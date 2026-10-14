@@ -1,6 +1,6 @@
 # Documentation index
 
-The system includes local research, verified CPU training and a budget-controlled Colab backend. Completed checks and remote execution status are recorded in [verification.md](verification.md). `plan.md` retains the research roadmap; `plan.html` is preserved.
+The system includes local research, verified CPU/A100 training and a budget-controlled Colab backend. Completed checks and remote execution status are recorded in [verification.md](verification.md). `plan.md` retains the research roadmap; `plan.html` is preserved.
 
 Read [architecture](architecture.md), [setup](setup.md), [data providers](providers.md), [datasets](datasets.md), then [simulation](simulation.md) and [training](training.md). Each guide owns one category; cross-links point to the category responsible for further detail.
 
@@ -23,6 +23,6 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
 | Colab runtime operations | [colab.md](colab.md) | CPU/T4 preflight, A100 training, compute ledger, retrieval and recovery |
 | Tests and acceptance | [testing.md](testing.md) | Offline checks, optional integration and future smoke acceptance |
-| Current verification | [verification.md](verification.md) | Checks actually performed, artifacts and pending acceptance |
+| Current verification | [verification.md](verification.md) | Checks actually performed, artifacts, usage and remaining research |
 
 No broker-order adapter is enabled. Advanced data families and extra reward terms remain gated behind separate matched experiments.

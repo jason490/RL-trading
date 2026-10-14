@@ -24,7 +24,9 @@ orders have been submitted. `plan.html` is preserved.
 | Source/script/test compilation | Passed | Syntax compilation; no static type-check claim |
 | Actual Yahoo daily download | Passed | Four ETFs, 4,211 bars each, no missing XNYS sessions |
 | Real-data CPU preflight | Passed | PPO 512 transitions, validation report, saved model and frozen bundle on Yahoo data |
-| A100 research execution | Awaiting retry after fix | Python/CUDA hardware verified; notebook backend import failure fixed |
+| Colab CPU acceptance | Passed | PPO 512 / SAC 1024 / TD3 1024; artifacts verified despite CLI stream failure |
+| A100 smoke and research | Passed | All three CUDA smokes plus PPO 50,000, seed 11; NVIDIA A100-SXM4-40GB, Python 3.13.15 |
+| Retrieved A100 inference | Passed | All five bundles: local CPU deterministic save/load parity, frozen normalization and unchanged checksums |
 
 Commands used for current local acceptance:
 
@@ -58,12 +60,74 @@ publication vintages. Split-adjusted OHLC and cash-dividend semantics are record
 in provenance. Raw source responses, coverage and immutable checksums are saved.
 Generated data/artifacts are ignored by Git; these links require the local outputs.
 
+## Completed A100 training and retrieved artifacts
+
+The final owned session was `rl-stocks-a100-0343183b915b`, allocated after the
+successful Colab CPU preflight. Source revision was
+`85bb0badfef319c06bffc141097faeab569fcb12`, with a clean working tree at upload.
+The research environment used the VM's own Python 3.13.15 and the committed hash
+lock. Hardware was NVIDIA A100-SXM4-40GB. Its completion manifest and every frozen
+bundle's file checksums/identity were validated before acceptance.
+
+| Job | Device | Actual transitions | Training duration |
+| --- | --- | --- | --- |
+| PPO smoke | CPU | 512 | 9.83 s |
+| PPO smoke | CUDA | 512 | 13.16 s |
+| SAC smoke | CUDA | 1,024 | 31.98 s |
+| TD3 smoke | CUDA | 1,024 | 23.27 s |
+| PPO, seed 11 | CUDA | 50,000 | 140.33 s |
+
+Durations above include training/validation/freezing, not VM setup and download
+time; every allocated stage counts in the usage ledger. The CPU job inside this
+A100 allocation was an additional check, not the lower-credit preflight.
+
+The full PPO run is `20261014T165221-ppo-11-f631b986`. Equal-weight mean net
+validation return selected the checkpoint observed at 30,000 transitions
+(11.2429857%); final post-update 50,000-transition weights scored 5.7217291%.
+These are 2021–2023 validation simulations under modeled costs, not held-out
+performance. PPO's on-step callback precedes its rollout optimizer update.
+`best.zip` and the frozen bundle hold the selected weights; `latest.zip` holds
+the final weights. No test data was evaluated or used for checkpoint selection.
+
+The retained baseline has seven daily market inputs and five portfolio-state
+inputs, schema `daily-indicators-v1`. Supply/demand and weekly features are not
+included. The selected bundle is
+`e71f26e9451eb5f16a84b7807896220b8c7e39125e6e5aa9bd4c74256805a675`;
+it remains `paper_eligible=false`.
+
+Retrieved outputs, available locally:
+
+- [Final artifact archive](../artifacts/colab/rl-stocks-a100-0343183b915b/artifacts.tar.gz), 16,681,515 bytes; periodic checkpoint archive also retrieved.
+- [Completion manifest](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/completion.json), including every completed job.
+- [Full PPO metadata](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/metadata.json).
+- [Selected frozen manifest](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/frozen/e71f26e9451eb5f16a84b7807896220b8c7e39125e6e5aa9bd4c74256805a675/manifest.json).
+- [Selected-weights validation report, CPU replay](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/selected-validation-cpu.html).
+- [Final-weights validation report, A100](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/validation.html).
+- [Local inference audit](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/local-inference-audit.json).
+
+All five downloaded bundles loaded on local Python 3.13.16/CPU, matched their
+saved `best.zip` predictions exactly on the same device, repeated predictions
+deterministically and left normalization/files unchanged. The selected PPO's
+CPU validation replay scored 11.24298574%; this small backend difference is not
+a claim of bit-for-bit CPU/CUDA parity. Reports are saved outside immutable
+bundles. The default run's `validation.html` reflects the final validation call,
+so use the separately labeled selected-weights report for the chosen bundle.
+
 ## Remote attempts, compute and recovery
 
 The cumulative ledger remains `.runtime/usage-ledger.json`; it is never reset
-between retries. After six attempts, conservative cumulative usage is 0.727205 units,
-with zero debit reported by the delayed account meter. All six are stopped.
-Owned A100 allocations report 5.30 units/hour. The project ceiling stays 150 units,
+between retries. After seven attempts, conservative cumulative usage is
+**1.479525 units**, leaving **148.520475 units** of the total ceiling and
+128.520475 units before the working stop threshold. All seven attempts are
+marked stopped and backend termination/absence was verified.
+
+Account balance fell from 382.82 to 382.03 units over these attempts, an observed
+debit of **0.79 units**; the last allocation's within-attempt balance debit was
+0.56 units. Delayed metering means the observed debit may not be the final bill.
+Budget decisions retain the larger conservative ledger estimate. The final
+`colab usage` reading reported balance 382.03, **0.00 units/hour and zero active
+assignments**. Owned A100 allocations reported 5.30 units/hour; CPU reported
+0.08 units/hour. The project ceiling stays 150 units,
 with work stopping by 130 and a two-hour allocation deadline including setup,
 training and retrieval.
 
@@ -78,16 +142,18 @@ Prior attempts:
 
 6. `rl-stocks-cpu-fcb20e48ed3d`: CPU preflight passed with PPO 512 / SAC 1024 / TD3 1024 on the verified Yahoo dataset, Python 3.13.16 and 0.08 units/hour. A CLI transport error followed completion; the downloaded completion manifest and all bundle checksums were independently verified. All three frozen bundles also passed local deterministic inference and normalization-freeze checks. Cleanup verified.
 
+7. `rl-stocks-a100-0343183b915b`: all five jobs in the table above completed. Final and checkpoint archives retrieved, completion and bundle checksums validated, local frozen inference verified. Attempt estimate 0.752320 units. Owned session stopped; backend absence and zero active assignments verified.
+
 Subprocess stdout/stderr and worker tracebacks are now retained durably in final
 artifacts. Metering, downloads and teardown remain bounded; no budget-stop restart
-is automatic. Final charges, retrieved models and cleanup will be recorded after
-this attempt finishes.
+is automatic. There is no outstanding cleanup failure or active owned session.
+Retain the ledger and downloaded artifacts for future jobs; do not reset usage.
 
 ## Remaining research and execution milestones
 
-- CPU Colab preflight is complete; finish the initial A100 seed-11, 50,000-transition PPO run and startup CUDA checks.
 - Run matched 50,000-transition experiments across algorithms and seeds 11/23/37.
-- Perform feature/reward ablations using training and validation only.
+- Implement and test [causal D1/W1 supply/demand inputs](supply-demand.md), then run matched feature ablations using training and validation only; M1 is later.
+- Perform other feature/reward ablations separately.
 - Freeze a candidate before the held-out test audit; test data has not selected checkpoints.
 - Audit actual Alpaca feeds/dividends, then add persistent shadow inference and paper-order lifecycle work.
 

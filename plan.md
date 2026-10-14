@@ -1,6 +1,6 @@
 # Modular swing-trading RL project plan
 
-Status: Python 3.13.16 aligned with Colab; 69 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. Budget-controlled Colab training is authorized and in progress.
+Status: Python 3.13 aligned with Colab; 69 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. CPU/A100 acceptance and initial PPO 50,000-transition seed-11 training completed; artifacts retrieved and shutdown verified. Supply/demand inputs are planned, not in the trained baseline.
 
 ## 1. Intended outcome and starting assumptions
 
@@ -296,7 +296,7 @@ Precompute causal features once per dataset version, use arrays in the environme
 8. **Live-data shadow evaluation:** Run the frozen bundle with Alpaca market data, record decisions and drift, and exercise reconnect/restart scenarios. Complete when feature timing, state recovery, and policy outputs match the specified protocol.
 9. **Alpaca paper execution:** Enable eligible long/short and learned stop/target orders with tested reconciliation and protection handling. Complete when the predeclared operational and performance criteria are reported, including divergence from the simulator. This milestone does not authorize live-money deployment.
 
-The next implementation task should start with milestones 1–2. Before remote jobs, resolve the symbol universe, date coverage, account/feed entitlements, and compute budget using the completed provider audit. All choices remain configurable; no stage is presented as evidence of expected profit.
+Milestones 1–5 have baseline implementations and initial training acceptance as recorded below. Next research compares matched algorithm/seed runs and introduces causal supply/demand inputs through milestone 6. Before further remote jobs, recheck provider entitlements and the cumulative compute budget. All choices remain configurable; no stage is presented as evidence of expected profit.
 
 
 ## 14. Implementation status — 2026-10-14
@@ -308,11 +308,11 @@ The local system follows the ownership map above. Detailed category documentatio
 | 1. Contracts/providers | Typed capabilities; canonical bars; synthetic/CSV/Yahoo/Alpaca adapters | Yahoo coverage verified; Alpaca endpoint/feed/dividend audit remains |
 | 2. Accumulation/datasets | Resumable source chunks, immutable hashes, coverage gates, causal features, splits/purge, frozen normalization | Completed for Yahoo; optional provider audits remain |
 | 3. Accounting/environment | Long/short cash and costs, next-open simulation, Gymnasium adapter, baselines | CPU Gymnasium/SB3 checks pass; execution sensitivity studies remain |
-| 4. Learned trade management | Four-component policy zone, adjustments/reversals, gap/stop ordering, both target boundaries, corporate actions | Neural-policy integration and later execution sensitivity studies |
-| 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | CPU 512/1024/1024 acceptance passes; A100 acceptance in progress |
-| 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | Matched ablations; advanced families/reward additions remain disabled |
-| 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | CPU parity/schema/corruption checks pass; held-out audit remains |
+| 4. Learned trade management | Four-component policy zone, adjustments/reversals, gap/stop ordering, both target boundaries, corporate actions | Neural-policy integration passes; execution sensitivity studies remain |
+| 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | CPU/A100 512/1024/1024 acceptance passes; initial A100 PPO 50,000 seed 11 complete; matched multi-seed studies remain |
+| 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | Causal D1/W1 supply/demand design planned; matched ablations and advanced families/reward additions remain |
+| 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | CPU/A100 save/load parity and local downloaded-bundle checks pass; held-out audit remains |
 | 8. Shadow inference | Shared causal feature/decision contracts and staleness gates | Persistent live-data orchestration/recovery/drift study |
 | 9. Paper execution | Intentionally deferred; no broker-order implementation | Future explicit milestone with tested lifecycle and protection |
 
-Remote smoke scripts preserve the 150-unit ceiling, 130-unit working limit, two-hour initial allocation cap, cumulative metering ledger, durable retrieval and verified cleanup. Colab attempts and cleanup are recorded in docs/verification.md. Longer experiment configurations are 50,000 transitions and seeds 11/23/37; an opt-in research job follows successful smoke acceptance. The user now requires matching Colab’s default Python (currently 3.13.16), superseding the original Python 3.12 specification.
+Remote smoke scripts preserve the 150-unit ceiling, 130-unit working limit, two-hour initial allocation cap, cumulative metering ledger, durable retrieval and verified cleanup. Colab attempts and cleanup are recorded in docs/verification.md. Longer experiment configurations are 50,000 transitions and seeds 11/23/37; an opt-in research job follows successful smoke acceptance. The user now requires matching Colab’s default Python (currently 3.13.15/3.13.16 across inspected runtime images), superseding the original Python 3.12 specification.

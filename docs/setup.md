@@ -16,7 +16,7 @@ python3.13 --version
 
 The research environment must be Python 3.13 for the current reviewed lock and
 acceptance results. The official Colab CLI can use its own interpreter. Colab's
-notebook kernel is currently Python 3.13.16; the launcher creates a dependency
+inspected kernels report Python 3.13.16 (CPU) or 3.13.15 (A100); the launcher creates a dependency
 environment using that same kernel interpreter. See
 [Colab version preflight](colab.md#python-version-preflight).
 Whenever Colab changes Python, update the package constraint, dependency-lock

@@ -38,7 +38,7 @@ Tests use synthetic fixtures and mocked runtime behavior; they never create a se
 - Frozen normalization immutability, feature/feed/nonfinite rejection and bundle corruption detection.
 - Default training does not create a final-test report.
 
-Synthetic wiring checks do not establish market performance or provider coverage. Historical Yahoo/Alpaca fixtures and actual account/feed audits remain separate acceptance steps once access exists.
+Synthetic wiring checks do not establish market performance or provider coverage. Actual Yahoo coverage and CPU/A100 training are recorded in [verification](verification.md). Actual Alpaca account/feed/dividend audits remain separate acceptance steps.
 
 ## Before a later Colab run
 

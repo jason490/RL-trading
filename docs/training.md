@@ -47,6 +47,13 @@ The callback's on-step timing matters for PPO: at a rollout boundary it runs bef
 
 Checkpoint score is equal-weight mean net validation return. It is declared before training; no callback accesses test episodes. A higher shaped reward never substitutes for portfolio evaluation. Save latest and best separately, and keep unsuccessful metadata for comparisons.
 
+`validation.html`/`.json` describe the most recent validation call, including the
+final post-update weights. They can differ from the selected `best.zip` bundle.
+Keep a separately labeled report when replaying selected weights, record the
+replay device, and never interpret the final-weights chart as the best bundle's
+chart. The initial A100 PPO run has a selected-weights CPU replay report linked
+in [verification](verification.md).
+
 `RL_CHECKPOINT_ARCHIVE` enables an atomic archive after validation; the remote bootstrap sets this path. The Colab watchdog retrieves it into durable local storage with bounded waits. This is best-effort periodic transfer; loss before the first successful download cannot be repaired from an ephemeral VM after termination. Final archive retrieval and cleanup are separately recorded.
 
 Replay buffers permit continued SAC/TD3 learning with recorded settings. They do not guarantee restoration of Python/NumPy/torch RNG, environment episode state or exact optimizer scheduling across interruption. Such exact-resume support remains a separate extension; do not describe the current replay save as that capability.
