@@ -256,3 +256,19 @@ research batch after CPU acceptance. This avoids repeating startup smokes in
 every full-training allocation and leaves more time for durable retrieval.
 The full nine-run study remains available, but profile its complete runtime
 before scheduling it within the execution/allocation deadlines.
+
+## Graceful owned-runner handoff
+
+When a long batch must be rescheduled, first retrieve a current checkpoint.
+Write `.runtime/stop-owned-runner.json` with the exact owned session name and a
+reason. On its next minute-metered usage call, the wrapper verifies the active
+ledger session, the runner parent command and its project directory, consumes
+the request once, and sends SIGINT to that parent. The runner's existing finally
+block retrieves available artifacts and verifies owned-session termination.
+This works when separate terminal calls have isolated PID namespaces. It never
+signals another project/session or bypasses a budget stop; retain the ledger.
+The handled request is recorded privately in `.runtime/handled-stop.json`.
+
+Study checkpoint transfers allow up to 45 seconds per snapshot; final archive
+transfers retain three bounded 120-second attempts. Minute metering remains
+active, and the two-hour allocation deadline includes these transfers.

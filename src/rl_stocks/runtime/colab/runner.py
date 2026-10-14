@@ -62,12 +62,13 @@ class ColabJob:
                     self.tick()
                     if args[0]=="exec" and self.last_meter!=getattr(self,"last_snapshot_meter",None):
                         self.last_snapshot_meter=self.last_meter
-                        self.ledger.guard(25)
+                        snapshot_timeout=getattr(self,"snapshot_timeout",20)
+                        self.ledger.guard(snapshot_timeout+5)
                         destination=self.root/"artifacts"/"colab"/self.session
                         destination.mkdir(parents=True,exist_ok=True)
                         checkpoint=destination/"checkpoint.tar.gz"
                         try:
-                            self.short(["download","-s",self.session,"/content/research-checkpoint.tar.gz",str(checkpoint)],20)
+                            self.short(["download","-s",self.session,"/content/research-checkpoint.tar.gz",str(checkpoint)],snapshot_timeout)
                             if str(checkpoint) not in self.ledger.active["retrieved"]:
                                 self.ledger.active["retrieved"].append(str(checkpoint));self.ledger.save()
                         except Exception:pass  # Remote first checkpoint may not exist yet.
@@ -133,6 +134,7 @@ class ColabJob:
         plan=study_plan(study_algorithm) if study else job_plan(research_algorithm,self.accelerator)
         self.exec_timeout=5400 if study else 1800
         self.download_timeout=120 if study else 30
+        self.snapshot_timeout=45 if study else 20
         # Help and version are checked before any metered allocation.
         version=self.short(["version"])
         for cmd in ("usage","new","install","exec","upload","download","stop","sessions"):

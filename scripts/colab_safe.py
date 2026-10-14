@@ -22,4 +22,8 @@ cli.setup_logging = setup_logging
 cli.state._settings_store = SettingsStore(str(state / 'settings.json'))
 cli.state._history = HistoryLogger(str(state / 'history'))
 if __name__ == '__main__':
+    if sys.argv[1:]==['usage']:
+        sys.path.insert(0,str(root/'src'))
+        from rl_stocks.runtime.colab.control import process_stop_request
+        if process_stop_request(root):sys.exit(1)
     cli.app(args=['--config', str(state / 'sessions.json'), *sys.argv[1:]])
