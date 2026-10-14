@@ -43,3 +43,13 @@ All four release asset digests match local SHA-256 values.
 [Compact results](../results/expanded-baseline-ppo-2026-10-14/summary.json) include
 per-symbol metrics, cash/buy-and-hold references, selected checkpoints, bundle
 identities and training provenance. Full matched comparisons are still running.
+
+## Packaging later study assets
+
+Run `PYTHONPATH=src .venv/bin/python scripts/package_research.py ARTIFACT_ROOT...
+--output artifacts/public/STUDY_NAME` to prepare allowlisted frozen models,
+run weights/metadata and derived validation charts. After a complete held-out
+audit, add `--audit artifacts/audits/AUDIT_NAME` to export `test.html` and
+`audit-summary.json`. Price/quote rows, replay files and runtime logs are not
+included. Inspect the package, generate asset checksums and verify the uploaded
+release digests before recording publication as complete.
