@@ -2,6 +2,18 @@
 from pathlib import Path
 
 
+def bootstrap_environment(parent, root):
+    root = Path(root)
+    content = root.parent
+    environment = dict(parent, UV_CACHE_DIR=str(content/'uv-cache'),
+                       MPLCONFIGDIR=str(content/'matplotlib'), MPLBACKEND='Agg',
+                       PYTHONPATH=str(root/'src'),
+                       RL_CHECKPOINT_ARCHIVE=str(content/'research-checkpoint.tar.gz'))
+    environment.pop('PYTHONHOME', None)
+    environment.pop('VIRTUAL_ENV', None)
+    return environment
+
+
 def bootstrap_commands(uv, root, kernel_python):
     root = Path(root)
     python = str(root / '.venv/bin/python')

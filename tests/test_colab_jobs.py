@@ -41,3 +41,16 @@ class JobPlanTests(unittest.TestCase):
         self.assertEqual(commands[1][4], '/content/research/.venv/bin/python')
         self.assertEqual(commands[-1], ['/content/research/.venv/bin/python',
                                        '/content/research/scripts/remote_train.py'])
+
+    def test_notebook_environment_does_not_override_research(self):
+        from rl_stocks.runtime.colab.jobs import bootstrap_environment
+        parent = {'MPLBACKEND': 'module://matplotlib_inline.backend_inline',
+                  'PYTHONHOME': '/old-python', 'VIRTUAL_ENV': '/old-env',
+                  'PYTHONPATH': '/notebook/packages', 'CUDA_VISIBLE_DEVICES': '0'}
+        environment = bootstrap_environment(parent, '/content/research')
+        self.assertEqual(environment['MPLBACKEND'], 'Agg')
+        self.assertEqual(environment['PYTHONPATH'], '/content/research/src')
+        self.assertEqual(environment['CUDA_VISIBLE_DEVICES'], '0')
+        self.assertNotIn('PYTHONHOME', environment)
+        self.assertNotIn('VIRTUAL_ENV', environment)
+        self.assertEqual(parent['MPLBACKEND'], 'module://matplotlib_inline.backend_inline')

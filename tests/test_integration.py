@@ -36,6 +36,18 @@ class IntegrationTests(unittest.TestCase):
             with self.assertRaises(ValueError):resolved_parameters(algorithm,True,overrides)
         with self.assertRaises(ValueError):resolved_parameters('unknown')
 
+    def test_colab_backend_is_safe_for_real_sb3_import(self):
+        import os
+        import subprocess
+        import sys
+        from rl_stocks.runtime.colab.jobs import bootstrap_environment
+        parent = dict(os.environ, MPLBACKEND='module://missing_notebook_backend',
+                      PYTHONHOME='/invalid/notebook/python')
+        environment = bootstrap_environment(parent, self.root/'research')
+        subprocess.run([sys.executable, '-c',
+                        'import stable_baselines3, matplotlib; assert matplotlib.get_backend().lower() == "agg"'],
+                       env=environment, check=True, capture_output=True, text=True, timeout=30)
+
     def test_env_checkers_reset_and_boundaries(self):
         import numpy as np
         from gymnasium.utils.env_checker import check_env

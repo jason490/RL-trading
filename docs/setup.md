@@ -1,6 +1,6 @@
 # Installation and dependency management
 
-Use Python **3.13**, matching Colab's current Python **3.13.16**. The package declares `>=3.13,<3.14`. The CLI's separate Python environment can differ; the research environment must match Colab.
+Use Python **3.13**, matching Colab's current interpreter family (3.13.15/3.13.16 across inspected images). The package declares `>=3.13,<3.14`. The CLI's separate Python environment can differ; the research environment must match Colab.
 
 ## Check Python before installing or training
 

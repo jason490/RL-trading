@@ -1,60 +1,91 @@
 # Verification and milestone status — 2026-10-14
 
-The system is implemented for local research with explicit pending acceptance. **Colab execution is deferred at the user's request.** No remote session or broker order was created. The original `plan.html` remains preserved.
+The project targets **Python 3.13**, matching Colab's current interpreter family.
+The local acceptance environment is **3.13.16**. The current CLI-provisioned A100
+reports **3.13.15**; its research environment uses that same interpreter. Patch
+versions can vary by runtime image and are recorded in artifacts. No broker
+orders have been submitted. `plan.html` is preserved.
 
 ## Checks actually performed
 
 | Check | Result | Scope |
 | --- | --- | --- |
-| Python runtime | 3.12.14 | Real project-local interpreter |
-| Unit discovery | 51 tests; **46 passed, 5 skipped**, no failures | Standard-library core plus explicit integration skips |
-| Source/script/test compilation | Passed | Syntax compilation; not dependency imports or static type checking |
-| Local CLI help | Passed | ingest/dataset/train/compare command registration |
-| Full offline audit | Passed | All four synthetic symbols, requested dates, immutable accumulation/datasets, validation accounting, baselines, HTML/JSON reports |
-| Documentation links | Checked after writing these guides | Local relative Markdown targets |
-| Official CLI wrapper | Version 0.7.4 and usage help worked | Writable log/settings/history/state; no allocation |
-| Earlier backend usage attempt | Failed to provide balance/rate due network/connection failure | No account balance inferred |
-| `plan.html` preservation | SHA-256 `26c4bf4b910013bf47231d47b74ccf82ece9fe05296cd5eefddccc300d3a365f` | File not edited |
+| Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
+| Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
+| `pip check` | Passed | No broken requirements in the research environment |
+| Full unittest discovery | **64 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
+| CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
+| Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
+| Reporting | Passed | Plotly HTML/JSON and dependency-free report behavior |
+| Optional SDK wiring | Passed with mocked clients | Actual Yahoo/Alpaca package imports; no Alpaca endpoint/credential audit |
+| Calendar regression | Passed | Holiday start, weekend end and exclusive session endpoints |
+| Colab artifact validation | Passed | Rejects remote exceptions, missing jobs, wrong Python and corrupted weights even if CLI exits zero |
+| Source/script/test compilation | Passed | Syntax compilation; no static type-check claim |
+| Actual Yahoo daily download | Passed | Four ETFs, 4,211 bars each, no missing XNYS sessions |
+| Real-data CPU preflight | Passed | PPO 512 transitions, validation report, saved model and frozen bundle on Yahoo data |
+| A100 research execution | Awaiting retry after fix | Python/CUDA hardware verified; notebook backend import failure fixed |
 
-Commands used:
+Commands used for current local acceptance:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
-PYTHONPATH=src .venv/bin/python -m compileall -q src scripts tests
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local --help
-PYTHONPATH=src .venv/bin/python scripts/offline_audit.py
+.venv/bin/python --version
+.venv/bin/python -m pip check
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m compileall -q src scripts tests
 ```
 
-The skipped methods cover algorithm configuration with real SB3 imports; Gymnasium/SB3 checkers and seeded/boundary behavior; actual PPO/SAC/TD3 train/save/load/report/bundle/replay continuation; mocked official Alpaca wiring; and mocked Yahoo wiring. NumPy, Gymnasium, torch, SB3 and Plotly are unavailable in this sandbox. Their skips do **not** count as smoke acceptance. The dependency-pin audit is tested with mocked installed-version metadata, not native package imports.
+The full suite completed in 32.322 seconds on Python 3.13.16. The earlier
+Python 3.12 acceptance also passed but is historical evidence, not the supported
+runtime. No Ruff, mypy or pytest invocation is claimed. Integration smoke checks
+verify wiring and accounting, not profitable learning.
 
-No Ruff, mypy, pytest invocation, real neural training, market-data endpoint audit or A100 run is claimed. No usable Git checkout is exposed here; run metadata records that absence and includes a package-source hash.
+## Verified market dataset and CPU artifacts
 
-## Generated offline artifacts
+- Yahoo snapshot: `data/raw/7836ed5c18b90aaa6d40b43b08e43a8d86a76589ba0fd3b3822114adbd56bc75`.
+- Dataset: `data/datasets/efbd5f5095604fc2c3d7e280c5d0d4c043a160525cca7daa5e24ab4374425aec`.
+- Coverage: SPY, QQQ, IWM and DIA, 2010-01-04 through 2026-09-30; 4,211 bars per symbol.
+- Training: 2,700 feature rows per symbol, 2010-03-16 through 2020-12-02.
+- Validation: 733 rows per symbol, 2021-01-04 through 2023-11-30.
+- Reserved test: 689 rows per symbol, 2024-01-02 through 2026-09-30.
+- Training/validation ends have 20-session purges. Preprocessing fits training only; the unverified override is false.
+- [Python 3.13 real-data CPU validation report](../artifacts/cpu313-preflight/runs/20261014T161538-ppo-11-f6ea2754/validation.html).
+- [CPU run metadata](../artifacts/cpu313-preflight/runs/20261014T161538-ppo-11-f6ea2754/metadata.json).
+- [CPU frozen manifest](../artifacts/cpu313-preflight/frozen/ca9d6a2324e2182099663301139272c733d872eaf0dcfb69462d4e6cad31d47e/manifest.json).
 
-- Snapshot: `data/raw/7529f85d10ebd9fbe02bcc283a4c786040f5fc3b99b2d454fcaa8795db64c5a2`
-- Dataset: `data/datasets/967df26a85479bc63b0126a88164e3be5da49e709f2861a0d3949fe62dffb03d`
-- [Interactive synthetic accounting report](../artifacts/offline-audit/20261014T054155-222304b6/report.html)
-- [Machine-readable report](../artifacts/offline-audit/20261014T054155-222304b6/report.json)
-- [Audit metadata](../artifacts/offline-audit/20261014T054155-222304b6/metadata.json)
+Yahoo availability is reconstructed; this download does not prove historical
+publication vintages. Split-adjusted OHLC and cash-dividend semantics are recorded
+in provenance. Raw source responses, coverage and immutable checksums are saved.
+Generated data/artifacts are ignored by Git; these links require the local outputs.
 
-The audit uses only validation segments and a fixed alternating exposure fixture. It is not a trained policy and supports no market profitability conclusion. Synthetic calendars/retrieval semantics and the explicit unverified override are recorded in the manifest. Current reports use the native SVG fallback because Plotly is unavailable.
+## Remote attempts, compute and recovery
 
-## Compute and cleanup
+The cumulative ledger remains `.runtime/usage-ledger.json`; it is never reset
+between retries. After four attempts, conservative cumulative usage is 0.589850 units,
+with zero debit reported by the delayed account meter. All four are stopped.
+Owned A100 allocations report 5.30 units/hour. The project ceiling stays 150 units,
+with work stopping by 130 and a two-hour allocation deadline including setup,
+training and retrieval.
 
-Project sessions allocated: **0**. Project compute units allocated/consumed by owned sessions: **0**. The unspent project ceiling is **150 units**; the actual account balance is unknown. There are no retrieved Colab artifacts and no owned remote session requiring cleanup. `.runtime/usage-ledger.json` persists the unused ceiling and an empty attempt history for the later run.
+Prior attempts:
 
-Budget/cleanup tests use mocked sessions only. They exercise conservative estimates, cumulative attempts, working-limit/deadline refusal, metering failure, provisioning failure, verified termination and retained recovery status after failure. They do not prove actual account metering or backend termination. The runtime's handled-interruption paths and persisted identity are implemented; power loss/SIGKILL still require manual recovery.
+1. `rl-stocks-smoke-f4c81ae30fb8`: allocation returned Service Unavailable; backend absence verified.
+2. `rl-stocks-smoke-8099d697d068`: remote kernel failed the former Python 3.12 gate. Failure archive retrieved; cleanup verified. This exposed the CLI's zero-exit remote-exception behavior, now covered by artifact validation.
+3. `rl-stocks-smoke-06fa5663634f`: older-interpreter worker failed before training. Partial archive retrieved; cleanup verified. The user then required matching Colab Python, and older-interpreter provisioning was removed.
+4. `rl-stocks-smoke-68624bf171b8`: Python 3.13.15 and A100 verified; SB3 import failed because an inherited inline Matplotlib backend was unavailable in the research environment. Failure archive retrieved; cleanup verified. The launcher now selects the headless Agg backend and has a real SB3 import regression test.
 
-## Pending acceptance and intentional scope
+Subprocess stdout/stderr and worker tracebacks are now retained durably in final
+artifacts. Metering, downloads and teardown remain bounded; no budget-stop restart
+is automatic. Final charges, retrieved models and cleanup will be recorded after
+this attempt finishes.
 
-| Area | Next acceptance |
-| --- | --- |
-| Dependencies | Generate/review transitive hash lock; install reviewed pins; run pip check and native imports |
-| Providers | Actual Yahoo pre-2016/through-September-2026 coverage; Alpaca endpoint/feed/dividend audit |
-| Environment/RL | Real Gymnasium/SB3 checkers; exactly 512 PPO / 1024 SAC / 1024 TD3 CPU smoke |
-| Frozen inference | Actual neural save/load parity, schema/feed/corruption rejection and replay continuation |
-| Colab | Later user-run A100 smoke, metering, durable downloads and verified cleanup within the persistent 150-unit ceiling |
-| Research | Matched multi-seed experiments/ablations and post-freeze held-out audit; no performance claims yet |
-| Live/paper | Shadow orchestration and Alpaca order lifecycle remain separate later milestones |
+## Remaining research and execution milestones
 
-Read [testing.md](testing.md) for acceptance procedures, [setup.md](setup.md) for lock installation and [colab.md](colab.md) for the deferred budget-controlled launch. The implemented baseline keeps advanced data families, extra reward terms and broker orders disabled.
+- Finish A100 smoke and the initial seed-11, 50,000-transition PPO run.
+- Run matched 50,000-transition experiments across algorithms and seeds 11/23/37.
+- Perform feature/reward ablations using training and validation only.
+- Freeze a candidate before the held-out test audit; test data has not selected checkpoints.
+- Audit actual Alpaca feeds/dividends, then add persistent shadow inference and paper-order lifecycle work.
+
+Advanced feature families, extra reward terms and broker orders remain disabled.
+See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.

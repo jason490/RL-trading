@@ -63,8 +63,8 @@ Before launching paid work, check the local research interpreter:
 
 There are three interpreter roles: the local official CLI, Colab's notebook
 kernel, and the research dependency environment. The CLI can use another Python
-version; research must match Colab's kernel. Both currently use **Python
-3.13.16**. The standard virtual environment isolates dependency versions while
+version; research must match Colab's kernel. The current A100 uses **Python 3.13.15**; another inspected image reports
+3.13.16. Record the actual patch version rather than assuming it. The standard virtual environment isolates dependency versions while
 using the kernel's own interpreter.
 
 For manual diagnosis on an already owned session, inspect both remote versions
@@ -104,12 +104,19 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/
 
 The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one A100, records its endpoint when discoverable, verifies reported A100 hardware and obtains its consumption rate immediately. A zero/unavailable rate causes teardown.
 
-The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` creates a remote dependency environment using Colab's kernel interpreter, syncs the hash lock and launches `remote_train.py` as a subprocess. Both kernel and research process use Colab's Python 3.13.16, with research dependencies isolated from preinstalled notebook packages. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.13 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition jobs are opt-in research experiments.
+The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` creates a remote dependency environment using Colab's kernel interpreter, syncs the hash lock and launches `remote_train.py` as a subprocess. Both kernel and research process use the same Colab Python 3.13 interpreter, with research dependencies isolated from preinstalled notebook packages. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.13 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition jobs are opt-in research experiments.
 
 The installed CLI can exit zero after a remote Python exception. The runner
 therefore validates the downloaded completion manifest, expected job counts,
 exact transition counts, dataset/runtime identities and frozen-bundle checksums.
 A failure archive or missing job is rejected even if the CLI command succeeded.
+
+The worker environment selects Matplotlib's `Agg` backend for headless training,
+sets a writable plotting cache and removes inherited notebook Python path/home
+overrides. This prevents Colab's inline backend from requiring notebook-only
+packages inside the research environment. Python remains Colab's own version;
+interactive reports use Plotly. Bootstrap stdout/stderr and worker tracebacks
+are saved in the retrieved archive for diagnosis.
 
 To follow successful smoke acceptance with one initial research model in the same
 owned session, add `--research ppo` (or `sac` / `td3`). This appends exactly 50,000
