@@ -1,12 +1,12 @@
 # Provider and dependency audit — 2026-10-14
 
-The implemented request is SPY/QQQ/IWM/DIA, 2010-01-01 through September 2026. Actual Yahoo and Alpaca endpoint coverage remains **unverified** because the sandbox cannot reach package repositories or data endpoints. No historical-market performance claim is supported. Synthetic and canonical CSV interchangeability are verified offline.
+The implemented request is SPY/QQQ/IWM/DIA, 2010-01-01 through September 2026. A Yahoo download on 2026-10-14 returned 4,211 daily bars per symbol, from 2010-01-04 through 2026-09-30, with no missing XNYS sessions. Split/dividend fields are preserved under the adapter's documented semantics. Alpaca endpoint coverage remains unverified. Historical publication vintages and profitable performance are not established by coverage checks.
 
 Yahoo is an unofficial personal-use research adapter, not a production service guarantee. It requests original daily OHLC with cash dividends and records split-adjusted-price semantics. Its reconstructed close+15-minute availability and revised historical data require explicit interpretation; it does not supply historical public-availability vintages. Alpaca requires account credentials and explicit entitlement; IEX and SIP volumes differ. Its earliest capability is declared as 2016; the requested pre-2016 range may be unsupported/empty and must be reported rather than substituted. Bar-only Alpaca snapshots are not accepted by the default dataset gate until dividends are independently verified.
 
 Current sectors, financials, options/OI, sentiment, trades/quotes and order-book data remain disabled. The typed capability registry rejects unsupported families independently. No current snapshot is inserted into historical observations.
 
-Dependency pins target Python 3.12, torch 2.8.0, Gymnasium 1.2.0, SB3 2.7.0 and optional alpaca-py 0.42.0/yfinance 0.2.65. SB3 release metadata permits Gymnasium >=0.29.1,<1.3, NumPy >=1.20,<3 and torch >=2.3,<3, so the direct pins satisfy those declared bounds. Actual installation/import compatibility and a transitive hash lock are pending network access; direct pins are not described as a resolved lock.
+Dependency pins target Python 3.12, torch 2.8.0, Gymnasium 1.2.0, SB3 2.7.0 and optional alpaca-py 0.42.0/yfinance 0.2.65. SB3 release metadata permits Gymnasium >=0.29.1,<1.3, NumPy >=1.20,<3 and torch >=2.3,<3, so the direct pins satisfy those declared bounds. `requirements.lock` now contains hash-pinned transitive dependencies. See [verification.md](verification.md) for actual native imports and training acceptance.
 
 Sources checked during implementation:
 
@@ -18,7 +18,7 @@ Sources checked during implementation:
 - [yfinance history API](https://ranaroussi.github.io/yfinance/reference/api/yfinance.Ticker.history.html)
 - [Official Colab CLI](https://github.com/googlecolab/google-colab-cli)
 
-The installed official CLI was inspected locally at version 0.7.4. Its `usage` parser recognizes the installed release's exact balance/rate/assignment labels and refuses unknown output. Logging/settings/history writes are redirected to the project, without changing authentication or weakening the compute ceiling. An actual `usage` attempt exited 1 with a network/connection failure and yielded no balance or rate; allocation was therefore not attempted.
+The installed official CLI was inspected locally at version 0.7.4. Its `usage` parser recognizes the installed release's exact balance/rate/assignment labels and refuses unknown output. Logging/settings/history writes are redirected to the project, without changing authentication or weakening the compute ceiling. Authenticated usage now works; the preflight balance was 382.82 units, rate 0.00/hour, with zero assignments. Current project charges and cleanup belong in [verification.md](verification.md).
 
 ## Adapter operations
 

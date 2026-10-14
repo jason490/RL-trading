@@ -1,6 +1,6 @@
 # Documentation index
 
-The system is implemented for local/offline research. Colab execution is deferred at the user's request. Dependency-backed training acceptance is pending installation; completed checks and their limits are recorded in [verification.md](verification.md). `plan.md` retains the original research roadmap; `plan.html` is preserved.
+The system includes local research, verified CPU training and a budget-controlled Colab backend. Completed checks and remote execution status are recorded in [verification.md](verification.md). `plan.md` retains the research roadmap; `plan.html` is preserved.
 
 Read [architecture](architecture.md), [setup](setup.md), [data providers](providers.md), [datasets](datasets.md), then [simulation](simulation.md) and [training](training.md). Each guide owns one category; cross-links point to the category responsible for further detail.
 

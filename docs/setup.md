@@ -35,7 +35,17 @@ The lock script resolves runtime plus Yahoo/Alpaca/development extras and genera
 
 A minimal package installation can omit provider extras: `pip install -e .`; install `.[yahoo]` or `.[alpaca]` only when those adapters are needed. For reproducible research use the reviewed lock, not an unconstrained fresh resolution. The full lock includes extras for convenience without making SDK imports a baseline requirement.
 
-The local sandbox has no installable RL packages and cannot reach package repositories, so transitive resolution, `pip check`, real Gymnasium/SB3 checkers and neural training remain pending. Colab allocation refuses a missing lock. No fake lock or substituted RL implementation is supplied.
+The repository includes the resolved `requirements.lock`. Regenerate it only
+when deliberately reviewing dependency changes. Colab allocation refuses a
+missing lock. Actual import, checker and training results are recorded in
+[verification.md](verification.md).
+
+CUDA dependencies need several gigabytes of download/unpacking space. If `/tmp`
+has a small quota, use a writable disk-backed cache before invoking uv:
+
+```bash
+export UV_CACHE_DIR="$PWD/.runtime/uv-cache"
+```
 
 ## Dependency-free work
 
@@ -46,6 +56,6 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 PYTHONPATH=src .venv/bin/python scripts/offline_audit.py
 ```
 
-The integration suite explicitly skips when NumPy/Gymnasium/torch/SB3/Plotly are missing. Install the real dependencies and rerun it before claiming training acceptance. Package downloads need a network-enabled execution environment; Colab execution is currently deferred.
+The integration suite explicitly skips when NumPy/Gymnasium/torch/SB3/Plotly are missing. Install the real dependencies and rerun it before claiming training acceptance. Package downloads need a network-enabled execution environment; remote training uses the budget-controlled [Colab procedure](colab.md).
 
 Training validates Python and actual installed core package versions against the reviewed direct pins before running checkers or learning. Local torch build suffixes (CPU/CUDA) are allowed; a different base release is rejected. This gate detects drift but does not replace the transitive lock or `pip check`.

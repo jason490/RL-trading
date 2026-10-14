@@ -11,13 +11,13 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Synthetic/CSV data, immutable storage and resumable accumulation | Implemented | Offline tests pass |
 | Causal daily features, optional completed weekly context, chronological splits and frozen normalization | Implemented | Offline tests pass |
 | Long/short accounting, next-open fills, costs, stops, learned target zones and reversals | Implemented | Offline simulator tests pass |
-| Reports and matched run comparisons | Implemented | SVG/JSON output tested; Plotly integration pending |
-| Yahoo/Alpaca historical adapters | Implemented | Actual endpoint coverage and SDK integration pending |
-| Gymnasium environment, PPO/SAC/TD3 training, checkpoints and frozen neural inference | Implemented | Dependency-backed acceptance pending |
+| Reports and matched run comparisons | Implemented | SVG/JSON and Plotly integration tested |
+| Yahoo/Alpaca historical adapters | Implemented | Yahoo daily coverage verified; mocked SDK wiring passes; actual Alpaca coverage pending |
+| Gymnasium environment, PPO/SAC/TD3 training, checkpoints and frozen neural inference | Implemented | CPU acceptance passes for all three algorithms |
 | Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | Mock lifecycle tests pass; actual remote acceptance pending |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **46 passing tests and 5 skipped integration tests**. Direct dependencies are pinned; the transitive hash lock has not yet been generated. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **56 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Requirements and installation
 
@@ -27,7 +27,9 @@ Use **Python 3.12**. Installation and real-provider retrieval require network ac
 python3.12 -m venv .venv
 .venv/bin/python -m pip install uv
 
-# Resolve the pinned project and optional development/provider dependencies.
+# Install the committed lock; regenerate it only for reviewed dependency changes.
+export UV_CACHE_DIR="$PWD/.runtime/uv-cache"
+mkdir -p .runtime
 RL_UV_BIN=.venv/bin/uv bash scripts/lock.sh
 .venv/bin/uv pip sync --python .venv/bin/python requirements.lock
 .venv/bin/uv pip install --python .venv/bin/python --no-deps -e .
@@ -36,7 +38,7 @@ RL_UV_BIN=.venv/bin/uv bash scripts/lock.sh
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
 
-Review and retain the generated `requirements.lock`. `requirements.txt` contains direct pins and is not a complete transitive lock. Training checks actual core package versions against the reviewed release set. Full setup instructions and compatibility assumptions are in [setup.md](docs/setup.md).
+Review and retain `requirements.lock`. `requirements.txt` contains direct pins and is not a complete transitive lock. Training checks actual core package versions against the reviewed release set. Full setup instructions and compatibility assumptions are in [setup.md](docs/setup.md).
 
 ## Offline quick start
 
