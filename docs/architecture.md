@@ -2,6 +2,10 @@
 
 The package follows the module map in `plan.md`. One symbol is traded per episode. One policy can train across the four ETF episodes; simultaneous multi-asset portfolio allocation requires a new environment/action version.
 
+Generated market datasets and artifacts are ignored at the repository root
+(`/data/`, `/artifacts/`). The implementation in `src/rl_stocks/data/` is tracked
+source code and must remain available in fresh checkouts.
+
 ```mermaid
 flowchart LR
     P[Provider adapters] --> A[Resumable accumulation]
