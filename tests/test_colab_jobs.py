@@ -1,4 +1,7 @@
 import unittest
+import json
+from pathlib import Path
+import tempfile
 
 from rl_stocks.runtime.colab.jobs import job_plan
 
@@ -16,3 +19,14 @@ class JobPlanTests(unittest.TestCase):
         self.assertEqual(len(job_plan()["jobs"]), 4)
         with self.assertRaises(ValueError):
             job_plan("unknown")
+
+    def test_uploaded_git_provenance_survives_without_checkout(self):
+        from rl_stocks.core.provenance import repository_state
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "source-git.json"
+            expected = {"revision": "a" * 40, "dirty": ""}
+            source.write_text(json.dumps(expected))
+            self.assertEqual(repository_state(directory), expected)
+            source.write_text('{"token":"unexpected"}')
+            with self.assertRaises(ValueError):
+                repository_state(directory)

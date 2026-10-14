@@ -13,6 +13,7 @@ import time
 import uuid
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
 from rl_stocks.runtime.colab.jobs import job_plan
+from rl_stocks.core.provenance import repository_state
 
 class ColabJob:
     def __init__(self,root,cli_python):
@@ -151,12 +152,15 @@ class ColabJob:
             archive=self.state/"research-upload.tar.gz"
             job_file=self.state/"job-plan.json"
             job_file.write_text(json.dumps(plan,indent=2))
+            git_file=self.state/"source-git.json"
+            git_file.write_text(json.dumps(repository_state(self.root),indent=2))
             self.ledger.active["job_plan"]=plan;self.ledger.save()
             with tarfile.open(archive,"w:gz") as tar:
                 for item in ("src","scripts","pyproject.toml","requirements.txt","requirements.lock","configs"):
                     tar.add(self.root/item,arcname=item)
                 tar.add(Path(dataset)/"dataset.json",arcname="dataset.json")
                 tar.add(job_file,arcname="job-plan.json")
+                tar.add(git_file,arcname="source-git.json")
             self.operation(["upload","-s",self.session,str(archive),"/content/research-upload.tar.gz"],120)
             self.operation(["install","-s",self.session,"-r",str(self.root/"requirements.lock")],1800)
             self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)

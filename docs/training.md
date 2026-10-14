@@ -39,3 +39,7 @@ Checkpoint score is equal-weight mean net validation return. It is declared befo
 Replay buffers permit continued SAC/TD3 learning with recorded settings. They do not guarantee restoration of Python/NumPy/torch RNG, environment episode state or exact optimizer scheduling across interruption. Such exact-resume support remains a separate extension; do not describe the current replay save as that capability.
 
 Runs record hardware/backend nondeterminism. Save/load parity is checked on the same device/observation; it is not a claim of bit-for-bit parity across CPU/A100 or different torch backends. Training smoke demonstrates wiring, not profitable learning. Dependencies and real smoke acceptance remain pending in this sandbox.
+
+Colab payloads include the originating Git revision and dirty-state record,
+captured at upload. Remote runs use that record even though the payload omits
+the Git database, and also compute a hash of the actual package source.

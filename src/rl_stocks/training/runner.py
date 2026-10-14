@@ -21,7 +21,7 @@ from rl_stocks.rl.registry.factory import create,resolved_parameters
 from rl_stocks.evaluation.runner import evaluate,selection_score
 from rl_stocks.reporting.html import report
 from rl_stocks.inference.bundle import freeze,FrozenPolicy
-from rl_stocks.core.provenance import source_identity
+from rl_stocks.core.provenance import source_identity,repository_state
 
 class ValidationCheckpoint(BaseCallback):
     def __init__(self,dataset,config,path,every):
@@ -54,10 +54,7 @@ class ValidationCheckpoint(BaseCallback):
         return True
 
 def git_state():
-    def cmd(args):
-        p=subprocess.run(["git",*args],capture_output=True,text=True)
-        return p.stdout.strip() if p.returncode==0 else None
-    return {"revision":cmd(["rev-parse","HEAD"]),"dirty":cmd(["status","--porcelain"])}
+    return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None):
     from rl_stocks.training.dependencies import verify_environment
