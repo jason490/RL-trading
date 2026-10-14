@@ -6,6 +6,10 @@
 
 The default gate requires verified exchange-calendar coverage, no missing sessions, and verified dividend/action treatment. Synthetic weekday data is intentionally unverified. Alpaca bar-only snapshots are intentionally missing dividend verification. A user may make an explicit research override with `--allow-unverified`; the manifest records it, and it does not turn the data into audited market history.
 
+Calendar coverage includes sessions on or after the requested start and strictly
+before the end. Holiday and weekend endpoints are valid; they do not need to be
+exchange sessions themselves.
+
 Every symbol must have training, validation and test episodes with at least two retained feature rows. Missing verified sessions break the series and restart feature warmup; no one-day return is inferred across an unobserved session. Unknown calendar quality is visible in provenance. Mixed providers/feeds/adjustment modes are rejected before generation.
 
 ## Chronological partitions
