@@ -1,6 +1,6 @@
 # Modular swing-trading RL project plan
 
-Status: Python 3.13 aligned with Colab; 86 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. CPU/A100 acceptance and initial PPO 50,000-transition seed-11 training completed; artifacts retrieved and shutdown verified. Supply/demand D1/W1 and sector-rotation inputs are implemented; expanded 26-instrument neural training is pending.
+Status: Python 3.13 aligned with Colab; 91 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. CPU/A100 acceptance and initial PPO 50,000-transition seed-11 training completed; artifacts retrieved and shutdown verified. Supply/demand D1/W1 and sector-rotation inputs are implemented; expanded 26-instrument CPU smoke passed; matched A100 studies are in progress.
 
 ## 1. Intended outcome and starting assumptions
 

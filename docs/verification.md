@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **86 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **91 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -37,8 +37,8 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unitt
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The latest full suite completed in 61.773 seconds on Python 3.13.16, including
-the new supply/demand and sector tests. The earlier 69-test acceptance completed
+The latest full suite completed in 74.526 seconds on Python 3.13.16 (91 tests),
+including supply/demand, sector, matched-study and public-asset checks. The earlier 69-test acceptance completed
 in 32.703 seconds before these additions. The earlier
 Python 3.12 acceptance also passed but is historical evidence, not the supported
 runtime. No Ruff, mypy or pytest invocation is claimed. Integration smoke checks
@@ -67,8 +67,9 @@ Generated data/artifacts are ignored by Git; these links require the local outpu
 The implementation now supports configurable tradable/context symbols,
 incremental D1/W1 supply/demand features and sector-ETF rotation. The existing
 A100 models were trained before these additions and still use seven daily market
-inputs. No new Colab allocation or expanded-universe neural training was started
-for this feature change; the cumulative ledger remains 1.479525 units.
+inputs. That feature implementation used no new Colab allocation. Subsequently the
+user authorized the next steps; expanded CPU acceptance passed and matched A100
+studies have started under the same cumulative ledger.
 
 Actual Yahoo retrieval produced:
 
@@ -95,12 +96,20 @@ unchanged normalization. The old frozen bundle rejects the combined schema.
 Test episodes were constructed but no test performance was evaluated.
 Local evidence is saved in `.runtime/expanded-datasets.json`,
 `.runtime/expanded-environment-audit.json` and
-`.runtime/final-expanded-acceptance.txt`. The full suite has 86 passing tests
+`.runtime/final-expanded-acceptance.txt`. The full suite now has 91 passing tests
 and no skips; `pip check` and syntax compilation also passed. No new lint/type
 check is claimed. Generated data/runtime evidence remains excluded from Git.
 
-Next is lower-credit acceptance of the expanded model inputs followed by matched
-50,000-transition A100 studies, using the existing cumulative budget. Review
+Expanded CPU session `rl-stocks-cpu-8c7f01297b8a` completed PPO 512 / SAC 1,024 /
+TD3 1,024 on the combined 88-market-input dataset, Python 3.13.16. Completion,
+bundle checksums and all three local CPU frozen save/load predictions were
+verified; normalization remained unchanged. Final artifacts were retrieved and
+backend shutdown verified. Attempt estimate: 0.016613 units; measured debit:
+0.01 units. Cumulative estimate after preflight: 1.496138 units.
+
+The committed [matched study protocol](experiments.md) now runs four datasets,
+three algorithms and seeds 11/23/37 on A100. Its execution status and final usage
+will be recorded on completion; the final test remains untouched. Review
 [sector/universe scaling](sectors-universe.md#scaling-to-hundreds-of-stocks)
 before adding hundreds of symbols.
 

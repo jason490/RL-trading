@@ -15,10 +15,10 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Yahoo/Alpaca historical adapters | Implemented | Yahoo daily coverage verified; mocked SDK wiring passes; actual Alpaca coverage pending |
 | Gymnasium environment, PPO/SAC/TD3 training, checkpoints and frozen neural inference | Implemented | CPU acceptance passes for all three algorithms |
 | Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | CPU preflight and A100 smoke/full PPO run pass; artifacts retrieved and shutdown verified |
-| Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata/dataset tests pass; new-model training pending |
+| Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata/dataset tests and expanded Colab CPU smoke pass; matched A100 studies in progress |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **86 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **91 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Requirements and installation
 
