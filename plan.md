@@ -48,6 +48,7 @@ src/rl_stocks/
     momentum/                      # RSI and related features
     volume/                        # relative volume, VWAP, volume-profile features
     timeframes/                    # session-aware resampling and causal alignment
+    market_structure/              # planned causal multi-timeframe supply/demand zones
     sectors/                       # effective-dated classification and context
     fundamentals/                  # filing-derived financial features
     options/                       # OI concentrations and wall proxies
@@ -147,6 +148,7 @@ Each feature has name/version, inputs, parameters, units, timeframe, warmup, ava
 | A | Price/volume and portfolio state | Lagged returns, trailing volatility/range, current exposure, cash, holding age, unrealized P&L. Small initial input set. |
 | B | EMA, RSI, ATR, relative volume | Try EMA 20/50, RSI 14, ATR 14, and completed daily volume divided by prior 20-session mean. Exclude the current session from the denominator. Indicators are hypotheses, not guaranteed predictive variables. |
 | C | Multiple timeframes | Add completed weekly trend/volatility first; monthly or intraday context later. Same underlying causal feature functions. |
+| C.1 | Multi-timeframe supply/demand | Base consolidation plus directional impulse, causal zone lifecycle, ATR-scaled distances/widths, freshness and age; D1/W1 first, M1 later. Matched ablations; not implemented in the baseline. |
 | D | Market/sector context | Benchmark/sector returns and relative strength; introduce sector categories only where point-in-time metadata is supportable. |
 | E | Financials | A small filing-derived family such as revenue growth and leverage, joined on public availability. No current analyst forecasts in historical observations. |
 | F | Price-level volume | Trailing volume profiles from actual historical trade prices/sizes where available; expose point of control/value area with causal window boundaries. Bar-derived profiles are explicitly approximations. |
@@ -157,6 +159,29 @@ Each feature has name/version, inputs, parameters, units, timeframe, warmup, ava
 Define a call/put wall initially as a reproducible OI concentration proxy: aggregate separately by type and a configured expiry bucket, find selected high-OI strikes, and express their distance from spot. Save aggregation/tie rules and stale-data limits. OI concentrations do not reveal dealer positioning or guarantee support/resistance; gamma-weighted variants need additional justified data and assumptions.
 
 Compare each addition against the same baseline on matched periods/seeds/costs. Optional snapshots with short histories get a separate matched-period study and cannot be credited for improvements caused merely by a different test window.
+
+### Planned multi-timeframe supply/demand input
+
+Use the reviewed [tradingAlgo supply/demand implementation](https://github.com/jason490/tradingAlgo/blob/b78d578c0b03433e7ddcb4f0fe64658cf9eaebae/screener/indicators/supply_demand.py)
+as the detection reference: short consolidation bases, directional impulses and
+subsequent zone lifecycle. The full specification is in
+[docs/supply-demand.md](docs/supply-demand.md). Compute each symbol/timeframe
+independently on completed D1 and W1 bars, with M1 a separate later study.
+Real intraday history is required before adding H1/H4; daily candles cannot supply it.
+
+Emit state only as of each daily decision. Full-history lifecycle resolution must
+not remove earlier zones because they break later, or assign final freshness to
+past rows. Use completed-period availability, deterministic live-zone ranking,
+presence/readiness masks, daily-ATR-scaled geometry and training-only frozen
+preprocessing. Start without overlap merging; a later merge variant must update
+geometry and preserve causal component provenance. Volume/RSI confirmations and
+cross-timeframe confluence are separate ablations with recorded definitions.
+
+Create a new feature schema/dataset/bundle and compare D1, W1 and D1+W1 against
+the same baseline periods, costs, seeds 11/23/37 and 50,000-transition budgets.
+The indicator supplies context to the policy; it does not replace learned stops
+or take-profit zones. This request adds planning/documentation only; the current
+trained model remains the daily-indicators baseline, and final-test data remains reserved.
 
 ## 6. Environment and learned trade outputs
 

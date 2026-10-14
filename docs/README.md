@@ -13,6 +13,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Storage and accumulation | [storage.md](storage.md) | Immutable identities, source chunks, cursor recovery and revisions |
 | Dataset construction | [datasets.md](datasets.md) | Coverage gates, splits, purging, warmup and normalization |
 | Causal feature families | [features.md](features.md) | Indicator formulas, availability, splits and weekly context |
+| Multi-timeframe supply/demand | [supply-demand.md](supply-demand.md) | Planned base/impulse zones, lifecycle, availability, RL inputs and ablations |
 | Trade simulation | [simulation.md](simulation.md) | Cash/P&L, fills, costs, gaps, stops, scale-outs and corporate actions |
 | Policy outputs and risk | [actions-risk.md](actions-risk.md) | Four-component decoding, geometry, desired quantities and clipping |
 | Gymnasium interface | [environment.md](environment.md) | Observations, seeded reset, step and episode boundaries |
@@ -20,7 +21,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
-| Colab runtime operations | [colab.md](colab.md) | Deferred launch, compute ledger, watchdog, retrieval and recovery |
+| Colab runtime operations | [colab.md](colab.md) | CPU/T4 preflight, A100 training, compute ledger, retrieval and recovery |
 | Tests and acceptance | [testing.md](testing.md) | Offline checks, optional integration and future smoke acceptance |
 | Current verification | [verification.md](verification.md) | Checks actually performed, artifacts and pending acceptance |
 
