@@ -32,7 +32,12 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/
 
 The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one A100, records its endpoint when discoverable, verifies reported A100 hardware and obtains its consumption rate immediately. A zero/unavailable rate causes teardown.
 
-The package, configs, dataset and lock are explicitly archived/uploaded. Remote `colab install -r` installs the pinned environment; `colab exec -f scripts/remote_smoke.py` bootstraps that uploaded payload. Executing a local script alone does not synchronize its imports or data. The remote script requires Python 3.12 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition configs remain separate, unexecuted experiments.
+The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` then installs managed Python 3.12.14, creates a separate remote environment, syncs the hash lock and launches `remote_train.py` as a subprocess. Colab's notebook kernel can remain on Python 3.13.16; its native modules are never reused by research training. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.12 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition jobs are opt-in research experiments.
+
+The installed CLI can exit zero after a remote Python exception. The runner
+therefore validates the downloaded completion manifest, expected job counts,
+exact transition counts, dataset/runtime identities and frozen-bundle checksums.
+A failure archive or missing job is rejected even if the CLI command succeeded.
 
 To follow successful smoke acceptance with one initial research model in the same
 owned session, add `--research ppo` (or `sac` / `td3`). This appends exactly 50,000
@@ -70,7 +75,7 @@ Review the ledger after verified manual recovery before allowing another allocat
 
 SIGKILL, local power loss or a total network outage cannot guarantee remote cleanup. Durable local checkpoints and persisted identifiers are the recovery mechanisms. Before the first successful checkpoint transfer, ephemeral VM data can still be lost. A Colab runtime is suitable for bounded training jobs, not unattended persistent trading uptime.
 
-The actual backend balance/rate could not be read in this sandbox. Mock tests verify budget arithmetic and failure/cleanup branches; they do not prove actual Colab lifecycle behavior. That validation is reserved for the later user-run smoke.
+Authenticated backend balance/rate readings now work. Mock tests verify budget arithmetic and failure/cleanup branches; actual Colab lifecycle evidence and charges are recorded in [verification.md](verification.md).
 
 ## Troubleshooting and first-time setup
 
@@ -139,4 +144,4 @@ Use [setup.md](setup.md) to generate `requirements.lock`, install it and run `pi
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON
 ```
 
-Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates a runtime; unlike the preceding help/usage steps, run it only when remote smoke execution is intended. Actual A100 eligibility and lifecycle success still require that later acceptance run.
+Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates a runtime; unlike the preceding help/usage steps, run it only when remote smoke execution is intended. Actual A100 eligibility and lifecycle success must be verified on each allocation.

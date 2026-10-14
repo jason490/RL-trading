@@ -30,3 +30,12 @@ class JobPlanTests(unittest.TestCase):
             source.write_text('{"token":"unexpected"}')
             with self.assertRaises(ValueError):
                 repository_state(directory)
+
+    def test_bootstrap_uses_managed_research_python(self):
+        from rl_stocks.runtime.colab.jobs import bootstrap_commands
+        commands = bootstrap_commands('uv', '/content/research')
+        self.assertEqual(commands[0], ['uv', 'python', 'install', '--no-bin', '3.12.14'])
+        self.assertIn('--managed-python', commands[1])
+        self.assertEqual(commands[2][4], '/content/research/.venv/bin/python')
+        self.assertEqual(commands[-1], ['/content/research/.venv/bin/python',
+                                       '/content/research/scripts/remote_train.py'])

@@ -14,6 +14,7 @@ import uuid
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
 from rl_stocks.runtime.colab.jobs import job_plan
 from rl_stocks.core.provenance import repository_state
+from rl_stocks.runtime.colab.artifacts import validate_archive
 
 class ColabJob:
     def __init__(self,root,cli_python):
@@ -162,11 +163,16 @@ class ColabJob:
                 tar.add(job_file,arcname="job-plan.json")
                 tar.add(git_file,arcname="source-git.json")
             self.operation(["upload","-s",self.session,str(archive),"/content/research-upload.tar.gz"],120)
-            self.operation(["install","-s",self.session,"-r",str(self.root/"requirements.lock")],1800)
+            # Research uses its own Python 3.12, independent of kernel version.
+            self.operation(["install","-s",self.session,"uv==0.13.1"],180)
             self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)
             output=self.root/"artifacts"/"colab"/self.session;output.mkdir(parents=True,exist_ok=True)
             ok=self.retrieve("/content/research-artifacts.tar.gz",output/"artifacts.tar.gz")
             if not ok:raise RuntimeError("artifact download exhausted retries")
+            runs=validate_archive(output/"artifacts.tar.gz",plan,Path(dataset).name)
+            self.ledger.active["training_verified"]=True
+            self.ledger.active["runs"]=[{k:r[k] for k in ("algorithm","device","smoke","actual_steps","bundle_id")} for r in runs]
+            self.ledger.save()
         except BudgetStop:
             self.ledger.value["budget_stopped"]=True;self.ledger.save()
             raise
@@ -186,6 +192,7 @@ class ColabJob:
                 "remaining_project_budget":150-self.ledger.value["consumed"],
                 "measured_attempt":self.ledger.active["measured"],"retrieved":self.ledger.active["retrieved"],
                 "metering_unreliable":self.ledger.active.get("metering_unreliable",False),
+                "training_verified":self.ledger.active.get("training_verified",False),
                 "cleanup_verified":clean}))
         if not clean:raise RuntimeError("cleanup not verified")
 
