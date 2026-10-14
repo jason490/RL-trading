@@ -21,7 +21,7 @@ def validate_archive(path, plan, dataset_id):
         try:
             completion = json.loads(read('artifacts/completion.json'))
             if (completion['plan'] != plan or completion['dataset'] != dataset_id
-                    or completion['python'][:2] != [3, 12] or 'A100' not in completion['gpu']):
+                    or completion['python'][:2] != [3, 13] or 'A100' not in completion['gpu']):
                 raise RuntimeError('remote completion manifest mismatch')
             runs = [json.loads(read(name)) for name in sorted(names)
                     if name.startswith('artifacts/runs/') and name.endswith('/metadata.json')]

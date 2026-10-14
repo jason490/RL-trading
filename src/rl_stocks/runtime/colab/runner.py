@@ -163,7 +163,7 @@ class ColabJob:
                 tar.add(job_file,arcname="job-plan.json")
                 tar.add(git_file,arcname="source-git.json")
             self.operation(["upload","-s",self.session,str(archive),"/content/research-upload.tar.gz"],120)
-            # Research uses its own Python 3.12, independent of kernel version.
+            # Use Colab's Python; isolate dependencies without changing interpreter.
             self.operation(["install","-s",self.session,"uv==0.13.1"],180)
             self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)
             output=self.root/"artifacts"/"colab"/self.session;output.mkdir(parents=True,exist_ok=True)

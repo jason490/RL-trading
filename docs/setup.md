@@ -1,6 +1,28 @@
 # Installation and dependency management
 
-Use Python **3.12**. The package declares `>=3.12,<3.13`; the local interpreter used for dependency-free verification is 3.12.14. Python 3.14 on the host is not the intended research runtime.
+Use Python **3.13**, matching Colab's current Python **3.13.16**. The package declares `>=3.13,<3.14`. The CLI's separate Python environment can differ; the research environment must match Colab.
+
+## Check Python before installing or training
+
+Inspect the interpreter you will actually run, rather than relying on a system
+default or notebook label:
+
+```bash
+python3.13 --version
+# After creating the project environment:
+.venv/bin/python --version
+.venv/bin/python -c 'import sys; assert sys.version_info[:2] == (3, 13), sys.version'
+```
+
+The research environment must be Python 3.13 for the current reviewed lock and
+acceptance results. The official Colab CLI can use its own interpreter. Colab's
+notebook kernel is currently Python 3.13.16; the launcher creates a dependency
+environment using that same kernel interpreter. See
+[Colab version preflight](colab.md#python-version-preflight).
+Whenever Colab changes Python, update the package constraint, dependency-lock
+target, local environment, version gate, scripts and documentation together.
+Run full checker/train/save/load acceptance before training with the new version.
+Do not download an older interpreter to bypass the mismatch.
 
 ## Direct pins
 
@@ -23,7 +45,7 @@ SB3 2.7.0 metadata declares Gymnasium >=0.29.1,<1.3; NumPy >=1.20,<3; and torch 
 ## Create the environment and hash lock
 
 ```bash
-python3.12 -m venv .venv
+python3.13 -m venv .venv
 .venv/bin/python -m pip install uv
 RL_UV_BIN=.venv/bin/uv bash scripts/lock.sh
 .venv/bin/uv pip sync --python .venv/bin/python requirements.lock

@@ -6,7 +6,7 @@ Yahoo is an unofficial personal-use research adapter, not a production service g
 
 Current sectors, financials, options/OI, sentiment, trades/quotes and order-book data remain disabled. The typed capability registry rejects unsupported families independently. No current snapshot is inserted into historical observations.
 
-Dependency pins target Python 3.12, torch 2.8.0, Gymnasium 1.2.0, SB3 2.7.0 and optional alpaca-py 0.42.0/yfinance 0.2.65. SB3 release metadata permits Gymnasium >=0.29.1,<1.3, NumPy >=1.20,<3 and torch >=2.3,<3, so the direct pins satisfy those declared bounds. `requirements.lock` now contains hash-pinned transitive dependencies. See [verification.md](verification.md) for actual native imports and training acceptance.
+Dependency pins target Python 3.13, torch 2.8.0, Gymnasium 1.2.0, SB3 2.7.0 and optional alpaca-py 0.42.0/yfinance 0.2.65. SB3 release metadata permits Gymnasium >=0.29.1,<1.3, NumPy >=1.20,<3 and torch >=2.3,<3, so the direct pins satisfy those declared bounds. `requirements.lock` now contains hash-pinned transitive dependencies. See [verification.md](verification.md) for actual native imports and training acceptance.
 
 Sources checked during implementation:
 

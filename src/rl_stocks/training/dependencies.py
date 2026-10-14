@@ -7,8 +7,8 @@ EXPECTED = {'numpy':'2.2.6','torch':'2.8.0','gymnasium':'1.2.0',
 
 
 def verify_environment():
-    if sys.version_info[:2] != (3,12):
-        raise RuntimeError('research training requires Python 3.12')
+    if sys.version_info[:2] != (3,13):
+        raise RuntimeError('research training requires Colab-matched Python 3.13')
     actual = {package:importlib.metadata.version(package) for package in EXPECTED}
     mismatches = {package:version for package,version in actual.items()
                   if version.split('+')[0] != EXPECTED[package]}

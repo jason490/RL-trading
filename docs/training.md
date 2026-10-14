@@ -16,6 +16,19 @@ Smoke policy layers are [32,32]. PPO smoke uses rollout 128 / batch 64 / exactly
 
 Long configuration is 50,000 transitions for seeds 11/23/37, via `train ... --long --seed SEED`. For an exact 50,000 PPO budget, the CLI resolves rollout 1000 / batch 50. Other long defaults remain as above. The Colab runner defaults to smoke acceptance; `--research ppo` appends one seed-11, 50,000-transition model after all smoke jobs succeed, within the same budget and deadline. Additional seeds remain separate experiments. See [verification.md](verification.md) for completed execution.
 
+## Runtime selection
+
+Run dependency checks, environment checkers and tiny PPO/SAC/TD3
+train/evaluate/save/load demonstrations on CPU first. Use T4 or another suitable
+lower-credit GPU for GPU-specific smoke checks when needed. Prepare the verified
+dataset, dependency lock and resolved configuration before requesting higher-credit
+hardware. See [Colab runtime selection](colab.md#runtime-selection-inexpensive-preflight-a100-training).
+
+Use **A100 for full training**, as requested by the user, once this preflight
+passes. Running CPU code on an allocated A100 still consumes that runtime's
+credits. Record actual reported rates and cumulative measured/estimated usage;
+all stages share the 150-unit ceiling and 130-unit teardown threshold.
+
 ## Lifecycle
 
 1. Verify the checksummed local dataset; separate training episodes from validation/test.
@@ -38,7 +51,7 @@ Checkpoint score is equal-weight mean net validation return. It is declared befo
 
 Replay buffers permit continued SAC/TD3 learning with recorded settings. They do not guarantee restoration of Python/NumPy/torch RNG, environment episode state or exact optimizer scheduling across interruption. Such exact-resume support remains a separate extension; do not describe the current replay save as that capability.
 
-Runs record hardware/backend nondeterminism. Save/load parity is checked on the same device/observation; it is not a claim of bit-for-bit parity across CPU/A100 or different torch backends. Training smoke demonstrates wiring, not profitable learning. Dependencies and real smoke acceptance remain pending in this sandbox.
+Runs record hardware/backend nondeterminism. Save/load parity is checked on the same device/observation; it is not a claim of bit-for-bit parity across CPU/A100 or different torch backends. Training smoke demonstrates wiring, not profitable learning. See [verification.md](verification.md) for completed CPU and remote acceptance.
 
 Colab payloads include the originating Git revision and dirty-state record,
 captured at upload. Remote runs use that record even though the payload omits

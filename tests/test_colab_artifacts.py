@@ -35,7 +35,7 @@ class ArtifactTests(unittest.TestCase):
             folder.mkdir(parents=True)
             (folder / 'metadata.json').write_text(json.dumps(run))
             self.runs.append(run)
-        self.completion = {'plan': self.plan, 'dataset': 'dataset-id', 'python': [3,12,14],
+        self.completion = {'plan': self.plan, 'dataset': 'dataset-id', 'python': [3,13,16],
                            'gpu': 'NVIDIA A100', 'completed': self.runs}
         self.write_completion()
 
@@ -57,7 +57,7 @@ class ArtifactTests(unittest.TestCase):
             self.check()
 
     def test_wrong_python_rejected(self):
-        self.completion['python'] = [3,13,16]
+        self.completion['python'] = [3,12,14]
         self.write_completion()
         with self.assertRaisesRegex(RuntimeError, 'manifest mismatch'):
             self.check()

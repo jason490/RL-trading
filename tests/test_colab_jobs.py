@@ -31,11 +31,13 @@ class JobPlanTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 repository_state(directory)
 
-    def test_bootstrap_uses_managed_research_python(self):
+    def test_bootstrap_uses_colab_interpreter_without_downgrade(self):
         from rl_stocks.runtime.colab.jobs import bootstrap_commands
-        commands = bootstrap_commands('uv', '/content/research')
-        self.assertEqual(commands[0], ['uv', 'python', 'install', '--no-bin', '3.12.14'])
-        self.assertIn('--managed-python', commands[1])
-        self.assertEqual(commands[2][4], '/content/research/.venv/bin/python')
+        commands = bootstrap_commands('uv', '/content/research', '/usr/bin/python3.13')
+        self.assertEqual(commands[0], ['uv', 'venv', '--python', '/usr/bin/python3.13',
+                                       '/content/research/.venv'])
+        self.assertFalse(any('install' in command[:2] or 'python' == command[1]
+                             for command in commands[:-1]))
+        self.assertEqual(commands[1][4], '/content/research/.venv/bin/python')
         self.assertEqual(commands[-1], ['/content/research/.venv/bin/python',
                                        '/content/research/scripts/remote_train.py'])

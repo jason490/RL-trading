@@ -17,20 +17,19 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | Mock lifecycle tests pass; actual remote acceptance pending |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **56 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **62 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Requirements and installation
 
-Use **Python 3.12**. Installation and real-provider retrieval require network access. The baseline does not need Alpaca credentials; Yahoo and Alpaca SDKs are optional package extras. Run commands from the repository root.
+Use **Python 3.13**. Installation and real-provider retrieval require network access. The baseline does not need Alpaca credentials; Yahoo and Alpaca SDKs are optional package extras. Run commands from the repository root.
 
 ```bash
-python3.12 -m venv .venv
+python3.13 -m venv .venv
 .venv/bin/python -m pip install uv
 
 # Install the committed lock; regenerate it only for reviewed dependency changes.
 export UV_CACHE_DIR="$PWD/.runtime/uv-cache"
 mkdir -p .runtime
-RL_UV_BIN=.venv/bin/uv bash scripts/lock.sh
 .venv/bin/uv pip sync --python .venv/bin/python requirements.lock
 .venv/bin/uv pip install --python .venv/bin/python --no-deps -e .
 .venv/bin/python -m pip check
@@ -42,7 +41,7 @@ Review and retain `requirements.lock`. `requirements.txt` contains direct pins a
 
 ## Offline quick start
 
-The standard-library audit needs Python 3.12 but no API credentials, RL packages or remote runtime:
+The standard-library audit needs Python 3.13 but no API credentials, RL packages or remote runtime:
 
 ```bash
 PYTHONPATH=src .venv/bin/python scripts/offline_audit.py
@@ -102,7 +101,7 @@ The wrapper redirects logging/settings/history/session state to private `.runtim
 
 ## Recommended development sequence
 
-1. Generate the dependency lock, install it and pass the integration suite without missing-dependency skips.
+1. Review and install the dependency lock, then pass the integration suite without missing-dependency skips.
 2. Retrieve and audit actual provider history, adjustments, calendars and availability; build a versioned dataset.
 3. Run short CPU train/evaluate/save/load checks for all three algorithms.
 4. Verify Colab authentication and metering, then run the bounded A100 smoke if remote validation is desired.

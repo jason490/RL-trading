@@ -1,6 +1,6 @@
 # Tests and acceptance
 
-Run the standard-library suite from the repository root with Python 3.12:
+Run the standard-library suite from the repository root with Python 3.13:
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
@@ -42,6 +42,6 @@ Synthetic wiring checks do not establish market performance or provider coverage
 
 ## Before a later Colab run
 
-Generate/review the transitive hash lock; run `pip check` and the local integration suite; inspect source coverage/actions/availability; verify a CPU smoke/profile; then use the owned budget-controlled runtime. Colab execution is deferred at the user's request. A100 hardware, remote package compatibility, measured consumption, artifact retrieval and actual backend termination are not claimed as verified by mock lifecycle tests.
+Generate/review the transitive hash lock; run `pip check` and the local integration suite; inspect source coverage/actions/availability; verify a CPU smoke/profile; then use the owned budget-controlled runtime. A100 hardware, remote package compatibility, measured consumption, artifact retrieval and actual backend termination require a real remote run; mock lifecycle tests alone cannot verify them. See [verification.md](verification.md) for actual execution evidence.
 
 When changing interfaces, add targeted tests for causal timing, quantity/risk gates, accounting or serialization behavior that can actually fail. Preserve user changes and report checks that ran, including skips and blockers. Do not add redundant tests solely to mirror a reversible presentation change.

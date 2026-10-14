@@ -5,7 +5,7 @@ import json
 import os
 import random
 from pathlib import Path
-import subprocess
+import sys
 import time
 import tarfile
 import uuid
@@ -75,6 +75,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     run=Path(output)/"runs"/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")+f"-{algorithm}-{seed}-"+uuid.uuid4().hex[:8])
     run.mkdir(parents=True,exist_ok=False)
     metadata={"algorithm":algorithm,"seed":seed,"device":device,"requested_steps":steps,"smoke":smoke,
+        "python":sys.version.split()[0],
         "resolved_parameters":resolved_parameters(algorithm,smoke,overrides),"simulation":asdict(config),
         "dataset":Path(dataset_path).name,"git":git_state(),"source_hash":source_identity(),
         "selection_metric":"Equal-weight mean validation net return", "status":"running",

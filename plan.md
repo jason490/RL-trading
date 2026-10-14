@@ -1,6 +1,6 @@
 # Modular swing-trading RL project plan
 
-Status: system implementation with verified offline core; dependency-backed RL acceptance pending. Updated 2026-10-14. Colab execution deferred at the user’s request.
+Status: Python 3.13.16 aligned with Colab; 62 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. Budget-controlled Colab training is authorized and in progress.
 
 ## 1. Intended outcome and starting assumptions
 
@@ -280,14 +280,14 @@ The local system follows the ownership map above. Detailed category documentatio
 
 | Milestone | Implemented work | Remaining acceptance |
 | --- | --- | --- |
-| 1. Contracts/providers | Typed capabilities; canonical bars; synthetic/CSV/Yahoo/Alpaca adapters | Actual market endpoint/feed/coverage audit; optional SDK integration |
-| 2. Accumulation/datasets | Resumable source chunks, immutable hashes, coverage gates, causal features, splits/purge, frozen normalization | Verified real history and resolved dependency lock |
-| 3. Accounting/environment | Long/short cash and costs, next-open simulation, Gymnasium adapter, baselines | Real Gymnasium/SB3 checker run |
+| 1. Contracts/providers | Typed capabilities; canonical bars; synthetic/CSV/Yahoo/Alpaca adapters | Yahoo coverage verified; Alpaca endpoint/feed/dividend audit remains |
+| 2. Accumulation/datasets | Resumable source chunks, immutable hashes, coverage gates, causal features, splits/purge, frozen normalization | Completed for Yahoo; optional provider audits remain |
+| 3. Accounting/environment | Long/short cash and costs, next-open simulation, Gymnasium adapter, baselines | CPU Gymnasium/SB3 checks pass; execution sensitivity studies remain |
 | 4. Learned trade management | Four-component policy zone, adjustments/reversals, gap/stop ordering, both target boundaries, corporate actions | Neural-policy integration and later execution sensitivity studies |
-| 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | Actual 512/1024/1024 CPU/A100 demonstrations; A100 run deferred |
+| 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | CPU 512/1024/1024 acceptance passes; A100 acceptance in progress |
 | 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | Matched ablations; advanced families/reward additions remain disabled |
-| 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | Actual save/load parity, corrupt/schema rejection integration and held-out audit |
+| 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | CPU parity/schema/corruption checks pass; held-out audit remains |
 | 8. Shadow inference | Shared causal feature/decision contracts and staleness gates | Persistent live-data orchestration/recovery/drift study |
 | 9. Paper execution | Intentionally deferred; no broker-order implementation | Future explicit milestone with tested lifecycle and protection |
 
-Remote smoke scripts preserve the 150-unit ceiling, 130-unit working limit, two-hour initial allocation cap, cumulative metering ledger, durable retrieval and verified cleanup. No Colab runtime was provisioned during implementation. Longer experiment configurations are 50,000 transitions and seeds 11/23/37; initial remote execution remains smoke only when resumed later.
+Remote smoke scripts preserve the 150-unit ceiling, 130-unit working limit, two-hour initial allocation cap, cumulative metering ledger, durable retrieval and verified cleanup. Colab attempts and cleanup are recorded in docs/verification.md. Longer experiment configurations are 50,000 transitions and seeds 11/23/37; an opt-in research job follows successful smoke acceptance. The user now requires matching Colab’s default Python (currently 3.13.16), superseding the original Python 3.12 specification.

@@ -7,7 +7,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Category | Guide | What it covers |
 | --- | --- | --- |
 | System architecture | [architecture.md](architecture.md) | Ownership, data flow, boundaries and extension rules |
-| Installation and dependencies | [setup.md](setup.md) | Python 3.12, pins, hash-lock generation and optional SDKs |
+| Installation and dependencies | [setup.md](setup.md) | Python 3.13, pins, hash-lock generation and optional SDKs |
 | Shared contracts | [contracts.md](contracts.md) | Canonical bars, capability types, feature/action schemas and diagnostics |
 | Provider access | [providers.md](providers.md) | Synthetic, files, Yahoo, Alpaca, audit status and entitlements |
 | Storage and accumulation | [storage.md](storage.md) | Immutable identities, source chunks, cursor recovery and revisions |

@@ -65,6 +65,7 @@ class IntegrationTests(unittest.TestCase):
                 run,bundle = train(self.dataset_path,algorithm,self.root/'artifacts',steps=steps)
                 metadata = json.loads((run/'metadata.json').read_text())
                 self.assertEqual(metadata['actual_steps'],steps)
+                self.assertTrue(metadata['python'].startswith('3.13.'))
                 self.assertTrue((run/'validation.html').exists())
                 self.assertFalse((run/'final-test.html').exists())
                 if algorithm!='ppo':

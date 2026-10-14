@@ -4,6 +4,38 @@ Remote execution is explicitly authorized for the current training task. Actual 
 
 Use Google's official `google-colab-cli` executable `colab`. The installed release inspected here is 0.7.4. Its usage command prints exact labelled account balance, hourly consumption and active assignment count. Do not assume a fixed conversion between 150 compute units and wall hours. [Official CLI](https://github.com/googlecolab/google-colab-cli)
 
+## Runtime selection: inexpensive preflight, A100 training
+
+Use lower-credit hardware for preparation and validation before allocating the
+full-training runtime. The user has selected **A100 for full training**.
+
+| Phase | Runtime | Required evidence before proceeding |
+| --- | --- | --- |
+| Prepare code, data and locks; check dependencies, accounting and environment APIs | Local CPU or Colab CPU | Verified dataset, compatible dependencies and passing checkers |
+| Tiny train/evaluate/save/load tests | CPU first | PPO/SAC/TD3 smoke acceptance, frozen prediction parity and recorded duration |
+| GPU-specific checks, when needed | T4 or another suitable lower-credit GPU | CUDA wiring, artifact retrieval and cleanup verified |
+| Full research training | A100 | Lower-credit preflight passed; data/configuration ready; budget and deadline checked |
+
+Do not allocate A100/H100 just to install dependencies, debug scripts or run
+smoke tests. A CPU profile performed inside an allocated A100 still incurs the
+A100 runtime's charges and does not replace CPU-first preflight. A100 may run
+brief final sanity checks immediately before its full training job after the
+lower-credit checks have already passed.
+
+Read the account balance before allocation and the reported consumption rate
+afterward. Hardware names do not establish a fixed credit rate. Record the
+runtime, rate, elapsed time and measured/estimated units for each attempt. Keep
+one owned session at a time; retrieve artifacts and verify shutdown before
+changing runtimes. The existing 150-unit ceiling, 130-unit teardown threshold,
+cumulative ledger and initial two-hour allocation limit apply across all
+stages, including setup, allocated idle time, downloads, failures and retries.
+
+The current automated runner requests and verifies A100 hardware; it does not
+yet automate CPU/T4 session selection. Complete the lower-credit preflight
+before launching that runner for full training. Any separately provisioned
+Colab preflight session must use the same metering, ledger, deadline and cleanup
+requirements; it must not bypass the project budget controller.
+
 ## Writable wrapper and authentication
 
 `scripts/colab_safe.py` imports the installed official CLI. It directs logs, settings, history and session state to private project `.runtime/` paths because the default home config files are read-only in this sandbox. The wrapper keeps only warning-level logs to avoid HTTP DEBUG details. It does not modify `HOME`, change OAuth scopes, copy/print credentials or alter authentication. The official CLI remains responsible for existing credentials and refresh behavior.
@@ -20,6 +52,46 @@ Inspect command help matching the installed release before changing automation. 
 
 ## Preconditions and launch
 
+### Python version preflight
+
+Before launching paid work, check the local research interpreter:
+
+```bash
+.venv/bin/python --version
+.venv/bin/python -c 'import sys; assert sys.version_info[:2] == (3, 13), sys.version'
+```
+
+There are three interpreter roles: the local official CLI, Colab's notebook
+kernel, and the research dependency environment. The CLI can use another Python
+version; research must match Colab's kernel. Both currently use **Python
+3.13.16**. The standard virtual environment isolates dependency versions while
+using the kernel's own interpreter.
+
+For manual diagnosis on an already owned session, inspect both remote versions
+without allocating another session:
+
+```bash
+/path/to/CLI_PYTHON scripts/colab_safe.py exec -s OWNED_SESSION_NAME <<'PY'
+import pathlib, subprocess, sys
+print('Colab kernel Python:', sys.version.split()[0])
+research = pathlib.Path('/content/rl-stocks/.venv/bin/python')
+if research.exists():
+    subprocess.run([str(research), '-c',
+                    'import sys; print("Research Python:", sys.version.split()[0]); assert sys.version_info[:2] == (3, 13)'],
+                   check=True)
+else:
+    print('Research environment is not created yet; run the isolated bootstrap.')
+PY
+```
+
+The automatic runner uses Colab's own interpreter for a standard isolated
+dependency environment before research package installation. Its worker checks the version before importing PyTorch/training;
+the downloaded completion manifest must also report Python 3.13. If Colab changes its default Python minor version, align and verify the
+project before training. Older-interpreter workarounds are prohibited. All diagnosis performed while allocated remains subject to metering
+and the two-hour deadline.
+
+### Launch prerequisites
+
 1. Resolve/review `requirements.lock`, install it locally and pass dependency-backed acceptance.
 2. Inspect the data manifest/coverage/actions and CPU smoke profile.
 3. Ensure there are no other account assignments; isolated account balance metering otherwise cannot safely attribute this project.
@@ -27,12 +99,12 @@ Inspect command help matching the installed release before changing automation. 
 5. Confirm the persistent project ledger has no unresolved session or prior budget stop.
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/official-colab/python
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/official-colab/python --research ppo
 ```
 
 The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one A100, records its endpoint when discoverable, verifies reported A100 hardware and obtains its consumption rate immediately. A zero/unavailable rate causes teardown.
 
-The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` then installs managed Python 3.12.14, creates a separate remote environment, syncs the hash lock and launches `remote_train.py` as a subprocess. Colab's notebook kernel can remain on Python 3.13.16; its native modules are never reused by research training. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.12 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition jobs are opt-in research experiments.
+The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` creates a remote dependency environment using Colab's kernel interpreter, syncs the hash lock and launches `remote_train.py` as a subprocess. Both kernel and research process use Colab's Python 3.13.16, with research dependencies isolated from preinstalled notebook packages. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.13 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition jobs are opt-in research experiments.
 
 The installed CLI can exit zero after a remote Python exception. The runner
 therefore validates the downloaded completion manifest, expected job counts,
@@ -141,7 +213,7 @@ Use [setup.md](setup.md) to generate `requirements.lock`, install it and run `pi
 ### 5. Launch through the budget controller when ready
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo
 ```
 
 Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates a runtime; unlike the preceding help/usage steps, run it only when remote smoke execution is intended. Actual A100 eligibility and lifecycle success must be verified on each allocation.
