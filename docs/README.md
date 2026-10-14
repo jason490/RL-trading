@@ -24,6 +24,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
+| GitHub model releases | [releases.md](releases.md) | Downloadable models, derived reports, checksums and training provenance |
 | Colab runtime operations | [colab.md](colab.md) | CPU/T4 preflight, A100 training, compute ledger, retrieval and recovery |
 | Tests and acceptance | [testing.md](testing.md) | Offline checks, optional integration and future smoke acceptance |
 | Current verification | [verification.md](verification.md) | Checks actually performed, artifacts, usage and remaining research |
