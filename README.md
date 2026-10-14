@@ -2,7 +2,7 @@
 
 A modular research toolkit for daily swing-trading simulations with Stable-Baselines3 PPO, SAC and TD3. It separates market-data access, causal features, portfolio accounting, training, evaluation, reporting and frozen inference.
 
-The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol traded per episode. The project is a research prototype: software checks and synthetic results do not establish profitable trading performance. Broker-order execution is not implemented.
+The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol traded per episode. An optional [configurable sector universe](docs/sectors-universe.md) adds 22 stocks across 11 sectors and sector-ETF rotation context. The project is a research prototype: software checks and synthetic results do not establish profitable trading performance. Broker-order execution is not implemented.
 
 ## Current capabilities and validation
 
@@ -15,10 +15,10 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Yahoo/Alpaca historical adapters | Implemented | Yahoo daily coverage verified; mocked SDK wiring passes; actual Alpaca coverage pending |
 | Gymnasium environment, PPO/SAC/TD3 training, checkpoints and frozen neural inference | Implemented | CPU acceptance passes for all three algorithms |
 | Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | CPU preflight and A100 smoke/full PPO run pass; artifacts retrieved and shutdown verified |
-| Multi-timeframe supply/demand inputs | Planned | Daily/weekly causal design documented; not in the trained baseline |
+| Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata/dataset tests pass; new-model training pending |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **69 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **86 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Requirements and installation
 
@@ -57,7 +57,7 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local ingest --provider yah
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local dataset data/raw/SNAPSHOT_HASH
 ```
 
-Replace `SNAPSHOT_HASH` with the directory printed by ingestion. The default request covers 2010-01-01 through September 2026 (`2026-10-01` exclusive). Provider adapters can also be called with explicit requests through the Python API; the current dataset generator expects the four-symbol research universe.
+Replace `SNAPSHOT_HASH` with the directory printed by ingestion. The default request covers 2010-01-01 through September 2026 (`2026-10-01` exclusive). Provider adapters can also be called with explicit requests through the Python API; the dataset generator supports both the default four ETFs and `--universe configs/universes/sector_research.json`.
 
 Available providers are `synthetic`, `files`, `yahoo` and `alpaca`. Files use `--file bars.csv`; Alpaca requires an explicit IEX/SIP feed and environment credentials. Alpaca bar-only data lacks verified dividend cash flows and cannot pass the default dataset gate without further action-data auditing. Sources are never silently substituted or mixed.
 
@@ -110,4 +110,4 @@ The wrapper redirects logging/settings/history/session state to private `.runtim
 6. Freeze a selected candidate and perform a held-out test audit.
 7. Add persistent shadow inference before designing paper-order execution.
 
-Advanced data families, additional reward terms and broker-order lifecycle work remain separate milestones. The [supply/demand guide](docs/supply-demand.md) specifies the planned causal daily/weekly zone experiment. Keep generated data, artifacts, runtime state and credentials out of Git. [plan.md](plan.md) contains the roadmap; [docs/README.md](docs/README.md) indexes the detailed guides.
+Advanced data families, additional reward terms and broker-order lifecycle work remain separate milestones. The [supply/demand guide](docs/supply-demand.md) describes implemented causal daily/weekly inputs; [sector rotation](docs/sectors-universe.md) documents the expanded universe and classification gates. Keep generated data, artifacts, runtime state and credentials out of Git. [plan.md](plan.md) contains the roadmap; [docs/README.md](docs/README.md) indexes the detailed guides.

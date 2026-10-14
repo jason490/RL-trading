@@ -1,8 +1,8 @@
 # Multi-timeframe supply/demand inputs
 
-**Status: planned; not implemented or included in the current trained model.**
+**Status: D1/W1 implemented and tested; not yet included in a newly trained model.**
 The requested feature is generic causal supply/demand zones across timeframes.
-Daily and completed weekly zones are the first study; completed monthly zones
+Daily and completed weekly zones are available as opt-in dataset inputs; completed monthly zones
 follow as a separate experiment. Intraday zones require actual intraday history.
 
 ## Reference and ownership
@@ -13,11 +13,11 @@ of small-bodied base candles followed by a directional impulse and sufficient
 departure from the base. Bounds come from the base's highs/lows. Zone state
 changes after formation as later bars revisit or close beyond those bounds.
 
-Planned implementation ownership is
+Implementation ownership is
 `src/rl_stocks/features/market_structure/supply_demand.py`; completed-period
-aggregation belongs to `features/timeframes/`. Parameters belong to a future
-`configs/features/supply_demand.json`. These paths describe future work, not
-existing callable modules or CLI flags. The feature remains provider independent
+aggregation lives in `features/timeframes/aggregation.py`. Default parameters are
+recorded in `configs/features/supply_demand.json`; `--zone-config` can load reviewed
+parameter overrides. The explicit `--supply-demand d1 w1` flag chooses timeframes. The feature remains provider independent
 and consumes the same versioned OHLCV used by the baseline.
 
 ## Detection specification
@@ -90,8 +90,8 @@ or invalidation rule is a separate, explicitly versioned variant.
 The reference's full-history zone methods resolve lifecycle through the end of
 their input. Applying one final zone list to earlier observations would leak
 future invalidations, mitigation and freshness. Instead, produce each historical
-snapshot from the prefix available at that decision, then implement equivalent
-incremental updates after prefix parity is established.
+snapshot from incremental chronological updates, with emitted snapshot copies compared
+against independently processed causal prefixes in the tests.
 
 Keep `formation_event_time` separate from `available_time`. A weekly impulse
 ending Friday cannot appear in Thursday's input, and the project's conservative
@@ -148,7 +148,7 @@ Compare fixed prefix fixtures with the reference under declared seed conventions
 Test save/load schema rejection and frozen prediction parity after changing inputs.
 
 Use separate studies: baseline; D1 zones; W1 zones; D1+W1; then optional M1 and
-confluence. Keep the four ETFs, costs, action/reward contract, 50,000-transition
+confluence. Keep the same declared universe, costs, action/reward contract, 50,000-transition
 budget, seeds 11/23/37 and validation selection rule identical. Match dates and
 warmup coverage; monthly lookbacks must not receive credit for simply shortening
 the comparison window. Parameters may be selected only on training/validation.
@@ -158,4 +158,28 @@ Persist zone snapshots/events, schema/parameter hashes and charts showing only
 zones actually available at each decision. Include negative studies and extra
 runtime/data cost in the cumulative Colab ledger. Adding this family requires a
 new dataset and newly trained frozen bundle; the existing baseline bundle is
-retained for comparison. No supply/demand training was performed in this task.
+retained for comparison. No supply/demand neural training has been performed yet. The existing baseline
+bundle still expects its original seven inputs. Dataset manifests record the
+local ATR seed (first 14 true ranges, then Wilder recursion), static thresholds,
+clipping and timeframe release convention. This deliberately differs from
+TA-Lib's initial seed and is not a claim of exact library parity.
+
+## Building a dataset
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local dataset data/raw/SNAPSHOT_HASH \
+  --supply-demand d1 w1 --zone-config configs/features/supply_demand.json
+```
+
+D1/W1 add 26 market values to the original seven (33 market inputs, plus five
+portfolio values in the environment). Each episode saves as-of selected zone
+snapshots and formation/mitigation/break events. Schema identity includes the
+parameter hash. Boolean masks/freshness use identity preprocessing; continuous
+fields fit retained training rows only. Missing-bar segments reset engines,
+and the first week after each history boundary is discarded conservatively.
+An engine queried before its latest release rejects the call; replay a prefix
+instead of asking current lifecycle state to reconstruct the past.
+
+Use [the universe/sector guide](sectors-universe.md) to combine these inputs
+with the expanded stock universe and rotation context. Monthly, intraday,
+overlap merging and volume/RSI threshold relaxations remain separate studies.

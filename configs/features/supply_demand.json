@@ -1,0 +1,14 @@
+{
+  "version": "base-impulse-v1",
+  "timeframes": ["d1", "w1"],
+  "parameters": {
+    "atr_period": 14,
+    "impulse_atr": 1.2,
+    "max_base": 3,
+    "base_body_ratio": 0.6,
+    "departure_atr": 0.8,
+    "max_zones": 10
+  },
+  "merging": false,
+  "dynamic_thresholds": false
+}

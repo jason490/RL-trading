@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **69 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **86 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -37,7 +37,9 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unitt
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The full suite completed in 32.703 seconds on Python 3.13.16. The earlier
+The latest full suite completed in 61.773 seconds on Python 3.13.16, including
+the new supply/demand and sector tests. The earlier 69-test acceptance completed
+in 32.703 seconds before these additions. The earlier
 Python 3.12 acceptance also passed but is historical evidence, not the supported
 runtime. No Ruff, mypy or pytest invocation is claimed. Integration smoke checks
 verify wiring and accounting, not profitable learning.
@@ -59,6 +61,48 @@ Yahoo availability is reconstructed; this download does not prove historical
 publication vintages. Split-adjusted OHLC and cash-dividend semantics are recorded
 in provenance. Raw source responses, coverage and immutable checksums are saved.
 Generated data/artifacts are ignored by Git; these links require the local outputs.
+
+## Expanded research inputs — local acceptance after the baseline run
+
+The implementation now supports configurable tradable/context symbols,
+incremental D1/W1 supply/demand features and sector-ETF rotation. The existing
+A100 models were trained before these additions and still use seven daily market
+inputs. No new Colab allocation or expanded-universe neural training was started
+for this feature change; the cumulative ledger remains 1.479525 units.
+
+Actual Yahoo retrieval produced:
+
+- Bar snapshot `data/raw/fced493827a124d4fb499d1c0e40009dc2420e19cd8712441ef65372d589457a`: 37 symbols, 152,227 bars, no missing expected exchange sessions within declared history boundaries; source responses and per-symbol chunks retained.
+- Sector snapshot `data/sectors/6612a6c493b468f58e523ead790196a3cd867416552443d02bcaaa46315d1ea6`: current dated metadata for all 22 stocks, matching the configuration's categories. These are not historical classification vintages.
+- Coverage spans 2010–September 2026 for the stocks/broad ETFs and older sector ETFs. XLC begins 2018-06-19; XLRE begins 2015-10-08. Their pre-history periods are explicitly recorded and masked in features.
+
+Four datasets were built with verified coverage, no research override, identical
+episode dates, 26 tradable symbols, three chronological splits per symbol and
+training-only preprocessing. Classification labels remain metadata; the default
+rotation features use historical ETF prices. The dated-record gate rejects
+`--sector-labels` when stocks lack training-era classifications.
+
+| Dataset | Identity | Market inputs | Environment observation size |
+| --- | --- | --- | --- |
+| Expanded baseline | `dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059` | 7 | 12 |
+| D1/W1 supply/demand | `420fead30751749541bb989e0d671b8f58849d88e6dbe4b3de54697b13b44c32` | 33 | 38 |
+| Sector rotation | `49ed77771b1e4f0c16435daa2de5416eda107cac19b8bb255382d9f6268cc2c7` | 62 | 67 |
+| Combined | `062ae018bf7ed0a01bed50695b824238ebc4de89bae8fa0ae09077ac007a5e25` | 88 | 93 |
+
+All four passed real Gymnasium and SB3 checkers and three no-trade steps for
+each of 26 training-symbol episodes, with finite observations/rewards and
+unchanged normalization. The old frozen bundle rejects the combined schema.
+Test episodes were constructed but no test performance was evaluated.
+Local evidence is saved in `.runtime/expanded-datasets.json`,
+`.runtime/expanded-environment-audit.json` and
+`.runtime/final-expanded-acceptance.txt`. The full suite has 86 passing tests
+and no skips; `pip check` and syntax compilation also passed. No new lint/type
+check is claimed. Generated data/runtime evidence remains excluded from Git.
+
+Next is lower-credit acceptance of the expanded model inputs followed by matched
+50,000-transition A100 studies, using the existing cumulative budget. Review
+[sector/universe scaling](sectors-universe.md#scaling-to-hundreds-of-stocks)
+before adding hundreds of symbols.
 
 ## Completed A100 training and retrieved artifacts
 
@@ -152,10 +196,11 @@ Retain the ledger and downloaded artifacts for future jobs; do not reset usage.
 ## Remaining research and execution milestones
 
 - Run matched 50,000-transition experiments across algorithms and seeds 11/23/37.
-- Implement and test [causal D1/W1 supply/demand inputs](supply-demand.md), then run matched feature ablations using training and validation only; M1 is later.
+- Train on the implemented [causal D1/W1 supply/demand inputs](supply-demand.md) and [sector rotation](sectors-universe.md), then run matched feature ablations using training and validation only; M1 is later.
 - Perform other feature/reward ablations separately.
 - Freeze a candidate before the held-out test audit; test data has not selected checkpoints.
 - Audit actual Alpaca feeds/dividends, then add persistent shadow inference and paper-order lifecycle work.
 
-Advanced feature families, extra reward terms and broker orders remain disabled.
+Supply/demand and sector rotation are opt-in; the previously trained model uses
+neither. Other advanced feature families, extra reward terms and broker orders remain disabled.
 See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.

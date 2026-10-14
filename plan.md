@@ -1,6 +1,6 @@
 # Modular swing-trading RL project plan
 
-Status: Python 3.13 aligned with Colab; 69 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. CPU/A100 acceptance and initial PPO 50,000-transition seed-11 training completed; artifacts retrieved and shutdown verified. Supply/demand inputs are planned, not in the trained baseline.
+Status: Python 3.13 aligned with Colab; 86 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. CPU/A100 acceptance and initial PPO 50,000-transition seed-11 training completed; artifacts retrieved and shutdown verified. Supply/demand D1/W1 and sector-rotation inputs are implemented; expanded 26-instrument neural training is pending.
 
 ## 1. Intended outcome and starting assumptions
 
@@ -14,11 +14,11 @@ Initial planning defaults, configurable before implementation:
 - Generate a signal after the completed session is available; simulate entry/adjustment at the next regular-session open with costs. Paper inference uses the same timing and accounts for feed publication delays. Protective orders can operate between daily decisions.
 - Start with a small declared universe and one traded symbol per episode. Share the policy across symbols with separate episodes; add simultaneous portfolio allocation as a separate environment version with explicit allocation constraints.
 - Begin with price/volume and a simple reward. Add learned stops/targets before the paper-execution milestone; introduce shorting after long-only accounting works.
-- Offline research, then live-data shadow inference, then Alpaca paper orders. Real-money deployment is a separate future task. This change creates documentation only.
+- Offline research, then live-data shadow inference, then Alpaca paper orders. Real-money deployment is a separate future task. Feature growth is implemented incrementally, with acceptance recorded below.
 
 ## 2. Proposed folder and module ownership
 
-These are planned paths, not an existing scaffold. Each category owns its code, configuration, and tests; provider-specific types stay inside adapters.
+This is the ownership map; some advanced paths remain planned, while implemented modules are recorded below. Each category owns its code, configuration, and tests; provider-specific types stay inside adapters.
 
 ```text
 AGENTS.md
@@ -48,7 +48,7 @@ src/rl_stocks/
     momentum/                      # RSI and related features
     volume/                        # relative volume, VWAP, volume-profile features
     timeframes/                    # session-aware resampling and causal alignment
-    market_structure/              # planned causal multi-timeframe supply/demand zones
+    market_structure/              # causal D1/W1 supply/demand zones
     sectors/                       # effective-dated classification and context
     fundamentals/                  # filing-derived financial features
     options/                       # OI concentrations and wall proxies
@@ -148,7 +148,7 @@ Each feature has name/version, inputs, parameters, units, timeframe, warmup, ava
 | A | Price/volume and portfolio state | Lagged returns, trailing volatility/range, current exposure, cash, holding age, unrealized P&L. Small initial input set. |
 | B | EMA, RSI, ATR, relative volume | Try EMA 20/50, RSI 14, ATR 14, and completed daily volume divided by prior 20-session mean. Exclude the current session from the denominator. Indicators are hypotheses, not guaranteed predictive variables. |
 | C | Multiple timeframes | Add completed weekly trend/volatility first; monthly or intraday context later. Same underlying causal feature functions. |
-| C.1 | Multi-timeframe supply/demand | Base consolidation plus directional impulse, causal zone lifecycle, ATR-scaled distances/widths, freshness and age; D1/W1 first, M1 later. Matched ablations; not implemented in the baseline. |
+| C.1 | Multi-timeframe supply/demand | Base consolidation plus directional impulse, causal zone lifecycle, ATR-scaled distances/widths, freshness and age; D1/W1 first, M1 later. Implemented opt-in D1/W1; matched ablations and new-model training pending. |
 | D | Market/sector context | Benchmark/sector returns and relative strength; introduce sector categories only where point-in-time metadata is supportable. |
 | E | Financials | A small filing-derived family such as revenue growth and leverage, joined on public availability. No current analyst forecasts in historical observations. |
 | F | Price-level volume | Trailing volume profiles from actual historical trade prices/sizes where available; expose point of control/value area with causal window boundaries. Bar-derived profiles are explicitly approximations. |
@@ -160,7 +160,7 @@ Define a call/put wall initially as a reproducible OI concentration proxy: aggre
 
 Compare each addition against the same baseline on matched periods/seeds/costs. Optional snapshots with short histories get a separate matched-period study and cannot be credited for improvements caused merely by a different test window.
 
-### Planned multi-timeframe supply/demand input
+### Multi-timeframe supply/demand input
 
 Use the reviewed [tradingAlgo supply/demand implementation](https://github.com/jason490/tradingAlgo/blob/b78d578c0b03433e7ddcb4f0fe64658cf9eaebae/screener/indicators/supply_demand.py)
 as the detection reference: short consolidation bases, directional impulses and
@@ -180,7 +180,7 @@ cross-timeframe confluence are separate ablations with recorded definitions.
 Create a new feature schema/dataset/bundle and compare D1, W1 and D1+W1 against
 the same baseline periods, costs, seeds 11/23/37 and 50,000-transition budgets.
 The indicator supplies context to the policy; it does not replace learned stops
-or take-profit zones. This request adds planning/documentation only; the current
+or take-profit zones. D1/W1 dataset inputs and sector-rotation context are implemented; the current
 trained model remains the daily-indicators baseline, and final-test data remains reserved.
 
 ## 6. Environment and learned trade outputs
@@ -310,7 +310,7 @@ The local system follows the ownership map above. Detailed category documentatio
 | 3. Accounting/environment | Long/short cash and costs, next-open simulation, Gymnasium adapter, baselines | CPU Gymnasium/SB3 checks pass; execution sensitivity studies remain |
 | 4. Learned trade management | Four-component policy zone, adjustments/reversals, gap/stop ordering, both target boundaries, corporate actions | Neural-policy integration passes; execution sensitivity studies remain |
 | 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | CPU/A100 512/1024/1024 acceptance passes; initial A100 PPO 50,000 seed 11 complete; matched multi-seed studies remain |
-| 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | Causal D1/W1 supply/demand design planned; matched ablations and advanced families/reward additions remain |
+| 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | D1/W1 supply/demand, configurable 22-stock/11-sector expansion and causal rotation implemented; new-model training and matched ablations remain |
 | 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | CPU/A100 save/load parity and local downloaded-bundle checks pass; held-out audit remains |
 | 8. Shadow inference | Shared causal feature/decision contracts and staleness gates | Persistent live-data orchestration/recovery/drift study |
 | 9. Paper execution | Intentionally deferred; no broker-order implementation | Future explicit milestone with tested lifecycle and protection |

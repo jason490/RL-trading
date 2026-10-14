@@ -27,14 +27,14 @@ Weekly grouping uses ISO calendar weeks and the last observed session close in e
 
 Feature rows with missing warmup/nonfinite results are excluded, not arbitrarily filled. Verified calendar gaps restart all feature-family warmup before another episode can begin.
 
-## Future additions
+## Optional research families
 
-[Multi-timeframe supply/demand zones](supply-demand.md) are a planned
+[Multi-timeframe supply/demand zones](supply-demand.md) are an implemented opt-in
 market-structure family based on causal base/impulse formation and as-of
 lifecycle state. Study D1 and completed W1 inputs first, then M1 separately.
 The current seven-indicator model has no supply/demand inputs; enabling this
 family requires a new feature schema, dataset, ablation and retrained bundle.
 
-Sectors, filings, options/OI, sentiment and order flow remain disabled. Add each family independently with event/public-availability/retrieval/revision metadata and backward as-of joins. A current snapshot is not historical evidence. Estimated signed trades or bar-derived volume profiles must be labelled as proxies. Match data windows, costs, seeds and budgets when evaluating each feature ablation.
+[Sector rotation](sectors-universe.md) is implemented as opt-in historical ETF context; issuer labels require audited training-era classifications. Filings, options/OI, sentiment and order flow remain disabled. Add each family independently with event/public-availability/retrieval/revision metadata and backward as-of joins. A current snapshot is not historical evidence. Estimated signed trades or bar-derived volume profiles must be labelled as proxies. Match data windows, costs, seeds and budgets when evaluating each feature ablation.
 
 Offline tests compare full-series outputs with causal prefixes and altered future suffixes, verify current-volume exclusion, weekly prefix parity and forward split continuity. Incremental production feature state is a future shadow-inference extension; current inference should recompute the same batch feature functions on available history.

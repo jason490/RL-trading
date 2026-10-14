@@ -1,6 +1,6 @@
 # Dataset construction and split isolation
 
-`generate(snapshot, output, weekly=False, purge=20, allow_unverified=False)` reads a verified immutable snapshot, computes features, builds chronological episodes, fits a training-only normalizer and writes a content-addressed dataset. No training-time provider calls occur.
+`generate(snapshot, output, weekly=False, purge=20, allow_unverified=False, zone_timeframes=(), zone_config=None, universe=None, sector_rotation=False, sector_records=(), sector_labels=False)` reads a verified immutable snapshot, computes features, builds chronological episodes, fits a training-only normalizer and writes a content-addressed dataset. No training-time provider calls occur.
 
 ## Quality gate
 
@@ -10,7 +10,7 @@ Calendar coverage includes sessions on or after the requested start and strictly
 before the end. Holiday and weekend endpoints are valid; they do not need to be
 exchange sessions themselves.
 
-Every symbol must have training, validation and test episodes with at least two retained feature rows. Missing verified sessions break the series and restart feature warmup; no one-day return is inferred across an unobserved session. Unknown calendar quality is visible in provenance. Mixed providers/feeds/adjustment modes are rejected before generation.
+Every configured tradable symbol must have training, validation and test episodes with at least two retained feature rows. Missing verified sessions break the series and restart feature warmup; no one-day return is inferred across an unobserved session. Unknown calendar quality is visible in provenance. Mixed providers/feeds/adjustment modes are rejected before generation.
 
 ## Chronological partitions
 
@@ -26,7 +26,7 @@ Indicators at the first validation/test sessions may use already available histo
 
 ## Normalizer
 
-`Normalizer` is a frozen dataclass containing ordered feature names, training means and population standard deviations. Near-zero scales have a floor of 1e-8. Fit rejects nonfinite/ragged matrices. Transform rejects name/order/length mismatch and nonfinite values; it has no update or partial-fit path. The same saved normalizer is used during validation, test and inference.
+`Normalizer` is a frozen dataclass containing ordered feature names, training means and population standard deviations. Continuous near-zero scales have a floor of 1e-8. Optional readiness/presence/freshness masks and issuer one-hot fields use fixed mean zero/scale one to preserve their binary contract. Fit rejects nonfinite/ragged matrices. Transform rejects name/order/length mismatch and nonfinite values; it has no update or partial-fit path. The same saved normalizer is used during validation, test and inference.
 
 Market features are normalized. Portfolio-state components remain raw scaled ratios and do not affect normalizer fitting. Observation clipping is not used to hide invalid or extreme data.
 
@@ -34,4 +34,4 @@ Market features are normalized. Portfolio-state components remain raw scaled rat
 
 `dataset.json` stores feature schema/name order, normalizer, symbol/split episodes, ATR in executable units and a manifest with snapshot identity, source provenance/coverage, exact split boundaries, purge length, universe, weekly flag, override status and survivorship caveat. Loading checks the directory hash against exact canonical bytes.
 
-The fixed ETF universe was selected retrospectively. Evaluations on these four liquid ETFs are not evidence about arbitrary current stock constituents or historical universe survival. Retain unsuccessful experiments and freeze research choices before opening the final test. Changing a feature schema or provider/feed requires a new dataset identity and new inference bundle.
+[Configured universes](sectors-universe.md) distinguish tradable symbols from context ETFs and retain dated sector metadata in the manifest. The default fixed ETF universe was selected retrospectively. Evaluations on these four liquid ETFs are not evidence about arbitrary current stock constituents or historical universe survival. Retain unsuccessful experiments and freeze research choices before opening the final test. Changing a feature schema or provider/feed requires a new dataset identity and new inference bundle.

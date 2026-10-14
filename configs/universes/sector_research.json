@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "name": "sector-research-v1",
+  "selected_on": "2026-10-14",
+  "benchmark": "SPY",
+  "sector_proxies": {
+    "communication_services": "XLC",
+    "consumer_discretionary": "XLY",
+    "consumer_staples": "XLP",
+    "energy": "XLE",
+    "financials": "XLF",
+    "health_care": "XLV",
+    "industrials": "XLI",
+    "materials": "XLB",
+    "real_estate": "XLRE",
+    "technology": "XLK",
+    "utilities": "XLU"
+  },
+  "sector_annotation_policy": "Declared current research categories; verify Yahoo snapshots; never backdate into historical observations",
+  "survivorship": "Retrospective surviving-company sample; not historical S&P 500 membership or a recommendation",
+  "instruments": [
+    {
+      "symbol": "SPY",
+      "kind": "broad_etf",
+      "role": "tradable",
+      "sector": "diversified"
+    },
+    {
+      "symbol": "QQQ",
+      "kind": "broad_etf",
+      "role": "tradable",
+      "sector": "diversified"
+    },
+    {
+      "symbol": "IWM",
+      "kind": "broad_etf",
+      "role": "tradable",
+      "sector": "diversified"
+    },
+    {
+      "symbol": "DIA",
+      "kind": "broad_etf",
+      "role": "tradable",
+      "sector": "diversified"
+    },
+    {
+      "symbol": "GOOGL",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "communication_services"
+    },
+    {
+      "symbol": "DIS",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "communication_services"
+    },
+    {
+      "symbol": "XLC",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "communication_services",
+      "history_start": "2018-06-19",
+      "history_source": "https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc"
+    },
+    {
+      "symbol": "AMZN",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "consumer_discretionary"
+    },
+    {
+      "symbol": "HD",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "consumer_discretionary"
+    },
+    {
+      "symbol": "XLY",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "consumer_discretionary"
+    },
+    {
+      "symbol": "PG",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "consumer_staples"
+    },
+    {
+      "symbol": "KO",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "consumer_staples"
+    },
+    {
+      "symbol": "XLP",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "consumer_staples"
+    },
+    {
+      "symbol": "XOM",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "energy"
+    },
+    {
+      "symbol": "CVX",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "energy"
+    },
+    {
+      "symbol": "XLE",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "energy"
+    },
+    {
+      "symbol": "JPM",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "financials"
+    },
+    {
+      "symbol": "BAC",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "financials"
+    },
+    {
+      "symbol": "XLF",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "financials"
+    },
+    {
+      "symbol": "JNJ",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "health_care"
+    },
+    {
+      "symbol": "UNH",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "health_care"
+    },
+    {
+      "symbol": "XLV",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "health_care"
+    },
+    {
+      "symbol": "CAT",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "industrials"
+    },
+    {
+      "symbol": "HON",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "industrials"
+    },
+    {
+      "symbol": "XLI",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "industrials"
+    },
+    {
+      "symbol": "LIN",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "materials"
+    },
+    {
+      "symbol": "APD",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "materials"
+    },
+    {
+      "symbol": "XLB",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "materials"
+    },
+    {
+      "symbol": "AMT",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "real_estate"
+    },
+    {
+      "symbol": "PLD",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "real_estate"
+    },
+    {
+      "symbol": "XLRE",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "real_estate",
+      "history_start": "2015-10-08",
+      "history_source": "https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre"
+    },
+    {
+      "symbol": "AAPL",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "technology"
+    },
+    {
+      "symbol": "MSFT",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "technology"
+    },
+    {
+      "symbol": "XLK",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "technology"
+    },
+    {
+      "symbol": "NEE",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "utilities"
+    },
+    {
+      "symbol": "DUK",
+      "kind": "stock",
+      "role": "tradable",
+      "sector": "utilities"
+    },
+    {
+      "symbol": "XLU",
+      "kind": "sector_etf",
+      "role": "context",
+      "sector": "utilities"
+    }
+  ]
+}

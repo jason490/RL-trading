@@ -18,6 +18,8 @@ The first command discovers both offline and dependency-backed tests. It reports
 | Data quality | UTC chronology, duplicates/order, OHLC/nonfinite failures, missing-session reports, mixed feed rejection |
 | Storage | Idempotent immutable content, corruption detection and resumable chunk reuse |
 | Features | Prefix/future-suffix causality, prior-only volume denominator, weekly prefix parity and effective splits |
+| Supply/demand | Both directions, break priority, mitigation snapshot immutability, actual weekly impulse release, readiness and raw split continuity |
+| Sectors/universe | Configurable roles, current-snapshot no-backdating, dated effective intervals, immutable metadata, momentum ranks, dividends, split/gap/late-bar masks and training-era label gate |
 | Datasets | Global date partitions, 20-session purging, explicit unverified override and training-only means |
 | Normalization | Frozen statistics; schema, nonfinite and ragged-matrix rejection |
 | Accounting | Long/short P&L, costs, dividends, splits, quantity caps and repeated-target reconciliation |

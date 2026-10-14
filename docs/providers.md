@@ -22,7 +22,7 @@ The installed official CLI was inspected locally at version 0.7.4. Its `usage` p
 
 ## Adapter operations
 
-All adapters satisfy `BarProvider` and return canonical bars. Baseline execution remains independent of any historical provider. `Request()` fixes the four-symbol/date request; explicit requests can narrow the universe/range in module-level research. No unsupported family is silently replaced by bars.
+All adapters satisfy `BarProvider` and return canonical bars. Baseline execution remains independent of any historical provider. `Request()` fixes the four-symbol/date request; explicit requests and `--universe` can change the symbol set in research. The optional Yahoo sector adapter captures dated current metadata separately from bars; see [sectors/universe](sectors-universe.md). No unsupported family is silently replaced by bars.
 
 | Adapter | Inputs | Availability/calendar convention | Primary limitation |
 | --- | --- | --- | --- |

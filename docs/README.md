@@ -14,7 +14,8 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Storage and accumulation | [storage.md](storage.md) | Immutable identities, source chunks, cursor recovery and revisions |
 | Dataset construction | [datasets.md](datasets.md) | Coverage gates, splits, purging, warmup and normalization |
 | Causal feature families | [features.md](features.md) | Indicator formulas, availability, splits and weekly context |
-| Multi-timeframe supply/demand | [supply-demand.md](supply-demand.md) | Planned base/impulse zones, lifecycle, availability, RL inputs and ablations |
+| Multi-timeframe supply/demand | [supply-demand.md](supply-demand.md) | Implemented D1/W1 base/impulse zones, lifecycle, availability, RL inputs and ablations |
+| Stock universe and sector rotation | [sectors-universe.md](sectors-universe.md) | Configurable symbols, dated classifications, historical ETF rotation, scaling and commands |
 | Trade simulation | [simulation.md](simulation.md) | Cash/P&L, fills, costs, gaps, stops, scale-outs and corporate actions |
 | Policy outputs and risk | [actions-risk.md](actions-risk.md) | Four-component decoding, geometry, desired quantities and clipping |
 | Gymnasium interface | [environment.md](environment.md) | Observations, seeded reset, step and episode boundaries |

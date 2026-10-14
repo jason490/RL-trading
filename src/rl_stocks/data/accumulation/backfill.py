@@ -10,7 +10,8 @@ from rl_stocks.data.storage.immutable import put, load
 from rl_stocks.data.validation.bars import coverage, exchange_sessions
 
 
-def accumulate(provider, request: Request, root, verify_calendar=True, refresh=False):
+def accumulate(provider, request: Request, root, verify_calendar=True, refresh=False,
+               history_starts=None, full_range=False):
     provider.capabilities.require(RecordType.BARS)
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
@@ -23,9 +24,14 @@ def accumulate(provider, request: Request, root, verify_calendar=True, refresh=F
     cursor = root / ('cursor-' + key + '.json')
     progress = json.loads(cursor.read_text()) if cursor.exists() else {}
     bars, parts = [], []
+    history_starts = history_starts or {}
     for symbol in request.symbols:
-        for year in range(request.start.year, request.end.year + 1):
-            start, end = max(request.start, date(year, 1, 1)), min(request.end, date(year + 1, 1, 1))
+        intervals = [(request.start, request.end)] if full_range else [
+            (max(request.start, date(year, 1, 1)), min(request.end, date(year+1, 1, 1)))
+            for year in range(request.start.year, request.end.year+1)]
+        for start, end in intervals:
+            if symbol in history_starts:
+                start = max(start, date.fromisoformat(history_starts[symbol]))
             if start >= end:
                 continue
             part_request = Request((symbol,), start, end)
@@ -58,6 +64,10 @@ def accumulate(provider, request: Request, root, verify_calendar=True, refresh=F
     bars.sort(key=lambda b: (b.symbol, b.session))
     expected = exchange_sessions(request) if verify_calendar else None
     report = coverage(bars, request, expected)
+    for symbol, start in history_starts.items():
+        if symbol in report:
+            report[symbol]["missing"] = [day for day in report[symbol]["missing"] if day >= start]
+            report[symbol]["declared_history_start"] = start
     provenance = {'request': {'symbols': request.symbols, 'start': str(request.start), 'end': str(request.end)},
         'capabilities': asdict(provider.capabilities), 'coverage': report,
         'parts': parts, 'dividends_verified': provider.capabilities.provider != 'alpaca'}
