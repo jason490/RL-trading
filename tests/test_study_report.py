@@ -26,3 +26,19 @@ class StudyReportTests(unittest.TestCase):
             runs=deepcopy(self.runs);runs[-1][field]='different';variants.append(runs)
         for runs in variants:
             with self.assertRaises(ValueError):summarize(runs,self.protocol)
+
+    def test_only_explicitly_verified_equivalent_sources_can_match(self):
+        runs=deepcopy(self.runs);runs[-1]['source_hash']='runtime-only-change'
+        with self.assertRaises(ValueError):summarize(runs,self.protocol,{'fixed-source':'learning'})
+        result=summarize(runs,self.protocol,{'fixed-source':'learning','runtime-only-change':'learning'})
+        self.assertEqual(result['candidate']['dataset'],'combined')
+
+    def test_git_verification_rejects_dirty_or_forged_packages(self):
+        from rl_stocks.core.provenance import repository_state,source_identity
+        from rl_stocks.reporting.study import verified_sources
+        from pathlib import Path
+        root=Path.cwd();state=repository_state(root)
+        with self.assertRaises(ValueError):
+            verified_sources([{'git':{'revision':state['revision'],'dirty':'modified'},'source_hash':source_identity()}],root)
+        with self.assertRaises(ValueError):
+            verified_sources([{'git':{'revision':state['revision'],'dirty':''},'source_hash':'forged'}],root)

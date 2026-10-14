@@ -84,3 +84,13 @@ class JobPlanTests(unittest.TestCase):
         with self.assertRaises(ValueError):validate_plan(altered)
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(ValueError):ColabJob(directory,'python','CPU').run(directory,study=True)
+
+    def test_bounded_algorithm_studies_keep_identical_seeds_and_budgets(self):
+        from rl_stocks.runtime.colab.jobs import study_plan,validate_plan
+        for algorithm in ('ppo','sac','td3'):
+            plan=study_plan(algorithm)
+            self.assertEqual(len(plan['jobs']),3)
+            self.assertEqual({j['algorithm'] for j in plan['jobs']},{algorithm})
+            self.assertEqual([j['seed'] for j in plan['jobs']],[11,23,37])
+            self.assertTrue(all(j['steps']==50000 and not j['smoke'] for j in plan['jobs']))
+            self.assertEqual(validate_plan(plan),plan)

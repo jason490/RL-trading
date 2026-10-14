@@ -33,9 +33,13 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner \
   data/datasets/DATASET_HASH --study --cli-python /path/to/CLI_PYTHON
 ```
 
-`--study` uses A100, runs CPU/CUDA startup smokes, then the nine matched research
-jobs sequentially in one owned session. The worker validates the full job plan,
-including each seed. The execution operation is bounded to 90 minutes; the
+`--study --study-algorithm ppo` uses A100 for one three-seed research batch
+after accepted lower-credit preflight. Repeat for SAC/TD3 on each dataset.
+The original unsliced `--study` plan runs startup smokes plus nine research jobs;
+profiling on 26 symbols showed that this larger group risks the execution limit.
+Completed cells from that initial group are retained and independently verified;
+remaining cells use bounded algorithm batches. The worker validates the full job plan,
+including each seed. Hardware and environment checks still run for every batch. The execution operation is bounded to 90 minutes; the
 overall owned allocation remains bounded to two hours including setup/retrieval.
 Final downloads allow up to three 120-second attempts. The existing cumulative
 150-unit ledger, 130-unit working limit and minute metering apply unchanged.
@@ -59,3 +63,13 @@ retain the full research outputs needed for continuation and audit.
 See [verification](verification.md) for actual execution, artifacts, measured/
 estimated compute and cleanup status; this protocol alone does not claim that
 all runs have completed.
+
+## Verifying scheduling changes
+
+Full uploaded package hashes remain recorded. Comparison verifies each hash
+against the exact clean Git tree in its metadata, then requires byte-identical
+learning files (data, features, environment, risk, algorithms, training, inference
+and evaluation). Runtime/reporting-only changes may differ after this proof;
+unknown hashes, dirty uploads or changed learning code are rejected. Model
+weights, dataset identities, costs, seeds and selection criteria are unchanged
+by splitting a batch. No final-test outcomes inform this adjustment.

@@ -4,11 +4,38 @@ import html
 import json
 from pathlib import Path
 from statistics import mean, stdev
-from rl_stocks.core.contracts import canonical
+from rl_stocks.core.contracts import canonical,digest
 from rl_stocks.reporting.offline import chart
 
 
-def summarize(runs, protocol):
+def verified_sources(runs, repository):
+    """Prove exact uploaded packages and identical learning files from clean Git trees."""
+    import hashlib
+    import subprocess
+    approved={}
+    for run in runs:
+        if run.get('smoke'):continue
+        state=run['git']
+        if state.get('dirty')!='' or not state.get('revision'):
+            raise ValueError('clean uploaded Git provenance required for source comparison')
+        revision=state['revision']
+        def git(*args):
+            return subprocess.run(['git',*args],cwd=repository,check=True,capture_output=True,timeout=20).stdout
+        paths=git('ls-tree','-r','--name-only',revision,'--','src/rl_stocks').decode().splitlines()
+        prefix='src/rl_stocks/'
+        files={p[len(prefix):]:hashlib.sha256(git('show',revision+':'+p)).hexdigest()
+               for p in paths if p.endswith('.py')}
+        full=digest(files)
+        if full!=run['source_hash']:
+            raise ValueError('uploaded package differs from recorded clean Git tree')
+        learning=digest({p:h for p,h in files.items() if not p.startswith(('runtime/','reporting/'))})
+        approved[full]=learning
+    if len(set(approved.values()))!=1:
+        raise ValueError('learning implementation changed between research cells')
+    return approved
+
+
+def summarize(runs, protocol, approved_sources=None):
     names = {identity:name for name,identity in protocol["datasets"].items()}
     groups = defaultdict(list)
     seen = set()
@@ -22,7 +49,11 @@ def summarize(runs, protocol):
         seen.add(key)
         if run["status"] != "complete" or run["actual_steps"] != protocol["transitions_per_run"]:
             raise ValueError("incomplete research cell")
-        assumptions=(run["simulation"],run["selection_metric"],run["source_hash"],run["versions"])
+        source=run['source_hash']
+        if approved_sources is not None:
+            if source not in approved_sources:raise ValueError('unverified source package')
+            source=approved_sources[source]
+        assumptions=(run["simulation"],run["selection_metric"],source,run["versions"])
         if reference is None:
             reference=assumptions
         elif assumptions != reference:
@@ -45,11 +76,11 @@ def summarize(runs, protocol):
             "candidate":{"dataset":winner["dataset"],"algorithm":candidate["algorithm"],
                          "seed":candidate["seed"],"bundle_id":candidate["bundle_id"],
                          "validation_score":candidate["selected_score"]},
-            "test_evaluated":False}
+            "test_evaluated":False,"verified_source_packages":approved_sources}
 
 
-def report_study(runs, protocol, destination):
-    value=summarize(runs,protocol)
+def report_study(runs, protocol, destination, approved_sources=None):
+    value=summarize(runs,protocol,approved_sources)
     value["runs"]=[{k:r[k] for k in ("algorithm","seed","dataset","actual_steps","selected_step",
         "selected_score","selected_metrics","bundle_id","duration_seconds","git","source_hash")}
         for r in runs if not r.get("smoke") and r.get("dataset") in protocol["datasets"].values()]

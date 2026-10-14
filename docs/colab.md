@@ -250,3 +250,9 @@ with `--research`. The execution command is bounded to 90 minutes; final artifac
 downloads have three attempts of up to 120 seconds. Allocation deadline,
 minute metering, cumulative ledger and teardown rules remain unchanged.
 See [experiments](experiments.md) for the committed four-dataset protocol.
+
+Use `--study --study-algorithm ppo` (or `sac`/`td3`) for a bounded three-seed
+research batch after CPU acceptance. This avoids repeating startup smokes in
+every full-training allocation and leaves more time for durable retrieval.
+The full nine-run study remains available, but profile its complete runtime
+before scheduling it within the execution/allocation deadlines.

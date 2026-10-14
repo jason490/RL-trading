@@ -47,18 +47,22 @@ def job_plan(research_algorithm=None, accelerator="A100"):
     return {"version": 2, "seed": 11, "accelerator": accelerator, "jobs": jobs}
 
 
-def study_plan():
+def study_plan(algorithm=None):
     """One dataset, matched algorithms/seeds; budget watchdog owns the allocation."""
-    smoke = [{**job, "seed": 11} for job in job_plan(accelerator="T4")["jobs"]]
+    if algorithm not in (None,"ppo","sac","td3"):
+        raise ValueError("unsupported study algorithm")
+    smoke = [{**job, "seed": 11} for job in job_plan(accelerator="T4")["jobs"]] if algorithm is None else []
     research = [{"algorithm": algorithm, "device": "cuda", "smoke": False,
                  "steps": 50000, "seed": seed}
-                for algorithm in ("ppo", "sac", "td3") for seed in (11, 23, 37)]
-    return {"version": 3, "accelerator": "A100", "jobs": smoke+research}
+                for algorithm in ((algorithm,) if algorithm else ("ppo", "sac", "td3")) for seed in (11, 23, 37)]
+    plan={"version": 3, "accelerator": "A100", "jobs": smoke+research}
+    if algorithm is not None:plan["study_algorithm"]=algorithm
+    return plan
 
 
 def validate_plan(plan):
     if plan.get("version") == 3:
-        if plan != study_plan():
+        if plan != study_plan(plan.get("study_algorithm")):
             raise ValueError("unsupported matched study plan")
     elif plan.get("version") == 2:
         jobs = plan["jobs"]

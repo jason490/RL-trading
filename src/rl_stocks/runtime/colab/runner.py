@@ -123,12 +123,14 @@ class ColabJob:
             recovery=" ".join(self.command+["stop","-s",self.session])
             print(f"Cleanup failed. Session: {self.session}. Recovery: {recovery}",file=sys.stderr)
         return verified
-    def run(self,dataset,research_algorithm=None,study=False):
+    def run(self,dataset,research_algorithm=None,study=False,study_algorithm=None):
+        if study_algorithm is not None and not study:
+            raise ValueError("study algorithm requires --study")
         if study and (self.accelerator!="A100" or research_algorithm is not None):
             raise ValueError("matched study requires A100 and no single-algorithm override")
         if self.accelerator=="A100" and research_algorithm is None and not study:
             raise ValueError("A100 requires a full --research job; use CPU/T4 for preflight")
-        plan=study_plan() if study else job_plan(research_algorithm,self.accelerator)
+        plan=study_plan(study_algorithm) if study else job_plan(research_algorithm,self.accelerator)
         self.exec_timeout=5400 if study else 1800
         self.download_timeout=120 if study else 30
         # Help and version are checked before any metered allocation.
@@ -227,11 +229,12 @@ def main():
     parser.add_argument("--accelerator",choices=("CPU","T4","A100"),
                         help="Default CPU for preflight; A100 for --research")
     parser.add_argument("--study",action="store_true",help="A100: all three algorithms, 50k transitions, seeds 11/23/37")
+    parser.add_argument("--study-algorithm",choices=("ppo","sac","td3"),help="Bounded three-seed batch after accepted CPU preflight")
     args=parser.parse_args()
     root=Path.cwd();state=root/".runtime";state.mkdir(exist_ok=True)
     with (state/"allocation.lock").open("w") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         accelerator=args.accelerator or ("A100" if args.research or args.study else "CPU")
-        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research,args.study)
+        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research,args.study,args.study_algorithm)
 
 if __name__=="__main__":main()
