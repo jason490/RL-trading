@@ -8,6 +8,35 @@ import tarfile
 from rl_stocks.reporting.offline import chart
 
 
+def equity_sections(results):
+    sections=[]
+    for key,result in results.items():
+        rows=result['rows'];base=result['baselines']['buy_hold']['rows']
+        sections.append(chart(key,[r['session'] for r in rows],[
+            ('Policy equity',[r['equity'] for r in rows]),
+            ('Buy and hold',[r['equity'] for r in base])]))
+        sections.append('<pre>'+html.escape(json.dumps(result['metrics'],indent=2))+'</pre>')
+    return sections
+
+
+def package_audit(audit_root, output):
+    audit_root=Path(audit_root);output=Path(output)
+    audit=json.loads((audit_root/'audit.json').read_text())
+    if audit['status']!='complete':raise ValueError('held-out audit is incomplete')
+    sections=['<!doctype html><meta charset="utf-8"><title>Frozen-family held-out audit</title>',
+              '<h1>Frozen-family held-out audit</h1><p>Family and candidate were selected using '
+              'validation and committed before this audit. Separate symbol episodes, modeled costs. '
+              'No test-driven checkpoint selection or retuning.</p>']
+    for entry in audit['seeds']:
+        seed=entry['seed']
+        results=json.loads((audit_root/f'test-seed-{seed}.json').read_text())
+        sections.append(f'<h2>Seed {seed}</h2>')
+        sections.extend(equity_sections(results))
+    output.mkdir(parents=True,exist_ok=True)
+    (output/'test.html').write_text('\n'.join(sections))
+    (output/'audit-summary.json').write_text(json.dumps(audit,indent=2,allow_nan=False)+'\n')
+
+
 def package(roots, output):
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     models=output/'research-models.tar.gz'
@@ -36,12 +65,7 @@ def package(roots, output):
                 if not selected.exists():continue
                 results=json.loads(selected.read_text())
                 sections.append('<h2>'+html.escape(run.name)+'</h2>')
-                for key,result in results.items():
-                    rows=result['rows'];base=result['baselines']['buy_hold']['rows']
-                    sections.append(chart(key,[r['session'] for r in rows],[
-                        ('Policy equity',[r['equity'] for r in rows]),
-                        ('Buy and hold',[r['equity'] for r in base])]))
-                    sections.append('<pre>'+html.escape(json.dumps(result['metrics'],indent=2))+'</pre>')
+                sections.extend(equity_sections(results))
     (output/'validation.html').write_text('\n'.join(sections))
     (output/'model-catalog.json').write_text(json.dumps(catalog,indent=2,allow_nan=False))
     return models
@@ -51,5 +75,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('roots',nargs='+',help='Retrieved artifacts roots containing runs/ and frozen/')
     parser.add_argument('--output',required=True)
+    parser.add_argument('--audit',help='Completed held-out audit directory; exports derived results only')
     args=parser.parse_args()
     print(package(args.roots,args.output))
+    if args.audit:package_audit(args.audit,args.output)
