@@ -4,6 +4,12 @@
 
 This repository is intended for modular swing-trading research using Google Colab CLI, interchangeable market-data providers, a custom Gymnasium environment, and PPO, SAC, and TD3. Alpaca is the initial paper-execution adapter, not a required historical-data dependency. The implementation now includes provider-independent local research modules, an offline-tested simulator, PPO/SAC/TD3 wiring, reports, frozen research inference, and a budget-controlled Colab runner. Dependency-backed training acceptance remains pending; Colab execution is deferred at the user’s request. Read `plan.md` for milestones and `docs/README.md` for the detailed category guides and actual verification status. Inspect repository contents and nested `AGENTS.md` files before future edits. Preserve user changes, follow existing tooling, and report only checks actually performed.
 
+## Git workflow
+
+- After each completed feature addition or bug fix, run the relevant checks, create a focused commit for that change, and push it to the current branch's configured upstream. Include related tests and documentation in the same commit. This is standing authorization to commit and push; do not ask again for routine feature/fix commits.
+- Inspect Git status before staging. Stage only files belonging to the completed change, preserve unrelated user changes, and use a clear commit message describing the feature or fix.
+- Do not force-push, rewrite published history, or amend unrelated commits. If committing or pushing fails, preserve the work and report the failure and any unpushed commit IDs; do not claim it was pushed.
+
 ## Architecture
 
 - Prefer maintained Stable-Baselines3 implementations and Alpaca's official `alpaca-py` SDK. Check compatible Python, PyTorch, Gymnasium, SB3, and SDK versions together, then pin dependencies.
@@ -53,6 +59,7 @@ This repository is intended for modular swing-trading research using Google Cola
 
 ## Google Colab CLI
 
+- Reuse the existing official Colab CLI installation. Do not install a second copy or reinstall/upgrade it unless explicitly requested or an identified compatibility problem requires it; explain that problem before changing the installation.
 - Use Google's official [`google-colab-cli`](https://github.com/googlecolab/google-colab-cli), whose executable is `colab`; similarly named tools differ. Check `colab version` and installed-release command help before automation.
 - Once scripts and dependency files exist, use explicit named sessions and documented `colab new`, `colab install`, `colab exec`, `colab upload`/`download`, and `colab stop` workflows. Ensure package, configuration, and data dependencies are available remotely; executing a local script transmits its content but does not sync the whole repository.
 - Begin with a small CPU smoke run and profile before requesting an accelerator. Colab VMs are ephemeral: checkpoint durably, retrieve artifacts/logs before teardown, and stop only sessions created for the task. Respect usage limits.

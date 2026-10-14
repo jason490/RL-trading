@@ -96,7 +96,7 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/
 
 The runner owns one uniquely named A100 session at a time, persists a cumulative usage ledger, monitors usage every minute, retrieves artifacts and verifies cleanup. Project defaults are a **150-unit ceiling**, teardown beginning by **130 units**, and an initial allocation deadline of at most **two hours**, including setup and retrieval. Unreliable metering prevents or stops allocation; budget stops do not trigger automatic restart.
 
-The wrapper redirects logging/settings/history/session state to private `.runtime/` storage without changing authentication. See [Colab operations and troubleshooting](docs/colab.md) for installation, authentication, network diagnosis, budget accounting and recovery. No remote acceptance result is currently recorded.
+The wrapper redirects logging/settings/history/session state to private `.runtime/` storage without changing authentication. See [Colab operations and troubleshooting](docs/colab.md) for reusing an existing installation, authentication, network diagnosis, budget accounting and recovery. No remote acceptance result is currently recorded.
 
 ## Recommended development sequence
 

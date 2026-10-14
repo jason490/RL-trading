@@ -69,23 +69,21 @@ The actual backend balance/rate could not be read in this sandbox. Mock tests ve
 
 These steps are intended for a normal terminal with working DNS/HTTPS and a writable user credential directory. Running them inside a restricted execution sandbox may reproduce its network failure even when the host terminal works. Test from the same environment that will run the budget controller. The commands below read usage and authenticate; they do not allocate a VM.
 
-### 1. Install the official CLI in an isolated environment
+### 1. Reuse the installed official CLI
 
-Keep its dependencies separate from the project's strict RL pins:
+Colab is already installed for this project; no separate installation is required. Use the Python interpreter from the environment containing that official package, keeping its dependencies separate from the project's RL environment:
 
 ```bash
-python3.12 -m venv .runtime/colab-cli
-.runtime/colab-cli/bin/python -m pip install google-colab-cli==0.7.4
-.runtime/colab-cli/bin/python scripts/colab_safe.py version
-.runtime/colab-cli/bin/python scripts/colab_safe.py usage --help
+/path/to/CLI_PYTHON scripts/colab_safe.py version
+/path/to/CLI_PYTHON scripts/colab_safe.py usage --help
 ```
 
-This reproduces the inspected CLI release. The official package supports installation with pip or uv; a similarly named package is not a substitute. [Official installation documentation](https://github.com/googlecolab/google-colab-cli#installation)
+Replace `/path/to/CLI_PYTHON` with the existing installation's interpreter. For a uv tool installation, inspect `uv tool dir` and the `google-colab-cli/bin/python` path beneath that directory. The runtime was inspected against CLI 0.7.4; verify the installed release before automation. A similarly named package is not a substitute. Do not reinstall or upgrade a working installation merely to follow this guide.
 
 ### 2. Authenticate interactively and verify metering
 
 ```bash
-.runtime/colab-cli/bin/python scripts/colab_safe.py --auth oauth2 usage
+/path/to/CLI_PYTHON scripts/colab_safe.py --auth oauth2 usage
 ```
 
 If authentication is needed, follow the official CLI's authorization URL/code prompts locally. Never paste tokens into project configuration, command arguments, issue reports or chat. The OAuth flow needs working Google connectivity and writable credential storage; the project wrapper redirects runtime files but does not redirect the official authentication cache.
@@ -131,7 +129,7 @@ Use [setup.md](setup.md) to generate `requirements.lock`, install it and run `pi
 ### 5. Launch through the budget controller when ready
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python .runtime/colab-cli/bin/python
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON
 ```
 
-Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates a runtime; unlike the preceding installation/help/usage steps, run it only when remote smoke execution is intended. Actual A100 eligibility and lifecycle success still require that later acceptance run.
+Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates a runtime; unlike the preceding help/usage steps, run it only when remote smoke execution is intended. Actual A100 eligibility and lifecycle success still require that later acceptance run.
