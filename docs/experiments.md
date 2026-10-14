@@ -73,3 +73,15 @@ and evaluation). Runtime/reporting-only changes may differ after this proof;
 unknown hashes, dirty uploads or changed learning code are rejected. Model
 weights, dataset identities, costs, seeds and selection criteria are unchanged
 by splitting a batch. No final-test outcomes inform this adjustment.
+
+## Committed-selection audit command
+
+After the complete matrix is verified, commit the validation study JSON containing
+the selected family and candidate. `scripts/audit_selected.py DECISION_JSON
+ARTIFACT_ROOT... --output artifacts/audits/UNIQUE_NAME` requires the decision bytes
+to match Git HEAD, all predeclared family seeds and the complete research matrix.
+It evaluates those frozen bundles once on test, saves reports/metrics, and checks
+that normalization and bundle files are unchanged. It refuses an existing output
+directory rather than silently overwriting an earlier audit. No training or
+checkpoint selection occurs in this command. Audit results are separate from
+validation selection.
