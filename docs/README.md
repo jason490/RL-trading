@@ -6,6 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
+| Project operating guidance | [project-guidance.md](project-guidance.md) | Research requirements, agent workflow, runtime policies and primary references |
 | System architecture | [architecture.md](architecture.md) | Ownership, data flow, boundaries and extension rules |
 | Installation and dependencies | [setup.md](setup.md) | Python 3.13, pins, hash-lock generation and optional SDKs |
 | Shared contracts | [contracts.md](contracts.md) | Canonical bars, capability types, feature/action schemas and diagnostics |
