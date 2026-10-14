@@ -1,6 +1,6 @@
 # Colab execution, budget and recovery
 
-**Execution is deferred at the user's request.** The system includes launch/recovery code and configuration for a later smoke run; no A100 session has been provisioned during this implementation.
+Remote execution is explicitly authorized for the current training task. Actual run results and cleanup status belong in [verification.md](verification.md); this guide describes the launch and recovery procedure.
 
 Use Google's official `google-colab-cli` executable `colab`. The installed release inspected here is 0.7.4. Its usage command prints exact labelled account balance, hourly consumption and active assignment count. Do not assume a fixed conversion between 150 compute units and wall hours. [Official CLI](https://github.com/googlecolab/google-colab-cli)
 
@@ -33,6 +33,13 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/
 The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one A100, records its endpoint when discoverable, verifies reported A100 hardware and obtains its consumption rate immediately. A zero/unavailable rate causes teardown.
 
 The package, configs, dataset and lock are explicitly archived/uploaded. Remote `colab install -r` installs the pinned environment; `colab exec -f scripts/remote_smoke.py` bootstraps that uploaded payload. Executing a local script alone does not synchronize its imports or data. The remote script requires Python 3.12 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition configs remain separate, unexecuted experiments.
+
+To follow successful smoke acceptance with one initial research model in the same
+owned session, add `--research ppo` (or `sac` / `td3`). This appends exactly 50,000
+transitions with seed 11; PPO uses rollout 1000 / batch 50. The uploaded, recorded
+job plan is validated remotely. A failed smoke job prevents research training.
+Research does not extend the two-hour allocation deadline or compute budget.
+Seeds 23/37 and final-test auditing remain separate experiments.
 
 ## Compute ledger and deadline
 

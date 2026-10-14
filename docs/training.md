@@ -14,7 +14,7 @@ The shared factory validates an algorithm name (`ppo`, `sac`, `td3`) and retains
 
 Smoke policy layers are [32,32]. PPO smoke uses rollout 128 / batch 64 / exactly 512 transitions. SAC/TD3 smoke uses batch 64, warmup 64 and exactly 1024 transitions so gradient updates are exercised. Rollout/batch divisibility and exact PPO transition multiples are required.
 
-Long configuration is 50,000 transitions for seeds 11/23/37, via `train ... --long --seed SEED`. For an exact 50,000 PPO budget, the CLI resolves rollout 1000 / batch 50. Other long defaults remain as above. Initial execution is smoke only; long jobs are configurations for later research, and Colab runs are deferred.
+Long configuration is 50,000 transitions for seeds 11/23/37, via `train ... --long --seed SEED`. For an exact 50,000 PPO budget, the CLI resolves rollout 1000 / batch 50. Other long defaults remain as above. The Colab runner defaults to smoke acceptance; `--research ppo` appends one seed-11, 50,000-transition model after all smoke jobs succeed, within the same budget and deadline. Additional seeds remain separate experiments. See [verification.md](verification.md) for completed execution.
 
 ## Lifecycle
 

@@ -12,6 +12,7 @@ import tarfile
 import time
 import uuid
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
+from rl_stocks.runtime.colab.jobs import job_plan
 
 class ColabJob:
     def __init__(self,root,cli_python):
@@ -106,7 +107,8 @@ class ColabJob:
             recovery=" ".join(self.command+["stop","-s",self.session])
             print(f"Cleanup failed. Session: {self.session}. Recovery: {recovery}",file=sys.stderr)
         return verified
-    def run(self,dataset):
+    def run(self,dataset,research_algorithm=None):
+        plan=job_plan(research_algorithm)
         # Help and version are checked before any metered allocation.
         version=self.short(["version"])
         for cmd in ("usage","new","install","exec","upload","download","stop","sessions"):
@@ -147,10 +149,14 @@ class ColabJob:
             status=self.short(["status","-s",self.session])
             if "A100" not in status.upper():raise RuntimeError("A100 allocation not verified")
             archive=self.state/"research-upload.tar.gz"
+            job_file=self.state/"job-plan.json"
+            job_file.write_text(json.dumps(plan,indent=2))
+            self.ledger.active["job_plan"]=plan;self.ledger.save()
             with tarfile.open(archive,"w:gz") as tar:
                 for item in ("src","scripts","pyproject.toml","requirements.txt","requirements.lock","configs"):
                     tar.add(self.root/item,arcname=item)
                 tar.add(Path(dataset)/"dataset.json",arcname="dataset.json")
+                tar.add(job_file,arcname="job-plan.json")
             self.operation(["upload","-s",self.session,str(archive),"/content/research-upload.tar.gz"],120)
             self.operation(["install","-s",self.session,"-r",str(self.root/"requirements.lock")],1800)
             self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)
@@ -182,10 +188,12 @@ class ColabJob:
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("dataset");parser.add_argument("--cli-python",required=True)
+    parser.add_argument("--research",choices=("ppo","sac","td3"),
+                        help="After smoke acceptance, train one 50,000-transition seed-11 model")
     args=parser.parse_args()
     root=Path.cwd();state=root/".runtime";state.mkdir(exist_ok=True)
     with (state/"allocation.lock").open("w") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        ColabJob(root,args.cli_python).run(args.dataset)
+        ColabJob(root,args.cli_python).run(args.dataset,args.research)
 
 if __name__=="__main__":main()

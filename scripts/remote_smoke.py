@@ -24,10 +24,15 @@ try:
     dataset.mkdir(parents=True,exist_ok=True)
     (root/'dataset.json').rename(dataset/'dataset.json')
     from rl_stocks.training.runner import train
-    # CPU profile first on the same data; A100 smoke then runs each algorithm.
-    train(dataset,'ppo',seed=11,device='cpu',smoke=True,steps=512)
-    for algorithm,steps in [('ppo',512),('sac',1024),('td3',1024)]:
-        train(dataset,algorithm,seed=11,device='cuda',smoke=True,steps=steps)
+    from rl_stocks.runtime.colab.jobs import job_plan
+    plan=json.loads((root/'job-plan.json').read_text())
+    research=plan['jobs'][-1]['algorithm'] if not plan['jobs'][-1]['smoke'] else None
+    if plan!=job_plan(research):raise ValueError('unsupported remote job plan')
+    for job in plan['jobs']:
+        overrides={'n_steps':1000,'batch_size':50} if job['algorithm']=='ppo' and not job['smoke'] else None
+        print('Starting job:',job,flush=True)
+        run,bundle=train(dataset,seed=plan['seed'],overrides=overrides,**job)
+        print('Completed job:',str(run),'bundle:',str(bundle),flush=True)
 except BaseException:
     (root/'artifacts').mkdir(exist_ok=True)
     (root/'artifacts'/'failure.txt').write_text(traceback.format_exc())
