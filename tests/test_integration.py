@@ -79,6 +79,11 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual(metadata['actual_steps'],steps)
                 self.assertTrue(metadata['python'].startswith('3.13.'))
                 self.assertTrue((run/'validation.html').exists())
+                selected=json.loads((run/'selected-validation.json').read_text())
+                score=sum(r['metrics']['net_return'] for r in selected.values())/len(selected)
+                self.assertAlmostEqual(score,metadata['selected_score'])
+                self.assertIn(metadata['selected_step'],[h['steps'] for h in metadata['validation_checkpoints']])
+                self.assertEqual(set(metadata['selected_metrics']),set(selected))
                 self.assertFalse((run/'final-test.html').exists())
                 if algorithm!='ppo':
                     from rl_stocks.rl.registry.factory import CLASSES

@@ -27,7 +27,7 @@ def validate_archive(path, plan, dataset_id):
                 raise RuntimeError('remote completion manifest mismatch')
             runs = [json.loads(read(name)) for name in sorted(names)
                     if name.startswith('artifacts/runs/') and name.endswith('/metadata.json')]
-            expected = Counter((j['algorithm'], j['device'], j['smoke'], j['steps'], plan['seed'])
+            expected = Counter((j['algorithm'], j['device'], j['smoke'], j['steps'], j.get('seed',plan.get('seed')))
                                for j in plan['jobs'])
             actual = Counter()
             for run in runs:

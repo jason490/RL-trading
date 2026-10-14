@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "name": "sector-study-2026-10-14",
+  "datasets": {
+    "baseline": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+    "supply_demand": "420fead30751749541bb989e0d671b8f58849d88e6dbe4b3de54697b13b44c32",
+    "rotation": "49ed77771b1e4f0c16435daa2de5416eda107cac19b8bb255382d9f6268cc2c7",
+    "combined": "062ae018bf7ed0a01bed50695b824238ebc4de89bae8fa0ae09077ac007a5e25"
+  },
+  "algorithms": ["ppo", "sac", "td3"],
+  "seeds": [11, 23, 37],
+  "transitions_per_run": 50000,
+  "checkpoint_selection": "equal-weight mean net validation return across 26 symbols",
+  "feature_algorithm_selection": "highest mean selected validation score across all three seeds; exact ties use dataset name then algorithm name",
+  "candidate_seed_selection": "highest validation score within selected family; ties use lowest seed",
+  "test_protocol": "freeze feature/algorithm selection before a single held-out audit of all three selected-family seeds; never rank or retune on test",
+  "reward": "net equity change after modeled costs only",
+  "budget_ledger": ".runtime/usage-ledger.json",
+  "project_ceiling_units": 150,
+  "working_stop_units": 130,
+  "allocation_deadline_seconds": 7200
+}

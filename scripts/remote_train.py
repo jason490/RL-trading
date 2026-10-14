@@ -11,12 +11,10 @@ sys.path.insert(0, str(root/'src'))
 def main():
     if sys.version_info[:2] != (3, 13):
         raise RuntimeError('Colab-matched Python 3.13 required')
-    from rl_stocks.runtime.colab.jobs import job_plan,bootstrap_environment
+    from rl_stocks.runtime.colab.jobs import validate_plan,bootstrap_environment
     os.environ.update(bootstrap_environment(os.environ,root))
     plan = json.loads((root/'job-plan.json').read_text())
-    research = plan['jobs'][-1]['algorithm'] if not plan['jobs'][-1]['smoke'] else None
-    if plan != job_plan(research,plan['accelerator']):
-        raise ValueError('unsupported remote job plan')
+    validate_plan(plan)
     import torch
     cuda=torch.cuda.is_available()
     gpu=torch.cuda.get_device_name() if cuda else None
@@ -36,9 +34,18 @@ def main():
     for job in plan['jobs']:
         overrides = {'n_steps': 1000, 'batch_size': 50} if job['algorithm']=='ppo' and not job['smoke'] else None
         print('Starting job:', job, flush=True)
-        run, bundle = train(dataset, seed=plan['seed'], overrides=overrides, **job)
+        seed = job.get('seed', plan.get('seed'))
+        parameters = {k:v for k,v in job.items() if k!='seed'}
+        run, bundle = train(dataset, seed=seed, overrides=overrides, **parameters)
         completed.append({'run': str(run), 'bundle_id': bundle.name})
         print('Completed job:', str(run), 'bundle:', str(bundle), flush=True)
+        # Preserve all completed jobs between minute-metered transfers.
+        import tarfile
+        checkpoint = Path(os.environ['RL_CHECKPOINT_ARCHIVE'])
+        temporary = checkpoint.with_suffix('.tmp')
+        with tarfile.open(temporary, 'w:gz') as archive:
+            archive.add(root/'artifacts', arcname='artifacts')
+        temporary.replace(checkpoint)
     (root/'artifacts/completion.json').write_text(json.dumps({
         'plan': plan, 'dataset': dataset.name, 'python': list(sys.version_info[:3]),
         'gpu': gpu, 'completed': completed}, indent=2))

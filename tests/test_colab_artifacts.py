@@ -51,6 +51,21 @@ class ArtifactTests(unittest.TestCase):
     def test_complete_plan_and_checksums(self):
         self.assertEqual(len(self.check()), 5)
 
+    def test_per_job_seeds_are_verified(self):
+        seeds=(11,23,37,11,23)
+        self.plan={'version':3,'accelerator':'A100','jobs':[
+            {**job,'seed':seed} for job,seed in zip(self.plan['jobs'],seeds)]}
+        for index,seed in enumerate(seeds):
+            self.runs[index]['seed']=seed
+            (self.artifacts/'runs'/str(index)/'metadata.json').write_text(json.dumps(self.runs[index]))
+        self.completion.update(plan=self.plan,completed=self.runs)
+        self.write_completion()
+        self.assertEqual(len(self.check()),5)
+        self.runs[-1]['seed']=42
+        (self.artifacts/'runs/4/metadata.json').write_text(json.dumps(self.runs[-1]))
+        with self.assertRaisesRegex(RuntimeError,'missing or unexpected'):
+            self.check()
+
     def test_remote_exception_rejected_despite_cli_success(self):
         (self.artifacts / 'failure.txt').write_text('remote exception')
         with self.assertRaisesRegex(RuntimeError, 'remote training failed'):

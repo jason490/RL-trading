@@ -241,3 +241,12 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/
 ```
 
 Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates an A100 for full research training; run it only after the lower-credit preflight passes. Actual A100 eligibility and lifecycle success must be verified on each allocation.
+
+## Matched studies
+
+`--study` selects all three algorithms at 50,000 transitions for seeds 11/23/37
+on one dataset, after startup smokes. It requires A100 and cannot be combined
+with `--research`. The execution command is bounded to 90 minutes; final artifact
+downloads have three attempts of up to 120 seconds. Allocation deadline,
+minute metering, cumulative ledger and teardown rules remain unchanged.
+See [experiments](experiments.md) for the committed four-dataset protocol.

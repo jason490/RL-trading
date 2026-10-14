@@ -49,9 +49,10 @@ Checkpoint score is equal-weight mean net validation return. It is declared befo
 
 `validation.html`/`.json` describe the most recent validation call, including the
 final post-update weights. They can differ from the selected `best.zip` bundle.
-Keep a separately labeled report when replaying selected weights, record the
-replay device, and never interpret the final-weights chart as the best bundle's
-chart. The initial A100 PPO run has a selected-weights CPU replay report linked
+New runs automatically save `selected-validation.html`/`.json` when validation
+selects better weights, plus the selected transition count and per-symbol metrics
+in metadata. Keep a separately labeled report when replaying selected weights,
+record its device, and never interpret the final-weights chart as the best bundle's chart. The initial A100 PPO run has a selected-weights CPU replay report linked
 in [verification](verification.md).
 
 `RL_CHECKPOINT_ARCHIVE` enables an atomic archive after validation; the remote bootstrap sets this path. The Colab watchdog retrieves it into durable local storage with bounded waits. This is best-effort periodic transfer; loss before the first successful download cannot be repaired from an ephemeral VM after termination. Final archive retrieval and cleanup are separately recorded.

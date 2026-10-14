@@ -4,6 +4,7 @@ import importlib.metadata
 import json
 import os
 import random
+import shutil
 from pathlib import Path
 import sys
 import time
@@ -27,6 +28,7 @@ class ValidationCheckpoint(BaseCallback):
     def __init__(self,dataset,config,path,every):
         super().__init__();self.dataset=dataset;self.config=config;self.path=path
         self.every=every;self.best=-float("inf");self.history=[]
+        self.best_step=None;self.best_metrics={}
     def validate(self):
         results=evaluate(self.model,self.dataset,"validation",self.config)
         score=selection_score(results)
@@ -35,16 +37,24 @@ class ValidationCheckpoint(BaseCallback):
         self.model.save(self.path/f"checkpoint-{self.num_timesteps}")
         if hasattr(self.model,"save_replay_buffer"):
             self.model.save_replay_buffer(self.path/"checkpoint-replay.pkl")
-        if score>self.best:
+        improved=score>self.best
+        if improved:
             self.best=score;self.model.save(self.path/"best")
+            self.best_step=self.num_timesteps
+            self.best_metrics={key:{"symbol":value["symbol"],"policy":value["metrics"],
+                "baselines":{name:baseline["metrics"] for name,baseline in value["baselines"].items()}}
+                for key,value in results.items()}
         (self.path/"checkpoints.json").write_text(json.dumps(self.history,indent=2))
         report(results,self.path/"validation.html","Validation; selection only",self.history)
+        if improved:
+            for suffix in ("html","json"):
+                shutil.copyfile(self.path/f"validation.{suffix}",self.path/f"selected-validation.{suffix}")
         snapshot=os.environ.get("RL_CHECKPOINT_ARCHIVE")
         if snapshot:
             target=Path(snapshot)
             temporary=target.with_suffix(".tmp")
             with tarfile.open(temporary,"w:gz") as archive:
-                archive.add(self.path,arcname=self.path.name)
+                archive.add(self.path.parent.parent,arcname="artifacts")
             temporary.replace(target)
     def _on_step(self):
         if not np.isfinite(self.locals["rewards"]).all():raise ValueError("nonfinite reward")
@@ -99,6 +109,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         original=selected.predict(observation,deterministic=True)[0]
         metadata.update(status="complete",actual_steps=model.num_timesteps,duration_seconds=time.monotonic()-start,
             validation_checkpoints=callback.history,selected_score=callback.best)
+        metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         np.testing.assert_array_equal(original,frozen.predict(observation))

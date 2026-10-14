@@ -69,3 +69,18 @@ class JobPlanTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'full --research'):
                 job.run(directory)
             self.assertEqual(job.ledger.value['attempts'],[])
+
+    def test_matched_study_algorithms_seeds_and_validation(self):
+        from rl_stocks.runtime.colab.jobs import study_plan,validate_plan
+        from rl_stocks.runtime.colab.runner import ColabJob
+        plan=study_plan()
+        self.assertEqual(len(plan['jobs']),13)
+        research=[j for j in plan['jobs'] if not j['smoke']]
+        self.assertEqual({(j['algorithm'],j['seed']) for j in research},
+                         {(a,s) for a in ('ppo','sac','td3') for s in (11,23,37)})
+        self.assertTrue(all(j['steps']==50000 and j['device']=='cuda' for j in research))
+        self.assertEqual(validate_plan(plan),plan)
+        altered=json.loads(json.dumps(plan));altered['jobs'][-1]['seed']=42
+        with self.assertRaises(ValueError):validate_plan(altered)
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(ValueError):ColabJob(directory,'python','CPU').run(directory,study=True)

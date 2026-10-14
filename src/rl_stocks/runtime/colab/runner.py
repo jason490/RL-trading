@@ -12,7 +12,7 @@ import tarfile
 import time
 import uuid
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
-from rl_stocks.runtime.colab.jobs import job_plan
+from rl_stocks.runtime.colab.jobs import job_plan,study_plan
 from rl_stocks.core.provenance import repository_state
 from rl_stocks.runtime.colab.artifacts import validate_archive
 
@@ -83,7 +83,7 @@ class ColabJob:
     def retrieve(self,remote,local):
         for attempt in range(3):
             try:
-                self.operation(["download","-s",self.session,remote,str(local)],30)
+                self.operation(["download","-s",self.session,remote,str(local)],getattr(self,"download_timeout",30))
                 self.ledger.active["retrieved"].append(str(local));self.ledger.save()
                 return True
             except BudgetStop:raise
@@ -92,7 +92,7 @@ class ColabJob:
 
     def execute_worker(self):
         try:
-            self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)
+            self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],getattr(self,"exec_timeout",1800))
         except BudgetStop:
             raise
         except RuntimeError:
@@ -123,10 +123,14 @@ class ColabJob:
             recovery=" ".join(self.command+["stop","-s",self.session])
             print(f"Cleanup failed. Session: {self.session}. Recovery: {recovery}",file=sys.stderr)
         return verified
-    def run(self,dataset,research_algorithm=None):
-        if self.accelerator=="A100" and research_algorithm is None:
+    def run(self,dataset,research_algorithm=None,study=False):
+        if study and (self.accelerator!="A100" or research_algorithm is not None):
+            raise ValueError("matched study requires A100 and no single-algorithm override")
+        if self.accelerator=="A100" and research_algorithm is None and not study:
             raise ValueError("A100 requires a full --research job; use CPU/T4 for preflight")
-        plan=job_plan(research_algorithm,self.accelerator)
+        plan=study_plan() if study else job_plan(research_algorithm,self.accelerator)
+        self.exec_timeout=5400 if study else 1800
+        self.download_timeout=120 if study else 30
         # Help and version are checked before any metered allocation.
         version=self.short(["version"])
         for cmd in ("usage","new","install","exec","upload","download","stop","sessions"):
@@ -222,11 +226,12 @@ def main():
                         help="After smoke acceptance, train one 50,000-transition seed-11 model")
     parser.add_argument("--accelerator",choices=("CPU","T4","A100"),
                         help="Default CPU for preflight; A100 for --research")
+    parser.add_argument("--study",action="store_true",help="A100: all three algorithms, 50k transitions, seeds 11/23/37")
     args=parser.parse_args()
     root=Path.cwd();state=root/".runtime";state.mkdir(exist_ok=True)
     with (state/"allocation.lock").open("w") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        accelerator=args.accelerator or ("A100" if args.research else "CPU")
-        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research)
+        accelerator=args.accelerator or ("A100" if args.research or args.study else "CPU")
+        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research,args.study)
 
 if __name__=="__main__":main()

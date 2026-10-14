@@ -45,3 +45,26 @@ def job_plan(research_algorithm=None, accelerator="A100"):
         jobs.append({"algorithm": research_algorithm, "device": "cuda",
                      "smoke": False, "steps": 50000})
     return {"version": 2, "seed": 11, "accelerator": accelerator, "jobs": jobs}
+
+
+def study_plan():
+    """One dataset, matched algorithms/seeds; budget watchdog owns the allocation."""
+    smoke = [{**job, "seed": 11} for job in job_plan(accelerator="T4")["jobs"]]
+    research = [{"algorithm": algorithm, "device": "cuda", "smoke": False,
+                 "steps": 50000, "seed": seed}
+                for algorithm in ("ppo", "sac", "td3") for seed in (11, 23, 37)]
+    return {"version": 3, "accelerator": "A100", "jobs": smoke+research}
+
+
+def validate_plan(plan):
+    if plan.get("version") == 3:
+        if plan != study_plan():
+            raise ValueError("unsupported matched study plan")
+    elif plan.get("version") == 2:
+        jobs = plan["jobs"]
+        research = jobs[-1]["algorithm"] if not jobs[-1]["smoke"] else None
+        if plan != job_plan(research, plan["accelerator"]):
+            raise ValueError("unsupported remote job plan")
+    else:
+        raise ValueError("unsupported plan version")
+    return plan
