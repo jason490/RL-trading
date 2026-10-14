@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **68 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **69 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -35,7 +35,7 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unitt
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The full suite completed in 32.253 seconds on Python 3.13.16. The earlier
+The full suite completed in 32.703 seconds on Python 3.13.16. The earlier
 Python 3.12 acceptance also passed but is historical evidence, not the supported
 runtime. No Ruff, mypy or pytest invocation is claimed. Integration smoke checks
 verify wiring and accounting, not profitable learning.
@@ -61,8 +61,8 @@ Generated data/artifacts are ignored by Git; these links require the local outpu
 ## Remote attempts, compute and recovery
 
 The cumulative ledger remains `.runtime/usage-ledger.json`; it is never reset
-between retries. After five attempts, conservative cumulative usage is 0.722489 units,
-with zero debit reported by the delayed account meter. All five are stopped.
+between retries. After six attempts, conservative cumulative usage is 0.727205 units,
+with zero debit reported by the delayed account meter. All six are stopped.
 Owned A100 allocations report 5.30 units/hour. The project ceiling stays 150 units,
 with work stopping by 130 and a two-hour allocation deadline including setup,
 training and retrieval.
@@ -76,6 +76,8 @@ Prior attempts:
 
 5. `rl-stocks-smoke-897ccaeabfd6`: bootstrap installation failed before worker execution; cleanup verified. The runner now supports shared-ledger CPU/T4 preflight and separates logs by session.
 
+6. `rl-stocks-cpu-fcb20e48ed3d`: CPU preflight passed with PPO 512 / SAC 1024 / TD3 1024 on the verified Yahoo dataset, Python 3.13.16 and 0.08 units/hour. A CLI transport error followed completion; the downloaded completion manifest and all bundle checksums were independently verified. All three frozen bundles also passed local deterministic inference and normalization-freeze checks. Cleanup verified.
+
 Subprocess stdout/stderr and worker tracebacks are now retained durably in final
 artifacts. Metering, downloads and teardown remain bounded; no budget-stop restart
 is automatic. Final charges, retrieved models and cleanup will be recorded after
@@ -83,7 +85,7 @@ this attempt finishes.
 
 ## Remaining research and execution milestones
 
-- Finish A100 smoke and the initial seed-11, 50,000-transition PPO run.
+- CPU Colab preflight is complete; finish the initial A100 seed-11, 50,000-transition PPO run and startup CUDA checks.
 - Run matched 50,000-transition experiments across algorithms and seeds 11/23/37.
 - Perform feature/reward ablations using training and validation only.
 - Freeze a candidate before the held-out test audit; test data has not selected checkpoints.

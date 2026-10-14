@@ -89,6 +89,16 @@ class ColabJob:
             except BudgetStop:raise
             except Exception:continue
         return False
+
+    def execute_worker(self):
+        try:
+            self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)
+        except BudgetStop:
+            raise
+        except RuntimeError:
+            # A completed remote job may outlive a failed CLI output stream.
+            # The downloaded manifest and checksums still decide acceptance.
+            self.ledger.active["exec_cli_failed"]=True;self.ledger.save()
     def cleanup(self):
         verified=False
         try:
@@ -174,7 +184,7 @@ class ColabJob:
             self.operation(["upload","-s",self.session,str(archive),"/content/research-upload.tar.gz"],120)
             # Use Colab's Python; isolate dependencies without changing interpreter.
             self.operation(["install","-s",self.session,"uv==0.13.1"],180)
-            self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],1800)
+            self.execute_worker()
             output=self.root/"artifacts"/"colab"/self.session;output.mkdir(parents=True,exist_ok=True)
             ok=self.retrieve("/content/research-artifacts.tar.gz",output/"artifacts.tar.gz")
             if not ok:raise RuntimeError("artifact download exhausted retries")

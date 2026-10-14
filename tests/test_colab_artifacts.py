@@ -85,3 +85,38 @@ class ArtifactTests(unittest.TestCase):
         self.completion['gpu']='NVIDIA A100'
         self.write_completion()
         with self.assertRaisesRegex(RuntimeError,'manifest mismatch'):self.check()
+
+    def test_completed_artifacts_survive_cli_transport_failure_and_cleanup(self):
+        import contextlib
+        import io
+        import shutil
+        from rl_stocks.runtime.colab.budget import Usage
+        from rl_stocks.runtime.colab.runner import ColabJob
+        self.check()  # Produce integrity fixtures before output directories exist.
+        for folder in ('src','scripts','configs','dataset-id'):
+            (self.root/folder).mkdir()
+        for name in ('pyproject.toml','requirements.txt','requirements.lock'):
+            (self.root/name).write_text('mock lifecycle fixture')
+        (self.root/'dataset-id/dataset.json').write_text('{}')
+        source=self.root/'result.tar.gz'
+        class TransportFailureJob(ColabJob):
+            remote_active=False
+            def meter(self):return Usage(150,5.3,1) if self.remote_active else Usage(150,0,0)
+            def short(self,args,timeout=25):
+                if args[0]=='stop':self.remote_active=False
+                return 'No active sessions found' if args[0]=='sessions' else 'A100'
+            def operation(self,args,timeout):
+                if args[0]=='new':
+                    self.remote_active=True
+                    (self.state/'sessions.json').write_text(json.dumps({self.session:{'name':self.session,'endpoint':'owned'}}))
+                if args[0]=='exec':raise RuntimeError('output stream failed after completion')
+            def retrieve(self,remote,local):
+                shutil.copyfile(source,local)
+                self.ledger.active['retrieved'].append(str(local));self.ledger.save()
+                return True
+        job=TransportFailureJob(self.root,'python','A100')
+        with contextlib.redirect_stdout(io.StringIO()):
+            job.run(self.root/'dataset-id','ppo')
+        self.assertTrue(job.ledger.active['exec_cli_failed'])
+        self.assertTrue(job.ledger.active['training_verified'])
+        self.assertEqual(job.ledger.active['status'],'stopped')

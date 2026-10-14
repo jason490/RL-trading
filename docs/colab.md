@@ -123,6 +123,11 @@ therefore validates the downloaded completion manifest, expected job counts,
 exact transition counts, dataset/runtime identities and frozen-bundle checksums.
 A failure archive or missing job is rejected even if the CLI command succeeded.
 
+Conversely, a CLI output-stream error can occur after the worker completed.
+The runner records that transport failure, retrieves the final archive and
+accepts it only if every expected job, runtime identity and bundle checksum
+passes validation. Budget stops and interruptions still enter teardown.
+
 The worker environment selects Matplotlib's `Agg` backend for headless training,
 sets a writable plotting cache and removes inherited notebook Python path/home
 overrides. This prevents Colab's inline backend from requiring notebook-only

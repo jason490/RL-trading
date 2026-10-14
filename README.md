@@ -17,7 +17,7 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | Mock lifecycle tests pass; actual remote acceptance pending |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **68 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **69 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Requirements and installation
 
