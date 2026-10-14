@@ -21,6 +21,14 @@ def setup_logging(log_to_stderr):
 cli.setup_logging = setup_logging
 cli.state._settings_store = SettingsStore(str(state / 'settings.json'))
 cli.state._history = HistoryLogger(str(state / 'history'))
+sys.path.insert(0,str(root/'src'))
+from colab_cli.contents import ContentsClient
+from rl_stocks.runtime.colab.transfers import download_binary
+
+def stream_download(self, remote_path, local_path):
+    download_binary(self.base_url,self.token,remote_path,local_path)
+
+ContentsClient.download=stream_download
 if __name__ == '__main__':
     if sys.argv[1:]==['usage']:
         sys.path.insert(0,str(root/'src'))

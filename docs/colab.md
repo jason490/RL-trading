@@ -272,3 +272,15 @@ The handled request is recorded privately in `.runtime/handled-stop.json`.
 Study checkpoint transfers allow up to 45 seconds per snapshot; final archive
 transfers retain three bounded 120-second attempts. Minute metering remains
 active, and the two-hour allocation deadline includes these transfers.
+
+## Large artifact streaming
+
+The installed 0.7.4 download command reads an entire base64 Contents-API JSON
+response. A bounded download of a large study archive exceeded 120 seconds.
+The project wrapper now uses the same existing session/authentication with
+[Jupyter's authenticated file handler](https://jupyter-server.readthedocs.io/en/stable/api/jupyter_server.files.html)
+to stream binary chunks, bound connect/read/overall time, verify response length
+and atomically replace local files. A 132.5 MB live study checkpoint was
+successfully retrieved this way. CLI installation and authentication are unchanged.
+Error messages omit credential-bearing URLs. Interrupted partial files never
+replace a previously retrieved archive.
