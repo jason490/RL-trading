@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "rl-stocks"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==2.2.6", "gymnasium==1.2.0", "stable-baselines3==2.7.0", "torch==2.8.0", "pandas==2.3.2", "pyarrow==21.0.0", "plotly==6.3.0", "exchange-calendars==4.11.1"]
+[project.optional-dependencies]
+yahoo = ["yfinance==0.2.65"]
+alpaca = ["alpaca-py==0.42.0"]
+dev = ["pytest==8.4.2", "ruff==0.13.0"]
+[project.scripts]
+rl-stocks = "rl_stocks.runtime.local:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100

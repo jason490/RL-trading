@@ -1,0 +1,2770 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Swing-Trading RL Project Plan</title>
+  <style>
+    /* ==========================================================================
+       CSS Custom Properties (Theme Variables)
+       ========================================================================== */
+    :root {
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      
+      /* Dark Theme (Default) */
+      --bg-canvas: #090d16;
+      --bg-surface: #0f172a;
+      --bg-surface-elevated: #1e293b;
+      --bg-surface-hover: #273549;
+      --bg-code: #0b1120;
+      
+      --border-subtle: #1e293b;
+      --border-strong: #334155;
+      --border-accent: #38bdf8;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --text-link: #38bdf8;
+      --text-link-hover: #7dd3fc;
+      
+      --accent-blue: #38bdf8;
+      --accent-blue-bg: rgba(56, 189, 248, 0.1);
+      --accent-green: #34d399;
+      --accent-green-bg: rgba(52, 211, 153, 0.1);
+      --accent-amber: #fbbf24;
+      --accent-amber-bg: rgba(251, 191, 36, 0.1);
+      --accent-purple: #c084fc;
+      --accent-purple-bg: rgba(192, 132, 252, 0.1);
+      --accent-rose: #f43f5e;
+      --accent-rose-bg: rgba(244, 63, 94, 0.1);
+      --accent-indigo: #818cf8;
+      --accent-indigo-bg: rgba(129, 140, 248, 0.1);
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+
+      --diagram-bg: #0d1527;
+      --diagram-box: #13203c;
+      --diagram-border: #263859;
+      --diagram-text: #e2e8f0;
+      --diagram-arrow: #38bdf8;
+    }
+
+    [data-theme="light"] {
+      --bg-canvas: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-surface-hover: #e2e8f0;
+      --bg-code: #f1f5f9;
+      
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --border-accent: #0284c7;
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+      --text-link: #0284c7;
+      --text-link-hover: #0369a1;
+      
+      --accent-blue: #0284c7;
+      --accent-blue-bg: rgba(2, 132, 199, 0.08);
+      --accent-green: #059669;
+      --accent-green-bg: rgba(5, 150, 105, 0.08);
+      --accent-amber: #d97706;
+      --accent-amber-bg: rgba(217, 119, 6, 0.08);
+      --accent-purple: #9333ea;
+      --accent-purple-bg: rgba(147, 51, 234, 0.08);
+      --accent-rose: #e11d48;
+      --accent-rose-bg: rgba(225, 29, 72, 0.08);
+      --accent-indigo: #4f46e5;
+      --accent-indigo-bg: rgba(79, 70, 229, 0.08);
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+      --diagram-bg: #f8fafc;
+      --diagram-box: #ffffff;
+      --diagram-border: #cbd5e1;
+      --diagram-text: #1e293b;
+      --diagram-arrow: #0284c7;
+    }
+
+    /* ==========================================================================
+       Reset & Base Styles
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--text-link);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--text-link-hover);
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       Top Navigation Bar
+       ========================================================================== */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 4rem;
+      background-color: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+
+    [data-theme="light"] .top-nav {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+    }
+
+    .brand-icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .brand-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-amber {
+      background-color: var(--accent-amber-bg);
+      color: var(--accent-amber);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .badge-blue {
+      background-color: var(--accent-blue-bg);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-purple {
+      background-color: var(--accent-purple-bg);
+      color: var(--accent-purple);
+      border: 1px solid rgba(192, 132, 252, 0.3);
+    }
+
+    .badge-green {
+      background-color: var(--accent-green-bg);
+      color: var(--accent-green);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .badge-rose {
+      background-color: var(--accent-rose-bg);
+      color: var(--accent-rose);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .search-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-strong);
+      color: var(--text-main);
+      padding: 0.45rem 0.85rem 0.45rem 2.2rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      width: 13rem;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      width: 17rem;
+      box-shadow: 0 0 0 2px var(--accent-blue-bg);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      width: 1rem;
+      height: 1rem;
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .btn-toggle {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-strong);
+      color: var(--text-main);
+      border-radius: 0.5rem;
+      padding: 0.45rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s ease;
+    }
+
+    .btn-toggle:hover {
+      background-color: var(--bg-surface-hover);
+      border-color: var(--text-dim);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-strong);
+      color: var(--text-main);
+      border-radius: 0.5rem;
+      padding: 0.45rem 0.6rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       Layout: Sidebar & Main Content
+       ========================================================================== */
+    .app-container {
+      display: flex;
+      max-width: 1540px;
+      margin: 0 auto;
+      min-height: calc(100vh - 4rem);
+    }
+
+    .sidebar {
+      width: 19rem;
+      flex-shrink: 0;
+      position: sticky;
+      top: 4rem;
+      height: calc(100vh - 4rem);
+      overflow-y: auto;
+      padding: 1.5rem 1rem;
+      border-right: 1px solid var(--border-subtle);
+      background-color: var(--bg-canvas);
+    }
+
+    .sidebar-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.4rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    .toc-link:hover {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .toc-link.active {
+      background-color: var(--accent-blue-bg);
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .toc-link.active .toc-num {
+      color: var(--accent-blue);
+    }
+
+    .main-content {
+      flex: 1;
+      min-width: 0;
+      padding: 2.5rem 3rem 6rem;
+    }
+
+    /* ==========================================================================
+       Hero Section
+       ========================================================================== */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+      border: 1px solid var(--border-strong);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    [data-theme="light"] .hero-banner {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(56, 189, 248, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 54rem;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       Sections & Typography
+       ========================================================================== */
+    section.doc-section {
+      margin-bottom: 4rem;
+      padding-top: 1rem;
+    }
+
+    .section-header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.875rem;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    h2.section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h2.section-title .section-id {
+      color: var(--accent-blue);
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    h3.subsection-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin: 2.25rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    p strong {
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       Cards, Callouts & Lists
+       ========================================================================== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0.75rem;
+      padding: 1.35rem;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .feature-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .callout {
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      border-left: 4px solid transparent;
+    }
+
+    .callout-note {
+      background-color: var(--accent-blue-bg);
+      border-left-color: var(--accent-blue);
+    }
+
+    .callout-warning {
+      background-color: var(--accent-amber-bg);
+      border-left-color: var(--accent-amber);
+    }
+
+    .callout-tip {
+      background-color: var(--accent-green-bg);
+      border-left-color: var(--accent-green);
+    }
+
+    .callout-purple {
+      background-color: var(--accent-purple-bg);
+      border-left-color: var(--accent-purple);
+    }
+
+    .callout-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .callout-content {
+      flex: 1;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .callout-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul.styled-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+      margin: 1.25rem 0;
+    }
+
+    ul.styled-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      color: var(--text-muted);
+    }
+
+    ul.styled-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      color: var(--accent-blue);
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    ul.styled-list li strong {
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       Tables
+       ========================================================================== */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border: 1px solid var(--border-subtle);
+      border-radius: 0.75rem;
+      background-color: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.925rem;
+    }
+
+    table.data-table th {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-main);
+      font-weight: 600;
+      padding: 0.875rem 1.125rem;
+      border-bottom: 1px solid var(--border-strong);
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    table.data-table td {
+      padding: 1rem 1.125rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    table.data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.data-table tr:hover td {
+      background-color: rgba(56, 189, 248, 0.02);
+    }
+
+    .table-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.15rem 0.45rem;
+      border-radius: 0.3rem;
+      background-color: var(--bg-surface-elevated);
+      color: var(--accent-blue);
+      border: 1px solid var(--border-strong);
+    }
+
+    /* ==========================================================================
+       Code Blocks & File Tree
+       ========================================================================== */
+    .code-container {
+      position: relative;
+      background-color: var(--bg-code);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0.75rem;
+      margin: 1.5rem 0;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1rem;
+      background-color: var(--bg-surface-elevated);
+      border-bottom: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      color: var(--text-muted);
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.35rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.15s ease;
+    }
+
+    .copy-btn:hover {
+      color: var(--text-main);
+      background-color: var(--bg-surface-hover);
+    }
+
+    pre.code-block {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #e2e8f0;
+    }
+
+    [data-theme="light"] pre.code-block {
+      color: #1e293b;
+    }
+
+    .code-comment {
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       Diagram Container & SVG Graphics
+       ========================================================================== */
+    .diagram-wrapper {
+      background-color: var(--diagram-bg);
+      border: 1px solid var(--diagram-border);
+      border-radius: 0.875rem;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .diagram-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-blue);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    svg.interactive-diagram {
+      width: 100%;
+      height: auto;
+      display: block;
+      min-width: 720px;
+    }
+
+    /* Diagram Styles */
+    .d-box {
+      fill: var(--diagram-box);
+      stroke: var(--diagram-border);
+      stroke-width: 1.5;
+      rx: 8;
+      transition: all 0.2s ease;
+    }
+
+    .d-box:hover {
+      stroke: var(--accent-blue);
+      filter: drop-shadow(0 4px 8px rgba(56, 189, 248, 0.25));
+    }
+
+    .d-box-accent {
+      fill: var(--accent-blue-bg);
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+      rx: 8;
+    }
+
+    .d-box-green {
+      fill: var(--accent-green-bg);
+      stroke: var(--accent-green);
+      stroke-width: 2;
+      rx: 8;
+    }
+
+    .d-box-amber {
+      fill: var(--accent-amber-bg);
+      stroke: var(--accent-amber);
+      stroke-width: 2;
+      rx: 8;
+    }
+
+    .d-box-purple {
+      fill: var(--accent-purple-bg);
+      stroke: var(--accent-purple);
+      stroke-width: 2;
+      rx: 8;
+    }
+
+    .d-box-rose {
+      fill: var(--accent-rose-bg);
+      stroke: var(--accent-rose);
+      stroke-width: 2;
+      rx: 8;
+    }
+
+    .d-text-title {
+      fill: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      text-anchor: middle;
+    }
+
+    .d-text-sub {
+      fill: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      text-anchor: middle;
+    }
+
+    .d-arrow {
+      stroke: var(--diagram-arrow);
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+
+    .d-arrow-dashed {
+      stroke: var(--text-dim);
+      stroke-width: 1.5;
+      stroke-dasharray: 4,4;
+      fill: none;
+      marker-end: url(#arrowhead-gray);
+    }
+
+    /* ==========================================================================
+       Milestone Interactive Cards
+       ========================================================================== */
+    .milestone-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.2s ease;
+      position: relative;
+    }
+
+    .milestone-card:hover {
+      border-color: var(--border-strong);
+    }
+
+    .milestone-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .milestone-num-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .milestone-badge {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-strong);
+      color: var(--accent-blue);
+      font-weight: 700;
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .milestone-title-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .milestone-completion-box {
+      margin-top: 1rem;
+      padding: 0.875rem 1rem;
+      border-radius: 0.5rem;
+      background-color: var(--bg-surface-elevated);
+      border-left: 3px solid var(--accent-green);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .milestone-completion-box strong {
+      color: var(--accent-green);
+    }
+
+    /* ==========================================================================
+       Responsive Styles
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 4rem;
+        bottom: 0;
+        z-index: 99;
+        background-color: var(--bg-surface);
+        box-shadow: var(--shadow-lg);
+        width: 18rem;
+      }
+
+      .sidebar.open {
+        display: block;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .main-content {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .hero-title {
+        font-size: 1.85rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-nav {
+        padding: 0 1rem;
+      }
+      .brand-title span:last-child {
+        display: none;
+      }
+      .search-input {
+        width: 9rem;
+      }
+      .search-input:focus {
+        width: 12rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .top-nav, .sidebar, .copy-btn, .btn-toggle, .search-input-wrap {
+        display: none !important;
+      }
+      .app-container {
+        display: block;
+      }
+      .main-content {
+        padding: 0;
+      }
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .feature-card, .callout, .table-container, .diagram-wrapper, .milestone-card {
+        border-color: #ccc !important;
+        background: #fff !important;
+        color: #000 !important;
+        break-inside: avoid;
+      }
+      a {
+        text-decoration: underline;
+        color: #000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Top Navigation Bar
+       ========================================================================== -->
+  <nav class="top-nav" aria-label="Main Navigation">
+    <div class="brand-group">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <div class="brand-icon">RL</div>
+      <div class="brand-title">
+        <span>RL-Stocks</span>
+        <span class="badge badge-amber">Planning Only</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <div class="search-input-wrap">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search plan sections..." aria-label="Search plan">
+      </div>
+
+      <button class="btn-toggle" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+        <span id="themeIcon">☀️</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       App Container: Sidebar + Content
+       ========================================================================== -->
+  <div class="app-container">
+
+    <!-- Table of Contents Sidebar -->
+    <aside class="sidebar" id="sidebarNav" aria-label="Table of Contents">
+      <div class="sidebar-section-title">Project Specification</div>
+      <ul class="toc-list" id="tocList">
+        <li><a href="#section-1" class="toc-link"><span class="toc-num">01</span><span>Outcome & Assumptions</span></a></li>
+        <li><a href="#section-2" class="toc-link"><span class="toc-num">02</span><span>Folder & Module Ownership</span></a></li>
+        <li><a href="#section-3" class="toc-link"><span class="toc-num">03</span><span>Data Accumulator & Generator</span></a></li>
+        <li><a href="#section-4" class="toc-link"><span class="toc-num">04</span><span>Preventing Lookahead Bias</span></a></li>
+        <li><a href="#section-5" class="toc-link"><span class="toc-num">05</span><span>Feature Rollout & Ablations</span></a></li>
+        <li><a href="#section-6" class="toc-link"><span class="toc-num">06</span><span>Environment & Learned Trade</span></a></li>
+        <li><a href="#section-7" class="toc-link"><span class="toc-num">07</span><span>Reward Design</span></a></li>
+        <li><a href="#section-8" class="toc-link"><span class="toc-num">08</span><span>RL Defaults & Tuning</span></a></li>
+        <li><a href="#section-9" class="toc-link"><span class="toc-num">09</span><span>Checkpoints & Visual Reports</span></a></li>
+        <li><a href="#section-10" class="toc-link"><span class="toc-num">10</span><span>Saving & Freezing the Model</span></a></li>
+        <li><a href="#section-11" class="toc-link"><span class="toc-num">11</span><span>Live-Data & Alpaca Paper</span></a></li>
+        <li><a href="#section-12" class="toc-link"><span class="toc-num">12</span><span>Colab, Efficiency & Reproducibility</span></a></li>
+        <li><a href="#section-13" class="toc-link"><span class="toc-num">13</span><span>Milestones & Criteria</span></a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+
+      <!-- ==========================================================================
+           Hero Banner
+           ========================================================================== -->
+      <header class="hero-banner">
+        <div class="hero-badges">
+          <span class="badge badge-amber">Status: Planning Only</span>
+          <span class="badge badge-blue">Updated 2026-10-13</span>
+          <span class="badge badge-purple">Gymnasium • SB3 • Alpaca</span>
+        </div>
+        <h1 class="hero-title">Modular Swing-Trading RL Project Plan</h1>
+        <p class="hero-subtitle">
+          A provider-independent, causal research pipeline for US equities swing trading using Stable-Baselines3 (PPO, SAC, TD3), customizable Gymnasium environments with learned stop/target zones, chronological walk-forward validation, and Alpaca paper execution.
+        </p>
+      </header>
+
+      <!-- ==========================================================================
+           DIAGRAM 1: End-to-End System Pipeline Flow
+           ========================================================================== -->
+      <div class="diagram-wrapper">
+        <div class="diagram-title">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          System Pipeline Flow: End-to-End Architecture
+        </div>
+        <svg class="interactive-diagram" viewBox="0 0 1000 240" aria-label="End-to-end RL pipeline flow diagram">
+          <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="var(--diagram-arrow)"/>
+            </marker>
+            <marker id="arrowhead-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="var(--text-dim)"/>
+            </marker>
+          </defs>
+
+          <!-- Top Row: Data to RL Factory -->
+          <!-- Node 1: Provider Adapters -->
+          <g transform="translate(20, 20)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Provider Adapters</text>
+            <text class="d-text-sub" x="67" y="46">Alpaca, Yahoo, SEC</text>
+            <text class="d-text-sub" x="67" y="58">Tradier, GDELT, CSV</text>
+          </g>
+
+          <line class="d-arrow" x1="155" y1="52" x2="185" y2="52"/>
+
+          <!-- Node 2: Accumulator -->
+          <g transform="translate(185, 20)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Accumulator</text>
+            <text class="d-text-sub" x="67" y="46">Resumable Sync</text>
+            <text class="d-text-sub" x="67" y="58">Raw + Checksums</text>
+          </g>
+
+          <line class="d-arrow" x1="320" y1="52" x2="350" y2="52"/>
+
+          <!-- Node 3: Storage & DuckDB -->
+          <g transform="translate(350, 20)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Normalized Records</text>
+            <text class="d-text-sub" x="67" y="46">Partitioned Parquet</text>
+            <text class="d-text-sub" x="67" y="58">DuckDB Local Cache</text>
+          </g>
+
+          <line class="d-arrow" x1="485" y1="52" x2="515" y2="52"/>
+
+          <!-- Node 4: Causal Features -->
+          <g transform="translate(515, 20)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Causal Features</text>
+            <text class="d-text-sub" x="67" y="46">Backward As-Of Join</text>
+            <text class="d-text-sub" x="67" y="58">Trailing Indicators</text>
+          </g>
+
+          <line class="d-arrow" x1="650" y1="52" x2="680" y2="52"/>
+
+          <!-- Node 5: Dataset Generator -->
+          <g transform="translate(680, 20)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Dataset Generator</text>
+            <text class="d-text-sub" x="67" y="46">Chronological Splits</text>
+            <text class="d-text-sub" x="67" y="58">Fitted Preprocessing</text>
+          </g>
+
+          <line class="d-arrow" x1="815" y1="52" x2="845" y2="52"/>
+
+          <!-- Node 6: Gymnasium Environment -->
+          <g transform="translate(845, 20)">
+            <rect class="d-box-accent" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28" fill="var(--accent-blue)">Trading Env</text>
+            <text class="d-text-sub" x="67" y="46">Cash/Holdings/Costs</text>
+            <text class="d-text-sub" x="67" y="58">Learned Zone Exits</text>
+          </g>
+
+          <!-- Turn around down to second row -->
+          <path class="d-arrow" d="M 912 85 L 912 120 L 912 145"/>
+
+          <!-- Bottom Row: RL Training to Live Paper Execution -->
+          <!-- Node 7: RL Factory -->
+          <g transform="translate(845, 145)">
+            <rect class="d-box-purple" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28" fill="var(--accent-purple)">RL Factory</text>
+            <text class="d-text-sub" x="67" y="46">PPO / SAC / TD3</text>
+            <text class="d-text-sub" x="67" y="58">Stable-Baselines3</text>
+          </g>
+
+          <line class="d-arrow" x1="845" y1="177" x2="815" y2="177"/>
+
+          <!-- Node 8: Validation & Reporting -->
+          <g transform="translate(680, 145)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Validation & Eval</text>
+            <text class="d-text-sub" x="67" y="46">10k Step Checkpoints</text>
+            <text class="d-text-sub" x="67" y="58">Visual Plotly Reports</text>
+          </g>
+
+          <line class="d-arrow" x1="680" y1="177" x2="650" y2="177"/>
+
+          <!-- Node 9: Frozen Bundle -->
+          <g transform="translate(515, 145)">
+            <rect class="d-box-accent" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28" fill="var(--accent-blue)">Frozen Bundle</text>
+            <text class="d-text-sub" x="67" y="46">Weights + Preprocess</text>
+            <text class="d-text-sub" x="67" y="58">Immutable Manifests</text>
+          </g>
+
+          <line class="d-arrow" x1="515" y1="177" x2="485" y2="177"/>
+
+          <!-- Node 10: Inference & Shadow Mode -->
+          <g transform="translate(350, 145)">
+            <rect class="d-box" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28">Shadow Inference</text>
+            <text class="d-text-sub" x="67" y="46">Live Feed Decoupling</text>
+            <text class="d-text-sub" x="67" y="58">Parity Verification</text>
+          </g>
+
+          <line class="d-arrow" x1="350" y1="177" x2="320" y2="177"/>
+
+          <!-- Node 11: Risk Management -->
+          <g transform="translate(185, 145)">
+            <rect class="d-box-amber" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28" fill="var(--accent-amber)">Risk & Limits</text>
+            <text class="d-text-sub" x="67" y="46">Buying Power / Caps</text>
+            <text class="d-text-sub" x="67" y="58">Clipping & Deadbands</text>
+          </g>
+
+          <line class="d-arrow" x1="185" y1="177" x2="155" y2="177"/>
+
+          <!-- Node 12: Alpaca Paper Broker -->
+          <g transform="translate(20, 145)">
+            <rect class="d-box-green" width="135" height="65"/>
+            <text class="d-text-title" x="67" y="28" fill="var(--accent-green)">Alpaca Paper</text>
+            <text class="d-text-sub" x="67" y="46">Reconciliation Loop</text>
+            <text class="d-text-sub" x="67" y="58">Zone Scale-Outs</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- ==========================================================================
+           SECTION 1: Intended outcome and starting assumptions
+           ========================================================================== -->
+      <section id="section-1" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">01</span> Intended Outcome and Starting Assumptions</h2>
+          <span class="badge badge-blue">Baseline Foundation</span>
+        </div>
+
+        <p>
+          Build a provider-independent research pipeline that accumulates market and company data, generates causal features, produces chronological training/validation/test datasets, trains interchangeable <strong>PPO</strong>, <strong>SAC</strong>, and <strong>TD3</strong> agents, and exports frozen models for inference against live market data and Alpaca paper trading.
+        </p>
+
+        <p>
+          The final model proposes position size, long/short direction, stop loss, a learned take-profit zone, and position adjustments. Execution and risk controls validate those proposals before sending orders. Add features and reward terms gradually, measuring each addition against the previous version.
+        </p>
+
+        <h3 class="subsection-title">Initial Planning Defaults (Configurable before implementation)</h3>
+        
+        <div class="card-grid">
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">1. Swing Trading Cadence</span>
+              <span class="badge badge-blue">Daily + Weekly</span>
+            </div>
+            <p>
+              US equities and swing trading; begin with daily decisions and completed daily bars, then add completed weekly context. Track holding periods in sessions. A research target of roughly <strong>2–20 sessions</strong> is an observation goal, not a rule that blocks protective exits.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">2. Execution & Fill Timing</span>
+              <span class="badge badge-amber">Next-Session Open</span>
+            </div>
+            <p>
+              Generate a signal after the completed session is available; simulate entry/adjustment at the next regular-session open with costs. Paper inference uses the same timing and accounts for feed publication delays. Protective orders can operate between daily decisions.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">3. Universe & Sharing</span>
+              <span class="badge badge-purple">Single-Symbol Episodes</span>
+            </div>
+            <p>
+              Start with a small declared universe and one traded symbol per episode. Share the policy across symbols with separate episodes; add simultaneous portfolio allocation as a separate environment version with explicit allocation constraints.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">4. Incremental Complexity</span>
+              <span class="badge badge-green">Price → Stops → Short</span>
+            </div>
+            <p>
+              Begin with price/volume and a simple reward. Add learned stops/targets before the paper-execution milestone; introduce shorting after long-only accounting works.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">5. Staged Deployment</span>
+              <span class="badge badge-blue">Offline → Shadow → Paper</span>
+            </div>
+            <p>
+              Offline research, then live-data shadow inference, then Alpaca paper orders. Real-money deployment is a separate future task. This change creates documentation only.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 2: Proposed folder and module ownership
+           ========================================================================== -->
+      <section id="section-2" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">02</span> Proposed Folder and Module Ownership</h2>
+          <span class="badge badge-purple">Architecture & Paths</span>
+        </div>
+
+        <p>
+          These are planned paths, not an existing scaffold. Each category owns its code, configuration, and tests; provider-specific types stay inside adapters.
+        </p>
+
+        <!-- DIAGRAM 2: Module Ownership Architecture -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            Subsystem Architecture & Modular Ownership Layers
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 260" aria-label="Subsystem architecture diagram">
+            <!-- Layer 1: Core & Configuration -->
+            <g transform="translate(20, 20)">
+              <rect class="d-box" width="280" height="65"/>
+              <text class="d-text-title" x="140" y="26">Core & Foundation</text>
+              <text class="d-text-sub" x="140" y="44">src/rl_stocks/core/ (Contracts, Time)</text>
+              <text class="d-text-sub" x="140" y="56">configs/ (Typed YAML) • tests/</text>
+            </g>
+
+            <!-- Layer 2: Data & Ingestion -->
+            <g transform="translate(330, 20)">
+              <rect class="d-box" width="290" height="65"/>
+              <text class="d-text-title" x="145" y="26">Data Ingestion & Storage</text>
+              <text class="d-text-sub" x="145" y="44">providers/ (Alpaca, Yahoo, SEC, etc.)</text>
+              <text class="d-text-sub" x="145" y="56">accumulation/ • storage/ (DuckDB/Parquet)</text>
+            </g>
+
+            <!-- Layer 3: Feature Engineering -->
+            <g transform="translate(650, 20)">
+              <rect class="d-box" width="280" height="65"/>
+              <text class="d-text-title" x="140" y="26">Causal Features & Splits</text>
+              <text class="d-text-sub" x="140" y="44">features/ (Price, EMA, RSI, ATR, Vol)</text>
+              <text class="d-text-sub" x="140" y="56">generation/ (Split masks, Manifests)</text>
+            </g>
+
+            <!-- Arrows to Layer 2 -->
+            <path class="d-arrow" d="M 160 85 L 160 115"/>
+            <path class="d-arrow" d="M 475 85 L 475 115"/>
+            <path class="d-arrow" d="M 790 85 L 790 115"/>
+
+            <!-- Layer 4: Gymnasium Environment -->
+            <g transform="translate(20, 115)">
+              <rect class="d-box-accent" width="280" height="65"/>
+              <text class="d-text-title" x="140" y="26" fill="var(--accent-blue)">Gymnasium Environment</text>
+              <text class="d-text-sub" x="140" y="44">trading/ (Env & wrappers)</text>
+              <text class="d-text-sub" x="140" y="56">accounting/ • execution/ • rewards/</text>
+            </g>
+
+            <!-- Layer 5: RL Factory & Training -->
+            <g transform="translate(330, 115)">
+              <rect class="d-box-purple" width="290" height="65"/>
+              <text class="d-text-title" x="145" y="26" fill="var(--accent-purple)">RL Factory & Runners</text>
+              <text class="d-text-sub" x="145" y="44">rl/ (PPO, SAC, TD3 registry)</text>
+              <text class="d-text-sub" x="145" y="56">training/ (Checkpoints, Callbacks, Seeds)</text>
+            </g>
+
+            <!-- Layer 6: Evaluation & Reporting -->
+            <g transform="translate(650, 115)">
+              <rect class="d-box" width="280" height="65"/>
+              <text class="d-text-title" x="140" y="26">Validation & Reporting</text>
+              <text class="d-text-sub" x="140" y="44">evaluation/ (Baselines, Walk-Forward)</text>
+              <text class="d-text-sub" x="140" y="56">reporting/ (Plotly HTML & PNG/PDF)</text>
+            </g>
+
+            <!-- Arrows to Layer 3 -->
+            <path class="d-arrow" d="M 160 180 L 160 205"/>
+            <path class="d-arrow" d="M 475 180 L 475 205"/>
+            <path class="d-arrow" d="M 790 180 L 790 205"/>
+
+            <!-- Layer 7: Inference & Bundle -->
+            <g transform="translate(20, 205)">
+              <rect class="d-box-accent" width="280" height="50"/>
+              <text class="d-text-title" x="140" y="22" fill="var(--accent-blue)">Frozen Model Bundle</text>
+              <text class="d-text-sub" x="140" y="38">inference/ (Deterministic Decoder)</text>
+            </g>
+
+            <!-- Layer 8: Risk Engine -->
+            <g transform="translate(330, 205)">
+              <rect class="d-box-amber" width="290" height="50"/>
+              <text class="d-text-title" x="145" y="22" fill="var(--accent-amber)">Risk & Guardrails</text>
+              <text class="d-text-sub" x="145" y="38">risk/ (Limits, Deadbands, Intent Validation)</text>
+            </g>
+
+            <!-- Layer 9: Execution & Runtime -->
+            <g transform="translate(650, 205)">
+              <rect class="d-box-green" width="280" height="50"/>
+              <text class="d-text-title" x="140" y="22" fill="var(--accent-green)">Broker & Runtime</text>
+              <text class="d-text-sub" x="140" y="38">execution/alpaca/ • runtime/colab/</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Interactive Code Container for Directory Tree -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>REPOSITORY LAYOUT & MODULE OWNERSHIP MAP</span>
+            <button class="copy-btn" id="copyTreeBtn" onclick="copyTreeToClipboard()">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <span>Copy Tree</span>
+            </button>
+          </div>
+          <pre class="code-block" id="treeBlock"><code>AGENTS.md
+plan.md
+pyproject.toml                      <span class="code-comment"># package metadata and dependency management</span>
+src/rl_stocks/
+  core/                            <span class="code-comment"># shared typed contracts, timestamps, identifiers</span>
+  data/
+    providers/                     <span class="code-comment"># common provider interfaces/capabilities</span>
+      alpaca/
+      yahoo/
+      sec_edgar/
+      alpha_vantage/
+      twelve_data/
+      tradier/
+      gdelt/
+      files/                       <span class="code-comment"># CSV/Parquet imports independent of an API</span>
+    accumulation/                  <span class="code-comment"># backfill, incremental sync, snapshot schedules</span>
+    validation/                    <span class="code-comment"># schema, coverage, quality, provenance</span>
+    storage/                       <span class="code-comment"># immutable raw and versioned normalized datasets</span>
+    universe/                      <span class="code-comment"># symbol identity, calendars, historical membership</span>
+    generation/                    <span class="code-comment"># splits, feature assembly, manifests, fixtures</span>
+  features/
+    registry/                      <span class="code-comment"># dependencies, versions, availability contracts</span>
+    price/                         <span class="code-comment"># returns, volatility, ranges</span>
+    trend/                         <span class="code-comment"># EMA and related features</span>
+    momentum/                      <span class="code-comment"># RSI and related features</span>
+    volume/                        <span class="code-comment"># relative volume, VWAP, volume-profile features</span>
+    timeframes/                    <span class="code-comment"># session-aware resampling and causal alignment</span>
+    sectors/                       <span class="code-comment"># effective-dated classification and context</span>
+    fundamentals/                  <span class="code-comment"># filing-derived financial features</span>
+    options/                       <span class="code-comment"># OI concentrations and wall proxies</span>
+    order_flow/                    <span class="code-comment"># trade/quote-derived proxies; depth if available</span>
+    sentiment/                     <span class="code-comment"># news/entity mapping and timestamped scores</span>
+  environment/
+    trading/                       <span class="code-comment"># Gymnasium Env and wrappers</span>
+    accounting/                    <span class="code-comment"># equity, cash, holdings, borrowing, dividends</span>
+    execution/                     <span class="code-comment"># simulated orders, stops, target-zone fills</span>
+    rewards/                       <span class="code-comment"># independently configurable reward components</span>
+  rl/
+    registry/                      <span class="code-comment"># common model factory</span>
+    ppo/
+    sac/
+    td3/
+  training/                        <span class="code-comment"># runner, callbacks, checkpointing, seeds</span>
+  evaluation/                      <span class="code-comment"># validation, held-out test, baselines, metrics</span>
+  inference/                       <span class="code-comment"># frozen bundle loading and decision decoding</span>
+  risk/                            <span class="code-comment"># limits and validated executable trade intents</span>
+  execution/
+    interfaces/                    <span class="code-comment"># broker-independent order lifecycle</span>
+    alpaca/                        <span class="code-comment"># paper adapter, fills, reconciliation</span>
+    orchestration/                 <span class="code-comment"># scheduling, recovery, decision idempotency</span>
+  reporting/                       <span class="code-comment"># plots, saved HTML reports, experiment comparison</span>
+  runtime/
+    local/
+    colab/                         <span class="code-comment"># CLI packaging, launch, recovery, teardown</span>
+configs/
+  providers/ features/ datasets/ environments/ rewards/
+  algorithms/ training/ evaluation/ risk/ execution/ runtime/
+tests/
+  data/ features/ environment/ rl/ training/
+  evaluation/ inference/ risk/ execution/ reporting/
+notebooks/                         <span class="code-comment"># thin exploratory views</span>
+scripts/                           <span class="code-comment"># thin CLI entry points</span>
+data/                              <span class="code-comment"># ignored generated storage</span>
+  raw/ normalized/ features/ datasets/ manifests/
+artifacts/                         <span class="code-comment"># ignored outputs, unique run IDs</span>
+  runs/ frozen/ paper/
+docs/                              <span class="code-comment"># schemas, provider audits, experiment decisions</span></code></pre>
+        </div>
+
+        <div class="callout callout-note">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>
+              <strong>Incremental Development Rule:</strong> Do not create every provider or feature module immediately. Add each implementation when its milestone needs it. Keep dependencies optional where possible so a price-only experiment does not require sentiment/options packages.
+            </p>
+          </div>
+        </div>
+
+        <!-- Planned Pipeline Flow Callout -->
+        <div class="callout callout-purple">
+          <div class="callout-icon">🔄</div>
+          <div class="callout-content">
+            <p>
+              <strong>Planned End-to-End Execution Flow:</strong><br>
+              <code>provider adapters</code> → <code>accumulator</code> → <code>normalized records</code> → <code>causal feature registry</code> → <code>dataset generator</code> → <code>environment</code> → <code>RL factory/training</code> → <code>validation/reporting</code> → <code>frozen bundle</code> → <code>inference</code> → <code>risk</code> → <code>paper broker adapter</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 3: Modular data accumulator and dataset generator
+           ========================================================================== -->
+      <section id="section-3" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">03</span> Modular Data Accumulator and Dataset Generator</h2>
+          <span class="badge badge-green">Data Infrastructure</span>
+        </div>
+
+        <h3 class="subsection-title">Contracts and Storage</h3>
+        <p>
+          Define separate record types for bars, trades, quotes, company classifications, filings/facts, options chains, news, and corporate actions. Provider capabilities describe supported record types, date ranges, granularity, feeds, delays, free-tier quotas, licensing, and point-in-time guarantees. Unsupported requests fail clearly rather than returning a silently substituted feed.
+        </p>
+        <p>
+          Every record includes symbol/instrument ID, provider, source event time, public availability time, retrieval time, revision/as-of identity, and applicable currency/units. For initial live snapshots, availability is no earlier than actual retrieval. Historical adapters may reconstruct earlier availability only from documented publication/filing metadata; uncertain timestamps require a conservative lag or exclusion. Record uncertainty in the manifest.
+        </p>
+        <p>
+          Accumulate immutable raw responses plus checksums. Normalize into partitioned Parquet, cache locally, and query with DuckDB or an equivalent light engine. Incremental jobs use resumable cursors, pagination, deduplication, bounded retries, and provider-specific quota budgets. Revised data creates a new version rather than mutating an experiment's inputs.
+        </p>
+        <p>
+          The generator builds aligned feature matrices, validity/age masks, chronological splits, fitted preprocessing, and a dataset manifest. Synthetic data generators produce deterministic accounting/leakage fixtures and stress scenarios; synthetic profits are not evidence of a market edge. Training episodes may be sampled within the training split without mixing chronological split membership.
+        </p>
+
+        <h3 class="subsection-title">Provider Selection and Free-Data Limitations</h3>
+        <p>
+          Selections below are for a small personal research prototype. Recheck actual account access, historical coverage, and terms with a small sample before implementing each adapter. Free access to a web page does not guarantee a stable API or redistribution rights.
+        </p>
+
+        <!-- Provider Audit Table -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Category</th>
+                <th style="width: 25%;">Initial Selection / Candidate</th>
+                <th>Planned Use and Limitations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Recent bars, quotes/trades, paper execution</strong></td>
+                <td><span class="table-badge">Alpaca</span></td>
+                <td>
+                  Official client and consistent broker integration. Explicitly select feeds: free live IEX is one exchange, not consolidated SIP volume. Historical feed access differs from real-time access. Verify earliest usable dates per record type; an older Alpaca support page documents the 2016 limit.
+                  <br>
+                  <a href="https://docs.alpaca.markets/us/docs/market-data-faq" target="_blank" rel="noopener noreferrer">Feed documentation</a> • 
+                  <a href="https://alpaca.markets/support/alpaca-data-timeline" target="_blank" rel="noopener noreferrer">Historical coverage note</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Longer daily equity history</strong></td>
+                <td><span class="table-badge">Yahoo Finance (`yfinance`)</span><br>+ Local file imports</td>
+                <td>
+                  First free research adapter to sample for pre-2016 daily bars and corporate actions. Actual history is symbol-dependent; intraday backfill is limited. This is an unofficial personal-use tool, not a production data SLA.
+                  <br>
+                  <a href="https://github.com/ranaroussi/yfinance" target="_blank" rel="noopener noreferrer">Project repository</a> • 
+                  <a href="https://ranaroussi.github.io/yfinance/reference/yfinance.functions.html" target="_blank" rel="noopener noreferrer">History API</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Sector/industry metadata</strong></td>
+                <td><span class="table-badge">Yahoo / `yfinance`</span><br>SEC SIC fallback</td>
+                <td>
+                  Choose Yahoo's conventional sector/industry fields for small-universe current research. Archive dated snapshots; current classifications must not be inserted into old backtests. SEC SIC provides an authoritative industry fallback, with an explicit project mapping to broad sectors, not an assertion of GICS equivalence. Historical features require historical filing evidence or are omitted.
+                  <br>
+                  <a href="https://ranaroussi.github.io/yfinance/reference/yfinance.sector_industry.html" target="_blank" rel="noopener noreferrer">Sector API</a> • 
+                  <a href="https://www.sec.gov/search-filings/standard-industrial-classification-sic-code-list" target="_blank" rel="noopener noreferrer">SEC SIC list</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Financial statements</strong></td>
+                <td><span class="table-badge">SEC EDGAR</span><br>Company Facts API</td>
+                <td>
+                  Preferred free authoritative US filings source, with no API key. Preserve original filings, accession IDs, units, and public filing times; never join by fiscal period end alone.
+                  <br>
+                  <a href="https://www.sec.gov/search-filings/edgar-application-programming-interfaces" target="_blank" rel="noopener noreferrer">SEC EDGAR APIs</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Options call/put concentrations</strong></td>
+                <td><span class="table-badge">Yahoo / `yfinance`</span><br>Forward snapshots</td>
+                <td>
+                  First free prototype candidate for contract strike/expiry/type/open-interest snapshots, subject to sample completeness and source delays. Does not provide a verified long historical chain archive. Persist source dates and first observed time; don't backfill today's OI into past decisions.
+                  <br>
+                  <a href="https://ranaroussi.github.io/yfinance/reference/yfinance.ticker_tickers.html" target="_blank" rel="noopener noreferrer">Chain interface</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Alternative options source</strong></td>
+                <td><span class="table-badge">Tradier</span><br>Sandbox Chains</td>
+                <td>
+                  Evaluate account-eligible delayed sandbox chains as an alternative, checking OI fields and access before adopting. Sandbox equity/options data is delayed and Greeks are unavailable there; real-time access requires a brokerage account. This does not solve historical chain coverage.
+                  <br>
+                  <a href="https://docs.tradier.com/docs/market-data" target="_blank" rel="noopener noreferrer">Market-data access</a> • 
+                  <a href="https://docs.tradier.com/reference/brokerage-api-markets-get-options-chains" target="_blank" rel="noopener noreferrer">Chains API</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Supplemental indicators/data</strong></td>
+                <td><span class="table-badge">Alpha Vantage</span></td>
+                <td>
+                  Keep an optional adapter, not the default bulk archive. Free quota is 25 requests/day; historical options, company overview, and news sentiment are currently marked premium. Do not assume its advertised long history is free for the needed endpoint. Compute EMA/RSI locally.
+                  <br>
+                  <a href="https://www.alphavantage.co/documentation/" target="_blank" rel="noopener noreferrer">API documentation</a> • 
+                  <a href="https://www.alphavantage.co/premium/" target="_blank" rel="noopener noreferrer">Quota limits</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Additional bar/indicator samples</strong></td>
+                <td><span class="table-badge">Twelve Data</span><br>Stooq file imports</td>
+                <td>
+                  Twelve Data Basic advertises 8 credits/minute and 800/day; verify endpoint entitlements and actual stock history. Stooq is a daily-download candidate awaiting a coverage/adjustment/terms audit, not a selected live provider.
+                  <br>
+                  <a href="https://twelvedata.com/pricing" target="_blank" rel="noopener noreferrer">Twelve Data plans</a> • 
+                  <a href="https://stooq.com/db/h/" target="_blank" rel="noopener noreferrer">Stooq downloads</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>News/sentiment</strong></td>
+                <td><span class="table-badge">GDELT</span><br>Archives & dated feeds</td>
+                <td>
+                  Free candidate for news/entity activity and tone; GDELT provides downloadable update files. Validate symbol mapping, first-seen timestamps, coverage, and duplicate stories. Tone is not automatically a reliable financial sentiment signal.
+                  <br>
+                  <a href="https://gdeltproject.org/data.html" target="_blank" rel="noopener noreferrer">GDELT data archives</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Order flow & price-level volume</strong></td>
+                <td><span class="table-badge">Alpaca trades/quotes</span><br>Imported datasets</td>
+                <td>
+                  Compute explicitly labelled trade/quote proxies. Bars alone cannot recover true order flow, aggressor identity, or exact volume-at-price. Complete equity depth/history is not assumed free. Defer depth features until a usable source exists.
+                  <br>
+                  <a href="https://docs.alpaca.markets/us/docs/historical-api" target="_blank" rel="noopener noreferrer">Alpaca historical API</a>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>Historical Options & Order-Book Limitation:</strong> No verified free source in this research establishes a complete, long, point-in-time options-chain/OI archive or equity order-book archive. These are conditional later milestones: accumulate forward, accept an audited user-supplied archive, or revisit paid data separately. Optional data must not shorten the baseline dataset silently.</p>
+          </div>
+        </div>
+
+        <div class="callout callout-note">
+          <div class="callout-icon">🛡️</div>
+          <div class="callout-content">
+            <p><strong>Data Harmonization & Feed Consistency:</strong> Never splice incompatible price/volume series into one experiment without an audited harmonization policy. Keep execution prices and corporate actions consistent; do not treat today's dividend-adjusted historical prices as raw executable prices. Cross-provider experiments record their feed differences, especially relative volume and flow. For initial paper deployment, either train with matching Alpaca features/feed or pass an explicit cross-feed drift evaluation.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 4: Preventing lookahead bias
+           ========================================================================== -->
+      <section id="section-4" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">04</span> Preventing Lookahead Bias</h2>
+          <span class="badge badge-amber">Causal Rigor</span>
+        </div>
+
+        <!-- DIAGRAM 3: Causal Timeline & Execution Ordering -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Causal Timeline: Bar Completion, As-Of Join, and Fill Ordering
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 200" aria-label="Timeline diagram of market session and execution">
+            <!-- Timeline Axis -->
+            <line x1="50" y1="110" x2="900" y2="110" stroke="var(--border-strong)" stroke-width="4"/>
+
+            <!-- Session T Bar -->
+            <rect class="d-box" x="80" y="45" width="230" height="45"/>
+            <text class="d-text-title" x="195" y="65">Session T Market Activity</text>
+            <text class="d-text-sub" x="195" y="80">09:30 - 16:00 ET (Price & Volume)</text>
+            <line x1="195" y1="90" x2="195" y2="110" stroke="var(--text-dim)" stroke-width="2"/>
+            <circle cx="195" cy="110" r="6" fill="var(--accent-blue)"/>
+
+            <!-- Bar Close & Publication Delay -->
+            <rect class="d-box-amber" x="330" y="45" width="180" height="45"/>
+            <text class="d-text-title" x="420" y="65" fill="var(--accent-amber)">Bar Close + Delay</text>
+            <text class="d-text-sub" x="420" y="80">Published Availability Time</text>
+            <line x1="420" y1="90" x2="420" y2="110" stroke="var(--accent-amber)" stroke-width="2"/>
+            <circle cx="420" cy="110" r="6" fill="var(--accent-amber)"/>
+
+            <!-- Signal Generation (Decision Time) -->
+            <rect class="d-box-purple" x="530" y="45" width="180" height="45"/>
+            <text class="d-text-title" x="620" y="65" fill="var(--accent-purple)">Decision Time (T Evening)</text>
+            <text class="d-text-sub" x="620" y="80">Backward As-Of Join Only</text>
+            <line x1="620" y1="90" x2="620" y2="110" stroke="var(--accent-purple)" stroke-width="2"/>
+            <circle cx="620" cy="110" r="6" fill="var(--accent-purple)"/>
+
+            <!-- Execution / Fill at Session T+1 Open -->
+            <rect class="d-box-green" x="730" y="45" width="190" height="45"/>
+            <text class="d-text-title" x="825" y="65" fill="var(--accent-green)">Session T+1 Open Fill</text>
+            <text class="d-text-sub" x="825" y="80">09:30 ET + Spread / Slippage</text>
+            <line x1="825" y1="90" x2="825" y2="110" stroke="var(--accent-green)" stroke-width="2"/>
+            <circle cx="825" cy="110" r="6" fill="var(--accent-green)"/>
+
+            <!-- Bottom Labels -->
+            <text class="d-text-sub" x="195" y="140" fill="var(--text-muted)">Historical Input Formation</text>
+            <text class="d-text-sub" x="420" y="140" fill="var(--text-muted)">Lag & Publication Verification</text>
+            <text class="d-text-sub" x="620" y="140" fill="var(--text-muted)">Agent Policy Inference</text>
+            <text class="d-text-sub" x="825" y="140" fill="var(--text-muted)">Simulated / Paper Execution</text>
+          </svg>
+        </div>
+
+        <ul class="styled-list">
+          <li>
+            <strong>Backward As-Of Joins by Availability Time:</strong> Use availability-time backward as-of joins: a feature used at decision time must have been observable by that time. Store bar start/end separately, including publication delay.
+          </li>
+          <li>
+            <strong>Session-Completed Boundaries:</strong> Daily indicators use completed sessions. Weekly/monthly features become available only after those periods close; Monday's signal cannot use Friday's future close. Intraday resampling respects exchange sessions, holidays, and DST. No backfilling incomplete higher-timeframe indicators.
+          </li>
+          <li>
+            <strong>Trailing Windows Only:</strong> EMA, RSI, ATR, returns, and rolling volume use trailing windows. Swing pivots that need future bars become available only after confirmation; avoid centered rolling windows and future peak/trough labels as observations.
+          </li>
+          <li>
+            <strong>Point-in-Time Financial Statements:</strong> Financial features use original filing availability and the latest eligible vintage at that decision. Later amendments/restatements and today's Company Facts summary must not overwrite what the agent knew then. Resolve period duration and duplicate concepts/units explicitly.
+          </li>
+          <li>
+            <strong>Options OI & Sentiment Timestamps:</strong> Options OI uses its own published as-of date and availability, not quote time. News uses first-seen/publication times with lag and revision handling. Archive sector classifications and universe membership; current winners/constituents are not a historical universe.
+          </li>
+          <li>
+            <strong>Global Calendar Splits (60 / 20 / 20):</strong> Split globally by calendar time across all symbols, initially approximately 60/20/20 subject to enough history. Training-only preprocessing; freeze categorical vocabulary and handle unknown sectors. Validation/test may use earlier historical bars only as causal indicator warmup, never future outcomes or fitted data.
+          </li>
+          <li>
+            <strong>Purge Gap at Split Boundaries:</strong> Define a conservative purge at split ends for positions/labels whose outcome would cross into the next split; use a declared research maximum holding horizon for this purpose. Keep portfolio states and replay buffers separate. Audit every split's observable times and episode bounds.
+          </li>
+          <li>
+            <strong>Strict Validation Discipline & Locked Test:</strong> Repeated checkpoint selection uses validation and designated walk-forward folds. Unlock the final test only after features, reward, and selection rules are frozen. If test results influence redesign, retire that test as a development interval and reserve a new holdout.
+          </li>
+        </ul>
+
+        <!-- DIAGRAM 4: Chronological Split & Purge Horizon Visual -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Chronological Splits & Horizon Purging Architecture
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 140" aria-label="Chronological splits diagram">
+            <!-- Train Fold -->
+            <rect class="d-box-blue" x="30" y="25" width="480" height="55" fill="var(--accent-blue-bg)" stroke="var(--accent-blue)" stroke-width="2" rx="6"/>
+            <text class="d-text-title" x="270" y="50" fill="var(--accent-blue)">Training Fold (~60% Chronological)</text>
+            <text class="d-text-sub" x="270" y="68">Episodes sampled within split • Fitted Preprocessing</text>
+
+            <!-- Purge Gap 1 -->
+            <rect x="515" y="25" width="30" height="55" fill="var(--accent-amber-bg)" stroke="var(--accent-amber)" stroke-width="1.5" stroke-dasharray="3,3" rx="4"/>
+            <text class="d-text-sub" x="530" y="55" transform="rotate(-90 530 55)" fill="var(--accent-amber)" font-size="9">PURGE</text>
+
+            <!-- Validation Fold -->
+            <rect class="d-box-purple" x="550" y="25" width="180" height="55" fill="var(--accent-purple-bg)" stroke="var(--accent-purple)" stroke-width="2" rx="6"/>
+            <text class="d-text-title" x="640" y="50" fill="var(--accent-purple)">Validation Fold (~20%)</text>
+            <text class="d-text-sub" x="640" y="68">Frozen State • 10k Eval</text>
+
+            <!-- Purge Gap 2 -->
+            <rect x="735" y="25" width="30" height="55" fill="var(--accent-amber-bg)" stroke="var(--accent-amber)" stroke-width="1.5" stroke-dasharray="3,3" rx="4"/>
+            <text class="d-text-sub" x="750" y="55" transform="rotate(-90 750 55)" fill="var(--accent-amber)" font-size="9">PURGE</text>
+
+            <!-- Final Test Fold -->
+            <rect class="d-box-green" x="770" y="25" width="150" height="55" fill="var(--accent-green-bg)" stroke="var(--accent-green)" stroke-width="2" rx="6"/>
+            <text class="d-text-title" x="845" y="50" fill="var(--accent-green)">Held-Out Test (~20%)</text>
+            <text class="d-text-sub" x="845" y="68">Single Audit • Locked</text>
+
+            <!-- Warmup Arrow at start -->
+            <path class="d-arrow-dashed" d="M 30 100 L 90 100"/>
+            <text class="d-text-sub" x="140" y="105" fill="var(--text-dim)">Indicator Warmup (Causal History Only)</text>
+            <text class="d-text-sub" x="640" y="105" fill="var(--text-dim)">Purge Horizon = Declared Max Holding Window (20 sessions)</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 5: Feature rollout and ablation experiments
+           ========================================================================== -->
+      <section id="section-5" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">05</span> Feature Rollout and Ablation Experiments</h2>
+          <span class="badge badge-purple">Incremental Ablation</span>
+        </div>
+
+        <p>
+          Each feature has name/version, inputs, parameters, units, timeframe, warmup, availability lag, missing-value policy, and incremental/batch parity checks. One family is introduced per experiment; snapshot feature schema changes require retraining and a new model bundle.
+        </p>
+
+        <!-- Feature Rollout Table -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 10%;">Order</th>
+                <th style="width: 28%;">Feature Family</th>
+                <th>First Experiment and Caveat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="table-badge">A</span></td>
+                <td><strong>Price/volume & portfolio state</strong></td>
+                <td>Lagged returns, trailing volatility/range, current exposure, cash, holding age, unrealized P&L. Small initial input set.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">B</span></td>
+                <td><strong>EMA, RSI, ATR, relative volume</strong></td>
+                <td>Try EMA 20/50, RSI 14, ATR 14, and completed daily volume divided by prior 20-session mean. Exclude the current session from the denominator. Indicators are hypotheses, not guaranteed predictive variables.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">C</span></td>
+                <td><strong>Multiple timeframes</strong></td>
+                <td>Add completed weekly trend/volatility first; monthly or intraday context later. Same underlying causal feature functions.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">D</span></td>
+                <td><strong>Market/sector context</strong></td>
+                <td>Benchmark/sector returns and relative strength; introduce sector categories only where point-in-time metadata is supportable.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">E</span></td>
+                <td><strong>Financials</strong></td>
+                <td>A small filing-derived family such as revenue growth and leverage, joined on public availability. No current analyst forecasts in historical observations.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">F</span></td>
+                <td><strong>Price-level volume</strong></td>
+                <td>Trailing volume profiles from actual historical trade prices/sizes where available; expose point of control/value area with causal window boundaries. Bar-derived profiles are explicitly approximations.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">G</span></td>
+                <td><strong>Sentiment</strong></td>
+                <td>Timestamped news count/tone first, then an independently versioned sentiment model if useful. Filter duplicated/entity-ambiguous stories and measure latency.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">H</span></td>
+                <td><strong>Options</strong></td>
+                <td>OI/volume concentrations by strike/expiry, put/call ratios, distance to candidate walls. Validate data coverage before training; keep missing/age masks.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">I</span></td>
+                <td><strong>Order flow</strong></td>
+                <td>Quote imbalance and signed-trade estimates, clearly labelled as estimates. Full-depth features require a new source/capability audit.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-note">
+          <div class="callout-icon">📊</div>
+          <div class="callout-content">
+            <p><strong>Call/Put Wall Proxy Definition:</strong> Define a call/put wall initially as a reproducible OI concentration proxy: aggregate separately by type and a configured expiry bucket, find selected high-OI strikes, and express their distance from spot. Save aggregation/tie rules and stale-data limits. OI concentrations do not reveal dealer positioning or guarantee support/resistance; gamma-weighted variants need additional justified data and assumptions.</p>
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <div class="callout-icon">⚖️</div>
+          <div class="callout-content">
+            <p><strong>Matched-Period Ablation Discipline:</strong> Compare each addition against the same baseline on matched periods/seeds/costs. Optional snapshots with short histories get a separate matched-period study and cannot be credited for improvements caused merely by a different test window.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 6: Environment and learned trade outputs
+           ========================================================================== -->
+      <section id="section-6" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">06</span> Environment and Learned Trade Outputs</h2>
+          <span class="badge badge-blue">Gymnasium Core</span>
+        </div>
+
+        <h3 class="subsection-title">Action and Decision Contracts</h3>
+        <p>
+          Use a continuous action design supported by all three algorithms. First implement a position-only baseline; the final action schema is a normalized four-component <code>Box</code>:
+        </p>
+
+        <!-- 4-Component Action Box Table -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 30%;">Action Component</th>
+                <th>Decoded Meaning and Geometry</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Signed target exposure</strong></td>
+                <td>Negative = short, zero = flat, positive = long; magnitude specifies requested equity allocation.</td>
+              </tr>
+              <tr>
+                <td><strong>Stop distance</strong></td>
+                <td>Positive bounded volatility-relative distance; produces a stop below a long or above a short reference price.</td>
+              </tr>
+              <tr>
+                <td><strong>Take-profit near distance</strong></td>
+                <td>Learned positive distance to the near boundary of the profit zone, above a long or below a short reference price.</td>
+              </tr>
+              <tr>
+                <td><strong>Take-profit zone width</strong></td>
+                <td>Learned positive width beyond the near boundary; defines the far boundary.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- DIAGRAM 5: Learned Target Zone & Stop Geometry -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+            Learned Trade Geometry: Action Space to Order Levels
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 230" aria-label="Trade geometry showing stop and target zone">
+            <!-- Long Setup (Left Side) -->
+            <g transform="translate(40, 20)">
+              <text class="d-text-title" x="180" y="15" fill="var(--accent-green)">LONG TRADE SETUP (Signed Exposure &gt; 0)</text>
+              
+              <!-- Far Boundary -->
+              <line x1="20" y1="40" x2="340" y2="40" stroke="var(--accent-green)" stroke-width="2" stroke-dasharray="4,4"/>
+              <text class="d-text-title" x="200" y="35" fill="var(--accent-green)" font-size="11">Far Boundary: Take-Profit Near + Zone Width (100% Exit)</text>
+
+              <!-- Near Boundary -->
+              <line x1="20" y1="80" x2="340" y2="80" stroke="var(--accent-green)" stroke-width="2"/>
+              <text class="d-text-title" x="200" y="75" fill="var(--accent-green)" font-size="11">Near Boundary: Take-Profit Near Distance (50% Scale-Out)</text>
+
+              <!-- Entry Reference -->
+              <rect x="20" y="110" width="320" height="25" fill="var(--accent-blue-bg)" stroke="var(--accent-blue)" stroke-width="1.5" rx="4"/>
+              <text class="d-text-title" x="180" y="127" fill="var(--accent-blue)">Reference Price / Fill Price</text>
+
+              <!-- Stop Price -->
+              <line x1="20" y1="170" x2="340" y2="170" stroke="var(--accent-rose)" stroke-width="2"/>
+              <text class="d-text-title" x="180" y="165" fill="var(--accent-rose)" font-size="11">Stop Loss Price: Reference Price - Stop Distance</text>
+
+              <!-- Brackets indicating distances -->
+              <line x1="10" y1="80" x2="10" y2="40" stroke="var(--accent-amber)" stroke-width="2"/>
+              <text class="d-text-sub" x="0" y="65" fill="var(--accent-amber)" font-size="10" transform="rotate(-90 0 65)">Zone Width</text>
+
+              <line x1="10" y1="120" x2="10" y2="80" stroke="var(--accent-green)" stroke-width="2"/>
+              <text class="d-text-sub" x="0" y="105" fill="var(--accent-green)" font-size="10" transform="rotate(-90 0 105)">Near Dist</text>
+
+              <line x1="10" y1="170" x2="10" y2="125" stroke="var(--accent-rose)" stroke-width="2"/>
+              <text class="d-text-sub" x="0" y="150" fill="var(--accent-rose)" font-size="10" transform="rotate(-90 0 150)">Stop Dist</text>
+            </g>
+
+            <!-- Vertical Separator -->
+            <line x1="475" y1="20" x2="475" y2="210" stroke="var(--border-subtle)" stroke-width="2"/>
+
+            <!-- Short Setup (Right Side) -->
+            <g transform="translate(515, 20)">
+              <text class="d-text-title" x="180" y="15" fill="var(--accent-rose)">SHORT TRADE SETUP (Signed Exposure &lt; 0)</text>
+
+              <!-- Stop Price -->
+              <line x1="20" y1="40" x2="340" y2="40" stroke="var(--accent-rose)" stroke-width="2"/>
+              <text class="d-text-title" x="180" y="35" fill="var(--accent-rose)" font-size="11">Stop Loss Price: Reference Price + Stop Distance</text>
+
+              <!-- Entry Reference -->
+              <rect x="20" y="80" width="320" height="25" fill="var(--accent-blue-bg)" stroke="var(--accent-blue)" stroke-width="1.5" rx="4"/>
+              <text class="d-text-title" x="180" y="97" fill="var(--accent-blue)">Reference Price / Fill Price</text>
+
+              <!-- Near Boundary -->
+              <line x1="20" y1="130" x2="340" y2="130" stroke="var(--accent-green)" stroke-width="2"/>
+              <text class="d-text-title" x="200" y="125" fill="var(--accent-green)" font-size="11">Near Boundary: Take-Profit Near Distance (50% Cover)</text>
+
+              <!-- Far Boundary -->
+              <line x1="20" y1="170" x2="340" y2="170" stroke="var(--accent-green)" stroke-width="2" stroke-dasharray="4,4"/>
+              <text class="d-text-title" x="200" y="165" fill="var(--accent-green)" font-size="11">Far Boundary: Take-Profit Near + Zone Width (100% Exit)</text>
+
+              <!-- Distances on right -->
+              <line x1="350" y1="80" x2="350" y2="40" stroke="var(--accent-rose)" stroke-width="2"/>
+              <text class="d-text-sub" x="360" y="60" fill="var(--accent-rose)" font-size="10">Stop Dist</text>
+
+              <line x1="350" y1="130" x2="350" y2="95" stroke="var(--accent-green)" stroke-width="2"/>
+              <text class="d-text-sub" x="360" y="115" fill="var(--accent-green)" font-size="10">Near Dist</text>
+
+              <line x1="350" y1="170" x2="350" y2="130" stroke="var(--accent-amber)" stroke-width="2"/>
+              <text class="d-text-sub" x="360" y="155" fill="var(--accent-amber)" font-size="10">Zone Width</text>
+            </g>
+          </svg>
+        </div>
+
+        <p>
+          <strong>No Hardcoded Reward-to-Risk Ratios:</strong> The network determines the target zone; no hardcoded reward-to-risk ratio substitutes for that prediction. Use causal ATR or a declared volatility scale to decode distances, with configurable bounds, minimum ticks, and rounding. Save both raw policy outputs and validated outputs. Warmup/invalid ATR prevents a trade. Actual ATR bounds and exposure limits are experiment settings, not proven optimal values.
+        </p>
+
+        <p>
+          <strong>Typed Decision Contract:</strong> Export a typed decision with symbol, decision/expiry timestamps, model/schema IDs, reference price, requested/approved exposure, share/notional amount, long/short/flat direction, stop price, target-zone lower/upper prices, and resulting add/reduce/close/reverse/hold intent. Size is calculated from known equity and prices, then capped by risk/buying-power/liquidity constraints. Repeated unchanged target exposure must not add another position.
+        </p>
+
+        <p>
+          <strong>Protection Anchoring and Reversals:</strong> Keep existing protections anchored to the existing entry unless a model decision explicitly requests a valid update. Define a deadband/minimum order size to avoid tiny adjustments. Record any rejected or clipped proposal. Direction reversals close and reconcile the existing position before opening the other direction; protective exits override holding-period preferences.
+        </p>
+
+        <h3 class="subsection-title">Making a Zone Affect Outcomes</h3>
+        <p>
+          Start learned exits with stop plus one learned target; then promote to the four-component zone schema. For zone experiments, use a fixed, configurable scale-out schedule such as half at the near boundary and half at the far boundary, with protection maintained on remaining shares. Both boundaries must influence outcomes so the network has a reason to learn zone width. Whole-share rounding and small-position fallback are explicit. Any future partial-exit allocations are a separate action-schema change.
+        </p>
+        <p>
+          Simulate fills, gaps, spread/slippage, commissions/fees, borrow costs, short availability, overnight exposure, dividends, and corporate actions. The next open is a future fill outcome, never an input to yesterday's decision. Stops/targets are decoded from the recorded decision reference; if a gap invalidates their geometry before entry, follow a declared reject/skip policy shared by simulation and paper execution.
+        </p>
+        <p>
+          Use finer bars/trades for execution replay when available while retaining daily decisions. If one OHLC bar hits a stop and target with unknown order, use a declared conservative stop-first rule and report sensitivity to that assumption. Do not claim stop prices guarantee fill prices during gaps. Episode termination/truncation and final valuation must be documented and checker-compatible.
+        </p>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 7: Reward design
+           ========================================================================== -->
+      <section id="section-7" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">07</span> Reward Design</h2>
+          <span class="badge badge-green">P&amp;L Accounting</span>
+        </div>
+
+        <p>
+          Begin with per-step log change in equity after modeled execution/holding costs. Positive and negative P&L are already rewarded/punished; do not double-count a second realized-trade profit reward. Invalid/ruined equity requires explicit terminal handling rather than an undefined log. Account equity is the source of truth, with a decomposed reward log.
+        </p>
+
+        <!-- Reward Stages Table -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 15%;">Stage</th>
+                <th style="width: 30%;">Candidate Addition</th>
+                <th>Reason and Control Mechanism</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="table-badge">R0</span></td>
+                <td><strong>Net equity return only</strong></td>
+                <td>Establish accounting and a transparent baseline.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">R1</span></td>
+                <td><strong>Modest turnover penalty</strong></td>
+                <td>Discourage excess adjustment if real costs alone do not. Penalize traded notional, not every inference call; record how much exceeds actual costs.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">R2</span></td>
+                <td><strong>Drawdown/downside-exposure term</strong></td>
+                <td>Test one at a time for large adverse positions. Avoid summing realized/unrealized losses twice or repeatedly penalizing the same unchanged drawdown.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">R3</span></td>
+                <td><strong>Holding-frequency preference</strong></td>
+                <td>Consider only after holding-duration and turnover reports show a need. Holding age belongs in state; swing behavior can emerge from daily cadence, costs, and trading constraints. No reward for merely staying in a losing trade.</td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">Diagnostic</span></td>
+                <td><strong>Win/loss ratio, profit factor, expectancy</strong></td>
+                <td>Report initially, not optimize directly. High win rate can hide large losses; trade-count ratios are sparse, unstable with few trades, and easy to game. Any later reward experiment must show improvement in net risk-adjusted results.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content">
+            <p><strong>Hard Limits Outside Shaping:</strong> Fix hard position/order/exposure limits outside reward shaping; a learned penalty is not a substitute for enforcement. Freeze reward coefficients before the final test and record every change as a new experiment.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 8: RL defaults and tuning
+           ========================================================================== -->
+      <section id="section-8" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">08</span> RL Defaults and Tuning</h2>
+          <span class="badge badge-purple">Algorithms & Hyperparameters</span>
+        </div>
+
+        <p>
+          Start with SB3 <code>MlpPolicy</code>, a normalized flat feature vector, and independent algorithm configurations. The following are proposed baseline settings, not trading-specific optimal hyperparameters. Verify against the pinned stable release; current reference docs include development versions.
+        </p>
+
+        <!-- RL Baseline Comparison Table -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Setting</th>
+                <th style="width: 26%;">PPO (On-Policy)</th>
+                <th style="width: 26%;">SAC (Off-Policy)</th>
+                <th>TD3 (Off-Policy)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Learning rate</strong></td>
+                <td><code>3e-4</code></td>
+                <td><code>3e-4</code></td>
+                <td><code>3e-4</code> (project starting choice)</td>
+              </tr>
+              <tr>
+                <td><strong>Discount gamma</strong></td>
+                <td><code>0.99</code></td>
+                <td><code>0.99</code></td>
+                <td><code>0.99</code></td>
+              </tr>
+              <tr>
+                <td><strong>Initial environments</strong></td>
+                <td>1, then profile vectorization</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td><strong>Batch size</strong></td>
+                <td><code>64</code></td>
+                <td><code>256</code></td>
+                <td><code>256</code></td>
+              </tr>
+              <tr>
+                <td><strong>Rollout / Replay</strong></td>
+                <td><code>n_steps=2048</code></td>
+                <td><code>buffer_size=100000</code></td>
+                <td><code>buffer_size=100000</code></td>
+              </tr>
+              <tr>
+                <td><strong>Updates</strong></td>
+                <td><code>n_epochs=10</code></td>
+                <td><code>train_freq=1</code>, <code>gradient_steps=1</code></td>
+                <td><code>train_freq=1</code>, <code>gradient_steps=1</code></td>
+              </tr>
+              <tr>
+                <td><strong>Other defaults</strong></td>
+                <td><code>gae_lambda=0.95</code>, <code>clip_range=0.2</code>, <code>ent_coef=0</code></td>
+                <td><code>learning_starts=1000</code>, <code>tau=0.005</code>, <code>ent_coef=auto</code></td>
+                <td><code>learning_starts=1000</code>, <code>tau=0.005</code>, <code>policy_delay=2</code>, <code>target_policy_noise=0.2</code>, <code>target_noise_clip=0.5</code></td>
+              </tr>
+              <tr>
+                <td><strong>Exploration</strong></td>
+                <td>stochastic policy</td>
+                <td>learned entropy</td>
+                <td>Gaussian action noise, starting <code>sigma=0.1</code> in normalized units; assess each component</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Documentation References: 
+          <a href="https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html" target="_blank" rel="noopener noreferrer">SB3 PPO</a> • 
+          <a href="https://stable-baselines3.readthedocs.io/en/master/modules/sac.html" target="_blank" rel="noopener noreferrer">SB3 SAC</a> • 
+          <a href="https://stable-baselines3.readthedocs.io/en/master/modules/td3.html" target="_blank" rel="noopener noreferrer">SB3 TD3</a>.
+          Use small networks initially, with architecture recorded separately for each algorithm. Reward/observation scales, daily holding horizon, and buffer memory determine whether defaults are sensible.
+        </p>
+
+        <p>
+          Run a tiny CPU wiring check before longer experiments, then a declared starting budget such as <strong>50k transitions per algorithm/seed</strong>. Use seeds <strong>11, 23, and 37</strong> initially. More simulated timesteps replay the same historical evidence; they do not add new independent market observations. Increase budgets only with validation evidence and resource estimates. PPO rollout/batch sizes must be compatible; off-policy warmup must finish before assessing learning.
+        </p>
+
+        <p>
+          Tune on training/validation walk-forward folds with recorded search budgets, covering learning rate, discount, capacity, and algorithm-specific settings. Features/reward changes are separate experiments. Match data and environment-step budgets, also report wall time and compute, and avoid selecting a winner from one lucky seed. Consider Optuna only after the fixed-default baseline is reproducible.
+        </p>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 9: Checkpoint evaluation and visual reports
+           ========================================================================== -->
+      <section id="section-9" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">09</span> Checkpoint Evaluation and Visual Reports</h2>
+          <span class="badge badge-blue">Validation Protocol</span>
+        </div>
+
+        <p>
+          At each configured checkpoint (initially every <strong>10k environment transitions</strong>), evaluate a separate validation environment with frozen preprocessing and deterministic inference. Account for vectorization when scheduling callbacks. Save latest, periodic, and best-by-validation checkpoints; do not repeatedly run the final test during training. A custom selector should use declared portfolio metrics, not automatically treat SB3's highest shaped reward as the best strategy. (<a href="https://stable-baselines3.readthedocs.io/en/master/guide/callbacks.html" target="_blank" rel="noopener noreferrer">SB3 callbacks</a>).
+        </p>
+
+        <!-- DIAGRAM 6: Checkpoint Evaluation & Freezing Flow -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            Checkpoint Evaluation, Metric Selection & Model Freezing Lifecycle
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 170" aria-label="Checkpoint evaluation and model freezing lifecycle">
+            <!-- Box 1: Training Transitions -->
+            <g transform="translate(20, 25)">
+              <rect class="d-box" width="180" height="70"/>
+              <text class="d-text-title" x="90" y="30">Training Rollouts</text>
+              <text class="d-text-sub" x="90" y="48">PPO / SAC / TD3</text>
+              <text class="d-text-sub" x="90" y="60">Transition Steps Count</text>
+            </g>
+
+            <line class="d-arrow" x1="200" y1="60" x2="235" y2="60"/>
+
+            <!-- Box 2: 10k Checkpoint Trigger -->
+            <g transform="translate(235, 25)">
+              <rect class="d-box-amber" width="180" height="70"/>
+              <text class="d-text-title" x="90" y="30" fill="var(--accent-amber)">10k Step Checkpoint</text>
+              <text class="d-text-sub" x="90" y="48">Vectorization-Aware</text>
+              <text class="d-text-sub" x="90" y="60">Periodic Evaluation Callback</text>
+            </g>
+
+            <line class="d-arrow" x1="415" y1="60" x2="450" y2="60"/>
+
+            <!-- Box 3: Validation Env -->
+            <g transform="translate(450, 25)">
+              <rect class="d-box-purple" width="220" height="70"/>
+              <text class="d-text-title" x="110" y="30" fill="var(--accent-purple)">Deterministic Validation</text>
+              <text class="d-text-sub" x="110" y="48">Frozen Normalization / Dict</text>
+              <text class="d-text-sub" x="110" y="60">Portfolio Metrics Selector</text>
+            </g>
+
+            <line class="d-arrow" x1="670" y1="60" x2="705" y2="60"/>
+
+            <!-- Box 4: Selection & Freezing -->
+            <g transform="translate(705, 25)">
+              <rect class="d-box-green" width="225" height="70"/>
+              <text class="d-text-title" x="112" y="30" fill="var(--accent-green)">Best-by-Validation Freeze</text>
+              <text class="d-text-sub" x="112" y="48">Export Immutable Bundle</text>
+              <text class="d-text-sub" x="112" y="60">Single Held-Out Test Audit</text>
+            </g>
+
+            <!-- Bottom descriptive text -->
+            <text class="d-text-sub" x="475" y="130" fill="var(--text-dim)">Custom selector evaluates Net Return, Drawdown, Sharpe, and Turnover (never raw shaped training reward)</text>
+          </svg>
+        </div>
+
+        <h3 class="subsection-title">Mandatory Visual Plotly HTML Reports (Backed by Machine-Readable Tables)</h3>
+        
+        <div class="card-grid">
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">1. Validation vs Steps</span>
+              <span class="badge badge-purple">Selection</span>
+            </div>
+            <p>Validation performance versus training steps, with all checkpoints/seeds and the selected checkpoint clearly marked.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">2. Equity & Drawdowns</span>
+              <span class="badge badge-blue">P&amp;L Curves</span>
+            </div>
+            <p>Equity, benchmark equity, underwater/drawdown curves, net returns, and annual risk-adjusted metrics.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">3. Price & Zone Overlays</span>
+              <span class="badge badge-green">Trade Geometry</span>
+            </div>
+            <p>Price charts with long/short entries, adjustments, exits, stop levels, and learned target-zone bands; track changes through time.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">4. Holding & Distributions</span>
+              <span class="badge badge-amber">Diagnostics</span>
+            </div>
+            <p>Holding-time and trade-return distributions, win rate plus average win/loss and expectancy, turnover/cost breakdown, exposure and rejected decisions.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">5. Comparative Matrix</span>
+              <span class="badge badge-purple">Seed Variance</span>
+            </div>
+            <p>Algorithm/config/feature/reward comparisons on matched windows, with variability across seeds and market regimes.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-title">6. Paper Parity Reports</span>
+              <span class="badge badge-rose">Execution Drift</span>
+            </div>
+            <p>Later paper reports comparing expected and actual fills, execution latency, and feature feed drift.</p>
+          </div>
+        </div>
+
+        <div class="callout callout-note">
+          <div class="callout-icon">📋</div>
+          <div class="callout-content">
+            <p><strong>Unbiased Test Audit:</strong> Reports must label training, validation, held-out test, and paper results distinctly, and show weak/failed runs as well as the winner. The final test is an unbiased audit of an already selected frozen candidate; it does not select a new best model.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 10: Saving and freezing the model
+           ========================================================================== -->
+      <section id="section-10" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">10</span> Saving and Freezing the Model</h2>
+          <span class="badge badge-green">Bundle Integrity</span>
+        </div>
+
+        <p>
+          Freeze a deployable inference bundle containing model weights, fitted preprocessing/normalization state, exact feature/action/reward versions, symbol universe and provider/feed assumptions, resolved configs, dependency lock, data/split manifests, validation-selection rule/results, and checksums. Attach final test results as a versioned report without retuning the selected weights. Mark failures as candidates that are not eligible for paper execution.
+        </p>
+
+        <p>
+          Inference never calls <code>learn()</code>, updates normalization, or appends to a training replay buffer. Use deterministic predictions for the first paper protocol. Verify save/load decision parity on fixed observations, reject schema/provider mismatches, and record the immutable bundle ID with each signal. Store resumable training checkpoints separately from deployment bundles. (<a href="https://stable-baselines3.readthedocs.io/en/master/guide/vec_envs.html" target="_blank" rel="noopener noreferrer">SB3 normalization</a>).
+        </p>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 11: Live-data evaluation and Alpaca paper execution
+           ========================================================================== -->
+      <section id="section-11" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">11</span> Live-Data Evaluation and Alpaca Paper Execution</h2>
+          <span class="badge badge-amber">Paper Trading</span>
+        </div>
+
+        <p>
+          Use a persistent local/server inference process; Colab is the training backend and is not assumed to provide unattended execution uptime. Consume live market data through the same feature code, honoring delays and completed-bar boundaries. Shadow mode records decisions without orders and checks historical/incremental feature parity, scheduling, latency, and missing/stale data behavior.
+        </p>
+
+        <p>
+          Then use Alpaca's explicit paper mode and verify the endpoint/account. Query tradability, shortability/borrow eligibility, buying power, tick/quantity restrictions, and supported order combinations. Shorting is conditional on actual account and asset eligibility. Never assume arbitrary fractional short orders or short-borrow history is available. (<a href="https://docs.alpaca.markets/us/docs/margin-and-short-selling" target="_blank" rel="noopener noreferrer">Alpaca Margin & Short Selling</a>).
+        </p>
+
+        <!-- DIAGRAM 7: Alpaca Order Lifecycle & Scale-Out Zone -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            Alpaca Execution Architecture: Two-Boundary Zone Lifecycle vs Standard Bracket
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 210" aria-label="Alpaca order reconciliation lifecycle diagram">
+            <!-- Bracket limitation warning box -->
+            <rect class="d-box-amber" x="30" y="25" width="260" height="160" rx="8"/>
+            <text class="d-text-title" x="160" y="50" fill="var(--accent-amber)">Standard Bracket Limitations</text>
+            <text class="d-text-sub" x="160" y="75">Single Take-Profit Leg Only</text>
+            <text class="d-text-sub" x="160" y="95">No Extended Hours Execution</text>
+            <text class="d-text-sub" x="160" y="115">Cannot scale out across 2 targets</text>
+            <text class="d-text-sub" x="160" y="145" fill="var(--accent-rose)">Requires Custom Lifecycle!</text>
+
+            <line class="d-arrow" x1="290" y1="105" x2="330" y2="105"/>
+
+            <!-- State Machine Box 1: Entry -->
+            <g transform="translate(330, 25)">
+              <rect class="d-box-accent" width="170" height="70"/>
+              <text class="d-text-title" x="85" y="30" fill="var(--accent-blue)">1. Signal & Entry</text>
+              <text class="d-text-sub" x="85" y="48">Next Open Market Order</text>
+              <text class="d-text-sub" x="85" y="60">Full Size (100% Qty)</text>
+            </g>
+
+            <line class="d-arrow" x1="500" y1="60" x2="530" y2="60"/>
+
+            <!-- State Machine Box 2: Protect & Scale-out 1 -->
+            <g transform="translate(530, 25)">
+              <rect class="d-box" width="180" height="70"/>
+              <text class="d-text-title" x="90" y="30">2. Near Target Hit</text>
+              <text class="d-text-sub" x="90" y="48">Scale out 50% shares</text>
+              <text class="d-text-sub" x="90" y="60">Reconcile broker state</text>
+            </g>
+
+            <line class="d-arrow" x1="710" y1="60" x2="740" y2="60"/>
+
+            <!-- State Machine Box 3: Update Stop & Scale-out 2 -->
+            <g transform="translate(740, 25)">
+              <rect class="d-box-green" width="180" height="70"/>
+              <text class="d-text-title" x="90" y="30" fill="var(--accent-green)">3. Far Target Hit</text>
+              <text class="d-text-sub" x="90" y="48">Exit remaining 50%</text>
+              <text class="d-text-sub" x="90" y="60">Cancel outstanding stop</text>
+            </g>
+
+            <!-- Reversal / Failure Recovery Path -->
+            <path class="d-arrow-dashed" d="M 620 95 L 620 145 L 740 145"/>
+            <g transform="translate(740, 115)">
+              <rect class="d-box-rose" width="180" height="65" fill="var(--accent-rose-bg)" stroke="var(--accent-rose)" stroke-width="1.5" rx="6"/>
+              <text class="d-text-title" x="90" y="28" fill="var(--accent-rose)">Stop Loss Triggered</text>
+              <text class="d-text-sub" x="90" y="45">Immediate exit of remaining qty</text>
+              <text class="d-text-sub" x="90" y="57">Protective priority over hold</text>
+            </g>
+          </svg>
+        </div>
+
+        <p>
+          <strong>Broker-Held Protection & Scale-Out Order Lifecycle:</strong> Use broker-held protection where supported. Alpaca brackets have a single take-profit leg and do not support extended hours; a two-boundary scale-out zone needs a separately verified lifecycle design. Do not pretend a normal bracket implements two profit targets. Test stop coverage, partial fills, leg quantity updates, replacement/cancellation races, and rejection recovery before enabling zone execution. On adjustments, reconcile positions and outstanding exits before changing quantities. (<a href="https://docs.alpaca.markets/us/docs/orders-at-alpaca" target="_blank" rel="noopener noreferrer">Alpaca Order Capabilities</a>).
+        </p>
+
+        <p>
+          <strong>State Persistence & Idempotency:</strong> Persist decision/order IDs, desired and actual positions, executions, and bundle IDs. Use idempotent decision processing, reconnect/backfill handling, bounded retries, and reconcile uncertain order submissions before resubmission. On restart reconstruct state from broker positions/open orders plus durable records. Stop new exposure on stale data, schema mismatch, failed reconciliation, or configured risk-limit breaches while maintaining existing protection.
+        </p>
+
+        <p>
+          <strong>Evaluation Criteria:</strong> Predeclare position/exposure/turnover/loss limits and paper evaluation criteria before a run. Report net returns, drawdowns, holding duration, trade count, costs, operational errors, and drift over enough time/trades to evaluate the protocol; there is no universal duration that proves profitability. Paper fills omit some real market effects. (<a href="https://docs.alpaca.markets/us/docs/paper-trading" target="_blank" rel="noopener noreferrer">Alpaca Paper Limitations</a>).
+        </p>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 12: Colab, efficiency, and reproducibility
+           ========================================================================== -->
+      <section id="section-12" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">12</span> Colab, Efficiency, and Reproducibility</h2>
+          <span class="badge badge-purple">Compute & Runtime</span>
+        </div>
+
+        <p>
+          Use the official Google Colab CLI with pinned version and checked subcommand help. Package/upload or install the project and its config/data explicitly. Record runtime hardware and dependencies; begin with CPU and profile before requesting GPU. Persist periodic checkpoints and export artifacts/logs before releasing only the sessions created for the job. (<a href="https://github.com/googlecolab/google-colab-cli" target="_blank" rel="noopener noreferrer">Official Google Colab CLI</a> • <a href="https://research.google.com/colaboratory/faq.html" target="_blank" rel="noopener noreferrer">Colab Runtime Limits & FAQ</a>).
+        </p>
+
+        <p>
+          Precompute causal features once per dataset version, use arrays in the environment loop, query partitioned storage for research, and batch/cache provider calls within quotas. Benchmark single-environment versus vectorized runs rather than assuming subprocesses help. Bound replay memory from actual observation/action dimensions; tune collection/update ratios with environment count. Keep secrets out of scripts, CLI arguments, outputs, and bundles.
+        </p>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 13: Implementation milestones and completion criteria
+           ========================================================================== -->
+      <section id="section-13" class="doc-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-id">13</span> Implementation Milestones and Completion Criteria</h2>
+          <span class="badge badge-green">9-Stage Roadmap</span>
+        </div>
+
+        <!-- DIAGRAM 8: Comprehensive 9-Stage Roadmap Flowchart -->
+        <div class="diagram-wrapper">
+          <div class="diagram-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+            Complete 9-Stage Milestone Roadmap & Phased Dependencies
+          </div>
+          <svg class="interactive-diagram" viewBox="0 0 950 340" aria-label="Implementation roadmap flowchart covering all 9 milestones">
+            <!-- Row 1: Milestones 1 to 3 -->
+            <g transform="translate(30, 20)">
+              <rect class="d-box-accent" width="260" height="75"/>
+              <text class="d-text-title" x="130" y="24" fill="var(--accent-blue)">Milestone 1: Contracts & Audit</text>
+              <text class="d-text-sub" x="130" y="42">Provider capabilities & schemas</text>
+              <text class="d-text-sub" x="130" y="56">Alpaca + Yahoo sampling</text>
+              <text class="d-text-sub" x="130" y="68" fill="var(--accent-green)">Immediate Next Step</text>
+            </g>
+
+            <line class="d-arrow" x1="290" y1="57" x2="330" y2="57"/>
+
+            <g transform="translate(330, 20)">
+              <rect class="d-box-accent" width="260" height="75"/>
+              <text class="d-text-title" x="130" y="24" fill="var(--accent-blue)">Milestone 2: Accumulator & Splits</text>
+              <text class="d-text-sub" x="130" y="42">Immutable storage & DuckDB</text>
+              <text class="d-text-sub" x="130" y="56">Leakage-free chronological splits</text>
+              <text class="d-text-sub" x="130" y="68" fill="var(--accent-green)">Immediate Next Step</text>
+            </g>
+
+            <line class="d-arrow" x1="590" y1="57" x2="630" y2="57"/>
+
+            <g transform="translate(630, 20)">
+              <rect class="d-box" width="280" height="75"/>
+              <text class="d-text-title" x="140" y="24">Milestone 3: Position-Only Env</text>
+              <text class="d-text-sub" x="140" y="42">Cash/long accounting + costs</text>
+              <text class="d-text-sub" x="140" y="56">Shorting & borrow assumptions</text>
+              <text class="d-text-sub" x="140" y="68">Gymnasium checker passing</text>
+            </g>
+
+            <!-- Downward connection to Row 2 -->
+            <path class="d-arrow" d="M 770 95 L 770 125 L 770 135"/>
+
+            <!-- Row 2: Milestones 4 to 6 -->
+            <g transform="translate(630, 135)">
+              <rect class="d-box" width="280" height="75"/>
+              <text class="d-text-title" x="140" y="24">Milestone 4: Learned Exits</text>
+              <text class="d-text-sub" x="140" y="42">4-Component Box Action</text>
+              <text class="d-text-sub" x="140" y="56">Learned zone scale-out schedule</text>
+              <text class="d-text-sub" x="140" y="68">Conservative stop-first replay</text>
+            </g>
+
+            <line class="d-arrow" x1="630" y1="172" x2="590" y2="172"/>
+
+            <g transform="translate(330, 135)">
+              <rect class="d-box" width="260" height="75"/>
+              <text class="d-text-title" x="130" y="24">Milestone 5: Modular Training</text>
+              <text class="d-text-sub" x="130" y="42">PPO, SAC, TD3 fixed baselines</text>
+              <text class="d-text-sub" x="130" y="56">10k transition validation checkpoints</text>
+              <text class="d-text-sub" x="130" y="68">Visual Plotly report exports</text>
+            </g>
+
+            <line class="d-arrow" x1="330" y1="172" x2="290" y2="172"/>
+
+            <g transform="translate(30, 135)">
+              <rect class="d-box" width="260" height="75"/>
+              <text class="d-text-title" x="130" y="24">Milestone 6: Controlled Growth</text>
+              <text class="d-text-sub" x="130" y="42">Feature families A through I</text>
+              <text class="d-text-sub" x="130" y="56">Reward terms R0 through R3</text>
+              <text class="d-text-sub" x="130" y="68">Matched ablation studies</text>
+            </g>
+
+            <!-- Downward connection to Row 3 -->
+            <path class="d-arrow" d="M 160 210 L 160 240 L 160 250"/>
+
+            <!-- Row 3: Milestones 7 to 9 -->
+            <g transform="translate(30, 250)">
+              <rect class="d-box-green" width="260" height="75"/>
+              <text class="d-text-title" x="130" y="24" fill="var(--accent-green)">Milestone 7: Select & Freeze</text>
+              <text class="d-text-sub" x="130" y="42">Export immutable bundle</text>
+              <text class="d-text-sub" x="130" y="56">Single held-out test audit</text>
+              <text class="d-text-sub" x="130" y="68">Deterministic reproducibility</text>
+            </g>
+
+            <line class="d-arrow" x1="290" y1="287" x2="330" y2="287"/>
+
+            <g transform="translate(330, 250)">
+              <rect class="d-box-green" width="260" height="75"/>
+              <text class="d-text-title" x="130" y="24" fill="var(--accent-green)">Milestone 8: Shadow Evaluation</text>
+              <text class="d-text-sub" x="130" y="42">Live Alpaca feed consumption</text>
+              <text class="d-text-sub" x="130" y="56">Zero-order parity monitoring</text>
+              <text class="d-text-sub" x="130" y="68">Reconnect & restart testing</text>
+            </g>
+
+            <line class="d-arrow" x1="590" y1="287" x2="630" y2="287"/>
+
+            <g transform="translate(630, 250)">
+              <rect class="d-box-amber" width="280" height="75"/>
+              <text class="d-text-title" x="140" y="24" fill="var(--accent-amber)">Milestone 9: Paper Execution</text>
+              <text class="d-text-sub" x="140" y="42">Alpaca paper endpoint verified</text>
+              <text class="d-text-sub" x="140" y="56">Learned stop/target zone orders</text>
+              <text class="d-text-sub" x="140" y="68">Full reconciliation lifecycle</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 9 Detailed Milestone Cards -->
+        <div class="milestones-container">
+          
+          <!-- Milestone 1 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">01</div>
+                <div class="milestone-title-text">Contracts and Provider Audit</div>
+              </div>
+              <span class="badge badge-amber">Initial Phase</span>
+            </div>
+            <p>
+              Implement minimal package/config boundaries, capability manifests, file import and synthetic fixtures. Sample Alpaca and Yahoo bar history including pre-2016 requests; record actual access, coverage, adjustments, and quotas.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when a provider can be replaced without changing the environment and gaps/unsupported types are explicit.
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">02</div>
+                <div class="milestone-title-text">Accumulator and Dataset Baseline</div>
+              </div>
+              <span class="badge badge-amber">Initial Phase</span>
+            </div>
+            <p>
+              Add immutable storage, incremental recovery, quality checks, global splits, simple causal features, and train-only preprocessing. Start optional snapshot archives when their source/access is verified.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when a manifest reproduces all three datasets and leakage checks cover timing, periods, revisions, and splits. Start optional snapshot archives when their source/access is verified.
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">03</div>
+                <div class="milestone-title-text">Position-Only Environment</div>
+              </div>
+              <span class="badge badge-blue">Core Simulation</span>
+            </div>
+            <p>
+              Implement cash/long accounting, next-session fills, costs, Gymnasium contract, and cash/buy-and-hold baselines. Then add short accounting and borrow assumptions.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when deterministic fixtures validate cash/P&amp;L/constraints and environment checkers pass.
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">04</div>
+                <div class="milestone-title-text">Learned Trade Management</div>
+              </div>
+              <span class="badge badge-blue">Trade Geometry</span>
+            </div>
+            <p>
+              Add stop/single-target actions, then the full learned zone and position-adjustment schema, partial exits, gaps, and conservative execution replay.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when both directions, changes, reversals, and stop/target races behave deterministically and constraints are enforced.
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">05</div>
+                <div class="milestone-title-text">Modular Training and Reporting</div>
+              </div>
+              <span class="badge badge-purple">RL Algorithms</span>
+            </div>
+            <p>
+              Add PPO, then SAC/TD3 with fixed defaults, checkpoint validation, save/load checks, and visual reports.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when each algorithm runs the same versioned experiment and reports all checkpoints and seeds.
+            </div>
+          </div>
+
+          <!-- Milestone 6 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">06</div>
+                <div class="milestone-title-text">Controlled Feature/Reward Growth</div>
+              </div>
+              <span class="badge badge-purple">Ablation Studies</span>
+            </div>
+            <p>
+              Introduce one family or reward term per study, keeping accepted changes only with matched validation evidence. Financials, options, sentiment, and flow each have separate data-readiness gates.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete each study with an ablation report and a recorded decision, including negative results.
+            </div>
+          </div>
+
+          <!-- Milestone 7 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">07</div>
+                <div class="milestone-title-text">Select, Freeze, and Audit</div>
+              </div>
+              <span class="badge badge-green">Inference Bundle</span>
+            </div>
+            <p>
+              Predeclare selection criteria, select with validation, export the immutable bundle, and evaluate once on held-out test.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when inference is reproducible and any failure is reported without test-driven retuning.
+            </div>
+          </div>
+
+          <!-- Milestone 8 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">08</div>
+                <div class="milestone-title-text">Live-Data Shadow Evaluation</div>
+              </div>
+              <span class="badge badge-green">Pre-Trade Validation</span>
+            </div>
+            <p>
+              Run the frozen bundle with Alpaca market data, record decisions and drift, and exercise reconnect/restart scenarios.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when feature timing, state recovery, and policy outputs match the specified protocol.
+            </div>
+          </div>
+
+          <!-- Milestone 9 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <div class="milestone-num-title">
+                <div class="milestone-badge">09</div>
+                <div class="milestone-title-text">Alpaca Paper Execution</div>
+              </div>
+              <span class="badge badge-amber">Paper Execution Only</span>
+            </div>
+            <p>
+              Enable eligible long/short and learned stop/target orders with tested reconciliation and protection handling.
+            </p>
+            <div class="milestone-completion-box">
+              <strong>Completion Criteria:</strong> Complete when the predeclared operational and performance criteria are reported, including divergence from the simulator. This milestone does not authorize live-money deployment.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="callout callout-tip" style="margin-top: 2rem;">
+          <div class="callout-icon">🚀</div>
+          <div class="callout-content">
+            <p><strong>Next Implementation Action:</strong> The next implementation task should start with <strong>milestones 1–2</strong>. Before remote jobs, resolve the symbol universe, date coverage, account/feed entitlements, and compute budget using the completed provider audit. All choices remain configurable; no stage is presented as evidence of expected profit.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       Client-side JavaScript (Self-Contained Navigation, Theme, Copy & Search)
+       ========================================================================== -->
+  <script>
+    // Theme Toggling (Dark / Light)
+    const htmlElem = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function setTheme(theme) {
+      htmlElem.setAttribute('data-theme', theme);
+      if (theme === 'light') {
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      } else {
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      }
+      try {
+        localStorage.setItem('rl_plan_theme', theme);
+      } catch (e) {}
+    }
+
+    // Load saved theme or system preference
+    const savedTheme = localStorage.getItem('rl_plan_theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      setTheme('light');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlElem.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebarNav = document.getElementById('sidebarNav');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      sidebarNav.classList.toggle('open');
+    });
+
+    // Close mobile menu on clicking a nav link
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 1024) {
+          sidebarNav.classList.remove('open');
+        }
+      });
+    });
+
+    // Copy Code / Tree Block
+    function copyTreeToClipboard() {
+      const treeBlock = document.getElementById('treeBlock');
+      const text = treeBlock.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copyTreeBtn');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span>✓ Copied!</span>';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 2000);
+      });
+    }
+
+    // ScrollSpy: Highlight Active TOC Section
+    const sections = document.querySelectorAll('section.doc-section');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          tocLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Client-side Section Search / Filter
+    const searchInput = document.getElementById('searchInput');
+    const tocList = document.getElementById('tocList');
+    const tocItems = tocList.querySelectorAll('li');
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      
+      tocItems.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (text.includes(query)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = query === '' ? 'block' : 'none';
+        }
+      });
+
+      // Highlight section titles in content if searching
+      sections.forEach(section => {
+        const sectionText = section.innerText.toLowerCase();
+        if (query !== '' && !sectionText.includes(query)) {
+          section.style.opacity = '0.35';
+        } else {
+          section.style.opacity = '1';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

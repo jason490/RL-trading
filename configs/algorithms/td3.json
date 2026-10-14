@@ -1,0 +1,13 @@
+{
+  "algorithm": "td3",
+  "long_transitions": 50000,
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "smoke_transitions": 1024,
+  "advanced_features": false,
+  "reward": "net_log_equity",
+  "selection": "mean_validation_net_return"
+}

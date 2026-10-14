@@ -1,2 +1,111 @@
-# RL-trading
-Training a RL model in trading using diff indicators and see how profitable it can get
+# rl-stocks
+
+A modular research toolkit for daily swing-trading simulations with Stable-Baselines3 PPO, SAC and TD3. It separates market-data access, causal features, portfolio accounting, training, evaluation, reporting and frozen inference.
+
+The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol traded per episode. The project is a research prototype: software checks and synthetic results do not establish profitable trading performance. Broker-order execution is not implemented.
+
+## Current capabilities and validation
+
+| Area | Implementation | Validation status |
+| --- | --- | --- |
+| Synthetic/CSV data, immutable storage and resumable accumulation | Implemented | Offline tests pass |
+| Causal daily features, optional completed weekly context, chronological splits and frozen normalization | Implemented | Offline tests pass |
+| Long/short accounting, next-open fills, costs, stops, learned target zones and reversals | Implemented | Offline simulator tests pass |
+| Reports and matched run comparisons | Implemented | SVG/JSON output tested; Plotly integration pending |
+| Yahoo/Alpaca historical adapters | Implemented | Actual endpoint coverage and SDK integration pending |
+| Gymnasium environment, PPO/SAC/TD3 training, checkpoints and frozen neural inference | Implemented | Dependency-backed acceptance pending |
+| Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | Mock lifecycle tests pass; actual remote acceptance pending |
+| Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
+
+The recorded verification run has **46 passing tests and 5 skipped integration tests**. Direct dependencies are pinned; the transitive hash lock has not yet been generated. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+
+## Requirements and installation
+
+Use **Python 3.12**. Installation and real-provider retrieval require network access. The baseline does not need Alpaca credentials; Yahoo and Alpaca SDKs are optional package extras. Run commands from the repository root.
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install uv
+
+# Resolve the pinned project and optional development/provider dependencies.
+RL_UV_BIN=.venv/bin/uv bash scripts/lock.sh
+.venv/bin/uv pip sync --python .venv/bin/python requirements.lock
+.venv/bin/uv pip install --python .venv/bin/python --no-deps -e .
+.venv/bin/python -m pip check
+
+PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
+```
+
+Review and retain the generated `requirements.lock`. `requirements.txt` contains direct pins and is not a complete transitive lock. Training checks actual core package versions against the reviewed release set. Full setup instructions and compatibility assumptions are in [setup.md](docs/setup.md).
+
+## Offline quick start
+
+The standard-library audit needs Python 3.12 but no API credentials, RL packages or remote runtime:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/offline_audit.py
+```
+
+It prints paths to a synthetic snapshot, a reproducible dataset and a standalone HTML report. The report uses a fixed exposure fixture, not a trained policy. Synthetic calendars are explicitly unverified; their results are only accounting and wiring checks.
+
+## Historical data and datasets
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local ingest --provider yahoo
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local dataset data/raw/SNAPSHOT_HASH
+```
+
+Replace `SNAPSHOT_HASH` with the directory printed by ingestion. The default request covers 2010-01-01 through September 2026 (`2026-10-01` exclusive). Provider adapters can also be called with explicit requests through the Python API; the current dataset generator expects the four-symbol research universe.
+
+Available providers are `synthetic`, `files`, `yahoo` and `alpaca`. Files use `--file bars.csv`; Alpaca requires an explicit IEX/SIP feed and environment credentials. Alpaca bar-only data lacks verified dividend cash flows and cannot pass the default dataset gate without further action-data auditing. Sources are never silently substituted or mixed.
+
+Features include log returns, trailing volatility, EMA 20/50, RSI 14, ATR 14 and prior-window relative volume. `dataset --weekly` adds completed weekly context. Training ends in 2020, validation covers 2021–2023, and testing starts in 2024. Training/validation ends have a 20-session purge; preprocessing fits only retained training rows.
+
+See [providers](docs/providers.md), [storage](docs/storage.md), [features](docs/features.md) and [datasets](docs/datasets.md) for source limitations, availability conventions, coverage gates and schemas.
+
+## Training and evaluation
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local train data/datasets/DATASET_HASH --algorithm ppo
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local train data/datasets/DATASET_HASH --algorithm sac
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local train data/datasets/DATASET_HASH --algorithm td3
+```
+
+Default smoke budgets are exactly **512 PPO / 1,024 SAC / 1,024 TD3 transitions**. Training runs Gymnasium/SB3 checkers, records seeds/configuration/data/package identities, evaluates validation checkpoints and exports a checksummed research bundle. Smoke acceptance verifies software wiring, not profitability.
+
+`--long --seed 11` selects a 50,000-transition experiment; the planned seed set is 11/23/37. Complete smoke acceptance before longer jobs. `--final-test` audits selected weights only after validation selection and freezing; it never selects checkpoints. Keep the final test untouched while changing features, rewards or hyperparameters.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local compare artifacts/runs --output artifacts/comparison.html
+```
+
+Reports include equity/baselines, drawdown, exposure, protective zones, fills, costs and holding-time diagnostics. Run comparisons retain failures and separate unmatched configurations. Frozen inference rejects incompatible schemas/feeds and invalid or stale inputs. Detailed behavior is documented in [training](docs/training.md), [evaluation](docs/evaluation.md), [reporting](docs/reporting.md) and [inference](docs/inference.md).
+
+## Optional Colab smoke validation
+
+Colab is an optional training backend. Use Google's official [google-colab-cli](https://github.com/googlecolab/google-colab-cli), authenticate interactively before automation, and verify that `usage` returns balance/rate information. The runtime code was inspected against CLI 0.7.4; check installed-release help before changing versions.
+
+```bash
+# CLI_PYTHON is the interpreter containing the official google-colab-cli package.
+/path/to/CLI_PYTHON scripts/colab_safe.py version
+/path/to/CLI_PYTHON scripts/colab_safe.py usage
+
+# Run only after lock generation, local integration and data audits pass.
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON
+```
+
+The runner owns one uniquely named A100 session at a time, persists a cumulative usage ledger, monitors usage every minute, retrieves artifacts and verifies cleanup. Project defaults are a **150-unit ceiling**, teardown beginning by **130 units**, and an initial allocation deadline of at most **two hours**, including setup and retrieval. Unreliable metering prevents or stops allocation; budget stops do not trigger automatic restart.
+
+The wrapper redirects logging/settings/history/session state to private `.runtime/` storage without changing authentication. See [Colab operations and troubleshooting](docs/colab.md) for installation, authentication, network diagnosis, budget accounting and recovery. No remote acceptance result is currently recorded.
+
+## Recommended development sequence
+
+1. Generate the dependency lock, install it and pass the integration suite without missing-dependency skips.
+2. Retrieve and audit actual provider history, adjustments, calendars and availability; build a versioned dataset.
+3. Run short CPU train/evaluate/save/load checks for all three algorithms.
+4. Verify Colab authentication and metering, then run the bounded A100 smoke if remote validation is desired.
+5. Compare matched 50,000-transition runs across seeds 11/23/37 using validation only.
+6. Freeze a selected candidate and perform a held-out test audit.
+7. Add persistent shadow inference before designing paper-order execution.
+
+Advanced data families, additional reward terms and broker-order lifecycle work remain separate milestones. Keep generated data, artifacts, runtime state and credentials out of Git. [plan.md](plan.md) contains the roadmap; [docs/README.md](docs/README.md) indexes the detailed guides.

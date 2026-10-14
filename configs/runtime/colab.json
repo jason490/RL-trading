@@ -1,0 +1,1 @@
+{"accelerator":"A100","total_compute_units":150,"teardown_at":130,"reserved_compute_units":20,"meter_interval_seconds":60,"maximum_allocation_seconds":7200,"automatic_restart":false}
