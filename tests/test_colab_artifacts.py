@@ -71,3 +71,17 @@ class ArtifactTests(unittest.TestCase):
         next(self.artifacts.glob('frozen/*/model.zip')).write_bytes(b'corrupt')
         with self.assertRaisesRegex(RuntimeError, 'checksum mismatch'):
             self.check()
+
+    def test_cpu_preflight_hardware_and_jobs(self):
+        self.plan=job_plan(accelerator='CPU')
+        for index,job in enumerate(self.plan['jobs']):
+            self.runs[index].update(job,requested_steps=job['steps'],actual_steps=job['steps'])
+            (self.artifacts/'runs'/str(index)/'metadata.json').write_text(json.dumps(self.runs[index]))
+        for index in (3,4):
+            (self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        self.completion.update(plan=self.plan,gpu=None,completed=self.runs[:3])
+        self.write_completion()
+        self.assertEqual(len(self.check()),3)
+        self.completion['gpu']='NVIDIA A100'
+        self.write_completion()
+        with self.assertRaisesRegex(RuntimeError,'manifest mismatch'):self.check()

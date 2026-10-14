@@ -296,6 +296,15 @@ class BudgetTests(unittest.TestCase):
         def bad_meter():raise OSError('network unavailable')
         job.meter=bad_meter
         with self.assertRaises(BudgetStop):job.tick()
+
+    def test_reported_zero_rate_is_allowed_only_for_cpu(self):
+        job=ColabJob(self.temp.name,'python','CPU');job.ledger=self.ledger
+        self.ledger.begin('cpu',Usage(150,0,0));job.last_meter=0.;job.allocated=True
+        job.meter=lambda:Usage(150,0,1)
+        job.tick()
+        self.assertFalse(self.ledger.value['budget_stopped'])
+        job.accelerator='T4';job.last_meter=0.
+        with self.assertRaises(BudgetStop):job.tick()
     def test_cleanup_on_provision_failure(self):
         import contextlib
         import io
@@ -307,7 +316,7 @@ class BudgetTests(unittest.TestCase):
             def operation(self,args,timeout):raise TimeoutError('provision failure')
         job=FailedJob(self.temp.name,'python')
         with contextlib.redirect_stdout(io.StringIO()):
-            with self.assertRaises(TimeoutError):job.run(Path(self.temp.name))
+            with self.assertRaises(TimeoutError):job.run(Path(self.temp.name),'ppo')
         self.assertEqual(job.ledger.active['status'],'stopped')
 
 class ReportingTests(unittest.TestCase):

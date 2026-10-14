@@ -25,16 +25,23 @@ def bootstrap_commands(uv, root, kernel_python):
     ]
 
 
-def job_plan(research_algorithm=None):
+def job_plan(research_algorithm=None, accelerator="A100"):
     if research_algorithm not in (None, "ppo", "sac", "td3"):
         raise ValueError("unknown research algorithm")
+    if accelerator not in ("CPU", "T4", "A100"):
+        raise ValueError("unsupported runtime")
+    if research_algorithm and accelerator != "A100":
+        raise ValueError("full research training requires A100")
     jobs = [
         {"algorithm": "ppo", "device": "cpu", "smoke": True, "steps": 512},
         {"algorithm": "ppo", "device": "cuda", "smoke": True, "steps": 512},
         {"algorithm": "sac", "device": "cuda", "smoke": True, "steps": 1024},
         {"algorithm": "td3", "device": "cuda", "smoke": True, "steps": 1024},
     ]
+    if accelerator == "CPU":
+        jobs = [{"algorithm": algorithm, "device": "cpu", "smoke": True, "steps": steps}
+                for algorithm, steps in (("ppo",512),("sac",1024),("td3",1024))]
     if research_algorithm:
         jobs.append({"algorithm": research_algorithm, "device": "cuda",
                      "smoke": False, "steps": 50000})
-    return {"version": 1, "seed": 11, "jobs": jobs}
+    return {"version": 2, "seed": 11, "accelerator": accelerator, "jobs": jobs}

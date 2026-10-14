@@ -30,11 +30,23 @@ changing runtimes. The existing 150-unit ceiling, 130-unit teardown threshold,
 cumulative ledger and initial two-hour allocation limit apply across all
 stages, including setup, allocated idle time, downloads, failures and retries.
 
-The current automated runner requests and verifies A100 hardware; it does not
-yet automate CPU/T4 session selection. Complete the lower-credit preflight
-before launching that runner for full training. Any separately provisioned
-Colab preflight session must use the same metering, ledger, deadline and cleanup
-requirements; it must not bypass the project budget controller.
+The runner defaults to **CPU preflight**, supports **T4 GPU preflight**, and
+requires `--research` for **A100 full training**. All modes share the same
+cumulative ledger, deadline, downloads and cleanup verification:
+
+```bash
+# Remote CPU preflight: PPO/SAC/TD3 tiny train/save/load checks.
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --accelerator CPU
+# Optional lower-credit CUDA preflight.
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --accelerator T4
+# Full A100 training only after preflight passes.
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo
+```
+
+A reported zero consumption rate is valid for a verified CPU runtime, while
+metering still runs every minute. GPU runtimes require a positive rate. Missing
+or unparseable metering always stops work. Logs are private and separated by
+session under `.runtime/SESSION_NAME/`; retries cannot reuse stale operation logs.
 
 ## Writable wrapper and authentication
 
@@ -102,9 +114,9 @@ and the two-hour deadline.
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/official-colab/python --research ppo
 ```
 
-The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one A100, records its endpoint when discoverable, verifies reported A100 hardware and obtains its consumption rate immediately. A zero/unavailable rate causes teardown.
+The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one selected runtime, records its endpoint when discoverable, verifies its reported hardware and obtains its consumption rate immediately. An unavailable rate causes teardown; zero is permitted only for verified CPU runtimes.
 
-The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` creates a remote dependency environment using Colab's kernel interpreter, syncs the hash lock and launches `remote_train.py` as a subprocess. Both kernel and research process use the same Colab Python 3.13 interpreter, with research dependencies isolated from preinstalled notebook packages. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.13 and actual A100 CUDA hardware, runs a CPU PPO profile, then exactly 512 PPO and 1024 SAC/TD3 GPU transitions. Longer 50,000-transition jobs are opt-in research experiments.
+The package, configs, dataset and lock are explicitly archived/uploaded. `colab install` installs the pinned uv bootstrap tool. `colab exec -f scripts/remote_smoke.py` creates a remote dependency environment using Colab's kernel interpreter, syncs the hash lock and launches `remote_train.py` as a subprocess. Both kernel and research process use the same Colab Python 3.13 interpreter, with research dependencies isolated from preinstalled notebook packages. Executing a local script alone does not synchronize imports or data. The worker verifies Python 3.13 and selected CPU/T4/A100 hardware. CPU preflight runs exactly PPO 512 and SAC/TD3 1024 CPU transitions. GPU plans include a CPU PPO profile and those exact CUDA smoke budgets before any full research job. Longer 50,000-transition jobs are opt-in research experiments.
 
 The installed CLI can exit zero after a remote Python exception. The runner
 therefore validates the downloaded completion manifest, expected job counts,
@@ -187,7 +199,7 @@ Usage rate: .../hr
 Active assignments: ...
 ```
 
-A zero usage rate can be normal **before** allocation; this runner requires a positive rate after allocating a paid runtime. Its preflight also requires zero existing assignments and more than 20 units of account balance. The 150-unit project ceiling is separate from the account's available balance. [Official usage/authentication documentation](https://github.com/googlecolab/google-colab-cli/blob/main/docs/04_automation_and_utility.md)
+A zero usage rate can be normal **before** allocation; this runner requires a positive rate after allocating a GPU; a verified CPU runtime may report zero. Its preflight also requires zero existing assignments and more than 20 units of account balance. The 150-unit project ceiling is separate from the account's available balance. [Official usage/authentication documentation](https://github.com/googlecolab/google-colab-cli/blob/main/docs/04_automation_and_utility.md)
 
 The automated runner uses noninteractive stdin, so complete authorization beforehand. An interactive sign-in that has never been completed cannot be repaired by blindly retrying automated provisioning.
 

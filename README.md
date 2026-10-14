@@ -17,7 +17,7 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | Mock lifecycle tests pass; actual remote acceptance pending |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **64 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **68 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Requirements and installation
 
@@ -82,7 +82,7 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local compare artifacts/run
 
 Reports include equity/baselines, drawdown, exposure, protective zones, fills, costs and holding-time diagnostics. Run comparisons retain failures and separate unmatched configurations. Frozen inference rejects incompatible schemas/feeds and invalid or stale inputs. Detailed behavior is documented in [training](docs/training.md), [evaluation](docs/evaluation.md), [reporting](docs/reporting.md) and [inference](docs/inference.md).
 
-## Optional Colab smoke validation
+## Optional Colab preflight and A100 training
 
 Colab is an optional training backend. Use Google's official [google-colab-cli](https://github.com/googlecolab/google-colab-cli), authenticate interactively before automation, and verify that `usage` returns balance/rate information. The runtime code was inspected against CLI 0.7.4; check installed-release help before changing versions.
 
@@ -95,7 +95,7 @@ Colab is an optional training backend. Use Google's official [google-colab-cli](
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON
 ```
 
-The runner owns one uniquely named A100 session at a time, persists a cumulative usage ledger, monitors usage every minute, retrieves artifacts and verifies cleanup. Project defaults are a **150-unit ceiling**, teardown beginning by **130 units**, and an initial allocation deadline of at most **two hours**, including setup and retrieval. Unreliable metering prevents or stops allocation; budget stops do not trigger automatic restart.
+The runner defaults to CPU preflight; `--accelerator T4` selects CUDA preflight and `--research ppo` selects full A100 training. It owns one uniquely named session at a time, persists a cumulative usage ledger, monitors usage every minute, retrieves artifacts and verifies cleanup. Project defaults are a **150-unit ceiling**, teardown beginning by **130 units**, and an initial allocation deadline of at most **two hours**, including setup and retrieval. Unreliable metering prevents or stops allocation; budget stops do not trigger automatic restart.
 
 The wrapper redirects logging/settings/history/session state to private `.runtime/` storage without changing authentication. See [Colab operations and troubleshooting](docs/colab.md) for reusing an existing installation, authentication, network diagnosis, budget accounting and recovery. No remote acceptance result is currently recorded.
 

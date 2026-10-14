@@ -54,3 +54,18 @@ class JobPlanTests(unittest.TestCase):
         self.assertNotIn('PYTHONHOME', environment)
         self.assertNotIn('VIRTUAL_ENV', environment)
         self.assertEqual(parent['MPLBACKEND'], 'module://matplotlib_inline.backend_inline')
+
+    def test_lower_credit_preflight_has_no_long_training(self):
+        plan=job_plan(accelerator='CPU')
+        self.assertEqual([j['steps'] for j in plan['jobs']], [512,1024,1024])
+        self.assertTrue(all(j['device']=='cpu' and j['smoke'] for j in plan['jobs']))
+        self.assertTrue(all(j['smoke'] for j in job_plan(accelerator='T4')['jobs']))
+        with self.assertRaises(ValueError):job_plan('ppo','T4')
+
+    def test_a100_smoke_only_refused_before_allocation(self):
+        from rl_stocks.runtime.colab.runner import ColabJob
+        with tempfile.TemporaryDirectory() as directory:
+            job=ColabJob(directory,'python','A100')
+            with self.assertRaisesRegex(ValueError,'full --research'):
+                job.run(directory)
+            self.assertEqual(job.ledger.value['attempts'],[])

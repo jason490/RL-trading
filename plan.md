@@ -1,6 +1,6 @@
 # Modular swing-trading RL project plan
 
-Status: Python 3.13.16 aligned with Colab; 64 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. Budget-controlled Colab training is authorized and in progress.
+Status: Python 3.13.16 aligned with Colab; 68 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. Budget-controlled Colab training is authorized and in progress.
 
 ## 1. Intended outcome and starting assumptions
 

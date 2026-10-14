@@ -1,4 +1,4 @@
-"""One owned A100 at a time. Metering failures always enter cleanup."""
+"""One owned Colab runtime at a time. Metering failures always enter cleanup."""
 import argparse
 import fcntl
 import json
@@ -17,12 +17,14 @@ from rl_stocks.core.provenance import repository_state
 from rl_stocks.runtime.colab.artifacts import validate_archive
 
 class ColabJob:
-    def __init__(self,root,cli_python):
+    def __init__(self,root,cli_python,accelerator="A100"):
         self.root=Path(root).resolve()
         self.command=[str(cli_python),str(self.root/"scripts/colab_safe.py")]
         self.state=self.root/".runtime";self.state.mkdir(exist_ok=True)
         self.ledger=Ledger(self.state/"usage-ledger.json")
-        self.session="rl-stocks-smoke-"+uuid.uuid4().hex[:12]
+        if accelerator not in ("CPU","T4","A100"):raise ValueError("unsupported runtime")
+        self.accelerator=accelerator
+        self.session="rl-stocks-"+accelerator.lower()+"-"+uuid.uuid4().hex[:12]
         self.last_meter=0.;self.allocated=False
     def short(self,args,timeout=25):
         p=subprocess.run(self.command+args,cwd=self.root,capture_output=True,text=True,timeout=timeout,stdin=subprocess.DEVNULL)
@@ -42,12 +44,14 @@ class ColabJob:
             self.last_meter=poll_started
             if self.ledger.active["meter_readings"][-1]["assignments"]>1:
                 raise BudgetStop("another account assignment prevents isolated metering")
-            if self.allocated and self.ledger.active["rate"]<=0:
+            if self.allocated and getattr(self,"accelerator","A100")!="CPU" and self.ledger.active["rate"]<=0:
                 raise BudgetStop("allocated runtime has no measurable consumption rate")
             self.ledger.guard(60)
     def operation(self,args,timeout):
         self.ledger.guard(timeout)
-        log=self.state/(args[0]+"-output.txt")
+        logs=self.state/self.session;logs.mkdir(exist_ok=True)
+        log=logs/(args[0]+"-output.txt")
+        self.ledger.active["operation"]=args[0];self.ledger.save()
         # CLI output may include session identifiers; files stay private, not printed.
         with log.open("w") as output:
             os.chmod(log,0o600)
@@ -110,7 +114,9 @@ class ColabJob:
             print(f"Cleanup failed. Session: {self.session}. Recovery: {recovery}",file=sys.stderr)
         return verified
     def run(self,dataset,research_algorithm=None):
-        plan=job_plan(research_algorithm)
+        if self.accelerator=="A100" and research_algorithm is None:
+            raise ValueError("A100 requires a full --research job; use CPU/T4 for preflight")
+        plan=job_plan(research_algorithm,self.accelerator)
         # Help and version are checked before any metered allocation.
         version=self.short(["version"])
         for cmd in ("usage","new","install","exec","upload","download","stop","sessions"):
@@ -120,6 +126,7 @@ class ColabJob:
         usage=self.meter()
         self.ledger.begin(self.session,usage)
         self.ledger.active["cli_version"]=version.strip();self.ledger.save()
+        self.ledger.active["accelerator"]=self.accelerator;self.ledger.save()
         self.last_meter=time.monotonic()
         # Persist the intended unique name before provisioning so interruption has
         # a recovery command even if new succeeds but its response is lost.
@@ -127,7 +134,9 @@ class ColabJob:
         previous={s:signal.signal(s,interrupted) for s in (signal.SIGTERM,signal.SIGINT)}
         ok=False
         try:
-            self.operation(["new","-s",self.session,"--gpu","A100"],180)
+            allocation=["new","-s",self.session]
+            if self.accelerator!="CPU":allocation.extend(["--gpu",self.accelerator])
+            self.operation(allocation,180)
             self.allocated=True
             raw=json.loads((self.state/"sessions.json").read_text())
             # CLI versions differ in state shape; endpoint is optional, never token.
@@ -147,9 +156,9 @@ class ColabJob:
                 self.ledger.active["metering_unreliable"]=True
                 raise BudgetStop("post-allocation metering unavailable") from exc
             self.last_meter=time.monotonic()
-            if self.ledger.active["rate"]<=0:raise BudgetStop("consumption rate unavailable")
+            if self.accelerator!="CPU" and self.ledger.active["rate"]<=0:raise BudgetStop("consumption rate unavailable")
             status=self.short(["status","-s",self.session])
-            if "A100" not in status.upper():raise RuntimeError("A100 allocation not verified")
+            if self.accelerator not in status.upper():raise RuntimeError("runtime allocation not verified")
             archive=self.state/"research-upload.tar.gz"
             job_file=self.state/"job-plan.json"
             job_file.write_text(json.dumps(plan,indent=2))
@@ -201,10 +210,13 @@ def main():
     parser.add_argument("dataset");parser.add_argument("--cli-python",required=True)
     parser.add_argument("--research",choices=("ppo","sac","td3"),
                         help="After smoke acceptance, train one 50,000-transition seed-11 model")
+    parser.add_argument("--accelerator",choices=("CPU","T4","A100"),
+                        help="Default CPU for preflight; A100 for --research")
     args=parser.parse_args()
     root=Path.cwd();state=root/".runtime";state.mkdir(exist_ok=True)
     with (state/"allocation.lock").open("w") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        ColabJob(root,args.cli_python).run(args.dataset,args.research)
+        accelerator=args.accelerator or ("A100" if args.research else "CPU")
+        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research)
 
 if __name__=="__main__":main()
