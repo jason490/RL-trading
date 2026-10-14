@@ -216,4 +216,4 @@ Use [setup.md](setup.md) to generate `requirements.lock`, install it and run `pi
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo
 ```
 
-Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates a runtime; unlike the preceding help/usage steps, run it only when remote smoke execution is intended. Actual A100 eligibility and lifecycle success must be verified on each allocation.
+Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates an A100 for full research training; run it only after the lower-credit preflight passes. Actual A100 eligibility and lifecycle success must be verified on each allocation.
