@@ -11,10 +11,12 @@ import sys
 import tarfile
 import time
 import uuid
+import shutil
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
 from rl_stocks.runtime.colab.jobs import job_plan,study_plan,learning_plan
 from rl_stocks.core.provenance import repository_state
 from rl_stocks.runtime.colab.artifacts import validate_archive
+from rl_stocks.runtime.colab.transport import TransportLost,connection_lost,worker_not_started
 
 class ColabJob:
     def __init__(self,root,cli_python,accelerator="A100"):
@@ -59,6 +61,9 @@ class ColabJob:
             start=time.monotonic()
             try:
                 while process.poll() is None:
+                    if args[0] in ('exec','install') and connection_lost(log):
+                        self.ledger.active['transport_failure']=args[0];self.ledger.save()
+                        raise TransportLost('Colab CLI connection lost during '+args[0])
                     self.tick()
                     if args[0]=="exec" and self.last_meter!=getattr(self,"last_snapshot_meter",None):
                         self.last_snapshot_meter=self.last_meter
@@ -74,7 +79,11 @@ class ColabJob:
                         except Exception:pass  # Remote first checkpoint may not exist yet.
                     if time.monotonic()-start>timeout:raise TimeoutError(args[0])
                     time.sleep(.5)
-                if process.returncode:raise RuntimeError("Colab operation failed: "+args[0])
+                if process.returncode:
+                    if args[0] in ('exec','install') and connection_lost(log):
+                        self.ledger.active['transport_failure']=args[0];self.ledger.save()
+                        raise TransportLost('Colab CLI connection lost during '+args[0])
+                    raise RuntimeError("Colab operation failed: "+args[0])
             finally:
                 if process.poll() is None:
                     os.killpg(process.pid,signal.SIGTERM)
@@ -92,14 +101,35 @@ class ColabJob:
         return False
 
     def execute_worker(self):
-        try:
-            self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],getattr(self,"exec_timeout",1800))
-        except BudgetStop:
-            raise
-        except RuntimeError:
-            # A completed remote job may outlive a failed CLI output stream.
-            # The downloaded manifest and checksums still decide acceptance.
-            self.ledger.active["exec_cli_failed"]=True;self.ledger.save()
+        for attempt in range(2):
+            try:
+                self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],getattr(self,"exec_timeout",1800))
+                return
+            except BudgetStop:raise
+            except TransportLost:
+                self.ledger.active['exec_cli_failed']=True;self.ledger.save()
+                self.ledger.guard(20)
+                if attempt==0 and worker_not_started(self.root,self.session):
+                    log=self.state/self.session/'exec-output.txt'
+                    if log.exists():shutil.copyfile(log,log.with_name('exec-transport-failure.txt'))
+                    self.ledger.active['prestart_exec_retries']=1;self.ledger.save()
+                    continue
+                return
+            except RuntimeError:
+                # A completed remote job may outlive a failed CLI output stream.
+                # The downloaded manifest/checksums still decide acceptance.
+                self.ledger.active["exec_cli_failed"]=True;self.ledger.save();return
+
+    def install_bootstrap(self):
+        for attempt in range(2):
+            try:
+                self.operation(['install','-s',self.session,'uv==0.13.1'],180)
+                return
+            except TransportLost:
+                if attempt:raise
+                log=self.state/self.session/'install-output.txt'
+                if log.exists():shutil.copyfile(log,log.with_name('install-transport-failure.txt'))
+                self.ledger.active['bootstrap_transport_retries']=1;self.ledger.save()
     def cleanup(self):
         verified=False
         try:
@@ -194,7 +224,7 @@ class ColabJob:
                 tar.add(git_file,arcname="source-git.json")
             self.operation(["upload","-s",self.session,str(archive),"/content/research-upload.tar.gz"],120)
             # Use Colab's Python; isolate dependencies without changing interpreter.
-            self.operation(["install","-s",self.session,"uv==0.13.1"],180)
+            self.install_bootstrap()
             self.execute_worker()
             output=self.root/"artifacts"/"colab"/self.session;output.mkdir(parents=True,exist_ok=True)
             ok=self.retrieve("/content/research-artifacts.tar.gz",output/"artifacts.tar.gz")

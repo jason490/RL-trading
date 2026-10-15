@@ -315,3 +315,15 @@ validation decisions every 10,000 training transitions. The earlier 512-step
 PPO smoke took 65.4 s on CPU versus about 110 s on A100, including overhead.
 These observations motivated CPU continuation; benchmark sustained throughput
 before selecting hardware for later studies.
+
+## Terminal connection failures
+
+The installed CLI can print `RuntimeError: Connection was lost.` while its
+background threads keep the command alive. The runner detects that terminal
+message in a bounded log tail and terminates the local command promptly.
+An execution reconnect is attempted at most once, and only if an authenticated
+Contents API request confirms that the worker directory does not exist (404).
+Unknown status or an existing worker prevents execution retry. A lost connection
+during the idempotent pinned remote `uv` bootstrap permits one bounded retry.
+This does not reinstall or upgrade the local Colab CLI. Budget stops never retry;
+normal artifact recovery, metering, deadlines and verified teardown still apply.
