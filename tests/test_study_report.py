@@ -42,3 +42,14 @@ class StudyReportTests(unittest.TestCase):
             verified_sources([{'git':{'revision':state['revision'],'dirty':'modified'},'source_hash':source_identity()}],root)
         with self.assertRaises(ValueError):
             verified_sources([{'git':{'revision':state['revision'],'dirty':''},'source_hash':'forged'}],root)
+
+    def test_mixed_device_provenance_is_reported_without_reselection(self):
+        runs=deepcopy(self.runs)
+        for run in runs:run['device']='cuda'
+        runs[-1]['device']='cpu'
+        value=summarize(runs,self.protocol)
+        self.assertEqual(value['training_devices'],['cpu','cuda'])
+        self.assertIn('mixed hardware',value['hardware_caveat'])
+        family=next(f for f in value['families'] if f['dataset']=='combined' and f['algorithm']=='sac')
+        self.assertEqual(family['devices'],['cpu','cuda'])
+        self.assertEqual(value['candidate']['seed'],11)

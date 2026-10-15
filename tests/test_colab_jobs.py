@@ -60,7 +60,8 @@ class JobPlanTests(unittest.TestCase):
         self.assertEqual([j['steps'] for j in plan['jobs']], [512,1024,1024])
         self.assertTrue(all(j['device']=='cpu' and j['smoke'] for j in plan['jobs']))
         self.assertTrue(all(j['smoke'] for j in job_plan(accelerator='T4')['jobs']))
-        with self.assertRaises(ValueError):job_plan('ppo','T4')
+        self.assertEqual(job_plan('ppo','T4')['jobs'][-1]['device'],'cuda')
+        self.assertEqual(job_plan('ppo','CPU')['jobs'][-1]['device'],'cpu')
 
     def test_a100_smoke_only_refused_before_allocation(self):
         from rl_stocks.runtime.colab.runner import ColabJob
@@ -83,7 +84,7 @@ class JobPlanTests(unittest.TestCase):
         altered=json.loads(json.dumps(plan));altered['jobs'][-1]['seed']=42
         with self.assertRaises(ValueError):validate_plan(altered)
         with tempfile.TemporaryDirectory() as directory:
-            with self.assertRaises(ValueError):ColabJob(directory,'python','CPU').run(directory,study=True)
+            with self.assertRaises(ValueError):ColabJob(directory,'python','CPU').run(directory,research_algorithm='ppo',study=True)
 
     def test_bounded_algorithm_studies_keep_identical_seeds_and_budgets(self):
         from rl_stocks.runtime.colab.jobs import study_plan,validate_plan
@@ -94,3 +95,16 @@ class JobPlanTests(unittest.TestCase):
             self.assertEqual([j['seed'] for j in plan['jobs']],[11,23,37])
             self.assertTrue(all(j['steps']==50000 and not j['smoke'] for j in plan['jobs']))
             self.assertEqual(validate_plan(plan),plan)
+
+    def test_cpu_and_t4_studies_retain_budget_and_support_unfinished_cells(self):
+        from rl_stocks.runtime.colab.jobs import study_plan,validate_plan
+        for accelerator,device in (('CPU','cpu'),('T4','cuda')):
+            plan=study_plan('sac',accelerator,[23,37])
+            self.assertEqual([j['seed'] for j in plan['jobs']],[23,37])
+            self.assertTrue(all(j['steps']==50000 and j['device']==device for j in plan['jobs']))
+            self.assertEqual(validate_plan(plan),plan)
+            altered=json.loads(json.dumps(plan));altered['jobs'][0]['device']='cuda' if device=='cpu' else 'cpu'
+            with self.assertRaises(ValueError):validate_plan(altered)
+        for seeds in ([],[37,11],[11,11],[42]):
+            with self.assertRaises(ValueError):study_plan('ppo','CPU',seeds)
+        with self.assertRaises(ValueError):study_plan(None,'CPU',[11])

@@ -30,8 +30,6 @@ def job_plan(research_algorithm=None, accelerator="A100"):
         raise ValueError("unknown research algorithm")
     if accelerator not in ("CPU", "T4", "A100"):
         raise ValueError("unsupported runtime")
-    if research_algorithm and accelerator != "A100":
-        raise ValueError("full research training requires A100")
     jobs = [
         {"algorithm": "ppo", "device": "cpu", "smoke": True, "steps": 512},
         {"algorithm": "ppo", "device": "cuda", "smoke": True, "steps": 512},
@@ -42,27 +40,34 @@ def job_plan(research_algorithm=None, accelerator="A100"):
         jobs = [{"algorithm": algorithm, "device": "cpu", "smoke": True, "steps": steps}
                 for algorithm, steps in (("ppo",512),("sac",1024),("td3",1024))]
     if research_algorithm:
-        jobs.append({"algorithm": research_algorithm, "device": "cuda",
+        jobs.append({"algorithm": research_algorithm, "device": "cpu" if accelerator=="CPU" else "cuda",
                      "smoke": False, "steps": 50000})
     return {"version": 2, "seed": 11, "accelerator": accelerator, "jobs": jobs}
 
 
-def study_plan(algorithm=None):
+def study_plan(algorithm=None, accelerator="A100", seeds=None):
     """One dataset, matched algorithms/seeds; budget watchdog owns the allocation."""
     if algorithm not in (None,"ppo","sac","td3"):
         raise ValueError("unsupported study algorithm")
-    smoke = [{**job, "seed": 11} for job in job_plan(accelerator="T4")["jobs"]] if algorithm is None else []
-    research = [{"algorithm": algorithm, "device": "cuda", "smoke": False,
+    if accelerator not in ("CPU","T4","A100"):
+        raise ValueError("unsupported runtime")
+    selected=(11,23,37) if seeds is None else tuple(seeds)
+    if (not selected or selected!=tuple(s for s in (11,23,37) if s in selected)
+            or seeds is not None and algorithm is None):
+        raise ValueError("study seeds require one algorithm and an ordered unique subset of 11/23/37")
+    smoke = [{**job, "seed": 11} for job in job_plan(accelerator="CPU" if accelerator=="CPU" else "T4")["jobs"]] if algorithm is None else []
+    research = [{"algorithm": algorithm, "device": "cpu" if accelerator=="CPU" else "cuda", "smoke": False,
                  "steps": 50000, "seed": seed}
-                for algorithm in ((algorithm,) if algorithm else ("ppo", "sac", "td3")) for seed in (11, 23, 37)]
-    plan={"version": 3, "accelerator": "A100", "jobs": smoke+research}
+                for algorithm in ((algorithm,) if algorithm else ("ppo", "sac", "td3")) for seed in selected]
+    plan={"version": 3, "accelerator": accelerator, "jobs": smoke+research}
     if algorithm is not None:plan["study_algorithm"]=algorithm
+    if seeds is not None:plan["study_seeds"]=list(selected)
     return plan
 
 
 def validate_plan(plan):
     if plan.get("version") == 3:
-        if plan != study_plan(plan.get("study_algorithm")):
+        if plan != study_plan(plan.get("study_algorithm"),plan.get("accelerator"),plan.get("study_seeds")):
             raise ValueError("unsupported matched study plan")
     elif plan.get("version") == 2:
         jobs = plan["jobs"]

@@ -4,17 +4,18 @@ Remote execution is explicitly authorized for the current training task. Actual 
 
 Use Google's official `google-colab-cli` executable `colab`. The installed release inspected here is 0.7.4. Its usage command prints exact labelled account balance, hourly consumption and active assignment count. Do not assume a fixed conversion between 150 compute units and wall hours. [Official CLI](https://github.com/googlecolab/google-colab-cli)
 
-## Runtime selection: inexpensive preflight, A100 training
+## Runtime selection: profile before choosing hardware
 
 Use lower-credit hardware for preparation and validation before allocating the
-full-training runtime. The user has selected **A100 for full training**.
+full-training runtime. The user switched the current study to **Colab CPU on 2026-10-15**, after
+profiling showed poor A100 utilization. This supersedes the earlier A100 requirement.
 
 | Phase | Runtime | Required evidence before proceeding |
 | --- | --- | --- |
 | Prepare code, data and locks; check dependencies, accounting and environment APIs | Local CPU or Colab CPU | Verified dataset, compatible dependencies and passing checkers |
 | Tiny train/evaluate/save/load tests | CPU first | PPO/SAC/TD3 smoke acceptance, frozen prediction parity and recorded duration |
 | GPU-specific checks, when needed | T4 or another suitable lower-credit GPU | CUDA wiring, artifact retrieval and cleanup verified |
-| Full research training | A100 | Lower-credit preflight passed; data/configuration ready; budget and deadline checked |
+| Full research training | CPU by default; explicitly selected T4/A100 when profiling justifies it | Lower-credit preflight passed; data/configuration ready; budget and deadline checked |
 
 Do not allocate A100/H100 just to install dependencies, debug scripts or run
 smoke tests. A CPU profile performed inside an allocated A100 still incurs the
@@ -31,7 +32,8 @@ cumulative ledger and initial two-hour allocation limit apply across all
 stages, including setup, allocated idle time, downloads, failures and retries.
 
 The runner defaults to **CPU preflight**, supports **T4 GPU preflight**, and
-requires `--research` for **A100 full training**. All modes share the same
+supports full CPU/T4/A100 research with `--research` or `--study`.
+An A100 allocation requires a research job; smoke-only A100 launches are rejected. All modes share the same
 cumulative ledger, deadline, downloads and cleanup verification:
 
 ```bash
@@ -40,7 +42,7 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/
 # Optional lower-credit CUDA preflight.
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --accelerator T4
 # Full A100 training only after preflight passes.
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo --accelerator A100
 ```
 
 A reported zero consumption rate is valid for a verified CPU runtime, while
@@ -111,7 +113,7 @@ and the two-hour deadline.
 5. Confirm the persistent project ledger has no unresolved session or prior budget stop.
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/official-colab/python --research ppo
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/official-colab/python --research ppo --accelerator A100
 ```
 
 The runner checks installed version and help for usage/new/install/exec/upload/download/stop/sessions before allocation. A missing transitive lock prevents provisioning. It acquires an exclusive local allocation lock, saves a unique owned name and initial balance, creates one selected runtime, records its endpoint when discoverable, verifies its reported hardware and obtains its consumption rate immediately. An unavailable rate causes teardown; zero is permitted only for verified CPU runtimes.
@@ -237,7 +239,7 @@ Use [setup.md](setup.md) to generate `requirements.lock`, install it and run `pi
 ### 5. Launch through the budget controller when ready
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON --research ppo --accelerator A100
 ```
 
 Replace the dataset placeholder with the printed content-addressed path. Preserve the ledger across attempts. This command allocates an A100 for full research training; run it only after the lower-credit preflight passes. Actual A100 eligibility and lifecycle success must be verified on each allocation.
@@ -245,7 +247,7 @@ Replace the dataset placeholder with the printed content-addressed path. Preserv
 ## Matched studies
 
 `--study` selects all three algorithms at 50,000 transitions for seeds 11/23/37
-on one dataset, after startup smokes. It requires A100 and cannot be combined
+on one dataset, after startup smokes. It defaults to CPU; use `--accelerator T4` or `--accelerator A100` explicitly. It cannot be combined
 with `--research`. The execution command is bounded to 90 minutes; final artifact
 downloads have three attempts of up to 120 seconds. Allocation deadline,
 minute metering, cumulative ledger and teardown rules remain unchanged.
@@ -284,3 +286,32 @@ and atomically replace local files. A 132.5 MB live study checkpoint was
 successfully retrieved this way. CLI installation and authentication are unchanged.
 Error messages omit credential-bearing URLs. Interrupted partial files never
 replace a previously retrieved archive.
+
+## CPU handoff and incomplete cells
+
+After a user-requested hardware change, stop and verify the owned runtime first.
+Retain independently verified completed cells from its checkpoint archive. Run
+only unfinished seeds on the replacement runtime:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner \
+  data/datasets/DATASET_HASH --study --study-algorithm ppo --study-seeds 37 \
+  --accelerator CPU --cli-python /path/to/CLI_PYTHON
+```
+
+Seed subsets must be ordered, unique and drawn from 11/23/37. They require one
+explicit study algorithm. A partial batch is not a completed family: the final
+study still requires all 36 unique research cells. Record the device per run;
+mixed CPU/CUDA results have a numerical/backend confound and are not a controlled
+hardware benchmark. No final-test results may determine which cells to retain.
+The cumulative ledger and all deadlines survive the handoff.
+
+A 12-second independent diagnostic during combined-feature PPO reported 0%
+GPU utilization in every one-second sample, 544 MiB allocated out of 40,960 MiB,
+and about 53 W on the A100. This short snapshot can overlap CPU-heavy validation
+and does not establish whole-run utilization. The network uses two 64-unit
+layers, one sequential training environment, and roughly 19,000 sequential
+validation decisions every 10,000 training transitions. The earlier 512-step
+PPO smoke took 65.4 s on CPU versus about 110 s on A100, including overhead.
+These observations motivated CPU continuation; benchmark sustained throughput
+before selecting hardware for later studies.

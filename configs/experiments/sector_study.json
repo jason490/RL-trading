@@ -28,5 +28,13 @@
   "working_stop_units": 130,
   "allocation_deadline_seconds": 7200,
   "scheduling": "Three-seed algorithm batches after accepted CPU preflight; retain independently verified completed cells from the initial larger batch",
-  "source_comparison": "Exact learning-package identity; runtime/reporting-only differences permitted only after clean Git-tree verification of every uploaded package hash"
+  "source_comparison": "Exact learning-package identity; runtime/reporting-only differences permitted only after clean Git-tree verification of every uploaded package hash",
+  "hardware_change": {
+    "authorized": "User requested Colab CPU or cheapest suitable GPU on 2026-10-15",
+    "retained_cuda_cells": 29,
+    "remaining_cpu_cells": 7,
+    "cumulative_units_at_handoff": 32.9383,
+    "selection_unchanged": true,
+    "caveat": "CPU/CUDA numerical differences; not a controlled hardware benchmark"
+  }
 }

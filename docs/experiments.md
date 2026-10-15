@@ -33,8 +33,9 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner \
   data/datasets/DATASET_HASH --study --cli-python /path/to/CLI_PYTHON
 ```
 
-`--study --study-algorithm ppo` uses A100 for one three-seed research batch
-after accepted lower-credit preflight. Repeat for SAC/TD3 on each dataset.
+`--study --study-algorithm ppo` defaults to CPU; explicitly pass
+`--accelerator A100` to use A100 instead. Each bounded algorithm batch runs
+three seeds after accepted lower-credit preflight. Repeat for SAC/TD3 on each dataset.
 The original unsliced `--study` plan runs startup smokes plus nine research jobs;
 profiling on 26 symbols showed that this larger group risks the execution limit.
 Completed cells from that initial group are retained and independently verified;
@@ -85,3 +86,15 @@ that normalization and bundle files are unchanged. It refuses an existing output
 directory rather than silently overwriting an earlier audit. No training or
 checkpoint selection occurs in this command. Audit results are separate from
 validation selection.
+
+## User-directed hardware change — 2026-10-15
+
+The user requested CPU or the cheapest suitable GPU after poor A100 utilization
+was observed. The owned A100 was stopped and verified at 32.9383 cumulative
+conservative units. Its checkpoint retained combined PPO seeds 11 and 23, bringing
+the retained total to 29 research cells. The seven unfinished cells continue on
+Colab CPU: combined PPO seed 37, plus combined SAC/TD3 seeds 11/23/37. No completed
+cell is rerun or selected using final-test performance. Training source, data,
+costs, seeds, transition budgets and selection rules remain fixed; runtime
+scheduling and device provenance are the changes. CPU/CUDA numerical differences
+limit a strict hardware-matched interpretation and are disclosed in results.

@@ -67,6 +67,7 @@ def summarize(runs, protocol, approved_sources=None):
         entries.sort(key=lambda r:r["seed"])
         scores=[r["selected_score"] for r in entries]
         summaries.append({"dataset":dataset,"algorithm":algorithm,"seeds":[r["seed"] for r in entries],
+            "devices":sorted({r.get('device','unknown') for r in entries}),
             "mean_validation_return":mean(scores),"seed_standard_deviation":stdev(scores),
             "scores":scores,"bundle_ids":[r["bundle_id"] for r in entries]})
     winner=sorted(summaries,key=lambda r:(-r["mean_validation_return"],r["dataset"],r["algorithm"]))[0]
@@ -76,13 +77,16 @@ def summarize(runs, protocol, approved_sources=None):
             "candidate":{"dataset":winner["dataset"],"algorithm":candidate["algorithm"],
                          "seed":candidate["seed"],"bundle_id":candidate["bundle_id"],
                          "validation_score":candidate["selected_score"]},
-            "test_evaluated":False,"verified_source_packages":approved_sources}
+            "test_evaluated":False,"verified_source_packages":approved_sources,
+            "training_devices":sorted({r.get('device','unknown') for r in runs if not r.get('smoke')}),
+            "hardware_caveat":"CPU/CUDA optimization may differ; mixed hardware is not a controlled hardware benchmark"}
 
 
 def report_study(runs, protocol, destination, approved_sources=None):
     value=summarize(runs,protocol,approved_sources)
-    value["runs"]=[{k:r[k] for k in ("algorithm","seed","dataset","actual_steps","selected_step",
+    value["runs"]=[{**{k:r[k] for k in ("algorithm","seed","dataset","actual_steps","selected_step",
         "selected_score","selected_metrics","bundle_id","duration_seconds","git","source_hash")}
+        ,"device":r.get('device','unknown')}
         for r in runs if not r.get("smoke") and r.get("dataset") in protocol["datasets"].values()]
     sections=['<!doctype html><meta charset="utf-8"><title>Expanded-universe validation study</title>',
         '<h1>Expanded-universe validation study</h1><p>26 separate symbol episodes. Net modeled costs. '

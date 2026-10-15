@@ -22,12 +22,14 @@ Run dependency checks, environment checkers and tiny PPO/SAC/TD3
 train/evaluate/save/load demonstrations on CPU first. Use T4 or another suitable
 lower-credit GPU for GPU-specific smoke checks when needed. Prepare the verified
 dataset, dependency lock and resolved configuration before requesting higher-credit
-hardware. See [Colab runtime selection](colab.md#runtime-selection-inexpensive-preflight-a100-training).
+hardware. See [Colab runtime selection](colab.md#runtime-selection-profile-before-choosing-hardware).
 
-Use **A100 for full training**, as requested by the user, once this preflight
-passes. Running CPU code on an allocated A100 still consumes that runtime's
-credits. Record actual reported rates and cumulative measured/estimated usage;
-all stages share the 150-unit ceiling and 130-unit teardown threshold.
+Prefer **Colab CPU** for these small MLPs, following the user's 2026-10-15
+hardware change. A slower GPU may have similar wall time when sequential
+simulation/validation dominates; compare complete operation times and reported
+units rather than GPU names. A100 is an explicit option when profiling justifies
+it. CPU/CUDA training can differ numerically; record the device for each run.
+All stages retain the 150-unit ceiling and 130-unit teardown threshold.
 
 ## Lifecycle
 
