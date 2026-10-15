@@ -113,3 +113,20 @@ on the higher-scoring baseline family, using fresh seeds and real-equity reporti
 The complete checkpoint CSVs and gate evidence are in
 `results/learning-study-2026-10-15/cpu-100k/`. Local acceptance: 115 tests passed
 in 76.265 seconds, including transport-failure handling. No new test audit ran.
+
+### What the selected baseline policies actually do
+
+The three unchanged-reward CPU seeds' selected checkpoints were long in 92.8%
+of validation sessions, short in 1.8% and flat in 5.4%, with mean absolute exposure
+85.8%. Each separate stock episode averaged 744 fills but only 57 new entries:
+most fills adjusted existing positions. Modeled costs averaged $4,611 on each
+$100,000 starting-equity episode, already deducted from reported net returns.
+These are equal-symbol, equal-seed averages, not statistics for one investable
+shared portfolio. `cpu-100k/behavior-summary.json` preserves the underlying
+seed summaries and selected bundle identities.
+
+The action's first component specifies desired total exposure, not an incremental
+purchase. Subsequent components select a stop at 0.5–5 ATR, a first profit target
+at 0.5–8 ATR, and a target-zone width of 0.25–4 ATR. Near-target execution closes
+roughly half the current position; the far target closes the remainder. Whole
+shares, next-session fills, gap checks, modeled costs and the holding limit apply.

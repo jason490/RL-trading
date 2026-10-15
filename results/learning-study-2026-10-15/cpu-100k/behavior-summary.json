@@ -1,0 +1,131 @@
+{
+  "split": "validation",
+  "stage": "cpu-100k",
+  "family": "baseline",
+  "records": [
+    {
+      "cell": "baseline-11",
+      "run": "20261015T112613-sac-11-66d65c29",
+      "bundle_id": "524b9d48d02004a6121e4af89ed43e76c2c92dea4422eab06953d486c6f4c7e7",
+      "selection": "best validation checkpoint through 100k",
+      "equal_weight_means": {
+        "fills": 762.2692307692307,
+        "entries": 67.88461538461539,
+        "full_closures": 66.88461538461539,
+        "protective_reentries_within_one_session": 38.38461538461539,
+        "fees": 1944.999764534402,
+        "impact": 3889.996878523403,
+        "borrow": 159.15795049407106,
+        "reported_costs": 5994.154593551877,
+        "mean_abs_exposure": 0.8441191634780175,
+        "long_fraction": 0.9180853299705759,
+        "short_fraction": 0.028741067675493906,
+        "flat_fraction": 0.053173602353930226,
+        "mean_abs_log_reward": 0.010118148631725554,
+        "net_return": 0.19226055063977712,
+        "max_drawdown": -0.31221715946193745,
+        "turnover": 194.499843926192
+      },
+      "fill_counts_across_symbols": {
+        "add": 8936,
+        "reduce": 8084,
+        "holding_limit": 575,
+        "stop": 420,
+        "reverse_close": 733,
+        "reverse": 733,
+        "target_near": 327,
+        "close": 2,
+        "target_far": 9
+      }
+    },
+    {
+      "cell": "baseline-23",
+      "run": "20261015T121952-sac-23-99c5a066",
+      "bundle_id": "f18260ace9e49317c25f06f1f3c26ca69b1498ebff258b9fbbe9270a53320d7c",
+      "selection": "best validation checkpoint through 100k",
+      "equal_weight_means": {
+        "fills": 734.8076923076923,
+        "entries": 53.65384615384615,
+        "full_closures": 52.65384615384615,
+        "protective_reentries_within_one_session": 40.26923076923077,
+        "fees": 1366.4286955902062,
+        "impact": 2732.8536372644694,
+        "borrow": 46.8405043445402,
+        "reported_costs": 4146.122837199216,
+        "mean_abs_exposure": 0.8736808478749665,
+        "long_fraction": 0.9280685161832702,
+        "short_fraction": 0.015184951660361497,
+        "flat_fraction": 0.05674653215636822,
+        "mean_abs_log_reward": 0.010548773058224829,
+        "net_return": 0.15849210988737714,
+        "max_drawdown": -0.3500849351417277,
+        "turnover": 136.64268186323955
+      },
+      "fill_counts_across_symbols": {
+        "add": 9720,
+        "reduce": 7446,
+        "reverse_close": 306,
+        "reverse": 306,
+        "holding_limit": 753,
+        "stop": 298,
+        "target_near": 264,
+        "target_far": 11,
+        "close": 1
+      }
+    },
+    {
+      "cell": "baseline-37",
+      "run": "20261015T124920-sac-37-879829ef",
+      "bundle_id": "b5767b7583f37e56b85f8f2e52f48713c052a47984b9c918ba4556f181ea1c08",
+      "selection": "best validation checkpoint through 100k",
+      "equal_weight_means": {
+        "fills": 734.6538461538462,
+        "entries": 48.92307692307692,
+        "full_closures": 48,
+        "protective_reentries_within_one_session": 36.96153846153846,
+        "fees": 1218.9938265625312,
+        "impact": 2437.984311816855,
+        "borrow": 35.72531008608612,
+        "reported_costs": 3692.7034484654723,
+        "mean_abs_exposure": 0.8574914321818315,
+        "long_fraction": 0.9379466162253047,
+        "short_fraction": 0.010718789407313998,
+        "flat_fraction": 0.051334594367381255,
+        "mean_abs_log_reward": 0.010271087831111482,
+        "net_return": 0.24032739145999898,
+        "max_drawdown": -0.3007916501209616,
+        "turnover": 121.89921559085668
+      },
+      "fill_counts_across_symbols": {
+        "add": 7217,
+        "reduce": 10296,
+        "reverse_close": 277,
+        "reverse": 277,
+        "stop": 258,
+        "holding_limit": 709,
+        "target_near": 63,
+        "close": 3,
+        "target_far": 1
+      }
+    }
+  ],
+  "three_seed_equal_symbol_means": {
+    "fills": 743.9102564102564,
+    "entries": 56.82051282051282,
+    "full_closures": 55.84615384615385,
+    "protective_reentries_within_one_session": 38.53846153846154,
+    "fees": 1510.1407622290465,
+    "impact": 3020.2782758682424,
+    "borrow": 80.57458830823246,
+    "reported_costs": 4610.993626405521,
+    "mean_abs_exposure": 0.8584304811782718,
+    "long_fraction": 0.9280334874597169,
+    "short_fraction": 0.018214936247723135,
+    "flat_fraction": 0.0537515762925599,
+    "mean_abs_log_reward": 0.010312669840353955,
+    "net_return": 0.19702668399571774,
+    "max_drawdown": -0.3210312482415423,
+    "turnover": 151.01391379342942
+  },
+  "interpretation": "Separate stock episodes, not one shared portfolio. Fills include adjustments and partial exits; costs are already included in net return."
+}
