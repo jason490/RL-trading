@@ -99,3 +99,17 @@ The gate also requires positive selected-checkpoint gains in two of three seeds.
 A single exceptional seed, monotonic best-so-far curve, or drawdown deterioration
 cannot satisfy the declared gate by itself. The JSON records every gate component
 and remains explicitly validation-only.
+
+## Completed unchanged-reward CPU comparison (2026-10-15)
+
+All six 100k cells completed with compact curves, artifact acceptance and verified
+runtime shutdown. Baseline SAC's mean final validation return rose 12.79 points
+from its matched 50k checkpoints to 16.50%; selected checkpoints averaged 19.70%.
+It failed the preregistered gate: drawdown worsened 2.84 points and selected return
+did not exceed the historical floor. Combined inputs selected 11.78% on average;
+none of its seeds improved its best checkpoint after 50k. More transitions alone
+did not pass the declared improvement gate. The next stage tests reward scale 10
+on the higher-scoring baseline family, using fresh seeds and real-equity reporting.
+The complete checkpoint CSVs and gate evidence are in
+`results/learning-study-2026-10-15/cpu-100k/`. Local acceptance: 115 tests passed
+in 76.265 seconds, including transport-failure handling. No new test audit ran.
