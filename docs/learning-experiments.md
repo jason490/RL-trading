@@ -143,3 +143,9 @@ and its JSON companion. These validation-selected comparisons are optimistic
 relative to a fresh audit. The policy has a 20-session holding cap and protective
 rules; the buy-and-hold benchmark holds continuously. Both use matched dates and
 modeled fee/impact rates, and neither forces liquidation at the data boundary.
+
+The scale-10 stage completed all three seeds: selected mean return 11.46%, final
+mean 7.38%, and no gate pass. The scale-100 stage also completed without passing.
+`long-stage-decision.json` records the deterministic selection across completed
+CPU configurations before the 250k stage: baseline inputs and reward scale 1.
+Long-stage seeds start fresh and retain 50k/100k/250k milestones for paired curves.

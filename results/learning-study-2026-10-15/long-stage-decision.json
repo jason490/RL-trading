@@ -1,0 +1,45 @@
+{
+  "stage": "long-250k",
+  "selected_configuration": {
+    "stage": "cpu-100k",
+    "family": "baseline",
+    "reward_scale": 1.0,
+    "mean_selected_return": 0.19702668399571774
+  },
+  "candidates": [
+    {
+      "stage": "cpu-100k",
+      "family": "baseline",
+      "reward_scale": 1.0,
+      "mean_selected_return": 0.19702668399571774
+    },
+    {
+      "stage": "cpu-100k",
+      "family": "combined",
+      "reward_scale": 1.0,
+      "mean_selected_return": 0.11780003954541175
+    },
+    {
+      "stage": "scale-10",
+      "family": "baseline",
+      "reward_scale": 10.0,
+      "mean_selected_return": 0.11462972326777433
+    },
+    {
+      "stage": "scale-100",
+      "family": "baseline",
+      "reward_scale": 100.0,
+      "mean_selected_return": 0.03984589054449044
+    }
+  ],
+  "steps": 250000,
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "validation_only": true,
+  "test_evaluated": false,
+  "fresh_training": true,
+  "reason": "No preceding stage passed. Highest three-seed mean selected validation return selects the unchanged-reward baseline configuration under the preregistered rule."
+}
