@@ -1,0 +1,31 @@
+{
+  "configuration": "baseline CPU SAC, unchanged reward, validation-selected checkpoints through 250000, seeds 11/23/37",
+  "split": "validation",
+  "initial_equity_per_episode": 100000,
+  "symbols": 26,
+  "symbols_mean_model_beats_buy_hold": 10,
+  "mean_model_return_pct": 23.960934481734967,
+  "mean_buy_hold_return_pct": 30.601850744159833,
+  "mean_excess_pp": -6.640916262424867,
+  "sources": [
+    {
+      "seed": 11,
+      "run": "20261015T181829-sac-11-f4080cfb",
+      "bundle_id": "9d4060f494091f146f6acfa13981366b00f2a4586eb0d0e95c61349624ea5156",
+      "selected_validation_sha256": "24440df8698da9106cac6d9a3cffe6833450918d0291dde87615b5ebd49be9f6"
+    },
+    {
+      "seed": 23,
+      "run": "20261015T193204-sac-23-045d03ff",
+      "bundle_id": "790b53a45f597583da393f6d179f0df7d1826835752dbde7fe55c45913bb6220",
+      "selected_validation_sha256": "e068ff1f965ed37fe31ce4e2d281a263b1fda15c307e544f357df458439cb92e"
+    },
+    {
+      "seed": 37,
+      "run": "20261015T203948-sac-37-3b0dc2f9",
+      "bundle_id": "df57f909e8af132ff2c783895bc5ee40974ec1b79312442beb96cd325967b97f",
+      "selected_validation_sha256": "cda6025c9639210ca38120957ee61b509b16790fe2f067e4eb4745f04545559e"
+    }
+  ],
+  "interpretation": "Separate stock episodes, same dates and cost rates. Model has protective rules and 20-session holding cap; buy-hold is unconstrained. Selected on validation, not out-of-sample. Final holdings marked to market without terminal liquidation."
+}

@@ -1,0 +1,174 @@
+{
+  "status": "complete",
+  "stopping_reason": "Four-stage protocol exhausted; no stage passed the preregistered risk-adjusted learning gate. Selected validation returns improved, final checkpoint stability and drawdown remain unresolved.",
+  "research_cells": 15,
+  "training_transitions": 1950000,
+  "configuration_summaries": [
+    {
+      "stage": "cpu-100k",
+      "family": "baseline",
+      "reward_scale": 1.0,
+      "selected_mean_return_pct": 19.702668399571774,
+      "selected_seed_std_pp": 4.112530058118156,
+      "final_mean_return_pct": 16.50312854122816,
+      "gate": {
+        "passed": false,
+        "mean_current_gain_pp": 12.787949016300425,
+        "paired_current_gains_pp": [
+          10.717471183847193,
+          -0.06753263120263253,
+          27.713908496256717
+        ],
+        "mean_selected_gain_pp": 8.55839600132342,
+        "paired_selected_gains_pp": [
+          13.251096114268618,
+          1.8363255124223266,
+          10.587766377279314
+        ],
+        "drawdown_worsening_pp": 2.8357371520884165,
+        "historical_selected_gain_pp": -0.08833585183068982,
+        "mean_selected_return": 0.19702668399571774,
+        "mean_final_return": 0.1650312854122816,
+        "interpretation": "Validation learning gate only; no new out-of-sample claim."
+      }
+    },
+    {
+      "stage": "cpu-100k",
+      "family": "combined",
+      "reward_scale": 1.0,
+      "selected_mean_return_pct": 11.780003954541176,
+      "selected_seed_std_pp": 9.076623783982793,
+      "final_mean_return_pct": 0.9362667999028577,
+      "gate": {
+        "passed": false,
+        "mean_current_gain_pp": 14.149400740097384,
+        "paired_current_gains_pp": [
+          32.43156499823534,
+          0.9186845336814289,
+          9.097952688375386
+        ],
+        "mean_selected_gain_pp": 0.0,
+        "paired_selected_gains_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drawdown_worsening_pp": -4.113694483148733,
+        "historical_selected_gain_pp": -8.011000296861289,
+        "mean_selected_return": 0.11780003954541175,
+        "mean_final_return": 0.009362667999028577,
+        "interpretation": "Validation learning gate only; no new out-of-sample claim."
+      }
+    },
+    {
+      "stage": "scale-10",
+      "family": "baseline",
+      "reward_scale": 10.0,
+      "selected_mean_return_pct": 11.462972326777434,
+      "selected_seed_std_pp": 6.602817840705441,
+      "final_mean_return_pct": 7.3785129774320835,
+      "gate": {
+        "passed": false,
+        "mean_current_gain_pp": 5.639097311221499,
+        "paired_current_gains_pp": [
+          2.8581461391606355,
+          15.628042425264137,
+          -1.568896630760276
+        ],
+        "mean_selected_gain_pp": 2.068521744951727,
+        "paired_selected_gains_pp": [
+          6.2055652348551815,
+          0.0,
+          0.0
+        ],
+        "drawdown_worsening_pp": 0.20478189960750845,
+        "historical_selected_gain_pp": -8.32803192462503,
+        "mean_selected_return": 0.11462972326777433,
+        "mean_final_return": 0.07378512977432083,
+        "interpretation": "Validation learning gate only; no new out-of-sample claim."
+      }
+    },
+    {
+      "stage": "scale-100",
+      "family": "baseline",
+      "reward_scale": 100.0,
+      "selected_mean_return_pct": 3.984589054449044,
+      "selected_seed_std_pp": 2.1246654536333747,
+      "final_mean_return_pct": -0.9864953195287924,
+      "gate": {
+        "passed": false,
+        "mean_current_gain_pp": 0.81790818160108,
+        "paired_current_gains_pp": [
+          0.8933639188759198,
+          2.9089507877284455,
+          -1.3485901618011251
+        ],
+        "mean_selected_gain_pp": 2.7292837502472684,
+        "paired_selected_gains_pp": [
+          3.7036055593701764,
+          4.484245691371629,
+          0.0
+        ],
+        "drawdown_worsening_pp": -1.2876183761377789,
+        "historical_selected_gain_pp": -15.806415196953418,
+        "mean_selected_return": 0.03984589054449044,
+        "mean_final_return": -0.009864953195287924,
+        "interpretation": "Validation learning gate only; no new out-of-sample claim."
+      }
+    },
+    {
+      "stage": "long-250k",
+      "family": "baseline",
+      "reward_scale": 1.0,
+      "selected_mean_return_pct": 23.960934481734967,
+      "selected_seed_std_pp": 4.139438060561307,
+      "final_mean_return_pct": 14.46377294027239,
+      "gate": {
+        "passed": false,
+        "mean_current_gain_pp": 10.748593415344656,
+        "paired_current_gains_pp": [
+          11.779147857725302,
+          3.6236241277466608,
+          16.843008260562005
+        ],
+        "mean_selected_gain_pp": 12.816662083486612,
+        "paired_selected_gains_pp": [
+          16.231112806036553,
+          6.9751180391102094,
+          15.243755405313072
+        ],
+        "drawdown_worsening_pp": 3.539574326895958,
+        "historical_selected_gain_pp": 4.169930230332502,
+        "mean_selected_return": 0.23960934481734966,
+        "mean_final_return": 0.1446377294027239,
+        "interpretation": "Validation learning gate only; no new out-of-sample claim."
+      }
+    }
+  ],
+  "long_stage_current_gains_vs_100k_pp": [
+    1.061676673878111,
+    3.691156758949294,
+    -10.87090023569471
+  ],
+  "long_stage_mean_current_gain_vs_100k_pp": -2.0393556009557687,
+  "long_stage_selected_gains_vs_100k_pp": [
+    2.9800166917679363,
+    5.138792526687883,
+    4.655989028033758
+  ],
+  "long_stage_mean_selected_gain_vs_100k_pp": 4.258266082163193,
+  "buy_hold_mean_return_pct": 30.601850744159833,
+  "constrained_long_mean_return_pct": 26.370388357486878,
+  "test_evaluated": false,
+  "paper_eligible": false,
+  "verified_source_packages": {
+    "103a809c4d6ec24f36fb81f24ae64a0518e4cc56625d1c79e90a3645c5abfcac": "6418dd59910d906cd84535675185c4ae95093d7bfbf78a753aa46a16121a6e01",
+    "5c4f5f1a0ef4c03570d7625940a19f9cf09bdc5bff53a446888b4fd10470dd9d": "6418dd59910d906cd84535675185c4ae95093d7bfbf78a753aa46a16121a6e01"
+  },
+  "all_owned_sessions_stopped": true,
+  "conservative_project_units": 34.03260432179968,
+  "learning_series_units": 0.9418422411216483,
+  "remaining_project_units": 115.96739567820032,
+  "last_account_balance": 352.08,
+  "next_research": "Representative point-in-time universe and declining-market coverage; fixed reward initially. Then separately declared churn controls or turnover penalty, with unchanged costs and multiple seeds. No hindsight selection of stocks that never recover."
+}

@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **111 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **115 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -307,15 +307,31 @@ again. Syntax compilation passed; `plan.html` retains its original checksum.
 Other advanced families, extra reward terms and broker orders remain disabled.
 See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.
 
-## Active CPU learning study — 2026-10-15
+## Completed CPU learning study — 2026-10-15
 
-The new [learning protocol](learning-experiments.md) and compact-curve runtime
-passed **111 tests in 73.219 seconds**, zero skips/failures, before full CPU
-experiments. Coverage includes percentage-point calculations, 50k anchors,
-post-update replacement, reward-scale equity invariance, segmented SAC
-continuation, complete CSV/JSONL remote acceptance, and multi-seed improvement
-gates. The initial setup lost its CLI connection before training; the owned
-runtime was stopped and verified, and that failure remains in the cumulative
-ledger. One bounded retry is running the first unchanged-reward CPU cell.
-The earlier 36-run results and test audit above are historical and unchanged.
-No new final-test evaluation or broker-order work is authorized by this study.
+The [learning protocol](learning-experiments.md) completed all 15 CPU cells,
+including three 250k runs. Full local acceptance passed **115 tests in 76.265
+seconds**, zero skips/failures (`.runtime/learning-full-acceptance.txt`). The earlier
+111-test protocol preflight preceded four additional CLI transport tests.
+Coverage includes compact curve calculations, post-update replacement, reward
+scaling without equity changes, segmented SAC, complete remote curve acceptance,
+paired multi-seed gates, terminal connection detection and bounded prestart retry.
+
+Every remote run passed completion, hardware/Python, step-count, curve and frozen
+checksum acceptance. Independent local checks verified exact CPU prediction parity
+on three observations per bundle, normalization immutability and schema/shape
+rejection for all 15 bundles. Clean Git source proofs match the learning code
+across all cells; dependencies and simulator assumptions match. See
+[bundle evidence](../results/learning-study-2026-10-15/bundle-verification.json) and
+[study summary](../results/learning-study-2026-10-15/summary.json).
+
+Two early connection failures were stopped and retained in the cumulative usage
+ledger. All 39 project-owned attempts are verified stopped. Conservative project
+usage is 34.032604 units, including approximately 0.941842 for this learning series;
+rate estimates sum to 33.721666 and observed account debits to 30.51. These are
+alternative project-wide measures, not amounts to add together. Latest account
+balance was 352.08 units; remaining project ceiling is 115.967396 units.
+
+Selected validation return improved to 23.96%, but no stage passed the declared
+risk gate. No new final-test evaluation or broker orders occurred. The earlier
+36-run study and held-out audit remain historical and unchanged.

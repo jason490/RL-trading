@@ -149,3 +149,35 @@ mean 7.38%, and no gate pass. The scale-100 stage also completed without passing
 `long-stage-decision.json` records the deterministic selection across completed
 CPU configurations before the 250k stage: baseline inputs and reward scale 1.
 Long-stage seeds start fresh and retain 50k/100k/250k milestones for paired curves.
+
+## Final outcome and interpretation
+
+All four stages finished: 15 CPU SAC cells and 1,950,000 transitions. None passed
+all preregistered criteria. At 250k, selected mean validation return was 23.96%,
+up 4.26 points from the controlled 100k baseline and 4.17 from the historical
+19.79% reference. The mean final return was 14.46%, down 2.04 points from the
+matched 100k milestones. Final drawdown worsened 3.54 points versus 50k anchors,
+exceeding the unchanged two-point limit. The protocol is exhausted; stop training.
+
+The longer selected models beat holding the same stock in 10 of 26 episodes,
+compared with 6 of 26 in the 100k baseline. They still trail mean buy-and-hold
+30.60% and the constraint-matched passive-long policy 26.37%. All numbers include
+modeled costs and refer to separate validation episodes, not a shared portfolio.
+Selecting checkpoints on this same validation interval is optimistic; it supplies
+no new out-of-sample evidence. Longer training and more checkpoint evaluations
+reuse the same market history. Percentage-point changes between checkpoints are
+changes in performance on a fixed validation window, not cumulative trading profit.
+
+All 15 frozen bundles passed independent prediction/normalization/schema checks.
+All owned runtimes stopped. Detailed CSVs, gates, source proofs and summaries are
+indexed in [the results guide](../results/learning-study-2026-10-15/README.md).
+
+The next proposed experiment is representative historical stock coverage, including
+persistent declines and verified delistings. Select membership and trend buckets
+using contemporaneously available information; never label training examples by
+whether they eventually recovered. Maintain the reward initially. Losses already
+reduce net-equity reward; adding a holding penalty risks discouraging profitable
+positions. The existing 20-session limit already closes old positions, but permits
+later re-entry. Test turnover controls or penalties as a separate, bounded ablation.
+Supply/demand remains optional: the combined inputs underperformed here and the
+current comparison cannot isolate it from sector context.

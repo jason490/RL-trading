@@ -327,13 +327,28 @@ separately and reserve a fresh audit interval. Historical membership/sector
 vintages precede scaling; shadow inference and broker orders remain later work.
 The immutable `plan.html` is unchanged.
 
-## 15. Sequential learning study — active, 2026-10-15
+## 15. Sequential learning study — completed, 2026-10-15
 
-[Learning experiments](docs/learning-experiments.md) now add validation behavior
-diagnostics, a constraint-matched passive-long control, compact 10k-step
-JSONL/CSV/HTML curves and controlled CPU SAC comparisons. The first stage is
-baseline/combined at 50k/100k post-update milestones, seeds 11/23/37, unchanged
-net-equity reward. Further scale and 250k stages are conditional and bounded
-by the declared gate/protocol and original project ledger. The new 111-test
-acceptance passed; the initial CPU setup failure was stopped and recorded
-before one bounded retry. No new test audit or larger universe is used.
+The preregistered four-stage CPU SAC protocol completed 15 cells and 1.95 million
+training transitions: baseline/combined at 100k; baseline reward scales 10 and
+100 at 100k; then baseline with the original reward at 250k, seeds 11/23/37.
+Compact 10k-step curves and explicit post-update milestone weights were retained.
+
+Selected mean validation return improved from 19.70% to 23.96%; final mean fell
+from 16.50% to 14.46%. The 250k stage failed the unchanged gate because average
+maximum drawdown worsened 3.54 percentage points versus the paired 50k anchors
+(limit 2). Buy-and-hold was 30.60%; the constraint-matched passive-long control
+was 26.37%. No stage passed and no paper candidate is approved. The bounded
+protocol is exhausted; do not extend its search or change its gate after results.
+
+All 15 frozen bundles passed exact CPU prediction parity, immutable normalization
+and schema rejection checks. Full acceptance passed 115 tests. Colab runtimes
+were stopped and verified; the cumulative project ledger reached 34.032604 units.
+See [results](results/learning-study-2026-10-15/README.md) and
+[learning experiments](docs/learning-experiments.md) for evidence and artifacts.
+
+Next proposed work is a separate matched universe experiment covering historical
+membership, declining stocks and verified delisting returns, chosen without
+future knowledge. Keep the reward fixed first; test turnover controls or reward
+penalties independently. The inspected final-test interval remains retired.
+Persistent shadow inference and paper-order lifecycle work remain later milestones.

@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "cells": 15,
+  "records": [
+    {
+      "stage": "cpu-100k",
+      "cell": "baseline-11",
+      "bundle_id": "524b9d48d02004a6121e4af89ed43e76c2c92dea4422eab06953d486c6f4c7e7",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "cpu-100k",
+      "cell": "baseline-23",
+      "bundle_id": "f18260ace9e49317c25f06f1f3c26ca69b1498ebff258b9fbbe9270a53320d7c",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "cpu-100k",
+      "cell": "baseline-37",
+      "bundle_id": "b5767b7583f37e56b85f8f2e52f48713c052a47984b9c918ba4556f181ea1c08",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "cpu-100k",
+      "cell": "combined-11",
+      "bundle_id": "1c60ba20ca48f4cdb41064d385e8307bb2a23e9bd974c63dfe454eb5806de7a2",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "cpu-100k",
+      "cell": "combined-23",
+      "bundle_id": "f332ac46ed11c9cde157ad968119552fc0878f43c1ae70738164c96318dbb267",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "cpu-100k",
+      "cell": "combined-37",
+      "bundle_id": "aefec285a33b01e548bb954104c649860e897becb90cc2221f6600e0311a2ab8",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "scale-10",
+      "cell": "baseline-11",
+      "bundle_id": "a9349e42fc66caf9cb5fcec8dbc03fb5fbeb2a3e7385efd5ff12fdbfade0b08d",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "scale-10",
+      "cell": "baseline-23",
+      "bundle_id": "007fcff06130759f6bd810f32ca47ace44541bfe97e288e2e89c6109293d8baa",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "scale-10",
+      "cell": "baseline-37",
+      "bundle_id": "7da1eba44675d0aafb96500c4ccab52e243ef592df863b50a8055cc8d6b0ebaa",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "scale-100",
+      "cell": "baseline-11",
+      "bundle_id": "3597e819504ebb9c3520ad56418381301f7bfde417def38b8d12972e4975d143",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "scale-100",
+      "cell": "baseline-23",
+      "bundle_id": "41d3012401e0023aa8aba9b83c9bc5fb86211d89062ab93872353f2383249063",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "scale-100",
+      "cell": "baseline-37",
+      "bundle_id": "d207d025e4de5dc2825d96abaced88d9b4925e92f05427f2455205c28e9b738e",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "long-250k",
+      "cell": "baseline-11",
+      "bundle_id": "9d4060f494091f146f6acfa13981366b00f2a4586eb0d0e95c61349624ea5156",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "long-250k",
+      "cell": "baseline-23",
+      "bundle_id": "790b53a45f597583da393f6d179f0df7d1826835752dbde7fe55c45913bb6220",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "stage": "long-250k",
+      "cell": "baseline-37",
+      "bundle_id": "df57f909e8af132ff2c783895bc5ee40974ec1b79312442beb96cd325967b97f",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    }
+  ]
+}
