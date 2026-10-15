@@ -130,3 +130,16 @@ purchase. Subsequent components select a stop at 0.5–5 ATR, a first profit tar
 at 0.5–8 ATR, and a target-zone width of 0.25–4 ATR. Near-target execution closes
 roughly half the current position; the far target closes the remainder. Whole
 shares, next-session fills, gap checks, modeled costs and the holding limit apply.
+
+### Per-stock comparison against holding the same stock
+
+For the selected unchanged-reward baseline CPU checkpoints, the three-seed mean
+beat buy-and-hold in 6 of 26 separate validation episodes. Mean net return was
+19.70% versus 30.60%, a 10.90-point shortfall. PLD outperformed by 21.58 points;
+XOM underperformed by 82.62 points. NEE and DIS beat holding by losing less, not
+by earning positive returns. Full per-symbol returns, seed variability, costs,
+drawdowns and source identities are preserved in `cpu-100k/per-stock-comparison.csv`
+and its JSON companion. These validation-selected comparisons are optimistic
+relative to a fresh audit. The policy has a 20-session holding cap and protective
+rules; the buy-and-hold benchmark holds continuously. Both use matched dates and
+modeled fee/impact rates, and neither forces liquidation at the data boundary.
