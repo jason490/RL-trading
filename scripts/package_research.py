@@ -4,6 +4,7 @@ import html
 import json
 from pathlib import Path
 import tarfile
+from urllib.parse import quote
 
 from rl_stocks.reporting.offline import chart
 
@@ -39,10 +40,12 @@ def package_audit(audit_root, output):
 
 def package(roots, output):
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
+    report_directory=output/'validation';report_directory.mkdir(exist_ok=True)
     models=output/'research-models.tar.gz'
     sections=['<!doctype html><meta charset="utf-8"><title>Research validation reports</title>',
               '<h1>Research validation reports</h1><p>Selected-model simulations after modeled costs. '
-              'Separate symbol episodes; validation selected the models. Not held-out performance.</p>']
+              'Separate symbol episodes; validation selected the models. Not held-out performance.</p>',
+              '<p>Extract validation-reports.tar.gz beside this index to open the individual reports.</p><ul>']
     catalog=[]
     with tarfile.open(models,'w:gz') as archive:
         for root in map(Path,roots):
@@ -64,9 +67,21 @@ def package(roots, output):
                 if not selected.exists():selected=run/'selected-validation-cpu.json'
                 if not selected.exists():continue
                 results=json.loads(selected.read_text())
-                sections.append('<h2>'+html.escape(run.name)+'</h2>')
-                sections.extend(equity_sections(results))
+                title=html.escape(run.name)
+                page=['<!doctype html><meta charset="utf-8"><title>'+title+'</title>',
+                      '<p><a href="../validation.html">All validation runs</a></p>',
+                      '<h1>'+title+'</h1><p>Validation-selected model; separate symbol episodes.</p>']
+                page.extend(equity_sections(results))
+                (report_directory/(run.name+'.html')).write_text('\n'.join(page))
+                score=metadata.get('selected_score')
+                score_text=f'{score:.2%}' if score is not None else 'not recorded'
+                sections.append('<li><a href="validation/'+quote(run.name)+'.html">'+title+'</a> — '
+                    +html.escape(metadata.get('device','unknown'))+'; mean selected return '+score_text+'</li>')
+    sections.append('</ul>')
     (output/'validation.html').write_text('\n'.join(sections))
+    with tarfile.open(output/'validation-reports.tar.gz','w:gz') as archive:
+        archive.add(output/'validation.html',arcname='validation.html')
+        archive.add(report_directory,arcname='validation')
     (output/'model-catalog.json').write_text(json.dumps(catalog,indent=2,allow_nan=False))
     return models
 

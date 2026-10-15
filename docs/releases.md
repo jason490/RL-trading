@@ -53,3 +53,9 @@ audit, add `--audit artifacts/audits/AUDIT_NAME` to export `test.html` and
 `audit-summary.json`. Price/quote rows, replay files and runtime logs are not
 included. Inspect the package, generate asset checksums and verify the uploaded
 release digests before recording publication as complete.
+
+Large studies use a small `validation.html` index plus one HTML page per run.
+Extract `validation-reports.tar.gz`, retaining its `validation/` directory beside
+the index. This avoids loading all symbols/seeds into one very large browser
+document. `test.html` contains the three preselected family seeds' derived audit
+charts. Older releases retain their original standalone validation pages.

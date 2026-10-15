@@ -53,7 +53,8 @@ the active Python environment, interpreter and installed official Colab CLI.
 ## Opening reports and models later
 
 Download the release assets and verify `SHA256SUMS` before extraction. Open
-`validation.html` for checkpoint-selected validation simulations and `test.html`
+the index in `validation-reports.tar.gz` for checkpoint-selected validation
+simulations (extract it with its `validation/` folder) and `test.html`
 for the separate held-out audit. The reports contain derived equity and metrics;
 they do not include the raw provider feed or imply a single investable portfolio.
 

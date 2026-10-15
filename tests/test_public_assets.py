@@ -29,6 +29,12 @@ class PublicAssetTests(unittest.TestCase):
                 names=archive.getnames()
             self.assertFalse(any('replay' in n or 'bootstrap' in n for n in names))
             self.assertNotIn('987654',(output/'validation.html').read_text())
+            self.assertIn('validation/run.html',(output/'validation.html').read_text())
+            self.assertNotIn('987654',(output/'validation/run.html').read_text())
+            with tarfile.open(output/'validation-reports.tar.gz') as archive:
+                self.assertIn('validation.html',archive.getnames())
+                self.assertIn('validation/run.html',archive.getnames())
+                self.assertFalse(any('replay' in n or 'bootstrap' in n for n in archive.getnames()))
             audit=root/'audit';audit.mkdir()
             (audit/'audit.json').write_text(json.dumps({'status':'complete','seeds':[{'seed':11}]}))
             (audit/'test-seed-11.json').write_text(json.dumps({'fixture':result}))
