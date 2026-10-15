@@ -12,7 +12,7 @@ import tarfile
 import time
 import uuid
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
-from rl_stocks.runtime.colab.jobs import job_plan,study_plan
+from rl_stocks.runtime.colab.jobs import job_plan,study_plan,learning_plan
 from rl_stocks.core.provenance import repository_state
 from rl_stocks.runtime.colab.artifacts import validate_archive
 
@@ -124,17 +124,20 @@ class ColabJob:
             recovery=" ".join(self.command+["stop","-s",self.session])
             print(f"Cleanup failed. Session: {self.session}. Recovery: {recovery}",file=sys.stderr)
         return verified
-    def run(self,dataset,research_algorithm=None,study=False,study_algorithm=None,study_seeds=None):
+    def run(self,dataset,research_algorithm=None,study=False,study_algorithm=None,study_seeds=None,learning=None):
+        if learning is not None and (self.accelerator!='CPU' or research_algorithm or study or study_algorithm or study_seeds):
+            raise ValueError('learning study requires CPU and no other study/research options')
         if (study_algorithm is not None or study_seeds is not None) and not study:
             raise ValueError("study algorithm requires --study")
         if study and research_algorithm is not None:
             raise ValueError("matched study cannot combine a single-algorithm research override")
         if self.accelerator=="A100" and research_algorithm is None and not study:
             raise ValueError("A100 requires a full --research job; use CPU/T4 for preflight")
-        plan=study_plan(study_algorithm,self.accelerator,study_seeds) if study else job_plan(research_algorithm,self.accelerator)
-        self.exec_timeout=5400 if study else 1800
-        self.download_timeout=120 if study else 30
-        self.snapshot_timeout=45 if study else 20
+        plan=learning_plan(**learning) if learning is not None else study_plan(study_algorithm,self.accelerator,study_seeds) if study else job_plan(research_algorithm,self.accelerator)
+        long_operation=study or learning is not None
+        self.exec_timeout=5400 if long_operation else 1800
+        self.download_timeout=120 if long_operation else 30
+        self.snapshot_timeout=45 if long_operation else 20
         # Help and version are checked before any metered allocation.
         version=self.short(["version"])
         for cmd in ("usage","new","install","exec","upload","download","stop","sessions"):
@@ -233,11 +236,16 @@ def main():
     parser.add_argument("--study",action="store_true",help="Matched 50k-transition research, seeds 11/23/37")
     parser.add_argument("--study-algorithm",choices=("ppo","sac","td3"),help="Bounded three-seed batch after accepted CPU preflight")
     parser.add_argument("--study-seeds",type=int,nargs="+",help="Unfinished seeds only; ordered subset of 11 23 37, with --study-algorithm")
+    parser.add_argument('--learning-study',action='store_true',help='One CPU SAC cell with compact 10k-step learning curves')
+    parser.add_argument('--learning-seed',type=int,default=11,choices=(11,23,37))
+    parser.add_argument('--learning-steps',type=int,default=100000,choices=(50000,100000,250000))
+    parser.add_argument('--reward-scale',type=float,default=1.,choices=(1.,10.,100.))
     args=parser.parse_args()
     root=Path.cwd();state=root/".runtime";state.mkdir(exist_ok=True)
     with (state/"allocation.lock").open("w") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         accelerator=args.accelerator or "CPU"
-        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research,args.study,args.study_algorithm,args.study_seeds)
+        learning={'seed':args.learning_seed,'steps':args.learning_steps,'reward_scale':args.reward_scale} if args.learning_study else None
+        ColabJob(root,args.cli_python,accelerator).run(args.dataset,args.research,args.study,args.study_algorithm,args.study_seeds,learning)
 
 if __name__=="__main__":main()

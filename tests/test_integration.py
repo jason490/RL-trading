@@ -36,6 +36,34 @@ class IntegrationTests(unittest.TestCase):
             with self.assertRaises(ValueError):resolved_parameters(algorithm,True,overrides)
         with self.assertRaises(ValueError):resolved_parameters('unknown')
 
+    def test_reward_scaling_preserves_equity_and_observations(self):
+        import numpy as np
+        from rl_stocks.environment.trading.env import TradingEnv
+        from rl_stocks.data.generation.datasets import normalizer_from
+        episode=next(e for e in self.dataset['episodes'].values() if e['split']=='train')
+        environments=[TradingEnv([episode],normalizer_from(self.dataset['normalizer']),self.dataset['names'],reward_scale=s) for s in (1.,10.)]
+        for env in environments:env.reset(seed=11)
+        for _ in range(5):
+            left,right=[env.step(np.array([.5,1.,1.,1.],dtype=np.float32)) for env in environments]
+            np.testing.assert_array_equal(left[0],right[0])
+            self.assertEqual(left[4]['equity'],right[4]['equity'])
+            self.assertAlmostEqual(right[1],10*left[1])
+            self.assertAlmostEqual(right[4]['unscaled_reward'],left[1])
+        for env in environments:env.close()
+
+    def test_segmented_sac_curves_retain_post_update_milestones(self):
+        from rl_stocks.training.runner import train
+        from rl_stocks.training.curves import latest_points
+        run,_=train(self.dataset_path,'sac',self.root/'curves',steps=256,milestones=[128,256],
+                    evaluation_every=128,compact_checkpoints=True,reward_scale=10.)
+        records=[json.loads(line) for line in (run/'learning-curve.jsonl').read_text().splitlines()]
+        self.assertEqual([r['steps'] for r in latest_points(records)],[128,256])
+        self.assertTrue(all(r['phase']=='post_update' for r in latest_points(records)))
+        metadata=json.loads((run/'metadata.json').read_text())
+        self.assertEqual(metadata['actual_steps'],256)
+        self.assertEqual(metadata['reward_config']['scale'],10.)
+        self.assertTrue((run/'learning-curve.csv').exists())
+
     def test_colab_backend_is_safe_for_real_sb3_import(self):
         import os
         import subprocess

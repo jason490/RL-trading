@@ -7,6 +7,21 @@ from rl_stocks.runtime.colab.jobs import job_plan
 
 
 class JobPlanTests(unittest.TestCase):
+    def test_learning_study_is_bounded_cpu_only_with_explicit_milestones(self):
+        from rl_stocks.runtime.colab.jobs import learning_plan,validate_plan
+        from rl_stocks.runtime.colab.runner import ColabJob
+        plan=learning_plan(23,250000,10.)
+        self.assertEqual(validate_plan(plan),plan)
+        self.assertEqual(plan['jobs'][0]['milestones'],[50000,100000,250000])
+        self.assertEqual(plan['jobs'][0]['device'],'cpu')
+        bad=json.loads(json.dumps(plan));bad['jobs'][0]['steps']=1000000
+        with self.assertRaises(ValueError):validate_plan(bad)
+        for options in ({'steps':1000000},{'reward_scale':-1},{'seed':42}):
+            with self.assertRaises(ValueError):learning_plan(**options)
+        with tempfile.TemporaryDirectory() as directory:
+            job=ColabJob(directory,'python','A100')
+            with self.assertRaises(ValueError):job.run(directory,learning={'seed':11})
+            self.assertEqual(job.ledger.value['attempts'],[])
     def test_smoke_gate_precedes_research(self):
         plan = job_plan("ppo")
         self.assertEqual([j["steps"] for j in plan["jobs"]], [512, 512, 1024, 1024, 50000])

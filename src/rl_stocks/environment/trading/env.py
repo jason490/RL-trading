@@ -7,13 +7,15 @@ from rl_stocks.environment.rewards.equity import equity_reward
 
 class TradingEnv(gym.Env):
     metadata={"render_modes":[]}
-    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None):
+    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.):
         super().__init__()
         if not episodes:raise ValueError("no episodes")
         if tuple(names)!=normalizer.names:raise ValueError("feature names mismatch")
         if len({e["split"] for e in episodes})!=1:raise ValueError("split mixing")
         self.episodes=episodes;self.normalizer=normalizer;self.names=names;self.config=config
         self.random_start=random_start;self.episode_steps=episode_steps
+        if not np.isfinite(reward_scale) or reward_scale<=0:raise ValueError('positive finite reward scale required')
+        self.reward_scale=float(reward_scale)
         self.action_space=gym.spaces.Box(-1.,1.,shape=(4,),dtype=np.float32)
         self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(len(names)+5,),dtype=np.float32)
     def reset(self,*,seed=None,options=None):
@@ -48,4 +50,5 @@ class TradingEnv(gym.Env):
         self.done=terminated or truncated
         reward=equity_reward(info["previous_equity"],info["equity"])
         info.update(session=bar.session,price=bar.close,events=self.sim.portfolio.events[event_start:])
-        return self.observation(),float(reward),bool(terminated),bool(truncated),info
+        info['unscaled_reward']=reward
+        return self.observation(),float(self.reward_scale*reward),bool(terminated),bool(truncated),info

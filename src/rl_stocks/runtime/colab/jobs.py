@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get("version") == 3:
+    if plan.get('version')==4:
+        try:expected=learning_plan(**plan['learning_study'])
+        except (KeyError,TypeError):raise ValueError('malformed learning study plan') from None
+        if plan!=expected:raise ValueError('unsupported learning study plan')
+    elif plan.get("version") == 3:
         if plan != study_plan(plan.get("study_algorithm"),plan.get("accelerator"),plan.get("study_seeds")):
             raise ValueError("unsupported matched study plan")
     elif plan.get("version") == 2:
@@ -77,3 +81,15 @@ def validate_plan(plan):
     else:
         raise ValueError("unsupported plan version")
     return plan
+
+
+def learning_plan(seed=11,steps=100000,reward_scale=1.):
+    """One bounded CPU SAC cell; learning budgets are deliberately finite."""
+    if (type(seed) is not int or type(steps) is not int or type(reward_scale) not in (int,float)
+            or seed not in (11,23,37) or steps not in (50000,100000,250000) or reward_scale not in (1.,10.,100.)):
+        raise ValueError('unsupported learning-study seed, steps or reward scale')
+    milestones=[s for s in (50000,100000,250000) if s<=steps]
+    specification={'seed':seed,'steps':steps,'reward_scale':float(reward_scale)}
+    job={'algorithm':'sac','device':'cpu','smoke':False,'seed':seed,'steps':steps,
+         'evaluation_every':10000,'compact_checkpoints':True,'milestones':milestones,'reward_scale':float(reward_scale)}
+    return {'version':4,'accelerator':'CPU','learning_study':specification,'jobs':[job]}

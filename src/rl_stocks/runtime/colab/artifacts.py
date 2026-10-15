@@ -2,6 +2,9 @@
 from collections import Counter
 import hashlib
 import json
+import math
+import csv
+from io import StringIO
 from pathlib import PurePosixPath
 import tarfile
 
@@ -34,6 +37,26 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
+                if plan.get('version')==4:
+                    job=plan['jobs'][0]
+                    if (run.get('reward_config')!={'kind':'net_log_equity','scale':job['reward_scale']}
+                            or run.get('milestones')!=job['milestones'] or run.get('evaluation_every')!=job['evaluation_every']
+                            or not run.get('compact_checkpoints')):
+                        raise RuntimeError('learning-study configuration mismatch')
+                    prefix=next(name.rsplit('/',1)[0]+'/' for name in names
+                        if name.endswith('/metadata.json') and json.loads(read(name)).get('bundle_id')==run['bundle_id'])
+                    curve=[json.loads(line) for line in read(prefix+'learning-curve.jsonl').splitlines()]
+                    points={r['steps']:r for r in curve}
+                    if (sorted(points)!=list(range(10000,job['steps']+1,10000))
+                            or any(not math.isfinite(r['score']) for r in curve)
+                            or any(points[s]['phase']!='post_update' for s in job['milestones'])
+                            or curve!=run['validation_checkpoints']):
+                        raise RuntimeError('incomplete or inconsistent learning curve')
+                    table=list(csv.DictReader(StringIO(read(prefix+'learning-curve.csv').decode())))
+                    if ([int(r['steps']) for r in table]!=sorted(points)
+                            or any(not math.isclose(float(r['return_pct']),100*points[int(r['steps'])]['score'],abs_tol=1e-9) for r in table)):
+                        raise RuntimeError('learning curve CSV mismatch')
+                    read(prefix+'learning-curve.html')
                 actual[(run['algorithm'], run['device'], run['smoke'], run['actual_steps'], run['seed'])] += 1
                 folder = 'artifacts/frozen/'+run['bundle_id']+'/'
                 hashes = json.loads(read(folder+'checksums.json'))

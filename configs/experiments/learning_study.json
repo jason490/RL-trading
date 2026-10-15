@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "name": "learning-study-2026-10-15",
+  "datasets": {
+    "baseline": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+    "combined": "062ae018bf7ed0a01bed50695b824238ebc4de89bae8fa0ae09077ac007a5e25"
+  },
+  "algorithm": "sac",
+  "device": "cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluation_every": 10000,
+  "milestones": [
+    50000,
+    100000,
+    250000
+  ],
+  "stages": [
+    {
+      "name": "cpu-100k",
+      "families": [
+        "baseline",
+        "combined"
+      ],
+      "steps": 100000,
+      "reward_scale": 1.0
+    },
+    {
+      "name": "scale-10",
+      "family": "best_previous_cpu_family",
+      "steps": 100000,
+      "reward_scale": 10.0
+    },
+    {
+      "name": "scale-100",
+      "family": "best_previous_cpu_family",
+      "steps": 100000,
+      "reward_scale": 100.0
+    },
+    {
+      "name": "long-250k",
+      "family": "best_previous_cpu_configuration",
+      "steps": 250000,
+      "reward_scale": "best_previous_cpu_reward_scale"
+    }
+  ],
+  "gate": {
+    "mean_current_gain_pp": 2.0,
+    "mean_selected_gain_pp": 2.0,
+    "paired_positive_seeds": 2,
+    "maximum_drawdown_worsening_pp": 2.0,
+    "historical_best_selected_mean_return": 0.19791004251402464,
+    "minimum_selected_gain_over_historical_pp": 2.0
+  },
+  "family_selection": "highest equal-weight mean selected validation return across all three seeds; deterministic ties use family name then lower reward scale",
+  "stopping": "Stop after the first completed stage satisfying the declared validation gate, exhausted four-stage protocol, budget/deadline/metering stop or user interruption. No automatic restart after budget stop.",
+  "validation_only": true,
+  "retired_test": "2024-01-02 through 2026-09-30 has already been inspected; no new test evaluation or tuning against its results",
+  "controls": "Same 26 tradables, dates, training-only normalization, simulator costs, action contract and net-log-equity objective. Scale variants change only the learning reward multiplier; always evaluate real net equity.",
+  "logging": "Compact JSONL every 10000 transitions; explicit post-update milestones supersede same-step on-step records in CSV/HTML; track current, best, percentage-point increments, gain since 50k and buy-hold excess.",
+  "project_ceiling_units": 150,
+  "working_stop_units": 130,
+  "initial_ledger_units": 33.09076208067803,
+  "allocation_deadline_seconds": 7200
+}

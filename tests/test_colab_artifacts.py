@@ -51,6 +51,33 @@ class ArtifactTests(unittest.TestCase):
     def test_complete_plan_and_checksums(self):
         self.assertEqual(len(self.check()), 5)
 
+    def test_learning_curve_config_intervals_and_csv_are_verified(self):
+        from rl_stocks.runtime.colab.jobs import learning_plan
+        self.plan=learning_plan(11,50000)
+        job=self.plan['jobs'][0];run=self.runs[0]
+        curve=[{'steps':step,'phase':'post_update' if step==50000 else 'on_step','score':.01}
+               for step in range(10000,50001,10000)]
+        run.update(job,requested_steps=50000,actual_steps=50000,
+                   reward_config={'kind':'net_log_equity','scale':1.},validation_checkpoints=curve)
+        folder=self.artifacts/'runs/0'
+        (folder/'metadata.json').write_text(json.dumps(run))
+        for index in (1,2,3,4):(self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        journal=folder/'learning-curve.jsonl'
+        journal.write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        csv=folder/'learning-curve.csv'
+        csv.write_text('steps,return_pct\n'+''.join(f"{r['steps']},1.0\n" for r in curve))
+        (folder/'learning-curve.html').write_text('curve')
+        self.completion.update(plan=self.plan,gpu=None,completed=[run]);self.write_completion()
+        self.assertEqual(len(self.check()),1)
+        journal.write_text(''.join(json.dumps(r)+'\n' for r in curve[:-1]))
+        with self.assertRaisesRegex(RuntimeError,'learning curve'):self.check()
+        journal.write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        csv.write_text(csv.read_text().replace('1.0','999.0'))
+        with self.assertRaisesRegex(RuntimeError,'CSV mismatch'):self.check()
+        run['reward_config']['scale']=10.
+        (folder/'metadata.json').write_text(json.dumps(run))
+        with self.assertRaisesRegex(RuntimeError,'configuration mismatch'):self.check()
+
     def test_per_job_seeds_are_verified(self):
         seeds=(11,23,37,11,23)
         self.plan={'version':3,'accelerator':'A100','jobs':[

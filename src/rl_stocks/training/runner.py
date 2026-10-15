@@ -23,18 +23,27 @@ from rl_stocks.evaluation.runner import evaluate,selection_score
 from rl_stocks.reporting.html import report
 from rl_stocks.inference.bundle import freeze,FrozenPolicy
 from rl_stocks.core.provenance import source_identity,repository_state
+from rl_stocks.training.curves import curve_record,append_record,render_curve
 
 class ValidationCheckpoint(BaseCallback):
-    def __init__(self,dataset,config,path,every):
+    def __init__(self,dataset,config,path,every,compact=False,target_steps=None):
         super().__init__();self.dataset=dataset;self.config=config;self.path=path
         self.every=every;self.best=-float("inf");self.history=[]
         self.best_step=None;self.best_metrics={}
-    def validate(self):
+        self.compact=compact;self.target_steps=target_steps;self.started=time.monotonic()
+    def validate(self,phase='on_step'):
         results=evaluate(self.model,self.dataset,"validation",self.config)
         score=selection_score(results)
-        item={"steps":self.num_timesteps,"score":score}
+        training={}
+        for key in ('train/ent_coef','train/actor_loss','train/critic_loss','train/ent_coef_loss'):
+            value=self.model.logger.name_to_value.get(key)
+            if value is not None and np.isfinite(float(value)):training[key]=float(value)
+        item=curve_record(results,self.history,self.num_timesteps,phase,time.monotonic()-self.started,training)
         self.history.append(item)
-        self.model.save(self.path/f"checkpoint-{self.num_timesteps}")
+        append_record(self.path/'learning-curve.jsonl',item)
+        render_curve(self.history,self.path/'learning-curve.html')
+        filename=f"checkpoint-{self.num_timesteps}" if not self.compact or phase=='post_update' else 'latest-checkpoint'
+        self.model.save(self.path/filename)
         if hasattr(self.model,"save_replay_buffer"):
             self.model.save_replay_buffer(self.path/"checkpoint-replay.pkl")
         improved=score>self.best
@@ -45,10 +54,11 @@ class ValidationCheckpoint(BaseCallback):
                 "baselines":{name:baseline["metrics"] for name,baseline in value["baselines"].items()}}
                 for key,value in results.items()}
         (self.path/"checkpoints.json").write_text(json.dumps(self.history,indent=2))
-        report(results,self.path/"validation.html","Validation; selection only",self.history)
-        if improved:
-            for suffix in ("html","json"):
-                shutil.copyfile(self.path/f"validation.{suffix}",self.path/f"selected-validation.{suffix}")
+        if improved or not self.compact or phase=='post_update' and self.num_timesteps==self.target_steps:
+            report(results,self.path/"validation.html","Validation; selection only",self.history)
+            if improved:
+                for suffix in ("html","json"):
+                    shutil.copyfile(self.path/f"validation.{suffix}",self.path/f"selected-validation.{suffix}")
         snapshot=os.environ.get("RL_CHECKPOINT_ARCHIVE")
         if snapshot:
             target=Path(snapshot)
@@ -66,7 +76,8 @@ class ValidationCheckpoint(BaseCallback):
 def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
-def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None):
+def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.):
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
     dataset=read_dataset(dataset_path)
@@ -75,12 +86,18 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
     if device=="cuda" and not torch.cuda.is_available():raise RuntimeError("CUDA requested but unavailable")
     episodes=[e for e in dataset["episodes"].values() if e["split"]=="train"]
-    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512)
+    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale)
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
     model=create(algorithm,env,seed,device,smoke,overrides)
     steps=steps if steps is not None else 512 if algorithm=="ppo" else 1024
     if steps<=0:raise ValueError("positive training steps required")
+    milestones=list(milestones) if milestones is not None else [steps]
+    if not milestones or milestones!=sorted(set(milestones)) or milestones[-1]!=steps or milestones[0]<=0:
+        raise ValueError('ordered positive milestones ending at total steps required')
+    if len(milestones)>1 and algorithm!='sac':raise ValueError('segmented learning study currently requires SAC')
+    every=evaluation_every if evaluation_every is not None else 256 if smoke else 10000
+    if not isinstance(every,int) or every<=0:raise ValueError('positive evaluation interval required')
     if algorithm=="ppo" and steps%model.n_steps:raise ValueError("steps must be an exact PPO rollout multiple")
     run=Path(output)/"runs"/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")+f"-{algorithm}-{seed}-"+uuid.uuid4().hex[:8])
     run.mkdir(parents=True,exist_ok=False)
@@ -90,17 +107,22 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "dataset":Path(dataset_path).name,"git":git_state(),"source_hash":source_identity(),
         "selection_metric":"Equal-weight mean validation net return", "status":"running",
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
+        "reward_config":{"kind":"net_log_equity","scale":reward_scale},
+        "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
     (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
-    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,256 if smoke else 10000)
+    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps)
     try:
-        model.learn(total_timesteps=steps,callback=callback)
+        previous=0
+        for milestone in milestones:
+            model.learn(total_timesteps=milestone-previous,callback=callback,reset_num_timesteps=previous==0)
+            # On-step evaluations precede the optimizer update; always capture
+            # the completed milestone weights as a distinct post-update record.
+            callback.validate(phase='post_update')
+            previous=milestone
         if not all(torch.isfinite(parameter).all() for parameter in model.policy.parameters()):
             raise ValueError("nonfinite model weights")
-        # The last on-step callback precedes PPO's rollout update; validate the
-        # final updated weights even when the transition count matches.
-        callback.validate()
         model.save(run/"latest")
         if algorithm!="ppo":model.save_replay_buffer(run/"replay.pkl")
         from rl_stocks.rl.registry.factory import CLASSES
