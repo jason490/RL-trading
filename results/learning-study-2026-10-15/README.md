@@ -44,6 +44,7 @@ replay buffers or private runtime/authentication logs are included.
 
 The project ledger remains cumulative: 34.032604 conservative units used out of
 150; 115.967396 remain. This series added approximately 0.941842 units. All owned
-runtimes are stopped. Detailed usage and artifact cleanup evidence accompany the
-release and results. The earlier 36-run study and retired final-test audit remain
+runtimes are stopped. All 15 [release asset checksums](release-verification.json) match GitHub’s server
+digests. [Cleanup](cleanup.json) removed 61 duplicate temporary files (1.78 GiB),
+retaining all 15 bundles, 33 milestone models, final replay buffers and curves. The earlier 36-run study and retired final-test audit remain
 unchanged. No model is paper-eligible.

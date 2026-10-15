@@ -335,3 +335,12 @@ balance was 352.08 units; remaining project ceiling is 115.967396 units.
 Selected validation return improved to 23.96%, but no stage passed the declared
 risk gate. No new final-test evaluation or broker orders occurred. The earlier
 36-run study and held-out audit remain historical and unchanged.
+
+The [learning release](https://github.com/jason490/RL-trading/releases/tag/learning-study-2026-10-15)
+contains 15 assets; every server-reported SHA-256 digest matched locally. Only
+after that verification, cleanup removed 61 duplicate transfer/rolling-checkpoint
+files (1,906,588,287 logical bytes; observed free-space increase 1,906,921,472 bytes).
+All 15 frozen bundles, 33 milestone models, final replays and curve journals remain.
+Post-cleanup bundle/release hashes and the immutable `plan.html` hash still match.
+See [release evidence](../results/learning-study-2026-10-15/release-verification.json)
+and [cleanup evidence](../results/learning-study-2026-10-15/cleanup.json).

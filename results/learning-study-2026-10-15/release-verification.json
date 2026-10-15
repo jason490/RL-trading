@@ -1,0 +1,82 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/learning-study-2026-10-15",
+  "asset_count": 15,
+  "server_sha256_verified": true,
+  "assets": [
+    {
+      "name": "research-models.tar.gz",
+      "sha256": "d1292f4990bea72c99a9d76922b13e3e1cfeacb4976e27144e88f79b4e01beba",
+      "bytes": 14794317
+    },
+    {
+      "name": "milestone-models.tar.gz",
+      "sha256": "2f056c28fa9a0e3906128486fcc311c963b4f0760360d75e7ad07bf14e0ad136",
+      "bytes": 8923490
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "sha256": "bfe239837e1ce1ed49184249ca3a4600827d0a2b8fddeb241c63fc4a703f7097",
+      "bytes": 12678293
+    },
+    {
+      "name": "validation.html",
+      "sha256": "d4c0ed76c02486467929d8e404bdfe08ab429b57c4bd7fd167e7e9cfb3c14d83",
+      "bytes": 2449
+    },
+    {
+      "name": "model-catalog.json",
+      "sha256": "9032d894831f4374f7c7acd480047f41d91aa49641dbb474eebe0527892062e6",
+      "bytes": 2691192
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "sha256": "44781ba80aa9ee690fff61a956eb91356abc6481e3e0aeb275b4e9ab659df8da",
+      "bytes": 29573066
+    },
+    {
+      "name": "research-evidence.tar.gz",
+      "sha256": "49a71836e64bc69fc66f2af07146a7d1d3c9c336bf55ef0e41fa2873ab04e64a",
+      "bytes": 259760
+    },
+    {
+      "name": "usage-summary.json",
+      "sha256": "63abdda78d1c0814a3253fa9104fd2f0d7a9ebc1125dbf29d1fabc0dcb5607e6",
+      "bytes": 737
+    },
+    {
+      "name": "protocol.json",
+      "sha256": "ebeef3d79d04f150796eceaf7f57e56df9e1ae7cb99dc5020dd6e1ee4cd77897",
+      "bytes": 2432
+    },
+    {
+      "name": "long-250k-curves.html",
+      "sha256": "d7665dc814e8ca251cc10cb386a22c6a6cb2013a37a5901003aa6633dc120cb6",
+      "bytes": 4779326
+    },
+    {
+      "name": "long-250k-curves.json",
+      "sha256": "db82f6765fb2a4237181cf77dda0b5edbe3cab70241457be30e3efe6f6c03ad9",
+      "bytes": 273965
+    },
+    {
+      "name": "long-250k-curves.csv",
+      "sha256": "9736220172eccfbc707e0bc8d07a1e849978bcfc0f62dc60cdc871afc40b0123",
+      "bytes": 4283
+    },
+    {
+      "name": "per-stock-comparison.html",
+      "sha256": "876523785c0cc9d05f81039b77eb8090a6aaf991bdabf0c8666173583b7aee52",
+      "bytes": 4773009
+    },
+    {
+      "name": "long-250k-per-stock-comparison.html",
+      "sha256": "f9b3ea27bbcfefb771c67d555d67d4963e85710d472b29ec39dac7564d5af7e4",
+      "bytes": 4773006
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "e74f95304f827303977b560f1af272fecfa34d55a1802d14202f20be708a837c",
+      "bytes": 1240
+    }
+  ]
+}
