@@ -326,3 +326,14 @@ control CPU hardware, profile sequential evaluation, test turnover/cost changes
 separately and reserve a fresh audit interval. Historical membership/sector
 vintages precede scaling; shadow inference and broker orders remain later work.
 The immutable `plan.html` is unchanged.
+
+## 15. Sequential learning study — active, 2026-10-15
+
+[Learning experiments](docs/learning-experiments.md) now add validation behavior
+diagnostics, a constraint-matched passive-long control, compact 10k-step
+JSONL/CSV/HTML curves and controlled CPU SAC comparisons. The first stage is
+baseline/combined at 50k/100k post-update milestones, seeds 11/23/37, unchanged
+net-equity reward. Further scale and 250k stages are conditional and bounded
+by the declared gate/protocol and original project ledger. The new 111-test
+acceptance passed; the initial CPU setup failure was stopped and recorded
+before one bounded retry. No new test audit or larger universe is used.

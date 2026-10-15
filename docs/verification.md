@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **101 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **111 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -37,7 +37,7 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unitt
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The latest full suite completed in 67.387 seconds on Python 3.13.16 (101 tests),
+The original completed-study suite ran in 67.387 seconds on Python 3.13.16 (101 tests),
 including supply/demand, sector, matched-study, public-asset, graceful-handoff and streamed-transfer checks. The earlier 69-test acceptance completed
 in 32.703 seconds before these additions. The earlier
 Python 3.12 acceptance also passed but is historical evidence, not the supported
@@ -306,3 +306,16 @@ again. Syntax compilation passed; `plan.html` retains its original checksum.
 
 Other advanced families, extra reward terms and broker orders remain disabled.
 See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.
+
+## Active CPU learning study — 2026-10-15
+
+The new [learning protocol](learning-experiments.md) and compact-curve runtime
+passed **111 tests in 73.219 seconds**, zero skips/failures, before full CPU
+experiments. Coverage includes percentage-point calculations, 50k anchors,
+post-update replacement, reward-scale equity invariance, segmented SAC
+continuation, complete CSV/JSONL remote acceptance, and multi-seed improvement
+gates. The initial setup lost its CLI connection before training; the owned
+runtime was stopped and verified, and that failure remains in the cumulative
+ledger. One bounded retry is running the first unchanged-reward CPU cell.
+The earlier 36-run results and test audit above are historical and unchanged.
+No new final-test evaluation or broker-order work is authorized by this study.
