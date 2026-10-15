@@ -1,9 +1,10 @@
 {
-  "status": "training_complete",
+  "status": "complete",
   "completed_research_runs": 36,
   "planned_research_runs": 36,
   "selection_frozen": true,
-  "test_evaluated": false,
+  "test_evaluated": true,
   "validation_decision": "validation-study.json",
-  "validation_decision_sha256": "07b3de17d4372840bc5148fe4966359a79d2c86b1daf32d07ab18e8cd9eddaa7"
+  "validation_decision_sha256": "07b3de17d4372840bc5148fe4966359a79d2c86b1daf32d07ab18e8cd9eddaa7",
+  "test_audit": "test-audit.json"
 }
