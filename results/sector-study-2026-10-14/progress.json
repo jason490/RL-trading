@@ -1,0 +1,159 @@
+{
+  "status": "partial",
+  "completed_research_runs": 18,
+  "planned_research_runs": 36,
+  "test_evaluated": false,
+  "selection_frozen": false,
+  "families": [
+    {
+      "family": "baseline_ppo",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.16502982943491842,
+          "selected_step": 50000,
+          "bundle_id": "56ea048074ee9679f21c25abd91556a65d53cc843f67e153edc8bacc1eaa424e"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.13052140330720124,
+          "selected_step": 30000,
+          "bundle_id": "3409e00bcdd33de89051f39a86004f23e6d57671c4f1ee55060849a7d14b809f"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": 0.09360233147540918,
+          "selected_step": 30000,
+          "bundle_id": "9e6ac7befcd36be41e5ebd1a231b095e7906811651ccdaea665efb1716c586e9"
+        }
+      ],
+      "mean_validation_return": 0.1297178547391763,
+      "seed_standard_deviation": 0.03572052818639172
+    },
+    {
+      "family": "baseline_sac",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.20993260301679528,
+          "selected_step": 50000,
+          "bundle_id": "379f4025d38002448d86c19801ca073a45a67c2d26d816d1d81e566e2bd2991b"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.16591399602857054,
+          "selected_step": 40000,
+          "bundle_id": "9a90384038eae87f03293ae7640de066209b414616a7f89ce967fabe35d280f7"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": 0.09212306359822858,
+          "selected_step": 50000,
+          "bundle_id": "e528a3003fc9f3be6a6da80f341695b303fc7cc023d16b8bd8b54ff0175c1fc4"
+        }
+      ],
+      "mean_validation_return": 0.1559898875478648,
+      "seed_standard_deviation": 0.05952846244744036
+    },
+    {
+      "family": "baseline_td3",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.034273325467669105,
+          "selected_step": 50000,
+          "bundle_id": "8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.13433642689624736,
+          "selected_step": 40000,
+          "bundle_id": "e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": -0.04323177783790057,
+          "selected_step": 10000,
+          "bundle_id": "b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce"
+        }
+      ],
+      "mean_validation_return": 0.041792658175338636,
+      "seed_standard_deviation": 0.0890225932356699
+    },
+    {
+      "family": "supply_demand_ppo",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.16926344802988516,
+          "selected_step": 40000,
+          "bundle_id": "a2e4d1cf33cf5718be717474268a773466da5d6507f59a9572569567e6bc6390"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": -0.01464587427361422,
+          "selected_step": 40000,
+          "bundle_id": "fa3cc6b5e482c20c72c867cf68b7f05eb7da942a2899b947a6846503831bc0eb"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": 0.1154337853650643,
+          "selected_step": 30000,
+          "bundle_id": "c8f677da3794469823ea9a940b30e4448a2c1a95ab738a53c273c5a74ebb5911"
+        }
+      ],
+      "mean_validation_return": 0.09001711970711175,
+      "seed_standard_deviation": 0.09455244511597366
+    },
+    {
+      "family": "supply_demand_sac",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": -0.037047952763625006,
+          "selected_step": 10000,
+          "bundle_id": "c89fa1e6067dc345378696a5126139c9110ddc55a8a1276a72237f18c4df79e8"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.110126842373628,
+          "selected_step": 20000,
+          "bundle_id": "a8e4734e4310e7391cbb350f2ca20ef33ae01f51d0ec451a480984e6d51af941"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": 0.1047872487831838,
+          "selected_step": 20000,
+          "bundle_id": "f10b2cadc5707b6af9a16b9c329caabcfe044227f1f8eb1f62c8e8b377d6260c"
+        }
+      ],
+      "mean_validation_return": 0.05928871279772893,
+      "seed_standard_deviation": 0.08347270609928671
+    },
+    {
+      "family": "supply_demand_td3",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.04544493813515554,
+          "selected_step": 30000,
+          "bundle_id": "92f35a2f78f52a4ee03e2871b0a733d17476e51ca29385e148f2059be73f2e91"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": -0.005395989563236354,
+          "selected_step": 20000,
+          "bundle_id": "f736eb2b566019e18cbbc1f6ad8735e972361a4e482953635b1ac84e4d6f464f"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": 0.06566421185807471,
+          "selected_step": 40000,
+          "bundle_id": "5111527881c68fc49da699825643de57484da24eef41451fe2275799eed92a5e"
+        }
+      ],
+      "mean_validation_return": 0.0352377201433313,
+      "seed_standard_deviation": 0.03661322890512103
+    }
+  ]
+}

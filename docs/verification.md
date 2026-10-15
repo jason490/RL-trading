@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **98 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **99 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -37,7 +37,7 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unitt
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The latest full suite completed in 75.365 seconds on Python 3.13.16 (98 tests),
+The latest full suite completed in 71.085 seconds on Python 3.13.16 (99 tests),
 including supply/demand, sector, matched-study, public-asset, graceful-handoff and streamed-transfer checks. The earlier 69-test acceptance completed
 in 32.703 seconds before these additions. The earlier
 Python 3.12 acceptance also passed but is historical evidence, not the supported
@@ -96,7 +96,7 @@ unchanged normalization. The old frozen bundle rejects the combined schema.
 Test episodes were constructed but no test performance was evaluated.
 Local evidence is saved in `.runtime/expanded-datasets.json`,
 `.runtime/expanded-environment-audit.json` and
-`.runtime/final-expanded-acceptance.txt`. The full suite now has 98 passing tests
+`.runtime/final-expanded-acceptance.txt`. The full suite now has 99 passing tests
 and no skips; `pip check` and syntax compilation also passed. No new lint/type
 check is claimed. Generated data/runtime evidence remains excluded from Git.
 
@@ -213,3 +213,27 @@ Retain the ledger and downloaded artifacts for future jobs; do not reset usage.
 Supply/demand and sector rotation are opt-in; the previously trained model uses
 neither. Other advanced feature families, extra reward terms and broker orders remain disabled.
 See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.
+
+## Matched study progress — 2026-10-15, interim
+
+The baseline and supply/demand families have completed all three algorithms and
+seeds: **18 of 36 research runs**, each at 50,000 transitions. Their final
+archives were retrieved and each owned runtime shutdown verified. Sector-only
+and combined inputs remain in progress. The [partial machine-readable results](../results/sector-study-2026-10-14/progress.json)
+are validation-only; no final family has been selected and test performance
+remains untouched.
+
+| Inputs | Algorithm | Mean validation return | Seed standard deviation |
+| --- | --- | ---: | ---: |
+| baseline | PPO | 12.97% | 3.57 pp |
+| baseline | SAC | 15.60% | 5.95 pp |
+| baseline | TD3 | 4.18% | 8.90 pp |
+| supply_demand | PPO | 9.00% | 9.46 pp |
+| supply_demand | SAC | 5.93% | 8.35 pp |
+| supply_demand | TD3 | 3.52% | 3.66 pp |
+
+Matching buy-and-hold returned 30.60% on average over the 26 validation episodes;
+cash returned 0%. These are separate symbol episodes, not an investable
+equal-weight portfolio. Cumulative estimated usage at this snapshot was 22.43
+units, including earlier attempts. The project ceiling remains 150 units and
+working stop 130 units; the private cumulative ledger remains authoritative.
