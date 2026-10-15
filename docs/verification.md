@@ -216,10 +216,10 @@ See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for 
 
 ## Matched study progress — 2026-10-15, interim
 
-The baseline and supply/demand families have completed all three algorithms and
-seeds: **18 of 36 research runs**, each at 50,000 transitions. Their final
-archives were retrieved and each owned runtime shutdown verified. Sector-only
-and combined inputs remain in progress. The [partial machine-readable results](../results/sector-study-2026-10-14/progress.json)
+Baseline, supply/demand and sector-only inputs have completed all algorithms
+and seeds: **27 of 36 research runs**, each at 50,000 transitions. Final
+archives were retrieved and each owned runtime shutdown verified. The final
+nine combined-input runs remain in progress. The [partial machine-readable results](../results/sector-study-2026-10-14/progress.json)
 are validation-only; no final family has been selected and test performance
 remains untouched.
 
@@ -231,9 +231,15 @@ remains untouched.
 | supply_demand | PPO | 9.00% | 9.46 pp |
 | supply_demand | SAC | 5.93% | 8.35 pp |
 | supply_demand | TD3 | 3.52% | 3.66 pp |
+| rotation | PPO | -1.92% | 3.79 pp |
+| rotation | SAC | 4.12% | 7.82 pp |
+| rotation | TD3 | 5.09% | 10.96 pp |
 
 Matching buy-and-hold returned 30.60% on average over the 26 validation episodes;
 cash returned 0%. These are separate symbol episodes, not an investable
-equal-weight portfolio. Cumulative estimated usage at this snapshot was 22.43
-units, including earlier attempts. The project ceiling remains 150 units and
-working stop 130 units; the private cumulative ledger remains authoritative.
+equal-weight portfolio. Cumulative conservative usage at this snapshot was
+31.59 units, including earlier attempts and one connection-loss setup failure.
+That failed session was stopped and verified before a manual bounded retry;
+completed cells were preserved and the cumulative ledger was never reset.
+The project ceiling remains 150 units and working stop 130 units; the private
+cumulative ledger remains authoritative.

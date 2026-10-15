@@ -1,6 +1,6 @@
 {
   "status": "partial",
-  "completed_research_runs": 18,
+  "completed_research_runs": 27,
   "planned_research_runs": 36,
   "test_evaluated": false,
   "selection_frozen": false,
@@ -154,6 +154,81 @@
       ],
       "mean_validation_return": 0.0352377201433313,
       "seed_standard_deviation": 0.03661322890512103
+    },
+    {
+      "family": "rotation_ppo",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": -0.06152988936040386,
+          "selected_step": 50000,
+          "bundle_id": "085871188ab32586bc0dcc804685a960b4532d2e59eaabc993d782f15de0a878"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.011708228148746178,
+          "selected_step": 50000,
+          "bundle_id": "01d14160637db6d9efe1033905da20d84982d83af58bd4633c8a6a75806fbf9d"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": -0.007730620618859357,
+          "selected_step": 10000,
+          "bundle_id": "f079b2ce22d40eec13f7c3d5a7b184e078a0d6e9a09cf9e070dca27b4d9e45c5"
+        }
+      ],
+      "mean_validation_return": -0.01918409394350568,
+      "seed_standard_deviation": 0.03793866105267562
+    },
+    {
+      "family": "rotation_sac",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.003306909198350869,
+          "selected_step": 10000,
+          "bundle_id": "f79ceebb6cc2ca1ea9e3b26f9654fdd1cc4a3cf7045ce640ac4b8cedfc203367"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.13118170349232058,
+          "selected_step": 30000,
+          "bundle_id": "3445541622013819e1d12545fe1adc101bd9a560e285e91d386ae31b4326089f"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": -0.010814288209537334,
+          "selected_step": 10000,
+          "bundle_id": "d370da6876bc050fcc803659e3c3b00de7fdcaa80669007d7c626500b0a2e414"
+        }
+      ],
+      "mean_validation_return": 0.04122477482704471,
+      "seed_standard_deviation": 0.07822428532895195
+    },
+    {
+      "family": "rotation_td3",
+      "seeds": [
+        {
+          "seed": 11,
+          "selected_validation_return": 0.1187737173791633,
+          "selected_step": 40000,
+          "bundle_id": "b714aae79ab21d38801ee81e60de23569231ac837a3e7e6d821cd5d7780d6ace"
+        },
+        {
+          "seed": 23,
+          "selected_validation_return": 0.10941229032356828,
+          "selected_step": 20000,
+          "bundle_id": "0185a73c35120591391010cae2d1c64b56987a746cbf3ae7922b4f26ace6a0ad"
+        },
+        {
+          "seed": 37,
+          "selected_validation_return": -0.07560967221985747,
+          "selected_step": 50000,
+          "bundle_id": "10ec5ae8a4a509a3c152c0658e3a2aa87445af1bc07685c002066a5e64002b80"
+        }
+      ],
+      "mean_validation_return": 0.05085877849429137,
+      "seed_standard_deviation": 0.10962486418991417
     }
   ]
 }
