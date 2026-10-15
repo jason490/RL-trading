@@ -97,7 +97,7 @@ def report_learning(runs,protocol,destination,expected_families=None):
         fig.add_trace(go.Scatter(x=x,y=[r['buy_hold_return_pct'] for r in rows],name=name+' / buy hold',line={'dash':'dot'}),row=1,col=1)
     for run in value['runs']:
         fig.add_trace(go.Scatter(x=[p['steps'] for p in run['points']],y=[p['return_pct'] for p in run['points']],
-            name=run['dataset'][:8]+' seed '+str(run['seed']),visible='legendonly',mode='lines+markers'),row=1,col=1)
+            name=run['dataset'][:8]+' seed '+str(run['seed']),visible='legendonly' if value['families'] else True,mode='lines+markers'),row=1,col=1)
     fig.update_layout(height=1000,title='Controlled CPU learning study — validation only; no final-test evaluation')
     fig.write_html(str(path),include_plotlyjs=True)
     return value
