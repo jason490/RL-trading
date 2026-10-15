@@ -87,3 +87,15 @@ The learning plan admits only seeds 11/23/37, budgets 50k/100k/250k and separate
 declared scales 1/10/100. Remote acceptance verifies the exact reward config,
 all expected curve intervals, post-update milestones and matching CSV values,
 in addition to model/frozen checksums and the original budget/cleanup rules.
+
+## Multi-seed comparison and stopping decision
+
+`scripts/report_learning.py ARTIFACT_ROOT... --output results/STUDY/curves.html`
+produces an HTML graph, aggregate CSV and compact JSON. Individual seed curves
+are available in the graph legend. Family aggregates require all three seeds;
+incomplete cells cannot produce a passing stage. Same-step post-update records
+replace on-step points only in the plotted view, preserving the full journal.
+The gate also requires positive selected-checkpoint gains in two of three seeds.
+A single exceptional seed, monotonic best-so-far curve, or drawdown deterioration
+cannot satisfy the declared gate by itself. The JSON records every gate component
+and remains explicitly validation-only.
