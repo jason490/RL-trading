@@ -4,8 +4,9 @@
 
 Universe selection, dated sector snapshots, sector-ETF rotation features and
 expanded dataset generation are implemented. They are opt-in: the original four
-ETF baseline and its trained bundle remain intact. Expanded-input CPU smoke acceptance has passed; matched 50,000-transition
-A100 research training is in progress. The environment still trades one
+ETF baseline and its trained bundle remain intact. Expanded-input CPU smoke acceptance has passed; all 36 research runs and the frozen held-out audit
+are complete; see [verification](verification.md) for the benchmark shortfall
+and CPU/CUDA comparison limitations. The environment still trades one
 symbol per episode; it does not allocate capital across a simultaneous portfolio.
 
 The checked-in starting configuration is

@@ -1,6 +1,6 @@
 # Modular swing-trading RL project plan
 
-Status: Python 3.13 aligned with Colab; 91 CPU acceptance tests pass; Yahoo history verified. Updated 2026-10-14. CPU/A100 acceptance and initial PPO 50,000-transition seed-11 training completed; artifacts retrieved and shutdown verified. Supply/demand D1/W1 and sector-rotation inputs are implemented; expanded 26-instrument CPU smoke passed; matched A100 studies are in progress.
+Status: Python 3.13 aligned with Colab; 101 tests pass. Updated 2026-10-15. All 36 expanded-universe 50,000-transition runs and the frozen three-seed held-out audit are complete. Combined SAC averaged 10.83% on test versus buy-and-hold 48.46%; no benchmark advantage demonstrated. Models/reports are published, all owned runtimes stopped, cumulative conservative usage 33.090762/150 units, and 7.82 GiB recovered through verified cleanup. CPU is now the default per the user-directed hardware change.
 
 ## 1. Intended outcome and starting assumptions
 
@@ -299,7 +299,7 @@ Precompute causal features once per dataset version, use arrays in the environme
 Milestones 1–5 have baseline implementations and initial training acceptance as recorded below. Next research compares matched algorithm/seed runs and introduces causal supply/demand inputs through milestone 6. Before further remote jobs, recheck provider entitlements and the cumulative compute budget. All choices remain configurable; no stage is presented as evidence of expected profit.
 
 
-## 14. Implementation status — 2026-10-14
+## 14. Implementation status — 2026-10-15
 
 The local system follows the ownership map above. Detailed category documentation is indexed in [docs/README.md](docs/README.md); checks actually performed are recorded in [docs/verification.md](docs/verification.md). `plan.html` is preserved.
 
@@ -309,10 +309,20 @@ The local system follows the ownership map above. Detailed category documentatio
 | 2. Accumulation/datasets | Resumable source chunks, immutable hashes, coverage gates, causal features, splits/purge, frozen normalization | Completed for Yahoo; optional provider audits remain |
 | 3. Accounting/environment | Long/short cash and costs, next-open simulation, Gymnasium adapter, baselines | CPU Gymnasium/SB3 checks pass; execution sensitivity studies remain |
 | 4. Learned trade management | Four-component policy zone, adjustments/reversals, gap/stop ordering, both target boundaries, corporate actions | Neural-policy integration passes; execution sensitivity studies remain |
-| 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | CPU/A100 512/1024/1024 acceptance passes; initial A100 PPO 50,000 seed 11 complete; matched multi-seed studies remain |
-| 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | D1/W1 supply/demand, configurable 22-stock/11-sector expansion and causal rotation implemented; new-model training and matched ablations remain |
-| 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | CPU/A100 save/load parity and local downloaded-bundle checks pass; held-out audit remains |
+| 5. Training/reporting | PPO/SAC/TD3 factory, checkpoint validation, run metadata, interactive HTML/JSON and seed/failure comparisons | CPU/A100 acceptance and all 36 multi-seed research cells complete; indexed reports and model assets published |
+| 6. Feature/reward growth | Required daily families and optional completed weekly context; net-equity reward only | D1/W1, configurable 22-stock/11-sector expansion and causal rotation trained in the four-dataset study; mixed CPU/CUDA confound disclosed; further ablations remain |
+| 7. Freeze/audit | Checksummed research bundle and immutable deterministic inference API; optional post-freeze test path | All 36 bundles pass frozen CPU prediction parity; selected-family three-seed held-out audit complete and underperforms buy-and-hold; paper-ineligible |
 | 8. Shadow inference | Shared causal feature/decision contracts and staleness gates | Persistent live-data orchestration/recovery/drift study |
 | 9. Paper execution | Intentionally deferred; no broker-order implementation | Future explicit milestone with tested lifecycle and protection |
 
 Remote smoke scripts preserve the 150-unit ceiling, 130-unit working limit, two-hour initial allocation cap, cumulative metering ledger, durable retrieval and verified cleanup. Colab attempts and cleanup are recorded in docs/verification.md. Longer experiment configurations are 50,000 transitions and seeds 11/23/37; an opt-in research job follows successful smoke acceptance. The user now requires matching Colab’s default Python (currently 3.13.15/3.13.16 across inspected runtime images), superseding the original Python 3.12 specification.
+
+Final selection was committed in `179b358` before the held-out audit. The
+[results](results/sector-study-2026-10-14/README.md) and
+[verification](docs/verification.md) record all seeds, unsuccessful outcomes,
+source/hardware caveats, release hashes, compute and cleanup. No final-test
+result selected a checkpoint, seed or feature set. Future research should
+control CPU hardware, profile sequential evaluation, test turnover/cost changes
+separately and reserve a fresh audit interval. Historical membership/sector
+vintages precede scaling; shadow inference and broker orders remain later work.
+The immutable `plan.html` is unchanged.

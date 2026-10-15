@@ -30,7 +30,8 @@ First complete the lower-credit CPU expanded-input smoke. For each dataset:
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner \
-  data/datasets/DATASET_HASH --study --cli-python /path/to/CLI_PYTHON
+  data/datasets/DATASET_HASH --study --study-algorithm ppo --accelerator CPU \
+  --cli-python /path/to/CLI_PYTHON
 ```
 
 `--study --study-algorithm ppo` defaults to CPU; explicitly pass

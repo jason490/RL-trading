@@ -1,6 +1,6 @@
 # Multi-timeframe supply/demand inputs
 
-**Status: D1/W1 implemented and tested; expanded CPU smoke passed; full matched A100 studies in progress.**
+**Status: D1/W1 implemented and tested; 36-run study and frozen held-out audit complete. See [verification](verification.md) for outcomes and mixed-hardware limitations.**
 The requested feature is generic causal supply/demand zones across timeframes.
 Daily and completed weekly zones are available as opt-in dataset inputs; completed monthly zones
 follow as a separate experiment. Intraday zones require actual intraday history.
@@ -158,8 +158,8 @@ Persist zone snapshots/events, schema/parameter hashes and charts showing only
 zones actually available at each decision. Include negative studies and extra
 runtime/data cost in the cumulative Colab ledger. Adding this family requires a
 new dataset and newly trained frozen bundle; the existing baseline bundle is
-retained for comparison. Expanded supply/demand/rotation CPU smoke training passed; full matched studies
-are in progress. The existing baseline
+retained for comparison. Expanded CPU smoke and the full four-input-set study
+are complete; D1-versus-W1 isolation remains a separate experiment. The existing baseline
 bundle still expects its original seven inputs. Dataset manifests record the
 local ATR seed (first 14 true ranges, then Wilder recursion), static thresholds,
 clipping and timeframe release convention. This deliberately differs from

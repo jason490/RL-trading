@@ -1,8 +1,8 @@
-# Verification and milestone status — 2026-10-14
+# Verification and milestone status — 2026-10-15
 
 The project targets **Python 3.13**, matching Colab's current interpreter family.
-The local acceptance environment is **3.13.16**. The current CLI-provisioned A100
-reports **3.13.15**; its research environment uses that same interpreter. Patch
+The local acceptance environment is **3.13.16**. The verified A100 image
+reported **3.13.15**; its research environment uses that same interpreter. Patch
 versions can vary by runtime image and are recorded in artifacts. No broker
 orders have been submitted. `plan.html` is preserved.
 
@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **99 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **101 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -37,7 +37,7 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python -m unitt
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The latest full suite completed in 71.085 seconds on Python 3.13.16 (99 tests),
+The latest full suite completed in 67.387 seconds on Python 3.13.16 (101 tests),
 including supply/demand, sector, matched-study, public-asset, graceful-handoff and streamed-transfer checks. The earlier 69-test acceptance completed
 in 32.703 seconds before these additions. The earlier
 Python 3.12 acceptance also passed but is historical evidence, not the supported
@@ -96,7 +96,7 @@ unchanged normalization. The old frozen bundle rejects the combined schema.
 Test episodes were constructed but no test performance was evaluated.
 Local evidence is saved in `.runtime/expanded-datasets.json`,
 `.runtime/expanded-environment-audit.json` and
-`.runtime/final-expanded-acceptance.txt`. The full suite now has 99 passing tests
+`.runtime/final-expanded-acceptance.txt`. The full suite now has 101 passing tests
 and no skips; `pip check` and syntax compilation also passed. No new lint/type
 check is claimed. Generated data/runtime evidence remains excluded from Git.
 
@@ -108,14 +108,15 @@ backend shutdown verified. Attempt estimate: 0.016613 units; measured debit:
 0.01 units. Cumulative estimate after preflight: 1.496138 units.
 
 The committed [matched study protocol](experiments.md) now runs four datasets,
-three algorithms and seeds 11/23/37 on A100. Its execution status and final usage
-will be recorded on completion; the final test remains untouched. Review
+three algorithms and seeds 11/23/37. All 36 cells and the separate held-out audit
+are complete. The first 29 cells used CUDA; the final seven used CPU after a
+user-directed cost change. See the final study evidence below. Review
 [sector/universe scaling](sectors-universe.md#scaling-to-hundreds-of-stocks)
 before adding hundreds of symbols.
 
 ## Completed A100 training and retrieved artifacts
 
-The final owned session was `rl-stocks-a100-0343183b915b`, allocated after the
+The initial four-ETF A100 session was `rl-stocks-a100-0343183b915b`, allocated after the
 successful Colab CPU preflight. Source revision was
 `85bb0badfef319c06bffc141097faeab569fcb12`, with a clean working tree at upload.
 The research environment used the VM's own Python 3.13.15 and the committed hash
@@ -150,7 +151,7 @@ it remains `paper_eligible=false`.
 
 Retrieved outputs, available locally:
 
-- [Final artifact archive](../artifacts/colab/rl-stocks-a100-0343183b915b/artifacts.tar.gz), 16,681,515 bytes; periodic checkpoint archive also retrieved.
+- Final and periodic archives were retrieved and validated; redundant archive copies were later removed after extracted outputs and published models were verified.
 - [Completion manifest](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/completion.json), including every completed job.
 - [Full PPO metadata](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/metadata.json).
 - [Selected frozen manifest](../artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/frozen/e71f26e9451eb5f16a84b7807896220b8c7e39125e6e5aa9bd4c74256805a675/manifest.json).
@@ -202,44 +203,106 @@ artifacts. Metering, downloads and teardown remain bounded; no budget-stop resta
 is automatic. There is no outstanding cleanup failure or active owned session.
 Retain the ledger and downloaded artifacts for future jobs; do not reset usage.
 
-## Remaining research and execution milestones
+## Completed 36-run study and held-out audit — 2026-10-15
 
-- Run matched 50,000-transition experiments across algorithms and seeds 11/23/37.
-- Train on the implemented [causal D1/W1 supply/demand inputs](supply-demand.md) and [sector rotation](sectors-universe.md), then run matched feature ablations using training and validation only; M1 is later.
-- Perform other feature/reward ablations separately.
-- Freeze a candidate before the held-out test audit; test data has not selected checkpoints.
-- Audit actual Alpaca feeds/dividends, then add persistent shadow inference and paper-order lifecycle work.
+All four datasets, three algorithms and three seeds completed exactly 50,000
+transitions per research cell. [Validation selection](../results/sector-study-2026-10-14/validation-study.json)
+was committed and pushed in `179b358` before opening the test interval.
+Learning-package files were byte-identical across source revisions; full uploaded
+package hashes were independently checked against clean recorded Git trees.
+All 36 frozen bundles passed same-device CPU save/load prediction parity, repeat
+determinism, unchanged normalization and unchanged file checksums.
 
-Supply/demand and sector rotation are opt-in; the previously trained model uses
-neither. Other advanced feature families, extra reward terms and broker orders remain disabled.
-See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.
-
-## Matched study progress — 2026-10-15, interim
-
-Baseline, supply/demand and sector-only inputs have completed all algorithms
-and seeds: **27 of 36 research runs**, each at 50,000 transitions. Final
-archives were retrieved and each owned runtime shutdown verified. The final
-nine combined-input runs remain in progress. The [partial machine-readable results](../results/sector-study-2026-10-14/progress.json)
-are validation-only; no final family has been selected and test performance
-remains untouched.
-
-| Inputs | Algorithm | Mean validation return | Seed standard deviation |
+| Inputs | Algorithm | Mean selected validation return | Seed standard deviation |
 | --- | --- | ---: | ---: |
 | baseline | PPO | 12.97% | 3.57 pp |
 | baseline | SAC | 15.60% | 5.95 pp |
 | baseline | TD3 | 4.18% | 8.90 pp |
-| supply_demand | PPO | 9.00% | 9.46 pp |
-| supply_demand | SAC | 5.93% | 8.35 pp |
-| supply_demand | TD3 | 3.52% | 3.66 pp |
+| combined | PPO | 7.82% | 15.21 pp |
+| combined | SAC | 19.79% | 27.08 pp |
+| combined | TD3 | 5.25% | 19.07 pp |
 | rotation | PPO | -1.92% | 3.79 pp |
 | rotation | SAC | 4.12% | 7.82 pp |
 | rotation | TD3 | 5.09% | 10.96 pp |
+| supply_demand | PPO | 9.00% | 9.46 pp |
+| supply_demand | SAC | 5.93% | 8.35 pp |
+| supply_demand | TD3 | 3.52% | 3.66 pp |
 
-Matching buy-and-hold returned 30.60% on average over the 26 validation episodes;
-cash returned 0%. These are separate symbol episodes, not an investable
-equal-weight portfolio. Cumulative conservative usage at this snapshot was
-31.59 units, including earlier attempts and one connection-loss setup failure.
-That failed session was stopped and verified before a manual bounded retry;
-completed cells were preserved and the cumulative ledger was never reset.
-The project ceiling remains 150 units and working stop 130 units; the private
-cumulative ledger remains authoritative.
+Matching buy-and-hold averaged 30.60%; cash returned 0%. Validation selected
+combined-feature SAC, candidate seed 23 (51.05% selected validation return).
+The family mean was 19.79%, with 27.08 percentage points of seed variation.
+The first 29 cells used CUDA and the final seven CPU, including all combined
+SAC/TD3 seeds. This backend confound limits attribution of score differences
+to the input families alone; it is not a controlled hardware comparison.
+
+The [one held-out audit](../results/sector-study-2026-10-14/test-audit.json) evaluated
+all three frozen selected-family seeds on 2024–September 2026. No seed, checkpoint
+or feature family was reselected using these outcomes.
+
+| Seed | Mean net test return across 26 symbol episodes |
+| --- | ---: |
+| 11 | 9.22% |
+| 23, preselected candidate | 13.90% |
+| 37 | 9.38% |
+| Three-seed mean | 10.83% |
+| Buy-and-hold | 48.46% |
+
+Seed standard deviation was 2.66 percentage points. Mean per-symbol maximum
+drawdown was 26.82%, versus 25.76% for buy-and-hold. Normalization and frozen
+files were unchanged throughout the audit. The models underperformed the
+benchmark and remain paper-ineligible. Returns are total interval returns from
+independent symbol simulations, not an annualized return or investable portfolio.
+
+[GitHub release](https://github.com/jason490/RL-trading/releases/tag/sector-study-2026-10-14)
+contains 36 research bundles and four startup-smoke bundles, weights/metadata,
+indexed validation charts, held-out charts and selection/audit summaries.
+All ten server-reported asset digests and sizes match local files. Raw provider
+bars, replay data and private runtime logs were excluded from publication.
+The [verification record](../results/sector-study-2026-10-14/release-verification.json)
+contains the exact hashes. Extract the validation report archive with its
+`validation/` directory beside the index.
+
+## Final budget and cleanup
+
+All **22 task-owned attempts** are stopped, with backend shutdown verified.
+The final account reading reported zero active assignments and 0.00 units/hour.
+Conservative cumulative ledger usage is **33.090762 units**; rate-integrated
+estimates total 32.779824 units. The observed account balance debit is 29.97 units,
+subject to delayed billing. The conservative ledger governs the budget: **116.909238
+units remain** under the 150-unit ceiling, with 96.909238 before the 130-unit
+working stop. No budget-stop restart occurred and the ledger was never reset.
+Detailed sanitized attempts are in [usage-summary.json](../results/sector-study-2026-10-14/usage-summary.json).
+
+CPU continuation used Python 3.13.16 and a reported 0.08 units/hour; A100 used
+Python 3.13.15 and about 5.30 units/hour. CPU PPO seed 37 completed training and
+validation in 150.87 seconds. An independent 12-second A100 sample during PPO
+reported 0% GPU utilization and 544 MiB allocated; it may overlap CPU-heavy
+validation and is not a whole-run profile. The diagnostic kernel was deleted.
+
+After publication verification, cleanup removed **293 temporary artifact files**,
+4.10 GiB of logical artifact data, the obsolete task-created Python 3.12
+environment and regenerable dependency cache. Actual filesystem space recovered:
+**7.82 GiB**. Final selected/latest models, final replay buffers, detailed reports,
+immutable data, source, current Python 3.13 environment and usage ledger remain.
+All 53 retained frozen directories and all release assets were rechecked and
+unchanged; post-cleanup dependency checks and fresh-process deterministic frozen inference passed. Three archives without verified
+extracted replacements were conservatively retained. See the exact
+[cleanup inventory](../results/sector-study-2026-10-14/cleanup.json) and
+[retention guide](artifact-retention.md).
+
+The full 101-test suite passed in 67.387 seconds, with zero skips/failures.
+After the later report-size fix, its focused publication regression passed
+again. Syntax compilation passed; `plan.html` retains its original checksum.
+
+## Remaining research and execution milestones
+
+- Repeat controlled CPU comparisons before attributing gains to added features.
+- Profile sequential simulation/evaluation; batch or vectorize where measured useful.
+- Investigate turnover/cost reduction as separate training/validation experiments.
+- Audit historical universe membership, delistings and sector vintages before broad scaling.
+- Add D1-versus-W1 isolation, optional monthly context and other families separately.
+- Use a fresh locked audit interval for future claims; do not repeatedly tune against this test.
+- Audit actual Alpaca feeds/dividends, then build persistent shadow inference before paper orders.
+
+Other advanced families, extra reward terms and broker orders remain disabled.
+See [testing.md](testing.md), [setup.md](setup.md) and [colab.md](colab.md) for procedures.

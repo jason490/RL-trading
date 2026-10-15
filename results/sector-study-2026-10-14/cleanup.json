@@ -1,0 +1,1496 @@
+{
+  "status": "complete",
+  "release_verified": true,
+  "all_owned_runtimes_stopped": true,
+  "verified_frozen_directories": 53,
+  "files": {
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/artifacts.tar.gz": {
+      "bytes": 61063098,
+      "sha256": "d851f03919eb845f5bbf89d202b0d9fe1d935aa0b235881e551f467b44def905",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/checkpoint.tar.gz": {
+      "bytes": 61061324,
+      "sha256": "b9fcbd02939d8da82f938468847027f4f56608d578e1d1dd202985262cdbc609",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015158-ppo-23-3e9b9bc4/checkpoint-20000.zip": {
+      "bytes": 243043,
+      "sha256": "d7aeb941c6ef160b5ec52de6b361b6ad72bc7fc134051dfb588a8ae74435ee70",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015158-ppo-23-3e9b9bc4/checkpoint-30000.zip": {
+      "bytes": 243966,
+      "sha256": "fadc8a02774f8dc1acb97fb3bd6707c52bbdac70c4e52abbbca050b53e00134c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015158-ppo-23-3e9b9bc4/checkpoint-50000.zip": {
+      "bytes": 245474,
+      "sha256": "5d509f6cb4ac0cfbe1860f344ae5b045214b9fb606d7248ff1ffa242a45ee01f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015158-ppo-23-3e9b9bc4/checkpoint-10000.zip": {
+      "bytes": 242152,
+      "sha256": "422f2a957c07682bfc3a211d104f82424844162ceccc7e23a20e63c2f15b4caf",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015158-ppo-23-3e9b9bc4/checkpoint-40000.zip": {
+      "bytes": 244830,
+      "sha256": "875ff1aa2e4425ab5d3ef39f75a696f3074691dfe58a2e7e8892e25fcb18f930",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015802-ppo-37-d482b477/checkpoint-20000.zip": {
+      "bytes": 243043,
+      "sha256": "2e2b6bb06db42a2564bab0a54a1a7f4c5f5886ed9080ce4da8971a18e45cf96b",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015802-ppo-37-d482b477/checkpoint-30000.zip": {
+      "bytes": 243926,
+      "sha256": "445198dba7e60e13fc9e8aba62e8d69c32fa4c8825349a2e01ffb288a6daf9c7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015802-ppo-37-d482b477/checkpoint-50000.zip": {
+      "bytes": 245478,
+      "sha256": "5240a0f8a7a04a70a9e19a230225c33399acab1624edd4acfee9ca920d8e972c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015802-ppo-37-d482b477/checkpoint-10000.zip": {
+      "bytes": 242192,
+      "sha256": "00a4e0dc1e166ecc677d609b18f37ad260e96e2d20c9cb9cebcd3d4a045db818",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T015802-ppo-37-d482b477/checkpoint-40000.zip": {
+      "bytes": 244750,
+      "sha256": "ce6a66438e3f82ab9123fda3d79dff0349663004790bbd1f53d99314272eec11",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T014653-ppo-11-22ea6236/checkpoint-20000.zip": {
+      "bytes": 243083,
+      "sha256": "f43906ec9d3b60856b645c246eafa5e71e0c57d631dc95fb02ffe462d1431a31",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T014653-ppo-11-22ea6236/checkpoint-30000.zip": {
+      "bytes": 243966,
+      "sha256": "0381ae02233b194dc3d79116fa29fb67ad939dff45a4a625078134ac74e69e98",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T014653-ppo-11-22ea6236/checkpoint-50000.zip": {
+      "bytes": 245474,
+      "sha256": "5957d3181b52b198b152e150d3810d3479595c70fa5f915cc136b43c97758d14",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T014653-ppo-11-22ea6236/checkpoint-10000.zip": {
+      "bytes": 242228,
+      "sha256": "b1fa4d3d0dc9cbe23decbbef6745b00371db4ee769754063b0e8209c80860a3e",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-52cb477e3b5d/retrieved/artifacts/runs/20261015T014653-ppo-11-22ea6236/checkpoint-40000.zip": {
+      "bytes": 244874,
+      "sha256": "3b0425b98e9961e51d61463742dd95cb2f709fdf0d1fae4200875b2b426dea83",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/artifacts.tar.gz": {
+      "bytes": 173827156,
+      "sha256": "d67fb0a1294f0f80ff6bc097df26c5039cebf78d6c25a55d4bf8dcef76ebc90e",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/checkpoint.tar.gz": {
+      "bytes": 154932444,
+      "sha256": "16a7c812b3cf1b337e42bfa9ae082ef1a09261c380a53365179744e2769eceed",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T023529-sac-37-29376f50/checkpoint-20000.zip": {
+      "bytes": 441416,
+      "sha256": "20e1b2aaeff486948785f7139ac92700155d0a7fd4f111cc2ddba11a03c5d703",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T023529-sac-37-29376f50/checkpoint-30000.zip": {
+      "bytes": 442296,
+      "sha256": "0fdeb18f539f2f0ff8eebaa3249e48197aa9542a39ab84e3502c97e32beb2d0f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T023529-sac-37-29376f50/checkpoint-50000.zip": {
+      "bytes": 443849,
+      "sha256": "b38f09c8b19c1fc8fc54a44b049ae31ba103c48fc261c05d8ae7ad5862b345c5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T023529-sac-37-29376f50/checkpoint-10000.zip": {
+      "bytes": 440551,
+      "sha256": "af66de3eb7bf60384ac991c3bc016ef087563b6034aef0cc4960dbd77e24acf4",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T023529-sac-37-29376f50/checkpoint-40000.zip": {
+      "bytes": 443120,
+      "sha256": "9d49b16ecf214c1a9b71990e6cd45860dad0c708f73911f9de6ac5be7b62ddd9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T020738-sac-11-017b6bdc/checkpoint-20000.zip": {
+      "bytes": 441456,
+      "sha256": "6e2416d82ba8405498d52be50ca7596236f3dbd57dc77fecbef22660f232dc3c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T020738-sac-11-017b6bdc/checkpoint-30000.zip": {
+      "bytes": 442336,
+      "sha256": "9fb178d5e86c9b531aa4b8ad6156d2402a237d80aff2bb09490b0c24c23299ac",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T020738-sac-11-017b6bdc/checkpoint-50000.zip": {
+      "bytes": 443845,
+      "sha256": "6791ca73d4ea83e7df5d00d48c0fcaf420491a4b7205d3b8cc02ff3a59c219ad",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T020738-sac-11-017b6bdc/checkpoint-10000.zip": {
+      "bytes": 440558,
+      "sha256": "7edab5db4f6a841924cbe8be33d66d625d604a3315f4f675cfbaf7d2682348b8",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T020738-sac-11-017b6bdc/checkpoint-40000.zip": {
+      "bytes": 443244,
+      "sha256": "0c51528c1e104d128b690140ffd0683ccc65bc6ef90cbd1be401288045c29d35",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T022102-sac-23-cfb4362d/checkpoint-20000.zip": {
+      "bytes": 441416,
+      "sha256": "16b63be74d519209ffce5f7f6d6074275ccdeb2aec21feca4d4df23119484c74",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T022102-sac-23-cfb4362d/checkpoint-30000.zip": {
+      "bytes": 442336,
+      "sha256": "1d9040f63db4f613c32168b5710dd99d30211005c87e1efa86bacb1c7816d355",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T022102-sac-23-cfb4362d/checkpoint-50000.zip": {
+      "bytes": 443845,
+      "sha256": "c5fbc24a9d91939b1247e8559a152828410be2b3473e217ef16bf78eef2fc7b4",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T022102-sac-23-cfb4362d/checkpoint-10000.zip": {
+      "bytes": 440511,
+      "sha256": "ec04cf832a13cf7131e8b81ac10879a2f8526798e1b11c4f524578655c474e3b",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T022102-sac-23-cfb4362d/checkpoint-40000.zip": {
+      "bytes": 443200,
+      "sha256": "87ba5ed16ce9458b5cb15a48d363fa135f31e202552c788a7726d9889df86057",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T023529-sac-37-29376f50/checkpoint-replay.pkl": {
+      "bytes": 56402384,
+      "sha256": "e77680992e1fde8d4c4e0e3282717b23b438e1f1857cb7b47ec482909c9ccd25",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T020738-sac-11-017b6bdc/checkpoint-replay.pkl": {
+      "bytes": 56402384,
+      "sha256": "b61fd546420d98fc41c7945669cf811808c61f8f09c60f2028083395dd78dfbf",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-9d97e7323da3/retrieved/artifacts/runs/20261015T022102-sac-23-cfb4362d/checkpoint-replay.pkl": {
+      "bytes": 56402384,
+      "sha256": "57a468f81448025c846a46eb50a8b64ca08e67229324f7503c578240deccc9f2",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/checkpoint.tar.gz": {
+      "bytes": 41984273,
+      "sha256": "50c6647a2420df773e0f238504a4d7d104229ec8d0e7ad0cf61bd860df53ffb1",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T032713-ppo-11-375e4020/checkpoint-20000.zip": {
+      "bytes": 284065,
+      "sha256": "42fc796aaeec13bf726965ba560204eabc94dfad59a43f4f01e80054780d6478",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T032713-ppo-11-375e4020/checkpoint-30000.zip": {
+      "bytes": 284948,
+      "sha256": "aafae5819c3e9b63dcbf7381bcef369c93e4f440f03de5c3d1715507c1db30a5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T032713-ppo-11-375e4020/checkpoint-50000.zip": {
+      "bytes": 286456,
+      "sha256": "9362ab215ec3c33fe87c91089a30f7e376f34a18b3ae1961586456322156fa2b",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T032713-ppo-11-375e4020/checkpoint-10000.zip": {
+      "bytes": 283210,
+      "sha256": "6434d09d53c733a422ae4a02b0f7fe7ed1c5bf8da45dd634e340faf88bc8662d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T032713-ppo-11-375e4020/checkpoint-40000.zip": {
+      "bytes": 285856,
+      "sha256": "87552875c1f35f1a6077c4d083c4db3a76aabd0d7853b482597e559ac02b8a3a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T033222-ppo-23-c45b7b9b/checkpoint-20000.zip": {
+      "bytes": 284025,
+      "sha256": "c7b56e3ef4fde3bbfe651b3b4c4cbfe96e698a1eae0ade532cf59c673a5733b1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T033222-ppo-23-c45b7b9b/checkpoint-30000.zip": {
+      "bytes": 284948,
+      "sha256": "46b46ef1ef59c037de236144657b40aadf5e71c3d02190b3fba7b967f16e5454",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T033222-ppo-23-c45b7b9b/checkpoint-50000.zip": {
+      "bytes": 286456,
+      "sha256": "36a4b1b0ca12fa75f130f5f0c1714eeabff19b694b91e2e82409a0667f7e87e6",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T033222-ppo-23-c45b7b9b/checkpoint-10000.zip": {
+      "bytes": 283134,
+      "sha256": "6a579b45433cab20449cf619f28529ff7484aba33b5d95180d102471bf5c8573",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-a1655a0c80d8/retained/artifacts/runs/20261015T033222-ppo-23-c45b7b9b/checkpoint-40000.zip": {
+      "bytes": 285812,
+      "sha256": "e0c24badda8e4ab144824ff493c01cf820fb5df3560b2868ed2b1e498760b027",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/artifacts.tar.gz": {
+      "bytes": 92189574,
+      "sha256": "8289450bf8a36f0f555172c571d75940914db276b65a26f2f3d88a963177f178",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/checkpoint.tar.gz": {
+      "bytes": 92189195,
+      "sha256": "b0dc00405c9424426b41c31163238fc264e41b2eae35ae2db8bf2905e66600f7",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T225351-sac-23-85cb7b8d/checkpoint-20000.zip": {
+      "bytes": 284023,
+      "sha256": "94860293f4a3b821f70900bef92d48339e54c0072da922f505af0673218752a7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T225351-sac-23-85cb7b8d/checkpoint-30000.zip": {
+      "bytes": 284943,
+      "sha256": "6dd407f841a447c80fb5954499d672cb96bd79c6c7499d988ca030ab9f7df009",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T225351-sac-23-85cb7b8d/checkpoint-50000.zip": {
+      "bytes": 286452,
+      "sha256": "4bfc1ab8973581201aaecb2a1312bc3c618a2d97cb1632bf02b6311ee006b5c6",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T225351-sac-23-85cb7b8d/checkpoint-10000.zip": {
+      "bytes": 283118,
+      "sha256": "beaae0c67d22c5b24f246db871903859236c7c193fb1a784935f04b8df3df2c6",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T225351-sac-23-85cb7b8d/checkpoint-40000.zip": {
+      "bytes": 285807,
+      "sha256": "9f7db009ca4c5667da0a598b082675817816305cfa4b6f90f1733d1496e9a69c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T224101-sac-11-85d76b22/checkpoint-20000.zip": {
+      "bytes": 284063,
+      "sha256": "eb488a0572130855c391d8f6eb24f845c55752a9134f40e583da46c13711bb75",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T224101-sac-11-85d76b22/checkpoint-30000.zip": {
+      "bytes": 284943,
+      "sha256": "4bae70091f638f1874478208579f2daffe3bdedb2c1902d9eb410e6ad72a990a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T224101-sac-11-85d76b22/checkpoint-50000.zip": {
+      "bytes": 286452,
+      "sha256": "b4700e7c8a3cd6e9d810449d6fb70cf6a5d310cee0b87daf9285007e556fbdab",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T224101-sac-11-85d76b22/checkpoint-10000.zip": {
+      "bytes": 283165,
+      "sha256": "2ce5d2c1f88e4d02a3966a0a9ef7b4eb101f2315e55b19b39a74cfa678b1f8e1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T224101-sac-11-85d76b22/checkpoint-40000.zip": {
+      "bytes": 285851,
+      "sha256": "ed141890de821bfd9b5c2081bbd6c81e3fe45b5819c3557b590b15a797e00430",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T230742-sac-37-22899371/checkpoint-20000.zip": {
+      "bytes": 284023,
+      "sha256": "30aaedf01c8c4d5c8ff1a873de151a54f62d63b7f685843ee0cb91c970e094aa",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T230742-sac-37-22899371/checkpoint-30000.zip": {
+      "bytes": 284903,
+      "sha256": "16366dfee6467c15c85ba018b97ee2a3e18d4394ce9944ca640c2a104660be3a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T230742-sac-37-22899371/checkpoint-50000.zip": {
+      "bytes": 286456,
+      "sha256": "c4790c8bb74924c2c26603d42021fbfa51b4884d1bcda1dc988e7b5dabf96438",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T230742-sac-37-22899371/checkpoint-10000.zip": {
+      "bytes": 283158,
+      "sha256": "943b168b5ab93c9365bdb143ea4056c55ea85c686c66af3be166ff55b30e73d0",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T230742-sac-37-22899371/checkpoint-40000.zip": {
+      "bytes": 285727,
+      "sha256": "72490e9e34518f7991b7acccf063569c447f31c86da7c0e2c4c9448b0cfdbc43",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T225351-sac-23-85cb7b8d/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "c7b571fda97d65ce5fa16e6f177a7020e38ffdd92fb0ecdff9842f43fb606237",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T224101-sac-11-85d76b22/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "283a1c08cfb67a6dac833bd131bd20ba9bf2b13e8c0dd1bbe74fef9ab2feafae",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-b0d76808aab9/retrieved/artifacts/runs/20261014T230742-sac-37-22899371/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "19126c4ed745278c3cc66f99a5b51e83a349d578679cc7de8e1decba2ebac34f",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/artifacts.tar.gz": {
+      "bytes": 188722147,
+      "sha256": "754efa048831c926262ddc1af31364b514c78544c06521b6c0a73a6b8dbe635c",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/checkpoint.tar.gz": {
+      "bytes": 188721119,
+      "sha256": "6f23a62619ce6c363cb447e56c455b5d1172140e338f62562837bf7ec534b308",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T043543-td3-11-e0f77bb1/checkpoint-20000.zip": {
+      "bytes": 551008,
+      "sha256": "0eb72aef7710027305154af7576698d9c3a353d0878d0eb7d0bd296fe6df9a75",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T043543-td3-11-e0f77bb1/checkpoint-30000.zip": {
+      "bytes": 551888,
+      "sha256": "baf1a174fc00cec8644e71cb84382fe92e87bcbfd2eb3bd00449ffb5ed91e9b1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T043543-td3-11-e0f77bb1/checkpoint-50000.zip": {
+      "bytes": 553397,
+      "sha256": "e571b92d6737a2008a69d1fb9a9e87ee73bfeda746279d35be286771b150ffe9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T043543-td3-11-e0f77bb1/checkpoint-10000.zip": {
+      "bytes": 550110,
+      "sha256": "f5f23013edcf3abb15c99c6e474c7e03c166d206475dda51dd5bcb827c18b161",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T043543-td3-11-e0f77bb1/checkpoint-40000.zip": {
+      "bytes": 552796,
+      "sha256": "b0918f3235de1d3e0eff33152949b1f00689170b44c563404afa981bb6c529af",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T050311-td3-37-f4c7024f/checkpoint-20000.zip": {
+      "bytes": 550968,
+      "sha256": "9c9b648788d0f2a8ebd8ff8d9f2fa3c303df30de62e0b1662e046784b0cb475c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T050311-td3-37-f4c7024f/checkpoint-30000.zip": {
+      "bytes": 551848,
+      "sha256": "8f8319502a479157f140b85f80e35d97c11d56ea5530430f25b019593635c3ac",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T050311-td3-37-f4c7024f/checkpoint-50000.zip": {
+      "bytes": 553401,
+      "sha256": "adea25f3de20a522de4263690a30078de8fe62ba9089c403584e4fb262000d56",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T050311-td3-37-f4c7024f/checkpoint-10000.zip": {
+      "bytes": 550103,
+      "sha256": "932a23f86af0e8c3924d1a01b4f94eee3579b5fe9f325331b3c16a1ce6da505e",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T050311-td3-37-f4c7024f/checkpoint-40000.zip": {
+      "bytes": 552672,
+      "sha256": "19a0ba94ea7f36bdc3385ada1f72059c1a625a4bfb3b88e8567058d0bbd782ca",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T044743-td3-23-f8e6d2cc/checkpoint-20000.zip": {
+      "bytes": 550968,
+      "sha256": "b2d3171cd044f5955c81f4931d5897b413b4f2c66462c5f765cf87e01671bc0f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T044743-td3-23-f8e6d2cc/checkpoint-30000.zip": {
+      "bytes": 551888,
+      "sha256": "7e3cb03cf5612d4515b7c59caa3d13268f39f31418856bae7443aac8f61f8967",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T044743-td3-23-f8e6d2cc/checkpoint-50000.zip": {
+      "bytes": 553397,
+      "sha256": "91e34128befdf4aa89c96ce5f0739e82c8ae81afa3270764955c07c280657a48",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T044743-td3-23-f8e6d2cc/checkpoint-10000.zip": {
+      "bytes": 550063,
+      "sha256": "e549a6b5e9421f8878e5f5a1c721c9da615f6faeb24b04df9db3e6fe91fe0f64",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T044743-td3-23-f8e6d2cc/checkpoint-40000.zip": {
+      "bytes": 552752,
+      "sha256": "809e3e2f3d2d86c4b17478937e5dfaea676f3c9dd72183498cec177607a7ace5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T043543-td3-11-e0f77bb1/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "bd0e842bb4775b139714649e1b114d398babc883c84de85db283d8fb4480bbef",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T050311-td3-37-f4c7024f/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "1d36899c15df829b9c40ddfbd942d5b56fedff520c44ee95e237ece1982a3f7c",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-9d2d4dacf544/retrieved/artifacts/runs/20261015T044743-td3-23-f8e6d2cc/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "6ca7e6c1715e76bbdb5b82f3aa35f85110118acde0671b3f46c6ed904b0aed43",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/artifacts.tar.gz": {
+      "bytes": 20910997,
+      "sha256": "4bb346350b3171a04ad8e67e86aacc0a8946af0f5890d15865a42a3871ee2d6e",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/checkpoint.tar.gz": {
+      "bytes": 20365550,
+      "sha256": "6252e3d87d77487824b0fb0d5ea5ec8f4cd0284495825813a46790f7508fd339",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/retrieved/artifacts/runs/20261015T034510-ppo-37-4b34f966/checkpoint-20000.zip": {
+      "bytes": 283514,
+      "sha256": "7484645c5e5bc46bebc1987d1edde370b2cd9c3d0277645e8b58af7a4cf0d7a0",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/retrieved/artifacts/runs/20261015T034510-ppo-37-4b34f966/checkpoint-30000.zip": {
+      "bytes": 284397,
+      "sha256": "4a88e83f0f0a1679982a1c981451f2e7208ec12d2c5c059adc73e86df22bc194",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/retrieved/artifacts/runs/20261015T034510-ppo-37-4b34f966/checkpoint-50000.zip": {
+      "bytes": 285949,
+      "sha256": "201d5c500a4c09d36469f6f69b75dcfb43ecd3fe96ee3ad6a703eab24e5c2286",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/retrieved/artifacts/runs/20261015T034510-ppo-37-4b34f966/checkpoint-10000.zip": {
+      "bytes": 282663,
+      "sha256": "e9d7b1dec0ef911f9370585b1b990ac833770f98a783f7ef8569135ebbcc3ff6",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-42e7166a4d52/retrieved/artifacts/runs/20261015T034510-ppo-37-4b34f966/checkpoint-40000.zip": {
+      "bytes": 285221,
+      "sha256": "0a4a490a188c1d4c83f2e9e5973cb06e4599fa9aae9db4d34ec8dc7b4e9a4003",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/artifacts.tar.gz": {
+      "bytes": 195811421,
+      "sha256": "f155b289ee5960ca24609e008e948843a0b6c371b84c5dd43801bf1628c2d996",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/checkpoint.tar.gz": {
+      "bytes": 195811387,
+      "sha256": "e7fc4eba09fcfb84c7f13a65a68aad4e88cfdc47b441907f140c2f7cab5db71c",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T041520-sac-37-c9b54680/checkpoint-20000.zip": {
+      "bytes": 514855,
+      "sha256": "bcad3efb98eb7ef0174690b1ca91a31e09a4153de094ea9d00a5230b289e5a03",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T041520-sac-37-c9b54680/checkpoint-30000.zip": {
+      "bytes": 515735,
+      "sha256": "29d65a79488892c5e09ad27e0c4727d79674168f089ec2478195389ef3021adc",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T041520-sac-37-c9b54680/checkpoint-50000.zip": {
+      "bytes": 517288,
+      "sha256": "4f9bb64f18a66cf4c507f11c2b5f5ec6213a2ae899ffb9ea6fe0ac45473e2326",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T041520-sac-37-c9b54680/checkpoint-10000.zip": {
+      "bytes": 513990,
+      "sha256": "d5930d3c86ee6cc1dda48b1a4bd563958d9aee54c35b440e4d9ff615083588b7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T041520-sac-37-c9b54680/checkpoint-40000.zip": {
+      "bytes": 516559,
+      "sha256": "98ecaf310426ed7e87ee9f0b8acff2263f12dad9e30b89a6946ac939e76ac458",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T035139-sac-11-5894f943/checkpoint-20000.zip": {
+      "bytes": 514895,
+      "sha256": "d7a4614828e0de8b9fb85d3e70bcb7f60ea698d958ff4ea6759ac33ce74a9c8a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T035139-sac-11-5894f943/checkpoint-30000.zip": {
+      "bytes": 515775,
+      "sha256": "3f03eaf023d38f47149b5f0b05f9142a352bbc0a24d2cdcc2ef6cf2a5f04e264",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T035139-sac-11-5894f943/checkpoint-50000.zip": {
+      "bytes": 517284,
+      "sha256": "faf96e0ecc774655246151dd34224730ecb27c0bafbfba97e83ce793237d26cd",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T035139-sac-11-5894f943/checkpoint-10000.zip": {
+      "bytes": 513997,
+      "sha256": "bbd8714b9ab9026fac5d5065af46badfc66fad702af47d023268a8eeab1317fe",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T035139-sac-11-5894f943/checkpoint-40000.zip": {
+      "bytes": 516683,
+      "sha256": "e3c152a99155087e19f270a1d7b560bcf349395073eeaf2e49889f39dcf806cc",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T040214-sac-23-a13c81d3/checkpoint-20000.zip": {
+      "bytes": 514855,
+      "sha256": "06ba0ea6314f37be9a901ed25fce3cb52f5483608c0334e6476396667d1128a1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T040214-sac-23-a13c81d3/checkpoint-30000.zip": {
+      "bytes": 515775,
+      "sha256": "15afa4c92467ce7625b677fbd5c4937f0bb2a4fe9533db61f67e141717285e4d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T040214-sac-23-a13c81d3/checkpoint-50000.zip": {
+      "bytes": 517284,
+      "sha256": "dc7b7d494574fa6910aa93ed180876fb3103fc5e4bfcf93947766740d9b6c236",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T040214-sac-23-a13c81d3/checkpoint-10000.zip": {
+      "bytes": 513950,
+      "sha256": "4de5d1786f8073595d4665f9da71a0e38ae2431a0223ff4894dec75c831af97d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T040214-sac-23-a13c81d3/checkpoint-40000.zip": {
+      "bytes": 516639,
+      "sha256": "12039f16ac276a409dab2d8a41d67e2b80b8920cd24b5519a63ab1789b7e071d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T041520-sac-37-c9b54680/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "c4d43f05de34a8d7098d3b6c428e3e46e26bc57366afe173d52a3ea9e8dbcba5",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T035139-sac-11-5894f943/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "64aebb2a3d5c67d85268104b407d3aea7c9383863e921181216049b247a60d51",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-4b37a2b2344b/retrieved/artifacts/runs/20261015T040214-sac-23-a13c81d3/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "b0c95947a9c6bf6c9faec2c148dcac2b557fba975ae51f5d8338ab6dec87c9b4",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/artifacts.tar.gz": {
+      "bytes": 109998857,
+      "sha256": "514054853a727d837eb70ee7502aef49ef442618f92538f72ba993e032f9bf72",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/checkpoint.tar.gz": {
+      "bytes": 109999481,
+      "sha256": "d5904e1f34a2f99e32fad75c56f9b60f08f26d90e27f12cf5ec231c0d62af8cb",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T012931-td3-37-27db8d28/checkpoint-20000.zip": {
+      "bytes": 380466,
+      "sha256": "ff779a9c18f88b58dad615a6d97a4fbfb87a5e0ee029674af1b273332df0aca1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T012931-td3-37-27db8d28/checkpoint-30000.zip": {
+      "bytes": 381346,
+      "sha256": "ec27a26510d1d55fc5120cd3704433f37d0d0e036d5718e92e772f7258751e5f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T012931-td3-37-27db8d28/checkpoint-50000.zip": {
+      "bytes": 382899,
+      "sha256": "09f12c1a1a582b2c61c9b02fc9dec22dbdf9483d031b3b2b947a527de753638e",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T012931-td3-37-27db8d28/checkpoint-10000.zip": {
+      "bytes": 379601,
+      "sha256": "819f2dd8e1ac134ff0212d15db9e69cbf917816e6e297b54bd58fa308cad3578",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T012931-td3-37-27db8d28/checkpoint-40000.zip": {
+      "bytes": 382170,
+      "sha256": "d133b90130e30fa5e63397bcf905184376122f01089fec0204907b158cd280af",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011903-td3-23-dd9fa73d/checkpoint-20000.zip": {
+      "bytes": 380466,
+      "sha256": "5b5199f1e66c52eb7d062ecaf1624ad48ac4d7c905a28f2bb1cd2c00ac1d6985",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011903-td3-23-dd9fa73d/checkpoint-30000.zip": {
+      "bytes": 381386,
+      "sha256": "2e42e1c25be48cd371a06dac2845859e24bf65e3a119d3bae5295713271e83a7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011903-td3-23-dd9fa73d/checkpoint-50000.zip": {
+      "bytes": 382895,
+      "sha256": "8263bd020f6640b241915958a3bddc54fb33914acf0f3ee2f7956ffb12defe10",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011903-td3-23-dd9fa73d/checkpoint-10000.zip": {
+      "bytes": 379561,
+      "sha256": "5d807133918a0c486a654888bc456fa54e2f32028810f4301070b9a64a694e5a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011903-td3-23-dd9fa73d/checkpoint-40000.zip": {
+      "bytes": 382250,
+      "sha256": "be71129b64268be9910198cfab23e25b741f895b9cb93c4fb4ebd8d99c7bdbfc",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011051-td3-11-909fb209/checkpoint-20000.zip": {
+      "bytes": 380502,
+      "sha256": "d9402ca325c594d4db0e648723db1b0fe9ddf6303f5c502ed24e73e84935a199",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011051-td3-11-909fb209/checkpoint-30000.zip": {
+      "bytes": 381382,
+      "sha256": "988a9a3cc8d6576eb790ddf228c9a229fb18d79c84f148a05e40d80fe9634b09",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011051-td3-11-909fb209/checkpoint-50000.zip": {
+      "bytes": 382891,
+      "sha256": "2f58caebbc2de8a3bead84fb05f24ddc0a385318ea1174e4d0096a260c3d69e0",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011051-td3-11-909fb209/checkpoint-10000.zip": {
+      "bytes": 379604,
+      "sha256": "cb13dcaf837d0954d3628a1be7f824f46c5b7b5aad850ee4827d6bd336fa8a06",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011051-td3-11-909fb209/checkpoint-40000.zip": {
+      "bytes": 382290,
+      "sha256": "db4cddb46b6e8e64675710dfa80d4bdacbcc250f343b900e8fe926008304e49d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T012931-td3-37-27db8d28/checkpoint-replay.pkl": {
+      "bytes": 33202094,
+      "sha256": "9af73ccf55426df6c969415a20b9fdfdf1cc645f4e742eb86afffa0bf8e99224",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011903-td3-23-dd9fa73d/checkpoint-replay.pkl": {
+      "bytes": 33202094,
+      "sha256": "a47aea8f690668de2dff6bee7210d43d72a684a774a3c0f66f58d3ca79072b72",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-6334e57ed762/retrieved/artifacts/runs/20261015T011051-td3-11-909fb209/checkpoint-replay.pkl": {
+      "bytes": 33202094,
+      "sha256": "1c4aca0d8c2652911e6245bf18c0a172aa702e31d3cc0dcf91763f6bf926fe83",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/artifacts.tar.gz": {
+      "bytes": 59509700,
+      "sha256": "f15f850ab9dc5995bd5686e6af28253f1cc0616b4cca572eb05dad1e575dc369",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/checkpoint.tar.gz": {
+      "bytes": 59092882,
+      "sha256": "19248af012a06706ac9ea90cc0272c4d51a2128010fad6fe121d87a131b45421",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261014T235731-ppo-11-1dc4d47b/checkpoint-20000.zip": {
+      "bytes": 197372,
+      "sha256": "6a876a733ad374990def75dce383250ca5d221505df0d279cedb7e27b500f4a0",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261014T235731-ppo-11-1dc4d47b/checkpoint-30000.zip": {
+      "bytes": 198255,
+      "sha256": "dbf6a38a452b7ac64b8760b4105acd8f4533653a4bd5099d26bb9d3115748f97",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261014T235731-ppo-11-1dc4d47b/checkpoint-50000.zip": {
+      "bytes": 199763,
+      "sha256": "eb6e386c9004825092a7ed604c6a9a191da2072fc8c438140ca3f415693ac628",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261014T235731-ppo-11-1dc4d47b/checkpoint-10000.zip": {
+      "bytes": 196517,
+      "sha256": "5b48ce315899b49d9698e46c2864a3a66f769c281d706053d1cbed0efc5bf9ad",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261014T235731-ppo-11-1dc4d47b/checkpoint-40000.zip": {
+      "bytes": 199163,
+      "sha256": "9b5d6043cce7d4f0ad73716a55b46e99f3bf1a08252f8d92410a6b3e995084be",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000824-ppo-37-a6471565/checkpoint-20000.zip": {
+      "bytes": 197336,
+      "sha256": "58d2aa2d7e4181d86c45fd3725a683f7016be544efed0f476107a4cdf4897f75",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000824-ppo-37-a6471565/checkpoint-30000.zip": {
+      "bytes": 198219,
+      "sha256": "54cec1cf6171203e52c0aff4db9f97fb5a2816f767544a930ec1b9035bc97a1d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000824-ppo-37-a6471565/checkpoint-50000.zip": {
+      "bytes": 199771,
+      "sha256": "88b79640c50440409a2207f83111987a51d16cab49849b1bece79ab977aeb100",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000824-ppo-37-a6471565/checkpoint-10000.zip": {
+      "bytes": 196485,
+      "sha256": "01b063c14708a8e7ab83181a87d250f966d58b47222bf1644aacceec33373200",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000824-ppo-37-a6471565/checkpoint-40000.zip": {
+      "bytes": 199043,
+      "sha256": "1a6e55605dd5d006d2c1546cf41d0dabc1fc13a01be6fcb40a20fcb3d133c25c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000227-ppo-23-5c4db9e5/checkpoint-20000.zip": {
+      "bytes": 197336,
+      "sha256": "ba154ad0c050f8fd5f2908abe1819ba68eff8abd08eb62d2eb84495d8110ac48",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000227-ppo-23-5c4db9e5/checkpoint-30000.zip": {
+      "bytes": 198259,
+      "sha256": "151bbaad0353899832bfff86a03643fea00166069d2be626030d8b65f5dcf722",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000227-ppo-23-5c4db9e5/checkpoint-50000.zip": {
+      "bytes": 199767,
+      "sha256": "6efb453d678454bf69d359cb2f076f537763fa807d28eafe11c83a5d1d880f7b",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000227-ppo-23-5c4db9e5/checkpoint-10000.zip": {
+      "bytes": 196445,
+      "sha256": "74324629fb6bf9af7aba79d877d1a9516e2d381ed3526036c231048d8dc7c53c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-4661cd950bd9/retrieved/artifacts/runs/20261015T000227-ppo-23-5c4db9e5/checkpoint-40000.zip": {
+      "bytes": 199123,
+      "sha256": "62977c769c75b30c4851cdb6b8134e7331f1117b9084fbc72b5856bf16194eb7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/artifacts.tar.gz": {
+      "bytes": 95467541,
+      "sha256": "04e8005f4af6480a4ce5bbc023e69944f28776f16092a2b8fb38ee61d8170f7f",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/checkpoint.tar.gz": {
+      "bytes": 89688253,
+      "sha256": "cd25fa9710fed290b2048158236d6890ea0a0f004145ceafb29020f5a4472a72",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/checkpoint-20000.zip": {
+      "bytes": 299400,
+      "sha256": "291d01b621fdc48a6e7458660ebf1f4d7099cbc8c6e73d620427a1a44e41e4f1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/checkpoint-30000.zip": {
+      "bytes": 300320,
+      "sha256": "656b353ec4b05e561387e963cd115e9fa061f8cfacd88e0371f06ceaee3f9e1c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/checkpoint-50000.zip": {
+      "bytes": 301829,
+      "sha256": "3639fbbfbddd978f7c868e09c7a0dc06489ae0b7bca636be75bb4944803ca9b5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/checkpoint-10000.zip": {
+      "bytes": 298495,
+      "sha256": "cf3432febb12688dc882a21a285e6ddc71a85ac092520c3607f08059204a6298",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/checkpoint-40000.zip": {
+      "bytes": 301184,
+      "sha256": "5f21f8c6c9928ff525fba33fd5920d3a69cb52df94cdb2c3aaa8502fd9fd5bbf",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/checkpoint-20000.zip": {
+      "bytes": 299400,
+      "sha256": "e541cf13b17a2b03704918cf0bb85fc3afca06e68863b6425a0f99735c8a30ea",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/checkpoint-30000.zip": {
+      "bytes": 300280,
+      "sha256": "85912677b6b6abe6f5129412bc84e883ac215b9642e8254ad8f184e5a5ae5135",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/checkpoint-50000.zip": {
+      "bytes": 301833,
+      "sha256": "79a32b03f9241188f51059c946e5c2fd569d8b4afda9b8533aa7a277ea450292",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/checkpoint-10000.zip": {
+      "bytes": 298535,
+      "sha256": "461663063d6e86ee5055f281820bc5b550218511ead55b9a9cd5d4551098cd1f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/checkpoint-40000.zip": {
+      "bytes": 301104,
+      "sha256": "dc879c3f13754f4ee77c2ffd8f1a80348692500558b324eeb9a320e9acc40435",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/checkpoint-20000.zip": {
+      "bytes": 299440,
+      "sha256": "16c056f6b0d2db97b4ff47f9b7c4185dbcf3f34f73c025b52b1b02f225f6d4a4",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/checkpoint-30000.zip": {
+      "bytes": 300320,
+      "sha256": "d7fc92dbf37ebc560338f7d29a02b69e8e6846ed0face58301a12f3ada9c9cd2",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/checkpoint-50000.zip": {
+      "bytes": 301829,
+      "sha256": "19fc3cc53043af6d86fe8ce883d913f913f66e14e61d6fcb3b08f00c0f3a64e5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/checkpoint-10000.zip": {
+      "bytes": 298542,
+      "sha256": "309fc47f4f1d20d7e6595735f425d0d149a3936396f9a1bd551e49f191bed022",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/checkpoint-40000.zip": {
+      "bytes": 301228,
+      "sha256": "c18a6eafbc578a49e779b09ab7f20aca622abcf3909f8e1adcff24506f14928f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "5bb79adb4f734507b4b58ccd5d259a8631eed2eeff56d00143ec77f8a788ba2e",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "5ec19b3e5573a7906df86a08b6a5f5ea6f8359b5e78b3fe166437402e2689ae3",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "81884d5cd3fbcac492258cf66142a3aace17131979ef432e7599454f802fcdbb",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/checkpoint.tar.gz": {
+      "bytes": 2781231,
+      "sha256": "83fde3ae9ebc127102cb9477b154f95ca90aa8ec7bf43382d5831b8dd46038b0",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/partial-artifacts.tar.gz": {
+      "bytes": 10080491,
+      "sha256": "ccac9ef074bcfab3d53a754d794680c63ecfed5001c9ea745a5dfcaa6c91f36c",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163656-ppo-11-ee38d08f/checkpoint-512.zip": {
+      "bytes": 67896,
+      "sha256": "9a052c28dfcb2636dbe1691dcd951fc4378afcaf0a0104ee363ea5b6df72fede",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163656-ppo-11-ee38d08f/checkpoint-256.zip": {
+      "bytes": 67777,
+      "sha256": "49abd95cfa4a9d8049a67d4f73f7e70bcb44ee6457e1d5cfd8ad68252b1e4780",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163708-sac-11-e5653ab4/checkpoint-512.zip": {
+      "bytes": 118416,
+      "sha256": "5b92b2a758d93863d3a089c61e92e4632fa99473f7a0a4e8b562658719cbccad",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163708-sac-11-e5653ab4/checkpoint-256.zip": {
+      "bytes": 118307,
+      "sha256": "22ee8c1d9213f4f8b5a9388e8f07273cb2f60cbea4ba3b16fc1bf428c519f059",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163708-sac-11-e5653ab4/checkpoint-768.zip": {
+      "bytes": 118496,
+      "sha256": "593c4234104097573c6025e3e15155df05c50e4d47038910a259b72d00bffcaa",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163708-sac-11-e5653ab4/checkpoint-1024.zip": {
+      "bytes": 118608,
+      "sha256": "24f82f5509a4dfd372470b904d7083933a2518bf7fe929a7eaca4e95ff7c6321",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163737-td3-11-6db84fee/checkpoint-512.zip": {
+      "bytes": 120737,
+      "sha256": "5d54c5407e7535c7ce4a84d82a947368765d6d1c372ff5a4d3f85c6bef140153",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163737-td3-11-6db84fee/checkpoint-256.zip": {
+      "bytes": 120657,
+      "sha256": "2dfce615f3d05d83b7a04d38cedb35ab7c0874d0dd5818d98d06cb6f61ce047b",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163737-td3-11-6db84fee/checkpoint-768.zip": {
+      "bytes": 120817,
+      "sha256": "a8dc88b9846fa323503f18b6f8f893ecc9361c026c9bc6fc2a0a47142b46e50d",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163737-td3-11-6db84fee/checkpoint-1024.zip": {
+      "bytes": 120929,
+      "sha256": "9a71cd92472d541b8d5f62ae4b9d1c19908692dd25408a0a40216881c44d1147",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163708-sac-11-e5653ab4/checkpoint-replay.pkl": {
+      "bytes": 12401833,
+      "sha256": "cf6d9d5f70cd21fcaf4acda7dd46fd4dcc17b2643086118d59f76b25376d0a4f",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-fcb20e48ed3d/retrieved/artifacts/runs/20261014T163737-td3-11-6db84fee/checkpoint-replay.pkl": {
+      "bytes": 12401833,
+      "sha256": "ca0938752c129270c359dd00e8fad20972a15f2c8e99d5c0e08f73bf968c553b",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/artifacts.tar.gz": {
+      "bytes": 33372317,
+      "sha256": "890853130ccc2ec038491c3637acdf4ba0a3ccf3eded992f5dc6f776458a914e",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/checkpoint.tar.gz": {
+      "bytes": 10962719,
+      "sha256": "728509e8975ce01f7c89372e1e801a4e1b42abac652dc907e33b73b7c00f8712",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213925-sac-11-626c71d1/checkpoint-512.zip": {
+      "bytes": 236159,
+      "sha256": "a2a61edbb257740e148a63e5538631bf597787547173f39c57417ca7d3681c0c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213925-sac-11-626c71d1/checkpoint-256.zip": {
+      "bytes": 236050,
+      "sha256": "3740f3655665903caec9e2c29d9c3bca6c70c7f11024bfb5aec1828d6dc8dc7b",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213925-sac-11-626c71d1/checkpoint-768.zip": {
+      "bytes": 236239,
+      "sha256": "9ddaca72e466dcf4aa49df58f7051faaa28e987e17fb650b077b2eb69e226570",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213925-sac-11-626c71d1/checkpoint-1024.zip": {
+      "bytes": 236351,
+      "sha256": "83e4c4d4616964833af790750884dc38259b0db50b850e014cccf4b5fbe36652",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T214151-td3-11-44310cdc/checkpoint-512.zip": {
+      "bytes": 248848,
+      "sha256": "6005c9a479034820fec1a74b54127997eccb3efdf5ec404361e25eaa1722ae6a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T214151-td3-11-44310cdc/checkpoint-256.zip": {
+      "bytes": 248768,
+      "sha256": "29388e7cb4039d6ab49f439b238396c9b48332cc5e69d150a6c243f24f416260",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T214151-td3-11-44310cdc/checkpoint-768.zip": {
+      "bytes": 248928,
+      "sha256": "1d220dc9fc4ebdfba479d616ef8c26939212ac08bd465cf4e6c0ef77e2e81172",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T214151-td3-11-44310cdc/checkpoint-1024.zip": {
+      "bytes": 249040,
+      "sha256": "6383a369ce57d417c00cfea250b2fc535cd7a6ec8419fb0503ec7fecc6ac1cfa",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213808-ppo-11-1f6184be/checkpoint-512.zip": {
+      "bytes": 133367,
+      "sha256": "04e4018a8e4baac39c81a935cef207df5a0f33e605fc741fc5b96fa97abb5dbc",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213808-ppo-11-1f6184be/checkpoint-256.zip": {
+      "bytes": 133248,
+      "sha256": "9bc72ef4afb57bf47d3b56ba5ff00911a587897cc69fec6b1e903c3cf9e9fea4",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T213925-sac-11-626c71d1/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "f7de314280fb1a80717293e50872e2a9cd77fb2c09658347e274cd5d8b86dfc0",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-cpu-8c7f01297b8a/retrieved/artifacts/runs/20261014T214151-td3-11-44310cdc/checkpoint-replay.pkl": {
+      "bytes": 77202643,
+      "sha256": "f6c43bc1578e6fd991cd00423d248b3a2739913056aedd8925d4a8cc9198a72e",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/artifacts.tar.gz": {
+      "bytes": 167335650,
+      "sha256": "ab7801d95231e5071f31ab0e38b17ee4ad029f99a48a9d5da455d4304bb9b1cd",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/checkpoint.tar.gz": {
+      "bytes": 148690939,
+      "sha256": "d4bbfbb8eb8d773837710ba6506f679eb253043ca707b85f7ae14b6ffb1bdac8",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T030244-td3-23-0cc092b5/checkpoint-20000.zip": {
+      "bytes": 470873,
+      "sha256": "4da2ba839fc8ed0d2572c34944121c1121568843fe12d67b39824fc396b4f9ad",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T030244-td3-23-0cc092b5/checkpoint-30000.zip": {
+      "bytes": 471793,
+      "sha256": "3a4a2d732e26bd618c8eeae6fc413fef93360c40c56ea5f78c6274f4a5fb936c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T030244-td3-23-0cc092b5/checkpoint-50000.zip": {
+      "bytes": 473302,
+      "sha256": "6ecb6fc30dc81123e8ad9e21034a0c17f2d44db8601b5f6a29fc829595c169bf",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T030244-td3-23-0cc092b5/checkpoint-10000.zip": {
+      "bytes": 469968,
+      "sha256": "1137b6cc79c69c872fc81efa1e7e9206d2c8d9685b5f5024b9227956c50e31c2",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T030244-td3-23-0cc092b5/checkpoint-40000.zip": {
+      "bytes": 472657,
+      "sha256": "a6c793abe39a1a569478206079d6f9975a195d4e54db99efa04da2a4e13289df",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T031208-td3-37-a7f3590b/checkpoint-20000.zip": {
+      "bytes": 470873,
+      "sha256": "1e42ac9dae2c97989fd14b135f2c417a29b58c2d67854f26e61869d8e4d4f494",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T031208-td3-37-a7f3590b/checkpoint-30000.zip": {
+      "bytes": 471753,
+      "sha256": "c815beb81056b78fb7b20fd5299ebb7fa624eb6f0594788b75df3ff56e5f208f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T031208-td3-37-a7f3590b/checkpoint-50000.zip": {
+      "bytes": 473306,
+      "sha256": "eefdd020d98164583e56bc6591258e1bb57ce0e205c47ce1732806db7d1e902a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T031208-td3-37-a7f3590b/checkpoint-10000.zip": {
+      "bytes": 470008,
+      "sha256": "75d936635ce85ffb4bcd209d268101f9b8973535ea7f3ef24c7d92b9c4c6a7db",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T031208-td3-37-a7f3590b/checkpoint-40000.zip": {
+      "bytes": 472577,
+      "sha256": "079b7a316e176d35590759e8769150309b9c5e7e3c298335400f1b450518fbe9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T025452-td3-11-a022e77f/checkpoint-20000.zip": {
+      "bytes": 470913,
+      "sha256": "22c53c42ef9f45c0802ca9b347db78673ff5e98cedd7302327a5fbe654ce58e5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T025452-td3-11-a022e77f/checkpoint-30000.zip": {
+      "bytes": 471793,
+      "sha256": "be5159841559448ad2f52e2205ed1ea9df277a46d04ef5f59f8ab9f5b18c5184",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T025452-td3-11-a022e77f/checkpoint-50000.zip": {
+      "bytes": 473302,
+      "sha256": "8319fa2f709bddfa3404a62b14c1162870ca4a703c6b034e0a4d9f30eb0fcd36",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T025452-td3-11-a022e77f/checkpoint-10000.zip": {
+      "bytes": 470015,
+      "sha256": "855b3eeafdb2d7623d69e5fefbe29bcf6dbf4814a434db14d3c7e749fcf53859",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T025452-td3-11-a022e77f/checkpoint-40000.zip": {
+      "bytes": 472701,
+      "sha256": "bd14f7c0b8997327d8f66108241e8405d68a5f25f89a3d1b0147758001bfbe48",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T030244-td3-23-0cc092b5/checkpoint-replay.pkl": {
+      "bytes": 56402384,
+      "sha256": "3434fcb88ea28a484b661a728c5211a3adccbafdbe74f15e8038c0e0f6b8edad",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T031208-td3-37-a7f3590b/checkpoint-replay.pkl": {
+      "bytes": 56402384,
+      "sha256": "ab2b218cd6ce2ed77bf9115e7b686a837fa82b104730f91541f35d5b91c33ae1",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-e3c7615877e8/retrieved/artifacts/runs/20261015T025452-td3-11-a022e77f/checkpoint-replay.pkl": {
+      "bytes": 56402384,
+      "sha256": "671b46f3f684d29d1c8e81791aa9a8dbef81c44b8dc78c720b0c1ff9e68db3c1",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained-ppo-checkpoint.tar.gz": {
+      "bytes": 132873805,
+      "sha256": "e644c254e22186a69ea7f6eb3320759507fafdc3eef79ab7de8cb81e8524cb31",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/manual-checkpoint.tar.gz": {
+      "bytes": 132494911,
+      "sha256": "6ddfe481e30de49d2c9535b5ff6499f4fecf1554d237a58cb083b6a47ca89727",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/checkpoint.tar.gz": {
+      "bytes": 132873805,
+      "sha256": "e644c254e22186a69ea7f6eb3320759507fafdc3eef79ab7de8cb81e8524cb31",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215140-ppo-11-539fbc67/checkpoint-512.zip": {
+      "bytes": 67895,
+      "sha256": "1f5f8a3960a5c23618f43233d035352c5350bdee360bc0eeee671f0c247105b5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215140-ppo-11-539fbc67/checkpoint-256.zip": {
+      "bytes": 67776,
+      "sha256": "9c7313976c0f49e18c485923f6ef2a9e991347b275b86444582db06f3aa320c9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215256-ppo-11-0d77f723/checkpoint-512.zip": {
+      "bytes": 68407,
+      "sha256": "2a48a62a3015ec53b8d5a3d92a9515575dc1dcb067bf6d51e9239f8ab499b613",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215256-ppo-11-0d77f723/checkpoint-256.zip": {
+      "bytes": 68288,
+      "sha256": "e49f094b06d7e7c378e06a2eb0fc1f2608034a3c0c48fc8e3490a11e7457cfa3",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T221346-ppo-23-25661f1a/checkpoint-20000.zip": {
+      "bytes": 156346,
+      "sha256": "d66eb7e1fb90965d30dae8c29cd6cbcdcee32c4f69c8d3cb15c5beb8aad1b907",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T221346-ppo-23-25661f1a/checkpoint-30000.zip": {
+      "bytes": 157269,
+      "sha256": "9d8cc515f785b15fbf07d493110bf77c186c612a25e65925cdf5b367ab83ed28",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T221346-ppo-23-25661f1a/checkpoint-50000.zip": {
+      "bytes": 158777,
+      "sha256": "d26a0cc802706f41f3e028645ececbc15c8306a25a2e573932f8e6ce50fcc504",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T221346-ppo-23-25661f1a/checkpoint-10000.zip": {
+      "bytes": 155455,
+      "sha256": "1c525f0873cab70258cc4bfcc3e110db96b5b2c420bada89a058b45e7c9c8c69",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T221346-ppo-23-25661f1a/checkpoint-40000.zip": {
+      "bytes": 158133,
+      "sha256": "a7de63338776965f5e973cc678dfcf22db27f408e9cd7362a66ad898ad13d718",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215505-sac-11-c60e0da5/checkpoint-512.zip": {
+      "bytes": 119375,
+      "sha256": "90a02da5c94314bc027155940657f7104904a4704aef614c0639c4bf039a0016",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215505-sac-11-c60e0da5/checkpoint-256.zip": {
+      "bytes": 119266,
+      "sha256": "77f8ea96a4c9ba5c507ab966b617a478297cc6c72ee9a459594290708fe0110c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215505-sac-11-c60e0da5/checkpoint-768.zip": {
+      "bytes": 119455,
+      "sha256": "9a17cfe504b5e2c5b3ee11509f4936aa17ddd1f8cbeffb6ba6a1055ec12915b5",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215505-sac-11-c60e0da5/checkpoint-1024.zip": {
+      "bytes": 119567,
+      "sha256": "2573dfe00558e133d0aa17af168e92f6c0e8a0bf57c9f2dba143fea3500ab990",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T222342-ppo-37-6166f31d/checkpoint-20000.zip": {
+      "bytes": 156346,
+      "sha256": "c0b76e0c8ca9761909177a4e156f224f0e66bdd59062307cc1e5f4310d021b6c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T222342-ppo-37-6166f31d/checkpoint-30000.zip": {
+      "bytes": 157229,
+      "sha256": "7741308d5defb48f8eba11280141b6f15e67d87c59229185b951081378b26a21",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T222342-ppo-37-6166f31d/checkpoint-50000.zip": {
+      "bytes": 158781,
+      "sha256": "b2b397b602ed1a9975448db142a7307d1f7716bb3630ba69fdae8b6dedecf5b8",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T222342-ppo-37-6166f31d/checkpoint-10000.zip": {
+      "bytes": 155495,
+      "sha256": "34de5c1aee79d3c73a8d7d6796ae0fc5c26df73012c3a38be0baddb8e423dda7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T222342-ppo-37-6166f31d/checkpoint-40000.zip": {
+      "bytes": 158053,
+      "sha256": "c90878866f8d468c7c798cec381d45c796d8d07314a3bb0b986326c8df39713a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215943-td3-11-f9a47797/checkpoint-512.zip": {
+      "bytes": 121696,
+      "sha256": "d8704535326ed8cf0364a562d11751337d65c47c52867fddbfcc71acaa55af13",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215943-td3-11-f9a47797/checkpoint-256.zip": {
+      "bytes": 121616,
+      "sha256": "fac5c42bc013c7be12a229bd0329d833ed34c46f2add82a5fab89b42a40fb7e9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215943-td3-11-f9a47797/checkpoint-768.zip": {
+      "bytes": 121776,
+      "sha256": "3243dca7ef9f8399793b96e2e9dbbc100f97c71a8bc709dc13f4f0e6bf648051",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215943-td3-11-f9a47797/checkpoint-1024.zip": {
+      "bytes": 121888,
+      "sha256": "d9b193290f348074c6fc2c4c39d59793a8bb0b394967a7bbb967db982d5423fb",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T220445-ppo-11-68c70167/checkpoint-20000.zip": {
+      "bytes": 156386,
+      "sha256": "9ef046063a6634508aebc3305fcd2da720a0738853ac31de42061fdfa7172f07",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T220445-ppo-11-68c70167/checkpoint-30000.zip": {
+      "bytes": 157269,
+      "sha256": "b35c692c91bfce6a10a7fd9c0f03f88347ff1e8ede9099de9fe8998ac730b748",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T220445-ppo-11-68c70167/checkpoint-50000.zip": {
+      "bytes": 158777,
+      "sha256": "101c3b2045cb219a93b7147de212a6bb8eac9b223950c92a9aa715dc00c15aad",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T220445-ppo-11-68c70167/checkpoint-10000.zip": {
+      "bytes": 155531,
+      "sha256": "ba8ca7b27ab4cb759f2e21469e739d4ec987f54c762afd0c2b18c97ac797776c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T220445-ppo-11-68c70167/checkpoint-40000.zip": {
+      "bytes": 158177,
+      "sha256": "5e1fa45ea9b741ec8034bef0ee107497fd81106d0d72f84635fdbefac433dc55",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215505-sac-11-c60e0da5/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "d9225238d9116d9421b751ae7257280d234f58311d8ec743897563644bc4e97c",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-730a3b118149/retained/artifacts/runs/20261014T215943-td3-11-f9a47797/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "582aa5bce9cc3b9b065ca7b1bb119dbd768c8190e3943f423869a31cb7ebc2d4",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/artifacts.tar.gz": {
+      "bytes": 114367962,
+      "sha256": "ecff0653da3e71e5891e099ad3843dbb0148f661d4a8d1528d1d3e1e946a929e",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/checkpoint.tar.gz": {
+      "bytes": 114367654,
+      "sha256": "a733fc5a7a4586a99216e8b1fc7d88348502818405d427f688777b7d3bb177bb",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T002022-sac-11-2204455b/checkpoint-20000.zip": {
+      "bytes": 358469,
+      "sha256": "60e63a0db8b80d321b54f0503aed6383c41afe2ec2470c30bca5743da85986c4",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T002022-sac-11-2204455b/checkpoint-30000.zip": {
+      "bytes": 359349,
+      "sha256": "805bc2e9b1c9ca878d0f2f8ec14962573f57a313100d8888c8e96dc3a8777f1a",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T002022-sac-11-2204455b/checkpoint-50000.zip": {
+      "bytes": 360858,
+      "sha256": "6efc256c1cf0fced15fef55b5409a7b1f0e0fde7294f5f0cd3721167d18789e0",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T002022-sac-11-2204455b/checkpoint-10000.zip": {
+      "bytes": 357571,
+      "sha256": "7c5a62bab348d98bfde3a54a7cbf60caeedff91d08f9c4f399eebb4f0ee07c48",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T002022-sac-11-2204455b/checkpoint-40000.zip": {
+      "bytes": 360257,
+      "sha256": "e6c92f1c75e4ea182a82b84478bd0355010162ff1a1879c9f05d862f4bf2142f",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T003317-sac-23-1acb7069/checkpoint-20000.zip": {
+      "bytes": 358433,
+      "sha256": "96cc472c786222887debf9e40c9c5b3db6cfe070066540434d460ab5ef36cd43",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T003317-sac-23-1acb7069/checkpoint-30000.zip": {
+      "bytes": 359353,
+      "sha256": "765c19e760afc93ba7c3851b29478402a4c6bf3ecfdd086070bdf1e6259c53c7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T003317-sac-23-1acb7069/checkpoint-50000.zip": {
+      "bytes": 360862,
+      "sha256": "09c2abd254e29650a76f3b6c17861deed8080cc472ea4e19c36a85035a8103e7",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T003317-sac-23-1acb7069/checkpoint-10000.zip": {
+      "bytes": 357528,
+      "sha256": "853c97ca12f6ff01ec6746b7129c0956866b3b5f8a319403558c75e90158d21e",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T003317-sac-23-1acb7069/checkpoint-40000.zip": {
+      "bytes": 360217,
+      "sha256": "79dad5cfe7939f342cb9d4b21748e52d56963535aad2bc0479329cf98298d110",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T004819-sac-37-553827eb/checkpoint-20000.zip": {
+      "bytes": 358433,
+      "sha256": "6937df3420335a0898f1acb31895aa1b6cbba68876f0198e5d516f946f10c4ab",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T004819-sac-37-553827eb/checkpoint-30000.zip": {
+      "bytes": 359313,
+      "sha256": "621af3f2e43f9fb175c06d0ce85c84ca454312c34a367f530929cecc2f475683",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T004819-sac-37-553827eb/checkpoint-50000.zip": {
+      "bytes": 360866,
+      "sha256": "a9d8e872b7c0de87063febb34b95ae8b7fc577851141df52efd16a722e8476bd",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T004819-sac-37-553827eb/checkpoint-10000.zip": {
+      "bytes": 357568,
+      "sha256": "202872b031dbb65e725d1da1ff1ae9d1af0ea3e6cb24b2eb8af7f49ed6fe9b41",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T004819-sac-37-553827eb/checkpoint-40000.zip": {
+      "bytes": 360137,
+      "sha256": "a80c7869f92392d4434a7bca4b947de8dbeba94581bb388906ad5b0fff172a0c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T002022-sac-11-2204455b/checkpoint-replay.pkl": {
+      "bytes": 33202094,
+      "sha256": "3869b3287eeb92c674f4389c84d3460c83f1546499cf8fdd0d5dec3caa182395",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T003317-sac-23-1acb7069/checkpoint-replay.pkl": {
+      "bytes": 33202094,
+      "sha256": "d19218fc3cad9390554dfb2b06c8e84184db4c6921804fc9ec17017f60260629",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-cb7958b2796c/retrieved/artifacts/runs/20261015T004819-sac-37-553827eb/checkpoint-replay.pkl": {
+      "bytes": 33202094,
+      "sha256": "dcf03fc53dc982d5c69912c29a77530e49b6252b6dd4bae0fd7eeed732fa9028",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/artifacts.tar.gz": {
+      "bytes": 16681515,
+      "sha256": "09b4206fb7a0f694517ab04af3aeed7db7e852df61bbc4ef55a5a204af0f4abb",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/checkpoint.tar.gz": {
+      "bytes": 3231016,
+      "sha256": "68ed45824e6a5927d5d090c4edecb84b657b19fb4152c11382de8216d3ea54a5",
+      "reason": "Downloaded/periodic archive; verified extracted run and frozen copies retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165157-td3-11-ba05ce8b/checkpoint-512.zip": {
+      "bytes": 121696,
+      "sha256": "b4d21a54f604f64a9b994c788e8360d804563ff9cef1d8965952cdb0c3a18f87",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165157-td3-11-ba05ce8b/checkpoint-256.zip": {
+      "bytes": 121616,
+      "sha256": "a434d401ed77f1b8ef64f9b634780f3e9987ac6546f72c7e35d2f10fa274223e",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165157-td3-11-ba05ce8b/checkpoint-768.zip": {
+      "bytes": 121776,
+      "sha256": "15cded2d2bca8ca6a9ba771388c6f204a15dc58c7cb9e052d40b539cdbf10b2c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165157-td3-11-ba05ce8b/checkpoint-1024.zip": {
+      "bytes": 121888,
+      "sha256": "ac26c09ca9d44747e0269e435788c11f67194bb863daad8ae138ca4ec9610308",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165125-sac-11-8f32dab9/checkpoint-512.zip": {
+      "bytes": 119375,
+      "sha256": "212a6e9561e990f1bb702dbe1f3c2f82172d85b448eb07323b3a7c9d887efa3c",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165125-sac-11-8f32dab9/checkpoint-256.zip": {
+      "bytes": 119266,
+      "sha256": "3aeb38f3586c61486cbf7dd7d2fa043f5034257be809e2dae1c266050a3b70ff",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165125-sac-11-8f32dab9/checkpoint-768.zip": {
+      "bytes": 119455,
+      "sha256": "a9c053b8146d3168f3a878dd490cd41ecaa7a11ed7189ab690cabcded03cf5d9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165125-sac-11-8f32dab9/checkpoint-1024.zip": {
+      "bytes": 119567,
+      "sha256": "1ab9465468f3032a69a9e11b5f3fcf7fdd47c717ae4ad7ec7b6b28f754f71a15",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165101-ppo-11-2648fab0/checkpoint-512.zip": {
+      "bytes": 67895,
+      "sha256": "61a2a35d8a12fb94589c57935bef5eba8d8cc1dd3f4424961a9e0bc80241b5c9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165101-ppo-11-2648fab0/checkpoint-256.zip": {
+      "bytes": 67776,
+      "sha256": "a163e0c661316b60fb94e99dc45662aa7a2999fe527f02b60cd879c73f67674e",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/checkpoint-20000.zip": {
+      "bytes": 156386,
+      "sha256": "e129319bb72d1830f1038666122ae6d748b9111fcd8085c665873722768dac99",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/checkpoint-30000.zip": {
+      "bytes": 157269,
+      "sha256": "8a05acd9008fd7668cee391f33d094912ace1313f5575c264189ea05649db7d1",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/checkpoint-50000.zip": {
+      "bytes": 158777,
+      "sha256": "50a79b9066693960325c754f1d82108990091a30eeeac74e0a3f7b39f97c5303",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/checkpoint-10000.zip": {
+      "bytes": 155531,
+      "sha256": "ca9b601d08ebf6f141e941928164b4592359518d1ff1efb73af87160711d54d6",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165221-ppo-11-f631b986/checkpoint-40000.zip": {
+      "bytes": 158177,
+      "sha256": "5bca5cd3c900b56a49d3046282d2733c15876f7a2e38ad889100a3294cd07934",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165111-ppo-11-f2f4ea29/checkpoint-512.zip": {
+      "bytes": 68407,
+      "sha256": "d662d788a31414276277885b862aece0d96d040984f589d69a33af65242107c9",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165111-ppo-11-f2f4ea29/checkpoint-256.zip": {
+      "bytes": 68288,
+      "sha256": "65f90e066da0e4b64fb82bf697d576fb09fea802522c9035471e688e074e8145",
+      "reason": "Intermediate checkpoint; selected/latest weights and checkpoint history retained"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165157-td3-11-ba05ce8b/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "e0e2f737d39e2492075df37102e5fb613ed94257325e27dba6a15c1d6bd577b4",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    },
+    "artifacts/colab/rl-stocks-a100-0343183b915b/retrieved/artifacts/runs/20261014T165125-sac-11-8f32dab9/checkpoint-replay.pkl": {
+      "bytes": 12401834,
+      "sha256": "41ccc36961c74934f8028d360d5b2842f3047f899616d266d3bb63216bcc8cbb",
+      "reason": "Byte-identical duplicate of retained final replay buffer"
+    }
+  },
+  "directories": [
+    {
+      "path": ".runtime/venv-312",
+      "reason": "Obsolete task-created Python 3.12 environment; active environment is Python 3.13"
+    },
+    {
+      "path": ".runtime/uv-cache",
+      "reason": "Regenerable task dependency-download cache; active installed hardlinks/copies retained"
+    }
+  ],
+  "archives_without_verified_extracted_copies_retained": [
+    "artifacts/colab/rl-stocks-smoke-68624bf171b8/artifacts.tar.gz",
+    "artifacts/colab/rl-stocks-smoke-06fa5663634f/partial-artifacts.tar.gz",
+    "artifacts/colab/rl-stocks-smoke-8099d697d068/artifacts.tar.gz"
+  ],
+  "removed_files": 293,
+  "removed_empty_session_directories": 2,
+  "logical_artifact_bytes_removed": 4404958613,
+  "filesystem_bytes_recovered": 8397139968,
+  "retained_frozen_checksums_unchanged": true,
+  "release_assets_unchanged": true,
+  "active_python": "3.13.16",
+  "usage_ledger_preserved": true
+}

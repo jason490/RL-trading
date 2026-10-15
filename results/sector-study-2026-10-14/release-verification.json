@@ -1,0 +1,67 @@
+{
+  "release_url": "https://github.com/jason490/RL-trading/releases/tag/sector-study-2026-10-14",
+  "tag": "sector-study-2026-10-14",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 762,
+      "sha256": "8735f572482cb176177b72288f30c6f1d8e5703d8e6cb279407edc1927083a1d",
+      "server_digest_verified": true
+    },
+    {
+      "name": "audit-summary.json",
+      "size": 184545,
+      "sha256": "d6cc0e35645ab41c266efb38b76a65a5a6b90a4b20e02f72d826a9f5d4624d68",
+      "server_digest_verified": true
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 2417502,
+      "sha256": "5da199a78c1a37f1202020c16750672ac3f58ecfa155825ae286ebf2e746864e",
+      "server_digest_verified": true
+    },
+    {
+      "name": "protocol.json",
+      "size": 1905,
+      "sha256": "559496580bda415cacb3acf5881f99fca8b8e35e25b44bf4d8d96d04f5003ff3",
+      "server_digest_verified": true
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 36202304,
+      "sha256": "63910153d14dbc2840017b5a8169f439a711ee666f5185fb083d57c1a46c5572",
+      "server_digest_verified": true
+    },
+    {
+      "name": "test.html",
+      "size": 14884846,
+      "sha256": "8b179216521020383727141274dfd420b65372e876714cc4b925a3c956ee8acc",
+      "server_digest_verified": true
+    },
+    {
+      "name": "usage-summary.json",
+      "size": 8461,
+      "sha256": "0e44aa1a5bc727244fd0e7c7ff62d97eb2639b2cc56f4bf7d70694f77ac8f45b",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 33447989,
+      "sha256": "6758079bf148c5994b179708b16cbc7876b25e613abf671605ad2ed0c0e1a9fd",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation-study.json",
+      "size": 1457063,
+      "sha256": "07b3de17d4372840bc5148fe4966359a79d2c86b1daf32d07ab18e8cd9eddaa7",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation.html",
+      "size": 5976,
+      "sha256": "6715c277e0eb34b80daffc506d5bd54de4d6ed084f0b10cc2490c6cad57178a6",
+      "server_digest_verified": true
+    }
+  ],
+  "all_server_digests_verified": true
+}

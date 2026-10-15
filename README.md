@@ -14,11 +14,30 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Reports and matched run comparisons | Implemented | SVG/JSON and Plotly integration tested |
 | Yahoo/Alpaca historical adapters | Implemented | Yahoo daily coverage verified; mocked SDK wiring passes; actual Alpaca coverage pending |
 | Gymnasium environment, PPO/SAC/TD3 training, checkpoints and frozen neural inference | Implemented | CPU acceptance passes for all three algorithms |
-| Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | CPU preflight and A100 smoke/full PPO run pass; artifacts retrieved and shutdown verified |
-| Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata/dataset tests and expanded Colab CPU smoke pass; matched A100 studies in progress |
+| Budget-controlled Colab launch, metering, retrieval and cleanup | Implemented | CPU/A100 acceptance and 36 research runs complete; artifacts retrieved and all owned sessions stopped |
+| Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata tests, CPU smoke, 36-run comparison and frozen held-out audit complete |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **98 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **101 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+
+## Published research results
+
+The [completed study](results/sector-study-2026-10-14/README.md) compares four input
+sets, three algorithms and seeds 11/23/37 at 50,000 transitions each. Validation
+selected combined-feature SAC; its three-seed mean return was 19.79%, versus
+30.60% for buy-and-hold, with substantial seed variation.
+
+The separately frozen 2024–September 2026 audit returned **10.83%** on average
+across seeds versus **48.46%** for buy-and-hold. The preselected seed returned
+13.90%. These are total returns from separate symbol episodes, not a portfolio
+or annualized results. The models have not demonstrated a benchmark advantage.
+The first 29 runs used CUDA and the last seven CPU; hardware differences limit
+a strict feature-only interpretation. The universe is a retrospective surviving-stock sample.
+
+[Download models and visual reports](https://github.com/jason490/RL-trading/releases/tag/sector-study-2026-10-14).
+Extract `validation-reports.tar.gz` and open its index; open `test.html` for the
+held-out charts. All ten uploaded asset digests were verified. See
+[artifact retention](docs/artifact-retention.md) for local evidence and cleanup.
 
 ## Requirements and installation
 
@@ -83,7 +102,9 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.local compare artifacts/run
 
 Reports include equity/baselines, drawdown, exposure, protective zones, fills, costs and holding-time diagnostics. Run comparisons retain failures and separate unmatched configurations. Frozen inference rejects incompatible schemas/feeds and invalid or stale inputs. Detailed behavior is documented in [training](docs/training.md), [evaluation](docs/evaluation.md), [reporting](docs/reporting.md) and [inference](docs/inference.md).
 
-## Optional Colab preflight and A100 training
+## Optional Colab training
+
+Check the actual Colab kernel Python before dependency changes or training. Match its default interpreter and verify compatible dependencies rather than installing an older Python. The inspected images use Python 3.13.
 
 Colab is an optional training backend. Use Google's official [google-colab-cli](https://github.com/googlecolab/google-colab-cli), authenticate interactively before automation, and verify that `usage` returns balance/rate information. The runtime code was inspected against CLI 0.7.4; check installed-release help before changing versions.
 
@@ -96,18 +117,25 @@ Colab is an optional training backend. Use Google's official [google-colab-cli](
 PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.runner data/datasets/DATASET_HASH --cli-python /path/to/CLI_PYTHON
 ```
 
-The runner defaults to CPU preflight; `--accelerator T4` selects CUDA preflight and `--research ppo` selects full A100 training. It owns one uniquely named session at a time, persists a cumulative usage ledger, monitors usage every minute, retrieves artifacts and verifies cleanup. Project defaults are a **150-unit ceiling**, teardown beginning by **130 units**, and an initial allocation deadline of at most **two hours**, including setup and retrieval. Unreliable metering prevents or stops allocation; budget stops do not trigger automatic restart.
+The runner defaults to CPU. Without a research flag it runs smoke acceptance; `--research ppo` or `--study --study-algorithm ppo` requests full CPU research. Explicitly select `--accelerator T4` or `--accelerator A100` when profiling justifies GPU use. It owns one uniquely named session at a time, persists a cumulative usage ledger, monitors usage every minute, retrieves artifacts and verifies cleanup. Project defaults are a **150-unit ceiling**, teardown beginning by **130 units**, and an initial allocation deadline of at most **two hours**, including setup and retrieval. Unreliable metering prevents or stops allocation; budget stops do not trigger automatic restart.
 
-The wrapper redirects logging/settings/history/session state to private `.runtime/` storage without changing authentication. See [Colab operations and troubleshooting](docs/colab.md) for reusing an existing installation, authentication, network diagnosis, budget accounting and recovery. Recorded remote acceptance includes all three algorithm smokes and a 50,000-transition PPO run, seed 11; artifacts and budget evidence are listed in [verification](docs/verification.md).
+The wrapper redirects logging/settings/history/session state to private `.runtime/` storage without changing authentication. See [Colab operations and troubleshooting](docs/colab.md) for reusing an existing installation, authentication, network diagnosis, budget accounting and recovery. Recorded remote acceptance includes all three algorithm smokes, 36 multi-seed research runs and a frozen held-out audit; artifacts and budget evidence are listed in [verification](docs/verification.md).
 
 ## Recommended development sequence
 
 1. Review and install the dependency lock, then pass the integration suite without missing-dependency skips.
 2. Retrieve and audit actual provider history, adjustments, calendars and availability; build a versioned dataset.
 3. Run short CPU train/evaluate/save/load checks for all three algorithms.
-4. Verify Colab authentication and metering, then run bounded CPU/T4 preflight before full A100 training.
+4. Verify Colab authentication and metering, then run bounded CPU/T4 preflight before choosing a full-training runtime from measured throughput and compute cost.
 5. Compare matched 50,000-transition runs across seeds 11/23/37 using validation only.
 6. Freeze a selected candidate and perform a held-out test audit.
 7. Add persistent shadow inference before designing paper-order execution.
 
 Advanced data families, additional reward terms and broker-order lifecycle work remain separate milestones. The [supply/demand guide](docs/supply-demand.md) describes implemented causal daily/weekly inputs; [sector rotation](docs/sectors-universe.md) documents the expanded universe and classification gates. Keep generated data, artifacts, runtime state and credentials out of Git. [plan.md](plan.md) contains the roadmap; [docs/README.md](docs/README.md) indexes the detailed guides.
+
+The next research priorities are controlled CPU comparisons, profiling/batching
+simulation and evaluation, and separate experiments to reduce unnecessary
+turnover and costs. Keep this completed test audit separate from future tuning;
+new claims need a fresh locked audit interval. Historical universe membership,
+delistings and classification vintages are prerequisites for broader stock
+scaling. Persistent shadow inference and paper execution remain later milestones.

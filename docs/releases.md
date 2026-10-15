@@ -42,7 +42,7 @@ All four release asset digests match local SHA-256 values.
 
 [Compact results](../results/expanded-baseline-ppo-2026-10-14/summary.json) include
 per-symbol metrics, cash/buy-and-hold references, selected checkpoints, bundle
-identities and training provenance. Full matched comparisons are still running.
+identities and training provenance. The completed comparison and separate held-out audit are published in the final study release below.
 
 ## Packaging later study assets
 
@@ -59,3 +59,24 @@ Extract `validation-reports.tar.gz`, retaining its `validation/` directory besid
 the index. This avoids loading all symbols/seeds into one very large browser
 document. `test.html` contains the three preselected family seeds' derived audit
 charts. Older releases retain their original standalone validation pages.
+
+## Completed expanded-universe study
+
+[sector-study-2026-10-14](https://github.com/jason490/RL-trading/releases/tag/sector-study-2026-10-14)
+contains all 36 research models plus four startup-smoke models. The index and
+per-run pages are in `validation-reports.tar.gz`; `test.html` contains the frozen
+selected family's three-seed audit charts. The catalog records actual devices
+and source/dataset identities. Protocol, immutable validation selection, audit
+summary and compute summary are included. All ten uploaded asset sizes and
+SHA-256 digests were independently verified.
+
+The selected combined-SAC family averaged 19.79% on validation and 10.83% on the
+held-out interval, versus 30.60% and 48.46% for buy-and-hold. Candidate seed 23
+returned 13.90% on test. These are separate symbol episodes; substantial seed
+variation, retrospective universe selection and mixed training hardware limit
+interpretation. The release is a prerelease research artifact, not a profitable
+strategy or permission to submit orders.
+
+See [full results](../results/sector-study-2026-10-14/README.md),
+[verified release hashes](../results/sector-study-2026-10-14/release-verification.json)
+and [cleanup inventory](../results/sector-study-2026-10-14/cleanup.json).
