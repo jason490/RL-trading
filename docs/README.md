@@ -21,6 +21,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Gymnasium interface | [environment.md](environment.md) | Observations, seeded reset, step and episode boundaries |
 | RL training and checkpoints | [training.md](training.md) | PPO/SAC/TD3 settings, seeds, selection and continuation |
 | Matched research experiments | [experiments.md](experiments.md) | Four datasets, three algorithms/seeds, declared selection, held-out protocol and GitHub assets |
+| Learning diagnostics and improvement | [learning-experiments.md](learning-experiments.md) | Trading behavior, compact checkpoint curves, controlled CPU comparisons and sequential learning gates |
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
