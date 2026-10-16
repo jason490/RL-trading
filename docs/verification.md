@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **120 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **121 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -360,3 +360,10 @@ Colab CLI 0.7.4 was reused. Pre-allocation account balance was 352.07 units, rat
 checks confirm identical train/validation bars across 7/33/62/88-feature families.
 This is preflight evidence, not a completed new indicator-family result.
 See [current results](../results/indicator-followup-2026-10-16/README.md).
+
+The within-run 100k-anchor reporting check brings the suite to **121 tests**,
+all passing in 76.908 seconds (`.runtime/indicator-full-acceptance-final.txt`).
+The three combined-input 250k cells completed and passed remote artifact/source
+acceptance. Selected mean validation return is 46.82%, final mean −1.73%; the
+feature gate fails final-return and final-drawdown conditions. Supply/demand-only
+and sector-only cells remain in progress; do not call the full follow-up complete.

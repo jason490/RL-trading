@@ -105,3 +105,18 @@ The family report records `mean_selected_gain_after_100k_pp` and
 because the run's requested budget is 250k. Previously published 100k cohorts can
 differ through numerical/backend variability even with fixed seeds and versions;
 those historical scores are context, not a substitute for within-run anchors.
+
+## Completed combined-input family
+
+All three combined-input 250k runs are retrieved, with source/dependency checks
+matching the basic-input control. Selected mean validation return is **46.82%**
+versus **23.96%** for basic inputs; selected mean drawdown improves 5.52 points.
+Two of three selected seeds improve. Final checkpoints average **−1.73%**, versus
+**14.46%**, and final drawdown worsens 3.80 points. The full paired feature gate
+therefore fails despite stronger selected policies. These selected validation
+results are optimistic and supply no new held-out performance claim.
+
+Within these same fresh runs, selected returns improve 18.87 points after 100k,
+while final return falls 8.64 points from its 100k anchors. Historical 100k cohorts
+are separate runs and must not be treated as exact counterfactual trajectories.
+Supply/demand-only and sector-only comparisons are still required for attribution.
