@@ -20,7 +20,9 @@ its actual UTC timestamp, and scored bars must close strictly after that timesta
 and after September 2026. Earlier bars can initialize indicators but generate no
 forward returns. Registering a campaign after today's close means the first
 eligible signal is after a later session closes; the first scored execution is
-the following session's open. No historical backfill becomes prospective evidence.
+the following session's open. Feed readiness may delay the first signal; skipped
+dates remain unscored and the actual start is recorded. No historical backfill
+becomes prospective evidence.
 
 ## Freeze the campaign
 

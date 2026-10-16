@@ -62,7 +62,8 @@ Then run the documented `run CAMPAIGN --once` command and inspect its report;
 only after a successful feed cycle should the persistent process be enabled.
 The first possible signal for this registration is the **October 19 close**, and
 the first possible simulated execution is the **October 20 open**. Those dates
-are opportunities, not recorded decisions. If that first decision window passes
-without a recorded signal, archive this unstarted campaign and register a new
-one rather than treating a delayed historical start as the original prospective
-study. No model or gate should be changed to repair a data-feed issue.
+are opportunities, not recorded decisions. If data readiness delays the first
+signal, record the later actual start and keep all skipped dates unscored; no
+historical signals may be backfilled. Once decisions begin, a missed execution
+session halts the campaign for review. No model or gate should be changed to
+repair a data-feed issue.

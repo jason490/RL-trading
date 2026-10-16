@@ -15,7 +15,7 @@
     "confirmed_by_fresh_retry": true,
     "prices_repaired_or_substituted": false
   },
-  "next_action": "Retry read-only collection and overlap audit after upstream correction; do not backdate signals or bypass validation. Use the same campaign only before its first post-registration decision window is missed. A missed prospective start requires a new registration.",
+  "next_action": "Retry read-only collection and overlap audit after upstream correction; never backdate signals or bypass validation. With no decisions yet, the first valid current observation can start later and all skipped dates remain unscored. Once decisions begin, a missed execution/decision session halts the campaign for review.",
   "colab_allocated": false,
   "project_conservative_units": 35.389379374361035
 }
