@@ -12,7 +12,7 @@ import tarfile
 import time
 import uuid
 import shutil
-from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage
+from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage,execution_window
 from rl_stocks.runtime.colab.jobs import job_plan,study_plan,learning_plan
 from rl_stocks.core.provenance import repository_state
 from rl_stocks.runtime.colab.artifacts import validate_archive
@@ -102,6 +102,12 @@ class ColabJob:
 
     def execute_worker(self):
         for attempt in range(2):
+            if hasattr(self,'execution_reserve'):
+                self.exec_timeout=execution_window(self.ledger.active['deadline']-self.ledger.clock(),
+                    self.preferred_exec_timeout,self.execution_reserve)
+                self.ledger.active['exec_timeout_seconds']=self.exec_timeout
+                self.ledger.active['retrieval_cleanup_reserve_seconds']=self.execution_reserve
+                self.ledger.save()
             try:
                 self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],getattr(self,"exec_timeout",1800))
                 return
@@ -166,6 +172,9 @@ class ColabJob:
         plan=learning_plan(**learning) if learning is not None else study_plan(study_algorithm,self.accelerator,study_seeds) if study else job_plan(research_algorithm,self.accelerator)
         long_operation=study or learning is not None
         self.exec_timeout=5400 if long_operation else 1800
+        if learning is not None and learning['steps']==250000:
+            self.preferred_exec_timeout=6600
+            self.execution_reserve=600
         self.download_timeout=120 if long_operation else 30
         self.snapshot_timeout=45 if long_operation else 20
         # Help and version are checked before any metered allocation.

@@ -8,6 +8,14 @@ from rl_stocks.core.files import write_once
 
 class BudgetStop(RuntimeError):pass
 
+def execution_window(remaining_seconds, preferred_seconds, reserve_seconds=600):
+    """Leave time for three final downloads, metering and verified shutdown."""
+    if not all(math.isfinite(v) and v>0 for v in (remaining_seconds,preferred_seconds,reserve_seconds)):
+        raise BudgetStop('invalid execution deadline')
+    available=math.floor(remaining_seconds-reserve_seconds)-1
+    if available<60:raise BudgetStop('insufficient execution time after retrieval/cleanup reserve')
+    return min(preferred_seconds,available)
+
 @dataclass(frozen=True)
 class Usage:
     balance: float

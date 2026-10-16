@@ -327,3 +327,14 @@ Unknown status or an existing worker prevents execution retry. A lost connection
 during the idempotent pinned remote `uv` bootstrap permits one bounded retry.
 This does not reinstall or upgrade the local Colab CLI. Budget stops never retry;
 normal artifact recovery, metering, deadlines and verified teardown still apply.
+
+## Longer indicator comparisons
+
+A 250k learning cell may need more than the earlier 90-minute execution timeout
+when input vectors and validation are larger. Its command timeout now uses the
+remaining allocation deadline, capped at 110 minutes, with at least ten minutes
+reserved for bounded retrieval, metering and verified shutdown. Setup and a
+permitted prestart reconnect reduce the available execution window; neither
+extends the two-hour allocation deadline. Insufficient time stops the job rather
+than allocating another runtime automatically. Other learning budgets retain
+their existing command timeout.
