@@ -44,3 +44,12 @@ Live stream persistence and recurrent decision orchestration are later work.
 Multi-step action/state parity, reset parity, invalid state rejection and stock
 order independence are covered by local acceptance. See
 [algorithm stability](algorithm-stability.md) for the experimental protocol.
+
+## Persistent forward tracking
+
+Use the [shadow runtime](shadow-inference.md) for frozen daily inference with a
+transactional position/decision journal, explicit recurrent-state recovery and
+next-session simulated execution. It preserves per-stream memory across process
+restarts, enforces observed-before-open signals and rejects gaps or revisions.
+The registered campaign and its forward reports are separate from validation
+selection and the retired test audit. It does not connect to a broker.

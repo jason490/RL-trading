@@ -1,0 +1,16 @@
+[Unit]
+Description=Frozen RL daily shadow inference (simulation only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/ABSOLUTE/PATH/TO/rl-stocks
+Environment=PYTHONPATH=src
+Environment=MPLBACKEND=Agg
+ExecStart=/ABSOLUTE/PATH/TO/rl-stocks/.venv/bin/python -m rl_stocks.runtime.shadow run /ABSOLUTE/PATH/TO/CAMPAIGN --poll-seconds 900
+Restart=no
+UMask=0077
+
+[Install]
+WantedBy=default.target

@@ -18,7 +18,7 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata tests, CPU smoke, 36-run comparison and frozen held-out audit complete |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **146 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **156 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Controlled learning experiments
 
@@ -69,6 +69,15 @@ a strict feature-only interpretation. The universe is a retrospective surviving-
 Extract `validation-reports.tar.gz` and open its index; open `test.html` for the
 held-out charts. All ten uploaded asset digests were verified. See
 [artifact retention](docs/artifact-retention.md) for local evidence and cleanup.
+
+## Forward shadow tracking
+
+[Persistent shadow inference](docs/shadow-inference.md) freezes saved policies
+and records future daily decisions and simulated fills in a durable journal.
+The supplied campaign includes all three combined-input SAC seeds plus basic
+PPO/SAC controls, with buy-and-hold/cash comparisons and interactive reports.
+It runs on a local/server process, makes no broker orders and does not train.
+Registration and software acceptance are separate from future market results.
 
 ## Requirements and installation
 

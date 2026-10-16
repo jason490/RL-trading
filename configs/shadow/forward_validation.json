@@ -1,0 +1,61 @@
+{
+  "name": "frozen-forward-shadow-v1",
+  "review_sessions": 126,
+  "max_age_seconds": 86400,
+  "arms": [
+    {
+      "name": "combined-sac-11",
+      "family": "combined-sac",
+      "seed": 11,
+      "bundle_id": "7f40441af142dd21dee828792690dec71e4f29126b9b86a9b5f7b14fe690112d"
+    },
+    {
+      "name": "combined-sac-23",
+      "family": "combined-sac",
+      "seed": 23,
+      "bundle_id": "ed05592c734f66215ca93f162972bd7de7a3bc95c479afb08eb16f1db35078e4"
+    },
+    {
+      "name": "combined-sac-37",
+      "family": "combined-sac",
+      "seed": 37,
+      "bundle_id": "c54d8194a30c54d67cf2bf730d3e1359a36ebecb8c6cb0d0e864f440a018378f"
+    },
+    {
+      "name": "basic-ppo-11",
+      "family": "basic-ppo",
+      "seed": 11,
+      "bundle_id": "351475bcb81da5222e5dcce374afed9d63c7723c8506873e2983ad8748097550"
+    },
+    {
+      "name": "basic-ppo-23",
+      "family": "basic-ppo",
+      "seed": 23,
+      "bundle_id": "6bc58516f306d5d5cab90f2eca12147961898cdf7dfcccf5d9cb84d31e116a28"
+    },
+    {
+      "name": "basic-ppo-37",
+      "family": "basic-ppo",
+      "seed": 37,
+      "bundle_id": "3c2864b3f0c2a3cb433cf85200d5f30acc9d567b16085788b11a5ede9cbb5b69"
+    },
+    {
+      "name": "basic-sac-11",
+      "family": "basic-sac",
+      "seed": 11,
+      "bundle_id": "ec8eac4222268ec5a64bebd8b120b5af943aecbac9f5a105ee26fb444bdac8b1"
+    },
+    {
+      "name": "basic-sac-23",
+      "family": "basic-sac",
+      "seed": 23,
+      "bundle_id": "f45f7508dadc800f39f67a926b9628d8118805ac08daed1c37048e93191efc6d"
+    },
+    {
+      "name": "basic-sac-37",
+      "family": "basic-sac",
+      "seed": 37,
+      "bundle_id": "bd80618b722b03bac15c2161e53aa8bb174961fb711824e82476179075bdeca6"
+    }
+  ]
+}

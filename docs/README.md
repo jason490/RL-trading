@@ -28,6 +28,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
+| Forward shadow inference | [shadow-inference.md](shadow-inference.md) | Frozen campaign registration, durable decisions, simulated fills, restart recovery and forward reports |
 | GitHub model releases | [releases.md](releases.md) | Downloadable models, derived reports, checksums and training provenance |
 | Artifact retention and cleanup | [artifact-retention.md](artifact-retention.md) | Required research evidence, release verification, temporary-file cleanup and recovery state |
 | Colab runtime operations | [colab.md](colab.md) | CPU/T4 preflight, A100 training, compute ledger, retrieval and recovery |

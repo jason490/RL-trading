@@ -449,3 +449,26 @@ is another separate hypothesis, especially for PPO seed 37; it should not be
 treated as a general explanation for all deterioration. TQC and stacked PPO
 remain unexecuted ideas, not queued jobs. Persistent shadow inference and paper
 execution remain later milestones. The inspected final-test interval is retired.
+
+## 18. Persistent frozen shadow tracking — implementation and acceptance, 2026-10-16
+
+The user authorized the next step: freeze the promising validation checkpoint and
+observe future behavior without more training. A dedicated local/server runtime
+now registers exact combined-SAC seeds 11/23/37 plus basic PPO/SAC controls,
+freezes costs, data/features and a 126-session research-review horizon, and scores
+only bars closing after registration. The retired 2024–September 2026 interval is
+warmup-only and cannot become a fresh test.
+
+The SQLite journal atomically persists all arm/symbol positions, pending actions,
+protective orders, fills and recurrent memory. Next-session simulated execution
+requires a decision journaled before the matching open. Restarts are idempotent;
+missing sessions, history revisions, stale data and feed/calendar mismatches halt
+for review. Read-only collection preserves immutable receipts; interactive
+reports compare separate stock accounts with buy-and-hold and cash. There is no
+broker connection or automatic paper eligibility. See
+[shadow operations](docs/shadow-inference.md).
+
+Software acceptance and registration are distinct from forward market evidence.
+Actual unattended uptime depends on a persistent host/process; the service template
+does not install or enable itself. Historical membership/delisting expansion,
+borrow eligibility and order lifecycle remain unimplemented later milestones.

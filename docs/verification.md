@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **146 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **156 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -436,3 +436,21 @@ server SHA-256 digests and sizes. Cleanup removed 44 duplicate/temporary files
 frozen bundles and nine endpoint milestones. Required replay, curves, validation
 outputs, failed-preflight evidence, immutable data and recovery records remain.
 No owned sessions are active. See the study's tracked release and cleanup records.
+
+## Persistent shadow software acceptance, 2026-10-16
+
+Full local acceptance passed **156 tests in 95.42 seconds**, zero skips/failures,
+with 13 existing checker/dependency warnings. Ten new shadow tests cover restart
+accounting and recurrent state, transactional rollback, duplicate prevention,
+observed-before-open timing, protocol/feed/manifest/history rejection, missing
+context, exchange times, future/stale bars, read-only collection and fixed-horizon
+reporting. Static undefined/unused-name checks pass for the new modules.
+
+All nine actual registered research candidates were checked on previously
+inspected validation inputs for software parity: shadow features and ATR match
+the stored datasets (26 symbols each), normalized observations exactly match the
+training environment, frozen actions are finite and normalization is unchanged.
+This is software acceptance, not fresh evaluation or forward performance.
+See [acceptance evidence](../results/forward-shadow-2026-10-16/software-acceptance.json)
+and [shadow operations](shadow-inference.md). No Colab session or dependency
+change was required; cumulative project usage remains 35.389379 units.
