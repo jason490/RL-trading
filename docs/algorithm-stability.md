@@ -12,8 +12,8 @@ seed 23, net return fell 58.34 percentage points while additional modeled costs
 were 6.71 points of initial equity. Time short rose from 8% to 33%; exposure-action
 saturation rose from 35% to 61%. Combined-input seeds declined 45–53 points with
 similar or lower costs. Costs matter but cannot account for most deterioration.
-The final sector-only seed is still running; do not publish its partial trajectory
-as a complete result.
+All nine indicator cells are complete; their source-verified results are
+[published separately](../results/indicator-followup-2026-10-16/README.md).
 
 These are different policies evaluated on the same historical validation episodes,
 not a live account losing the selected checkpoint's profits. The best model file
