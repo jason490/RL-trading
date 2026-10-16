@@ -1,0 +1,11 @@
+{
+  "failed_session": "rl-stocks-cpu-e592690a2956",
+  "family": "supply_demand",
+  "seed": 23,
+  "last_retrieved_steps": 200000,
+  "final_artifact_available": false,
+  "cleanup_verified": true,
+  "budget_stopped": false,
+  "project_units_after_attempt": 34.537023954249754,
+  "recovery": "Fresh full-budget retry from same committed learning source; completed seeds retained. Interrupted trajectory excluded from complete-cell aggregates; checkpoint retained."
+}

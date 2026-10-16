@@ -120,3 +120,14 @@ Within these same fresh runs, selected returns improve 18.87 points after 100k,
 while final return falls 8.64 points from its 100k anchors. Historical 100k cohorts
 are separate runs and must not be treated as exact counterfactual trajectories.
 Supply/demand-only and sector-only comparisons are still required for attribution.
+
+## Interrupted attempt and recovery
+
+Four fresh cells are complete, including supply/demand seed 11 (selected and final
+validation return 13.40%). Supply/demand seed 23 lost its CLI execution connection
+after the retrieved 200k checkpoint; bounded final-download retries found no
+archive. Its CPU session was stopped and verified. No metering or budget stop
+occurred; cumulative estimated project consumption was 34.537024 units. Preserve
+that checkpoint and failure record, exclude its partial trajectory from complete
+cell aggregates, and retry that seed once from the unchanged learning source.
+Completed cells are skipped. See the tracked recovery record in the results.
