@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **121 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **124 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -367,3 +367,10 @@ The three combined-input 250k cells completed and passed remote artifact/source
 acceptance. Selected mean validation return is 46.82%, final mean −1.73%; the
 feature gate fails final-return and final-drawdown conditions. Supply/demand-only
 and sector-only cells remain in progress; do not call the full follow-up complete.
+
+The lost-stream export recovery adds three checks for authenticated probe errors,
+continued metering/checkpoint retrieval, and deadline/budget stops. Full local
+`pytest -q` acceptance passed **124 tests in 78.80 seconds**, with zero skips or
+failures. Eleven warnings describe Gymnasium's unbounded numeric observation
+space and the optional SDK's deprecated WebSocket import. No learning code or
+reward changed; `plan.html` retains its original checksum.
