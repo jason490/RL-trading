@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "matched_train_validation_bar_sequences": true,
+  "families": [
+    {
+      "family": "baseline",
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "feature_count": 7,
+      "episodes": 52,
+      "train_validation_bars_digest": "19ee63517975a3619ea75da997f1a2c9a6277b89f120c396e966258a02b1c940",
+      "normalizer_features": 7
+    },
+    {
+      "family": "supply_demand",
+      "dataset": "420fead30751749541bb989e0d671b8f58849d88e6dbe4b3de54697b13b44c32",
+      "feature_count": 33,
+      "episodes": 52,
+      "train_validation_bars_digest": "19ee63517975a3619ea75da997f1a2c9a6277b89f120c396e966258a02b1c940",
+      "normalizer_features": 33
+    },
+    {
+      "family": "rotation",
+      "dataset": "49ed77771b1e4f0c16435daa2de5416eda107cac19b8bb255382d9f6268cc2c7",
+      "feature_count": 62,
+      "episodes": 52,
+      "train_validation_bars_digest": "19ee63517975a3619ea75da997f1a2c9a6277b89f120c396e966258a02b1c940",
+      "normalizer_features": 62
+    },
+    {
+      "family": "combined",
+      "dataset": "062ae018bf7ed0a01bed50695b824238ebc4de89bae8fa0ae09077ac007a5e25",
+      "feature_count": 88,
+      "episodes": 52,
+      "train_validation_bars_digest": "19ee63517975a3619ea75da997f1a2c9a6277b89f120c396e966258a02b1c940",
+      "normalizer_features": 88
+    }
+  ],
+  "test_evaluated": false,
+  "interpretation": "Immutable input identities checked; train/validation bar sequences match across all four feature datasets. Features and training-only normalizers differ as intended."
+}
