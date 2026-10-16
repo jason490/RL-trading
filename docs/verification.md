@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full unittest discovery | **115 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full unittest discovery | **120 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -344,3 +344,19 @@ All 15 frozen bundles, 33 milestone models, final replays and curve journals rem
 Post-cleanup bundle/release hashes and the immutable `plan.html` hash still match.
 See [release evidence](../results/learning-study-2026-10-15/release-verification.json)
 and [cleanup evidence](../results/learning-study-2026-10-15/cleanup.json).
+
+## Indicator follow-up preflight — 2026-10-16
+
+The new matched 250k indicator protocol is committed separately from the exhausted
+learning study. Local acceptance passed **120 tests in 76.990 seconds**, zero
+skips/failures (`.runtime/indicator-full-acceptance.txt`). New checks cover bounded
+execution windows with retrieval/shutdown reserves, factorial input attribution,
+paired gains and drawdown gates, invalid/mismatched controls, real report export
+and training-only regime coverage independent of future validation data.
+
+Colab CLI 0.7.4 was reused. Pre-allocation account balance was 352.07 units, rate
+0.00/hour and active assignments zero; the project ledger remains cumulative from
+34.032604 units. The active CPU kernel reports Python **3.13.16**. Immutable dataset
+checks confirm identical train/validation bars across 7/33/62/88-feature families.
+This is preflight evidence, not a completed new indicator-family result.
+See [current results](../results/indicator-followup-2026-10-16/README.md).

@@ -18,7 +18,7 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata tests, CPU smoke, 36-run comparison and frozen held-out audit complete |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **115 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **120 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Controlled learning experiments
 
@@ -33,6 +33,14 @@ Compact CSV/JSONL records and interactive graphs track validation returns every
 See the [learning results](results/learning-study-2026-10-15/README.md).
 The original held-out audit remains unchanged; future tuning requires a fresh
 locked interval for new out-of-sample claims.
+
+## Matched indicator follow-up
+
+The [250k indicator follow-up](docs/indicator-experiments.md) compares combined,
+supply/demand-only and sector-only inputs against the completed 250k baseline.
+The original reward and costs stay fixed. See [current comparison evidence](results/indicator-followup-2026-10-16/README.md).
+A training-only decline audit is available; [historical universe coverage](docs/historical-universe.md)
+remains a separate data-verification requirement before expanding the sample.
 
 ## Published research results
 
