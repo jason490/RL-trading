@@ -404,10 +404,10 @@ training. Historical-universe coverage remains a separate data-readiness task;
 reward changes must be tested independently. Guidance on multiple seeds and
 evaluation is in [SB3's experiment guide](https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html).
 
-## 17. Diagnose deterioration and compare PPO — authorized, 2026-10-16
+## 17. Diagnose deterioration and compare PPO variants — authorized, 2026-10-16
 
 After the last indicator cell, diagnose selected/final saved paths and run a
-separate six-cell PPO/SAC CPU stability comparison if the evidence supports PPO.
+separate nine-cell PPO/RecurrentPPO/SAC CPU stability comparison if the evidence supports PPO.
 The saved outputs show large directional/exposure changes whose P&L impact exceeds
 additional costs; these observations do not prove an optimization cause. The
 [protocol](configs/experiments/algorithm_stability.json) fixes basic inputs, the

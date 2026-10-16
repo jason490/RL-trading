@@ -101,7 +101,7 @@ def learning_plan(seed=11,steps=100000,reward_scale=1.):
 
 def stability_plan(algorithm,seed):
     """A fixed 100k CPU cell for the separate PPO/SAC stability comparison."""
-    if algorithm not in ('ppo','sac') or type(seed) is not int or seed not in (11,23,37):
+    if algorithm not in ('ppo','sac','recurrent_ppo') or type(seed) is not int or seed not in (11,23,37):
         raise ValueError('unsupported stability algorithm or seed')
     job={'algorithm':algorithm,'device':'cpu','smoke':False,'seed':seed,'steps':100000,
          'evaluation_every':10000,'compact_checkpoints':True,'milestones':[100000],'reward_scale':1.}

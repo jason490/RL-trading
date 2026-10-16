@@ -32,6 +32,7 @@ Do not download an older interpreter to bypass the mismatch.
 | PyTorch | 2.8.0 | Policy/critic networks on CPU or CUDA |
 | Gymnasium | 1.2.0 | Environment API and checker |
 | Stable-Baselines3 | 2.7.0 | Maintained PPO/SAC/TD3 |
+| SB3-Contrib | 2.7.0 | RecurrentPPO with LSTM memory |
 | pandas | 2.3.2 | Optional frame/Parquet operations and SB3 dependency |
 | PyArrow | 21.0.0 | Derived normalized Parquet |
 | Plotly | 6.3.0 | Interactive reports |

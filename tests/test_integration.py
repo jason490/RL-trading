@@ -36,6 +36,53 @@ class IntegrationTests(unittest.TestCase):
             with self.assertRaises(ValueError):resolved_parameters(algorithm,True,overrides)
         with self.assertRaises(ValueError):resolved_parameters('unknown')
 
+    def test_recurrent_train_memory_save_load_and_episode_isolation(self):
+        import numpy as np
+        from copy import deepcopy
+        from rl_stocks.training.runner import train
+        from rl_stocks.rl.registry.factory import CLASSES
+        from rl_stocks.inference.bundle import FrozenPolicy
+        from rl_stocks.evaluation.runner import evaluate
+        from rl_stocks.data.generation.datasets import normalizer_from
+        from rl_stocks.environment.trading.env import TradingEnv
+        run,bundle=train(self.dataset_path,'recurrent_ppo',self.root/'recurrent',steps=512)
+        m=json.loads((run/'metadata.json').read_text())
+        self.assertEqual(m['actual_steps'],512)
+        self.assertFalse((run/'replay.pkl').exists())
+        self.assertFalse((run/'final-test.html').exists())
+        model=CLASSES['recurrent_ppo'].load(run/'best.zip',device='cpu')
+        frozen=FrozenPolicy(bundle,self.dataset['schema'],'synthetic')
+        before=deepcopy(vars(frozen.normalizer))
+        episode=next(e for e in self.dataset['episodes'].values() if e['split']=='validation')
+        env=TradingEnv([episode],normalizer_from(self.dataset['normalizer']),self.dataset['names'])
+        obs,_=env.reset(seed=11);state=other=None;first=None
+        for i in range(6):
+            expected,other=model.predict(obs,state=other,episode_start=np.array([i==0]),deterministic=True)
+            saved=None if state is None else tuple(x.copy() for x in state)
+            action,new=frozen.predict_recurrent(obs,state=state,episode_start=i==0)
+            np.testing.assert_array_equal(action,expected)
+            for a,b in zip(new,other):np.testing.assert_array_equal(a,b)
+            if saved is not None:
+                for a,b in zip(saved,state):np.testing.assert_array_equal(a,b)
+            if i==0:first=(obs.copy(),action.copy(),tuple(x.copy() for x in new))
+            state=new
+            obs,*_=env.step(action)
+        action,new=frozen.predict_recurrent(first[0],state=state,episode_start=True)
+        np.testing.assert_array_equal(action,first[1])
+        for a,b in zip(new,first[2]):np.testing.assert_array_equal(a,b)
+        self.assertEqual(before,vars(frozen.normalizer))
+        with self.assertRaises(ValueError):frozen.predict(obs)
+        with self.assertRaises(ValueError):frozen.predict_recurrent(obs,state=None,episode_start=False)
+        with self.assertRaises(ValueError):frozen.predict_recurrent(obs,state=(np.zeros(1),np.zeros(1)),episode_start=False)
+        bad=tuple(np.full_like(x,np.nan) for x in state)
+        with self.assertRaises(ValueError):frozen.predict_recurrent(obs,state=bad,episode_start=False)
+        expected=evaluate(model,self.dataset)
+        reversed_data={**self.dataset,'episodes':dict(reversed(list(self.dataset['episodes'].items())))}
+        actual=evaluate(model,reversed_data)
+        for key in expected:
+            self.assertEqual(expected[key]['metrics'],actual[key]['metrics'])
+        env.close()
+
     def test_reward_scaling_preserves_equity_and_observations(self):
         import numpy as np
         from rl_stocks.environment.trading.env import TradingEnv

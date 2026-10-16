@@ -310,7 +310,7 @@ def main():
     parser.add_argument('--learning-seed',type=int,default=11,choices=(11,23,37))
     parser.add_argument('--learning-steps',type=int,default=100000,choices=(50000,100000,250000))
     parser.add_argument('--reward-scale',type=float,default=1.,choices=(1.,10.,100.))
-    parser.add_argument('--stability-algorithm',choices=('ppo','sac'),help='Separate fixed 100k CPU algorithm comparison')
+    parser.add_argument('--stability-algorithm',choices=('ppo','sac','recurrent_ppo'),help='Separate fixed 100k CPU algorithm comparison')
     parser.add_argument('--stability-seed',type=int,default=11,choices=(11,23,37))
     args=parser.parse_args()
     root=Path.cwd();state=root/".runtime";state.mkdir(exist_ok=True)

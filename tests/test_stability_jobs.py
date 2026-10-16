@@ -7,7 +7,7 @@ from rl_stocks.runtime.colab.runner import ColabJob
 
 class StabilityJobTests(unittest.TestCase):
     def test_fixed_cpu_plan_and_tampering_rejected(self):
-        for algorithm in ('ppo','sac'):
+        for algorithm in ('ppo','sac','recurrent_ppo'):
             for seed in (11,23,37):
                 p=stability_plan(algorithm,seed);self.assertEqual(validate_plan(p),p)
                 self.assertEqual(p['jobs'][0]['milestones'],[100000])

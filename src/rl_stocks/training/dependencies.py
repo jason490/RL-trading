@@ -3,7 +3,7 @@ import importlib.metadata
 import sys
 
 EXPECTED = {'numpy':'2.2.6','torch':'2.8.0','gymnasium':'1.2.0',
-            'stable-baselines3':'2.7.0','pandas':'2.3.2','plotly':'6.3.0'}
+            'stable-baselines3':'2.7.0','sb3-contrib':'2.7.0','pandas':'2.3.2','plotly':'6.3.0'}
 
 
 def verify_environment():

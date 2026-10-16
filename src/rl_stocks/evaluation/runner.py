@@ -4,6 +4,7 @@ from rl_stocks.environment.accounting.portfolio import Portfolio
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.data.generation.datasets import normalizer_from
 from rl_stocks.evaluation.metrics import metrics
+from rl_stocks.rl.registry.prediction import PredictionStream
 
 def evaluate(model,dataset,split="validation",config=SimulationConfig()):
     from rl_stocks.environment.trading.env import TradingEnv
@@ -14,9 +15,9 @@ def evaluate(model,dataset,split="validation",config=SimulationConfig()):
         if episode["split"]!=split:continue
         env=TradingEnv([episode],normalizer,dataset["names"],config)
         obs,_=env.reset(seed=11,options={"episode":0})
-        rows=[]
+        rows=[];prediction=PredictionStream(model)
         while True:
-            action,_=model.predict(obs,deterministic=True)
+            action=prediction.predict(obs)
             obs,reward,terminated,truncated,info=env.step(action)
             info.pop("events",None)
             rows.append(info)

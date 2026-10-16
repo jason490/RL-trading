@@ -18,7 +18,7 @@ from gymnasium.utils.env_checker import check_env as gym_check
 from rl_stocks.data.generation.datasets import read_dataset, normalizer_from
 from rl_stocks.environment.trading.env import TradingEnv
 from rl_stocks.environment.execution.simulator import SimulationConfig
-from rl_stocks.rl.registry.factory import create,resolved_parameters
+from rl_stocks.rl.registry.factory import create,resolved_parameters,ON_POLICY
 from rl_stocks.evaluation.runner import evaluate,selection_score
 from rl_stocks.reporting.html import report
 from rl_stocks.inference.bundle import freeze,FrozenPolicy
@@ -92,7 +92,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
     model=create(algorithm,env,seed,device,smoke,overrides)
-    steps=steps if steps is not None else 512 if algorithm=="ppo" else 1024
+    steps=steps if steps is not None else 512 if algorithm in ON_POLICY else 1024
     if steps<=0:raise ValueError("positive training steps required")
     milestones=list(milestones) if milestones is not None else [steps]
     if not milestones or milestones!=sorted(set(milestones)) or milestones[-1]!=steps or milestones[0]<=0:
@@ -100,7 +100,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if len(milestones)>1 and algorithm!='sac':raise ValueError('segmented learning study currently requires SAC')
     every=evaluation_every if evaluation_every is not None else 256 if smoke else 10000
     if not isinstance(every,int) or every<=0:raise ValueError('positive evaluation interval required')
-    if algorithm=="ppo" and steps%model.n_steps:raise ValueError("steps must be an exact PPO rollout multiple")
+    if algorithm in ON_POLICY and steps%model.n_steps:raise ValueError("steps must be an exact PPO rollout multiple")
     run=Path(output)/"runs"/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")+f"-{algorithm}-{seed}-"+uuid.uuid4().hex[:8])
     run.mkdir(parents=True,exist_ok=False)
     metadata={"algorithm":algorithm,"seed":seed,"device":device,"requested_steps":steps,"smoke":smoke,
@@ -126,17 +126,24 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if not all(torch.isfinite(parameter).all() for parameter in model.policy.parameters()):
             raise ValueError("nonfinite model weights")
         model.save(run/"latest")
-        if algorithm!="ppo":model.save_replay_buffer(run/"replay.pkl")
+        if hasattr(model,'save_replay_buffer'):model.save_replay_buffer(run/"replay.pkl")
         from rl_stocks.rl.registry.factory import CLASSES
         selected=CLASSES[algorithm].load(run/"best.zip",device=device)
         observation,_=env.reset(seed=seed)
-        original=selected.predict(observation,deterministic=True)[0]
+        from rl_stocks.rl.registry.prediction import recurrent
+        if recurrent(selected):
+            original,original_state=selected.predict(observation,state=None,episode_start=np.array([True]),deterministic=True)
+        else:original=selected.predict(observation,deterministic=True)[0]
         metadata.update(status="complete",actual_steps=model.num_timesteps,duration_seconds=time.monotonic()-start,
             validation_checkpoints=callback.history,selected_score=callback.best)
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
-        np.testing.assert_array_equal(original,frozen.predict(observation))
+        if recurrent(selected):
+            action,state=frozen.predict_recurrent(observation,state=None,episode_start=True)
+            np.testing.assert_array_equal(original,action)
+            for a,b in zip(original_state,state):np.testing.assert_array_equal(a,b)
+        else:np.testing.assert_array_equal(original,frozen.predict(observation))
         metadata["bundle_id"]=bundle.name
         if final_test:
             results=evaluate(selected,dataset,"test",config)

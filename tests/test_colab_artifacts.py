@@ -93,6 +93,28 @@ class ArtifactTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError,'missing or unexpected'):
             self.check()
 
+    def test_stability_export_requires_post_update_endpoint(self):
+        from rl_stocks.runtime.colab.jobs import stability_plan
+        self.plan=stability_plan('recurrent_ppo',11)
+        job=self.plan['jobs'][0];run=self.runs[0]
+        curve=[{'steps':step,'phase':'post_update' if step==100000 else 'on_step','score':.01}
+               for step in range(10000,100001,10000)]
+        run.update(job,requested_steps=100000,actual_steps=100000,
+                   reward_config={'kind':'net_log_equity','scale':1.},validation_checkpoints=curve)
+        folder=self.artifacts/'runs/0'
+        (folder/'metadata.json').write_text(json.dumps(run))
+        for index in (1,2,3,4):(self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        journal=folder/'learning-curve.jsonl'
+        journal.write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        (folder/'learning-curve.csv').write_text('steps,return_pct\n'+''.join(f"{r['steps']},1.0\n" for r in curve))
+        (folder/'learning-curve.html').write_text('curve')
+        self.completion.update(plan=self.plan,gpu=None,completed=[run]);self.write_completion()
+        self.assertEqual(len(self.check()),1)
+        curve[-1]['phase']='on_step';run['validation_checkpoints']=curve
+        (folder/'metadata.json').write_text(json.dumps(run))
+        journal.write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        with self.assertRaisesRegex(RuntimeError,'learning curve'):self.check()
+
     def test_remote_exception_rejected_despite_cli_success(self):
         (self.artifacts / 'failure.txt').write_text('remote exception')
         with self.assertRaisesRegex(RuntimeError, 'remote training failed'):

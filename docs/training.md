@@ -66,3 +66,19 @@ Runs record hardware/backend nondeterminism. Save/load parity is checked on the 
 Colab payloads include the originating Git revision and dirty-state record,
 captured at upload. Remote runs use that record even though the payload omits
 the Git database, and also compute a hash of the actual package source.
+
+## RecurrentPPO
+
+`--algorithm recurrent_ppo` selects SB3-Contrib's `MlpLstmPolicy`. The same causal
+observations and four-component action are used. Actor and critic have separate
+single-layer LSTMs (64 hidden units for research, 32 for smoke) and the existing
+MLP head widths. The local smoke accepts 512 transitions. Research PPO variants
+use rollout length 1000 and batch size 50, so requested steps must be an exact
+rollout multiple. RecurrentPPO is on-policy and does not save a replay buffer.
+
+Validation maintains hidden/cell state within each episode and resets it at each
+new stock episode. It never changes the training collector's LSTM state. Frozen
+export verifies the action and state from an explicitly reset prediction. The
+[inference guide](inference.md#recurrent-bundles) covers sequence use and state
+validation; [algorithm stability](algorithm-stability.md) describes the controlled
+CPU comparison. Memory adds model capacity and is not established as an improvement.

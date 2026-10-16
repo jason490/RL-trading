@@ -20,7 +20,7 @@ def main():
     generate.add_argument("--sectors",help="Content-addressed sector snapshot directory")
     generate.add_argument("--sector-labels",action="store_true",help="Requires audited training-era issuer classifications")
     train_parser=sub.add_parser("train");train_parser.add_argument("dataset")
-    train_parser.add_argument("--algorithm",choices=["ppo","sac","td3"],required=True)
+    train_parser.add_argument("--algorithm",choices=["ppo","sac","td3","recurrent_ppo"],required=True)
     train_parser.add_argument("--seed",type=int,default=11);train_parser.add_argument("--device",default="cpu",choices=["cpu","cuda"])
     train_parser.add_argument("--steps",type=int);train_parser.add_argument("--long",action="store_true")
     train_parser.add_argument("--final-test",action="store_true");train_parser.add_argument("--output",default="artifacts")
@@ -78,7 +78,7 @@ def main():
         print(compare(args.runs,args.output))
     else:
         from rl_stocks.training.runner import train
-        overrides={"n_steps":1000,"batch_size":50} if args.long and args.algorithm=="ppo" else None
+        overrides={"n_steps":1000,"batch_size":50} if args.long and args.algorithm in ('ppo','recurrent_ppo') else None
         steps=args.steps if args.steps else 50000 if args.long else None
         print(train(args.dataset,args.algorithm,args.output,args.seed,args.device,not args.long,steps,args.final_test,overrides))
 

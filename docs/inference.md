@@ -25,3 +25,22 @@ Returned fields include immutable bundle ID plus action schema, decision/expiry/
 Training compares selected pre-export deterministic action with the reloaded frozen action on the same observation using exact array equality. Integration tests also check repeated predictions, normalizer immutability, schema/feed rejection and checksum corruption. These checks pass with the reviewed Python 3.13 lock. All five downloaded A100-session bundles also passed local CPU save/load parity, repeated predictions and unchanged normalization/file checks. This does not claim bit-for-bit CPU/CUDA parity. See [verification](verification.md) for artifacts.
 
 All current candidates, including the initial 50,000-transition PPO model, have `paper_eligible=false`. No inference call places an order, updates replay or retrains. Shared batch feature functions support causal historical recomputation; a durable live-data scheduler, incremental feature state, drift monitoring and restart reconciliation remain the shadow-inference milestone. Alpaca paper execution remains later still.
+
+## Recurrent bundles
+
+A `recurrent_ppo` bundle uses `predict_recurrent(observation, state=..., episode_start=...)`
+and returns `(action, new_state)`. Begin with `state=None, episode_start=True`;
+carry the returned hidden/cell tuple into subsequent predictions with
+`episode_start=False`. Keep one state per ordered symbol/episode stream. Both
+arrays must have shape `(LSTM layers, 1, hidden size)` and finite values. Input
+state arrays are copied; model inference cannot modify a caller's stored state.
+The normalizer remains immutable.
+
+Reset at a new episode/symbol and after a restart unless validated matching state
+or causal replay restores context. Do not reset merely because a position closes.
+The stateless `predict()` and its `decide()` convenience path reject recurrent
+bundles: use the explicit recurrent prediction API and the shared risk decoder.
+Live stream persistence and recurrent decision orchestration are later work.
+Multi-step action/state parity, reset parity, invalid state rejection and stock
+order independence are covered by local acceptance. See
+[algorithm stability](algorithm-stability.md) for the experimental protocol.

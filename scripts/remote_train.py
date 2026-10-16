@@ -32,7 +32,7 @@ def main():
     (root/'dataset.json').rename(dataset/'dataset.json')
     completed = []
     for job in plan['jobs']:
-        overrides = {'n_steps': 1000, 'batch_size': 50} if job['algorithm']=='ppo' and not job['smoke'] else None
+        overrides = {'n_steps': 1000, 'batch_size': 50} if job['algorithm'] in ('ppo','recurrent_ppo') and not job['smoke'] else None
         print('Starting job:', job, flush=True)
         seed = job.get('seed', plan.get('seed'))
         parameters = {k:v for k,v in job.items() if k!='seed'}

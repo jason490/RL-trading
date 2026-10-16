@@ -44,10 +44,10 @@ change that counterfactual. Training loss and entropy are diagnostic proxies and
 cannot prove the cause of validation losses. Annual slices are descriptive and
 must not select a different checkpoint for each year.
 
-## Bounded PPO versus SAC comparison
+## Bounded PPO, RecurrentPPO and SAC comparison
 
-The [committed protocol](../configs/experiments/algorithm_stability.json) fixes six
-new CPU cells: PPO and fresh SAC controls at 100k transitions, seeds 11/23/37, using
+The [committed protocol](../configs/experiments/algorithm_stability.json) fixes nine
+new CPU cells: PPO, RecurrentPPO and fresh SAC controls at 100k transitions, seeds 11/23/37, using
 basic inputs. Data, costs, reward, hidden-layer widths, learning rate and discount
 stay fixed. Existing algorithm-specific defaults stay intact; no extra reward,
 new stock selection, KL tuning or learning-rate search is included.
@@ -58,8 +58,8 @@ not a guaranteed fix. The earlier basic-input 50k study recorded PPO mean select
 return 12.97% (seed standard deviation 3.57 points), SAC 15.60% (5.95 points), and
 TD3 4.18% (8.90 points). Those historical baseline families all used CUDA and are
 context only. The new comparison uses CPU for both algorithms and fresh controls.
-See the versioned [PPO](https://stable-baselines3.readthedocs.io/en/v2.7.1/modules/ppo.html)
-and [SAC](https://stable-baselines3.readthedocs.io/en/v2.7.1/modules/sac.html) documentation.
+See the versioned [PPO](https://stable-baselines3.readthedocs.io/en/v2.7.0/modules/ppo.html)
+and [SAC](https://stable-baselines3.readthedocs.io/en/v2.7.0/modules/sac.html) documentation.
 
 The fresh SAC controls avoid reusing a different optimization trajectory: this
 experiment uses one uninterrupted 100k learn call, with an explicit post-update
@@ -80,4 +80,41 @@ by avoiding the stronger model's swings.
 No new session starts until the indicator study is finished, retrieved, published,
 stopped and its temporary duplicates cleaned. The same cumulative ledger, minute
 metering, two-hour allocation deadline and 130-unit working stop apply. Complete
-only the six declared cells; do not extend training because a result disappoints.
+only the nine declared cells; do not extend training because a result disappoints.
+
+## RecurrentPPO memory contract
+
+The user proposed RecurrentPPO before this new experiment allocated a session.
+The third arm uses `sb3-contrib==2.7.0`, matching SB3 2.7.0 and the inspected Colab
+3.13.16 interpreter. The hash lock adds only the reviewed contrib dependency;
+existing dependencies retain their pins. [RecurrentPPO reference](https://sb3-contrib.readthedocs.io/en/v2.7.0/modules/ppo_recurrent.html).
+
+The LSTM keeps a learned compressed state, not an exact record of every past bar.
+Actor and critic have separate single-layer 64-unit LSTMs and 64x64 MLP heads.
+PPO rollout, minibatch, epochs and clipping match the standard PPO arm. The
+recurrent arm adds parameters, so improved results would support this model
+configuration, not isolate memory from parameter count. A dedicated recurrent
+versus standard PPO comparison uses the same stability gate. No post-result
+architecture tuning is permitted.
+
+Evaluation carries hidden/cell state through each stock's ordered sessions and
+starts with zero memory at each episode boundary. It resets at a new symbol or
+episode, not at each trade exit. No state is carried across training/validation
+splits, and no future observations initialize memory. Separate evaluation streams
+prevent one stock's history from affecting another stock.
+
+Frozen recurrent inference is explicit:
+
+```python
+state = None
+for index, observation in enumerate(ordered_observations):
+    action, state = frozen.predict_recurrent(
+        observation, state=state, episode_start=(index == 0))
+```
+
+Callers own a separate state pair per stream. A restart must reset and replay a
+causal history or restore a validated matching state; silently continuing with
+missing memory is rejected. Stateless `predict()` rejects a recurrent bundle.
+Shape/nonfinite state rejection, unchanged input memory, multi-step saved-model
+parity, reset parity and reversed-symbol-order evaluation are acceptance checks.
+Persistent live-state recovery and broker orchestration remain later milestones.

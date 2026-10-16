@@ -1,0 +1,11 @@
+{
+  "algorithm": "recurrent_ppo",
+  "long_transitions": 50000,
+  "seeds": [11, 23, 37],
+  "smoke_transitions": 512,
+  "advanced_features": false,
+  "reward": "net_log_equity",
+  "selection": "mean_validation_net_return",
+  "policy": "MlpLstmPolicy",
+  "memory": "Separate actor/critic LSTMs; 64 hidden units, one layer; reset per episode"
+}

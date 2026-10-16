@@ -49,12 +49,31 @@ class FrozenPolicy:
         algorithm=self.manifest["metadata"]["algorithm"]
         self._model=CLASSES[algorithm].load(self.path/"model.zip",device=device)
         self._model.policy.set_training_mode(False)
-    def predict(self,observation):
+    def _observation(self,observation):
         import numpy as np
         observation=np.asarray(observation,dtype=np.float32)
         if observation.shape!=(len(self.manifest["names"])+5,) or not np.isfinite(observation).all():
             raise ValueError("observation shape/nonfinite mismatch")
-        return self._model.predict(observation,deterministic=True)[0]
+        return observation
+    def predict(self,observation):
+        from rl_stocks.rl.registry.prediction import recurrent
+        if recurrent(self._model):raise ValueError('recurrent policy requires explicit state and episode_start')
+        return self._model.predict(self._observation(observation),deterministic=True)[0]
+    def predict_recurrent(self,observation,*,state,episode_start):
+        """Return action and new memory; callers own a separate state per stream."""
+        import numpy as np
+        from rl_stocks.rl.registry.prediction import recurrent
+        if not recurrent(self._model):raise ValueError('policy is not recurrent')
+        if not isinstance(episode_start,(bool,np.bool_)):raise ValueError('explicit boolean episode_start required')
+        if state is None and not episode_start:raise ValueError('initial prediction requires episode_start')
+        if state is not None:
+            lstm=self._model.policy.lstm_actor
+            shape=(lstm.num_layers,1,lstm.hidden_size)
+            if not isinstance(state,tuple) or len(state)!=2:raise ValueError('hidden/cell state pair required')
+            state=tuple(np.array(s,dtype=np.float32,copy=True) for s in state)
+            if any(s.shape!=shape or not np.isfinite(s).all() for s in state):raise ValueError('recurrent state shape/nonfinite mismatch')
+        return self._model.predict(self._observation(observation),state=state,
+            episode_start=np.array([episode_start],dtype=bool),deterministic=True)
     def decide(self,features,names,portfolio_state,symbol,decision_time,expiry_time,reference,atr,equity,quantity,
                available_time,now=None,max_age_seconds=86400):
         from rl_stocks.risk.decisions import decode

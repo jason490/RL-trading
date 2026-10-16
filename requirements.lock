@@ -1611,6 +1611,10 @@ ruff==0.13.0 \
     --hash=sha256:dcd628101d9f7d122e120ac7c17e0a0f468b19bc925501dbe03c1cb7f5415b24 \
     --hash=sha256:fbc6b1934eb1c0033da427c805e27d164bb713f8e273a024a7e86176d7f462cf
     # via rl-stocks (pyproject.toml)
+sb3-contrib==2.7.0 \
+    --hash=sha256:87281ae64e6965e46ac24b58778241d2b07b29996044491267ed844c1a75acfe \
+    --hash=sha256:fc5b5cffc7908c7961a73daea8496f5bf2fe69301bc3e7ca71522549eb7feb77
+    # via rl-stocks (pyproject.toml)
 setuptools==84.0.0 \
     --hash=sha256:51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670 \
     --hash=sha256:f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73
@@ -1631,7 +1635,9 @@ sseclient-py==1.9.0 \
 stable-baselines3==2.7.0 \
     --hash=sha256:3de94fab840b3eb379a352c8d9b390998686d2fcb41de36298066935eef94bea \
     --hash=sha256:5258561e5becd15234274262cf09fcb9a082a73c2c67a85322f5652a05195ec4
-    # via rl-stocks (pyproject.toml)
+    # via
+    #   rl-stocks (pyproject.toml)
+    #   sb3-contrib
 sympy==1.14.0 \
     --hash=sha256:d3d3fe8df1e5a0b42f0e7bdf50541697dbe7d23746e894990c030e2b05e72517 \
     --hash=sha256:e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5
