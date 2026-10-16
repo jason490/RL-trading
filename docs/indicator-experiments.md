@@ -96,3 +96,12 @@ Incomplete families expose individual completed-seed curves as dotted lines,
 without a family aggregate or feature gate. Their records remain in JSON so
 single-seed gains/regressions are visible while other seeds run. Complete-family
 bar summaries and factorial contrasts retain their three-seed requirements.
+
+## Separating a longer budget from a different run
+
+The family report records `mean_selected_gain_after_100k_pp` and
+`mean_final_gain_after_100k_pp` using the 100k milestones inside those same fresh
+250k runs. Do not attribute an early best checkpoint to later training merely
+because the run's requested budget is 250k. Previously published 100k cohorts can
+differ through numerical/backend variability even with fixed seeds and versions;
+those historical scores are context, not a substitute for within-run anchors.

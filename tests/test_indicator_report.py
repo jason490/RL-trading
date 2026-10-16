@@ -55,3 +55,15 @@ class IndicatorReportTests(unittest.TestCase):
         bad=copy.deepcopy(runs);bad[-1]['selected_metrics']['A']['baselines']['buy_hold']['net_return']=.4
         with self.assertRaises(ValueError):summarize_indicators(bad,p,{'source':'same-learning'})
         with self.assertRaises(ValueError):summarize_indicators(runs,p,{'source':'a','other':'b'})
+
+    def test_early_best_is_not_attributed_to_extra_training(self):
+        runs,p=self.fixture()
+        for run in runs:
+            selected=100*run['selected_score']
+            run['validation_checkpoints'].insert(0,{'steps':100000,'phase':'post_update',
+                'return_pct':selected,'best_return_pct':selected,'score':run['selected_score'],
+                'mean_max_drawdown_pct':-10.})
+        v=summarize_indicators(runs,p,{'source':'same-learning'})
+        for family in v['families']:
+            self.assertAlmostEqual(family['mean_selected_gain_after_100k_pp'],0.)
+            self.assertAlmostEqual(family['mean_final_gain_after_100k_pp'],-1.)

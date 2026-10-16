@@ -51,6 +51,11 @@ def summarize_indicators(runs,protocol,source_proofs):
                       'final_drawdown_pct','selected_costs','selected_turnover','buy_hold_return_pct'):
             row['mean_'+field]=mean(e[field] for e in entries)
         row['selected_seed_std_pp']=stdev(e['selected_return_pct'] for e in entries)
+        anchors=[next((p for p in e['points'] if p['steps']==100000),None) for e in entries]
+        row['mean_selected_gain_after_100k_pp']=(mean(e['selected_return_pct']-p['best_return_pct']
+            for e,p in zip(entries,anchors)) if all(anchors) else None)
+        row['mean_final_gain_after_100k_pp']=(mean(e['final_return_pct']-p['return_pct']
+            for e,p in zip(entries,anchors)) if all(anchors) else None)
         if label!='baseline' and 'baseline' in complete_groups:
             controls=complete_groups['baseline']
             selected=[e['selected_return_pct']-b['selected_return_pct'] for e,b in zip(entries,controls)]
