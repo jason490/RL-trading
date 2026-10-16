@@ -1705,7 +1705,9 @@
       "mean_selected_costs": 5694.606155142152,
       "mean_selected_turnover": 184.47076292533797,
       "mean_buy_hold_return_pct": 30.60185074415983,
-      "selected_seed_std_pp": 4.139438060561304
+      "selected_seed_std_pp": 4.139438060561304,
+      "mean_selected_gain_after_100k_pp": 4.258266082163189,
+      "mean_final_gain_after_100k_pp": -2.0393556009557687
     },
     {
       "family": "combined",
@@ -3408,6 +3410,8 @@
       "mean_selected_turnover": 273.22032395939186,
       "mean_buy_hold_return_pct": 30.60185074415983,
       "selected_seed_std_pp": 22.838026352390774,
+      "mean_selected_gain_after_100k_pp": 18.871271189252592,
+      "mean_final_gain_after_100k_pp": -8.644572148684093,
       "feature_gate": {
         "passed": false,
         "paired_selected_gains_pp": [
