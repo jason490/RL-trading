@@ -80,3 +80,13 @@ strategy or permission to submit orders.
 See [full results](../results/sector-study-2026-10-14/README.md),
 [verified release hashes](../results/sector-study-2026-10-14/release-verification.json)
 and [cleanup inventory](../results/sector-study-2026-10-14/cleanup.json).
+
+## Algorithm and recurrent-memory comparison
+
+[algorithm-stability-2026-10-16](https://github.com/jason490/RL-trading/releases/tag/algorithm-stability-2026-10-16)
+contains all nine 100k SAC/PPO/RecurrentPPO research models, explicit endpoint
+weights, compact learning curves, standalone `comparison.html`, per-stock
+validation reports, protocol and sanitized usage evidence. No new test audit
+was performed. All gates failed; no model is paper-eligible. See
+[results](../results/algorithm-stability-2026-10-16/README.md) for interpretation
+and recorded publication/cleanup verification.

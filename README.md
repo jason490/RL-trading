@@ -42,6 +42,15 @@ The original reward and costs stay fixed. See [current comparison evidence](resu
 A training-only decline audit is available; [historical universe coverage](docs/historical-universe.md)
 remains a separate data-verification requirement before expanding the sample.
 
+## Algorithm and memory comparison
+
+The [completed 100k comparison](results/algorithm-stability-2026-10-16/README.md)
+trained SAC, PPO and RecurrentPPO on Colab CPU with three seeds each. Mean final
+validation returns were 16.50%, 16.90% and 6.13%, respectively, versus 30.60%
+buy-and-hold. All improvement gates failed; recurrent memory did not help this
+configuration. [Download interactive curves and frozen models](https://github.com/jason490/RL-trading/releases/tag/algorithm-stability-2026-10-16).
+These are separate stock episodes, not portfolio or new held-out results.
+
 ## Published research results
 
 The [completed study](results/sector-study-2026-10-14/README.md) compares four input

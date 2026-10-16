@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "bundles": 9,
+  "records": [
+    {
+      "cell": "ppo-11",
+      "algorithm": "ppo",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "351475bcb81da5222e5dcce374afed9d63c7723c8506873e2983ad8748097550",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": false,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "recurrent_ppo-11",
+      "algorithm": "recurrent_ppo",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "b7b0e2b0ac6697a7a940e25320fb5dcb7413af99fdb0205f7070b37c64032c2d",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": true,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "sac-11",
+      "algorithm": "sac",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "ec8eac4222268ec5a64bebd8b120b5af943aecbac9f5a105ee26fb444bdac8b1",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": false,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "ppo-23",
+      "algorithm": "ppo",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "6bc58516f306d5d5cab90f2eca12147961898cdf7dfcccf5d9cb84d31e116a28",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": false,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "sac-23",
+      "algorithm": "sac",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "f45f7508dadc800f39f67a926b9628d8118805ac08daed1c37048e93191efc6d",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": false,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "recurrent_ppo-23",
+      "algorithm": "recurrent_ppo",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "46d6a526d1e80f625b9026a42141646f5e524b8501cfdda0c2d5b7b3118f82a8",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": true,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "ppo-37",
+      "algorithm": "ppo",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "3c2864b3f0c2a3cb433cf85200d5f30acc9d567b16085788b11a5ede9cbb5b69",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": false,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "sac-37",
+      "algorithm": "sac",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "bd80618b722b03bac15c2161e53aa8bb174961fb711824e82476179075bdeca6",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": false,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    },
+    {
+      "cell": "recurrent_ppo-37",
+      "algorithm": "recurrent_ppo",
+      "actual_steps": 100000,
+      "python": "3.13.16",
+      "bundle_id": "8b003b708e171f7ea3a21234d526824174c6e0849a55cfaabea19f7cfd0ef4e1",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_reset_and_state_parity": true,
+      "normalization_unchanged": true,
+      "schema_feed_shape_rejected": true
+    }
+  ]
+}

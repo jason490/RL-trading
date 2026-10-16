@@ -372,7 +372,7 @@ versus 23.96%/14.46% basic controls. All paired feature gates failed; no additio
 steps or seeds were added to this protocol. All 12 control/new bundles passed
 frozen checks. Project usage reached 35.098226 units and all owned sessions stopped.
 
-## 17. Recommended algorithm comparisons — proposed
+## Earlier algorithm recommendations — superseded by the declared comparison below
 
 After the indicator follow-up, test alternatives to SAC in a separate bounded
 study. Strong selected checkpoints followed by deterioration motivate this
@@ -410,7 +410,7 @@ training. Historical-universe coverage remains a separate data-readiness task;
 reward changes must be tested independently. Guidance on multiple seeds and
 evaluation is in [SB3's experiment guide](https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html).
 
-## 17. Diagnose deterioration and compare PPO variants — in progress, 2026-10-16
+## 17. Diagnose deterioration and compare PPO variants — completed, 2026-10-16
 
 After the last indicator cell, diagnose selected/final saved paths and run a
 separate nine-cell PPO/RecurrentPPO/SAC CPU stability comparison if the evidence supports PPO.
@@ -430,3 +430,22 @@ by profiling and cost. Local acceptance passes 144 tests, including four mixed-
 hardware mocked concurrent cells. Run the three-model CPU concurrent smoke
 preflight before the nine 100k algorithm/memory comparison cells. All credit
 usage, retries and cleanup share the preserved project ledger.
+
+The actual concurrent preflight accepted all three algorithms after a reviewed
+transport-timeout fix; full local acceptance passed 146 tests. All nine research
+cells then completed 100k transitions on Colab CPU, with peak concurrency three.
+Selected/final validation means were SAC 19.70%/16.50%, PPO 18.69%/16.90%, and
+RecurrentPPO 13.27%/6.13%, versus buy-and-hold 30.60%. All declared gates failed.
+PPO narrowed the selected-to-final gap but did not provide the required return
+gains; the recurrent configuration deteriorated more. No additional training or
+test selection was added. All nine downloaded bundles passed exact frozen
+sequence parity, normalization and schema rejection checks. Every owned session
+stopped and cleanup was verified; conservative cumulative usage is 35.389379
+units. See [results](results/algorithm-stability-2026-10-16/README.md).
+
+Next work should establish historical membership and delisting-return coverage
+before a separately declared universe experiment. A matched turnover intervention
+is another separate hypothesis, especially for PPO seed 37; it should not be
+treated as a general explanation for all deterioration. TQC and stacked PPO
+remain unexecuted ideas, not queued jobs. Persistent shadow inference and paper
+execution remain later milestones. The inspected final-test interval is retired.

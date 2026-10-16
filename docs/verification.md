@@ -414,3 +414,18 @@ the two unaccepted smoke cells were retried. All sessions stopped. Downloaded
 bundles pass exact multi-step CPU prediction parity (including recurrent state),
 immutable normalization and matching learning-source proofs. Full local
 acceptance passes **146 tests in 86.94 seconds**, zero skips/failures.
+
+## Completed concurrent algorithm study, 2026-10-16
+
+All nine declared SAC/PPO/RecurrentPPO cells completed 100,000 transitions in
+Google Colab CPU runtimes, with peak concurrency three. The coordinator retrieved
+all artifacts and verified every owned session stopped. Clean learning-source and
+dependency proofs match across arms. Selected/final means are SAC 19.70%/16.50%,
+PPO 18.69%/16.90%, recurrent PPO 13.27%/6.13%; all improvement gates fail.
+No new final-test evaluation or orders occurred. All nine frozen bundles pass
+exact CPU sequence predictions, recurrent state/reset parity where applicable,
+immutable normalization and schema/feed/shape rejection. Full local acceptance
+remains 146 passed (86.94 seconds); no learning code changed during publication.
+Cumulative conservative usage is 35.389379 units, with 114.610621 remaining.
+[Results](../results/algorithm-stability-2026-10-16/README.md) retain all seeds,
+10k-step curves, failed gates and saved-path deterioration attribution.

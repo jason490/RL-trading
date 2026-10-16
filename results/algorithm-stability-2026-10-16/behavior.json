@@ -252,6 +252,870 @@
       },
       "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
       "cell": "recurrent_ppo-11"
+    },
+    {
+      "algorithm": "sac",
+      "seed": 11,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 80000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 762.2692307692307,
+            "entries": 67.88461538461539,
+            "full_closures": 66.88461538461539,
+            "protective_reentries_within_one_session": 38.38461538461539,
+            "fees": 1944.999764534402,
+            "impact": 3889.996878523403,
+            "borrow": 159.15795049407106,
+            "reported_costs": 5994.154593551877,
+            "mean_abs_exposure": 0.8441191634780175,
+            "long_fraction": 0.9180853299705759,
+            "short_fraction": 0.028741067675493906,
+            "flat_fraction": 0.053173602353930226,
+            "mean_abs_log_reward": 0.010118148631725554,
+            "net_return": 0.19226055063977712,
+            "max_drawdown": -0.31221715946193745,
+            "turnover": 194.499843926192
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.8631920420406946,
+              0.1275165818597199,
+              0.5113332508121683,
+              -0.16799459769889655
+            ],
+            "saturation_fraction": [
+              0.635771332492644,
+              0.042612442202606134,
+              0.21647751155947878,
+              0.05023118957545187
+            ],
+            "target_sign_switch_fraction": 0.04435441439545407
+          },
+          "yearly_return_pct": {
+            "2021": 24.203664798928965,
+            "2022": -10.125401045774606,
+            "2023": 9.306289908393278
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 762.8076923076923,
+            "entries": 109.03846153846153,
+            "full_closures": 108.07692307692308,
+            "protective_reentries_within_one_session": 76.61538461538461,
+            "fees": 2586.3159871767925,
+            "impact": 5172.629715220818,
+            "borrow": 150.66524868728476,
+            "reported_costs": 7909.6109510848955,
+            "mean_abs_exposure": 0.8090256450830103,
+            "long_fraction": 0.8637032366540563,
+            "short_fraction": 0.02711223203026482,
+            "flat_fraction": 0.10918453131567886,
+            "mean_abs_log_reward": 0.010091791407038359,
+            "net_return": 0.11534258429564627,
+            "max_drawdown": -0.3287837878677221,
+            "turnover": 258.63148576106926
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.8737018463922529,
+              -0.49023661266396956,
+              0.3222327460450703,
+              -0.265437965450817
+            ],
+            "saturation_fraction": [
+              0.6747583018074821,
+              0.04487179487179487,
+              0.022383354350567465,
+              0.060372005044136194
+            ],
+            "target_sign_switch_fraction": 0.050878669893717775
+          },
+          "yearly_return_pct": {
+            "2021": 23.12680205203488,
+            "2022": -15.69179420517957,
+            "2023": 8.571208667071081
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -7.691796634413086,
+      "additional_costs_as_initial_equity_pp": 1.9154563575330184,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -5.776340276880068,
+      "symbols_deteriorating": 18,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/ent_coef": 1.7459185983170755e-05,
+        "train/actor_loss": -0.8826242685317993,
+        "train/critic_loss": 5.777857586508617e-05,
+        "train/ent_coef_loss": -1.1984107494354248
+      },
+      "final_training": {
+        "train/ent_coef": 1.7907324945554137e-05,
+        "train/actor_loss": -0.3476780652999878,
+        "train/critic_loss": 8.365761459572241e-05,
+        "train/ent_coef_loss": 2.350076913833618
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "sac-11"
+    },
+    {
+      "algorithm": "ppo",
+      "seed": 23,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 90000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 268.0769230769231,
+            "entries": 59.5,
+            "full_closures": 58.61538461538461,
+            "protective_reentries_within_one_session": 40.84615384615385,
+            "fees": 1413.0558663383513,
+            "impact": 2826.1082712262964,
+            "borrow": 73.07672267455321,
+            "reported_costs": 4312.240860239201,
+            "mean_abs_exposure": 0.8904592716145969,
+            "long_fraction": 0.9244430432955023,
+            "short_fraction": 0.01912568306010929,
+            "flat_fraction": 0.0564312736443884,
+            "mean_abs_log_reward": 0.01090277284437181,
+            "net_return": 0.21688452151507556,
+            "max_drawdown": -0.32623232020900267,
+            "turnover": 141.30541356133148
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.9267426895787262,
+              0.15614534011004966,
+              -0.010956604117386673,
+              0.15404945494026337
+            ],
+            "saturation_fraction": [
+              0.8711643547709121,
+              0.05474989491382934,
+              0,
+              0.33522488440521225
+            ],
+            "target_sign_switch_fraction": 0.03130590339892665
+          },
+          "yearly_return_pct": {
+            "2021": 24.221791123041907,
+            "2022": -9.041750774826168,
+            "2023": 11.498486181387577
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 301.53846153846155,
+            "entries": 69.5,
+            "full_closures": 68.61538461538461,
+            "protective_reentries_within_one_session": 41.42307692307692,
+            "fees": 1550.719603175495,
+            "impact": 3101.4359202015717,
+            "borrow": 121.52702821600568,
+            "reported_costs": 4773.682551593072,
+            "mean_abs_exposure": 0.8727312085665192,
+            "long_fraction": 0.9100462379150904,
+            "short_fraction": 0.032629255989911725,
+            "flat_fraction": 0.057324506094997896,
+            "mean_abs_log_reward": 0.01076626067641968,
+            "net_return": 0.20874110536796162,
+            "max_drawdown": -0.3236933750843054,
+            "turnover": 155.07179601009702
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.8947099191396012,
+              0.19949271530372933,
+              -0.0036417881219470488,
+              0.20078191377984742
+            ],
+            "saturation_fraction": [
+              0.8401639344262295,
+              0.05727196300966793,
+              0.0024169819251786467,
+              0.40899537620849097
+            ],
+            "target_sign_switch_fraction": 0.04793223192675997
+          },
+          "yearly_return_pct": {
+            "2021": 22.74300851298932,
+            "2022": -7.298403875234614,
+            "2023": 9.886011101750318
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -0.8143416147113947,
+      "additional_costs_as_initial_equity_pp": 0.46144169135387164,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -0.352899923357523,
+      "symbols_deteriorating": 15,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/entropy_loss": -4.7177258968353275,
+        "train/approx_kl": 0.011280527338385582,
+        "train/clip_fraction": 0.12649999970570205,
+        "train/value_loss": 0.0007963484879292082,
+        "train/policy_gradient_loss": -0.017662183376033484,
+        "train/explained_variance": 0.6408429741859436,
+        "train/std": 0.789376974105835
+      },
+      "final_training": {
+        "train/entropy_loss": -4.5861914706230165,
+        "train/approx_kl": 0.013902691192924976,
+        "train/clip_fraction": 0.1488999998010695,
+        "train/value_loss": 0.0006608064251486212,
+        "train/policy_gradient_loss": -0.021646632426830195,
+        "train/explained_variance": 0.6132116317749023,
+        "train/std": 0.7635087370872498
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "ppo-23"
+    },
+    {
+      "algorithm": "sac",
+      "seed": 23,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 60000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 734.8076923076923,
+            "entries": 53.65384615384615,
+            "full_closures": 52.65384615384615,
+            "protective_reentries_within_one_session": 40.26923076923077,
+            "fees": 1366.4286955902062,
+            "impact": 2732.8536372644694,
+            "borrow": 46.8405043445402,
+            "reported_costs": 4146.122837199216,
+            "mean_abs_exposure": 0.8736808478749665,
+            "long_fraction": 0.9280685161832702,
+            "short_fraction": 0.015184951660361497,
+            "flat_fraction": 0.05674653215636822,
+            "mean_abs_log_reward": 0.010548773058224829,
+            "net_return": 0.15849210988737714,
+            "max_drawdown": -0.3500849351417277,
+            "turnover": 136.64268186323955
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.9159660180353377,
+              0.5122552276590934,
+              0.009488501587977375,
+              -0.09540410334508226
+            ],
+            "saturation_fraction": [
+              0.7484762505254309,
+              0.2858343841950399,
+              0.01355611601513241,
+              0.018757881462799497
+            ],
+            "target_sign_switch_fraction": 0.018415237293486268
+          },
+          "yearly_return_pct": {
+            "2021": 27.379526323597165,
+            "2022": -12.763036779009203,
+            "2023": 7.705152247735188
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 734.1538461538462,
+            "entries": 71.38461538461539,
+            "full_closures": 70.46153846153847,
+            "protective_reentries_within_one_session": 42.61538461538461,
+            "fees": 1783.1186550768255,
+            "impact": 3566.233970108135,
+            "borrow": 120.46115205706256,
+            "reported_costs": 5469.813777242022,
+            "mean_abs_exposure": 0.8461569064481986,
+            "long_fraction": 0.914354770912148,
+            "short_fraction": 0.026849516603614964,
+            "flat_fraction": 0.058795712484237074,
+            "mean_abs_log_reward": 0.010222840724513812,
+            "net_return": 0.13945352845112757,
+            "max_drawdown": -0.3312295490366728,
+            "turnover": 178.3116985054273
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.868557051046524,
+              0.29109681061006687,
+              0.3624427477637726,
+              -0.28892263572799304
+            ],
+            "saturation_fraction": [
+              0.6354560739806642,
+              0.06956704497688104,
+              0.04639554434636402,
+              0.03136822194199244
+            ],
+            "target_sign_switch_fraction": 0.04088182679153951
+          },
+          "yearly_return_pct": {
+            "2021": 25.06237871334644,
+            "2022": -12.314093913472014,
+            "2023": 8.012580244858134
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -1.9038581436249564,
+      "additional_costs_as_initial_equity_pp": 1.3236909400428065,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -0.5801672035821499,
+      "symbols_deteriorating": 13,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/ent_coef": 1.572183464304544e-05,
+        "train/actor_loss": -2.4493930339813232,
+        "train/critic_loss": 7.364418706856668e-05,
+        "train/ent_coef_loss": 2.910081624984741
+      },
+      "final_training": {
+        "train/ent_coef": 1.9040482584387064e-05,
+        "train/actor_loss": -0.3531107008457184,
+        "train/critic_loss": 9.082075848709792e-05,
+        "train/ent_coef_loss": 0.8788434267044067
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "sac-23"
+    },
+    {
+      "algorithm": "recurrent_ppo",
+      "seed": 23,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 50000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 752.0384615384615,
+            "entries": 54.61538461538461,
+            "full_closures": 53.65384615384615,
+            "protective_reentries_within_one_session": 33.73076923076923,
+            "fees": 900.1546851675134,
+            "impact": 1800.3070285323033,
+            "borrow": 105.1527276612376,
+            "reported_costs": 2805.614441361054,
+            "mean_abs_exposure": 0.4929686329915242,
+            "long_fraction": 0.8861916771752837,
+            "short_fraction": 0.0657313997477932,
+            "flat_fraction": 0.04807692307692308,
+            "mean_abs_log_reward": 0.0060791516248952,
+            "net_return": 0.17255546561448723,
+            "max_drawdown": -0.2178303637150365,
+            "turnover": 90.01535142662517
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.4954423791026801,
+              0.018131387731956477,
+              0.25038515672992173,
+              0.4400471611191257
+            ],
+            "saturation_fraction": [
+              0.07828919714165616,
+              0.0033102143757881464,
+              0.1459121479613283,
+              0.1746532156368222
+            ],
+            "target_sign_switch_fraction": 0.028517310323055878
+          },
+          "yearly_return_pct": {
+            "2021": 13.430686329750277,
+            "2022": -2.177228285843844,
+            "2023": 8.04254770397099
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 576.9615384615385,
+            "entries": 91.42307692307692,
+            "full_closures": 90.46153846153847,
+            "protective_reentries_within_one_session": 47.57692307692308,
+            "fees": 1639.0786208831964,
+            "impact": 3278.154584515135,
+            "borrow": 295.61186015639987,
+            "reported_costs": 5212.845065554732,
+            "mean_abs_exposure": 0.6756454118028395,
+            "long_fraction": 0.8269756200084069,
+            "short_fraction": 0.10277427490542244,
+            "flat_fraction": 0.07025010508617066,
+            "mean_abs_log_reward": 0.00786413929276766,
+            "net_return": 0.05863953994159955,
+            "max_drawdown": -0.33412990412563454,
+            "turnover": 163.90772922577585
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.6571708806297543,
+              0.07263499596928856,
+              0.21287445121939197,
+              0.04553467591889962
+            ],
+            "saturation_fraction": [
+              0.4744640605296343,
+              0.057692307692307696,
+              0.20239596469104665,
+              0.40284783522488443
+            ],
+            "target_sign_switch_fraction": 0.06545301483741976
+          },
+          "yearly_return_pct": {
+            "2021": 21.123435180200932,
+            "2022": -15.21470415406798,
+            "2023": 3.097112662613407
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -11.391592567288768,
+      "additional_costs_as_initial_equity_pp": 2.4072306241936783,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -8.98436194309509,
+      "symbols_deteriorating": 20,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/entropy_loss": -5.201893429756165,
+        "train/approx_kl": 0.015675464645028114,
+        "train/clip_fraction": 0.15599999973550438,
+        "train/value_loss": 0.0002804086843934783,
+        "train/policy_gradient_loss": -0.021448027831735092,
+        "train/explained_variance": 0.5458767414093018,
+        "train/std": 0.8925427198410034
+      },
+      "final_training": {
+        "train/entropy_loss": -4.56051926612854,
+        "train/approx_kl": 0.04287954419851303,
+        "train/clip_fraction": 0.29299999967217444,
+        "train/value_loss": 0.0005286321102903458,
+        "train/policy_gradient_loss": -0.033862524909363145,
+        "train/explained_variance": 0.7084554433822632,
+        "train/std": 0.7670029401779175
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "recurrent_ppo-23"
+    },
+    {
+      "algorithm": "ppo",
+      "seed": 37,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 30000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 786.7307692307693,
+            "entries": 60.80769230769231,
+            "full_closures": 59.84615384615385,
+            "protective_reentries_within_one_session": 34.57692307692308,
+            "fees": 856.4532029055755,
+            "impact": 1712.9056225052007,
+            "borrow": 28.30742191197671,
+            "reported_costs": 2597.6662473227525,
+            "mean_abs_exposure": 0.4129870509747,
+            "long_fraction": 0.9145649432534678,
+            "short_fraction": 0.03656998738965952,
+            "flat_fraction": 0.04886506935687263,
+            "mean_abs_log_reward": 0.0054108138453300425,
+            "net_return": 0.14453748289441015,
+            "max_drawdown": -0.1849708381159802,
+            "turnover": 85.64528112527003
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.42768248387727104,
+              0.041388109334020866,
+              -0.12871170533322734,
+              0.13151456237678227
+            ],
+            "saturation_fraction": [
+              0.0004728877679697352,
+              0.00010508617065994115,
+              0.018810424548129465,
+              0.0014712063892391761
+            ],
+            "target_sign_switch_fraction": 0.040145217299800064
+          },
+          "yearly_return_pct": {
+            "2021": 9.677548660327401,
+            "2022": -1.9942582406660094,
+            "2023": 7.832889241042981
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 529.2692307692307,
+            "entries": 97.73076923076923,
+            "full_closures": 96.76923076923077,
+            "protective_reentries_within_one_session": 45.07692307692308,
+            "fees": 2053.473603660581,
+            "impact": 4106.944663182186,
+            "borrow": 210.99119595778294,
+            "reported_costs": 6371.40946280055,
+            "mean_abs_exposure": 0.7479350209141103,
+            "long_fraction": 0.8680643127364439,
+            "short_fraction": 0.06778058007566204,
+            "flat_fraction": 0.06415510718789408,
+            "mean_abs_log_reward": 0.009127342868758681,
+            "net_return": 0.09888613557977508,
+            "max_drawdown": -0.2954502351451804,
+            "turnover": 205.34723315913297
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.7666966723365856,
+              0.08886745950628343,
+              0.1829279536947928,
+              0.5113156776832782
+            ],
+            "saturation_fraction": [
+              0.5989386296763346,
+              0.18495166036149643,
+              0.13582387557797393,
+              0.21558427910886926
+            ],
+            "target_sign_switch_fraction": 0.07787014626959908
+          },
+          "yearly_return_pct": {
+            "2021": 11.271239768972196,
+            "2022": -5.54763423978668,
+            "2023": 7.755240534162483
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -4.565134731463508,
+      "additional_costs_as_initial_equity_pp": 3.773743215477797,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -0.791391515985711,
+      "symbols_deteriorating": 13,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/entropy_loss": -5.336065566539764,
+        "train/approx_kl": 0.012601976282894611,
+        "train/clip_fraction": 0.13389999950304626,
+        "train/value_loss": 0.0012345514450862538,
+        "train/policy_gradient_loss": -0.01802247394867299,
+        "train/explained_variance": 0.5786309242248535,
+        "train/std": 0.9191017746925354
+      },
+      "final_training": {
+        "train/entropy_loss": -4.578770520687104,
+        "train/approx_kl": 0.012568941339850426,
+        "train/clip_fraction": 0.14599999986588955,
+        "train/value_loss": 0.00018787208537105471,
+        "train/policy_gradient_loss": -0.020994371788200822,
+        "train/explained_variance": 0.69211745262146,
+        "train/std": 0.7597512602806091
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "ppo-37"
+    },
+    {
+      "algorithm": "sac",
+      "seed": 37,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 100000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 734.6538461538462,
+            "entries": 48.92307692307692,
+            "full_closures": 48,
+            "protective_reentries_within_one_session": 36.96153846153846,
+            "fees": 1218.9938265625312,
+            "impact": 2437.984311816855,
+            "borrow": 35.72531008608612,
+            "reported_costs": 3692.7034484654723,
+            "mean_abs_exposure": 0.8574914321818315,
+            "long_fraction": 0.9379466162253047,
+            "short_fraction": 0.010718789407313998,
+            "flat_fraction": 0.051334594367381255,
+            "mean_abs_log_reward": 0.010271087831111482,
+            "net_return": 0.24032739145999898,
+            "max_drawdown": -0.3007916501209616,
+            "turnover": 121.89921559085668
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.89211659874421,
+              -0.0066425085675320536,
+              0.5703117672405658,
+              -0.027331921387465374
+            ],
+            "saturation_fraction": [
+              0.5539617486338798,
+              0.008459436738125263,
+              0.0471311475409836,
+              0.009562841530054645
+            ],
+            "target_sign_switch_fraction": 0.018467852257181942
+          },
+          "yearly_return_pct": {
+            "2021": 25.901340556042584,
+            "2022": -9.158629246087568,
+            "2023": 11.826452384226691
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 732.3076923076923,
+            "entries": 48.96153846153846,
+            "full_closures": 48.03846153846154,
+            "protective_reentries_within_one_session": 36.96153846153846,
+            "fees": 1218.0529596629335,
+            "impact": 2436.1025796380745,
+            "borrow": 37.93932944996453,
+            "reported_costs": 3692.0948687509726,
+            "mean_abs_exposure": 0.8573922937652488,
+            "long_fraction": 0.9372110130306852,
+            "short_fraction": 0.011454392601933585,
+            "flat_fraction": 0.051334594367381255,
+            "mean_abs_log_reward": 0.010266814666543264,
+            "net_return": 0.24029774349007102,
+            "max_drawdown": -0.3012772060119571,
+            "turnover": 121.80512898191755
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.8916267559571194,
+              -0.011025770768967933,
+              0.5729688136780047,
+              -0.024399053958370286
+            ],
+            "saturation_fraction": [
+              0.5535939470365699,
+              0.008617065994115174,
+              0.04739386296763346,
+              0.009615384615384616
+            ],
+            "target_sign_switch_fraction": 0.018573082184573292
+          },
+          "yearly_return_pct": {
+            "2021": 25.923929387516974,
+            "2022": -8.978943942289394,
+            "2023": 11.66660032226475
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -0.0029647969927965034,
+      "additional_costs_as_initial_equity_pp": -0.0006085797144996832,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -0.0035733767072961865,
+      "symbols_deteriorating": 5,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/ent_coef": 8.921379958337639e-06,
+        "train/actor_loss": -0.346563458442688,
+        "train/critic_loss": 6.694527837680653e-05,
+        "train/ent_coef_loss": -5.044191837310791
+      },
+      "final_training": {
+        "train/ent_coef": 8.919789252104238e-06,
+        "train/actor_loss": -0.3448670506477356,
+        "train/critic_loss": 6.698010838590562e-05,
+        "train/ent_coef_loss": -2.2739381790161133
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "sac-37"
+    },
+    {
+      "algorithm": "recurrent_ppo",
+      "seed": 37,
+      "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+      "selected_step": 90000,
+      "final_step": 100000,
+      "phases": {
+        "selected": {
+          "behavior": {
+            "fills": 467.53846153846155,
+            "entries": 81.96153846153847,
+            "full_closures": 81.03846153846153,
+            "protective_reentries_within_one_session": 54.19230769230769,
+            "fees": 1725.017672531679,
+            "impact": 3450.032263925305,
+            "borrow": 202.59844671851113,
+            "reported_costs": 5377.648383175495,
+            "mean_abs_exposure": 0.7715719125322378,
+            "long_fraction": 0.8620218579234973,
+            "short_fraction": 0.058007566204287514,
+            "flat_fraction": 0.07997057587221522,
+            "mean_abs_log_reward": 0.009513032780396625,
+            "net_return": 0.11692912606360842,
+            "max_drawdown": -0.30278149136064064,
+            "turnover": 172.501613196285
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.7937595803028707,
+              0.31402926707402273,
+              0.15970185408079013,
+              -0.1272704705148023
+            ],
+            "saturation_fraction": [
+              0.6761769651113914,
+              0.262505254308533,
+              0.2619272803699033,
+              0.33990121899957965
+            ],
+            "target_sign_switch_fraction": 0.038198463643060086
+          },
+          "yearly_return_pct": {
+            "2021": 17.119815605117353,
+            "2022": -8.557987243508359,
+            "2023": 6.906767909181644
+          }
+        },
+        "final": {
+          "behavior": {
+            "fills": 493.38461538461536,
+            "entries": 85.57692307692308,
+            "full_closures": 84.65384615384616,
+            "protective_reentries_within_one_session": 54.26923076923077,
+            "fees": 1854.8014631765282,
+            "impact": 3709.599702836402,
+            "borrow": 274.68586426497376,
+            "reported_costs": 5839.087030277905,
+            "mean_abs_exposure": 0.7606362466677286,
+            "long_fraction": 0.8525641025641025,
+            "short_fraction": 0.06751786464901219,
+            "flat_fraction": 0.07991803278688525,
+            "mean_abs_log_reward": 0.00949003415403552,
+            "net_return": 0.07566472506529175,
+            "max_drawdown": -0.30873057829528233,
+            "turnover": 185.4799851418414
+          },
+          "actions": {
+            "component_order": [
+              "exposure",
+              "stop",
+              "target_near",
+              "zone_width"
+            ],
+            "mean_action": [
+              0.7686369417712073,
+              0.27799594678441175,
+              0.1853101686093125,
+              -0.07474825435909965
+            ],
+            "saturation_fraction": [
+              0.6737599831862127,
+              0.19924337957124844,
+              0.35503362757461115,
+              0.34809794031105507
+            ],
+            "target_sign_switch_fraction": 0.042986425339366516
+          },
+          "yearly_return_pct": {
+            "2021": 15.25381082072064,
+            "2022": -11.565377664173026,
+            "2023": 7.479778514701183
+          }
+        }
+      },
+      "final_minus_selected_return_pp": -4.126440099831667,
+      "additional_costs_as_initial_equity_pp": 0.46143864710240995,
+      "change_in_non_cost_pnl_as_initial_equity_pp": -3.665001452729257,
+      "symbols_deteriorating": 15,
+      "symbol_count": 26,
+      "selected_training": {
+        "train/entropy_loss": -4.685987069606781,
+        "train/approx_kl": 0.038837917149066925,
+        "train/clip_fraction": 0.28799999980255964,
+        "train/value_loss": 0.0003213138699538831,
+        "train/policy_gradient_loss": -0.038566435084590935,
+        "train/explained_variance": 0.736419677734375,
+        "train/std": 0.7820192575454712
+      },
+      "final_training": {
+        "train/entropy_loss": -4.488239781856537,
+        "train/approx_kl": 0.03461930528283119,
+        "train/clip_fraction": 0.284800001103431,
+        "train/value_loss": 0.00037967167556416824,
+        "train/policy_gradient_loss": -0.033968489608331584,
+        "train/explained_variance": 0.6492059230804443,
+        "train/std": 0.7431221008300781
+      },
+      "interpretation": "Validation-selected versus final saved paths. Cost add-back is an accounting decomposition of those paths, not a cost-free backtest. Year returns carry the existing positions across year boundaries. Losses, entropy and saturation are diagnostics; they do not prove overfitting or establish a causal mechanism.",
+      "cell": "recurrent_ppo-37"
     }
   ]
 }

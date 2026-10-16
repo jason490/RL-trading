@@ -139,3 +139,24 @@ families expose their seed curves without a family aggregate or gate. Complete
 three-seed groups report selected/final returns and seed standard deviations,
 drawdowns, and the selected-to-final gap. Gates are shown only for complete pairs.
 The standalone HTML, JSON and CSV record the protocol and do not select on test.
+
+## Completed results, 2026-10-16
+
+All nine cells finished on Colab CPU. Selected/final mean validation returns were
+SAC 19.70%/16.50%, PPO 18.69%/16.90%, RecurrentPPO 13.27%/6.13%; buy-and-hold
+was 30.60%. All declared gates failed. PPO reduced the selected-to-final gap
+from 3.20 to 1.79 points but missed the required return and gap improvements.
+The recurrent configuration had a 7.14-point gap and lost to both controls at
+the endpoint in every seed. No architecture tuning or additional steps followed.
+
+Saved-path attribution varies: extra costs represent 3.77 of PPO seed 37's
+4.57-point decline, but only 2.41 of recurrent seed 23's 11.39-point decline.
+The latter also increased exposure saturation from 8% to 47%. This supports
+separate turnover and policy-behavior hypotheses, not a universal reward fix or
+proof of overfitting. All nine frozen bundles pass sequence/reset parity and
+immutable normalization/schema checks. Full local acceptance passed 146 tests.
+Every owned session stopped; cumulative conservative usage is 35.389379 units.
+
+See [complete results and next steps](../results/algorithm-stability-2026-10-16/README.md)
+and [downloadable graphs/models](https://github.com/jason490/RL-trading/releases/tag/algorithm-stability-2026-10-16).
+Do not reuse the retired final-test interval to rescue a failed comparison.
