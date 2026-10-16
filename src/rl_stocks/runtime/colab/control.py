@@ -22,7 +22,7 @@ def process_stop_request(root, parent_info=None, send_signal=None):
         cwd=Path(os.readlink(f'/proc/{pid}/cwd'))
     else:
         pid,arguments,cwd=parent_info
-    approved=any(a=='rl_stocks.runtime.colab.runner' or Path(a).name in
+    approved=any(a in ('rl_stocks.runtime.colab.runner','rl_stocks.runtime.colab.fleet') or Path(a).name in
                  ('run-study-campaign.py','run-study-batches.py') for a in arguments)
     if pid<=1 or Path(cwd).resolve()!=root or not approved:
         return False

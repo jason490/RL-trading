@@ -373,5 +373,5 @@ or interruption. Persist all recovery IDs and commands; never stop unrelated
 assignments. Do not automatically restart after a budget or metering stop.
 
 The legacy `ColabJob` runner is serial and must not be launched in parallel
-against its single-active-attempt ledger. Concurrent execution requires the
-coordinator implementation and failure/budget/cleanup tests first.
+against its single-active-attempt ledger. Use the [concurrent coordinator](colab-concurrency.md) for a pool; its
+accounting and failure/cleanup acceptance are separate from remote preflight.

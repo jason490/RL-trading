@@ -31,6 +31,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | GitHub model releases | [releases.md](releases.md) | Downloadable models, derived reports, checksums and training provenance |
 | Artifact retention and cleanup | [artifact-retention.md](artifact-retention.md) | Required research evidence, release verification, temporary-file cleanup and recovery state |
 | Colab runtime operations | [colab.md](colab.md) | CPU/T4 preflight, A100 training, compute ledger, retrieval and recovery |
+| Concurrent Colab runtimes | [colab-concurrency.md](colab-concurrency.md) | Configurable pool, shared account metering, owned teardown and recovery |
 | Tests and acceptance | [testing.md](testing.md) | Offline checks, optional integration and future smoke acceptance |
 | Current verification | [verification.md](verification.md) | Checks actually performed, artifacts, usage and remaining research |
 

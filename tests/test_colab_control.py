@@ -7,6 +7,14 @@ from rl_stocks.runtime.colab.control import process_stop_request
 
 
 class ControlTests(unittest.TestCase):
+    def test_exact_fleet_parent_can_be_interrupted(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);state=root/'.runtime';state.mkdir()
+            (state/'usage-ledger.json').write_text(json.dumps({'attempts':[{'session':'fleet','status':'active'}]}))
+            (state/'stop-owned-runner.json').write_text(json.dumps({'session':'fleet'}))
+            calls=[]
+            self.assertTrue(process_stop_request(root,(123,['python','-m','rl_stocks.runtime.colab.fleet'],root),lambda *a:calls.append(a)))
+            self.assertEqual(calls,[(123,signal.SIGINT)])
     def test_exact_owned_parent_receives_one_graceful_interrupt(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);state=root/'.runtime';state.mkdir()

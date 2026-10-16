@@ -6,6 +6,14 @@ from rl_stocks.runtime.colab.runner import ColabJob
 
 
 class StabilityJobTests(unittest.TestCase):
+    def test_single_smoke_is_cpu_and_has_exact_algorithm_budget(self):
+        from rl_stocks.runtime.colab.jobs import single_smoke_plan
+        for algorithm,steps in [('ppo',512),('recurrent_ppo',512),('sac',1024),('td3',1024)]:
+            plan=single_smoke_plan(algorithm);self.assertEqual(validate_plan(plan),plan)
+            self.assertEqual(plan['jobs'][0]['steps'],steps)
+            self.assertEqual(plan['accelerator'],'CPU')
+            plan['jobs'][0]['steps']=100000
+            with self.assertRaises(ValueError):validate_plan(plan)
     def test_fixed_cpu_plan_and_tampering_rejected(self):
         for algorithm in ('ppo','sac','recurrent_ppo'):
             for seed in (11,23,37):

@@ -58,5 +58,13 @@
     "n_epochs": 10,
     "inference_state": "Carry hidden/cell state only within a symbol episode; reset at every episode boundary; zero state initially; no warmup across data splits."
   },
-  "memory_comparison": "Apply the same paired gate to recurrent_ppo versus standard ppo, in addition to each candidate versus SAC. No superiority claim from recurrent-versus-SAC alone."
+  "memory_comparison": "Apply the same paired gate to recurrent_ppo versus standard ppo, in addition to each candidate versus SAC. No superiority claim from recurrent-versus-SAC alone.",
+  "execution": {
+    "runner": "rl_stocks.runtime.colab.fleet",
+    "concurrency_configurable": true,
+    "initial_research_concurrency": 3,
+    "hardware": "CPU fixed for this matched experiment; generic fleet supports validated CPU/GPU plans",
+    "lower_credit_preflight": "Three concurrent CPU single-algorithm smoke jobs: SAC 1024, PPO 512, RecurrentPPO 512; complete owned cleanup before research allocation",
+    "budget": "Single account-level fleet charge plus preserved historical serial attempts; shared 150-unit ceiling, teardown by 130, 360-second aggregate cleanup projection; per-allocation two-hour deadline"
+  }
 }

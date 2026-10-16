@@ -422,3 +422,11 @@ No new final-test evaluation, extra reward, hyperparameter search or stock
 selection occurs. Finish and publish the indicator study and clean its temporary
 duplicates before allocating new sessions. See [guide](docs/algorithm-stability.md).
 
+
+Concurrent execution is now implemented with a configurable runtime pool, isolated
+payloads and one aggregate account meter. The user explicitly removed the old
+one-session rule and fixed two-session/CPU-only limits; hardware remains chosen
+by profiling and cost. Local acceptance passes 144 tests, including four mixed-
+hardware mocked concurrent cells. Run the three-model CPU concurrent smoke
+preflight before the nine 100k algorithm/memory comparison cells. All credit
+usage, retries and cleanup share the preserved project ledger.

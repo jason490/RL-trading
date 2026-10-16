@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==5:
+    if plan.get('version')==6:
+        try:expected=single_smoke_plan(plan['smoke_algorithm'])
+        except (KeyError,TypeError):raise ValueError('malformed single smoke plan') from None
+        if plan!=expected:raise ValueError('unsupported single smoke plan')
+    elif plan.get('version')==5:
         try:expected=stability_plan(**plan['stability_study'])
         except (KeyError,TypeError):raise ValueError('malformed stability study plan') from None
         if plan!=expected:raise ValueError('unsupported stability study plan')
@@ -106,3 +110,10 @@ def stability_plan(algorithm,seed):
     job={'algorithm':algorithm,'device':'cpu','smoke':False,'seed':seed,'steps':100000,
          'evaluation_every':10000,'compact_checkpoints':True,'milestones':[100000],'reward_scale':1.}
     return {'version':5,'accelerator':'CPU','stability_study':{'algorithm':algorithm,'seed':seed},'jobs':[job]}
+
+
+def single_smoke_plan(algorithm):
+    if algorithm not in ('ppo','sac','td3','recurrent_ppo'):raise ValueError('unsupported smoke algorithm')
+    steps=512 if algorithm in ('ppo','recurrent_ppo') else 1024
+    return {'version':6,'accelerator':'CPU','smoke_algorithm':algorithm,
+        'jobs':[{'algorithm':algorithm,'device':'cpu','smoke':True,'seed':11,'steps':steps}]}
