@@ -26,7 +26,7 @@ lower-credit checks have already passed.
 Read the account balance before allocation and the reported consumption rate
 afterward. Hardware names do not establish a fixed credit rate. Record the
 runtime, rate, elapsed time and measured/estimated units for each attempt. Keep
-one owned session at a time; retrieve artifacts and verify shutdown before
+the legacy single-session runner serially; retrieve artifacts and verify shutdown before
 changing runtimes. The existing 150-unit ceiling, 130-unit teardown threshold,
 cumulative ledger and initial two-hour allocation limit apply across all
 stages, including setup, allocated idle time, downloads, failures and retries.
@@ -355,3 +355,23 @@ permits the existing single prestart retry.
 This recovery applies to newly started runner processes. A process already
 executing an older runner keeps its loaded behavior; its partial artifacts and
 verified shutdown must be reviewed before any fresh retry.
+
+## Concurrent-session policy
+
+The user's 2026-10-16 instruction authorizes configurable concurrent Colab
+sessions, without a fixed two-session limit or CPU-only restriction. This
+supersedes the previous one-session operating rule. CPU remains the current
+small-network workload preference; profiling and cost determine hardware.
+Account availability can still limit allocations.
+
+Concurrency must share the existing cumulative **150-unit project ceiling**,
+start teardown by **130 units**, include setup/idle/download/failure costs,
+and preserve each allocation's two-hour deadline. A single coordinator must
+meter aggregate account consumption, count overlapping debits once, project
+all outstanding work, and stop/verify every owned session on handled failure
+or interruption. Persist all recovery IDs and commands; never stop unrelated
+assignments. Do not automatically restart after a budget or metering stop.
+
+The legacy `ColabJob` runner is serial and must not be launched in parallel
+against its single-active-attempt ledger. Concurrent execution requires the
+coordinator implementation and failure/budget/cleanup tests first.
