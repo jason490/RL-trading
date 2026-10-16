@@ -131,3 +131,18 @@ occurred; cumulative estimated project consumption was 34.537024 units. Preserve
 that checkpoint and failure record, exclude its partial trajectory from complete
 cell aggregates, and retry that seed once from the unchanged learning source.
 Completed cells are skipped. See the tracked recovery record in the results.
+
+## Completed supply/demand-only family
+
+All three 250k seeds are retrieved and their runtimes stopped. Selected mean
+validation return is **18.39%**, versus basic inputs' **23.96%**; final mean is
+**11.83%**, versus **14.46%**. Only seed 23 improves selected return. Selected
+mean drawdown improves 0.34 points and final drawdown improves 1.75 points, but
+returns fail the paired feature gate. Seed 37 selects 17.19% at 160k and finishes
+at 3.40%; all trajectories remain published rather than dropping weaker seeds.
+
+Within these same runs, selected return gains 10.08 points after 100k and final
+return gains 8.53 points from its 100k anchors. Longer training helped this family
+relative to its own early checkpoints, while it still underperformed the matched
+basic-input control. The sector-only family remains necessary before attributing
+the combined family's selected gains or calculating feature interactions.
