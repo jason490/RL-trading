@@ -14,22 +14,25 @@ from rl_stocks.runtime.colab.payloads import prepare_payload
 
 
 class FakeCommand:
-    def __init__(self,path,delay=0,code=0,callback=None):
+    def __init__(self,path,delay=0,code=0,callback=None,expired=False):
         self.path=path;self.remaining=delay;self.code=code;self.callback=callback
+        self.timed_out=expired
     def poll(self):
         if self.callback:self.callback();self.callback=None
         if self.remaining:self.remaining-=1;return None
         return self.code
-    def expired(self):return False
+    def expired(self):return self.timed_out
     def close(self):pass
     def terminate(self):self.remaining=0
 
 
 class FakeCLI:
     command=['fake-colab']
-    def __init__(self,root,fail_meter=False,fail_stop=False,interrupt=False):
+    def __init__(self,root,fail_meter=False,fail_stop=False,interrupt=False,ready_failures=0,download_timeouts=0):
         self.root=root;self.active={};self.high_water=0;self.calls=[];self.meters=0
         self.fail_meter=fail_meter;self.fail_stop=fail_stop;self.interrupt=interrupt;self.fleet=None
+        self.ready_failures=ready_failures
+        self.download_timeouts=download_timeouts
     def short(self,args,timeout=25):
         if args==['usage']:
             self.meters+=1
@@ -51,7 +54,14 @@ class FakeCLI:
             return FakeCommand(path,delay=300,callback=callback)
         elif args[0]=='download':
             destination=Path(args[-1]);destination.parent.mkdir(parents=True,exist_ok=True)
-            if args[-2].endswith('.ready'):destination.touch()
+            if args[-2].endswith('research-artifacts.tar.gz') and self.download_timeouts:
+                self.download_timeouts-=1
+                return FakeCommand(path,delay=999,expired=True)
+            if args[-2].endswith('.ready'):
+                if self.ready_failures:
+                    self.ready_failures-=1;path.write_text('Download failed: binary download failed: ReadTimeout')
+                    return FakeCommand(path,code=1)
+                destination.touch()
             else:
                 with tarfile.open(destination,'w:gz') as archive:
                     info=tarfile.TarInfo('artifacts/fixture.json');data=b'{}';info.size=len(data);archive.addfile(info,io.BytesIO(data))
@@ -63,6 +73,21 @@ class FakeCLI:
 
 
 class FleetTests(unittest.TestCase):
+    def test_final_download_command_timeouts_use_bounded_retries(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root,cli,fleet=self.fixture(directory,count=1,download_timeouts=2)
+            self.assertEqual(self.run_fixture(fleet)['status'],'complete')
+            self.assertEqual(sum(c[0]=='download' and c[-2].endswith('research-artifacts.tar.gz') for c in cli.calls),3)
+    def test_marker_timeouts_retry_but_remain_bounded(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root,cli,fleet=self.fixture(directory,count=1,ready_failures=2)
+            self.assertEqual(self.run_fixture(fleet)['status'],'complete')
+            self.assertEqual(sum(c[0]=='download' and c[-2].endswith('.ready') for c in cli.calls),3)
+        with tempfile.TemporaryDirectory() as directory:
+            root,cli,fleet=self.fixture(directory,count=1,ready_failures=3)
+            with self.assertRaises(RuntimeError):self.run_fixture(fleet)
+            self.assertEqual(cli.active,{})
+            self.assertEqual(sum(c[0]=='download' and c[-2].endswith('.ready') for c in cli.calls),3)
     def fixture(self,directory,count=4,**options):
         root=Path(directory)
         for name in ('src','scripts','configs','.runtime','dataset'): (root/name).mkdir()

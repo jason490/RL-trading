@@ -62,6 +62,7 @@ class Runtime:
     sequence:int=0
     install_retries:int=0
     exec_retries:int=0
+    probe_failures:int=0
     download_attempts:int=0
     stop_attempts:int=0
     exec_deadline:float=0.
@@ -213,7 +214,12 @@ class Fleet:
             a.phase='await_export';a.probe_due=0.;child['phase']=a.phase;self.budget.ledger.save();self.save()
         elif phase=='ready':
             if code:
-                if 'HTTP 404' not in path.read_text(errors='replace'):raise RuntimeError('remote export status unavailable')
+                message=path.read_text(errors='replace')
+                if 'HTTP 404' in message:a.probe_failures=0
+                else:
+                    a.probe_failures+=1
+                    if any(status in message for status in ('HTTP 401','HTTP 403')) or a.probe_failures>=3:
+                        raise RuntimeError('remote export status unavailable after bounded retries')
                 a.phase='await_export';a.probe_due=time.monotonic()+10
             else:
                 a.download_attempts=1;self.download(a,'download','/content/research-artifacts.tar.gz','artifacts.tar.gz')
@@ -260,7 +266,7 @@ class Fleet:
         if code is None:
             command.terminate()
             if not lost:
-                if a.phase in ('stop','verify','salvage'):code=1
+                if a.phase in ('stop','verify','salvage','ready','download'):code=1
                 else:raise TimeoutError('runtime operation deadline: '+a.phase)
             else:code=1
         else:command.close()
@@ -309,7 +315,9 @@ class Fleet:
                             try:self.meter()
                             except BaseException as error:self.fail(error)
                         try:self.step(a)
-                        except BaseException as error:self.fail(error)
+                        except BaseException as error:
+                            if not self.fatal:self.state.update(failed_task=a.task['id'],failure_phase=a.phase)
+                            self.fail(error)
                     if not any(a.phase not in ('pending','done') for a in self.actors):
                         if self.fatal or all(a.phase=='done' for a in self.actors):break
                     time.sleep(.5)

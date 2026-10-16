@@ -1,0 +1,24 @@
+{
+  "status": "partial",
+  "completed": {
+    "ppo-11": {
+      "session": "rl-stocks-cpu-6485cd7f9e9b",
+      "root": "/home/vibe/projects/rl-stocks/artifacts/colab/rl-stocks-cpu-6485cd7f9e9b/retrieved/artifacts",
+      "runs": [
+        {
+          "algorithm": "ppo",
+          "seed": 11,
+          "actual_steps": 512,
+          "bundle_id": "f035a8d1f445a5f8ce3d70b5620c3de1e0f423495b8f71c30ce9800473193d1d"
+        }
+      ]
+    }
+  },
+  "failed_fleet": "rl-stocks-fleet-06f96b23fa95",
+  "reason": "Completion-marker download ReadTimeout; bounded retry fix added. Only PPO accepted; other periodic checkpoints retained.",
+  "peak_observed_assignments": 3,
+  "peak_observed_aggregate_rate": 0.24,
+  "all_owned_sessions_stopped": true,
+  "budget_stopped": false,
+  "conservative_project_units": 35.116856396394965
+}

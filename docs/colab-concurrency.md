@@ -130,3 +130,12 @@ stream-independent progress, owned interruption, metering outage, cleanup failur
 and recovery, and preservation of unrelated sessions. Actual remote concurrency
 must be reported separately after the smoke run; mocked acceptance is not proof
 of an account's permitted runtime count.
+
+Transient completion-marker transfer errors and final-download timeouts get at
+most three attempts within the original execution/allocation window. A missing
+marker is a normal not-ready response; unauthorized marker access fails closed.
+These transfer retries never suppress an unreliable account meter or extend the
+deadline. The first real three-CPU smoke run exposed a marker ReadTimeout: PPO
+was accepted, SAC/RecurrentPPO checkpoints were salvaged, and all three sessions
+were stopped and verified. The two unfinished acceptance tasks may be retried
+only after that reviewed ordinary transport failure; no budget stop occurred.
