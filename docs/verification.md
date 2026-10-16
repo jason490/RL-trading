@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **131 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **134 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -382,3 +382,10 @@ Colab's active default kernel was rechecked as **3.13.16** before adding
 `sb3-contrib==2.7.0`; the hash lock retains all prior pins. Full local acceptance
 passed **131 tests in 90.02 seconds**, zero skips/failures (13 dependency/checker
 warnings). Recurrent research training has not yet started.
+
+The stability-report gate and explicit separate actor/critic LSTM settings pass
+full local acceptance: **134 tests in 91.41 seconds**, zero skips/failures, with
+13 known checker/dependency warnings. The new paired report rejects incomplete
+endpoints and mismatched source/dependency/cost assumptions, and requires return
+gains as well as reduced deterioration. No new comparison cell has been allocated
+at this verification point.

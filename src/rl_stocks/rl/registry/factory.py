@@ -13,7 +13,8 @@ def resolved_parameters(algorithm,smoke=False,overrides=None):
     params=importlib.import_module(f"rl_stocks.rl.{algorithm}.config").parameters(smoke)
     params.update(learning_rate=3e-4,gamma=.99,policy_kwargs={"net_arch":[32,32] if smoke else [64,64]})
     if algorithm=='recurrent_ppo':
-        params['policy_kwargs'].update(lstm_hidden_size=32 if smoke else 64,n_lstm_layers=1)
+        params['policy_kwargs'].update(lstm_hidden_size=32 if smoke else 64,n_lstm_layers=1,
+                                      shared_lstm=False,enable_critic_lstm=True)
     params.update(overrides or {})
     if not isinstance(params["batch_size"],int) or params["batch_size"]<=0:
         raise ValueError("batch size must be a positive integer")
