@@ -76,3 +76,17 @@ final replay buffers, compact curves and detailed validation outputs were kept;
 checkpoint, immutable data and cumulative ledger/recovery records remain. Earlier
 study artifacts were untouched. See the tracked [cleanup record](../results/indicator-followup-2026-10-16/cleanup.json)
 and [release verification](../results/indicator-followup-2026-10-16/release-verification.json).
+
+## Algorithm stability cleanup
+
+The completed nine-cell algorithm/memory release has 13 assets with verified
+server SHA-256 digests and sizes. Cleanup then removed 44 duplicate/temporary
+files totaling 678,561,987 logical bytes (about 647 MiB), including final transfer
+archives, rolling checkpoint duplicates and isolated owned upload payloads.
+Observed free space increased by 678,645,760 bytes. All 129 retained files were
+rehashed: nine frozen bundles, best/latest weights, nine explicit 100k milestone
+models, final SAC replay buffers, curves and detailed validation remain. Smoke
+outputs and unique failed-preflight checkpoints, datasets, cumulative ledger and
+recovery records were preserved. Earlier studies were untouched. See
+[cleanup](../results/algorithm-stability-2026-10-16/cleanup.json) and
+[release verification](../results/algorithm-stability-2026-10-16/release-verification.json).

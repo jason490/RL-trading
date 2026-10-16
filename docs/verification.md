@@ -429,3 +429,10 @@ remains 146 passed (86.94 seconds); no learning code changed during publication.
 Cumulative conservative usage is 35.389379 units, with 114.610621 remaining.
 [Results](../results/algorithm-stability-2026-10-16/README.md) retain all seeds,
 10k-step curves, failed gates and saved-path deterioration attribution.
+
+Publication verification confirms all 13 algorithm-study assets have matching
+server SHA-256 digests and sizes. Cleanup removed 44 duplicate/temporary files
+(678,561,987 logical bytes); 129 retained files were rehashed, including all nine
+frozen bundles and nine endpoint milestones. Required replay, curves, validation
+outputs, failed-preflight evidence, immutable data and recovery records remain.
+No owned sessions are active. See the study's tracked release and cleanup records.

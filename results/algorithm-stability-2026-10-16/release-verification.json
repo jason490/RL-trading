@@ -1,0 +1,72 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/algorithm-stability-2026-10-16",
+  "asset_count": 13,
+  "server_sha256_verified": true,
+  "assets": [
+    {
+      "name": "research-models.tar.gz",
+      "sha256": "164714b252ceaf857910d8a5fb9b4247f0928e3902cf8c9eee1d783819bb099b",
+      "bytes": 10377584
+    },
+    {
+      "name": "milestone-models.tar.gz",
+      "sha256": "ee2c22a4ddeb60bd16958645083618b588ba47b2ac1840b1e64bcc0dca3829e2",
+      "bytes": 3018022
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "sha256": "8e41ee61240733d75c6763ce6b4b57d4ee53e6dee21acd530d9bf78b46a37ed8",
+      "bytes": 7604006
+    },
+    {
+      "name": "validation.html",
+      "sha256": "62cbd85dd68ccc4f2f01de5f1b7c27fe28ae3e4063031fa11df755c636c6f9f3",
+      "bytes": 1675
+    },
+    {
+      "name": "model-catalog.json",
+      "sha256": "2b30a1686243312f3c8ca5c005c3f56e2927f434ddf5c624900e05361fc3f701",
+      "bytes": 1329469
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "sha256": "49d37d0c3ef0a64d4485f9234d41844f4bbd051462a48a07b550bc0fa547e219",
+      "bytes": 14704936
+    },
+    {
+      "name": "research-evidence.tar.gz",
+      "sha256": "30257a52f195f92b2cac96d7ca7b89919684fc793c515d58aa7161925dd32d9e",
+      "bytes": 63748
+    },
+    {
+      "name": "usage-summary.json",
+      "sha256": "c17f79704f4c66230bff541dd0818dcb43f6525613ee673a021b466ef8fd2b87",
+      "bytes": 626
+    },
+    {
+      "name": "protocol.json",
+      "sha256": "f301bccd84d2966d313431eab968e089eabdc78541a3a58ba92359eda29aea7d",
+      "bytes": 4288
+    },
+    {
+      "name": "comparison.html",
+      "sha256": "2b666ac05742f2cc2f0d2bda9ca2d9e985e3a476c5720659d75e5aaba45bb125",
+      "bytes": 4776258
+    },
+    {
+      "name": "comparison.json",
+      "sha256": "2ecfe95053949554184353c00d0a54f735ef07398aac7a8381e6cb16d673085b",
+      "bytes": 103899
+    },
+    {
+      "name": "comparison.csv",
+      "sha256": "3a56f14bf5e07c4d93916c4d36cd1bc5b766a25b45e6257884adcdcc11a6d831",
+      "bytes": 596
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "18d4f08df6e53ac14d26ba2c2dc8bf5333bf013da055da53296ca25451da2f1b",
+      "bytes": 1028
+    }
+  ]
+}

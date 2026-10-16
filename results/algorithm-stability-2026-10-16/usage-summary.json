@@ -1,0 +1,17 @@
+{
+  "project_ceiling_units": 150,
+  "working_stop_units": 130,
+  "conservative_project_units": 35.389379374361035,
+  "remaining_project_units": 114.61062062563897,
+  "research_fleet_units": 0.25762837243742354,
+  "rate_estimated_project_units": 35.078441149959964,
+  "account_debit_project_units": 31.649999999999977,
+  "last_account_balance": 350.93,
+  "ledger_attempts": 52,
+  "owned_allocations": 63,
+  "all_owned_sessions_stopped": true,
+  "new_cells": 9,
+  "source_proofs": {
+    "3e31e80a6837338e954d2441e1bcf1232b4fb8e6de0ea009404279dfbba7bdea": "ffd06c6d5b6e1fb50813d8467c186290313e48d44036010e39365dcf579e5049"
+  }
+}

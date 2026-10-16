@@ -63,6 +63,18 @@ project, summed account debits are 31.65 units and rate estimates are 35.078441;
 the conservative ledger accounts for metering precision and delay rather than
 assuming either alone is exact.
 
+## Publication and cleanup
+
+All 13 release assets have matching server SHA-256 digests and sizes; see
+[release verification](release-verification.json). After verification, cleanup
+removed 44 duplicate/temporary files totaling 678,561,987 logical bytes (about
+647 MiB); observed free space increased by 678,645,760 bytes. All nine frozen
+bundles, best/latest weights, nine endpoint milestones, final SAC replay buffers,
+curves and detailed validation outputs remain. All 129 retained files were
+rehashed. Unique failed-preflight checkpoints, smoke outputs, datasets and
+ledger/recovery records were preserved; earlier studies were untouched.
+See [cleanup inventory](cleanup.json) and [sanitized usage](usage-summary.json).
+
 ## Next work
 
 Stop this bounded protocol here. Establish historical membership and verified
