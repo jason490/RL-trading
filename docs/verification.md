@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **144 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **146 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -404,3 +404,13 @@ pass. Mocked lifecycle acceptance covers four concurrent mixed-hardware cells,
 single-charge account metering, deadline/global stops, interrupts, metering loss,
 cleanup failure and concurrent recovery, payload isolation and unowned-session
 preservation. No actual concurrent VM allocation has occurred at this point.
+
+The real concurrent CPU preflight is accepted for SAC 1,024 transitions, PPO
+512 and RecurrentPPO 512. Three named Google Colab sessions were simultaneously
+active; measured aggregate rate was **0.24 units/hour**. A transient completion
+marker download timeout triggered checkpoint salvage and verified shutdown;
+bounded marker/final-download timeout retries were fixed and tested, then only
+the two unaccepted smoke cells were retried. All sessions stopped. Downloaded
+bundles pass exact multi-step CPU prediction parity (including recurrent state),
+immutable normalization and matching learning-source proofs. Full local
+acceptance passes **146 tests in 86.94 seconds**, zero skips/failures.

@@ -21,6 +21,13 @@ is retained separately. Direction, timing and exposure changes explain the saved
 path differences more directly than a blanket cost penalty. Calling the training
 cause “overfitting,” critic error or entropy collapse requires further evidence.
 
+Checkpoint selection itself also creates a gap: the selected result is the best
+of many validation checkpoints, whereas the endpoint is one checkpoint. More
+steps add selection opportunities. That alone makes selected results optimistic;
+a selected-to-final decline is not proof of overfitting. The new experiment fixes
+the evaluation count for all arms and requires improvements in endpoint return
+and drawdown as well as checkpoint retention.
+
 ## Reproduce the diagnosis
 
 ```

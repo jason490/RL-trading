@@ -1,6 +1,6 @@
 {
-  "status": "partial",
-  "completed": {
+  "status": "complete",
+  "accepted_smoke_cells": {
     "ppo-11": {
       "session": "rl-stocks-cpu-6485cd7f9e9b",
       "root": "/home/vibe/projects/rl-stocks/artifacts/colab/rl-stocks-cpu-6485cd7f9e9b/retrieved/artifacts",
@@ -12,13 +12,76 @@
           "bundle_id": "f035a8d1f445a5f8ce3d70b5620c3de1e0f423495b8f71c30ce9800473193d1d"
         }
       ]
+    },
+    "sac-11": {
+      "session": "rl-stocks-cpu-70279cd9a52e",
+      "root": "/home/vibe/projects/rl-stocks/artifacts/colab/rl-stocks-cpu-70279cd9a52e/retrieved/artifacts",
+      "runs": [
+        {
+          "algorithm": "sac",
+          "seed": 11,
+          "actual_steps": 1024,
+          "bundle_id": "d8c1a56226a0fb047702dc113442e79c9624e207dc56d038718dbf2c2d9d94a9"
+        }
+      ]
+    },
+    "recurrent_ppo-11": {
+      "session": "rl-stocks-cpu-8cc5f76b2098",
+      "root": "/home/vibe/projects/rl-stocks/artifacts/colab/rl-stocks-cpu-8cc5f76b2098/retrieved/artifacts",
+      "runs": [
+        {
+          "algorithm": "recurrent_ppo",
+          "seed": 11,
+          "actual_steps": 512,
+          "bundle_id": "23fa27be39e5baa25d157e08d7eae60f8d91eff0b0f8ed75eab625bbb7325318"
+        }
+      ]
     }
   },
-  "failed_fleet": "rl-stocks-fleet-06f96b23fa95",
-  "reason": "Completion-marker download ReadTimeout; bounded retry fix added. Only PPO accepted; other periodic checkpoints retained.",
+  "records": [
+    {
+      "cell": "ppo-11",
+      "algorithm": "ppo",
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "f035a8d1f445a5f8ce3d70b5620c3de1e0f423495b8f71c30ce9800473193d1d",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_state_parity": false,
+      "normalization_unchanged": true
+    },
+    {
+      "cell": "sac-11",
+      "algorithm": "sac",
+      "actual_steps": 1024,
+      "python": "3.13.16",
+      "bundle_id": "d8c1a56226a0fb047702dc113442e79c9624e207dc56d038718dbf2c2d9d94a9",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_state_parity": false,
+      "normalization_unchanged": true
+    },
+    {
+      "cell": "recurrent_ppo-11",
+      "algorithm": "recurrent_ppo",
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "23fa27be39e5baa25d157e08d7eae60f8d91eff0b0f8ed75eab625bbb7325318",
+      "exact_cpu_sequence_parity": true,
+      "recurrent_state_parity": true,
+      "normalization_unchanged": true
+    }
+  ],
+  "source_proofs": {
+    "fba699eaea5925c6d6a9446df4d2111e44c276e120c03781e57b65411ee31296": "ffd06c6d5b6e1fb50813d8467c186290313e48d44036010e39365dcf579e5049",
+    "3e31e80a6837338e954d2441e1bcf1232b4fb8e6de0ea009404279dfbba7bdea": "ffd06c6d5b6e1fb50813d8467c186290313e48d44036010e39365dcf579e5049"
+  },
+  "all_owned_sessions_stopped": true,
   "peak_observed_assignments": 3,
   "peak_observed_aggregate_rate": 0.24,
-  "all_owned_sessions_stopped": true,
+  "conservative_project_units": 35.13175100192361,
   "budget_stopped": false,
-  "conservative_project_units": 35.116856396394965
+  "reviewed_failure": {
+    "fleet": "rl-stocks-fleet-06f96b23fa95",
+    "reason": "Completion-marker ReadTimeout; checkpoint salvage and all owned cleanup verified; bounded transfer-retry fix committed; only two unaccepted tasks retried.",
+    "retry_fleet": "rl-stocks-fleet-3683853797a7"
+  }
 }
