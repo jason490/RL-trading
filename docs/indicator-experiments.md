@@ -72,3 +72,22 @@ attribution waits for all four families. JSON records the exact gate components,
 paired gains and input-family contrasts. CSV summarizes complete families; the
 standalone graph compares selected/final returns, training curves and drawdown.
 The baseline control is retained in reports but does not count as a new remote run.
+
+## Training-regime coverage before adding stocks
+
+`scripts/audit_training_regimes.py DATASET --output results/STUDY/training-regimes.json`
+audits only training episodes through 2020. At each eligible session it computes
+trailing 252- and 63-session split-adjusted price changes; the first 252 sessions
+in each episode are warmup. A decline bucket means the trailing-year price change
+is below −20%; a two-window decline additionally requires a negative trailing
+quarter. No future recovery, validation or test outcome labels these observations.
+Dividends are excluded: this describes price-trend coverage, not strategy returns.
+Overlapping windows are descriptive and are not independent market events.
+
+The existing training set already contains two-window declines in 16 of its 26
+tradables. Adding losers is therefore not equivalent to introducing the first
+negative examples. Nevertheless, the universe is a retrospectively selected
+surviving-company sample; this audit does not verify historical membership or
+delisting returns. Those data are required before claiming a representative
+historical universe. The audit changes neither data nor episode sampling and
+leaves the matched indicator experiment intact.
