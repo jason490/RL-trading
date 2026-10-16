@@ -80,6 +80,8 @@ def summarize_indicators(runs,protocol,source_proofs):
                               'seed_std_pp':stdev(gains)})
     return {'complete':complete,'received_cells':sum(len(g) for g in groups.values()),'expected_cells':12,
         'test_evaluated':False,'paper_eligible':False,'families':families,'contrasts':contrasts,
+        'partial_families':{label:[entries[s] for s in sorted(entries)] for label,entries in groups.items()
+                            if label not in complete_groups},
         'source_proofs':source_proofs,'protocol':protocol,
         'interpretation':'Paired validation-selected comparisons; seed variability is descriptive, not an out-of-sample or significance claim.'}
 
@@ -105,6 +107,12 @@ def report_indicators(runs,protocol,source_proofs,destination):
         points=[{p['steps']:p for p in e['points']} for e in entries]
         fig.add_trace(go.Scatter(x=common,y=[mean(p[s]['return_pct'] for p in points) for s in common],
             name=family['family'],mode='lines+markers'),row=2,col=1)
+    for label,entries in value['partial_families'].items():
+        for entry in entries:
+            fig.add_trace(go.Scatter(x=[p['steps'] for p in entry['points']],
+                y=[p['return_pct'] for p in entry['points']],
+                name=label+' seed '+str(entry['seed'])+' (incomplete family)',
+                mode='lines+markers',line={'dash':'dot'}),row=2,col=1)
     fig.update_layout(height=1100,barmode='group',title='Matched 250k input-family comparison — validation only')
     fig.write_html(str(path),include_plotlyjs=True)
     return value

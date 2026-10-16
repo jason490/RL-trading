@@ -48,6 +48,7 @@ class IndicatorReportTests(unittest.TestCase):
     def test_partial_or_mismatched_controls_do_not_support_attribution(self):
         runs,p=self.fixture();v=summarize_indicators(runs[:-1],p,{'source':'same-learning'})
         self.assertFalse(v['complete']);self.assertEqual(v['contrasts'],[])
+        self.assertEqual(len(v['partial_families']['combined']),2)
         for field,value in [('versions',{'torch':'different'}),('git',{'dirty':' M file'}),('actual_steps',100000)]:
             bad=copy.deepcopy(runs);bad[-1][field]=value
             with self.assertRaises(ValueError):summarize_indicators(bad,p,{'source':'same-learning'})

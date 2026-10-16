@@ -91,3 +91,8 @@ surviving-company sample; this audit does not verify historical membership or
 delisting returns. Those data are required before claiming a representative
 historical universe. The audit changes neither data nor episode sampling and
 leaves the matched indicator experiment intact.
+
+Incomplete families expose individual completed-seed curves as dotted lines,
+without a family aggregate or feature gate. Their records remain in JSON so
+single-seed gains/regressions are visible while other seeds run. Complete-family
+bar summaries and factorial contrasts retain their three-seed requirements.
