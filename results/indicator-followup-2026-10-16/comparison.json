@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "received_cells": 3,
+  "received_cells": 4,
   "expected_cells": 12,
   "test_evaluated": false,
   "paper_eligible": false,
@@ -1710,7 +1710,8 @@
   ],
   "contrasts": [],
   "source_proofs": {
-    "5c4f5f1a0ef4c03570d7625940a19f9cf09bdc5bff53a446888b4fd10470dd9d": "6418dd59910d906cd84535675185c4ae95093d7bfbf78a753aa46a16121a6e01"
+    "5c4f5f1a0ef4c03570d7625940a19f9cf09bdc5bff53a446888b4fd10470dd9d": "6418dd59910d906cd84535675185c4ae95093d7bfbf78a753aa46a16121a6e01",
+    "727edce59de67de88e4f243ed9f9ecea6a8ff640282511616a017d9d8773288a": "6418dd59910d906cd84535675185c4ae95093d7bfbf78a753aa46a16121a6e01"
   },
   "protocol": {
     "version": 1,
