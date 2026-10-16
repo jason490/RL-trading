@@ -7,5 +7,11 @@
   "cleanup_verified": true,
   "budget_stopped": false,
   "project_units_after_attempt": 34.537023954249754,
-  "recovery": "Fresh full-budget retry from same committed learning source; completed seeds retained. Interrupted trajectory excluded from complete-cell aggregates; checkpoint retained."
+  "recovery": "Fresh full-budget retry from same committed learning source; completed seeds retained. Interrupted trajectory excluded from complete-cell aggregates; checkpoint retained.",
+  "retry": {
+    "session": "rl-stocks-cpu-668dbedfdb15",
+    "completed_steps": 250000,
+    "artifacts_retrieved": true,
+    "cleanup_verified": true
+  }
 }
