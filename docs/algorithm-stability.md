@@ -118,3 +118,17 @@ missing memory is rejected. Stateless `predict()` rejects a recurrent bundle.
 Shape/nonfinite state rejection, unchanged input memory, multi-step saved-model
 parity, reset parity and reversed-symbol-order evaluation are acceptance checks.
 Persistent live-state recovery and broker orchestration remain later milestones.
+
+## Report the fixed comparison
+
+```
+PYTHONPATH=src python scripts/report_stability.py ARTIFACT_ROOT... --output artifacts/algorithm-stability.html
+```
+
+The report requires clean Git source proofs, identical learning implementation and
+dependencies, the declared algorithm parameters, identical costs and passive
+benchmarks, every 10k validation point, and a post-update 100k endpoint. Partial
+families expose their seed curves without a family aggregate or gate. Complete
+three-seed groups report selected/final returns and seed standard deviations,
+drawdowns, and the selected-to-final gap. Gates are shown only for complete pairs.
+The standalone HTML, JSON and CSV record the protocol and do not select on test.
