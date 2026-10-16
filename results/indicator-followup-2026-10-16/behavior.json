@@ -400,6 +400,56 @@
         "max_drawdown": -0.4281790515276855,
         "turnover": 360.35659931321493
       }
+    },
+    {
+      "cell": "rotation-37",
+      "phase": "selected",
+      "bundle_id": "ec8efdc8f7cf6d8cf39805e85564417b238e77be4f3f76d43881837441cf9f96",
+      "source_file": "selected-validation.json",
+      "source_sha256": "b7f91b5c7a3c8d93851300b6fb4ffbdd263f1851a396e3340b38faa2a1ba6a43",
+      "equal_weight_means": {
+        "fills": 731.1538461538462,
+        "entries": 148,
+        "full_closures": 147,
+        "protective_reentries_within_one_session": 33.42307692307692,
+        "fees": 3249.3767066498426,
+        "impact": 6498.758626000301,
+        "borrow": 1532.8551490069308,
+        "reported_costs": 11280.990481657074,
+        "mean_abs_exposure": 0.8044663673816674,
+        "long_fraction": 0.7414880201765448,
+        "short_fraction": 0.21006725514922236,
+        "flat_fraction": 0.04844472467423287,
+        "mean_abs_log_reward": 0.009829956560189482,
+        "net_return": 0.1673559495487118,
+        "max_drawdown": -0.35215707111016475,
+        "turnover": 324.9379313000511
+      }
+    },
+    {
+      "cell": "rotation-37",
+      "phase": "final",
+      "bundle_id": null,
+      "source_file": "validation.json",
+      "source_sha256": "832a2faa648a47813c61804a334f697d605d16d53e9191f02a47f5ac2bd15428",
+      "equal_weight_means": {
+        "fills": 750.1923076923077,
+        "entries": 137.80769230769232,
+        "full_closures": 136.80769230769232,
+        "protective_reentries_within_one_session": 24.153846153846153,
+        "fees": 2825.6754470011842,
+        "impact": 5651.354293366142,
+        "borrow": 2911.452121448281,
+        "reported_costs": 11388.48186181561,
+        "mean_abs_exposure": 0.8459610086099479,
+        "long_fraction": 0.5717213114754098,
+        "short_fraction": 0.39291719209751996,
+        "flat_fraction": 0.0353614964270702,
+        "mean_abs_log_reward": 0.010313045258679928,
+        "net_return": -0.10954500350102964,
+        "max_drawdown": -0.41632994278388946,
+        "turnover": 282.5677146683393
+      }
     }
   ],
   "interpretation": "Equal-symbol means for separate $100,000 episodes; fills include adjustments/partial exits, costs already deducted from returns. Final-phase records describe latest weights, not the selected frozen bundle."

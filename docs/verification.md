@@ -389,3 +389,10 @@ full local acceptance: **134 tests in 91.41 seconds**, zero skips/failures, with
 endpoints and mismatched source/dependency/cost assumptions, and requires return
 gains as well as reduced deterioration. No new comparison cell has been allocated
 at this verification point.
+
+The indicator follow-up is complete: nine new CPU SAC 250k cells plus three
+reused basic-input controls. All source/dependency/data/cost comparisons match;
+all nine new and three control frozen bundles pass exact CPU parity, immutable
+normalization and schema/shape rejection. All feature gates fail. Cumulative
+conservative usage is **35.098226 units**, with **114.901774 remaining** and all
+49 owned attempts stopped. The new algorithm/memory study has not started.

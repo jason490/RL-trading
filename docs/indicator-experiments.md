@@ -144,5 +144,23 @@ at 3.40%; all trajectories remain published rather than dropping weaker seeds.
 Within these same runs, selected return gains 10.08 points after 100k and final
 return gains 8.53 points from its 100k anchors. Longer training helped this family
 relative to its own early checkpoints, while it still underperformed the matched
-basic-input control. The sector-only family remains necessary before attributing
+basic-input control. At that point the sector-only family was still needed before attributing
 the combined family's selected gains or calculating feature interactions.
+
+## Complete nine-cell outcome
+
+Sector-only seeds select **46.35%, 29.25%, and 16.74%** and finish at
+**6.14%, −29.09%, and −10.95%**. Their selected mean is **30.78%** and final mean
+**−11.30%**. All three feature families fail the preregistered paired gate.
+The complete comparison and all unsuccessful seeds are retained in the
+[results](../results/indicator-followup-2026-10-16/README.md). The supply/demand
+selected-return effect is −5.57 points without sectors and +16.04 with sectors;
+its interaction is +21.61 points (seed standard deviation 38.81). These noisy
+validation-selected contrasts do not establish independent predictive benefit.
+
+All nine new and three control frozen bundles passed CPU prediction parity,
+normalization immutability and schema rejection. All owned sessions are stopped.
+Cumulative conservative usage is 35.098226 of 150 units (114.901774 remaining).
+The user subsequently authorized a separate algorithm/memory stability comparison
+and configurable concurrent runtimes under centralized shared-budget monitoring.
+No new test audit or broker orders are part of either experiment.

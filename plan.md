@@ -353,7 +353,7 @@ future knowledge. Keep the reward fixed first; test turnover controls or reward
 penalties independently. The inspected final-test interval remains retired.
 Persistent shadow inference and paper-order lifecycle work remain later milestones.
 
-## 16. Matched indicator follow-up — authorized, 2026-10-16
+## 16. Matched indicator follow-up — completed, 2026-10-16
 
 The user requested the missing combined-input 250k comparison and next steps.
 The [new protocol](configs/experiments/indicator_followup.json) declares combined,
@@ -365,6 +365,12 @@ continue under the existing cumulative project budget. Feature benefit is assess
 by a separate declared paired gate; no new final-test audit or orders occur.
 Historical-universe coverage and churn experiments follow attribution as separate
 work. See [indicator experiments](docs/indicator-experiments.md).
+
+The nine indicator cells finished at 250k each. Selected/final means were
+46.82%/−1.73% combined, 18.39%/11.83% zones-only and 30.78%/−11.30% sector-only,
+versus 23.96%/14.46% basic controls. All paired feature gates failed; no additional
+steps or seeds were added to this protocol. All 12 control/new bundles passed
+frozen checks. Project usage reached 35.098226 units and all owned sessions stopped.
 
 ## 17. Recommended algorithm comparisons — proposed
 
@@ -415,3 +421,4 @@ original reward, 100k transitions, seeds 11/23/37 and fresh paired SAC controls.
 No new final-test evaluation, extra reward, hyperparameter search or stock
 selection occurs. Finish and publish the indicator study and clean its temporary
 duplicates before allocating new sessions. See [guide](docs/algorithm-stability.md).
+

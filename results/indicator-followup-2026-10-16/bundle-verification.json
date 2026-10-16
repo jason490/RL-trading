@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "new_bundles": 9,
+  "control_bundles": 3,
+  "records": [
+    {
+      "cell": "baseline-11",
+      "bundle_id": "9d4060f494091f146f6acfa13981366b00f2a4586eb0d0e95c61349624ea5156",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "baseline-23",
+      "bundle_id": "790b53a45f597583da393f6d179f0df7d1826835752dbde7fe55c45913bb6220",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "baseline-37",
+      "bundle_id": "df57f909e8af132ff2c783895bc5ee40974ec1b79312442beb96cd325967b97f",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "combined-11",
+      "bundle_id": "7f40441af142dd21dee828792690dec71e4f29126b9b86a9b5f7b14fe690112d",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "combined-23",
+      "bundle_id": "ed05592c734f66215ca93f162972bd7de7a3bc95c479afb08eb16f1db35078e4",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "combined-37",
+      "bundle_id": "c54d8194a30c54d67cf2bf730d3e1359a36ebecb8c6cb0d0e864f440a018378f",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "supply_demand-11",
+      "bundle_id": "64f6c105a0009eb9262cbaef47956054b2c3e0ed6c7f3d29a5414725c0a2c12f",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "supply_demand-23",
+      "bundle_id": "9f06807f0bfac9da708272450346a0f533cdc765bb7ddb909315447597b5641c",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "supply_demand-37",
+      "bundle_id": "fc09934344e9961db9a5ccfcce0cb94a36557e552397c77b89438ae0358e8194",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "rotation-11",
+      "bundle_id": "ca244003949cdc25c3d5df8f67f322e3caf199930e9ab1e6ed251aaef9a305af",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "rotation-23",
+      "bundle_id": "9cb303a4be802def0c2509906d5f7786a796ca252bb8fc44009be0873855c575",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    },
+    {
+      "cell": "rotation-37",
+      "bundle_id": "ec8efdc8f7cf6d8cf39805e85564417b238e77be4f3f76d43881837441cf9f96",
+      "exact_cpu_prediction_parity": true,
+      "normalizer_unchanged": true,
+      "schema_and_shape_rejected": true
+    }
+  ]
+}
