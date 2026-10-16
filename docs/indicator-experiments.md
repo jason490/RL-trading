@@ -54,3 +54,21 @@ runs. No broker orders are authorized. After input attribution, audit historical
 universe coverage and plan a separate churn experiment. Representative declining
 and delisted stocks require contemporaneous membership, correct terminal returns
 and verified provider coverage; do not pick stocks using future recovery labels.
+
+## Rebuilding the comparison report
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/report_indicators.py \
+  BASELINE_ARTIFACT_ROOT_11 BASELINE_ARTIFACT_ROOT_23 BASELINE_ARTIFACT_ROOT_37 \
+  NEW_INDICATOR_ARTIFACT_ROOTS \
+  --output artifacts/public/indicator-followup-2026-10-16/comparison.html
+```
+
+The reporter accepts only complete CPU SAC 250k original-reward cells and rejects
+duplicate seeds, changed simulator/algorithm/dependency assumptions, unmatched
+symbol/benchmark coverage and missing post-update endpoints. Clean Git learning
+source proofs are mandatory. A family needs all three seeds; interaction
+attribution waits for all four families. JSON records the exact gate components,
+paired gains and input-family contrasts. CSV summarizes complete families; the
+standalone graph compares selected/final returns, training curves and drawdown.
+The baseline control is retained in reports but does not count as a new remote run.
