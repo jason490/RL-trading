@@ -338,3 +338,20 @@ permitted prestart reconnect reduce the available execution window; neither
 extends the two-hour allocation deadline. Insufficient time stops the job rather
 than allocating another runtime automatically. Other learning budgets retain
 their existing command timeout.
+
+### Recovering a lost execution stream
+
+A terminal `Connection was lost` message does not prove that the remote worker
+stopped. When its working directory already exists, the runner keeps metering
+and retrieving periodic checkpoints while checking an authenticated export marker.
+It never launches that worker twice. The bootstrap writes the final archive to a
+temporary path, atomically publishes it, then creates the marker; an archive being
+compressed cannot be mistaken for a complete export. An unavailable status probe,
+unreliable usage meter, working-budget stop or original execution deadline ends
+this wait and enters cleanup. The wait cannot extend the allocation deadline or
+consume its retrieval/shutdown reserve. Only a confirmed missing worker directory
+permits the existing single prestart retry.
+
+This recovery applies to newly started runner processes. A process already
+executing an older runner keeps its loaded behavior; its partial artifacts and
+verified shutdown must be reviewed before any fresh retry.

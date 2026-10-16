@@ -16,7 +16,7 @@ from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage,executi
 from rl_stocks.runtime.colab.jobs import job_plan,study_plan,learning_plan
 from rl_stocks.core.provenance import repository_state
 from rl_stocks.runtime.colab.artifacts import validate_archive
-from rl_stocks.runtime.colab.transport import TransportLost,connection_lost,worker_not_started
+from rl_stocks.runtime.colab.transport import TransportLost,connection_lost,worker_not_started,export_ready
 
 class ColabJob:
     def __init__(self,root,cli_python,accelerator="A100"):
@@ -108,6 +108,7 @@ class ColabJob:
                 self.ledger.active['exec_timeout_seconds']=self.exec_timeout
                 self.ledger.active['retrieval_cleanup_reserve_seconds']=self.execution_reserve
                 self.ledger.save()
+            execution_deadline=time.monotonic()+getattr(self,'exec_timeout',1800)
             try:
                 self.operation(["exec","-s",self.session,"-f",str(self.root/"scripts/remote_smoke.py")],getattr(self,"exec_timeout",1800))
                 return
@@ -115,16 +116,44 @@ class ColabJob:
             except TransportLost:
                 self.ledger.active['exec_cli_failed']=True;self.ledger.save()
                 self.ledger.guard(20)
-                if attempt==0 and worker_not_started(self.root,self.session):
+                if worker_not_started(self.root,self.session):
+                    if attempt:raise TransportLost('worker did not start after bounded retry') from None
                     log=self.state/self.session/'exec-output.txt'
                     if log.exists():shutil.copyfile(log,log.with_name('exec-transport-failure.txt'))
                     self.ledger.active['prestart_exec_retries']=1;self.ledger.save()
                     continue
+                self.await_export(execution_deadline)
                 return
             except RuntimeError:
                 # A completed remote job may outlive a failed CLI output stream.
                 # The downloaded manifest/checksums still decide acceptance.
                 self.ledger.active["exec_cli_failed"]=True;self.ledger.save();return
+
+    def await_export(self,execution_deadline):
+        """Keep metering a started worker after stream loss, within its old deadline."""
+        self.ledger.active['awaiting_remote_export']=True;self.ledger.save()
+        last_snapshot=None
+        while True:
+            if time.monotonic()+20>=execution_deadline:
+                raise TimeoutError('remote export did not finish within execution window')
+            self.tick()
+            self.ledger.guard(20)
+            if export_ready(self.root,self.session):
+                self.ledger.active['remote_export_verified']=True;self.ledger.save()
+                return
+            if last_snapshot!=self.last_meter:
+                last_snapshot=self.last_meter
+                timeout=getattr(self,'snapshot_timeout',20)
+                self.ledger.guard(timeout+5)
+                destination=self.root/'artifacts'/'colab'/self.session
+                destination.mkdir(parents=True,exist_ok=True)
+                checkpoint=destination/'checkpoint.tar.gz'
+                try:
+                    self.short(['download','-s',self.session,'/content/research-checkpoint.tar.gz',str(checkpoint)],timeout)
+                    if str(checkpoint) not in self.ledger.active['retrieved']:
+                        self.ledger.active['retrieved'].append(str(checkpoint));self.ledger.save()
+                except Exception:pass
+            time.sleep(5)
 
     def install_bootstrap(self):
         for attempt in range(2):

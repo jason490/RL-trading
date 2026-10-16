@@ -34,5 +34,7 @@ except BaseException:
         failure.write(traceback.format_exc())
     raise
 finally:
-    with tarfile.open('/content/research-artifacts.tar.gz','w:gz') as archive:
+    with tarfile.open('/content/research-artifacts.partial.tar.gz','w:gz') as archive:
         if (root/'artifacts').exists():archive.add(root/'artifacts',arcname='artifacts')
+    os.replace('/content/research-artifacts.partial.tar.gz','/content/research-artifacts.tar.gz')
+    Path('/content/research-artifacts.ready').touch()
