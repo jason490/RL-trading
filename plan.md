@@ -352,3 +352,16 @@ membership, declining stocks and verified delisting returns, chosen without
 future knowledge. Keep the reward fixed first; test turnover controls or reward
 penalties independently. The inspected final-test interval remains retired.
 Persistent shadow inference and paper-order lifecycle work remain later milestones.
+
+## 16. Matched indicator follow-up — authorized, 2026-10-16
+
+The user requested the missing combined-input 250k comparison and next steps.
+The [new protocol](configs/experiments/indicator_followup.json) declares combined,
+supply/demand-only and rotation-only CPU SAC families at 250k, seeds 11/23/37,
+original reward and unchanged data/costs. The completed basic-input 250k family
+is the control, subject to clean learning-source/dependency proofs. The previous
+exhausted study remains unchanged. Compact 10k-step curves and durable retrieval
+continue under the existing cumulative project budget. Feature benefit is assessed
+by a separate declared paired gate; no new final-test audit or orders occur.
+Historical-universe coverage and churn experiments follow attribution as separate
+work. See [indicator experiments](docs/indicator-experiments.md).

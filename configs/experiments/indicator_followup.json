@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "name": "indicator-followup-2026-10-16",
+  "authorization": "User explicitly requested 250k combined indicators followed by the next controlled comparisons on 2026-10-16. Separate from the exhausted learning study.",
+  "datasets": {
+    "baseline": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+    "supply_demand": "420fead30751749541bb989e0d671b8f58849d88e6dbe4b3de54697b13b44c32",
+    "rotation": "49ed77771b1e4f0c16435daa2de5416eda107cac19b8bb255382d9f6268cc2c7",
+    "combined": "062ae018bf7ed0a01bed50695b824238ebc4de89bae8fa0ae09077ac007a5e25"
+  },
+  "algorithm": "sac",
+  "device": "cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps": 250000,
+  "reward_scale": 1.0,
+  "evaluation_every": 10000,
+  "milestones": [
+    50000,
+    100000,
+    250000
+  ],
+  "gate": {
+    "mean_current_gain_pp": 2.0,
+    "mean_selected_gain_pp": 2.0,
+    "paired_positive_seeds": 2,
+    "maximum_drawdown_worsening_pp": 2.0,
+    "historical_best_selected_mean_return": 0.19791004251402464,
+    "minimum_selected_gain_over_historical_pp": 2.0
+  },
+  "learning_gate_interpretation": "Original within-run 50k learning gate retained as descriptive context; feature benefit is judged by paired comparisons to the existing 250k baseline, not by this historical floor.",
+  "feature_gate": {
+    "mean_selected_gain_pp": 2.0,
+    "paired_positive_seeds": 2,
+    "minimum_mean_final_gain_pp": 0.0,
+    "maximum_selected_drawdown_worsening_pp": 2.0,
+    "maximum_final_drawdown_worsening_pp": 2.0
+  },
+  "baseline_control": "results/learning-study-2026-10-15/long-250k/progress.json",
+  "stages": [
+    {
+      "name": "combined-250k",
+      "family": "combined"
+    },
+    {
+      "name": "supply-demand-250k",
+      "family": "supply_demand"
+    },
+    {
+      "name": "rotation-250k",
+      "family": "rotation"
+    }
+  ],
+  "comparisons": [
+    "supply_demand minus baseline",
+    "combined minus rotation",
+    "rotation minus baseline",
+    "combined minus supply_demand",
+    "interaction: combined minus supply_demand minus rotation plus baseline"
+  ],
+  "controls": "Same 26 tradables, training through 2020, validation 2021\u20132023, training-only normalization, simulator costs, architecture, SAC parameters and original net-log-equity reward. Reuse frozen local datasets; only input families differ.",
+  "source_comparison": "Verify every uploaded clean Git source hash; learning code and dependencies must match the completed 250k baseline. Runtime/reporting-only changes allowed after proof.",
+  "stopping": "Complete the nine declared cells; stop earlier on user request, budget/deadline/metering failure or unrecoverable transport failure. No automatic runtime restart after a budget stop. Do not change gates or add reward changes based on results.",
+  "validation_only": true,
+  "test_evaluated": false,
+  "retired_test": "2024-01-02 through 2026-09-30 has already been inspected; no new test evaluation or tuning against its results",
+  "project_ceiling_units": 150,
+  "working_stop_units": 130,
+  "initial_ledger_units": 34.03260432179968,
+  "allocation_deadline_seconds": 7200,
+  "next_work": "After matched feature attribution, audit representative historical membership/delistings and design a separate churn experiment. Do not select nonrecovering stocks using future outcomes."
+}

@@ -9,7 +9,7 @@ def main():
     parser.add_argument('roots',nargs='+')
     parser.add_argument('--protocol',default='configs/experiments/learning_study.json')
     parser.add_argument('--output',required=True)
-    parser.add_argument('--families',nargs='+',choices=('baseline','combined'))
+    parser.add_argument('--families',nargs='+',choices=('baseline','supply_demand','rotation','combined'))
     args=parser.parse_args()
     runs=[]
     for root in map(Path,args.roots):
