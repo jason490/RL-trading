@@ -1,0 +1,77 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/indicator-followup-2026-10-16",
+  "asset_count": 14,
+  "server_sha256_verified": true,
+  "assets": [
+    {
+      "name": "research-models.tar.gz",
+      "sha256": "c5675a062a4532975baf1ffececf2b6469067043fa4971ef0e2445b1c0469357",
+      "bytes": 12097782
+    },
+    {
+      "name": "milestone-models.tar.gz",
+      "sha256": "2d579e5b1c570298a4dba16cbd073be3431d2e0a3688dc404d3ece9859396f86",
+      "bytes": 10038088
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "sha256": "994a5724d898cc9e194e10a1b6b6fbd05103b74a0d7c23083f0c5de9f6f121ed",
+      "bytes": 7602162
+    },
+    {
+      "name": "validation.html",
+      "sha256": "633c5806a8d9b50617c2818dfc8df55a771e6bbc591a5cbd3e6e2475be0e7c6b",
+      "bytes": 1615
+    },
+    {
+      "name": "model-catalog.json",
+      "sha256": "e0dc6611c3010fdff7829f8a6c54c05130e21e56281fb6e46f939d7a5c4a9e88",
+      "bytes": 2520045
+    },
+    {
+      "name": "comparison-catalog.json",
+      "sha256": "a9b0c240a3c27f31bcc48f6656656c8d6821d003e856449740cb550944ef70f6",
+      "bytes": 3359328
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "sha256": "2036b2a7476fb07c001e6f777645eda1dda18586a6b522f680fbdd7ee17d38c1",
+      "bytes": 19494434
+    },
+    {
+      "name": "research-evidence.tar.gz",
+      "sha256": "1624fb61795140a470e05457c06844ee9dd0e6e8e58e642409cb1790f1dde263",
+      "bytes": 101494
+    },
+    {
+      "name": "usage-summary.json",
+      "sha256": "3104df787a8e975887135c910917f81c2bb21dc9311fca9dd911352c731762c1",
+      "bytes": 1332
+    },
+    {
+      "name": "protocol.json",
+      "sha256": "7f804a14682e9b157e1a6ccb8fe4109a6ff04b0378a4e1ac69c66844a02ab46f",
+      "bytes": 3332
+    },
+    {
+      "name": "comparison.html",
+      "sha256": "119495db5ef42077d47c744a9f7ca369e739b5866e420281b10778cc4260973b",
+      "bytes": 4776188
+    },
+    {
+      "name": "comparison.json",
+      "sha256": "40bfa09f868826415bde2e78ebd4a53c8dae5a1665cb3aa462784489924b62e2",
+      "bytes": 316626
+    },
+    {
+      "name": "comparison.csv",
+      "sha256": "f1b63a3f8537f3f0f15f7b8a1211812b8cebf57ff6ce03202a0cfea1aa042f41",
+      "bytes": 1055
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "d8aa79f81330cd5ec91776cee2806a03935d000934f1adab77d2e7535c13b362",
+      "bytes": 1118
+    }
+  ]
+}

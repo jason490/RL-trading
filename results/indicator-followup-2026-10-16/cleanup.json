@@ -1,0 +1,161 @@
+{
+  "status": "complete",
+  "release_server_digests_verified_before_cleanup": true,
+  "all_owned_sessions_stopped": true,
+  "removed_files": 37,
+  "removed_logical_bytes": 1942764002,
+  "observed_free_space_increase_bytes": 1942892544,
+  "retained_post_update_milestone_models": 27,
+  "retained_files_rehashed": 144,
+  "retained": "All nine new frozen bundles, best/latest weights, final replay buffers, 27 milestone weights, compact curves and detailed validation outputs. Interrupted-attempt checkpoint, original datasets, earlier study artifacts, ledger and recovery state retained.",
+  "removed": [
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-acd16436747e/artifacts.tar.gz",
+      "bytes": 110513265
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-acd16436747e/checkpoint.tar.gz",
+      "bytes": 110511941
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-acd16436747e/retrieved/artifacts/runs/20261016T050829-sac-11-0748649e/checkpoint-replay.pkl",
+      "bytes": 77202643
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-acd16436747e/retrieved/artifacts/runs/20261016T050829-sac-11-0748649e/latest-checkpoint.zip",
+      "bytes": 517303
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b84a43881c16/artifacts.tar.gz",
+      "bytes": 109955350
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b84a43881c16/checkpoint.tar.gz",
+      "bytes": 65808317
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b84a43881c16/retrieved/artifacts/runs/20261016T062718-sac-23-b665ef24/checkpoint-replay.pkl",
+      "bytes": 77202643
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b84a43881c16/retrieved/artifacts/runs/20261016T062718-sac-23-b665ef24/latest-checkpoint.zip",
+      "bytes": 517311
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7cb758453b22/artifacts.tar.gz",
+      "bytes": 109655088
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7cb758453b22/checkpoint.tar.gz",
+      "bytes": 65705244
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7cb758453b22/retrieved/artifacts/runs/20261016T074000-sac-37-be87564b/checkpoint-replay.pkl",
+      "bytes": 77202643
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7cb758453b22/retrieved/artifacts/runs/20261016T074000-sac-37-be87564b/latest-checkpoint.zip",
+      "bytes": 517307
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-97ac9653f6cb/artifacts.tar.gz",
+      "bytes": 56691588
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-97ac9653f6cb/checkpoint.tar.gz",
+      "bytes": 56690436
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-97ac9653f6cb/retrieved/artifacts/runs/20261016T082845-sac-11-9d981355/checkpoint-replay.pkl",
+      "bytes": 33202093
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-97ac9653f6cb/retrieved/artifacts/runs/20261016T082845-sac-11-9d981355/latest-checkpoint.zip",
+      "bytes": 359918
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-668dbedfdb15/artifacts.tar.gz",
+      "bytes": 55962066
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-668dbedfdb15/checkpoint.tar.gz",
+      "bytes": 55962261
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-668dbedfdb15/retrieved/artifacts/runs/20261016T133321-sac-23-bfb0e573/checkpoint-replay.pkl",
+      "bytes": 33202093
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-668dbedfdb15/retrieved/artifacts/runs/20261016T133321-sac-23-bfb0e573/latest-checkpoint.zip",
+      "bytes": 359930
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-fcc5f2f4f03e/artifacts.tar.gz",
+      "bytes": 56289706
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-fcc5f2f4f03e/checkpoint.tar.gz",
+      "bytes": 38613258
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-fcc5f2f4f03e/retrieved/artifacts/runs/20261016T145642-sac-37-c94b2e48/checkpoint-replay.pkl",
+      "bytes": 33202093
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-fcc5f2f4f03e/retrieved/artifacts/runs/20261016T145642-sac-37-c94b2e48/latest-checkpoint.zip",
+      "bytes": 359926
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-efdbc4098eac/artifacts.tar.gz",
+      "bytes": 95949152
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-efdbc4098eac/checkpoint.tar.gz",
+      "bytes": 95947835
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-efdbc4098eac/retrieved/artifacts/runs/20261016T161337-sac-11-ad9476f5/checkpoint-replay.pkl",
+      "bytes": 56402383
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-efdbc4098eac/retrieved/artifacts/runs/20261016T161337-sac-11-ad9476f5/latest-checkpoint.zip",
+      "bytes": 442905
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b0b2577530ef/artifacts.tar.gz",
+      "bytes": 96344404
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b0b2577530ef/checkpoint.tar.gz",
+      "bytes": 59047005
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b0b2577530ef/retrieved/artifacts/runs/20261016T172655-sac-23-a8371275/checkpoint-replay.pkl",
+      "bytes": 56402383
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b0b2577530ef/retrieved/artifacts/runs/20261016T172655-sac-23-a8371275/latest-checkpoint.zip",
+      "bytes": 442913
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7f29b44e8333/artifacts.tar.gz",
+      "bytes": 95616450
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7f29b44e8333/checkpoint.tar.gz",
+      "bytes": 58479920
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7f29b44e8333/retrieved/artifacts/runs/20261016T184701-sac-37-dcb40978/checkpoint-replay.pkl",
+      "bytes": 56402383
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-7f29b44e8333/retrieved/artifacts/runs/20261016T184701-sac-37-dcb40978/latest-checkpoint.zip",
+      "bytes": 442909
+    },
+    {
+      "path": ".runtime/research-upload.tar.gz",
+      "bytes": 44638937
+    }
+  ]
+}

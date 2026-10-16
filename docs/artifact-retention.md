@@ -63,3 +63,16 @@ in [inference](inference.md). For exact data reconstruction and further research
 retain the local immutable dataset snapshots and the hash-locked dependencies.
 See [releases](releases.md), [verification](verification.md) and
 [Colab recovery](colab.md) for publication evidence and runtime status.
+
+## Indicator follow-up cleanup
+
+The completed 2026-10-16 indicator release has 14 GitHub assets whose server
+SHA-256 digests and sizes match local copies. Only after that verification,
+cleanup removed 37 temporary/duplicate files totaling 1,942,764,002 logical bytes
+(about 1.81 GiB). Observed free space increased by 1,942,892,544 bytes. All nine
+new frozen policies, 27 post-update milestone weights, best/latest weights,
+final replay buffers, compact curves and detailed validation outputs were kept;
+144 retained files were rehashed after cleanup. The unique interrupted-attempt
+checkpoint, immutable data and cumulative ledger/recovery records remain. Earlier
+study artifacts were untouched. See the tracked [cleanup record](../results/indicator-followup-2026-10-16/cleanup.json)
+and [release verification](../results/indicator-followup-2026-10-16/release-verification.json).
