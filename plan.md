@@ -450,7 +450,7 @@ treated as a general explanation for all deterioration. TQC and stacked PPO
 remain unexecuted ideas, not queued jobs. Persistent shadow inference and paper
 execution remain later milestones. The inspected final-test interval is retired.
 
-## 18. Persistent frozen shadow tracking — implementation and acceptance, 2026-10-16
+## 18. Persistent frozen shadow tracking — implemented; feed activation blocked, 2026-10-16
 
 The user authorized the next step: freeze the promising validation checkpoint and
 observe future behavior without more training. A dedicated local/server runtime
@@ -472,3 +472,12 @@ Software acceptance and registration are distinct from forward market evidence.
 Actual unattended uptime depends on a persistent host/process; the service template
 does not install or enable itself. Historical membership/delisting expansion,
 borrow eligibility and order lifecycle remain unimplemented later milestones.
+
+Full acceptance passed 156 tests; all nine actual bundles passed feature/ATR and
+training-observation parity for 26 symbols. The fixed campaign was registered
+from clean source and its initial waiting/report cycle passed. Fresh Yahoo data
+failed OHLC geometry on October 16 SPY, confirmed by a fresh retry. Automatic
+polling remains disabled; zero forward decisions/outcomes exist. Resolve the
+upstream bar or audit an explicit data correction before activation, without
+silently relaxing validation. The first eligible close is October 19; do not
+backdate a missed prospective start. See [actual status](results/forward-shadow-2026-10-16/status.json).

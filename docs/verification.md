@@ -454,3 +454,12 @@ This is software acceptance, not fresh evaluation or forward performance.
 See [acceptance evidence](../results/forward-shadow-2026-10-16/software-acceptance.json)
 and [shadow operations](shadow-inference.md). No Colab session or dependency
 change was required; cumulative project usage remains 35.389379 units.
+
+The actual nine-arm campaign was registered from clean revision `e6db469` at
+2026-10-16 22:55:19 UTC, and the scheduler's waiting/report cycle passed. Fresh
+Yahoo preflight then failed strict OHLC geometry for the October 16 SPY bar
+(high below open by approximately one cent), confirmed by a fresh retry. Prices
+were not repaired or substituted. Unattended polling is **not running**; no
+forward decisions or returns exist. See the [status](../results/forward-shadow-2026-10-16/status.json)
+and [registration](../results/forward-shadow-2026-10-16/registration.json).
+A persistent host and a successful feed audit are required before activation.

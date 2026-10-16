@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-16T22:57:34.543934+00:00",
+  "campaign": "0747a6730378e055ccfa2ac6fed2a1be9b58991f0a3039c4373947478f543965",
+  "status": "registered_feed_preflight_blocked",
+  "polling_running": false,
+  "forward_decisions": 0,
+  "settled_sessions": 0,
+  "paper_eligible": false,
+  "waiting_cycle_passed": true,
+  "feed_preflight": {
+    "provider": "yahoo",
+    "symbol": "SPY",
+    "session": "2026-10-16",
+    "error": "invalid OHLC geometry: daily high below open by approximately one cent",
+    "confirmed_by_fresh_retry": true,
+    "prices_repaired_or_substituted": false
+  },
+  "next_action": "Retry read-only collection and overlap audit after upstream correction; do not backdate signals or bypass validation. Use the same campaign only before its first post-registration decision window is missed. A missed prospective start requires a new registration.",
+  "colab_allocated": false,
+  "project_conservative_units": 35.389379374361035
+}
