@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "name": "algorithm-stability-2026-10-16",
+  "authorization": "User requested completion of the last indicator cell, diagnosis of deterioration, and a different model if supported by the diagnosis.",
+  "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+  "dataset_family": "baseline",
+  "algorithms": [
+    "sac",
+    "ppo"
+  ],
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps": 100000,
+  "milestones": [
+    100000
+  ],
+  "evaluation_every": 10000,
+  "device": "cpu",
+  "reward_scale": 1.0,
+  "selection": "Equal-weight mean validation net return; retain best and post-update final weights for every seed.",
+  "gate": {
+    "minimum_mean_selected_gain_pp": 2.0,
+    "minimum_mean_final_gain_pp": 2.0,
+    "minimum_paired_final_positive_seeds": 2,
+    "maximum_selected_drawdown_worsening_pp": 2.0,
+    "maximum_final_drawdown_worsening_pp": 2.0,
+    "minimum_reduction_in_mean_selected_minus_final_gap_pp": 2.0
+  },
+  "controls": "Same immutable basic-input dataset, train through 2020, validate 2021-2023, original net-log-equity reward, simulator, 64x64 hidden-layer widths, learning rate and discount; existing algorithm-specific defaults. Fresh SAC controls and PPO runs share one learning-source/dependency identity. PPO rollout 1000, batch 50, 10 epochs as in prior remote PPO research. No KL/reward/sampling tuning.",
+  "why_fresh_controls": "New diagnostic logging; one uninterrupted 100k learn call with a post-update endpoint. Earlier SAC study segmented learning at 50k/100k and historical model study mixed CPU/CUDA. Do not treat those as identical new trajectories.",
+  "hypothesis": "On-policy PPO with clipped updates may retain validation performance better than SAC replay-based updates. Prior basic-input 50k PPO had lower seed variability than SAC; this does not establish superiority.",
+  "diagnosis_limits": "Saved-path comparisons identify directional/exposure shifts and cost changes, not a proven causal mechanism. Low critic loss or falling entropy alone does not demonstrate overfitting.",
+  "validation_only": true,
+  "test_evaluated": false,
+  "retired_test": "2024 through September 2026 remains retired; no new final-test evaluation or orders.",
+  "max_new_cells": 6,
+  "max_new_transitions": 600000,
+  "stopping": "Finish these six fixed cells only, unless user stop or budget/deadline/metering/unrecoverable failure. No automatic restart after budget stop. No search expansion based on outcomes.",
+  "project_ceiling_units": 150,
+  "working_stop_units": 130,
+  "allocation_deadline_seconds": 7200,
+  "start_after": "All nine indicator cells retrieved, verified, published, and their owned sessions stopped; clean the indicator temporary duplicates first."
+}

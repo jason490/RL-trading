@@ -24,6 +24,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Matched research experiments | [experiments.md](experiments.md) | Four datasets, three algorithms/seeds, declared selection, held-out protocol and GitHub assets |
 | Learning diagnostics and improvement | [learning-experiments.md](learning-experiments.md) | Trading behavior, compact checkpoint curves, controlled CPU comparisons and sequential learning gates |
 | Matched 250k indicator follow-up | [indicator-experiments.md](indicator-experiments.md) | Combined, zones-only and sector-only comparisons against the completed 250k baseline |
+| Algorithm stability and deterioration | [algorithm-stability.md](algorithm-stability.md) | Saved-path diagnosis and bounded PPO-versus-SAC CPU comparison |
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |

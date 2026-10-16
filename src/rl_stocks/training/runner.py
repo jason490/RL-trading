@@ -35,7 +35,9 @@ class ValidationCheckpoint(BaseCallback):
         results=evaluate(self.model,self.dataset,"validation",self.config)
         score=selection_score(results)
         training={}
-        for key in ('train/ent_coef','train/actor_loss','train/critic_loss','train/ent_coef_loss'):
+        for key in ('train/ent_coef','train/actor_loss','train/critic_loss','train/ent_coef_loss',
+                    'train/entropy_loss','train/approx_kl','train/clip_fraction','train/value_loss',
+                    'train/policy_gradient_loss','train/explained_variance','train/std','rollout/ep_rew_mean'):
             value=self.model.logger.name_to_value.get(key)
             if value is not None and np.isfinite(float(value)):training[key]=float(value)
         item=curve_record(results,self.history,self.num_timesteps,phase,time.monotonic()-self.started,training)

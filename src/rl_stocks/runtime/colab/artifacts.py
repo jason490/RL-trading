@@ -37,7 +37,7 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version')==4:
+                if plan.get('version') in (4,5):
                     job=plan['jobs'][0]
                     if (run.get('reward_config')!={'kind':'net_log_equity','scale':job['reward_scale']}
                             or run.get('milestones')!=job['milestones'] or run.get('evaluation_every')!=job['evaluation_every']

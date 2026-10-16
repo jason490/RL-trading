@@ -365,3 +365,53 @@ continue under the existing cumulative project budget. Feature benefit is assess
 by a separate declared paired gate; no new final-test audit or orders occur.
 Historical-universe coverage and churn experiments follow attribution as separate
 work. See [indicator experiments](docs/indicator-experiments.md).
+
+## 17. Recommended algorithm comparisons — proposed
+
+After the indicator follow-up, test alternatives to SAC in a separate bounded
+study. Strong selected checkpoints followed by deterioration motivate this
+comparison, but do not establish that SAC or value overestimation causes the
+instability. No alternative is assumed to improve trading performance.
+
+1. **TQC first:** Compare Truncated Quantile Critics with SAC on the same fixed
+   input dataset. TQC builds on SAC and truncates high critic quantiles to control
+   value overestimation. This is a hypothesis to test, not a diagnosis of the
+   current runs. See the [official implementation documentation](https://sb3-contrib.readthedocs.io/en/v2.8.0/modules/tqc.html).
+2. **PPO with recent observations next:** Compare ordinary PPO with a fixed,
+   predeclared window of stacked causal observations. Keep an unstacked PPO
+   control so changes from algorithm choice and added history can be separated.
+3. **Recurrent PPO afterward:** Compare an LSTM policy with the PPO controls to
+   test whether learned memory adds value beyond existing indicators and stacked
+   observations. Reset recurrent state at episode/symbol boundaries and never
+   carry history across data splits. Account for its additional training and
+   frozen-inference complexity. See [Recurrent PPO documentation](https://sb3-contrib.readthedocs.io/en/master/modules/ppo_recurrent.html).
+
+Keep net-equity reward, universe, feature family, dates, preprocessing, action
+contract, execution rules and costs fixed within each comparison. Use seeds
+11/23/37, equal transition budgets and checkpoint-evaluation opportunities, and
+record wall time, compute units, hardware and algorithm-specific update settings.
+Predeclare configurations, search limits, chronological validation folds and
+acceptance criteria before training; include selected and final checkpoints,
+drawdown, costs, turnover and seed variability. Retain cash, buy-and-hold and the
+constraint-matched passive-long controls. Do not reuse the retired final-test
+interval or change gates after seeing results.
+
+Before implementation, verify SB3-Contrib compatibility with Colab's actual
+default Python and the dependency lock. Any execution protocol must fit the
+remaining cumulative project budget and existing metering/cleanup limits. This
+recommendation adds no jobs to the running indicator study and does not initiate
+training. Historical-universe coverage remains a separate data-readiness task;
+reward changes must be tested independently. Guidance on multiple seeds and
+evaluation is in [SB3's experiment guide](https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html).
+
+## 17. Diagnose deterioration and compare PPO — authorized, 2026-10-16
+
+After the last indicator cell, diagnose selected/final saved paths and run a
+separate six-cell PPO/SAC CPU stability comparison if the evidence supports PPO.
+The saved outputs show large directional/exposure changes whose P&L impact exceeds
+additional costs; these observations do not prove an optimization cause. The
+[protocol](configs/experiments/algorithm_stability.json) fixes basic inputs, the
+original reward, 100k transitions, seeds 11/23/37 and fresh paired SAC controls.
+No new final-test evaluation, extra reward, hyperparameter search or stock
+selection occurs. Finish and publish the indicator study and clean its temporary
+duplicates before allocating new sessions. See [guide](docs/algorithm-stability.md).

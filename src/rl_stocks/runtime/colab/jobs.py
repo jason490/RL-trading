@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==4:
+    if plan.get('version')==5:
+        try:expected=stability_plan(**plan['stability_study'])
+        except (KeyError,TypeError):raise ValueError('malformed stability study plan') from None
+        if plan!=expected:raise ValueError('unsupported stability study plan')
+    elif plan.get('version')==4:
         try:expected=learning_plan(**plan['learning_study'])
         except (KeyError,TypeError):raise ValueError('malformed learning study plan') from None
         if plan!=expected:raise ValueError('unsupported learning study plan')
@@ -93,3 +97,12 @@ def learning_plan(seed=11,steps=100000,reward_scale=1.):
     job={'algorithm':'sac','device':'cpu','smoke':False,'seed':seed,'steps':steps,
          'evaluation_every':10000,'compact_checkpoints':True,'milestones':milestones,'reward_scale':float(reward_scale)}
     return {'version':4,'accelerator':'CPU','learning_study':specification,'jobs':[job]}
+
+
+def stability_plan(algorithm,seed):
+    """A fixed 100k CPU cell for the separate PPO/SAC stability comparison."""
+    if algorithm not in ('ppo','sac') or type(seed) is not int or seed not in (11,23,37):
+        raise ValueError('unsupported stability algorithm or seed')
+    job={'algorithm':algorithm,'device':'cpu','smoke':False,'seed':seed,'steps':100000,
+         'evaluation_every':10000,'compact_checkpoints':True,'milestones':[100000],'reward_scale':1.}
+    return {'version':5,'accelerator':'CPU','stability_study':{'algorithm':algorithm,'seed':seed},'jobs':[job]}
