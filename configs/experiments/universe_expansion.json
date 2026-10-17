@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "name": "universe-expansion-2026-10-17",
+  "provider": "yahoo",
+  "feed": "yahoo",
+  "start": "2010-01-01",
+  "end_exclusive": "2024-01-01",
+  "control_universe": "configs/universes/sector_research.json",
+  "expanded_universe": "configs/universes/sector_expansion.json",
+  "evaluation_symbols": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "DIA",
+    "GOOGL",
+    "DIS",
+    "AMZN",
+    "HD",
+    "PG",
+    "KO",
+    "XOM",
+    "CVX",
+    "JPM",
+    "BAC",
+    "JNJ",
+    "UNH",
+    "CAT",
+    "HON",
+    "LIN",
+    "APD",
+    "AMT",
+    "PLD",
+    "AAPL",
+    "MSFT",
+    "NEE",
+    "DUK"
+  ],
+  "arms": [
+    "control",
+    "expanded"
+  ],
+  "algorithm": "ppo",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps": 50000,
+  "evaluation_every": 10000,
+  "features": "basic seven; no weekly, supply/demand or rotation inputs",
+  "reward_scale": 1.0,
+  "device": "cpu",
+  "concurrency": 2,
+  "selection": "Equal-weight common 26-symbol validation net return, 2021-2023; best checkpoint per seed retained; post-update endpoint also reported.",
+  "hypothesis": "Adding 33 stocks to training improves temporal validation behavior on the same original 26 tradables. Each arm uses the same raw snapshot; its own normalizer fits only its training panel.",
+  "gate": {
+    "minimum_mean_selected_gain_pp": 2.0,
+    "minimum_mean_final_gain_pp": 2.0,
+    "minimum_paired_final_positive_seeds": 2,
+    "maximum_selected_drawdown_worsening_pp": 2.0,
+    "maximum_final_drawdown_worsening_pp": 2.0
+  },
+  "test_evaluated": false,
+  "included_splits": [
+    "train",
+    "validation"
+  ],
+  "survivorship": "Retrospective survivor expansion; not a historical-index study. Current sectors are annotations only. No failed-stock or delisting claim.",
+  "stopping": "Six fixed 50k cells only after CPU smoke and data acceptance. No outcome-driven longer runs or reward changes. All allocations share the existing 150-unit project ceiling and 130-unit stop, with two-hour per-session deadlines.",
+  "alpaca": "Separate 2016-2023 SIP coverage audit only; incomplete corporate-action evidence blocks substitution into this dividend-aware comparison."
+}

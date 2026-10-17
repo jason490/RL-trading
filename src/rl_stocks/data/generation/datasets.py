@@ -1,5 +1,4 @@
 from dataclasses import asdict, dataclass
-from datetime import date
 from pathlib import Path
 import json
 import math
@@ -41,7 +40,7 @@ def split_name(session):
 
 def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
              zone_timeframes=(), zone_config=None, universe=None, sector_rotation=False,
-             sector_records=(), sector_labels=False):
+             sector_records=(), sector_labels=False, evaluation_symbols=None, include_test=True):
     if purge < 20:
         raise ValueError("purge must cover maximum holding horizon (20 sessions)")
     bars, provenance = load(snapshot)
@@ -55,6 +54,12 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
         missing_symbols = set(symbols(universe))-{b.symbol for b in bars}
         if missing_symbols:
             raise ValueError(f"universe absent from snapshot: {sorted(missing_symbols)}")
+    evaluation = tuple(tradable) if evaluation_symbols is None else tuple(evaluation_symbols)
+    if not evaluation or len(set(evaluation)) != len(evaluation) or not set(evaluation) <= set(tradable):
+        raise ValueError("evaluation symbols must be a nonempty unique subset of tradables")
+    if type(include_test) is not bool:
+        raise ValueError("include_test must be boolean")
+    splits = ("train", "validation", "test") if include_test else ("train", "validation")
     if sector_rotation:
         if universe is None:
             raise ValueError("sector rotation requires a configured universe")
@@ -88,7 +93,9 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
             for row in rows:
                 bar = series[row["bar"]]
                 row["values"] += rotation.at(symbol, bar.session, bar.available_time)
-        for split in ("train","validation","test"):
+        for split in splits:
+            if split != "train" and symbol not in evaluation:
+                continue
             selected = [r for r in rows if split_name(series[r["bar"]].session)==split]
             if split != "test":
                 selected = selected[:-purge]
@@ -115,8 +122,8 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
                 if split=="train":
                     training.extend(episode["features"])
     if any(not any(e["split"]==s and e["symbol"]==symbol for e in episodes.values())
-           for symbol in tradable for s in ("train","validation","test")):
-        raise ValueError("all symbols must have all three splits")
+           for s in splits for symbol in (tradable if s == "train" else evaluation)):
+        raise ValueError("all required symbols must have all requested splits")
     if sector_labels:
         known_index = names.index("stock_sector_known")
         for symbol in stocks:
@@ -139,6 +146,12 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
         payload["manifest"]["survivorship"] = (
             "Retrospectively selected surviving stocks/ETFs; not historical index membership; "
             "current declared sector labels are annotations, not historical facts")
+    if evaluation_symbols is not None or not include_test:
+        payload["manifest"]["evaluation_symbols"] = evaluation
+        payload["manifest"]["included_splits"] = splits
+        payload["manifest"]["evaluation_policy"] = (
+            "Declared common validation panel; additional symbols contribute training only. "
+            "No absent test partition may be reconstructed or treated as a fresh holdout.")
     if sector_rotation:
         payload["schema"] += "-sector-rotation-v1"+("-labels" if sector_labels else "")
         payload["manifest"]["sector_rotation"] = {

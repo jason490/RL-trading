@@ -524,3 +524,19 @@ transport, 429 cooldown and bounded handling of longer cooldowns without real
 network traffic. Live acceptance used only the historical-data endpoint, with
 no orders, training, Colab allocation or existing dataset/model changes.
 Rate limiting is process-wide; use one downloader process for this account.
+
+## Universe expansion preparation — 2026-10-17
+
+The common Yahoo snapshot passed all requested calendar coverage gates for 70
+symbols through 2023. Control and expanded datasets contain 70,200 and 158,546
+training rows with exactly matching 19,058-row validation panels and no test
+episodes. The separate Alpaca SIP audit retained 713 missing LIN sessions and
+did not certify corporate actions. See [data and audit evidence](../results/universe-expansion-2026-10-17/README.md).
+
+Full local acceptance passed **174 tests**, with 13 existing warnings, in 93.85
+seconds. The final targeted two-test expansion check also passed after adding
+the report rejection test: a large selected-checkpoint gain cannot pass when
+final performance deteriorates, duplicate cells and mismatched baselines are
+rejected, normalization fits training only, and no retired-test episodes are
+created. Unused-import checks passed for changed modules/scripts/tests.
+Colab execution acceptance and outcomes are recorded separately after retrieval.

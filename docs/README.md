@@ -18,6 +18,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Stock universe and sector rotation | [sectors-universe.md](sectors-universe.md) | Configurable symbols, dated classifications, historical ETF rotation, scaling and commands |
 | Historical universe coverage | [historical-universe.md](historical-universe.md) | Membership, delistings, provider audit and training-only decline coverage before expansion |
 | Historical evidence import and audit | [historical-data.md](historical-data.md) | Stable IDs, causal membership events, delisting outcomes, immutable imports, listing discovery and coverage reports |
+| Matched universe expansion | [universe-expansion.md](universe-expansion.md) | Fixed 22-versus-55-stock training comparison, common validation panel, no retired-test reuse, and Colab operations |
 | Trade simulation | [simulation.md](simulation.md) | Cash/P&L, fills, costs, gaps, stops, scale-outs and corporate actions |
 | Policy outputs and risk | [actions-risk.md](actions-risk.md) | Four-component decoding, geometry, desired quantities and clipping |
 | Gymnasium interface | [environment.md](environment.md) | Observations, seeded reset, step and episode boundaries |

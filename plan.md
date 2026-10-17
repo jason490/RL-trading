@@ -527,3 +527,23 @@ full historical coverage, dividend evidence, historical memberships and terminal
 outcomes remain separate gates. Existing Yahoo models and shadow inference are
 unchanged. See [provider operations](docs/providers.md) and
 [access evidence](results/alpaca-access-2026-10-17.json).
+
+## 20. Matched retrospective training-universe expansion — 2026-10-17
+
+The user authorized training/testing with more data. A declared six-cell CPU PPO
+comparison uses seeds 11/23/37 and 50,000 steps per cell, expanding 22 to 55 stocks
+plus the same four ETFs. Both arms score the identical original 26-symbol
+validation panel. A fresh common Yahoo snapshot supplies matched prices and
+cash dividends; each arm fits preprocessing on its own training observations.
+The datasets contain training through 2020 and validation in 2021–2023 only;
+the retired test interval is neither requested nor evaluated. Rewards, basic
+features, simulator and costs are fixed. This is retrospective survivor research,
+not the separately gated historical-membership/delisting experiment.
+
+Data acceptance passes all 70 configured symbols: 70,200 versus 158,546 training
+rows, with identical 19,058-row validation panels. A separate Alpaca 2016–2023
+audit returned 139,508 SIP bars but found 713 missing LIN sessions; corporate
+actions remain unverified. Keep that feed outside this dividend-aware comparison.
+Use the existing aggregate-budget Colab pool, CPU smoke before research, and
+verify all owned teardown. See [operations](docs/universe-expansion.md) and
+[results](results/universe-expansion-2026-10-17/README.md).

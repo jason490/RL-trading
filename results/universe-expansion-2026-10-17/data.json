@@ -1,0 +1,607 @@
+{
+  "snapshot": "data/raw/universe-expansion/be5a8d56ab667294ac741ba0ad55f9d25e391cd2740811f965ad77543d9c283f",
+  "datasets": {
+    "control": {
+      "path": "data/datasets/672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "id": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_symbols": [
+        "AAPL",
+        "AMT",
+        "AMZN",
+        "APD",
+        "BAC",
+        "CAT",
+        "CVX",
+        "DIA",
+        "DIS",
+        "DUK",
+        "GOOGL",
+        "HD",
+        "HON",
+        "IWM",
+        "JNJ",
+        "JPM",
+        "KO",
+        "LIN",
+        "MSFT",
+        "NEE",
+        "PG",
+        "PLD",
+        "QQQ",
+        "SPY",
+        "UNH",
+        "XOM"
+      ],
+      "rows": {
+        "train": 70200,
+        "validation": 19058
+      }
+    },
+    "expanded": {
+      "path": "data/datasets/3a902d8124f65543d17c485d8a55f0335b3fec4206af2011a835ce758e172fff",
+      "id": "3a902d8124f65543d17c485d8a55f0335b3fec4206af2011a835ce758e172fff",
+      "training_symbols": [
+        "AAPL",
+        "ABBV",
+        "AEP",
+        "AMT",
+        "AMZN",
+        "APD",
+        "BAC",
+        "CAT",
+        "CMCSA",
+        "COP",
+        "COST",
+        "CVX",
+        "DE",
+        "DIA",
+        "DIS",
+        "DUK",
+        "ECL",
+        "EOG",
+        "EXC",
+        "FCX",
+        "GOOGL",
+        "GS",
+        "HD",
+        "HON",
+        "INTC",
+        "IWM",
+        "JNJ",
+        "JPM",
+        "KO",
+        "LIN",
+        "LOW",
+        "MCD",
+        "MRK",
+        "MS",
+        "MSFT",
+        "NEE",
+        "NKE",
+        "NVDA",
+        "O",
+        "ORCL",
+        "PEP",
+        "PFE",
+        "PG",
+        "PLD",
+        "PSA",
+        "QQQ",
+        "SHW",
+        "SLB",
+        "SO",
+        "SPG",
+        "SPY",
+        "T",
+        "UNH",
+        "UNP",
+        "UPS",
+        "VZ",
+        "WFC",
+        "WMT",
+        "XOM"
+      ],
+      "rows": {
+        "train": 158546,
+        "validation": 19058
+      }
+    }
+  },
+  "coverage": {
+    "AAPL": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "ABBV": {
+      "calendar_verified": true,
+      "count": 2768,
+      "declared_history_start": "2013-01-02",
+      "first": "2013-01-02",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "AEP": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "AMT": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "AMZN": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "APD": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "BAC": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "CAT": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "CMCSA": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "COP": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "COST": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "CVX": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "DE": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "DIA": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "DIS": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "DUK": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "ECL": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "EOG": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "EXC": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "FCX": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "GOOGL": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "GS": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "HD": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "HON": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "INTC": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "IWM": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "JNJ": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "JPM": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "KO": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "LIN": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "LOW": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "MCD": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "MRK": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "MS": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "MSFT": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "NEE": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "NKE": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "NVDA": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "O": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "ORCL": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "PEP": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "PFE": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "PG": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "PLD": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "PSA": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "QQQ": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "SHW": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "SLB": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "SO": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "SPG": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "SPY": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "T": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "UNH": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "UNP": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "UPS": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "VZ": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "WFC": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "WMT": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLB": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLC": {
+      "calendar_verified": true,
+      "count": 1393,
+      "declared_history_start": "2018-06-19",
+      "first": "2018-06-19",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLE": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLF": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLI": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLK": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLP": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLRE": {
+      "calendar_verified": true,
+      "count": 2071,
+      "declared_history_start": "2015-10-08",
+      "first": "2015-10-08",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLU": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLV": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XLY": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "XOM": {
+      "calendar_verified": true,
+      "count": 3522,
+      "first": "2010-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    }
+  },
+  "test_evaluated": false,
+  "survivorship": "Retrospective survivor expansion; not a historical-index study. Current sectors are annotations only. No failed-stock or delisting claim."
+}

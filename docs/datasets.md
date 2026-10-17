@@ -26,6 +26,14 @@ Indicators at the first validation/test sessions may use already available histo
 
 ## Normalizer
 
+For a declared training-panel comparison, `evaluation_symbols` restricts validation
+and test episodes to a nonempty unique subset of configured tradables.
+`include_test=False` creates only training and validation episodes. These choices
+are recorded in the manifest and leave the default all-symbol, three-split behavior
+unchanged. All training symbols still need valid training episodes; every scored
+symbol needs each requested evaluation split. See the
+[universe protocol](universe-expansion.md) for the current use of these options.
+
 `Normalizer` is a frozen dataclass containing ordered feature names, training means and population standard deviations. Continuous near-zero scales have a floor of 1e-8. Optional readiness/presence/freshness masks and issuer one-hot fields use fixed mean zero/scale one to preserve their binary contract. Fit rejects nonfinite/ragged matrices. Transform rejects name/order/length mismatch and nonfinite values; it has no update or partial-fit path. The same saved normalizer is used during validation, test and inference.
 
 Market features are normalized. Portfolio-state components remain raw scaled ratios and do not affect normalizer fitting. Observation clipping is not used to hide invalid or extreme data.
