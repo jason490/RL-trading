@@ -93,6 +93,16 @@ weights, final improvement in at least two seeds, and at most two percentage
 points of additional average drawdown. A failure ends this six-cell comparison;
 it does not automatically authorize longer runs or a new reward search.
 
+After retrieval, run `PYTHONPATH=src .venv/bin/python
+scripts/verify_frozen_runs.py ARTIFACT_ROOT... --output artifacts/STUDY/frozen-checks.json`.
+For stateless PPO/SAC/TD3 bundles this compares selected and frozen weights,
+checks exact deterministic predictions over three observations from every
+validation episode, verifies immutable normalization and rejects incompatible
+schemas/feeds/nonfinite inputs. No training or test evaluation occurs.
+Use `scripts/report_universe.py ARTIFACT_ROOT... --output artifacts/STUDY/comparison.html`
+with the same `PYTHONPATH=src .venv/bin/python` prefix for the interactive matched
+report, compact JSON summary and per-seed CSV.
+
 ## Alpaca remains a separate feed audit
 
 The account's free historical SIP access works, and its corporate-action endpoint
