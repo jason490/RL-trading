@@ -78,7 +78,21 @@ at cleanup was 350.88 units; that is separate from this project's remaining budg
 The interactive comparison is local at `artifacts/universe-expansion/comparison.html`;
 each retrieved run retains detailed selected/final validation reports and compact
 JSONL/CSV/HTML learning curves with percentage-point changes every 10k steps.
-Publication and temporary-file cleanup evidence are added after release verification.
+[The GitHub release](https://github.com/jason490/RL-trading/releases/tag/universe-expansion-2026-10-17)
+contains the six frozen models, selected/final weights, derived validation equity
+reports, compact learning curves and interactive comparison. Download and open
+[universe-comparison.html](https://github.com/jason490/RL-trading/releases/download/universe-expansion-2026-10-17/universe-comparison.html)
+for checkpoint returns and incremental percentage-point graphs.
+All **13 server asset sizes and SHA-256 digests** match local files; see
+[release verification](release-verification.json).
+
+After verified publication, [cleanup](cleanup.json) removed 48 redundant transfer
+archives, intermediate weights and partial reports totaling **413,585,593 logical
+bytes (394.43 MiB)**. All 146 retained files were rehashed unchanged. Selected and
+final weights, 50k post-update checkpoints, complete frozen bundles, normalization,
+curves and detailed reports remain. Raw datasets, the project ledger and private
+session recovery records were preserved. A fresh CLI check reports zero active
+assignments and a zero usage rate. `plan.html` retains its original checksum.
 
 ## Recommendation and next gates
 

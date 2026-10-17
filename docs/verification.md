@@ -564,3 +564,11 @@ The preserved project ledger is 35.458188/150 units with 114.541812 remaining;
 the working teardown threshold remains 130. All compute includes setup, allocated
 idle time, transfers and teardown. No automatic longer run or new reward search
 followed the failed gate. See [results and next gates](../results/universe-expansion-2026-10-17/README.md).
+
+The [release](https://github.com/jason490/RL-trading/releases/tag/universe-expansion-2026-10-17)
+has 13 assets whose server sizes and SHA-256 digests match local copies. Only
+after that verification, cleanup removed 48 redundant files (394.43 MiB) and
+rehashed all 146 retained files unchanged. Models, 50k endpoint weights, curves,
+normalization, reports, datasets and the preserved ledger remain. The final CLI
+check reports zero assignments and 0.00 units/hour. Publication and cleanup
+inventories are linked from the results guide; `plan.html` is unchanged.

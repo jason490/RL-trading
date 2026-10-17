@@ -1,5 +1,18 @@
 # Research artifacts and retention
 
+## Universe expansion cleanup — 2026-10-17
+
+All seven owned allocations stopped and all six research bundles passed frozen
+acceptance before cleanup. After verifying all 13 GitHub asset SHA-256 digests
+and sizes, cleanup removed 48 redundant files totaling 413,585,593 logical bytes
+(394.43 MiB). Observed free space increased by 413,687,808 bytes. All 146 retained
+files were rehashed unchanged, including selected/final weights, explicit 50k
+post-update checkpoints, full frozen directories, curves and detailed reports.
+Smoke evidence, raw datasets, source manifests, cumulative ledger and session
+recovery records remain. Earlier studies and unrelated files were untouched.
+See [inventory](../results/universe-expansion-2026-10-17/cleanup.json) and
+[release verification](../results/universe-expansion-2026-10-17/release-verification.json).
+
 Research outputs are separated from source code so models can be inspected and
 reused without committing large data snapshots or private runtime state.
 

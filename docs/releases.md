@@ -1,5 +1,22 @@
 # Research model releases
 
+## Matched training-universe expansion
+
+[universe-expansion-2026-10-17](https://github.com/jason490/RL-trading/releases/tag/universe-expansion-2026-10-17)
+contains six Colab CPU PPO models comparing 22 versus 55 training stocks, plus
+four ETFs, on the same original validation panel. Mean selected/final returns
+were control 11.77%/10.49% and expanded 10.53%/5.60%, versus buy-and-hold 30.60%.
+The expansion gate failed; these are development results, not an independent test.
+
+All 13 release asset sizes and SHA-256 digests match local copies. Open
+`universe-comparison.html` for interactive return and percentage-point-change
+charts. `learning-curves.tar.gz` preserves each seed's JSONL/CSV/HTML histories;
+`research-models.tar.gz` contains all complete frozen bundles and selected/final
+weights. Six bundles passed 468 exact prediction comparisons. Raw provider bars
+and credentials are excluded. See [results and acceptance](../results/universe-expansion-2026-10-17/README.md),
+[verified release hashes](../results/universe-expansion-2026-10-17/release-verification.json)
+and [retention inventory](../results/universe-expansion-2026-10-17/cleanup.json).
+
 Large research models are published as GitHub release assets. Source, reviewed
 experiment protocols and compact results remain in Git. Original provider bars,
 replay buffers and private runtime logs remain local.

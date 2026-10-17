@@ -1,0 +1,97 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/universe-expansion-2026-10-17",
+  "all_verified": true,
+  "assets": [
+    {
+      "name": "compute.json",
+      "bytes": 732,
+      "sha256": "66e4b627ef7d19a4f0ae1f5ee841c8af752dbcb9a6b16574106c4ce39ac6bbe9",
+      "server_sha256": "sha256:66e4b627ef7d19a4f0ae1f5ee841c8af752dbcb9a6b16574106c4ce39ac6bbe9",
+      "verified": true
+    },
+    {
+      "name": "data-manifest.json",
+      "bytes": 12951,
+      "sha256": "215507286afa9ec4f9578f78280d4e9dce7d2ac73df0fa9ab52a67baa1ba9a0f",
+      "server_sha256": "sha256:215507286afa9ec4f9578f78280d4e9dce7d2ac73df0fa9ab52a67baa1ba9a0f",
+      "verified": true
+    },
+    {
+      "name": "frozen-checks.json",
+      "bytes": 6129,
+      "sha256": "dd8653d61c981e7aa576a9ccc8166527dd3293dddeddc56ad433ff74471ec346",
+      "server_sha256": "sha256:dd8653d61c981e7aa576a9ccc8166527dd3293dddeddc56ad433ff74471ec346",
+      "verified": true
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "bytes": 8767937,
+      "sha256": "9317c72ba594015be82ba255f7f81c18f86e2fd157880ebcf31f6a7946d4e49c",
+      "server_sha256": "sha256:9317c72ba594015be82ba255f7f81c18f86e2fd157880ebcf31f6a7946d4e49c",
+      "verified": true
+    },
+    {
+      "name": "model-catalog.json",
+      "bytes": 649042,
+      "sha256": "6ffeeea78532ca9dc006de457441a82367a2781a9622667bf9fb11c91f8b9c95",
+      "server_sha256": "sha256:6ffeeea78532ca9dc006de457441a82367a2781a9622667bf9fb11c91f8b9c95",
+      "verified": true
+    },
+    {
+      "name": "protocol.json",
+      "bytes": 2146,
+      "sha256": "70bf6656d692421fcfe25eae8c87a6a775c0d0f765b39c1a9f808fd55bc8a002",
+      "server_sha256": "sha256:70bf6656d692421fcfe25eae8c87a6a775c0d0f765b39c1a9f808fd55bc8a002",
+      "verified": true
+    },
+    {
+      "name": "research-models.tar.gz",
+      "bytes": 3045647,
+      "sha256": "11f6341708407c443b1aef8816b2a96784a1438f02fac40115f2f61c51a79d21",
+      "server_sha256": "sha256:11f6341708407c443b1aef8816b2a96784a1438f02fac40115f2f61c51a79d21",
+      "verified": true
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 1038,
+      "sha256": "cbe8dda0831c0c3affa494d0ee1644eae4a779a88116820deb24113007863468",
+      "server_sha256": "sha256:cbe8dda0831c0c3affa494d0ee1644eae4a779a88116820deb24113007863468",
+      "verified": true
+    },
+    {
+      "name": "universe-comparison.csv",
+      "bytes": 1592,
+      "sha256": "2486e937fdcf61cc390ecf74bf80ce852c08650cc1a701b985eef66e04b7b414",
+      "server_sha256": "sha256:2486e937fdcf61cc390ecf74bf80ce852c08650cc1a701b985eef66e04b7b414",
+      "verified": true
+    },
+    {
+      "name": "universe-comparison.html",
+      "bytes": 4775403,
+      "sha256": "f67c000631fd13ab953d2fcf980cec89d37aeb605c16f58e11cd5a61d8508d73",
+      "server_sha256": "sha256:f67c000631fd13ab953d2fcf980cec89d37aeb605c16f58e11cd5a61d8508d73",
+      "verified": true
+    },
+    {
+      "name": "universe-comparison.json",
+      "bytes": 39261,
+      "sha256": "9f2c3a0c3f72097dd438e7605757c73c5245d9f1802ff91e614989985d415659",
+      "server_sha256": "sha256:9f2c3a0c3f72097dd438e7605757c73c5245d9f1802ff91e614989985d415659",
+      "verified": true
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "bytes": 5059394,
+      "sha256": "4f919cacac33eed32652c9780309d55053cd8832483d7b2a254d24d1197625da",
+      "server_sha256": "sha256:4f919cacac33eed32652c9780309d55053cd8832483d7b2a254d24d1197625da",
+      "verified": true
+    },
+    {
+      "name": "validation.html",
+      "bytes": 1193,
+      "sha256": "2d3ad286ffa9687dc981ee46892012db953d6b9e193983a956ca07d4ed891f9b",
+      "server_sha256": "sha256:2d3ad286ffa9687dc981ee46892012db953d6b9e193983a956ca07d4ed891f9b",
+      "verified": true
+    }
+  ]
+}
