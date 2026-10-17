@@ -1,0 +1,67 @@
+{
+  "per_seed": [
+    {
+      "arm": "control",
+      "seed": 11,
+      "final_mean_costs": 9288.688118205251,
+      "final_mean_turnover": 302.1959144237673,
+      "final_mean_sharpe": 0.13405565719199447,
+      "selected_mean_costs": 9288.688118205251
+    },
+    {
+      "arm": "expanded",
+      "seed": 11,
+      "final_mean_costs": 8435.90682946247,
+      "final_mean_turnover": 259.45282916032403,
+      "final_mean_sharpe": 0.1087405122895844,
+      "selected_mean_costs": 9674.5813999317
+    },
+    {
+      "arm": "control",
+      "seed": 23,
+      "final_mean_costs": 5237.8281258586085,
+      "final_mean_turnover": 169.10874509109863,
+      "final_mean_sharpe": 0.28310091090176376,
+      "selected_mean_costs": 5060.073273986549
+    },
+    {
+      "arm": "expanded",
+      "seed": 23,
+      "final_mean_costs": 4590.177011015757,
+      "final_mean_turnover": 151.57996753788373,
+      "final_mean_sharpe": 0.1703629227202248,
+      "selected_mean_costs": 4869.95221228021
+    },
+    {
+      "arm": "control",
+      "seed": 37,
+      "final_mean_costs": 7579.247682278131,
+      "final_mean_turnover": 248.61725151449102,
+      "final_mean_sharpe": 0.2641954985953273,
+      "selected_mean_costs": 2597.6662473227525
+    },
+    {
+      "arm": "expanded",
+      "seed": 37,
+      "final_mean_costs": 7468.408225900391,
+      "final_mean_turnover": 221.84378253150115,
+      "final_mean_sharpe": 0.19410491258252321,
+      "selected_mean_costs": 6306.186366497528
+    }
+  ],
+  "families": {
+    "control": {
+      "final_mean_costs": 7368.58797544733,
+      "final_mean_turnover": 239.973970343119,
+      "final_mean_sharpe": 0.2271173555630285,
+      "selected_mean_costs": 5648.8092131715175
+    },
+    "expanded": {
+      "final_mean_costs": 6831.497355459539,
+      "final_mean_turnover": 210.9588597432363,
+      "final_mean_sharpe": 0.1577361158641108,
+      "selected_mean_costs": 6950.239992903146
+    }
+  },
+  "interpretation": "Descriptive paired accounting diagnostics only; no causal claim about the learning decline."
+}

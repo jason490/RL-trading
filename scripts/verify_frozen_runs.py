@@ -32,6 +32,10 @@ def verify(roots, data_root):
             bundle = root / 'frozen' / metadata['bundle_id']
             feed = dataset['manifest']['provenance']['capabilities']['feed']
             frozen = FrozenPolicy(bundle, dataset['schema'], feed, 'cpu')
+            if (frozen.manifest['names'] != dataset['names']
+                    or frozen.manifest['normalizer'] != dataset['normalizer']
+                    or frozen.manifest['data_manifest'] != dataset['manifest']):
+                raise ValueError('frozen feature order, normalization or data manifest differs from dataset')
             selected = CLASSES[metadata['algorithm']].load(path.parent / 'best.zip', device='cpu')
             if checksum(path.parent / 'best.zip') != checksum(bundle / 'model.zip'):
                 raise ValueError('frozen weights differ from selected weights')
@@ -74,6 +78,7 @@ def verify(roots, data_root):
             records.append({'bundle_id': bundle.name, 'dataset': identity, 'algorithm': metadata['algorithm'],
                 'seed': metadata['seed'], 'symbols_checked': symbols, 'predictions_checked': count,
                 'exact_prediction_parity': True, 'deterministic_repeat': True,
+                'normalization_and_data_match_dataset': True,
                 'normalization_unchanged': True, 'schema_feed_nonfinite_rejection': True,
                 'selected_weights_sha256': checksum(path.parent / 'best.zip')})
             seen.add(bundle.name)

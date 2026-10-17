@@ -547,3 +547,14 @@ actions remain unverified. Keep that feed outside this dividend-aware comparison
 Use the existing aggregate-budget Colab pool, CPU smoke before research, and
 verify all owned teardown. See [operations](docs/universe-expansion.md) and
 [results](results/universe-expansion-2026-10-17/README.md).
+
+All six declared 50k CPU PPO cells completed. Mean selected/final validation
+returns were control 11.77%/10.49% and expanded 10.53%/5.60%, versus buy-and-hold
+30.60%. Expansion failed the gate and lost on final returns in all three seeds;
+no longer runs or reward changes were added. Six frozen bundles passed 468 exact
+CPU prediction comparisons plus immutable normalization/data/schema checks.
+All seven owned allocations including smoke stopped with verified cleanup.
+Conservative study usage was 0.068809 units, cumulative project usage 35.458188
+of 150. Keep the smaller panel as a research control, resolve provider/action and
+historical membership/terminal evidence, and predeclare walk-forward development
+before further search. The retired test and existing shadow campaign are unchanged.

@@ -1,0 +1,39 @@
+{
+  "control_seed": 11,
+  "previous_study": "algorithm-stability-2026-10-16",
+  "checkpoints": [
+    {
+      "steps": 10000,
+      "previous_return_pct": -2.7693965523724886,
+      "current_return_pct": -2.7693965523724886,
+      "absolute_difference_pp": 0.0
+    },
+    {
+      "steps": 20000,
+      "previous_return_pct": -2.7495850101359136,
+      "current_return_pct": -2.7495850101359136,
+      "absolute_difference_pp": 0.0
+    },
+    {
+      "steps": 30000,
+      "previous_return_pct": 0.9199828825470978,
+      "current_return_pct": 0.9199828825470978,
+      "absolute_difference_pp": 0.0
+    },
+    {
+      "steps": 40000,
+      "previous_return_pct": -7.100045205909463,
+      "current_return_pct": -7.100045205909463,
+      "absolute_difference_pp": 0.0
+    },
+    {
+      "steps": 50000,
+      "previous_return_pct": 4.317296724638197,
+      "current_return_pct": 4.317296724638197,
+      "absolute_difference_pp": 0.0
+    }
+  ],
+  "passed": true,
+  "scope": "Same on-step checkpoints through 50k; final 50k post-update weights are a separate record. Training feature names, sessions and normalizer also match the previous basic dataset.",
+  "test_evaluated": false
+}

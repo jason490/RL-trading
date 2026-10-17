@@ -1,5 +1,17 @@
 # Matched universe expansion
 
+## Actual result
+
+All six 50k CPU PPO cells completed on Colab Python 3.13.16. The expanded panel
+failed the declared improvement gate: mean selected/final development-validation
+returns were 10.53%/5.60%, versus control 11.77%/10.49% and buy-and-hold 30.60%.
+All three expanded final returns were lower. Average final drawdown was less
+severe, but Sharpe and final return also fell. Six frozen bundles passed 468 exact
+CPU prediction comparisons. All seven owned allocations, including smoke, were
+stopped and verified. See [full results and recommendations](../results/universe-expansion-2026-10-17/README.md).
+No longer run, additional stock expansion, reward search or test evaluation was
+automatically added after the failed gate.
+
 ## Question and fixed scope
 
 The 2026-10-17 experiment asks whether more training symbols improve behavior on

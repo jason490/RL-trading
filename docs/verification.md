@@ -1,4 +1,4 @@
-# Verification and milestone status — 2026-10-15
+# Verification and milestone status — 2026-10-17
 
 The project targets **Python 3.13**, matching Colab's current interpreter family.
 The local acceptance environment is **3.13.16**. The verified A100 image
@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **170 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **175 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 89.53 seconds, 13 existing warnings |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -540,3 +540,27 @@ final performance deteriorates, duplicate cells and mismatched baselines are
 rejected, normalization fits training only, and no retired-test episodes are
 created. Unused-import checks passed for changed modules/scripts/tests.
 Colab execution acceptance and outcomes are recorded separately after retrieval.
+
+## Completed universe comparison — 2026-10-17
+
+All six declared 50k PPO cells completed on Colab CPU, Python 3.13.16, with the
+same clean committed learning source. The control's five on-step checkpoints
+through 50k exactly reproduce the prior seed-11 CPU run. Dataset validation
+panels, baselines, features, costs and algorithm parameters are checked before
+reporting. The retired test is absent and was never evaluated.
+
+The expanded panel failed the improvement gate: selected/final mean returns
+10.53%/5.60%, versus control 11.77%/10.49% and buy-and-hold 30.60%. Six actual
+frozen bundles passed 468 exact CPU prediction comparisons, repeated-prediction
+parity, full feature-order/normalization/data-manifest equality, immutable
+normalization, and schema/feed/nonfinite rejection. The reusable verifier is
+`scripts/verify_frozen_runs.py`; the final full local suite passed **175 tests**
+with 13 existing warnings in 89.53 seconds, and changed-file unused-import checks
+passed. No failures or skipped tests were hidden.
+
+All seven owned allocations including smoke were stopped and verified. Measured
+study debit was 0.05 units; conservative rate accounting charges 0.068809 units.
+The preserved project ledger is 35.458188/150 units with 114.541812 remaining;
+the working teardown threshold remains 130. All compute includes setup, allocated
+idle time, transfers and teardown. No automatic longer run or new reward search
+followed the failed gate. See [results and next gates](../results/universe-expansion-2026-10-17/README.md).

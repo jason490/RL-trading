@@ -1,0 +1,27 @@
+{
+  "project_ceiling_units": 150,
+  "working_stop_units": 130,
+  "study_measured_account_debit_units": 0.05000000000001137,
+  "study_rate_estimated_units": 0.06880850001308653,
+  "study_conservative_units": 0.06880850001308653,
+  "project_conservative_units": 35.45818787437412,
+  "remaining_project_units": 114.54181212562588,
+  "account_balance_at_cleanup": 350.88,
+  "owned_allocations": 7,
+  "all_owned_cleanup_verified": true,
+  "budget_stopped": false,
+  "research_cells": 6,
+  "research_transitions": 300000,
+  "smoke_transitions": 512,
+  "peak_concurrency": 2,
+  "hardware": "Colab CPU",
+  "runtime_python_versions": [
+    [
+      3,
+      13,
+      16
+    ]
+  ],
+  "source_revision": "b11f6db",
+  "test_evaluated": false
+}
