@@ -98,3 +98,10 @@ price correction, fallback close, training, broker order or forward performance
 claim was introduced. All predecessor empty campaigns remain retained. The latest
 registration pins the approved policy and current software; status is a timestamped
 snapshot, not a continuously updated process monitor.
+
+The latest replacement is registered from clean source `20d5a8f`; its exact
+identity/timestamp are in the current registration JSON. It retains all nine
+bundle IDs, costs and review rules, adds the user-approved receipt policy and
+preserves both predecessor protocols/journals. Full acceptance passes 161 tests
+(87.42 seconds); all 15 targeted tests pass. No polling process was started while
+the required close is missing, and there are still zero forward records.

@@ -1,12 +1,12 @@
 {
-  "campaign": "cf374434b5dc82bc9f4b1d8ec43e6236c14511e7231306e75c5cbfa06ab8f847",
-  "supersedes_campaign": "0747a6730378e055ccfa2ac6fed2a1be9b58991f0a3039c4373947478f543965",
-  "supersession_reason": "User approved narrowly scoped October 16 SPY high correction before any forward decisions. Original protocol/journal retained.",
-  "registered_at": "2026-10-17T00:01:07.171359+00:00",
-  "not_before": "2026-10-17T00:01:07.171359+00:00",
-  "source_revision": "c46e7f17a2311ecc01fed6ce3892d7257c17d706",
+  "campaign": "ce7daf6e98902baf8f98bb7aac2af4f1ec78b734972a2fa95bbb63157f4af77a",
+  "supersedes_campaign": "cf374434b5dc82bc9f4b1d8ec43e6236c14511e7231306e75c5cbfa06ab8f847",
+  "supersession_reason": "User-approved SPY correction plus lossless optional raw-source encoding, pinned before any forward decisions. All predecessor protocols/journals retained.",
+  "registered_at": "2026-10-17T00:05:49.638487+00:00",
+  "not_before": "2026-10-17T00:05:49.638487+00:00",
+  "source_revision": "20d5a8f0a8e6102ed820736ad235f9d350732883",
   "source_was_clean": true,
-  "implementation": "b18f6287a7e0c08a3d75f24a15dc2121fdde341f4ce8adc57ed2aa5c0649acd5",
+  "implementation": "cfcc17982f63c5b1294561c1eb08fc84099069b59792b3f8cd04720d94294117",
   "mode": "shadow-no-orders",
   "arms": [
     {

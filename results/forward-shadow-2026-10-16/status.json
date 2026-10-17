@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-17T00:01:11.510079+00:00",
-  "campaign": "cf374434b5dc82bc9f4b1d8ec43e6236c14511e7231306e75c5cbfa06ab8f847",
-  "status": "registered_feed_preflight_passed",
+  "checked_at": "2026-10-17T00:06:18.263076+00:00",
+  "campaign": "ce7daf6e98902baf8f98bb7aac2af4f1ec78b734972a2fa95bbb63157f4af77a",
+  "status": "registered_correction_pinned_required_close_missing",
   "polling_running": false,
   "forward_decisions": 0,
   "settled_sessions": 0,
@@ -17,5 +17,22 @@
     "strict_overlap_validation_passed": true
   },
   "colab_allocated": false,
-  "project_conservative_units": 35.389379374361035
+  "project_conservative_units": 35.389379374361035,
+  "latest_feed_diagnosis": {
+    "checked_at": "2026-10-17T00:05:24.428250+00:00",
+    "provider": "yahoo",
+    "symbol": "SPY",
+    "session": "2026-10-16",
+    "missing_fields": [
+      "Close",
+      "Adj Close"
+    ],
+    "required_price_missing": true,
+    "one_cent_correction_expanded": false,
+    "replacement_prices_invented": false,
+    "polling_running": false,
+    "earlier_valid_receipt_retained": true,
+    "earlier_correction_preflight_snapshot": "4560b9e5fbb5922132fcd0f0354069f17b648657fcb9904c3d7967daa7e394f0"
+  },
+  "next_action": "Wait for a valid Yahoo SPY October 16 Close and retry collection. Keep the approved high-only policy; do not impute a close or bypass validation. No polling worker was started."
 }
