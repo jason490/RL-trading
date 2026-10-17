@@ -1,0 +1,27 @@
+{
+  "status": "software_implemented_real_evidence_required",
+  "current_universe_file": "configs/universes/sector_research.json",
+  "current_universe_file_sha256": "0bb7966d30ed37ec6fc8ed6fc6c11a212311b18ec3bccb2a4bb0197cf44dc71d",
+  "configured_tradable_count": 26,
+  "configured_stock_count": 22,
+  "configured_context_count": 11,
+  "real_historical_evidence_imported": false,
+  "membership_verified": false,
+  "stable_security_identity_verified": false,
+  "terminal_outcomes_verified": false,
+  "training_ready": false,
+  "missing_inputs": [
+    "Complete dated membership and publication-vintage evidence for a declared universe",
+    "Stable security/share-class IDs and dated ticker mappings",
+    "Raw prices/actions including failed and delisted cohort names",
+    "Verified last-trade and terminal-outcome/settlement records"
+  ],
+  "missing_integration": [
+    "Historical membership-exit/suspension/terminal-aware episode construction and policy/benchmark accounting",
+    "Separately declared matched expansion experiment"
+  ],
+  "legacy_models_and_data_changed": false,
+  "retired_test_reopened": false,
+  "keys_in_logs_or_repo": false,
+  "automatic_downloads_or_paid_subscriptions_started": false
+}

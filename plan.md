@@ -495,3 +495,24 @@ Optional missing source floats are tagged losslessly in raw receipts; collection
 requests stop at the latest completed exchange session. Prior successful receipts
 and every empty predecessor campaign remain retained. No new training or credit
 consumption occurred. See the latest feed diagnosis beside the campaign records.
+
+## 19. Historical membership and delisting evidence — software implemented; real data pending, 2026-10-17
+
+The user's requested evidence layer now imports stable security/issuer identities,
+versioned ticker and membership events, raw bars/actions and verified or explicitly
+unresolved terminal outcomes. Selection requires effective AND public availability
+times; future outcomes do not select members. Immutable imports and coverage
+reports retain missing/dead-stock failures, last-trade references, unresolved
+settlements and unsupported non-cash outcomes. Alpha Vantage listing discovery is
+read-only and never auto-certifies index membership or terminal returns.
+
+Full acceptance passed 170 tests, plus final targeted historical validation.
+A reproducible synthetic demo covers ticker reuse and a zero-value failed security;
+it is not real market evidence. No credentialed vendor history is configured, so
+real membership/identity/terminal verification is still pending. The old 26-tradable
+universe, frozen models and retired test are unchanged; no training or credits
+were consumed. Before an expanded experiment, obtain source evidence and integrate
+historical episodes, membership exits, suspensions, delayed/non-cash settlements
+and matching benchmarks. The current audit intentionally reports
+`training_ready=false`. See [guide](docs/historical-data.md) and
+[status](results/historical-coverage-2026-10-17/current-data-readiness.json).

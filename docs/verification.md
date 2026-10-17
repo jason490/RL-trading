@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **161 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **170 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -493,3 +493,21 @@ high/open inconsistency. See [latest diagnosis](../results/forward-shadow-2026-1
 
 Final full acceptance passes **161 tests in 87.42 seconds**, zero skips/failures,
 with 13 existing checker/dependency warnings. No Colab runtime was allocated.
+
+## Historical membership/terminal evidence layer, 2026-10-17
+
+Full acceptance passed **170 tests in 89.47 seconds**, zero skips/failures, with
+13 existing warnings. Nine targeted historical tests pass after final validation
+hardening. Checks cover stable-ID ticker reuse, effective/publication-time joins,
+later vintage corrections, future-outcome independence, missing failed-stock
+prices, unresolved/non-cash/zero/buyout outcomes, delisting missing-return codes,
+source attestations, immutable identity and secret-safe mocked API failures.
+The CLI import/audit demo and HTML/CSV export passed on synthetic records only.
+
+No real historical vendor evidence was imported or certified; no Alpha Vantage
+API key or historical subscription was configured, and no API request, Colab
+allocation, training, broker order or new held-out evaluation occurred. The current
+retrospective 26-tradable sample and frozen policies remain unchanged. Coverage
+approval is conditional on source attestations and `training_ready` remains false
+until the documented historical episode/accounting integration is complete.
+See [guide](historical-data.md) and [readiness record](../results/historical-coverage-2026-10-17/current-data-readiness.json).

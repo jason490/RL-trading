@@ -64,3 +64,20 @@ control. Report results by trailing regime and symbol, not only one aggregate.
 Only training data may determine sampling weights; validation stays chronologically
 separate and the inspected test interval remains retired. More samples from the
 same episodes do not create independent market evidence.
+
+## Implemented evidence layer, 2026-10-17
+
+The [historical import/audit guide](historical-data.md) now documents a working
+stable-ID master, versioned as-of ticker/membership registry, immutable file
+imports, terminal-outcome validation, complete failure reports and a read-only
+Alpha Vantage listing-discovery adapter. A supplied synthetic example demonstrates
+dead-stock coverage and ticker reuse; it is not market evidence. The audit
+exports eligible sessions and explicitly leaves `training_ready=false` until
+historical episode/terminal accounting is integrated and real source evidence
+passes. Existing frozen models and retrospective datasets are unchanged.
+
+See [current data readiness](../results/historical-coverage-2026-10-17/current-data-readiness.json)
+and [software acceptance](../results/historical-coverage-2026-10-17/software-acceptance.json).
+No historical-data credentials or certified vendor exports are configured; no
+paid service or bulk API retrieval was initiated. Real source files/entitlement
+remain required before claiming reduced survivorship bias in a trained model.

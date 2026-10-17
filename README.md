@@ -18,7 +18,7 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata tests, CPU smoke, 36-run comparison and frozen held-out audit complete |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **161 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **170 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Controlled learning experiments
 
@@ -78,6 +78,15 @@ The supplied campaign includes all three combined-input SAC seeds plus basic
 PPO/SAC controls, with buy-and-hold/cash comparisons and interactive reports.
 It runs on a local/server process, makes no broker orders and does not train.
 Registration and software acceptance are separate from future market results.
+
+## Historical-universe evidence
+
+[Historical data import and audit](docs/historical-data.md) tracks stable security
+IDs, dated membership/ticker changes, missing member prices and delisting outcomes.
+It includes immutable file imports, coverage reports and optional read-only
+Alpha Vantage listing discovery. Real historical coverage is still unverified;
+the bundled example is synthetic, and episode/terminal integration remains a
+separate gate before training an expanded universe.
 
 ## Requirements and installation
 

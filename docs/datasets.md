@@ -35,3 +35,15 @@ Market features are normalized. Portfolio-state components remain raw scaled rat
 `dataset.json` stores feature schema/name order, normalizer, symbol/split episodes, ATR in executable units and a manifest with snapshot identity, source provenance/coverage, exact split boundaries, purge length, universe, weekly flag, override status and survivorship caveat. Loading checks the directory hash against exact canonical bytes.
 
 [Configured universes](sectors-universe.md) distinguish tradable symbols from context ETFs and retain dated sector metadata in the manifest. The default fixed ETF universe was selected retrospectively. Evaluations on these four liquid ETFs are not evidence about arbitrary current stock constituents or historical universe survival. Retain unsuccessful experiments and freeze research choices before opening the final test. Changing a feature schema or provider/feed requires a new dataset identity and new inference bundle.
+
+## Historical-universe evidence is a separate gate
+
+Use [historical import and audit](historical-data.md) to verify supplied stable
+security IDs, known-by-date membership, missing/dead-stock prices and terminal
+outcomes. Its eligible-session CSV is a data-request panel, not a training dataset.
+The existing generator still creates fixed-universe episodes and requires each
+symbol in all three splits; it must not be used unchanged for IPO/delisted
+cohorts. `training_ready` intentionally remains false pending historical episode,
+membership-exit/suspension and terminal-aware policy/benchmark accounting. No
+future-failure or recovery label may select samples or weights. Keep previous
+models and the retired final-test interval separate from a new expansion study.

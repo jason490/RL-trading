@@ -1,0 +1,24 @@
+{
+  "purpose": "Synthetic software checks only; no real historical membership or terminal prices were acquired.",
+  "full_tests_passed": 170,
+  "full_test_seconds": 89.47,
+  "targeted_tests_passed": 9,
+  "fixture_history_id": "be8e33d07ff13937c598fd76030fc6ba274dc0597034d047f8a45e31a05ceb2c",
+  "fixture_coverage_passed": true,
+  "fixture_totals": {
+    "securities_in_master": 2,
+    "selected_securities": 2,
+    "unselected_master_securities": 0,
+    "sessions": 6,
+    "expected_member_sessions": 6,
+    "covered_member_sessions": 6,
+    "terminal_outcomes_required": 1,
+    "terminal_outcomes_covered": 1
+  },
+  "training_ready": false,
+  "colab_allocated": false,
+  "project_conservative_units": 35.389379374361035,
+  "cli_import_and_reports_passed": true,
+  "cli_require_complete_rejected_missing_dead_stock_prices": true,
+  "missing_stock_was_retained_in_coverage_counts": true
+}

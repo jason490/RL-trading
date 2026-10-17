@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "universe": {
+    "name": "fixture-index",
+    "start": "2020-01-02",
+    "end": "2020-01-10",
+    "calendar": "XNYS",
+    "source": "synthetic-fixture-only",
+    "selection_rule": "Synthetic rotating index; no real market evidence"
+  },
+  "attestations": {
+    "membership_complete": {
+      "verified": true,
+      "source": "synthetic-only",
+      "revision": "v1"
+    },
+    "identity_verified": {
+      "verified": true,
+      "source": "synthetic-only",
+      "revision": "v1"
+    },
+    "membership_vintages_verified": {
+      "verified": true,
+      "source": "synthetic-only",
+      "revision": "v1"
+    },
+    "corporate_actions_verified": {
+      "verified": true,
+      "source": "synthetic-only",
+      "revision": "v1"
+    },
+    "delisted_price_coverage_verified": {
+      "verified": true,
+      "source": "synthetic-only",
+      "revision": "v1"
+    }
+  },
+  "securities": [
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "security_id": "old-security",
+      "issuer_id": "issuer-old-security",
+      "exchange": "XNYS",
+      "instrument_type": "stock",
+      "listed_from": "2010-01-01",
+      "last_trade_session": "2020-01-07",
+      "status": "delisted"
+    },
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "security_id": "new-security",
+      "issuer_id": "issuer-new-security",
+      "exchange": "XNYS",
+      "instrument_type": "stock",
+      "listed_from": "2020-01-08",
+      "last_trade_session": null,
+      "status": "active"
+    }
+  ],
+  "aliases": [
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "event_id": "alias-old-security",
+      "security_id": "old-security",
+      "ticker": "ACME",
+      "effective_from": "2010-01-01"
+    },
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "event_id": "alias-new-security",
+      "security_id": "new-security",
+      "ticker": "ACME",
+      "effective_from": "2020-01-08"
+    }
+  ],
+  "membership": [
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "event_id": "add-old-security",
+      "security_id": "old-security",
+      "universe": "fixture-index",
+      "member": true,
+      "effective_from": "2020-01-02"
+    },
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "event_id": "add-new-security",
+      "security_id": "new-security",
+      "universe": "fixture-index",
+      "member": true,
+      "effective_from": "2020-01-08"
+    },
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2019-12-31T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "event_id": "remove-old",
+      "security_id": "old-security",
+      "universe": "fixture-index",
+      "member": false,
+      "effective_from": "2020-01-08"
+    }
+  ],
+  "terminals": [
+    {
+      "source": "synthetic-fixture-only",
+      "revision": "v1",
+      "available_time": "2020-01-10T12:00:00+00:00",
+      "retrieved_time": "2026-10-17T00:00:00+00:00",
+      "event_id": "terminal-old",
+      "security_id": "old-security",
+      "last_trade_session": "2020-01-07",
+      "settlement_time": "2020-01-10T12:00:00+00:00",
+      "kind": "cash_per_share",
+      "reference_price": 100.0,
+      "value": 0.0,
+      "currency": "USD",
+      "verified": true,
+      "basis": "additional_to_last_close"
+    }
+  ],
+  "prices": [
+    {
+      "security_id": "old-security",
+      "bar": {
+        "symbol": "ACME",
+        "session": "2020-01-02",
+        "open_time": "2020-01-02T14:30:00+00:00",
+        "event_time": "2020-01-02T21:00:00+00:00",
+        "available_time": "2020-01-02T21:15:00+00:00",
+        "retrieved_time": "2026-10-17T00:00:00+00:00",
+        "provider": "synthetic",
+        "feed": "synthetic",
+        "revision": "v1",
+        "open": 100.0,
+        "high": 101.0,
+        "low": 99.0,
+        "close": 100.0,
+        "volume": 100000.0,
+        "dividend": 0.0,
+        "split": 1.0,
+        "adjustments": "raw_with_actions"
+      }
+    },
+    {
+      "security_id": "old-security",
+      "bar": {
+        "symbol": "ACME",
+        "session": "2020-01-03",
+        "open_time": "2020-01-03T14:30:00+00:00",
+        "event_time": "2020-01-03T21:00:00+00:00",
+        "available_time": "2020-01-03T21:15:00+00:00",
+        "retrieved_time": "2026-10-17T00:00:00+00:00",
+        "provider": "synthetic",
+        "feed": "synthetic",
+        "revision": "v1",
+        "open": 100.0,
+        "high": 101.0,
+        "low": 99.0,
+        "close": 100.0,
+        "volume": 100000.0,
+        "dividend": 0.0,
+        "split": 1.0,
+        "adjustments": "raw_with_actions"
+      }
+    },
+    {
+      "security_id": "old-security",
+      "bar": {
+        "symbol": "ACME",
+        "session": "2020-01-06",
+        "open_time": "2020-01-06T14:30:00+00:00",
+        "event_time": "2020-01-06T21:00:00+00:00",
+        "available_time": "2020-01-06T21:15:00+00:00",
+        "retrieved_time": "2026-10-17T00:00:00+00:00",
+        "provider": "synthetic",
+        "feed": "synthetic",
+        "revision": "v1",
+        "open": 100.0,
+        "high": 101.0,
+        "low": 99.0,
+        "close": 100.0,
+        "volume": 100000.0,
+        "dividend": 0.0,
+        "split": 1.0,
+        "adjustments": "raw_with_actions"
+      }
+    },
+    {
+      "security_id": "old-security",
+      "bar": {
+        "symbol": "ACME",
+        "session": "2020-01-07",
+        "open_time": "2020-01-07T14:30:00+00:00",
+        "event_time": "2020-01-07T21:00:00+00:00",
+        "available_time": "2020-01-07T21:15:00+00:00",
+        "retrieved_time": "2026-10-17T00:00:00+00:00",
+        "provider": "synthetic",
+        "feed": "synthetic",
+        "revision": "v1",
+        "open": 100.0,
+        "high": 101.0,
+        "low": 99.0,
+        "close": 100.0,
+        "volume": 100000.0,
+        "dividend": 0.0,
+        "split": 1.0,
+        "adjustments": "raw_with_actions"
+      }
+    },
+    {
+      "security_id": "new-security",
+      "bar": {
+        "symbol": "ACME",
+        "session": "2020-01-08",
+        "open_time": "2020-01-08T14:30:00+00:00",
+        "event_time": "2020-01-08T21:00:00+00:00",
+        "available_time": "2020-01-08T21:15:00+00:00",
+        "retrieved_time": "2026-10-17T00:00:00+00:00",
+        "provider": "synthetic",
+        "feed": "synthetic",
+        "revision": "v1",
+        "open": 100.0,
+        "high": 101.0,
+        "low": 99.0,
+        "close": 100.0,
+        "volume": 100000.0,
+        "dividend": 0.0,
+        "split": 1.0,
+        "adjustments": "raw_with_actions"
+      }
+    },
+    {
+      "security_id": "new-security",
+      "bar": {
+        "symbol": "ACME",
+        "session": "2020-01-09",
+        "open_time": "2020-01-09T14:30:00+00:00",
+        "event_time": "2020-01-09T21:00:00+00:00",
+        "available_time": "2020-01-09T21:15:00+00:00",
+        "retrieved_time": "2026-10-17T00:00:00+00:00",
+        "provider": "synthetic",
+        "feed": "synthetic",
+        "revision": "v1",
+        "open": 100.0,
+        "high": 101.0,
+        "low": 99.0,
+        "close": 100.0,
+        "volume": 100000.0,
+        "dividend": 0.0,
+        "split": 1.0,
+        "adjustments": "raw_with_actions"
+      }
+    }
+  ]
+}
