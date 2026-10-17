@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **160 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **161 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -480,3 +480,16 @@ Full acceptance passed **160 tests in 88.59 seconds**, zero skips/failures, with
 13 existing warnings. All 14 targeted correction/shadow checks also pass, including
 wrong-date/symbol/changed-source/larger-error rejection and audit persistence.
 See [preflight](../results/forward-shadow-2026-10-16/correction-preflight.json).
+
+Required missing prices remain rejected before any correction fingerprint is
+computed. Optional nonfinite raw metadata is preserved with explicit JSON tags;
+normalized prices and volume must still be finite. Collection caps its exclusive
+request end at the latest completed exchange session plus one day, including
+weekends/holidays. Fifteen targeted correction/shadow tests pass, covering these
+cases and unchanged strict rejection. The earlier valid 37-symbol preflight is
+retained; a later fresh Yahoo response changed October 16 SPY Close to NaN, so
+activation remains blocked by missing required prices rather than the repaired
+high/open inconsistency. See [latest diagnosis](../results/forward-shadow-2026-10-16/latest-feed-diagnosis.json).
+
+Final full acceptance passes **161 tests in 87.42 seconds**, zero skips/failures,
+with 13 existing checker/dependency warnings. No Colab runtime was allocated.

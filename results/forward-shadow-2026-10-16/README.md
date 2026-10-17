@@ -29,7 +29,7 @@ journals, raw data and process logs remain private/ignored. A persistent host is
 required for daily uptime; installing the provided service template is an
 operator deployment step, not something the template performs automatically.
 
-## Actual registration and current blocker
+## Initial registration and original blocker (historical)
 
 Campaign `0747a6730378e055ccfa2ac6fed2a1be9b58991f0a3039c4373947478f543965`
 was registered at **2026-10-16 22:55:19 UTC**, using clean source `e6db469`.
@@ -82,3 +82,19 @@ A replacement registration pins the new policy and implementation with unchanged
 models, seeds, costs and review horizon; see the current [registration](registration.json)
 and [status](status.json). No historical study result was recomputed or improved
 by this correction. Full software acceptance passes 160 tests.
+
+## Latest feed condition
+
+The one-cent exception works and the earlier 37-symbol successful receipt is
+preserved. After midnight UTC, a fresh Yahoo response returned `NaN` for the
+October 16 SPY **Close** (and optional Adj Close). This is a different source
+problem, recorded in [latest diagnosis](latest-feed-diagnosis.json). The approved
+exception cannot fill missing prices; strict validation still rejects them.
+Collection is bounded to completed exchange sessions and optional missing source
+metadata remains explicitly tagged without fabricating numeric values.
+
+Polling remains disabled pending a valid required closing price. No additional
+price correction, fallback close, training, broker order or forward performance
+claim was introduced. All predecessor empty campaigns remain retained. The latest
+registration pins the approved policy and current software; status is a timestamped
+snapshot, not a continuously updated process monitor.

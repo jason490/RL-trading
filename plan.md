@@ -488,3 +488,10 @@ provider/feed/date/symbol and maximum $0.011 increase; raw evidence and a receip
 audit remain immutable. Real preflight passes all 37 symbols with one correction.
 Full acceptance passes 160 tests. Retain the initial zero-outcome campaign and
 register its replacement with the correction policy before prospective signals.
+
+A later Yahoo response changed the same SPY bar's required Close to NaN. The
+approved high-only exception does not impute it, and polling stays disabled.
+Optional missing source floats are tagged losslessly in raw receipts; collection
+requests stop at the latest completed exchange session. Prior successful receipts
+and every empty predecessor campaign remain retained. No new training or credit
+consumption occurred. See the latest feed diagnosis beside the campaign records.

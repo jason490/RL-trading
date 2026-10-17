@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-17T00:01:11.510079+00:00",
+  "campaign": "cf374434b5dc82bc9f4b1d8ec43e6236c14511e7231306e75c5cbfa06ab8f847",
+  "status": "superseded_before_activation",
+  "polling_running": false,
+  "forward_decisions": 0,
+  "settled_sessions": 0,
+  "paper_eligible": false,
+  "waiting_cycle_passed": true,
+  "feed_preflight": {
+    "passed": true,
+    "snapshot_id": "4560b9e5fbb5922132fcd0f0354069f17b648657fcb9904c3d7967daa7e394f0",
+    "symbols": 37,
+    "corrections_applied": 1,
+    "policy": "yahoo-spy-2026-10-16-high-v1",
+    "original_raw_response_preserved": true,
+    "strict_overlap_validation_passed": true
+  },
+  "colab_allocated": false,
+  "project_conservative_units": 35.389379374361035,
+  "activation_issue": "Yahoo changed SPY October 16 Close to NaN after the earlier valid receipt; strict OHLC fingerprinting/validation rejected it. No decisions or fills existed."
+}

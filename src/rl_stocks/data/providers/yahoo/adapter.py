@@ -1,6 +1,14 @@
 from datetime import timedelta
+import math
 from rl_stocks.core.contracts import Bar, Capabilities, Request, utcnow
 from rl_stocks.data.validation.bars import validate
+
+
+def source_number(value):
+    """Keep optional missing source floats representable in strict JSON."""
+    value = float(value)
+    return value if math.isfinite(value) else {'nonfinite_float': repr(value)}
+
 
 class YahooProvider:
     capabilities = Capabilities("yahoo", feed="yahoo", adjustments="split_adjusted_with_dividends",
@@ -27,7 +35,7 @@ class YahooProvider:
             if frame.empty:
                 raise ValueError(f"no Yahoo bars for {symbol}; no fallback")
             self.raw_source.append({"symbol":symbol,"retrieved_time":retrieved,
-                "rows":[{"date":str(index),**{str(k):float(v) for k,v in row.items()}}
+                "rows":[{"date":str(index),**{str(k):source_number(v) for k,v in row.items()}}
                         for index,row in frame.iterrows()]})
             for index, row in frame.iterrows():
                 day = str(index.date())

@@ -23,9 +23,15 @@ def collect(root, output, *, now=None, provider=None):
     bars, _ = load(source)
     last = min(max(b.session for b in bars if b.symbol == s)
                for s in protocol['required_symbols'])
+    import exchange_calendars as xc
+    calendar = xc.get_calendar('XNYS', start=str(current.date()-timedelta(days=14)),
+                               end=str(current.date()+timedelta(days=2)))
+    completed = [s for s in calendar.sessions
+                 if timestamp(calendar.session_close(s).isoformat())+timedelta(minutes=15) <= current]
+    end = completed[-1].date()+timedelta(days=1)
     request = Request(tuple(protocol['required_symbols']),
                       date.fromisoformat(last)-timedelta(days=7),
-                      current.date()+timedelta(days=1))
+                      end)
     correction = protocol.get('receipt_correction_policy')
     policy_id = correction['id'] if correction else None
     if provider is None:

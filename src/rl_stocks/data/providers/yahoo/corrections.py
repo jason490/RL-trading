@@ -1,5 +1,6 @@
 """Explicit user-approved exceptions; never a general OHLC repair tolerance."""
 from dataclasses import replace
+import math
 from rl_stocks.core.contracts import digest
 
 
@@ -20,6 +21,8 @@ def correct_spy_high(bar):
            ('provider', 'feed', 'adjustments', 'symbol', 'session')) or bar.high >= bar.open:
         return bar, None
     original = {key: getattr(bar, key) for key in ('open', 'high', 'low', 'close')}
+    if not all(math.isfinite(value) for value in original.values()):
+        return bar, None  # The normal validator rejects missing required prices.
     if digest(original) != policy['original_ohlc_sha256'] or not 0 < bar.open-bar.high <= policy['maximum_raise']:
         raise ValueError('approved SPY correction does not match received OHLC')
     corrected = replace(bar, high=bar.open, revision=bar.revision+'|'+policy['id'])

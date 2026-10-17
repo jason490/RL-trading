@@ -68,3 +68,19 @@ class YahooCorrectionTests(unittest.TestCase):
         frame = self.frame.copy();frame.loc[frame.index[0], 'Close'] = 763.26
         with self.assertRaisesRegex(ValueError, 'does not match'):
             self.fetch(SPY_HIGH_POLICY['id'], frame)
+
+    def test_optional_missing_raw_field_is_losslessly_tagged_but_required_nan_rejected(self):
+        from rl_stocks.core.contracts import canonical
+        frame = self.frame.copy()
+        frame['Adj Close'] = float('nan')
+        provider, bars = self.fetch(SPY_HIGH_POLICY['id'], frame)
+        source = provider.raw_source[0]['rows'][0]
+        self.assertEqual(source['Adj Close'], {'nonfinite_float':'nan'})
+        self.assertEqual(source['High'], float(self.frame.iloc[0].High))
+        canonical({'raw_source':provider.raw_source, 'corrections':provider.corrections})
+        self.assertEqual(bars[0].high, bars[0].open)
+        for name in ('Volume', 'Close', 'High'):
+            invalid = frame.copy();invalid.loc[invalid.index[0], name] = float('nan')
+            with self.subTest(field=name):
+                with self.assertRaisesRegex(ValueError, 'nonfinite bar'):
+                    self.fetch(SPY_HIGH_POLICY['id'], invalid)

@@ -113,7 +113,9 @@ correction is applied. Low, open, close, volume, dividends and split fields are
 unchanged. All bars still pass the original strict validator afterward. Default
 Yahoo ingestion without the explicit policy remains strict.
 
-Raw responses retain the original high. Immutable shadow receipts include the
+Raw responses retain the original high. Optional nonfinite source floats use
+explicit JSON tags such as `{"nonfinite_float":"nan"}`; required normalized
+price/volume fields still reject nonfinite values. Immutable shadow receipts include the
 policy, original/corrected high, delta, source checksum and a revision marker.
 The campaign pins the policy before new signals. It cannot be added by editing
 an existing immutable campaign: register a replacement and retain the original

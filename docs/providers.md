@@ -62,3 +62,9 @@ $0.011). The original raw response and a per-receipt correction audit are kept;
 other invalid bars still fail. The policy is frozen in a replacement campaign,
 not applied to old datasets or performance reports. See
 [shadow correction details](shadow-inference.md#approved-october-16-spy-correction).
+
+Optional nonfinite source fields are retained in receipts as explicit JSON tags,
+for example `{"nonfinite_float":"nan"}`, rather than invalid JSON literals or
+fabricated numeric values. Required normalized bar fields still reject NaN or
+infinity. This preserves optional Yahoo metadata without weakening price/volume
+validation.

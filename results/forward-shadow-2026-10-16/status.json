@@ -1,21 +1,21 @@
 {
-  "checked_at": "2026-10-16T22:57:34.543934+00:00",
-  "campaign": "0747a6730378e055ccfa2ac6fed2a1be9b58991f0a3039c4373947478f543965",
-  "status": "registered_feed_preflight_blocked",
+  "checked_at": "2026-10-17T00:01:11.510079+00:00",
+  "campaign": "cf374434b5dc82bc9f4b1d8ec43e6236c14511e7231306e75c5cbfa06ab8f847",
+  "status": "registered_feed_preflight_passed",
   "polling_running": false,
   "forward_decisions": 0,
   "settled_sessions": 0,
   "paper_eligible": false,
   "waiting_cycle_passed": true,
   "feed_preflight": {
-    "provider": "yahoo",
-    "symbol": "SPY",
-    "session": "2026-10-16",
-    "error": "invalid OHLC geometry: daily high below open by approximately one cent",
-    "confirmed_by_fresh_retry": true,
-    "prices_repaired_or_substituted": false
+    "passed": true,
+    "snapshot_id": "4560b9e5fbb5922132fcd0f0354069f17b648657fcb9904c3d7967daa7e394f0",
+    "symbols": 37,
+    "corrections_applied": 1,
+    "policy": "yahoo-spy-2026-10-16-high-v1",
+    "original_raw_response_preserved": true,
+    "strict_overlap_validation_passed": true
   },
-  "next_action": "Retry read-only collection and overlap audit after upstream correction; never backdate signals or bypass validation. With no decisions yet, the first valid current observation can start later and all skipped dates remain unscored. Once decisions begin, a missed execution/decision session halts the campaign for review.",
   "colab_allocated": false,
   "project_conservative_units": 35.389379374361035
 }

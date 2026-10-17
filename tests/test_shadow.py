@@ -223,7 +223,11 @@ class ShadowTests(unittest.TestCase):
         provider = type('Provider', (), {})()
         provider.capabilities = Capabilities('yahoo', feed='synthetic')
         provider.raw_source = []
-        provider.bars = lambda request: [b for b in self.bars if b.session in ('2026-10-15','2026-10-16')]
+        requests = []
+        def fetch(request):
+            requests.append(request)
+            return [b for b in self.bars if b.session in ('2026-10-15','2026-10-16')]
+        provider.bars = fetch
         protocol = read_protocol(self.campaign)
         protocol['feed_contract']['provider'] = 'yahoo'
         with patch('rl_stocks.inference.shadow.collect.read_protocol', return_value=protocol):
@@ -231,6 +235,9 @@ class ShadowTests(unittest.TestCase):
             from rl_stocks.data.storage.immutable import load
             bars, _ = load(path)
             self.assertEqual({b.session for b in bars}, {'2026-10-15'})
+            self.assertEqual(str(requests[-1].end), '2026-10-16')
+            collect(self.campaign, self.root/'collected', now='2026-10-17T01:00:00+00:00', provider=provider)
+            self.assertEqual(str(requests[-1].end), '2026-10-17')
             from rl_stocks.data.providers.yahoo.corrections import SPY_HIGH_POLICY
             protocol['receipt_correction_policy'] = SPY_HIGH_POLICY
             with self.assertRaisesRegex(ValueError, 'correction policy differs'):
