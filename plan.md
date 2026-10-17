@@ -481,3 +481,10 @@ polling remains disabled; zero forward decisions/outcomes exist. Resolve the
 upstream bar or audit an explicit data correction before activation, without
 silently relaxing validation. The first eligible close is October 19; do not
 backdate a missed prospective start. See [actual status](results/forward-shadow-2026-10-16/status.json).
+
+The user then explicitly approved correcting the insignificant October 16 SPY
+high/open inconsistency. The opt-in exception pins the exact source OHLC checksum,
+provider/feed/date/symbol and maximum $0.011 increase; raw evidence and a receipt
+audit remain immutable. Real preflight passes all 37 symbols with one correction.
+Full acceptance passes 160 tests. Retain the initial zero-outcome campaign and
+register its replacement with the correction policy before prospective signals.

@@ -1,0 +1,160 @@
+{
+  "campaign": "0747a6730378e055ccfa2ac6fed2a1be9b58991f0a3039c4373947478f543965",
+  "registered_at": "2026-10-16T22:55:19.886208+00:00",
+  "not_before": "2026-10-16T22:55:19.886208+00:00",
+  "source_revision": "e6db469a069c7afdf5e820649ac76056ffdaea08",
+  "source_was_clean": true,
+  "implementation": "309cc088deca2974cd25c90e7f7afcf98cf5d80afa2c23449212f3304636fb05",
+  "mode": "shadow-no-orders",
+  "arms": [
+    {
+      "name": "combined-sac-11",
+      "family": "combined-sac",
+      "seed": 11,
+      "bundle_id": "7f40441af142dd21dee828792690dec71e4f29126b9b86a9b5f7b14fe690112d",
+      "manifest_sha256": "7f40441af142dd21dee828792690dec71e4f29126b9b86a9b5f7b14fe690112d"
+    },
+    {
+      "name": "combined-sac-23",
+      "family": "combined-sac",
+      "seed": 23,
+      "bundle_id": "ed05592c734f66215ca93f162972bd7de7a3bc95c479afb08eb16f1db35078e4",
+      "manifest_sha256": "ed05592c734f66215ca93f162972bd7de7a3bc95c479afb08eb16f1db35078e4"
+    },
+    {
+      "name": "combined-sac-37",
+      "family": "combined-sac",
+      "seed": 37,
+      "bundle_id": "c54d8194a30c54d67cf2bf730d3e1359a36ebecb8c6cb0d0e864f440a018378f",
+      "manifest_sha256": "c54d8194a30c54d67cf2bf730d3e1359a36ebecb8c6cb0d0e864f440a018378f"
+    },
+    {
+      "name": "basic-ppo-11",
+      "family": "basic-ppo",
+      "seed": 11,
+      "bundle_id": "351475bcb81da5222e5dcce374afed9d63c7723c8506873e2983ad8748097550",
+      "manifest_sha256": "351475bcb81da5222e5dcce374afed9d63c7723c8506873e2983ad8748097550"
+    },
+    {
+      "name": "basic-ppo-23",
+      "family": "basic-ppo",
+      "seed": 23,
+      "bundle_id": "6bc58516f306d5d5cab90f2eca12147961898cdf7dfcccf5d9cb84d31e116a28",
+      "manifest_sha256": "6bc58516f306d5d5cab90f2eca12147961898cdf7dfcccf5d9cb84d31e116a28"
+    },
+    {
+      "name": "basic-ppo-37",
+      "family": "basic-ppo",
+      "seed": 37,
+      "bundle_id": "3c2864b3f0c2a3cb433cf85200d5f30acc9d567b16085788b11a5ede9cbb5b69",
+      "manifest_sha256": "3c2864b3f0c2a3cb433cf85200d5f30acc9d567b16085788b11a5ede9cbb5b69"
+    },
+    {
+      "name": "basic-sac-11",
+      "family": "basic-sac",
+      "seed": 11,
+      "bundle_id": "ec8eac4222268ec5a64bebd8b120b5af943aecbac9f5a105ee26fb444bdac8b1",
+      "manifest_sha256": "ec8eac4222268ec5a64bebd8b120b5af943aecbac9f5a105ee26fb444bdac8b1"
+    },
+    {
+      "name": "basic-sac-23",
+      "family": "basic-sac",
+      "seed": 23,
+      "bundle_id": "f45f7508dadc800f39f67a926b9628d8118805ac08daed1c37048e93191efc6d",
+      "manifest_sha256": "f45f7508dadc800f39f67a926b9628d8118805ac08daed1c37048e93191efc6d"
+    },
+    {
+      "name": "basic-sac-37",
+      "family": "basic-sac",
+      "seed": 37,
+      "bundle_id": "bd80618b722b03bac15c2161e53aa8bb174961fb711824e82476179075bdeca6",
+      "manifest_sha256": "bd80618b722b03bac15c2161e53aa8bb174961fb711824e82476179075bdeca6"
+    }
+  ],
+  "review_sessions": 126,
+  "review": {
+    "decision": "Research review only; no automatic paper/live eligibility.",
+    "maximum_mean_drawdown_worsening_pp": 2.0,
+    "minimum_mean_excess_return_pp": 0.0,
+    "minimum_positive_seeds": 2
+  },
+  "simulation": {
+    "allow_short": true,
+    "borrow_rate": 0.03,
+    "exposure_cap": 1.0,
+    "fee_bps": 1.0,
+    "impact_bps": 2.0,
+    "initial_equity": 100000.0,
+    "max_holding": 20
+  },
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "DIA",
+    "GOOGL",
+    "DIS",
+    "AMZN",
+    "HD",
+    "PG",
+    "KO",
+    "XOM",
+    "CVX",
+    "JPM",
+    "BAC",
+    "JNJ",
+    "UNH",
+    "CAT",
+    "HON",
+    "LIN",
+    "APD",
+    "AMT",
+    "PLD",
+    "AAPL",
+    "MSFT",
+    "NEE",
+    "DUK"
+  ],
+  "required_symbols": [
+    "AAPL",
+    "AMT",
+    "AMZN",
+    "APD",
+    "BAC",
+    "CAT",
+    "CVX",
+    "DIA",
+    "DIS",
+    "DUK",
+    "GOOGL",
+    "HD",
+    "HON",
+    "IWM",
+    "JNJ",
+    "JPM",
+    "KO",
+    "LIN",
+    "MSFT",
+    "NEE",
+    "PG",
+    "PLD",
+    "QQQ",
+    "SPY",
+    "UNH",
+    "XLB",
+    "XLC",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLRE",
+    "XLU",
+    "XLV",
+    "XLY",
+    "XOM"
+  ],
+  "baseline_snapshot_id": "fced493827a124d4fb499d1c0e40009dc2420e19cd8712441ef65372d589457a",
+  "retired_test_reused_for_selection": false,
+  "broker_orders_enabled": false
+}

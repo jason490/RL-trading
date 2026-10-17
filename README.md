@@ -18,7 +18,7 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata tests, CPU smoke, 36-run comparison and frozen held-out audit complete |
 | Live-data shadow orchestration and Alpaca paper orders | Future milestones | Not implemented |
 
-The recorded verification run has **156 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The recorded verification run has **160 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 ## Controlled learning experiments
 

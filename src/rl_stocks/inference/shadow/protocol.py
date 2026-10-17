@@ -18,6 +18,7 @@ def implementation_id():
     root = Path(__file__).resolve().parents[2]
     paths = [*root.glob('features/**/*.py'), *root.glob('environment/**/*.py'),
              *root.glob('risk/**/*.py'), *root.glob('inference/**/*.py'),
+             *root.glob('data/providers/yahoo/*.py'),
              root/'data/generation/datasets.py', root/'data/validation/bars.py']
     return digest({str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
                    for p in sorted(paths)})
@@ -25,12 +26,17 @@ def implementation_id():
 
 def register(config, output, *, now=None, policy_loader=FrozenPolicy):
     now = timestamp(now or utcnow())
-    if set(config) != {'name', 'snapshot', 'arms', 'review_sessions', 'max_age_seconds'}:
+    required = {'name', 'snapshot', 'arms', 'review_sessions', 'max_age_seconds'}
+    if not required <= set(config) or set(config)-required-{'receipt_correction_policy'}:
         raise ValueError('campaign configuration keys mismatch')
     if not isinstance(config['review_sessions'], int) or config['review_sessions'] < 2:
         raise ValueError('review requires at least two sessions')
     if not 60 <= config['max_age_seconds'] <= 86400:
         raise ValueError('invalid freshness limit')
+    from rl_stocks.data.providers.yahoo.corrections import SPY_HIGH_POLICY
+    correction = config.get('receipt_correction_policy')
+    if correction not in (None, SPY_HIGH_POLICY['id']):
+        raise ValueError('unknown receipt correction policy')
     bars, provenance = load(config['snapshot'])
     if any(timestamp(b.retrieved_time) > now or timestamp(b.available_time) > now for b in bars):
         raise ValueError('future bootstrap data')
@@ -71,6 +77,7 @@ def register(config, output, *, now=None, policy_loader=FrozenPolicy):
         'symbols': symbols, 'required_symbols': required, 'simulation': common[2],
         'feed_contract': common[3], 'review_sessions': config['review_sessions'],
         'max_age_seconds': config['max_age_seconds'], 'implementation': implementation_id(),
+        'receipt_correction_policy': SPY_HIGH_POLICY if correction else None,
         'git': repository_state(Path.cwd()), 'mode': 'shadow-no-orders',
         'selection': 'All registered arms retained; no forward checkpoint selection.',
         'review': {'minimum_mean_excess_return_pp': 0., 'minimum_positive_seeds': 2,

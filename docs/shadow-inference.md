@@ -97,6 +97,29 @@ correct exchange open/close timestamps, continuous forward context and fresh
 observations. Historical warmup can retain the original archive's documented
 coverage limitations; it is not silently relabeled as newly verified data.
 
+## Approved October 16 SPY correction
+
+The user explicitly authorized correcting Yahoo's October 16, 2026 SPY bar.
+The supplied recipe opts into `yahoo-spy-2026-10-16-high-v1`: raise that bar's
+high to its reported open, a change of approximately $0.01001. This is a declared
+data correction, not a verified exchange quote or an automatic rounding rule.
+It can affect high-based indicators, so the correction remains visible in
+provenance even though the magnitude is small.
+
+The exception requires the exact provider/feed/adjustment/symbol/date and a
+checksum of the originally observed OHLC values; the maximum increase is $0.011.
+A different invalid source row still fails. If Yahoo fixes the bar itself, no
+correction is applied. Low, open, close, volume, dividends and split fields are
+unchanged. All bars still pass the original strict validator afterward. Default
+Yahoo ingestion without the explicit policy remains strict.
+
+Raw responses retain the original high. Immutable shadow receipts include the
+policy, original/corrected high, delta, source checksum and a revision marker.
+The campaign pins the policy before new signals. It cannot be added by editing
+an existing immutable campaign: register a replacement and retain the original
+zero-outcome record. Model weights and training normalization are not edited;
+previous study data and historical scores are not recomputed by this correction.
+
 ## Decisions, simulated fills and restarts
 
 At the first eligible close, each stock account starts with $100,000 cash and no

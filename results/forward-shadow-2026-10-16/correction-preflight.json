@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "snapshot_id": "4560b9e5fbb5922132fcd0f0354069f17b648657fcb9904c3d7967daa7e394f0",
+  "symbols": 37,
+  "corrections_applied": 1,
+  "policy": "yahoo-spy-2026-10-16-high-v1",
+  "original_raw_response_preserved": true,
+  "strict_overlap_validation_passed": true
+}

@@ -26,7 +26,12 @@ def collect(root, output, *, now=None, provider=None):
     request = Request(tuple(protocol['required_symbols']),
                       date.fromisoformat(last)-timedelta(days=7),
                       current.date()+timedelta(days=1))
-    provider = provider or YahooProvider()
+    correction = protocol.get('receipt_correction_policy')
+    policy_id = correction['id'] if correction else None
+    if provider is None:
+        provider = YahooProvider(correction_policy=policy_id)
+    if getattr(provider, 'correction_policy', None) != policy_id:
+        raise ValueError('provider correction policy differs from registered campaign')
     received = provider.bars(request)
     # Restated split-adjusted prices cannot be mixed with existing positions.
     for response in getattr(provider, 'raw_source', []):
@@ -41,5 +46,7 @@ def collect(root, output, *, now=None, provider=None):
                                  'observed_at': current.isoformat(), 'request': {
                                      'symbols': request.symbols, 'start': str(request.start),
                                      'end': str(request.end)},
-                                 'capabilities': asdict(provider.capabilities)},
+                                 'capabilities': asdict(provider.capabilities),
+                                 'correction_policy': correction,
+                                 'corrections': getattr(provider, 'corrections', [])},
                raw_source=getattr(provider, 'raw_source', None))

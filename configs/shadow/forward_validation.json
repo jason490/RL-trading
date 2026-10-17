@@ -57,5 +57,6 @@
       "seed": 37,
       "bundle_id": "bd80618b722b03bac15c2161e53aa8bb174961fb711824e82476179075bdeca6"
     }
-  ]
+  ],
+  "receipt_correction_policy": "yahoo-spy-2026-10-16-high-v1"
 }

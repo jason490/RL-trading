@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **156 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
+| Full local acceptance | **160 passed; zero skips or failures** | Includes real dependency-backed RL acceptance |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -463,3 +463,20 @@ were not repaired or substituted. Unattended polling is **not running**; no
 forward decisions or returns exist. See the [status](../results/forward-shadow-2026-10-16/status.json)
 and [registration](../results/forward-shadow-2026-10-16/registration.json).
 A persistent host and a successful feed audit are required before activation.
+
+## User-approved SPY data correction, 2026-10-17
+
+The user approved a narrowly scoped correction for Yahoo's October 16 SPY bar.
+The shadow recipe pins `yahoo-spy-2026-10-16-high-v1`: only the original observed
+OHLC checksum may raise high to open, capped at $0.011. Default Yahoo ingestion
+and all subsequent bar validation remain strict. Immutable raw responses retain
+the old high, and normalized receipts record the exact correction and revision.
+A fresh real-data preflight now passes for all 37 required symbols, with exactly
+one correction and unchanged historical overlap. No old training dataset or model
+was modified. The original empty campaign is retained; a replacement must pin
+the new receipt policy and implementation before forward signals.
+
+Full acceptance passed **160 tests in 88.59 seconds**, zero skips/failures, with
+13 existing warnings. All 14 targeted correction/shadow checks also pass, including
+wrong-date/symbol/changed-source/larger-error rejection and audit persistence.
+See [preflight](../results/forward-shadow-2026-10-16/correction-preflight.json).

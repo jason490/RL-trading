@@ -231,6 +231,16 @@ class ShadowTests(unittest.TestCase):
             from rl_stocks.data.storage.immutable import load
             bars, _ = load(path)
             self.assertEqual({b.session for b in bars}, {'2026-10-15'})
+            from rl_stocks.data.providers.yahoo.corrections import SPY_HIGH_POLICY
+            protocol['receipt_correction_policy'] = SPY_HIGH_POLICY
+            with self.assertRaisesRegex(ValueError, 'correction policy differs'):
+                collect(self.campaign, self.root/'collected', now='2026-10-15T21:30:00+00:00', provider=provider)
+            provider.correction_policy = SPY_HIGH_POLICY['id']
+            provider.corrections = [{'policy':SPY_HIGH_POLICY['id'], 'delta':.010009765625}]
+            path = collect(self.campaign, self.root/'collected', now='2026-10-15T21:30:00+00:00', provider=provider)
+            _, provenance = load(path)
+            self.assertEqual(provenance['correction_policy'], SPY_HIGH_POLICY)
+            self.assertEqual(provenance['corrections'], provider.corrections)
             provider.raw_source = [{'rows':[{'date':'2026-10-15','Stock Splits':2.}]}]
             with self.assertRaisesRegex(ValueError, 'split requires'):
                 collect(self.campaign, self.root/'collected', now='2026-10-15T21:30:00+00:00', provider=provider)

@@ -67,3 +67,18 @@ signal, record the later actual start and keep all skipped dates unscored; no
 historical signals may be backfilled. Once decisions begin, a missed execution
 session halts the campaign for review. No model or gate should be changed to
 repair a data-feed issue.
+
+## Approved correction and successful preflight
+
+On October 17 the user authorized correcting the small SPY high/open error.
+The [correction preflight](correction-preflight.json) now passes all 37 symbols,
+with exactly one audited correction. The raw response is preserved, high is
+raised to the reported open, and all other fields retain their source values.
+The rule requires the exact observed OHLC checksum and caps the change at $0.011;
+other invalid rows still fail. Default Yahoo ingestion is unchanged.
+
+The initial campaign and its blocked status are retained under [history](history/initial-registration.json).
+A replacement registration pins the new policy and implementation with unchanged
+models, seeds, costs and review horizon; see the current [registration](registration.json)
+and [status](status.json). No historical study result was recomputed or improved
+by this correction. Full software acceptance passes 160 tests.

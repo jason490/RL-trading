@@ -52,3 +52,13 @@ Historical availability is a conservative reconstruction, not verified public-av
 Uses the official historical client and `StockBarsRequest` with daily timeframe, explicit IEX/SIP and split adjustment. It reads credentials only when the adapter is called. The official SDK handles pagination; an isolated pinned transport extension bounds GET connect/read waits to (5,30) seconds and SDK retry attempts to two. The adapter never constructs a trading client or submits an order.
 
 Alpaca daily bars omit dividend cash flows. Its snapshots therefore carry `dividends_verified=false`; an explicit research override does not establish realistic total-return accounting. Actual pre-2016 history and account feed entitlements must be sampled later. Mocked-client tests exercise request/feed/normalization wiring when dependencies are installed; they do not prove account access.
+
+## Explicit shadow-only data correction
+
+Default Yahoo ingestion retains strict OHLC validation. The forward shadow recipe
+opts into the user's approved `yahoo-spy-2026-10-16-high-v1` exception: only the
+exact observed October 16 SPY OHLC checksum may raise high to open (maximum
+$0.011). The original raw response and a per-receipt correction audit are kept;
+other invalid bars still fail. The policy is frozen in a replacement campaign,
+not applied to old datasets or performance reports. See
+[shadow correction details](shadow-inference.md#approved-october-16-spy-correction).

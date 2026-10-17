@@ -48,3 +48,13 @@ Imports must remain side-effect free: importing a provider does not authenticate
 Reuse modules from thin scripts or future notebooks. Extend one family at a time, add an explicit feature/action version, record a matched ablation and retrain the bundle when its schema changes. Data provider changes must preserve canonical contracts and remain visible in manifests; feed harmonization is a separate audited experiment.
 
 The source checkout exposes no usable Git metadata in this sandbox. Runs record a null revision/dirty status rather than inventing a revision. In a normal Git checkout the same runner records both automatically.
+
+## Why `src/rl_stocks/` exists
+
+`src/` is the source container and `rl_stocks/` is the importable Python package.
+This keeps imports under one namespace, such as `rl_stocks.inference`, and lets
+the package installer discover the project through `pyproject.toml`. It also
+helps tests exercise installed package discovery instead of accidentally importing
+files from the checkout root. Moving every module directly under `src/` would
+require a coordinated import/build migration and create separate top-level module
+names. Keep application categories inside the `rl_stocks` package.

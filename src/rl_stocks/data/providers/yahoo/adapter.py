@@ -5,11 +5,19 @@ from rl_stocks.data.validation.bars import validate
 class YahooProvider:
     capabilities = Capabilities("yahoo", feed="yahoo", adjustments="split_adjusted_with_dividends",
         limitations="Unofficial personal use; revised history; availability reconstructed with 15-minute lag; no vintage guarantee")
+    def __init__(self, *, correction_policy=None):
+        from rl_stocks.data.providers.yahoo.corrections import SPY_HIGH_POLICY
+        if correction_policy not in (None, SPY_HIGH_POLICY['id']):
+            raise ValueError('unknown Yahoo correction policy')
+        self.correction_policy = correction_policy
+        self.corrections = []
+
     def bars(self, request: Request):
         import yfinance as yf
         import exchange_calendars as xc
         result = []
         self.raw_source=[]
+        self.corrections=[]
         retrieved = utcnow()
         calendar = xc.get_calendar("XNYS", start=str(request.start), end=str(request.end))
         for symbol in request.symbols:
@@ -33,5 +41,14 @@ class YahooProvider:
                     retrieved, float(row.Open), float(row.High), float(row.Low), float(row.Close),
                     float(row.Volume), float(row.get("Dividends", 0)), 1.0,
                     "split_adjusted_with_dividends"))
+        if self.correction_policy:
+            from rl_stocks.data.providers.yahoo.corrections import correct_spy_high
+            corrected = []
+            for bar in result:
+                bar, audit = correct_spy_high(bar)
+                corrected.append(bar)
+                if audit is not None:
+                    self.corrections.append(audit)
+            result = corrected
         validate(result)
         return result
