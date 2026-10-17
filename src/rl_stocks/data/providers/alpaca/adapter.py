@@ -1,4 +1,3 @@
-import os
 from datetime import datetime, timedelta, timezone
 from rl_stocks.core.contracts import Bar, Capabilities, Request, utcnow
 from rl_stocks.data.validation.bars import validate
@@ -19,7 +18,8 @@ class AlpacaProvider:
         from alpaca.data.timeframe import TimeFrame
         from alpaca.data.enums import Adjustment, DataFeed
         import exchange_calendars as xc
-        client = self.client or StockHistoricalDataClient(os.environ["ALPACA_API_KEY"], os.environ["ALPACA_SECRET_KEY"])
+        from rl_stocks.data.providers.alpaca.credentials import credentials
+        client = self.client or StockHistoricalDataClient(*credentials())
         if self.client is None:
             from rl_stocks.data.providers.alpaca.transport import BoundedSession
             # Isolated private extension verified against alpaca-py 0.42.0.

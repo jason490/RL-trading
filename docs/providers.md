@@ -1,6 +1,6 @@
 # Provider and dependency audit — 2026-10-14
 
-The implemented request is SPY/QQQ/IWM/DIA, 2010-01-01 through September 2026. A Yahoo download on 2026-10-14 returned 4,211 daily bars per symbol, from 2010-01-04 through 2026-09-30, with no missing XNYS sessions. Split/dividend fields are preserved under the adapter's documented semantics. Alpaca endpoint coverage remains unverified. Historical publication vintages and profitable performance are not established by coverage checks.
+The implemented request is SPY/QQQ/IWM/DIA, 2010-01-01 through September 2026. A Yahoo download on 2026-10-14 returned 4,211 daily bars per symbol, from 2010-01-04 through 2026-09-30, with no missing XNYS sessions. Split/dividend fields are preserved under the adapter's documented semantics. A small authenticated Alpaca SIP access check passed on 2026-10-17; full historical coverage remains unverified. Historical publication vintages and profitable performance are not established by coverage checks.
 
 Yahoo is an unofficial personal-use research adapter, not a production service guarantee. It requests original daily OHLC with cash dividends and records split-adjusted-price semantics. Its reconstructed close+15-minute availability and revised historical data require explicit interpretation; it does not supply historical public-availability vintages. Alpaca requires account credentials and explicit entitlement; IEX and SIP volumes differ. Its earliest capability is declared as 2016; the requested pre-2016 range may be unsupported/empty and must be reported rather than substituted. Bar-only Alpaca snapshots are not accepted by the default dataset gate until dividends are independently verified.
 
@@ -51,7 +51,49 @@ Historical availability is a conservative reconstruction, not verified public-av
 
 Uses the official historical client and `StockBarsRequest` with daily timeframe, explicit IEX/SIP and split adjustment. It reads credentials only when the adapter is called. The official SDK handles pagination; an isolated pinned transport extension bounds GET connect/read waits to (5,30) seconds and SDK retry attempts to two. The adapter never constructs a trading client or submits an order.
 
-Alpaca daily bars omit dividend cash flows. Its snapshots therefore carry `dividends_verified=false`; an explicit research override does not establish realistic total-return accounting. Actual pre-2016 history and account feed entitlements must be sampled later. Mocked-client tests exercise request/feed/normalization wiring when dependencies are installed; they do not prove account access.
+Alpaca daily bars omit dividend cash flows. Its snapshots therefore carry `dividends_verified=false`; an explicit research override does not establish realistic total-return accounting. The advertised history begins in 2016, so this feed cannot replace the full 2010 onward Yahoo baseline. Mocked-client tests exercise request/feed/normalization wiring when dependencies are installed; the separate authenticated check below establishes only the sampled account access.
+
+#### Credentials and Basic-plan request budget
+
+Place the paper account credentials in the ignored project-root `.env`:
+
+```dotenv
+APCA_API_KEY_ID=your_key
+APCA_API_SECRET_KEY=your_secret
+```
+
+The adapter reads this file from the current working directory only when a real
+historical client is needed. Complete environment-variable pairs take precedence;
+the legacy `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` pair also works. Pairs are never
+mixed between sources. Simple quoted values, comments, and `export` assignments
+are supported; shell commands and variable interpolation are never evaluated.
+Keep `.env` local; do not upload it with research artifacts or commit it.
+
+The user's account limit is **200 historical HTTP requests/minute**. The transport
+spaces GET attempts by at least 0.34 seconds (below 180/minute), sharing one pacer
+across real clients in the same Python process. Every SDK pagination request and
+retry passes through the pacer. HTTP 429 causes a 60-second cooldown; a numeric
+`Retry-After` longer than 60 seconds aborts the current download instead of
+retrying early. SDK retries remain bounded at two. The limit counts HTTP requests,
+not symbols or downloaded rows.
+
+**Use one Alpaca downloader process at a time.** This process-local limiter does
+not coordinate independent scripts, Colab VMs, or other applications using the
+same account. Leave room for external requests; concurrent account-wide ingestion
+requires a shared limiter before enabling it.
+
+Alpaca Basic offers historical consolidated SIP queries when the request `end`
+is at least 15 minutes old; live Basic equities use IEX. Select `--feed sip`
+explicitly for delayed historical data; there is no entitlement-based fallback.
+See [plan limits](https://docs.alpaca.markets/us/docs/about-market-data-api) and
+[historical SIP access](https://docs.alpaca.markets/us/docs/market-data-faq).
+
+On 2026-10-17, one bounded historical request returned three valid daily bars
+each for SPY, QQQ, IWM, and DIA over October 12–14. The secret-free
+[access report](../results/alpaca-access-2026-10-17.json) identifies an immutable
+local raw snapshot. No trading client or Colab allocation was used. This does not
+verify dividends, historical membership, terminal delisting payouts, or full-range
+coverage, and does not change any Yahoo-trained model or frozen shadow campaign.
 
 ## Explicit shadow-only data correction
 

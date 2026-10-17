@@ -511,3 +511,16 @@ retrospective 26-tradable sample and frozen policies remain unchanged. Coverage
 approval is conditional on source attestations and `training_ready` remains false
 until the documented historical episode/accounting integration is complete.
 See [guide](historical-data.md) and [readiness record](../results/historical-coverage-2026-10-17/current-data-readiness.json).
+# Alpaca credentials and quota check — 2026-10-17
+
+Authenticated historical SIP access passed for SPY, QQQ, IWM and DIA over
+2026-10-12 through 2026-10-14, with three canonical bars each, retained as an
+immutable local snapshot. See [access evidence](../results/alpaca-access-2026-10-17.json).
+The ignored `.env` remains untracked. Thirteen focused checks passed (three new credential/quota tests, the existing
+mocked adapter test, and nine historical-evidence checks), with one existing
+optional-SDK deprecation warning; unused-import checks passed. The quota test
+simulates 201 HTTP requests across two clients, confirms pacing, read-only
+transport, 429 cooldown and bounded handling of longer cooldowns without real
+network traffic. Live acceptance used only the historical-data endpoint, with
+no orders, training, Colab allocation or existing dataset/model changes.
+Rate limiting is process-wide; use one downloader process for this account.

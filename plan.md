@@ -516,3 +516,14 @@ historical episodes, membership exits, suspensions, delayed/non-cash settlements
 and matching benchmarks. The current audit intentionally reports
 `training_ready=false`. See [guide](docs/historical-data.md) and
 [status](results/historical-coverage-2026-10-17/current-data-readiness.json).
+## Alpaca historical access check — 2026-10-17
+
+Authenticated Basic-plan historical SIP access is verified for a three-session,
+four-ETF sample. The adapter accepts ignored `.env` credentials and spaces all
+real SDK HTTP attempts, including pages and retries, below 180/minute against
+the user's 200/minute account limit. Run one downloader process at a time;
+independent process quotas are not coordinated. This is a data-access check;
+full historical coverage, dividend evidence, historical memberships and terminal
+outcomes remain separate gates. Existing Yahoo models and shadow inference are
+unchanged. See [provider operations](docs/providers.md) and
+[access evidence](results/alpaca-access-2026-10-17.json).

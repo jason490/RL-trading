@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-17T22:12:45.321892+00:00",
+  "provider": "alpaca",
+  "feed": "sip",
+  "request": {
+    "symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "start": "2026-10-12",
+    "end_exclusive": "2026-10-15"
+  },
+  "account_limit_per_minute": 200,
+  "downloader_target_per_minute": 180,
+  "orders_submitted": 0,
+  "counts": {
+    "SPY": 3,
+    "QQQ": 3,
+    "IWM": 3,
+    "DIA": 3
+  },
+  "status": "passed",
+  "snapshot": "data/raw/alpaca-preflight/464fd7e595c609d0e66797c747598e16083d3bcab91e4781a29f20842fa3bb18"
+}
