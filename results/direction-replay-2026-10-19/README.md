@@ -9,3 +9,18 @@ untracked; the clean-source gate requires committing it first.
 
 See [protocol](../../configs/experiments/direction_replay.json) and
 [methodology](../../docs/direction-replay.md). No result is claimed yet.
+
+## Initial diagnostic completed
+
+All 18 seed-11 profile/phase/mode labels completed using nine unique replays;
+selected/final policy fingerprints are identical within each source run. Every
+unrestricted path passed its predeclared CPU tolerance and exact session/quantity
+checks. Model files, data and normalization remained unchanged. Universal legacy
+short-only returns AMZN +16.30%, DIS +15.88% and NEE +1.37%, but loses 1.91%
+over the full 26-symbol panel. Long-only masked improves to 20.73% overall,
+while full long-only returns 21.29%, below unrestricted full 22.59%.
+
+Before proposing a direction gate, repeat the same modes on already-trained
+legacy wide seeds 23/37 under separate committed protocols. No new models or
+Colab allocation. The seed-11 success on three falling stocks alone does not
+establish robust shorting or a competitive all-market strategy.

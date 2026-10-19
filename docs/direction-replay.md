@@ -76,3 +76,18 @@ separate direction specialist would need a new bounded training protocol and
 multi-seed development checks, followed by untouched prospective evaluation.
 Repeated 2021–2023 diagnostics do not create independent evidence; the retired
 2024–September 2026 interval remains isolated.
+
+## Existing confirmation seeds
+
+After the seed-11 diagnostic, separate committed seed-23/37 protocols repeat all
+three universal modes on the already-trained wide-initialization **legacy**
+models. These protocols use a one-profile, six-cell subset with no new training.
+Only the declared initialization arm/seed is taken from the complete original
+confirmation state; other preexisting study cells are not inputs. Old bundles
+without observation metadata retain the legacy contract, and pre-sampler source
+metadata means the original legacy-uniform starts. Original unrestricted paths
+must independently pass parity for each phase. Seed 11's exact training-tensor
+bridge to the old source is retained in the prior study results.
+
+Report all seeds and both phases, including failures. These replays confirm
+diagnostic consistency, not a newly trained or prospectively validated strategy.

@@ -87,6 +87,16 @@ def render(records,cells,path):
     fig.write_html(str(path),include_plotlyjs=True)
 
 
+def validate_protocol(protocol):
+    profiles=protocol['profiles']
+    if (not profiles or profiles!=[p for p in ('legacy','execution_masked','execution_full') if p in profiles]
+        or protocol['modes']!=['unrestricted','long_only','short_only']
+        or protocol['phases']!=['selected','final'] or protocol['maximum_cells']!=6*len(profiles)
+        or type(protocol['source_seed']) is not int or protocol['source_seed'] not in (11,23,37)
+        or protocol.get('source_initialization','wide')!='wide'):
+        raise ValueError('unsupported fixed replay protocol')
+
+
 def replay(protocol_path,state_path,output,data_root):
     protocol_path,state_path,output,data_root=map(Path,(protocol_path,state_path,output,data_root))
     protocol=json.loads(protocol_path.read_text());root=Path(__file__).resolve().parents[1]
@@ -94,10 +104,7 @@ def replay(protocol_path,state_path,output,data_root):
     if revision['dirty']:raise ValueError('commit source and protocol before replay')
     committed=subprocess.check_output(['git','show','HEAD:'+protocol_path.resolve().relative_to(root).as_posix()],cwd=root)
     if committed!=protocol_path.read_bytes():raise ValueError('committed protocol required')
-    if (protocol['profiles']!=['legacy','execution_masked','execution_full']
-        or protocol['modes']!=['unrestricted','long_only','short_only']
-        or protocol['phases']!=['selected','final'] or protocol['maximum_cells']!=18):
-        raise ValueError('unsupported fixed replay protocol')
+    validate_protocol(protocol)
     state=json.loads(state_path.read_text())
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('completed source study and verified cleanup required')
     dataset_path=data_root/protocol['dataset'];dataset=read_dataset(dataset_path)
@@ -110,18 +117,23 @@ def replay(protocol_path,state_path,output,data_root):
     for item in state['completed'].values():
         paths=list((Path(item['root'])/'runs').glob('*/metadata.json'))
         if len(paths)!=1:raise ValueError('one source run per profile required')
-        path=paths[0];meta=json.loads(path.read_text());profile=meta.get('observation',{}).get('profile')
-        if (profile not in protocol['profiles'] or profile in runs or meta['observation']!=observation_spec(profile)
-            or meta['status']!='complete' or meta['smoke'] or meta['seed']!=11 or meta['algorithm']!='ppo'
+        path=paths[0];meta=json.loads(path.read_text())
+        if meta['seed']!=protocol['source_seed'] or meta.get('initialization',{}).get('arm')!=protocol.get('source_initialization','wide'):continue
+        observed=meta.get('observation',observation_spec())
+        profile=observed.get('profile')
+        if (profile not in protocol['profiles'] or profile in runs or observed!=observation_spec(profile)
+            or meta['status']!='complete' or meta['smoke'] or meta['seed']!=protocol['source_seed'] or meta['algorithm']!='ppo'
             or meta['actual_steps']!=50000 or meta['requested_steps']!=50000 or meta['dataset']!=protocol['dataset']
             or meta['git']!={'revision':protocol['training_source_revision'],'dirty':''}):
             raise ValueError('unexpected fixed source run')
-        current={k:meta[k] for k in ('dataset','simulation','source_hash','versions','resolved_parameters','initialization','start_sampling')}
+        current={k:meta[k] for k in ('dataset','simulation','source_hash','versions','resolved_parameters','initialization')}
+        current['start_sampling']=meta.get('start_sampling',{'mode':'legacy_uniform'})
+        if current['start_sampling']!={'mode':'legacy_uniform'}:raise ValueError('legacy start sampling required')
         if contract is not None and current!=contract:raise ValueError('source run configuration mismatch')
         contract=current;bundle=Path(item['root'])/'frozen'/meta['bundle_id']
         frozen=FrozenPolicy(bundle,dataset['schema'],dataset['manifest']['provenance']['capabilities']['feed'])
         if (frozen.manifest['normalizer']!=dataset['normalizer'] or frozen.manifest['data_manifest']!=dataset['manifest']
-            or frozen.manifest['names']!=dataset['names'] or frozen.manifest['metadata']['observation']!=meta['observation']):
+            or frozen.manifest['names']!=dataset['names'] or frozen.manifest['metadata'].get('observation',observation_spec())!=observed):
             raise ValueError('frozen data/profile mismatch')
         if checksum(path.parent/'best.zip')!=checksum(bundle/'model.zip'):raise ValueError('selected weights mismatch')
         for p in bundle.iterdir():protected[p]=checksum(p)
@@ -132,7 +144,7 @@ def replay(protocol_path,state_path,output,data_root):
     output.mkdir(parents=True,exist_ok=False);(output/'reports').mkdir()
     source={'revision':revision,'source_hash':source_identity()}
     started={'status':'running','protocol_sha256':digest(protocol),'source':source,'source_run_contract':contract,
-             'training_performed':False,'test_evaluated':False,'colab_allocated':False,'cells':[]}
+             'source_seed':protocol['source_seed'],'training_performed':False,'test_evaluated':False,'colab_allocated':False,'cells':[]}
     target=output/'summary.json';target.write_text(json.dumps(started,indent=2)+'\n')
     cells,records,baseline_hash=[],[],None;torch.set_num_threads(1)
     try:
@@ -158,7 +170,7 @@ def replay(protocol_path,state_path,output,data_root):
                         parity=verify_reference(results,json.loads((path.parent/reference).read_text()),protocol['parity_tolerance']) if mode=='unrestricted' else None
                         report=output/'reports'/f'{profile}-{phase}-{mode}.json.gz'
                         report.write_bytes(gzip.compress(canonical(results),mtime=0))
-                        cell={'profile':profile,'phase':phase,'mode':mode,'run':path.parent.name,
+                        cell={'profile':profile,'seed':meta['seed'],'phase':phase,'mode':mode,'run':path.parent.name,
                               'weights_sha256':checksum(path.parent/weights),'policy_fingerprint':fingerprint,
                               'metrics':group_metrics(results,stocks),'declining_stocks':declining_stock_summary(results,stocks),
                               'action_statistics':action_statistics(results),

@@ -104,3 +104,14 @@ def test_filtered_replay_retains_original_risk_outputs_and_reports_blocking():
     summary=stats(results)
     assert summary['blocked_signal_fraction']>0 and summary['end_long_fraction']==0
     assert summary['requested_long_fraction']>0 and summary['end_short_fraction']>0
+
+
+def test_replay_protocol_bounds_existing_confirmation_seeds_and_profile_subsets():
+    import json,runpy
+    from pathlib import Path
+    validate=runpy.run_path('scripts/replay_directions.py')['validate_protocol']
+    p=json.loads(Path('configs/experiments/direction_replay.json').read_text());validate(p)
+    for seed in (23,37):
+        q={**p,'source_seed':seed,'profiles':['legacy'],'maximum_cells':6};validate(q)
+        for key,value in (('source_seed',True),('source_seed',19),('profiles',['legacy','legacy']),('maximum_cells',18),('source_initialization','standard')):
+            with pytest.raises(ValueError):validate({**q,key:value})
