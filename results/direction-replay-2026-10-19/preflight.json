@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "prior_retained_hashes_verified": 314,
+  "project_units": 35.687822780613104,
+  "no_new_training_or_colab_allocation": true,
+  "source": "e424ab66457f34808627c15f5473524c10ea90a7",
+  "initial_attempt": {
+    "status": "stopped_before_inference",
+    "reason": "Untracked preflight receipt correctly failed clean-worktree gate; commit receipt before running",
+    "evaluated_cells": 0
+  }
+}
