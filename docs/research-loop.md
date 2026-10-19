@@ -73,3 +73,15 @@ because one selected validation result clears a gate.
 If the working budget, reliable metering, data integrity or prospective evidence
 blocks further work, record the exact limitation and next feasible action.
 Do not restart automatically after a budget stop or imply the objective passed.
+
+## Initial diagnostic results
+
+The [short-side audit](../results/short-side-2026-10-19/README.md) confirms
+inconsistent profits from shorts in existing models. The subsequent
+[causal execution diagnostic](../results/execution-rules-2026-10-19/README.md)
+finds fixed 95% long exposure returns 27.61% on stocks and 11.64% on broad ETFs,
+versus holding 32.63% and 19.47%. A simple EMA trend/flat rule loses 16.26% and
+29.59%; do not assume it is a useful imitation teacher. These local simulations
+use the original 22-stock/four-ETF panel, no new training or retired-test data.
+Next research should preregister a matched exploration/action-initialization
+diagnosis, retaining short capability and the original net-equity objective.

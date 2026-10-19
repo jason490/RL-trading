@@ -604,3 +604,10 @@ training or Colab allocation was required. CLI usage confirms zero active
 assignments, 0.00 units/hour; the cumulative project ledger remains 35.458188.
 The learned short-side objective is not reliably met. The bounded token-efficient
 research workflow is documented; prospective confirmation remains outstanding.
+
+The subsequent fixed-rule execution diagnostic completed all 104 rule/symbol
+paths on the existing validation panel with no training or Colab allocation.
+Two additional rule-contract tests pass; the combined direction/rule focused
+suite passes 8 tests. Compilation and whitespace checks pass. The latest full
+suite above remains the 183-test run before these two isolated rule tests were
+added. See [execution evidence](../results/execution-rules-2026-10-19/README.md).

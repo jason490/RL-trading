@@ -596,3 +596,11 @@ the learned policies have not achieved this objective reliably. No training or
 Colab allocation was added by this diagnostic. Next: causal execution-feasibility
 baselines, then a preregistered matched direction/timing experiment. See
 [audit evidence](results/short-side-2026-10-19/README.md).
+
+The causal execution diagnostic is also complete on the existing 26-symbol
+validation panel: fixed +95% exposure yields 27.61% stocks/11.64% ETFs versus
+holding 32.63%/19.47%; the tested EMA trend/flat rule loses 16.26%/29.59%.
+It is not a suitable profitable teacher by assumption. Preserve these negative
+results and investigate action initialization/exploration and protection churn
+with a matched bounded experiment before longer training. Diagnostic simulation
+used no Colab allocation; the cumulative project ledger is unchanged.

@@ -1,0 +1,34 @@
+{
+  "rules": [
+    "cash",
+    "long",
+    "short",
+    "ema_trend"
+  ],
+  "nonzero_exposure": 0.95,
+  "protective_action": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "simulation": {
+    "initial_equity": 100000.0,
+    "fee_bps": 1.0,
+    "impact_bps": 2.0,
+    "borrow_rate": 0.03,
+    "max_holding": 20,
+    "allow_short": true,
+    "exposure_cap": 1.0
+  },
+  "split": "validation",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "universe_sha256": "3ba51729e4cdcbe59ee51f2734a892e5d056a79f0d5e6e4a43bd4e5e634cf185",
+  "purpose": "fixed causal execution diagnostic; no learned policy or checkpoint selection",
+  "source_sha256": {
+    "evaluation/rules.py": "938baa37007a35f751d38f8c43b3adc506cf2a84f0c932c815cd64eceff9a177",
+    "evaluation/runner.py": "0c504e768547a0a0c8b9a140140af514f780c7ab80ec135f156421f087ff77dc",
+    "evaluation/direction.py": "bc74eded40f53a1f81c0594100a8d0a48d35dc5244d1eb593ac4b637899a6db8",
+    "environment/execution/simulator.py": "d9cf6d41d6ae9e829da0b63c63d112daeecad3bd27e4ca431bc98772b6a8a536",
+    "environment/accounting/portfolio.py": "3e5d539d3d4360edd9d72502a1401682377f9cbcc17e11fe8b6ca0858cb6f5a9"
+  }
+}
