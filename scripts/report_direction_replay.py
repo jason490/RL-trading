@@ -1,6 +1,7 @@
 """Pair fixed universal-filter diagnostics across the three declared legacy seeds."""
 import argparse
 import csv
+import gzip
 import json
 from pathlib import Path
 from statistics import mean,stdev
@@ -73,6 +74,24 @@ def aggregate(summaries,protocols):
         'seed37_selected_bounded_reference_exception':not cells[37]['selected','unrestricted']['unrestricted_parity']['quantity_path_exact']}
 
 
+def action_feedback(reference,restricted):
+    deltas=[];flips=0
+    for key in sorted(set(reference)&set(restricted)):
+        a={r['session']:r for r in reference[key]['rows']}
+        b={r['session']:r for r in restricted[key]['rows']}
+        for day in sorted(set(a)&set(b)):
+            original=a[day].get('policy_action',a[day]['raw_action'])[0]
+            request=b[day].get('policy_action',b[day]['raw_action'])[0]
+            deltas.append(abs(original-request))
+            flips+=(original>0 and request<0) or (original<0 and request>0)
+    if not deltas:raise ValueError('matching decision sessions required')
+    return {'common_decisions':len(deltas),'requested_direction_sign_flips':flips,
+            'requested_direction_sign_flip_fraction':flips/len(deltas),
+            'mean_absolute_requested_exposure_change':mean(deltas),
+            'maximum_absolute_requested_exposure_change':max(deltas),
+            'comparison':'Original policy requests before restriction; same model and fixed market inputs, different simulated account paths'}
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('roots',type=Path,nargs=3)
     p.add_argument('--output',type=Path,required=True);a=p.parse_args()
@@ -99,6 +118,21 @@ def main():
         with (root/'per-symbol.csv').open() as f:
             records.extend({'seed':protocol['source_seed'],**r} for r in csv.DictReader(f) if r['profile']=='legacy')
     result['unique_source_reports_verified']=len(reports)
+    feedback=[]
+    for root,protocol,summary in zip(a.roots,protocols,summaries):
+        cache={}
+        def load(cell):
+            path=root/cell['report']
+            if path not in cache:cache[path]=json.loads(gzip.decompress(path.read_bytes()))
+            return cache[path]
+        for profile in protocol['profiles']:
+            for phase in ('selected','final'):
+                chosen={c['mode']:c for c in summary['cells'] if c['profile']==profile and c['phase']==phase}
+                if len({c['weights_sha256'] for c in chosen.values()})!=1:raise ValueError('feedback model mismatch')
+                for mode in ('long_only','short_only'):
+                    feedback.append({'seed':protocol['source_seed'],'profile':profile,'phase':phase,'mode':mode,
+                        **action_feedback(load(chosen['unrestricted']),load(chosen[mode]))})
+    result['account_path_feedback']=feedback
     a.output.parent.mkdir(parents=True,exist_ok=True)
     a.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     with a.output.with_suffix('.csv').open('w',newline='') as f:

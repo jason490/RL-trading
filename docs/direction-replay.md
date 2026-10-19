@@ -122,3 +122,10 @@ filters, all three seeds, checked source reports and the seed-11 tensor bridge.
 It validates profitable-short flags against total return and short P&L instead
 of trusting a supplied success count. Seed 37's original strict failure remains
 explicit. All modes remain in the report; the reporter never promotes a strategy.
+
+The paired reporter also compares pre-filter `policy_action` requests against
+unrestricted requests on common decision sessions. This measures account-path
+feedback with the same frozen model and market features. It does not mistake
+the filter's mechanical clipping for a learned direction change. Account
+dependence can be appropriate for costs/risk; observed sign flips alone do not
+prove a market-only directional network would improve performance.

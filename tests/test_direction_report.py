@@ -56,3 +56,16 @@ def test_paired_report_rejects_missing_or_unmatched_evidence():
         changed=deepcopy(summaries);mutate(changed)
         with pytest.raises(ValueError):aggregate(changed,protocols)
     with pytest.raises(ValueError):aggregate(summaries[:2],protocols[:2])
+
+
+def test_feedback_compares_original_requests_instead_of_mechanical_filter_output():
+    feedback=runpy.run_path('scripts/report_direction_replay.py')['action_feedback']
+    source={'stock':{'rows':[{'session':'2021-01-01','raw_action':[.5,1,1,1]}]}}
+    same={'stock':{'rows':[{'session':'2021-01-01','raw_action':[0.,1,1,1],'policy_action':[.5,1,1,1]}]}}
+    assert feedback(source,same)['requested_direction_sign_flips']==0
+    assert feedback(source,same)['mean_absolute_requested_exposure_change']==0
+    changed=deepcopy(same);changed['stock']['rows'][0]['policy_action'][0]=-.25
+    stats=feedback(source,changed)
+    assert stats['requested_direction_sign_flips']==1
+    assert stats['mean_absolute_requested_exposure_change']==.75
+    with pytest.raises(ValueError):feedback(source,{})
