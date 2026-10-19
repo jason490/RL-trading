@@ -1,0 +1,8 @@
+{
+  "source_revision": "c0d7e603983fb394faf5977cbf1164133b08d3cf",
+  "source_hash": "aaa9b09e2fcc3577c6741677683f492a80a89c29e94c92dead686bdcf8b1db70",
+  "source_archive_sha256": "71b9f841e81528a2e24ec11a59d215758e55e05218420a1b76616e6bbde27f1c",
+  "shared_original_ledger_and_lock_verified": true,
+  "root": "/home/vibe/projects/rl-stocks/.runtime/causal-source",
+  "sessions_allocated": 0
+}

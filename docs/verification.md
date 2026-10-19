@@ -682,3 +682,10 @@ persistent-downtrend shares are 2.27% (small) and 5.11% (large). Sampling modes
 leave rewards, observations and inference normalization unchanged. No research
 training or Colab allocation has occurred at this declaration. Protocol and
 methodology are in [training-sampling.md](training-sampling.md).
+
+All four sampler/data CPU Colab smokes now pass exact 512-step budgets, final
+sampling-counter checks and owned shutdown on actual Python 3.13.16. Four frozen
+bundles pass 312 exact CPU predictions, immutable normalization/data and rejection
+checks across the two training normalizers. Conservative smoke usage is 0.027557
+units; project cumulative 35.590538/150. No 50k result is claimed at this stage.
+See [smoke evidence](../results/causal-sampling-2026-10-19/smoke.json).

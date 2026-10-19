@@ -1,0 +1,86 @@
+{
+  "status": "complete",
+  "cells": [
+    {
+      "task": "small_balanced-11",
+      "session": "rl-stocks-cpu-ee3359e6e2a5",
+      "bundle_id": "2379102539c988cfcd1c284665ed2279f7fef36383d3c098b19f79beda79d235",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "python": "3.13.16",
+      "steps": 512,
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 3,
+        "transitions": 512,
+        "downtrend_transitions": 67,
+        "mode": "downtrend_balanced"
+      },
+      "pool_eligible": 63102,
+      "pool_downtrend": 1435,
+      "stopped_verified": true
+    },
+    {
+      "task": "small_uniform-11",
+      "session": "rl-stocks-cpu-bb0e1de1c972",
+      "bundle_id": "da8b07502e20762c40b0333480d6922ff3c94bc0348d4766396e729231854d4c",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "python": "3.13.16",
+      "steps": 512,
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "mode": "ready_uniform"
+      },
+      "pool_eligible": 63102,
+      "pool_downtrend": 1435,
+      "stopped_verified": true
+    },
+    {
+      "task": "large_balanced-11",
+      "session": "rl-stocks-cpu-0eabed00df2e",
+      "bundle_id": "08e0f15e06e83cd70b3a282b1a5afa547065221c0b5cb74931008ae3134a6953",
+      "dataset": "c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398",
+      "python": "3.13.16",
+      "steps": 512,
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 3,
+        "transitions": 512,
+        "downtrend_transitions": 151,
+        "mode": "downtrend_balanced"
+      },
+      "pool_eligible": 268643,
+      "pool_downtrend": 13734,
+      "stopped_verified": true
+    },
+    {
+      "task": "large_uniform-11",
+      "session": "rl-stocks-cpu-b07128d4c878",
+      "bundle_id": "aa59d5b18dbe8c31dc41cc810dea9080bddda3b6af6b01b4309b7302a08d1ea0",
+      "dataset": "c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398",
+      "python": "3.13.16",
+      "steps": 512,
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 1,
+        "transitions": 512,
+        "downtrend_transitions": 75,
+        "mode": "ready_uniform"
+      },
+      "pool_eligible": 268643,
+      "pool_downtrend": 13734,
+      "stopped_verified": true
+    }
+  ],
+  "cleanup_verified": true,
+  "measured_units": 0.01999999999998181,
+  "estimated_units": 0.027557483805550467,
+  "charged_units": 0.027557483805550467,
+  "project_units": 35.59053795143034,
+  "study_unit_baseline": 35.56298046762479,
+  "study_limit": 2.0,
+  "budget_stopped": false,
+  "research_screen": "pending"
+}
