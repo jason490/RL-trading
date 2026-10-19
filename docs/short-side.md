@@ -85,3 +85,11 @@ targets, partial-exit status and prior protective actions in an optional full
 profile. This addresses demonstrated state aliasing for both long and short
 positions. It requires matched Colab validation before claiming improved short
 profitability; legacy frozen policies retain their original input contract.
+
+## Counterfactual direction restrictions
+
+[Universal direction replay](direction-replay.md) measures short-only and
+long-only fixed-policy paths across every symbol, recomputing account inputs
+after each actual restricted fill. It preserves all original risk outputs and
+keeps future declining-stock labels reporting-only. Side attribution on the
+original path is not a substitute for this counterfactual simulation.

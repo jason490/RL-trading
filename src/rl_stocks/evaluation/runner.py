@@ -7,9 +7,11 @@ from rl_stocks.evaluation.metrics import metrics
 from rl_stocks.evaluation.direction import directional_attribution
 from rl_stocks.rl.registry.prediction import PredictionStream
 
-def evaluate(model,dataset,split="validation",config=SimulationConfig(),observation_profile="legacy"):
+def evaluate(model,dataset,split="validation",config=SimulationConfig(),observation_profile="legacy",exposure_mode="unrestricted"):
     from rl_stocks.environment.trading.env import TradingEnv
     if split not in ("validation","test"):raise ValueError("evaluation split required")
+    from rl_stocks.evaluation.exposure import EXPOSURE_MODES,filter_exposure
+    if exposure_mode not in EXPOSURE_MODES:raise ValueError('unknown exposure filter')
     normalizer=normalizer_from(dataset["normalizer"])
     results={}
     for key,episode in dataset["episodes"].items():
@@ -19,8 +21,11 @@ def evaluate(model,dataset,split="validation",config=SimulationConfig(),observat
         rows=[];prediction=PredictionStream(model)
         while True:
             action=prediction.predict(obs)
+            policy_action=tuple(float(x) for x in action)
+            if exposure_mode!="unrestricted":action=filter_exposure(action,exposure_mode)
             obs,reward,terminated,truncated,info=env.step(action)
             info.pop("events",None)
+            if exposure_mode!="unrestricted":info.update(policy_action=policy_action,exposure_mode=exposure_mode)
             rows.append(info)
             if terminated or truncated:break
         events=env.sim.portfolio.events

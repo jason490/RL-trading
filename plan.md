@@ -711,7 +711,7 @@ Sixteen GitHub asset hashes/sizes are verified; 27 duplicate archives/markers
 (291.41 MiB logical) were removed with 314 retained hashes unchanged.
 See [results](results/execution-observations-2026-10-19/README.md).
 
-## 27. Universal direction-filter replay — planned, not yet run
+## 27. Universal direction-filter replay — implemented; diagnostic pending
 
 Use fixed selected/final policies from the completed three-profile study. Replay
 universal long-only and short-only exposure filters on every validation symbol,
@@ -722,3 +722,9 @@ No checkpoint selection, fitting, training or Colab allocation. Establish whethe
 profitable short contributions survive removal of long trades before proposing
 a direction-specialist or entry-gating experiment. Preserve original reports,
 weights, normalization and retired-test isolation.
+
+The reusable evaluator now supports universal sign restrictions and preserves
+original policy risk outputs in filtered-path audit rows. A strict committed
+protocol covers all 18 profile/phase/mode cells. Tests verify state feedback,
+cost-aware short profits, account reconciliation, reference-path rejection and
+exact policy fingerprints for deterministic phase reuse.

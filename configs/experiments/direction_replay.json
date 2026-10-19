@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "direction-replay-2026-10-19",
+  "hypothesis": "Positive attributed short P&L may fail to survive removal of long trades because frozen actions depend on changed account state. Replay universally restricted policies before proposing direction specialists.",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "training_source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+  "universe": "configs/universes/sector_research.json",
+  "profiles": [
+    "legacy",
+    "execution_masked",
+    "execution_full"
+  ],
+  "modes": [
+    "unrestricted",
+    "long_only",
+    "short_only"
+  ],
+  "phases": [
+    "selected",
+    "final"
+  ],
+  "source_seed": 11,
+  "source_transitions": 50000,
+  "maximum_cells": 18,
+  "split": "validation",
+  "dates": "2021-2023",
+  "execution": "Same SimulationConfig and profile-specific observations as source models; retain all original protective components. Each filtered path starts at initial equity and recomputes observations after actual restricted simulation fills.",
+  "selection": "No checkpoint/model/mode selection or promotion; report every fixed cell, including unfavorable groups. Negative holding-stock cohort is reporting-only and never activates a filter.",
+  "parity_tolerance": {
+    "return_absolute": 1e-06,
+    "equity_dollars": 0.1,
+    "cost_dollars": 0.01,
+    "action_absolute": 2e-06,
+    "sessions_and_quantities": "exact"
+  },
+  "deduplication": "Within one run only: selected/final may share replay when full policy tensor, class and spaces fingerprints match; original weight file hashes and phase aliases remain recorded.",
+  "constraints": {
+    "training_performed": false,
+    "colab_allocation": false,
+    "retired_test_evaluated": false,
+    "weights_and_normalizer": "Frozen and checked unchanged",
+    "source_reports": "Preserved; unrestricted replay must match original panel, paths and metrics within declared CPU tolerance",
+    "independent_evidence": false,
+    "objective_achieved": false
+  },
+  "interpretation": "A profitable short-only falling-stock subset cannot establish comparable all-market returns. This is a bounded diagnostic to guide a separately preregistered experiment."
+}
