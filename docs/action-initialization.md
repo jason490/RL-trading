@@ -89,6 +89,22 @@ At duplicate step counts, the final post-update observation supersedes the
 pre-update callback point. The compact JSON preserves both group metrics and
 the small per-checkpoint curve needed to reproduce this view.
 
+`scripts/report_initialization_confirmation.py --screen SCREEN.json --state
+STATE.json --output CONFIRMATION.json` verifies all three paired seeds against
+the original screen's exact source/data/configuration and baseline-panel hash.
+It reports relative improvement separately from absolute stock/ETF targets.
+Comparable/outperforming targets require both selected and final group means,
+at least two seeds passing both phases, and stock median excess no worse than
+-2 points. The aggregate stock median first averages each stock's excess across
+seeds; drawdown must not worsen by more than 2 points against holding. Positive
+development targets still require prospective confirmation before a success claim.
+
+If unrelated engineering advances the main branch during this study, use an
+export of the original committed source for confirmation. Verify its package
+source hash matches the screen and share the **original** `.runtime` ledger and
+allocation lock, data and artifacts. Do not create a fresh budget in the export.
+Record the source archive/revision and shared-ledger verification in results.
+
 Version-7 remote plans strictly validate arm, CPU, seed, smoke/50k budget,
 reward scale, evaluation interval and final milestone. Run metadata and frozen
 bundle manifests record the initialization. Archive validation rejects incorrect

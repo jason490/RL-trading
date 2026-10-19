@@ -69,6 +69,7 @@ def main():
         cells[arm] = cell
     comparison = screen_gate(cells, protocol)
     output = {'protocol_sha256': digest(protocol), 'protocol': protocol,
+              'validation_baseline_sha256': digest(baselines),
               'matched_contract': contract, 'cells': cells, 'screen': comparison,
               'objective_achieved': False,
               'interpretation': 'Development screen only; no independent profitability evidence'}
