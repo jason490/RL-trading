@@ -83,6 +83,11 @@ PYTHONPATH=src .venv/bin/python scripts/report_initialization.py \
 Confirmation task preparation requires `--phase confirm --candidate ARM
 --screen-summary PATH`; it rejects candidates without a matching passing screen
 and protocol hash. Do not allocate confirmation when the screen fails.
+The report also writes a standalone interactive HTML comparison beside its JSON,
+showing validation return, incremental percentage-point change and drawdown.
+At duplicate step counts, the final post-update observation supersedes the
+pre-update callback point. The compact JSON preserves both group metrics and
+the small per-checkpoint curve needed to reproduce this view.
 
 Version-7 remote plans strictly validate arm, CPU, seed, smoke/50k budget,
 reward scale, evaluation interval and final milestone. Run metadata and frozen
