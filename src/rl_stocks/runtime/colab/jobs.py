@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==9:
+    if plan.get('version')==10:
+        try:expected=architecture_plan(**plan['architecture_study'])
+        except (KeyError,TypeError):raise ValueError('malformed policy-architecture study plan') from None
+        if plan!=expected:raise ValueError('unsupported policy-architecture study plan')
+    elif plan.get('version')==9:
         try:expected=observation_plan(**plan['observation_study'])
         except (KeyError,TypeError):raise ValueError('malformed execution-observation study plan') from None
         if plan!=expected:raise ValueError('unsupported execution-observation study plan')
@@ -169,3 +173,16 @@ def observation_plan(profile,seed=11,smoke=False):
             'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
             'milestones':[steps],'reward_scale':1.,'initialization':'wide',
             'start_sampling':'legacy_uniform','observation_profile':profile}]}
+
+
+def architecture_plan(variant,seed=11,smoke=False):
+    from rl_stocks.rl.ppo.architecture import VARIANTS
+    if variant not in VARIANTS or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported architecture variant, seed or smoke mode')
+    steps=512 if smoke else 50000
+    return {'version':10,'accelerator':'CPU',
+        'architecture_study':{'variant':variant,'seed':seed,'smoke':smoke},
+        'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
+            'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
+            'milestones':[steps],'reward_scale':1.,'initialization':'wide',
+            'start_sampling':'legacy_uniform','observation_profile':'execution_full','policy_variant':variant}]}

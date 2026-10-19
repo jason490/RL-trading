@@ -740,7 +740,7 @@ No training or Colab units were added.
 Nineteen release asset hashes/sizes are verified; 18 publication duplicates
 (9.85 MiB logical) were removed with 597 retained hashes unchanged.
 
-## 28. Market-only exposure head — proposed, not implemented
+## 28. Market-only exposure head — implemented; Colab validation pending
 
 Current policy direction changes with account-path inputs even when market
 features and weights are fixed; full-state seed11 flips direction on 14.70% of
@@ -766,3 +766,10 @@ against both controls. Use one frozen source, original cumulative ledger,
 two-unit study allowance, per-allocation two-hour deadline and actual Colab
 Python checks. Directional P&L remains reporting-only; independent prospective
 evidence is still required for success.
+
+The custom policy, optional factory/training argument, frozen architecture checks
+and version-10 CPU plans are implemented. Branch controls keep identical
+initialized tensors and allocated parameter counts; fixed masks remove active
+exposure/account connections. Native model/RNG parity and save/freeze/load
+checks pass locally. Numeric protocol and shared dual-control reporter are
+frozen before allocation. See [policy architecture](docs/policy-architecture.md).

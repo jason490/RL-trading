@@ -1,0 +1,90 @@
+{
+  "universe": "configs/universes/sector_research.json",
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 50000,
+  "device": "cpu",
+  "initialization": "wide",
+  "n_steps": 1000,
+  "batch_size": 50,
+  "evaluation_every": 10000,
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "selection_metric": "Equal-weight mean validation net return, unchanged",
+  "screen_gate": {
+    "minimum_selected_gain_pp": 2.0,
+    "minimum_final_gain_pp": 2.0,
+    "minimum_group_final_gain_pp": 0.0,
+    "maximum_final_drawdown_worsening_pp": 2.0,
+    "ranking": "Only two_branch_market_exposure can be promoted; it must independently pass against both two_branch_unmasked and native",
+    "scope": "Selected and final mean gains >=2pp against EACH control; final stock/ETF gains >=0; mean final drawdown worsening <=2pp. No declining-stock label is used for selection."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_gain_pp": 2.0,
+    "minimum_mean_final_gain_pp": 2.0,
+    "minimum_paired_positive_final_seeds": 2,
+    "maximum_mean_final_drawdown_worsening_pp": 2.0,
+    "target_comparable_excess_pp_each_stock_and_etf_group": -2.0,
+    "target_outperforming_excess_pp_each_stock_and_etf_group": 0.0,
+    "minimum_target_passing_seeds": 2,
+    "minimum_median_stock_excess_pp": -2.0,
+    "require_selected_and_final_target_pass": true
+  },
+  "constraints": {
+    "train": "Through 2020; training-only normalization",
+    "validation": "2021-2023 development only, original 26-symbol panel",
+    "retired_test": "Never load or evaluate 2024-September 2026",
+    "features_actions_costs_reward": "Same seven market features, execution_full account state, four-component action, costs and net log equity reward; only actor architecture/information mask changes",
+    "short_side": "Reconciled reporting on all symbols; ex-post negative-holding stock labels are reporting-only",
+    "success_claim": "Development promotion is not independent confirmation or permission to trade",
+    "source": "One frozen committed source for every smoke/screen/confirmation cell; export shares original ledger and allocation lock",
+    "normalization": "Same immutable training-only normalizer and complete 26-symbol development panel for all arms"
+  },
+  "execution": {
+    "preflight": "512-transition CPU Colab smoke for each policy architecture; verify actual kernel Python before dependency setup",
+    "runner": "Existing centrally metered Colab fleet",
+    "initial_concurrency": 2,
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "stop_on_screen_failure": true,
+    "cleanup": "Retrieve and validate artifacts; verify owned teardown; retain selected/final weights and curves; publish checksums before removing duplicates"
+  },
+  "version": 1,
+  "name": "exposure-architecture-2026-10-19",
+  "hypothesis": "Separating signed exposure from account-path inputs may reduce portfolio-driven direction feedback. Test this against the identical two-branch layout with account connections enabled and the native full-state policy; account dependence may also be beneficial.",
+  "algorithm": "ppo",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "reference_arm": "two_branch_unmasked",
+  "arms": [
+    "native",
+    "two_branch_unmasked",
+    "two_branch_market_exposure"
+  ],
+  "screen_cells": 3,
+  "confirmation_additional_cells_maximum": 6,
+  "start_sampling": "legacy_uniform",
+  "promotion_candidate": "two_branch_market_exposure",
+  "promotion_references": [
+    "two_branch_unmasked",
+    "native"
+  ],
+  "study_kind": "policy_architecture",
+  "market_features": 7,
+  "observation_profile": "execution_full",
+  "architecture": {
+    "native": "Original SB3 MlpPolicy on full 21-field observations",
+    "branches": "Market branch sees seven market inputs; full branch and critic see all21. Two Tanh layers, widths32 smoke/64 research; concatenate actor branches.",
+    "unmasked": "Exposure and protective outputs can use both actor branches",
+    "market_exposure": "Fixed connection buffer zeros exposure row account-branch connections; learned protective outputs and critic keep account access",
+    "capacity_control": "Same allocated parameter count and initialized tensors in branch arms; the mask deliberately removes active exposure connections",
+    "initialization": "Use native SB3 initialization then existing wide action biases; no additional trainable parameters or RNG draw when wrapping the action head",
+    "legacy": "Default native factory/models/RNG/bundle input contracts unchanged"
+  }
+}

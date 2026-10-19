@@ -71,7 +71,7 @@ def verify(roots, data_root):
                 else:
                     raise ValueError('incompatible bundle request accepted')
             try:
-                frozen.predict([float('nan')] * (len(dataset['names']) + 5))
+                frozen.predict([float('nan')] * frozen.observation_size)
             except ValueError:
                 pass
             else:

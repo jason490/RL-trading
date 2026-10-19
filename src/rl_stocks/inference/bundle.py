@@ -56,6 +56,9 @@ class FrozenPolicy:
         self._model=CLASSES[algorithm].load(self.path/"model.zip",device=device)
         if self._model.observation_space.shape!=(self.observation_size,):
             raise ValueError('model observation schema mismatch')
+        from rl_stocks.rl.ppo.architecture import architecture_spec,validate_loaded_architecture
+        self.policy_architecture=self.manifest['metadata'].get('policy_architecture',architecture_spec())
+        validate_loaded_architecture(self._model,self.policy_architecture,len(self.manifest['names']))
         self._model.policy.set_training_mode(False)
     def _observation(self,observation):
         import numpy as np

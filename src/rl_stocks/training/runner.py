@@ -83,7 +83,7 @@ def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
-          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy'):
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native'):
     initialization_spec(initialization,algorithm)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
@@ -97,7 +97,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
     env.reset_sampling_statistics()
-    model=create(algorithm,env,seed,device,smoke,overrides)
+    model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
     initialized=initialize_policy(model,initialization,algorithm)
     steps=steps if steps is not None else 512 if algorithm in ON_POLICY else 1024
     if steps<=0:raise ValueError("positive training steps required")
@@ -110,15 +110,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm in ON_POLICY and steps%model.n_steps:raise ValueError("steps must be an exact PPO rollout multiple")
     run=Path(output)/"runs"/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")+f"-{algorithm}-{seed}-"+uuid.uuid4().hex[:8])
     run.mkdir(parents=True,exist_ok=False)
+    from rl_stocks.rl.ppo.architecture import architecture_spec
     metadata={"algorithm":algorithm,"seed":seed,"device":device,"requested_steps":steps,"smoke":smoke,
         "python":sys.version.split()[0],
-        "resolved_parameters":resolved_parameters(algorithm,smoke,overrides),"simulation":asdict(config),
+        "resolved_parameters":resolved_parameters(algorithm,smoke,overrides,policy_variant,len(dataset["names"])),"simulation":asdict(config),
         "dataset":Path(dataset_path).name,"git":git_state(),"source_hash":source_identity(),
         "selection_metric":"Equal-weight mean validation net return", "status":"running",
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
         "reward_config":{"kind":"net_log_equity","scale":reward_scale},
         "initialization":initialized,"observation":env.observation_spec,
-        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling)+('' if observation_profile=='legacy' else ':'+observation_profile),
+        "policy_architecture":architecture_spec(policy_variant,len(dataset["names"])),
+        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling)+('' if observation_profile=='legacy' else ':'+observation_profile)+('' if policy_variant=='native' else ':'+policy_variant),
         "start_sampling":env.start_sampler.summary if env.start_sampler else {'mode':'legacy_uniform'},
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
