@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "fleet": "rl-stocks-fleet-15a178514f8d",
+  "cleanup_verified": true,
+  "measured_units": 0.01999999999998181,
+  "estimated_units": 0.03802772488329146,
+  "charged_units": 0.03802772488329146,
+  "cells": [
+    {
+      "task": "low_noise-11",
+      "session": "rl-stocks-cpu-1e1c1115f4af",
+      "stopped_verified": true
+    },
+    {
+      "task": "standard-11",
+      "session": "rl-stocks-cpu-21161589165c",
+      "stopped_verified": true
+    },
+    {
+      "task": "wide-11",
+      "session": "rl-stocks-cpu-04daf511e79d",
+      "stopped_verified": true
+    },
+    {
+      "task": "wide_low_noise-11",
+      "session": "rl-stocks-cpu-d6581de6081e",
+      "stopped_verified": true
+    }
+  ],
+  "confirmation": "running separately under the same project ledger; not included in screen charge"
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "new_run": "20261019T125442-ppo-11-54c00e33",
+  "reference_run": "20261017T222637-ppo-11-86e28a8b",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "seed": 11,
+  "steps": 50000,
+  "exact_checkpoint_return_parity": true,
+  "exact_final_policy_tensor_parity": true,
+  "policy_tensors_compared": 13,
+  "new_source": {
+    "revision": "dab2e3360b10f0e06f6b7e2818770e92cf266e80",
+    "dirty": ""
+  },
+  "reference_source": {
+    "revision": "b11f6db96704364d78d2b5314a130bf740e38cab",
+    "dirty": ""
+  },
+  "new_source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+  "reference_source_hash": "d79b2fc5a0ddf820b375ca5b2939f1ae179098667b635dd7fefb465518377f3a",
+  "training_performed_locally": false,
+  "test_evaluated": false
+}

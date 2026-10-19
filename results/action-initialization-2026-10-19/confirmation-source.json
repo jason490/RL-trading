@@ -1,0 +1,11 @@
+{
+  "purpose": "Preserve identical screen/confirmation source despite unrelated complete-case data engineering on main",
+  "source_revision": "dab2e3360b10f0e06f6b7e2818770e92cf266e80",
+  "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+  "source_archive_sha256": "1d9b73ec5a657a933c3c95d966c16c611973d00eece757bc4ab329d06c2a36e9",
+  "source_matches_screen": true,
+  "shared_original_usage_ledger_verified": true,
+  "shared_original_allocation_lock_verified": true,
+  "shared_data_and_artifacts": true,
+  "provisioned_sessions": 0
+}

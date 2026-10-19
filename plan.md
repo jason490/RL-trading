@@ -633,3 +633,14 @@ fits training only; old models retain their original normalization. No new
 training/provider requests or separate allocation were used for preparation.
 Full local acceptance passes 193 tests. See
 [data evidence](results/complete-case-107-2026-10-19/README.md).
+
+Action-initialization screen update: all four CPU 50k cells completed with verified
+shutdown and frozen parity. Final returns were standard 4.59%, low-noise 7.18%,
+wide 7.96%, combined 7.43%, versus holding 30.60%. Wide passes the declared
+relative/group/drawdown screen; combined ranks second, and low-noise fails the
+ETF group constraint. The standard control exactly reproduces its earlier six
+checkpoint returns and 13 policy tensors. Wide still has zero of three declining
+stocks with positive policy and short P&L in this seed. Confirmation on seeds
+23/37 is running from an exact original-source export with the shared ledger;
+no objective-success claim or test access. See
+[screen evidence](results/action-initialization-2026-10-19/README.md).
