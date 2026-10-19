@@ -51,3 +51,24 @@ delisting outcomes and representative market performance remain separate gates.
 No new provider calls, interpreter changes or separate Colab allocation were
 needed. Full local acceptance passes 193 tests, with 13 existing warnings and
 no skips/failures; scope/context failure checks also pass independently.
+
+## Training-only declining-regime coverage
+
+The existing trailing-price audit uses a 252-session price return below -20%
+and a negative 63-session price return. It inspects training episodes only;
+validation changes cannot affect these diagnostics. It does not label future
+recovery or include dividends in its trend classification.
+
+| Measure | Original 26 tradables | Expanded 111 tradables |
+| --- | ---: | ---: |
+| Eligible trailing observations | 63,648 | 270,974 |
+| Observations with trailing yearly decline below -20% | 1,851 (2.91%) | 18,829 (6.95%) |
+| Also negative over the trailing quarter | 1,468 (2.31%) | 13,964 (5.15%) |
+| Symbols with at least one such persistent-decline window | 16 | 93 |
+
+The broader training set contains substantially more observed downtrend periods.
+That supports a future matched experiment about learning downside behavior; it
+does not prove additional stocks improve a policy or establish short profits.
+`control-regimes.json` and `expanded-regimes.json` retain exact settings, symbol
+counts and dates; their CSVs are compact per-symbol diagnostics. The original
+22-stock/four-ETF validation panel remains fixed for any matched comparison.

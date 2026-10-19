@@ -10,7 +10,7 @@ def main():
     v=regime_coverage(read_dataset(a.dataset),json.loads(Path(a.universe).read_text()));v['dataset']=Path(a.dataset).name
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(v,indent=2)+'\n')
     with out.with_suffix('.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=list(v['records'][0]));writer.writeheader();writer.writerows(v['records'])
+        writer=csv.DictWriter(f,fieldnames=list(v['records'][0]),lineterminator='\n');writer.writeheader();writer.writerows(v['records'])
     print('Training symbols with declining trailing windows:',v['symbols_with_declining_both_windows'],'of',len(v['records']))
     print('Historical membership and delisting returns remain unverified.')
 
