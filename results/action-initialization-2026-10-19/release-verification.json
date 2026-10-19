@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "release_url": "https://github.com/jason490/RL-trading/releases/tag/action-initialization-2026-10-19",
+  "tag": "action-initialization-2026-10-19",
+  "target_commitish": "5ac52952ccb952d37b959f56b2e6bc55c11706fa",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 1356,
+      "sha256": "322c5aea9d676096bc14f846de7fd1cbb68dbde60df700ecfac9ec02c4e4713b",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/SHA256SUMS",
+      "server_digest_verified": true
+    },
+    {
+      "name": "compute.json",
+      "size": 3862,
+      "sha256": "504ef3dcd03ce620c5d82d83e711dd49e586fbf68b722e6721d22478755bc62c",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/compute.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "confirmation.html",
+      "size": 4778604,
+      "sha256": "864fec9041345aaa30744ddce9e030df52f3a75596f0d8935d335813cfacd8b5",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/confirmation.html",
+      "server_digest_verified": true
+    },
+    {
+      "name": "confirmation.json",
+      "size": 74574,
+      "sha256": "204a8e076da1f95e124693310ed3100df8919ec4d5870d7d254661a8192a8e5d",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/confirmation.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "control-reproduction.json",
+      "size": 1017,
+      "sha256": "44b749e617168b30e3d4033fe8736846e5d943e6538ff34c94fcf36f5397c355",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/control-reproduction.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "dataset-manifest.json",
+      "size": 28563,
+      "sha256": "63264c4fe7849cc0080c80dd7b0e6e666932c1c15b4d51bc5f458e0dcf0fdfb0",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/dataset-manifest.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "frozen-checks.json",
+      "size": 12130,
+      "sha256": "8e20c427c366376997657402318d99b700318dbea7e835601f0d0a8c102fd019",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/frozen-checks.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "size": 17512474,
+      "sha256": "50b4c4a64c05528f14321a715e9262ec75ff5f810b9a1e2020779bfc373ca549",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/learning-curves.tar.gz",
+      "server_digest_verified": true
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 1205634,
+      "sha256": "4386c5fdbd34377c1866d83e264b30882b8a474c08c2ca008f25615fc37cbcd3",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/model-catalog.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "protocol.json",
+      "size": 3414,
+      "sha256": "deaeb63e16c5a2e626f20bb18cdf70e09c4c3e8148735e89ac8eb751aac5d27c",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/protocol.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 5029514,
+      "sha256": "d97d1a680b21de622fbe8fe29bb99df423c04e34495ea4a4829c6142f573b040",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/research-models.tar.gz",
+      "server_digest_verified": true
+    },
+    {
+      "name": "screen.html",
+      "size": 4776346,
+      "sha256": "88dcfaf3c46244ad38dbd758deeb35eb7870cb5dd8789fac7e55bd20997354e7",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/screen.html",
+      "server_digest_verified": true
+    },
+    {
+      "name": "screen.json",
+      "size": 51431,
+      "sha256": "82f2d6d8da6bcfd0d01281ff3d4130228497234eb0c4928532fa61edef887297",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/screen.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "short-side-summary.json",
+      "size": 38868,
+      "sha256": "75a46edd759ddfe1a09f31336d15a4dc1406e3e95533a9e179773ad85b85567f",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/short-side-summary.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "short-side.csv",
+      "size": 82036,
+      "sha256": "68970f955f0c23742d2058cfbc797c4b6d8926eec2088ff600542439138e45b3",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/short-side.csv",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 9884200,
+      "sha256": "43a9b71bb5d4d38af382d05624a4519b1098684f108c86743e521ee17fb766c0",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/validation-reports.tar.gz",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation.html",
+      "size": 2031,
+      "sha256": "baee58bbf1480155816b53fdf4da9a662785c4fbdbfd7c8445d5f5f32fb443f3",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/action-initialization-2026-10-19/validation.html",
+      "server_digest_verified": true
+    }
+  ],
+  "asset_count": 17,
+  "total_bytes": 43486054,
+  "verification": "GitHub server SHA-256 and size match each local published asset"
+}

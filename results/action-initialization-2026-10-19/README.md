@@ -73,10 +73,13 @@ observations are not added together. The conservative ledger exceeds both and
 now totals **35.562980/150 units**, leaving **114.437020** (94.437020 before the
 130-unit working stop). `compute.json` records each phase and every owned session.
 
-Seventeen public assets are prepared with checksums: frozen models, selected and
-final weights, derived equity reports, paired interactive charts, learning curves,
-protocol, source/data manifests, gates and short-side evidence. Publication and
-server checksum verification are pending; duplicate archives remain until then.
+[The release](https://github.com/jason490/RL-trading/releases/tag/action-initialization-2026-10-19) contains 17 assets: frozen models, selected/final weights,
+derived equity reports, paired interactive charts, learning curves, protocol,
+source/data manifests, gates and short-side evidence. Every GitHub server SHA-256
+and size matches the local asset (`release-verification.json`). After verification,
+52 duplicate archives/markers were removed, reclaiming 612.30 MiB logical bytes.
+All 228 retained artifact hashes are unchanged (`cleanup.json`); raw snapshots,
+models, frozen bundles, full reports, curves and the usage ledger remain.
 Local charts: `artifacts/action-initialization/screen.html` and
 `artifacts/action-initialization/confirmation.html`.
 

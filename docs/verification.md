@@ -662,6 +662,7 @@ and rejection checks. Three controls exactly reproduce 39 policy tensors and
 are zero. Conservative study charge 0.104793 units; cumulative 35.562980/150,
 remaining 114.437020. No retired test was evaluated. Related confirmation-gate,
 curve and variant-audit focused checks pass; the latest full suite remains the
-193-test run documented above. All public asset checksums and archive allowlists
-pass locally; publication/duplicate cleanup remain pending remote verification.
+193-test run documented above. All 17 public asset hashes/sizes match GitHub server digests. After verification,
+52 duplicate archives/markers (612.30 MiB logical) were removed; all 228 retained
+artifact hashes remain unchanged. Raw data, models, reports and the ledger remain.
 See [complete evidence](../results/action-initialization-2026-10-19/README.md).

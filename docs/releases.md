@@ -107,3 +107,19 @@ validation reports, protocol and sanitized usage evidence. No new test audit
 was performed. All gates failed; no model is paper-eligible. See
 [results](../results/algorithm-stability-2026-10-16/README.md) for interpretation
 and recorded publication/cleanup verification.
+
+## PPO initialization screen and confirmation — 2026-10-19
+
+[Download the release](https://github.com/jason490/RL-trading/releases/tag/action-initialization-2026-10-19). All 17 server asset hashes and sizes are verified.
+Eight 50k CPU research models plus four smokes are cataloged with initialization
+variant, seed, source and normalization. Open `confirmation.html` after downloading
+for paired checkpoint returns, incremental changes and drawdowns; `screen.html`
+retains all four initial arms. `research-models.tar.gz` contains frozen bundles
+and selected/final weights; `learning-curves.tar.gz` contains per-run JSONL, CSV
+and HTML curves. The validation archive contains derived equity reports.
+
+Mean final return improves from 10.49% to 13.89%, still below holding 30.60%.
+Declining-stock performance worsens and short-profit requirements remain unmet.
+The release is development evidence; it does not replace the registered shadow
+campaign or enable broker orders. Full limitations and checksums are recorded in
+[the results](../results/action-initialization-2026-10-19/README.md).

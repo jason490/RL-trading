@@ -148,7 +148,7 @@ Each feature has name/version, inputs, parameters, units, timeframe, warmup, ava
 | A | Price/volume and portfolio state | Lagged returns, trailing volatility/range, current exposure, cash, holding age, unrealized P&L. Small initial input set. |
 | B | EMA, RSI, ATR, relative volume | Try EMA 20/50, RSI 14, ATR 14, and completed daily volume divided by prior 20-session mean. Exclude the current session from the denominator. Indicators are hypotheses, not guaranteed predictive variables. |
 | C | Multiple timeframes | Add completed weekly trend/volatility first; monthly or intraday context later. Same underlying causal feature functions. |
-| C.1 | Multi-timeframe supply/demand | Base consolidation plus directional impulse, causal zone lifecycle, ATR-scaled distances/widths, freshness and age; D1/W1 first, M1 later. Implemented opt-in D1/W1; matched ablations and new-model training pending. |
+| C.1 | Multi-timeframe supply/demand | Base consolidation plus directional impulse, causal zone lifecycle, ATR-scaled distances/widths, freshness and age; D1/W1 first, M1 later. Opt-in D1/W1 implemented and tested in matched 50k/250k studies; no robust advantage established. M1 remains gated. |
 | D | Market/sector context | Benchmark/sector returns and relative strength; introduce sector categories only where point-in-time metadata is supportable. |
 | E | Financials | A small filing-derived family such as revenue growth and leverage, joined on public availability. No current analyst forecasts in historical observations. |
 | F | Price-level volume | Trailing volume profiles from actual historical trade prices/sizes where available; expose point of control/value area with causal window boundaries. Bar-derived profiles are explicitly approximations. |
@@ -621,9 +621,10 @@ observations. No shorting-success or independent-performance claim is supported.
 
 Conservative study usage is 0.104793 units; cumulative project 35.562980/150,
 with 114.437020 remaining. Source is pinned to the screen's committed snapshot
-through a verified export sharing the original ledger/lock. Publication and
-duplicate cleanup follow server checksum verification. Next: predeclare a causal
-down-regime sampling/universe experiment, not longer blind training. See
+through a verified export sharing the original ledger/lock. Seventeen release
+assets passed GitHub SHA-256/size verification; 52 duplicate files (612.30 MiB
+logical) were removed with 228 retained hashes unchanged. Next: predeclare a
+causal down-regime sampling/universe experiment, not longer blind training. See
 [results](results/action-initialization-2026-10-19/README.md) and
 [operations](docs/action-initialization.md).
 

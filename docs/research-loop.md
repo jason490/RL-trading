@@ -85,3 +85,22 @@ versus holding 32.63% and 19.47%. A simple EMA trend/flat rule loses 16.26% and
 use the original 22-stock/four-ETF panel, no new training or retired-test data.
 Next research should preregister a matched exploration/action-initialization
 diagnosis, retaining short capability and the original net-equity objective.
+
+## Confirmed initialization result and next hypothesis
+
+The completed matched 50k PPO study improves selected/final means from
+11.77%/10.49% to 14.23%/13.89%, with final gains in all three seeds. Absolute
+stock/ETF targets fail, and declining-stock final returns worsen from -12.20%
+to -16.50%, with zero of nine wide observations earning positive total returns
+and positive short P&L together. Retain this as an overall-return research
+baseline, not proof of profitable shorts or a reason for blind longer training.
+
+Next predeclare a causal down-regime sampling experiment, potentially paired
+with the verified 107-stock training universe. The expanded training-only audit
+has 5.15% persistent trailing-decline observations versus 2.31% in the original
+panel. Sampling labels must use only already-observed prices, with matched
+eligibility and episode lengths across controls/candidates. Full-period declining
+validation-stock labels remain reporting-only. Freeze the next protocol before
+allocation, test sampling isolation/RNG behavior, and retain the unchanged shared
+project ledger. [Current result](../results/action-initialization-2026-10-19/README.md)
+records verified publication, cleanup and remaining budget.

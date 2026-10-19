@@ -103,3 +103,21 @@ outputs and unique failed-preflight checkpoints, datasets, cumulative ledger and
 recovery records were preserved. Earlier studies were untouched. See
 [cleanup](../results/algorithm-stability-2026-10-16/cleanup.json) and
 [release verification](../results/algorithm-stability-2026-10-16/release-verification.json).
+
+## Initialization-study cleanup — 2026-10-19
+
+All 12 owned sessions stopped before cleanup. Seventeen GitHub assets passed
+server SHA-256/size checks. Each final download archive matched its extracted
+file set byte-for-byte. Cleanup then removed 52 task-owned upload/download/source
+archives and ready markers, including duplicate compressed publication assets:
+642,046,525 logical bytes (612.30 MiB). All 228 retained files were rehashed
+before and after deletion with no changes. Selected/final/intermediate weights,
+frozen bundles, full reports, compact curves, source export, raw data and the
+project ledger remain. Authentication/configuration and unrelated studies were
+preserved. The release can recover the removed public compressed assets.
+
+Exact paths and before/after evidence are in
+[cleanup.json](../results/action-initialization-2026-10-19/cleanup.json); server
+asset receipts are in
+[release-verification.json](../results/action-initialization-2026-10-19/release-verification.json).
+No cleanup failure or unresolved owned session remains.
