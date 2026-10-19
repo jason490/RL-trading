@@ -37,8 +37,12 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5):
+                if plan.get('version') in (4,5,7):
                     job=plan['jobs'][0]
+                    if plan.get('version')==7:
+                        from rl_stocks.training.initialization import initialization_spec
+                        if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
+                            raise RuntimeError('initialization-study configuration mismatch')
                     if (run.get('reward_config')!={'kind':'net_log_equity','scale':job['reward_scale']}
                             or run.get('milestones')!=job['milestones'] or run.get('evaluation_every')!=job['evaluation_every']
                             or not run.get('compact_checkpoints')):
@@ -47,7 +51,7 @@ def validate_archive(path, plan, dataset_id):
                         if name.endswith('/metadata.json') and json.loads(read(name)).get('bundle_id')==run['bundle_id'])
                     curve=[json.loads(line) for line in read(prefix+'learning-curve.jsonl').splitlines()]
                     points={r['steps']:r for r in curve}
-                    if (sorted(points)!=list(range(10000,job['steps']+1,10000))
+                    if (sorted(points)!=list(range(job['evaluation_every'],job['steps']+1,job['evaluation_every']))
                             or any(not math.isfinite(r['score']) for r in curve)
                             or any(points[s]['phase']!='post_update' for s in job['milestones'])
                             or curve!=run['validation_checkpoints']):

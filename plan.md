@@ -604,3 +604,15 @@ It is not a suitable profitable teacher by assumption. Preserve these negative
 results and investigate action initialization/exploration and protection churn
 with a matched bounded experiment before longer training. Diagnostic simulation
 used no Colab allocation; the cumulative project ledger is unchanged.
+
+## 23. PPO action initialization — declared 2026-10-19
+
+The next bounded study separates initial Gaussian exploration and protective
+mean bias in a four-arm 50k seed-11 factorial screen. Exposure stays unbiased,
+shorting remains available, and rewards, data, execution and action semantics
+stay fixed. Promote at most one arm against a fresh standard control, then add
+only seeds 23/37 if the declared selected/final/group/drawdown gate passes.
+Maximum eight research cells and two incremental conservative units; use CPU
+smoke first and the existing aggregate Colab pool. The declaration is not a
+result. See [protocol](configs/experiments/action_initialization.json) and
+[operations](docs/action-initialization.md).

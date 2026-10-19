@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **183 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 87.40 seconds, 13 existing warnings |
+| Full local acceptance | **189 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 87.24 seconds, 13 existing warnings |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -611,3 +611,14 @@ Two additional rule-contract tests pass; the combined direction/rule focused
 suite passes 8 tests. Compilation and whitespace checks pass. The latest full
 suite above remains the 183-test run before these two isolated rule tests were
 added. See [execution evidence](../results/execution-rules-2026-10-19/README.md).
+
+## Action-initialization preflight — 2026-10-19
+
+The four-arm PPO screen is declared before allocation. Strict CPU plans and
+archive checks verify initialization and final post-update curves. Native
+control leaves weights and RNG unchanged; altered arms preserve other seeded
+weights, both exposure signs and trainability, and pass save/load prediction
+parity. Full acceptance passes 189 tests in 87.24 seconds, no skips/failures,
+13 existing warnings. The subsequently added screen-gate regression and related
+focused suite pass 15 tests. No real research training was performed locally.
+Remote smoke and research results remain pending at this declaration.

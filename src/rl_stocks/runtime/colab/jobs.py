@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==6:
+    if plan.get('version')==7:
+        try:expected=initialization_plan(**plan['initialization_study'])
+        except (KeyError,TypeError):raise ValueError('malformed initialization study plan') from None
+        if plan!=expected:raise ValueError('unsupported initialization study plan')
+    elif plan.get('version')==6:
         try:expected=single_smoke_plan(plan['smoke_algorithm'])
         except (KeyError,TypeError):raise ValueError('malformed single smoke plan') from None
         if plan!=expected:raise ValueError('unsupported single smoke plan')
@@ -117,3 +121,16 @@ def single_smoke_plan(algorithm):
     steps=512 if algorithm in ('ppo','recurrent_ppo') else 1024
     return {'version':6,'accelerator':'CPU','smoke_algorithm':algorithm,
         'jobs':[{'algorithm':algorithm,'device':'cpu','smoke':True,'seed':11,'steps':steps}]}
+
+
+def initialization_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.initialization import initialization_spec
+    initialization_spec(arm,'ppo')
+    if type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported initialization seed or smoke mode')
+    steps=512 if smoke else 50000
+    return {'version':7,'accelerator':'CPU',
+        'initialization_study':{'arm':arm,'seed':seed,'smoke':smoke},
+        'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
+            'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
+            'milestones':[steps],'reward_scale':1.,'initialization':arm}]}

@@ -1,0 +1,11 @@
+{
+  "declared_at": "2026-10-19T12:41:48.295202+00:00",
+  "protocol_sha256": "9c45adebe3e5203d7f54b91c8d91e9ae1f7a2a16bd62c05cb4d3e76016400fa0",
+  "starting_project_units": 35.45818787437412,
+  "max_incremental_units": 2.0,
+  "starting_cli_balance": 350.88,
+  "starting_cli_rate": 0.0,
+  "starting_assignments": 0,
+  "preflight_parent_revision": "5360b21",
+  "status": "declared_no_allocation_yet"
+}

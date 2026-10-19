@@ -30,6 +30,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Short-side performance | [short-side.md](short-side.md) | Reconciled long/short P&L, falling-stock reports and positive-return requirements |
 | Autonomous improvement research | [research-loop.md](research-loop.md) | Bounded experiments, stock/ETF gates, token efficiency and prospective confirmation |
+| PPO action initialization | [action-initialization.md](action-initialization.md) | Factorial exploration/protection screen, matched controls, promotion and bounded Colab operations |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
 | Forward shadow inference | [shadow-inference.md](shadow-inference.md) | Frozen campaign registration, durable decisions, simulated fills, restart recovery and forward reports |

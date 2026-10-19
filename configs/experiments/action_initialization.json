@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "name": "action-initialization-2026-10-19",
+  "hypothesis": "Protective-action mean initialization and Gaussian exploration may contribute to poor PPO exposure and churn. Use a 2x2 factorial screen to separate the factors; do not assume either helps.",
+  "algorithm": "ppo",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "universe": "configs/universes/sector_research.json",
+  "arms": ["standard", "low_noise", "wide", "wide_low_noise"],
+  "screen_seed": 11,
+  "confirmation_seeds": [11, 23, 37],
+  "steps_per_cell": 50000,
+  "screen_cells": 4,
+  "confirmation_additional_cells_maximum": 4,
+  "device": "cpu",
+  "n_steps": 1000,
+  "batch_size": 50,
+  "evaluation_every": 10000,
+  "reward_scale": 1.0,
+  "selection_metric": "Equal-weight mean validation net return, unchanged",
+  "screen_gate": {
+    "minimum_selected_gain_pp": 2.0,
+    "minimum_final_gain_pp": 2.0,
+    "minimum_group_final_gain_pp": 0.0,
+    "maximum_final_drawdown_worsening_pp": 2.0,
+    "ranking": "Final equal-weight mean return; tie order low_noise, wide, wide_low_noise",
+    "scope": "Promote at most one arm versus freshly rerun standard control; both stock and ETF groups must improve or tie on final return. Declining-stock labels never select or promote."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_gain_pp": 2.0,
+    "minimum_mean_final_gain_pp": 2.0,
+    "minimum_paired_positive_final_seeds": 2,
+    "maximum_mean_final_drawdown_worsening_pp": 2.0,
+    "target_comparable_excess_pp_each_stock_and_etf_group": -2.0,
+    "target_outperforming_excess_pp_each_stock_and_etf_group": 0.0,
+    "minimum_target_passing_seeds": 2,
+    "minimum_median_stock_excess_pp": -2.0,
+    "require_selected_and_final_target_pass": true
+  },
+  "initialization": {
+    "exposure_mean_bias_all_arms": 0.0,
+    "native_action_weights": "Preserve seeded weights, optimizer and all other parameters",
+    "standard": {"protective_mean_bias": 0.0, "log_std": 0.0},
+    "low_noise": {"protective_mean_bias": 0.0, "log_std": -1.0},
+    "wide": {"protective_mean_bias": 0.75, "log_std": 0.0},
+    "wide_low_noise": {"protective_mean_bias": 0.75, "log_std": -1.0},
+    "learned_after_initialization": true,
+    "signed_exposure_and_shorting": "Unchanged; no long bias or sign constraint"
+  },
+  "constraints": {
+    "train": "Through 2020; training-only normalization",
+    "validation": "2021-2023 development only, original 26-symbol panel",
+    "retired_test": "Never load or evaluate 2024-September 2026",
+    "features_actions_costs_reward": "Unchanged basic features, target-zone-v1, default simulator, net log equity",
+    "short_side": "Reconciled reporting on all symbols; ex-post negative-holding stock labels are reporting-only",
+    "success_claim": "Development promotion is not independent confirmation or permission to trade"
+  },
+  "execution": {
+    "preflight": "512-transition CPU smoke of each distinct initialization before research",
+    "runner": "Existing centrally metered Colab fleet",
+    "initial_concurrency": 2,
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "stop_on_screen_failure": true,
+    "cleanup": "Retrieve and validate artifacts; verify owned teardown; retain selected/final weights and curves; publish checksums before removing duplicates"
+  }
+}

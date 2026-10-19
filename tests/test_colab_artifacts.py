@@ -93,6 +93,28 @@ class ArtifactTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError,'missing or unexpected'):
             self.check()
 
+    def test_initialization_and_smoke_curve_contract_are_verified(self):
+        from rl_stocks.runtime.colab.jobs import initialization_plan
+        from rl_stocks.training.initialization import initialization_spec
+        self.plan=initialization_plan('wide_low_noise',smoke=True)
+        job=self.plan['jobs'][0];run=self.runs[0]
+        curve=[{'steps':256,'phase':'on_step','score':.01},
+               {'steps':512,'phase':'post_update','score':.01}]
+        run.update(job,requested_steps=512,actual_steps=512,
+                   initialization=initialization_spec('wide_low_noise'),
+                   reward_config={'kind':'net_log_equity','scale':1.},validation_checkpoints=curve)
+        folder=self.artifacts/'runs/0'
+        for index in (1,2,3,4):(self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        (folder/'learning-curve.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        (folder/'learning-curve.csv').write_text('steps,return_pct\n256,1.0\n512,1.0\n')
+        (folder/'learning-curve.html').write_text('curve')
+        (folder/'metadata.json').write_text(json.dumps(run))
+        self.completion.update(plan=self.plan,gpu=None,completed=[run]);self.write_completion()
+        self.assertEqual(len(self.check()),1)
+        run['initialization']=initialization_spec('standard')
+        (folder/'metadata.json').write_text(json.dumps(run))
+        with self.assertRaisesRegex(RuntimeError,'initialization-study'):self.check()
+
     def test_stability_export_requires_post_update_endpoint(self):
         from rl_stocks.runtime.colab.jobs import stability_plan
         self.plan=stability_plan('recurrent_ppo',11)

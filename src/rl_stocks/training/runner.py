@@ -24,6 +24,7 @@ from rl_stocks.reporting.html import report
 from rl_stocks.inference.bundle import freeze,FrozenPolicy
 from rl_stocks.core.provenance import source_identity,repository_state
 from rl_stocks.training.curves import curve_record,append_record,render_curve
+from rl_stocks.training.initialization import initialization_spec,initialize_policy
 
 class ValidationCheckpoint(BaseCallback):
     def __init__(self,dataset,config,path,every,compact=False,target_steps=None):
@@ -79,7 +80,8 @@ def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
-          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.):
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard'):
+    initialization_spec(initialization,algorithm)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
     dataset=read_dataset(dataset_path)
@@ -92,6 +94,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
     model=create(algorithm,env,seed,device,smoke,overrides)
+    initialized=initialize_policy(model,initialization,algorithm)
     steps=steps if steps is not None else 512 if algorithm in ON_POLICY else 1024
     if steps<=0:raise ValueError("positive training steps required")
     milestones=list(milestones) if milestones is not None else [steps]
@@ -110,6 +113,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "selection_metric":"Equal-weight mean validation net return", "status":"running",
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
         "reward_config":{"kind":"net_log_equity","scale":reward_scale},
+        "initialization":initialized,
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
