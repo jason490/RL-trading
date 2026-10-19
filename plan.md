@@ -558,3 +558,21 @@ Conservative study usage was 0.068809 units, cumulative project usage 35.458188
 of 150. Keep the smaller panel as a research control, resolve provider/action and
 historical membership/terminal evidence, and predeclare walk-forward development
 before further search. The retired test and existing shadow campaign are unchanged.
+
+## 21. Additional stock acquisition — 2026-10-19
+
+The user clarified that the next step is to pull more stocks, rather than repeat
+evaluation or start longer training. The declared universe now contains 110
+stocks (55 added; ten names per annotated sector), plus the same 15 ETFs. Yahoo
+provided 425,350 daily bars for 107 stocks plus the ETFs over 2010–2023. Missing
+EA, AVB and EQR requests remain recorded; separate Alpaca SIP snapshots supplied
+6,036 bars over 2016–2023. These feeds are not merged or training-ready, and the
+supplement does not cover 2010–2015 or verified dividend cash flows.
+
+All 110 stocks have some history, with 189,180 new stock bars acquired. Raw data
+remain immutable locally, with manifests and coverage reports in Git. Explicit
+CLI date bounds and opt-in failure-preserving batch collection are implemented;
+default fail-fast and dataset quality gates remain unchanged. Full acceptance
+passed 177 tests. No model evaluation, research training or Colab allocation was
+added; the cumulative project ledger remains 35.458188/150 units. See
+[acquisition evidence](results/stock-pull-2026-10-19/README.md).

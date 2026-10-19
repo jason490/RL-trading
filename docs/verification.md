@@ -1,4 +1,4 @@
-# Verification and milestone status — 2026-10-17
+# Verification and milestone status — 2026-10-19
 
 The project targets **Python 3.13**, matching Colab's current interpreter family.
 The local acceptance environment is **3.13.16**. The verified A100 image
@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **175 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 89.53 seconds, 13 existing warnings |
+| Full local acceptance | **177 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 88.71 seconds, 13 existing warnings |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -572,3 +572,19 @@ rehashed all 146 retained files unchanged. Models, 50k endpoint weights, curves,
 normalization, reports, datasets and the preserved ledger remain. The final CLI
 check reports zero assignments and 0.00 units/hour. Publication and cleanup
 inventories are linked from the results guide; `plan.html` is unchanged.
+
+## Additional stock pull — 2026-10-19
+
+The user requested more stock histories only. All 110 requested stocks now have
+some history across separate sources: Yahoo supplies 107 stocks plus 15 ETFs
+(425,350 bars, 2010–2023 subject to declared inceptions), and Alpaca SIP supplies
+EA, AVB and EQR (6,036 bars, 2016–2023). Primary failures remain in coverage; the
+feeds are not merged and training readiness is false. No research dataset,
+evaluation, training or Colab allocation was added. The project ledger is unchanged.
+
+Focused ingestion checks passed 17 tests; the full suite passed **177 tests**,
+zero failures/skips and 13 existing warnings, in 88.71 seconds. New checks cover
+exclusive date bounds, continued collection with failed-symbol retention, safe
+error metadata, default fail-fast behavior and storage checksum rejection.
+Changed-file unused-import checks passed. See the
+[manifest, coverage and reproduction guide](../results/stock-pull-2026-10-19/README.md).

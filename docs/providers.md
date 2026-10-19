@@ -22,6 +22,15 @@ The installed official CLI was inspected locally at version 0.7.4. Its `usage` p
 
 ## Adapter operations
 
+Ingestion accepts explicit inclusive `--start` and exclusive `--end` dates.
+`--continue-on-error` optionally collects the remaining symbols after provider
+request failures and records each failed symbol/date range/error type in
+`acquisition_failures`. It never persists authenticated exception text, marks a
+failed chunk successful, fills missing bars or switches feeds. Default ingestion
+still fails immediately; storage/checksum failures are never suppressed. A
+written partial snapshot is not coverage approval. See the
+[110-stock acquisition report](../results/stock-pull-2026-10-19/README.md).
+
 All adapters satisfy `BarProvider` and return canonical bars. Baseline execution remains independent of any historical provider. `Request()` fixes the four-symbol/date request; explicit requests and `--universe` can change the symbol set in research. The optional Yahoo sector adapter captures dated current metadata separately from bars; see [sectors/universe](sectors-universe.md). No unsupported family is silently replaced by bars.
 
 | Adapter | Inputs | Availability/calendar convention | Primary limitation |

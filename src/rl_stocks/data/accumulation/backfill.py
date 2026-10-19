@@ -11,7 +11,7 @@ from rl_stocks.data.validation.bars import coverage, exchange_sessions
 
 
 def accumulate(provider, request: Request, root, verify_calendar=True, refresh=False,
-               history_starts=None, full_range=False):
+               history_starts=None, full_range=False, continue_on_error=False):
     provider.capabilities.require(RecordType.BARS)
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
@@ -23,7 +23,7 @@ def accumulate(provider, request: Request, root, verify_calendar=True, refresh=F
     key = digest(identity)
     cursor = root / ('cursor-' + key + '.json')
     progress = json.loads(cursor.read_text()) if cursor.exists() else {}
-    bars, parts = [], []
+    bars, parts, failures = [], [], []
     history_starts = history_starts or {}
     for symbol in request.symbols:
         intervals = [(request.start, request.end)] if full_range else [
@@ -41,18 +41,27 @@ def accumulate(provider, request: Request, root, verify_calendar=True, refresh=F
                 part_bars, _ = load(path)
             else:
                 # SDK-level retries remain bounded as well; no feed fallback.
-                for attempt in range(3):
-                    try:
-                        part_bars = list(provider.bars(part_request))
-                        break
-                    except Exception as exc:
-                        transient=isinstance(exc,(TimeoutError,ConnectionError)) or type(exc).__name__ in (
-                            "Timeout","ConnectTimeout","ReadTimeout","ConnectionError","YFRateLimitError")
-                        if not transient:
-                            raise
-                        if attempt == 2:
-                            raise
-                        time.sleep(attempt + 1)
+                try:
+                    for attempt in range(3):
+                        try:
+                            part_bars = list(provider.bars(part_request))
+                            break
+                        except Exception as exc:
+                            transient=isinstance(exc,(TimeoutError,ConnectionError)) or type(exc).__name__ in (
+                                "Timeout","ConnectTimeout","ReadTimeout","ConnectionError","YFRateLimitError")
+                            if not transient:
+                                raise
+                            if attempt == 2:
+                                raise
+                            time.sleep(attempt + 1)
+                except Exception as exc:
+                    if not continue_on_error:
+                        raise
+                    # Persist request identity and error type, never authenticated
+                    # exception text. Failed chunks are not cached as successful.
+                    failures.append({'symbol':symbol,'start':str(start),'end':str(end),
+                                     'error_type':type(exc).__name__})
+                    continue
                 part_provenance = {**identity, 'request': {'symbol': symbol, 'start': str(start), 'end': str(end)}}
                 path = put(root, part_bars, part_provenance, getattr(provider, 'raw_source', None))
                 progress[chunk] = path.name
@@ -71,4 +80,6 @@ def accumulate(provider, request: Request, root, verify_calendar=True, refresh=F
     provenance = {'request': {'symbols': request.symbols, 'start': str(request.start), 'end': str(request.end)},
         'capabilities': asdict(provider.capabilities), 'coverage': report,
         'parts': parts, 'dividends_verified': provider.capabilities.provider != 'alpaca'}
+    if continue_on_error:
+        provenance['acquisition_failures'] = failures
     return put(root, bars, provenance, {'immutable_parts': parts})

@@ -1,4 +1,5 @@
 import argparse
+from datetime import date
 from pathlib import Path
 from rl_stocks.core.contracts import Request
 
@@ -10,6 +11,12 @@ def main():
     ingest.add_argument("--output",default="data/raw");ingest.add_argument("--seed",type=int,default=11)
     ingest.add_argument("--universe")
     ingest.add_argument("--full-range",action="store_true",help="One resumable history request per symbol")
+    ingest.add_argument("--start",type=date.fromisoformat,default=Request.start,
+                        help="Inclusive history start (YYYY-MM-DD)")
+    ingest.add_argument("--end",type=date.fromisoformat,default=Request.end,
+                        help="Exclusive history end (YYYY-MM-DD)")
+    ingest.add_argument("--continue-on-error",action="store_true",
+                        help="Record failed provider requests and keep collecting; quality gates still apply")
     sectors=sub.add_parser("ingest-sectors")
     sectors.add_argument("--universe",required=True);sectors.add_argument("--output",default="data/sectors")
     generate=sub.add_parser("dataset");generate.add_argument("snapshot");generate.add_argument("--output",default="data/datasets")
@@ -48,10 +55,10 @@ def main():
             from rl_stocks.data.providers.alpaca.adapter import AlpacaProvider
             provider=AlpacaProvider(args.feed)
         from rl_stocks.data.universe.config import symbols, history_starts
-        request=Request(symbols(universe)) if universe else Request()
+        request=Request(symbols(universe) if universe else Request.symbols,args.start,args.end)
         print(accumulate(provider,request,args.output,verify_calendar=args.provider!="synthetic",
                          history_starts=history_starts(universe) if universe else None,
-                         full_range=args.full_range))
+                         full_range=args.full_range,continue_on_error=args.continue_on_error))
     elif args.command=="ingest-sectors":
         from rl_stocks.data.providers.yahoo.sectors import YahooSectors
         from rl_stocks.data.universe.sectors import put_sectors

@@ -1,0 +1,4 @@
+symbol,kind,role,sector,source,count,first,last,missing_sessions,calendar_verified,declared_history_start
+AVB,stock,tradable,real_estate,alpaca-sip,2012,2016-01-04,2023-12-29,0,True,
+EA,stock,tradable,communication_services,alpaca-sip,2012,2016-01-04,2023-12-29,0,True,
+EQR,stock,tradable,real_estate,alpaca-sip,2012,2016-01-04,2023-12-29,0,True,

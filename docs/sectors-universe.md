@@ -1,5 +1,23 @@
 # Configurable stock universe and sector rotation
 
+## Wider data collection: 110 stocks
+
+[stock_research_110.json](../configs/universes/stock_research_110.json) retains
+the prior 55 stocks and adds 55, with ten names per declared current sector,
+four broad ETFs and eleven sector ETFs. This configuration is for data collection;
+it does not replace any previous experiment's universe or historical membership.
+
+The October 19 pull acquired 2010–2023 Yahoo histories for 107 stocks plus the
+15 ETFs, and separate 2016–2023 Alpaca SIP histories for EA, AVB and EQR, whose
+Yahoo requests failed. All requested names remain in coverage reports. The
+source snapshots are not harmonized or training-ready; Alpaca cash dividends
+remain unverified. See [counts, snapshot identities, commands and tests](../results/stock-pull-2026-10-19/README.md).
+
+Use ingestion's `--start` and exclusive `--end` to fix the history interval.
+Opt-in `--continue-on-error` preserves provider failures while collecting other
+symbols; it does not bypass data-quality gates. Defaults still fail immediately.
+No new training or evaluation is triggered by downloading a wider universe.
+
 ## Scope and status
 
 Universe selection, dated sector snapshots, sector-ETF rotation features and

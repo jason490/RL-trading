@@ -1,0 +1,43 @@
+{
+  "provider": "alpaca",
+  "feed": "sip",
+  "requested_symbols": [
+    "EA",
+    "AVB",
+    "EQR"
+  ],
+  "start": "2016-01-01",
+  "end_exclusive": "2024-01-01",
+  "retrieved_at": "2026-10-19T11:14:12.856844+00:00",
+  "merged_with_yahoo": false,
+  "dividends_verified": false,
+  "training_ready": false,
+  "purpose": "Separate supplements for missing Yahoo histories; no automatic source fallback or date-range harmonization.",
+  "snapshot": "data/raw/stock-pull-alpaca-2026-10-19/536faa18ee25775decd0364d161fc785d5c62d3cb299d58e2dd0750596aa6e21",
+  "bars": 6036,
+  "coverage": {
+    "AVB": {
+      "calendar_verified": true,
+      "count": 2012,
+      "first": "2016-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "EA": {
+      "calendar_verified": true,
+      "count": 2012,
+      "first": "2016-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    },
+    "EQR": {
+      "calendar_verified": true,
+      "count": 2012,
+      "first": "2016-01-04",
+      "last": "2023-12-29",
+      "missing": []
+    }
+  },
+  "acquisition_failures": [],
+  "status": "complete_bar_coverage"
+}
