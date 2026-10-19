@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "protocol_sha256": "b4e381d7fd1c6a44c98799ccc2455248511ecd4490ede6707df6f368331555c1",
+  "cells": [
+    {
+      "policy_architecture": {
+        "version": 1,
+        "variant": "native"
+      },
+      "observation": {
+        "version": 1,
+        "profile": "execution_full",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "45b25af029b10d06c57014c6e979313af32ee509ec38ca79f6ab60602f2101c3",
+      "git": {
+        "revision": "4b05a6aba75a16d55c111c8165b83518a8c71ad7",
+        "dirty": ""
+      },
+      "source_hash": "a57b2e1da32631a91823bd26feb147267f4e9057947579f2d6971bfb09e8cbf0"
+    },
+    {
+      "policy_architecture": {
+        "version": 1,
+        "variant": "two_branch_unmasked",
+        "market_features": 7,
+        "actor_branches": [
+          "market",
+          "full_observation"
+        ],
+        "exposure_reads_account": true,
+        "risk_reads_account": true,
+        "critic_reads_account": true
+      },
+      "observation": {
+        "version": 1,
+        "profile": "execution_full",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "3411022f00b635ddbfb6e4a105402a25bd71ef6f80f3ae23a24ce375505ef0ce",
+      "git": {
+        "revision": "4b05a6aba75a16d55c111c8165b83518a8c71ad7",
+        "dirty": ""
+      },
+      "source_hash": "a57b2e1da32631a91823bd26feb147267f4e9057947579f2d6971bfb09e8cbf0"
+    },
+    {
+      "policy_architecture": {
+        "version": 1,
+        "variant": "two_branch_market_exposure",
+        "market_features": 7,
+        "actor_branches": [
+          "market",
+          "full_observation"
+        ],
+        "exposure_reads_account": false,
+        "risk_reads_account": true,
+        "critic_reads_account": true
+      },
+      "observation": {
+        "version": 1,
+        "profile": "execution_full",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "caa62eb90914ddc870c63ce33f464a4c98e91d9c0c17583854fa4f7b9c296341",
+      "git": {
+        "revision": "4b05a6aba75a16d55c111c8165b83518a8c71ad7",
+        "dirty": ""
+      },
+      "source_hash": "a57b2e1da32631a91823bd26feb147267f4e9057947579f2d6971bfb09e8cbf0"
+    }
+  ],
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-a04b5c7730ba",
+    "rl-stocks-cpu-fa72ba3c03bb",
+    "rl-stocks-cpu-90778db884f7"
+  ],
+  "project_units": 35.711818539014786,
+  "incremental_units": 0.02399575840168211,
+  "frozen_predictions": 234,
+  "research_started": false
+}

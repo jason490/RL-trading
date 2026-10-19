@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "prior_run": "20261019T192219-ppo-11-ab773c98",
+  "new_run": "20261019T202222-ppo-11-4e6ed38f",
+  "identical_policy_tensors": {
+    "best": 13,
+    "latest": 13
+  },
+  "all_checkpoint_scores_equal": true,
+  "research_training_performed_locally": false
+}

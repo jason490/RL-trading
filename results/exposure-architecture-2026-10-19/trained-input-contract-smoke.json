@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "research_training_performed_locally": false,
+  "records": [
+    {
+      "variant": "native",
+      "phase": "selected",
+      "account_vectors": 5,
+      "same_market_inputs": true,
+      "maximum_exposure_mean_change": 0.01030043512582779,
+      "market_only_invariance_passed": null,
+      "architecture_and_mask_valid": true,
+      "weights_unchanged": true,
+      "parameters": 3689
+    },
+    {
+      "variant": "native",
+      "phase": "final",
+      "account_vectors": 5,
+      "same_market_inputs": true,
+      "maximum_exposure_mean_change": 0.03399650752544403,
+      "market_only_invariance_passed": null,
+      "architecture_and_mask_valid": true,
+      "weights_unchanged": true,
+      "parameters": 3689
+    },
+    {
+      "variant": "two_branch_unmasked",
+      "phase": "selected",
+      "account_vectors": 5,
+      "same_market_inputs": true,
+      "maximum_exposure_mean_change": 0.0015517361462116241,
+      "market_only_invariance_passed": null,
+      "architecture_and_mask_valid": true,
+      "weights_unchanged": true,
+      "parameters": 5129
+    },
+    {
+      "variant": "two_branch_unmasked",
+      "phase": "final",
+      "account_vectors": 5,
+      "same_market_inputs": true,
+      "maximum_exposure_mean_change": 0.005912773311138153,
+      "market_only_invariance_passed": null,
+      "architecture_and_mask_valid": true,
+      "weights_unchanged": true,
+      "parameters": 5129
+    },
+    {
+      "variant": "two_branch_market_exposure",
+      "phase": "selected",
+      "account_vectors": 5,
+      "same_market_inputs": true,
+      "maximum_exposure_mean_change": 0.0,
+      "market_only_invariance_passed": true,
+      "architecture_and_mask_valid": true,
+      "weights_unchanged": true,
+      "parameters": 5129
+    },
+    {
+      "variant": "two_branch_market_exposure",
+      "phase": "final",
+      "account_vectors": 5,
+      "same_market_inputs": true,
+      "maximum_exposure_mean_change": 0.0,
+      "market_only_invariance_passed": true,
+      "architecture_and_mask_valid": true,
+      "weights_unchanged": true,
+      "parameters": 5129
+    }
+  ]
+}
