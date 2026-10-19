@@ -173,3 +173,21 @@ and sector balance, set sampling/compute budgets and persist manifests. Hundred-
 stock experiments still share the existing 150-unit Colab ledger; they do not
 receive a fresh budget. Simultaneous sector allocation requires a separate
 portfolio environment/action contract and acceptance milestone.
+
+## Explicit 107-stock complete-case configuration
+
+`stock_research_110.json` remains the original 110-stock acquisition request.
+`stock_research_107_complete.json` is a separately named Yahoo-only research
+subset with 107 stocks, four tradable broad ETFs and eleven context sector ETFs.
+It records its parent configuration hash and exclusions EA/AVB/EQR because
+Yahoo returned no bars. Separate partial Alpaca histories are not merged or
+treated as complete substitutes. Sector annotations remain present for every
+stock; this subset is not equally balanced after those exclusions.
+
+Use explicit universe-scoped coverage checking and development-only episodes;
+every retained symbol still requires verified coverage and corporate actions.
+For a matched expansion, pass the original panel with `--evaluation-symbols`
+so additional names contribute training only. Every failed source request is
+retained in the dataset's original provenance and coverage audit. This is
+retrospective survivor research, not solved historical membership/delisting
+coverage or representative market performance.

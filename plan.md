@@ -616,3 +616,20 @@ Maximum eight research cells and two incremental conservative units; use CPU
 smoke first and the existing aggregate Colab pool. The declaration is not a
 result. See [protocol](configs/experiments/action_initialization.json) and
 [operations](docs/action-initialization.md).
+
+## 24. Explicit complete-case dataset — 2026-10-19
+
+An explicit 107-stock Yahoo configuration records its 110-stock parent and
+exclusions EA/AVB/EQR; partial Alpaca data remains separate. Opt-in universe
+coverage checking gates every configured stock/ETF/context while retaining
+the source's full failed-request provenance. Default snapshot-wide checks and
+existing default dataset identities remain unchanged; no unverified-data
+override is used. CLI development-only/common-panel options are now exposed.
+
+Dataset `c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398`
+contains 298,946 training feature rows across 111 tradables and the exact original
+19,058-row/26-symbol validation panel, with zero test rows. Expanded preprocessing
+fits training only; old models retain their original normalization. No new
+training/provider requests or separate allocation were used for preparation.
+Full local acceptance passes 193 tests. See
+[data evidence](results/complete-case-107-2026-10-19/README.md).

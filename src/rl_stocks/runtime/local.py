@@ -26,6 +26,9 @@ def main():
     generate.add_argument("--universe");generate.add_argument("--sector-rotation",action="store_true")
     generate.add_argument("--sectors",help="Content-addressed sector snapshot directory")
     generate.add_argument("--sector-labels",action="store_true",help="Requires audited training-era issuer classifications")
+    generate.add_argument("--coverage-scope",choices=['snapshot','universe'],default='snapshot')
+    generate.add_argument("--development-only",action="store_true",help="Build train/validation only; exclude test")
+    generate.add_argument("--evaluation-symbols",nargs='+',help="Explicit common validation/test panel")
     train_parser=sub.add_parser("train");train_parser.add_argument("dataset")
     train_parser.add_argument("--algorithm",choices=["ppo","sac","td3","recurrent_ppo"],required=True)
     train_parser.add_argument("--seed",type=int,default=11);train_parser.add_argument("--device",default="cpu",choices=["cpu","cuda"])
@@ -79,7 +82,8 @@ def main():
                        zone_timeframes=tuple(args.supply_demand),zone_config=zone_config,universe=universe,
                        sector_rotation=args.sector_rotation,
                        sector_records=read_sectors(args.sectors) if args.sectors else (),
-                       sector_labels=args.sector_labels))
+                       sector_labels=args.sector_labels,coverage_scope=args.coverage_scope,
+                       include_test=not args.development_only,evaluation_symbols=args.evaluation_symbols))
     elif args.command=="compare":
         from rl_stocks.reporting.comparison import compare
         print(compare(args.runs,args.output))

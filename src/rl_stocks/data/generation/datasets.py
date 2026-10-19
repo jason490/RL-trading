@@ -40,7 +40,10 @@ def split_name(session):
 
 def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
              zone_timeframes=(), zone_config=None, universe=None, sector_rotation=False,
-             sector_records=(), sector_labels=False, evaluation_symbols=None, include_test=True):
+             sector_records=(), sector_labels=False, evaluation_symbols=None, include_test=True,
+             coverage_scope='snapshot'):
+    if coverage_scope not in ('snapshot','universe') or coverage_scope=='universe' and universe is None:
+        raise ValueError('coverage scope requires snapshot or an explicit configured universe')
     if purge < 20:
         raise ValueError("purge must cover maximum holding horizon (20 sessions)")
     bars, provenance = load(snapshot)
@@ -73,8 +76,14 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
             universe.get("benchmark", "SPY"), sector_records,
             {s: c["missing"] for s, c in provenance["coverage"].items()},
             use_classifications=sector_labels)
+    checked_coverage = provenance['coverage']
+    if coverage_scope=='universe':
+        checked_symbols=set(symbols(universe))
+        if not checked_symbols<=set(checked_coverage):
+            raise ValueError('required coverage entries absent from provenance')
+        checked_coverage={s:checked_coverage[s] for s in sorted(checked_symbols)}
     if not allow_unverified and (not provenance.get("dividends_verified") or
-        any(not x["calendar_verified"] or x["missing"] for x in provenance["coverage"].values())):
+        any(not x["calendar_verified"] or x["missing"] for x in checked_coverage.values())):
         raise ValueError("coverage/corporate actions not verified; audit or explicit research override required")
     episodes, training = {}, []
     names = None
@@ -146,6 +155,14 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
         payload["manifest"]["survivorship"] = (
             "Retrospectively selected surviving stocks/ETFs; not historical index membership; "
             "current declared sector labels are annotations, not historical facts")
+    if coverage_scope=='universe':
+        ignored=sorted(set(provenance['coverage'])-set(checked_coverage))
+        payload['manifest']['coverage_audit']={
+            'scope':'explicit_configured_universe','checked_symbols':sorted(checked_coverage),
+            'excluded_source_symbols':ignored,
+            'excluded_failed_coverage':[s for s in ignored if provenance['coverage'][s]['missing']
+                                        or not provenance['coverage'][s]['calendar_verified']],
+            'policy':'All configured tradable and context symbols remain gated; full source failures retained in provenance'}
     if evaluation_symbols is not None or not include_test:
         payload["manifest"]["evaluation_symbols"] = evaluation
         payload["manifest"]["included_splits"] = splits

@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **189 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 87.24 seconds, 13 existing warnings |
+| Full local acceptance | **193 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 111.38 seconds, 13 existing warnings |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -631,3 +631,18 @@ All four owned sessions stopped. Measured debit was 0.0 units; conservative
 estimate 0.021871; cumulative project 35.480059/150 units. The 50k research screen
 is still pending; smoke returns are not model-performance evidence. See
 [smoke evidence](../results/action-initialization-2026-10-19/smoke.json).
+
+## Complete-case dataset acceptance — 2026-10-19
+
+Explicit universe-scoped coverage retains the wider request's failures while
+checking all retained stock/ETF/context coverage and verified corporate actions.
+Default snapshot-wide checks and default dataset identities remain unchanged.
+Full acceptance passes 193 tests in 111.38 seconds, no skips/failures and 13
+existing warnings; the focused scope tests pass again with added missing-context
+and absent-coverage checks. Syntax and whitespace checks pass.
+
+The new 107-stock/four-ETF training dataset contains 298,946 feature rows, with
+the exact original 26-symbol/19,058-row validation panel and no test episodes.
+No unverified override, feed merge, network fetch or model training was used in
+this preparation. See [evidence](../results/complete-case-107-2026-10-19/README.md).
+The ongoing initialization screen retains its original dataset and captured source.

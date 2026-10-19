@@ -1,10 +1,20 @@
 # Dataset construction and split isolation
 
-`generate(snapshot, output, weekly=False, purge=20, allow_unverified=False, zone_timeframes=(), zone_config=None, universe=None, sector_rotation=False, sector_records=(), sector_labels=False)` reads a verified immutable snapshot, computes features, builds chronological episodes, fits a training-only normalizer and writes a content-addressed dataset. No training-time provider calls occur.
+`generate(...)` reads a verified immutable snapshot, computes features, builds chronological episodes, fits a training-only normalizer and writes a content-addressed dataset. No training-time provider calls occur. Optional `evaluation_symbols`, `include_test` and `coverage_scope` arguments control the declared evaluation panel and coverage gate without changing the defaults.
 
 ## Quality gate
 
 The default gate requires verified exchange-calendar coverage, no missing sessions, and verified dividend/action treatment. Synthetic weekday data is intentionally unverified. Alpaca bar-only snapshots are intentionally missing dividend verification. A user may make an explicit research override with `--allow-unverified`; the manifest records it, and it does not turn the data into audited market history.
+
+The default `coverage_scope='snapshot'` checks every source coverage record,
+including failed requests outside a smaller configured universe. An explicit
+`coverage_scope='universe'` (CLI `--coverage-scope universe`) instead checks
+**every configured tradable and context symbol**. It requires an explicit
+universe, rejects absent bars/coverage records and retains dividend verification.
+It does not enable `allow_unverified`, impute gaps or merge feeds. The manifest
+records checked symbols and excluded source failures in `coverage_audit` while
+preserving the original complete provenance. This allows an explicitly declared
+complete-case subset without pretending the original wider request succeeded.
 
 Calendar coverage includes sessions on or after the requested start and strictly
 before the end. Holiday and weekend endpoints are valid; they do not need to be
@@ -33,6 +43,9 @@ are recorded in the manifest and leave the default all-symbol, three-split behav
 unchanged. All training symbols still need valid training episodes; every scored
 symbol needs each requested evaluation split. See the
 [universe protocol](universe-expansion.md) for the current use of these options.
+The CLI exposes these as `--evaluation-symbols SYMBOL ...` and
+`--development-only`. The latter excludes test episodes entirely. No omitted
+test partition can later be treated as a fresh holdout after it was retired.
 
 `Normalizer` is a frozen dataclass containing ordered feature names, training means and population standard deviations. Continuous near-zero scales have a floor of 1e-8. Optional readiness/presence/freshness masks and issuer one-hot fields use fixed mean zero/scale one to preserve their binary contract. Fit rejects nonfinite/ragged matrices. Transform rejects name/order/length mismatch and nonfinite values; it has no update or partial-fit path. The same saved normalizer is used during validation, test and inference.
 
