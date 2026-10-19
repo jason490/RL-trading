@@ -98,6 +98,10 @@ at least two seeds passing both phases, and stock median excess no worse than
 -2 points. The aggregate stock median first averages each stock's excess across
 seeds; drawdown must not worsen by more than 2 points against holding. Positive
 development targets still require prospective confirmation before a success claim.
+The command also writes a standalone interactive HTML comparison of all six
+paired learning curves, incremental gains and drawdowns, using arm colors and
+seed line styles. Selected checkpoint scores remain separate in JSON; the last
+plotted record at 50k is the final post-update result.
 
 If unrelated engineering advances the main branch during this study, use an
 export of the original committed source for confirmation. Verify its package

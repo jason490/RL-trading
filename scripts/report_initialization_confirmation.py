@@ -60,6 +60,24 @@ def main():
             'confirmation':confirmation_gate(cells,candidate,protocol),'matched_contract':screen['matched_contract']}
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    from plotly.subplots import make_subplots
+    import plotly.graph_objects as go
+    figure=make_subplots(rows=3,cols=1,shared_xaxes=True,subplot_titles=(
+        'Development validation return (%) — final points are post-update',
+        'Change since previous checkpoint (percentage points)','Mean maximum drawdown (%)'))
+    for arm,color in zip(arms,('#2563eb','#059669')):
+        for seed,dash in zip(('11','23','37'),('solid','dash','dot')):
+            points=cells[arm][seed]['learning_curve'];name=f'{arm}, seed {seed}'
+            for row,key in ((1,'return_pct'),(2,'change_pp'),(3,'mean_max_drawdown_pct')):
+                figure.add_trace(go.Scatter(x=[p['steps'] for p in points],y=[p[key] for p in points],
+                    name=name,legendgroup=name,showlegend=row==1,mode='lines+markers',
+                    line={'color':color,'dash':dash}),row=row,col=1)
+    groups=cells['standard']['11']['final']['groups']
+    holding=100*sum(g['count']*g['buy_hold_return'] for g in groups.values())/sum(g['count'] for g in groups.values())
+    figure.add_hline(y=holding,row=1,col=1,line_dash='dash',annotation_text='Same-symbol buy-and-hold')
+    figure.update_layout(height=1000,title='Paired PPO initialization confirmation; selected scores remain separate in JSON')
+    figure.update_xaxes(title_text='Training transitions',row=3,col=1)
+    figure.write_html(str(args.output.with_suffix('.html')),include_plotlyjs=True)
     print(json.dumps(result['confirmation'],indent=2))
 
 
