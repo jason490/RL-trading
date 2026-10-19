@@ -53,7 +53,7 @@ def package(roots, output):
                 metadata=json.loads((run/'metadata.json').read_text())
                 if metadata.get('status')!='complete':
                     continue
-                catalog.append(metadata)
+                catalog.append({**metadata,'run_name':run.name})
                 bundle=root/'frozen'/metadata['bundle_id']
                 # Preserve the exact complete frozen directory/checksum file set.
                 allowed={'model.zip','manifest.json','checksums.json','requirements.lock',
@@ -67,7 +67,11 @@ def package(roots, output):
                 if not selected.exists():selected=run/'selected-validation-cpu.json'
                 if not selected.exists():continue
                 results=json.loads(selected.read_text())
-                title=html.escape(run.name)
+                variant=metadata.get('research_variant',metadata.get('initialization',{}).get('arm','standard'))
+                label=(f"{metadata.get('algorithm','unknown')} / {variant} / dataset {metadata.get('dataset','unknown')[:12]} / "
+                       f"seed {metadata.get('seed','unknown')} / {metadata.get('actual_steps','unknown')} steps / "
+                       +('smoke' if metadata.get('smoke') else 'research'))
+                title=html.escape(label)
                 page=['<!doctype html><meta charset="utf-8"><title>'+title+'</title>',
                       '<p><a href="../validation.html">All validation runs</a></p>',
                       '<h1>'+title+'</h1><p>Validation-selected model; separate symbol episodes.</p>']

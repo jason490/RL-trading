@@ -123,3 +123,9 @@ Declining-stock performance worsens and short-profit requirements remain unmet.
 The release is development evidence; it does not replace the registered shadow
 campaign or enable broker orders. Full limitations and checksums are recorded in
 [the results](../results/action-initialization-2026-10-19/README.md).
+
+Public validation indexes identify each model by algorithm, research variant,
+dataset prefix, seed, actual transitions and smoke/research status. The model
+catalog also records `run_name` to locate its archive/report folder. This keeps
+small smoke runs and models with different training universes distinguishable
+when a release contains multiple cells of the same algorithm and seed.

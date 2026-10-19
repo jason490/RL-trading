@@ -13,7 +13,9 @@ class PublicAssetTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)/'input';run=root/'runs/run';bundle=root/'frozen/id'
             run.mkdir(parents=True);bundle.mkdir(parents=True)
-            (run/'metadata.json').write_text(json.dumps({'status':'complete','bundle_id':'id'}))
+            (run/'metadata.json').write_text(json.dumps({'status':'complete','bundle_id':'id',
+                'algorithm':'ppo','research_variant':'wide:downtrend_balanced','dataset':'abcdef0123456789',
+                'seed':11,'actual_steps':512,'smoke':True}))
             (run/'best.zip').write_bytes(b'weights')
             (run/'replay.pkl').write_bytes(b'private features')
             (root/'bootstrap-log.txt').write_text('private runtime output')
@@ -30,6 +32,9 @@ class PublicAssetTests(unittest.TestCase):
             self.assertFalse(any('replay' in n or 'bootstrap' in n for n in names))
             self.assertNotIn('987654',(output/'validation.html').read_text())
             self.assertIn('validation/run.html',(output/'validation.html').read_text())
+            self.assertIn('wide:downtrend_balanced',(output/'validation.html').read_text())
+            self.assertIn('512 steps / smoke',(output/'validation.html').read_text())
+            self.assertEqual(json.loads((output/'model-catalog.json').read_text())[0]['run_name'],'run')
             self.assertNotIn('987654',(output/'validation/run.html').read_text())
             with tarfile.open(output/'validation-reports.tar.gz') as archive:
                 self.assertIn('validation.html',archive.getnames())
