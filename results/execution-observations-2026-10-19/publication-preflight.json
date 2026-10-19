@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "release_assets": 16,
+  "bundles": 6,
+  "exact_cpu_predictions": 468,
+  "research_transitions": 150000,
+  "smoke_transitions": 1536,
+  "confirmation_run": false,
+  "no_raw_bars_or_replay_in_model_archive": true,
+  "local_asset_checksums_verified": true,
+  "all_sessions_stopped": true,
+  "retired_test_evaluated": false,
+  "source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 1252,
+      "sha256": "a15ed8da7e3987493a25e0826024566114f6a1502ea2bea21313c0926c7a1518"
+    },
+    {
+      "name": "compute.json",
+      "size": 927,
+      "sha256": "0afea0ea7390cec543033c56574bacef61519552acb170ab7cae878a82d977c4"
+    },
+    {
+      "name": "frozen-checks.json",
+      "size": 6129,
+      "sha256": "45df60c0fd13b0bcaa3f1745ee499faa70007541fa2930b38f642435b09bb285"
+    },
+    {
+      "name": "learning-curves.html",
+      "size": 4775036,
+      "sha256": "646e0c353317ebbf145c1d9ab69f00d30ee9c024c2536ec8b74812de0411c54c"
+    },
+    {
+      "name": "legacy-screen-parity.json",
+      "size": 328,
+      "sha256": "030134c2ddc38b464f22c5409bd65be4c574d25788e830dd0e628b8faae201e0"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 582593,
+      "sha256": "695b4cccde7b0e2637d62f3c025031485433c661a38f388836f53e7d08cc902c"
+    },
+    {
+      "name": "per-symbol.csv",
+      "size": 42277,
+      "sha256": "c07ae79b2949a82363b8eadbac6ab0c880d4113ede581a09e8808a3547bf3578"
+    },
+    {
+      "name": "preflight.json",
+      "size": 1025,
+      "sha256": "a653b883af301ba4a62918df8cc7a527cc6588f4dc11feccc6ebbf065433c1ff"
+    },
+    {
+      "name": "protocol.json",
+      "size": 3460,
+      "sha256": "89bbd761f21bac767ff3a062d8570482a5cd7a5f534cdabfff8bbfa2c78fad6e"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 2336014,
+      "sha256": "a3db5affed456b286b48ae8b4c6e36667a2dcd31b6b6cdd4ac83453d6c1b2747"
+    },
+    {
+      "name": "screen.json",
+      "size": 41001,
+      "sha256": "58bac234425e0a9c43736e4b868bf37b73a0511268b364be56005702c1ea158e"
+    },
+    {
+      "name": "short-side.json",
+      "size": 20986,
+      "sha256": "ef992d7724f49381938422e3340ffdb9e26019538b723ab9d7763490a1d79c92"
+    },
+    {
+      "name": "smoke.json",
+      "size": 2748,
+      "sha256": "4a7248b8869d237adb8a361f5cf2adcc5dcaf4e7fd4452efe8d9519ec633a344"
+    },
+    {
+      "name": "study-README.md",
+      "size": 4622,
+      "sha256": "5ff42ac564ca3b1026847ee20966cec33dfc9c1c388263dceb24ecf204e9787d"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 4943028,
+      "sha256": "d65c836dbb5ca8ced9191dbdad6dce69402e42794a54409a1497eece64790597"
+    },
+    {
+      "name": "validation.html",
+      "size": 1465,
+      "sha256": "8e7350725df06ea70b6ff3b800780465096bbd3c3294a0f8469ed204bd46e549"
+    }
+  ]
+}

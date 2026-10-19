@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "prior_run": "20261019T125955-ppo-11-4b9172ef",
+  "new_run": "20261019T192733-ppo-11-70d5a74b",
+  "identical_tensors": {
+    "best": 13,
+    "latest": 13
+  },
+  "all_checkpoint_scores_equal": true,
+  "selected_score": 0.07962208424177526,
+  "final_score": 0.07962208424177526,
+  "trained_locally": false
+}

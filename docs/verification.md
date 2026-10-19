@@ -702,3 +702,20 @@ No retired test was evaluated. Training-only diagnostics and a synthetic
 execution-state aliasing witness are retained in the results folder. All 17 public assets match GitHub server SHA-256/size checks. Cleanup removed
 36 duplicate archives/markers (512.95 MiB logical), with all 160 retained artifact
 hashes unchanged. Raw data, models, reports, source export and ledger remain. [Full evidence](../results/causal-sampling-2026-10-19/README.md).
+
+## Execution-state observations — 2026-10-19
+
+Versioned legacy/masked/full inputs, frozen schema/model-shape checks and shared
+training/evaluation/shadow state construction are implemented. Full regression
+passed 214 tests; final profile/runtime additions passed 32 focused tests and
+the explicit audit fix passed ten profile/audit checks. Three CPU Colab smokes
+and three 50k PPO cells completed on Python 3.13.16. Legacy model tensors and
+all checkpoint scores exactly reproduce previous wide controls; six bundles
+pass 468 exact frozen predictions. All six owned sessions stopped.
+
+Full state returned 22.59% versus masked 15.81%, legacy 7.96% and holding 30.60%,
+but failed both control gates on ETF/drawdown constraints. No confirmation was
+run. All three declining stocks still have negative total policy returns despite
+positive short P&L. Conservative cumulative usage is 35.687823/150; the study
+charged 0.049487 units. This is development evidence only.
+[Full results and limits](../results/execution-observations-2026-10-19/README.md).

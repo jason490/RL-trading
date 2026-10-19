@@ -41,6 +41,12 @@ in the simulator. Flat accounts zero held protection/action flags; the unit
 share fraction remains informative. Invalid price/ATR or nonfinite state fails
 explicitly. The shared builder is `environment/observations/state.py`.
 
+Price units follow the immutable dataset contract. In the current Yahoo study,
+OHLC are retrospectively split-adjusted; the share-unit fraction therefore
+describes that research simulator, not reconstructed historical unadjusted
+execution prices. This feature does not resolve provider restatements or the
+universe's survivorship limitations.
+
 ## Frozen compatibility and evaluation
 
 New run metadata and frozen manifests record the ordered state schema, profile

@@ -1,0 +1,27 @@
+{
+  "project_start_units": 35.638335838194024,
+  "conservative_project_units": 35.687822780613104,
+  "study_conservative_units": 0.04948694241907958,
+  "study_measured_units": 0.01999999999998181,
+  "study_estimated_units": 0.04948694241907861,
+  "study_charged_units": 0.04948694241907861,
+  "remaining_project_units": 114.3121772193869,
+  "remaining_working_units": 94.3121772193869,
+  "study_limit_units": 2.0,
+  "budget_stopped": false,
+  "sessions_stopped": [
+    "rl-stocks-cpu-3c5ecdf0693e",
+    "rl-stocks-cpu-b250b60f758e",
+    "rl-stocks-cpu-df8013b150b9",
+    "rl-stocks-cpu-6eade161f20a",
+    "rl-stocks-cpu-0afe60e0ef6e",
+    "rl-stocks-cpu-f1d3053e5561"
+  ],
+  "all_cleanup_verified": true,
+  "latest_account_balance": 350.73,
+  "latest_account_rate": 0.0,
+  "latest_active_assignments": 0,
+  "measured_and_estimated_not_added": true,
+  "initial_account_balance": 350.77,
+  "rounded_balance_change_units": 0.04
+}

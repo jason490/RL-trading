@@ -677,7 +677,7 @@ Full acceptance passes 207 tests. Seventeen GitHub asset hashes/sizes are verifi
 36 duplicates (512.95 MiB logical) were removed with 160 retained hashes unchanged. See [results](results/causal-sampling-2026-10-19/README.md) and
 [methodology](docs/training-sampling.md).
 
-## 26. Versioned execution observations — implemented; matched Colab study pending
+## 26. Versioned execution observations — complete, failed promotion
 
 A synthetic witness proves that the current 12-value observation can alias two
 states with different held protection and different next-step outcomes. Expose
@@ -701,3 +701,22 @@ regression: 214 tests passed before the final protocol tests; the additional
 strict remote-plan and dual-control gate checks are run separately. The declared
 three-arm protocol preserves actions/rewards and permits confirmation only after
 full beats both controls. See [execution observations](docs/execution-observations.md).
+
+The three-arm seed-11 50k Colab screen completed: full 22.59%, masked 15.81%,
+legacy 7.96%, holding 30.60%. Full failed ETF/drawdown constraints against the
+controls, so confirmation was not run. Declining-stock total returns remain
+negative despite positive short contributions. Six bundles pass 468 exact
+frozen predictions; six owned sessions stopped, project 35.687823/150.
+See [results](results/execution-observations-2026-10-19/README.md).
+
+## 27. Universal direction-filter replay — planned, not yet run
+
+Use fixed selected/final policies from the completed three-profile study. Replay
+universal long-only and short-only exposure filters on every validation symbol,
+retaining original protective components and recomputing observations along the
+counterfactual path. Report all-symbol stock/ETF results and reconciled short
+P&L; negative-holding labels remain reporting-only and never activate a filter.
+No checkpoint selection, fitting, training or Colab allocation. Establish whether
+profitable short contributions survive removal of long trades before proposing
+a direction-specialist or entry-gating experiment. Preserve original reports,
+weights, normalization and retired-test isolation.
