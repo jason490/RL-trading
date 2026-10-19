@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "protocol_sha256": "b4e381d7fd1c6a44c98799ccc2455248511ecd4490ede6707df6f368331555c1",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "train_episodes": 26,
+  "validation_episodes": 26,
+  "no_test_episodes": true,
+  "parameters": {
+    "native": {
+      "parameter_count": 11465,
+      "active_action_head_connections": 256,
+      "observation_shape": [
+        21
+      ],
+      "architecture": {
+        "version": 1,
+        "variant": "native"
+      }
+    },
+    "two_branch_unmasked": {
+      "parameter_count": 16393,
+      "active_action_head_connections": 512,
+      "observation_shape": [
+        21
+      ],
+      "architecture": {
+        "version": 1,
+        "variant": "two_branch_unmasked",
+        "market_features": 7,
+        "actor_branches": [
+          "market",
+          "full_observation"
+        ],
+        "exposure_reads_account": true,
+        "risk_reads_account": true,
+        "critic_reads_account": true
+      }
+    },
+    "two_branch_market_exposure": {
+      "parameter_count": 16393,
+      "active_action_head_connections": 448,
+      "observation_shape": [
+        21
+      ],
+      "architecture": {
+        "version": 1,
+        "variant": "two_branch_market_exposure",
+        "market_features": 7,
+        "actor_branches": [
+          "market",
+          "full_observation"
+        ],
+        "exposure_reads_account": false,
+        "risk_reads_account": true,
+        "critic_reads_account": true
+      }
+    }
+  },
+  "branch_initial_tensors_equal_except_mask": true,
+  "local_python": "3.13.16",
+  "offline_tests_passed": 237,
+  "source": {
+    "source_revision": "4b05a6aba75a16d55c111c8165b83518a8c71ad7",
+    "source_hash": "a57b2e1da32631a91823bd26feb147267f4e9057947579f2d6971bfb09e8cbf0",
+    "source_archive_sha256": "b377bd4aef2132ce5a7a6059ce866dcf2966707e53a637653b0273f8cc61e610",
+    "shared_original_ledger_and_lock_verified": true,
+    "root": "/home/vibe/projects/rl-stocks/.runtime/exposure-head-source",
+    "sessions_allocated": 0
+  },
+  "starting_project_units": 35.687822780613104,
+  "maximum_incremental_units": 2.0,
+  "usage_before_allocation": {
+    "balance": 350.73,
+    "rate": 0.0,
+    "active_assignments": 0
+  },
+  "research_training_performed_locally": false
+}
