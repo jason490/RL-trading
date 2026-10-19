@@ -23,9 +23,10 @@ def audit(roots, universe, data_root):
         if matched is not None and contract != matched:
             raise ValueError('dataset, simulation and requested steps must match')
         matched = contract
-        identity = (metadata['algorithm'], metadata['seed'])
+        variant = metadata.get('initialization', {}).get('arm', 'standard')
+        identity = (metadata['algorithm'], variant, metadata['seed'])
         if identity in seen:
-            raise ValueError('duplicate algorithm/seed; pass one matched study only')
+            raise ValueError('duplicate algorithm/variant/seed; pass one matched study only')
         seen.add(identity)
         dataset_id = metadata['dataset']
         if dataset_id not in datasets:
@@ -40,27 +41,28 @@ def audit(roots, universe, data_root):
                 episode = dataset['episodes'][key]
                 result['directional'] = directional_attribution(
                     episode, result['rows'], result['events'], metadata['simulation']['initial_equity'])
-                records.append({'algorithm': metadata['algorithm'], 'seed': metadata['seed'],
+                records.append({'algorithm': metadata['algorithm'], 'variant': variant, 'seed': metadata['seed'],
                                 'phase': phase, 'symbol': result['symbol'],
                                 'kind': 'stock' if result['symbol'] in stocks else 'etf',
                                 'policy_return': result['metrics']['net_return'],
                                 'buy_hold_return': result['baselines']['buy_hold']['metrics']['net_return'],
                                 **result['directional']})
-            runs.append({'algorithm': metadata['algorithm'], 'seed': metadata['seed'],
+            runs.append({'algorithm': metadata['algorithm'], 'variant': variant, 'seed': metadata['seed'],
                          'phase': phase, 'dataset': dataset_id,
                          'requested_steps': metadata['requested_steps'],
                          'source_report_sha256': checksum(path),
                          'declining_stocks': declining_stock_summary(results, stocks)})
-    seed_sets = [{r['seed'] for r in runs if r['algorithm'] == algorithm}
-                 for algorithm in {r['algorithm'] for r in runs}]
+    families = {(r['algorithm'], r['variant']) for r in runs}
+    seed_sets = [{r['seed'] for r in runs if (r['algorithm'], r['variant']) == family}
+                 for family in families]
     if any(seeds != seed_sets[0] for seeds in seed_sets):
         raise ValueError('matched seed sets required')
     summaries = []
-    for algorithm in sorted({r['algorithm'] for r in runs}):
+    for algorithm, variant in sorted(families):
         for phase in ('selected', 'final'):
-            group = [r for r in runs if r['algorithm'] == algorithm and r['phase'] == phase]
+            group = [r for r in runs if r['algorithm'] == algorithm and r['variant'] == variant and r['phase'] == phase]
             cells = [r for g in group for r in g['declining_stocks']['records']]
-            summaries.append({'algorithm': algorithm, 'phase': phase,
+            summaries.append({'algorithm': algorithm, 'variant': variant, 'phase': phase,
                               'seeds': sorted(g['seed'] for g in group),
                               'stock_seed_observations': len(cells),
                               'positive_policy_and_short_pnl_count': sum(r['positive_policy_and_short_pnl'] for r in cells),

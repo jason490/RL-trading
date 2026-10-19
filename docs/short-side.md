@@ -57,8 +57,11 @@ PYTHONPATH=src .venv/bin/python scripts/audit_short_side.py \
 
 Pass explicit run folders containing `metadata.json`, `selected-validation.json`
 and `validation.json`. Dataset, simulation, transition budget and algorithm seed
-sets must match. Local immutable datasets must still be available. The command
-rejects test reports and duplicate algorithm/seed cells. `summary.json` preserves
+sets must match for each algorithm/initialization variant. Variants remain
+separate even when algorithm and seed are identical; older runs without an
+initialization field are labeled `standard`. Local immutable datasets must
+still be available. The command rejects test reports, unpaired seed sets and
+duplicate algorithm/variant/seed cells. `summary.json` preserves
 source report checksums; `per-symbol.csv` includes all stock/ETF rows and kinds.
 Selected and final weights remain separate.
 
