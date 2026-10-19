@@ -1,0 +1,11 @@
+{
+  "first_difference_session": "2023-05-30",
+  "same_previous_equity": true,
+  "actual_action": 0.7493364214897156,
+  "reference_action": 0.7493365406990051,
+  "actual_fractional_target": 712.9999576287051,
+  "reference_fractional_target": 713.0000710573547,
+  "actual_decoded_quantity": 712,
+  "reference_decoded_quantity": 713,
+  "filtered_cases_evaluated_for_seed37": 0
+}

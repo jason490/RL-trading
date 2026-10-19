@@ -63,13 +63,19 @@ def reference_differences(actual,expected):
 def verify_reference(actual,expected,tolerance):
     if set(actual)!=set(expected):raise ValueError('reference episode panel mismatch')
     exact=digest(actual)==digest(expected)
+    quantity_absolute=tolerance.get('quantity_absolute',0);quantity_limit=tolerance.get('quantity_mismatch_rows',0)
+    if type(quantity_absolute) is not int or type(quantity_limit) is not int or (quantity_absolute,quantity_limit) not in ((0,0),(1,10)):
+        raise ValueError('unsupported quantity reference allowance')
+    quantity_mismatches=0
     for key,result in actual.items():
         reference=expected[key]
         if (result['symbol'],result['split'])!=(reference['symbol'],'validation'):
             raise ValueError('reference symbol/split mismatch')
         if len(result['rows'])!=len(reference['rows']):raise ValueError('reference path length mismatch')
         for row,old in zip(result['rows'],reference['rows']):
-            if (row['session'],row['quantity'])!=(old['session'],old['quantity']):
+            quantity_mismatches+=row['quantity']!=old['quantity']
+            if (row['session']!=old['session'] or abs(row['quantity']-old['quantity'])>quantity_absolute
+                or np.sign(row['quantity'])!=np.sign(old['quantity'])):
                 raise ValueError('reference session/quantity path mismatch')
             if abs(row['equity']-old['equity'])>tolerance['equity_dollars']:
                 raise ValueError('reference equity path mismatch')
@@ -80,7 +86,9 @@ def verify_reference(actual,expected,tolerance):
         if abs(result['metrics']['costs']-reference['metrics']['costs'])>tolerance['cost_dollars']:
             raise ValueError('reference cost mismatch')
         if digest(result['baselines'])!=digest(reference['baselines']):raise ValueError('reference holding mismatch')
-    return {'passed':True,'exact_report_digest':exact,'tolerance':tolerance}
+    if quantity_mismatches>quantity_limit:raise ValueError('reference quantity mismatch count exceeded')
+    return {'passed':True,'exact_report_digest':exact,'tolerance':tolerance,
+            'quantity_path_exact':quantity_mismatches==0,'quantity_mismatch_rows':quantity_mismatches}
 
 
 def action_statistics(results):

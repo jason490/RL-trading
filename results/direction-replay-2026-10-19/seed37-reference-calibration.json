@@ -1,0 +1,438 @@
+{
+  "status": "calibrated",
+  "protocol_sha256": "f422a15fdf6f6124ac937f3b80e4460137c6c99fcc7c8931eea88a46b343de2d",
+  "source": {
+    "revision": {
+      "revision": "d303c12ce2659589c79b7431e26d6e24e9cb5e1d",
+      "dirty": ""
+    },
+    "source_hash": "657f3dae692d2373250fbd9514c83c642bb6b484506db52b774c246953881ea9"
+  },
+  "source_run_contract": {
+    "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+    "simulation": {
+      "initial_equity": 100000.0,
+      "fee_bps": 1.0,
+      "impact_bps": 2.0,
+      "borrow_rate": 0.03,
+      "max_holding": 20,
+      "allow_short": true,
+      "exposure_cap": 1.0
+    },
+    "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.8.0",
+      "gymnasium": "1.2.0",
+      "stable-baselines3": "2.7.0",
+      "sb3-contrib": "2.7.0",
+      "pandas": "2.3.2",
+      "plotly": "6.3.0"
+    },
+    "resolved_parameters": {
+      "n_steps": 1000,
+      "batch_size": 50,
+      "n_epochs": 10,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "policy_kwargs": {
+        "net_arch": [
+          64,
+          64
+        ]
+      }
+    },
+    "initialization": {
+      "arm": "wide",
+      "applied": true,
+      "protective_mean_bias": 0.75,
+      "log_std": 0.0,
+      "exposure_mean_bias": 0.0,
+      "action_weights": "unchanged seeded native weights"
+    },
+    "start_sampling": {
+      "mode": "legacy_uniform"
+    }
+  },
+  "reference_only": true,
+  "source_seed": 37,
+  "training_performed": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "cells": [
+    {
+      "profile": "legacy",
+      "seed": 37,
+      "phase": "selected",
+      "mode": "unrestricted",
+      "run": "20261019T132047-ppo-37-1d78f46f",
+      "weights_sha256": "3714bf316362e2baf953bbabb2e2a7c04a9e329ecfbced0416094183e361e47b",
+      "policy_fingerprint": "63106ec451712eebfe06824cb123cd12968e2678cb3832a02f7af0e5581fbd5b",
+      "metrics": {
+        "score": 0.1569426426145632,
+        "mean_max_drawdown": -0.28640744534448287,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.17564396386038295,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.15062150558445528,
+            "median_excess_return": -0.10554223363487475,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.2861561334509429
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.05408537576255468,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.14057484066122417,
+            "median_excess_return": -0.14680966111241134,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.28778966075895285
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.4853388878179359,
+          "AMT": 0.16239706173442747,
+          "AMZN": 0.23576810691330485,
+          "APD": -0.11191113745631343,
+          "BAC": 0.29571511396596195,
+          "CAT": -0.08711696572973904,
+          "CVX": -0.5989872616590528,
+          "DIS": 0.1399177518272101,
+          "DUK": -0.1732080921885676,
+          "GOOGL": -0.3156374985653172,
+          "HD": -0.04855232842912938,
+          "HON": -0.2214367779383779,
+          "JNJ": 0.01099061463363471,
+          "JPM": -0.09917332981343607,
+          "KO": -0.015564161693743417,
+          "LIN": -0.3585742811144923,
+          "MSFT": -0.5247096288673188,
+          "NEE": 0.06649173914696194,
+          "PG": -0.15858887946442657,
+          "PLD": 0.36010521320244115,
+          "UNH": -0.2784966975783092,
+          "XOM": -1.107762795965799
+        }
+      },
+      "declining_stocks": {
+        "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+        "count": 3,
+        "positive_policy_and_short_pnl_count": 0,
+        "records": [
+          {
+            "episode": "AMZN-validation-0",
+            "symbol": "AMZN",
+            "policy_return": 0.15842010437465426,
+            "buy_hold_return": -0.0773480025386506,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": 24228.988060707823,
+            "short_net_pnl": -8386.977623242226,
+            "long_return_contribution": 0.24228988060707823,
+            "short_return_contribution": -0.08386977623242227,
+            "long_costs": 6558.484236960586,
+            "short_costs": 1315.0343859376035,
+            "long_active_sessions": 701,
+            "short_active_sessions": 142,
+            "sessions": 732,
+            "max_equity_reconciliation_error": 1.709850039333105e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          },
+          {
+            "episode": "DIS-validation-0",
+            "symbol": "DIS",
+            "policy_return": -0.3338836532024382,
+            "buy_hold_return": -0.4738014050296483,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": -32738.108848881442,
+            "short_net_pnl": -650.2564713623669,
+            "long_return_contribution": -0.3273810884888144,
+            "short_return_contribution": -0.0065025647136236694,
+            "long_costs": 4962.889074924646,
+            "short_costs": 481.77733012700185,
+            "long_active_sessions": 721,
+            "short_active_sessions": 92,
+            "sessions": 732,
+            "max_equity_reconciliation_error": 9.458744898438454e-11,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          },
+          {
+            "episode": "NEE-validation-0",
+            "symbol": "NEE",
+            "policy_return": -0.07981616573030492,
+            "buy_hold_return": -0.14630790487726686,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": -10964.42607587509,
+            "short_net_pnl": 2982.8095028447788,
+            "long_return_contribution": -0.1096442607587509,
+            "short_return_contribution": 0.029828095028447788,
+            "long_costs": 5512.253165519173,
+            "short_costs": 504.73430895331364,
+            "long_active_sessions": 724,
+            "short_active_sessions": 53,
+            "sessions": 732,
+            "max_equity_reconciliation_error": 1.8189894035458565e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          }
+        ]
+      },
+      "action_statistics": {
+        "weighting": "session-weighted across all validation episodes",
+        "sessions": 19032,
+        "requested_long_fraction": 0.9608028583438419,
+        "requested_short_fraction": 0.03919714165615805,
+        "blocked_signal_fraction": 0,
+        "end_long_fraction": 0.9230769230769231,
+        "end_short_fraction": 0.03914459857082808,
+        "mean_absolute_end_exposure": 0.7698491743097196
+      },
+      "mean_costs": 6154.568883592865,
+      "mean_turnover": 202.4140682332571,
+      "unrestricted_parity": {
+        "passed": false,
+        "differences": {
+          "panel_matches": true,
+          "row_counts_match": true,
+          "session_mismatch_rows": 0,
+          "quantity_mismatch_rows": 2,
+          "position_sign_mismatch_rows": 0,
+          "maximum_quantity_difference": 1,
+          "maximum_equity_difference_dollars": 0.9931518166558817,
+          "maximum_action_difference": 0.0004596412181854248,
+          "maximum_return_difference": 8.385447488823417e-06,
+          "maximum_drawdown_difference": 1.7448371636419324e-09,
+          "maximum_cost_difference_dollars": 0.011468984006569372,
+          "quantity_examples": [
+            {
+              "episode": "AMZN-validation-0",
+              "session": "2023-05-30",
+              "actual": 712,
+              "reference": 713,
+              "equity_difference": 0.7467125326948008
+            },
+            {
+              "episode": "AMZN-validation-0",
+              "session": "2023-08-04",
+              "actual": 609,
+              "reference": 608,
+              "equity_difference": -0.5391592381783994
+            }
+          ]
+        },
+        "error": "reference session/quantity path mismatch"
+      },
+      "report": "reports/legacy-selected-unrestricted.json.gz",
+      "report_sha256": "dc0b6807afacbbcc503edb02bbaf18aedfcd3c568bf37b13208dcc36c9fccb36",
+      "reused_evaluation_from": null
+    },
+    {
+      "profile": "legacy",
+      "seed": 37,
+      "phase": "final",
+      "mode": "unrestricted",
+      "run": "20261019T132047-ppo-37-1d78f46f",
+      "weights_sha256": "be4336a5f0e860ff7922ac6ccfec5c94b40ad0516abbedb102d0732b78437631",
+      "policy_fingerprint": "e0bb7079468e9253cc1f325e91ee5bec5febfb995cf0165c35c333047822e5eb",
+      "metrics": {
+        "score": 0.14979563402504764,
+        "mean_max_drawdown": -0.2855779203198615,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.1685562551363397,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.15770921430849852,
+            "median_excess_return": -0.10971074888177212,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.28448324741325703
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.04661221791294132,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.14804799851083753,
+            "median_excess_return": -0.1539272694332574,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.2915986213061863
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.5127023226919682,
+          "AMT": 0.13975909933668795,
+          "AMZN": 0.15705488923820887,
+          "APD": -0.179470990256265,
+          "BAC": 0.32367942049425236,
+          "CAT": -0.010596157109039828,
+          "CVX": -0.6298055829348306,
+          "DIS": 0.15639813815186454,
+          "DUK": -0.18149918374194207,
+          "GOOGL": -0.3038536232357998,
+          "HD": -0.03442559487363228,
+          "HON": -0.20246531845487947,
+          "JNJ": -0.014327441734673485,
+          "JPM": -0.07367480139596183,
+          "KO": -0.011879487764005825,
+          "LIN": -0.355568005663802,
+          "MSFT": -0.5762438049919314,
+          "NEE": 0.07534528936732965,
+          "PG": -0.14574669636758242,
+          "PLD": 0.39337773434741585,
+          "UNH": -0.3718155770050531,
+          "XOM": -1.1111426975013596
+        }
+      },
+      "declining_stocks": {
+        "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+        "count": 3,
+        "positive_policy_and_short_pnl_count": 0,
+        "records": [
+          {
+            "episode": "AMZN-validation-0",
+            "symbol": "AMZN",
+            "policy_return": 0.07970688669955828,
+            "buy_hold_return": -0.0773480025386506,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": 16092.31637180454,
+            "short_net_pnl": -8121.627701848804,
+            "long_return_contribution": 0.1609231637180454,
+            "short_return_contribution": -0.08121627701848803,
+            "long_costs": 5929.843972847294,
+            "short_costs": 1079.925309270724,
+            "long_active_sessions": 698,
+            "short_active_sessions": 140,
+            "sessions": 732,
+            "max_equity_reconciliation_error": 1.6189005691558123e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          },
+          {
+            "episode": "DIS-validation-0",
+            "symbol": "DIS",
+            "policy_return": -0.31740326687778375,
+            "buy_hold_return": -0.4738014050296483,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": -30581.357117222622,
+            "short_net_pnl": -1158.9695705558297,
+            "long_return_contribution": -0.30581357117222624,
+            "short_return_contribution": -0.011589695705558296,
+            "long_costs": 4950.81223187666,
+            "short_costs": 444.6800731803292,
+            "long_active_sessions": 712,
+            "short_active_sessions": 94,
+            "sessions": 732,
+            "max_equity_reconciliation_error": 1.418811734765768e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          },
+          {
+            "episode": "NEE-validation-0",
+            "symbol": "NEE",
+            "policy_return": -0.07096261550993721,
+            "buy_hold_return": -0.14630790487726686,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": -10153.990825705696,
+            "short_net_pnl": 3057.7292747119936,
+            "long_return_contribution": -0.10153990825705696,
+            "short_return_contribution": 0.030577292747119938,
+            "long_costs": 5406.806070809073,
+            "short_costs": 481.06416706050766,
+            "long_active_sessions": 718,
+            "short_active_sessions": 57,
+            "sessions": 732,
+            "max_equity_reconciliation_error": 1.0368239600211382e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          }
+        ]
+      },
+      "action_statistics": {
+        "weighting": "session-weighted across all validation episodes",
+        "sessions": 19032,
+        "requested_long_fraction": 0.9590689365279529,
+        "requested_short_fraction": 0.04093106347204708,
+        "blocked_signal_fraction": 0,
+        "end_long_fraction": 0.9208701134930644,
+        "end_short_fraction": 0.040720891130727195,
+        "mean_absolute_end_exposure": 0.7682497456824593
+      },
+      "mean_costs": 6130.4211053408435,
+      "mean_turnover": 201.727587491907,
+      "unrestricted_parity": {
+        "passed": true,
+        "exact_report_digest": false,
+        "tolerance": {
+          "return_absolute": 1e-06,
+          "equity_dollars": 0.1,
+          "cost_dollars": 0.01,
+          "action_absolute": 2e-06,
+          "sessions_and_quantities": "exact"
+        },
+        "differences": {
+          "panel_matches": true,
+          "row_counts_match": true,
+          "session_mismatch_rows": 0,
+          "quantity_mismatch_rows": 0,
+          "position_sign_mismatch_rows": 0,
+          "maximum_quantity_difference": 0,
+          "maximum_equity_difference_dollars": 0.0006533371924888343,
+          "maximum_action_difference": 3.5762786865234375e-07,
+          "maximum_return_difference": 6.533371843531199e-09,
+          "maximum_drawdown_difference": 5.359473642663204e-09,
+          "maximum_cost_difference_dollars": 1.9604613044066355e-07,
+          "quantity_examples": []
+        }
+      },
+      "report": "reports/legacy-final-unrestricted.json.gz",
+      "report_sha256": "12d84f682e1c7d13455b556683927296f595a9a706827d410968c0d32690b12c",
+      "reused_evaluation_from": null
+    }
+  ],
+  "failed_case": {
+    "profile": "legacy",
+    "phase": "selected",
+    "mode": "unrestricted",
+    "report": "reports/legacy-selected-unrestricted.json.gz",
+    "report_sha256": "dc0b6807afacbbcc503edb02bbaf18aedfcd3c568bf37b13208dcc36c9fccb36",
+    "reference_differences": {
+      "panel_matches": true,
+      "row_counts_match": true,
+      "session_mismatch_rows": 0,
+      "quantity_mismatch_rows": 2,
+      "position_sign_mismatch_rows": 0,
+      "maximum_quantity_difference": 1,
+      "maximum_equity_difference_dollars": 0.9931518166558817,
+      "maximum_action_difference": 0.0004596412181854248,
+      "maximum_return_difference": 8.385447488823417e-06,
+      "maximum_drawdown_difference": 1.7448371636419324e-09,
+      "maximum_cost_difference_dollars": 0.011468984006569372,
+      "quantity_examples": [
+        {
+          "episode": "AMZN-validation-0",
+          "session": "2023-05-30",
+          "actual": 712,
+          "reference": 713,
+          "equity_difference": 0.7467125326948008
+        },
+        {
+          "episode": "AMZN-validation-0",
+          "session": "2023-08-04",
+          "actual": 609,
+          "reference": 608,
+          "equity_difference": -0.5391592381783994
+        }
+      ]
+    },
+    "error": "reference session/quantity path mismatch"
+  },
+  "validation_baseline_sha256": "a361016bca2ed9ad2b9262b7fff12b4065a40f446a3f4d0a95361635f338f493",
+  "source_artifacts_unchanged": true,
+  "unique_replays": 2,
+  "objective_achieved": false
+}

@@ -126,3 +126,26 @@ def test_reference_diagnostics_measure_discrete_drift_without_relaxing_gate():
     assert d['session_mismatch_rows']==0 and d['maximum_action_difference']==0
     assert d['quantity_examples'][0]['session']==row['session']
     with pytest.raises(ValueError):module['verify_reference'](altered,results,{'equity_dollars':.1,'action_absolute':2e-6,'return_absolute':1e-6,'cost_dollars':.01})
+
+
+def test_declared_one_share_bridge_is_bounded_and_cannot_change_position_sign():
+    import runpy
+    verify=runpy.run_path('scripts/replay_directions.py')['verify_reference']
+    results=evaluate(AccountAware(),fixture());altered=deepcopy(results)
+    tolerance={'equity_dollars':2.,'action_absolute':.001,'return_absolute':2e-5,'cost_dollars':.05,
+               'quantity_absolute':1,'quantity_mismatch_rows':10}
+    altered['SPY/validation']['rows'][0]['quantity']+=1
+    assert verify(altered,results,tolerance)['quantity_mismatch_rows']==1
+    assert not verify(altered,results,tolerance)['quantity_path_exact']
+    altered['SPY/validation']['rows'][0]['quantity']+=1
+    with pytest.raises(ValueError):verify(altered,results,tolerance)
+    for key,value in (('quantity_absolute',2),('quantity_mismatch_rows',100),('quantity_absolute',True)):
+        with pytest.raises(ValueError):verify(results,results,{**tolerance,key:value})
+    base=deepcopy(results);base['SPY/validation']['rows']=[deepcopy(results['SPY/validation']['rows'][0]) for _ in range(11)]
+    altered=deepcopy(base)
+    for row in altered['SPY/validation']['rows']:row['quantity']+=1
+    with pytest.raises(ValueError,match='count exceeded'):verify(altered,base,tolerance)
+
+    base=deepcopy(results);base["SPY/validation"]["rows"][0]["quantity"]=1
+    altered=deepcopy(base);altered["SPY/validation"]["rows"][0]["quantity"]=0
+    with pytest.raises(ValueError):verify(altered,base,tolerance)

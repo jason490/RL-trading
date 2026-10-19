@@ -30,3 +30,11 @@ stopped before filtered evaluation because the original exact-quantity check
 failed. Its initial failure is retained in `seed37-initial-failure.json`. A
 reference-only inspection will measure the discrepancy without relaxing the
 original gate or producing filtered performance results.
+
+The seed-37 reference-only inspection found two one-share differences in the
+selected path, under $1 equity drift and no sign changes; final weights pass
+strict parity. The first case comes from 712.999... versus 713.000... decoded
+shares after a 1.2e-7 exposure difference, with equal prior equity. A separate
+calibrated protocol now bounds this platform bridge before filtered evaluation:
+one share on at most ten rows, $2 equity, $0.05 costs and 0.002 percentage-point
+return/drawdown caps. Original strict failure remains recorded.

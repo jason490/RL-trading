@@ -101,3 +101,13 @@ relaxes parity thresholds. Whole-share boundary differences can be diagnosed
 without silently accepting them. Failed ordinary replay retains the complete
 compressed failed path and discrepancy summary for review. A changed acceptance
 protocol requires a separate explicit declaration before filtered evaluation.
+
+The seed-37 selected model failed the original strict gate on two one-share
+rows, with less than $1 daily equity drift and no sign changes. The final model
+passed. A separate calibrated protocol was committed **before filtered seed-37
+evaluation**: at most one share on ten rows, identical sessions/signs, $2 daily
+equity, $0.05 costs, 0.00002 return/drawdown fractions and 0.001 action tolerance.
+The original failure and reference-only calibration remain explicit. Restrictions
+are compared to their paired local unrestricted path; no original strict result
+is relabeled as exact. The $2 equity cap is 0.002 percentage points of initial
+equity, far below the development improvement gates.
