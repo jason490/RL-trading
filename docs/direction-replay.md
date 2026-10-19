@@ -111,3 +111,14 @@ The original failure and reference-only calibration remain explicit. Restriction
 are compared to their paired local unrestricted path; no original strict result
 is relabeled as exact. The $2 equity cap is 0.002 percentage points of initial
 equity, far below the development improvement gates.
+
+## Paired three-seed report
+
+`report_direction_replay.py` accepts the completed initial-profile, seed-23 and
+calibrated seed-37 artifact roots in that order and writes a paired legacy-model
+summary, CSV and interactive chart. It requires committed reporter/inputs,
+matching training configuration and holding paths, identical phase weights across
+filters, all three seeds, checked source reports and the seed-11 tensor bridge.
+It validates profitable-short flags against total return and short P&L instead
+of trusting a supplied success count. Seed 37's original strict failure remains
+explicit. All modes remain in the report; the reporter never promotes a strategy.
