@@ -36,6 +36,30 @@ def policy_fingerprint(model):
     return h.hexdigest()
 
 
+def reference_differences(actual,expected):
+    result={'panel_matches':set(actual)==set(expected),'row_counts_match':True,
+            'session_mismatch_rows':0,'quantity_mismatch_rows':0,'position_sign_mismatch_rows':0,
+            'maximum_quantity_difference':0,'maximum_equity_difference_dollars':0.,
+            'maximum_action_difference':0.,'maximum_return_difference':0.,
+            'maximum_drawdown_difference':0.,'maximum_cost_difference_dollars':0.,'quantity_examples':[]}
+    for key in sorted(set(actual)&set(expected)):
+        new,old=actual[key],expected[key]
+        result['row_counts_match'] &= len(new['rows'])==len(old['rows'])
+        for metric,out in (('net_return','maximum_return_difference'),('max_drawdown','maximum_drawdown_difference'),('costs','maximum_cost_difference_dollars')):
+            result[out]=max(result[out],abs(new['metrics'][metric]-old['metrics'][metric]))
+        for a,b in zip(new['rows'],old['rows']):
+            result['session_mismatch_rows']+=a['session']!=b['session']
+            difference=abs(a['quantity']-b['quantity'])
+            result['quantity_mismatch_rows']+=difference!=0
+            result['position_sign_mismatch_rows']+=int(np.sign(a['quantity'])!=np.sign(b['quantity']))
+            result['maximum_quantity_difference']=max(result['maximum_quantity_difference'],difference)
+            result['maximum_equity_difference_dollars']=max(result['maximum_equity_difference_dollars'],abs(a['equity']-b['equity']))
+            result['maximum_action_difference']=max(result['maximum_action_difference'],max(abs(x-y) for x,y in zip(a['raw_action'],b['raw_action'])))
+            if difference and len(result['quantity_examples'])<10:
+                result['quantity_examples'].append({'episode':key,'session':a['session'],'actual':a['quantity'],'reference':b['quantity'],'equity_difference':a['equity']-b['equity']})
+    return result
+
+
 def verify_reference(actual,expected,tolerance):
     if set(actual)!=set(expected):raise ValueError('reference episode panel mismatch')
     exact=digest(actual)==digest(expected)
@@ -97,7 +121,7 @@ def validate_protocol(protocol):
         raise ValueError('unsupported fixed replay protocol')
 
 
-def replay(protocol_path,state_path,output,data_root):
+def replay(protocol_path,state_path,output,data_root,reference_only=False):
     protocol_path,state_path,output,data_root=map(Path,(protocol_path,state_path,output,data_root))
     protocol=json.loads(protocol_path.read_text());root=Path(__file__).resolve().parents[1]
     revision=repository_state(root)
@@ -144,7 +168,7 @@ def replay(protocol_path,state_path,output,data_root):
     output.mkdir(parents=True,exist_ok=False);(output/'reports').mkdir()
     source={'revision':revision,'source_hash':source_identity()}
     started={'status':'running','protocol_sha256':digest(protocol),'source':source,'source_run_contract':contract,
-             'source_seed':protocol['source_seed'],'training_performed':False,'test_evaluated':False,'colab_allocated':False,'cells':[]}
+             'reference_only':reference_only,'source_seed':protocol['source_seed'],'training_performed':False,'test_evaluated':False,'colab_allocated':False,'cells':[]}
     target=output/'summary.json';target.write_text(json.dumps(started,indent=2)+'\n')
     cells,records,baseline_hash=[],[],None;torch.set_num_threads(1)
     try:
@@ -153,23 +177,37 @@ def replay(protocol_path,state_path,output,data_root):
             for phase,weights,reference in (('selected','best.zip','selected-validation.json'),('final','latest.zip','validation.json')):
                 model=frozen._model if phase=='selected' else CLASSES['ppo'].load(path.parent/weights,device='cpu')
                 model.policy.set_training_mode(False);fingerprint=policy_fingerprint(model)
-                for mode in protocol['modes']:
+                for mode in (['unrestricted'] if reference_only else protocol['modes']):
                     key=(fingerprint,mode)
                     if key in cache:
                         previous,results=cache[key]
                         cell={**previous,'phase':phase,'weights_sha256':checksum(path.parent/weights),
                               'reused_evaluation_from':previous['phase']}
                         if mode=='unrestricted':
-                            cell['unrestricted_parity']=verify_reference(results,json.loads((path.parent/reference).read_text()),protocol['parity_tolerance'])
+                            expected=json.loads((path.parent/reference).read_text())
+                            try:cell['unrestricted_parity']={**verify_reference(results,expected,protocol['parity_tolerance']),'differences':reference_differences(results,expected)}
+                            except (ValueError,AssertionError) as error:
+                                if not reference_only:raise
+                                cell['unrestricted_parity']={'passed':False,'differences':reference_differences(results,expected),'error':str(error)}
                     else:
                         results=evaluate(model,dataset,config=SimulationConfig(**meta['simulation']),
                                          observation_profile=profile,exposure_mode=mode)
                         panel_hash=digest({k:r['baselines'] for k,r in results.items()})
                         if baseline_hash is not None and baseline_hash!=panel_hash:raise ValueError('baseline drift')
                         baseline_hash=panel_hash
-                        parity=verify_reference(results,json.loads((path.parent/reference).read_text()),protocol['parity_tolerance']) if mode=='unrestricted' else None
                         report=output/'reports'/f'{profile}-{phase}-{mode}.json.gz'
                         report.write_bytes(gzip.compress(canonical(results),mtime=0))
+                        parity=None
+                        if mode=='unrestricted':
+                            expected=json.loads((path.parent/reference).read_text())
+                            differences=reference_differences(results,expected)
+                            try:parity={**verify_reference(results,expected,protocol['parity_tolerance']),'differences':differences}
+                            except (ValueError,AssertionError) as error:
+                                started['failed_case']={'profile':profile,'phase':phase,'mode':mode,
+                                    'report':str(report.relative_to(output)),'report_sha256':checksum(report),
+                                    'reference_differences':differences,'error':str(error)}
+                                if not reference_only:raise
+                                parity={'passed':False,'differences':differences,'error':str(error)}
                         cell={'profile':profile,'seed':meta['seed'],'phase':phase,'mode':mode,'run':path.parent.name,
                               'weights_sha256':checksum(path.parent/weights),'policy_fingerprint':fingerprint,
                               'metrics':group_metrics(results,stocks),'declining_stocks':declining_stock_summary(results,stocks),
@@ -189,8 +227,8 @@ def replay(protocol_path,state_path,output,data_root):
                     if any(checksum(p)!=h for p,h in protected.items()):raise ValueError('source artifact mutation')
                     started['cells']=cells;target.write_text(json.dumps(started,indent=2,allow_nan=False)+'\n')
                     print(json.dumps({'profile':profile,'phase':phase,'mode':mode,'return_pct':100*cell['metrics']['score'],'reused':cell['reused_evaluation_from']}),flush=True)
-        assert len(cells)==protocol['maximum_cells']
-        started.update(status='complete',validation_baseline_sha256=baseline_hash,source_artifacts_unchanged=True,
+        assert len(cells)==(2*len(protocol['profiles']) if reference_only else protocol['maximum_cells'])
+        started.update(status='calibrated' if reference_only else 'complete',validation_baseline_sha256=baseline_hash,source_artifacts_unchanged=True,
                        unique_replays=sum(c['reused_evaluation_from'] is None for c in cells),objective_achieved=False)
         target.write_text(json.dumps(started,indent=2,allow_nan=False)+'\n')
         with (output/'per-symbol.csv').open('w',newline='') as stream:
@@ -207,4 +245,5 @@ if __name__=='__main__':
     p.add_argument('--state',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--data-root',type=Path,default=Path('data/datasets'))
-    a=p.parse_args();print(replay(a.protocol,a.state,a.output,a.data_root))
+    p.add_argument('--reference-only',action='store_true',help='Measure unrestricted reference drift only; does not complete or relax the protocol')
+    a=p.parse_args();print(replay(a.protocol,a.state,a.output,a.data_root,a.reference_only))

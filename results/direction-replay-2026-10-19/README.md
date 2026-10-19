@@ -24,3 +24,9 @@ Before proposing a direction gate, repeat the same modes on already-trained
 legacy wide seeds 23/37 under separate committed protocols. No new models or
 Colab allocation. The seed-11 success on three falling stocks alone does not
 establish robust shorting or a competitive all-market strategy.
+
+Seed 23 completed all six modes/phases with valid original path parity. Seed 37
+stopped before filtered evaluation because the original exact-quantity check
+failed. Its initial failure is retained in `seed37-initial-failure.json`. A
+reference-only inspection will measure the discrepancy without relaxing the
+original gate or producing filtered performance results.

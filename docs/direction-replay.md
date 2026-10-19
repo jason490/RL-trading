@@ -91,3 +91,13 @@ bridge to the old source is retained in the prior study results.
 
 Report all seeds and both phases, including failures. These replays confirm
 diagnostic consistency, not a newly trained or prospectively validated strategy.
+
+## Reference drift inspection
+
+`--reference-only` runs just the unrestricted selected/final paths and records
+maximum action, equity, cost and position differences against saved reports.
+It writes status `calibrated`, never `complete`, and never runs filtered cases or
+relaxes parity thresholds. Whole-share boundary differences can be diagnosed
+without silently accepting them. Failed ordinary replay retains the complete
+compressed failed path and discrepancy summary for review. A changed acceptance
+protocol requires a separate explicit declaration before filtered evaluation.

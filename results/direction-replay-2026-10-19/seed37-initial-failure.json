@@ -1,0 +1,66 @@
+{
+  "status": "failed",
+  "protocol_sha256": "f422a15fdf6f6124ac937f3b80e4460137c6c99fcc7c8931eea88a46b343de2d",
+  "source": {
+    "revision": {
+      "revision": "f0521405d3e3857fc7ab3421e7480a84daef6429",
+      "dirty": ""
+    },
+    "source_hash": "657f3dae692d2373250fbd9514c83c642bb6b484506db52b774c246953881ea9"
+  },
+  "source_run_contract": {
+    "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+    "simulation": {
+      "initial_equity": 100000.0,
+      "fee_bps": 1.0,
+      "impact_bps": 2.0,
+      "borrow_rate": 0.03,
+      "max_holding": 20,
+      "allow_short": true,
+      "exposure_cap": 1.0
+    },
+    "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.8.0",
+      "gymnasium": "1.2.0",
+      "stable-baselines3": "2.7.0",
+      "sb3-contrib": "2.7.0",
+      "pandas": "2.3.2",
+      "plotly": "6.3.0"
+    },
+    "resolved_parameters": {
+      "n_steps": 1000,
+      "batch_size": 50,
+      "n_epochs": 10,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "policy_kwargs": {
+        "net_arch": [
+          64,
+          64
+        ]
+      }
+    },
+    "initialization": {
+      "arm": "wide",
+      "applied": true,
+      "protective_mean_bias": 0.75,
+      "log_std": 0.0,
+      "exposure_mean_bias": 0.0,
+      "action_weights": "unchanged seeded native weights"
+    },
+    "start_sampling": {
+      "mode": "legacy_uniform"
+    }
+  },
+  "source_seed": 37,
+  "training_performed": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "cells": [],
+  "error_type": "ValueError"
+}

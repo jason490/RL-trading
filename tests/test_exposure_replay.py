@@ -115,3 +115,14 @@ def test_replay_protocol_bounds_existing_confirmation_seeds_and_profile_subsets(
         q={**p,'source_seed':seed,'profiles':['legacy'],'maximum_cells':6};validate(q)
         for key,value in (('source_seed',True),('source_seed',19),('profiles',['legacy','legacy']),('maximum_cells',18),('source_initialization','standard')):
             with pytest.raises(ValueError):validate({**q,key:value})
+
+
+def test_reference_diagnostics_measure_discrete_drift_without_relaxing_gate():
+    import runpy
+    module=runpy.run_path('scripts/replay_directions.py');results=evaluate(AccountAware(),fixture())
+    altered=deepcopy(results);row=altered['SPY/validation']['rows'][0];row['quantity']+=1;row['equity']+=.01
+    d=module['reference_differences'](altered,results)
+    assert d['quantity_mismatch_rows']==1 and d['maximum_quantity_difference']==1
+    assert d['session_mismatch_rows']==0 and d['maximum_action_difference']==0
+    assert d['quantity_examples'][0]['session']==row['session']
+    with pytest.raises(ValueError):module['verify_reference'](altered,results,{'equity_dollars':.1,'action_absolute':2e-6,'return_absolute':1e-6,'cost_dollars':.01})
