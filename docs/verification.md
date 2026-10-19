@@ -646,3 +646,22 @@ the exact original 26-symbol/19,058-row validation panel and no test episodes.
 No unverified override, feed merge, network fetch or model training was used in
 this preparation. See [evidence](../results/complete-case-107-2026-10-19/README.md).
 The ongoing initialization screen retains its original dataset and captured source.
+
+## Completed action-initialization study — 2026-10-19
+
+Eight 50k PPO research cells and four 512-transition CPU smokes completed, all
+on actual Colab Python 3.13.16. The wider-initialization variant passes its
+relative three-seed gate: selected/final means 14.23%/13.89% versus standard
+11.77%/10.49%, with final gains in all three seeds. Holding returns 30.60%;
+absolute stock/ETF targets fail. Declining-stock returns worsen, with zero of
+nine wide observations satisfying positive policy and short P&L together.
+
+Twelve frozen bundles pass 936 exact predictions plus immutable data/normalizer
+and rejection checks. Three controls exactly reproduce 39 policy tensors and
+18 checkpoint returns. All 12 owned sessions stopped; final CLI rate/assignments
+are zero. Conservative study charge 0.104793 units; cumulative 35.562980/150,
+remaining 114.437020. No retired test was evaluated. Related confirmation-gate,
+curve and variant-audit focused checks pass; the latest full suite remains the
+193-test run documented above. All public asset checksums and archive allowlists
+pass locally; publication/duplicate cleanup remain pending remote verification.
+See [complete evidence](../results/action-initialization-2026-10-19/README.md).

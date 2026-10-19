@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "bundles": 12,
+  "research_cells": 8,
+  "smoke_cells": 4,
+  "research_steps": 400000,
+  "smoke_steps": 2048,
+  "frozen_exact_predictions": 936,
+  "release_asset_count": 17,
+  "all_asset_checksums_verified": true,
+  "model_archive_raw_data_and_replay_absent": true,
+  "retired_test_evaluated": false
+}

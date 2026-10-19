@@ -1,0 +1,129 @@
+{
+  "starting_project_units": 35.45818787437412,
+  "conservative_study_units": 0.10479259325067147,
+  "study_limit_units": 2.0,
+  "project_units": 35.56298046762479,
+  "remaining_project_units": 114.43701953237522,
+  "remaining_working_units": 94.43701953237522,
+  "phases": [
+    {
+      "phase": "smoke",
+      "fleet": "rl-stocks-fleet-934b9ef8e8e9",
+      "measured_units": 0.0,
+      "estimated_units": 0.021870635331339306,
+      "charged_units": 0.021870635331339306
+    },
+    {
+      "phase": "screen",
+      "fleet": "rl-stocks-fleet-15a178514f8d",
+      "measured_units": 0.01999999999998181,
+      "estimated_units": 0.03802772488329146,
+      "charged_units": 0.03802772488329146
+    },
+    {
+      "phase": "confirm",
+      "fleet": "rl-stocks-fleet-dbcdfd3d1f89",
+      "measured_units": 0.03000000000002956,
+      "estimated_units": 0.04489423303604126,
+      "charged_units": 0.04489423303604126
+    }
+  ],
+  "sum_metered_window_debits": 0.05000000000001137,
+  "observed_account_balance_start": 350.88,
+  "observed_account_balance_end": 350.82,
+  "observed_account_balance_change": 0.06,
+  "balance_note": "Window debits and rounded start/end balance changes are separate observations; do not add them. Conservative charge exceeds both.",
+  "final_reported_rate": 0.0,
+  "final_reported_assignments": 0,
+  "all_owned_cleanup_verified": true,
+  "owned_sessions": [
+    {
+      "session": "rl-stocks-cpu-32e3f6a3b257",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 146.42964005470276,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-1f08bdb8ad3e",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 196.48687267303467,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-86ac7bfb9c42",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 244.03896927833557,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-7b4f9fc93536",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 274.79518961906433,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-21161589165c",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 445.5069148540497,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-1e1c1115f4af",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 310.4828941822052,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-04daf511e79d",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 425.5259385108948,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-d6581de6081e",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 408.8337433338165,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-e01bea5f202a",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 436.3296639919281,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-a33034afe7d5",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 462.8827669620514,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-c3143c483e7e",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 514.7020943164825,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-61c17277ada3",
+      "status": "stopped",
+      "cleanup_verified": true,
+      "allocation_seconds": 430.3579840660095,
+      "deadline_seconds": 7200
+    }
+  ],
+  "budget_stopped": false,
+  "research_steps": 400000,
+  "smoke_steps": 2048,
+  "training_hardware": "CPU"
+}

@@ -605,16 +605,26 @@ results and investigate action initialization/exploration and protection churn
 with a matched bounded experiment before longer training. Diagnostic simulation
 used no Colab allocation; the cumulative project ledger is unchanged.
 
-## 23. PPO action initialization — declared 2026-10-19
+## 23. PPO action initialization — complete 2026-10-19
 
-The next bounded study separates initial Gaussian exploration and protective
-mean bias in a four-arm 50k seed-11 factorial screen. Exposure stays unbiased,
-shorting remains available, and rewards, data, execution and action semantics
-stay fixed. Promote at most one arm against a fresh standard control, then add
-only seeds 23/37 if the declared selected/final/group/drawdown gate passes.
-Maximum eight research cells and two incremental conservative units; use CPU
-smoke first and the existing aggregate Colab pool. The declaration is not a
-result. See [protocol](configs/experiments/action_initialization.json) and
+Four seed-11 factorial arms screened initial exploration and protective means;
+only wide protection and standard control received confirmation seeds 23/37.
+All eight 50k research cells and four 512-step CPU smokes completed on Colab
+Python 3.13.16. All 12 owned sessions stopped and 936 exact frozen predictions
+passed. The three standard controls reproduce 39 tensors/18 checkpoint returns.
+
+Mean selected/final returns improve from 11.77%/10.49% to 14.23%/13.89%, versus
+holding 30.60%; all three final paired seeds improve. The relative gate passes,
+absolute stock/ETF targets fail. Declining-stock final returns worsen from
+-12.20% to -16.50%, with wide producing zero of nine positive-policy/positive-short
+observations. No shorting-success or independent-performance claim is supported.
+
+Conservative study usage is 0.104793 units; cumulative project 35.562980/150,
+with 114.437020 remaining. Source is pinned to the screen's committed snapshot
+through a verified export sharing the original ledger/lock. Publication and
+duplicate cleanup follow server checksum verification. Next: predeclare a causal
+down-regime sampling/universe experiment, not longer blind training. See
+[results](results/action-initialization-2026-10-19/README.md) and
 [operations](docs/action-initialization.md).
 
 ## 24. Explicit complete-case dataset — 2026-10-19
@@ -634,13 +644,8 @@ training/provider requests or separate allocation were used for preparation.
 Full local acceptance passes 193 tests. See
 [data evidence](results/complete-case-107-2026-10-19/README.md).
 
-Action-initialization screen update: all four CPU 50k cells completed with verified
-shutdown and frozen parity. Final returns were standard 4.59%, low-noise 7.18%,
-wide 7.96%, combined 7.43%, versus holding 30.60%. Wide passes the declared
-relative/group/drawdown screen; combined ranks second, and low-noise fails the
-ETF group constraint. The standard control exactly reproduces its earlier six
-checkpoint returns and 13 policy tensors. Wide still has zero of three declining
-stocks with positive policy and short P&L in this seed. Confirmation on seeds
-23/37 is running from an exact original-source export with the shared ledger;
-no objective-success claim or test access. See
-[screen evidence](results/action-initialization-2026-10-19/README.md).
+Training-only trailing-price diagnostics find 93/111 expanded tradables with
+persistent decline windows versus 16/26 control; their observation shares are
+5.15% versus 2.31%. These are causal trailing labels, not future-recovery labels
+or proof that expansion improves returns. Exact diagnostics remain in the data
+evidence folder for the next separately declared research experiment.
