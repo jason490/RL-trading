@@ -25,6 +25,11 @@ Each contiguous dataset segment starts with its own initial equity. No P&L or ho
 
 Trade diagnostics currently count partial exit fills separately, subtract each exit fee, and exclude entry fees from the realized diagnostic. Net equity still includes entry fees and all costs. Do not treat these sparse fill statistics as complete round-trip trade attribution or optimize win rate alone. Drawdown, costs and equity remain the accounting source of truth.
 
+New evaluations also include reconciled long/short marked P&L, including entry
+fees, dividends, borrow and open positions. See [short-side research](short-side.md)
+for the accounting method and declining-stock reporting rules. This diagnostic
+does not alter rewards, action decoding or checkpoint selection.
+
 Zero return variance yields reported Sharpe zero instead of undefined division. There is no universal minimum sample length that proves profitability. Returns include open-position marked P&L at truncation and do not assume a cost-free guaranteed liquidation at the stop/target trigger.
 
 ## Final-test policy

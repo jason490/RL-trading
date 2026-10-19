@@ -66,6 +66,8 @@ def report(results,destination,title,checkpoints=None):
             labels=sorted(counts)
             sections.append(chart(title_,[str(v) for v in labels],[('Count',[counts[v] for v in labels])]) if labels else '<p>No exits</p>')
         sections.append('<pre>'+html.escape(json.dumps(result['metrics'],indent=2))+'</pre>')
+        if 'directional' in result:
+            sections.append('<pre>'+html.escape(json.dumps(result['directional'],indent=2))+'</pre>')
         for label,data in [('Fills',result['events']),('Raw and approved decisions',rows)]:
             sections.append('<details><summary>'+label+'</summary><pre>'+html.escape(json.dumps(data,indent=2))+'</pre></details>')
     if checkpoints:

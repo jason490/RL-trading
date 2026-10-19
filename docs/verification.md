@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **177 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 88.71 seconds, 13 existing warnings |
+| Full local acceptance | **183 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 87.40 seconds, 13 existing warnings |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -588,3 +588,19 @@ exclusive date bounds, continued collection with failed-symbol retention, safe
 error metadata, default fail-fast behavior and storage checksum rejection.
 Changed-file unused-import checks passed. See the
 [manifest, coverage and reproduction guide](../results/stock-pull-2026-10-19/README.md).
+
+## Short-side attribution — 2026-10-19
+
+Full acceptance passes 183 tests, zero skips/failures, 13 existing warnings.
+New tests cover profitable falling-stock shorts after modeled costs, rising-stock
+losses, disabled shorts, reversals, scale-outs, splits/dividends, gap stops,
+early episode prefixes and reconciliation failures. Syntax and whitespace checks
+pass. New evaluation reports include exact signed-cash-flow long/short attribution.
+
+The saved nine-model 100k audit reconciled 468 symbol/seed/phase paths to equity;
+maximum declining-cohort per-session residual was below $0.000001. Results are
+in [the short-side evidence](../results/short-side-2026-10-19/README.md). No new
+training or Colab allocation was required. CLI usage confirms zero active
+assignments, 0.00 units/hour; the cumulative project ledger remains 35.458188.
+The learned short-side objective is not reliably met. The bounded token-efficient
+research workflow is documented; prospective confirmation remains outstanding.

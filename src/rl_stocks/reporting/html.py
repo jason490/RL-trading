@@ -38,6 +38,7 @@ def report(results,destination,title,checkpoints=None):
         diag.add_trace(go.Histogram(x=[e["realized_pnl"] for e in events if e.get("closed")]),row=1,col=2)
         sections.append(diag.to_html(full_html=False,include_plotlyjs=False))
         sections.append("<pre>"+html.escape(json.dumps({"policy":r["metrics"],
+            "directional":r.get("directional"),
             "baselines":{k:v["metrics"] for k,v in r["baselines"].items()},
             "rejected_decisions":sum(x["rejected"] is not None for x in rows)},indent=2))+"</pre>")
     if checkpoints:

@@ -4,6 +4,7 @@ from rl_stocks.environment.accounting.portfolio import Portfolio
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.data.generation.datasets import normalizer_from
 from rl_stocks.evaluation.metrics import metrics
+from rl_stocks.evaluation.direction import directional_attribution
 from rl_stocks.rl.registry.prediction import PredictionStream
 
 def evaluate(model,dataset,split="validation",config=SimulationConfig()):
@@ -24,7 +25,8 @@ def evaluate(model,dataset,split="validation",config=SimulationConfig()):
             if terminated or truncated:break
         events=env.sim.portfolio.events
         results[key]={"rows":rows,"events":events,"metrics":metrics(rows,events,config.initial_equity),
-            "baselines":baselines(episode,config),"split":split,"symbol":episode["symbol"]}
+            "baselines":baselines(episode,config),"split":split,"symbol":episode["symbol"],
+            "directional":directional_attribution(episode,rows,events,config.initial_equity)}
     if not results:raise ValueError("no evaluation episodes")
     return results
 

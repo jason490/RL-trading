@@ -1,0 +1,75 @@
+# Bounded autonomous research
+
+The user authorized continuing research toward returns comparable to or better
+than holding the same stocks and ETFs, including causal indicators, different
+models, more data, training and carefully tested reward changes. This is a
+research objective, not a profitability guarantee. The total project ceiling
+remains 150 Colab units, with teardown beginning by 130; authorization does not
+reset the ledger or permit broker orders.
+
+## Efficient order of work
+
+1. Diagnose existing saved paths before training again. Reuse immutable raw
+   snapshots and selected/final reports. Include short-side attribution and
+   causal constant/trend baselines under the same execution rules to distinguish
+   model failures from execution constraints.
+2. Predeclare each bounded experiment with one hypothesis, dataset identities,
+   costs, action/reward contracts, seeds, steps, checkpoint cadence, promotion
+   gate and maximum cost/duration. Keep negative results in the registry.
+3. Screen a small fixed budget, then confirm promising changes on seeds
+   11/23/37 with a matched control. More training follows evidence of stable
+   final performance; longer runs are not the default response to deterioration.
+4. Expand the training universe only with explicit provider/action/coverage
+   acceptance. The 107-stock complete Yahoo panel can be studied as retrospective
+   survivor research. EA/AVB/EQR's separate partial Alpaca history must not be
+   silently merged. Historical membership and delisting outcomes remain gated.
+5. Confirm a frozen candidate prospectively or on a separately preregistered
+   untouched interval. Preserve retired-test isolation. Publish verified
+   artifacts and stop/verify every owned runtime before cleaning duplicates.
+
+## Development targets
+
+Before starting a new search, freeze its numeric protocol. Default screening
+targets are mean excess return of at least -2 percentage points for **both**
+stocks and broad ETFs separately, on the same symbols and execution dates.
+Outperformance requires nonnegative excess in both groups. Confirmation should
+meet the declared threshold in at least two of three seeds, with median stock
+excess at least -2 points and no more than 2 points of additional mean maximum
+drawdown. Evaluate both selected and final weights; a temporary best checkpoint
+alone is insufficient. These are development gates, not statistical proof.
+
+Report the [short-side objective](short-side.md) separately: a negative holding
+return must not be described as profitable shorting unless policy return and
+short net P&L are both positive. Full-period declining-stock labels are for
+reporting only, never checkpoint selection or training. Do not claim that every
+falling stock will be profitable.
+
+The 2021–2023 interval has already guided repeated research and is development
+validation. The previously inspected 2024–September 2026 test is retired and
+must not select new checkpoints. New indicators and more optimization over the
+same bars do not create fresh evidence. A goal cannot be marked achieved solely
+because one selected validation result clears a gate.
+
+## Token-efficient operation
+
+- Read `AGENTS.md`, this guide and the current experiment's compact protocol,
+  status and summary first. Search targeted functions instead of repeatedly
+  dumping whole files, historical conversations or large manifests.
+- Persist exact hypotheses, source revision, dataset hashes, run IDs, owned
+  session IDs, deadlines, usage and next action in machine-readable local state.
+  Keep credentials and authenticated logs out of tracked results.
+- Reuse caches and established runners; avoid reimplementing budget monitoring,
+  polling loops and artifact verification per experiment. Aggregate status
+  changes and metrics rather than streaming full logs. Meter every minute even
+  when nothing useful changed; quiet status output must not disable monitoring.
+- Retain compact learning curves at the declared checkpoint cadence (normally
+  every 10k steps), selected/final weights and failure evidence. Retrieve durable
+  artifacts before teardown, verify release checksums before duplicate cleanup,
+  and preserve the ledger across retries and context compaction.
+- Batch independent inspections, bound searches/retries/experiments, and stop an
+  unsuccessful family at its declared gate. Do not spend tokens or credits
+  repeating a completed comparison without a new testable hypothesis.
+
+If the working budget, reliable metering, data integrity or prospective evidence
+blocks further work, record the exact limitation and next feasible action.
+Do not restart automatically after a budget stop or imply the objective passed.

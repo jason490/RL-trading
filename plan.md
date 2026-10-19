@@ -576,3 +576,23 @@ default fail-fast and dataset quality gates remain unchanged. Full acceptance
 passed 177 tests. No model evaluation, research training or Colab allocation was
 added; the cumulative project ledger remains 35.458188/150 units. See
 [acquisition evidence](results/stock-pull-2026-10-19/README.md).
+
+## 22. Bounded improvement and short-side evidence — 2026-10-19
+
+The user authorized continued bounded research toward comparable/better stock
+and ETF returns, and requested profitable shorting on declining stocks. Follow
+[the token-efficient research loop](docs/research-loop.md), preserve the shared
+150-unit ceiling/130-unit teardown rule, and never select on the retired test.
+Future declining-stock labels are reporting-only.
+
+Evaluation now reconstructs separate long/short marked P&L including entry and
+exit costs, dividends, split cash in lieu and borrow, reconciling both sides to
+equity each session. A saved-path audit of nine existing matched 100k models
+finds inconsistent results: final PPO/SAC/recurrent PPO average returns on the
+three declining stocks are -20.62%/-18.99%/-21.64% versus holding -23.25%.
+Positive policy and positive short contribution occur in only 1/9, 2/9 and 1/9
+stock-seed observations respectively. The simulator supports profitable shorts;
+the learned policies have not achieved this objective reliably. No training or
+Colab allocation was added by this diagnostic. Next: causal execution-feasibility
+baselines, then a preregistered matched direction/timing experiment. See
+[audit evidence](results/short-side-2026-10-19/README.md).
