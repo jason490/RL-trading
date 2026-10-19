@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "protocol_sha256": "44382c7a091f27e3f769e0920c18eed66fafec0b728f31d75256de1e69330913",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "train_episodes": 26,
+  "validation_episodes": 26,
+  "no_test_episodes": true,
+  "observation_shapes": {
+    "legacy": [
+      12
+    ],
+    "execution_masked": [
+      21
+    ],
+    "execution_full": [
+      21
+    ]
+  },
+  "source": {
+    "source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+    "source_hash": "f181c230f7c6fc9018b12ca51db703882ddb45012496d0d0c1d9e66934468aa7",
+    "source_archive_sha256": "5222d31be5493e9be3f9c3d1e733f60e90997ab1a2176904357b9b755ee8630c",
+    "shared_original_ledger_and_lock_verified": true,
+    "root": "/home/vibe/projects/rl-stocks/.runtime/observation-source",
+    "sessions_allocated": 0
+  },
+  "starting_project_units": 35.638335838194024,
+  "max_incremental_units": 2.0,
+  "usage_before_allocation": {
+    "balance": 350.77,
+    "rate": 0.0,
+    "active_assignments": 0
+  }
+}

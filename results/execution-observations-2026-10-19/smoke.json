@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "protocol_sha256": "44382c7a091f27e3f769e0920c18eed66fafec0b728f31d75256de1e69330913",
+  "cells": [
+    {
+      "observation": {
+        "version": 1,
+        "profile": "execution_masked",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "5bf6dea53d0b78376e879bb27b6163ce2e42d1d8f87311510bd36e735c3fed63",
+      "git": {
+        "revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+        "dirty": ""
+      },
+      "source_hash": "f181c230f7c6fc9018b12ca51db703882ddb45012496d0d0c1d9e66934468aa7"
+    },
+    {
+      "observation": {
+        "version": 1,
+        "profile": "legacy",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return"
+        ]
+      },
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "e8ec01774f0ac652fec8cb6c03cacec66ad7cef43a6f1a7ea96991e00d0538c7",
+      "git": {
+        "revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+        "dirty": ""
+      },
+      "source_hash": "f181c230f7c6fc9018b12ca51db703882ddb45012496d0d0c1d9e66934468aa7"
+    },
+    {
+      "observation": {
+        "version": 1,
+        "profile": "execution_full",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "actual_steps": 512,
+      "python": "3.13.16",
+      "bundle_id": "f93c70394e8666399b91fc977896651a10f8904e64a202b4f30adaadc3977667",
+      "git": {
+        "revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+        "dirty": ""
+      },
+      "source_hash": "f181c230f7c6fc9018b12ca51db703882ddb45012496d0d0c1d9e66934468aa7"
+    }
+  ],
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-3c5ecdf0693e",
+    "rl-stocks-cpu-b250b60f758e",
+    "rl-stocks-cpu-df8013b150b9"
+  ],
+  "project_units": 35.65802928533885,
+  "incremental_units": 0.01969344714482446,
+  "research_started": false
+}

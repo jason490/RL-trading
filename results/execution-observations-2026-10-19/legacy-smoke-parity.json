@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "prior_run": "20261019T124711-ppo-11-c7418d39",
+  "new_run": "20261019T191743-ppo-11-4a3b15dc",
+  "tensors_identical": {
+    "best": 13,
+    "latest": 13
+  },
+  "selected_score": -0.002077351327410766,
+  "trained_locally": false
+}
