@@ -1,0 +1,95 @@
+{
+  "status": "complete",
+  "fleet": "rl-stocks-fleet-934b9ef8e8e9",
+  "cells": [
+    {
+      "task": "standard-11",
+      "session": "rl-stocks-cpu-32e3f6a3b257",
+      "bundle_id": "19dec44678f089a5cbff2956d8fd86db9d2d52c44dd701301b537f37633a1adf",
+      "steps": 512,
+      "python": "3.13.16",
+      "initialization": {
+        "arm": "standard",
+        "applied": false
+      },
+      "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+      "source_git": {
+        "revision": "d9115cca7307608e0277d4f706e0a192199f5acf",
+        "dirty": ""
+      },
+      "stopped_verified": true
+    },
+    {
+      "task": "low_noise-11",
+      "session": "rl-stocks-cpu-1f08bdb8ad3e",
+      "bundle_id": "a48676a895c70062ef92b299260d54e8e3747cabba860bc8eadf3d8b8a7982f6",
+      "steps": 512,
+      "python": "3.13.16",
+      "initialization": {
+        "arm": "low_noise",
+        "applied": true,
+        "protective_mean_bias": 0.0,
+        "log_std": -1.0,
+        "exposure_mean_bias": 0.0,
+        "action_weights": "unchanged seeded native weights"
+      },
+      "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+      "source_git": {
+        "revision": "d9115cca7307608e0277d4f706e0a192199f5acf",
+        "dirty": ""
+      },
+      "stopped_verified": true
+    },
+    {
+      "task": "wide-11",
+      "session": "rl-stocks-cpu-86ac7bfb9c42",
+      "bundle_id": "9bb02d090df1fea3717c8e15ba16e07a59e092a3d9377efbbdc32e53fe9b0f2f",
+      "steps": 512,
+      "python": "3.13.16",
+      "initialization": {
+        "arm": "wide",
+        "applied": true,
+        "protective_mean_bias": 0.75,
+        "log_std": 0.0,
+        "exposure_mean_bias": 0.0,
+        "action_weights": "unchanged seeded native weights"
+      },
+      "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+      "source_git": {
+        "revision": "d9115cca7307608e0277d4f706e0a192199f5acf",
+        "dirty": ""
+      },
+      "stopped_verified": true
+    },
+    {
+      "task": "wide_low_noise-11",
+      "session": "rl-stocks-cpu-7b4f9fc93536",
+      "bundle_id": "1022ebc45cc39fd4434e7f613ed3136ca2ae6ed6377544be392092fd7a055206",
+      "steps": 512,
+      "python": "3.13.16",
+      "initialization": {
+        "arm": "wide_low_noise",
+        "applied": true,
+        "protective_mean_bias": 0.75,
+        "log_std": -1.0,
+        "exposure_mean_bias": 0.0,
+        "action_weights": "unchanged seeded native weights"
+      },
+      "source_hash": "1e09e11cb5ab7d4eafba780d64f840e4ac84fa345885c6a9ad1aeb1582b3899b",
+      "source_git": {
+        "revision": "d9115cca7307608e0277d4f706e0a192199f5acf",
+        "dirty": ""
+      },
+      "stopped_verified": true
+    }
+  ],
+  "cleanup_verified": true,
+  "measured_units": 0.0,
+  "estimated_units": 0.021870635331339306,
+  "charged_units": 0.021870635331339306,
+  "project_units": 35.48005850970546,
+  "remaining_project_units": 114.51994149029454,
+  "budget_stopped": false,
+  "metering_unreliable": false,
+  "research_50k_screen": "pending"
+}

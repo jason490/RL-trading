@@ -622,3 +622,12 @@ parity. Full acceptance passes 189 tests in 87.24 seconds, no skips/failures,
 13 existing warnings. The subsequently added screen-gate regression and related
 focused suite pass 15 tests. No real research training was performed locally.
 Remote smoke and research results remain pending at this declaration.
+
+Four distinct initialization CPU Colab smokes now pass: exactly 512 PPO
+transitions each on Python 3.13.16, with valid post-update curves and frozen
+bundles. Independent verification passes 312 exact CPU predictions, immutable
+normalization/data manifests and incompatible schema/feed/nonfinite rejection.
+All four owned sessions stopped. Measured debit was 0.0 units; conservative
+estimate 0.021871; cumulative project 35.480059/150 units. The 50k research screen
+is still pending; smoke returns are not model-performance evidence. See
+[smoke evidence](../results/action-initialization-2026-10-19/smoke.json).
