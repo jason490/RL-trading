@@ -651,20 +651,28 @@ persistent decline windows versus 16/26 control; their observation shares are
 or proof that expansion improves returns. Exact diagnostics remain in the data
 evidence folder for the next separately declared research experiment.
 
-## 25. Causal sampling and broader universe — declared 2026-10-19
+## 25. Causal sampling and broader universe — complete 2026-10-19
 
-The next 2x2 screen fixes wide-initialized 50k PPO and varies training universe
-(original 26 tradables versus verified 107 stocks/four ETFs) and causal start
-sampling. Both modes use the same 252-session-ready pool; balanced starts select
-equally between trailing yearly price decline below -20% with negative trailing
-quarter and other eligible starts. No future-recovery/validation-stock labels
-enter training or selection. Actual start and transition balance is recorded.
+Four 50k seed-11 PPO cells and four 512-step CPU smokes completed on Python
+3.13.16, using matched readiness pools and the exact original validation panel.
+Balanced sampling raised actual downtrend transitions from 2.9% to 11.3% on
+small data and 5.1% to 15.5% on large data. Small balanced selected/final return
+was 16.20%/16.20% versus reference 2.22%/-5.43%; large balanced was 10.19%/4.05%.
+All three candidates worsened ETF returns, so the declared screen failed and no
+confirmation/longer training was added. Holding returns 30.60% overall.
 
-Use four CPU smokes before the four seed-11 cells; promote at most one candidate
-against the fresh small/readiness-uniform control, then add seeds 23/37 only on
-passing the fixed gate. Same raw 26-symbol validation, training-only normalization,
-net-equity reward, actions, costs and 512-session training episodes. All phases
-share one frozen source and the original ledger/lock. A runner-enforced 2-unit
-study cap supplements the project's 150-unit total/130-unit teardown and each
-allocation's two-hour deadline. See [protocol](configs/experiments/causal_sampling.json)
-and [methodology](docs/training-sampling.md). No allocation at declaration.
+Small balanced remained mostly long and failed profitable shorting on the three
+declining stocks; large balanced had one positive-policy/positive-short example
+(NEE) but still lost on AMZN and DIS. Training-only forward diagnostics show the
+severe-decline start class often rebounds over 20 sessions; past decline labels
+cannot substitute for future direction. A synthetic witness also demonstrates
+execution-state aliasing: identical current observations can hide different
+protective stops and yield different next-step rewards/positions.
+
+Next: a versioned execution-state observation with masked same-dimension and
+legacy controls, preserving frozen inference compatibility, actions and rewards.
+Eight frozen bundles passed 624 exact predictions and all eight owned sessions
+stopped. Conservative study usage 0.075355; cumulative project 35.638336/150.
+Full acceptance passes 207 tests. Publication and duplicate cleanup follow server
+checksums. See [results](results/causal-sampling-2026-10-19/README.md) and
+[methodology](docs/training-sampling.md).

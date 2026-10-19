@@ -1,0 +1,82 @@
+{
+  "synthetic_execution_observability_witness": true,
+  "market_feature_names": [
+    "return_1",
+    "volatility_20",
+    "ema_20_ratio",
+    "ema_50_ratio",
+    "rsi_14",
+    "atr_14_ratio",
+    "relative_volume_20"
+  ],
+  "same_visible_observation": true,
+  "observation_size": 12,
+  "visible_observation": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.018714286386966705,
+    1.0,
+    0.5000750422477722,
+    0.49992498755455017,
+    0.05000000074505806,
+    -0.00010001500049838796,
+    -0.00015001000429037958
+  ],
+  "different_hidden_protection": [
+    [
+      99.0,
+      116.0,
+      124.0
+    ],
+    [
+      90.0,
+      116.0,
+      124.0
+    ]
+  ],
+  "same_next_action": [
+    0.5,
+    1,
+    1,
+    1
+  ],
+  "same_next_bar": {
+    "symbol": "SPY",
+    "session": "2015-11-10",
+    "open_time": "2015-11-10T14:30:00+00:00",
+    "event_time": "2015-11-10T21:00:00+00:00",
+    "available_time": "2015-11-10T21:15:00+00:00",
+    "retrieved_time": "2026-10-14T00:00:00+00:00",
+    "provider": "synthetic",
+    "feed": "synthetic",
+    "revision": "fixture",
+    "open": 96,
+    "high": 98.5,
+    "low": 95.5,
+    "close": 98,
+    "volume": 1000,
+    "dividend": 0.0,
+    "split": 1.0,
+    "adjustments": "raw_with_actions"
+  },
+  "outcomes": [
+    {
+      "reward": -0.02035273148218185,
+      "equity": 97970.59996,
+      "quantity": 0,
+      "rejected": "protective_fill_precedes_signal"
+    },
+    {
+      "reward": -0.010072347560121396,
+      "equity": 98982.97020192,
+      "quantity": 499,
+      "rejected": null
+    }
+  ],
+  "interpretation": "Two legal prior actions yield identical seven causal market features and five visible account values, but different held protection. The same next action/bar yields different rewards and positions. This is execution-state aliasing, not a claim that market features are Markov.",
+  "training_performed": false,
+  "next_hypothesis": "Versioned protection/partial-exit/last-action/unit-share state, masked same-dimension control and legacy frozen compatibility; retain four-action contract and net-equity reward."
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "release_assets": 17,
+  "bundles": 8,
+  "exact_cpu_predictions": 624,
+  "research_transitions": 200000,
+  "smoke_transitions": 2048,
+  "confirmation_run": false,
+  "no_raw_bars_or_replay_in_model_archive": true,
+  "local_asset_checksums_verified": true,
+  "all_sessions_stopped": true,
+  "retired_test_evaluated": false
+}

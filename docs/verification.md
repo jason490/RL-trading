@@ -689,3 +689,16 @@ bundles pass 312 exact CPU predictions, immutable normalization/data and rejecti
 checks across the two training normalizers. Conservative smoke usage is 0.027557
 units; project cumulative 35.590538/150. No 50k result is claimed at this stage.
 See [smoke evidence](../results/causal-sampling-2026-10-19/smoke.json).
+
+## Causal sampling screen outcome — 2026-10-19
+
+All four research cells completed 50k steps, with matching pool/source/baseline
+hashes and exact training counters. No candidate passed: even the 16.20% small
+balanced result deteriorated on ETFs versus the fresh control. No confirmation
+or longer runs were added. Eight bundles across smoke/research pass 624 exact
+CPU predictions and immutable preprocessing checks; all eight owned sessions
+stopped. Conservative project usage is 35.638336/150 units (study 0.075355).
+No retired test was evaluated. Training-only diagnostics and a synthetic
+execution-state aliasing witness are retained in the results folder. Seventeen
+public assets pass local checksum/allowlist checks; remote publication and
+cleanup are pending. [Full evidence](../results/causal-sampling-2026-10-19/README.md).

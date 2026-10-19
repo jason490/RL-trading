@@ -1,0 +1,48 @@
+{
+  "training_only": true,
+  "validation_or_test_used": false,
+  "diagnostic_only": true,
+  "horizon_sessions": 20,
+  "method": "Buy one unit at next open, mark 20th session close, include dividends only after entry day; no fees, impact, stops, borrowing or rebalancing. Forward outcomes never enter sampling, observations, rewards or checkpoint selection.",
+  "overlap": "Overlapping training horizons and symbols are not independent observations. This is not a costed strategy backtest.",
+  "datasets": [
+    {
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_symbols": 26,
+      "horizon_sessions": 20,
+      "classes": {
+        "downtrend": {
+          "count": 1435,
+          "mean_gross_total_return": 0.03250647235132077,
+          "median_gross_total_return": 0.036822175577066574,
+          "positive_fraction": 0.6020905923344948
+        },
+        "other": {
+          "count": 61667,
+          "mean_gross_total_return": 0.01241312077384643,
+          "median_gross_total_return": 0.014476440719713102,
+          "positive_fraction": 0.6241587883308739
+        }
+      }
+    },
+    {
+      "dataset": "c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398",
+      "training_symbols": 111,
+      "horizon_sessions": 20,
+      "classes": {
+        "downtrend": {
+          "count": 13734,
+          "mean_gross_total_return": 0.03268929046073654,
+          "median_gross_total_return": 0.026786463891282808,
+          "positive_fraction": 0.6044124071647008
+        },
+        "other": {
+          "count": 254909,
+          "mean_gross_total_return": 0.010202202173845576,
+          "median_gross_total_return": 0.012613605594251842,
+          "positive_fraction": 0.5946592705632207
+        }
+      }
+    }
+  ]
+}

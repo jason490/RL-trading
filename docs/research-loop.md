@@ -104,3 +104,20 @@ validation-stock labels remain reporting-only. Freeze the next protocol before
 allocation, test sampling isolation/RNG behavior, and retain the unchanged shared
 project ledger. [Current result](../results/action-initialization-2026-10-19/README.md)
 records verified publication, cleanup and remaining budget.
+
+## Sampling outcome and execution observability
+
+The causal start/universe screen failed its ETF constraint; no confirmation
+was run. Oversampling severe past declines increased downtrend transitions but
+did not establish a profitable short policy. Training-only 20-session outcomes
+were positive on average after those starts, consistent with rebound buying.
+Do not turn future recovery outcomes into sampling labels.
+
+A concrete synthetic witness finds identical visible market/account vectors
+with different active protection and different next-step outcomes. Next test
+explicit, versioned execution state: actual stop/targets, partial-exit status,
+last protective outputs and share-unit scale. Include masked same-dimension and
+legacy controls, preserve existing frozen bundles, and keep actions/reward/costs
+fixed. Diagnose this known observability limitation before another blind training
+extension. [Sampling evidence](../results/causal-sampling-2026-10-19/README.md)
+contains the witness and complete negative results.

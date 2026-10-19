@@ -1,0 +1,86 @@
+{
+  "starting_project_units": 35.56298046762479,
+  "conservative_study_units": 0.07535537056923403,
+  "study_limit_units": 2.0,
+  "project_units": 35.638335838194024,
+  "remaining_project_units": 114.36166416180598,
+  "remaining_working_units": 94.36166416180598,
+  "phases": [
+    {
+      "phase": "smoke",
+      "fleet": "rl-stocks-fleet-a20aca652fe4",
+      "measured_units": 0.01999999999998181,
+      "estimated_units": 0.027557483805550467,
+      "charged_units": 0.027557483805550467
+    },
+    {
+      "phase": "screen",
+      "fleet": "rl-stocks-fleet-3d886778449f",
+      "measured_units": 0.03000000000002956,
+      "estimated_units": 0.04779788676367866,
+      "charged_units": 0.04779788676367866
+    }
+  ],
+  "sum_metered_window_debits": 0.05000000000001137,
+  "reported_account_balance_start": 350.82,
+  "reported_account_balance_end": 350.77,
+  "observed_balance_change": 0.05,
+  "reported_rate_end": 0.0,
+  "reported_assignments_end": 0,
+  "all_owned_cleanup_verified": true,
+  "owned_sessions": [
+    {
+      "session": "rl-stocks-cpu-bb0e1de1c972",
+      "cleanup_verified": true,
+      "allocation_seconds": 253.41125226020813,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-ee3359e6e2a5",
+      "cleanup_verified": true,
+      "allocation_seconds": 240.1463840007782,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-b07128d4c878",
+      "cleanup_verified": true,
+      "allocation_seconds": 360.5907733440399,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-0eabed00df2e",
+      "cleanup_verified": true,
+      "allocation_seconds": 298.5711212158203,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-0a2e5b0272a0",
+      "cleanup_verified": true,
+      "allocation_seconds": 576.094952583313,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-6df03ec1b058",
+      "cleanup_verified": true,
+      "allocation_seconds": 429.39205408096313,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-dee86901dadf",
+      "cleanup_verified": true,
+      "allocation_seconds": 460.9811909198761,
+      "deadline_seconds": 7200
+    },
+    {
+      "session": "rl-stocks-cpu-f726825520b9",
+      "cleanup_verified": true,
+      "allocation_seconds": 499.4137451648712,
+      "deadline_seconds": 7200
+    }
+  ],
+  "budget_stopped": false,
+  "research_steps": 200000,
+  "smoke_steps": 2048,
+  "screen_passed": false,
+  "confirmation_run": false
+}
