@@ -50,7 +50,8 @@ nonfinite observations. It never infers a profile from vector length: masked and
 full have equal lengths but different declared semantics. Callers of `decide`
 provide the complete ordered portfolio state for the bundle's profile.
 
-Training checkpoint evaluation, final audit, standalone frozen verification and
+Training checkpoint evaluation, the explicitly gated frozen-family audit, final
+audit, standalone frozen verification and
 shadow simulation carry the profile explicitly. Existing shadow campaigns keep
 their frozen legacy contract. No broker orders are enabled.
 

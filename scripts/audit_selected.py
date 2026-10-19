@@ -54,7 +54,8 @@ def audit(decision_path, roots, output, repository):
             if policy.manifest['metadata']['seed']!=seed or policy.manifest['metadata']['algorithm']!=family['algorithm']:
                 raise ValueError('selected family/bundle mismatch')
             before=asdict(policy.normalizer)
-            results=evaluate(policy._model,dataset,'test',SimulationConfig(**policy.manifest['metadata']['simulation']))
+            results=evaluate(policy._model,dataset,'test',SimulationConfig(**policy.manifest['metadata']['simulation']),
+                             observation_profile=policy.observation_profile)
             report(results,output/f'test-seed-{seed}.html',f'Held-out audit: frozen {family["algorithm"]}, seed {seed}')
             if before!=asdict(policy.normalizer) or hashes!={p.name:checksum(p) for p in bundle.iterdir()}:
                 raise RuntimeError('inference modified frozen artifacts or normalization')
