@@ -707,6 +707,8 @@ legacy 7.96%, holding 30.60%. Full failed ETF/drawdown constraints against the
 controls, so confirmation was not run. Declining-stock total returns remain
 negative despite positive short contributions. Six bundles pass 468 exact
 frozen predictions; six owned sessions stopped, project 35.687823/150.
+Sixteen GitHub asset hashes/sizes are verified; 27 duplicate archives/markers
+(291.41 MiB logical) were removed with 314 retained hashes unchanged.
 See [results](results/execution-observations-2026-10-19/README.md).
 
 ## 27. Universal direction-filter replay — planned, not yet run

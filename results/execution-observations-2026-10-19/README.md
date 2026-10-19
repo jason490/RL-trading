@@ -80,3 +80,13 @@ counterfactual trading strategy. No future decline label may activate a filter,
 no checkpoint is reselected, and no training/allocation is needed for this
 bounded inference diagnostic. A profitable subset would not establish an
 all-market strategy or resolve survivorship/prospective validation limits.
+
+## Published artifacts and cleanup
+
+[Download models and interactive reports](https://github.com/jason490/RL-trading/releases/tag/execution-observations-2026-10-19). All 16 server
+SHA-256/size pairs are verified ([proof](release-verification.json)). Cleanup
+removed 27 duplicate archives/markers, 305,562,368 logical bytes (291.41 MiB).
+All 314 retained file hashes remained unchanged. Final archives matched every
+extracted file; payloads matched retained source, dataset and plans before
+removal. Extracted models/reports, source export, raw data and the cumulative
+ledger remain intact ([cleanup evidence](cleanup.json)).

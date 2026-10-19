@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "server_assets_verified_before_cleanup": true,
+  "final_archives_verified_against_extracted_files": [
+    "rl-stocks-cpu-3c5ecdf0693e",
+    "rl-stocks-cpu-b250b60f758e",
+    "rl-stocks-cpu-df8013b150b9",
+    "rl-stocks-cpu-6eade161f20a",
+    "rl-stocks-cpu-0afe60e0ef6e",
+    "rl-stocks-cpu-f1d3053e5561"
+  ],
+  "payloads_verified_against_retained_source_dataset_and_plan": [
+    "rl-stocks-cpu-3c5ecdf0693e",
+    "rl-stocks-cpu-b250b60f758e",
+    "rl-stocks-cpu-df8013b150b9",
+    "rl-stocks-cpu-6eade161f20a",
+    "rl-stocks-cpu-0afe60e0ef6e",
+    "rl-stocks-cpu-f1d3053e5561"
+  ],
+  "checkpoint_archives_superseded_by_verified_complete_results": true,
+  "removed_files": [
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-3c5ecdf0693e/artifacts.tar.gz",
+      "size": 20401032,
+      "sha256": "6e6a59f0302bb26155f20a6ab638c3a1fedac7547b60e9258519d852d55b0d53"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-3c5ecdf0693e/checkpoint.tar.gz",
+      "size": 20401050,
+      "sha256": "d78ae312611dc0bcb586c4e35ceda15e44672e048fd2b3dab06a290523f086cf"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-3c5ecdf0693e/export.ready",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-3c5ecdf0693e/research-upload.tar.gz",
+      "size": 10247499,
+      "sha256": "32429db7951f1d2aeaac7f2e124ab76d7c6314f878dd079988e966dd795bfd89"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b250b60f758e/artifacts.tar.gz",
+      "size": 21005309,
+      "sha256": "b919d877025c72f8f929923a332a60f1dc73bd098e881a0a04b213c456abd165"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b250b60f758e/checkpoint.tar.gz",
+      "size": 20576881,
+      "sha256": "169d57878db5e4416b56f63779e0b85b5c076902bc89d02fa0433d5b2edfe841"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-b250b60f758e/export.ready",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-b250b60f758e/research-upload.tar.gz",
+      "size": 10247509,
+      "sha256": "76afcee80760736acd774a089f76fe11437c444d74f118269b59d8065155f57f"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-df8013b150b9/artifacts.tar.gz",
+      "size": 20441187,
+      "sha256": "d2003bdc0f63fbb7f975cca823e3148ed23ee6cd0bf4a69a56b3f83071112279"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-df8013b150b9/checkpoint.tar.gz",
+      "size": 20440562,
+      "sha256": "3e275feca636ef50dfdab200652f44ea04d694bf5b6ac502f615b4f799acf0d5"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-df8013b150b9/export.ready",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-df8013b150b9/research-upload.tar.gz",
+      "size": 10247509,
+      "sha256": "0b26311025d13143793516cdcc394ea460a0c02e745c34ea33fd4876407cf051"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-6eade161f20a/artifacts.tar.gz",
+      "size": 19934472,
+      "sha256": "561055f443dbaa54107cac01fdd60de0bff6bb06d2ace7385575c5b57e269a05"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-6eade161f20a/checkpoint.tar.gz",
+      "size": 20752944,
+      "sha256": "fa01caa6c559194fcf48e6f52e9aaf4cae0e67cc4e927c4f8337685db1eafee0"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-6eade161f20a/export.ready",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-6eade161f20a/research-upload.tar.gz",
+      "size": 10249814,
+      "sha256": "b761f5260a36e52dee750903048a4406b2f4168ccb758f271b79de5dfbc52440"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-0afe60e0ef6e/artifacts.tar.gz",
+      "size": 18115628,
+      "sha256": "173f60133ec3273e9fef275965bf4ec9c111aeb4d40f05c78f6083400c3adc99"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-0afe60e0ef6e/checkpoint.tar.gz",
+      "size": 17588455,
+      "sha256": "c2752e0d0eb1057621d2a0e4c8bbb2779dc26b69f722f76d57df9b7d17ece527"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-0afe60e0ef6e/export.ready",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-0afe60e0ef6e/research-upload.tar.gz",
+      "size": 10249816,
+      "sha256": "33af0d99367e075edc966287f0232dd94a280407d7d0100bdc36c1ce63f10ee4"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-f1d3053e5561/artifacts.tar.gz",
+      "size": 18527808,
+      "sha256": "45f79a4e6551aaf1217f87e807375a1ece73c3083ea8aea0e1f642c1895e02ed"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-f1d3053e5561/checkpoint.tar.gz",
+      "size": 17797077,
+      "sha256": "8ebf206b4e55d20c092e927b5175c34546c761e92f49463fc97cf4cd0d4c9adf"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-f1d3053e5561/export.ready",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-f1d3053e5561/research-upload.tar.gz",
+      "size": 10249814,
+      "sha256": "7acba6d30311f3aa23272c225823ca0ec896b84a114b98f448ae004fa1b238af"
+    },
+    {
+      "path": "artifacts/public/execution-observations-2026-10-19/research-models.tar.gz",
+      "size": 2336014,
+      "sha256": "a3db5affed456b286b48ae8b4c6e36667a2dcd31b6b6cdd4ac83453d6c1b2747"
+    },
+    {
+      "path": "artifacts/public/execution-observations-2026-10-19/validation-reports.tar.gz",
+      "size": 4943028,
+      "sha256": "d65c836dbb5ca8ced9191dbdad6dce69402e42794a54409a1497eece64790597"
+    },
+    {
+      "path": ".runtime/observation-source.tar",
+      "size": 808960,
+      "sha256": "5222d31be5493e9be3f9c3d1e733f60e90997ab1a2176904357b9b755ee8630c"
+    }
+  ],
+  "removed_count": 27,
+  "removed_logical_bytes": 305562368,
+  "retained_file_count": 314,
+  "retained_hashes_unchanged": true,
+  "retained_hash_manifest_sha256": "3ce499b11f0debeefeac26e046f83a39c9a13916edc5b0cbc3f7f87904bdf4d1",
+  "all_six_owned_sessions_stopped": true,
+  "source_export_and_original_data_ledger_preserved": true
+}

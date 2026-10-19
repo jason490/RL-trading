@@ -719,3 +719,8 @@ run. All three declining stocks still have negative total policy returns despite
 positive short P&L. Conservative cumulative usage is 35.687823/150; the study
 charged 0.049487 units. This is development evidence only.
 [Full results and limits](../results/execution-observations-2026-10-19/README.md).
+
+The execution-observation release has 16 verified GitHub asset hashes/sizes.
+Cleanup removed 27 duplicates (291.41 MiB logical), with 314 retained file hashes
+unchanged. Final archives and payload source/data/plan contents were checked
+before removal. The source export and original ledger remain available.
