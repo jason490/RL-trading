@@ -121,3 +121,16 @@ legacy controls, preserve existing frozen bundles, and keep actions/reward/costs
 fixed. Diagnose this known observability limitation before another blind training
 extension. [Sampling evidence](../results/causal-sampling-2026-10-19/README.md)
 contains the witness and complete negative results.
+
+## Current direction diagnostic and next hypothesis
+
+Universal restrictions on fixed wide PPO models confirm some short profits
+(6/9 declining-stock/seed episodes) but short-only loses 1.19% on the full
+panel. Long-only improves to 15.49%, still far below 30.60% holding. A universal
+filter is not an all-market solution. Full-state policy requests change direction
+on 14.70% of common unrestricted/short-only decisions before mechanical clipping.
+Next test a market-only exposure head with account-aware learned protection and
+critic, against same-capacity unmasked and native controls. This is a proposed
+architecture ablation, not an established cure. Freeze its numeric protocol and
+verify masks/legacy inference before Colab allocation. The completed diagnostic
+adds no Colab usage; project remains 35.687823/150.

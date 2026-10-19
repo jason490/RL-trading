@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "source_study_retained_files_verified": 314,
+  "older_initialization_retained_files_verified": 228,
+  "original_models_data_and_ledger_unchanged": true,
+  "complete_labeled_cells": 30,
+  "complete_unique_replays": 21,
+  "reference_only_replays": 2,
+  "compressed_replay_files_verified": 23,
+  "initial_strict_failed_replay_before_filters_retained": true,
+  "project_units": 35.687822780613104,
+  "incremental_colab_units": 0.0,
+  "remaining_project_units": 114.3121772193869,
+  "remaining_working_units": 94.3121772193869,
+  "colab_sessions_allocated": 0,
+  "retired_test_evaluated": false,
+  "broker_orders_submitted": false,
+  "verification": "26 focused environment/direction/profile tests; 12 exposure/paired-report tests after final additions"
+}

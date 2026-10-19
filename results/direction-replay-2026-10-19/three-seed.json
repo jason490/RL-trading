@@ -1,0 +1,673 @@
+{
+  "scope": "Fixed-policy development diagnostic; no strategy selection or independent confirmation",
+  "sources": [
+    {
+      "seed": 11,
+      "training_source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+      "replay_source": {
+        "revision": {
+          "revision": "674e44fac9b0573a793d684fe871a356cd7989c8",
+          "dirty": ""
+        },
+        "source_hash": "657f3dae692d2373250fbd9514c83c642bb6b484506db52b774c246953881ea9"
+      },
+      "protocol_sha256": "9090f26c571b7f6ce9103c9c441097288063e4cfbceb6c38121ffced88512c94"
+    },
+    {
+      "seed": 23,
+      "training_source_revision": "dab2e3360b10f0e06f6b7e2818770e92cf266e80",
+      "replay_source": {
+        "revision": {
+          "revision": "f0521405d3e3857fc7ab3421e7480a84daef6429",
+          "dirty": ""
+        },
+        "source_hash": "657f3dae692d2373250fbd9514c83c642bb6b484506db52b774c246953881ea9"
+      },
+      "protocol_sha256": "a556dc67cd45b285a2d9087e924c7e66c1de025d72f43247ecd55be44f8d2fa4"
+    },
+    {
+      "seed": 37,
+      "training_source_revision": "dab2e3360b10f0e06f6b7e2818770e92cf266e80",
+      "replay_source": {
+        "revision": {
+          "revision": "e27f13f19f3f7d8ee74212a4e506be98ff8fe0d8",
+          "dirty": ""
+        },
+        "source_hash": "657f3dae692d2373250fbd9514c83c642bb6b484506db52b774c246953881ea9"
+      },
+      "protocol_sha256": "4f78c0408308adf015b520e2dfae9db9dab02471cf81c6762b520ea305d2588a"
+    }
+  ],
+  "matched_training_contract": {
+    "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+    "simulation": {
+      "initial_equity": 100000.0,
+      "fee_bps": 1.0,
+      "impact_bps": 2.0,
+      "borrow_rate": 0.03,
+      "max_holding": 20,
+      "allow_short": true,
+      "exposure_cap": 1.0
+    },
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.8.0",
+      "gymnasium": "1.2.0",
+      "stable-baselines3": "2.7.0",
+      "sb3-contrib": "2.7.0",
+      "pandas": "2.3.2",
+      "plotly": "6.3.0"
+    },
+    "resolved_parameters": {
+      "n_steps": 1000,
+      "batch_size": 50,
+      "n_epochs": 10,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "policy_kwargs": {
+        "net_arch": [
+          64,
+          64
+        ]
+      }
+    },
+    "initialization": {
+      "arm": "wide",
+      "applied": true,
+      "protective_mean_bias": 0.75,
+      "log_std": 0.0,
+      "exposure_mean_bias": 0.0,
+      "action_weights": "unchanged seeded native weights"
+    },
+    "start_sampling": {
+      "mode": "legacy_uniform"
+    }
+  },
+  "validation_baseline_sha256": "a361016bca2ed9ad2b9262b7fff12b4065a40f446a3f4d0a95361635f338f493",
+  "results": [
+    {
+      "phase": "selected",
+      "mode": "unrestricted",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "mean_return": 0.14226640291339984,
+      "seed_return_standard_deviation": 0.056747859706281496,
+      "mean_gain_vs_paired_unrestricted_pp": 0.0,
+      "positive_gain_seeds": 0,
+      "groups": {
+        "stock": {
+          "net_return": 0.15834302574005815,
+          "buy_hold_return": 0.32626546944483825,
+          "excess_return": -0.16792244370478007,
+          "max_drawdown": -0.30599542409258307,
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "median_excess_return": -0.13988173579342653
+        },
+        "etf": {
+          "net_return": 0.053844977366779075,
+          "buy_hold_return": 0.19466021642377884,
+          "excess_return": -0.14081523905699977,
+          "max_drawdown": -0.26139859895607137,
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "median_excess_return": -0.14659294939435596
+        }
+      },
+      "mean_costs": 6775.843895215128,
+      "declining_stock_seed_observations": 9,
+      "positive_total_and_short_count": 0,
+      "mean_declining_stock_return": -0.15670496914083443,
+      "declining_per_symbol": {
+        "AMZN": {
+          "mean_policy_return": -0.03800282558160576,
+          "buy_hold_return": -0.0773480025386506,
+          "positive_total_and_short_seeds": 0
+        },
+        "DIS": {
+          "mean_policy_return": -0.37453992195839186,
+          "buy_hold_return": -0.4738014050296483,
+          "positive_total_and_short_seeds": 0
+        },
+        "NEE": {
+          "mean_policy_return": -0.05757215988250567,
+          "buy_hold_return": -0.14630790487726686,
+          "positive_total_and_short_seeds": 0
+        }
+      }
+    },
+    {
+      "phase": "selected",
+      "mode": "long_only",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "mean_return": 0.1562806634177438,
+      "seed_return_standard_deviation": 0.04318018170165192,
+      "mean_gain_vs_paired_unrestricted_pp": 1.4014260504343974,
+      "positive_gain_seeds": 3,
+      "groups": {
+        "stock": {
+          "net_return": 0.17042495241780437,
+          "buy_hold_return": 0.32626546944483825,
+          "excess_return": -0.15584051702703386,
+          "max_drawdown": -0.301182686680019,
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "median_excess_return": -0.12035809711478607
+        },
+        "etf": {
+          "net_return": 0.07848707391741076,
+          "buy_hold_return": 0.19466021642377884,
+          "excess_return": -0.11617314250636808,
+          "max_drawdown": -0.25762534218122896,
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "median_excess_return": -0.1178065649086852
+        }
+      },
+      "mean_costs": 5820.916493452737,
+      "declining_stock_seed_observations": 9,
+      "positive_total_and_short_count": 0,
+      "mean_declining_stock_return": -0.17339308234099338,
+      "declining_per_symbol": {
+        "AMZN": {
+          "mean_policy_return": -0.046205983862728485,
+          "buy_hold_return": -0.0773480025386506,
+          "positive_total_and_short_seeds": 0
+        },
+        "DIS": {
+          "mean_policy_return": -0.4015497700604971,
+          "buy_hold_return": -0.4738014050296483,
+          "positive_total_and_short_seeds": 0
+        },
+        "NEE": {
+          "mean_policy_return": -0.07242349309975456,
+          "buy_hold_return": -0.14630790487726686,
+          "positive_total_and_short_seeds": 0
+        }
+      }
+    },
+    {
+      "phase": "selected",
+      "mode": "short_only",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "mean_return": -0.009644125635295738,
+      "seed_return_standard_deviation": 0.009150160167964832,
+      "mean_gain_vs_paired_unrestricted_pp": -15.191052854869557,
+      "positive_gain_seeds": 0,
+      "groups": {
+        "stock": {
+          "net_return": -0.006890863511174223,
+          "buy_hold_return": 0.32626546944483825,
+          "excess_return": -0.33315633295601244,
+          "max_drawdown": -0.05084367109869143,
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "median_excess_return": -0.24461519912036167
+        },
+        "etf": {
+          "net_return": -0.024787067317964068,
+          "buy_hold_return": 0.19466021642377884,
+          "excess_return": -0.2194472837417429,
+          "max_drawdown": -0.035747194765671335,
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "median_excess_return": -0.28717942878823227
+        }
+      },
+      "mean_costs": 981.2898241616579,
+      "declining_stock_seed_observations": 9,
+      "positive_total_and_short_count": 6,
+      "mean_declining_stock_return": 0.038199140003848435,
+      "declining_per_symbol": {
+        "AMZN": {
+          "mean_policy_return": 0.02378808224147566,
+          "buy_hold_return": -0.0773480025386506,
+          "positive_total_and_short_seeds": 1
+        },
+        "DIS": {
+          "mean_policy_return": 0.06468343996129082,
+          "buy_hold_return": -0.4738014050296483,
+          "positive_total_and_short_seeds": 2
+        },
+        "NEE": {
+          "mean_policy_return": 0.02612589780877883,
+          "buy_hold_return": -0.14630790487726686,
+          "positive_total_and_short_seeds": 3
+        }
+      }
+    },
+    {
+      "phase": "final",
+      "mode": "unrestricted",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "mean_return": 0.1389252166340219,
+      "seed_return_standard_deviation": 0.05468434538258011,
+      "mean_gain_vs_paired_unrestricted_pp": 0.0,
+      "positive_gain_seeds": 0,
+      "groups": {
+        "stock": {
+          "net_return": 0.1554535834889791,
+          "buy_hold_return": 0.32626546944483825,
+          "excess_return": -0.1708118859558591,
+          "max_drawdown": -0.3067583866944164,
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "median_excess_return": -0.13652869508290857
+        },
+        "etf": {
+          "net_return": 0.04801919893175719,
+          "buy_hold_return": 0.19466021642377884,
+          "excess_return": -0.14664101749202166,
+          "max_drawdown": -0.26425875085994344,
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "median_excess_return": -0.1525649206890107
+        }
+      },
+      "mean_costs": 6738.014604335284,
+      "declining_stock_seed_observations": 9,
+      "positive_total_and_short_count": 0,
+      "mean_declining_stock_return": -0.16497487992004892,
+      "declining_per_symbol": {
+        "AMZN": {
+          "mean_policy_return": -0.06460511196555396,
+          "buy_hold_return": -0.0773480025386506,
+          "positive_total_and_short_seeds": 0
+        },
+        "DIS": {
+          "mean_policy_return": -0.3675445306337583,
+          "buy_hold_return": -0.4738014050296483,
+          "positive_total_and_short_seeds": 0
+        },
+        "NEE": {
+          "mean_policy_return": -0.06277499716083453,
+          "buy_hold_return": -0.14630790487726686,
+          "positive_total_and_short_seeds": 0
+        }
+      }
+    },
+    {
+      "phase": "final",
+      "mode": "long_only",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "mean_return": 0.15491417531434035,
+      "seed_return_standard_deviation": 0.04197675238599556,
+      "mean_gain_vs_paired_unrestricted_pp": 1.5988958680318457,
+      "positive_gain_seeds": 3,
+      "groups": {
+        "stock": {
+          "net_return": 0.1691039519604528,
+          "buy_hold_return": 0.32626546944483825,
+          "excess_return": -0.15716151748438542,
+          "max_drawdown": -0.3016256406392901,
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "median_excess_return": -0.11885372752971494
+        },
+        "etf": {
+          "net_return": 0.07687040376072196,
+          "buy_hold_return": 0.19466021642377884,
+          "excess_return": -0.11778981266305688,
+          "max_drawdown": -0.2601242047183271,
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "median_excess_return": -0.12160385375469808
+        }
+      },
+      "mean_costs": 5771.32898529134,
+      "declining_stock_seed_observations": 9,
+      "positive_total_and_short_count": 0,
+      "mean_declining_stock_return": -0.18830717624061635,
+      "declining_per_symbol": {
+        "AMZN": {
+          "mean_policy_return": -0.07594718218956024,
+          "buy_hold_return": -0.0773480025386506,
+          "positive_total_and_short_seeds": 0
+        },
+        "DIS": {
+          "mean_policy_return": -0.4090952133316054,
+          "buy_hold_return": -0.4738014050296483,
+          "positive_total_and_short_seeds": 0
+        },
+        "NEE": {
+          "mean_policy_return": -0.0798791332006834,
+          "buy_hold_return": -0.14630790487726686,
+          "positive_total_and_short_seeds": 0
+        }
+      }
+    },
+    {
+      "phase": "final",
+      "mode": "short_only",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "mean_return": -0.011885179095526405,
+      "seed_return_standard_deviation": 0.007330284871915433,
+      "mean_gain_vs_paired_unrestricted_pp": -15.08103957295483,
+      "positive_gain_seeds": 0,
+      "groups": {
+        "stock": {
+          "net_return": -0.008697540413400935,
+          "buy_hold_return": 0.32626546944483825,
+          "excess_return": -0.3349630098582392,
+          "max_drawdown": -0.05330699935798967,
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "median_excess_return": -0.24594984529221725
+        },
+        "etf": {
+          "net_return": -0.02941719184721649,
+          "buy_hold_return": 0.19466021642377884,
+          "excess_return": -0.22407740827099534,
+          "max_drawdown": -0.04026462730326166,
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "median_excess_return": -0.2907837348263224
+        }
+      },
+      "mean_costs": 1017.5798755590946,
+      "declining_stock_seed_observations": 9,
+      "positive_total_and_short_count": 6,
+      "mean_declining_stock_return": 0.038243957547259705,
+      "declining_per_symbol": {
+        "AMZN": {
+          "mean_policy_return": 0.021169626723106294,
+          "buy_hold_return": -0.0773480025386506,
+          "positive_total_and_short_seeds": 1
+        },
+        "DIS": {
+          "mean_policy_return": 0.06489819377976132,
+          "buy_hold_return": -0.4738014050296483,
+          "positive_total_and_short_seeds": 2
+        },
+        "NEE": {
+          "mean_policy_return": 0.028664052138911506,
+          "buy_hold_return": -0.14630790487726686,
+          "positive_total_and_short_seeds": 3
+        }
+      }
+    }
+  ],
+  "objective_achieved": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "seed37_selected_bounded_reference_exception": true,
+  "reporter": {
+    "git": {
+      "revision": "1e6d7be1f668f5c2298df7183ab2a8078683bac7",
+      "dirty": ""
+    },
+    "sha256": "7eec7ed996577450b8043172badffab00d52a2f740ce82f15307499511c7620d"
+  },
+  "seed11_exact_training_bridge": {
+    "passed": true,
+    "prior_run": "20261019T125955-ppo-11-4b9172ef",
+    "new_run": "20261019T192733-ppo-11-70d5a74b",
+    "identical_tensors": {
+      "best": 13,
+      "latest": 13
+    },
+    "all_checkpoint_scores_equal": true,
+    "selected_score": 0.07962208424177526,
+    "final_score": 0.07962208424177526,
+    "trained_locally": false
+  },
+  "seed37_selected_strict_reference_failed": true,
+  "unique_source_reports_verified": 21,
+  "account_path_feedback": [
+    {
+      "seed": 11,
+      "profile": "legacy",
+      "phase": "selected",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 91,
+      "requested_direction_sign_flip_fraction": 0.0047814207650273225,
+      "mean_absolute_requested_exposure_change": 0.009605844446116164,
+      "maximum_absolute_requested_exposure_change": 0.3387613706290722,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "legacy",
+      "phase": "selected",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 215,
+      "requested_direction_sign_flip_fraction": 0.011296763345943674,
+      "mean_absolute_requested_exposure_change": 0.030209309709997877,
+      "maximum_absolute_requested_exposure_change": 0.26791614294052124,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "legacy",
+      "phase": "final",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 91,
+      "requested_direction_sign_flip_fraction": 0.0047814207650273225,
+      "mean_absolute_requested_exposure_change": 0.009605844446116164,
+      "maximum_absolute_requested_exposure_change": 0.3387613706290722,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "legacy",
+      "phase": "final",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 215,
+      "requested_direction_sign_flip_fraction": 0.011296763345943674,
+      "mean_absolute_requested_exposure_change": 0.030209309709997877,
+      "maximum_absolute_requested_exposure_change": 0.26791614294052124,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_masked",
+      "phase": "selected",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 465,
+      "requested_direction_sign_flip_fraction": 0.024432534678436316,
+      "mean_absolute_requested_exposure_change": 0.050355301271186856,
+      "maximum_absolute_requested_exposure_change": 1.202230229973793,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_masked",
+      "phase": "selected",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 1290,
+      "requested_direction_sign_flip_fraction": 0.06778058007566204,
+      "mean_absolute_requested_exposure_change": 0.2767535761628416,
+      "maximum_absolute_requested_exposure_change": 1.077978402376175,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_masked",
+      "phase": "final",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 465,
+      "requested_direction_sign_flip_fraction": 0.024432534678436316,
+      "mean_absolute_requested_exposure_change": 0.050355301271186856,
+      "maximum_absolute_requested_exposure_change": 1.202230229973793,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_masked",
+      "phase": "final",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 1290,
+      "requested_direction_sign_flip_fraction": 0.06778058007566204,
+      "mean_absolute_requested_exposure_change": 0.2767535761628416,
+      "maximum_absolute_requested_exposure_change": 1.077978402376175,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_full",
+      "phase": "selected",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 359,
+      "requested_direction_sign_flip_fraction": 0.018862967633459436,
+      "mean_absolute_requested_exposure_change": 0.038154784737201033,
+      "maximum_absolute_requested_exposure_change": 1.466466248035431,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_full",
+      "phase": "selected",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 2797,
+      "requested_direction_sign_flip_fraction": 0.1469630096679277,
+      "mean_absolute_requested_exposure_change": 0.46888674828893306,
+      "maximum_absolute_requested_exposure_change": 1.4725083410739899,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_full",
+      "phase": "final",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 359,
+      "requested_direction_sign_flip_fraction": 0.018862967633459436,
+      "mean_absolute_requested_exposure_change": 0.038154784737201033,
+      "maximum_absolute_requested_exposure_change": 1.466466248035431,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 11,
+      "profile": "execution_full",
+      "phase": "final",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 2797,
+      "requested_direction_sign_flip_fraction": 0.1469630096679277,
+      "mean_absolute_requested_exposure_change": 0.46888674828893306,
+      "maximum_absolute_requested_exposure_change": 1.4725083410739899,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 23,
+      "profile": "legacy",
+      "phase": "selected",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 13,
+      "requested_direction_sign_flip_fraction": 0.0006830601092896175,
+      "mean_absolute_requested_exposure_change": 0.0012904990284565482,
+      "maximum_absolute_requested_exposure_change": 0.2772659659385681,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 23,
+      "profile": "legacy",
+      "phase": "selected",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 63,
+      "requested_direction_sign_flip_fraction": 0.0033102143757881464,
+      "mean_absolute_requested_exposure_change": 0.039143134267102676,
+      "maximum_absolute_requested_exposure_change": 0.32483041286468506,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 23,
+      "profile": "legacy",
+      "phase": "final",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 8,
+      "requested_direction_sign_flip_fraction": 0.0004203446826397646,
+      "mean_absolute_requested_exposure_change": 0.0017794215914289481,
+      "maximum_absolute_requested_exposure_change": 0.3508007824420929,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 23,
+      "profile": "legacy",
+      "phase": "final",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 88,
+      "requested_direction_sign_flip_fraction": 0.004623791509037411,
+      "mean_absolute_requested_exposure_change": 0.05677495430362226,
+      "maximum_absolute_requested_exposure_change": 0.47003498673439026,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 37,
+      "profile": "legacy",
+      "phase": "selected",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 7,
+      "requested_direction_sign_flip_fraction": 0.00036780159730979403,
+      "mean_absolute_requested_exposure_change": 0.0017807699556722015,
+      "maximum_absolute_requested_exposure_change": 0.2064368724822998,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 37,
+      "profile": "legacy",
+      "phase": "selected",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 206,
+      "requested_direction_sign_flip_fraction": 0.010823875577973938,
+      "mean_absolute_requested_exposure_change": 0.09417789299651737,
+      "maximum_absolute_requested_exposure_change": 0.5123523473739624,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 37,
+      "profile": "legacy",
+      "phase": "final",
+      "mode": "long_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 16,
+      "requested_direction_sign_flip_fraction": 0.0008406893652795292,
+      "mean_absolute_requested_exposure_change": 0.0023357191627290056,
+      "maximum_absolute_requested_exposure_change": 0.3924899399280548,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    },
+    {
+      "seed": 37,
+      "profile": "legacy",
+      "phase": "final",
+      "mode": "short_only",
+      "common_decisions": 19032,
+      "requested_direction_sign_flips": 235,
+      "requested_direction_sign_flip_fraction": 0.012347625052543085,
+      "mean_absolute_requested_exposure_change": 0.11843927404692553,
+      "maximum_absolute_requested_exposure_change": 0.5283388793468475,
+      "comparison": "Original policy requests before restriction; same model and fixed market inputs, different simulated account paths"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "algorithm": "ppo",
+      "seed": 11,
+      "profile": "legacy",
+      "source_transitions": 50000,
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+      "run": "20261019T192733-ppo-11-70d5a74b",
+      "bundle_id": "aa96c9a99274ba8c8d9dd0801e1f6c74649d389646926241f9e495b25196eb96",
+      "selected_weights_sha256": "51ac5ca2d3d3cc5eef4ae8602a166865e49c02a4d7f3d4cc1f6bfa6fffe946e4",
+      "final_weights_sha256": "7057cde4964d6398546fb51d598446fd8e4a61d1c546c16d085b0304856d71bf",
+      "download_release": "https://github.com/jason490/RL-trading/releases/tag/execution-observations-2026-10-19"
+    },
+    {
+      "algorithm": "ppo",
+      "seed": 11,
+      "profile": "execution_masked",
+      "source_transitions": 50000,
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+      "run": "20261019T192738-ppo-11-d541adbc",
+      "bundle_id": "2a910c96244f70216a6a7f44620726b014b5d9dd79863629f169626ec47a652a",
+      "selected_weights_sha256": "3d8301bcae353d47003566b6a5a4fd5452d52759cd928a27264213015cf6da4c",
+      "final_weights_sha256": "02eb5ed720ad1e5fdfcd9eb807f4b78a3932b4e698ac37bba3d30f1b36eaf549",
+      "download_release": "https://github.com/jason490/RL-trading/releases/tag/execution-observations-2026-10-19"
+    },
+    {
+      "algorithm": "ppo",
+      "seed": 11,
+      "profile": "execution_full",
+      "source_transitions": 50000,
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_source_revision": "8b39004de0e0fc0da92b14914d5362bd3a3cf615",
+      "run": "20261019T193348-ppo-11-595f5523",
+      "bundle_id": "8912fa437ad2ccda0dbb51fc5ca6e75e42c34cc52a197ed51bd2ef2dae68172d",
+      "selected_weights_sha256": "2ad973b911386532b54178247a28fba6f53c9712f6979ef8f1699c8c2ab5c665",
+      "final_weights_sha256": "6a86487bcb5509e89df8e75dfd614901da30438ca5a4c3bf88ab76ce86750276",
+      "download_release": "https://github.com/jason490/RL-trading/releases/tag/execution-observations-2026-10-19"
+    },
+    {
+      "algorithm": "ppo",
+      "seed": 23,
+      "profile": "legacy",
+      "source_transitions": 50000,
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_source_revision": "dab2e3360b10f0e06f6b7e2818770e92cf266e80",
+      "run": "20261019T131327-ppo-23-2a28eb14",
+      "bundle_id": "d0aaf801673c06dbe58ee83e80fd2959f2219fc679c9d82496da64f71881c3ca",
+      "selected_weights_sha256": "ba48a872071d0b6b25f568053987bbd0e9a949cc2093d1eff0098a721324a318",
+      "final_weights_sha256": "1645d205c41664107e9e376f8b7d832605301a3791bded725e06d71c15a5d58c",
+      "download_release": "https://github.com/jason490/RL-trading/releases/tag/action-initialization-2026-10-19"
+    },
+    {
+      "algorithm": "ppo",
+      "seed": 37,
+      "profile": "legacy",
+      "source_transitions": 50000,
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "training_source_revision": "dab2e3360b10f0e06f6b7e2818770e92cf266e80",
+      "run": "20261019T132047-ppo-37-1d78f46f",
+      "bundle_id": "c698518d350ee2e15a6a844af65eca977d0f6a9cdb87af7e19b0d032ed855cb1",
+      "selected_weights_sha256": "3714bf316362e2baf953bbabb2e2a7c04a9e329ecfbced0416094183e361e47b",
+      "final_weights_sha256": "be4336a5f0e860ff7922ac6ccfec5c94b40ad0516abbedb102d0732b78437631",
+      "download_release": "https://github.com/jason490/RL-trading/releases/tag/action-initialization-2026-10-19"
+    }
+  ],
+  "new_weights_created": false
+}

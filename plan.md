@@ -711,7 +711,7 @@ Sixteen GitHub asset hashes/sizes are verified; 27 duplicate archives/markers
 (291.41 MiB logical) were removed with 314 retained hashes unchanged.
 See [results](results/execution-observations-2026-10-19/README.md).
 
-## 27. Universal direction-filter replay — implemented; diagnostic pending
+## 27. Universal direction-filter replay — complete; no all-market solution
 
 Use fixed selected/final policies from the completed three-profile study. Replay
 universal long-only and short-only exposure filters on every validation symbol,
@@ -728,3 +728,39 @@ original policy risk outputs in filtered-path audit rows. A strict committed
 protocol covers all 18 profile/phase/mode cells. Tests verify state feedback,
 cost-aware short profits, account reconciliation, reference-path rejection and
 exact policy fingerprints for deterministic phase reuse.
+
+The fixed diagnostic now covers 30 profile/phase/mode labels, 21 unique replays
+and two reference-only calibration paths. Three-seed final unrestricted 13.89%,
+long-only 15.49%, short-only -1.19%, holding 30.60%. Universal short-only is
+positive on six of nine declining-stock/seed episodes (AMZN/DIS/NEE means
++2.12%/+6.49%/+2.87%), but not the full panel. Seed-37 selected strict reference
+failed on two one-share rows; a separately committed <=$2/one-share bridge was
+measured and declared before filtered replay. Original failure stays explicit.
+No training or Colab units were added.
+
+## 28. Market-only exposure head — proposed, not implemented
+
+Current policy direction changes with account-path inputs even when market
+features and weights are fixed; full-state seed11 flips direction on 14.70% of
+common unrestricted/short-only decisions. This can reflect valid cost/risk
+behavior, so test it as an ablation rather than assume it causes losses.
+
+Propose an SB3 PPO custom policy in `rl/ppo/policies.py`: a market-only actor
+branch and a full-observation actor branch feed a four-output Gaussian action
+head; the critic retains full observations. In the treatment, a fixed connection
+mask prevents signed exposure (component zero) from accessing the account branch.
+Protective outputs remain learned and can use both branches. Compare against an
+identical-capacity unmasked two-branch control and native full-state PPO; use
+execution_full observations, seven existing market features, wide initialization,
+unchanged net-equity reward, costs and legacy-uniform starts. Preserve native
+policy/RNG/default bundle behavior. No universal direction filter during training.
+
+Before allocation, verify the exposure output is exactly independent of account
+perturbations while risk/value outputs retain access; verify masks/gradients,
+parameter matching, serialization/frozen parity and strict schema rejection.
+Predeclare a three-arm seed11 50k CPU screen with 512-step smokes, and confirm
+23/37 only if treatment clears the selected/final, stock/ETF and drawdown gates
+against both controls. Use one frozen source, original cumulative ledger,
+two-unit study allowance, per-allocation two-hour deadline and actual Colab
+Python checks. Directional P&L remains reporting-only; independent prospective
+evidence is still required for success.

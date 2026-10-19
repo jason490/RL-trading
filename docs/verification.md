@@ -724,3 +724,22 @@ The execution-observation release has 16 verified GitHub asset hashes/sizes.
 Cleanup removed 27 duplicates (291.41 MiB logical), with 314 retained file hashes
 unchanged. Final archives and payload source/data/plan contents were checked
 before removal. The source export and original ledger remain available.
+
+## Universal direction replay — 2026-10-19
+
+Thirty fixed profile/phase/mode labels completed using 21 unique replays, with
+two additional unrestricted calibration paths. No models were trained and no
+Colab session allocated. Three-seed final unrestricted/long-only/short-only
+means are 13.89%/15.49%/-1.19%, versus holding 30.60%. Short-only earns positive
+total and short P&L in six of nine declining-stock/seed episodes, with mean
+AMZN +2.12%, DIS +6.49%, NEE +2.87%, but loses over the whole panel.
+
+Seed 37 selected required a separately declared one-share CPU bridge after its
+original strict reference check failed on two rows with <$1 equity drift. The
+strict failure, reference-only measurement and bounded exception are retained.
+All other legacy seed/phase references pass the original strict checks. All
+314 source-study and 228 older initialization retained hashes remain unchanged;
+project units stay 35.687823/150 with zero active assignments. Tests cover filter
+state feedback, profitable/costly shorts, parity and bounded rejection, paired
+model/seed consistency and pre-filter direction diagnostics.
+[Results and limits](../results/direction-replay-2026-10-19/README.md).
