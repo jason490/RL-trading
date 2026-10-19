@@ -23,7 +23,7 @@ def audit(roots, universe, data_root):
         if matched is not None and contract != matched:
             raise ValueError('dataset, simulation and requested steps must match')
         matched = contract
-        variant = metadata.get('initialization', {}).get('arm', 'standard')
+        variant = metadata.get('research_variant', metadata.get('initialization', {}).get('arm', 'standard'))
         identity = (metadata['algorithm'], variant, metadata['seed'])
         if identity in seen:
             raise ValueError('duplicate algorithm/variant/seed; pass one matched study only')

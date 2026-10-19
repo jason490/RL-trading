@@ -1,0 +1,9 @@
+{
+  "declared_at": "2026-10-19T13:57:22.819597+00:00",
+  "protocol_sha256": "719af17c3390c35a9d833e9c72a7e8e9d7ebb57e49b0d84c989bf9935cb05d55",
+  "starting_project_units": 35.56298046762479,
+  "study_limit_units": 2.0,
+  "starting_account_balance": 350.82,
+  "starting_reported_assignments": 0,
+  "status": "declared_before_allocation"
+}

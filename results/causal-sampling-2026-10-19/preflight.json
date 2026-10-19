@@ -1,0 +1,1481 @@
+{
+  "passed": true,
+  "protocol_sha256": "719af17c3390c35a9d833e9c72a7e8e9d7ebb57e49b0d84c989bf9935cb05d55",
+  "datasets": {
+    "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9": {
+      "train_symbols": 26,
+      "training_rows": 70200,
+      "validation_rows": 19058,
+      "validation_sha256": "904b2e83355f06fbbb76e4a317f18902bbe6f740329dfa7fab43078c11de220f",
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "schema": "daily-indicators-v1",
+      "feed": "yahoo",
+      "pools": {
+        "ready_uniform": {
+          "mode": "ready_uniform",
+          "long_window": 252,
+          "short_window": 63,
+          "long_price_return_below": -0.2,
+          "short_price_return_below": 0.0,
+          "eligible": 63102,
+          "downtrend": 1435,
+          "other": 61667,
+          "episodes": [
+            {
+              "symbol": "AAPL",
+              "eligible": 2427,
+              "downtrend": 144
+            },
+            {
+              "symbol": "AMT",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMZN",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "APD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "BAC",
+              "eligible": 2427,
+              "downtrend": 351
+            },
+            {
+              "symbol": "CAT",
+              "eligible": 2427,
+              "downtrend": 248
+            },
+            {
+              "symbol": "CVX",
+              "eligible": 2427,
+              "downtrend": 254
+            },
+            {
+              "symbol": "DIA",
+              "eligible": 2427,
+              "downtrend": 6
+            },
+            {
+              "symbol": "DIS",
+              "eligible": 2427,
+              "downtrend": 25
+            },
+            {
+              "symbol": "DUK",
+              "eligible": 2427,
+              "downtrend": 3
+            },
+            {
+              "symbol": "GOOGL",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "HD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "HON",
+              "eligible": 2427,
+              "downtrend": 20
+            },
+            {
+              "symbol": "IWM",
+              "eligible": 2427,
+              "downtrend": 39
+            },
+            {
+              "symbol": "JNJ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "JPM",
+              "eligible": 2427,
+              "downtrend": 62
+            },
+            {
+              "symbol": "KO",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "LIN",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "MSFT",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "NEE",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PG",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PLD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "QQQ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "SPY",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "UNH",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "XOM",
+              "eligible": 2427,
+              "downtrend": 208
+            }
+          ],
+          "selection": "global uniform eligible starts",
+          "labels_in_observation_or_reward": false
+        },
+        "downtrend_balanced": {
+          "mode": "downtrend_balanced",
+          "long_window": 252,
+          "short_window": 63,
+          "long_price_return_below": -0.2,
+          "short_price_return_below": 0.0,
+          "eligible": 63102,
+          "downtrend": 1435,
+          "other": 61667,
+          "episodes": [
+            {
+              "symbol": "AAPL",
+              "eligible": 2427,
+              "downtrend": 144
+            },
+            {
+              "symbol": "AMT",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMZN",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "APD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "BAC",
+              "eligible": 2427,
+              "downtrend": 351
+            },
+            {
+              "symbol": "CAT",
+              "eligible": 2427,
+              "downtrend": 248
+            },
+            {
+              "symbol": "CVX",
+              "eligible": 2427,
+              "downtrend": 254
+            },
+            {
+              "symbol": "DIA",
+              "eligible": 2427,
+              "downtrend": 6
+            },
+            {
+              "symbol": "DIS",
+              "eligible": 2427,
+              "downtrend": 25
+            },
+            {
+              "symbol": "DUK",
+              "eligible": 2427,
+              "downtrend": 3
+            },
+            {
+              "symbol": "GOOGL",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "HD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "HON",
+              "eligible": 2427,
+              "downtrend": 20
+            },
+            {
+              "symbol": "IWM",
+              "eligible": 2427,
+              "downtrend": 39
+            },
+            {
+              "symbol": "JNJ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "JPM",
+              "eligible": 2427,
+              "downtrend": 62
+            },
+            {
+              "symbol": "KO",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "LIN",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "MSFT",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "NEE",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PG",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PLD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "QQQ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "SPY",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "UNH",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "XOM",
+              "eligible": 2427,
+              "downtrend": 208
+            }
+          ],
+          "selection": "equal-probability class, then global uniform within class",
+          "labels_in_observation_or_reward": false
+        }
+      }
+    },
+    "c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398": {
+      "train_symbols": 111,
+      "training_rows": 298946,
+      "validation_rows": 19058,
+      "validation_sha256": "904b2e83355f06fbbb76e4a317f18902bbe6f740329dfa7fab43078c11de220f",
+      "normalizer_sha256": "cc733cc154c306e52444ad5fea231509a6266723923e26a97fe074d6aadc3b32",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "schema": "daily-indicators-v1",
+      "feed": "yahoo",
+      "pools": {
+        "ready_uniform": {
+          "mode": "ready_uniform",
+          "long_window": 252,
+          "short_window": 63,
+          "long_price_return_below": -0.2,
+          "short_price_return_below": 0.0,
+          "eligible": 268643,
+          "downtrend": 13734,
+          "other": 254909,
+          "episodes": [
+            {
+              "symbol": "AAPL",
+              "eligible": 2427,
+              "downtrend": 144
+            },
+            {
+              "symbol": "ABBV",
+              "eligible": 1673,
+              "downtrend": 132
+            },
+            {
+              "symbol": "ABT",
+              "eligible": 2427,
+              "downtrend": 23
+            },
+            {
+              "symbol": "ADBE",
+              "eligible": 2427,
+              "downtrend": 9
+            },
+            {
+              "symbol": "AEP",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMGN",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMT",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMZN",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "APA",
+              "eligible": 2427,
+              "downtrend": 808
+            },
+            {
+              "symbol": "APD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AXP",
+              "eligible": 2427,
+              "downtrend": 170
+            },
+            {
+              "symbol": "BA",
+              "eligible": 2427,
+              "downtrend": 139
+            },
+            {
+              "symbol": "BAC",
+              "eligible": 2427,
+              "downtrend": 351
+            },
+            {
+              "symbol": "BLK",
+              "eligible": 2427,
+              "downtrend": 39
+            },
+            {
+              "symbol": "BMY",
+              "eligible": 2427,
+              "downtrend": 147
+            },
+            {
+              "symbol": "C",
+              "eligible": 2427,
+              "downtrend": 339
+            },
+            {
+              "symbol": "CAT",
+              "eligible": 2427,
+              "downtrend": 248
+            },
+            {
+              "symbol": "CL",
+              "eligible": 2427,
+              "downtrend": 10
+            },
+            {
+              "symbol": "CMCSA",
+              "eligible": 2427,
+              "downtrend": 19
+            },
+            {
+              "symbol": "COP",
+              "eligible": 2427,
+              "downtrend": 369
+            },
+            {
+              "symbol": "COST",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "CSCO",
+              "eligible": 2427,
+              "downtrend": 189
+            },
+            {
+              "symbol": "CVX",
+              "eligible": 2427,
+              "downtrend": 254
+            },
+            {
+              "symbol": "D",
+              "eligible": 2427,
+              "downtrend": 13
+            },
+            {
+              "symbol": "DE",
+              "eligible": 2427,
+              "downtrend": 10
+            },
+            {
+              "symbol": "DIA",
+              "eligible": 2427,
+              "downtrend": 6
+            },
+            {
+              "symbol": "DIS",
+              "eligible": 2427,
+              "downtrend": 25
+            },
+            {
+              "symbol": "DUK",
+              "eligible": 2427,
+              "downtrend": 3
+            },
+            {
+              "symbol": "DVN",
+              "eligible": 2427,
+              "downtrend": 658
+            },
+            {
+              "symbol": "ECL",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "ED",
+              "eligible": 2427,
+              "downtrend": 6
+            },
+            {
+              "symbol": "EOG",
+              "eligible": 2427,
+              "downtrend": 419
+            },
+            {
+              "symbol": "EQIX",
+              "eligible": 2427,
+              "downtrend": 19
+            },
+            {
+              "symbol": "EXC",
+              "eligible": 2427,
+              "downtrend": 244
+            },
+            {
+              "symbol": "F",
+              "eligible": 2427,
+              "downtrend": 322
+            },
+            {
+              "symbol": "FCX",
+              "eligible": 2427,
+              "downtrend": 709
+            },
+            {
+              "symbol": "GD",
+              "eligible": 2427,
+              "downtrend": 120
+            },
+            {
+              "symbol": "GE",
+              "eligible": 2427,
+              "downtrend": 501
+            },
+            {
+              "symbol": "GILD",
+              "eligible": 2427,
+              "downtrend": 264
+            },
+            {
+              "symbol": "GOOGL",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "GS",
+              "eligible": 2427,
+              "downtrend": 290
+            },
+            {
+              "symbol": "HAL",
+              "eligible": 2427,
+              "downtrend": 601
+            },
+            {
+              "symbol": "HD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "HON",
+              "eligible": 2427,
+              "downtrend": 20
+            },
+            {
+              "symbol": "HSY",
+              "eligible": 2427,
+              "downtrend": 22
+            },
+            {
+              "symbol": "IBM",
+              "eligible": 2427,
+              "downtrend": 106
+            },
+            {
+              "symbol": "INTC",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "IWM",
+              "eligible": 2427,
+              "downtrend": 39
+            },
+            {
+              "symbol": "JNJ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "JPM",
+              "eligible": 2427,
+              "downtrend": 62
+            },
+            {
+              "symbol": "KMB",
+              "eligible": 2427,
+              "downtrend": 33
+            },
+            {
+              "symbol": "KO",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "KR",
+              "eligible": 2427,
+              "downtrend": 201
+            },
+            {
+              "symbol": "LIN",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "LLY",
+              "eligible": 2427,
+              "downtrend": 7
+            },
+            {
+              "symbol": "LMT",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "LOW",
+              "eligible": 2427,
+              "downtrend": 15
+            },
+            {
+              "symbol": "MCD",
+              "eligible": 2427,
+              "downtrend": 3
+            },
+            {
+              "symbol": "MDLZ",
+              "eligible": 2427,
+              "downtrend": 95
+            },
+            {
+              "symbol": "MLM",
+              "eligible": 2427,
+              "downtrend": 43
+            },
+            {
+              "symbol": "MRK",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "MS",
+              "eligible": 2427,
+              "downtrend": 331
+            },
+            {
+              "symbol": "MSFT",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "NEE",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "NEM",
+              "eligible": 2427,
+              "downtrend": 486
+            },
+            {
+              "symbol": "NFLX",
+              "eligible": 2427,
+              "downtrend": 235
+            },
+            {
+              "symbol": "NKE",
+              "eligible": 2427,
+              "downtrend": 42
+            },
+            {
+              "symbol": "NUE",
+              "eligible": 2427,
+              "downtrend": 204
+            },
+            {
+              "symbol": "NVDA",
+              "eligible": 2427,
+              "downtrend": 204
+            },
+            {
+              "symbol": "O",
+              "eligible": 2427,
+              "downtrend": 81
+            },
+            {
+              "symbol": "OMC",
+              "eligible": 2427,
+              "downtrend": 134
+            },
+            {
+              "symbol": "ORCL",
+              "eligible": 2427,
+              "downtrend": 24
+            },
+            {
+              "symbol": "OXY",
+              "eligible": 2427,
+              "downtrend": 493
+            },
+            {
+              "symbol": "PEG",
+              "eligible": 2427,
+              "downtrend": 24
+            },
+            {
+              "symbol": "PEP",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PFE",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "PG",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PLD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PNC",
+              "eligible": 2427,
+              "downtrend": 89
+            },
+            {
+              "symbol": "PPG",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "PSA",
+              "eligible": 2427,
+              "downtrend": 43
+            },
+            {
+              "symbol": "QCOM",
+              "eligible": 2427,
+              "downtrend": 164
+            },
+            {
+              "symbol": "QQQ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "ROST",
+              "eligible": 2427,
+              "downtrend": 15
+            },
+            {
+              "symbol": "RTX",
+              "eligible": 2427,
+              "downtrend": 150
+            },
+            {
+              "symbol": "SBUX",
+              "eligible": 2427,
+              "downtrend": 7
+            },
+            {
+              "symbol": "SHW",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "SLB",
+              "eligible": 2427,
+              "downtrend": 547
+            },
+            {
+              "symbol": "SO",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "SPG",
+              "eligible": 2427,
+              "downtrend": 208
+            },
+            {
+              "symbol": "SPY",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "SRE",
+              "eligible": 2427,
+              "downtrend": 12
+            },
+            {
+              "symbol": "T",
+              "eligible": 2427,
+              "downtrend": 59
+            },
+            {
+              "symbol": "TGT",
+              "eligible": 2427,
+              "downtrend": 105
+            },
+            {
+              "symbol": "TJX",
+              "eligible": 2427,
+              "downtrend": 7
+            },
+            {
+              "symbol": "TMUS",
+              "eligible": 2427,
+              "downtrend": 137
+            },
+            {
+              "symbol": "TTWO",
+              "eligible": 2427,
+              "downtrend": 83
+            },
+            {
+              "symbol": "TXN",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "UNH",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "UNP",
+              "eligible": 2427,
+              "downtrend": 107
+            },
+            {
+              "symbol": "UPS",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "USB",
+              "eligible": 2427,
+              "downtrend": 91
+            },
+            {
+              "symbol": "VLO",
+              "eligible": 2427,
+              "downtrend": 240
+            },
+            {
+              "symbol": "VMC",
+              "eligible": 2427,
+              "downtrend": 108
+            },
+            {
+              "symbol": "VTR",
+              "eligible": 2427,
+              "downtrend": 192
+            },
+            {
+              "symbol": "VZ",
+              "eligible": 2427,
+              "downtrend": 16
+            },
+            {
+              "symbol": "WELL",
+              "eligible": 2427,
+              "downtrend": 144
+            },
+            {
+              "symbol": "WFC",
+              "eligible": 2427,
+              "downtrend": 213
+            },
+            {
+              "symbol": "WMT",
+              "eligible": 2427,
+              "downtrend": 63
+            },
+            {
+              "symbol": "XEL",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "XOM",
+              "eligible": 2427,
+              "downtrend": 208
+            }
+          ],
+          "selection": "global uniform eligible starts",
+          "labels_in_observation_or_reward": false
+        },
+        "downtrend_balanced": {
+          "mode": "downtrend_balanced",
+          "long_window": 252,
+          "short_window": 63,
+          "long_price_return_below": -0.2,
+          "short_price_return_below": 0.0,
+          "eligible": 268643,
+          "downtrend": 13734,
+          "other": 254909,
+          "episodes": [
+            {
+              "symbol": "AAPL",
+              "eligible": 2427,
+              "downtrend": 144
+            },
+            {
+              "symbol": "ABBV",
+              "eligible": 1673,
+              "downtrend": 132
+            },
+            {
+              "symbol": "ABT",
+              "eligible": 2427,
+              "downtrend": 23
+            },
+            {
+              "symbol": "ADBE",
+              "eligible": 2427,
+              "downtrend": 9
+            },
+            {
+              "symbol": "AEP",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMGN",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMT",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AMZN",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "APA",
+              "eligible": 2427,
+              "downtrend": 808
+            },
+            {
+              "symbol": "APD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "AXP",
+              "eligible": 2427,
+              "downtrend": 170
+            },
+            {
+              "symbol": "BA",
+              "eligible": 2427,
+              "downtrend": 139
+            },
+            {
+              "symbol": "BAC",
+              "eligible": 2427,
+              "downtrend": 351
+            },
+            {
+              "symbol": "BLK",
+              "eligible": 2427,
+              "downtrend": 39
+            },
+            {
+              "symbol": "BMY",
+              "eligible": 2427,
+              "downtrend": 147
+            },
+            {
+              "symbol": "C",
+              "eligible": 2427,
+              "downtrend": 339
+            },
+            {
+              "symbol": "CAT",
+              "eligible": 2427,
+              "downtrend": 248
+            },
+            {
+              "symbol": "CL",
+              "eligible": 2427,
+              "downtrend": 10
+            },
+            {
+              "symbol": "CMCSA",
+              "eligible": 2427,
+              "downtrend": 19
+            },
+            {
+              "symbol": "COP",
+              "eligible": 2427,
+              "downtrend": 369
+            },
+            {
+              "symbol": "COST",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "CSCO",
+              "eligible": 2427,
+              "downtrend": 189
+            },
+            {
+              "symbol": "CVX",
+              "eligible": 2427,
+              "downtrend": 254
+            },
+            {
+              "symbol": "D",
+              "eligible": 2427,
+              "downtrend": 13
+            },
+            {
+              "symbol": "DE",
+              "eligible": 2427,
+              "downtrend": 10
+            },
+            {
+              "symbol": "DIA",
+              "eligible": 2427,
+              "downtrend": 6
+            },
+            {
+              "symbol": "DIS",
+              "eligible": 2427,
+              "downtrend": 25
+            },
+            {
+              "symbol": "DUK",
+              "eligible": 2427,
+              "downtrend": 3
+            },
+            {
+              "symbol": "DVN",
+              "eligible": 2427,
+              "downtrend": 658
+            },
+            {
+              "symbol": "ECL",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "ED",
+              "eligible": 2427,
+              "downtrend": 6
+            },
+            {
+              "symbol": "EOG",
+              "eligible": 2427,
+              "downtrend": 419
+            },
+            {
+              "symbol": "EQIX",
+              "eligible": 2427,
+              "downtrend": 19
+            },
+            {
+              "symbol": "EXC",
+              "eligible": 2427,
+              "downtrend": 244
+            },
+            {
+              "symbol": "F",
+              "eligible": 2427,
+              "downtrend": 322
+            },
+            {
+              "symbol": "FCX",
+              "eligible": 2427,
+              "downtrend": 709
+            },
+            {
+              "symbol": "GD",
+              "eligible": 2427,
+              "downtrend": 120
+            },
+            {
+              "symbol": "GE",
+              "eligible": 2427,
+              "downtrend": 501
+            },
+            {
+              "symbol": "GILD",
+              "eligible": 2427,
+              "downtrend": 264
+            },
+            {
+              "symbol": "GOOGL",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "GS",
+              "eligible": 2427,
+              "downtrend": 290
+            },
+            {
+              "symbol": "HAL",
+              "eligible": 2427,
+              "downtrend": 601
+            },
+            {
+              "symbol": "HD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "HON",
+              "eligible": 2427,
+              "downtrend": 20
+            },
+            {
+              "symbol": "HSY",
+              "eligible": 2427,
+              "downtrend": 22
+            },
+            {
+              "symbol": "IBM",
+              "eligible": 2427,
+              "downtrend": 106
+            },
+            {
+              "symbol": "INTC",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "IWM",
+              "eligible": 2427,
+              "downtrend": 39
+            },
+            {
+              "symbol": "JNJ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "JPM",
+              "eligible": 2427,
+              "downtrend": 62
+            },
+            {
+              "symbol": "KMB",
+              "eligible": 2427,
+              "downtrend": 33
+            },
+            {
+              "symbol": "KO",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "KR",
+              "eligible": 2427,
+              "downtrend": 201
+            },
+            {
+              "symbol": "LIN",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "LLY",
+              "eligible": 2427,
+              "downtrend": 7
+            },
+            {
+              "symbol": "LMT",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "LOW",
+              "eligible": 2427,
+              "downtrend": 15
+            },
+            {
+              "symbol": "MCD",
+              "eligible": 2427,
+              "downtrend": 3
+            },
+            {
+              "symbol": "MDLZ",
+              "eligible": 2427,
+              "downtrend": 95
+            },
+            {
+              "symbol": "MLM",
+              "eligible": 2427,
+              "downtrend": 43
+            },
+            {
+              "symbol": "MRK",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "MS",
+              "eligible": 2427,
+              "downtrend": 331
+            },
+            {
+              "symbol": "MSFT",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "NEE",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "NEM",
+              "eligible": 2427,
+              "downtrend": 486
+            },
+            {
+              "symbol": "NFLX",
+              "eligible": 2427,
+              "downtrend": 235
+            },
+            {
+              "symbol": "NKE",
+              "eligible": 2427,
+              "downtrend": 42
+            },
+            {
+              "symbol": "NUE",
+              "eligible": 2427,
+              "downtrend": 204
+            },
+            {
+              "symbol": "NVDA",
+              "eligible": 2427,
+              "downtrend": 204
+            },
+            {
+              "symbol": "O",
+              "eligible": 2427,
+              "downtrend": 81
+            },
+            {
+              "symbol": "OMC",
+              "eligible": 2427,
+              "downtrend": 134
+            },
+            {
+              "symbol": "ORCL",
+              "eligible": 2427,
+              "downtrend": 24
+            },
+            {
+              "symbol": "OXY",
+              "eligible": 2427,
+              "downtrend": 493
+            },
+            {
+              "symbol": "PEG",
+              "eligible": 2427,
+              "downtrend": 24
+            },
+            {
+              "symbol": "PEP",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PFE",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "PG",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PLD",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "PNC",
+              "eligible": 2427,
+              "downtrend": 89
+            },
+            {
+              "symbol": "PPG",
+              "eligible": 2427,
+              "downtrend": 40
+            },
+            {
+              "symbol": "PSA",
+              "eligible": 2427,
+              "downtrend": 43
+            },
+            {
+              "symbol": "QCOM",
+              "eligible": 2427,
+              "downtrend": 164
+            },
+            {
+              "symbol": "QQQ",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "ROST",
+              "eligible": 2427,
+              "downtrend": 15
+            },
+            {
+              "symbol": "RTX",
+              "eligible": 2427,
+              "downtrend": 150
+            },
+            {
+              "symbol": "SBUX",
+              "eligible": 2427,
+              "downtrend": 7
+            },
+            {
+              "symbol": "SHW",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "SLB",
+              "eligible": 2427,
+              "downtrend": 547
+            },
+            {
+              "symbol": "SO",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "SPG",
+              "eligible": 2427,
+              "downtrend": 208
+            },
+            {
+              "symbol": "SPY",
+              "eligible": 2427,
+              "downtrend": 1
+            },
+            {
+              "symbol": "SRE",
+              "eligible": 2427,
+              "downtrend": 12
+            },
+            {
+              "symbol": "T",
+              "eligible": 2427,
+              "downtrend": 59
+            },
+            {
+              "symbol": "TGT",
+              "eligible": 2427,
+              "downtrend": 105
+            },
+            {
+              "symbol": "TJX",
+              "eligible": 2427,
+              "downtrend": 7
+            },
+            {
+              "symbol": "TMUS",
+              "eligible": 2427,
+              "downtrend": 137
+            },
+            {
+              "symbol": "TTWO",
+              "eligible": 2427,
+              "downtrend": 83
+            },
+            {
+              "symbol": "TXN",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "UNH",
+              "eligible": 2427,
+              "downtrend": 2
+            },
+            {
+              "symbol": "UNP",
+              "eligible": 2427,
+              "downtrend": 107
+            },
+            {
+              "symbol": "UPS",
+              "eligible": 2427,
+              "downtrend": 31
+            },
+            {
+              "symbol": "USB",
+              "eligible": 2427,
+              "downtrend": 91
+            },
+            {
+              "symbol": "VLO",
+              "eligible": 2427,
+              "downtrend": 240
+            },
+            {
+              "symbol": "VMC",
+              "eligible": 2427,
+              "downtrend": 108
+            },
+            {
+              "symbol": "VTR",
+              "eligible": 2427,
+              "downtrend": 192
+            },
+            {
+              "symbol": "VZ",
+              "eligible": 2427,
+              "downtrend": 16
+            },
+            {
+              "symbol": "WELL",
+              "eligible": 2427,
+              "downtrend": 144
+            },
+            {
+              "symbol": "WFC",
+              "eligible": 2427,
+              "downtrend": 213
+            },
+            {
+              "symbol": "WMT",
+              "eligible": 2427,
+              "downtrend": 63
+            },
+            {
+              "symbol": "XEL",
+              "eligible": 2427,
+              "downtrend": 0
+            },
+            {
+              "symbol": "XOM",
+              "eligible": 2427,
+              "downtrend": 208
+            }
+          ],
+          "selection": "equal-probability class, then global uniform within class",
+          "labels_in_observation_or_reward": false
+        }
+      }
+    }
+  },
+  "pool_sha256": {
+    "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9:ready_uniform": "5e88b539f73cd01ade42aaf75f130f93b4e4f6fe241ac8c162bed5274c453af3",
+    "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9:downtrend_balanced": "b0927d164d3649434d0eecfcff4dfef24b34c0910df83db5f4f1def66d664bb5",
+    "c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398:ready_uniform": "62f190cc8ed8d155444d48702e505c6e7df5e57794a104356a42972e8d983b60",
+    "c2e6c58c4d4b0a9853b5b37851c731f559f42e597e9eefcf77796d874db31398:downtrend_balanced": "8f624b0f8664b6bcc3f8e2945288676a302cf5da4c5aa7d1887ec327c8d4a850"
+  },
+  "training_performed": false,
+  "retired_test_evaluated": false,
+  "sessions_allocated": 0
+}

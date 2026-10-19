@@ -137,6 +137,28 @@ class ArtifactTests(unittest.TestCase):
         journal.write_text(''.join(json.dumps(r)+'\n' for r in curve))
         with self.assertRaisesRegex(RuntimeError,'learning curve'):self.check()
 
+    def test_causal_sampling_export_requires_actual_training_counts(self):
+        from rl_stocks.runtime.colab.jobs import sampling_plan
+        from rl_stocks.training.initialization import initialization_spec
+        self.plan=sampling_plan('small_balanced',smoke=True);job=self.plan['jobs'][0];run=self.runs[0]
+        curve=[{'steps':256,'phase':'on_step','score':.01},{'steps':512,'phase':'post_update','score':.01}]
+        counts={'mode':'downtrend_balanced','starts':4,'downtrend_starts':2,'transitions':512,'downtrend_transitions':100}
+        run.update(job,requested_steps=512,actual_steps=512,initialization=initialization_spec('wide'),
+            start_sampling={'mode':'downtrend_balanced'},sampling_diagnostics=counts,
+            reward_config={'kind':'net_log_equity','scale':1.},validation_checkpoints=curve)
+        folder=self.artifacts/'runs/0'
+        for index in (1,2,3,4):(self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        (folder/'metadata.json').write_text(json.dumps(run))
+        (folder/'training-sampling.json').write_text(json.dumps(counts))
+        (folder/'learning-curve.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        (folder/'learning-curve.csv').write_text('steps,return_pct\n256,1.0\n512,1.0\n')
+        (folder/'learning-curve.html').write_text('curve')
+        self.completion.update(plan=self.plan,gpu=None,completed=[run]);self.write_completion()
+        assert len(self.check())==1
+        counts['transitions']=511
+        (folder/'metadata.json').write_text(json.dumps(run));(folder/'training-sampling.json').write_text(json.dumps(counts))
+        with self.assertRaisesRegex(RuntimeError,'sampling diagnostic'):self.check()
+
     def test_remote_exception_rejected_despite_cli_success(self):
         (self.artifacts / 'failure.txt').write_text('remote exception')
         with self.assertRaisesRegex(RuntimeError, 'remote training failed'):

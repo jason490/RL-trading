@@ -3,6 +3,7 @@ import argparse
 from dataclasses import dataclass
 import fcntl
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -87,7 +88,7 @@ def validate_tasks(tasks,root):
 
 
 class Fleet:
-    def __init__(self,root,cli,tasks,concurrency,state_path):
+    def __init__(self,root,cli,tasks,concurrency,state_path,study_limit=None,study_start=None):
         if type(concurrency) is not int or concurrency<1:raise ValueError('positive configurable concurrency required')
         self.root=Path(root).resolve();self.cli=cli;self.tasks=validate_tasks(tasks,self.root)
         self.concurrency=concurrency;self.state_path=Path(state_path)
@@ -95,7 +96,26 @@ class Fleet:
         self.name='rl-stocks-fleet-'+uuid.uuid4().hex[:12]
         self.actors=[Runtime(t,'rl-stocks-'+t['plan']['accelerator'].lower()+'-'+uuid.uuid4().hex[:12]) for t in self.tasks]
         self.state={'fleet':self.name,'status':'preflight','completed':{},'initial_ledger_units':self.budget.ledger.value['consumed']}
+        self.study_budget=None
+        if study_start is not None and study_limit is None:raise ValueError('study start requires an allowance')
+        if study_limit is not None:
+            baseline=self.budget.ledger.value['consumed'] if study_start is None else study_start
+            if not math.isfinite(study_limit) or study_limit<=0 or not math.isfinite(baseline) or not 0<=baseline<=self.budget.ledger.value['consumed']:
+                raise ValueError('positive finite study allowance and valid existing baseline required')
+            self.study_budget={'start_units':baseline,'limit_units':study_limit}
+            self.state['study_budget']=self.study_budget
         self.last_meter=0.;self.fatal=None;self.interrupted=False
+
+    def guard_study(self,seconds=60):
+        if self.study_budget is None:return
+        ledger=self.budget.ledger;active=self.budget.active
+        projected=ledger.value['consumed']-self.study_budget['start_units']+(
+            ledger.clock()-active['last_time']+max(360,seconds))*(active['rate']+.01)/3600
+        if projected>=self.study_budget['limit_units']:
+            self.state['study_budget_stopped']=True;self.save()
+            ledger.value['budget_stopped']=True
+            active['stop_reason']='study allowance exhausted; stop owned fleet and require review'
+            ledger.save();raise BudgetStop(active['stop_reason'])
 
     def save(self):
         self.state['sessions']={a.session:{'task':a.task['id'],'phase':a.phase} for a in self.actors if a.phase!='pending'}
@@ -124,7 +144,8 @@ class Fleet:
         return usage
 
     def launch(self,a,phase,args,timeout,teardown=False):
-        if not teardown:self.budget.guard(a.session,timeout)
+        if not teardown:
+            self.guard_study(timeout);self.budget.guard(a.session,timeout)
         a.phase=phase;a.sequence+=1
         path=self.root/'.runtime'/a.session/f'{phase}-{a.sequence}-output.txt'
         a.command=self.cli.launch(args,path,timeout)
@@ -301,11 +322,13 @@ class Fleet:
                     if cleanup_deadline and time.monotonic()>cleanup_deadline:break
                     if not self.fatal:
                         try:
+                            self.guard_study(60)
                             for a in active:
                                 if a.phase not in ('stop','verify'):self.budget.guard(a.session,60)
                             pending=next((a for a in self.actors if a.phase=='pending'),None)
                             if pending and len(active)<self.concurrency and not any(a.phase in ('new','status') for a in active):
                                 self.budget.admit(pending.session,pending.task['plan']['accelerator'])
+                                pending.phase='admitted'
                                 args=['new','-s',pending.session]
                                 if pending.task['plan']['accelerator']!='CPU':args+=['--gpu',pending.task['plan']['accelerator']]
                                 self.launch(pending,'new',args,180)
@@ -408,14 +431,18 @@ def main():
     parser.add_argument('--concurrency',type=int,default=1)
     parser.add_argument('--cli-python',required=True)
     parser.add_argument('--state-output',type=Path,required=True)
+    parser.add_argument('--study-unit-limit',type=float)
+    parser.add_argument('--study-start-units',type=float)
     args=parser.parse_args();root=Path.cwd().resolve()
     cli=CLI(root,args.cli_python)
     if args.recover:
         if args.jobs:parser.error('--recover cannot combine --jobs')
+        if args.study_unit_limit is not None or args.study_start_units is not None:parser.error('recovery does not accept study budget overrides')
         recover(root,cli,args.recover,args.state_output)
     else:
         if not args.jobs:parser.error('--jobs is required unless recovering')
-        Fleet(root,cli,json.loads(args.jobs.read_text()),args.concurrency,args.state_output).run()
+        Fleet(root,cli,json.loads(args.jobs.read_text()),args.concurrency,args.state_output,
+              study_limit=args.study_unit_limit,study_start=args.study_start_units).run()
 
 
 if __name__=='__main__':main()

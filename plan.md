@@ -650,3 +650,21 @@ persistent decline windows versus 16/26 control; their observation shares are
 5.15% versus 2.31%. These are causal trailing labels, not future-recovery labels
 or proof that expansion improves returns. Exact diagnostics remain in the data
 evidence folder for the next separately declared research experiment.
+
+## 25. Causal sampling and broader universe — declared 2026-10-19
+
+The next 2x2 screen fixes wide-initialized 50k PPO and varies training universe
+(original 26 tradables versus verified 107 stocks/four ETFs) and causal start
+sampling. Both modes use the same 252-session-ready pool; balanced starts select
+equally between trailing yearly price decline below -20% with negative trailing
+quarter and other eligible starts. No future-recovery/validation-stock labels
+enter training or selection. Actual start and transition balance is recorded.
+
+Use four CPU smokes before the four seed-11 cells; promote at most one candidate
+against the fresh small/readiness-uniform control, then add seeds 23/37 only on
+passing the fixed gate. Same raw 26-symbol validation, training-only normalization,
+net-equity reward, actions, costs and 512-session training episodes. All phases
+share one frozen source and the original ledger/lock. A runner-enforced 2-unit
+study cap supplements the project's 150-unit total/130-unit teardown and each
+allocation's two-hour deadline. See [protocol](configs/experiments/causal_sampling.json)
+and [methodology](docs/training-sampling.md). No allocation at declaration.

@@ -7,25 +7,44 @@ from rl_stocks.environment.rewards.equity import equity_reward
 
 class TradingEnv(gym.Env):
     metadata={"render_modes":[]}
-    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.):
+    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform'):
         super().__init__()
         if not episodes:raise ValueError("no episodes")
         if tuple(names)!=normalizer.names:raise ValueError("feature names mismatch")
         if len({e["split"] for e in episodes})!=1:raise ValueError("split mixing")
         self.episodes=episodes;self.normalizer=normalizer;self.names=names;self.config=config
         self.random_start=random_start;self.episode_steps=episode_steps
+        from rl_stocks.environment.sampling.regimes import MODES,CausalStarts
+        if start_sampling not in MODES:raise ValueError('unknown start sampling mode')
+        if start_sampling!='legacy_uniform' and (not random_start or episodes[0]['split']!='train'):
+            raise ValueError('causal start sampling requires random-start training only')
+        self.start_sampler=CausalStarts(episodes,start_sampling,config.max_holding) if start_sampling!='legacy_uniform' else None
+        self.reset_sampling_statistics()
         if not np.isfinite(reward_scale) or reward_scale<=0:raise ValueError('positive finite reward scale required')
         self.reward_scale=float(reward_scale)
         self.action_space=gym.spaces.Box(-1.,1.,shape=(4,),dtype=np.float32)
         self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(len(names)+5,),dtype=np.float32)
     def reset(self,*,seed=None,options=None):
         super().reset(seed=seed)
-        index=(options or {}).get("episode",int(self.np_random.integers(len(self.episodes))))
+        if self.start_sampler is None:
+            index=(options or {}).get("episode",int(self.np_random.integers(len(self.episodes))))
+            start=None
+        else:
+            if 'episode' in (options or {}):raise ValueError('explicit episode conflicts with sampled training pool')
+            index,start=self.start_sampler.choose(self.np_random)
+        self.episode_index=index
         self.episode=self.episodes[index]
         self.bars=[Bar(**b) for b in self.episode["bars"]]
-        self.i=int(self.np_random.integers(max(1,len(self.bars)-self.config.max_holding-1))) if self.random_start else 0
+        self.i=start if start is not None else int(self.np_random.integers(max(1,len(self.bars)-self.config.max_holding-1))) if self.random_start else 0
+        if self.start_sampler:
+            self.sampling_counts['starts']+=1
+            self.sampling_counts['downtrend_starts']+=int(self.start_sampler.label(index,self.i))
         self.steps=0;self.done=False;self.sim=Simulator(self.config)
         return self.observation(),{"symbol":self.episode["symbol"],"session":self.bars[self.i].session}
+    def reset_sampling_statistics(self):
+        self.sampling_counts=dict(starts=0,downtrend_starts=0,transitions=0,downtrend_transitions=0)
+    def sampling_statistics(self):
+        return {**self.sampling_counts,'mode':self.start_sampler.mode} if self.start_sampler else None
     def observation(self):
         p=self.sim.portfolio;price=self.bars[self.i].close;equity=p.equity(price)
         vector=self.normalizer.transform(self.episode["features"][self.i],self.names)
@@ -37,6 +56,9 @@ class TradingEnv(gym.Env):
         return value
     def step(self,action):
         if self.done:raise RuntimeError("reset required after episode end")
+        if self.start_sampler:
+            self.sampling_counts['transitions']+=1
+            self.sampling_counts['downtrend_transitions']+=int(self.start_sampler.label(self.episode_index,self.i))
         previous=self.bars[self.i];atr=self.episode["atr"][self.i]
         self.i+=1;self.steps+=1
         bar=self.bars[self.i]

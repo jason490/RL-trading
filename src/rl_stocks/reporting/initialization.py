@@ -6,11 +6,12 @@ def screen_gate(cells, protocol):
     """Cells are one matched seed with selected/final group metrics, not tests."""
     if set(cells) != set(protocol['arms']):
         raise ValueError('complete four-arm screen required')
-    control = cells['standard']
+    reference=protocol.get('reference_arm','standard')
+    control = cells[reference]
     gate = protocol['screen_gate']
     comparisons = {}
     eligible = []
-    for arm in protocol['arms'][1:]:
+    for arm in (a for a in protocol['arms'] if a!=reference):
         cell = cells[arm]
         selected_gain = 100 * (cell['selected']['score'] - control['selected']['score'])
         final_gain = 100 * (cell['final']['score'] - control['final']['score'])
@@ -57,10 +58,11 @@ def group_metrics(results, stocks):
 
 def confirmation_gate(cells, candidate, protocol):
     seeds=tuple(str(s) for s in protocol['confirmation_seeds'])
-    if candidate not in protocol['arms'][1:] or set(cells)!={'standard',candidate} or any(
+    reference=protocol.get('reference_arm','standard')
+    if candidate not in protocol['arms'] or candidate==reference or set(cells)!={reference,candidate} or any(
             set(cells[arm])!=set(seeds) for arm in cells):
         raise ValueError('matched standard/candidate cells for all declared seeds required')
-    control=cells['standard'];chosen=cells[candidate];gate=protocol['confirmation_gate']
+    control=cells[reference];chosen=cells[candidate];gate=protocol['confirmation_gate']
     gains={phase:100*mean(chosen[s][phase]['score']-control[s][phase]['score'] for s in seeds)
            for phase in ('selected','final')}
     paired=sum(chosen[s]['final']['score']>control[s]['final']['score'] for s in seeds)

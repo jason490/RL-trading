@@ -73,6 +73,33 @@ class FakeCLI:
 
 
 class FleetTests(unittest.TestCase):
+    def test_guard_failure_after_admission_cleans_registered_intent(self):
+        from rl_stocks.runtime.colab.budget import BudgetStop
+        with tempfile.TemporaryDirectory() as directory:
+            root,cli,fleet=self.fixture(directory,count=1)
+            def guard(seconds=60):
+                if seconds==180:raise BudgetStop('test projected operation refused')
+            with patch.object(fleet,'guard_study',side_effect=guard):
+                with self.assertRaises(RuntimeError):self.run_fixture(fleet)
+            self.assertEqual(cli.active,{})
+            self.assertTrue(all(c['status']=='stopped' for c in fleet.budget.active['children'].values()))
+    def test_study_allowance_stops_before_allocation_and_blocks_restart(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root,cli,fleet=self.fixture(directory,count=1)
+            fleet.study_budget={'start_units':0.,'limit_units':.0001}
+            with self.assertRaises(RuntimeError):self.run_fixture(fleet)
+            self.assertFalse(any(c[0]=='new' for c in cli.calls))
+            self.assertEqual(cli.active,{})
+            self.assertTrue(fleet.budget.ledger.value['budget_stopped'])
+
+    def test_study_allowance_projects_next_operation_and_stops_owned_sessions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root,cli,fleet=self.fixture(directory,count=2)
+            fleet.study_budget={'start_units':0.,'limit_units':.02}
+            with self.assertRaises(RuntimeError):self.run_fixture(fleet)
+            self.assertGreater(cli.high_water,0)
+            self.assertEqual(cli.active,{})
+            self.assertTrue(fleet.budget.ledger.value['budget_stopped'])
     def test_final_download_command_timeouts_use_bounded_retries(self):
         with tempfile.TemporaryDirectory() as directory:
             root,cli,fleet=self.fixture(directory,count=1,download_timeouts=2)

@@ -139,3 +139,15 @@ deadline. The first real three-CPU smoke run exposed a marker ReadTimeout: PPO
 was accepted, SAC/RecurrentPPO checkpoints were salvaged, and all three sessions
 were stopped and verified. The two unfinished acceptance tasks may be retried
 only after that reviewed ordinary transport failure; no budget stop occurred.
+
+## Optional tighter study allowance
+
+`--study-unit-limit UNITS --study-start-units EXACT_LEDGER_VALUE` applies a
+smaller allowance across successive phases while preserving the same project
+ledger. Repeat the original exact baseline for smoke/screen/confirmation; do not
+reset it at each wave. Guards project the next operation plus at least the
+360-second cleanup window using the aggregate rate and unmetered time estimate.
+An exhausted study allowance stops owned work, persists a budget-stop flag and
+blocks automatic restart. Recovery accepts no budget overrides. The shared
+150/130-unit limits remain authoritative. Registered allocation intent is also
+cleaned up if a guard rejects a command immediately after admission.

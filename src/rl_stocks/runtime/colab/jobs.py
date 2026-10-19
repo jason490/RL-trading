@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==7:
+    if plan.get('version')==8:
+        try:expected=sampling_plan(**plan['sampling_study'])
+        except (KeyError,TypeError):raise ValueError('malformed causal-sampling study plan') from None
+        if plan!=expected:raise ValueError('unsupported causal-sampling study plan')
+    elif plan.get('version')==7:
         try:expected=initialization_plan(**plan['initialization_study'])
         except (KeyError,TypeError):raise ValueError('malformed initialization study plan') from None
         if plan!=expected:raise ValueError('unsupported initialization study plan')
@@ -134,3 +138,17 @@ def initialization_plan(arm,seed=11,smoke=False):
         'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
             'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
             'milestones':[steps],'reward_scale':1.,'initialization':arm}]}
+
+
+SAMPLING_ARMS=('small_uniform','small_balanced','large_uniform','large_balanced')
+
+
+def sampling_plan(arm,seed=11,smoke=False):
+    if arm not in SAMPLING_ARMS or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported causal-sampling arm, seed or smoke mode')
+    steps=512 if smoke else 50000
+    mode='ready_uniform' if arm.endswith('uniform') else 'downtrend_balanced'
+    return {'version':8,'accelerator':'CPU','sampling_study':{'arm':arm,'seed':seed,'smoke':smoke},
+        'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
+            'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
+            'milestones':[steps],'reward_scale':1.,'initialization':'wide','start_sampling':mode}]}

@@ -37,18 +37,29 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5,7):
+                if plan.get('version') in (4,5,7,8):
                     job=plan['jobs'][0]
-                    if plan.get('version')==7:
+                    if plan.get('version') in (7,8):
                         from rl_stocks.training.initialization import initialization_spec
                         if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
                             raise RuntimeError('initialization-study configuration mismatch')
+                    if plan.get('version')==8:
+                        if run.get('start_sampling',{}).get('mode')!=job['start_sampling']:
+                            raise RuntimeError('causal-sampling mode mismatch')
                     if (run.get('reward_config')!={'kind':'net_log_equity','scale':job['reward_scale']}
                             or run.get('milestones')!=job['milestones'] or run.get('evaluation_every')!=job['evaluation_every']
                             or not run.get('compact_checkpoints')):
                         raise RuntimeError('learning-study configuration mismatch')
                     prefix=next(name.rsplit('/',1)[0]+'/' for name in names
                         if name.endswith('/metadata.json') and json.loads(read(name)).get('bundle_id')==run['bundle_id'])
+                    if plan.get('version')==8:
+                        counts=run.get('sampling_diagnostics',{})
+                        if (counts!=json.loads(read(prefix+'training-sampling.json'))
+                                or counts.get('mode')!=job['start_sampling'] or counts.get('transitions')!=job['steps']
+                                or not 0<=counts.get('downtrend_transitions',-1)<=job['steps']
+                                or not 0<=counts.get('downtrend_starts',-1)<=counts.get('starts',0)
+                                or counts.get('starts',0)<=0):
+                            raise RuntimeError('causal-sampling diagnostic mismatch')
                     curve=[json.loads(line) for line in read(prefix+'learning-curve.jsonl').splitlines()]
                     points={r['steps']:r for r in curve}
                     if (sorted(points)!=list(range(job['evaluation_every'],job['steps']+1,job['evaluation_every']))

@@ -13,7 +13,7 @@ orders have been submitted. `plan.html` is preserved.
 | Local interpreter | Python 3.13.16 | Project `.venv`; supersedes the original 3.12 requirement |
 | Hash lock and installation | Passed | 79 resolved dependencies, reviewed direct pins, editable package |
 | `pip check` | Passed | No broken requirements in the research environment |
-| Full local acceptance | **193 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 111.38 seconds, 13 existing warnings |
+| Full local acceptance | **207 passed; zero skips or failures** | Includes real dependency-backed RL acceptance; latest run 87.73 seconds, 15 warnings (two additional checker warnings) |
 | Gymnasium/SB3 checkers | Passed | Seeded reset, observation/action spaces, terminal/truncation behavior |
 | CPU algorithm smoke | Passed | Exactly PPO 512, SAC 1024 and TD3 1024 transitions on synthetic fixtures |
 | Checkpoints/replay/frozen inference | Passed | Save/load prediction parity, normalization immutability, schema/feed/corruption rejection, off-policy replay continuation |
@@ -666,3 +666,19 @@ curve and variant-audit focused checks pass; the latest full suite remains the
 52 duplicate archives/markers (612.30 MiB logical) were removed; all 228 retained
 artifact hashes remain unchanged. Raw data, models, reports and the ledger remain.
 See [complete evidence](../results/action-initialization-2026-10-19/README.md).
+
+## Causal sampling preflight — 2026-10-19
+
+Full local acceptance passes 207 tests in 87.73 seconds, no skips/failures and
+15 warnings. New coverage verifies causal prefix labels, training isolation,
+shared readiness eligibility, class balancing, exact legacy RNG draws and real
+Gymnasium/SB3 checkers. Archive validation checks final sampling counters against
+exact transitions; fleet allowance tests verify refusal before allocation,
+registered-intent cleanup and owned teardown on a projected study-budget stop.
+
+Preflight confirms the original raw 26-symbol/19,058-row validation episodes
+match across both datasets and fingerprints all four pools. Eligible-start
+persistent-downtrend shares are 2.27% (small) and 5.11% (large). Sampling modes
+leave rewards, observations and inference normalization unchanged. No research
+training or Colab allocation has occurred at this declaration. Protocol and
+methodology are in [training-sampling.md](training-sampling.md).

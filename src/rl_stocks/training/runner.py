@@ -27,12 +27,15 @@ from rl_stocks.training.curves import curve_record,append_record,render_curve
 from rl_stocks.training.initialization import initialization_spec,initialize_policy
 
 class ValidationCheckpoint(BaseCallback):
-    def __init__(self,dataset,config,path,every,compact=False,target_steps=None):
+    def __init__(self,dataset,config,path,every,compact=False,target_steps=None,sampling_env=None):
         super().__init__();self.dataset=dataset;self.config=config;self.path=path
         self.every=every;self.best=-float("inf");self.history=[]
         self.best_step=None;self.best_metrics={}
         self.compact=compact;self.target_steps=target_steps;self.started=time.monotonic()
+        self.sampling_env=sampling_env
     def validate(self,phase='on_step'):
+        if self.sampling_env is not None and self.sampling_env.start_sampler:
+            (self.path/'training-sampling.json').write_text(json.dumps(self.sampling_env.sampling_statistics(),indent=2))
         results=evaluate(self.model,self.dataset,"validation",self.config)
         score=selection_score(results)
         training={}
@@ -80,7 +83,7 @@ def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
-          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard'):
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform'):
     initialization_spec(initialization,algorithm)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
@@ -90,9 +93,10 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
     if device=="cuda" and not torch.cuda.is_available():raise RuntimeError("CUDA requested but unavailable")
     episodes=[e for e in dataset["episodes"].values() if e["split"]=="train"]
-    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale)
+    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale,start_sampling=start_sampling)
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
+    env.reset_sampling_statistics()
     model=create(algorithm,env,seed,device,smoke,overrides)
     initialized=initialize_policy(model,initialization,algorithm)
     steps=steps if steps is not None else 512 if algorithm in ON_POLICY else 1024
@@ -114,11 +118,13 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
         "reward_config":{"kind":"net_log_equity","scale":reward_scale},
         "initialization":initialized,
+        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling),
+        "start_sampling":env.start_sampler.summary if env.start_sampler else {'mode':'legacy_uniform'},
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
     (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
-    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps)
+    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env)
     try:
         previous=0
         for milestone in milestones:
@@ -133,6 +139,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if hasattr(model,'save_replay_buffer'):model.save_replay_buffer(run/"replay.pkl")
         from rl_stocks.rl.registry.factory import CLASSES
         selected=CLASSES[algorithm].load(run/"best.zip",device=device)
+        sampling_diagnostics=env.sampling_statistics()
         observation,_=env.reset(seed=seed)
         from rl_stocks.rl.registry.prediction import recurrent
         if recurrent(selected):
@@ -141,6 +148,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata.update(status="complete",actual_steps=model.num_timesteps,duration_seconds=time.monotonic()-start,
             validation_checkpoints=callback.history,selected_score=callback.best)
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
+        metadata['sampling_diagnostics']=sampling_diagnostics
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):
