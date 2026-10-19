@@ -100,8 +100,10 @@ phase charges and every owned deadline/shutdown. The ledger and allocation lock
 were shared across the source export and every phase; training source is
 `c0d7e603983fb394faf5977cbf1164133b08d3cf`.
 
-Seventeen public assets are prepared and locally checksum-verified. Publication,
-server verification and duplicate cleanup remain pending. The interactive chart
+[The release](https://github.com/jason490/RL-trading/releases/tag/causal-sampling-2026-10-19) contains 17 assets, all verified against GitHub server
+SHA-256 digests and sizes (`release-verification.json`). Cleanup then removed
+36 duplicate archives/markers, reclaiming 512.95 MiB logical bytes. All 160
+retained artifact hashes are unchanged (`cleanup.json`). The interactive chart
 is `artifacts/causal-sampling/screen.html`. Raw data, selected/final weights,
 full reports, curves and the ledger are retained. See
 [protocol](../../configs/experiments/causal_sampling.json) and

@@ -673,6 +673,22 @@ Next: a versioned execution-state observation with masked same-dimension and
 legacy controls, preserving frozen inference compatibility, actions and rewards.
 Eight frozen bundles passed 624 exact predictions and all eight owned sessions
 stopped. Conservative study usage 0.075355; cumulative project 35.638336/150.
-Full acceptance passes 207 tests. Publication and duplicate cleanup follow server
-checksums. See [results](results/causal-sampling-2026-10-19/README.md) and
+Full acceptance passes 207 tests. Seventeen GitHub asset hashes/sizes are verified;
+36 duplicates (512.95 MiB logical) were removed with 160 retained hashes unchanged. See [results](results/causal-sampling-2026-10-19/README.md) and
 [methodology](docs/training-sampling.md).
+
+## 26. Versioned execution observations — next, not yet implemented
+
+A synthetic witness proves that the current 12-value observation can alias two
+states with different held protection and different next-step outcomes. Expose
+actual stop/target distances, partial-exit status, last protective actions and
+share-unit scale through an explicit versioned observation profile. Keep a
+same-dimension masked control and a legacy reference; preserve all existing
+frozen-model input contracts and deterministic prediction parity. Do not change
+the four-action contract, reward, costs or simulator behavior in this experiment.
+
+Test observability, shape/schema rejection, legacy parity and Gymnasium/SB3
+checkers before any new Colab allocation. Declare the matched multi-seed protocol
+and limits first, retain retired-test isolation, and share the original project
+ledger. Better observability is a structural hypothesis, not a claim of improved
+returns or a fully observed market process.

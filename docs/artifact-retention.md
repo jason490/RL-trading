@@ -121,3 +121,16 @@ Exact paths and before/after evidence are in
 asset receipts are in
 [release-verification.json](../results/action-initialization-2026-10-19/release-verification.json).
 No cleanup failure or unresolved owned session remains.
+
+## Causal-sampling study cleanup — 2026-10-19
+
+All eight owned sessions stopped, and 17 published assets passed GitHub server
+SHA-256/size checks. All final archives matched their extracted file sets.
+Cleanup removed 36 owned upload/download/source archives, ready markers and
+redundant public compressed copies: 537,871,153 logical bytes (512.95 MiB).
+All 160 retained artifact hashes are unchanged. Raw snapshots, selected/final
+weights, frozen bundles, full reports, curves, source export and the shared
+ledger remain; authentication, unrelated studies and user files were preserved.
+No unresolved ownership or cleanup failure remains. Exact paths and hashes are
+in [cleanup evidence](../results/causal-sampling-2026-10-19/cleanup.json) and
+[server receipts](../results/causal-sampling-2026-10-19/release-verification.json).

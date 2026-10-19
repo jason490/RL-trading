@@ -129,3 +129,18 @@ dataset prefix, seed, actual transitions and smoke/research status. The model
 catalog also records `run_name` to locate its archive/report folder. This keeps
 small smoke runs and models with different training universes distinguishable
 when a release contains multiple cells of the same algorithm and seed.
+
+## Causal sampling and universe screen — 2026-10-19
+
+[Download the release](https://github.com/jason490/RL-trading/releases/tag/causal-sampling-2026-10-19). All 17 server asset hashes/sizes are verified.
+The four seed-11 50k arms failed their ETF promotion constraint; no confirmation
+or longer runs followed. Catalogs distinguish four research models from four
+512-step smokes, including sampler variant and training dataset. Open `screen.html`
+for all four learning curves and incremental changes; `directions.csv` records
+requested/executed direction and side P&L. The learning-curve archive includes
+final sampling counters. Manifests, frozen checks, training-only forward analysis
+and the synthetic execution-observability witness are also included.
+
+These are negative development results, not a new winning model or independent
+performance evidence. [Full results](../results/causal-sampling-2026-10-19/README.md)
+retain the gate, source identity, budget and cleanup receipts.

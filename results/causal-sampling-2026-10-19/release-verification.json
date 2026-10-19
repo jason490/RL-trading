@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "release_url": "https://github.com/jason490/RL-trading/releases/tag/causal-sampling-2026-10-19",
+  "tag": "causal-sampling-2026-10-19",
+  "target_commitish": "2981eebab9b2fc94e39550f222de09978980ed40",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 1363,
+      "sha256": "002328e69737b07918e3b6c5158f28103c34adf4202dd36d3c046a397e3c63c2",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/SHA256SUMS",
+      "server_digest_verified": true
+    },
+    {
+      "name": "compute.json",
+      "size": 2514,
+      "sha256": "e37f88accf726efe5ab02d3f46d0fc801512f5ea7ea1ba1bf8a0334b93ee7515",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/compute.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "dataset-manifests.json",
+      "size": 391379,
+      "sha256": "3cffcc9764904d5e32958dea1e89324411508c2e5ea7e172cbacb83fb049a706",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/dataset-manifests.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "directions.csv",
+      "size": 36463,
+      "sha256": "2fd59ba367447bf6a85fd53f3fde8ed6924d1114b317d08cae4077d09802dabe",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/directions.csv",
+      "server_digest_verified": true
+    },
+    {
+      "name": "execution-observability-witness.json",
+      "size": 2080,
+      "sha256": "fb2dcaeb297056f8785cf431b2755e42f44ff9ac08074801f46fe4b326c29347",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/execution-observability-witness.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "frozen-checks.json",
+      "size": 8122,
+      "sha256": "99032c0e8530f4f18d5ad115bf169ad773e0d0989f15c1abefe2846213e7fa0b",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/frozen-checks.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "size": 11669209,
+      "sha256": "bf64a58f18a027fca8c9632615a780df549a87ba28faa159c4c3c233ca969535",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/learning-curves.tar.gz",
+      "server_digest_verified": true
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 833976,
+      "sha256": "9d26b39daaad1c4cc8c6653eb026d3c69c7b9e1cf4cc0dd691e6e15e7c9b0a80",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/model-catalog.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "preflight.json",
+      "size": 37452,
+      "sha256": "7d6fb6927097bd9898f470f7759d349e80dcd7a4d0a9d6f2c02aa1dc85f0b1bf",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/preflight.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "protocol.json",
+      "size": 4768,
+      "sha256": "a7c86319c66b00661a915059564ab6b7ab4add9cf77ab4b01da4e32bd23653b6",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/protocol.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 3127785,
+      "sha256": "6a70d955a317b1d1d447693dff65972789893402af3dc36b5f5cf42559dd2ad8",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/research-models.tar.gz",
+      "server_digest_verified": true
+    },
+    {
+      "name": "screen.html",
+      "size": 4776762,
+      "sha256": "27b3ffac06539c27b2e2ec56f076bc02792374617a279b586b2da020d26b7453",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/screen.html",
+      "server_digest_verified": true
+    },
+    {
+      "name": "screen.json",
+      "size": 48379,
+      "sha256": "a1e6ebb3a883f11b3204a33e3cfc884b62465bf45c0af522247b1a9cecf63da4",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/screen.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "source.json",
+      "size": 393,
+      "sha256": "6a7d3adefced0052b38db3adb977ffc3be323727809092ef321f7b594923bef8",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/source.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "training-forward-audit.json",
+      "size": 1790,
+      "sha256": "13a179e6c55341509110473357252cc8b91f26585d36d8ddf2cac04c899bf398",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/training-forward-audit.json",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 6524965,
+      "sha256": "e854c3dee01fdb2b115aa5dc93176b6cdc4c890c6178c2d1e3456382e467d688",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/validation-reports.tar.gz",
+      "server_digest_verified": true
+    },
+    {
+      "name": "validation.html",
+      "size": 1879,
+      "sha256": "2c817058a4dfbbadc1cde5ef91011472428757ed3f960046dccdc5a26b3ce1aa",
+      "download_url": "https://github.com/jason490/RL-trading/releases/download/causal-sampling-2026-10-19/validation.html",
+      "server_digest_verified": true
+    }
+  ],
+  "asset_count": 17,
+  "total_bytes": 27469279,
+  "verification": "GitHub server SHA-256 and size match every local asset"
+}

@@ -699,6 +699,6 @@ or longer runs were added. Eight bundles across smoke/research pass 624 exact
 CPU predictions and immutable preprocessing checks; all eight owned sessions
 stopped. Conservative project usage is 35.638336/150 units (study 0.075355).
 No retired test was evaluated. Training-only diagnostics and a synthetic
-execution-state aliasing witness are retained in the results folder. Seventeen
-public assets pass local checksum/allowlist checks; remote publication and
-cleanup are pending. [Full evidence](../results/causal-sampling-2026-10-19/README.md).
+execution-state aliasing witness are retained in the results folder. All 17 public assets match GitHub server SHA-256/size checks. Cleanup removed
+36 duplicate archives/markers (512.95 MiB logical), with all 160 retained artifact
+hashes unchanged. Raw data, models, reports, source export and ledger remain. [Full evidence](../results/causal-sampling-2026-10-19/README.md).
