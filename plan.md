@@ -737,6 +737,8 @@ positive on six of nine declining-stock/seed episodes (AMZN/DIS/NEE means
 failed on two one-share rows; a separately committed <=$2/one-share bridge was
 measured and declared before filtered replay. Original failure stays explicit.
 No training or Colab units were added.
+Nineteen release asset hashes/sizes are verified; 18 publication duplicates
+(9.85 MiB logical) were removed with 597 retained hashes unchanged.
 
 ## 28. Market-only exposure head — proposed, not implemented
 

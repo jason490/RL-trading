@@ -123,3 +123,13 @@ rules and the original shared-ledger allowance before allocation. This is a
 hypothesis about account feedback; it has not been implemented or trained and
 might worsen cost-aware trading. No retrospective declining-stock label selects
 an input, checkpoint, gate or trade.
+
+## Publication and cleanup
+
+[Download charts, CSV and diagnostic receipts](https://github.com/jason490/RL-trading/releases/tag/direction-replay-2026-10-19). All 19 server
+asset hashes/sizes match ([verification](release-verification.json)). Cleanup
+removed 18 byte-identical publication copies, 10,333,406 logical bytes (9.85 MiB),
+with all 597 retained hashes unchanged. Full replay/calibration paths, original
+models, source data and ledger remain local; summaries and original failure
+receipts remain in Git ([cleanup](cleanup.json)). No new Colab session was
+allocated; final account status reports zero active assignments.

@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "server_assets_verified_before_cleanup": 19,
+  "removed_files": [
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/study-README.md",
+      "retained_source": "results/direction-replay-2026-10-19/README.md",
+      "size": 6938,
+      "sha256": "73c0229cce0f636ac07dbe7b4041e3a12e53955f3af6ad8960ae47ec2532f313"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/three-seed.json",
+      "retained_source": "results/direction-replay-2026-10-19/three-seed.json",
+      "size": 25114,
+      "sha256": "1e7418b6c725ad3029e0072decdb27cf49db8f7039ddc289a4fd636ee5747999"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/three-seed.csv",
+      "retained_source": "results/direction-replay-2026-10-19/three-seed.csv",
+      "size": 265948,
+      "sha256": "efc77a16c90c0d2687bdfefa81c850a33a798cd40e9469afaf22a545e71919bc"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/summary.json",
+      "retained_source": "results/direction-replay-2026-10-19/summary.json",
+      "size": 103725,
+      "sha256": "64e9b415f1f26dabaeec66f555d04a2a0d09df864bfda52ff044cef5ed13471f"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/per-symbol.csv",
+      "retained_source": "results/direction-replay-2026-10-19/per-symbol.csv",
+      "size": 267584,
+      "sha256": "625dcfb5ed05408f9155c0803f69720972bbc2a22c83584756698fdd644a76c3"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/seed23-summary.json",
+      "retained_source": "results/direction-replay-2026-10-19/seed23-summary.json",
+      "size": 35839,
+      "sha256": "b0c88b5fa43cbf782e0ef71a1d02feaba814e0663ca998e3ecc3121b5d8d14bd"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/seed37-summary.json",
+      "retained_source": "results/direction-replay-2026-10-19/seed37-summary.json",
+      "size": 38051,
+      "sha256": "7d74fdc91ae6d4a809815f82217c7445b0c1debfc52f92e133cc7cff504da7aa"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/seed37-initial-failure.json",
+      "retained_source": "results/direction-replay-2026-10-19/seed37-initial-failure.json",
+      "size": 1715,
+      "sha256": "0014dc897c8d5aca6950fbff99472a4c647f1ac9c60b40d523ff54d5d7661db0"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/seed37-reference-calibration.json",
+      "retained_source": "results/direction-replay-2026-10-19/seed37-reference-calibration.json",
+      "size": 16629,
+      "sha256": "983f3ce5baa4bdba51d49e032a88a265a9ff1eb88dbc3a6e8242b2dbbdca62b8"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/seed37-rounding-boundary.json",
+      "retained_source": "results/direction-replay-2026-10-19/seed37-rounding-boundary.json",
+      "size": 376,
+      "sha256": "795ff243890856b6e56c2a1491e00f42c093dc7d5ac34f07ca7bb18b940dc2c9"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/preservation.json",
+      "retained_source": "results/direction-replay-2026-10-19/preservation.json",
+      "size": 773,
+      "sha256": "fa462b0c8abf93a49ba0b75dcb12813695eef96c0b601783e321562f2a016a93"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/model-sources.json",
+      "retained_source": "results/direction-replay-2026-10-19/model-sources.json",
+      "size": 3719,
+      "sha256": "770ff62746ed8492a67b9fa1bf628fc165b072eb20b003a481978a049ee52d9d"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/direction_replay.json",
+      "retained_source": "configs/experiments/direction_replay.json",
+      "size": 2229,
+      "sha256": "53aa3bd45a2893a409f15a703f6043b869e76dbe88efe9c56260de8602079c87"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/direction_replay_seed23.json",
+      "retained_source": "configs/experiments/direction_replay_seed23.json",
+      "size": 2449,
+      "sha256": "0dd977a330acf8df219aed8281a03000e27d41a45b51795bbe94b8530f7de719"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/direction_replay_seed37.json",
+      "retained_source": "configs/experiments/direction_replay_seed37.json",
+      "size": 2449,
+      "sha256": "f0fd71d3b8d06458df5fd9761e5ba89ca11e90606436a69bf9025efffd998c36"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/direction_replay_seed37_calibrated.json",
+      "retained_source": "configs/experiments/direction_replay_seed37_calibrated.json",
+      "size": 3236,
+      "sha256": "0e038afc8db60c8483bb9ec18f8d1bfb91fc24ebb56057852cfe11b671d9c9f6"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/profile-comparison.html",
+      "retained_source": "artifacts/direction-replay-2026-10-19/comparison.html",
+      "size": 4782606,
+      "sha256": "2dace11aa43966e7619c3540db8a0330ad6e928be941690b3245651c50eb6273"
+    },
+    {
+      "path": "artifacts/public/direction-replay-2026-10-19/three-seed-comparison.html",
+      "retained_source": "artifacts/direction-replay-2026-10-19/three-seed.html",
+      "size": 4774026,
+      "sha256": "b93acb03a026005191e30d5bdf63267d8ad6c8da6be55a16b48f80f0a92ad7fb"
+    }
+  ],
+  "removed_count": 18,
+  "removed_logical_bytes": 10333406,
+  "retained_file_count": 597,
+  "retained_hashes_unchanged": true,
+  "retained_manifest_sha256": "2f111f6bf0fd149474ddfc5d4d6a8e62deed3b358741cc086ad94d72ff52ad9c",
+  "complete_and_failed_replay_evidence_preserved": true,
+  "new_model_weights_created": false,
+  "new_colab_sessions_allocated": 0,
+  "project_units_unchanged": 35.687822780613104,
+  "recovery_release": "https://github.com/jason490/RL-trading/releases/tag/direction-replay-2026-10-19"
+}

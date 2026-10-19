@@ -743,3 +743,8 @@ project units stay 35.687823/150 with zero active assignments. Tests cover filte
 state feedback, profitable/costly shorts, parity and bounded rejection, paired
 model/seed consistency and pre-filter direction diagnostics.
 [Results and limits](../results/direction-replay-2026-10-19/README.md).
+
+Direction-replay publication verified all 19 GitHub asset hashes/sizes. Cleanup
+removed 18 duplicate publication copies (9.85 MiB logical) with 597 retained
+hashes unchanged. All full replay/calibration paths and original models/data
+remain available. Final account status has zero active assignments.
