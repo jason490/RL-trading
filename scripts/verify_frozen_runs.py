@@ -45,7 +45,8 @@ def verify(roots, data_root):
                 if episode['split'] != 'validation':
                     continue
                 env = TradingEnv([episode], normalizer_from(dataset['normalizer']),
-                                 dataset['names'], SimulationConfig(**metadata['simulation']))
+                                 dataset['names'], SimulationConfig(**metadata['simulation']),
+                                 observation_profile=metadata.get('observation',{}).get('profile','legacy'))
                 try:
                     observation, _ = env.reset(seed=11, options={'episode': 0})
                     for _ in range(3):

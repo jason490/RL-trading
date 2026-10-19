@@ -37,12 +37,17 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5,7,8):
+                if plan.get('version') in (4,5,7,8,9):
                     job=plan['jobs'][0]
-                    if plan.get('version') in (7,8):
+                    if plan.get('version') in (7,8,9):
                         from rl_stocks.training.initialization import initialization_spec
                         if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
                             raise RuntimeError('initialization-study configuration mismatch')
+                    if plan.get('version')==9:
+                        from rl_stocks.environment.observations.state import observation_spec
+                        if (run.get('observation')!=observation_spec(job['observation_profile'])
+                                or run.get('start_sampling')!={'mode':'legacy_uniform'}):
+                            raise RuntimeError('execution-observation configuration mismatch')
                     if plan.get('version')==8:
                         if run.get('start_sampling',{}).get('mode')!=job['start_sampling']:
                             raise RuntimeError('causal-sampling mode mismatch')
@@ -81,6 +86,8 @@ def validate_archive(path, plan, dataset_id):
                 for name, checksum in hashes.items():
                     if PurePosixPath(name).name != name or hashlib.sha256(read(folder+name)).hexdigest() != checksum:
                         raise RuntimeError('remote bundle checksum mismatch')
+                if plan.get('version')==9 and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
+                    raise RuntimeError('frozen observation schema mismatch')
                 if digest(json.loads(read(folder+'manifest.json'))) != run['bundle_id']:
                     raise RuntimeError('remote bundle identity mismatch')
             if actual != expected or len(completion['completed']) != len(runs):

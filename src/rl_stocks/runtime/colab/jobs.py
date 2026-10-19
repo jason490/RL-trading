@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==8:
+    if plan.get('version')==9:
+        try:expected=observation_plan(**plan['observation_study'])
+        except (KeyError,TypeError):raise ValueError('malformed execution-observation study plan') from None
+        if plan!=expected:raise ValueError('unsupported execution-observation study plan')
+    elif plan.get('version')==8:
         try:expected=sampling_plan(**plan['sampling_study'])
         except (KeyError,TypeError):raise ValueError('malformed causal-sampling study plan') from None
         if plan!=expected:raise ValueError('unsupported causal-sampling study plan')
@@ -152,3 +156,16 @@ def sampling_plan(arm,seed=11,smoke=False):
         'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
             'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
             'milestones':[steps],'reward_scale':1.,'initialization':'wide','start_sampling':mode}]}
+
+
+def observation_plan(profile,seed=11,smoke=False):
+    from rl_stocks.environment.observations.state import PROFILES
+    if profile not in PROFILES or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported execution-observation profile, seed or smoke mode')
+    steps=512 if smoke else 50000
+    return {'version':9,'accelerator':'CPU',
+        'observation_study':{'profile':profile,'seed':seed,'smoke':smoke},
+        'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
+            'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
+            'milestones':[steps],'reward_scale':1.,'initialization':'wide',
+            'start_sampling':'legacy_uniform','observation_profile':profile}]}

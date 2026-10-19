@@ -27,16 +27,16 @@ from rl_stocks.training.curves import curve_record,append_record,render_curve
 from rl_stocks.training.initialization import initialization_spec,initialize_policy
 
 class ValidationCheckpoint(BaseCallback):
-    def __init__(self,dataset,config,path,every,compact=False,target_steps=None,sampling_env=None):
+    def __init__(self,dataset,config,path,every,compact=False,target_steps=None,sampling_env=None,observation_profile="legacy"):
         super().__init__();self.dataset=dataset;self.config=config;self.path=path
         self.every=every;self.best=-float("inf");self.history=[]
         self.best_step=None;self.best_metrics={}
         self.compact=compact;self.target_steps=target_steps;self.started=time.monotonic()
-        self.sampling_env=sampling_env
+        self.sampling_env=sampling_env;self.observation_profile=observation_profile
     def validate(self,phase='on_step'):
         if self.sampling_env is not None and self.sampling_env.start_sampler:
             (self.path/'training-sampling.json').write_text(json.dumps(self.sampling_env.sampling_statistics(),indent=2))
-        results=evaluate(self.model,self.dataset,"validation",self.config)
+        results=evaluate(self.model,self.dataset,"validation",self.config,self.observation_profile)
         score=selection_score(results)
         training={}
         for key in ('train/ent_coef','train/actor_loss','train/critic_loss','train/ent_coef_loss',
@@ -83,7 +83,7 @@ def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
-          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform'):
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy'):
     initialization_spec(initialization,algorithm)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
@@ -93,7 +93,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
     if device=="cuda" and not torch.cuda.is_available():raise RuntimeError("CUDA requested but unavailable")
     episodes=[e for e in dataset["episodes"].values() if e["split"]=="train"]
-    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale,start_sampling=start_sampling)
+    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale,start_sampling=start_sampling,observation_profile=observation_profile)
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
     env.reset_sampling_statistics()
@@ -117,14 +117,14 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "selection_metric":"Equal-weight mean validation net return", "status":"running",
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
         "reward_config":{"kind":"net_log_equity","scale":reward_scale},
-        "initialization":initialized,
-        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling),
+        "initialization":initialized,"observation":env.observation_spec,
+        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling)+('' if observation_profile=='legacy' else ':'+observation_profile),
         "start_sampling":env.start_sampler.summary if env.start_sampler else {'mode':'legacy_uniform'},
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
     (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
-    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env)
+    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env,observation_profile=observation_profile)
     try:
         previous=0
         for milestone in milestones:
@@ -158,7 +158,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         else:np.testing.assert_array_equal(original,frozen.predict(observation))
         metadata["bundle_id"]=bundle.name
         if final_test:
-            results=evaluate(selected,dataset,"test",config)
+            results=evaluate(selected,dataset,"test",config,observation_profile)
             report(results,run/"final-test.html","Held-out audit of frozen validation selection")
         (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
         return run,bundle

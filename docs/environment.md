@@ -35,3 +35,11 @@ Equity <=0 is true termination with finite reward -20. Dataset end or configured
 The raw environment remains a Gymnasium interface. SB3 wraps it using its supported vector adapter; the raw five-return step/reset tuple must not be used as if it were an SB3 VecEnv API. Gymnasium and SB3 checkers run in the training entry point and integration suite.
 
 Dependency-free tests verify the underlying simulator and boundaries conceptually, but do not replace those actual checker runs. The checker/seeded-reset/time-limit integration test is currently skipped until real dependencies are installed. Its status is explicit in [verification.md](verification.md).
+
+## Optional execution observations
+
+The default five portfolio fields remain unchanged. Explicit `execution_full`
+and same-size `execution_masked` profiles add nine inputs; see
+[execution-observations.md](execution-observations.md) for order, formulas,
+compatibility and validation. Training, checkpoint evaluation and inference must
+use the same declared profile.

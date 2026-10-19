@@ -72,14 +72,14 @@ def restore_sim(value, config):
     return sim
 
 
-def observation(policy, features, sim, price):
+def observation(policy, features, sim, price, atr=None):
     p = sim.portfolio
     equity = p.equity(price)
     if equity <= 0:
         raise ValueError('nonpositive shadow equity; manual review required')
-    config = sim.config
-    state = [p.quantity*price/equity, p.cash/equity, p.age/config.max_holding,
-             (price-p.basis)*p.quantity/equity, equity/config.initial_equity-1]
+    from rl_stocks.environment.observations.state import portfolio_state
+    profile = policy.manifest['metadata'].get('observation', {}).get('profile', 'legacy')
+    state = portfolio_state(sim, price, atr, profile)
     return policy.normalizer.transform(features, policy.manifest['names'])+state
 
 
@@ -173,7 +173,7 @@ def tick(root, snapshot, *, now=None, policy_loader=FrozenPolicy):
                                 events=list(sim.portfolio.events))
                     record['settlements'].append(info)
                 vector, atr = features[symbol]
-                obs = observation(policy, vector, sim, bar.close)
+                obs = observation(policy, vector, sim, bar.close, atr)
                 memory = value.get('memory')
                 if policy.manifest['metadata']['algorithm'] == 'recurrent_ppo':
                     state = tuple(np.array(x, dtype=np.float32) for x in memory) if memory else None

@@ -45,14 +45,22 @@ class FrozenPolicy:
             raise ValueError("bundle schema mismatch")
         expected=self.manifest["data_manifest"]["provenance"]["capabilities"]["feed"]
         if expected!=feed:raise ValueError("bundle feed mismatch")
+        from rl_stocks.environment.observations.state import observation_spec
+        self.observation_spec=self.manifest['metadata'].get('observation',observation_spec())
+        if self.observation_spec!=observation_spec(self.observation_spec.get('profile')):
+            raise ValueError('bundle observation schema mismatch')
+        self.observation_profile=self.observation_spec['profile']
+        self.observation_size=len(self.manifest['names'])+len(self.observation_spec['portfolio_fields'])
         self.normalizer=normalizer_from(self.manifest["normalizer"])
         algorithm=self.manifest["metadata"]["algorithm"]
         self._model=CLASSES[algorithm].load(self.path/"model.zip",device=device)
+        if self._model.observation_space.shape!=(self.observation_size,):
+            raise ValueError('model observation schema mismatch')
         self._model.policy.set_training_mode(False)
     def _observation(self,observation):
         import numpy as np
         observation=np.asarray(observation,dtype=np.float32)
-        if observation.shape!=(len(self.manifest["names"])+5,) or not np.isfinite(observation).all():
+        if observation.shape!=(self.observation_size,) or not np.isfinite(observation).all():
             raise ValueError("observation shape/nonfinite mismatch")
         return observation
     def predict(self,observation):

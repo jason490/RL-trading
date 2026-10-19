@@ -7,14 +7,14 @@ from rl_stocks.evaluation.metrics import metrics
 from rl_stocks.evaluation.direction import directional_attribution
 from rl_stocks.rl.registry.prediction import PredictionStream
 
-def evaluate(model,dataset,split="validation",config=SimulationConfig()):
+def evaluate(model,dataset,split="validation",config=SimulationConfig(),observation_profile="legacy"):
     from rl_stocks.environment.trading.env import TradingEnv
     if split not in ("validation","test"):raise ValueError("evaluation split required")
     normalizer=normalizer_from(dataset["normalizer"])
     results={}
     for key,episode in dataset["episodes"].items():
         if episode["split"]!=split:continue
-        env=TradingEnv([episode],normalizer,dataset["names"],config)
+        env=TradingEnv([episode],normalizer,dataset["names"],config,observation_profile=observation_profile)
         obs,_=env.reset(seed=11,options={"episode":0})
         rows=[];prediction=PredictionStream(model)
         while True:

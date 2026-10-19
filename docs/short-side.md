@@ -77,3 +77,11 @@ paths; early termination prefixes; and reconciliation failures.
 Broker borrow availability, recalls, actual variable rates and instrument
 eligibility are not established by this simulation. Existing frozen policies
 remain research-only. No broker orders are authorized or submitted.
+
+## Known execution state
+
+[Versioned execution observations](execution-observations.md) expose held stops,
+targets, partial-exit status and prior protective actions in an optional full
+profile. This addresses demonstrated state aliasing for both long and short
+positions. It requires matched Colab validation before claiming improved short
+profitability; legacy frozen policies retain their original input contract.

@@ -21,6 +21,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Matched universe expansion | [universe-expansion.md](universe-expansion.md) | Fixed 22-versus-55-stock training comparison, common validation panel, no retired-test reuse, and Colab operations |
 | Trade simulation | [simulation.md](simulation.md) | Cash/P&L, fills, costs, gaps, stops, scale-outs and corporate actions |
 | Policy outputs and risk | [actions-risk.md](actions-risk.md) | Four-component decoding, geometry, desired quantities and clipping |
+| Execution-state observations | [execution-observations.md](execution-observations.md) | Versioned held protection, masked controls, legacy compatibility and causal state |
 | Gymnasium interface | [environment.md](environment.md) | Observations, seeded reset, step and episode boundaries |
 | RL training and checkpoints | [training.md](training.md) | PPO/SAC/TD3 settings, seeds, selection and continuation |
 | Matched research experiments | [experiments.md](experiments.md) | Four datasets, three algorithms/seeds, declared selection, held-out protocol and GitHub assets |

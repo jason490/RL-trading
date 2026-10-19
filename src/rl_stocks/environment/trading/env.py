@@ -1,13 +1,14 @@
-from dataclasses import asdict
 import gymnasium as gym
 import numpy as np
 from rl_stocks.core.contracts import Bar
 from rl_stocks.environment.execution.simulator import Simulator, SimulationConfig
 from rl_stocks.environment.rewards.equity import equity_reward
 
+from rl_stocks.environment.observations.state import observation_spec, portfolio_state
+
 class TradingEnv(gym.Env):
     metadata={"render_modes":[]}
-    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform'):
+    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform',observation_profile='legacy'):
         super().__init__()
         if not episodes:raise ValueError("no episodes")
         if tuple(names)!=normalizer.names:raise ValueError("feature names mismatch")
@@ -22,8 +23,10 @@ class TradingEnv(gym.Env):
         self.reset_sampling_statistics()
         if not np.isfinite(reward_scale) or reward_scale<=0:raise ValueError('positive finite reward scale required')
         self.reward_scale=float(reward_scale)
+        self.observation_profile=observation_profile
+        self.observation_spec=observation_spec(observation_profile)
         self.action_space=gym.spaces.Box(-1.,1.,shape=(4,),dtype=np.float32)
-        self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(len(names)+5,),dtype=np.float32)
+        self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(len(names)+len(self.observation_spec["portfolio_fields"]),),dtype=np.float32)
     def reset(self,*,seed=None,options=None):
         super().reset(seed=seed)
         if self.start_sampler is None:
@@ -48,9 +51,7 @@ class TradingEnv(gym.Env):
     def observation(self):
         p=self.sim.portfolio;price=self.bars[self.i].close;equity=p.equity(price)
         vector=self.normalizer.transform(self.episode["features"][self.i],self.names)
-        state=[p.quantity*price/max(equity,1e-8),p.cash/max(equity,1e-8),
-            p.age/self.config.max_holding,(price-p.basis)*p.quantity/max(equity,1e-8),
-            equity/self.config.initial_equity-1]
+        state=portfolio_state(self.sim,price,self.episode["atr"][self.i],self.observation_profile)
         value=np.asarray(vector+state,dtype=np.float32)
         if not np.isfinite(value).all():raise ValueError("nonfinite observation")
         return value

@@ -677,7 +677,7 @@ Full acceptance passes 207 tests. Seventeen GitHub asset hashes/sizes are verifi
 36 duplicates (512.95 MiB logical) were removed with 160 retained hashes unchanged. See [results](results/causal-sampling-2026-10-19/README.md) and
 [methodology](docs/training-sampling.md).
 
-## 26. Versioned execution observations — next, not yet implemented
+## 26. Versioned execution observations — implemented; matched Colab study pending
 
 A synthetic witness proves that the current 12-value observation can alias two
 states with different held protection and different next-step outcomes. Expose
@@ -692,3 +692,12 @@ checkers before any new Colab allocation. Declare the matched multi-seed protoco
 and limits first, retain retired-test isolation, and share the original project
 ledger. Better observability is a structural hypothesis, not a claim of improved
 returns or a fully observed market process.
+
+Implementation now includes legacy/full/masked observation profiles, ordered
+schemas in frozen metadata, model-shape rejection and shared training/evaluation/
+shadow state construction. Actual checkers, stop-alias witness, legacy RNG/state
+parity, short geometry, split scaling and frozen save/load parity pass. Full
+regression: 214 tests passed before the final protocol tests; the additional
+strict remote-plan and dual-control gate checks are run separately. The declared
+three-arm protocol preserves actions/rewards and permits confirmation only after
+full beats both controls. See [execution observations](docs/execution-observations.md).
