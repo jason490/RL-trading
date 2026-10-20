@@ -59,3 +59,20 @@ Tests prove both telescoping identities and their different cross-episode
 rankings, finite inputs, insolvency semantics, exact observations/execution/RNG
 under matched actions, cost-aware reconciliation, and strict remote-plan rejection.
 These checks do not establish profitability or replace remote save/load acceptance.
+
+## Matched report
+
+After completed research cells and verified fleet cleanup, run:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/report_observations.py \
+  --protocol configs/experiments/reward_objectives.json \
+  --state .runtime/reward-screen-state.json \
+  --output artifacts/reward-objectives-screen/summary.json
+```
+
+The reporter varies only the declared reward kind in its matched contract;
+unplanned scale, parameters, source, data, costs or observation changes fail.
+It records both actual kinds per cell and checks selected/final report scores,
+matching holding baselines, side attribution and post-update final weights.
+Confirmation also requires the matching passing screen receipt.

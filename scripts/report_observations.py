@@ -30,7 +30,9 @@ def main():
     a=p.parse_args();protocol=json.loads(a.protocol.read_text());state=json.loads(a.state.read_text())
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete study and verified cleanup required')
     architecture=protocol.get('study_kind')=='policy_architecture'
-    candidate=protocol.get('promotion_candidate','execution_full')
+    reward=protocol.get('study_kind')=='reward_objective'
+    candidate='net_initial_equity_change' if reward else protocol.get('promotion_candidate','execution_full')
+    references=[protocol['reference_arm']] if reward else protocol['promotion_references']
     previous=json.loads(a.screen.read_text()) if a.screen else None
     if previous and (previous['protocol_sha256']!=digest(protocol) or not previous['screen']['passed']):
         raise ValueError('matching passing screen required')
@@ -42,13 +44,21 @@ def main():
     for item in state['completed'].values():
         paths=list((Path(item['root'])/'runs').glob('*/metadata.json'))
         if len(paths)!=1:raise ValueError('one run per task required')
-        path=paths[0];m=json.loads(path.read_text());arm=(m.get('policy_architecture',{}).get('variant') if architecture else m.get('observation',{}).get('profile'));seed=str(m['seed'])
-        if (arm not in protocol['arms'] or m.get('observation')!=observation_spec('execution_full' if architecture else arm)
+        path=paths[0];m=json.loads(path.read_text());arm=(m.get('reward_config',{}).get('kind') if reward else m.get('policy_architecture',{}).get('variant') if architecture else m.get('observation',{}).get('profile'));seed=str(m['seed'])
+        if (arm not in protocol['arms'] or m.get('observation')!=observation_spec('execution_full' if architecture or reward else arm)
             or m['status']!='complete' or m['smoke'] or m['algorithm']!='ppo' or m['device']!='cpu'
             or m['actual_steps']!=50000 or m['requested_steps']!=50000 or m['dataset']!=protocol['dataset']
             or m['initialization']!=initialization_spec('wide') or m['start_sampling']!={'mode':'legacy_uniform'}
             or m['seed'] not in ((23,37) if previous else (11,))):raise ValueError('unexpected execution-observation cell')
         current={k:m[k] for k in ('dataset','source_hash','git','simulation','versions','resolved_parameters','reward_config','evaluation_every','initialization','start_sampling')}
+        if reward:
+            from rl_stocks.rl.ppo.architecture import architecture_spec
+            from rl_stocks.rl.registry.factory import resolved_parameters
+            expected=resolved_parameters('ppo',False,{'n_steps':protocol['n_steps'],'batch_size':protocol['batch_size']})
+            if (m['reward_config']!={'kind':arm,'scale':protocol['reward_scale']}
+                or m.get('policy_architecture')!=architecture_spec('native',7)
+                or m['resolved_parameters']!=expected):raise ValueError('reward/native parameter mismatch')
+            current['reward_config']={'varied_kind':protocol['arms'],'scale':protocol['reward_scale']}
         if architecture:
             from rl_stocks.rl.ppo.architecture import architecture_spec
             from rl_stocks.rl.registry.factory import resolved_parameters
@@ -59,7 +69,7 @@ def main():
             current['resolved_parameters']=resolved_parameters('ppo',False,overrides)
         if current['git']['dirty'] or contract is not None and current!=contract:raise ValueError('source/configuration mismatch')
         contract=current
-        cell={'seed':m['seed'],'run':path.parent.name,'bundle_id':m['bundle_id'],'observation':m['observation'],'reports':{},'policy_architecture':m.get('policy_architecture')}
+        cell={'seed':m['seed'],'run':path.parent.name,'bundle_id':m['bundle_id'],'observation':m['observation'],'reports':{},'policy_architecture':m.get('policy_architecture'),'reward_config':m.get('reward_config')}
         cell['learning_curve']=[{k:r[k] for k in ('steps','phase','return_pct','change_pp','mean_max_drawdown_pct','mean_costs')} for r in latest_points(m['validation_checkpoints'])]
         for phase,file in [('selected','selected-validation.json'),('final','validation.json')]:
             rp=path.parent/file;results=json.loads(rp.read_text())
@@ -80,10 +90,10 @@ def main():
             cells[arm]=cell
     if previous:
         result={r:confirmation_gate({r:cells[r],candidate:cells[candidate]},candidate,
-                 {**protocol,'reference_arm':r}) for r in protocol['promotion_references']}
+                 {**protocol,'reference_arm':r}) for r in references}
         passed=all(r['relative_improvement_passed'] for r in result.values())
         verdict={'passed':passed,'controls':result}
-    else:verdict=dual_screen(cells,protocol)
+    else:verdict=screen_gate(cells,protocol) if reward else dual_screen(cells,protocol)
     output={'protocol_sha256':digest(protocol),'protocol':protocol,'matched_contract':contract,
             'validation_baseline_sha256':baseline,'cells':cells,
             'confirmation' if previous else 'screen':verdict,'objective_achieved':False}
