@@ -121,3 +121,20 @@ exposure and cost differences to distinguish deterioration mechanisms before
 preregistering another bounded hypothesis. This diagnostic needs no fitting,
 provider calls or Colab allocation. Development results remain repeatedly used;
 prospective confirmation and the overall benchmark/short objective remain unmet.
+
+## Saved temperature-path outcome
+
+Candidate selected-to-final stock/ETF net return changes -10.47/-6.25pp split
+into long -7.34/-3.45pp and short -3.13/-2.80pp. Cost drag rises only0.91pp
+for stocks and falls0.75pp for ETFs. Saved-path non-cost changes -9.56/-7.00pp
+show costs alone cannot account for deterioration; exposure rises while both
+side contributions worsen. This is descriptive accounting, not a causal
+cost-free replay or proof of an optimization mechanism. No fitting/data access/
+Colab and source hashes unchanged;11 existing numeric/contract checks pass.
+[Evidence](../results/sac-temperature-paths-2026-10-20/README.md).
+
+Before new allocation, audit existing TD3 input/exploration contracts and whether
+a fixed full-state delayed-update comparison provides a distinct hypothesis.
+Prior weak TD3 results stay visible. No promise of improvement, automatic
+allocation, temperature rescue or relaxation of stock/ETF/short/prospective
+requirements. Project remains36.069198/150.
