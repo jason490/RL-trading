@@ -126,6 +126,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
     if study_protocol_sha256 is not None:metadata['study_protocol_sha256']=study_protocol_sha256
+    if algorithm=='td3':
+        from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record
+        if study_protocol_sha256==TD3_PROTOCOL:metadata['td3_initialization']=td3_initialization_record(model)
     if algorithm=='sac':
         from rl_stocks.training.sac_temperature import PROTOCOL_SHA256 as TEMP_PROTOCOL,initialization_record
         if study_protocol_sha256==TEMP_PROTOCOL:metadata['temperature_initialization']=initialization_record(model)

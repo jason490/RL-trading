@@ -83,6 +83,11 @@ def validate_tasks(tasks,root):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
+        if plan.get('version')==18:
+            from rl_stocks.data.generation.datasets import read_dataset
+            from rl_stocks.training.td3_state import validate_payload
+            if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('TD3 state task dataset identity mismatch')
+            validate_payload(read_dataset(dataset))
         if plan.get('version')==17:
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.sac_temperature import validate_payload

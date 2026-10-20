@@ -54,3 +54,28 @@ worker, archive and initial/noise contracts pass preflight.
 Current status: audit and preregistration complete; 12 focused protocol and
 saved-path accounting checks pass. Integration/smoke/screen remain pending.
 No new Colab allocation. Project 36.069198/150, objective active and unmet.
+
+## Version 18 preflight
+
+Job builder, preallocation payload validation, remote worker and archive contracts
+now enforce the fixed protocol. Runner records actual initial actor, target actor,
+critic and target critic hashes, Gaussian exploration and delayed-update settings
+without action sampling. Masked/full network equality remains an actual Colab
+smoke requirement, not inferred from fixtures. The strict reporter validates
+source/configuration, complete causal report accounting, matching holding paths,
+selected/final checkpoint scores and fixed gates; no candidate is yet promoted.
+
+Fifty TD3/SAC/temperature/fleet/budget checks pass; three immutable smoke payloads
+validate without allocation or fitting. Archive tests cover both 1,024 and 50k
+contracts and semantic tampering despite recomputed checksums. Existing off-policy
+parameter checking now treats TD3 as off-policy rather than injecting PPO rollout
+parameters. Scripts compile. Next freeze committed source, then three metered CPU
+smokes under one unchanged study allowance; do not screen before actual parity.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_td3_state_jobs.py --smoke \
+  --output .runtime/td3-state-smoke-jobs.json
+PYTHONPATH=src .venv/bin/python scripts/report_td3_state.py \
+  --state .runtime/td3-state-screen-state.json \
+  --output artifacts/td3-state/screen-report.json
+```

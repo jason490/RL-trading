@@ -1051,3 +1051,9 @@ reward, costs, parameters and strict absolute/relative gates;12 protocol/off-pol
 checks pass. No allocation before runtime/initial-noise preflight.
 [Category guide](td3-execution-state.md),
 [audit](../results/td3-diagnostic-2026-10-20/README.md).
+
+TD3 version18 integration passes50 focused job/protocol/archive/gate/fleet/budget
+checks; actual immutable smoke payloads validate. Runner fingerprints all four
+initial networks/noise, and strict reporter enforces matched selected/final
+accounting and gates. No fitting or allocation yet; actual initialization/parity
+remains required. [Details](td3-execution-state.md#version-18-preflight).

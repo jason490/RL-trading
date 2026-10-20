@@ -1085,3 +1085,8 @@ benchmark requirements. Audit/protocol checks12 pass without training or data
 access. Runtime integration and metered Colab smokes/screens remain pending.
 [Guide](docs/td3-execution-state.md),
 [protocol](configs/experiments/td3_execution_state.json).
+
+TD3 version18 runtime/report integration complete:50 focused checks, actual
+immutable smoke payload validation and script compilation pass without fitting.
+Freeze committed source before three Colab CPU smokes. Actual network/noise and
+frozen-prefix parity must precede the fixed50k screen.

@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==17:
+    if plan.get('version')==18:
+        try:expected=td3_state_plan(**plan['td3_state_study'])
+        except (KeyError,TypeError):raise ValueError('malformed TD3 state plan') from None
+        if plan!=expected:raise ValueError('unsupported TD3 state plan')
+    elif plan.get('version')==17:
         try:expected=temperature_plan(**plan['temperature_study'])
         except (KeyError,TypeError):raise ValueError('malformed temperature plan') from None
         if plan!=expected:raise ValueError('unsupported temperature plan')
@@ -310,4 +314,15 @@ def temperature_plan(arm,seed=11,smoke=False):
     plan=sac_state_plan('execution_full',seed,smoke);plan.pop('sac_state_study')
     plan.update(version=17,temperature_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides={'ent_coef':p['entropy_coefficient'][arm]})
+    return plan
+
+
+def td3_state_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.td3_state import protocol,PROTOCOL_SHA256
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported TD3 state arm, seed or smoke mode')
+    plan=sac_state_plan(arm,seed,smoke);plan.pop('sac_state_study')
+    plan.update(version=18,td3_state_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
+    plan['jobs'][0].update(algorithm='td3',study_protocol_sha256=PROTOCOL_SHA256)
     return plan
