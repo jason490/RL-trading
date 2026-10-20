@@ -2,13 +2,13 @@ import gymnasium as gym
 import numpy as np
 from rl_stocks.core.contracts import Bar
 from rl_stocks.environment.execution.simulator import Simulator, SimulationConfig
-from rl_stocks.environment.rewards.equity import equity_reward
+from rl_stocks.environment.rewards.equity import equity_reward, validate_reward_kind
 
 from rl_stocks.environment.observations.state import observation_spec, portfolio_state
 
 class TradingEnv(gym.Env):
     metadata={"render_modes":[]}
-    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform',observation_profile='legacy'):
+    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform',observation_profile='legacy',reward_kind='net_log_equity'):
         super().__init__()
         if not episodes:raise ValueError("no episodes")
         if tuple(names)!=normalizer.names:raise ValueError("feature names mismatch")
@@ -23,6 +23,7 @@ class TradingEnv(gym.Env):
         self.reset_sampling_statistics()
         if not np.isfinite(reward_scale) or reward_scale<=0:raise ValueError('positive finite reward scale required')
         self.reward_scale=float(reward_scale)
+        self.reward_kind=validate_reward_kind(reward_kind)
         self.observation_profile=observation_profile
         self.observation_spec=observation_spec(observation_profile)
         self.action_space=gym.spaces.Box(-1.,1.,shape=(4,),dtype=np.float32)
@@ -71,7 +72,8 @@ class TradingEnv(gym.Env):
         # Data cutoffs/time limits use marked equity and bootstrap; no artificial
         # liquidation fee is added at truncation. Episodes never cross split ends.
         self.done=terminated or truncated
-        reward=equity_reward(info["previous_equity"],info["equity"])
+        reward=equity_reward(info["previous_equity"],info["equity"],self.reward_kind,self.config.initial_equity)
         info.update(session=bar.session,price=bar.close,events=self.sim.portfolio.events[event_start:])
         info['unscaled_reward']=reward
+        info['reward_kind']=self.reward_kind
         return self.observation(),float(self.reward_scale*reward),bool(terminated),bool(truncated),info

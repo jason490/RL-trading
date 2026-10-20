@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from rl_stocks.core.contracts import digest
-from rl_stocks.runtime.colab.jobs import observation_plan,architecture_plan
+from rl_stocks.runtime.colab.jobs import observation_plan,architecture_plan,reward_plan
 from rl_stocks.rl.ppo.architecture import VARIANTS
 
 
@@ -15,7 +15,8 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args();protocol=json.loads(args.protocol.read_text())
     architecture=protocol.get('study_kind')=='policy_architecture'
-    expected=list(VARIANTS) if architecture else ['legacy','execution_masked','execution_full']
+    reward=protocol.get('study_kind')=='reward_objective'
+    expected=['net_log_equity','net_initial_equity_change'] if reward else list(VARIANTS) if architecture else ['legacy','execution_masked','execution_full']
     if protocol['arms']!=expected or protocol['steps_per_cell']!=50000:
         raise ValueError('unsupported execution-observation protocol')
     seeds=(11,)
@@ -27,7 +28,7 @@ def main():
         seeds=(23,37)
     elif args.screen:raise ValueError('unexpected screen input')
     tasks=[{'id':f'{profile}-{seed}','dataset':'data/datasets/'+protocol['dataset'],
-            'plan':(architecture_plan if architecture else observation_plan)(profile,seed,args.phase=='smoke')}
+            'plan':(reward_plan if reward else architecture_plan if architecture else observation_plan)(profile,seed,args.phase=='smoke')}
            for seed in seeds for profile in protocol['arms']]
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(tasks,indent=2)+'\n')

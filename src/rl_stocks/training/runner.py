@@ -83,7 +83,7 @@ def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
-          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native'):
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native',reward_kind='net_log_equity'):
     initialization_spec(initialization,algorithm)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
@@ -93,7 +93,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
     if device=="cuda" and not torch.cuda.is_available():raise RuntimeError("CUDA requested but unavailable")
     episodes=[e for e in dataset["episodes"].values() if e["split"]=="train"]
-    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale,start_sampling=start_sampling,observation_profile=observation_profile)
+    env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale,reward_kind=reward_kind,start_sampling=start_sampling,observation_profile=observation_profile)
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
     env.reset_sampling_statistics()
@@ -117,10 +117,10 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "dataset":Path(dataset_path).name,"git":git_state(),"source_hash":source_identity(),
         "selection_metric":"Equal-weight mean validation net return", "status":"running",
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
-        "reward_config":{"kind":"net_log_equity","scale":reward_scale},
+        "reward_config":{"kind":reward_kind,"scale":reward_scale},
         "initialization":initialized,"observation":env.observation_spec,
         "policy_architecture":architecture_spec(policy_variant,len(dataset["names"])),
-        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling)+('' if observation_profile=='legacy' else ':'+observation_profile)+('' if policy_variant=='native' else ':'+policy_variant),
+        "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling)+('' if observation_profile=='legacy' else ':'+observation_profile)+('' if policy_variant=='native' else ':'+policy_variant)+('' if reward_kind=='net_log_equity' else ':'+reward_kind),
         "start_sampling":env.start_sampler.summary if env.start_sampler else {'mode':'legacy_uniform'},
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,

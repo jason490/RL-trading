@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==10:
+    if plan.get('version')==11:
+        try:expected=reward_plan(**plan['reward_study'])
+        except (KeyError,TypeError):raise ValueError('malformed reward study plan') from None
+        if plan!=expected:raise ValueError('unsupported reward study plan')
+    elif plan.get('version')==10:
         try:expected=architecture_plan(**plan['architecture_study'])
         except (KeyError,TypeError):raise ValueError('malformed policy-architecture study plan') from None
         if plan!=expected:raise ValueError('unsupported policy-architecture study plan')
@@ -186,3 +190,18 @@ def architecture_plan(variant,seed=11,smoke=False):
             'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
             'milestones':[steps],'reward_scale':1.,'initialization':'wide',
             'start_sampling':'legacy_uniform','observation_profile':'execution_full','policy_variant':variant}]}
+
+
+def reward_plan(kind, seed=11, smoke=False):
+    from rl_stocks.environment.rewards.equity import validate_reward_kind
+    validate_reward_kind(kind)
+    if type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed != 11:
+        raise ValueError('unsupported reward study seed or smoke mode')
+    steps = 512 if smoke else 50000
+    return {'version':11, 'accelerator':'CPU',
+        'reward_study':{'kind':kind,'seed':seed,'smoke':smoke},
+        'jobs':[{'algorithm':'ppo','device':'cpu','smoke':smoke,'seed':seed,'steps':steps,
+            'evaluation_every':256 if smoke else 10000,'compact_checkpoints':True,
+            'milestones':[steps],'reward_scale':1.,'initialization':'wide',
+            'start_sampling':'legacy_uniform','observation_profile':'execution_full',
+            'policy_variant':'native','reward_kind':kind}]}

@@ -228,3 +228,41 @@ class ArtifactTests(unittest.TestCase):
         self.assertTrue(job.ledger.active['exec_cli_failed'])
         self.assertTrue(job.ledger.active['training_verified'])
         self.assertEqual(job.ledger.active['status'],'stopped')
+
+    def test_reward_study_checks_run_and_frozen_objective(self):
+        from rl_stocks.runtime.colab.jobs import reward_plan
+        from rl_stocks.training.initialization import initialization_spec
+        from rl_stocks.environment.observations.state import observation_spec
+        from rl_stocks.rl.ppo.architecture import architecture_spec
+        from rl_stocks.rl.registry.factory import resolved_parameters
+        self.plan=reward_plan('net_initial_equity_change',smoke=True)
+        job=self.plan['jobs'][0];run=self.runs[0]
+        curve=[{'steps':256,'phase':'on_step','score':.01},
+               {'steps':512,'phase':'post_update','score':.01}]
+        run.update(job,requested_steps=512,actual_steps=512,
+            reward_config={'kind':job['reward_kind'],'scale':1.},validation_checkpoints=curve,
+            initialization=initialization_spec('wide','ppo'),
+            observation=observation_spec('execution_full'),start_sampling={'mode':'legacy_uniform'},
+            policy_architecture=architecture_spec('native',7),
+            resolved_parameters=resolved_parameters('ppo',True,None,'native',7))
+        for index in (1,2,3,4):(self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        folder=self.artifacts/'runs/0'
+        (folder/'learning-curve.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        (folder/'learning-curve.csv').write_text('steps,return_pct\n256,1.0\n512,1.0\n')
+        (folder/'learning-curve.html').write_text('curve')
+        def write_bundle(reward):
+            manifest={'metadata':{'observation':run['observation'],
+                'policy_architecture':run['policy_architecture'],'reward_config':reward}}
+            identity=digest(manifest);bundle=self.artifacts/'frozen'/identity;bundle.mkdir(exist_ok=True)
+            (bundle/'manifest.json').write_bytes(canonical(manifest));(bundle/'model.zip').write_bytes(b'fixture')
+            (bundle/'checksums.json').write_bytes(canonical({p.name:hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in bundle.iterdir() if p.name!='checksums.json'}))
+            run['bundle_id']=identity
+            (folder/'metadata.json').write_text(json.dumps(run))
+            self.completion.update(plan=self.plan,gpu=None,completed=[run]);self.write_completion()
+        write_bundle(run['reward_config']);self.assertEqual(len(self.check()),1)
+        write_bundle({'kind':'net_log_equity','scale':1.})
+        with self.assertRaisesRegex(RuntimeError,'frozen reward'):self.check()
+        run['reward_config']['kind']='net_log_equity'
+        (folder/'metadata.json').write_text(json.dumps(run))
+        with self.assertRaisesRegex(RuntimeError,'configuration mismatch'):self.check()

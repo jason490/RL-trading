@@ -37,18 +37,18 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5,7,8,9,10):
+                if plan.get('version') in (4,5,7,8,9,10,11):
                     job=plan['jobs'][0]
-                    if plan.get('version') in (7,8,9,10):
+                    if plan.get('version') in (7,8,9,10,11):
                         from rl_stocks.training.initialization import initialization_spec
                         if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
                             raise RuntimeError('initialization-study configuration mismatch')
-                    if plan.get('version') in (9,10):
+                    if plan.get('version') in (9,10,11):
                         from rl_stocks.environment.observations.state import observation_spec
                         if (run.get('observation')!=observation_spec(job['observation_profile'])
                                 or run.get('start_sampling')!={'mode':'legacy_uniform'}):
                             raise RuntimeError('execution-observation configuration mismatch')
-                    if plan.get('version')==10:
+                    if plan.get('version') in (10,11):
                         from rl_stocks.rl.ppo.architecture import architecture_spec
                         from rl_stocks.rl.registry.factory import resolved_parameters
                         if (run.get('policy_architecture')!=architecture_spec(job['policy_variant'],7)
@@ -58,7 +58,7 @@ def validate_archive(path, plan, dataset_id):
                     if plan.get('version')==8:
                         if run.get('start_sampling',{}).get('mode')!=job['start_sampling']:
                             raise RuntimeError('causal-sampling mode mismatch')
-                    if (run.get('reward_config')!={'kind':'net_log_equity','scale':job['reward_scale']}
+                    if (run.get('reward_config')!={'kind':job.get('reward_kind','net_log_equity'),'scale':job['reward_scale']}
                             or run.get('milestones')!=job['milestones'] or run.get('evaluation_every')!=job['evaluation_every']
                             or not run.get('compact_checkpoints')):
                         raise RuntimeError('learning-study configuration mismatch')
@@ -93,10 +93,12 @@ def validate_archive(path, plan, dataset_id):
                 for name, checksum in hashes.items():
                     if PurePosixPath(name).name != name or hashlib.sha256(read(folder+name)).hexdigest() != checksum:
                         raise RuntimeError('remote bundle checksum mismatch')
-                if plan.get('version') in (9,10) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
+                if plan.get('version') in (9,10,11) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
                     raise RuntimeError('frozen observation schema mismatch')
-                if plan.get('version')==10 and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
+                if plan.get('version') in (10,11) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
                     raise RuntimeError('frozen policy architecture mismatch')
+                if plan.get('version')==11 and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
+                    raise RuntimeError('frozen reward configuration mismatch')
                 if digest(json.loads(read(folder+'manifest.json'))) != run['bundle_id']:
                     raise RuntimeError('remote bundle identity mismatch')
             if actual != expected or len(completion['completed']) != len(runs):
