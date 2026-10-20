@@ -26,6 +26,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Gymnasium interface | [environment.md](environment.md) | Observations, seeded reset, step and episode boundaries |
 | PPO policy architecture | [policy-architecture.md](policy-architecture.md) | Market-only exposure, account-aware protection/critic, matched branch controls and frozen contracts |
 | Reward objective research | [reward-objectives.md](reward-objectives.md) | Optional initial-capital equity changes, matched log control, discounting limits and locked Colab protocol |
+| Random-forest signal feasibility | [forest-signal.md](forest-signal.md) | Locked tree dependencies, fixed comparison and portable non-pickle tree arrays |
 | Supervised signal feasibility | [supervised-signal.md](supervised-signal.md) | Completed training-only targets, internal chronological probe, frozen preprocessing and gated warm-start research |
 | RL training and checkpoints | [training.md](training.md) | PPO/SAC/TD3 settings, seeds, selection and continuation |
 | Matched research experiments | [experiments.md](experiments.md) | Four datasets, three algorithms/seeds, declared selection, held-out protocol and GitHub assets |

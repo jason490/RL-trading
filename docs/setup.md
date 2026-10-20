@@ -82,3 +82,11 @@ PYTHONPATH=src .venv/bin/python scripts/offline_audit.py
 The integration suite explicitly skips when NumPy/Gymnasium/torch/SB3/Plotly are missing. Install the real dependencies and rerun it before claiming training acceptance. Package downloads need a network-enabled execution environment; remote training uses the budget-controlled [Colab procedure](colab.md).
 
 Training validates Python and actual installed core package versions against the reviewed direct pins before running checkers or learning. Local torch build suffixes (CPU/CUDA) are allowed; a different base release is rejected. This gate detects drift but does not replace the transitive lock or `pip check`.
+
+## Optional tabular tree research
+
+The `trees` extra pins scikit-learn1.9.1 and SciPy1.17.1. The complete hash lock
+includes these plus joblib1.6.0/threadpoolctl3.7.0, preserving all previous pins.
+Python3.13.16 wheel-only installation and core environment checks pass. This
+adds no interpreter or CLI installation. Follow [forest setup](forest-signal.md)
+for actual Colab Python checks, frozen dependency proof and unfitted preflight.

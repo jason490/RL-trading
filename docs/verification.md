@@ -830,3 +830,13 @@ weights, normalization, forecasts and targets unchanged. Six centered forecasts
 preserve daily ranks but fail the unchanged predictive gate against ridge.
 No training, project-validation/test labels, Colab allocation or orders.
 [Result](../results/signal-centering-2026-10-20/README.md).
+
+## 2026-10-20 forest dependency/data preflight
+
+Reviewed optional sklearn/scipy wheels install on local Python3.13.16, matching
+the latest inspected Colab CPU kernel. Existing pins unchanged; package/core
+checks pass. Immutable completed folds and unfitted constructors accepted.
+Portable array fixtures test ordering, averaging, restoration and invalid/cyclic
+inputs. 264 non-training regression tests plus3 focused checks pass. No forest
+fit, new Colab allocation, policy or performance claim.
+[Preflight](../results/forest-signal-2026-10-20/README.md).

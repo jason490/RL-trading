@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "name": "forest-signal-feasibility-2026-10-20",
+  "hypothesis": "A bagged tabular tree learner may extract a more stable20-session signal than the failed MLPs. Keep the completed target payload, feature arms and numeric gates unchanged.",
+  "source_dataset": "830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed",
+  "source_features": 10,
+  "arms": [
+    "masked",
+    "full"
+  ],
+  "mask": "Both arms have10 inputs; masked zeros the last3 context fields. Identical initial model tensors per seed.",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "target": {
+    "horizon_sessions": 20,
+    "entry": "Next session open, after entry-day corporate actions",
+    "exit": "20th session close, including later splits and cash dividends",
+    "kind": "Gross log unit total return; no reinvestment of dividends",
+    "label_availability": "Exit bar available_time; never before completion",
+    "exclusions": "No execution costs, borrow, stops, targets, or whole-share rounding; a forecast label, not an oracle trading action"
+  },
+  "folds": {
+    "fit_label_completed_through": "2017-12-31",
+    "probe_decision_start": "2018-01-01",
+    "probe_label_completed_through": "2020-12-31",
+    "project_validation": "Never used for supervision, preprocessing or feasibility scoring",
+    "purge": "Discard every window straddling fit/probe, episode end, or training end; source episodes already split at known gaps",
+    "normalization": "Refit raw feature means/scales on fit rows only; ignore source pooled2010-2020 normalizer"
+  },
+  "models": {
+    "constant": "Fit-fold target mean",
+    "ridge": {
+      "penalty": 0.01,
+      "intercept_penalized": false,
+      "loss_normalization": "XTX/N plus penalty"
+    },
+    "forest": {
+      "class": "RandomForestRegressor",
+      "n_estimators": 128,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "min_samples_split": 2,
+      "min_samples_leaf": 50,
+      "max_features": 0.8,
+      "bootstrap": true,
+      "max_samples": 0.8,
+      "oob_score": false,
+      "n_jobs": 1,
+      "warm_start": false,
+      "ccp_alpha": 0.0,
+      "checkpoint_selection": "None; fixed final forest only",
+      "random_state": "seed11/23/37"
+    }
+  },
+  "feasibility_gate": {
+    "candidates": [
+      "masked",
+      "full"
+    ],
+    "minimum_mean_mse_reduction_vs_constant_and_own_ridge": 0.02,
+    "minimum_passing_seeds": 2,
+    "per_seed_pass": "Final overall probe MSE must improve at least2% versus BOTH constant and the same-arm ridge.",
+    "minimum_mean_daily_spearman_ic": 0.02,
+    "minimum_symbols_per_daily_ic": 10,
+    "probe_years": [
+      2018,
+      2019,
+      2020
+    ],
+    "maximum_yearly_mean_mse_deterioration_vs_constant_and_own_ridge": 0.0,
+    "yearly_and_ic_aggregation": "Average final forest metrics equally across seeds; require every probe year to pass its baseline limits.",
+    "feature_information_comparison": "Report paired full-minus-masked MSE by seed; descriptive, not an additional gate.",
+    "ranking": "Among passing candidates use lowest mean final probe MSE; exact ties follow declared candidate order. No checkpoint selection.",
+    "interpretation": "Two declared feature candidates, overlapping targets and correlated symbols are not independent samples; no p-value or trading-profit claim. If neither passes stop; no automatic PPO allocation."
+  },
+  "execution": {
+    "training_location": "Google Colab CPU only; actual default Python checked first",
+    "planned_allocations": 1,
+    "max_study_incremental_units": 1.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "runner": "Existing centrally metered owned fleet; shared original ledger; retrieve and verify artifacts before shutdown",
+    "preflight": "One CPU allocation: verify current kernel and pinned dependencies; fit2 prefix trees on512 fit rows; portable restoration/schema/finite checks before six full forests.",
+    "forest_fits": 6,
+    "total_full_fit_trees": 768,
+    "discarded_prefix_trees": 2,
+    "total_fitted_trees_including_prefix": 770
+  },
+  "constraints": {
+    "retired_test": "Never load/evaluate 2024-September2026",
+    "declining_stock_labels": "Validation/prospective decline cohorts reporting only; never inputs, supervision, sampling, rewards or checkpoint selection",
+    "training_future_targets": "Only completed training-era outcomes used as supervision, never inputs",
+    "ppo_warm_start": "No warm start or trading allocation from predictive gate alone; separate matched trading protocol required.",
+    "profitability": "Predictive feasibility cannot satisfy the stock/ETF return goal; matched trading evaluation and prospective evidence remain necessary"
+  },
+  "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
+  "verification": {
+    "prediction_cross_backend_abs_tolerance": 1e-10,
+    "metric_abs_tolerance": 1e-10,
+    "local_restoration_predictions": "Portable NumPy predictions repeated bitwise; agree with fitted sklearn forests within1e-10.",
+    "gate_verdict": "must agree exactly with recomputation"
+  },
+  "dependencies": {
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "lock": "Hash-locked trees extra; all previous package versions preserved; actual default Colab Python checked before dependency sync"
+  },
+  "source_mlp_result": "results/supervised-signal-2026-10-20/result.json"
+}

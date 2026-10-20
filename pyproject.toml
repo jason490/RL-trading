@@ -10,6 +10,7 @@ dependencies = ["numpy==2.2.6", "gymnasium==1.2.0", "stable-baselines3==2.7.0", 
 yahoo = ["yfinance==0.2.65"]
 alpaca = ["alpaca-py==0.42.0"]
 dev = ["pytest==8.4.2", "ruff==0.13.0"]
+trees = ["scikit-learn==1.9.1", "scipy==1.17.1"]
 [project.scripts]
 rl-stocks = "rl_stocks.runtime.local:main"
 [tool.setuptools.packages.find]

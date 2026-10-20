@@ -913,3 +913,15 @@ seeds and yearly constraints fail. Original gate remains failed, no promotion
 or PPO allocation. All source hashes unchanged; no new units. Next investigate
 a distinct tabular tree learner under a new compatible, bounded CPU protocol.
 [Evidence](results/signal-centering-2026-10-20/README.md).
+
+## 35. Tabular forest signal feasibility — dependency/data preflight accepted
+
+Preregister a distinct bagged tree learner against unchanged constant/ridge
+controls, target folds, feature masks and predictive gates. Six128-tree forests,
+seeds11/23/37, depth8, leaf minimum50 and fixed bootstrap/feature fractions; two
+prefix trees first. Optional hash-locked dependencies support verified Colab
+Python3.13.16; all previous pins preserved. Portable numerical tree arrays and
+malformed/finite input checks pass without fitting. 264 non-training regression
+tests and3 focused forest checks pass. Actual fitting and complete metered
+job/artifact integration are pending. No new session or credits at preflight.
+[Protocol](configs/experiments/forest_signal.json), [guide](docs/forest-signal.md).

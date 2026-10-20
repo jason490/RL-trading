@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "protocol_sha256": "49aa716bb364a97c1d34631eef49d049fc3c7a16afcd4933501e2a52a4999eb8",
+  "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
+  "python": "3.13.16",
+  "versions": {
+    "core": {
+      "numpy": "2.2.6",
+      "torch": "2.8.0",
+      "gymnasium": "1.2.0",
+      "stable-baselines3": "2.7.0",
+      "sb3-contrib": "2.7.0",
+      "pandas": "2.3.2",
+      "plotly": "6.3.0"
+    },
+    "trees": {
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0"
+    }
+  },
+  "requirements_lock_sha256": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142",
+  "prior_package_pin_changes": {},
+  "constructor_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 8,
+    "max_features": 0.8,
+    "max_leaf_nodes": null,
+    "max_samples": 0.8,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 50,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 128,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 11,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "prefix_tree_count": 2,
+  "fit_rows": 45266,
+  "probe_rows": 18616,
+  "model_fitted": false,
+  "colab_allocated": false,
+  "project_validation_used": false,
+  "test_evaluated": false
+}
