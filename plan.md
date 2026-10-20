@@ -944,3 +944,9 @@ raw-field/action agreement and identical cached readback. Earlier joint trailing
 decline coverage23.55% versus8.61% recent under the same past-only rule. No merge,
 training or Colab. Next preregister overlap/price-unit checks before matched
 training preparation. [Evidence](results/historical-regimes-2026-10-20/README.md).
+
+The separate seam protocol fixesDec2009–Mar2010, four ETFs, source/action and
+exact row-set checks, unchanged numeric price/dividend tolerances, exact volume,
+splits and event/availability times.19 history/overlap tests pass before provider
+acquisition. Failures retain evidence and stop merging; no automatic rescaling.
+[Protocol](configs/experiments/historical_overlap.json).

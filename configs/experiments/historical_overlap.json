@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "historical-etf-overlap-2026-10-20",
+  "symbols": ["SPY", "QQQ", "IWM", "DIA"],
+  "start": "2009-12-01",
+  "end_exclusive": "2010-04-01",
+  "purpose": "A fixed seam-spanning download overlaps both earlier and recent immutable histories; include December and March distribution periods without choosing dates from trading outcomes.",
+  "earlier_snapshot": "f44c7b0831d8322c029acf0229b754221d53cc20f8fc641a24afa4d3c1fc093b",
+  "recent_snapshot": "be5a8d56ab667294ac741ba0ad55f9d25e391cd2740811f965ad77543d9c283f",
+  "provider": "yahoo",
+  "adjustments": "split_adjusted_with_dividends",
+  "acquisition": "Existing immutable full-range symbol chunks; bounded transient retries; no correction, fallback, rescaling or synthetic bar.",
+  "checks": {"calendar": "Every XNYS session for all four symbols; no extra rows", "raw_source": "Run the existing source/action audit before comparison", "price_absolute_tolerance": 0.000001, "price_relative_tolerance": 0.0000001, "dividend_absolute_tolerance": 0.00000001, "volume": "Exact equality", "split": "Exact normalized factor equality; raw action consistency checked", "times": "Exact open/event/availability timestamps", "fail_policy": "Any mismatch fails. Preserve all snapshots; no automatic harmonization or merge."},
+  "constraints": {"training": false, "automatic_merge": false, "colab_allocations": 0, "retired_test_access": false, "performance_selection": false},
+  "interpretation": "Overlap consistency supports shared reported units locally at the seam; it cannot prove full-history vendor accuracy, historical vintages, or profitable policies. Mismatches require a separate explicit harmonization or reacquisition protocol, never widening this tolerance after observation."
+}

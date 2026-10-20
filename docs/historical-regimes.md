@@ -58,3 +58,24 @@ PYTHONPATH=src .venv/bin/python scripts/compare_historical_regimes.py \
 No dataset merge or model fit occurred. Audit a fixed2010 overlap next to check
 cross-snapshot price-unit continuity before preparation. The full trading
 objective remains unachieved; inspect verification/results before allocating.
+
+## Preregistered cross-download overlap
+
+[Seam protocol](../configs/experiments/historical_overlap.json) fixes a separate
+2009-12-01 through2010-03-31 download for all four ETFs. December overlaps the
+earlier snapshot; January–March overlap the existing recent snapshot. This
+covers both sides of the seam and distribution periods. Source/action audits
+run first; row sets and raw split events must agree. Fixed price tolerances
+are1e-6 absolute plus1e-7 relative, cash-dividend tolerance1e-8, volume/split
+factors/times exact. Retrieval timestamps/revision IDs may differ. Any mismatch
+fails; no rescaling, widening tolerances after seeing results, fallback or merge.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/audit_historical_overlap.py --acquire \
+  --output artifacts/historical-regimes/overlap.json
+```
+
+A successful local overlap is evidence of consistent reported units at the seam,
+not proof of full-history action accuracy or historical publication vintages.
+Eleven overlap tests and eight history tests pass before acquisition. Actual
+source overlap acceptance is pending; this stage creates no training allocation.
