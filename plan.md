@@ -1105,3 +1105,13 @@ pass. Removed21 duplicate files preserving405 hashes. Project36.149107/150.
 Before new fitting, predeclare fixed training-only saved-policy replay to
 distinguish weak fitting from a generalization gap; no diagnostic selection.
 [Evidence](results/td3-execution-state-2026-10-20/README.md).
+
+## 43. Fixed fitted-period replay — completed, no promotion
+
+Final SAC passes fitted2018–2020 stock/ETF/median comparability but fails the
+known development gates; PPO/TD3 fail training flags. No universal optimizer or
+overfitting diagnosis.20 focused checks, immutable source/tensor/normalizer
+proofs and3 release asset digests pass, no fitting/Colab. Before another study,
+audit existing expanded data for SAC training diversity with original
+normalization/validation fixed. Project36.149107/150, objective unmet.
+[Evidence](results/training-fit-2026-10-20/README.md).

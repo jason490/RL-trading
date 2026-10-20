@@ -358,3 +358,9 @@ labels. Compare per-period matched excess, not raw returns across regimes.
 No checkpoint selection or algorithm ranking; PPO initialization differs.
 Twenty slice/isolation/accounting checks pass; actual replay not yet executed.
 [Protocol and commands](training-fit-diagnostic.md).
+
+Training-fit replay completed without fitting or Colab: SAC passes fitted-window
+comparability but fails development; PPO/TD3 fail fitted flags. All source,
+weights, update counts and normalization remain unchanged. Three release assets
+verified, complete derived paths retained. Project36.149107/150.
+[Evidence and training-diversity audit next](training-fit-diagnostic.md#actual-inference-only-outcome).

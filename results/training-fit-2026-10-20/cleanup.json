@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "removed_files": [
+    {
+      "path": "artifacts/training-fit-release/protocol.json",
+      "bytes": 2111,
+      "sha256": "04b3a1f51741180eeed767d0cc1c6ad0daccbb8acf283c1a3ed4b181c47e468e"
+    },
+    {
+      "path": "artifacts/training-fit-release/derived-training-reports.tar.gz",
+      "bytes": 28023910,
+      "sha256": "3b536ae229b13f74437a0c37c68ab559b99714008bdfe1ebf9d388581aec6fa4"
+    },
+    {
+      "path": "artifacts/training-fit-release/summary.json",
+      "bytes": 31510,
+      "sha256": "31a9d0db3f355e127115359b5477eb2d94bb0658f1a776fee3baeaed8f2b9bed"
+    }
+  ],
+  "removed_logical_bytes": 28057531,
+  "retained_files": 21,
+  "retained_hashes_unchanged": true,
+  "release_assets_verified": true,
+  "owned_colab_allocations": 0
+}

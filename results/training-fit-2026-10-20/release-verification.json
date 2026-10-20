@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/training-fit-2026-10-20",
+  "asset_count": 3,
+  "assets": [
+    {
+      "name": "derived-training-reports.tar.gz",
+      "size": 28023910,
+      "digest": "sha256:3b536ae229b13f74437a0c37c68ab559b99714008bdfe1ebf9d388581aec6fa4",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 2111,
+      "digest": "sha256:04b3a1f51741180eeed767d0cc1c6ad0daccbb8acf283c1a3ed4b181c47e468e",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 31510,
+      "digest": "sha256:31a9d0db3f355e127115359b5477eb2d94bb0658f1a776fee3baeaed8f2b9bed",
+      "state": "uploaded"
+    }
+  ]
+}

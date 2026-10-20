@@ -57,3 +57,24 @@ protocol and explicit training-window implementation prepared; 20 slicing,
 split-isolation, report-contract and direction-report checks pass without
 fitting. Actual saved-policy replay is not complete yet. Project usage remains
 36.149107/150; all owned Colab sessions are stopped.
+
+## Actual inference-only outcome
+
+The committed replay completed:26 episodes/19,136 execution rows per model.
+SAC fitted stocks67.06% versus holding58.15%, ETFs53.86% versus47.15%, median
+stock excess-0.46pp: training comparability passes. Its same final policy
+development mean7.93% versus30.60% and group excess-23.94/-15.70pp fail. This
+contrast is consistent with a generalization gap, not proof of a single cause.
+PPO/TD3 fail the training flags; do not describe all learners as only overfit.
+
+All13 source hashes, policy tensors including SAC alpha, optimizer update counts
+and normalization are unchanged. No fitting, checkpoint selection, retired data
+or Colab. Three published assets verify; duplicate release copies removed while
+full derived paths remain. Project36.149107/150; all owned runtimes stopped.
+[Actual evidence](../results/training-fit-2026-10-20/README.md).
+
+Next audit existing expanded survivor data for a fixed SAC training-diversity
+hypothesis, keeping original normalization and validation unchanged with a fresh
+matched original-universe control. Failed prior PPO expansion remains negative
+evidence. No allocation before coverage/source/sampling checks and a separately
+committed bounded protocol. Preserve all absolute/multi-seed/prospective gates.

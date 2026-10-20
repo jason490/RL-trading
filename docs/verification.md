@@ -1082,3 +1082,9 @@ post-cleanup byte-identical report pass; project36.149107/150.
 Fixed final PPO/SAC/TD3 policies, same2018–2020 fitted slice, explicit training
 labels and no optimizer/selection/Colab. Window/split/accounting tests20 pass.
 Preregistered before actual replay; [guide](training-fit-diagnostic.md).
+
+Training-fit replay completed without fitting or Colab: SAC passes fitted-window
+comparability but fails development; PPO/TD3 fail fitted flags. All source,
+weights, update counts and normalization remain unchanged. Three release assets
+verified, complete derived paths retained. Project36.149107/150.
+[Evidence and training-diversity audit next](training-fit-diagnostic.md#actual-inference-only-outcome).
