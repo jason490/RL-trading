@@ -1107,3 +1107,8 @@ immutable payload validations. Group cycles, seeded resets, full-window counts,
 positive-transition coverage and frozen normalizer/initial-state/archive gates
 implemented. No fitting; real smoke parity still required.
 [Details](sac-diversity.md#version19-preflight-implemented).
+
+Observed smoke transport failure motivates bounded deferred unstarted-worker
+recovery. Sixteen lifecycle/budget/retry checks pass; original deadlines and
+one-retry limit preserved. Current frozen training source unchanged.
+[Behavior](colab-concurrency.md#delayed-proof-of-an-unstarted-worker).

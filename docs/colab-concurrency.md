@@ -151,3 +151,22 @@ An exhausted study allowance stops owned work, persists a budget-stop flag and
 blocks automatic restart. Recovery accepts no budget overrides. The shared
 150/130-unit limits remain authoritative. Registered allocation intent is also
 cleaned up if a guard rejects a command immediately after admission.
+
+## Delayed proof of an unstarted worker
+
+A CLI connection can fail before bootstrap while the immediate authenticated
+absence check is temporarily unavailable. A later confirmed HTTP404 for the
+owned project directory now permits the existing single same-session retry
+while waiting for export. Unknown/unreachable status or a present project
+never permits a retry. A successful CLI execution is not retried just because
+export is delayed. Both initial and deferred retries preserve the earlier
+execution deadline and the original allocation deadline; budgets/ledger never
+reset and no new session is allocated. One used retry prevents another.
+
+The diversity smoke exposed this path: original CLI failed before bootstrap,
+later authenticated project/job/log404 checks proved absence, and one manual
+same-session retry resumed setup. Existing frozen workers were not modified.
+The future-controller fix passes16 lifecycle/budget/deferred-retry checks with
+fake processes, including unknown→absence, no second retry, success exclusion
+and deadline preservation. It never treats observation timeout alone as proof
+that training stopped.

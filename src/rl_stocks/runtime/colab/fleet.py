@@ -191,12 +191,17 @@ class Fleet:
         output=self.root/'artifacts/colab'/a.session;output.mkdir(parents=True,exist_ok=True)
         self.launch(a,phase,['download','-s',a.session,remote,str(output/name)],timeout,teardown)
 
-    def execute(self,a):
+    def execute(self,a,preserve_deadline=False):
         child=self.budget.active['children'][a.session]
         long=any(j['steps']>=50000 for j in a.task['plan']['jobs'])
         preferred=6600 if any(j['steps']==250000 for j in a.task['plan']['jobs']) else 5400 if long else 1800
         timeout=execution_window(child['deadline']-time.time(),preferred,600 if long else 300)
-        a.exec_deadline=time.monotonic()+timeout;a.snapshot_due=time.monotonic()+60
+        if preserve_deadline:
+            timeout=min(timeout,a.exec_deadline-time.monotonic())
+            if timeout<=20:raise TimeoutError('existing remote execution deadline')
+        next_deadline=time.monotonic()+timeout
+        a.exec_deadline=min(a.exec_deadline,next_deadline) if preserve_deadline else next_deadline
+        a.snapshot_due=time.monotonic()+60
         self.launch(a,'exec',['exec','-s',a.session,'-f',str(self.root/'scripts/remote_smoke.py')],timeout)
 
     def stop(self,a):
@@ -266,7 +271,7 @@ class Fleet:
             if code:
                 child['exec_cli_failed']=True
                 if not a.exec_retries and worker_not_started(self.root,a.session):
-                    a.exec_retries+=1;self.execute(a);return
+                    a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
             a.phase='await_export';a.probe_due=0.;child['phase']=a.phase;self.budget.ledger.save();self.save()
         elif phase=='ready':
             if code:
@@ -313,6 +318,9 @@ class Fleet:
         if a.phase=='await_export':
             if time.monotonic()+20>=a.exec_deadline:raise TimeoutError('remote export deadline')
             if time.monotonic()>=a.probe_due:
+                child=self.budget.active['children'][a.session]
+                if child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
+                    a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
                 self.download(a,'ready','/content/research-artifacts.ready','export.ready',20)
             return
         if a.command is None:return
