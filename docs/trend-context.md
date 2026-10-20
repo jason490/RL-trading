@@ -127,3 +127,11 @@ and all3 owned sessions stopped. Source780f382f6ea6cd862535b12c1723ee4dc06ade87
 is shared across arms. [Acceptance](../results/trend-context-2026-10-20/smoke-acceptance.json)
 records datasets/models, checksum proof and cumulative35.818227/150-unit usage.
 The50k selected/final screen is next; smoke acceptance does not promote a policy.
+
+## Completed screen: rejected
+
+Full context selected14.26%/final13.89%, masked13.93%/13.93%, baseline0.83%/0.83%,
+holding30.60%. Both control gates fail: final ETFs3.07% versus8.91% masked and
+5.02% baseline. Full-context declining-stock joint success0/3. No confirmation
+or default-feature change. All6 CPU allocations stopped,468 exact frozen
+predictions pass; project35.856639/150. [Full evidence](../results/trend-context-2026-10-20/README.md).

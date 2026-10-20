@@ -834,7 +834,7 @@ fail the gate; stocks/ETFs worsen, declining-stock joint success0/3. No confirma
 Four sessions stopped,312 frozen predictions exact, native control fully reproduced.
 Project35.795378/150; [evidence](results/reward-objectives-2026-10-20/README.md).
 
-## 31. Longer-horizon causal price context — implemented; diagnosis/preflight
+## 31. Longer-horizon causal price context — screen complete; rejected
 
 Add optional63/252-session log price returns and252-close drawdown. Preserve
 forward-only split continuity, completed-bar availability and training-only fit.
@@ -851,3 +851,9 @@ Version12 context jobs now lock dataset/feature contracts before allocation,
 inside the worker and on artifact retrieval. Matched reporting handles the fixed
 3-dataset mapping and both gates. Focused job/fleet/report/artifact checks pass;
 CPU smokes are next after committed-source export and account preflight.
+
+All3 CPU smokes and3 matched50k cells completed. Full selected14.26%/final13.89%,
+masked13.93%, baseline0.83%, holding30.60%. Full fails both gates, ETFs worsen and
+joint declining-stock total/short success is0/3; no confirmation. All6 owned
+sessions stopped,468 frozen predictions exact, project35.856639/150.
+[Evidence](results/trend-context-2026-10-20/README.md).

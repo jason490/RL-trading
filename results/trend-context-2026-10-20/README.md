@@ -1,43 +1,35 @@
-# Longer-horizon context — smokes accepted; screen pending
+# Longer-horizon context — completed; both gates failed
 
-The optional family adds causal63/252-session log price returns and252-close
-trailing drawdown. It uses forward-only split continuity and excludes cash
-dividends from the signal. Net-equity rewards still include dividends and costs.
+| Arm | Selected return | Final return | Final stocks | Final ETFs | Mean final maximum drawdown |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| matched_baseline | 0.83% | 0.83% | 0.07% | 5.02% | -15.90% |
+| masked | 13.93% | 13.93% | 14.84% | 8.91% | -26.62% |
+| full | 14.26% | 13.89% | 15.86% | 3.07% | -24.26% |
 
-[Preflight](preflight.json) reproduces the default dataset identity exactly,
-then builds matched7-field baseline,10-field masked, and10-field full datasets.
-All3 have64,922 training and19,058 validation rows with identical eligible raw
-bar/ATR panels and first7 training normalizer statistics. Original validation
-bars are unchanged. Training-only jointly negative quarterly/annual context
-coverage is12.85%; this does not establish future predictive power.
+Matched holding returned30.60% overall,32.63% stocks,19.47% ETFs. Full context gains only0.34pp selected and loses0.04pp final versus the masked control; final ETFs worsen5.84pp. Against the matched baseline, final return improves13.06pp but ETFs worsen1.95pp and drawdown worsens8.37pp. Both fixed gates fail. No confirmation seeds, promotion, or longer training for this family.
 
-The committed [protocol](../../configs/experiments/trend_context.json) requires
-CPU smokes, then a3-arm seed11 50k screen. Full must pass against BOTH controls;
-only then run23/37. Keep net-log reward, actions/costs/discount/starts fixed.
-Ex-post declining-stock labels remain reporting-only and require joint positive
-total return and net short P&L. No retired-test data or allocation is used.
+The large difference between the two controls means an apparent gain against the smaller baseline alone would be misleading. This one-seed screen does not prove the features can never help, but it does not justify adoption. Longer warmup removes5,278 early training rows and changes training normalization relative to the older dataset. Its22.59% native run is therefore not an equivalent control.
 
-[Feature definitions, controls and commands](../../docs/trend-context.md).
+## Declining stocks: full-context final weights
 
-Actual Gymnasium and SB3 checkers pass for21/24/24 observation dimensions.
-Masked/full untrained policy tensors match exactly, with3,881 smoke parameters
-each ([environment receipt](environment-preflight.json)). Source snapshot ends
-2023-12-29 and its full provenance matches the existing dataset. Default dataset
-regeneration and all causal/matched-data checks pass. Relevant checks:53 core/
-data tests,32 feature/profile tests,6 final focused tests (overlapping suites).
-That preflight used no allocation; subsequent remote smoke acceptance is recorded below.
+| Symbol | Total return | Net short P&L | Both positive |
+| --- | ---: | ---: | --- |
+| AMZN | -11.43% | $6,448.58 | no |
+| DIS | -31.84% | $1,935.44 | no |
+| NEE | 2.15% | $-1,670.94 | no |
 
-## Colab smoke acceptance
+Full-context joint success is0/3. AMZN and DIS have positive short P&L outweighed by long losses; NEE has positive total return despite a negative short contribution. Masked control passes on NEE only. Future negative-holding labels are reporting-only and do not choose weights, rewards or trades.
 
-All3 variants completed512 transitions on Google Colab CPU, defaultPython3.13.16.
-Artifacts passed strict dataset/feature/source/curve checks. All3 owned sessions
-stopped and shutdown was verified; account350.65,rate0.00 and0 active assignments.
-The3 frozen bundles pass234 exact CPU prefix predictions, deterministic repeat,
-immutable normalization, and schema/feed/nonfinite rejection. This verifies
-wiring and restoration; smoke returns are not model-performance evidence.
+## Data, verification and operations
 
-[Acceptance receipt](smoke-acceptance.json) binds all models/datasets to frozen
-source780f382f6ea6cd862535b12c1723ee4dc06ade87. Study conservative usage0.022849
-units; project35.818227/150. The same exact study baseline35.79537808105018
-and2-unit allowance apply across all phases. Next run the preregistered3-arm
-seed11 50k screen, then confirm only if full context beats BOTH controls.
+The committed [protocol](../../configs/experiments/trend_context.json) uses the retained2010–2023 snapshot and original26-symbol development panel. All arms have64,922 training and19,058 validation rows, identical eligible bar/ATR panels and first7 training normalizer statistics. Original validation dates are unchanged. Price context excludes cash dividends; net-equity simulation still includes them and short costs. No retired-test bars or broker orders are used.
+
+All3 CPU512-step smokes and3 CPU50k cells completed on actual Colab defaultPython3.13.16 with source780f382f6ea6cd862535b12c1723ee4dc06ade87. All6 bundles pass468 exact CPU prefix predictions, deterministic repeat, immutable normalization, and incompatible schema/feed/nonfinite rejection. All6 owned sessions stopped and shutdown was verified. No research training occurred locally.
+
+[Screen and complete checkpoint curves](screen.json), [smoke acceptance](smoke-acceptance.json), [research frozen checks](frozen-checks.json), [data preflight](preflight.json), [environment checks](environment-preflight.json), [compute](compute.json), [feature guide](../../docs/trend-context.md).
+
+Study conservative usage0.061261 units versus measured account debit0.04; project35.856639/150, remaining114.143361. Reported rate0.00 and0 active assignments. Publication verification precedes duplicate cleanup; original models, full reports/curves, data, source export and ledger remain.
+
+## Next diagnosis
+
+Retain the original default feature set. Inspect saved exposure, turnover, side contributions and protective-exit behavior to separate missed market participation, trading costs and signal errors before proposing another training change. Adding context did not solve ETF performance or joint short profitability. New settings require another bounded preregistration and independent prospective evidence.
