@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "name": "frozen-signal-centering-2026-10-20",
+  "hypothesis": "Fixed MLPs have positive within-session ranks but negative pooled covariance. A causal ridge level anchor may isolate common-component forecast error without fitting new weights.",
+  "source_signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
+  "source_bundle": "dceb61471ac067f26af72b9e7b6f3eea4ce59580f475c2f652b65c2c5c142ad1",
+  "source_protocol": "configs/experiments/supervised_signal.json",
+  "source_failure": "results/supervised-signal-2026-10-20/result.json",
+  "universe": "configs/universes/sector_research.json",
+  "arms": ["masked", "full"],
+  "seeds": [11, 23, 37],
+  "recipe": "centered_i,t = raw_mlp_i,t - mean_26(raw_mlp_j,t) + mean_26(same_arm_frozen_ridge_j,t)",
+  "weights": "Fixed coefficients1/-1/+1; equal-weight26-symbol means; no fitted weight or intercept",
+  "availability": {
+    "panel": "Every declared tradable symbol exactly once per session; no subset, carry-forward, missing-symbol substitution or future cohort",
+    "decision_cutoff": "Maximum feature_available_time of the same-session26-symbol panel",
+    "required": "Every feature available on its decision session; cutoff strictly before every panel row's next entry-session UTC midnight",
+    "labels": "Never passed to the transformation; only used afterward for descriptive scoring"
+  },
+  "diagnostic_gate": "Reuse source numeric MSE/IC/year/seed gate without alteration, and report paired change from raw forecasts. Any pass is descriptive only.",
+  "constraints": {
+    "original_gate_remains_failed": true,
+    "eligible_for_promotion": false,
+    "independent_confirmation": false,
+    "model_fitting": false,
+    "normalization_updates": false,
+    "source_weights_changed": false,
+    "project_validation_used": false,
+    "retired_test_evaluated": false,
+    "colab_allocated": false,
+    "profitability_established": false,
+    "probe": "2018-2020 internal training probe already used in development; not fresh evidence",
+    "trading": "Return forecasts only; no orders, simulation-rule changes, PPO allocation or four-action policy substitution"
+  }
+}

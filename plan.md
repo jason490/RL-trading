@@ -896,3 +896,13 @@ Masked/full MLP MSE is 5.52%/12.56% worse than constant; zero passing seeds and
 failed yearly gates. No PPO warm start. All111,696 forecasts verified against
 immutable probe data, normalization/schema checks pass, session stopped.
 Project35.861240/150; [evidence](results/supervised-signal-2026-10-20/README.md).
+
+## 34. Fixed-forecast common-component diagnostic — implemented; scoring pending
+
+Preregister same-session MLP demeaning plus same-arm frozen ridge mean anchoring.
+Use all26 symbols exactly once per session; enforce availability before every
+next entry session. No labels in the transformation, fitted coefficient, model
+update or new Colab allocation. Source weights/predictions/data are checksummed;
+original failed gate remains failed and promotion disabled. Reuse unchanged
+numeric predictive gates for descriptive scoring only after committed preflight.
+[Protocol](configs/experiments/signal_centering.json), [guide](docs/signal-centering.md).
