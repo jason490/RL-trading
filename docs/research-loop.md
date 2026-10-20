@@ -253,3 +253,22 @@ data/reward/costs and equal50k cells. Require both controls and absolute selecte
 final stock/ETF gates before confirmation. No assumption that failed PPO state
 ablations imply SAC success. Ten checks pass; project35.917535/150, no new units.
 [Protocol](../configs/experiments/sac_execution_state.json).
+
+## SAC execution-state outcome
+
+The fixed full-state SAC screen fails: selected/final7.93% versus
+legacy7.44%/7.39%, masked17.84%/17.69%, holding30.60%. Full final stock8.68%/ETF3.77%
+and median stock excess−17.40pp fail. Extra execution state did not repair this
+configuration; avoid universal claims about information value. Drawdown improves
+but cannot override return gates. Joint falling-stock total/short positives1/3.
+No confirmation or more steps.468 exact restored predictions,6 owned stops,13
+verified assets; project36.009692/150.
+[Complete evidence](../results/sac-execution-state-2026-10-20/README.md).
+
+Next inspect saved SAC entropy coefficients, losses and net-reward magnitudes
+before another protocol. Do not assume feature insufficiency, optimizer failure
+or that reducing costs alone fixes the non-cost gap. If considering numerical
+reward scaling, distinguish scalar conditioning from changes in SAC's effective
+entropy/reward balance; it is not automatically an unchanged learning objective.
+Require a new fixed matched hypothesis and the same benchmark/short-side gates
+before spending more units. No new allocation is implied by this diagnostic.

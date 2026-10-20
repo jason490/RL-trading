@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "asset_count": 13,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/sac-execution-state-2026-10-20",
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773673,
+      "digest": "sha256:31b59825b8fc0ca5b776f1d9673df9487482efaba0e17fc0a75219be2977a632",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 342,
+      "digest": "sha256:0dbc0533ff26ed564fcf2546ea1323c0fa8cd80f383bc3f9327b65f476dcbc44",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 1447,
+      "digest": "sha256:80aad9c5fad522bf70f7a724793588e9b82a123f016d21aa72573daf7f06bd06",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 578770,
+      "digest": "sha256:9e64a578ffd978fe322bf220c68957bf676912fa00c17e85193549527e6f00f9",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 4464,
+      "digest": "sha256:dcadaa47383b7485e8b781133158967f67979370eb115ac7417042a05900ddba",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 3702386,
+      "digest": "sha256:55d164d6ecf592bc422056121a201c5170c3834d5e4441828f3d05fd186cb264",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 3123,
+      "digest": "sha256:1ed3180c748c9606f994624322e404a38aaf08fb97ac89bdd04dca9b46bfeb87",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 3123,
+      "digest": "sha256:cbe2ea34266b74084d74369b8981903d18ee9f86b993b39f9dd1906b3ec150bd",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 4228,
+      "digest": "sha256:6d59d55fa295155ca10c061398230c30503de3b2dfddaae088cdd1f50ff434b9",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 400,
+      "digest": "sha256:9a1bb4b0253dd5041c88352ba291b096c4fa04587695746406967bebe366ae87",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 158552,
+      "digest": "sha256:7062c13e74e7bfec9e49a7a294ebdf82f478cca01ceaf556b869c5c793b7133d",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 5001294,
+      "digest": "sha256:5fe754781f414838466349b8c517b4777f24a66a6d924cb7c72bddd7d1c03579",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1491,
+      "digest": "sha256:a393f82e67bf925c352d37adf862aeeec9f10d69576393e72bacd76d6296b413",
+      "state": "uploaded"
+    }
+  ]
+}

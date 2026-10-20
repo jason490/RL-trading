@@ -945,3 +945,14 @@ exact with immutable normalization and incompatible-input rejection.3 owned
 sessions stopped and cleanup verified. Project35.939018 after smoke. Fixed
 3x50k screen launched frombb0f3e2 with original2-unit study allowance.
 [Evidence](../results/sac-execution-state-2026-10-20/README.md).
+
+## SAC execution-state screen completed
+
+Three50k SAC screens complete onColab CPU,Python3.13.16. Selected/final
+legacy7.44%/7.39%, masked17.84%/17.69%, full7.93%/7.93%, matched holding30.60%.
+Full fails both controls and absolute stock/ETF/median targets; joint declining
+stock total/short positives1/3. No confirmation.468 exact smoke/screen selected
+bundle predictions,6 owned shutdowns,13 verified release assets. Cleanup21 files
+238,984,076 bytes,390 retained hashes unchanged; replay summary byte-identical.
+Conservative project36.009692/150.
+[Evidence](../results/sac-execution-state-2026-10-20/README.md).

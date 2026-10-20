@@ -1,0 +1,9 @@
+{
+  "retained_archive_reconstruction_passed": true,
+  "summary_byte_identical": true,
+  "summary_sha256": "7062c13e74e7bfec9e49a7a294ebdf82f478cca01ceaf556b869c5c793b7133d",
+  "retained_file_count": 390,
+  "retained_hashes_unchanged": true,
+  "training_performed": false,
+  "colab_allocations": 0
+}

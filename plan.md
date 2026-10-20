@@ -1014,3 +1014,11 @@ SAC state Colab smokes pass:3x1024 transitions,Python3.13.16,234 exact frozen
 predictions and3 verified owned stops.3x50k seed11 screen launched from the same
 bb0f3e2 source and shared original2-unit allowance. No performance verdict.
 [Evidence](results/sac-execution-state-2026-10-20/README.md).
+
+Milestone38 completed, gate failed. Full-state SAC selected/final7.93% versus
+legacy7.44%/7.39%, masked17.84%/17.69% and holding30.60%. Cached last pre-update
+checkpoints are not final reports. No confirmation, extension or promotion.
+All6 owned sessions stopped,468 exact frozen checks,13 release assets verified;
+227.91MiB duplicate cleanup with390 retained hashes unchanged and byte-identical
+report replay. Project36.009692/150.
+[Results](results/sac-execution-state-2026-10-20/README.md).

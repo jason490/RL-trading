@@ -14,7 +14,7 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
   --output artifacts/sac-diagnostic/new-summary.json
 ```
 
-## Fixed next comparison
+## Fixed comparison
 
 [Protocol](../configs/experiments/sac_execution_state.json) declares SAC with
 legacy12 inputs, masked21 inputs and full21 inputs on the same immutable base
@@ -68,8 +68,8 @@ local validation. Actual Colab acceptance is next, not implied by fixtures.
 
 All three1024-transition CPU smokes passed from frozen sourcebb0f3e2, actual
 Python3.13.16,234 exact frozen predictions and3 verified owned shutdowns. The
-fixed50k three-arm screen is now launched with the same source, original
-ledger/lock and2-unit allowance including smoke. Performance remains pending;
+fixed50k three-arm screen is now complete with the same source, original
+ledger/lock and2-unit allowance including smoke. Its fixed gate failed;
 no smoke return selects the configuration.
 
 After complete50k screen retrieval and shutdown, use:
@@ -90,4 +90,24 @@ files for the same checks. Reporting never trains or marks the goal achieved.
 Thirteen focused common/SAC gate-and-archive checks pass before screen results.
 
 [Actual Colab smoke evidence](../results/sac-execution-state-2026-10-20/README.md):
-project35.939018 after smoke; screen launched, no gate verdict.
+project35.939018 after smoke; completed screen evidence is below.
+
+## Completed screen outcome
+
+[Verified results](../results/sac-execution-state-2026-10-20/README.md): legacy
+selected7.44%/final7.39%, masked17.84%/17.69%, full7.93%/7.93%, holding30.60%.
+The earlier cached50000-step records for legacy/masked precede the last update;
+use final post-update reports, not those checkpoints, as final results.
+
+Full state gains only0.48/0.53pp versus legacy and loses9.91/9.77pp versus masked;
+stock8.68%/ETF3.77% and median excess−17.40pp fail absolute targets. Improved
+mean drawdown−25.91% does not override return failures. Joint positive total/
+short P&L occurs for1/3 falling stocks (AMZN); DIS/NEE fail. No confirmation,
+longer run or promotion. This fixed negative result is not proof that extra
+state is universally unhelpful.
+
+468 selected-bundle smoke/screen prefix predictions are exact; all6 owned
+sessions stopped.13 published assets verified;227.91MiB duplicates removed
+with390 retained hashes unchanged. Post-cleanup report reproduction is byte
+identical. Conservative project36.009692/150, study0.092157 units; separate
+account350.51, zero assignments/rate after teardown.

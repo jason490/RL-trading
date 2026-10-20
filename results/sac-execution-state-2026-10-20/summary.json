@@ -1,0 +1,3986 @@
+{
+  "protocol_sha256": "06a840db82ec0570c8b0466716a0343cfb93957c8cc2a69f5d9880c7152459ce",
+  "cells": {
+    "legacy": {
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "run": "20261020T084320-sac-11-5ae0c049",
+      "bundle_id": "91eef541b6652fa9b1d00019147c638d2fa4630104ead9114bea250abd35c66b",
+      "seed": 11,
+      "observation": {
+        "version": 1,
+        "profile": "legacy",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return"
+        ]
+      },
+      "reports": {
+        "selected": {
+          "sha256": "d6b519dea91a25d434318aaf72a46d28de6d19dfebf8cdfc4d372b56fbfd7a43",
+          "file": "selected-validation.json"
+        },
+        "final": {
+          "sha256": "dd0a6cc9603a1d9a192b96830cf336bf8c49cb31d6c8ac702b5c26ec1240dc42",
+          "file": "validation.json"
+        }
+      },
+      "sampling": null,
+      "learning_curve": [
+        {
+          "steps": 10000,
+          "phase": "on_step",
+          "score": -0.03598528196244383,
+          "return_pct": -3.5985281962443825,
+          "change_pp": null,
+          "equity_change_pct_from_previous": null,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -3.5985281962443825,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -34.200378940404214,
+          "mean_max_drawdown_pct": -5.584962849725534,
+          "mean_costs": 1091.8036312196443,
+          "mean_turnover": 25.711138635391595,
+          "elapsed_seconds": 109.21494701000006,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.01323441598886721,
+              "max_drawdown": -0.037379953299525814,
+              "sharpe": -0.11719798059676281,
+              "costs": 1370.4709366100028,
+              "turnover": 33.45008814781539
+            },
+            "AMT-validation-0": {
+              "net_return": -0.048535394611921245,
+              "max_drawdown": -0.06398072397404964,
+              "sharpe": -0.5158170573780965,
+              "costs": 1343.1893625701996,
+              "turnover": 28.68271941722372
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.015924282984579374,
+              "max_drawdown": -0.09027826468570954,
+              "sharpe": 0.1070797095553531,
+              "costs": 2638.4493262099304,
+              "turnover": 65.3947789379366
+            },
+            "APD-validation-0": {
+              "net_return": -0.06407874232639366,
+              "max_drawdown": -0.08180306318355002,
+              "sharpe": -1.0617181587344584,
+              "costs": 943.7377125432164,
+              "turnover": 20.171022443171992
+            },
+            "BAC-validation-0": {
+              "net_return": -0.06326742027497179,
+              "max_drawdown": -0.08791986951474695,
+              "sharpe": -0.5624562213628582,
+              "costs": 1436.9707539274698,
+              "turnover": 30.69710444267202
+            },
+            "CAT-validation-0": {
+              "net_return": -0.026444617307011087,
+              "max_drawdown": -0.0625132708396241,
+              "sharpe": -0.28128006296161806,
+              "costs": 1408.749231366083,
+              "turnover": 32.61138735560026
+            },
+            "CVX-validation-0": {
+              "net_return": -0.055229955385448504,
+              "max_drawdown": -0.06741314863099335,
+              "sharpe": -0.8496276527326158,
+              "costs": 1110.9845757617823,
+              "turnover": 26.85588216070473
+            },
+            "DIA-validation-0": {
+              "net_return": -0.01339317694929898,
+              "max_drawdown": -0.018148425399072576,
+              "sharpe": -0.572564265667434,
+              "costs": 483.4517112185289,
+              "turnover": 13.018452074689256
+            },
+            "DIS-validation-0": {
+              "net_return": 0.008356047774980224,
+              "max_drawdown": -0.05583872078891339,
+              "sharpe": 0.08894843956603243,
+              "costs": 1863.5616734658417,
+              "turnover": 40.31338043252592
+            },
+            "DUK-validation-0": {
+              "net_return": -0.013855477036619601,
+              "max_drawdown": -0.0364484023423034,
+              "sharpe": -0.297353641187344,
+              "costs": 661.166888587629,
+              "turnover": 15.470791698898818
+            },
+            "GOOGL-validation-0": {
+              "net_return": -0.034799524095046164,
+              "max_drawdown": -0.05739378443659304,
+              "sharpe": -0.2763479753660978,
+              "costs": 1716.2188508498718,
+              "turnover": 41.84084572715759
+            },
+            "HD-validation-0": {
+              "net_return": -0.055304561052376244,
+              "max_drawdown": -0.07046823820767945,
+              "sharpe": -0.8113431545332477,
+              "costs": 1054.5219026807383,
+              "turnover": 23.342326765445623
+            },
+            "HON-validation-0": {
+              "net_return": -0.02236827955377263,
+              "max_drawdown": -0.02440147267179993,
+              "sharpe": -0.4895027357343126,
+              "costs": 753.97179214082,
+              "turnover": 16.639056577243135
+            },
+            "IWM-validation-0": {
+              "net_return": -0.06535986767146895,
+              "max_drawdown": -0.07361011372024007,
+              "sharpe": -1.1248844534216753,
+              "costs": 912.0596064956974,
+              "turnover": 20.893614372140817
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.025550517757745084,
+              "max_drawdown": -0.02840248282630009,
+              "sharpe": -1.400428326297513,
+              "costs": 513.5557973646553,
+              "turnover": 13.331326706599167
+            },
+            "JPM-validation-0": {
+              "net_return": -0.0521008329013809,
+              "max_drawdown": -0.06847167877534055,
+              "sharpe": -0.6463943747781631,
+              "costs": 1023.9801538009315,
+              "turnover": 22.53381860630365
+            },
+            "KO-validation-0": {
+              "net_return": -0.022645758673578986,
+              "max_drawdown": -0.02650582861673023,
+              "sharpe": -1.0050316306777798,
+              "costs": 524.4810836696213,
+              "turnover": 13.691267688174108
+            },
+            "LIN-validation-0": {
+              "net_return": -0.04444221133296933,
+              "max_drawdown": -0.05362103570229748,
+              "sharpe": -0.87956127110692,
+              "costs": 755.0045027068136,
+              "turnover": 19.219595545644783
+            },
+            "MSFT-validation-0": {
+              "net_return": -0.041597411976927234,
+              "max_drawdown": -0.06590647230567914,
+              "sharpe": -0.4668525047281039,
+              "costs": 1199.791901427935,
+              "turnover": 28.98866010116577
+            },
+            "NEE-validation-0": {
+              "net_return": -0.058013595279462704,
+              "max_drawdown": -0.06799634699650547,
+              "sharpe": -0.6156649952061127,
+              "costs": 1322.490800005604,
+              "turnover": 29.51976871432789
+            },
+            "PG-validation-0": {
+              "net_return": -0.01526440389658934,
+              "max_drawdown": -0.024665107965514577,
+              "sharpe": -0.4596916728212792,
+              "costs": 598.825710093584,
+              "turnover": 14.64151846359253
+            },
+            "PLD-validation-0": {
+              "net_return": -0.07350680911758445,
+              "max_drawdown": -0.08958394468635678,
+              "sharpe": -0.6151723199383514,
+              "costs": 1260.174315558389,
+              "turnover": 30.344051600803414
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.007660207366829375,
+              "max_drawdown": -0.027960750063798057,
+              "sharpe": -0.0853370017281101,
+              "costs": 995.1547896064243,
+              "turnover": 23.965377362848567
+            },
+            "SPY-validation-0": {
+              "net_return": -0.015640882183107552,
+              "max_drawdown": -0.025496113083769534,
+              "sharpe": -0.4079578352594085,
+              "costs": 591.4150072147046,
+              "turnover": 15.104308114964235
+            },
+            "UNH-validation-0": {
+              "net_return": -0.04207196330773888,
+              "max_drawdown": -0.053104093113012785,
+              "sharpe": -1.185638007652976,
+              "costs": 671.8937045758524,
+              "turnover": 17.42870921059264
+            },
+            "XOM-validation-0": {
+              "net_return": -0.08553163573598921,
+              "max_drawdown": -0.09277903509853291,
+              "sharpe": -1.2654937017057242,
+              "costs": 1232.6223212584287,
+              "turnover": 30.339751851938875
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.06728273630142212,
+            "train/actor_loss": -27.159332275390625,
+            "train/critic_loss": 0.009373079985380173,
+            "train/ent_coef_loss": -17.972015380859375
+          }
+        },
+        {
+          "steps": 20000,
+          "phase": "on_step",
+          "score": -0.01941118081104868,
+          "return_pct": -1.941118081104868,
+          "change_pp": 1.6574101151395146,
+          "equity_change_pct_from_previous": 1.7192788493037847,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -1.941118081104868,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -32.5429688252647,
+          "mean_max_drawdown_pct": -12.370674633669585,
+          "mean_costs": 3314.906203770625,
+          "mean_turnover": 94.55339799529288,
+          "elapsed_seconds": 247.13769601000013,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.022185841463547518,
+              "max_drawdown": -0.1281896315912926,
+              "sharpe": -0.04079839185798479,
+              "costs": 4314.967807231475,
+              "turnover": 126.47424443495656
+            },
+            "AMT-validation-0": {
+              "net_return": -0.010540646109896468,
+              "max_drawdown": -0.09685072914449855,
+              "sharpe": -0.04044376343113088,
+              "costs": 3121.566237411835,
+              "turnover": 93.72446897775099
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.037463219339278986,
+              "max_drawdown": -0.2213574412091942,
+              "sharpe": 0.15930823123043808,
+              "costs": 8148.559083303782,
+              "turnover": 220.08196660351942
+            },
+            "APD-validation-0": {
+              "net_return": -0.01283945295446376,
+              "max_drawdown": -0.13967578059418329,
+              "sharpe": -0.04375106530786032,
+              "costs": 2817.515312014014,
+              "turnover": 80.81835656756365
+            },
+            "BAC-validation-0": {
+              "net_return": -0.12114389984974627,
+              "max_drawdown": -0.18434729409485595,
+              "sharpe": -0.47583490091820985,
+              "costs": 3969.274725556614,
+              "turnover": 105.33413047930237
+            },
+            "CAT-validation-0": {
+              "net_return": -0.2058792024462065,
+              "max_drawdown": -0.2798280557415237,
+              "sharpe": -0.7613027009427404,
+              "costs": 4711.902692704623,
+              "turnover": 124.34111891335985
+            },
+            "CVX-validation-0": {
+              "net_return": -0.07070640933376915,
+              "max_drawdown": -0.19498568858042797,
+              "sharpe": -0.18258311222870846,
+              "costs": 4412.973152745927,
+              "turnover": 113.659017396021
+            },
+            "DIA-validation-0": {
+              "net_return": -0.01106123303094586,
+              "max_drawdown": -0.026646128586723328,
+              "sharpe": -0.21076061764565354,
+              "costs": 1525.3919940124936,
+              "turnover": 45.421131722412106
+            },
+            "DIS-validation-0": {
+              "net_return": -0.28758168895644676,
+              "max_drawdown": -0.30369449507046886,
+              "sharpe": -1.2622785733737418,
+              "costs": 4129.409742047669,
+              "turnover": 114.84261228379705
+            },
+            "DUK-validation-0": {
+              "net_return": -0.05734994449703301,
+              "max_drawdown": -0.087193571932204,
+              "sharpe": -0.7004522041326758,
+              "costs": 1809.7549414234888,
+              "turnover": 57.06969418701559
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.24685416875813182,
+              "max_drawdown": -0.07531047238105748,
+              "sharpe": 0.8059077529966743,
+              "costs": 6154.884957400637,
+              "turnover": 172.17535345696152
+            },
+            "HD-validation-0": {
+              "net_return": 0.03171749486606812,
+              "max_drawdown": -0.09562361235706862,
+              "sharpe": 0.2128552973372683,
+              "costs": 3312.4535398812127,
+              "turnover": 97.54167741341995
+            },
+            "HON-validation-0": {
+              "net_return": -0.05060091284702939,
+              "max_drawdown": -0.09237658237800195,
+              "sharpe": -0.45973028516490877,
+              "costs": 2089.0008137523505,
+              "turnover": 62.3650387075714
+            },
+            "IWM-validation-0": {
+              "net_return": -0.03364495317726979,
+              "max_drawdown": -0.06123292652596524,
+              "sharpe": -0.24343667838202,
+              "costs": 2444.6803244202392,
+              "turnover": 73.61008400826171
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.04103605561122181,
+              "max_drawdown": -0.054816556718440435,
+              "sharpe": -0.6755767427255946,
+              "costs": 1754.0446387602062,
+              "turnover": 50.58971051651645
+            },
+            "JPM-validation-0": {
+              "net_return": -0.0037208253600738983,
+              "max_drawdown": -0.053574493878796425,
+              "sharpe": 0.0008816122203807816,
+              "costs": 2935.6879712475034,
+              "turnover": 82.51338284914863
+            },
+            "KO-validation-0": {
+              "net_return": 0.05371760246779167,
+              "max_drawdown": -0.028498956954428833,
+              "sharpe": 0.6622041674682367,
+              "costs": 1847.6334467087588,
+              "turnover": 55.0585302638346
+            },
+            "LIN-validation-0": {
+              "net_return": -0.06630277347807889,
+              "max_drawdown": -0.15328035501929083,
+              "sharpe": -0.4105741041790534,
+              "costs": 2544.1752394080772,
+              "turnover": 79.54054437288082
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.13160810339485285,
+              "max_drawdown": -0.14941784778906186,
+              "sharpe": 0.6386101233016885,
+              "costs": 4003.5309804475073,
+              "turnover": 118.59499832143011
+            },
+            "NEE-validation-0": {
+              "net_return": -0.13067077164402796,
+              "max_drawdown": -0.208932138394757,
+              "sharpe": -0.5821276857924673,
+              "costs": 3235.5324803551594,
+              "turnover": 98.70082625484366
+            },
+            "PG-validation-0": {
+              "net_return": -0.0015287525249988443,
+              "max_drawdown": -0.03108565597225621,
+              "sharpe": -0.00824144710629949,
+              "costs": 1691.6642352068839,
+              "turnover": 51.78513118990193
+            },
+            "PLD-validation-0": {
+              "net_return": 0.13450985730431242,
+              "max_drawdown": -0.08762045818794828,
+              "sharpe": 0.7066432570808832,
+              "costs": 3873.8327263163696,
+              "turnover": 115.55526264009816
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.041194283594284675,
+              "max_drawdown": -0.0719744588722867,
+              "sharpe": 0.30434616791358104,
+              "costs": 2644.1416557906305,
+              "turnover": 84.63090612164339
+            },
+            "SPY-validation-0": {
+              "net_return": -0.012688304940367212,
+              "max_drawdown": -0.04022092927536691,
+              "sharpe": -0.1620134031920529,
+              "costs": 1537.4110144582187,
+              "turnover": 48.9424650350797
+            },
+            "UNH-validation-0": {
+              "net_return": 0.12907666767863768,
+              "max_drawdown": -0.030759794894282044,
+              "sharpe": 1.0653466025406466,
+              "costs": 2215.240873271384,
+              "turnover": 70.07051659919959
+            },
+            "XOM-validation-0": {
+              "net_return": -0.17135043026550079,
+              "max_drawdown": -0.31888134860971096,
+              "sharpe": -0.34149779736941227,
+              "costs": 4942.330712159187,
+              "turnover": 114.94717856112484
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.003390662604942918,
+            "train/actor_loss": -17.993118286132812,
+            "train/critic_loss": 0.0010540238581597805,
+            "train/ent_coef_loss": -36.98214340209961
+          }
+        },
+        {
+          "steps": 30000,
+          "phase": "on_step",
+          "score": -0.02095530443836505,
+          "return_pct": -2.095530443836505,
+          "change_pp": -0.15441236273163705,
+          "equity_change_pct_from_previous": -0.15746902239753835,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -1.941118081104868,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -32.697381187996335,
+          "mean_max_drawdown_pct": -27.548658282451367,
+          "mean_costs": 6031.529656302128,
+          "mean_turnover": 188.08924037275972,
+          "elapsed_seconds": 388.87496053100017,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.08863627507235228,
+              "max_drawdown": -0.28295411684791627,
+              "sharpe": -0.12180156162145037,
+              "costs": 5700.474543278965,
+              "turnover": 176.219032615099
+            },
+            "AMT-validation-0": {
+              "net_return": -0.39439378373964296,
+              "max_drawdown": -0.5122838198050742,
+              "sharpe": -0.8662672224823132,
+              "costs": 5721.300941160366,
+              "turnover": 183.77805336602884
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.38144818696020577,
+              "max_drawdown": -0.29788826014781156,
+              "sharpe": 0.6016853377147074,
+              "costs": 10813.211053709467,
+              "turnover": 325.0553002395165
+            },
+            "APD-validation-0": {
+              "net_return": 0.07110674064793376,
+              "max_drawdown": -0.250715076503622,
+              "sharpe": 0.24011074453943487,
+              "costs": 6008.7724520630745,
+              "turnover": 190.09143445696407
+            },
+            "BAC-validation-0": {
+              "net_return": 0.053883625842219285,
+              "max_drawdown": -0.28096293848165144,
+              "sharpe": 0.1935914452770544,
+              "costs": 7502.286964554635,
+              "turnover": 224.45369647421848
+            },
+            "CAT-validation-0": {
+              "net_return": -0.18234913957582055,
+              "max_drawdown": -0.3703390183711044,
+              "sharpe": -0.314040460374255,
+              "costs": 7173.278471781724,
+              "turnover": 222.2946374611637
+            },
+            "CVX-validation-0": {
+              "net_return": 0.15237550415672252,
+              "max_drawdown": -0.24747409415431576,
+              "sharpe": 0.3935461743664088,
+              "costs": 7571.254626869964,
+              "turnover": 236.67100069879245
+            },
+            "DIA-validation-0": {
+              "net_return": -0.04125501957104183,
+              "max_drawdown": -0.15458486039039154,
+              "sharpe": -0.1267217124672583,
+              "costs": 4034.171947693026,
+              "turnover": 130.45159218648305
+            },
+            "DIS-validation-0": {
+              "net_return": -0.1137093856529301,
+              "max_drawdown": -0.3476683675504123,
+              "sharpe": -0.14513982623496705,
+              "costs": 7247.779691677993,
+              "turnover": 216.68208054411073
+            },
+            "DUK-validation-0": {
+              "net_return": -0.09886082495641646,
+              "max_drawdown": -0.244354744062392,
+              "sharpe": -0.24548240764884321,
+              "costs": 4849.413629993167,
+              "turnover": 152.43969979947218
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.23700191877429355,
+              "max_drawdown": -0.36841986271399585,
+              "sharpe": 0.49714318925483736,
+              "costs": 8108.200906247631,
+              "turnover": 243.6540385877901
+            },
+            "HD-validation-0": {
+              "net_return": -0.03623916085989298,
+              "max_drawdown": -0.2885600170151543,
+              "sharpe": -0.024003298840850743,
+              "costs": 5935.494272036707,
+              "turnover": 181.54087987677687
+            },
+            "HON-validation-0": {
+              "net_return": -0.1245863795599279,
+              "max_drawdown": -0.2788122101849667,
+              "sharpe": -0.28277464338395497,
+              "costs": 5064.93119583987,
+              "turnover": 164.25428702831965
+            },
+            "IWM-validation-0": {
+              "net_return": -0.1810007789898478,
+              "max_drawdown": -0.3348304781546213,
+              "sharpe": -0.39840614543551855,
+              "costs": 5067.09863155629,
+              "turnover": 162.70799856423528
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.12054645455060031,
+              "max_drawdown": -0.1654070846913578,
+              "sharpe": -0.41806840062281314,
+              "costs": 3895.1544993441735,
+              "turnover": 126.28206783818848
+            },
+            "JPM-validation-0": {
+              "net_return": 0.18779693206171544,
+              "max_drawdown": -0.20943154934777086,
+              "sharpe": 0.5405750884192718,
+              "costs": 6157.584430892635,
+              "turnover": 187.51065112506598
+            },
+            "KO-validation-0": {
+              "net_return": -0.033713994211733045,
+              "max_drawdown": -0.19194236125079223,
+              "sharpe": -0.08460956838585451,
+              "costs": 4533.786727866644,
+              "turnover": 145.56779808622298
+            },
+            "LIN-validation-0": {
+              "net_return": 0.22192343997510178,
+              "max_drawdown": -0.17608419611900505,
+              "sharpe": 0.6140978655360727,
+              "costs": 5520.802712633179,
+              "turnover": 176.21578625233298
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.06318919279796598,
+              "max_drawdown": -0.38276872648382343,
+              "sharpe": 0.2088699948550006,
+              "costs": 5670.61721932586,
+              "turnover": 176.0357588649665
+            },
+            "NEE-validation-0": {
+              "net_return": -0.3188311420947437,
+              "max_drawdown": -0.4019029852378617,
+              "sharpe": -0.7075566840519926,
+              "costs": 5576.04108527448,
+              "turnover": 173.9402559090668
+            },
+            "PG-validation-0": {
+              "net_return": -0.15085294111339065,
+              "max_drawdown": -0.26914179590559417,
+              "sharpe": -0.48602886123039246,
+              "costs": 4280.968276515441,
+              "turnover": 137.0807355518166
+            },
+            "PLD-validation-0": {
+              "net_return": -0.014969769745017847,
+              "max_drawdown": -0.2066539261973871,
+              "sharpe": 0.04571518969152268,
+              "costs": 6912.058903255184,
+              "turnover": 208.94873511056593
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.14965861795642965,
+              "max_drawdown": -0.35818123124930734,
+              "sharpe": -0.33535309480126463,
+              "costs": 5174.575405486308,
+              "turnover": 163.09029012770526
+            },
+            "SPY-validation-0": {
+              "net_return": 0.04014953853241332,
+              "max_drawdown": -0.1695943657239295,
+              "sharpe": 0.1897489749884362,
+              "costs": 4196.944148216343,
+              "turnover": 135.07105534953925
+            },
+            "UNH-validation-0": {
+              "net_return": 0.08159063489982366,
+              "max_drawdown": -0.13134679523856163,
+              "sharpe": 0.26978659449711373,
+              "costs": 5006.311923783891,
+              "turnover": 162.78669144140625
+            },
+            "XOM-validation-0": {
+              "net_return": 0.01430003760390175,
+              "max_drawdown": -0.24034827160853434,
+              "sharpe": 0.11480933989915772,
+              "costs": 9097.256402798326,
+              "turnover": 287.4966921359047
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.00018236525647807866,
+            "train/actor_loss": -10.894058227539062,
+            "train/critic_loss": 0.0004317671700846404,
+            "train/ent_coef_loss": -39.37718200683594
+          }
+        },
+        {
+          "steps": 40000,
+          "phase": "on_step",
+          "score": 0.05930023815867691,
+          "return_pct": 5.930023815867691,
+          "change_pp": 8.025554259704196,
+          "equity_change_pct_from_previous": 8.19733184407918,
+          "gain_since_50k_pp": null,
+          "best_return_pct": 5.930023815867691,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -24.67182692829214,
+          "mean_max_drawdown_pct": -32.807053098859015,
+          "mean_costs": 5999.753980688557,
+          "mean_turnover": 189.48553938967143,
+          "elapsed_seconds": 520.825504293,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.32766168442508903,
+              "max_drawdown": -0.34857462275700146,
+              "sharpe": 0.5499935422446891,
+              "costs": 5286.397500078384,
+              "turnover": 173.37054898557926
+            },
+            "AMT-validation-0": {
+              "net_return": -0.288860639136598,
+              "max_drawdown": -0.5414128232288395,
+              "sharpe": -0.42146116952458745,
+              "costs": 4774.838920338064,
+              "turnover": 152.83169985414432
+            },
+            "AMZN-validation-0": {
+              "net_return": -0.2882379294801998,
+              "max_drawdown": -0.5979907786624257,
+              "sharpe": -0.2116617879540965,
+              "costs": 3795.9455544929006,
+              "turnover": 118.04116004116777
+            },
+            "APD-validation-0": {
+              "net_return": 0.05433310202150321,
+              "max_drawdown": -0.23444860512202925,
+              "sharpe": 0.19115055323392033,
+              "costs": 5877.320726725447,
+              "turnover": 186.67510076783836
+            },
+            "BAC-validation-0": {
+              "net_return": 0.20289765960201933,
+              "max_drawdown": -0.3340607431579039,
+              "sharpe": 0.4065437581814953,
+              "costs": 8128.078474551489,
+              "turnover": 248.87816339716386
+            },
+            "CAT-validation-0": {
+              "net_return": -0.23615086389811923,
+              "max_drawdown": -0.4895282325009105,
+              "sharpe": -0.2612556523777309,
+              "costs": 7099.563118289053,
+              "turnover": 221.1355877253793
+            },
+            "CVX-validation-0": {
+              "net_return": 0.11594206994622658,
+              "max_drawdown": -0.3223414805808156,
+              "sharpe": 0.28371042524882534,
+              "costs": 7833.119886747313,
+              "turnover": 243.58318988301747
+            },
+            "DIA-validation-0": {
+              "net_return": 0.023392720689130675,
+              "max_drawdown": -0.1807351193430533,
+              "sharpe": 0.12649780991612108,
+              "costs": 5564.606403040127,
+              "turnover": 177.5472070780962
+            },
+            "DIS-validation-0": {
+              "net_return": -0.4435107539859595,
+              "max_drawdown": -0.5583527521646287,
+              "sharpe": -0.6864906678198297,
+              "costs": 4320.293030091633,
+              "turnover": 138.5846868773497
+            },
+            "DUK-validation-0": {
+              "net_return": -0.06770686420670025,
+              "max_drawdown": -0.2815145091228973,
+              "sharpe": -0.07443002502675153,
+              "costs": 5555.5723694989365,
+              "turnover": 180.8008780548618
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.9144478466994932,
+              "max_drawdown": -0.19684488531981137,
+              "sharpe": 1.126237125716609,
+              "costs": 9397.854632328887,
+              "turnover": 278.5765980866203
+            },
+            "HD-validation-0": {
+              "net_return": 0.009313091377854521,
+              "max_drawdown": -0.29730785422735195,
+              "sharpe": 0.11180824175824314,
+              "costs": 6270.727890674544,
+              "turnover": 198.68057158682242
+            },
+            "HON-validation-0": {
+              "net_return": -0.038331147228429785,
+              "max_drawdown": -0.2901162188686027,
+              "sharpe": -0.0007519486221815466,
+              "costs": 6338.03292263252,
+              "turnover": 202.6305355100351
+            },
+            "IWM-validation-0": {
+              "net_return": -0.101906366995553,
+              "max_drawdown": -0.3144298876173123,
+              "sharpe": -0.08367101627778932,
+              "costs": 4694.195310302365,
+              "turnover": 152.76062372584568
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.16213021912757108,
+              "max_drawdown": -0.25994493165720667,
+              "sharpe": -0.39796847360571674,
+              "costs": 5457.16323589478,
+              "turnover": 174.42987351115534
+            },
+            "JPM-validation-0": {
+              "net_return": 0.13692707895815892,
+              "max_drawdown": -0.313114817497784,
+              "sharpe": 0.3294763368135776,
+              "costs": 6058.508701314623,
+              "turnover": 188.45521617150573
+            },
+            "KO-validation-0": {
+              "net_return": 0.049929736089758814,
+              "max_drawdown": -0.18316046805680797,
+              "sharpe": 0.19532029868167253,
+              "costs": 5680.798849948243,
+              "turnover": 182.72104591894183
+            },
+            "LIN-validation-0": {
+              "net_return": 0.17345850301536547,
+              "max_drawdown": -0.2599482655353432,
+              "sharpe": 0.38294232459675714,
+              "costs": 5522.130492864207,
+              "turnover": 176.8579061415212
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.7333462516835998,
+              "max_drawdown": -0.376858225769524,
+              "sharpe": 0.9880728451077789,
+              "costs": 6114.291454005157,
+              "turnover": 197.2994766606839
+            },
+            "NEE-validation-0": {
+              "net_return": -0.09741829178126771,
+              "max_drawdown": -0.37761767876327823,
+              "sharpe": -0.05819700536151269,
+              "costs": 5560.7847208707835,
+              "turnover": 179.4031732508135
+            },
+            "PG-validation-0": {
+              "net_return": -0.08661958738814979,
+              "max_drawdown": -0.2835842249151904,
+              "sharpe": -0.1568422027120092,
+              "costs": 4666.400118805053,
+              "turnover": 151.45744143876695
+            },
+            "PLD-validation-0": {
+              "net_return": 0.208272808411321,
+              "max_drawdown": -0.2978504955419883,
+              "sharpe": 0.4235919970671031,
+              "costs": 7331.807774765979,
+              "turnover": 225.31638635633132
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.13995942626564495,
+              "max_drawdown": -0.29643353642571135,
+              "sharpe": 0.33053715133887634,
+              "costs": 4583.609091355279,
+              "turnover": 148.27863985215436
+            },
+            "SPY-validation-0": {
+              "net_return": -0.034507812397224,
+              "max_drawdown": -0.2754524138265362,
+              "sharpe": -0.013148896563609134,
+              "costs": 4434.359247422223,
+              "turnover": 143.28908745477915
+            },
+            "UNH-validation-0": {
+              "net_return": 0.045994862181946594,
+              "max_drawdown": -0.29742028444207824,
+              "sharpe": 0.1760145379592912,
+              "costs": 5974.732657825685,
+              "turnover": 193.5667268762144
+            },
+            "XOM-validation-0": {
+              "net_return": 0.2513098263842597,
+              "max_drawdown": -0.3207899505983117,
+              "sharpe": 0.466188724257571,
+              "costs": 9672.470413038805,
+              "turnover": 291.45249892466796
+            }
+          },
+          "training": {
+            "train/ent_coef": 1.5078372598509304e-05,
+            "train/actor_loss": -6.56279182434082,
+            "train/critic_loss": 0.00012839131522923708,
+            "train/ent_coef_loss": -2.921130657196045
+          }
+        },
+        {
+          "steps": 50000,
+          "phase": "post_update",
+          "score": 0.0739388215573229,
+          "return_pct": 7.39388215573229,
+          "change_pp": 1.4638583398645988,
+          "equity_change_pct_from_previous": 1.3819107058912206,
+          "gain_since_50k_pp": 0.0,
+          "best_return_pct": 7.443932394855511,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -23.20796858842754,
+          "mean_max_drawdown_pct": -33.08324116237473,
+          "mean_costs": 7890.5624929414125,
+          "mean_turnover": 247.00760164334088,
+          "elapsed_seconds": 690.6389575559999,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.20062854055505164,
+              "max_drawdown": -0.2658430200244132,
+              "sharpe": 0.4013976238559155,
+              "costs": 6833.780330099152,
+              "turnover": 221.1088169256946
+            },
+            "AMT-validation-0": {
+              "net_return": -0.2792978703620401,
+              "max_drawdown": -0.5392885558980742,
+              "sharpe": -0.41828688856560553,
+              "costs": 6520.815688731094,
+              "turnover": 202.58747653253363
+            },
+            "AMZN-validation-0": {
+              "net_return": -0.3034115017715815,
+              "max_drawdown": -0.5937945434220109,
+              "sharpe": -0.24661119005408305,
+              "costs": 6341.684595003793,
+              "turnover": 203.1444141088067
+            },
+            "APD-validation-0": {
+              "net_return": 0.03721187650087643,
+              "max_drawdown": -0.3260579463423452,
+              "sharpe": 0.1608398200425717,
+              "costs": 6861.422431805706,
+              "turnover": 215.18428760726158
+            },
+            "BAC-validation-0": {
+              "net_return": 0.12934908186582494,
+              "max_drawdown": -0.35113265773608926,
+              "sharpe": 0.29843857396590956,
+              "costs": 8747.88584207127,
+              "turnover": 263.090693443568
+            },
+            "CAT-validation-0": {
+              "net_return": 0.07253738049724867,
+              "max_drawdown": -0.30095052737676653,
+              "sharpe": 0.21946896056442824,
+              "costs": 9971.963804972653,
+              "turnover": 311.6049636678292
+            },
+            "CVX-validation-0": {
+              "net_return": 0.3196308146122273,
+              "max_drawdown": -0.264036159819531,
+              "sharpe": 0.5503656535639334,
+              "costs": 11702.203610931449,
+              "turnover": 370.80878366246276
+            },
+            "DIA-validation-0": {
+              "net_return": 0.08729488007251485,
+              "max_drawdown": -0.17100321769196825,
+              "sharpe": 0.2987812855723479,
+              "costs": 6763.5068204732615,
+              "turnover": 209.8487823687216
+            },
+            "DIS-validation-0": {
+              "net_return": -0.18832480363906068,
+              "max_drawdown": -0.38981710369842204,
+              "sharpe": -0.19176260632108078,
+              "costs": 7481.111928419129,
+              "turnover": 224.6598814135418
+            },
+            "DUK-validation-0": {
+              "net_return": 0.002096911433808746,
+              "max_drawdown": -0.30247994451836535,
+              "sharpe": 0.08451641044406034,
+              "costs": 7087.507858837048,
+              "turnover": 222.31261253600184
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.8360181581698038,
+              "max_drawdown": -0.25311140119062847,
+              "sharpe": 1.0189422783795863,
+              "costs": 11994.793709233696,
+              "turnover": 367.3794368957623
+            },
+            "HD-validation-0": {
+              "net_return": -0.09431801838691001,
+              "max_drawdown": -0.3730592332480597,
+              "sharpe": -0.0784143834792181,
+              "costs": 8107.569668547605,
+              "turnover": 253.03036715533602
+            },
+            "HON-validation-0": {
+              "net_return": -0.05539047317758561,
+              "max_drawdown": -0.33516522537336835,
+              "sharpe": -0.023840245932143355,
+              "costs": 7367.831551064853,
+              "turnover": 232.59817479582205
+            },
+            "IWM-validation-0": {
+              "net_return": -0.2613908244767187,
+              "max_drawdown": -0.41330147912939774,
+              "sharpe": -0.43283712241650546,
+              "costs": 5145.948672957053,
+              "turnover": 165.81860628804128
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.2048620640087302,
+              "max_drawdown": -0.27226994526282167,
+              "sharpe": -0.5329171488680348,
+              "costs": 5698.964563420836,
+              "turnover": 177.3565990080659
+            },
+            "JPM-validation-0": {
+              "net_return": -0.01941986937403939,
+              "max_drawdown": -0.41581707202164697,
+              "sharpe": 0.0627206083798398,
+              "costs": 6940.99471109989,
+              "turnover": 214.62809761483376
+            },
+            "KO-validation-0": {
+              "net_return": -0.03557662141341189,
+              "max_drawdown": -0.2709049997365409,
+              "sharpe": -0.025973576932527706,
+              "costs": 6384.921433176078,
+              "turnover": 203.0358087350519
+            },
+            "LIN-validation-0": {
+              "net_return": 0.17976224580172606,
+              "max_drawdown": -0.29257359889752454,
+              "sharpe": 0.38755606184896685,
+              "costs": 6912.3036816154245,
+              "turnover": 220.40489039439095
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.6257004231230658,
+              "max_drawdown": -0.32764989903174735,
+              "sharpe": 0.8730000175105657,
+              "costs": 8718.258164797231,
+              "turnover": 279.15821539378726
+            },
+            "NEE-validation-0": {
+              "net_return": -0.18799702766262893,
+              "max_drawdown": -0.375480566002253,
+              "sharpe": -0.24504944513211951,
+              "costs": 7187.977115999416,
+              "turnover": 227.28176519011694
+            },
+            "PG-validation-0": {
+              "net_return": -0.09994770457017077,
+              "max_drawdown": -0.26313298858934897,
+              "sharpe": -0.1970108286693564,
+              "costs": 5586.951098251121,
+              "turnover": 176.36953842592305
+            },
+            "PLD-validation-0": {
+              "net_return": 0.6613984750962021,
+              "max_drawdown": -0.23844512843169952,
+              "sharpe": 0.9332127010069089,
+              "costs": 14101.522642760563,
+              "turnover": 409.79141264823124
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.17401023620268496,
+              "max_drawdown": -0.28000317696671206,
+              "sharpe": 0.39987232794098465,
+              "costs": 6071.091177070765,
+              "turnover": 194.50484894979255
+            },
+            "SPY-validation-0": {
+              "net_return": -0.004857659249748236,
+              "max_drawdown": -0.28743979756536153,
+              "sharpe": 0.05748835200674419,
+              "costs": 5302.327664148811,
+              "turnover": 170.1066575645342
+            },
+            "UNH-validation-0": {
+              "net_return": 0.06848845490005862,
+              "max_drawdown": -0.3497097862165842,
+              "sharpe": 0.21498414344313554,
+              "costs": 7288.309552250774,
+              "turnover": 233.47077620284804
+            },
+            "XOM-validation-0": {
+              "net_return": 0.26307631975192725,
+              "max_drawdown": -0.3491747280257498,
+              "sharpe": 0.45838756091482086,
+              "costs": 14032.976498738044,
+              "turnover": 452.91173519790345
+            }
+          },
+          "training": {
+            "train/ent_coef": 9.891967238218058e-06,
+            "train/actor_loss": -3.9610073566436768,
+            "train/critic_loss": 6.767129525542259e-05,
+            "train/ent_coef_loss": -4.6253662109375
+          }
+        }
+      ],
+      "selected": {
+        "score": 0.07443932394855511,
+        "mean_max_drawdown": -0.32998340020971606,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.08734780791918516,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.23891766152565308,
+            "median_excess_return": -0.2689323967926996,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.3385576771132607
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.0034426621100898946,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.19121755431368895,
+            "median_excess_return": -0.1791611121131848,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.2828248772402207
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.29777103799234195,
+          "AMT": -0.30191245084438423,
+          "AMZN": -0.20418481613106898,
+          "APD": -0.04135741795249115,
+          "BAC": 0.021912879267505403,
+          "CAT": -0.3853124244780053,
+          "CVX": -0.5585981365993307,
+          "DIS": 0.2833140707801203,
+          "DUK": -0.1593612998653633,
+          "GOOGL": 0.2942275460238075,
+          "HD": -0.34580901332452985,
+          "HON": -0.05807437995412912,
+          "JNJ": -0.28463586765564886,
+          "JPM": -0.3537704291076934,
+          "KO": -0.2532289259297503,
+          "LIN": -0.4765779992862371,
+          "MSFT": -0.1554569621409816,
+          "NEE": -0.0494904152827369,
+          "PG": -0.2928096495396365,
+          "PLD": 0.38129209602730296,
+          "UNH": -0.5659702773328512,
+          "XOM": -1.4526136422459233
+        },
+        "declining_stocks": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 0,
+          "records": [
+            {
+              "episode": "AMZN-validation-0",
+              "symbol": "AMZN",
+              "policy_return": -0.2815328186697196,
+              "buy_hold_return": -0.0773480025386506,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -22841.634941467448,
+              "short_net_pnl": -5311.646925504563,
+              "long_return_contribution": -0.22841634941467448,
+              "short_return_contribution": -0.05311646925504563,
+              "long_costs": 4917.121143509213,
+              "short_costs": 1516.9776279153764,
+              "long_active_sessions": 708,
+              "short_active_sessions": 103,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.6007106751203537e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "DIS-validation-0",
+              "symbol": "DIS",
+              "policy_return": -0.19048733424952802,
+              "buy_hold_return": -0.4738014050296483,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -34185.96166175816,
+              "short_net_pnl": 15137.228236805331,
+              "long_return_contribution": -0.34185961661758163,
+              "short_return_contribution": 0.1513722823680533,
+              "long_costs": 4882.4734691701915,
+              "short_costs": 2616.114224405223,
+              "long_active_sessions": 649,
+              "short_active_sessions": 161,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.1641532182693481e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "NEE-validation-0",
+              "symbol": "NEE",
+              "policy_return": -0.19579832016000376,
+              "buy_hold_return": -0.14630790487726686,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -21661.05428067837,
+              "short_net_pnl": 2081.222264677999,
+              "long_return_contribution": -0.2166105428067837,
+              "short_return_contribution": 0.020812222646779992,
+              "long_costs": 5110.319018609714,
+              "short_costs": 2025.9550099596622,
+              "long_active_sessions": 709,
+              "short_active_sessions": 123,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.8189894035458565e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            }
+          ]
+        }
+      },
+      "final": {
+        "score": 0.0739388215573229,
+        "mean_max_drawdown": -0.3308324116237473,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.08760694217916647,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.23865852726567174,
+            "median_excess_return": -0.26623536275035775,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.3386315923119996
+          },
+          "etf": {
+            "count": 4,
+            "net_return": -0.0012358418628167778,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.19589605828659562,
+            "median_excess_return": -0.19517684874663033,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.2879369178383599
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.29340550129751897,
+          "AMT": -0.29933726356777157,
+          "AMZN": -0.2260634992329309,
+          "APD": -0.03700029113116732,
+          "BAC": 0.034234571597698826,
+          "CAT": -0.3867521291249767,
+          "CVX": -0.5584560483003349,
+          "DIS": 0.2854766013905876,
+          "DUK": -0.15820913598963515,
+          "GOOGL": 0.2999850697754596,
+          "HD": -0.3729005149951844,
+          "HON": -0.05919115837493205,
+          "JNJ": -0.2796450361908591,
+          "JPM": -0.3542208800743666,
+          "KO": -0.2528256893098564,
+          "LIN": -0.4754833012201629,
+          "MSFT": -0.15268778021085305,
+          "NEE": -0.041689122785362076,
+          "PG": -0.28988620145939603,
+          "PLD": 0.380440907314034,
+          "UNH": -0.5652456583612941,
+          "XOM": -1.4476255382959564
+        },
+        "declining_stocks": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 0,
+          "records": [
+            {
+              "episode": "AMZN-validation-0",
+              "symbol": "AMZN",
+              "policy_return": -0.3034115017715815,
+              "buy_hold_return": -0.0773480025386506,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -25416.691748183497,
+              "short_net_pnl": -4924.458428974533,
+              "long_return_contribution": -0.25416691748183495,
+              "short_return_contribution": -0.049244584289745326,
+              "long_costs": 4857.787215431925,
+              "short_costs": 1483.8973795718794,
+              "long_active_sessions": 708,
+              "short_active_sessions": 103,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.3096723705530167e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "DIS-validation-0",
+              "symbol": "DIS",
+              "policy_return": -0.18832480363906068,
+              "buy_hold_return": -0.4738014050296483,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -34165.663849635836,
+              "short_net_pnl": 15333.18348572996,
+              "long_return_contribution": -0.34165663849635836,
+              "short_return_contribution": 0.1533318348572996,
+              "long_costs": 4896.414658348063,
+              "short_costs": 2584.6972700710644,
+              "long_active_sessions": 649,
+              "short_active_sessions": 158,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 2.928572939708829e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "NEE-validation-0",
+              "symbol": "NEE",
+              "policy_return": -0.18799702766262893,
+              "buy_hold_return": -0.14630790487726686,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -20659.194677383,
+              "short_net_pnl": 1859.491911120138,
+              "long_return_contribution": -0.20659194677383,
+              "short_return_contribution": 0.01859491911120138,
+              "long_costs": 5133.48597153358,
+              "short_costs": 2054.4911444658333,
+              "long_active_sessions": 709,
+              "short_active_sessions": 119,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 9.094947017729282e-11,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            }
+          ]
+        }
+      }
+    },
+    "execution_full": {
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "run": "20261020T084415-sac-11-485810df",
+      "bundle_id": "57de3742d11ea88cbd05f6f0959f5c330cdd6c67ef0139db140fd0c82b14c080",
+      "seed": 11,
+      "observation": {
+        "version": 1,
+        "profile": "execution_full",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "reports": {
+        "selected": {
+          "sha256": "a63ca48aefdca6f54a7926dd2bd2b8ab6c68d3ba300c3a4eaf74680ce3ffee8f",
+          "file": "selected-validation.json"
+        },
+        "final": {
+          "sha256": "a63ca48aefdca6f54a7926dd2bd2b8ab6c68d3ba300c3a4eaf74680ce3ffee8f",
+          "file": "validation.json"
+        }
+      },
+      "sampling": null,
+      "learning_curve": [
+        {
+          "steps": 10000,
+          "phase": "on_step",
+          "score": -0.03016846883573478,
+          "return_pct": -3.016846883573478,
+          "change_pp": null,
+          "equity_change_pct_from_previous": null,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -3.016846883573478,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -33.618697627733305,
+          "mean_max_drawdown_pct": -5.048557077362308,
+          "mean_costs": 1127.2366591423904,
+          "mean_turnover": 27.901726635239008,
+          "elapsed_seconds": 109.80085895000002,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.057778746610168796,
+              "max_drawdown": -0.06385120175218884,
+              "sharpe": -0.7371183636954141,
+              "costs": 1230.7764620765051,
+              "turnover": 30.040603257685206
+            },
+            "AMT-validation-0": {
+              "net_return": -0.03159576318182267,
+              "max_drawdown": -0.05421417182239596,
+              "sharpe": -0.3933110485996215,
+              "costs": 1215.890148138214,
+              "turnover": 30.64642310043335
+            },
+            "AMZN-validation-0": {
+              "net_return": -0.06719601580775747,
+              "max_drawdown": -0.145046205331531,
+              "sharpe": -0.17044802146658644,
+              "costs": 2009.7832499197525,
+              "turnover": 47.36015747976226
+            },
+            "APD-validation-0": {
+              "net_return": -0.025281758807006227,
+              "max_drawdown": -0.03186703340764108,
+              "sharpe": -0.6014489653293382,
+              "costs": 1026.1555796423636,
+              "turnover": 26.118397455354334
+            },
+            "BAC-validation-0": {
+              "net_return": -0.05005463716375569,
+              "max_drawdown": -0.07875247027044097,
+              "sharpe": -0.5127828781280439,
+              "costs": 1309.246453963785,
+              "turnover": 31.710726500027558
+            },
+            "CAT-validation-0": {
+              "net_return": -0.027652761940651693,
+              "max_drawdown": -0.03708535369564092,
+              "sharpe": -0.33533209038615974,
+              "costs": 1442.0596306113919,
+              "turnover": 36.61249758699684
+            },
+            "CVX-validation-0": {
+              "net_return": -0.04526015539135042,
+              "max_drawdown": -0.06477396599861673,
+              "sharpe": -0.6105218434476618,
+              "costs": 1234.320996421461,
+              "turnover": 30.955069295227187
+            },
+            "DIA-validation-0": {
+              "net_return": -0.00889310639637464,
+              "max_drawdown": -0.009470163743513282,
+              "sharpe": -0.5517811739010766,
+              "costs": 658.7022890513722,
+              "turnover": 15.389496906738282
+            },
+            "DIS-validation-0": {
+              "net_return": -0.03465850966091877,
+              "max_drawdown": -0.10173830350531832,
+              "sharpe": -0.28668338486981426,
+              "costs": 1569.180965644479,
+              "turnover": 39.03864029007229
+            },
+            "DUK-validation-0": {
+              "net_return": -0.0040944418512146585,
+              "max_drawdown": -0.01494674314978417,
+              "sharpe": -0.11729429452192147,
+              "costs": 826.3718822912713,
+              "turnover": 20.317751689288066
+            },
+            "GOOGL-validation-0": {
+              "net_return": -0.037817980134065676,
+              "max_drawdown": -0.06945447838395191,
+              "sharpe": -0.36241187524380875,
+              "costs": 1559.4946392778859,
+              "turnover": 39.577856366871174
+            },
+            "HD-validation-0": {
+              "net_return": -0.034755195369512104,
+              "max_drawdown": -0.038697316150758554,
+              "sharpe": -0.6522819563004891,
+              "costs": 1167.8690121642123,
+              "turnover": 29.430013450807404
+            },
+            "HON-validation-0": {
+              "net_return": -0.020651469885434093,
+              "max_drawdown": -0.024469023136098667,
+              "sharpe": -0.6468838500926567,
+              "costs": 898.7321174012231,
+              "turnover": 23.45702525803517
+            },
+            "IWM-validation-0": {
+              "net_return": -0.035633511476469315,
+              "max_drawdown": -0.03998852481712889,
+              "sharpe": -0.9887968776303229,
+              "costs": 981.4128311040585,
+              "turnover": 25.298840292232814
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.02182626255925746,
+              "max_drawdown": -0.02380528573122287,
+              "sharpe": -1.0678052384716648,
+              "costs": 691.6397314863082,
+              "turnover": 16.961688947854334
+            },
+            "JPM-validation-0": {
+              "net_return": -0.04805744036713222,
+              "max_drawdown": -0.0555866822402189,
+              "sharpe": -0.8195810177529691,
+              "costs": 1090.0977803407952,
+              "turnover": 26.748200325242802
+            },
+            "KO-validation-0": {
+              "net_return": -0.025701972107514015,
+              "max_drawdown": -0.027297510012331938,
+              "sharpe": -1.6706253955505295,
+              "costs": 676.8793255193182,
+              "turnover": 16.245243784389256
+            },
+            "LIN-validation-0": {
+              "net_return": -0.022330913803417896,
+              "max_drawdown": -0.049400312759428466,
+              "sharpe": -0.4434743544707453,
+              "costs": 1156.3173662464098,
+              "turnover": 29.789466396952477
+            },
+            "MSFT-validation-0": {
+              "net_return": -0.0555155554140675,
+              "max_drawdown": -0.07057909144615782,
+              "sharpe": -0.8671691365888404,
+              "costs": 1252.9031688196865,
+              "turnover": 31.77226975949247
+            },
+            "NEE-validation-0": {
+              "net_return": -0.015882999013010712,
+              "max_drawdown": -0.07054178116977705,
+              "sharpe": -0.0811669696172538,
+              "costs": 1212.2514974253584,
+              "turnover": 28.630236769192525
+            },
+            "PG-validation-0": {
+              "net_return": -0.021186541522665636,
+              "max_drawdown": -0.024351079588273983,
+              "sharpe": -1.1801965761134812,
+              "costs": 704.9987459150359,
+              "turnover": 16.920010032430213
+            },
+            "PLD-validation-0": {
+              "net_return": 0.03435513119242262,
+              "max_drawdown": -0.05878146379223659,
+              "sharpe": 0.27440106235878686,
+              "costs": 1390.1191851117699,
+              "turnover": 32.10225104873324
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.02721624246985166,
+              "max_drawdown": -0.03524069918240991,
+              "sharpe": -0.5553706324275601,
+              "costs": 1015.0369266727511,
+              "turnover": 25.11715763092041
+            },
+            "SPY-validation-0": {
+              "net_return": -0.0061825860733590865,
+              "max_drawdown": -0.011498759873700304,
+              "sharpe": -0.28667539488146815,
+              "costs": 711.1986271748021,
+              "turnover": 16.88107138937563
+            },
+            "UNH-validation-0": {
+              "net_return": -0.028329663358523716,
+              "max_drawdown": -0.04019235892084305,
+              "sharpe": -0.7584755933428474,
+              "costs": 967.6768669176419,
+              "turnover": 24.617882761035908
+            },
+            "XOM-validation-0": {
+              "net_return": -0.06518109055622479,
+              "max_drawdown": -0.07099486023259005,
+              "sharpe": -1.0088253679059813,
+              "costs": 1309.037658364296,
+              "turnover": 33.70591474106303
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.06724979728460312,
+            "train/actor_loss": -27.21105194091797,
+            "train/critic_loss": 0.0043286108411848545,
+            "train/ent_coef_loss": -18.194608688354492
+          }
+        },
+        {
+          "steps": 20000,
+          "phase": "on_step",
+          "score": -0.0674356650610938,
+          "return_pct": -6.743566506109381,
+          "change_pp": -3.7267196225359025,
+          "equity_change_pct_from_previous": -3.8426463801007227,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -3.016846883573478,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -37.34541725026921,
+          "mean_max_drawdown_pct": -12.587656626584021,
+          "mean_costs": 2469.0397105668726,
+          "mean_turnover": 55.432950774626384,
+          "elapsed_seconds": 252.13393104,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.10742250475888793,
+              "max_drawdown": -0.18048030722775854,
+              "sharpe": -0.514347329112449,
+              "costs": 2504.543206687961,
+              "turnover": 62.443679783428095
+            },
+            "AMT-validation-0": {
+              "net_return": -0.04235296994090354,
+              "max_drawdown": -0.18364359888698556,
+              "sharpe": -0.14784275401043664,
+              "costs": 3219.877830886141,
+              "turnover": 70.320489334858
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.06673495066750368,
+              "max_drawdown": -0.17663694019853104,
+              "sharpe": 0.23208815727914203,
+              "costs": 4215.4691758975305,
+              "turnover": 115.526263292185
+            },
+            "APD-validation-0": {
+              "net_return": -0.09819663515127641,
+              "max_drawdown": -0.1478834431117907,
+              "sharpe": -0.6837493479119893,
+              "costs": 2359.869457976261,
+              "turnover": 49.13533177687246
+            },
+            "BAC-validation-0": {
+              "net_return": -0.03458774023189881,
+              "max_drawdown": -0.1312630080822993,
+              "sharpe": -0.08649372025303839,
+              "costs": 3231.8648678510694,
+              "turnover": 72.40511525338354
+            },
+            "CAT-validation-0": {
+              "net_return": -0.0020525462190867927,
+              "max_drawdown": -0.1618745169040502,
+              "sharpe": 0.026667393293857183,
+              "costs": 3432.6807170174156,
+              "turnover": 83.1539593738697
+            },
+            "CVX-validation-0": {
+              "net_return": -0.04870366870764087,
+              "max_drawdown": -0.11936060490951195,
+              "sharpe": -0.23557116323235208,
+              "costs": 2450.6581966082795,
+              "turnover": 61.35904035014627
+            },
+            "DIA-validation-0": {
+              "net_return": -0.06146041481766373,
+              "max_drawdown": -0.061563881389469,
+              "sharpe": -0.8622331104522118,
+              "costs": 1619.9119577823706,
+              "turnover": 26.496181048926363
+            },
+            "DIS-validation-0": {
+              "net_return": -0.03480643987204379,
+              "max_drawdown": -0.12684552263500792,
+              "sharpe": -0.06802921825456709,
+              "costs": 4264.869801348942,
+              "turnover": 98.02482895011403
+            },
+            "DUK-validation-0": {
+              "net_return": 0.022834186146056368,
+              "max_drawdown": -0.047978548119061326,
+              "sharpe": 0.1878242025128385,
+              "costs": 1982.48979037505,
+              "turnover": 36.409299276613034
+            },
+            "GOOGL-validation-0": {
+              "net_return": -0.055707177329676005,
+              "max_drawdown": -0.1525430173137775,
+              "sharpe": -0.20112247076112885,
+              "costs": 3091.2882063428283,
+              "turnover": 81.27777029638756
+            },
+            "HD-validation-0": {
+              "net_return": -0.18001023938515315,
+              "max_drawdown": -0.1918682911277516,
+              "sharpe": -1.124640944602201,
+              "costs": 2200.048205707113,
+              "turnover": 46.89082912639546
+            },
+            "HON-validation-0": {
+              "net_return": -0.04618497572487157,
+              "max_drawdown": -0.06194169676121619,
+              "sharpe": -0.3554006403145484,
+              "costs": 2062.4532361353345,
+              "turnover": 38.114018558136465
+            },
+            "IWM-validation-0": {
+              "net_return": -0.15926081833696593,
+              "max_drawdown": -0.16364109730839616,
+              "sharpe": -1.0939510469976692,
+              "costs": 1957.4212226080376,
+              "turnover": 42.166781210075726
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.036194545683467916,
+              "max_drawdown": -0.04754374370767411,
+              "sharpe": -0.5109987857446682,
+              "costs": 1820.4180551849215,
+              "turnover": 30.086090827959136
+            },
+            "JPM-validation-0": {
+              "net_return": -0.15388395884359107,
+              "max_drawdown": -0.18759109851406874,
+              "sharpe": -0.8026521677559859,
+              "costs": 2436.3527869044383,
+              "turnover": 54.0684363840463
+            },
+            "KO-validation-0": {
+              "net_return": -0.07727258695773431,
+              "max_drawdown": -0.09339371284950082,
+              "sharpe": -0.9924174118889983,
+              "costs": 1745.1326710175383,
+              "turnover": 29.064297710965505
+            },
+            "LIN-validation-0": {
+              "net_return": -0.03127283571319395,
+              "max_drawdown": -0.06398459210534968,
+              "sharpe": -0.23611229865556813,
+              "costs": 1823.1752867735515,
+              "turnover": 39.31019648053833
+            },
+            "MSFT-validation-0": {
+              "net_return": -0.18190410741147323,
+              "max_drawdown": -0.20584363799941596,
+              "sharpe": -1.079380410455642,
+              "costs": 2087.401141465081,
+              "turnover": 50.74217673895337
+            },
+            "NEE-validation-0": {
+              "net_return": 0.08770583829982015,
+              "max_drawdown": -0.07057739363788806,
+              "sharpe": 0.38349737717978577,
+              "costs": 3224.6110645352987,
+              "turnover": 74.28796690599081
+            },
+            "PG-validation-0": {
+              "net_return": -0.10217447101055677,
+              "max_drawdown": -0.11627623904786144,
+              "sharpe": -1.0091331117074032,
+              "costs": 1771.132216004607,
+              "turnover": 31.093463132416183
+            },
+            "PLD-validation-0": {
+              "net_return": -0.00013278934322025204,
+              "max_drawdown": -0.07314100118159261,
+              "sharpe": 0.032688855858429025,
+              "costs": 2708.6933241227657,
+              "turnover": 65.10482721148597
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.1474354375998599,
+              "max_drawdown": -0.15742588090327492,
+              "sharpe": -0.9260985837507894,
+              "costs": 2161.109686513725,
+              "turnover": 48.89284482346421
+            },
+            "SPY-validation-0": {
+              "net_return": -0.11359563077737755,
+              "max_drawdown": -0.11359563077737755,
+              "sharpe": -1.176675195300947,
+              "costs": 1631.9292169025443,
+              "turnover": 29.606523519101515
+            },
+            "UNH-validation-0": {
+              "net_return": -0.13556747932184732,
+              "max_drawdown": -0.13608565352600366,
+              "sharpe": -1.3823648799464028,
+              "costs": 1610.6571672246844,
+              "turnover": 35.53697205860175
+            },
+            "XOM-validation-0": {
+              "net_return": -0.08042229356342823,
+              "max_drawdown": -0.09980766468623103,
+              "sharpe": -0.4021665743885651,
+              "costs": 2580.9739848652,
+              "turnover": 69.73933671537114
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.0033783521503210068,
+            "train/actor_loss": -18.097675323486328,
+            "train/critic_loss": 0.0010768237989395857,
+            "train/ent_coef_loss": -37.16071319580078
+          }
+        },
+        {
+          "steps": 30000,
+          "phase": "on_step",
+          "score": -0.051851252312297196,
+          "return_pct": -5.185125231229719,
+          "change_pp": 1.5584412748796608,
+          "equity_change_pct_from_previous": 1.6711354021293978,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -3.016846883573478,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -35.78697597538955,
+          "mean_max_drawdown_pct": -27.19091343447117,
+          "mean_costs": 5160.261064637971,
+          "mean_turnover": 149.7028403847455,
+          "elapsed_seconds": 386.1793561049999,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.26546191773187655,
+              "max_drawdown": -0.465990943051269,
+              "sharpe": -0.6126176351038404,
+              "costs": 4859.7532057282715,
+              "turnover": 148.98284526083282
+            },
+            "AMT-validation-0": {
+              "net_return": -0.06788877566040086,
+              "max_drawdown": -0.32510740174184516,
+              "sharpe": -0.0824163099782571,
+              "costs": 7269.075024045887,
+              "turnover": 197.7784067800267
+            },
+            "AMZN-validation-0": {
+              "net_return": -0.07496908278922665,
+              "max_drawdown": -0.3921745944325892,
+              "sharpe": 0.01028642238083135,
+              "costs": 10564.0204751079,
+              "turnover": 302.2859147559886
+            },
+            "APD-validation-0": {
+              "net_return": -0.005149576572247128,
+              "max_drawdown": -0.15072965945595485,
+              "sharpe": 0.04794908516452355,
+              "costs": 4953.843141447003,
+              "turnover": 140.30117163909514
+            },
+            "BAC-validation-0": {
+              "net_return": -0.30209738154084975,
+              "max_drawdown": -0.4149683622224456,
+              "sharpe": -0.6786121628673596,
+              "costs": 5683.592829181839,
+              "turnover": 158.86398909171342
+            },
+            "CAT-validation-0": {
+              "net_return": 0.10663879666821874,
+              "max_drawdown": -0.21158951976916418,
+              "sharpe": 0.2935532499698593,
+              "costs": 6998.478202662408,
+              "turnover": 186.55381218260368
+            },
+            "CVX-validation-0": {
+              "net_return": -0.08293785580240076,
+              "max_drawdown": -0.21934273410200622,
+              "sharpe": -0.13759195456952783,
+              "costs": 5658.788928007349,
+              "turnover": 157.04169701558433
+            },
+            "DIA-validation-0": {
+              "net_return": 0.08869889889780458,
+              "max_drawdown": -0.10163440171904037,
+              "sharpe": 0.42635623371504133,
+              "costs": 2699.369893716695,
+              "turnover": 88.09250878092091
+            },
+            "DIS-validation-0": {
+              "net_return": -0.1936186324643122,
+              "max_drawdown": -0.31180689472747336,
+              "sharpe": -0.3333012296708499,
+              "costs": 6990.2651564170865,
+              "turnover": 189.51715686226365
+            },
+            "DUK-validation-0": {
+              "net_return": 0.1960075970059747,
+              "max_drawdown": -0.11015560056898288,
+              "sharpe": 0.6616948843612943,
+              "costs": 3751.869080195401,
+              "turnover": 114.27366524716194
+            },
+            "GOOGL-validation-0": {
+              "net_return": -0.043601641972943916,
+              "max_drawdown": -0.44610136039590753,
+              "sharpe": -0.011696949918855884,
+              "costs": 7784.871373627262,
+              "turnover": 222.90204456435654
+            },
+            "HD-validation-0": {
+              "net_return": -0.06126983857826174,
+              "max_drawdown": -0.291974559755415,
+              "sharpe": -0.10772539036074635,
+              "costs": 5351.759822319899,
+              "turnover": 158.21302587762065
+            },
+            "HON-validation-0": {
+              "net_return": -0.21480600050326193,
+              "max_drawdown": -0.29826014645446397,
+              "sharpe": -0.7125970724650695,
+              "costs": 3550.354287507016,
+              "turnover": 110.11658901367412
+            },
+            "IWM-validation-0": {
+              "net_return": -0.2439516479477385,
+              "max_drawdown": -0.33710375320137276,
+              "sharpe": -0.6856280450627847,
+              "costs": 3747.5837778436967,
+              "turnover": 116.65288869543862
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.0550981197406728,
+              "max_drawdown": -0.1528425786440739,
+              "sharpe": -0.21179713644669623,
+              "costs": 2781.9182611674737,
+              "turnover": 90.68335101180898
+            },
+            "JPM-validation-0": {
+              "net_return": -0.18135752152253903,
+              "max_drawdown": -0.3720292529985846,
+              "sharpe": -0.47428396781381627,
+              "costs": 5070.864340794479,
+              "turnover": 144.16202329018986
+            },
+            "KO-validation-0": {
+              "net_return": 0.019237361294340616,
+              "max_drawdown": -0.13932682826242038,
+              "sharpe": 0.12178790270475975,
+              "costs": 3148.969544285732,
+              "turnover": 101.27252142618299
+            },
+            "LIN-validation-0": {
+              "net_return": 0.05757714285443338,
+              "max_drawdown": -0.25081180201916464,
+              "sharpe": 0.21522385086926046,
+              "costs": 4234.543667623328,
+              "turnover": 130.01648454115178
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.010927246649134581,
+              "max_drawdown": -0.3988616355514396,
+              "sharpe": 0.09886182105421651,
+              "costs": 5672.899468619298,
+              "turnover": 171.87061972985032
+            },
+            "NEE-validation-0": {
+              "net_return": -0.18735831968694217,
+              "max_drawdown": -0.2697985958225517,
+              "sharpe": -0.38233098334748283,
+              "costs": 5215.077137273862,
+              "turnover": 149.68165110811253
+            },
+            "PG-validation-0": {
+              "net_return": -0.03601128626788852,
+              "max_drawdown": -0.20687861607967883,
+              "sharpe": -0.09702569961525534,
+              "costs": 3089.4401610391183,
+              "turnover": 97.50110025439281
+            },
+            "PLD-validation-0": {
+              "net_return": 0.48666343602890416,
+              "max_drawdown": -0.1577358487287729,
+              "sharpe": 0.9855205192132299,
+              "costs": 7859.2863979525155,
+              "turnover": 192.34029961082084
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.17539089480466985,
+              "max_drawdown": -0.38347214801116924,
+              "sharpe": -0.43024925921801116,
+              "costs": 3897.059047086559,
+              "turnover": 121.44371865034857
+            },
+            "SPY-validation-0": {
+              "net_return": 0.06731517834742462,
+              "max_drawdown": -0.14967335370165236,
+              "sharpe": 0.29086721485043754,
+              "costs": 3239.3295503605314,
+              "turnover": 103.1752690559726
+            },
+            "UNH-validation-0": {
+              "net_return": 0.11028600414613554,
+              "max_drawdown": -0.15304651586180684,
+              "sharpe": 0.38005008752139513,
+              "costs": 4208.039397749141,
+              "turnover": 133.06188856604354
+            },
+            "XOM-validation-0": {
+              "net_return": -0.3005157284258658,
+              "max_drawdown": -0.35822038568325876,
+              "sharpe": -0.7239616944006794,
+              "costs": 5885.7355088274835,
+              "turnover": 165.4892069912271
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.00018113755504600704,
+            "train/actor_loss": -10.984236717224121,
+            "train/critic_loss": 0.0002536060637794435,
+            "train/ent_coef_loss": -40.820709228515625
+          }
+        },
+        {
+          "steps": 40000,
+          "phase": "on_step",
+          "score": 0.016883977940892685,
+          "return_pct": 1.6883977940892685,
+          "change_pp": 6.873523025318988,
+          "equity_change_pct_from_previous": 7.249414231766682,
+          "gain_since_50k_pp": null,
+          "best_return_pct": 1.6883977940892685,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -28.91345295007056,
+          "mean_max_drawdown_pct": -34.776645825096544,
+          "mean_costs": 8746.558823024574,
+          "mean_turnover": 280.75153272955134,
+          "elapsed_seconds": 517.886146844,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.3102177293972268,
+              "max_drawdown": -0.3012480134575387,
+              "sharpe": 0.5324725266075718,
+              "costs": 7834.736500375902,
+              "turnover": 252.07444714887112
+            },
+            "AMT-validation-0": {
+              "net_return": -0.062366640772069326,
+              "max_drawdown": -0.3541522039350644,
+              "sharpe": -0.003934613923589768,
+              "costs": 10072.746614100988,
+              "turnover": 321.9047830695903
+            },
+            "AMZN-validation-0": {
+              "net_return": -0.3703388410267944,
+              "max_drawdown": -0.6302372022975486,
+              "sharpe": -0.3510011663301223,
+              "costs": 8194.889740545594,
+              "turnover": 252.92237692232587
+            },
+            "APD-validation-0": {
+              "net_return": 0.058558386274012664,
+              "max_drawdown": -0.1955879630204117,
+              "sharpe": 0.19830650681643047,
+              "costs": 7604.031768710807,
+              "turnover": 244.53130590147865
+            },
+            "BAC-validation-0": {
+              "net_return": -0.2642395208321151,
+              "max_drawdown": -0.5560571916484812,
+              "sharpe": -0.35685417983581624,
+              "costs": 8291.497336951265,
+              "turnover": 265.17956968708785
+            },
+            "CAT-validation-0": {
+              "net_return": 0.3426076946477301,
+              "max_drawdown": -0.2587444060803602,
+              "sharpe": 0.5497753334195127,
+              "costs": 10905.422276396572,
+              "turnover": 344.70050916519114
+            },
+            "CVX-validation-0": {
+              "net_return": 0.44646636112472193,
+              "max_drawdown": -0.19984558750125392,
+              "sharpe": 0.7032908749635172,
+              "costs": 12690.034513814908,
+              "turnover": 403.177526464442
+            },
+            "DIA-validation-0": {
+              "net_return": 0.10270564754230471,
+              "max_drawdown": -0.13487617748376357,
+              "sharpe": 0.3663930173607912,
+              "costs": 7195.664336855364,
+              "turnover": 236.7267088703653
+            },
+            "DIS-validation-0": {
+              "net_return": -0.270280765705722,
+              "max_drawdown": -0.49474564378312336,
+              "sharpe": -0.36722334518269983,
+              "costs": 8385.99946074043,
+              "turnover": 263.3737314921594
+            },
+            "DUK-validation-0": {
+              "net_return": -0.058165342886257854,
+              "max_drawdown": -0.22486476515329878,
+              "sharpe": -0.06367606172532916,
+              "costs": 8188.611853525111,
+              "turnover": 267.75673108685174
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.09956542192784323,
+              "max_drawdown": -0.5861475666476474,
+              "sharpe": 0.25568999388719743,
+              "costs": 10711.567632755205,
+              "turnover": 335.74110203197347
+            },
+            "HD-validation-0": {
+              "net_return": 0.2549847064483468,
+              "max_drawdown": -0.2944198803533966,
+              "sharpe": 0.4976374695905851,
+              "costs": 10733.028004524165,
+              "turnover": 345.03771032353734
+            },
+            "HON-validation-0": {
+              "net_return": -0.23328083889974083,
+              "max_drawdown": -0.3194239563861896,
+              "sharpe": -0.496291504644853,
+              "costs": 6802.234534333014,
+              "turnover": 223.66033986888607
+            },
+            "IWM-validation-0": {
+              "net_return": -0.38415419894727254,
+              "max_drawdown": -0.4791922970576613,
+              "sharpe": -0.8387173531479613,
+              "costs": 7270.073250125834,
+              "turnover": 238.02800626613106
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.19744487665921606,
+              "max_drawdown": -0.3209320988900769,
+              "sharpe": -0.5209112162761909,
+              "costs": 7440.548101848238,
+              "turnover": 244.05189502053756
+            },
+            "JPM-validation-0": {
+              "net_return": -0.18074470666423925,
+              "max_drawdown": -0.44084607398277587,
+              "sharpe": -0.26478149984173416,
+              "costs": 8303.725377497598,
+              "turnover": 266.57144130867044
+            },
+            "KO-validation-0": {
+              "net_return": -0.019975820927757293,
+              "max_drawdown": -0.27243710761356943,
+              "sharpe": 0.006538811815168093,
+              "costs": 8092.006900972041,
+              "turnover": 265.56649506353114
+            },
+            "LIN-validation-0": {
+              "net_return": 0.0313018021041207,
+              "max_drawdown": -0.2842252836828717,
+              "sharpe": 0.1482899195277072,
+              "costs": 6566.988538981011,
+              "turnover": 213.47474526416863
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.2667524481296981,
+              "max_drawdown": -0.4098816411848444,
+              "sharpe": 0.48523027802003516,
+              "costs": 8687.979955477209,
+              "turnover": 281.33535993522884
+            },
+            "NEE-validation-0": {
+              "net_return": -0.18596175530801395,
+              "max_drawdown": -0.44335161829403436,
+              "sharpe": -0.26330821248260466,
+              "costs": 9019.44180625626,
+              "turnover": 282.85107076608324
+            },
+            "PG-validation-0": {
+              "net_return": -0.12320475871581915,
+              "max_drawdown": -0.2989659527559585,
+              "sharpe": -0.2772592514569726,
+              "costs": 7287.890081464168,
+              "turnover": 239.57079827494562
+            },
+            "PLD-validation-0": {
+              "net_return": 0.5995702965367873,
+              "max_drawdown": -0.2646374437191389,
+              "sharpe": 0.8496546863406973,
+              "costs": 11998.854529058517,
+              "turnover": 370.35866773325534
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.05757610147600101,
+              "max_drawdown": -0.41155725612210703,
+              "sharpe": 0.19699068466999234,
+              "costs": 7599.077429368985,
+              "turnover": 247.2276400893343
+            },
+            "SPY-validation-0": {
+              "net_return": 0.01252158061416453,
+              "max_drawdown": -0.2109374689544804,
+              "sharpe": 0.0972901852050156,
+              "costs": 7227.119896329304,
+              "turnover": 237.54515338954468
+            },
+            "UNH-validation-0": {
+              "net_return": -0.2224845617760831,
+              "max_drawdown": -0.41276224728771704,
+              "sharpe": -0.4128914305441438,
+              "costs": 7106.03349847795,
+              "turnover": 234.65463354661114
+            },
+            "XOM-validation-0": {
+              "net_return": 0.4287978793613527,
+              "max_drawdown": -0.24185086723178728,
+              "sharpe": 0.633641663239333,
+              "costs": 13200.32545915247,
+              "turnover": 421.51710227753347
+            }
+          },
+          "training": {
+            "train/ent_coef": 1.4720614672114607e-05,
+            "train/actor_loss": -6.65568208694458,
+            "train/critic_loss": 8.395839540753514e-05,
+            "train/ent_coef_loss": -14.32280158996582
+          }
+        },
+        {
+          "steps": 50000,
+          "phase": "post_update",
+          "score": 0.07928143280991959,
+          "return_pct": 7.928143280991959,
+          "change_pp": 6.239745486902691,
+          "equity_change_pct_from_previous": 6.13614298411671,
+          "gain_since_50k_pp": 0.0,
+          "best_return_pct": 7.928143280991959,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -22.673707463167872,
+          "mean_max_drawdown_pct": -25.914762084310233,
+          "mean_costs": 7859.000147083533,
+          "mean_turnover": 259.5294959178096,
+          "elapsed_seconds": 686.734716429,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.32331017659790473,
+              "max_drawdown": -0.24687317212776472,
+              "sharpe": 0.6243484731177601,
+              "costs": 7475.580262978788,
+              "turnover": 246.60544720414737
+            },
+            "AMT-validation-0": {
+              "net_return": 0.01059935380990451,
+              "max_drawdown": -0.32557788960563117,
+              "sharpe": 0.10860390169418636,
+              "costs": 7866.320930103919,
+              "turnover": 260.7224619148377
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.11623848075358101,
+              "max_drawdown": -0.28999428491806767,
+              "sharpe": 0.28140968727798626,
+              "costs": 8884.570775167122,
+              "turnover": 286.1172055767825
+            },
+            "APD-validation-0": {
+              "net_return": 0.03391902333241403,
+              "max_drawdown": -0.1655535360927356,
+              "sharpe": 0.15125764273597433,
+              "costs": 7134.224777757305,
+              "turnover": 235.97307230226394
+            },
+            "BAC-validation-0": {
+              "net_return": -0.08214343486201015,
+              "max_drawdown": -0.4198196350637079,
+              "sharpe": -0.055836663465482814,
+              "costs": 7743.784403130696,
+              "turnover": 256.0359417748192
+            },
+            "CAT-validation-0": {
+              "net_return": 0.24294992928405468,
+              "max_drawdown": -0.2169753084429098,
+              "sharpe": 0.486932600233113,
+              "costs": 8261.010109362032,
+              "turnover": 270.9494560753681
+            },
+            "CVX-validation-0": {
+              "net_return": 0.19446148646999828,
+              "max_drawdown": -0.2447582345536724,
+              "sharpe": 0.4200677639992343,
+              "costs": 9533.23263397287,
+              "turnover": 313.20832777222023
+            },
+            "DIA-validation-0": {
+              "net_return": 0.017607811732342604,
+              "max_drawdown": -0.1371894556055685,
+              "sharpe": 0.10996471876587957,
+              "costs": 7845.468587639107,
+              "turnover": 260.7709556595033
+            },
+            "DIS-validation-0": {
+              "net_return": -0.3526256554597095,
+              "max_drawdown": -0.43324663257503504,
+              "sharpe": -0.7846778692985964,
+              "costs": 6067.243447855442,
+              "turnover": 198.46434752043692
+            },
+            "DUK-validation-0": {
+              "net_return": -0.15164779886855906,
+              "max_drawdown": -0.3097681853267379,
+              "sharpe": -0.3572993065702347,
+              "costs": 7730.816533101583,
+              "turnover": 256.5007365930353
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.39116033101246694,
+              "max_drawdown": -0.24490154321561497,
+              "sharpe": 0.6400439816310463,
+              "costs": 9295.579309960023,
+              "turnover": 305.20391225776973
+            },
+            "HD-validation-0": {
+              "net_return": 0.20272088804217514,
+              "max_drawdown": -0.2872258101950176,
+              "sharpe": 0.45346619555731893,
+              "costs": 8077.405927077123,
+              "turnover": 268.0306053886458
+            },
+            "HON-validation-0": {
+              "net_return": -0.008642194057027819,
+              "max_drawdown": -0.21002317931403214,
+              "sharpe": 0.05079316015689382,
+              "costs": 7167.8516523134895,
+              "turnover": 237.91626545508788
+            },
+            "IWM-validation-0": {
+              "net_return": -0.25516777961884296,
+              "max_drawdown": -0.3504583364291807,
+              "sharpe": -0.6144543681206833,
+              "costs": 6414.029309581999,
+              "turnover": 212.31858288123794
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.25337350516031165,
+              "max_drawdown": -0.31138931325844854,
+              "sharpe": -0.8134604075089381,
+              "costs": 6529.53580628182,
+              "turnover": 216.72624653309703
+            },
+            "JPM-validation-0": {
+              "net_return": 0.0577730146904738,
+              "max_drawdown": -0.30526231077039256,
+              "sharpe": 0.1994893543254824,
+              "costs": 7666.717085998756,
+              "turnover": 254.88992411536
+            },
+            "KO-validation-0": {
+              "net_return": -0.15787418827363608,
+              "max_drawdown": -0.2856488136536184,
+              "sharpe": -0.464283179600645,
+              "costs": 7381.387451131746,
+              "turnover": 244.58809835307383
+            },
+            "LIN-validation-0": {
+              "net_return": 0.2745566166675668,
+              "max_drawdown": -0.15515516180630695,
+              "sharpe": 0.6199080350563345,
+              "costs": 7582.611377617658,
+              "turnover": 252.23570262764846
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.3731804256987743,
+              "max_drawdown": -0.35058571193624766,
+              "sharpe": 0.6697493797911629,
+              "costs": 8157.024508061696,
+              "turnover": 270.9358468916789
+            },
+            "NEE-validation-0": {
+              "net_return": -0.02938399526788804,
+              "max_drawdown": -0.3090477131280107,
+              "sharpe": 0.01680095648765903,
+              "costs": 8203.678804617031,
+              "turnover": 269.3288945953311
+            },
+            "PG-validation-0": {
+              "net_return": 0.04638707311155721,
+              "max_drawdown": -0.2049559549036264,
+              "sharpe": 0.18973912889681277,
+              "costs": 7212.062044693785,
+              "turnover": 239.82426016117438
+            },
+            "PLD-validation-0": {
+              "net_return": 0.45587167788569927,
+              "max_drawdown": -0.16755519533704066,
+              "sharpe": 0.7785835364548759,
+              "costs": 9209.078155544394,
+              "turnover": 303.3444304095455
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.2518361443961632,
+              "max_drawdown": -0.18514846126041706,
+              "sharpe": 0.5883019283990516,
+              "costs": 7840.0338455368665,
+              "turnover": 260.9757682528442
+            },
+            "SPY-validation-0": {
+              "net_return": 0.13634582299291487,
+              "max_drawdown": -0.17063779606151797,
+              "sharpe": 0.43258616172357667,
+              "costs": 8036.003899152416,
+              "turnover": 267.48113540204065
+            },
+            "UNH-validation-0": {
+              "net_return": -0.07667273829116861,
+              "max_drawdown": -0.2382653977094038,
+              "sharpe": -0.09398932081858875,
+              "costs": 6773.748249250267,
+              "turnover": 225.32470784124718
+            },
+            "XOM-validation-0": {
+              "net_return": 0.2999302864390716,
+              "max_drawdown": -0.17182110862995414,
+              "sharpe": 0.5449536918762451,
+              "costs": 10245.003936283932,
+              "turnover": 333.2945603038524
+            }
+          },
+          "training": {
+            "train/ent_coef": 1.5060207260830794e-05,
+            "train/actor_loss": -4.033446788787842,
+            "train/critic_loss": 0.00013334545656107366,
+            "train/ent_coef_loss": -0.012902140617370605
+          }
+        }
+      ],
+      "selected": {
+        "score": 0.07928143280991959,
+        "mean_max_drawdown": -0.25914762084310233,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.08684978425251506,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.23941568519232317,
+            "median_excess_return": -0.17399090519240107,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.267927458752908
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.03765549987564443,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.15700471654813442,
+            "median_excess_return": -0.18392878680263813,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.21085851233917105
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.17072386525466587,
+          "AMT": -0.009440039395826938,
+          "AMZN": 0.1935864832922316,
+          "APD": -0.04029314429962971,
+          "BAC": -0.17725794513013626,
+          "CAT": -0.2163395803381707,
+          "CVX": -0.6836253764425639,
+          "DIS": 0.12117574956993882,
+          "DUK": -0.31195384629200296,
+          "GOOGL": -0.14487275738187733,
+          "HD": -0.07586160856609925,
+          "HON": -0.012442879254374262,
+          "JNJ": -0.3281564773424406,
+          "JPM": -0.2770279960098534,
+          "KO": -0.3751232561700806,
+          "LIN": -0.38068893035432216,
+          "MSFT": -0.4052077776351446,
+          "NEE": 0.11692390960937882,
+          "PG": -0.14355142377766805,
+          "PLD": 0.1749141101035312,
+          "UNH": -0.7104068515525214,
+          "XOM": -1.410771571608812
+        },
+        "declining_stocks": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 1,
+          "records": [
+            {
+              "episode": "AMZN-validation-0",
+              "symbol": "AMZN",
+              "policy_return": 0.11623848075358101,
+              "buy_hold_return": -0.0773480025386506,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -3491.293944531353,
+              "short_net_pnl": 15115.14201988934,
+              "long_return_contribution": -0.03491293944531353,
+              "short_return_contribution": 0.15115142019889338,
+              "long_costs": 7197.896092887102,
+              "short_costs": 1686.6746822800244,
+              "long_active_sessions": 689,
+              "short_active_sessions": 102,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.7462298274040222e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": true
+            },
+            {
+              "episode": "DIS-validation-0",
+              "symbol": "DIS",
+              "policy_return": -0.3526256554597095,
+              "buy_hold_return": -0.4738014050296483,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -34835.46911154334,
+              "short_net_pnl": -427.09643442751076,
+              "long_return_contribution": -0.3483546911154334,
+              "short_return_contribution": -0.004270964344275108,
+              "long_costs": 5314.000963599767,
+              "short_costs": 753.2424842556778,
+              "long_active_sessions": 687,
+              "short_active_sessions": 98,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.709850039333105e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "NEE-validation-0",
+              "symbol": "NEE",
+              "policy_return": -0.02938399526788804,
+              "buy_hold_return": -0.14630790487726686,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -1375.3230880116607,
+              "short_net_pnl": -1563.0764387771678,
+              "long_return_contribution": -0.013753230880116608,
+              "short_return_contribution": -0.015630764387771678,
+              "long_costs": 7433.986256230372,
+              "short_costs": 769.6925483866565,
+              "long_active_sessions": 698,
+              "short_active_sessions": 53,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.3096723705530167e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            }
+          ]
+        }
+      },
+      "final": {
+        "score": 0.07928143280991959,
+        "mean_max_drawdown": -0.25914762084310233,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.08684978425251506,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.23941568519232317,
+            "median_excess_return": -0.17399090519240107,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.267927458752908
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.03765549987564443,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.15700471654813442,
+            "median_excess_return": -0.18392878680263813,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.21085851233917105
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.17072386525466587,
+          "AMT": -0.009440039395826938,
+          "AMZN": 0.1935864832922316,
+          "APD": -0.04029314429962971,
+          "BAC": -0.17725794513013626,
+          "CAT": -0.2163395803381707,
+          "CVX": -0.6836253764425639,
+          "DIS": 0.12117574956993882,
+          "DUK": -0.31195384629200296,
+          "GOOGL": -0.14487275738187733,
+          "HD": -0.07586160856609925,
+          "HON": -0.012442879254374262,
+          "JNJ": -0.3281564773424406,
+          "JPM": -0.2770279960098534,
+          "KO": -0.3751232561700806,
+          "LIN": -0.38068893035432216,
+          "MSFT": -0.4052077776351446,
+          "NEE": 0.11692390960937882,
+          "PG": -0.14355142377766805,
+          "PLD": 0.1749141101035312,
+          "UNH": -0.7104068515525214,
+          "XOM": -1.410771571608812
+        },
+        "declining_stocks": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 1,
+          "records": [
+            {
+              "episode": "AMZN-validation-0",
+              "symbol": "AMZN",
+              "policy_return": 0.11623848075358101,
+              "buy_hold_return": -0.0773480025386506,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -3491.293944531353,
+              "short_net_pnl": 15115.14201988934,
+              "long_return_contribution": -0.03491293944531353,
+              "short_return_contribution": 0.15115142019889338,
+              "long_costs": 7197.896092887102,
+              "short_costs": 1686.6746822800244,
+              "long_active_sessions": 689,
+              "short_active_sessions": 102,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.7462298274040222e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": true
+            },
+            {
+              "episode": "DIS-validation-0",
+              "symbol": "DIS",
+              "policy_return": -0.3526256554597095,
+              "buy_hold_return": -0.4738014050296483,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -34835.46911154334,
+              "short_net_pnl": -427.09643442751076,
+              "long_return_contribution": -0.3483546911154334,
+              "short_return_contribution": -0.004270964344275108,
+              "long_costs": 5314.000963599767,
+              "short_costs": 753.2424842556778,
+              "long_active_sessions": 687,
+              "short_active_sessions": 98,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.709850039333105e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "NEE-validation-0",
+              "symbol": "NEE",
+              "policy_return": -0.02938399526788804,
+              "buy_hold_return": -0.14630790487726686,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -1375.3230880116607,
+              "short_net_pnl": -1563.0764387771678,
+              "long_return_contribution": -0.013753230880116608,
+              "short_return_contribution": -0.015630764387771678,
+              "long_costs": 7433.986256230372,
+              "short_costs": 769.6925483866565,
+              "long_active_sessions": 698,
+              "short_active_sessions": 53,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.3096723705530167e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            }
+          ]
+        }
+      }
+    },
+    "execution_masked": {
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "run": "20261020T084512-sac-11-2107c42d",
+      "bundle_id": "b05dea1ae934e932ccce75eb3d3e4ef6973112220a89266992dc2ff6ca182aa3",
+      "seed": 11,
+      "observation": {
+        "version": 1,
+        "profile": "execution_masked",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "reports": {
+        "selected": {
+          "sha256": "543f26a341b40daba4c5df5dd70e61ab1b358a01a4753d8b720f1145dfed0fb5",
+          "file": "selected-validation.json"
+        },
+        "final": {
+          "sha256": "a3ccf14096d370527a991b6c593baf620d0eaf622ca926c66d9c519e93bca4ab",
+          "file": "validation.json"
+        }
+      },
+      "sampling": null,
+      "learning_curve": [
+        {
+          "steps": 10000,
+          "phase": "on_step",
+          "score": -0.0015685857460672064,
+          "return_pct": -0.15685857460672065,
+          "change_pp": null,
+          "equity_change_pct_from_previous": null,
+          "gain_since_50k_pp": null,
+          "best_return_pct": -0.15685857460672065,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -30.758709318766552,
+          "mean_max_drawdown_pct": -3.263057561085399,
+          "mean_costs": 776.1061177557517,
+          "mean_turnover": 20.127845249916955,
+          "elapsed_seconds": 164.19805590600004,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": -0.009556868744429514,
+              "max_drawdown": -0.026655709495483126,
+              "sharpe": -0.1488647526277741,
+              "costs": 874.8497809365535,
+              "turnover": 22.798571751086428
+            },
+            "AMT-validation-0": {
+              "net_return": -0.039042847290794325,
+              "max_drawdown": -0.05131280396606375,
+              "sharpe": -0.8352747392867166,
+              "costs": 789.919928054146,
+              "turnover": 21.731831528320313
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.010067893434674735,
+              "max_drawdown": -0.10730717826713632,
+              "sharpe": 0.08315515883374783,
+              "costs": 1592.432749135714,
+              "turnover": 39.755946670196366
+            },
+            "APD-validation-0": {
+              "net_return": -0.038568474667643016,
+              "max_drawdown": -0.0490292929252234,
+              "sharpe": -0.7307993818394838,
+              "costs": 745.7382877669052,
+              "turnover": 19.088424978003477
+            },
+            "BAC-validation-0": {
+              "net_return": 0.02053779955848989,
+              "max_drawdown": -0.031934912413772554,
+              "sharpe": 0.3050976884112472,
+              "costs": 954.7346169395366,
+              "turnover": 25.645399874109998
+            },
+            "CAT-validation-0": {
+              "net_return": -0.04038281327261006,
+              "max_drawdown": -0.06494664084950952,
+              "sharpe": -0.6060334092670581,
+              "costs": 1008.8229410092431,
+              "turnover": 26.638987594508066
+            },
+            "CVX-validation-0": {
+              "net_return": 0.015440537949598099,
+              "max_drawdown": -0.035567685018918604,
+              "sharpe": 0.28026866197832284,
+              "costs": 889.6939774686791,
+              "turnover": 23.010159542517332
+            },
+            "DIA-validation-0": {
+              "net_return": -0.009974929243922181,
+              "max_drawdown": -0.011936559073458697,
+              "sharpe": -0.8689562682032557,
+              "costs": 331.11670371675893,
+              "turnover": 8.174118768452425
+            },
+            "DIS-validation-0": {
+              "net_return": -0.02868721242623873,
+              "max_drawdown": -0.09353683799282753,
+              "sharpe": -0.29135888278682803,
+              "costs": 1097.4738031536056,
+              "turnover": 30.534667410009178
+            },
+            "DUK-validation-0": {
+              "net_return": -0.008033449027807893,
+              "max_drawdown": -0.020720760469812527,
+              "sharpe": -0.4140275799157412,
+              "costs": 429.26966559893407,
+              "turnover": 10.877151145126948
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.0118020341669689,
+              "max_drawdown": -0.036714888318264194,
+              "sharpe": 0.16349099707560288,
+              "costs": 1107.7096847572493,
+              "turnover": 29.248748449094105
+            },
+            "HD-validation-0": {
+              "net_return": 0.023908513290797906,
+              "max_drawdown": -0.023220485186167927,
+              "sharpe": 0.4349248371746082,
+              "costs": 836.4993157542692,
+              "turnover": 21.819424633259885
+            },
+            "HON-validation-0": {
+              "net_return": -0.010269928023260433,
+              "max_drawdown": -0.021016029901037236,
+              "sharpe": -0.35450291784731697,
+              "costs": 566.196938787059,
+              "turnover": 14.536889649428641
+            },
+            "IWM-validation-0": {
+              "net_return": 0.0035665416670307426,
+              "max_drawdown": -0.013872988122576757,
+              "sharpe": 0.11940234759857632,
+              "costs": 573.1219590313169,
+              "turnover": 15.175498270502908
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.0010323867341510695,
+              "max_drawdown": -0.005071456683128028,
+              "sharpe": -0.0731697332787572,
+              "costs": 421.744295087503,
+              "turnover": 10.264429211169942
+            },
+            "JPM-validation-0": {
+              "net_return": -0.002402626737263769,
+              "max_drawdown": -0.016522127265135356,
+              "sharpe": -0.046261192193072856,
+              "costs": 731.36461461354,
+              "turnover": 18.700401433073402
+            },
+            "KO-validation-0": {
+              "net_return": -0.012008393176047516,
+              "max_drawdown": -0.013361798596048469,
+              "sharpe": -0.885128931521115,
+              "costs": 446.3568625350977,
+              "turnover": 11.225435366539697
+            },
+            "LIN-validation-0": {
+              "net_return": -0.0015755581419745202,
+              "max_drawdown": -0.030381397616554007,
+              "sharpe": -0.034274835581373835,
+              "costs": 824.4852307013477,
+              "turnover": 21.36827104675293
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.01860891803635578,
+              "max_drawdown": -0.014455263782463978,
+              "sharpe": 0.40541304104718834,
+              "costs": 909.6492952416327,
+              "turnover": 23.79062178992166
+            },
+            "NEE-validation-0": {
+              "net_return": 0.023562494190625394,
+              "max_drawdown": -0.041468212783132175,
+              "sharpe": 0.3001902794717513,
+              "costs": 879.5943615961393,
+              "turnover": 22.32175526883083
+            },
+            "PG-validation-0": {
+              "net_return": -0.010936689504020491,
+              "max_drawdown": -0.013874068961140407,
+              "sharpe": -0.6263550279478548,
+              "costs": 436.79345891864733,
+              "turnover": 10.867256964078653
+            },
+            "PLD-validation-0": {
+              "net_return": 0.00905575149606852,
+              "max_drawdown": -0.05921519904180461,
+              "sharpe": 0.12210414637722439,
+              "costs": 1039.4254097803296,
+              "turnover": 26.40848569168091
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.003923780903649754,
+              "max_drawdown": -0.013696972816775177,
+              "sharpe": -0.12419966593525568,
+              "costs": 667.1540307947533,
+              "turnover": 17.20137093841553
+            },
+            "SPY-validation-0": {
+              "net_return": 0.00021185398241074793,
+              "max_drawdown": -0.005652614339860307,
+              "sharpe": 0.017850972816711625,
+              "costs": 387.80021259874104,
+              "turnover": 9.797104498291016
+            },
+            "UNH-validation-0": {
+              "net_return": -0.008501039183784198,
+              "max_drawdown": -0.023418481997707907,
+              "sharpe": -0.22758060234611147,
+              "costs": 673.9011440382443,
+              "turnover": 16.854205057827887
+            },
+            "XOM-validation-0": {
+              "net_return": 0.04735142990682939,
+              "max_drawdown": -0.023504599998201203,
+              "sharpe": 0.871239614069978,
+              "costs": 962.9097936335983,
+              "turnover": 25.488818966642306
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.06725697964429855,
+            "train/actor_loss": -27.222434997558594,
+            "train/critic_loss": 0.004566243849694729,
+            "train/ent_coef_loss": -18.113149642944336
+          }
+        },
+        {
+          "steps": 20000,
+          "phase": "on_step",
+          "score": 0.010900854719605958,
+          "return_pct": 1.0900854719605957,
+          "change_pp": 1.2469440465673165,
+          "equity_change_pct_from_previous": 1.2489030581024796,
+          "gain_since_50k_pp": null,
+          "best_return_pct": 1.0900854719605957,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -29.511765272199238,
+          "mean_max_drawdown_pct": -7.130054446037021,
+          "mean_costs": 2928.3094757746103,
+          "mean_turnover": 78.93755589034373,
+          "elapsed_seconds": 362.8597717079999,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.17394722773644933,
+              "max_drawdown": -0.059681383471333116,
+              "sharpe": 0.858557666814735,
+              "costs": 4221.168416858192,
+              "turnover": 121.38280153988966
+            },
+            "AMT-validation-0": {
+              "net_return": -0.03565935161996736,
+              "max_drawdown": -0.09377908644678701,
+              "sharpe": -0.2527173632013735,
+              "costs": 3078.8822676810587,
+              "turnover": 83.66961009278846
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.21391891054306678,
+              "max_drawdown": -0.1528195961910559,
+              "sharpe": 0.5779177818843132,
+              "costs": 7931.89195704859,
+              "turnover": 231.69077680970003
+            },
+            "APD-validation-0": {
+              "net_return": -0.09378171811270275,
+              "max_drawdown": -0.10704110333349415,
+              "sharpe": -0.8973189166691135,
+              "costs": 2394.207449056644,
+              "turnover": 60.21893660287162
+            },
+            "BAC-validation-0": {
+              "net_return": 0.07330407333162059,
+              "max_drawdown": -0.07911774680202066,
+              "sharpe": 0.3884701854574612,
+              "costs": 3731.4109650787104,
+              "turnover": 103.02386201103567
+            },
+            "CAT-validation-0": {
+              "net_return": -0.08086671748316299,
+              "max_drawdown": -0.1401166141350607,
+              "sharpe": -0.4839751091455,
+              "costs": 3686.896203707412,
+              "turnover": 101.13202330005106
+            },
+            "CVX-validation-0": {
+              "net_return": 0.0014318821785905822,
+              "max_drawdown": -0.06241797609015032,
+              "sharpe": 0.03448710100134189,
+              "costs": 2826.961450394317,
+              "turnover": 77.07649426986369
+            },
+            "DIA-validation-0": {
+              "net_return": -0.02703199223302577,
+              "max_drawdown": -0.031224321940451327,
+              "sharpe": -0.5851266383690789,
+              "costs": 1262.647423986057,
+              "turnover": 28.853946384887696
+            },
+            "DIS-validation-0": {
+              "net_return": 0.0041783791359908395,
+              "max_drawdown": -0.11022271322809407,
+              "sharpe": 0.05499804710011981,
+              "costs": 4730.641362621889,
+              "turnover": 127.80607213016229
+            },
+            "DUK-validation-0": {
+              "net_return": -0.023953930420618663,
+              "max_drawdown": -0.033638368131049035,
+              "sharpe": -0.3826352705332676,
+              "costs": 1620.242021731739,
+              "turnover": 38.63892910151545
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.17209166903418094,
+              "max_drawdown": -0.061163046851941405,
+              "sharpe": 0.7498937965038944,
+              "costs": 5245.801435335112,
+              "turnover": 150.5074336130304
+            },
+            "HD-validation-0": {
+              "net_return": 0.05777409426622815,
+              "max_drawdown": -0.07562978669008202,
+              "sharpe": 0.459637407560784,
+              "costs": 2655.2428836128483,
+              "turnover": 69.81127525069196
+            },
+            "HON-validation-0": {
+              "net_return": -0.04984056318912411,
+              "max_drawdown": -0.05564141028188874,
+              "sharpe": -0.7184261548232838,
+              "costs": 1856.7462636979526,
+              "turnover": 43.834930412658935
+            },
+            "IWM-validation-0": {
+              "net_return": -0.013405247877868232,
+              "max_drawdown": -0.03635435733989023,
+              "sharpe": -0.17118070723037435,
+              "costs": 2086.689265828558,
+              "turnover": 51.71297710886705
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.020337824368222512,
+              "max_drawdown": -0.03479261892007357,
+              "sharpe": -0.3654942468154383,
+              "costs": 1602.5692125204864,
+              "turnover": 34.64197451593716
+            },
+            "JPM-validation-0": {
+              "net_return": -0.09718772239361018,
+              "max_drawdown": -0.10374434421257883,
+              "sharpe": -0.8514335215613174,
+              "costs": 2408.878053823933,
+              "turnover": 63.23628834896186
+            },
+            "KO-validation-0": {
+              "net_return": 0.01532974435751866,
+              "max_drawdown": -0.021821409898054922,
+              "sharpe": 0.28610576520115877,
+              "costs": 1560.4840637873285,
+              "turnover": 36.33669171439756
+            },
+            "LIN-validation-0": {
+              "net_return": -0.06535397458650483,
+              "max_drawdown": -0.10924527225241276,
+              "sharpe": -0.6801173323866364,
+              "costs": 1849.7877424640867,
+              "turnover": 48.82598130966186
+            },
+            "MSFT-validation-0": {
+              "net_return": -0.02447492558177211,
+              "max_drawdown": -0.06325232562728023,
+              "sharpe": -0.11645876158220769,
+              "costs": 3470.3130114357914,
+              "turnover": 99.3548804542809
+            },
+            "NEE-validation-0": {
+              "net_return": 0.01153390011689126,
+              "max_drawdown": -0.09951565105368465,
+              "sharpe": 0.09906597192750262,
+              "costs": 3630.1420146406535,
+              "turnover": 98.99691734854382
+            },
+            "PG-validation-0": {
+              "net_return": -0.01353401099588225,
+              "max_drawdown": -0.03600149372086903,
+              "sharpe": -0.20046453134413253,
+              "costs": 1506.7393302242674,
+              "turnover": 34.705286752272166
+            },
+            "PLD-validation-0": {
+              "net_return": 0.02328291283517614,
+              "max_drawdown": -0.0839659253688525,
+              "sharpe": 0.164989998236975,
+              "costs": 3289.900331706555,
+              "turnover": 91.66628633991934
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.025147158917070644,
+              "max_drawdown": -0.03488110445663084,
+              "sharpe": 0.2923885986489632,
+              "costs": 2035.3058092206536,
+              "turnover": 53.615240219726566
+            },
+            "SPY-validation-0": {
+              "net_return": -0.04466264481399862,
+              "max_drawdown": -0.048852471074512294,
+              "sharpe": -0.8587627171421639,
+              "costs": 1274.5149930238717,
+              "turnover": 30.03543629817288
+            },
+            "UNH-validation-0": {
+              "net_return": -0.025244473736096507,
+              "max_drawdown": -0.045304210401135636,
+              "sharpe": -0.30599979709441405,
+              "costs": 1734.8568458692328,
+              "turnover": 44.573123834198114
+            },
+            "XOM-validation-0": {
+              "net_return": 0.1268173676695279,
+              "max_drawdown": -0.07358981805024134,
+              "sharpe": 0.5974162518970492,
+              "costs": 4443.125594783931,
+              "turnover": 127.02827738485088
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.00338157219812274,
+            "train/actor_loss": -18.083938598632812,
+            "train/critic_loss": 0.0007778404396958649,
+            "train/ent_coef_loss": -37.211814880371094
+          }
+        },
+        {
+          "steps": 30000,
+          "phase": "on_step",
+          "score": -0.052090288338256234,
+          "return_pct": -5.209028833825624,
+          "change_pp": -6.299114305786219,
+          "equity_change_pct_from_previous": -6.231189019553652,
+          "gain_since_50k_pp": null,
+          "best_return_pct": 1.0900854719605957,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -35.81087957798545,
+          "mean_max_drawdown_pct": -20.084023482390435,
+          "mean_costs": 5269.662102779123,
+          "mean_turnover": 152.61464996745755,
+          "elapsed_seconds": 570.90496813,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.06209161669969987,
+              "max_drawdown": -0.14602899367434286,
+              "sharpe": 0.24104950173271397,
+              "costs": 6511.711446179949,
+              "turnover": 189.11541869117738
+            },
+            "AMT-validation-0": {
+              "net_return": -0.1950493456752389,
+              "max_drawdown": -0.29223567851557297,
+              "sharpe": -0.7112588841983621,
+              "costs": 5333.482971281939,
+              "turnover": 150.4806842403294
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.03563658330802455,
+              "max_drawdown": -0.4440323287296476,
+              "sharpe": 0.16742076979052095,
+              "costs": 8557.015749614,
+              "turnover": 240.33308902536155
+            },
+            "APD-validation-0": {
+              "net_return": -0.15074265938061993,
+              "max_drawdown": -0.20607148543754772,
+              "sharpe": -0.6494857258431919,
+              "costs": 4741.341541875165,
+              "turnover": 133.36450343543268
+            },
+            "BAC-validation-0": {
+              "net_return": -0.30483956725629624,
+              "max_drawdown": -0.31978488538377536,
+              "sharpe": -1.050557495158286,
+              "costs": 5119.432954799099,
+              "turnover": 148.9936389687363
+            },
+            "CAT-validation-0": {
+              "net_return": 0.02824483080243434,
+              "max_drawdown": -0.1491539073163345,
+              "sharpe": 0.14088655823254312,
+              "costs": 6763.148800016046,
+              "turnover": 193.98590550367058
+            },
+            "CVX-validation-0": {
+              "net_return": 0.41341027868078206,
+              "max_drawdown": -0.1106542321488857,
+              "sharpe": 1.0971935812928701,
+              "costs": 7179.135897259107,
+              "turnover": 210.65238121906205
+            },
+            "DIA-validation-0": {
+              "net_return": -0.07176102769921111,
+              "max_drawdown": -0.16022254388243928,
+              "sharpe": -0.3874305145751315,
+              "costs": 3388.087024642604,
+              "turnover": 105.58929897032066
+            },
+            "DIS-validation-0": {
+              "net_return": -0.26941151207115244,
+              "max_drawdown": -0.35453720548725043,
+              "sharpe": -0.7598268198583085,
+              "costs": 6542.836377910801,
+              "turnover": 186.60463627803406
+            },
+            "DUK-validation-0": {
+              "net_return": -0.1356921020367311,
+              "max_drawdown": -0.2150084838127233,
+              "sharpe": -0.7002407717173463,
+              "costs": 3476.474007742321,
+              "turnover": 103.499433211997
+            },
+            "GOOGL-validation-0": {
+              "net_return": -0.039806966078793304,
+              "max_drawdown": -0.15078577549888816,
+              "sharpe": -0.04085513719054426,
+              "costs": 8034.397393847581,
+              "turnover": 235.82209944848674
+            },
+            "HD-validation-0": {
+              "net_return": -0.08169765274253316,
+              "max_drawdown": -0.22697407157049732,
+              "sharpe": -0.3087592956700311,
+              "costs": 5110.622581649659,
+              "turnover": 142.7942811910305
+            },
+            "HON-validation-0": {
+              "net_return": -0.08114825315582741,
+              "max_drawdown": -0.14583235952937923,
+              "sharpe": -0.39597959408814737,
+              "costs": 4022.071958907003,
+              "turnover": 116.3455078062377
+            },
+            "IWM-validation-0": {
+              "net_return": -0.11638528573021312,
+              "max_drawdown": -0.19669204246013716,
+              "sharpe": -0.5067143936591327,
+              "costs": 4876.959873532839,
+              "turnover": 138.677817038801
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.1214220023692647,
+              "max_drawdown": -0.18656376510528272,
+              "sharpe": -0.6331379785954024,
+              "costs": 2875.9512971748136,
+              "turnover": 91.49953581613451
+            },
+            "JPM-validation-0": {
+              "net_return": -0.16640979163245773,
+              "max_drawdown": -0.22702417180008805,
+              "sharpe": -0.669752774169551,
+              "costs": 4419.839882594382,
+              "turnover": 126.63860929829455
+            },
+            "KO-validation-0": {
+              "net_return": -0.03246060259395922,
+              "max_drawdown": -0.13461730789053294,
+              "sharpe": -0.15143062429414744,
+              "costs": 3589.8626551813354,
+              "turnover": 108.9646835634247
+            },
+            "LIN-validation-0": {
+              "net_return": 0.09536802654144516,
+              "max_drawdown": -0.0907071206105371,
+              "sharpe": 0.45962029525151826,
+              "costs": 4614.159973591451,
+              "turnover": 134.9837694920855
+            },
+            "MSFT-validation-0": {
+              "net_return": -0.1598662462561562,
+              "max_drawdown": -0.22836858352796363,
+              "sharpe": -0.562291450228777,
+              "costs": 6153.050125300719,
+              "turnover": 175.88491963551442
+            },
+            "NEE-validation-0": {
+              "net_return": -0.203585278878609,
+              "max_drawdown": -0.26996686028808137,
+              "sharpe": -0.6356591244844767,
+              "costs": 4955.147247083496,
+              "turnover": 140.4669758464785
+            },
+            "PG-validation-0": {
+              "net_return": -0.08967156726253322,
+              "max_drawdown": -0.1438807582900724,
+              "sharpe": -0.43948556586522625,
+              "costs": 3147.9935260574866,
+              "turnover": 94.08322430031494
+            },
+            "PLD-validation-0": {
+              "net_return": 0.12948291788059763,
+              "max_drawdown": -0.13191707651581275,
+              "sharpe": 0.44952156385610004,
+              "costs": 6390.553726879693,
+              "turnover": 177.2066009775807
+            },
+            "QQQ-validation-0": {
+              "net_return": -0.018860867494797984,
+              "max_drawdown": -0.1599530411876421,
+              "sharpe": -0.053674703186624734,
+              "costs": 5026.978327643634,
+              "turnover": 143.03447996787148
+            },
+            "SPY-validation-0": {
+              "net_return": 0.018892264967854455,
+              "max_drawdown": -0.14879370337402664,
+              "sharpe": 0.13241379180277288,
+              "costs": 3912.5070369284567,
+              "turnover": 118.27894352234397
+            },
+            "UNH-validation-0": {
+              "net_return": -0.08418317199999381,
+              "max_drawdown": -0.18988422891248302,
+              "sharpe": -0.36489443609668215,
+              "costs": 4203.460324340114,
+              "turnover": 119.25173878864881
+            },
+            "XOM-validation-0": {
+              "net_return": 0.18551988463888858,
+              "max_drawdown": -0.19215549447156932,
+              "sharpe": 0.43196811494213433,
+              "costs": 8064.991970223524,
+              "turnover": 241.4287229165268
+            }
+          },
+          "training": {
+            "train/ent_coef": 0.00018551695393398404,
+            "train/actor_loss": -10.97152328491211,
+            "train/critic_loss": 0.0005664561176672578,
+            "train/ent_coef_loss": -35.73695373535156
+          }
+        },
+        {
+          "steps": 40000,
+          "phase": "on_step",
+          "score": 0.10552375167278988,
+          "return_pct": 10.552375167278988,
+          "change_pp": 15.761404001104612,
+          "equity_change_pct_from_previous": 16.627537208658726,
+          "gain_since_50k_pp": null,
+          "best_return_pct": 10.552375167278988,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -20.049475576880845,
+          "mean_max_drawdown_pct": -24.845831659547063,
+          "mean_costs": 4976.093481918945,
+          "mean_turnover": 160.60183047329707,
+          "elapsed_seconds": 766.052952087,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.1390568886657293,
+              "max_drawdown": -0.21635360258961334,
+              "sharpe": 0.32925229134087364,
+              "costs": 4695.219898071111,
+              "turnover": 151.95941382581785
+            },
+            "AMT-validation-0": {
+              "net_return": -0.12586094912159085,
+              "max_drawdown": -0.3367264614217408,
+              "sharpe": -0.16552646647571176,
+              "costs": 4848.714831653003,
+              "turnover": 156.82468432847963
+            },
+            "AMZN-validation-0": {
+              "net_return": 0.16867138300029172,
+              "max_drawdown": -0.5613369412162368,
+              "sharpe": 0.33548740814407657,
+              "costs": 6700.15004462595,
+              "turnover": 194.9341738066928
+            },
+            "APD-validation-0": {
+              "net_return": -0.009292141143251609,
+              "max_drawdown": -0.2791673533193062,
+              "sharpe": 0.05346308455147219,
+              "costs": 4542.905811417207,
+              "turnover": 146.47471375261148
+            },
+            "BAC-validation-0": {
+              "net_return": 0.07448200412660988,
+              "max_drawdown": -0.33722231998388963,
+              "sharpe": 0.22387686397461262,
+              "costs": 5101.413284580519,
+              "turnover": 166.63929860758398
+            },
+            "CAT-validation-0": {
+              "net_return": 0.04309488261049532,
+              "max_drawdown": -0.23875171536183448,
+              "sharpe": 0.172030294822977,
+              "costs": 5485.2227520266515,
+              "turnover": 177.23993390477187
+            },
+            "CVX-validation-0": {
+              "net_return": 0.35453572224709284,
+              "max_drawdown": -0.2612266104504464,
+              "sharpe": 0.6206252878607449,
+              "costs": 6077.203915770266,
+              "turnover": 200.40950156409033
+            },
+            "DIA-validation-0": {
+              "net_return": 0.10737246016178115,
+              "max_drawdown": -0.11024134827689092,
+              "sharpe": 0.44601359990506223,
+              "costs": 4553.297525225324,
+              "turnover": 150.1263409236614
+            },
+            "DIS-validation-0": {
+              "net_return": -0.40423306666571346,
+              "max_drawdown": -0.4821622107767183,
+              "sharpe": -0.7627646877739331,
+              "costs": 5121.516824949921,
+              "turnover": 162.57277600648214
+            },
+            "DUK-validation-0": {
+              "net_return": 0.050637518427852246,
+              "max_drawdown": -0.1825369172011606,
+              "sharpe": 0.20328096499811346,
+              "costs": 4763.6403753935365,
+              "turnover": 156.74074963861244
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.5242851934305321,
+              "max_drawdown": -0.3197193388298788,
+              "sharpe": 0.7629885763207006,
+              "costs": 6258.129629194126,
+              "turnover": 200.26961900055622
+            },
+            "HD-validation-0": {
+              "net_return": 0.015206600822176952,
+              "max_drawdown": -0.20359751594296238,
+              "sharpe": 0.1179397039068893,
+              "costs": 4921.217289089127,
+              "turnover": 156.6598791279733
+            },
+            "HON-validation-0": {
+              "net_return": 0.05585688596938265,
+              "max_drawdown": -0.18073791019646435,
+              "sharpe": 0.20902045485779636,
+              "costs": 4694.6785343781785,
+              "turnover": 153.84647673905206
+            },
+            "IWM-validation-0": {
+              "net_return": -0.02067809180428304,
+              "max_drawdown": -0.21853464667898181,
+              "sharpe": 0.02949797564825426,
+              "costs": 4520.732654361155,
+              "turnover": 147.6850198604742
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.06179416974370511,
+              "max_drawdown": -0.1395837216586272,
+              "sharpe": -0.19230417145054876,
+              "costs": 4281.148075317719,
+              "turnover": 139.83076727170283
+            },
+            "JPM-validation-0": {
+              "net_return": 0.07656883595476005,
+              "max_drawdown": -0.2835923610846798,
+              "sharpe": 0.23945769572922945,
+              "costs": 4620.090496160827,
+              "turnover": 150.0867325543624
+            },
+            "KO-validation-0": {
+              "net_return": 0.005233495567092961,
+              "max_drawdown": -0.17102744478676213,
+              "sharpe": 0.06732581168768707,
+              "costs": 4370.05910177884,
+              "turnover": 142.48308115352904
+            },
+            "LIN-validation-0": {
+              "net_return": 0.30772302691836373,
+              "max_drawdown": -0.16456763155527565,
+              "sharpe": 0.6829392125289082,
+              "costs": 4856.782856978252,
+              "turnover": 158.6000272269237
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.22662166615143664,
+              "max_drawdown": -0.2942626021329494,
+              "sharpe": 0.4575601524435873,
+              "costs": 5247.666057393874,
+              "turnover": 167.80525482109792
+            },
+            "NEE-validation-0": {
+              "net_return": 0.02303442297003766,
+              "max_drawdown": -0.2414834917683515,
+              "sharpe": 0.133273773953012,
+              "costs": 4657.995360073975,
+              "turnover": 151.4307973405055
+            },
+            "PG-validation-0": {
+              "net_return": -0.1398834812767713,
+              "max_drawdown": -0.24923444849091192,
+              "sharpe": -0.4477980667129492,
+              "costs": 3973.5707077621823,
+              "turnover": 127.25924666529305
+            },
+            "PLD-validation-0": {
+              "net_return": 0.2095289461129235,
+              "max_drawdown": -0.2750948984789404,
+              "sharpe": 0.4487818271094399,
+              "costs": 5215.336611471406,
+              "turnover": 167.92236687883835
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.061727848679304254,
+              "max_drawdown": -0.2108368301779966,
+              "sharpe": 0.2099871993559342,
+              "costs": 4362.642077331173,
+              "turnover": 139.17010736137402
+            },
+            "SPY-validation-0": {
+              "net_return": 0.08021221470231699,
+              "max_drawdown": -0.20219831183394055,
+              "sharpe": 0.29666793511452055,
+              "costs": 4200.245309462583,
+              "turnover": 137.5522715772673
+            },
+            "UNH-validation-0": {
+              "net_return": 0.320443108708272,
+              "max_drawdown": -0.14190580082619775,
+              "sharpe": 0.7564519658590491,
+              "costs": 5068.147207084664,
+              "turnover": 164.81001011935334
+            },
+            "XOM-validation-0": {
+              "net_return": 0.6610663380214001,
+              "max_drawdown": -0.15781379644147886,
+              "sharpe": 0.8755627432385936,
+              "costs": 6240.7032983410145,
+              "turnover": 206.3143482486167
+            }
+          },
+          "training": {
+            "train/ent_coef": 1.7115846276283264e-05,
+            "train/actor_loss": -6.6310224533081055,
+            "train/critic_loss": 0.00011384131357772276,
+            "train/ent_coef_loss": -8.644718170166016
+          }
+        },
+        {
+          "steps": 50000,
+          "phase": "post_update",
+          "score": 0.17693261386353581,
+          "return_pct": 17.69326138635358,
+          "change_pp": 7.140886219074593,
+          "equity_change_pct_from_previous": 6.459278878693997,
+          "gain_since_50k_pp": 0.0,
+          "best_return_pct": 17.839591830687457,
+          "buy_hold_return_pct": 30.60185074415983,
+          "excess_return_pp": -12.90858935780625,
+          "mean_max_drawdown_pct": -30.17621388926924,
+          "mean_costs": 4476.2495309314445,
+          "mean_turnover": 145.78745071830934,
+          "elapsed_seconds": 988.3671397620001,
+          "symbols": {
+            "AAPL-validation-0": {
+              "net_return": 0.3622422882327143,
+              "max_drawdown": -0.35013107675762756,
+              "sharpe": 0.5535406497119985,
+              "costs": 4090.959711675812,
+              "turnover": 135.37673476628208
+            },
+            "AMT-validation-0": {
+              "net_return": 0.00226755271710255,
+              "max_drawdown": -0.408567087516178,
+              "sharpe": 0.11961540511724426,
+              "costs": 4453.726479814755,
+              "turnover": 144.37589912765932
+            },
+            "AMZN-validation-0": {
+              "net_return": -0.07209651626392533,
+              "max_drawdown": -0.5686166849600685,
+              "sharpe": 0.059902093756134436,
+              "costs": 5507.476320687541,
+              "turnover": 170.7625250274773
+            },
+            "APD-validation-0": {
+              "net_return": -0.0937042933042026,
+              "max_drawdown": -0.21883510479208113,
+              "sharpe": -0.07157199001871152,
+              "costs": 4003.7916667463423,
+              "turnover": 129.25753826127996
+            },
+            "BAC-validation-0": {
+              "net_return": 0.06578545141258463,
+              "max_drawdown": -0.41921401269400915,
+              "sharpe": 0.21102730103640618,
+              "costs": 4273.5928927648765,
+              "turnover": 140.16990687448973
+            },
+            "CAT-validation-0": {
+              "net_return": 0.27868091251040483,
+              "max_drawdown": -0.2638631998932016,
+              "sharpe": 0.46159650948239994,
+              "costs": 5502.547558463183,
+              "turnover": 175.3394406884368
+            },
+            "CVX-validation-0": {
+              "net_return": 0.5870327099314376,
+              "max_drawdown": -0.2624110144667364,
+              "sharpe": 0.7544742971184747,
+              "costs": 5817.045171650052,
+              "turnover": 189.9702193882898
+            },
+            "DIA-validation-0": {
+              "net_return": 0.07035102487231892,
+              "max_drawdown": -0.18606561859630377,
+              "sharpe": 0.27384144238337166,
+              "costs": 4391.041494572287,
+              "turnover": 145.50046851983726
+            },
+            "DIS-validation-0": {
+              "net_return": -0.2650262496973811,
+              "max_drawdown": -0.44228499298657853,
+              "sharpe": -0.30176222655808205,
+              "costs": 4884.432204477976,
+              "turnover": 155.60811839783003
+            },
+            "DUK-validation-0": {
+              "net_return": 0.04016879401908646,
+              "max_drawdown": -0.23904247613276974,
+              "sharpe": 0.16501214193315938,
+              "costs": 3975.0602467081576,
+              "turnover": 131.03758112212705
+            },
+            "GOOGL-validation-0": {
+              "net_return": 0.4568718459572434,
+              "max_drawdown": -0.4327404946886224,
+              "sharpe": 0.6068046541805062,
+              "costs": 5155.263941497031,
+              "turnover": 167.08239751775133
+            },
+            "HD-validation-0": {
+              "net_return": 0.0025724923980920966,
+              "max_drawdown": -0.33147319975876677,
+              "sharpe": 0.11328622448519592,
+              "costs": 4651.013448180553,
+              "turnover": 150.49150035181486
+            },
+            "HON-validation-0": {
+              "net_return": -0.04295798962474595,
+              "max_drawdown": -0.23615251659135472,
+              "sharpe": -0.007451995553994308,
+              "costs": 3876.564872151847,
+              "turnover": 127.07952900957393
+            },
+            "IWM-validation-0": {
+              "net_return": -0.16907022887520728,
+              "max_drawdown": -0.32936704553114526,
+              "sharpe": -0.23124584624082978,
+              "costs": 3367.5820406321373,
+              "turnover": 111.62829720861792
+            },
+            "JNJ-validation-0": {
+              "net_return": -0.0036684714119360473,
+              "max_drawdown": -0.16045195709498306,
+              "sharpe": 0.047101475273942796,
+              "costs": 4200.961239263664,
+              "turnover": 136.53229269112717
+            },
+            "JPM-validation-0": {
+              "net_return": 0.22381857406104833,
+              "max_drawdown": -0.3372804427351478,
+              "sharpe": 0.4423844535816541,
+              "costs": 4422.573658469408,
+              "turnover": 144.23646426270264
+            },
+            "KO-validation-0": {
+              "net_return": 0.11094158175587832,
+              "max_drawdown": -0.1530731764817077,
+              "sharpe": 0.35181426328043996,
+              "costs": 4209.999923063663,
+              "turnover": 137.7509554006328
+            },
+            "LIN-validation-0": {
+              "net_return": 0.4801267825538187,
+              "max_drawdown": -0.1899979553564426,
+              "sharpe": 0.7818927294634853,
+              "costs": 4207.111519723907,
+              "turnover": 137.82884590270712
+            },
+            "MSFT-validation-0": {
+              "net_return": 0.5818052572887944,
+              "max_drawdown": -0.3855989808533654,
+              "sharpe": 0.7576152468573727,
+              "costs": 4279.828169509387,
+              "turnover": 141.8307080325508
+            },
+            "NEE-validation-0": {
+              "net_return": 0.07735198722728809,
+              "max_drawdown": -0.2598157538193543,
+              "sharpe": 0.2265119959721004,
+              "costs": 4006.7768754349772,
+              "turnover": 129.53568661298573
+            },
+            "PG-validation-0": {
+              "net_return": -0.03287454553217495,
+              "max_drawdown": -0.2767957561427318,
+              "sharpe": -0.019602487301587364,
+              "costs": 3914.744773809454,
+              "turnover": 127.80519649030896
+            },
+            "PLD-validation-0": {
+              "net_return": 0.258416309828998,
+              "max_drawdown": -0.38686248056661865,
+              "sharpe": 0.45133337129877354,
+              "costs": 5266.098511939615,
+              "turnover": 170.41370606922516
+            },
+            "QQQ-validation-0": {
+              "net_return": 0.014384565858279519,
+              "max_drawdown": -0.3413306487496697,
+              "sharpe": 0.12393255957771301,
+              "costs": 3456.829576073726,
+              "turnover": 113.87705072557166
+            },
+            "SPY-validation-0": {
+              "net_return": 0.12383767638664,
+              "max_drawdown": -0.2148326143556818,
+              "sharpe": 0.3591171333870754,
+              "costs": 3900.3714251603615,
+              "turnover": 129.49383882233641
+            },
+            "UNH-validation-0": {
+              "net_return": 0.35886728900480325,
+              "max_drawdown": -0.24634409108445032,
+              "sharpe": 0.6548401721355405,
+              "costs": 4387.559768953316,
+              "turnover": 144.3106613812256
+            },
+            "XOM-validation-0": {
+              "net_return": 1.184123159144971,
+              "max_drawdown": -0.20466722860440545,
+              "sharpe": 1.1064303959149056,
+              "costs": 6179.534312793519,
+              "turnover": 203.17815602320186
+            }
+          },
+          "training": {
+            "train/ent_coef": 1.203602641908219e-05,
+            "train/actor_loss": -4.015979766845703,
+            "train/critic_loss": 0.0001322890748269856,
+            "train/ent_coef_loss": -12.234942436218262
+          }
+        }
+      ],
+      "selected": {
+        "score": 0.17839591830687457,
+        "mean_max_drawdown": -0.3012379148931204,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.2080746509252684,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.11819081851956985,
+            "median_excess_return": -0.11802939624571301,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.3075032627599154
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.015162888905708605,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.17949732751807024,
+            "median_excess_return": -0.17243811681991172,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.2667785016257478
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.13290468457796467,
+          "AMT": -0.0189107962093209,
+          "AMZN": 0.006967098155886475,
+          "APD": -0.15194459014924788,
+          "BAC": -0.03374680372320915,
+          "CAT": -0.18876209347135497,
+          "CVX": -0.28167847466550033,
+          "DIS": 0.20930457405599712,
+          "DUK": -0.12088516542960992,
+          "GOOGL": -0.08073184812051526,
+          "HD": -0.2780330090040759,
+          "HON": -0.05207888378285819,
+          "JNJ": -0.11517362706181611,
+          "JPM": -0.11460476964678512,
+          "KO": -0.10778088267150077,
+          "LIN": -0.17967153004303626,
+          "MSFT": -0.12822851098528965,
+          "NEE": 0.22408170446362763,
+          "PG": -0.22486394257079112,
+          "PLD": -0.020758222810285387,
+          "UNH": -0.2753132097001596,
+          "XOM": -0.5344803394827267
+        },
+        "declining_stocks": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 1,
+          "records": [
+            {
+              "episode": "AMZN-validation-0",
+              "symbol": "AMZN",
+              "policy_return": -0.07038090438276412,
+              "buy_hold_return": -0.0773480025386506,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": 1657.6760349129909,
+              "short_net_pnl": -8695.766473189262,
+              "long_return_contribution": 0.01657676034912991,
+              "short_return_contribution": -0.08695766473189262,
+              "long_costs": 3767.7704698054276,
+              "short_costs": 1757.5483701758528,
+              "long_active_sessions": 685,
+              "short_active_sessions": 133,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.6007106751203537e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "DIS-validation-0",
+              "symbol": "DIS",
+              "policy_return": -0.2644968309736512,
+              "buy_hold_return": -0.4738014050296483,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -37495.88608569751,
+              "short_net_pnl": 11046.202988332207,
+              "long_return_contribution": -0.3749588608569751,
+              "short_return_contribution": 0.11046202988332207,
+              "long_costs": 3638.6227564672577,
+              "short_costs": 1257.4414396108546,
+              "long_active_sessions": 715,
+              "short_active_sessions": 59,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 2.255546860396862e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "NEE-validation-0",
+              "symbol": "NEE",
+              "policy_return": 0.07777379958636077,
+              "buy_hold_return": -0.14630790487726686,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": 1188.574196907226,
+              "short_net_pnl": 6588.805761728792,
+              "long_return_contribution": 0.01188574196907226,
+              "short_return_contribution": 0.06588805761728793,
+              "long_costs": 3517.3090250011423,
+              "short_costs": 507.67326888033034,
+              "long_active_sessions": 715,
+              "short_active_sessions": 37,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 9.822542779147625e-11,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": true
+            }
+          ]
+        }
+      },
+      "final": {
+        "score": 0.17693261386353581,
+        "mean_max_drawdown": -0.3017621388926924,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.20730658737317728,
+            "buy_hold_return": 0.32626546944483825,
+            "excess_return": -0.11895888207166096,
+            "median_excess_return": -0.11555984502181815,
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "max_drawdown": -0.30791907654441825
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.00987575956050779,
+            "buy_hold_return": 0.19466021642377884,
+            "excess_return": -0.18478445686327105,
+            "median_excess_return": -0.17093541908833776,
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "max_drawdown": -0.26789898180820015
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.1317917536198563,
+          "AMT": -0.0177718404886289,
+          "AMZN": 0.00525148627472527,
+          "APD": -0.16791646093624635,
+          "BAC": -0.02932905885554149,
+          "CAT": -0.18060859711182053,
+          "CVX": -0.2910541529811246,
+          "DIS": 0.2087751553322672,
+          "DUK": -0.12013725340435744,
+          "GOOGL": -0.07916124243710088,
+          "HD": -0.2760100042101823,
+          "HON": -0.046758674822092394,
+          "JNJ": -0.07845144359406497,
+          "JPM": -0.11098243663927887,
+          "KO": -0.10630748614056618,
+          "LIN": -0.1751187644680703,
+          "MSFT": -0.1965829460451245,
+          "NEE": 0.22365989210455495,
+          "PG": -0.2228130424214002,
+          "PLD": -0.02254125795317008,
+          "UNH": -0.2748668242565495,
+          "XOM": -0.5265786989029126
+        },
+        "declining_stocks": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 1,
+          "records": [
+            {
+              "episode": "AMZN-validation-0",
+              "symbol": "AMZN",
+              "policy_return": -0.07209651626392533,
+              "buy_hold_return": -0.0773480025386506,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": 1480.3068867862894,
+              "short_net_pnl": -8689.958513178797,
+              "long_return_contribution": 0.014803068867862893,
+              "short_return_contribution": -0.08689958513178797,
+              "long_costs": 3752.6280744620326,
+              "short_costs": 1754.848246225507,
+              "long_active_sessions": 688,
+              "short_active_sessions": 129,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 8.36735125631094e-11,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "DIS-validation-0",
+              "symbol": "DIS",
+              "policy_return": -0.2650262496973811,
+              "buy_hold_return": -0.4738014050296483,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": -37527.453345789865,
+              "short_net_pnl": 11024.828376051935,
+              "long_return_contribution": -0.37527453345789863,
+              "short_return_contribution": 0.11024828376051936,
+              "long_costs": 3632.2433692479362,
+              "short_costs": 1252.1888352300398,
+              "long_active_sessions": 715,
+              "short_active_sessions": 59,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.8189894035458565e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": false
+            },
+            {
+              "episode": "NEE-validation-0",
+              "symbol": "NEE",
+              "policy_return": 0.07735198722728809,
+              "buy_hold_return": -0.14630790487726686,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "long_net_pnl": 1364.5220050907956,
+              "short_net_pnl": 6370.676717638082,
+              "long_return_contribution": 0.013645220050907956,
+              "short_return_contribution": 0.06370676717638082,
+              "long_costs": 3509.5046146490017,
+              "short_costs": 497.27226078597363,
+              "long_active_sessions": 716,
+              "short_active_sessions": 35,
+              "sessions": 732,
+              "max_equity_reconciliation_error": 1.0186340659856796e-10,
+              "includes_open_position_mark": true,
+              "positive_policy_and_short_pnl": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "screen": {
+    "passed": false,
+    "promoted_candidate": null,
+    "controls": {
+      "legacy": {
+        "gain_pp": {
+          "selected": 0.48421088613644775,
+          "final": 0.5342611252596691
+        },
+        "final_group_gain_pp": {
+          "stock": -0.07571579266514028,
+          "etf": 3.8891341738461205
+        },
+        "final_drawdown_worsening_pp": -7.168479078064499,
+        "passed": false
+      },
+      "execution_masked": {
+        "gain_pp": {
+          "selected": -9.911448549695498,
+          "final": -9.765118105361623
+        },
+        "final_group_gain_pp": {
+          "stock": -12.045680312066223,
+          "etf": 2.7779740315136636
+        },
+        "final_drawdown_worsening_pp": -4.261451804959004,
+        "passed": false
+      }
+    },
+    "targets": {
+      "selected": {
+        "group_excess_pp": {
+          "stock": -23.941568519232316,
+          "etf": -15.700471654813441
+        },
+        "median_stock_excess_pp": -17.399090519240108,
+        "passed": false
+      },
+      "final": {
+        "group_excess_pp": {
+          "stock": -23.941568519232316,
+          "etf": -15.700471654813441
+        },
+        "median_stock_excess_pp": -17.399090519240108,
+        "passed": false
+      }
+    },
+    "objective_achieved": false,
+    "prospective_confirmation_required": true
+  },
+  "matched_contract": {
+    "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+    "source_hash": "c25b24c2b5035ad46590d98b8ef826793a3e964e34dfdd91adb35962914dedb2",
+    "git": {
+      "revision": "bb0f3e25bcf60765df158401434959458508da7c",
+      "dirty": ""
+    },
+    "simulation": {
+      "initial_equity": 100000.0,
+      "fee_bps": 1.0,
+      "impact_bps": 2.0,
+      "borrow_rate": 0.03,
+      "max_holding": 20,
+      "allow_short": true,
+      "exposure_cap": 1.0
+    },
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.8.0",
+      "gymnasium": "1.2.0",
+      "stable-baselines3": "2.7.0",
+      "sb3-contrib": "2.7.0",
+      "pandas": "2.3.2",
+      "plotly": "6.3.0"
+    },
+    "resolved_parameters": {
+      "buffer_size": 100000,
+      "batch_size": 256,
+      "learning_starts": 1000,
+      "train_freq": 1,
+      "gradient_steps": 1,
+      "tau": 0.005,
+      "ent_coef": "auto",
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "policy_kwargs": {
+        "net_arch": [
+          64,
+          64
+        ]
+      }
+    },
+    "reward_config": {
+      "kind": "net_log_equity",
+      "scale": 1.0
+    },
+    "evaluation_every": 10000,
+    "initialization": {
+      "arm": "standard",
+      "applied": false
+    },
+    "policy_architecture": {
+      "version": 1,
+      "variant": "native"
+    }
+  },
+  "validation_baseline_sha256": "b97d9e7ee545eeca5c22b408f27914bdcb8a293c9ed7a63dd7d8f51b248daa1a",
+  "objective_achieved": false,
+  "test_evaluated": false,
+  "confirmation_allocated": false,
+  "training_performed_by_report": false
+}

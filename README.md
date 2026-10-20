@@ -67,7 +67,7 @@ selected combined-feature SAC; its three-seed mean return was 19.79%, versus
 The separately frozen 2024–September 2026 audit returned **10.83%** on average
 across seeds versus **48.46%** for buy-and-hold. The preselected seed returned
 13.90%. These are total returns from separate symbol episodes, not a portfolio
-or annualized results. The models have not demonstrated a benchmark advantage.
+or annualized results. The models have not demonstrated a benchmark advantage. Subsequent controlled studies and negative results are recorded in the [research log](docs/research-loop.md), including [historical ETF augmentation](results/historical-augmentation-2026-10-20/README.md) and [SAC execution-state comparison](results/sac-execution-state-2026-10-20/README.md).
 The first 29 runs used CUDA and the last seven CPU; hardware differences limit
 a strict feature-only interpretation. The universe is a retrospective surviving-stock sample.
 
