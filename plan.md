@@ -1037,3 +1037,9 @@ reproduce previous full-state control. Six numeric tests pass; no allocation.
 [Diagnosis](results/sac-learning-diagnostic-2026-10-20/README.md),
 [protocol](configs/experiments/sac_temperature.json),
 [guide](docs/sac-temperature.md).
+
+Initial-temperature version17 integration implemented: fixed override/identity
+checks, actual initial alpha/target-entropy and network fingerprints captured
+before learning.49 focused regressions pass; two1024 CPU smoke payloads validate.
+Freeze committed source before metered allocation; no assumption that fixture
+fingerprints prove real cross-arm parity.

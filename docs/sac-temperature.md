@@ -63,3 +63,11 @@ falling-stock report. No model is promoted by this diagnostic.
 Current stage: six numeric tests and actual replay inspection pass; protocol
 fixed, runtime/job/archive integration pending. No new allocation or training.
 Project remains36.009692/150; keep the full research goal active.
+
+Version17 integration now locks the initial-temperature override, dataset and
+protocol in task/worker/archive checks. Runner records actual initial alpha,
+target entropy and actor/critic/target fingerprints before learning. Valid-case
+fixtures and semantic-tampering rejection pass;49 focused temperature/SAC/fleet/
+budget/artifact checks pass without fitting. Two immutable smoke payloads
+validate. Actual cross-arm initial-weight equality and Colab parity remain
+required before screening; fixture fingerprints are not experimental evidence.

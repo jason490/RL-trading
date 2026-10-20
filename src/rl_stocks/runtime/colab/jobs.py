@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==16:
+    if plan.get('version')==17:
+        try:expected=temperature_plan(**plan['temperature_study'])
+        except (KeyError,TypeError):raise ValueError('malformed temperature plan') from None
+        if plan!=expected:raise ValueError('unsupported temperature plan')
+    elif plan.get('version')==16:
         try:expected=sac_state_plan(**plan['sac_state_study'])
         except (KeyError,TypeError):raise ValueError('malformed SAC state plan') from None
         if plan!=expected:raise ValueError('unsupported SAC state plan')
@@ -296,3 +300,14 @@ def sac_state_plan(arm,seed=11,smoke=False):
             evaluation_every=p['smoke_evaluation_every'] if smoke else p['evaluation_every'],compact_checkpoints=True,
             milestones=[steps],reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',
             observation_profile=arm,policy_variant='native',reward_kind='net_log_equity',study_protocol_sha256=PROTOCOL_SHA256)])
+
+
+def temperature_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.sac_temperature import protocol,PROTOCOL_SHA256
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported temperature arm, seed or smoke mode')
+    plan=sac_state_plan('execution_full',seed,smoke);plan.pop('sac_state_study')
+    plan.update(version=17,temperature_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
+    plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides={'ent_coef':p['entropy_coefficient'][arm]})
+    return plan

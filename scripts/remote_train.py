@@ -27,6 +27,9 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==17:
+        from rl_stocks.training.sac_temperature import validate_payload
+        validate_payload(payload)
     if plan.get('version')==16:
         from rl_stocks.training.sac_state import validate_payload
         validate_payload(payload)
@@ -45,7 +48,8 @@ def main():
         overrides = {'n_steps': 1000, 'batch_size': 50} if job['algorithm'] in ('ppo','recurrent_ppo') and not job['smoke'] else None
         print('Starting job:', job, flush=True)
         seed = job.get('seed', plan.get('seed'))
-        parameters = {k:v for k,v in job.items() if k!='seed'}
+        parameters = {k:v for k,v in job.items() if k not in ('seed','overrides')}
+        if 'overrides' in job:overrides=job['overrides']
         if plan.get('version')==14:
             from rl_stocks.training.supervised.forest_runner import run as fit_forest
             os.environ['RL_COLAB_OWNED_WORKER']='1'

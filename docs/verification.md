@@ -967,3 +967,11 @@ performance claim. [Evidence](../results/sac-learning-diagnostic-2026-10-20/READ
 
 Combined replay-target, saved-path and participation regression:16 tests pass,
 with no fitting or additional runtime allocation.
+
+Version17 integration now locks the initial-temperature override, dataset and
+protocol in task/worker/archive checks. Runner records actual initial alpha,
+target entropy and actor/critic/target fingerprints before learning. Valid-case
+fixtures and semantic-tampering rejection pass;49 focused temperature/SAC/fleet/
+budget/artifact checks pass without fitting. Two immutable smoke payloads
+validate. Actual cross-arm initial-weight equality and Colab parity remain
+required before screening; fixture fingerprints are not experimental evidence.
