@@ -3,7 +3,7 @@ import math
 
 
 def screen_gate(cells,protocol):
-    if set(cells)!=set(protocol['arms']):raise ValueError('all three matched arms required')
+    if set(cells)!=set(protocol['arms']):raise ValueError('all declared matched arms required')
     gate=protocol['screen_gate'];candidate=cells[protocol['candidate']]
     for cell in cells.values():
         for phase in ('selected','final'):

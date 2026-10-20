@@ -71,3 +71,22 @@ fixtures and semantic-tampering rejection pass;49 focused temperature/SAC/fleet/
 budget/artifact checks pass without fitting. Two immutable smoke payloads
 validate. Actual cross-arm initial-weight equality and Colab parity remain
 required before screening; fixture fingerprints are not experimental evidence.
+
+The two smokes are now executing from frozen source0f04e6b, under the original
+ledger/lock and2-unit study allowance. Actual initial-network equality, frozen
+parity and owned teardown remain pending. The screen reporter is implemented:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+  .venv/bin/python scripts/report_temperature.py \
+  --state .runtime/temperature-screen-state.json \
+  --output artifacts/temperature/screen-report.json
+```
+
+It validates cross-arm initial fingerprints and normalized matched settings,
+then checks fresh default configuration, all checkpoint scores and selected/
+final model tensors against the prior full-state control. Any discrepancy
+disables promotion and is reported; it never triggers automatic retries.
+Fixed two-arm gates and interactive10k charts reuse the verified common
+reporting code. Ten focused gate/archive/initialization tests pass without
+fitting. Actual screen/reproduction acceptance is still pending.

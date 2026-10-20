@@ -975,3 +975,8 @@ fixtures and semantic-tampering rejection pass;49 focused temperature/SAC/fleet/
 budget/artifact checks pass without fitting. Two immutable smoke payloads
 validate. Actual cross-arm initial-weight equality and Colab parity remain
 required before screening; fixture fingerprints are not experimental evidence.
+
+Initial-temperature reporter implemented before screen results: exact default
+configuration/score/tensor reproduction and cross-arm initial fingerprint checks
+precede interpretation. Ten focused tests pass. Two Colab smokes are running;
+no runtime/parity acceptance or performance verdict claimed yet.
