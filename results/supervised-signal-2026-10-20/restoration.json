@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "bundle_id": "dceb61471ac067f26af72b9e7b6f3eea4ce59580f475c2f652b65c2c5c142ad1",
+  "normalization_matches_immutable_fit_data": true,
+  "probe_target_session_symbol_arrays_exact": true,
+  "normalization_unchanged": true,
+  "schema_source_nonfinite_rejection": true,
+  "records": [
+    {
+      "arm": "masked",
+      "seed": 11,
+      "predictions": 18616,
+      "deterministic_repeat_exact": true,
+      "max_remote_prediction_error": 2.9802322387695312e-08
+    },
+    {
+      "arm": "masked",
+      "seed": 23,
+      "predictions": 18616,
+      "deterministic_repeat_exact": true,
+      "max_remote_prediction_error": 2.9802322387695312e-08
+    },
+    {
+      "arm": "masked",
+      "seed": 37,
+      "predictions": 18616,
+      "deterministic_repeat_exact": true,
+      "max_remote_prediction_error": 2.9802322387695312e-08
+    },
+    {
+      "arm": "full",
+      "seed": 11,
+      "predictions": 18616,
+      "deterministic_repeat_exact": true,
+      "max_remote_prediction_error": 2.9802322387695312e-08
+    },
+    {
+      "arm": "full",
+      "seed": 23,
+      "predictions": 18616,
+      "deterministic_repeat_exact": true,
+      "max_remote_prediction_error": 2.9802322387695312e-08
+    },
+    {
+      "arm": "full",
+      "seed": 37,
+      "predictions": 18616,
+      "deterministic_repeat_exact": true,
+      "max_remote_prediction_error": 5.960464477539063e-08
+    }
+  ],
+  "training_performed": false,
+  "project_validation_used": false,
+  "test_evaluated": false
+}

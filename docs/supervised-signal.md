@@ -129,3 +129,13 @@ Thirty-six focused model, target, fleet and artifact tests pass without local
 model fitting. They include predictor restoration, nonfinite/schema/checksum
 rejection, fixed-plan checks and tampered-metric detection. The real Colab fits
 remain pending; these tests do not establish forecast accuracy.
+
+## Completed feasibility: rejected
+
+Masked/full MLP mean probe MSE is 5.52%/12.56% worse than the constant baseline;
+both fail their combined gate with zero passing seeds. Positive daily rank
+correlations around 0.04 are not trading returns. Ridge improves MSE about 2.7%
+but has rank correlation below 0.02. No PPO warm start or longer MLP run follows.
+One Colab CPU session stopped; all 111,696 forecasts restore with maximum
+cloud/CPU error 5.96e-8 and exact local repeats. Project 35.861240/150 units.
+[Full evidence](../results/supervised-signal-2026-10-20/README.md).

@@ -870,7 +870,7 @@ No training, data access, test use or Colab allocation. Next investigate strictl
 training-only supervised signal/warm-start feasibility before a new bounded
 protocol. [Evidence](results/participation-diagnostic-2026-10-20/README.md).
 
-## 33. Training-only supervised signal feasibility — labels implemented; fitting pending
+## 33. Training-only supervised signal feasibility — completed; rejected
 
 Prepare gross20-session next-open-to-close unit total-return labels, with later
 splits/dividends and conservative completion availability. Fit labels end2017,
@@ -890,3 +890,9 @@ forecast-only bundle. Archive acceptance recomputes metrics/gates from predictio
 local restoration compares every probe forecast with immutable inputs. Two
 discarded prefix updates plus12000 final-fit updates are explicitly counted.
 Thirty-six focused tests pass without local fitting. Actual Colab is next.
+
+One CPU allocation completed all six MLP fits, two ridge and constant controls.
+Masked/full MLP MSE is 5.52%/12.56% worse than constant; zero passing seeds and
+failed yearly gates. No PPO warm start. All111,696 forecasts verified against
+immutable probe data, normalization/schema checks pass, session stopped.
+Project35.861240/150; [evidence](results/supervised-signal-2026-10-20/README.md).

@@ -1,45 +1,29 @@
-# Supervised signal feasibility — data prepared; fitting pending
+# Supervised signal feasibility — completed; neither MLP passed
 
-[The protocol](../../configs/experiments/supervised_signal.json) fixes a completed
-20-session gross unit total-return target, masked/full ten-field MLPs with three
-seeds, constant and ridge controls, and final-only predictive gates before any
-model fitting. No model has been trained and no PPO weights have changed.
+This is predictive error on the internal 2018–2020 training probe, **not trading return**. Fit labels end in 2017. No project-validation or retired-test labels were used. No PPO policy changed.
 
-| Fold | Examples | Symbols | Decision range | Last label available |
-| --- | ---: | ---: | --- | --- |
-| Fit | 45,266 | 26 | 2011-01-03 through 2017-11-30 | 2017-12-29 |
-| Internal probe | 18,616 | 26 | 2018-01-02 through 2020-11-03 | 2020-12-02 |
+| Predictor | Probe MSE | Mean daily rank correlation |
+| --- | ---: | ---: |
+| Constant | 0.00594294 | Undefined (constant forecasts) |
+| Ridge masked | 0.00578529 | 0.0089 |
+| MLP masked, three-seed mean | 0.00627077 | 0.0422 |
+| Ridge full | 0.00578210 | 0.0107 |
+| MLP full, three-seed mean | 0.00668966 | 0.0393 |
 
-The 252-session source warmup explains the 2011 first decision. Source training
-purging plus the target horizon explain the early November 2020 last decision.
-Every boundary-crossing target is discarded. Fit preprocessing ignores the
-source's pooled normalizer and all probe outcomes/features. Changing project
-validation content cannot alter the prepared training examples.
+Masked MLP mean MSE is 5.52% worse than the constant and 8.39% worse than its ridge control; full is 12.56% and 15.70% worse. Neither has a passing seed. Both worsen versus the baselines in 2020. Full-context MSE is worse than masked in all three paired seeds. Positive rank correlation alone cannot pass the fixed combined gate. No PPO warm-start allocation follows.
 
-[Preflight](preflight.json) binds the checksummed derived payload, fold hashes,
-counts and preprocessing. The immutable payload stays under ignored
-`data/signals/84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235/`.
-It contains no raw OHLC or project-validation episodes; no raw data are published.
+Ridge reduces MSE about 2.7% versus the constant, but its mean daily rank correlation is only 0.009–0.011, below the declared 0.02 signal threshold. This descriptive control result does not rescue the failed MLP gate or establish profitable trading.
 
-Targets enter at the next open after entry-day corporate actions, include later
-splits and cash dividends, and become available at the twentieth close. They
-exclude fees, impact, borrow, protection and whole-share rounding. Predictive
-accuracy therefore does not establish tradable returns, positive short profits,
-or satisfaction of the stock/ETF benchmark goal. The internal probe has been
-used in earlier RL training and is not fresh market evidence.
+## Actual execution and verification
 
-Eleven focused target/context/accounting tests pass, including fold completion,
-future perturbation isolation, delayed availability, entry-day versus later
-corporate actions, episode separation, unused project-validation data and
-fit-only preprocessing. Immutable readback and protocol/data identity checks pass.
-No Colab allocation or additional project units; usage remains 35.856639/150.
+One Google Colab CPU allocation completed the two discarded prefix updates and 12,000 fixed full-fit updates, plus constant/ridge fits. Actual Python 3.13.16; no GPU or local fitting. Source f6c20e427441d96a5c120901210cb241196bc591, clean captured revision. Each candidate uses identical initial tensors per paired seed, fixed fit-only preprocessing, and final weights only. Fit loss is logged every 200 updates without probe checkpoint selection.
 
-The bounded CPU worker, portable predictor restoration, strict job/artifact
-validation and metric recomputation are implemented. Thirty-six focused tests
-pass without local model fitting. Next freeze the committed source and allocate
-one owned CPU runtime through the original centrally metered fleet.
-Actual Colab Python and tiny finite-loss/save/load checks must pass before fixed
-full fits. A failed feasibility gate stops the family; a pass would require a
-separate matched policy protocol and prospective evidence before any success claim.
+All six saved predictors restore on all 18,616 immutable probe rows: 111,696 MLP forecasts. Local repeats are bitwise exact; maximum cloud/CPU difference is 5.96e-8, within the predeclared 1e-6 bound. Constant/ridge predictions, labels, sessions and symbols match; normalization stays frozen and wrong schema/source/nonfinite inputs are rejected. Returned metrics and gate were independently recomputed.
 
-[Definitions, leakage controls and commands](../../docs/supervised-signal.md).
+[Result and gate](result.json), [restoration proof](restoration.json), [training loss](training-loss.json), [source metadata](metadata.json), [data preflight](preflight.json), [compute](compute.json), [protocol](../../configs/experiments/supervised_signal.json), [definitions](../../docs/supervised-signal.md).
+
+One owned session stopped and termination verified. Project 35.861240/150 units; this study conservatively adds 0.004601 units, remaining 114.138760. Account 350.61, rate 0.00, active assignments 0. No orders or trading returns are produced by these predictors. Publication verification precedes duplicate cleanup.
+
+## Interpretation and next diagnosis
+
+The current supervised MLP is rejected; more updates or transferring these weights to PPO is not justified by this gate. Inspect forecast bias and variance by year to distinguish calibration/extrapolation error from the weaker ranking signal before proposing another model. Any calibration or combination must be fitted on earlier training-era data under a new protocol, with fixed probe gates; it cannot use this probe as a fitting set or relabel the failed study. Overlapping targets, correlated symbols and a retrospective universe prevent an independent profitability claim.
