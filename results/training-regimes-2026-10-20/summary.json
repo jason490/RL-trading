@@ -1,0 +1,116 @@
+{
+  "records": {
+    "ppo": {
+      "all": {
+        "count": 18096,
+        "mean_requested_exposure": 0.8472466874352198,
+        "short_request_fraction": 0.021385941644562333,
+        "mean_future_price_return": 0.0121811630892735
+      },
+      "past_decline": {
+        "count": 1022,
+        "mean_requested_exposure": 0.8484566704043845,
+        "short_request_fraction": 0.022504892367906065,
+        "mean_future_price_return": 0.05888260549815935
+      },
+      "past_decline_future_decline": {
+        "count": 96,
+        "mean_requested_exposure": 0.9252408226020634,
+        "short_request_fraction": 0,
+        "mean_future_price_return": -0.2053566057760294
+      },
+      "past_decline_future_rebound": {
+        "count": 384,
+        "mean_requested_exposure": 0.8262367361458018,
+        "short_request_fraction": 0.0078125,
+        "mean_future_price_return": 0.18018492354070284
+      },
+      "past_decline_future_other": {
+        "count": 542,
+        "mean_requested_exposure": 0.8505990618145663,
+        "short_request_fraction": 0.03690036900369004,
+        "mean_future_price_return": 0.019743996926176725
+      }
+    },
+    "sac": {
+      "all": {
+        "count": 18061,
+        "mean_requested_exposure": 0.7344518337236027,
+        "short_request_fraction": 0.04529095841869221,
+        "mean_future_price_return": 0.011703953579672877
+      },
+      "past_decline": {
+        "count": 987,
+        "mean_requested_exposure": 0.23513952528693635,
+        "short_request_fraction": 0.303951367781155,
+        "mean_future_price_return": 0.05180628283495179
+      },
+      "past_decline_future_decline": {
+        "count": 96,
+        "mean_requested_exposure": 0.06915453262627125,
+        "short_request_fraction": 0.40625,
+        "mean_future_price_return": -0.2053566057760294
+      },
+      "past_decline_future_rebound": {
+        "count": 353,
+        "mean_requested_exposure": 0.2401521850915536,
+        "short_request_fraction": 0.31444759206798867,
+        "mean_future_price_return": 0.1708563638747364
+      },
+      "past_decline_future_other": {
+        "count": 538,
+        "mean_requested_exposure": 0.2614686895701965,
+        "short_request_fraction": 0.2788104089219331,
+        "mean_future_price_return": 0.01958129900523102
+      }
+    },
+    "td3": {
+      "all": {
+        "count": 18096,
+        "mean_requested_exposure": 0.44607589561508676,
+        "short_request_fraction": 0.16478779840848806,
+        "mean_future_price_return": 0.0121811630892735
+      },
+      "past_decline": {
+        "count": 1022,
+        "mean_requested_exposure": 0.8538659804604525,
+        "short_request_fraction": 0.03228962818003914,
+        "mean_future_price_return": 0.05888260549815935
+      },
+      "past_decline_future_decline": {
+        "count": 96,
+        "mean_requested_exposure": 0.8550912576417128,
+        "short_request_fraction": 0.010416666666666666,
+        "mean_future_price_return": -0.2053566057760294
+      },
+      "past_decline_future_rebound": {
+        "count": 384,
+        "mean_requested_exposure": 0.9134742569488784,
+        "short_request_fraction": 0.0234375,
+        "mean_future_price_return": 0.18018492354070284
+      },
+      "past_decline_future_other": {
+        "count": 542,
+        "mean_requested_exposure": 0.8114172631524146,
+        "short_request_fraction": 0.042435424354243544,
+        "mean_future_price_return": 0.019743996926176725
+      }
+    }
+  },
+  "source_sha256": {
+    "results/training-fit-2026-10-20/summary.json": "31a9d0db3f355e127115359b5477eb2d94bb0658f1a776fee3baeaed8f2b9bed",
+    "artifacts/training-fit-2026-10-20/ppo/training.json": "0c96b22997c9c4c5d1a58c1231f941f02b6af6cb90dfcc9bd7da8f77554ace0d",
+    "artifacts/training-fit-2026-10-20/sac/training.json": "42df27ad59f6f12929150d078800acf59e86bb3f75c3629e070b4c5446c9e435",
+    "artifacts/training-fit-2026-10-20/td3/training.json": "a3c7236307877b3238b2d1ff3b3c8d7c2168edf82267651728a33f00f09b7545"
+  },
+  "script_sha256": "a6218a9a117cf1b5f5a64f82d3a26391c4d2dd028f364bece5d3bc31fef143de",
+  "module_sha256": "ac21ba0d3a88ca7d76328a701a592e71ddd52910a46f802fbb0467bd608e4fc3",
+  "horizon_sessions": 20,
+  "threshold": 0.1,
+  "source_files_unchanged": true,
+  "training_performed": false,
+  "dataset_opened": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "interpretation": "Overlapping fitted-period decisions, not independent trades or realized short profits. Future cohorts are reporting-only; never learning, sampling or selection labels. Gross reference-price returns omit dividends/costs. Old50k models, not new100k diversity models; no causal algorithm ranking."
+}

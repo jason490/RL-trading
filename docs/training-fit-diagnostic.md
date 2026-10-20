@@ -78,3 +78,15 @@ hypothesis, keeping original normalization and validation unchanged with a fresh
 matched original-universe control. Failed prior PPO expansion remains negative
 evidence. No allocation before coverage/source/sampling checks and a separately
 committed bounded protocol. Preserve all absolute/multi-seed/prospective gates.
+
+## Fitted decline/rebound decisions
+
+A saved-path20-session/10% audit finds older50k SAC short requests40.63% before
+continued declines versus31.44% before rebounds, conditional on accepted
+protective decisions. Mean forward return after past declines is positive;
+blind decline oversampling need not teach persistent shorting. Future buckets
+are reporting-only and overlapping, not independent trades or profit evidence.
+PPO/TD3 differ in source/initialization; no causal algorithm ranking.
+[Results, caveats and hashes](../results/training-regimes-2026-10-20/README.md).
+No fitting or new inference/Colab was needed. Next audit actual100k diversity
+final policies on the same fixed fitted window before another hypothesis.
