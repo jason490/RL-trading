@@ -1,0 +1,93 @@
+{
+  "assets": [
+    {
+      "digest": "sha256:859bb28ca71a31ef95398aec38eb92ab907f96d63e0015ba837cd0e236d868da",
+      "name": "checkpoint-curves.html",
+      "size": 8610,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:36f2b9cb5dfa12d3511959bc44925d784b8d49f7b021fa104914077eff920faa",
+      "name": "compute.json",
+      "size": 479,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:f6efb13d173615dfdc595a0fd626b499f33fc119739cc5307766ed2ce0ce6634",
+      "name": "environment-preflight.json",
+      "size": 707,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:f1db4dcb5118e6bdec3e169495741ae6c11423020b56dbd09c074696e4a55520",
+      "name": "frozen-checks.json",
+      "size": 3123,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:3cee03e669fd808f1e54db6b348f2df85e5e477ca07f5eba4e584e2cd0803f88",
+      "name": "model-catalog.json",
+      "size": 583595,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:e997f834138b7698a9d8556ffca8454189daeda36abaaede90ede37e7e155ca3",
+      "name": "preflight.json",
+      "size": 3173,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:93baf64e797a58243d582a44612d80a1879f60d14a38435a60666477681da38b",
+      "name": "protocol.json",
+      "size": 4729,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:0b9d44c1c166037f43f258e2f94e14d51a986c9a87428810321a9d6ce30ed573",
+      "name": "README.md",
+      "size": 3603,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:e07b4474a122e3fb2134c22d0305ed4551495f6b0fd9d6beedeeec109734a2a8",
+      "name": "research-models.tar.gz",
+      "size": 2462691,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:4f999ffdf86793b84ca13be704ef2bf36c94dc0eb29a4ca3bbaa508c84b8dc2a",
+      "name": "screen.json",
+      "size": 43563,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:460c25e500b9b1850a5589676d6c15e555afbc467774cb1519aa6e6257c1d1a1",
+      "name": "SHA256SUMS",
+      "size": 1097,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:a16ab183f3d89d0da1dc6b3acff89b6856a412d4508c5b0a1a489fb3045a2383",
+      "name": "smoke-acceptance.json",
+      "size": 5567,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:b16c74663306b169e141a84e23431041467c6550935be55886f2573725438f0c",
+      "name": "validation-reports.tar.gz",
+      "size": 4952211,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:4aa62819ee7b506a4f3d656ab72e4191c7dfd8feeceb3d1f9c5895a39ddac673",
+      "name": "validation.html",
+      "size": 1489,
+      "state": "uploaded"
+    }
+  ],
+  "tag": "trend-context-2026-10-20",
+  "url": "https://github.com/jason490/RL-trading/releases/tag/trend-context-2026-10-20",
+  "verified": true,
+  "all_server_sha256_and_sizes_match": true,
+  "asset_count": 14
+}

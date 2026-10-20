@@ -28,8 +28,17 @@ All3 CPU512-step smokes and3 CPU50k cells completed on actual Colab defaultPytho
 
 [Screen and complete checkpoint curves](screen.json), [smoke acceptance](smoke-acceptance.json), [research frozen checks](frozen-checks.json), [data preflight](preflight.json), [environment checks](environment-preflight.json), [compute](compute.json), [feature guide](../../docs/trend-context.md).
 
-Study conservative usage0.061261 units versus measured account debit0.04; project35.856639/150, remaining114.143361. Reported rate0.00 and0 active assignments. Publication verification precedes duplicate cleanup; original models, full reports/curves, data, source export and ledger remain.
+Study conservative usage0.061261 units versus measured account debit0.04; project35.856639/150, remaining114.143361. Reported rate0.00 and0 active assignments. All14 published assets passed server hash/size verification; duplicate cleanup is complete. Original models, full reports/curves, data, source export and ledger remain.
 
 ## Next diagnosis
 
 Retain the original default feature set. Inspect saved exposure, turnover, side contributions and protective-exit behavior to separate missed market participation, trading costs and signal errors before proposing another training change. Adding context did not solve ETF performance or joint short profitability. New settings require another bounded preregistration and independent prospective evidence.
+
+## Published artifacts and cleanup
+
+[Models and visual reports](https://github.com/jason490/RL-trading/releases/tag/trend-context-2026-10-20).
+All14 server SHA-256/size pairs match ([verification](release-verification.json)).
+Cleanup removed21 proven duplicate archives/markers,196,449,793 logical bytes
+(187.35MiB), with316 retained hashes unchanged ([cleanup](cleanup.json)).
+Six earlier checkpoint archives differ from final extraction and were kept
+conservatively. No unresolved session or cleanup failure remains.

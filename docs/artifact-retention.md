@@ -145,3 +145,14 @@ earlier snapshot archives differed from final extraction and remain. Original
 models, full reports, curves, source export, datasets and shared ledger remain.
 See [cleanup](../results/reward-objectives-2026-10-20/cleanup.json) and
 [release receipts](../results/reward-objectives-2026-10-20/release-verification.json).
+
+## Trend-context study cleanup — 2026-10-20
+
+All6 owned CPU sessions stopped and14 release assets passed server SHA-256/size
+verification. Final archives matched extracted files; payloads matched preserved
+source/data/plans. Cleanup removed21 proven duplicates totaling196,449,793 logical
+bytes (187.35MiB), with316 retained hashes unchanged. Six earlier snapshots were
+kept because they are not byte-identical to final output. Original models, full
+reports/curves, source export, raw snapshot,3 datasets and ledger remain.
+[Cleanup](../results/trend-context-2026-10-20/cleanup.json),
+[server receipts](../results/trend-context-2026-10-20/release-verification.json).

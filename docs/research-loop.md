@@ -145,3 +145,15 @@ short P&L. No confirmation or further extension. All4 CPU allocations stopped,
 prior tensors/checkpoints exactly. Finite losses and modest finalKL do not prove
 an optimizer failure. Next diagnose longer-horizon causal context before any
 new preregistered feature/control experiment.
+
+## Longer-horizon context outcome and next diagnosis
+
+Explicit63/252-session price returns and252-close drawdown do not pass the
+matched50k screen. Full final13.89% versus same-dimension masked13.93% and
+matched-warmup baseline0.83%; final ETF3.07% versus8.91% masked. Both control
+gates fail, full joint short/total success0/3, no confirmation. Retain default
+features. All6 CPU sessions stopped;468 frozen predictions and14 release asset
+checks pass, project35.856639/150. Next inspect saved exposure/turnover/cost and
+protective-exit behavior to identify missed market participation versus signal
+errors before preregistering another change. Do not infer that a gain against
+the smaller baseline alone establishes feature value.

@@ -776,3 +776,15 @@ checkpoint scores match the prior run. All13 release assets verified;15 duplicat
 files removed (118.91MiB),272 retained hashes unchanged. No test evaluation or
 orders. Project35.795378/150; account350.66,zero active/rate.
 [Evidence](../results/reward-objectives-2026-10-20/README.md).
+
+## 2026-10-20 longer-horizon context screen
+
+All3 CPU512-step smokes and3 matched50k cells completed on actual defaultPython
+3.13.16. Full selected14.26%/final13.89%, masked13.93%, baseline0.83%, holding
+30.60%. Full fails both gates, particularly ETF performance; declining-stock
+joint positive total/short success0/3. No confirmation or default-feature change.
+All468 frozen prefix predictions match; all6 owned sessions stopped. All14
+release assets verified,21 duplicates removed (187.35MiB),316 retained hashes
+unchanged. Source/data/ledger retained; no retired test or orders. Project
+35.856639/150,account350.62,rate0.00,active0.
+[Evidence](../results/trend-context-2026-10-20/README.md).
