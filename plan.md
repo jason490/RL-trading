@@ -897,7 +897,7 @@ failed yearly gates. No PPO warm start. All111,696 forecasts verified against
 immutable probe data, normalization/schema checks pass, session stopped.
 Project35.861240/150; [evidence](results/supervised-signal-2026-10-20/README.md).
 
-## 34. Fixed-forecast common-component diagnostic — implemented; scoring pending
+## 34. Fixed-forecast common-component diagnostic — completed; rejected
 
 Preregister same-session MLP demeaning plus same-arm frozen ridge mean anchoring.
 Use all26 symbols exactly once per session; enforce availability before every
@@ -906,3 +906,10 @@ update or new Colab allocation. Source weights/predictions/data are checksummed;
 original failed gate remains failed and promotion disabled. Reuse unchanged
 numeric predictive gates for descriptive scoring only after committed preflight.
 [Protocol](configs/experiments/signal_centering.json), [guide](docs/signal-centering.md).
+
+Availability preflight was committed before scoring. Centering reduces raw MLP
+MSE7.39% masked/12.96% full, but is0.38%/0.70% worse than ridge; zero passing
+seeds and yearly constraints fail. Original gate remains failed, no promotion
+or PPO allocation. All source hashes unchanged; no new units. Next investigate
+a distinct tabular tree learner under a new compatible, bounded CPU protocol.
+[Evidence](results/signal-centering-2026-10-20/README.md).

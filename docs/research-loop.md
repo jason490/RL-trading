@@ -183,3 +183,13 @@ negative pooled prediction/target covariance for every MLP despite positive
 within-day ranking. Next preregister a causal same-session common-component
 diagnostic on fixed forecasts before any new fitting; retain the original failed
 gate and the internal probe's development-only status.
+
+## Fixed common-component outcome
+
+The preregistered no-fit transformation improves raw MLP MSE7.39%/12.96% but
+still loses to ridge by0.38%/0.70%, with zero passing seeds and yearly failures.
+All availability/source checks pass and ranks remain unchanged. No promotion,
+new training or Colab units. Stop this centering family. Next investigate a
+distinct tabular tree ensemble, checking compatible dependencies and CPU
+acceptance before a new committed fixed comparison. Preserve the same purged
+targets and do not reinterpret forecast error as stock-trading performance.

@@ -64,3 +64,12 @@ result cannot relabel the original study as passed, promote an RL policy, prove
 stock/ETF outperformance, or trigger PPO allocation automatically. A later
 causal feature/trading experiment would require its own preregistered controls
 and prospective evidence.
+
+## Completed result
+
+Centering lowers masked/full MLP error by7.39%/12.96%, preserves ranks and beats
+the constant by2.28%/2.03%. It remains0.38%/0.70% worse than ridge, with zero
+passing seeds and failed yearly ridge constraints. The unchanged descriptive
+gate fails. Source hashes stay unchanged; no training or Colab allocation.
+Original failure and promotion restrictions remain.
+[Evidence and charts](../results/signal-centering-2026-10-20/README.md).

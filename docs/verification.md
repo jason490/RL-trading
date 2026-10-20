@@ -821,3 +821,12 @@ normalization/schema checks pass. Session stopped,12 release assets verified,
 11 duplicates removed,233 retained hashes unchanged. No project-validation or
 retired-test labels used; no profitability established. Project35.861240/150.
 [Evidence](../results/supervised-signal-2026-10-20/README.md).
+
+## 2026-10-20 fixed-forecast centering diagnostic
+
+Protocol/preflight committed before scoring. Complete26-symbol panels on716
+sessions satisfy same-session availability before next-entry midnight. Source
+weights, normalization, forecasts and targets unchanged. Six centered forecasts
+preserve daily ranks but fail the unchanged predictive gate against ridge.
+No training, project-validation/test labels, Colab allocation or orders.
+[Result](../results/signal-centering-2026-10-20/README.md).
