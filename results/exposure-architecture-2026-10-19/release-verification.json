@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "release": "https://github.com/jason490/RL-trading/releases/tag/exposure-architecture-2026-10-19",
+  "target_commit": "a7d4dc78e5dc8272b3bf9d55019c1e6e0e9607b5",
+  "asset_count": 18,
+  "total_bytes": 13285573,
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 1443,
+      "sha256": "5285369cf670e237a13984c33182da295e2b20f477a2d805ecd4cc8fa0173636",
+      "server_digest": "sha256:5285369cf670e237a13984c33182da295e2b20f477a2d805ecd4cc8fa0173636",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/SHA256SUMS"
+    },
+    {
+      "name": "compute.json",
+      "size": 931,
+      "sha256": "f5ed3e2f8f9fd112f9217db8de2e85f83d77d43b4844549e94047954187ab59b",
+      "server_digest": "sha256:f5ed3e2f8f9fd112f9217db8de2e85f83d77d43b4844549e94047954187ab59b",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/compute.json"
+    },
+    {
+      "name": "frozen-checks.json",
+      "size": 6129,
+      "sha256": "6b8764ff549b4d93425e1c6b94f03b9574924528b21d4675fb6b976a9a23e1e0",
+      "server_digest": "sha256:6b8764ff549b4d93425e1c6b94f03b9574924528b21d4675fb6b976a9a23e1e0",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/frozen-checks.json"
+    },
+    {
+      "name": "learning-curves.html",
+      "size": 4775132,
+      "sha256": "a806e3aeff3b73413bf3fdc72364f86ec439c7b583596a39da02c75acc09df64",
+      "server_digest": "sha256:a806e3aeff3b73413bf3fdc72364f86ec439c7b583596a39da02c75acc09df64",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/learning-curves.html"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 585024,
+      "sha256": "c8f044daa8a119c0d12748b5e5f1d409b31a69b692e36631d67621a202061e1f",
+      "server_digest": "sha256:c8f044daa8a119c0d12748b5e5f1d409b31a69b692e36631d67621a202061e1f",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/model-catalog.json"
+    },
+    {
+      "name": "native-screen-parity.json",
+      "size": 355,
+      "sha256": "70076042537448231498a50c382d98c805619093b31cb46cdb60263d7b60ae8d",
+      "server_digest": "sha256:70076042537448231498a50c382d98c805619093b31cb46cdb60263d7b60ae8d",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/native-screen-parity.json"
+    },
+    {
+      "name": "native-smoke-parity.json",
+      "size": 276,
+      "sha256": "0970dca7e0afd99a200f329bef2691673359f95d86a531e7e37f7fb32435f352",
+      "server_digest": "sha256:0970dca7e0afd99a200f329bef2691673359f95d86a531e7e37f7fb32435f352",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/native-smoke-parity.json"
+    },
+    {
+      "name": "per-symbol.csv",
+      "size": 45745,
+      "sha256": "f8c26bed9e61413ed84948a0ba044849c87c195a40123a3c603fb0708f1d0483",
+      "server_digest": "sha256:f8c26bed9e61413ed84948a0ba044849c87c195a40123a3c603fb0708f1d0483",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/per-symbol.csv"
+    },
+    {
+      "name": "preflight.json",
+      "size": 2293,
+      "sha256": "9630fc21d00bd130e9dad38992c64c2782ba6206c0519480b6fbf2f99a9d6ce0",
+      "server_digest": "sha256:9630fc21d00bd130e9dad38992c64c2782ba6206c0519480b6fbf2f99a9d6ce0",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/preflight.json"
+    },
+    {
+      "name": "protocol.json",
+      "size": 4707,
+      "sha256": "e90cb1c767a78009a452d8c6fce7c5f046c439c6c5fe1e71a9e6c8b7180bc157",
+      "server_digest": "sha256:e90cb1c767a78009a452d8c6fce7c5f046c439c6c5fe1e71a9e6c8b7180bc157",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/protocol.json"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 2861856,
+      "sha256": "fbfade1e7ec97d75c2017ee11cc207c2b0288a4f704ad3987e5b088a0d69a2b0",
+      "server_digest": "sha256:fbfade1e7ec97d75c2017ee11cc207c2b0288a4f704ad3987e5b088a0d69a2b0",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/research-models.tar.gz"
+    },
+    {
+      "name": "screen.json",
+      "size": 43341,
+      "sha256": "fa16e7b6772260a65d819cb0af33a9b0e1a70096a732b7b6f25104fa0c120c92",
+      "server_digest": "sha256:fa16e7b6772260a65d819cb0af33a9b0e1a70096a732b7b6f25104fa0c120c92",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/screen.json"
+    },
+    {
+      "name": "short-side.json",
+      "size": 21229,
+      "sha256": "fc1e76f7211740962bb6a21020a51cd1a6185274417685faccd0da1f6983b5c7",
+      "server_digest": "sha256:fc1e76f7211740962bb6a21020a51cd1a6185274417685faccd0da1f6983b5c7",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/short-side.json"
+    },
+    {
+      "name": "smoke.json",
+      "size": 3811,
+      "sha256": "81111669df442648bae702020934b496561b546eb775310a3754872689e6ef8c",
+      "server_digest": "sha256:81111669df442648bae702020934b496561b546eb775310a3754872689e6ef8c",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/smoke.json"
+    },
+    {
+      "name": "study-README.md",
+      "size": 5272,
+      "sha256": "86dc800c89180c01de59c341273fffbafe0b3a3b15983a0977d10fa30e9aa8a4",
+      "server_digest": "sha256:86dc800c89180c01de59c341273fffbafe0b3a3b15983a0977d10fa30e9aa8a4",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/study-README.md"
+    },
+    {
+      "name": "trained-input-contract-smoke.json",
+      "size": 2120,
+      "sha256": "5c0677d56fc8fb748bf02ef4be0fd7d23babff8aa747d5d39d334c56e7ac6d55",
+      "server_digest": "sha256:5c0677d56fc8fb748bf02ef4be0fd7d23babff8aa747d5d39d334c56e7ac6d55",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/trained-input-contract-smoke.json"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 4924324,
+      "sha256": "4fb476d844b746117a79b6b0c7918e38951702f638c7e133b4179c05cba4ccda",
+      "server_digest": "sha256:4fb476d844b746117a79b6b0c7918e38951702f638c7e133b4179c05cba4ccda",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/validation-reports.tar.gz"
+    },
+    {
+      "name": "validation.html",
+      "size": 1585,
+      "sha256": "c31893de93758aaa4392addf5a783cdca1250fc65740e8932e1bad888569bf5f",
+      "server_digest": "sha256:c31893de93758aaa4392addf5a783cdca1250fc65740e8932e1bad888569bf5f",
+      "url": "https://github.com/jason490/RL-trading/releases/download/exposure-architecture-2026-10-19/validation.html"
+    }
+  ]
+}

@@ -780,6 +780,8 @@ failed both control gates and made losses on AMZN/DIS/NEE, including short-side
 losses. No confirmation was launched. Native selected/final tensors and all
 checkpoint scores exactly reproduce prior controls; six bundles pass 468 exact
 frozen predictions. Six owned sessions stopped; project 35.748563/150.
+All 18 release assets are verified; 27 duplicate archives/markers (300.33 MiB
+logical) were removed, with 326 retained hashes unchanged.
 [Full result](results/exposure-architecture-2026-10-19/README.md).
 
 ## 29. Frozen seed ensembles — proposed, not implemented

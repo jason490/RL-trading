@@ -90,3 +90,13 @@ individual references plus every ensemble candidate. No declining-stock label
 may choose a member or trade. A single ensemble built from three seeds is not
 three independent ensemble runs; any promising result still needs separate
 robustness and prospective confirmation. This next diagnostic is not yet run.
+
+## Published artifacts and cleanup
+
+[Download frozen models and interactive reports](https://github.com/jason490/RL-trading/releases/tag/exposure-architecture-2026-10-19). All 18 server
+asset SHA-256/size pairs match ([verification](release-verification.json)).
+Cleanup removed 27 duplicate archives/markers, 314,922,712 logical bytes
+(300.33 MiB), with all 326 retained hashes unchanged. Final archives matched
+every extracted file; payloads matched retained source/data/plans before removal.
+Original models, complete curves/reports, source export, immutable data and
+cumulative ledger remain ([cleanup](cleanup.json)).

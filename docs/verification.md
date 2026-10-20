@@ -760,3 +760,8 @@ native selected/final tensors and every checkpoint score exactly reproduce the
 previous full-state control. All six owned sessions stopped. Study conservative
 usage 0.060740; cumulative 35.748563/150. No retired test or broker orders.
 [Results](../results/exposure-architecture-2026-10-19/README.md).
+
+Architecture publication verified all 18 GitHub asset hashes/sizes. Cleanup
+removed 27 duplicates (300.33 MiB logical), preserving all 326 retained file
+hashes. Final archives and payload source/data/plan contents were checked before
+removal. Source export, original data and cumulative ledger remain intact.
