@@ -784,7 +784,7 @@ All 18 release assets are verified; 27 duplicate archives/markers (300.33 MiB
 logical) were removed, with 326 retained hashes unchanged.
 [Full result](results/exposure-architecture-2026-10-19/README.md).
 
-## 29. Frozen seed ensembles — implemented; diagnostic pending
+## 29. Frozen seed ensembles — diagnostic complete; absolute gates failed
 
 Before more training, preregister uniform averages of existing stateless PPO/SAC
 three-seed policies, retaining account inputs. Inspect strongest same-data
@@ -810,3 +810,10 @@ the development snapshot's schema/normalizer/feed and exact validation dates/
 closing prices. The older source dataset remains unopened. Fresh individual
 references and all three fixed ensemble candidates will use one shared account
 per symbol, with original path drift bounded before ensemble evaluation.
+
+All 18 cases completed with immutable sources and recipe parity. Combined final
+22.16% versus holding 30.60%; its relative descriptive gate passes but absolute
+gates fail. Original SAC11 cost-reference failure remains failed; promotion is
+disabled. Combined declining-stock joint total/short success is 0/3, versus 1/3
+for PPO-only and SAC-only. No new training or Colab units; project remains
+35.748563/150. See [complete evidence](results/frozen-ensembles-2026-10-20/README.md).

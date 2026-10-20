@@ -99,3 +99,7 @@ recipes, core-package hash and input preflight still match. The failed case is
 evaluated again and must satisfy every other original cap. This avoids repeating
 verified simulations and does not resume training or Colab sessions. The original
 failed report and the continuation are retained separately.
+
+## Completed evidence
+
+[The completed diagnostic](../results/frozen-ensembles-2026-10-20/README.md) reports every candidate and phase. Combined final return is 22.16% versus 30.60% holding; all absolute gates fail. Combined has zero of three declining stocks with both positive total return and positive net short P&L. PPO-only and SAC-only each pass that joint condition on NEE alone. The original reference gate remains failed and nothing is promoted. No additional Colab units were used.
