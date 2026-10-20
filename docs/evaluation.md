@@ -43,3 +43,14 @@ Freeze features, reward, costs, hyperparameters and selection criteria before op
 Match dataset identity, exposure/cost settings, seed set, transition budget and selection protocol. Report actual steps/device/duration as well as requested steps. `reporting/comparison.py` groups runs by these common settings and retains failures; it never reads test reports. Algorithm-specific parameter differences remain recorded.
 
 For later ablations, introduce one feature family or reward term at a time. Optional data with short history requires a matched-period baseline and cannot receive credit from a changed evaluation window. Fixed retrospective ETF selection and reconstructed historical availability limit the scope of claims even when all software checks pass.
+
+## Saved report acceptance
+
+`evaluation/report_contract.py` validates saved development reports against the
+exact immutable validation episodes. Session/price sequences, symbol identity,
+equity chains, early-depletion cutoffs, metrics, cash/holding benchmarks and
+directional accounting must reconcile. A `validation` string alone is not
+sufficient. Historical, SAC-state and temperature screen reporters use this
+check before scoring. Tests reject mislabeled future dates, altered prices,
+metrics/benchmarks/side P&L and unexplained truncations. No policy training or
+checkpoint reselection occurs during acceptance.

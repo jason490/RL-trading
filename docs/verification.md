@@ -989,3 +989,12 @@ fingerprints match exactly, initial alpha1/0.001 and target entropy−4 verified
 Both owned stops verified; project36.022140 after smoke. Fixed2x50k screen
 launched from same0f04e6b source and original2-unit allowance.
 [Evidence](../results/sac-temperature-2026-10-20/README.md).
+
+## Saved development-report identity/accounting checks
+
+Report acceptance now binds exact episode keys, decision/execution dates and
+prices to immutable2021–2023 validation, validates equity chains and early-stop
+conditions, recomputes metrics and complete cash/holding paths, and reconciles
+reported long/short attribution. A validation label alone cannot admit future
+dates or altered benchmarks.14 focused tests pass;12 actual retained selected/
+final SAC/history reports pass without fitting. No training-source change.

@@ -11,6 +11,8 @@ from rl_stocks.training.curves import latest_points
 from rl_stocks.reporting.initialization import group_metrics
 from rl_stocks.reporting.history import screen_gate,render_report
 from rl_stocks.evaluation.direction import declining_stock_summary
+from rl_stocks.evaluation.report_contract import validate_development_report
+from rl_stocks.environment.execution.simulator import SimulationConfig
 
 
 def main():
@@ -40,7 +42,7 @@ def main():
         contract=current;cell=dict(dataset=m['dataset'],run=path.parent.name,bundle_id=m['bundle_id'],seed=11,observation=m['observation'],reports={},sampling=m['sampling_diagnostics'])
         cell['learning_curve']=latest_points(m['validation_checkpoints'])
         for phase,filename in [('selected','selected-validation.json'),('final','validation.json')]:
-            rp=path.parent/filename;results=json.loads(rp.read_text());symbols={v['symbol'] for v in results.values()}
+            rp=path.parent/filename;results=json.loads(rp.read_text());validate_development_report(results,data,SimulationConfig(**m['simulation']));symbols={v['symbol'] for v in results.values()}
             expected={e['symbol'] for e in data['episodes'].values() if e['split']=='validation'}
             if symbols!=expected or all_symbols is not None and symbols!=all_symbols or any(v['split']!='validation' for v in results.values()):raise ValueError('same declared validation panel required')
             all_symbols=symbols;bh=digest({k:v['baselines']['buy_hold'] for k,v in results.items()})
