@@ -1,0 +1,87 @@
+{
+  "assets": [
+    {
+      "digest": "sha256:a3ad9837c0975cc425d9c92ba8b497b5e086964819a29d425ac9ff21318925bc",
+      "name": "checkpoint-curves.html",
+      "size": 8432,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:584458c54f593c62bd1ed4b39ad3d81e3f9ad9ee89ba8f4b99fb323294df692b",
+      "name": "compute.json",
+      "size": 494,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:0a2b23015b7f2bb608282e937b428067d4ce04f1b12d495cc0791f39d36c8e8a",
+      "name": "frozen-checks.json",
+      "size": 2121,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:035dc9d92af67e483701ca98b48eff1727c0ed189a12e250b2e0094ff279ada0",
+      "name": "model-catalog.json",
+      "size": 388955,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:8dc8a055957d8bcd9c8a45d35ea0700a074c147b696816824a10d54ba3735281",
+      "name": "native-control-parity.json",
+      "size": 355,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:86c4fd25626bc9a6e96c0beb28b0b09cb5d50ace02a37961a08f94dbc5b7b3a8",
+      "name": "protocol.json",
+      "size": 3807,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:f7c4ac726d24cd4932397721e2af5ab75629d8a82687396385bdcfa407917a44",
+      "name": "README.md",
+      "size": 2975,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:cb2e939a80b23c5912fd4fdc630ddabf3bb8997c20b5cccaeb433d108db8dca2",
+      "name": "research-models.tar.gz",
+      "size": 1620357,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:e132fd205fc22bd6caeafd7d84a8dc282589a147943a366d655777bc792a2de9",
+      "name": "screen.json",
+      "size": 29802,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:4077f8fcbcb2e30b103d5ff7b26fad3aabd34039ed23173c6804fa1a700cbe90",
+      "name": "SHA256SUMS",
+      "size": 1016,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:eba1a2ecc31f969be9f4e80dce4b481b034d8acd783381d29dbe99249b1a82df",
+      "name": "smoke-acceptance.json",
+      "size": 4007,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:291527ab7c930c4d2c26793071a122819226dd8aa46d6bde415b31313eb497ac",
+      "name": "validation-reports.tar.gz",
+      "size": 3306591,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:4e93763342025ba5911eb6ba670018962dda12af0a46fce1dd2982c0cfbc14dd",
+      "name": "validation.html",
+      "size": 1165,
+      "state": "uploaded"
+    }
+  ],
+  "tag": "reward-objectives-2026-10-20",
+  "url": "https://github.com/jason490/RL-trading/releases/tag/reward-objectives-2026-10-20",
+  "verified": true,
+  "all_server_sha256_and_sizes_match": true,
+  "asset_count": 13
+}

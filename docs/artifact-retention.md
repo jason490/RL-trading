@@ -134,3 +134,14 @@ ledger remain; authentication, unrelated studies and user files were preserved.
 No unresolved ownership or cleanup failure remains. Exact paths and hashes are
 in [cleanup evidence](../results/causal-sampling-2026-10-19/cleanup.json) and
 [server receipts](../results/causal-sampling-2026-10-19/release-verification.json).
+
+## Reward-objective study cleanup — 2026-10-20
+
+Four owned CPU sessions stopped; all13 release assets passed server SHA-256/size
+checks. Final archives matched all extracted files and upload payloads matched
+preserved source/data/plans before removal. Cleanup removed15 duplicates totaling
+124,682,332 logical bytes (118.91MiB), with272 retained hashes unchanged. Three
+earlier snapshot archives differed from final extraction and remain. Original
+models, full reports, curves, source export, datasets and shared ledger remain.
+See [cleanup](../results/reward-objectives-2026-10-20/cleanup.json) and
+[release receipts](../results/reward-objectives-2026-10-20/release-verification.json).

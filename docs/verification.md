@@ -765,3 +765,14 @@ Architecture publication verified all 18 GitHub asset hashes/sizes. Cleanup
 removed 27 duplicates (300.33 MiB logical), preserving all 326 retained file
 hashes. Final archives and payload source/data/plan contents were checked before
 removal. Source export, original data and cumulative ledger remain intact.
+
+## 2026-10-20 reward objective screen
+
+Two512-step and two50k Colab CPU cells completed with default Python3.13.16,
+immutable source/ledger,312 exact frozen predictions and all4 shutdowns verified.
+The candidate selected23.38% but final20.43%, below22.59% control and30.60%
+holding; predefined gate fails, no confirmation. Default control tensors and all
+checkpoint scores match the prior run. All13 release assets verified;15 duplicate
+files removed (118.91MiB),272 retained hashes unchanged. No test evaluation or
+orders. Project35.795378/150; account350.66,zero active/rate.
+[Evidence](../results/reward-objectives-2026-10-20/README.md).

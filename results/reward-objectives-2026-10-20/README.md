@@ -25,8 +25,25 @@ The [protocol](../../configs/experiments/reward_objectives.json) was committed b
 
 [Screen and checkpoint curves](screen.json), [smoke acceptance](smoke-acceptance.json), [research frozen checks](frozen-checks.json), [compute](compute.json), [methodology](../../docs/reward-objectives.md).
 
-All four owned sessions stopped and shutdown was verified. Study conservative usage0.046815 units (measured account debit0.03); project35.795378/150, remaining114.204622, reported rate0.00/hour and zero active assignments. Shared ledger and recovery records remain intact. Publication verification and duplicate cleanup follow before removing transfer copies.
+All four owned sessions stopped and shutdown was verified. Study conservative usage0.046815 units (measured account debit0.03); project35.795378/150, remaining114.204622, reported rate0.00/hour and zero active assignments. Shared ledger and recovery records remain intact. All13 GitHub assets have matching server SHA-256 digests and sizes. Verified duplicate cleanup is complete.
 
 ## Interpretation and next evidence
 
 Changing from log to initial-capital equity differences did not solve final instability or long losses on declining stocks. Keep net-log as the default. This rules out this reward-only hypothesis under the tested settings; it does not justify adding arbitrary short bonuses or extending unsuccessful training. Any next experiment requires a new diagnosis and preregistered matched protocol; prospective evidence remains necessary.
+
+## Published models and cleanup
+
+[Download models and visual reports](https://github.com/jason490/RL-trading/releases/tag/reward-objectives-2026-10-20).
+All13 server asset hashes/sizes match ([verification](release-verification.json)).
+Cleanup removed15 verified duplicate archives/markers,124,682,332 logical bytes
+(118.91MiB), with all272 retained hashes unchanged ([cleanup](cleanup.json)).
+Three earlier checkpoint archives were conservatively kept because their full
+contents differ from final extraction. Original models, full reports/curves,
+source export, data and ledger remain. No unresolved session or cleanup failure.
+
+Checkpoint diagnostics show no nonfinite loss or obvious KL spike: candidate
+final approximateKL0.0084 and clip fraction0.0824. The last optimizer update
+reduced candidate return from23.20% to20.43%, while control improved from20.95%
+to22.59%. This does not establish optimizer instability as the cause or justify
+an arbitrary KL change. Next inspect whether the seven-feature baseline lacks
+causal longer-horizon market context before declaring another matched ablation.

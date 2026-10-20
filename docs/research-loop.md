@@ -134,3 +134,14 @@ critic, against same-capacity unmasked and native controls. This is a proposed
 architecture ablation, not an established cure. Freeze its numeric protocol and
 verify masks/legacy inference before Colab allocation. The completed diagnostic
 adds no Colab usage; project remains 35.687823/150.
+
+## Reward objective outcome
+
+The2026-10-20 matched seed11 screen rejects initial-capital equity changes:
+selected23.38%/final20.43% versus unchanged log control22.59%, holding30.60%.
+Both final groups worsen; no declining stock achieves joint positive total and
+short P&L. No confirmation or further extension. All4 CPU allocations stopped,
+312 exact frozen predictions pass; project35.795378/150. The control reproduces
+prior tensors/checkpoints exactly. Finite losses and modest finalKL do not prove
+an optimizer failure. Next diagnose longer-horizon causal context before any
+new preregistered feature/control experiment.
