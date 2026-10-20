@@ -850,3 +850,8 @@ gate (16.23%/17.47% worse than ridge, zero passing seeds), so no PPO transfer,
 trading promotion or profitable-short claim. Project conservative35.871240/150;
 owned shutdown verified, rate0 with zero assignments. See the
 [complete evidence](../results/forest-signal-2026-10-20/README.md).
+
+Saved forest error decomposition now verifies both exact MSE identities in
+36 predictor/year cells. Six focused tests pass without fitting. Undefined
+sign precision/recall is null, and unequal daily panels use row weights.
+Prediction source unchanged; no gate change, new Colab usage or promotion.

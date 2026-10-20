@@ -1,6 +1,6 @@
 {
   "verified": true,
-  "asset_count": 10,
+  "asset_count": 11,
   "url": "https://github.com/jason490/RL-trading/releases/tag/forest-signal-2026-10-20",
   "assets": [
     {
@@ -19,6 +19,12 @@
       "name": "fit-summary.json",
       "size": 418,
       "digest": "sha256:5b73d95ceb17c371a8c112d4b2fa13cf693a23904c7eafa7b785485972da6c75",
+      "state": "uploaded"
+    },
+    {
+      "name": "forecast-errors.json",
+      "size": 25931,
+      "digest": "sha256:79cd93e527ef50d8cc377e8bc771eadf6fe178f4739e8876dbdf09613aa473cc",
       "state": "uploaded"
     },
     {

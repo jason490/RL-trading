@@ -45,3 +45,36 @@ net short P&L after costs. This forecast experiment does not demonstrate either.
 Stop this fixed forest configuration; diagnose regime/target generalization
 before committing another training protocol. Do not expand this failed setup
 with more trees or longer PPO training by default.
+
+## Why the fixed forests failed
+
+A no-fit [error decomposition](forecast-errors.json) uses all saved forecasts
+without changing predictions, gates or checkpoints. Both exact identities pass:
+`MSE = var(target) + var(prediction) - 2 cov(target,prediction) + bias²`
+and `MSE = row-weighted daily mean-error² + within-day error variance`.
+
+In2020, mean pooled forecast/target covariance is−0.0006715 masked and
+−0.0007574 full, versus positive0.0002562 for full ridge. Forest error therefore
+includes wrong-way variation, not merely a constant calibration offset. Daily
+common-error terms contribute0.011698/0.011816 of total2020 MSE
+0.015874/0.016256. These are descriptive error components, not causal claims.
+
+In2018, roughly46.35% of gross targets are negative, but forests predict negative
+for only0.50%/1.46% of rows (mean across seeds). In2020 their negative forecast
+precision is only22.94%/25.36% despite39.20% negative targets. These are overlapping
+20-session gross-return signs, not trading signals or net short profitability.
+Labels are reporting-only; no label-based sampling or checkpoint selection occurs.
+
+The pooled bias is small (0.000284/0.000398), so correcting one global mean is
+not an adequate explanation. No second forest centering experiment is justified
+by this evidence alone. Stop this family rather than add trees or PPO updates.
+Six decomposition tests pass, including unequal panel weights, undefined sign
+metrics and invalid vectors. Original source prediction SHA remains unchanged.
+
+Next investigate training-regime coverage before selecting another learner:
+audit a fixed chronological pre-2010 ETF history extension against existing
+2010–2020 history. This is a proposed data audit, not permission to silently merge
+providers, use validation decline labels, or train on retired data. First freeze
+the date range, symbols, provider/actions/coverage checks and comparison design.
+New fitting requires its own bounded matched protocol and original development
+gates; all-market and prospective requirements remain intact.

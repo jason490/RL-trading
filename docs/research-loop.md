@@ -193,3 +193,21 @@ new training or Colab units. Stop this centering family. Next investigate a
 distinct tabular tree ensemble, checking compatible dependencies and CPU
 acceptance before a new committed fixed comparison. Preserve the same purged
 targets and do not reinterpret forecast error as stock-trading performance.
+
+## Forest outcome and next data-coverage diagnosis
+
+The fixed masked/full forests fail (16.23%/17.47% worse than own ridge), with
+zero passing seeds. No PPO transfer. A saved-forecast decomposition finds
+negative2020 forecast/target covariance in both arms, dominated by common-day
+error, with small pooled bias. Negative forecast precision is22.94%/25.36% in
+2020 versus39.20% negative gross targets. Neither forecast signs nor this ex-post
+cohort establishes profitable shorting. No forest centering or extra trees by
+default. [Complete diagnosis](../results/forest-signal-2026-10-20/README.md).
+
+Next inspect chronological training-regime coverage and feasibility of a fixed
+pre-2010 ETF history extension, with explicit provider/corporate-action/coverage
+acceptance before merging or fitting. Use chronology, never future losing-stock
+labels, to define inclusion. A later matched study would need to distinguish
+extra market history from extra ETF sampling and transition budget. Keep retired
+isolation, predefined stock/ETF gates and prospective confirmation. Project usage
+remains35.871240/150; this saved-path diagnosis adds no allocation or training.
