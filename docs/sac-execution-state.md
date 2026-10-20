@@ -57,3 +57,9 @@ Current evidence: diagnostic passed, protocol fixed, ten focused saved-path and
 participation tests pass. Job/worker/artifact integration and actual Colab smoke
 acceptance remain pending. No new allocation or performance result. Cumulative
 project usage remains35.917535/150; the goal is unachieved.
+
+Version16 integration now verifies fixed protocol/data identity before allocation
+and again in the worker. Metadata/frozen bundles carry the protocol hash; archive
+checks cover SAC parameters, initialization, observation profile and complete
+selected/final checkpoint curves. All three immutable smoke task payloads pass
+local validation. Actual Colab acceptance is next, not implied by fixtures.

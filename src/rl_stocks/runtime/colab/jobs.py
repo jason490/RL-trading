@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==15:
+    if plan.get('version')==16:
+        try:expected=sac_state_plan(**plan['sac_state_study'])
+        except (KeyError,TypeError):raise ValueError('malformed SAC state plan') from None
+        if plan!=expected:raise ValueError('unsupported SAC state plan')
+    elif plan.get('version')==15:
         try:expected=history_plan(**plan['history_study'])
         except (KeyError,TypeError):raise ValueError('malformed historical study plan') from None
         if plan!=expected:raise ValueError('unsupported historical study plan')
@@ -278,3 +282,17 @@ def history_plan(arm,seed=11,smoke=False):
         dataset_contract=dict(identity=p['datasets'][arm],arm=arm))
     plan['jobs'][0]['start_sampling']='full_window_uniform'
     return plan
+
+
+def sac_state_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.sac_state import protocol,PROTOCOL_SHA256
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported SAC state arm, seed or smoke mode')
+    steps=p['smoke_steps'] if smoke else p['steps_per_cell']
+    return dict(version=16,accelerator='CPU',sac_state_study=dict(arm=arm,seed=seed,smoke=smoke),
+        protocol_sha256=PROTOCOL_SHA256,dataset_contract=dict(identity=p['dataset']),
+        jobs=[dict(algorithm='sac',device='cpu',smoke=smoke,seed=seed,steps=steps,
+            evaluation_every=p['smoke_evaluation_every'] if smoke else p['evaluation_every'],compact_checkpoints=True,
+            milestones=[steps],reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',
+            observation_profile=arm,policy_variant='native',reward_kind='net_log_equity',study_protocol_sha256=PROTOCOL_SHA256)])

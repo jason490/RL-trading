@@ -1004,3 +1004,8 @@ Ten focused tests pass; no new Colab allocation. Job/worker acceptance pending.
 [Diagnosis](results/sac-diagnostic-2026-10-20/README.md),
 [protocol](configs/experiments/sac_execution_state.json),
 [guide](docs/sac-execution-state.md).
+
+SAC state version16 metered job/worker/artifact contracts implemented. Three
+immutable1024-transition CPU smoke tasks validate locally; full/legacy/masked
+archive fixtures pass and semantic tampering is rejected. Freeze committed
+source before allocation; share original ledger and2-unit study allowance.

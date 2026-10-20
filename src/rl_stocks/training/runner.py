@@ -83,7 +83,7 @@ def git_state():
     return repository_state(Path(__file__).resolve().parents[3])
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
-          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native',reward_kind='net_log_equity'):
+          evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native',reward_kind='net_log_equity',study_protocol_sha256=None):
     initialization_spec(initialization,algorithm)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
@@ -125,6 +125,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
+    if study_protocol_sha256 is not None:metadata['study_protocol_sha256']=study_protocol_sha256
     if 'history_augmentation' in dataset['manifest']:
         from rl_stocks.training.history.spec import PROTOCOL_SHA256
         metadata['history_augmentation']=dataset['manifest']['history_augmentation']

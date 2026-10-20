@@ -924,3 +924,12 @@ focused tests pass. New three-arm SAC state protocol fixed but no allocation.
 
 Broader SAC diagnostic/participation/observation regression:19 tests pass,
 including actual Gymnasium/SB3 observation-profile checkers, without fitting.
+
+Version16 integration now verifies fixed protocol/data identity before allocation
+and again in the worker. Metadata/frozen bundles carry the protocol hash; archive
+checks cover SAC parameters, initialization, observation profile and complete
+selected/final checkpoint curves. All three immutable smoke task payloads pass
+local validation. Actual Colab acceptance is next, not implied by fixtures.
+
+53 focused SAC/history/observation/fleet/budget/artifact regressions pass before
+allocation, including actual Gym/SB3 observation checks without model fitting.
