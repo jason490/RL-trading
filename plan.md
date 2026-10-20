@@ -818,7 +818,7 @@ disabled. Combined declining-stock joint total/short success is 0/3, versus 1/3
 for PPO-only and SAC-only. No new training or Colab units; project remains
 35.748563/150. See [complete evidence](results/frozen-ensembles-2026-10-20/README.md).
 
-## 30. Reward objective alignment — implemented; Colab acceptance pending
+## 30. Reward objective alignment — screen complete; rejected
 
 Add optional initial-capital net equity changes against unchanged net-log reward.
 Keep native full-state wide PPO, data/costs/actions/discount/starts fixed. Two CPU
@@ -827,3 +827,9 @@ predeclared gate. Preserve all failed results and short-side joint total/P&L
 reporting. Undiscounted telescoping does not imply discounted PPO equivalence.
 See [protocol](configs/experiments/reward_objectives.json) and
 [reward guide](docs/reward-objectives.md). No new allocation yet.
+
+Both512-step CPU smokes and matched50k cells completed. Candidate selected23.38%,
+final20.43%, control22.59%, holding30.60%. Selected gain0.79pp and final loss2.16pp
+fail the gate; stocks/ETFs worsen, declining-stock joint success0/3. No confirmation.
+Four sessions stopped,312 frozen predictions exact, native control fully reproduced.
+Project35.795378/150; [evidence](results/reward-objectives-2026-10-20/README.md).

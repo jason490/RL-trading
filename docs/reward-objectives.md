@@ -76,3 +76,12 @@ unplanned scale, parameters, source, data, costs or observation changes fail.
 It records both actual kinds per cell and checks selected/final report scores,
 matching holding baselines, side attribution and post-update final weights.
 Confirmation also requires the matching passing screen receipt.
+
+## Completed screen
+
+[Results](../results/reward-objectives-2026-10-20/README.md): candidate selected
+23.38%, final20.43%; control selected/final22.59%, holding30.60%. The relative
+gate fails, both final groups worsen and all3 declining-stock total returns
+remain negative despite positive short P&L. No confirmation was launched. Four
+CPU allocations stopped; all312 frozen prefix predictions pass. Net-log remains
+the default; this reward-only change is not adopted.

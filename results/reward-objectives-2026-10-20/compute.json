@@ -1,0 +1,15 @@
+{
+  "project_units": 35.79537808105018,
+  "study_start_units": 35.74856302673022,
+  "study_conservative_units": 0.04681505431996413,
+  "remaining_units": 114.20462191894981,
+  "remaining_before_teardown": 94.20462191894981,
+  "account_balance": 350.66,
+  "active_assignments": 0,
+  "reported_rate": 0.0,
+  "owned_sessions_stopped": 4,
+  "cleanup_verified": true,
+  "study_budget_stopped": false,
+  "measured_account_debit": 0.03,
+  "conservative_estimate_includes_setup_idle_transfers": true
+}
