@@ -1,12 +1,12 @@
 """Training-only start pools based on prices already observed at each start."""
 import math
 
-MODES = ('legacy_uniform', 'ready_uniform', 'downtrend_balanced')
+MODES = ('legacy_uniform', 'ready_uniform', 'downtrend_balanced', 'full_window_uniform')
 
 
 class CausalStarts:
     def __init__(self, episodes, mode, max_holding=20):
-        if mode not in MODES[1:]:
+        if mode not in ('ready_uniform','downtrend_balanced'):
             raise ValueError('causal start-pool mode required')
         self.mode = mode
         self.labels, self.all, self.down, self.other, records = [], [], [], [], []

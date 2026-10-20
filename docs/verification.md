@@ -868,3 +868,17 @@ Historical seam acceptance passes:332 bars, zero OHLCV/dividend differences
 against earlier/recent references, matching raw split events and executable
 timestamps/factors. Cached readback exact;69 related tests pass. No merge,
 training or Colab. [Evidence](../results/historical-regimes-2026-10-20/overlap.json).
+
+## Matched historical augmentation preparation
+
+Three immutable arms pass exact readback and unchanged original episodes,
+validation and normalization checks. Full512-transition windows, reproducible
+sampling and realized symbol/period counts pass tests and actual Gym/SB3
+checkers.16 focused tests pass without fitting; original causal/legacy sampling
+regression included. Colab training/job/artifact integration remains pending.
+[Prepared identities](../results/historical-augmentation-2026-10-20/preflight.json).
+
+Broader verification passes75 preparation/sampling/core/observation/reward tests
+without fitting. Repeated preparation reproduces all three exact data identities.
+Downtrend labels are not measured by full-window sampling; any compatibility
+counters are explicitly marked unmeasured, not evidence of zero downtrends.

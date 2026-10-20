@@ -1,0 +1,39 @@
+{
+  "arms": {
+    "original": {
+      "dataset": "6c5c9f049023d95efd14f457d772389cec291691bd365ef6f6c66566a9e6e1b0",
+      "train_episodes": 26,
+      "train_rows": 70200,
+      "validation_identical": true,
+      "normalization_identical": true,
+      "original_episodes_identical": true,
+      "expected_etf_episode_fraction": 0.15384615384615385
+    },
+    "recent_etf": {
+      "dataset": "76534b522d45ae5750fe312e75703acf00869ed297377f5676b850292c15cf2c",
+      "train_episodes": 30,
+      "train_rows": 81000,
+      "validation_identical": true,
+      "normalization_identical": true,
+      "original_episodes_identical": true,
+      "expected_etf_episode_fraction": 0.26666666666666666
+    },
+    "older_etf": {
+      "dataset": "66442d235deee9504bc58193c03d7639fe2d968a0bf3fbec0862c32f76e22fbf",
+      "train_episodes": 30,
+      "train_rows": 78976,
+      "validation_identical": true,
+      "normalization_identical": true,
+      "original_episodes_identical": true,
+      "expected_etf_episode_fraction": 0.26666666666666666
+    }
+  },
+  "training_performed": false,
+  "test_included": false,
+  "source": {
+    "base_dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+    "earlier_snapshot": "f44c7b0831d8322c029acf0229b754221d53cc20f8fc641a24afa4d3c1fc093b",
+    "source_audit_sha256": "643179f52b43b0d207bb6e3f92c4e907ddaca9e6676a309fc68816d94a261ce1",
+    "overlap_audit_sha256": "a298ccb8f8533503b41738c9be61b0fa80c3bfa536687730c240b9b57b1fc1f5"
+  }
+}

@@ -19,7 +19,11 @@ class TradingEnv(gym.Env):
         if start_sampling not in MODES:raise ValueError('unknown start sampling mode')
         if start_sampling!='legacy_uniform' and (not random_start or episodes[0]['split']!='train'):
             raise ValueError('causal start sampling requires random-start training only')
-        self.start_sampler=CausalStarts(episodes,start_sampling,config.max_holding) if start_sampling!='legacy_uniform' else None
+        if start_sampling=='full_window_uniform':
+            from rl_stocks.environment.sampling.windows import FullWindows
+            self.start_sampler=FullWindows(episodes,episode_steps)
+        else:
+            self.start_sampler=CausalStarts(episodes,start_sampling,config.max_holding) if start_sampling!='legacy_uniform' else None
         self.reset_sampling_statistics()
         if not np.isfinite(reward_scale) or reward_scale<=0:raise ValueError('positive finite reward scale required')
         self.reward_scale=float(reward_scale)
@@ -43,10 +47,16 @@ class TradingEnv(gym.Env):
         if self.start_sampler:
             self.sampling_counts['starts']+=1
             self.sampling_counts['downtrend_starts']+=int(self.start_sampler.label(index,self.i))
+        if self.start_sampler and self.start_sampler.mode=='full_window_uniform':
+            group=self.start_sampler.groups[index]
+            self.sampling_counts['history_groups'].setdefault(group,dict(starts=0,transitions=0))['starts']+=1
         self.steps=0;self.done=False;self.sim=Simulator(self.config)
         return self.observation(),{"symbol":self.episode["symbol"],"session":self.bars[self.i].session}
     def reset_sampling_statistics(self):
         self.sampling_counts=dict(starts=0,downtrend_starts=0,transitions=0,downtrend_transitions=0)
+        if self.start_sampler and self.start_sampler.mode=='full_window_uniform':
+            self.sampling_counts['history_groups']={}
+            self.sampling_counts['downtrend_counts_measured']=False
     def sampling_statistics(self):
         return {**self.sampling_counts,'mode':self.start_sampler.mode} if self.start_sampler else None
     def observation(self):
@@ -61,6 +71,9 @@ class TradingEnv(gym.Env):
         if self.start_sampler:
             self.sampling_counts['transitions']+=1
             self.sampling_counts['downtrend_transitions']+=int(self.start_sampler.label(self.episode_index,self.i))
+        if self.start_sampler and self.start_sampler.mode=='full_window_uniform':
+            group=self.start_sampler.groups[self.episode_index]
+            self.sampling_counts['history_groups'].setdefault(group,dict(starts=0,transitions=0))['transitions']+=1
         previous=self.bars[self.i];atr=self.episode["atr"][self.i]
         self.i+=1;self.steps+=1
         bar=self.bars[self.i]

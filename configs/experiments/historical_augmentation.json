@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "name": "matched-historical-etf-augmentation-2026-10-20",
+  "hypothesis": "Earlier chronological market regimes may improve trading generalization beyond equal-mass recent-ETF oversampling. Compare both controls, retain failed outcomes, and stop at the fixed gate.",
+  "algorithm": "ppo",
+  "arms": ["original", "recent_etf", "older_etf"],
+  "candidate": "older_etf",
+  "datasets": {
+    "original": "6c5c9f049023d95efd14f457d772389cec291691bd365ef6f6c66566a9e6e1b0",
+    "recent_etf": "76534b522d45ae5750fe312e75703acf00869ed297377f5676b850292c15cf2c",
+    "older_etf": "66442d235deee9504bc58193c03d7639fe2d968a0bf3fbec0862c32f76e22fbf"
+  },
+  "base_dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "screen_seed": 11,
+  "confirmation_seeds": [11, 23, 37],
+  "steps_per_cell": 50000,
+  "smoke_steps": 512,
+  "device": "cpu",
+  "initialization": "wide",
+  "policy_variant": "native",
+  "observation_profile": "execution_full",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "start_sampling": "full_window_uniform",
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "n_steps": 1000,
+  "batch_size": 50,
+  "evaluation_every": 10000,
+  "selection_metric": "Unchanged equal-weight mean validation net return; no declining-stock label selection",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Stop after seed11; no confirmation, longer run or parameter sweep. Preserve all checkpoints and reports."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Repeated2021-2023 development evidence only. Frozen prospective confirmation still required; never claim success from one selected checkpoint."
+  },
+  "constraints": {
+    "normalization": "Original immutable training-only normalizer and seven indicators identical in every arm; no refit on validation or older labels",
+    "episodes": "Original episodes untouched; earlier ETFs get independent feature warmup and final20-row purge. Additional recent ETF episodes duplicate only existing training episodes.",
+    "sampling": "Uniform training episode, then uniform start with entire window remaining. Recent/older augmented arms each have8/30 expected ETF episode mass and4/30 extra episode mass; original4/26. Record actual starts/transitions by symbol and earlier/recent history. No outcome labels.",
+    "execution": "Identical100k equity, whole shares, exposure cap1,20-session holding limit, long/short four-component actions, next-session execution and default costs",
+    "validation": "Same immutable original26-symbol2021-2023 panel and matched holding dates, selected/final weights reported",
+    "retired_test": "Never load or evaluate2024-September2026",
+    "short_side": "Report positive total returns AND positive net short P&L jointly for ex-post falling-stock cohorts; reporting only, never inputs/sampling/reward/checkpoint selection",
+    "limitations": "Retrospective survivor stocks/ETFs and revised Yahoo units, not PIT membership/delisting coverage or independent market evidence",
+    "training_location": "Google Colab only; actual default Python checked before dependency sync"
+  },
+  "execution": {
+    "runner": "Existing central metered owned fleet with shared original ledger",
+    "initial_concurrency": 3,
+    "preflight": "One512-transition CPU Colab smoke per arm before50k screen; verify kernel/dependencies, fixed windows, group counters, frozen restoration and teardown",
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "cleanup": "Retrieve durable models/reports/checkpoints; verify every owned runtime stopped; publish and verify assets before duplicate-only removal",
+    "readiness": "Prepared data and local sampler tests do not authorize skipping metered job/artifact validation; freeze one committed source before allocation."
+  }
+}

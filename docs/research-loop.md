@@ -211,3 +211,14 @@ labels, to define inclusion. A later matched study would need to distinguish
 extra market history from extra ETF sampling and transition budget. Keep retired
 isolation, predefined stock/ETF gates and prospective confirmation. Project usage
 remains35.871240/150; this saved-path diagnosis adds no allocation or training.
+
+## Historical augmentation preparation
+
+Older source/overlap checks pass. Three immutable original/recent-ETF/earlier-ETF
+arms preserve existing observations/normalization/validation; extraETF mass is
+matched in augmented arms. Full training windows avoid near-end truncation
+confounds; actual group transitions are logged. The fixed protocol requires
+beating both controls and passing absolute stock/ETF gates before confirmation,
+not merely improving an already weak control. Complete metered job/artifact
+integration and source freeze before threeCPU smokes. No fitting or credits
+used at preparation; [protocol](../configs/experiments/historical_augmentation.json).

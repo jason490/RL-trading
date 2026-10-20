@@ -957,3 +957,17 @@ Next prepare separate old-history episodes, fixed512-session training windows
 and matched recent/old ETF sampling mass while preserving original observations,
 validation and normalization. Freeze identities/gates before Colab.
 [Evidence](results/historical-regimes-2026-10-20/overlap.json).
+
+## 37. Matched historical ETF augmentation — prepared, fitting pending
+
+Original/recent-ETF/earlier-ETF datasets preserve original observations,
+normalization and validation exactly. Rows70,200/81,000/78,976; augmented arms
+each have8/30 expected ETF episode mass. Full-window sampling logs actual
+symbol/period starts and transitions; legacy behavior preserved. Fixed native
+wide/full-state PPO50k seed11 screen must beat both controls and satisfy both
+stock/ETF selected/final targets before23/37 confirmation.16 focused preparation/
+sampling tests and Gym/SB3 checkers pass without fitting. No Colab allocation;
+worker/job/artifact validation and committed source freeze pending.
+[Protocol](configs/experiments/historical_augmentation.json),
+[guide](docs/historical-augmentation.md),
+[prepared identities](results/historical-augmentation-2026-10-20/preflight.json).
