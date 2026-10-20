@@ -1,0 +1,11 @@
+{
+  "name": "sac-diversity-fixed-fit-2026-10-20",
+  "source_state": ".runtime/diversity-screen-state.json",
+  "source_summary": "results/sac-diversity-2026-10-20/summary.json",
+  "arms": ["original", "expanded"],
+  "weights": "latest.zip only; final100k seed11; no selection",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "window": "Existing fixed2017-12-29 anchor,2018-01-02 through2020-12-02 executions,26 common training symbols",
+  "constraints": "No fitting, normalization update, optimizer calls, checkpoint selection, provider requests, retired data or Colab. Preserve original failed diversity gates. Future20-session10-percent decline/rebound labels are reporting only. Old training-fit slicing protocol unchanged.",
+  "interpretation": "Compare matched fitted-window holding and accepted exposure cohorts descriptively. In-sample performance is not independent validation or evidence of robust short profits; no automatic training extension."
+}
