@@ -1112,3 +1112,8 @@ Observed smoke transport failure motivates bounded deferred unstarted-worker
 recovery. Sixteen lifecycle/budget/retry checks pass; original deadlines and
 one-retry limit preserved. Current frozen training source unchanged.
 [Behavior](colab-concurrency.md#delayed-proof-of-an-unstarted-worker).
+
+Diversity actual Colab smokes pass:2x1024, Python3.13.16, matching initial
+networks/alpha/preprocessing,156 exact restored predictions, sampler counts and
+2 verified owned stops. Project36.169866/150.
+[Evidence](../results/sac-diversity-2026-10-20/README.md).

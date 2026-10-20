@@ -1130,3 +1130,8 @@ Diversity version19 integration complete:82 focused checks, actual immutable
 payload checks and script compilation pass. Source freeze then2x1024 Colab CPU
 smokes next, before matched2x100k screen. Positive-transition coverage and
 actual initial network/normalizer parity remain required.
+
+Diversity actual smokes pass2x1024 CPU transitions, initial network/alpha and
+normalization equality,156 exact frozen predictions and2 verified stops. Fixed
+2x100k screen next under same study allowance, worker5cad3fa/controllerc6f69d4.
+[Acceptance](results/sac-diversity-2026-10-20/smoke-summary.json).

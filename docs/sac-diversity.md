@@ -110,3 +110,19 @@ PYTHONPATH=src .venv/bin/python scripts/report_diversity.py \
 Account balance350.42, zero rate and assignments verified before source freeze.
 Project36.149107/150. The new study allowance2 units includes smokes and screen,
 starting at the unchanged current cumulative ledger; it never resets the project.
+
+## Actual diversity smoke acceptance
+
+Two1024-transition Colab CPU smokes pass on default Python3.13.16. Actual
+initial actor/critic/target hashes and alpha1 match; original normalization
+matches across datasets.156 exact frozen-prefix predictions, sampler-count
+reconciliation and incompatible-input rejection pass. Both owned sessions
+stopped. One verified-absence same-session retry recovered an initial CLI
+connection loss; no duplicate allocation or deadline reset. Project36.169866/150.
+
+Screen controller is frozen separately atc6f69d4 to include bounded delayed
+absence recovery; its working directory/payload files remain frozen worker
+source5cad3fa. This preserves the exact worker source used by smokes while
+recording controller provenance separately. Original study start36.14910675
+and2-unit allowance remain unchanged across phases.
+[Evidence](../results/sac-diversity-2026-10-20/README.md).

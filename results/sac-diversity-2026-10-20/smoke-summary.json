@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "records": {
+    "expanded": {
+      "session": "rl-stocks-cpu-3fc37e1f3afc",
+      "bundle_id": "d2cebd1ba8cf493144460af2b03284f55e17b0ac232ded1225deeb28cd8d0299",
+      "python": "3.13.16",
+      "actual_steps": 1024,
+      "initialization": {
+        "alpha": 1.0,
+        "target_entropy": -4.0,
+        "network_sha256": {
+          "actor": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "critic": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c",
+          "critic_target": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c"
+        }
+      },
+      "sampling": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 111,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 107,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 8,
+            "transitions": 896
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 8,
+        "actual_etf_transition_fraction": 0.125
+      },
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f"
+    },
+    "original": {
+      "session": "rl-stocks-cpu-1374a02a6501",
+      "bundle_id": "9a650c620b73c4b51049f3610af0287f26188d9a1846a308dd1cadb70b715f6b",
+      "python": "3.13.16",
+      "actual_steps": 1024,
+      "initialization": {
+        "alpha": 1.0,
+        "target_entropy": -4.0,
+        "network_sha256": {
+          "actor": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "critic": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c",
+          "critic_target": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c"
+        }
+      },
+      "sampling": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 26,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 22,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 8,
+            "transitions": 896
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 8,
+        "actual_etf_transition_fraction": 0.125
+      },
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f"
+    }
+  },
+  "initial_networks_and_alpha_identical": true,
+  "normalizers_identical": true,
+  "owned_cleanup_verified": true,
+  "project_units": 36.16986556577946,
+  "study_start_units": 36.14910675120684,
+  "smoke_incremental_units": 0.020758814572623407,
+  "account_balance": 350.4,
+  "reported_rate": 0.0,
+  "active_assignments": 0,
+  "test_evaluated": false,
+  "objective_achieved": false,
+  "worker_revision": "5cad3fa2055e4262ea130410868a80400010e57a",
+  "recovery": {
+    "same_session_retry_count": 1,
+    "absence_verified": true,
+    "new_allocation": false,
+    "deadlines_preserved": true
+  }
+}
