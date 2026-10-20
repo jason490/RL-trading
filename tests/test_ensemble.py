@@ -83,3 +83,27 @@ def test_retired_source_dataset_cannot_be_selected_for_evaluation(tmp_path):
     protocol['evaluation_dataset']=protocol['source_dataset']
     with pytest.raises(ValueError,match='before data access'):
         prepare(protocol,{'status':'complete','cleanup_verified':True},tmp_path/'does-not-exist')
+
+
+def test_resume_rejects_changed_models_data_or_gates_and_tampered_cached_paths(tmp_path):
+    import json,gzip,runpy
+    from pathlib import Path
+    from rl_stocks.core.contracts import canonical,digest
+    from rl_stocks.inference.bundle import checksum
+    restore=runpy.run_path('scripts/replay_ensembles.py')['verified_cache']
+    protocol=json.loads(Path('configs/experiments/frozen_ensembles_continuation.json').read_text())
+    original=json.loads(Path('configs/experiments/frozen_ensembles.json').read_text())
+    path=tmp_path/'report.json.gz';path.write_bytes(gzip.compress(canonical({'fixture':True}),mtime=0))
+    proof={'fixture':'contract'}
+    old={'status':'failed','training_performed':False,'colab_allocated':False,'test_evaluated':False,
+         'package_source_hash':'fixed','preflight':proof,'protocol_sha256':digest(original),'protocol':original,
+         'failed_case':{'name':'reference:sac-11','phase':'final','source_reference_drift':{**{k:0. for k in original['reference_drift_limits']},'maximum_cost_difference_dollars':3.24}},
+         'cells':[{'phase':'selected','name':'ppo_mean','report':path.name,'report_sha256':checksum(path)}]}
+    (tmp_path/'summary.json').write_text(json.dumps(old))
+    cache,_=restore(tmp_path,protocol,proof,'fixed');assert cache['selected','ppo_mean'][1]['fixture']
+    for changed in ({**protocol,'candidates':{}},{**protocol,'evaluation_dataset':'other'}):
+        with pytest.raises(ValueError):restore(tmp_path,changed,proof,'fixed')
+    with pytest.raises(ValueError):restore(tmp_path,protocol,{'other':'contract'},'fixed')
+    with pytest.raises(ValueError):restore(tmp_path,protocol,proof,'changed-code')
+    path.write_bytes(b'tampered')
+    with pytest.raises(ValueError):restore(tmp_path,protocol,proof,'fixed')

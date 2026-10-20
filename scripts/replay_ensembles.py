@@ -81,10 +81,38 @@ def prepare(protocol,state,data_root):
         'data_provenance_identical':False,'source_data_identity_not_claimed':True}
 
 
+def verified_cache(previous,protocol,proof,package_hash):
+    previous=Path(previous);old=json.loads((previous/'summary.json').read_text())
+    amendment=protocol.get('continuation',{})
+    if (old['status']!='failed' or old['training_performed'] or old['colab_allocated']
+        or old['test_evaluated'] or old['package_source_hash']!=package_hash
+        or old['preflight']!=proof or old['protocol_sha256']!=amendment.get('original_protocol_sha256')
+        or old['failed_case']['name']!=amendment.get('failed_case')
+        or old['failed_case']['phase']!=amendment.get('failed_phase')
+        or amendment.get('eligible_for_promotion') is not False):
+        raise ValueError('invalid diagnostic continuation source')
+    if amendment.get('maximum_cost_drift_dollars_for_diagnostic')!=5. or amendment.get('original_reference_gate_remains_failed') is not True:
+        raise ValueError('diagnostic cost exception must remain bounded and nonpassing')
+    drift=old['failed_case']['source_reference_drift'];limits=old['protocol']['reference_drift_limits']
+    if (any(drift[k]>v for k,v in limits.items() if k!='maximum_cost_difference_dollars')
+        or not limits['maximum_cost_difference_dollars']<drift['maximum_cost_difference_dollars']<=5.):
+        raise ValueError('original failure is not the declared small cost-only discrepancy')
+    base={k:v for k,v in protocol.items() if k not in ('version','name','continuation')}
+    expected={k:v for k,v in old['protocol'].items() if k not in ('version','name')}
+    if base!=expected:raise ValueError('continuation changes data, members, weights or performance gates')
+    result={}
+    for cell in old['cells']:
+        path=(previous/cell['report']).resolve()
+        if not path.is_relative_to(previous.resolve()) or checksum(path)!=cell['report_sha256']:
+            raise ValueError('cached replay path/hash mismatch')
+        result[cell['phase'],cell['name']]=(cell,json.loads(gzip.decompress(path.read_bytes())))
+    return result,old
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--protocol',type=Path,default=Path('configs/experiments/frozen_ensembles.json'))
     p.add_argument('--state',type=Path,default=Path('.runtime/algorithm-stability-state.json'));p.add_argument('--data-root',type=Path,default=Path('data/datasets'))
-    p.add_argument('--output',type=Path,required=True);p.add_argument('--preflight',type=Path,default=Path('results/frozen-ensembles-2026-10-20/preflight.json'));p.add_argument('--preflight-only',action='store_true');a=p.parse_args()
+    p.add_argument('--output',type=Path,required=True);p.add_argument('--preflight',type=Path,default=Path('results/frozen-ensembles-2026-10-20/preflight.json'));p.add_argument('--preflight-only',action='store_true');p.add_argument('--reuse-verified',type=Path);a=p.parse_args()
     protocol=json.loads(a.protocol.read_text());state=json.loads(a.state.read_text());torch.set_num_threads(1)
     if not a.preflight_only:
         source=repository_state(Path.cwd())
@@ -108,7 +136,12 @@ def main():
     from rl_stocks.data.generation.datasets import normalizer_from
     ep=next(e for e in d['episodes'].values() if e['split']=='validation')
     probe_env=TradingEnv([ep],normalizer_from(d['normalizer']),d['names']);probe_observation,_=probe_env.reset(seed=11);probe_env.close()
-    records=[];baseline=None;cache={}
+    records=[];baseline=None;cache={};completed_cache={};old_scope=None;new_evaluations=0
+    if a.reuse_verified:
+        completed_cache,old_scope=verified_cache(a.reuse_verified,protocol,proof,scope['package_source_hash'])
+        scope['continuation_from_failed_protocol']=old_scope['protocol_sha256']
+        scope['original_reference_gate_passed']=False
+        scope['eligible_for_promotion']=False
     normalizer_before=canonical(d['normalizer'])
     try:
         for phase in ('selected','final'):
@@ -117,20 +150,33 @@ def main():
                 models=[members[phase][k] for k in identities];ensemble=UniformEnsemble(models)
                 cache_key=tuple((k,fingerprints[phase,k]) for k in identities)
                 reused=cache_key in cache
-                results,oldcell=cache[cache_key] if reused else (evaluate(ensemble,d,config=SimulationConfig(**proof['simulation'])),None)
+                disk_cached=completed_cache.get((phase,name))
+                if disk_cached is not None and disk_cached[0]['recipe']!=ensemble.recipe():raise ValueError('cached recipe/member mismatch')
+                if reused:results,oldcell=cache[cache_key]
+                elif disk_cached is not None:oldcell,results=disk_cached
+                else:
+                    results=evaluate(ensemble,d,config=SimulationConfig(**proof['simulation']));oldcell=None;new_evaluations+=1
                 report=a.output/'reports'/f'{phase}-{name.replace(":","-")}.json.gz'
                 if reused:report=a.output/oldcell['report']
                 else:report.write_bytes(gzip.compress(canonical(results),mtime=0))
                 cell={'name':name,'phase':phase,'member_ids':identities,'recipe':ensemble.recipe(),
                       'metrics':group_metrics(results,stocks),'declining_stocks':declining_stock_summary(results,stocks),
                       'mean_costs':mean(r['metrics']['costs'] for r in results.values()),
-                      'report':str(report.relative_to(a.output)),'report_sha256':checksum(report),'reused':reused}
+                      'report':str(report.relative_to(a.output)),'report_sha256':checksum(report),'reused':reused,'reused_verified_previous_run':disk_cached is not None}
                 expected=references.get((identities[0],phase)) if name.startswith('reference:') else None
                 if expected is not None:
                     drift=difference(results,expected);cell['source_reference_drift']=drift
                     if (not drift['panel_matches'] or not drift['row_counts_match'] or drift['session_mismatch_rows']
                         or any(drift[k]>limit for k,limit in protocol['reference_drift_limits'].items())):
-                        scope['failed_case']=cell;raise ValueError('source/local reference drift exceeds declared financial limits')
+                        amendment=protocol.get('continuation',{})
+                        cost_only=all(drift[k]<=limit for k,limit in protocol['reference_drift_limits'].items() if k!='maximum_cost_difference_dollars')
+                        permitted=(old_scope is not None and cost_only and drift['panel_matches'] and drift['row_counts_match'] and not drift['session_mismatch_rows']
+                            and drift['maximum_cost_difference_dollars']<=amendment.get('maximum_cost_drift_dollars_for_diagnostic',0)
+                            and name==amendment.get('failed_case') and phase==amendment.get('failed_phase'))
+                        if not permitted:
+                            scope['failed_case']=cell;raise ValueError('source/local reference drift exceeds declared financial limits')
+                        cell['original_reference_gate_passed']=False
+                        cell['diagnostic_only_cost_drift_exception']=True
                 current=digest({k:r['baselines'] for k,r in results.items()})
                 if baseline is not None and baseline!=current:raise ValueError('holding baseline drift')
                 baseline=current
@@ -145,7 +191,7 @@ def main():
                 for r in results.values():records.append({'name':name,'phase':phase,'symbol':r['symbol'],
                     'kind':'stock' if r['symbol'] in stocks else 'etf',**r['metrics'],
                     'buy_hold_return':r['baselines']['buy_hold']['metrics']['net_return'],**r['directional']})
-                print(json.dumps({'phase':phase,'case':name,'return_pct':100*cell['metrics']['score'],'reused':reused}),flush=True)
+                print(json.dumps({'phase':phase,'case':name,'return_pct':100*cell['metrics']['score'],'reused':reused,'reused_verified_previous_run':disk_cached is not None}),flush=True)
         assert len(scope['cells'])==protocol['maximum_labeled_replays']
         comparisons={}
         for candidate,ids in protocol['candidates'].items():
@@ -167,7 +213,7 @@ def main():
             comparisons[candidate]={'relative_to_mean_individual_reference':relative,'absolute_comparable_by_phase':absolute,'absolute_comparable':all(absolute.values()),'not_independent_confirmation':True}
         scope['diagnostic_comparisons']=comparisons
         scope.update(status='complete',source_artifacts_and_tensors_unchanged=True,validation_baseline_sha256=baseline,
-                     unique_replays=len(cache),ensemble_repetitions=1,interpretation='One fixed ensemble per candidate, not independent ensemble seeds; no prospective evidence')
+                     unique_replays=len(cache),new_evaluations_this_run=new_evaluations,reused_verified_previous_cells=len(completed_cache),ensemble_repetitions=1,interpretation='One fixed ensemble per candidate, not independent ensemble seeds; no prospective evidence')
         save(target,scope)
         with (a.output/'per-symbol.csv').open('w',newline='') as f:
             w=csv.DictWriter(f,fieldnames=list(records[0]),lineterminator='\n');w.writeheader();w.writerows(records)

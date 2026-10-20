@@ -1,0 +1,284 @@
+{
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "source/local reference drift exceeds declared financial limits",
+  "completed_cells": 12,
+  "protocol_sha256": "cea60c81ad739f911ab11f9bacc2ad13466bda0abcbb82338c18d67bff14cf56",
+  "failed_case": {
+    "declining_stocks": {
+      "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+      "count": 3,
+      "positive_policy_and_short_pnl_count": 0,
+      "records": [
+        {
+          "buy_hold_return": -0.0773480025386506,
+          "episode": "AMZN-validation-0",
+          "includes_open_position_mark": true,
+          "long_active_sessions": 716,
+          "long_costs": 4068.7712197962037,
+          "long_net_pnl": -28887.051200776128,
+          "long_return_contribution": -0.28887051200776126,
+          "max_equity_reconciliation_error": 1.4915713109076023e-10,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "policy_return": -0.32566778283566755,
+          "positive_policy_and_short_pnl": false,
+          "sessions": 732,
+          "short_active_sessions": 54,
+          "short_costs": 802.4822265934096,
+          "short_net_pnl": -3679.727082790745,
+          "short_return_contribution": -0.03679727082790745,
+          "symbol": "AMZN"
+        },
+        {
+          "buy_hold_return": -0.4738014050296483,
+          "episode": "DIS-validation-0",
+          "includes_open_position_mark": true,
+          "long_active_sessions": 720,
+          "long_costs": 3482.890028152269,
+          "long_net_pnl": -52748.159289737974,
+          "long_return_contribution": -0.5274815928973797,
+          "max_equity_reconciliation_error": 1.6007106751203537e-10,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "policy_return": -0.5361629862361866,
+          "positive_policy_and_short_pnl": false,
+          "sessions": 732,
+          "short_active_sessions": 30,
+          "short_costs": 306.7792117294006,
+          "short_net_pnl": -868.1393338806283,
+          "short_return_contribution": -0.008681393338806282,
+          "symbol": "DIS"
+        },
+        {
+          "buy_hold_return": -0.14630790487726686,
+          "episode": "NEE-validation-0",
+          "includes_open_position_mark": true,
+          "long_active_sessions": 713,
+          "long_costs": 5768.758135238883,
+          "long_net_pnl": -4343.119487028569,
+          "long_return_contribution": -0.04343119487028569,
+          "max_equity_reconciliation_error": 8.731149137020111e-11,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "policy_return": -0.026896333257765748,
+          "positive_policy_and_short_pnl": false,
+          "sessions": 732,
+          "short_active_sessions": 29,
+          "short_costs": 502.1757126671173,
+          "short_net_pnl": 1653.4861612519016,
+          "short_return_contribution": 0.016534861612519016,
+          "symbol": "NEE"
+        }
+      ]
+    },
+    "mean_costs": 7909.719381413039,
+    "member_ids": [
+      "sac-11"
+    ],
+    "metrics": {
+      "groups": {
+        "etf": {
+          "buy_hold_max_drawdown": -0.2771255753468467,
+          "buy_hold_return": 0.19466021642377884,
+          "count": 4,
+          "excess_return": -0.10394698915206094,
+          "max_drawdown": -0.2778675652720781,
+          "median_excess_return": -0.08970725472493257,
+          "net_return": 0.0907132272717179
+        },
+        "stock": {
+          "buy_hold_max_drawdown": -0.32913998204866823,
+          "buy_hold_return": 0.32626546944483825,
+          "count": 22,
+          "excess_return": -0.2064599382000316,
+          "max_drawdown": -0.33804303844140027,
+          "median_excess_return": -0.16291157535815198,
+          "net_return": 0.11980553124480663
+        }
+      },
+      "mean_max_drawdown": -0.3287852733384276,
+      "score": 0.11532979217202374,
+      "stock_excess_by_symbol": {
+        "AAPL": -0.28672921156102094,
+        "AMT": -0.22955169436152612,
+        "AMZN": -0.24831978029701696,
+        "APD": -0.017309182140088808,
+        "BAC": -0.3855572633582094,
+        "CAT": -0.3695074253256363,
+        "CVX": 0.098430420557307,
+        "DIS": -0.06236158120653834,
+        "DUK": -0.25590641606635756,
+        "GOOGL": -0.13914814392551866,
+        "HD": 0.0705118366658497,
+        "HON": -0.14283418102419276,
+        "JNJ": -0.16768507173667901,
+        "JPM": -0.10223880351776016,
+        "KO": -0.15813807897962495,
+        "LIN": -0.21760797166394208,
+        "MSFT": -0.20168435903851267,
+        "NEE": 0.11941157161950111,
+        "PG": -0.11947331702812902,
+        "PLD": -0.01784354297074109,
+        "UNH": -0.5503483911703009,
+        "XOM": -1.1582280538715575
+      }
+    },
+    "name": "reference:sac-11",
+    "phase": "final",
+    "recipe": {
+      "aggregation": "Arithmetic mean of deterministic bounded four-component predictions on shared account state",
+      "contract": {
+        "action_schema": "target-zone-v1",
+        "adjustments": "split_adjusted_with_dividends",
+        "feature_schema": "daily-indicators-v1",
+        "feed": "yahoo",
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20"
+        ],
+        "normalizer": {
+          "means": [
+            0.0004990544866644428,
+            0.012735132296023969,
+            0.00469844447216914,
+            0.012019454990342297,
+            0.5389047390801802,
+            0.018389739889369705,
+            1.0153090843440746
+          ],
+          "names": [
+            "return_1",
+            "volatility_20",
+            "ema_20_ratio",
+            "ema_50_ratio",
+            "rsi_14",
+            "atr_14_ratio",
+            "relative_volume_20"
+          ],
+          "scales": [
+            0.015313643928828525,
+            0.00786943611664361,
+            0.029180487735227603,
+            0.04507155802842066,
+            0.11677961862593828,
+            0.009077586213247573,
+            0.456061113252682
+          ]
+        },
+        "observation": {
+          "portfolio_fields": [
+            "exposure",
+            "cash_fraction",
+            "holding_age",
+            "unrealized_fraction",
+            "equity_return"
+          ],
+          "profile": "legacy",
+          "version": 1
+        },
+        "observation_size": 12
+      },
+      "kind": "uniform_stateless_actions",
+      "members": [
+        {
+          "identity": "sac-11",
+          "weight": 1.0,
+          "weights_sha256": "e457fdb5f8067e8a5572dc561f9e96d69748393280a834c39120f092f60a1b13"
+        }
+      ],
+      "version": 1
+    },
+    "report": "reports/final-reference-sac-11.json.gz",
+    "report_sha256": "624bee9ee3f3add92c3d4d5e9959dba0c84244001e38676c3957b7df55e0207d",
+    "reused": false,
+    "source_reference_drift": {
+      "maximum_action_difference": 0.004169762134552002,
+      "maximum_cost_difference_dollars": 3.237586090759578,
+      "maximum_drawdown_difference": 3.859241407155878e-05,
+      "maximum_equity_difference_dollars": 41.09931913865148,
+      "maximum_quantity_difference": 6,
+      "maximum_return_difference": 0.0003366855109532274,
+      "panel_matches": true,
+      "position_sign_mismatch_rows": 0,
+      "quantity_examples": [
+        {
+          "actual": 635,
+          "episode": "JPM-validation-0",
+          "equity_difference": -2.0112284993811045,
+          "reference": 636,
+          "session": "2022-05-31"
+        },
+        {
+          "actual": 548,
+          "episode": "JPM-validation-0",
+          "equity_difference": -3.9189975774788763,
+          "reference": 549,
+          "session": "2022-07-22"
+        },
+        {
+          "actual": 640,
+          "episode": "JPM-validation-0",
+          "equity_difference": -4.0991105288412655,
+          "reference": 641,
+          "session": "2022-10-20"
+        },
+        {
+          "actual": 723,
+          "episode": "JPM-validation-0",
+          "equity_difference": -7.7970895837497665,
+          "reference": 724,
+          "session": "2023-02-03"
+        },
+        {
+          "actual": 726,
+          "episode": "JPM-validation-0",
+          "equity_difference": -9.087482102680951,
+          "reference": 727,
+          "session": "2023-03-03"
+        },
+        {
+          "actual": 752,
+          "episode": "JPM-validation-0",
+          "equity_difference": -13.46622915842454,
+          "reference": 753,
+          "session": "2023-03-10"
+        },
+        {
+          "actual": 90,
+          "episode": "JPM-validation-0",
+          "equity_difference": -11.6063039660512,
+          "reference": 89,
+          "session": "2023-03-14"
+        },
+        {
+          "actual": 176,
+          "episode": "JPM-validation-0",
+          "equity_difference": -20.72560241543397,
+          "reference": 174,
+          "session": "2023-03-15"
+        },
+        {
+          "actual": 801,
+          "episode": "JPM-validation-0",
+          "equity_difference": -22.810756339895306,
+          "reference": 802,
+          "session": "2023-03-27"
+        },
+        {
+          "actual": 741,
+          "episode": "JPM-validation-0",
+          "equity_difference": -26.994991169965942,
+          "reference": 742,
+          "session": "2023-04-14"
+        }
+      ],
+      "quantity_mismatch_rows": 86,
+      "row_counts_match": true,
+      "session_mismatch_rows": 0
+    }
+  },
+  "full_original_summary_sha256": "df67f3dcae6f243c298cb2179915cc8fb7da9e635e6dfa1649cd76d67f7a902d"
+}

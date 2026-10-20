@@ -14,3 +14,11 @@ No performance result is claimed yet.
 
 See [protocol](../../configs/experiments/frozen_ensembles.json),
 [methodology](../../docs/ensembles.md) and [preflight](preflight.json).
+
+The original run stopped after twelve verified cases on final SAC seed11
+reference cost drift: $3.24 versus the $1 cap. Equity/return/drawdown caps pass.
+Selected ensemble means were 19.27% PPO, 21.38% SAC and 21.42% combined, below
+30.60% holding. A diagnostic-only continuation will retain the original failed
+reference gate, reuse verified cases, rerun the failed case and complete the
+remaining final cases. It cannot promote a model; all members, weights,
+evaluation data and performance gates remain unchanged.

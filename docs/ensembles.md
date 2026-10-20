@@ -83,3 +83,19 @@ ensemble trials. A promising development result would still require separately
 preregistered robustness repetitions and untouched prospective evaluation. This
 diagnostic cannot establish the project goal by itself. No broker orders or
 retired-test evaluation are authorized by it.
+
+## Diagnostic continuation after an original reference failure
+
+The original run stopped on final SAC seed11: $3.24 source cost drift exceeded
+the $1 cap, while its equity, return and drawdown differences stayed inside
+their original caps. That original run remains failed. A separately committed
+continuation preserves every member, weight, dataset, performance gate and
+original drift limit. It allows only this cost-only discrepancy up to $5 for
+descriptive matched-local analysis; the original reference gate remains failed
+and promotion remains disabled. No result is relabeled cloud-exact.
+
+`--reuse-verified` reuses only completed cases whose raw report checksums,
+recipes, core-package hash and input preflight still match. The failed case is
+evaluated again and must satisfy every other original cap. This avoids repeating
+verified simulations and does not resume training or Colab sessions. The original
+failed report and the continuation are retained separately.
