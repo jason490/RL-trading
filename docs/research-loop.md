@@ -364,3 +364,16 @@ comparability but fails development; PPO/TD3 fail fitted flags. All source,
 weights, update counts and normalization remain unchanged. Three release assets
 verified, complete derived paths retained. Project36.149107/150.
 [Evidence and training-diversity audit next](training-fit-diagnostic.md#actual-inference-only-outcome).
+
+## SAC training-diversity preparation
+
+Cached107-stock plus4-ETF data preserves every original episode and all26
+validation episodes exactly. New immutable cdb93a33… fixes original preprocessing
+without fitting or modifying sources.18 data/slice tests pass. Fixed protocol
+retains22/26 stock and4/26 ETF sampling mass, explicit full-window group cycles
+and actual symbol coverage. Fresh equal100k arms allow traversal of107 stocks;
+50k cannot. No sampler rescue, return-label weighting or relaxed development
+gates. Prior PPO expansion failures remain negative evidence. Runtime/sampler
+integration and Colab smokes pending, no allocation; project36.149107/150.
+[Guide](sac-diversity.md),
+[audit](../results/sac-diversity-data-2026-10-20/README.md).

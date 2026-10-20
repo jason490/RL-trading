@@ -1115,3 +1115,13 @@ proofs and3 release asset digests pass, no fitting/Colab. Before another study,
 audit existing expanded data for SAC training diversity with original
 normalization/validation fixed. Project36.149107/150, objective unmet.
 [Evidence](results/training-fit-2026-10-20/README.md).
+
+## 44. SAC training-diversity data and fixed protocol — prepared
+
+Cached expansion audit preserves all originals and validation; new cdb93a33…
+uses original preprocessing.18 checks pass, source hashes unchanged, no fitting/
+Colab. Fixed fresh two-arm100k comparison holds stock/ETF sampling mass; group
+cycles and actual coverage are required before interpreting the result. Sampler/
+runtime integration and smokes next; no relaxation of absolute or prospective
+requirements. [Guide](docs/sac-diversity.md),
+[protocol](configs/experiments/sac_diversity.json).
