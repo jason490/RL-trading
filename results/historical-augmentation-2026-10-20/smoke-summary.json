@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "owned_cleanup_verified": true,
+  "records": [
+    {
+      "task": "history-recent_etf-11-smoke",
+      "session": "rl-stocks-cpu-50a56c7759c6",
+      "bundle_id": "ef34a63422171bf42b0bcb187e0e0efd3dd5aa0ee654f6c745a27fcbe458b69d",
+      "dataset": "76534b522d45ae5750fe312e75703acf00869ed297377f5676b850292c15cf2c",
+      "steps": 512,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "source_hash": "45abaa7928f6010cf13e906e6bf8a56608cff5d2d3d0800477d575505865509c",
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "BAC:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "PLD:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "JPM:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "NEE:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "IWM:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "full_window_uniform"
+      }
+    },
+    {
+      "task": "history-original-11-smoke",
+      "session": "rl-stocks-cpu-1fc27c36274d",
+      "bundle_id": "e6af5d8a89d6cea26787853d6310f508d466b0c06684fb078aa61569f45028dd",
+      "dataset": "6c5c9f049023d95efd14f457d772389cec291691bd365ef6f6c66566a9e6e1b0",
+      "steps": 512,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "source_hash": "45abaa7928f6010cf13e906e6bf8a56608cff5d2d3d0800477d575505865509c",
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "APD:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "PG:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "JPM:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "MSFT:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "HON:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "full_window_uniform"
+      }
+    },
+    {
+      "task": "history-older_etf-11-smoke",
+      "session": "rl-stocks-cpu-a955a37f2481",
+      "bundle_id": "59ff30ff3687fb5f237322a9ed9535c939fffad5ecdc0cfec606320554938899",
+      "dataset": "66442d235deee9504bc58193c03d7639fe2d968a0bf3fbec0862c32f76e22fbf",
+      "steps": 512,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "source_hash": "45abaa7928f6010cf13e906e6bf8a56608cff5d2d3d0800477d575505865509c",
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "BAC:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "PLD:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "JPM:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "NEE:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "IWM:earlier": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "full_window_uniform"
+      }
+    }
+  ],
+  "project_units_after_smoke": 35.88837393207416,
+  "smoke_conservative_increment": 0.01713345854348347,
+  "account_balance_after_smoke": 350.6,
+  "rate_after_smoke": 0.0,
+  "active_assignments_after_smoke": 0,
+  "source_revision": "4be5219e782de018ddb5e28cf2fd9e3471780fc5",
+  "performance_gate_evaluated": false
+}

@@ -892,3 +892,8 @@ Actual metered Colab acceptance is next; no fitting result is implied.
 
 53 focused historical/sampling/context/fleet/budget/artifact checks pass before
 allocation; three exact immutable smoke task payloads validate locally.
+
+Actual historical Colab smoke acceptance:3x512 PPO transitions,Python3.13.16,
+234 exact restored predictions,3 owned shutdowns verified. Project35.888374
+after smoke; no performance gate assessed.50k three-arm screen launched from
+same source and original2-unit study allowance.

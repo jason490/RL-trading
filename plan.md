@@ -977,3 +977,8 @@ identities, full-window summaries, sampling totals and frozen metadata checked.
 Fix nested sampling snapshots changing during parity reset; regression covers it.
 Three immutable smoke tasks validate before allocation; freeze committed source
 then run metered CPU smokes under the shared2-unit study allowance.
+
+Historical smokes passed in Colab:3x512 transitions,234 exact frozen predictions,
+Python3.13.16 and3 owned shutdowns verified. Screen launched:3x50k seed11,
+same4be5219 source, original2-unit study allowance including smoke.
+[Acceptance](results/historical-augmentation-2026-10-20/smoke-summary.json).

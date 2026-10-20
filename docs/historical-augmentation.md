@@ -4,7 +4,7 @@ The [source/overlap audits](historical-regimes.md) accepted a chronological
 2001–2009 four-ETF panel. The [fixed experiment](../configs/experiments/historical_augmentation.json)
 now compares original episodes, recent-ETF oversampling and earlier-ETF
 augmentation. It tests extra market history against extra ETF sampling, without
-selecting future losing symbols. No model has been fitted for this experiment.
+selecting future losing symbols. Three Colab smokes have passed; the50k screen is running.
 
 ## Dataset arms
 
@@ -64,3 +64,11 @@ reward settings, checkpoint curves, complete frozen metadata and reconciled
 symbol/history sampling counts. Invalid checksummed contracts fail. Sampling
 statistics are copied before parity resets to prevent nested-count mutation.
 Actual metered Colab acceptance is next; no fitting result is implied.
+
+## Colab acceptance
+
+Three512-transition CPU smokes pass on actual Python3.13.16; all three owned
+sessions stopped and234 restored predictions are exact. Archive checks and
+normalization/schema rejection pass. Conservative project35.888374 after smoke.
+The50k three-arm seed11 screen is launched from frozen revision4be5219 and shares
+the original2-unit study allowance. [Evidence](../results/historical-augmentation-2026-10-20/README.md).
