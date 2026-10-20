@@ -79,3 +79,23 @@ Freeze committed source before running these tasks through the existing metered
 fleet. Retain initial construction fingerprints separately from learned final/
 selected alpha values. Actual entropy optimizer decay must stay zero in all
 three records; invalid or nonfinite final alpha is rejected.
+
+## First smoke failure and configuration fix
+
+The first attempt's control completed1024 transitions, but strict completion
+validation detected an unexpected `use_sde=False` inside the recorded plan.
+SB3 mutates its supplied policy_kwargs; factory override merging retained a
+reference to the caller's nested dictionary. This contaminated both the job
+plan and subsequently resolved metadata. The validator correctly rejected the
+archive. Candidate was interrupted; both owned sessions stopped and verified.
+No screen ran. Failed archives/checkpoints remain retained.
+
+The factory now deep-copies overrides before model construction. A real SAC
+construction regression verifies SB3 receives its own mutable dictionary,
+caller settings remain unchanged and resolved metadata has no injected field.
+Twenty relevant actual-optimizer/job/archive tests pass, no local fitting.
+Account350.31, rate0 and zero assignments verified after shutdown. Conservative
+project36.277597/150 includes this attempt. Retry must use a newly frozen fixed
+source, new owned sessions/deadlines and the original study starting budget;
+this was not a budget stop. Do not relax archive validation or overwrite failed
+evidence. [Failure record](../results/sac-regularization-2026-10-20/smoke-attempt-1.json).

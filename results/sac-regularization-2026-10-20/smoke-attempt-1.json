@@ -1,0 +1,34 @@
+{
+  "status": "failed_acceptance",
+  "source_revision": "f5b5c03ace280c608fa37dd54519cd8d2c1117f2",
+  "fleet": "rl-stocks-fleet-52491cc4b206",
+  "sessions": {
+    "rl-stocks-cpu-5d469ef29f82": {
+      "task": "regularization-control-11-smoke",
+      "phase": "done"
+    },
+    "rl-stocks-cpu-53c962362c44": {
+      "task": "regularization-weight_decay-11-smoke",
+      "phase": "done"
+    }
+  },
+  "cleanup_verified": true,
+  "completed_cells": 0,
+  "control_training_completed": true,
+  "candidate_interrupted": true,
+  "cause": "SB3 inserted use_sde=False into nested caller-owned policy_kwargs through shallow overrides; completion plan mismatch. Strict validator correctly rejected it.",
+  "project_units": 36.27759749508101,
+  "study_incremental_units": 0.013702225322191453,
+  "artifacts_retained": [
+    "artifacts/colab/rl-stocks-cpu-5d469ef29f82/artifacts.tar.gz",
+    "artifacts/colab/rl-stocks-cpu-5d469ef29f82/checkpoint.tar.gz",
+    "artifacts/colab/rl-stocks-cpu-53c962362c44/checkpoint.tar.gz"
+  ],
+  "post_shutdown_account": {
+    "balance": 350.31,
+    "rate": 0,
+    "assignments": 0
+  },
+  "screen_allocated": false,
+  "test_evaluated": false
+}

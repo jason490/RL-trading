@@ -1,3 +1,4 @@
+from copy import deepcopy
 import importlib
 import math
 import numpy as np
@@ -18,7 +19,7 @@ def resolved_parameters(algorithm,smoke=False,overrides=None,policy_variant="nat
     if algorithm=='recurrent_ppo':
         params['policy_kwargs'].update(lstm_hidden_size=32 if smoke else 64,n_lstm_layers=1,
                                       shared_lstm=False,enable_critic_lstm=True)
-    params.update(overrides or {})
+    params.update(deepcopy(overrides or {}))
     if policy_variant!='native':
         if any(k in params['policy_kwargs'] for k in ('market_features','direction_market_only','features_extractor_class','use_sde')):
             raise ValueError('branch information contract cannot be overridden')

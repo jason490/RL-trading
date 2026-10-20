@@ -38,3 +38,15 @@ def test_save_load_preserves_actual_optimizer_settings_without_fitting(tmp_path)
     validate_final_optimizer_record(before,'weight_decay')
     before['initialization']['alpha']=float('nan')
     with pytest.raises(ValueError):validate_final_optimizer_record(before,'weight_decay')
+
+
+def test_factory_construction_preserves_nested_job_overrides():
+    from rl_stocks.rl.registry.factory import create,resolved_parameters
+    requested=overrides('weight_decay',True);before=deepcopy(requested)
+    model=create('sac',Spaces(),smoke=True,overrides=requested)
+    assert requested==before
+    assert 'use_sde' in model.policy_kwargs  # SB3 mutates its own private copy.
+    assert 'use_sde' not in resolved_parameters('sac',True,requested)['policy_kwargs']
+    resolved=resolved_parameters('sac',True,requested)
+    resolved['policy_kwargs']['optimizer_kwargs']['weight_decay']=1.
+    assert requested==before
