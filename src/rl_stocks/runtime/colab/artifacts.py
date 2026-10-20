@@ -109,6 +109,15 @@ def validate_archive(path, plan, dataset_id):
                     if (frozen.get('names')!=expected_names or frozen.get('feature_schema')!=c['schema']
                         or frozen.get('data_manifest',{}).get('trend_context',{}).get('mode')!=c['mode']):
                         raise RuntimeError('frozen trend-context contract mismatch')
+                if plan.get('version')==13:
+                    from rl_stocks.training.supervised.artifacts import verify_report
+                    from rl_stocks.training.supervised.spec import SIGNAL_DATASET
+                    manifest=json.loads(read(folder+'manifest.json'))
+                    prefix=next(n.rsplit('/',1)[0]+'/' for n in names if n.endswith('/metadata.json') and json.loads(read(n)).get('bundle_id')==run['bundle_id'])
+                    if (dataset_id!=SIGNAL_DATASET or manifest.get('kind')!='signal-feasibility-v1'
+                        or run['algorithm']!='signal_feasibility' or run.get('device')!='cpu'
+                        or manifest['metadata']!={k:v for k,v in run.items() if k!='bundle_id'}):raise RuntimeError('signal archive contract mismatch')
+                    verify_report(read,prefix,run,manifest)
                 if digest(json.loads(read(folder+'manifest.json'))) != run['bundle_id']:
                     raise RuntimeError('remote bundle identity mismatch')
             if actual != expected or len(completion['completed']) != len(runs):

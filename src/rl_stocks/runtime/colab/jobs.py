@@ -66,7 +66,9 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==12:
+    if plan.get('version')==13:
+        if plan!=signal_plan():raise ValueError('unsupported supervised-signal plan')
+    elif plan.get('version')==12:
         try:expected=context_plan(**plan['context_study'])
         except (KeyError,TypeError):raise ValueError('malformed trend-context study plan') from None
         if plan!=expected:raise ValueError('unsupported trend-context study plan')
@@ -241,3 +243,11 @@ def validate_context_payload(data, plan):
         or data['manifest'].get('unverified_override') is not False
         or any(e['split'] not in ('train','validation') or any(b['session']>'2023-12-31' for b in e['bars']) for e in data['episodes'].values())):
         raise ValueError('trend-context dataset contract mismatch')
+
+
+def signal_plan():
+    from rl_stocks.training.supervised.spec import protocol,PROTOCOL_SHA256,SIGNAL_DATASET
+    protocol()
+    return {'version':13,'accelerator':'CPU','protocol_sha256':PROTOCOL_SHA256,
+        'dataset_contract':{'identity':SIGNAL_DATASET,'kind':'completed-training-signal-v1'},
+        'jobs':[{'algorithm':'signal_feasibility','device':'cpu','smoke':False,'seed':11,'steps':12002}]}

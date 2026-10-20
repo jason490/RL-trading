@@ -96,3 +96,36 @@ incremental study allowance and two-hour deadline. Actual Colab Python and tiny
 finite-loss/save/load checks must pass before the fixed full fits. No dependency
 or interpreter changes, orders, or new allocations occurred during preparation.
 The retrospective universe and survivorship limitations remain unchanged.
+
+## Implemented worker and frozen predictor
+
+Version13 Colab plans bind the immutable signal payload and complete protocol
+hash. The CPU worker runs two discarded prefix optimizer updates with finite
+loss, input rejection and save/load checks, then reseeds all six fixed full fits.
+The12002-step plan counts optimizer updates, not environment transitions. The
+fit-only loss curve is recorded every200 updates; probe scores are computed only
+at the fixed final model. Completed fits are checkpointed durably.
+
+`inference.signal.SignalBundle` restores all six MLPs plus ridge/constant forecasts
+with exact names/source contracts and frozen fit preprocessing. It has no trading
+actions. Returned archives require complete seed sets, paired initial tensor
+fingerprints, matched date/symbol panels, checksum integrity and independently
+recomputed metrics/gates. Local post-download verification checks every forecast
+against the immutable probe inputs: repeated CPU prediction is exact, cloud/CPU
+predictions allow at most1e-6 absolute error, and metric tolerance is1e-10. The
+boolean gate must agree with recomputation. No future labels are model inputs.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_signal_jobs.py \
+  --output .runtime/signal-feasibility-jobs.json
+# Execute with the existing centrally metered fleet, frozen source and original
+# ledger; concurrency1, study-unit-limit1, study-start-units from that ledger.
+PYTHONPATH=src .venv/bin/python scripts/verify_signal_runs.py \
+  artifacts/colab/OWNED_SESSION/retrieved/artifacts \
+  --output artifacts/supervised-signal/restoration.json
+```
+
+Thirty-six focused model, target, fleet and artifact tests pass without local
+model fitting. They include predictor restoration, nonfinite/schema/checksum
+rejection, fixed-plan checks and tampered-metric detection. The real Colab fits
+remain pending; these tests do not establish forecast accuracy.

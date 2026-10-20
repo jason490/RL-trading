@@ -84,7 +84,8 @@
     "working_stop_units": 130,
     "allocation_deadline_seconds": 7200,
     "runner": "Existing centrally metered owned fleet; shared original ledger; retrieve and verify artifacts before shutdown",
-    "preflight": "Within the CPU allocation, run finite-loss and save/load/schema checks on a tiny prefix before the fixed full fits; stop on failure."
+    "preflight": "Within the CPU allocation, run finite-loss and save/load/schema checks on a tiny prefix before the fixed full fits; stop on failure.",
+    "discarded_prefix_optimizer_updates": 2
   },
   "constraints": {
     "retired_test": "Never load/evaluate 2024-September2026",
@@ -93,5 +94,11 @@
     "ppo_warm_start": "Not implemented; any subsequent allocation requires a separate preregistered matched policy protocol and unchanged learned protection/execution contract.",
     "profitability": "Predictive feasibility cannot satisfy the stock/ETF return goal; matched trading evaluation and prospective evidence remain necessary"
   },
-  "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235"
+  "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
+  "verification": {
+    "prediction_cross_backend_abs_tolerance": 1e-06,
+    "metric_abs_tolerance": 1e-10,
+    "local_restoration_predictions": "bitwise exact",
+    "gate_verdict": "must agree exactly with recomputation"
+  }
 }

@@ -40,7 +40,12 @@ def main():
         print('Starting job:', job, flush=True)
         seed = job.get('seed', plan.get('seed'))
         parameters = {k:v for k,v in job.items() if k!='seed'}
-        run, bundle = train(dataset, seed=seed, overrides=overrides, **parameters)
+        if plan.get('version')==13:
+            from rl_stocks.training.supervised.runner import run as fit_signal
+            os.environ['RL_COLAB_OWNED_WORKER']='1'
+            run,bundle=fit_signal(dataset,root/'artifacts')
+        else:
+            run, bundle = train(dataset, seed=seed, overrides=overrides, **parameters)
         completed.append({'run': str(run), 'bundle_id': bundle.name})
         print('Completed job:', str(run), 'bundle:', str(bundle), flush=True)
         # Preserve all completed jobs between minute-metered transfers.

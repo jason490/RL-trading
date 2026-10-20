@@ -34,8 +34,10 @@ corporate actions, episode separation, unused project-validation data and
 fit-only preprocessing. Immutable readback and protocol/data identity checks pass.
 No Colab allocation or additional project units; usage remains 35.856639/150.
 
-Next implement the bounded CPU model-fitting job, portable predictor restoration,
-strict artifact/metric checks and centrally metered cleanup before allocation.
+The bounded CPU worker, portable predictor restoration, strict job/artifact
+validation and metric recomputation are implemented. Thirty-six focused tests
+pass without local model fitting. Next freeze the committed source and allocate
+one owned CPU runtime through the original centrally metered fleet.
 Actual Colab Python and tiny finite-loss/save/load checks must pass before fixed
 full fits. A failed feasibility gate stops the family; a pass would require a
 separate matched policy protocol and prospective evidence before any success claim.

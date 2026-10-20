@@ -883,3 +883,10 @@ No profitability or PPO initialization claim; Colab CPU fitting/verification
 requires its own strict job/artifact integration. One-unit allowance, original
 ledger, actual default Python and owned cleanup remain required.
 [Protocol](configs/experiments/supervised_signal.json), [guide](docs/supervised-signal.md).
+
+Version13 feasibility jobs and the CPU worker are implemented, with six final
+MLPs, constant/ridge baselines, durable checkpoints and a separate checksummed
+forecast-only bundle. Archive acceptance recomputes metrics/gates from predictions;
+local restoration compares every probe forecast with immutable inputs. Two
+discarded prefix updates plus12000 final-fit updates are explicitly counted.
+Thirty-six focused tests pass without local fitting. Actual Colab is next.

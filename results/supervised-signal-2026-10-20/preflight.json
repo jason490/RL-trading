@@ -1,7 +1,7 @@
 {
   "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
   "passed": true,
-  "protocol_sha256": "b67632d0ff90a0523afbabed4953bec3e1a23b463c6166d8c3a7c1621c41d844",
+  "protocol_sha256": "54d032fbfb152d03f1a1eac6f6026dc76a37645ad75df1c06b3191c43b016a44",
   "source_dataset": "830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed",
   "folds": {
     "fit": {
