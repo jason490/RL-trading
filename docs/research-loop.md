@@ -419,3 +419,9 @@ against fresh identical expanded-data control, preserving seeded actual sampling
 initialization, reward/entropy/costs and absolute/relative gates. No sweep or
 extension of the failed diversity family.
 [Inference-only evidence](../results/sac-diversity-fit-2026-10-20/README.md).
+
+Fixed actor/critic Adam L2 study preregistered:control0 versus1e-4, identical
+expanded111 dataset/sampling, fresh100k cells and unchanged entropy optimizer.
+Six actual-construction/protocol checks pass without fitting. Runtime/archive/
+report integration must precede Colab smokes; no allocation yet.
+[Protocol and gates](sac-regularization.md).

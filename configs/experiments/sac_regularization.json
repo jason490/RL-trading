@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "name": "sac-weight-decay-2026-10-20",
+  "hypothesis": "Both final100k policies beat holding on fitted2018-2020 but fail development. Test one fixed actor/critic Adam L2 weight decay to improve generalization, without adding data/steps or changing entropy/reward.",
+  "algorithm": "sac",
+  "arms": [
+    "control",
+    "weight_decay"
+  ],
+  "candidate": "weight_decay",
+  "market_features": 7,
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "smoke_steps": 1024,
+  "evaluation_every": 10000,
+  "smoke_evaluation_every": 512,
+  "initialization": "standard",
+  "policy_variant": "native",
+  "start_sampling": "stock_etf_cycle_windows",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "parameters": {
+    "buffer_size": 100000,
+    "batch_size": 256,
+    "learning_starts": 1000,
+    "train_freq": 1,
+    "gradient_steps": 1,
+    "tau": 0.005,
+    "ent_coef": "auto",
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "smoke_parameters": "Locked SAC smoke32x32 networks,batch64,warmup64. Smoke sampling128 full transitions; no return-based tuning",
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected/final separately reported, actual100k final post-update required",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Stop fixed seed11 comparison; no extra steps, coefficient sweep, extra features, confirmation or promotion on failed gates"
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "constraints": {
+    "data": "Expanded111-tradable source preserves all original episodes exactly; derived expanded payload replaces only preprocessing with original immutable normalizer and records lineage. Additional85 symbols contribute training only. Original26-symbol development episodes stay exact.",
+    "observations": "All arms same21 full execution observations, seeded64x64 actor/critic/target initialization and original seven indicator normalization. Verify initial network hashes match.",
+    "causality": "Only current completed market data and actual held execution state. Full-period losing-stock labels reporting only, never inputs/sampling/rewards/checkpoint selection",
+    "simulation": "Unchanged four-component actions,100k equity, whole shares, exposure cap1,20-session holding limit, next-session fills, costs and corporate actions",
+    "splits": "Train through2020, repeated development2021-2023 only; never open/evaluate2024-September2026",
+    "comparison": "Fresh control/candidate identical expanded111 training episodes, original26 development, same sampler/random seed/full windows and100k transitions. Actual symbol/group sampling counts must match across arms; network updates do not consume environment RNG.",
+    "short_side": "Reconcile every new run's long/short costs and marked P&L. Report joint positive total return AND positive net short P&L on declining stocks; never loss reduction alone",
+    "limitations": "Survivor stocks, revised Yahoo history, correlated development episodes; no live/paper broker orders",
+    "regularization": "SB3 2.7.0 torch.optim.Adam coupled L2 weight_decay applies to actor and critic parameters including biases. Entropy coefficient Adam remains weight_decay0, auto alpha initial1. Target network has no optimizer. This changes learning objective, not execution costs."
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only, actual default Python checked before dependency sync",
+    "initial_concurrency": 2,
+    "preflight": "Actual optimizer/state validation and two1024-transition Colab CPU smokes before fresh two100k screens; never train locally",
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "runner": "Existing central metered owned fleet, original cumulative ledger, bound downloads, verified shutdown and recovery IDs",
+    "cleanup": "Retain all models/checkpoints/curves; verify publication checksums before removing duplicates; verify every owned session stopped"
+  },
+  "screen_cells": 2,
+  "observation_profile": "execution_full",
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Same expanded111 dataset in both arms,100k for full symbol transition coverage; fixed budget, not an extension of completed diversity study"
+  },
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "weight_decay": {
+    "control": 0.0,
+    "weight_decay": 0.0001
+  },
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "base_diversity_protocol_sha256": "3fd2f8f484d40d4abec51524ebb4c4087d56924103622019107a8d2b6931e616"
+}

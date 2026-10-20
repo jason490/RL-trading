@@ -1170,3 +1170,11 @@ unchanged;12 tests pass. Full derived paths retained, no fitting/Colab. Project
 36.263895/150. Next a separately fixed regularization hypothesis with fresh
 matched expanded control, not blind extension or promotion.
 [Evidence](results/sac-diversity-fit-2026-10-20/README.md).
+
+## 47. SAC regularization — protocol and optimizer acceptance prepared
+
+Fixed Adam actor/critic decay0 versus1e-4, entropy optimizer unchanged;
+identical expanded-data100k cells, strict selected/final benchmark gates.
+Six checks pass including actual Adam settings and initial tensor equality;
+no fitting or Colab. Runtime/archive/report integration then two1024 smokes
+required before screen. [Guide](docs/sac-regularization.md).
