@@ -1076,3 +1076,9 @@ all arms achieve0/3 joint profitable-short cases. No more steps/confirmation.
 468 exact restored predictions,6 owned stops,13 verified release assets and
 post-cleanup byte-identical report pass; project36.149107/150.
 [Outcome and next fit-versus-generalization diagnostic](td3-execution-state.md#completed-td3-state-comparison).
+
+## Training-fit diagnostic preregistration
+
+Fixed final PPO/SAC/TD3 policies, same2018–2020 fitted slice, explicit training
+labels and no optimizer/selection/Colab. Window/split/accounting tests20 pass.
+Preregistered before actual replay; [guide](training-fit-diagnostic.md).

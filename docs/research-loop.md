@@ -349,3 +349,12 @@ all arms achieve0/3 joint profitable-short cases. No more steps/confirmation.
 468 exact restored predictions,6 owned stops,13 verified release assets and
 post-cleanup byte-identical report pass; project36.149107/150.
 [Outcome and next fit-versus-generalization diagnostic](td3-execution-state.md#completed-td3-state-comparison).
+
+## Fixed fitted-period diagnosis
+
+Before new fitting, replay only final50k full-state PPO/SAC/TD3 policies on the
+fixed2018–2020 training window, preserving original purge cutoff and train
+labels. Compare per-period matched excess, not raw returns across regimes.
+No checkpoint selection or algorithm ranking; PPO initialization differs.
+Twenty slice/isolation/accounting checks pass; actual replay not yet executed.
+[Protocol and commands](training-fit-diagnostic.md).

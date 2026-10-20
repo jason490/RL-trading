@@ -10,6 +10,11 @@ from rl_stocks.rl.registry.prediction import PredictionStream
 def evaluate(model,dataset,split="validation",config=SimulationConfig(),observation_profile="legacy",exposure_mode="unrestricted"):
     from rl_stocks.environment.trading.env import TradingEnv
     if split not in ("validation","test"):raise ValueError("evaluation split required")
+    return _evaluate(model,dataset,split,config,observation_profile,exposure_mode)
+
+
+def _evaluate(model,dataset,split,config,observation_profile,exposure_mode="unrestricted"):
+    from rl_stocks.environment.trading.env import TradingEnv
     from rl_stocks.evaluation.exposure import EXPOSURE_MODES,filter_exposure
     if exposure_mode not in EXPOSURE_MODES:raise ValueError('unknown exposure filter')
     normalizer=normalizer_from(dataset["normalizer"])

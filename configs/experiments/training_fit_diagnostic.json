@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "training-fit-diagnostic-2026-10-20",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "anchor_session": "2017-12-29",
+  "first_execution_session": "2018-01-02",
+  "last_session": "2020-12-02",
+  "source_split": "train",
+  "weights": "latest.zip only; no checkpoint selection",
+  "sources": {
+    "ppo": {"state": ".runtime/architecture-screen-state.json", "task": "native-11", "initialization": "wide"},
+    "sac": {"state": ".runtime/sac-state-screen-state.json", "task": "sac-state-execution_full-11", "initialization": "standard"},
+    "td3": {"state": ".runtime/td3-state-screen-state.json", "task": "td3-state-execution_full-11", "initialization": "standard"}
+  },
+  "seed": 11,
+  "source_steps": 50000,
+  "observation_profile": "execution_full",
+  "policy_variant": "native",
+  "reward": {"kind": "net_log_equity", "scale": 1.0},
+  "benchmark_flags": {"minimum_stock_and_etf_excess_pp": -2.0, "minimum_median_stock_excess_pp": -2.0},
+  "hypothesis": "Measure whether fixed final policies approach matched holding even on a fitted-period window before assuming development failure is overfitting or spending on another algorithm.",
+  "interpretation": "Both training benchmark failures and a training-pass/development-fail contrast are descriptive; periods have different regimes and durations, so neither proves an optimizer/capacity/generalization cause. PPO initialization/source differ; do not rank algorithms causally.",
+  "constraints": ["No fitting, optimizer calls, normalization updates, sampling by future outcome, checkpoint selection, provider requests or Colab allocation", "No retired-test access or promotion; preserve original failed development gates", "Read only existing training bars/features and saved development reports; source hashes/normalizer/tensors/update counts unchanged", "All26 declared symbols; next-session fills, costs, four actions, holding limits and causal execution state unchanged", "Compact group/per-symbol metrics and complete derived paths retained outside Git; diagnose, do not select a winner"]
+}
