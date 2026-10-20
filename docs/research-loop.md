@@ -409,3 +409,13 @@ cost-only cure is established. Next inspect strictly training-only decline/
 rebound decision coverage before freezing another hypothesis; no future decline
 labels may enter learning or checkpoint selection.
 [Full evidence](../results/sac-diversity-paths-2026-10-20/README.md).
+
+Final100k diversity fitted-window replay finds original91.72%/expanded62.43%
+versus holding56.45%, both training-comparable while development fails.
+Expanded remains more long-biased in fitted persistent-decline cohorts. This
+supports a fixed generalization/regularization hypothesis over blind extra
+steps, without proving the mechanism. Next preregister one regularization arm
+against fresh identical expanded-data control, preserving seeded actual sampling,
+initialization, reward/entropy/costs and absolute/relative gates. No sweep or
+extension of the failed diversity family.
+[Inference-only evidence](../results/sac-diversity-fit-2026-10-20/README.md).

@@ -1159,3 +1159,14 @@ post-shutdown account350.31, zero rate/assignments. Retired test stays isolated.
 Next inspect saved selected/final cost, exposure and directional contributions
 before a distinct hypothesis. This requires no fitting/provider/Colab; do not
 extend the failed family solely because its late checkpoint improved.
+
+## 46. SAC fitted-window generalization diagnosis — complete
+
+Final100k original/expanded SAC fitted mean91.72%/62.43% versus56.45% holding;
+both pass descriptive training comparability but original development gates
+remain failed. Existing50k and new100k decline/rebound reporting uses future
+cohorts only descriptively. Source files, weights, updates and preprocessing
+unchanged;12 tests pass. Full derived paths retained, no fitting/Colab. Project
+36.263895/150. Next a separately fixed regularization hypothesis with fresh
+matched expanded control, not blind extension or promotion.
+[Evidence](results/sac-diversity-fit-2026-10-20/README.md).

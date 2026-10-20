@@ -90,3 +90,15 @@ PPO/TD3 differ in source/initialization; no causal algorithm ranking.
 [Results, caveats and hashes](../results/training-regimes-2026-10-20/README.md).
 No fitting or new inference/Colab was needed. Next audit actual100k diversity
 final policies on the same fixed fitted window before another hypothesis.
+
+## New100k diversity-policy fitted replay
+
+Both final policies pass descriptive fitted comparability: original91.72%,
+expanded62.43%, holding56.45% on the identical2018–2020 common panel. Development
+10.38%/24.19% versus30.60% remains failed. Weights/SAC alpha/update counts,
+normalization and source hashes are unchanged. Decline/rebound reporting finds
+expanded more long-biased even on fitted persistent declines. No optimizer/
+generalization cause is proven and no training outcome selects a checkpoint.
+[Exact results and retained path locations](../results/sac-diversity-fit-2026-10-20/README.md).
+Next consider a separately fixed regularization comparison with fresh matched
+expanded-data control; this is a proposal, not authorization to skip preflight.

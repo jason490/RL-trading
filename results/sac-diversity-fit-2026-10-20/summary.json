@@ -1,0 +1,199 @@
+{
+  "protocol_sha256": "cc30df1568b840cc63282efee0ac5e5f2b0a86fafcc759146ff20f9bdf6c3770",
+  "records": {
+    "original": {
+      "run": "20261020T191801-sac-11-b0913b62",
+      "training": {
+        "score": 0.9171784038554146,
+        "mean_max_drawdown": -0.23862777909352875,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.9154124489654432,
+            "buy_hold_return": 0.5814593877458677,
+            "excess_return": 0.3339530612195754,
+            "median_excess_return": 0.2637746195269679,
+            "buy_hold_max_drawdown": -0.3640432336062538,
+            "max_drawdown": -0.2457535539620317
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.926891155750258,
+            "buy_hold_return": 0.4714601263306348,
+            "excess_return": 0.45543102941962327,
+            "median_excess_return": 0.3849842389092346,
+            "buy_hold_max_drawdown": -0.34073494920756275,
+            "max_drawdown": -0.19943601731676258
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.2661812242529815,
+          "AMT": 0.32254443064006977,
+          "AMZN": 0.07697038722999405,
+          "APD": 0.8393060200701044,
+          "BAC": 0.38820086937167897,
+          "CAT": -0.1676196820117457,
+          "CVX": 0.8193701108607307,
+          "DIS": 1.0166808581099194,
+          "DUK": 0.26897287018627747,
+          "GOOGL": 0.3749119196173145,
+          "HD": 0.09917986108807297,
+          "HON": 0.25857636886765833,
+          "JNJ": 0.056696023428137066,
+          "JPM": 0.3829362571845991,
+          "KO": 0.1107653315609296,
+          "LIN": 0.09842760540058926,
+          "MSFT": 0.2795285146031201,
+          "NEE": 0.22148423152522456,
+          "PG": 0.10424067308176665,
+          "PLD": 0.6113772138003217,
+          "UNH": 0.19538159018745005,
+          "XOM": 1.255217116281428
+        }
+      },
+      "regimes": {
+        "all": {
+          "count": 18096,
+          "mean_requested_exposure": 0.867607083988469,
+          "short_request_fraction": 0.04553492484526967,
+          "mean_future_price_return": 0.0121811630892735
+        },
+        "past_decline": {
+          "count": 1022,
+          "mean_requested_exposure": 0.44051198343474807,
+          "short_request_fraction": 0.24951076320939333,
+          "mean_future_price_return": 0.05888260549815935
+        },
+        "past_decline_future_decline": {
+          "count": 96,
+          "mean_requested_exposure": -0.059521170953909554,
+          "short_request_fraction": 0.53125,
+          "mean_future_price_return": -0.2053566057760294
+        },
+        "past_decline_future_rebound": {
+          "count": 384,
+          "mean_requested_exposure": 0.5077763213776052,
+          "short_request_fraction": 0.22916666666666666,
+          "mean_future_price_return": 0.18018492354070284
+        },
+        "past_decline_future_other": {
+          "count": 542,
+          "mean_requested_exposure": 0.48142282670274433,
+          "short_request_fraction": 0.2140221402214022,
+          "mean_future_price_return": 0.019743996926176725
+        }
+      },
+      "model_sha256": "3c7d7d0da4fc85038322a475b8d7236d8c7cd74659db23fbc3f9ff80bc1ebbc3",
+      "weights_sha256": "6607cb743477fd6466631af7e0412edc28dc2c23ecbec490ba8961ade4b645fc",
+      "updates_unchanged": 99000,
+      "derived_report_sha256": "89d16a7c9140dccc657971c7251d4c2cbc1d6431df42166ce5fe14666ad09739"
+    },
+    "expanded": {
+      "run": "20261020T192042-sac-11-2b2e56fc",
+      "training": {
+        "score": 0.6243326448478049,
+        "mean_max_drawdown": -0.3342142569818337,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.6402175633889579,
+            "buy_hold_return": 0.5814593877458677,
+            "excess_return": 0.05875817564309021,
+            "median_excess_return": 0.034521361476354706,
+            "buy_hold_max_drawdown": -0.3640432336062538,
+            "max_drawdown": -0.34268409329912575
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.5369655928714638,
+            "buy_hold_return": 0.4714601263306348,
+            "excess_return": 0.06550546654082906,
+            "median_excess_return": 0.08764382005602267,
+            "buy_hold_max_drawdown": -0.34073494920756275,
+            "max_drawdown": -0.28763015723672747
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": 0.5499613910053531,
+          "AMT": 0.008981614586602182,
+          "AMZN": -0.6758403185298794,
+          "APD": 0.27675097777370494,
+          "BAC": 0.4721975516398593,
+          "CAT": 0.8486176549769677,
+          "CVX": 0.055196960385196836,
+          "DIS": -0.28950505673553195,
+          "DUK": 0.013845762567512576,
+          "GOOGL": -0.1558705075272928,
+          "HD": 0.7484404245653771,
+          "HON": 0.10187820772798384,
+          "JNJ": -0.10153600277405128,
+          "JPM": 0.17555675617282618,
+          "KO": -0.11749721803114155,
+          "LIN": 0.1400598083502913,
+          "MSFT": -0.09130701814869813,
+          "NEE": 0.2996657709281223,
+          "PG": -0.3063874546915375,
+          "PLD": -0.590824822202989,
+          "UNH": -0.40132666947361795,
+          "XOM": 0.3316220515829267
+        }
+      },
+      "regimes": {
+        "all": {
+          "count": 18096,
+          "mean_requested_exposure": 0.9314771627893657,
+          "short_request_fraction": 0.01840185676392573,
+          "mean_future_price_return": 0.0121811630892735
+        },
+        "past_decline": {
+          "count": 1022,
+          "mean_requested_exposure": 0.7779193170033323,
+          "short_request_fraction": 0.09882583170254403,
+          "mean_future_price_return": 0.05888260549815935
+        },
+        "past_decline_future_decline": {
+          "count": 96,
+          "mean_requested_exposure": 0.6470084680865208,
+          "short_request_fraction": 0.16666666666666666,
+          "mean_future_price_return": -0.2053566057760294
+        },
+        "past_decline_future_rebound": {
+          "count": 384,
+          "mean_requested_exposure": 0.8034337329057356,
+          "short_request_fraction": 0.0859375,
+          "mean_future_price_return": 0.18018492354070284
+        },
+        "past_decline_future_other": {
+          "count": 542,
+          "mean_requested_exposure": 0.783029844290216,
+          "short_request_fraction": 0.0959409594095941,
+          "mean_future_price_return": 0.019743996926176725
+        }
+      },
+      "model_sha256": "16aee875da8ddf935137c83d6c3a5ad0c747fe893facfdbf5667924705427211",
+      "weights_sha256": "02d0fb8a2bee422924b75e82a03c5ea96dfdaf79bea969c8408a898a16e2f9c3",
+      "updates_unchanged": 99000,
+      "derived_report_sha256": "d88873429e6ab4f82d259b58900c99250e8e24813019fc04f97708d590d68d31"
+    }
+  },
+  "source_sha256": {
+    "configs/experiments/diversity_fit_diagnostic.json": "48b44ea291e3bb06010e31d806261d385c2fe40d639e24ec25b77ab7a93f9670",
+    ".runtime/diversity-screen-state.json": "2d7c52fd29c823a0798acb107944a7c315e0f29626e9fe36329b9f5735b7b3cf",
+    "results/sac-diversity-2026-10-20/summary.json": "da13d526129bbe83ff21ae6b753141611a61854383f7cae4f996d7be80ddf8d3",
+    "data/datasets/672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9/dataset.json": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+    "/home/vibe/projects/rl-stocks/.runtime/sac-diversity-source/artifacts/colab/rl-stocks-cpu-aa5fd4f48c34/retrieved/artifacts/runs/20261020T191801-sac-11-b0913b62/metadata.json": "a6223d514202cfb68333fe6c2ae8fa97cba8fbe38b69760d7eef85ab5ad058a6",
+    "/home/vibe/projects/rl-stocks/.runtime/sac-diversity-source/artifacts/colab/rl-stocks-cpu-aa5fd4f48c34/retrieved/artifacts/runs/20261020T191801-sac-11-b0913b62/latest.zip": "3c7d7d0da4fc85038322a475b8d7236d8c7cd74659db23fbc3f9ff80bc1ebbc3",
+    "/home/vibe/projects/rl-stocks/.runtime/sac-diversity-source/artifacts/colab/rl-stocks-cpu-11df9f137f0c/retrieved/artifacts/runs/20261020T192042-sac-11-2b2e56fc/metadata.json": "f0b9049a24380c52c7b5779d469503d6d81493f15c9917cc2dcce192f362a45f",
+    "/home/vibe/projects/rl-stocks/.runtime/sac-diversity-source/artifacts/colab/rl-stocks-cpu-11df9f137f0c/retrieved/artifacts/runs/20261020T192042-sac-11-2b2e56fc/latest.zip": "16aee875da8ddf935137c83d6c3a5ad0c747fe893facfdbf5667924705427211"
+  },
+  "script_sha256": "cb8912e7e4d5aa98a087d464b901f94f40e67edf81e43a1203375d72113611b8",
+  "normalization_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "source_files_unchanged": true,
+  "weights_updates_normalization_unchanged": true,
+  "training_performed": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "checkpoint_selected": false,
+  "objective_achieved": false,
+  "interpretation": "Compare matched fitted-window holding and accepted exposure cohorts descriptively. In-sample performance is not independent validation or evidence of robust short profits; no automatic training extension."
+}
