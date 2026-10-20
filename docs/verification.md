@@ -980,3 +980,12 @@ Initial-temperature reporter implemented before screen results: exact default
 configuration/score/tensor reproduction and cross-arm initial fingerprint checks
 precede interpretation. Ten focused tests pass. Two Colab smokes are running;
 no runtime/parity acceptance or performance verdict claimed yet.
+
+## Actual temperature Colab smoke acceptance
+
+Two1024-transition CPU smokes pass onPython3.13.16. Initial actor/critic/target
+fingerprints match exactly, initial alpha1/0.001 and target entropy−4 verified;
+156 exact restored predictions with immutable normalization/input rejection.
+Both owned stops verified; project36.022140 after smoke. Fixed2x50k screen
+launched from same0f04e6b source and original2-unit allowance.
+[Evidence](../results/sac-temperature-2026-10-20/README.md).

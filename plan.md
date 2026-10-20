@@ -1043,3 +1043,9 @@ checks, actual initial alpha/target-entropy and network fingerprints captured
 before learning.49 focused regressions pass; two1024 CPU smoke payloads validate.
 Freeze committed source before metered allocation; no assumption that fixture
 fingerprints prove real cross-arm parity.
+
+Temperature smokes passed:2x1024 Colab CPU transitions,Python3.13.16, exact
+initial network fingerprints, alpha1/0.001, target entropy−4,156 frozen-prefix
+predictions and2 owned stops. Fixed2x50k seed11 screen launched, same0f04e6b
+source and original2-unit allowance. No performance/reproduction verdict yet.
+[Acceptance](results/sac-temperature-2026-10-20/smoke-summary.json).

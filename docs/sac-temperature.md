@@ -72,9 +72,11 @@ budget/artifact checks pass without fitting. Two immutable smoke payloads
 validate. Actual cross-arm initial-weight equality and Colab parity remain
 required before screening; fixture fingerprints are not experimental evidence.
 
-The two smokes are now executing from frozen source0f04e6b, under the original
-ledger/lock and2-unit study allowance. Actual initial-network equality, frozen
-parity and owned teardown remain pending. The screen reporter is implemented:
+The two smokes have passed from frozen source0f04e6b, actual Python3.13.16.
+Initial actor/critic/target fingerprints match exactly; alpha1/0.001 and target
+entropy−4 are verified.156 restored predictions are exact, and both owned
+sessions stopped. The fixed50k screen is now launched under the original
+ledger/lock and2-unit allowance including smoke. The screen reporter is implemented:
 
 ```bash
 PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
@@ -90,3 +92,6 @@ disables promotion and is reported; it never triggers automatic retries.
 Fixed two-arm gates and interactive10k charts reuse the verified common
 reporting code. Ten focused gate/archive/initialization tests pass without
 fitting. Actual screen/reproduction acceptance is still pending.
+
+[Actual Colab evidence](../results/sac-temperature-2026-10-20/README.md):
+project36.022140 after smoke; screen/reproduction/gates remain pending.

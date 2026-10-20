@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "initial_networks_identical": true,
+  "owned_cleanup_verified": true,
+  "records": [
+    {
+      "task": "temperature-default-11-smoke",
+      "session": "rl-stocks-cpu-8df4aabac315",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "bundle_id": "d3347a7a503837a74f2ffb8a50df62c62b24a06cf6c8b9e1153d3c063e601414",
+      "steps": 1024,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "initialization": {
+        "alpha": 1.0,
+        "target_entropy": -4.0,
+        "network_sha256": {
+          "actor": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "critic": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c",
+          "critic_target": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c"
+        }
+      },
+      "resolved_parameters": {
+        "buffer_size": 100000,
+        "batch_size": 64,
+        "learning_starts": 64,
+        "train_freq": 1,
+        "gradient_steps": 1,
+        "tau": 0.005,
+        "ent_coef": "auto",
+        "learning_rate": 0.0003,
+        "gamma": 0.99,
+        "policy_kwargs": {
+          "net_arch": [
+            32,
+            32
+          ]
+        }
+      },
+      "source_hash": "de316ebb8886b814decf69762409fa9b49f82086ccd418a9063f80bde984b9a9"
+    },
+    {
+      "task": "temperature-cold_start-11-smoke",
+      "session": "rl-stocks-cpu-ac8029b65e2a",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "bundle_id": "3a5904b13601092a1ed2dfb8240b4ff16b8bdbed6bdb33c3f6dc7b465f6d95f5",
+      "steps": 1024,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "initialization": {
+        "alpha": 0.0009999999310821295,
+        "target_entropy": -4.0,
+        "network_sha256": {
+          "actor": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "critic": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c",
+          "critic_target": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c"
+        }
+      },
+      "resolved_parameters": {
+        "buffer_size": 100000,
+        "batch_size": 64,
+        "learning_starts": 64,
+        "train_freq": 1,
+        "gradient_steps": 1,
+        "tau": 0.005,
+        "ent_coef": "auto_0.001",
+        "learning_rate": 0.0003,
+        "gamma": 0.99,
+        "policy_kwargs": {
+          "net_arch": [
+            32,
+            32
+          ]
+        }
+      },
+      "source_hash": "de316ebb8886b814decf69762409fa9b49f82086ccd418a9063f80bde984b9a9"
+    }
+  ],
+  "source_revision": "0f04e6b3ad96a4afb30243dc8f9066fcf8dfb4f9",
+  "project_units_after_smoke": 36.02214035490088,
+  "smoke_conservative_increment": 0.01244812673926532,
+  "account_balance_after_smoke": 350.51,
+  "rate_after_smoke": 0.0,
+  "active_assignments_after_smoke": 0,
+  "performance_gate_evaluated": false
+}
