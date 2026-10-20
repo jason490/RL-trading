@@ -855,3 +855,11 @@ Saved forest error decomposition now verifies both exact MSE identities in
 36 predictor/year cells. Six focused tests pass without fitting. Undefined
 sign precision/recall is null, and unequal daily panels use row weights.
 Prediction source unchanged; no gate change, new Colab usage or promotion.
+
+## Historical ETF regime source audit (2026-10-20)
+
+Fixed2001–2009 four-ETF panel passes all-session coverage and raw/normalized
+OHLCV/action agreement. Cached readback is exact; recent2010–2020 subset passes
+identical source checks.9,052 earlier bars,23.55% joint trailing declines versus
+8.61% recent. No merge or fitting; cross-snapshot price continuity remains
+pending. [Evidence](../results/historical-regimes-2026-10-20/README.md).

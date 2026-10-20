@@ -938,3 +938,9 @@ must separate recent-ETF sampling mass from old-history information and preserve
 all existing stock/ETF, short-side and prospective gates.
 [Protocol](configs/experiments/historical_regime_audit.json),
 [guide](docs/historical-regimes.md).
+
+Milestone36 source audit accepted:9,052 bars,2,263 sessions per ETF, exact
+raw-field/action agreement and identical cached readback. Earlier joint trailing
+decline coverage23.55% versus8.61% recent under the same past-only rule. No merge,
+training or Colab. Next preregister overlap/price-unit checks before matched
+training preparation. [Evidence](results/historical-regimes-2026-10-20/README.md).

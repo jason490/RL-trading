@@ -7,7 +7,7 @@ that earlier bars will improve returns or that past declines predict shorts.
 
 [Protocol](../configs/experiments/historical_regime_audit.json) fixes all four
 baseline ETFs,2001–2009 inclusive.2001 is the first complete calendar year after
-the youngest baseline ETF's listing. No outcomes choose the symbols or dates.
+the youngest baseline ETF's listing ([IWM inception: May22,2000](https://www.ishares.com/us/products/239710/iwm-ishares-russell-2000-etf)). No outcomes choose the symbols or dates.
 Every XNYS session is required, including the exchange's special closures.
 
 The existing Yahoo adapter and immutable accumulation retain source OHLCV,
@@ -41,5 +41,20 @@ from extra market history. Keep both stock and ETF selected/final gates,
 drawdown, seeds11/23/37, short-side reports and prospective confirmation. No
 retired-test access or silent split-boundary changes are authorized by this audit.
 
-Current stage: implementation and source acceptance pending. The full trading
+## Accepted audit evidence
+
+[Results](../results/historical-regimes-2026-10-20/README.md) confirm9,052 bars,
+complete four-symbol coverage and exact raw/normalized agreement. Cached
+readback produces the identical report without downloading. Past-only joint
+63/252-session declines cover23.55% earlier versus8.61% recent eligible rows.
+The existing2010–2020 comparison is checked under the identical audit, using
+only training dates from the retained snapshot. Reproduce it with:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/compare_historical_regimes.py \
+  --output artifacts/historical-regimes/new-comparison.json
+```
+
+No dataset merge or model fit occurred. Audit a fixed2010 overlap next to check
+cross-snapshot price-unit continuity before preparation. The full trading
 objective remains unachieved; inspect verification/results before allocating.
