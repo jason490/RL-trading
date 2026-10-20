@@ -150,3 +150,13 @@ post-shutdown account350.31, zero rate/assignments. Retired test stays isolated.
 Next inspect saved selected/final cost, exposure and directional contributions
 before a distinct hypothesis. This requires no fitting/provider/Colab; do not
 extend the failed family solely because its late checkpoint improved.
+
+## Saved path decomposition
+
+Expanded final stock/ETF gaps−6.56/−5.59pp split into incremental cost drag
+3.51/2.66pp and saved non-cost excess−3.05/−2.93pp. Mostly-long exposure persists;
+short exposure is below0.6% in each group. Small resize cost is only0.23/0.21pp.
+Costs alone do not explain the gap; add-back is not a causal zero-cost replay.
+The generic saved-path script now accepts explicit algorithm/transition count,
+preserving PPO50k defaults and complete-state/matched-panel checks.
+[Diagnosis, source checksums and reproduction](../results/sac-diversity-paths-2026-10-20/README.md).

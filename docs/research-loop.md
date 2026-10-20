@@ -401,3 +401,11 @@ post-shutdown account350.31, zero rate/assignments. Retired test stays isolated.
 Next inspect saved selected/final cost, exposure and directional contributions
 before a distinct hypothesis. This requires no fitting/provider/Colab; do not
 extend the failed family solely because its late checkpoint improved.
+
+Saved diversity-path diagnosis finds expanded stock/ETF non-cost gaps3.05/2.93pp
+plus incremental costs3.51/2.66pp; small resize costs only0.23/0.21pp. Mostly-long
+behavior with very little short exposure persists. No training extension or
+cost-only cure is established. Next inspect strictly training-only decline/
+rebound decision coverage before freezing another hypothesis; no future decline
+labels may enter learning or checkpoint selection.
+[Full evidence](../results/sac-diversity-paths-2026-10-20/README.md).
