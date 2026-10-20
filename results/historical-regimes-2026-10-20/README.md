@@ -30,9 +30,34 @@ immutable source chunks and audit reports are retained locally; no duplicates
 need removal. This is ETF coverage, not historical stock membership/delisting
 coverage or evidence of improved policy returns/profitable shorts.
 
-Next freeze a short2010 overlap audit against the existing snapshot to check
-price-unit continuity before combining separately retrieved histories. If it
-passes, implement a matched three-arm original/recent-ETF/old-ETF comparison with
+The fixed seam overlap now passes (details below). Next implement a matched
+three-arm original/recent-ETF/old-ETF comparison with
 equal ETF sampling mass, transitions, observations and costs. Keep the original
 stock/ETF selected-and-final gates, seeds11/23/37, short-side reporting and
 prospective requirements. No automatic learner allocation follows this audit.
+
+## Cross-download seam overlap — accepted
+
+The separate frozenDec2009–Mar2010 download contains332 bars (83 sessions per
+ETF). All88 earlier-overlap and244 recent-overlap rows have exactly zero
+OHLCV/dividend differences, identical normalized split factors, raw split
+events and open/event/availability times. Cached readback is identical.
+[Overlap checks](overlap.json), [readback](overlap-readback.json),
+[preregistered protocol](../../configs/experiments/historical_overlap.json).
+
+Source snapshot `dab959f56792b6347ad068c8d275eb4c5d51190292b9fcd6102971d2dc33836b`
+and every original snapshot remain unchanged. No tolerance widening, price
+rescaling, dataset merge or fitting.69 history/overlap/calendar/core/regime tests
+pass. Local seam consistency does not independently verify full historical
+actions/vintages or solve surviving-stock bias. Project remains35.871240/150.
+
+For the next matched preparation, keep existing validation episodes and the
+original training-only normalizer identical. Build old history as separate
+training episodes with independent feature warmup and20-session end purging,
+so adding early bars does not alter existing training/validation observations.
+Compare original episodes, additional recent-ETF episodes and additional old-ETF
+episodes. The latter two must have equal expected ETF sampling mass. Require
+full512-transition training windows in every arm and report actual sampled
+transitions by symbol/history period; variable near-boundary episodes otherwise
+confound nominal sampling mass. Freeze the complete numeric training protocol
+and prepared identities before any Colab smoke or fitting.

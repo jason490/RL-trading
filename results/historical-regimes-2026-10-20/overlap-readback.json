@@ -1,0 +1,8 @@
+{
+  "exact_report_parity": true,
+  "download_repeated": false,
+  "snapshot": "dab959f56792b6347ad068c8d275eb4c5d51190292b9fcd6102971d2dc33836b",
+  "protocol_sha256": "99d10e17a51960b68fdeca1e50d21b5e6997dae5d403fde64b846835efd1d958",
+  "implementation_revision": "eec1742",
+  "training_performed": false
+}

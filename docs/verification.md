@@ -863,3 +863,8 @@ OHLCV/action agreement. Cached readback is exact; recent2010–2020 subset passe
 identical source checks.9,052 earlier bars,23.55% joint trailing declines versus
 8.61% recent. No merge or fitting; cross-snapshot price continuity remains
 pending. [Evidence](../results/historical-regimes-2026-10-20/README.md).
+
+Historical seam acceptance passes:332 bars, zero OHLCV/dividend differences
+against earlier/recent references, matching raw split events and executable
+timestamps/factors. Cached readback exact;69 related tests pass. No merge,
+training or Colab. [Evidence](../results/historical-regimes-2026-10-20/overlap.json).

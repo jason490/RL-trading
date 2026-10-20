@@ -78,4 +78,14 @@ PYTHONPATH=src .venv/bin/python scripts/audit_historical_overlap.py --acquire \
 A successful local overlap is evidence of consistent reported units at the seam,
 not proof of full-history action accuracy or historical publication vintages.
 Eleven overlap tests and eight history tests pass before acquisition. Actual
-source overlap acceptance is pending; this stage creates no training allocation.
+source overlap acceptance now passes:332 bars, zero numeric differences,
+matching actions/times and exact cached readback.69 related tests pass;
+[results](../results/historical-regimes-2026-10-20/README.md#cross-download-seam-overlap--accepted).
+No merge or training allocation occurred.
+
+Next preparation must preserve existing episodes and fit-only normalization.
+Construct old training episodes separately with independent warmup/end purging.
+Match expected ETF sampling mass between recent-ETF and old-ETF augmentation,
+use full512-transition windows in all three arms, and record realized transition
+mass by symbol/period. Freeze data identities and numeric training gates before
+allocation. Seam agreement alone does not justify model promotion.

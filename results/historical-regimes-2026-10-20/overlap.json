@@ -1,0 +1,212 @@
+{
+  "protocol_sha256": "99d10e17a51960b68fdeca1e50d21b5e6997dae5d403fde64b846835efd1d958",
+  "snapshot": "dab959f56792b6347ad068c8d275eb4c5d51190292b9fcd6102971d2dc33836b",
+  "passed": true,
+  "comparisons": {
+    "earlier": {
+      "passed": true,
+      "rows": 88,
+      "mismatch_count": 0,
+      "mismatches_first20": [],
+      "maximum_absolute_difference": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "volume": 0.0,
+        "dividend": 0.0
+      },
+      "tolerances": {
+        "price_atol": 1e-06,
+        "price_rtol": 1e-07,
+        "dividend_atol": 1e-08
+      },
+      "rescaling_applied": false,
+      "reference_modified": false,
+      "candidate_modified": false,
+      "raw_split_events_match": true
+    },
+    "recent": {
+      "passed": true,
+      "rows": 244,
+      "mismatch_count": 0,
+      "mismatches_first20": [],
+      "maximum_absolute_difference": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "volume": 0.0,
+        "dividend": 0.0
+      },
+      "tolerances": {
+        "price_atol": 1e-06,
+        "price_rtol": 1e-07,
+        "dividend_atol": 1e-08
+      },
+      "rescaling_applied": false,
+      "reference_modified": false,
+      "candidate_modified": false,
+      "raw_split_events_match": true
+    }
+  },
+  "source_audit": {
+    "accepted_source_consistency": true,
+    "coverage_complete": true,
+    "independent_action_verification": false,
+    "point_in_time_vintages_verified": false,
+    "stock_delisting_coverage_verified": false,
+    "training_performed": false,
+    "automatic_merge": false,
+    "records": [
+      {
+        "symbol": "SPY",
+        "rows": 83,
+        "first": "2009-12-01",
+        "last": "2010-03-31",
+        "source_splits": [],
+        "dividends": [
+          {
+            "session": "2009-12-18",
+            "cash_per_adjusted_share": 0.59
+          },
+          {
+            "session": "2010-03-19",
+            "cash_per_adjusted_share": 0.48
+          }
+        ],
+        "regime_years": {
+          "2009": {
+            "rows": 22,
+            "ready63": 0,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          },
+          "2010": {
+            "rows": 61,
+            "ready63": 20,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          }
+        }
+      },
+      {
+        "symbol": "QQQ",
+        "rows": 83,
+        "first": "2009-12-01",
+        "last": "2010-03-31",
+        "source_splits": [],
+        "dividends": [
+          {
+            "session": "2009-12-18",
+            "cash_per_adjusted_share": 0.073
+          },
+          {
+            "session": "2010-03-19",
+            "cash_per_adjusted_share": 0.051
+          }
+        ],
+        "regime_years": {
+          "2009": {
+            "rows": 22,
+            "ready63": 0,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          },
+          "2010": {
+            "rows": 61,
+            "ready63": 20,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          }
+        }
+      },
+      {
+        "symbol": "IWM",
+        "rows": 83,
+        "first": "2009-12-01",
+        "last": "2010-03-31",
+        "source_splits": [],
+        "dividends": [
+          {
+            "session": "2009-12-23",
+            "cash_per_adjusted_share": 0.253
+          },
+          {
+            "session": "2010-03-24",
+            "cash_per_adjusted_share": 0.172
+          }
+        ],
+        "regime_years": {
+          "2009": {
+            "rows": 22,
+            "ready63": 0,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          },
+          "2010": {
+            "rows": 61,
+            "ready63": 20,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          }
+        }
+      },
+      {
+        "symbol": "DIA",
+        "rows": 83,
+        "first": "2009-12-01",
+        "last": "2010-03-31",
+        "source_splits": [],
+        "dividends": [
+          {
+            "session": "2009-12-18",
+            "cash_per_adjusted_share": 0.4
+          },
+          {
+            "session": "2010-02-19",
+            "cash_per_adjusted_share": 0.265
+          },
+          {
+            "session": "2010-03-19",
+            "cash_per_adjusted_share": 0.207
+          }
+        ],
+        "regime_years": {
+          "2009": {
+            "rows": 22,
+            "ready63": 0,
+            "negative63": 0,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          },
+          "2010": {
+            "rows": 61,
+            "ready63": 20,
+            "negative63": 1,
+            "ready252": 0,
+            "negative252": 0,
+            "joint_negative": 0
+          }
+        }
+      }
+    ]
+  },
+  "training_performed": false,
+  "automatic_merge": false,
+  "colab_allocations": 0,
+  "test_evaluated": false
+}

@@ -950,3 +950,10 @@ exact row-set checks, unchanged numeric price/dividend tolerances, exact volume,
 splits and event/availability times.19 history/overlap tests pass before provider
 acquisition. Failures retain evidence and stop merging; no automatic rescaling.
 [Protocol](configs/experiments/historical_overlap.json).
+
+Seam overlap accepted:332 rows, zero differences, matching action/time contracts
+and identical readback;69 related tests pass. No rescaling, merge or training.
+Next prepare separate old-history episodes, fixed512-session training windows
+and matched recent/old ETF sampling mass while preserving original observations,
+validation and normalization. Freeze identities/gates before Colab.
+[Evidence](results/historical-regimes-2026-10-20/overlap.json).
