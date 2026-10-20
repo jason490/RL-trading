@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "cleanup_verified": true,
+  "source": {
+    "source_revision": "27f0d343b263a4a35ff5a1837ce1cb2efcbfb9f7",
+    "source_hash": "696a35cea17de4b59416a3c7b6738e41cdc8523eda4c74c3ec66f8ffaeeafbba",
+    "source_archive_sha256": "082455384384d9b940418ca354bef6c363f3d1638658aa3298f40986b1ac0339",
+    "shared_original_ledger_and_lock_verified": true,
+    "sessions_allocated": 0
+  },
+  "cells": [
+    {
+      "arm": "net_log_equity-11",
+      "session": "rl-stocks-cpu-e116a257a96b",
+      "run": "20261020T005103-ppo-11-ea052304",
+      "bundle_id": "c82d8b9c6ecc0790c0839d434e2ed5dbed91725cb27a7b8ff21e66058ecbe241",
+      "metadata_sha256": "36f1000b883da44c4f990b65882948f82d8eb80a533039066e2c6571b967a7fb",
+      "steps": 512,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "gpu": null,
+      "reward_config": {
+        "kind": "net_log_equity",
+        "scale": 1.0
+      }
+    },
+    {
+      "arm": "net_initial_equity_change-11",
+      "session": "rl-stocks-cpu-deb98981faa2",
+      "run": "20261020T005223-ppo-11-171c0123",
+      "bundle_id": "02a9783d313b0643701790bb936e8e797bc0930b01fb757355ab2d5bb5644956",
+      "metadata_sha256": "cec7fe659a35ca6c9ca714e75500e3d294165e9409518b624784a488f6b13fc4",
+      "steps": 512,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "gpu": null,
+      "reward_config": {
+        "kind": "net_initial_equity_change",
+        "scale": 1.0
+      }
+    }
+  ],
+  "frozen_verification": {
+    "passed": true,
+    "bundles": [
+      {
+        "bundle_id": "c82d8b9c6ecc0790c0839d434e2ed5dbed91725cb27a7b8ff21e66058ecbe241",
+        "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+        "algorithm": "ppo",
+        "seed": 11,
+        "symbols_checked": [
+          "AAPL",
+          "AMT",
+          "AMZN",
+          "APD",
+          "BAC",
+          "CAT",
+          "CVX",
+          "DIA",
+          "DIS",
+          "DUK",
+          "GOOGL",
+          "HD",
+          "HON",
+          "IWM",
+          "JNJ",
+          "JPM",
+          "KO",
+          "LIN",
+          "MSFT",
+          "NEE",
+          "PG",
+          "PLD",
+          "QQQ",
+          "SPY",
+          "UNH",
+          "XOM"
+        ],
+        "predictions_checked": 78,
+        "exact_prediction_parity": true,
+        "deterministic_repeat": true,
+        "normalization_and_data_match_dataset": true,
+        "normalization_unchanged": true,
+        "schema_feed_nonfinite_rejection": true,
+        "selected_weights_sha256": "b37578479bd6d0f01768af13a22aa9b10897038d2bc05f3b11b366e22127db25"
+      },
+      {
+        "bundle_id": "02a9783d313b0643701790bb936e8e797bc0930b01fb757355ab2d5bb5644956",
+        "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+        "algorithm": "ppo",
+        "seed": 11,
+        "symbols_checked": [
+          "AAPL",
+          "AMT",
+          "AMZN",
+          "APD",
+          "BAC",
+          "CAT",
+          "CVX",
+          "DIA",
+          "DIS",
+          "DUK",
+          "GOOGL",
+          "HD",
+          "HON",
+          "IWM",
+          "JNJ",
+          "JPM",
+          "KO",
+          "LIN",
+          "MSFT",
+          "NEE",
+          "PG",
+          "PLD",
+          "QQQ",
+          "SPY",
+          "UNH",
+          "XOM"
+        ],
+        "predictions_checked": 78,
+        "exact_prediction_parity": true,
+        "deterministic_repeat": true,
+        "normalization_and_data_match_dataset": true,
+        "normalization_unchanged": true,
+        "schema_feed_nonfinite_rejection": true,
+        "selected_weights_sha256": "ee93b22a3e8a192d3ee97df3ef72c4ce8bada7acbd2733351d9f756d40d219b1"
+      }
+    ],
+    "device": "cpu",
+    "training_performed": false,
+    "test_evaluated": false
+  },
+  "retired_test_evaluated": false,
+  "project_units": 35.763584512523806,
+  "incremental_conservative_units": 0.015021485793589306,
+  "account_balance": 350.69,
+  "active_assignments": 0,
+  "rate_units_per_hour": 0.0
+}
