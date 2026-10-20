@@ -58,7 +58,8 @@ class TradingEnv(gym.Env):
             self.sampling_counts['history_groups']={}
             self.sampling_counts['downtrend_counts_measured']=False
     def sampling_statistics(self):
-        return {**self.sampling_counts,'mode':self.start_sampler.mode} if self.start_sampler else None
+        from copy import deepcopy
+        return {**deepcopy(self.sampling_counts),'mode':self.start_sampler.mode} if self.start_sampler else None
     def observation(self):
         p=self.sim.portfolio;price=self.bars[self.i].close;equity=p.equity(price)
         vector=self.normalizer.transform(self.episode["features"][self.i],self.names)

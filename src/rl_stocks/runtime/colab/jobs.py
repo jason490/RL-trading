@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==14:
+    if plan.get('version')==15:
+        try:expected=history_plan(**plan['history_study'])
+        except (KeyError,TypeError):raise ValueError('malformed historical study plan') from None
+        if plan!=expected:raise ValueError('unsupported historical study plan')
+    elif plan.get('version')==14:
         if plan!=forest_plan():raise ValueError('unsupported forest-signal plan')
     elif plan.get('version')==13:
         if plan!=signal_plan():raise ValueError('unsupported supervised-signal plan')
@@ -262,3 +266,15 @@ def forest_plan():
     return {'version':14,'accelerator':'CPU','protocol_sha256':PROTOCOL_SHA256,
         'dataset_contract':{'identity':SIGNAL_DATASET,'kind':'completed-training-signal-v1'},
         'jobs':[{'algorithm':'forest_signal_feasibility','device':'cpu','smoke':False,'seed':11,'steps':770}]}
+
+
+def history_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.history.spec import protocol,PROTOCOL_SHA256
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported historical arm, seed or smoke mode')
+    plan=reward_plan('net_log_equity',seed,smoke);plan.pop('reward_study')
+    plan.update(version=15,history_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
+        dataset_contract=dict(identity=p['datasets'][arm],arm=arm))
+    plan['jobs'][0]['start_sampling']='full_window_uniform'
+    return plan

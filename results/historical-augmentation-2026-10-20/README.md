@@ -19,3 +19,10 @@ Broader verification passes75 preparation/sampling/core/observation/reward tests
 without fitting. Repeated preparation reproduces all three exact data identities.
 Downtrend labels are not measured by full-window sampling; any compatibility
 counters are explicitly marked unmeasured, not evidence of zero downtrends.
+
+Version15 now binds dataset identities, fixed protocol, CPU jobs and full-window
+sampling on the launcher and worker. Returned archives check PPO/init/state/
+reward settings, checkpoint curves, complete frozen metadata and reconciled
+symbol/history sampling counts. Invalid checksummed contracts fail. Sampling
+statistics are copied before parity resets to prevent nested-count mutation.
+Actual metered Colab acceptance is next; no fitting result is implied.

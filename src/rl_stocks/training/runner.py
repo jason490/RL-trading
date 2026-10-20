@@ -125,6 +125,10 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
+    if 'history_augmentation' in dataset['manifest']:
+        from rl_stocks.training.history.spec import PROTOCOL_SHA256
+        metadata['history_augmentation']=dataset['manifest']['history_augmentation']
+        metadata['history_protocol_sha256']=PROTOCOL_SHA256
     (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
     start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env,observation_profile=observation_profile)
     try:

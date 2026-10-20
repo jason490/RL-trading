@@ -22,7 +22,7 @@ def validate_archive(path, plan, dataset_id):
                 raise RuntimeError('missing required remote artifact: '+name)
             return stream.read()
         try:
-            if plan.get('version')==12 and dataset_id!=plan['dataset_contract']['identity']:
+            if plan.get('version') in (12,15) and dataset_id!=plan['dataset_contract']['identity']:
                 raise RuntimeError('trend-context dataset identity mismatch')
             completion = json.loads(read('artifacts/completion.json'))
             hardware_ok = (completion['gpu'] is None if plan['accelerator']=='CPU'
@@ -39,18 +39,18 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5,7,8,9,10,11,12):
+                if plan.get('version') in (4,5,7,8,9,10,11,12,15):
                     job=plan['jobs'][0]
-                    if plan.get('version') in (7,8,9,10,11,12):
+                    if plan.get('version') in (7,8,9,10,11,12,15):
                         from rl_stocks.training.initialization import initialization_spec
                         if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
                             raise RuntimeError('initialization-study configuration mismatch')
-                    if plan.get('version') in (9,10,11,12):
+                    if plan.get('version') in (9,10,11,12,15):
                         from rl_stocks.environment.observations.state import observation_spec
                         if (run.get('observation')!=observation_spec(job['observation_profile'])
-                                or run.get('start_sampling')!={'mode':'legacy_uniform'}):
+                                or plan.get('version')!=15 and run.get('start_sampling')!={'mode':'legacy_uniform'}):
                             raise RuntimeError('execution-observation configuration mismatch')
-                    if plan.get('version') in (10,11,12):
+                    if plan.get('version') in (10,11,12,15):
                         from rl_stocks.rl.ppo.architecture import architecture_spec
                         from rl_stocks.rl.registry.factory import resolved_parameters
                         if (run.get('policy_architecture')!=architecture_spec(job['policy_variant'],7)
@@ -95,11 +95,11 @@ def validate_archive(path, plan, dataset_id):
                 for name, checksum in hashes.items():
                     if PurePosixPath(name).name != name or hashlib.sha256(read(folder+name)).hexdigest() != checksum:
                         raise RuntimeError('remote bundle checksum mismatch')
-                if plan.get('version') in (9,10,11,12) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
+                if plan.get('version') in (9,10,11,12,15) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
                     raise RuntimeError('frozen observation schema mismatch')
-                if plan.get('version') in (10,11,12) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
+                if plan.get('version') in (10,11,12,15) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
                     raise RuntimeError('frozen policy architecture mismatch')
-                if plan.get('version') in (11,12) and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
+                if plan.get('version') in (11,12,15) and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
                     raise RuntimeError('frozen reward configuration mismatch')
                 if plan.get('version')==12:
                     from rl_stocks.features.registry.assemble import NAMES as BASE
@@ -128,6 +128,19 @@ def validate_archive(path, plan, dataset_id):
                         or manifest['metadata']!={k:v for k,v in run.items() if k!='bundle_id'}):raise RuntimeError('forest archive contract mismatch')
                     if hashlib.sha256(read(folder+'requirements.lock')).hexdigest()!=run['requirements_lock_sha256'] or json.loads(read(folder+'dependencies.json'))!=run['versions']:raise RuntimeError('forest dependency manifest mismatch')
                     verify_report(read,prefix,run,manifest)
+                if plan.get('version')==15:
+                    from rl_stocks.training.history.spec import PROTOCOL_SHA256,validate_counts
+                    from rl_stocks.features.registry.assemble import NAMES
+                    frozen=json.loads(read(folder+'manifest.json'));arm=plan['history_study']['arm'];job=plan['jobs'][0]
+                    prefix=next(n.rsplit('/',1)[0]+'/' for n in names if n.endswith('/metadata.json') and json.loads(read(n)).get('bundle_id')==run['bundle_id'])
+                    counts=run.get('sampling_diagnostics',{})
+                    summary=validate_counts(counts,arm,job['smoke'],job['steps'])
+                    if (counts!=json.loads(read(prefix+'training-sampling.json')) or run.get('start_sampling')!=summary
+                        or run.get('history_protocol_sha256')!=PROTOCOL_SHA256
+                        or frozen.get('metadata')!={k:v for k,v in run.items() if k!='bundle_id'}
+                        or frozen.get('names')!=list(NAMES) or frozen.get('feature_schema')!='daily-indicators-v1'
+                        or frozen['data_manifest'].get('history_augmentation')!=run.get('history_augmentation')
+                        or run['history_augmentation']['arm']!=arm):raise RuntimeError('historical bundle/sampling contract mismatch')
                 if digest(json.loads(read(folder+'manifest.json'))) != run['bundle_id']:
                     raise RuntimeError('remote bundle identity mismatch')
             if actual != expected or len(completion['completed']) != len(runs):

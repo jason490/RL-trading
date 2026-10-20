@@ -971,3 +971,9 @@ worker/job/artifact validation and committed source freeze pending.
 [Protocol](configs/experiments/historical_augmentation.json),
 [guide](docs/historical-augmentation.md),
 [prepared identities](results/historical-augmentation-2026-10-20/preflight.json).
+
+Historical version15 job/worker/artifact integration implemented. Protocol/data
+identities, full-window summaries, sampling totals and frozen metadata checked.
+Fix nested sampling snapshots changing during parity reset; regression covers it.
+Three immutable smoke tasks validate before allocation; freeze committed source
+then run metered CPU smokes under the shared2-unit study allowance.

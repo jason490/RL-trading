@@ -47,3 +47,11 @@ def test_environment_full_horizon_and_realized_counts():
     assert stats['history_groups']=={'SPY:recent':{'starts':1,'transitions':512}}
     e.reset();e.reset_sampling_statistics();e.step([0,1,1,1])
     assert e.sampling_statistics()['history_groups']['SPY:recent']['transitions']==1
+
+
+def test_statistics_snapshot_is_not_mutated_by_parity_reset():
+    from test_causal_sampling import episode as market_episode,env
+    e=env(market_episode(),'full_window_uniform');e.reset(seed=11);e.step([0,1,1,1])
+    snapshot=e.sampling_statistics();e.reset()
+    assert snapshot['starts']==1 and snapshot['history_groups']['SPY:recent']['starts']==1
+    assert e.sampling_statistics()['history_groups']['SPY:recent']['starts']==2

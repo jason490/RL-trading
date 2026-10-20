@@ -27,6 +27,9 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==15:
+        from rl_stocks.training.history.spec import validate_payload
+        validate_payload(payload,plan['history_study']['arm'])
     if plan.get('version')==12:
         from rl_stocks.runtime.colab.jobs import validate_context_payload
         if digest(payload)!=plan['dataset_contract']['identity']:raise ValueError('remote trend-context dataset identity mismatch')

@@ -57,3 +57,10 @@ The study is capped at2 incremental units, shares the original150-unit ledger
 and130-unit working stop, and uses bounded2-hour owned allocations. CPU profiling
 supports this small-network workload. Actual Colab Python must be rechecked.
 Metered job/artifact integration and source freeze remain required before launch.
+
+Version15 now binds dataset identities, fixed protocol, CPU jobs and full-window
+sampling on the launcher and worker. Returned archives check PPO/init/state/
+reward settings, checkpoint curves, complete frozen metadata and reconciled
+symbol/history sampling counts. Invalid checksummed contracts fail. Sampling
+statistics are copied before parity resets to prevent nested-count mutation.
+Actual metered Colab acceptance is next; no fitting result is implied.
