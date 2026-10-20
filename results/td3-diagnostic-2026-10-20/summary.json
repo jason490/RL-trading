@@ -1,0 +1,393 @@
+{
+  "records": [
+    {
+      "seed": 11,
+      "run": "20261014T232818-td3-11-ff94e1b5",
+      "bundle_id": "8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb",
+      "models": {
+        "best.zip": {
+          "input_size": 12,
+          "n_updates": 48999,
+          "policy_delay": 2,
+          "target_policy_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "exploration_noise": {
+            "kind": "NormalActionNoise",
+            "mean": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sigma": [
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "latest.zip": {
+          "input_size": 12,
+          "n_updates": 49000,
+          "policy_delay": 2,
+          "target_policy_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "exploration_noise": {
+            "kind": "NormalActionNoise",
+            "mean": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sigma": [
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        }
+      },
+      "observation_profile": "legacy",
+      "omitted_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "phases": {
+        "selected": {
+          "stock": {
+            "net_return": 0.02218635372629709,
+            "buy_hold_return": 0.32626546944483825,
+            "short_fraction": 0.24080973671137607,
+            "long_fraction": 0.7010059612518629,
+            "incremental_cost_drag_pp": 11.566525935048293,
+            "saved_path_noncost_excess_pp": -18.84138563680582
+          },
+          "etf": {
+            "net_return": 0.10075167004521518,
+            "buy_hold_return": 0.19466021642377884,
+            "short_fraction": 0.13797814207650272,
+            "long_fraction": 0.769808743169399,
+            "incremental_cost_drag_pp": 9.720161195688464,
+            "saved_path_noncost_excess_pp": 0.3293065578320964
+          }
+        },
+        "final": {
+          "stock": {
+            "net_return": 0.02133441956866927,
+            "buy_hold_return": 0.32626546944483825,
+            "short_fraction": 0.24049925484351714,
+            "long_fraction": 0.7019374068554396,
+            "incremental_cost_drag_pp": 11.55406335687587,
+            "saved_path_noncost_excess_pp": -18.939041630741027
+          },
+          "etf": {
+            "net_return": 0.09105264881699032,
+            "buy_hold_return": 0.19466021642377884,
+            "short_fraction": 0.1369535519125683,
+            "long_fraction": 0.7721994535519126,
+            "incremental_cost_drag_pp": 9.633309665796201,
+            "saved_path_noncost_excess_pp": -0.7274470948826506
+          }
+        }
+      },
+      "directional_pnl_reconstructed": false
+    },
+    {
+      "seed": 23,
+      "run": "20261014T233608-td3-23-45042c92",
+      "bundle_id": "e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b",
+      "models": {
+        "best.zip": {
+          "input_size": 12,
+          "n_updates": 38999,
+          "policy_delay": 2,
+          "target_policy_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "exploration_noise": {
+            "kind": "NormalActionNoise",
+            "mean": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sigma": [
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "latest.zip": {
+          "input_size": 12,
+          "n_updates": 49000,
+          "policy_delay": 2,
+          "target_policy_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "exploration_noise": {
+            "kind": "NormalActionNoise",
+            "mean": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sigma": [
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        }
+      },
+      "observation_profile": "legacy",
+      "omitted_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "phases": {
+        "selected": {
+          "stock": {
+            "net_return": 0.15902505307480494,
+            "buy_hold_return": 0.32626546944483825,
+            "short_fraction": 0.07178340784898161,
+            "long_fraction": 0.8659339294585197,
+            "incremental_cost_drag_pp": 7.640686743954265,
+            "saved_path_noncost_excess_pp": -9.083354893049064
+          },
+          "etf": {
+            "net_return": -0.0014510170858193228,
+            "buy_hold_return": 0.19466021642377884,
+            "short_fraction": 0.08469945355191258,
+            "long_fraction": 0.8603142076502732,
+            "incremental_cost_drag_pp": 6.218811357798643,
+            "saved_path_noncost_excess_pp": -13.392311993161172
+          }
+        },
+        "final": {
+          "stock": {
+            "net_return": 0.10875513701538266,
+            "buy_hold_return": 0.32626546944483825,
+            "short_fraction": 0.06389716840536512,
+            "long_fraction": 0.8716467958271237,
+            "incremental_cost_drag_pp": 7.783735629031002,
+            "saved_path_noncost_excess_pp": -13.967297613914555
+          },
+          "etf": {
+            "net_return": 0.030759053605152326,
+            "buy_hold_return": 0.19466021642377884,
+            "short_fraction": 0.05327868852459017,
+            "long_fraction": 0.8773907103825136,
+            "incremental_cost_drag_pp": 6.76815056445961,
+            "saved_path_noncost_excess_pp": -9.62196571740304
+          }
+        }
+      },
+      "directional_pnl_reconstructed": false
+    },
+    {
+      "seed": 37,
+      "run": "20261014T234502-td3-37-140a76d1",
+      "bundle_id": "b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce",
+      "models": {
+        "best.zip": {
+          "input_size": 12,
+          "n_updates": 8999,
+          "policy_delay": 2,
+          "target_policy_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "exploration_noise": {
+            "kind": "NormalActionNoise",
+            "mean": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sigma": [
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "latest.zip": {
+          "input_size": 12,
+          "n_updates": 49000,
+          "policy_delay": 2,
+          "target_policy_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "exploration_noise": {
+            "kind": "NormalActionNoise",
+            "mean": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sigma": [
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        }
+      },
+      "observation_profile": "legacy",
+      "omitted_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "phases": {
+        "selected": {
+          "stock": {
+            "net_return": -0.03613708164354754,
+            "buy_hold_return": 0.32626546944483825,
+            "short_fraction": 0.11847988077496274,
+            "long_fraction": 0.8362518628912071,
+            "incremental_cost_drag_pp": 10.279287485181067,
+            "saved_path_noncost_excess_pp": -25.96096762365751
+          },
+          "etf": {
+            "net_return": -0.08225260690684225,
+            "buy_hold_return": 0.19466021642377884,
+            "short_fraction": 0.055669398907103824,
+            "long_fraction": 0.89275956284153,
+            "incremental_cost_drag_pp": 6.9012138344181855,
+            "saved_path_noncost_excess_pp": -20.790068498643922
+          }
+        },
+        "final": {
+          "stock": {
+            "net_return": -0.13261527741148058,
+            "buy_hold_return": 0.32626546944483825,
+            "short_fraction": 0.2541604570293095,
+            "long_fraction": 0.7053527074018877,
+            "incremental_cost_drag_pp": 12.45560562748427,
+            "saved_path_noncost_excess_pp": -33.43246905814761
+          },
+          "etf": {
+            "net_return": -0.13284010861934822,
+            "buy_hold_return": 0.19466021642377884,
+            "short_fraction": 0.3152322404371585,
+            "long_fraction": 0.657103825136612,
+            "incremental_cost_drag_pp": 10.159082749344122,
+            "saved_path_noncost_excess_pp": -22.590949754968584
+          }
+        }
+      },
+      "directional_pnl_reconstructed": false
+    }
+  ],
+  "matched_source_contract": {
+    "dataset": "dfd600f62d5f12f7aa1c62b64a3fe2a1d00a48b3264f2a7fff31354958a57059",
+    "source_hash": "1fa6c69568c056642db15e2684c3db01cf3046bccb1b5df984b692fb57381b28",
+    "git": {
+      "revision": "5b1b375dc6184fce788e95da8f502ea1c01701d6",
+      "dirty": ""
+    },
+    "simulation": {
+      "initial_equity": 100000.0,
+      "fee_bps": 1.0,
+      "impact_bps": 2.0,
+      "borrow_rate": 0.03,
+      "max_holding": 20,
+      "allow_short": true,
+      "exposure_cap": 1.0
+    },
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.8.0",
+      "gymnasium": "1.2.0",
+      "stable-baselines3": "2.7.0",
+      "pandas": "2.3.2",
+      "plotly": "6.3.0"
+    },
+    "resolved_parameters": {
+      "buffer_size": 100000,
+      "batch_size": 256,
+      "learning_starts": 1000,
+      "train_freq": 1,
+      "gradient_steps": 1,
+      "tau": 0.005,
+      "policy_delay": 2,
+      "target_policy_noise": 0.2,
+      "target_noise_clip": 0.5,
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "policy_kwargs": {
+        "net_arch": [
+          64,
+          64
+        ]
+      }
+    }
+  },
+  "validation_baseline_sha256": "b97d9e7ee545eeca5c22b408f27914bdcb8a293c9ed7a63dd7d8f51b248daa1a",
+  "source_hashes": {
+    "configs/universes/sector_research.json": "0bb7966d30ed37ec6fc8ed6fc6c11a212311b18ec3bccb2a4bb0197cf44dc71d",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/metadata.json": "b203a6095e8ef5f6650edb288009e586bcfff290525240d703d4240d73c18691",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb/manifest.json": "8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb/model.zip": "8108fb3166c9fce0322b1d6d3f412a17174e3ba50b631d34acab69d07f70d3de",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb/checksums.json": "a44b5913ccdf44e33961c0458f1aae830d2371635f51a233499bf1ad5a1e2f5f",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/8960cf1534bf5413ecb80c4c3fe255d82fa0e54e8f0bcbe3a673474908afa0eb/requirements.lock": "ebc3c00eeda0a8f68f0f5fc666c1648fc32608178905b5c46a7944e555c11752",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/best.zip": "8108fb3166c9fce0322b1d6d3f412a17174e3ba50b631d34acab69d07f70d3de",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/latest.zip": "e9547d74d048409b9e6daba046ae412dabc6dbcc4b7c10bf7d8a2189658e39d0",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/selected-validation.json": "563c4bdc7c42a40b9ceee150f34ecb0d3db6ab1dd1bc24f36a53467a2b9a877c",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T232818-td3-11-ff94e1b5/validation.json": "689e5bac6d0115c6599a65e0bf51b8c11dfbcf929bfaa0cd019152cc87f7c638",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/metadata.json": "7b1d0efe93c6a1a35ba93267de6d95794b760a684db351d1b07a7aefa2e8f43c",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b/manifest.json": "e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b/model.zip": "5f21f8c6c9928ff525fba33fd5920d3a69cb52df94cdb2c3aaa8502fd9fd5bbf",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b/checksums.json": "acdf66a1cf9bdb3527391c8bc53b8c37836389a81ba182694be241715dbacc91",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/e2449af05cbe9cb29c0cc85e9dd9d72ece7627d5bf854769eb58fc2d2ddbe09b/requirements.lock": "ebc3c00eeda0a8f68f0f5fc666c1648fc32608178905b5c46a7944e555c11752",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/best.zip": "5f21f8c6c9928ff525fba33fd5920d3a69cb52df94cdb2c3aaa8502fd9fd5bbf",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/latest.zip": "b967811c45d4b61c4d66809579283b62dc8e9791f003a1c15d69172cf68702e0",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/selected-validation.json": "1bd3feaad6cb2bb8482ce80acb2f8c07978dba007918f0a418b7a1a2c7f5196d",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T233608-td3-23-45042c92/validation.json": "73ac63c4e64bf93ee2ec0bdd01bda3f989cb9a3eb43c152f1e1c4bae2a0e3f5b",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/metadata.json": "012e78e63ce965bc4809050c877c360d99b477669090f48c96b1a1b77ec4af20",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce/manifest.json": "b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce/model.zip": "461663063d6e86ee5055f281820bc5b550218511ead55b9a9cd5d4551098cd1f",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce/checksums.json": "cc122dec231a4eab272e9846946ce19117e7aa5ced30a08f160d0b02bf0a3969",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/frozen/b7ebad712ddcbe3d9fb21710e651f17f103d59ea66383f4c1fa09aadc0537fce/requirements.lock": "ebc3c00eeda0a8f68f0f5fc666c1648fc32608178905b5c46a7944e555c11752",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/best.zip": "461663063d6e86ee5055f281820bc5b550218511ead55b9a9cd5d4551098cd1f",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/latest.zip": "9fc60366511cf3573122b982fddd3d95db84b458b8aa37f9ad0e130f277a0e76",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/selected-validation.json": "1db2291dda13ae9076ab3b097ac84d8b3a06e40e36895dc3151c7696430da164",
+    "artifacts/colab/rl-stocks-a100-fcf79fe3ffb9/retrieved/artifacts/runs/20261014T234502-td3-37-140a76d1/validation.json": "318446f8460d905a1d8a32ca77bb9f98df1c35a491d651501f1def61069e73cf"
+  },
+  "source_unchanged": true,
+  "diagnostic_script_sha256": "7ed63e2f8fbc6ad1499205926f388580dd8d56f03c2277e6710c3c9bdf04bc0c",
+  "dataset_opened": false,
+  "training_performed": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "objective_achieved": false,
+  "interpretation": "Own saved models only; no fitting, predictions or dataset loading. Input omission is verified, not its performance effect. Noise is verified from restored objects, not absent metadata. Old studies are diagnosis, not matched controls for new training. Close short fraction does not establish profitable shorts."
+}

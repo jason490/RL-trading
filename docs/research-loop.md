@@ -331,3 +331,13 @@ a fixed full-state delayed-update comparison provides a distinct hypothesis.
 Prior weak TD3 results stay visible. No promise of improvement, automatic
 allocation, temperature rescue or relaxation of stock/ETF/short/prospective
 requirements. Project remains36.069198/150.
+
+## TD3 audit and fixed protocol
+
+Three owned 50k seeds verify legacy12 inputs, Gaussian sigma0.1 and delayed
+updates; no training/data access/Colab. Final stocks/ETFs -0.08%/-0.37% remain
+weak. Fixed legacy/masked/full TD3 comparison preregistered with unchanged data,
+reward, costs, parameters and strict absolute/relative gates;12 protocol/off-policy
+checks pass. No allocation before runtime/initial-noise preflight.
+[Category guide](td3-execution-state.md),
+[audit](../results/td3-diagnostic-2026-10-20/README.md).

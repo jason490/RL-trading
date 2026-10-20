@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "name": "td3-execution-state-2026-10-20",
+  "hypothesis": "Three saved baseline TD3 seeds omit nine active execution fields and deteriorate despite fixed Gaussian exploration. Test whether full state helps deterministic delayed-update learning against fresh legacy and same-dimension masked TD3 controls; failed PPO/SAC state studies remain negative evidence, not a proof of the TD3 effect.",
+  "algorithm": "td3",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "arms": [
+    "legacy",
+    "execution_masked",
+    "execution_full"
+  ],
+  "candidate": "execution_full",
+  "market_features": 7,
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 50000,
+  "smoke_steps": 1024,
+  "evaluation_every": 10000,
+  "smoke_evaluation_every": 512,
+  "initialization": "standard",
+  "policy_variant": "native",
+  "start_sampling": "legacy_uniform",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "parameters": {
+    "buffer_size": 100000,
+    "batch_size": 256,
+    "learning_starts": 1000,
+    "train_freq": 1,
+    "gradient_steps": 1,
+    "tau": 0.005,
+    "policy_delay": 2,
+    "target_policy_noise": 0.2,
+    "target_noise_clip": 0.5,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "smoke_parameters": "Existing locked TD3 smoke configuration:32x32 networks,batch64,warmup64; identical exploration noise and delay; smoke returns never select parameters",
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected and final weights independently reported",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Stop seed11 screen; no confirmation, extra transitions or parameter sweep"
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "constraints": {
+    "data": "Same seven indicators, original immutable training-only preprocessing and26-symbol validation panel across all arms; no new data family",
+    "observations": "Legacy12 inputs versus21 masked/full inputs; masked/full same network capacity and state dimension. Additional nine execution fields zero in masked, causal live simulator state in full Verify masked/full initial actor, target actor, critic and target critic tensor hashes equal before learning.",
+    "causality": "Only current completed market data and actual held execution state. Full-period losing-stock labels reporting only, never inputs/sampling/rewards/checkpoint selection",
+    "simulation": "Unchanged four-component actions,100k equity, whole shares, exposure cap1,20-session holding limit, next-session fills, costs and corporate actions",
+    "splits": "Train through2020, repeated development2021-2023 only; never open/evaluate2024-September2026",
+    "comparison": "All new TD3 arms equal50k CPU budgets and identical data/costs. Old TD3 uses old source/data contracts and is diagnosis only. PPO/SAC outcomes are contextual evidence, not matched controls. No algorithm, noise or update-frequency sweep.",
+    "short_side": "Reconcile every new run's long/short costs and marked P&L. Report joint positive total return AND positive net short P&L on declining stocks; never loss reduction alone",
+    "limitations": "Survivor stocks, revised Yahoo history, correlated development episodes; no live/paper broker orders"
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only, actual default Python checked before dependency sync",
+    "initial_concurrency": 3,
+    "preflight": "Three1024-transition Colab CPU smokes; actual initial actor/target/critic fingerprints, Gaussian noise, observation/parameter/archive contracts and frozen parity before50k screen",
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "runner": "Existing central metered owned fleet, original cumulative ledger, bound downloads, verified shutdown and recovery IDs",
+    "cleanup": "Retain all models/checkpoints/curves; verify publication checksums before removing duplicates; verify every owned session stopped"
+  },
+  "exploration_noise": {
+    "kind": "NormalActionNoise",
+    "mean": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sigma": [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ]
+  }
+}

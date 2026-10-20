@@ -1075,3 +1075,13 @@ exposure and cost differences to distinguish deterioration mechanisms before
 preregistering another bounded hypothesis. This diagnostic needs no fitting,
 provider calls or Colab allocation. Development results remain repeatedly used;
 prospective confirmation and the overall benchmark/short objective remain unmet.
+
+## 41. Saved TD3 audit and fixed execution-state protocol
+
+Three saved TD3 seeds omit execution state despite verified Gaussian noise.
+Final stock/ETF means -0.08%/-0.37%, so no performance claim. A fixed three-arm
+legacy/masked/full test retains prior failed PPO/SAC evidence and absolute
+benchmark requirements. Audit/protocol checks12 pass without training or data
+access. Runtime integration and metered Colab smokes/screens remain pending.
+[Guide](docs/td3-execution-state.md),
+[protocol](configs/experiments/td3_execution_state.json).
