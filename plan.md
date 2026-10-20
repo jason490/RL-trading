@@ -740,7 +740,7 @@ No training or Colab units were added.
 Nineteen release asset hashes/sizes are verified; 18 publication duplicates
 (9.85 MiB logical) were removed with 597 retained hashes unchanged.
 
-## 28. Market-only exposure head — implemented; Colab validation pending
+## 28. Market-only exposure head — complete, failed promotion
 
 Current policy direction changes with account-path inputs even when market
 features and weights are fixed; full-state seed11 flips direction on 14.70% of
@@ -773,3 +773,31 @@ initialized tensors and allocated parameter counts; fixed masks remove active
 exposure/account connections. Native model/RNG parity and save/freeze/load
 checks pass locally. Numeric protocol and shared dual-control reporter are
 frozen before allocation. See [policy architecture](docs/policy-architecture.md).
+
+All three 512-step CPU smokes and three 50k cells completed. Native final 22.59%,
+unmasked branches 5.41%, market-only exposure -3.64%, holding 30.60%. Treatment
+failed both control gates and made losses on AMZN/DIS/NEE, including short-side
+losses. No confirmation was launched. Native selected/final tensors and all
+checkpoint scores exactly reproduce prior controls; six bundles pass 468 exact
+frozen predictions. Six owned sessions stopped; project 35.748563/150.
+[Full result](results/exposure-architecture-2026-10-19/README.md).
+
+## 29. Frozen seed ensembles — proposed, not implemented
+
+Before more training, preregister uniform averages of existing stateless PPO/SAC
+three-seed policies, retaining account inputs. Inspect strongest same-data
+confirmed baselines and verify feature/action/feed/normalizer compatibility.
+Fix all member lists and equal weights before measuring ensemble performance;
+report PPO-only, SAC-only and combined uniform candidates rather than choose
+weights retrospectively. Apply all members to one shared evolving account and
+average their four bounded outputs, not independent equity returns. Preserve
+learned protective components, costs and next-session execution.
+
+Use a development-only evaluation snapshot; inspect source manifests/receipts
+without loading retired-test bars, and explicitly verify any dataset provenance
+bridge. Include selected/final phases, immutable input hashes, individual
+references and all stock/ETF/short diagnostics. This is local frozen inference,
+not training or a new Colab allocation. Distinguish one ensemble made from three
+seeds from three independent ensemble repetitions. No checkpoint/member is
+selected using future declining-stock labels, and no deployment/goal completion
+is implied by a single development result.

@@ -115,4 +115,14 @@ screens and the [short-side diagnostics](short-side.md) as well.
 Full offline regression passed **237 tests** (17 existing observation-bound and
 deprecation warnings, no skips) before Colab allocation. This includes native
 PPO/SAC/TD3/recurrent acceptance and the new policy/frozen contracts. The
-architecture-specific screen remains pending until its Colab runs finish.
+architecture-specific screen is now complete and failed both promotion gates.
+
+## Screen outcome
+
+Native full-state selected/final return was 22.59%; unmasked branches 5.41%;
+market-only exposure selected -1.02%, final -3.64%. The treatment lost on all
+three declining stocks and failed both control comparisons. No confirmation or
+longer training was added. All six owned CPU sessions stopped; six bundles pass
+468 exact frozen predictions. Native training tensors/checkpoint scores exactly
+reproduce the prior control. Project consumption is 35.748563/150.
+[Full results](../results/exposure-architecture-2026-10-19/README.md).

@@ -748,3 +748,15 @@ Direction-replay publication verified all 19 GitHub asset hashes/sizes. Cleanup
 removed 18 duplicate publication copies (9.85 MiB logical) with 597 retained
 hashes unchanged. All full replay/calibration paths and original models/data
 remain available. Final account status has zero active assignments.
+
+## PPO exposure architecture — completed 2026-10-20
+
+237 offline tests and three CPU Colab 512-step smokes pass on Python 3.13.16.
+The subsequent three-arm 50k seed-11 screen fails: native +22.59%, unmasked
+branches +5.41%, market-only exposure -3.64% final, versus holding +30.60%.
+Treatment also loses on all three declining stocks; no confirmation is run.
+Six bundles pass 468 exact frozen predictions and architecture/mask checks;
+native selected/final tensors and every checkpoint score exactly reproduce the
+previous full-state control. All six owned sessions stopped. Study conservative
+usage 0.060740; cumulative 35.748563/150. No retired test or broker orders.
+[Results](../results/exposure-architecture-2026-10-19/README.md).

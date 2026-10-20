@@ -1,35 +1,92 @@
-# Exposure architecture study — preflight complete
+# Exposure architecture study — completed, failed promotion
 
-The committed three-arm protocol compares native full-state PPO, an unmasked
-market/full-observation branch layout, and the identical branch layout with
-exposure's account connections masked. All arms use seven existing market
-features plus 14 execution/account values, wide initialization, unchanged costs,
-actions and net-equity reward. Source:
-`4b05a6aba75a16d55c111c8165b83518a8c71ad7`.
+Removing account inputs from the exposure head did not improve this screen.
+The market-only treatment failed both predeclared control comparisons, so no
+confirmation seeds or longer training were run. Native PPO remains the default;
+the optional custom policies are retained as tested research implementations.
 
-Offline regression passed 237 tests. Preflight verifies immutable development-only
-data, 21-value inputs and identical initial branch tensors except the fixed
-mask. Research parameter counts are 11,465 native and 16,393 in each branch arm.
-The treatment deliberately has fewer active exposure connections. No local
-research training was performed.
+## Matched 50k PPO results
 
-Three 512-transition CPU Colab smokes precede the declared three-arm 50k seed-11
-screen. Only treatment can be promoted, after passing selected/final, stock/ETF
-and drawdown requirements against both controls. No performance result is claimed
-at preflight. All phases share one frozen source and the original ledger; the
-two-unit study allowance starts at 35.687822780613104 project units. Total ceiling
-150, teardown threshold 130 and per-allocation two-hour deadlines remain active.
+Seed 11, same 26-symbol 2021–2023 development panel, full execution observations,
+wide initialization, legacy-uniform starts, unchanged actions/costs/net-log-equity
+reward. All models were freshly trained in Colab from one source revision.
 
-See [protocol](../../configs/experiments/exposure_architecture.json),
-[methodology](../../docs/policy-architecture.md), and [preflight](preflight.json).
-Retired test data and future declining-stock selection labels are excluded.
+| Architecture | Selected return | Final return | Final stocks | Final ETFs | Mean final drawdown |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Native full-state | 22.59% | 22.59% | 25.13% | 8.64% | -32.50% |
+| Two branches, unmasked | 5.41% | 5.41% | 5.13% | 6.95% | -32.76% |
+| Market-only exposure | -1.02% | -3.64% | -5.59% | 7.04% | -32.40% |
+| Same-symbol buy-and-hold | 30.60% | 30.60% | 32.63% | 19.47% | — |
 
-All three Colab CPU smokes now pass on actual Python 3.13.16. Three frozen
-bundles pass 234 exact prefix predictions, immutable normalization checks and
-input rejection. Six selected/final trained-policy contracts pass, with exact
-market-only exposure invariance to account perturbations. Native smoke tensors
-and every checkpoint score exactly reproduce the prior full-state control. All
-three owned sessions stopped; conservative project usage 35.711819/150. The
-50k screen is next; no research performance is claimed yet. See [smokes](smoke.json),
-[frozen checks](smoke-frozen-checks.json), [trained contracts](trained-input-contract-smoke.json)
-and [native parity](native-smoke-parity.json).
+Treatment's final mean is 9.05 percentage points below the matched unmasked
+branch control and 26.24 points below native. Against unmasked, stock return
+falls 10.71 points; ETF return changes only +0.08 points. The slight drawdown
+improvement does not compensate for those losses. The larger branch layout also
+underperforms native, so the full gap cannot be attributed solely to the input
+mask. These are single-seed development results, not proof that account inputs
+must always help or that every branch architecture is unsuitable.
+
+## Shorting requirement remains unmet
+
+The treatment's final results on the three negative-holding stocks:
+
+| Stock | Holding | Policy total | Net short P&L on $100k initial equity |
+| --- | ---: | ---: | ---: |
+| AMZN | -7.73% | -52.16% | -$25,748.94 |
+| DIS | -47.38% | -40.65% | -$2,557.13 |
+| NEE | -14.63% | -43.40% | -$8,506.06 |
+
+None has positive total return and positive short contribution. Both controls
+also have negative total returns on all three; their positive short contributions
+are outweighed by long losses. The declining-stock cohort remains reporting-only,
+never a model input, checkpoint metric or reason to override the failed gate.
+See [short-side audit](short-side.json) and [all 156 symbol/phase rows](per-symbol.csv).
+
+## Verification and provenance
+
+Source: `4b05a6aba75a16d55c111c8165b83518a8c71ad7`, package hash
+`a57b2e1da32631a91823bd26feb147267f4e9057947579f2d6971bfb09e8cbf0`.
+The source export shares the original cumulative ledger/allocation lock. Actual
+Colab kernel was Python 3.13.16. No dependency or CLI installation was upgraded.
+
+Offline regression passed 237 tests. Three 512-step CPU smokes preceded three
+50k CPU cells. Six selected/final smoke input contracts pass, including exactly
+invariant market-only exposure means under account perturbations. Six frozen
+bundles pass 468 exact predictions, immutable normalization/data and invalid-
+input checks; loading also validates each policy class and exact mask buffer.
+Native smokes and 50k research reproduce the prior full-state runs' selected/final
+13-tensor policies and every checkpoint score exactly. All source observations,
+actions and rewards remain compatible with legacy native bundles.
+
+All six owned sessions stopped with verified cleanup. Conservative study usage:
+**0.060740 units**, cumulative **35.748563/150**, leaving **114.251437** project
+units and **94.251437** before teardown at 130. Measured meter-window debits total
+0.04, and rounded balances changed 350.73 to 350.69; estimates/readings are
+reported separately, never added. Each allocation included setup, idle time and
+retrieval in its two-hour deadline. No budget stop, retired-test evaluation or
+broker orders occurred.
+
+- [Protocol](../../configs/experiments/exposure_architecture.json),
+  [methodology](../../docs/policy-architecture.md), [preflight](preflight.json).
+- [Screen and both gates](screen.json), [compute](compute.json),
+  [frozen checks](frozen-checks.json), [smokes](smoke.json).
+- [Trained smoke input contracts](trained-input-contract-smoke.json),
+  [native smoke parity](native-smoke-parity.json),
+  [native research parity](native-screen-parity.json).
+
+Interactive checkpoint charts are generated at
+`artifacts/exposure-architecture/screen.html`; extracted models, selected/final
+reports, complete curves and frozen bundles are retained locally and published
+through allowlisted GitHub assets. Original provider bars are not redistributed.
+
+## Next bounded diagnostic
+
+Retain account context and test uniform averaging of already-trained stateless
+PPO/SAC seed predictions before allocating more training. Fix member lists and
+weights in advance, verify matching action/feature/feed/normalization contracts,
+and replay one shared account path rather than average independent returns.
+Use development-only bars, compare both selected and final phases, and report
+individual references plus every ensemble candidate. No declining-stock label
+may choose a member or trade. A single ensemble built from three seeds is not
+three independent ensemble runs; any promising result still needs separate
+robustness and prospective confirmation. This next diagnostic is not yet run.
