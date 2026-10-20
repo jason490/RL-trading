@@ -869,3 +869,17 @@ resizes incur only0.05–0.12pp historical costs, so a small band is low priorit
 No training, data access, test use or Colab allocation. Next investigate strictly
 training-only supervised signal/warm-start feasibility before a new bounded
 protocol. [Evidence](results/participation-diagnostic-2026-10-20/README.md).
+
+## 33. Training-only supervised signal feasibility — labels implemented; fitting pending
+
+Prepare gross20-session next-open-to-close unit total-return labels, with later
+splits/dividends and conservative completion availability. Fit labels end2017,
+internal probe spans2018–2020; discard boundary-crossing windows. Never consume
+project-validation features/labels; ignore pooled preprocessing and refit on fit
+rows only. Immutable derived payload has45,266 fit and18,616 probe examples.
+Matched10-input masked/full models, constant and fixed ridge controls,3 seeds,
+fixed-final MLP updates and predictive gates are committed before fitting.
+No profitability or PPO initialization claim; Colab CPU fitting/verification
+requires its own strict job/artifact integration. One-unit allowance, original
+ledger, actual default Python and owned cleanup remain required.
+[Protocol](configs/experiments/supervised_signal.json), [guide](docs/supervised-signal.md).

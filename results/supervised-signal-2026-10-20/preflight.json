@@ -1,0 +1,123 @@
+{
+  "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
+  "passed": true,
+  "protocol_sha256": "b67632d0ff90a0523afbabed4953bec3e1a23b463c6166d8c3a7c1621c41d844",
+  "source_dataset": "830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed",
+  "folds": {
+    "fit": {
+      "count": 45266,
+      "symbols": 26,
+      "decision_start": "2011-01-03",
+      "decision_end": "2017-11-30",
+      "last_label_available": "2017-12-29T21:15:00+00:00",
+      "rows_sha256": "e5eb54e125f1e11f6283a179158c13460a7e52c51de5129f5b5e9ce9c8e66d6b",
+      "year_counts": {
+        "2011": 6552,
+        "2012": 6500,
+        "2013": 6552,
+        "2014": 6552,
+        "2015": 6552,
+        "2016": 6552,
+        "2017": 6006
+      }
+    },
+    "probe": {
+      "count": 18616,
+      "symbols": 26,
+      "decision_start": "2018-01-02",
+      "decision_end": "2020-11-03",
+      "last_label_available": "2020-12-02T21:15:00+00:00",
+      "rows_sha256": "1c813764b109cc7981b92e8c1485183ced4f496c3d6c4e3edf650cffb1ce6390",
+      "year_counts": {
+        "2018": 6526,
+        "2019": 6552,
+        "2020": 5538
+      }
+    }
+  },
+  "normalizers": {
+    "masked": {
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "price_log_return_63",
+        "price_log_return_252",
+        "price_drawdown_252"
+      ],
+      "means": [
+        0.0005037225706033487,
+        0.01148801680362215,
+        0.004704314317874673,
+        0.012233423496510798,
+        0.5382524640618074,
+        0.01668501546087251,
+        1.0156322421278368,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scales": [
+        0.013196251201625986,
+        0.005896006319060678,
+        0.025758317809055565,
+        0.040381719986339236,
+        0.11571614563374032,
+        0.0068900589710887,
+        0.4630562525403991,
+        1e-08,
+        1e-08,
+        1e-08
+      ]
+    },
+    "full": {
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "price_log_return_63",
+        "price_log_return_252",
+        "price_drawdown_252"
+      ],
+      "means": [
+        0.0005037225706033487,
+        0.01148801680362215,
+        0.004704314317874673,
+        0.012233423496510798,
+        0.5382524640618074,
+        0.01668501546087251,
+        1.0156322421278368,
+        0.03144215108735347,
+        0.1251753159946626,
+        -0.06582451497441932
+      ],
+      "scales": [
+        0.013196251201625986,
+        0.005896006319060678,
+        0.025758317809055565,
+        0.040381719986339236,
+        0.11571614563374032,
+        0.0068900589710887,
+        0.4630562525403991,
+        0.09045837626255594,
+        0.16854096165059948,
+        0.07627417424943049
+      ]
+    }
+  },
+  "same_first7_fit_statistics": true,
+  "source_pooled_normalizer_used": false,
+  "project_validation_used": false,
+  "test_evaluated": false,
+  "model_training_performed": false,
+  "colab_allocated": false,
+  "target_kind": "Gross completed20-session unit total return, not tradable P&L"
+}

@@ -798,3 +798,14 @@ tests pass, including intraday short versus flat-close distinction, cost identit
 pretrade resize scale, and bad date/horizon/accounting rejection. No weights,
 datasets, retired-test reports or Colab allocations opened; no new credits used.
 [Report and charts](../results/participation-diagnostic-2026-10-20/README.md).
+
+## 2026-10-20 supervised signal data preparation
+
+A checksummed training-only label payload contains45,266 fit examples with labels
+completed by2017 and18,616 probe examples completed during2018–2020. Fit-only
+preprocessing ignores pooled source statistics and all probe/project-validation
+features. Eleven focused tests pass, covering completion, purging, dividends,
+splits, episodes, future perturbations, delayed/UTC timestamps and normalization.
+Immutable readback and protocol/data identity checks pass. No supervised model
+fit, new Colab allocation, policy change or profitability result yet.
+[Preflight evidence](../results/supervised-signal-2026-10-20/README.md).
