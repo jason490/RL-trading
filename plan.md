@@ -784,7 +784,7 @@ All 18 release assets are verified; 27 duplicate archives/markers (300.33 MiB
 logical) were removed, with 326 retained hashes unchanged.
 [Full result](results/exposure-architecture-2026-10-19/README.md).
 
-## 29. Frozen seed ensembles — proposed, not implemented
+## 29. Frozen seed ensembles — implemented; diagnostic pending
 
 Before more training, preregister uniform averages of existing stateless PPO/SAC
 three-seed policies, retaining account inputs. Inspect strongest same-data
@@ -803,3 +803,10 @@ not training or a new Colab allocation. Distinguish one ensemble made from three
 seeds from three independent ensemble repetitions. No checkpoint/member is
 selected using future declining-stock labels, and no deployment/goal completion
 is implied by a single development result.
+
+Uniform action averaging, strict member contracts and checksummed recipe
+restoration are implemented. Preflight confirms six source PPO/SAC models match
+the development snapshot's schema/normalizer/feed and exact validation dates/
+closing prices. The older source dataset remains unopened. Fresh individual
+references and all three fixed ensemble candidates will use one shared account
+per symbol, with original path drift bounded before ensemble evaluation.

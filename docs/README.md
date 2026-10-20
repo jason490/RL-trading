@@ -36,6 +36,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | PPO action initialization | [action-initialization.md](action-initialization.md) | Factorial exploration/protection screen, matched controls, promotion and bounded Colab operations |
 | Causal training sampling | [training-sampling.md](training-sampling.md) | Training-only downtrend starts, readiness-matched controls, universe factorial study and actual transition balance |
 | Visual and run reports | [reporting.md](reporting.md) | Plotly/SVG reports, trade diagnostics and seed comparisons |
+| Frozen seed ensembles | [ensembles.md](ensembles.md) | Uniform action averaging, shared state, explicit data bridge and immutable recipes |
 | Frozen inference | [inference.md](inference.md) | Checksummed bundles, deterministic predictions and schema/staleness rejection |
 | Forward shadow inference | [shadow-inference.md](shadow-inference.md) | Frozen campaign registration, durable decisions, simulated fills, restart recovery and forward reports |
 | GitHub model releases | [releases.md](releases.md) | Downloadable models, derived reports, checksums and training provenance |
