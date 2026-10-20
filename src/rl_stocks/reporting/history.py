@@ -1,4 +1,4 @@
-"""Fixed historical-augmentation screen; no checkpoint reselection."""
+"""Fixed three-arm development screen and charts; no checkpoint reselection."""
 import math
 
 
@@ -31,7 +31,7 @@ def screen_gate(cells,protocol):
         objective_achieved=False,prospective_confirmation_required=True)
 
 
-def render_report(result,path):
+def render_report(result,path,title='Historical augmentation'):
     """Write a standalone interactive development chart from compact records."""
     import plotly.graph_objects as go
     from plotly.subplots import make_subplots
@@ -46,5 +46,5 @@ def render_report(result,path):
     fig.add_trace(go.Bar(x=['Stocks','ETFs'],y=[100*row[g]['buy_hold_return'] for g in ('stock','etf')],name='Matched holding'),row=1,col=2)
     fig.update_xaxes(title_text='Training transitions',row=1,col=1)
     fig.update_yaxes(title_text='Net return (%)')
-    fig.update_layout(title='Historical augmentation: repeated development validation; gate '+('passed' if result['screen']['passed'] else 'failed'),barmode='group')
+    fig.update_layout(title=title+': repeated development validation; gate '+('passed' if result['screen']['passed'] else 'failed'),barmode='group')
     fig.write_html(str(path),include_plotlyjs=True)

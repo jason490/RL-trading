@@ -53,9 +53,9 @@ retrieval. Check current default Colab Python before dependency sync. No CLI
 reinstallation, local fitting or broker orders. Preserve all unsuccessful
 models/evidence and verify publication/shutdown before duplicate cleanup.
 
-Current evidence: diagnostic passed, protocol fixed, ten focused saved-path and
+At preregistration: diagnostic passed, protocol fixed, ten focused saved-path and
 participation tests pass. Job/worker/artifact integration and actual Colab smoke
-acceptance remain pending. No new allocation or performance result. Cumulative
+acceptance were pending at that stage. Cumulative
 project usage remains35.917535/150; the goal is unachieved.
 
 Version16 integration now verifies fixed protocol/data identity before allocation
@@ -63,3 +63,26 @@ and again in the worker. Metadata/frozen bundles carry the protocol hash; archiv
 checks cover SAC parameters, initialization, observation profile and complete
 selected/final checkpoint curves. All three immutable smoke task payloads pass
 local validation. Actual Colab acceptance is next, not implied by fixtures.
+
+## Smoke fleet and report readiness
+
+All three1024-transition CPU smokes are now running from frozen sourcebb0f3e2
+with original ledger/lock and2-unit total study allowance. Completion/parity and
+owned cleanup are still pending; no smoke return selects the configuration.
+
+After complete50k screen retrieval and shutdown, use:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+  .venv/bin/python scripts/report_sac_state.py \
+  --state .runtime/sac-state-screen-state.json \
+  --output artifacts/sac-state/screen-report.json
+```
+
+The reporter revalidates archives, metadata/source/settings, identical holding
+paths and validation panels. It crosschecks selected/final scores against the
+checkpoint journal and emits short-side cohorts plus standalone interactive
+10k return curves. Both controls and absolute stock/ETF targets must pass.
+After transport cleanup it can reconstruct a temporary archive from retained
+files for the same checks. Reporting never trains or marks the goal achieved.
+Thirteen focused common/SAC gate-and-archive checks pass before screen results.

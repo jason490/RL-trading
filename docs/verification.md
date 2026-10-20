@@ -933,3 +933,7 @@ local validation. Actual Colab acceptance is next, not implied by fixtures.
 
 53 focused SAC/history/observation/fleet/budget/artifact regressions pass before
 allocation, including actual Gym/SB3 observation checks without model fitting.
+
+SAC fixed reporter and interactive chart are implemented before screen results;
+13 common/SAC gate/archive checks pass. Smoke fleet3x1024 is running from
+bb0f3e2; runtime/parity/shutdown acceptance pending, no performance claim.
