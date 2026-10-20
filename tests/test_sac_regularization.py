@@ -27,3 +27,14 @@ def test_fixed_arm_and_smoke_architecture():
     assert overrides('weight_decay',True)['policy_kwargs']['net_arch']==[32,32]
     with pytest.raises(ValueError):overrides('sweep')
     with pytest.raises(ValueError):overrides('control',1)
+
+
+def test_save_load_preserves_actual_optimizer_settings_without_fitting(tmp_path):
+    from rl_stocks.training.sac_regularization import validate_final_optimizer_record
+    model=SAC('MlpPolicy',Spaces(),seed=11,device='cpu',**overrides('weight_decay'))
+    before=optimizer_record(model);model.save(tmp_path/'policy')
+    restored=SAC.load(tmp_path/'policy.zip',device='cpu')
+    assert optimizer_record(restored)==before
+    validate_final_optimizer_record(before,'weight_decay')
+    before['initialization']['alpha']=float('nan')
+    with pytest.raises(ValueError):validate_final_optimizer_record(before,'weight_decay')

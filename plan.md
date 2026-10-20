@@ -1178,3 +1178,8 @@ identical expanded-data100k cells, strict selected/final benchmark gates.
 Six checks pass including actual Adam settings and initial tensor equality;
 no fitting or Colab. Runtime/archive/report integration then two1024 smokes
 required before screen. [Guide](docs/sac-regularization.md).
+
+Regularization version20 integration complete:40 focused tests, actual immutable
+payload checks and script compilation pass. Strict reports restore selected/
+latest optimizers and require matching actual sampling counts. Freeze source,
+check account usage, then two1024 Colab CPU smokes; no screen before acceptance.

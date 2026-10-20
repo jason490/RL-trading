@@ -134,6 +134,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==TEMP_PROTOCOL:metadata['temperature_initialization']=initialization_record(model)
         from rl_stocks.training.diversity import PROTOCOL_SHA256 as DIVERSITY_PROTOCOL
         if study_protocol_sha256==DIVERSITY_PROTOCOL:metadata['diversity_initialization']=initialization_record(model)
+        from rl_stocks.training.sac_regularization import PROTOCOL_SHA256 as REG_PROTOCOL,optimizer_record
+        if study_protocol_sha256==REG_PROTOCOL:metadata['regularization_initialization']=optimizer_record(model)
     if 'history_augmentation' in dataset['manifest']:
         from rl_stocks.training.history.spec import PROTOCOL_SHA256
         metadata['history_augmentation']=dataset['manifest']['history_augmentation']
@@ -164,6 +166,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
             validation_checkpoints=callback.history,selected_score=callback.best)
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         metadata['sampling_diagnostics']=sampling_diagnostics
+        if algorithm=='sac' and study_protocol_sha256==REG_PROTOCOL:
+            metadata['regularization_final']=optimizer_record(model)
+            metadata['regularization_selected']=optimizer_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

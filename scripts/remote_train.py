@@ -27,6 +27,9 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==20:
+        from rl_stocks.training.sac_regularization import validate_payload
+        validate_payload(payload)
     if plan.get('version')==19:
         from rl_stocks.training.diversity import validate_payload
         validate_payload(payload,plan['diversity_study']['arm'])

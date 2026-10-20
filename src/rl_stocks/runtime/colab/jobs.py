@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==19:
+    if plan.get('version')==20:
+        try:expected=regularization_plan(**plan['regularization_study'])
+        except (KeyError,TypeError):raise ValueError('malformed regularization plan') from None
+        if plan!=expected:raise ValueError('unsupported regularization plan')
+    elif plan.get('version')==19:
         try:expected=diversity_plan(**plan['diversity_study'])
         except (KeyError,TypeError):raise ValueError('malformed diversity plan') from None
         if plan!=expected:raise ValueError('unsupported diversity plan')
@@ -341,4 +345,15 @@ def diversity_plan(arm,seed=11,smoke=False):
     steps=p['smoke_steps'] if smoke else p['steps_per_cell']
     plan.update(version=19,diversity_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,dataset_contract=dict(identity=p['datasets'][arm]))
     plan['jobs'][0].update(steps=steps,milestones=[steps],start_sampling=p['start_sampling'],study_protocol_sha256=PROTOCOL_SHA256)
+    return plan
+
+
+def regularization_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.sac_regularization import protocol,PROTOCOL_SHA256,overrides
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported regularization arm/seed/smoke')
+    plan=diversity_plan('expanded',seed,smoke);plan.pop('diversity_study')
+    plan.update(version=20,regularization_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
+    plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke))
     return plan

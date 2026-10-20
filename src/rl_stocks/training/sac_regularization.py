@@ -42,3 +42,18 @@ def validate_optimizer_record(record,arm):
         item=record['optimizers'][name];expected=0. if name=='entropy' else p['weight_decay'][arm]
         if item!={'class':'torch.optim.adam.Adam','weight_decay':[expected]}:
             raise ValueError('actual Adam regularization mismatch')
+
+
+def validate_payload(data):
+    from rl_stocks.training.diversity import validate_payload as validate
+    return validate(data,'expanded')
+
+
+def validate_final_optimizer_record(record,arm):
+    # Alpha changes during training; only optimizer configuration is fixed here.
+    import math
+    alpha=record['initialization']['alpha']
+    if not math.isfinite(alpha) or alpha<=0:raise ValueError('positive finite learned alpha required')
+    probe=dict(record)
+    probe['initialization']={**record['initialization'],'alpha':1.0}
+    validate_optimizer_record(probe,arm)

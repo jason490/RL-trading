@@ -58,3 +58,24 @@ No training, provider call, dependency change or allocation has occurred for thi
 study. Job/payload/fleet/archive/report integration remains required before any
 Colab allocation. Keep this distinction explicit; construction tests do not
 validate learning or performance.
+
+## Runtime integration acceptance
+
+Version20 fixed plans, controller/worker immutable expanded-payload checks,
+initial/final/selected actual optimizer records, checksummed archive contracts
+and strict report restoration are implemented. The report reloads both latest
+and selected SAC models and compares their actual optimizer/tensor fingerprints
+with recorded evidence. Actual symbol/group sampling must match across arms.
+Forty focused optimizer/save-load/job/archive/gate/report/recovery checks pass;
+actual immutable datasets validate for both smoke tasks. Scripts compile.
+No local training was used. Colab smokes remain unexecuted at this acceptance.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_regularization_jobs.py \
+  --smoke --output .runtime/regularization-smoke-jobs.json
+```
+
+Freeze committed source before running these tasks through the existing metered
+fleet. Retain initial construction fingerprints separately from learned final/
+selected alpha values. Actual entropy optimizer decay must stay zero in all
+three records; invalid or nonfinite final alpha is rejected.
