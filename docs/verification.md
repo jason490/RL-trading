@@ -956,3 +956,14 @@ bundle predictions,6 owned shutdowns,13 verified release assets. Cleanup21 files
 238,984,076 bytes,390 retained hashes unchanged; replay summary byte-identical.
 Conservative project36.009692/150.
 [Evidence](../results/sac-execution-state-2026-10-20/README.md).
+
+## SAC saved replay and target-scale diagnosis
+
+Three own final50k models/replays inspected with zero optimizer steps;4096 fixed
+rows per model, timeout-aware soft-target decomposition and unchanged tensor/file
+hashes. No dataset or Colab access. Six numeric tests pass. Reward/alpha/value
+scales motivate a fixed initial-temperature hypothesis, not a causal failure or
+performance claim. [Evidence](../results/sac-learning-diagnostic-2026-10-20/README.md).
+
+Combined replay-target, saved-path and participation regression:16 tests pass,
+with no fitting or additional runtime allocation.

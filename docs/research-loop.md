@@ -272,3 +272,19 @@ reward scaling, distinguish scalar conditioning from changes in SAC's effective
 entropy/reward balance; it is not automatically an unchanged learning objective.
 Require a new fixed matched hypothesis and the same benchmark/short-side gates
 before spending more units. No new allocation is implied by this diagnostic.
+
+## SAC learning-scale diagnostic and next hypothesis
+
+Saved50k replay rewards average0.0055–0.0059 absolute; alpha starts1, logs~0.067
+at10k and ends~1e-5. Final critic values~4 with small one-step residuals do not
+prove wrong gradients or financial calibration. Final entropy contribution is
+small/negative, so do not call final exploration excessively rewarded. No early
+critic reconstruction, optimizer steps or source mutation occurred.
+
+Test one preregistered initial learned-alpha0.001 versus default1, keeping full
+state, target entropy, rewardscale1 and all other data/parameters/costs fixed.
+This changes startup exploration/soft targets, not merely units. No temperature
+sweep. Require fresh default reproduction and selected/final stock/ETF gates
+before further seeds. Original failed state study remains failed. No allocation
+yet; project36.009692/150.
+[Protocol](../configs/experiments/sac_temperature.json).

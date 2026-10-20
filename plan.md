@@ -1022,3 +1022,18 @@ All6 owned sessions stopped,468 exact frozen checks,13 release assets verified;
 227.91MiB duplicate cleanup with390 retained hashes unchanged and byte-identical
 report replay. Project36.009692/150.
 [Results](results/sac-execution-state-2026-10-20/README.md).
+
+## 39. SAC saved-learning audit and initial-temperature protocol — fixed
+
+Three final50k models/replays,4096 fixed sampled transitions each, zero optimizer
+steps. Mean absolute rewards0.0055–0.0059, logged alpha0.067 at10k to~1e-5 at50k,
+final Q means~4 and sampled one-step RMSE0.0082–0.0099. Tensor/file hashes
+unchanged, no dataset/test access. Value offset alone is not causal proof.
+Preregister one initial-alpha candidate0.001 against default1 with learned
+adaptation and all reward/data/full-state/network/cost settings fixed. Two
+1024 smokes then50k seed11 screens; strict relative and absolute benchmarks
+before23/37 confirmation, no grid/longer runs on failure. Fresh default must
+reproduce previous full-state control. Six numeric tests pass; no allocation.
+[Diagnosis](results/sac-learning-diagnostic-2026-10-20/README.md),
+[protocol](configs/experiments/sac_temperature.json),
+[guide](docs/sac-temperature.md).

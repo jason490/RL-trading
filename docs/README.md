@@ -30,6 +30,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Reward objective research | [reward-objectives.md](reward-objectives.md) | Optional initial-capital equity changes, matched log control, discounting limits and locked Colab protocol |
 | Random-forest signal feasibility | [forest-signal.md](forest-signal.md) | Locked tree dependencies, fixed comparison and portable non-pickle tree arrays |
 | Supervised signal feasibility | [supervised-signal.md](supervised-signal.md) | Completed training-only targets, internal chronological probe, frozen preprocessing and gated warm-start research |
+| SAC initial-temperature research | [sac-temperature.md](sac-temperature.md) | Saved reward/Q/entropy diagnosis and fixed startup-temperature comparison |
 | SAC execution-state research | [sac-execution-state.md](sac-execution-state.md) | Saved SAC input/participation audit and fixed legacy/masked/full off-policy comparison |
 | RL training and checkpoints | [training.md](training.md) | PPO/SAC/TD3 settings, seeds, selection and continuation |
 | Matched research experiments | [experiments.md](experiments.md) | Four datasets, three algorithms/seeds, declared selection, held-out protocol and GitHub assets |
