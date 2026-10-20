@@ -90,3 +90,8 @@ reporting-only. Both dual-control gains and absolute selected/final group/median
 thresholds must pass; development promotion never sets objective achievement.
 Tests reject one-control-only gains, phase-specific ETF/median failures, excess
 drawdown and nonfinite/incomplete metrics. No new training is run by reporting.
+
+The reporter also writes a standalone interactive HTML chart: compact10k
+checkpoint returns with matched holding, and final stock/ETF return comparisons.
+Click legends to toggle curves. The chart uses saved development records and
+does not reselect checkpoints or reinterpret validation as independent evidence.

@@ -24,3 +24,14 @@ def test_incomplete_and_nonfinite_rejected():
     with pytest.raises(ValueError):screen_gate(c,protocol())
     c=cells();c['older_etf']['final']['score']=float('nan')
     with pytest.raises(ValueError):screen_gate(c,protocol())
+
+
+def test_interactive_chart_uses_saved_points_and_matched_hold(tmp_path):
+    from rl_stocks.reporting.history import render_report
+    c=cells()
+    for cell in c.values():
+        cell['learning_curve']=[dict(steps=10000,return_pct=1.),dict(steps=50000,return_pct=10.)]
+        for g in ('stock','etf'):cell['final']['groups'][g].update(count=22 if g=='stock' else 4,buy_hold_return=.2)
+    path=tmp_path/'report.html';render_report(dict(cells=c,screen=dict(passed=False)),path)
+    text=path.read_text()
+    assert 'plotly.js' in text and 'Training transitions' in text and 'Matched holding' in text

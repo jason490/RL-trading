@@ -9,7 +9,7 @@ from rl_stocks.runtime.colab.artifacts import validate_archive
 from rl_stocks.training.history.spec import protocol,PROTOCOL_SHA256,validate_payload
 from rl_stocks.training.curves import latest_points
 from rl_stocks.reporting.initialization import group_metrics
-from rl_stocks.reporting.history import screen_gate
+from rl_stocks.reporting.history import screen_gate,render_report
 from rl_stocks.evaluation.direction import declining_stock_summary
 
 
@@ -50,6 +50,7 @@ def main():
         validation_baseline_sha256=baseline,objective_achieved=False,test_evaluated=False,
         confirmation_allocated=False,training_performed_by_report=False)
     a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    render_report(result,a.output.with_suffix('.html'))
     print(json.dumps(verdict,indent=2))
 
 
