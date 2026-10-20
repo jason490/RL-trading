@@ -1,0 +1,108 @@
+{
+  "universe": "configs/universes/sector_research.json",
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 50000,
+  "device": "cpu",
+  "initialization": "wide",
+  "n_steps": 1000,
+  "batch_size": 50,
+  "evaluation_every": 10000,
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "selection_metric": "Equal-weight mean validation net return, unchanged",
+  "screen_gate": {
+    "minimum_selected_gain_pp": 2.0,
+    "minimum_final_gain_pp": 2.0,
+    "minimum_group_final_gain_pp": 0.0,
+    "maximum_final_drawdown_worsening_pp": 2.0,
+    "ranking": "Only full may pass; it must independently beat matched_baseline and masked",
+    "scope": "Selected/final gains >=2pp against EACH control; final stock/ETF gains >=0; drawdown worsening <=2pp. No future decline label selects weights."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_gain_pp": 2.0,
+    "minimum_mean_final_gain_pp": 2.0,
+    "minimum_paired_positive_final_seeds": 2,
+    "maximum_mean_final_drawdown_worsening_pp": 2.0,
+    "target_comparable_excess_pp_each_stock_and_etf_group": -2.0,
+    "target_outperforming_excess_pp_each_stock_and_etf_group": 0.0,
+    "minimum_target_passing_seeds": 2,
+    "minimum_median_stock_excess_pp": -2.0,
+    "require_selected_and_final_target_pass": true
+  },
+  "constraints": {
+    "train": "Through 2020; training-only normalization",
+    "validation": "2021-2023 development only, original 26-symbol panel",
+    "retired_test": "Never load or evaluate 2024-September 2026",
+    "features_actions_costs_reward": "Only explicit3-field trailing price context differs. Shared eligible bar/ATR panels and first7 normalizer statistics; native full-state PPO, wide initialization, net-log reward, actions/costs/starts/discount/GAE unchanged.",
+    "short_side": "Reconciled reporting on all symbols; ex-post negative-holding stock labels are reporting-only",
+    "success_claim": "Development promotion is not independent confirmation or permission to trade",
+    "source": "One frozen committed source for every smoke/screen/confirmation cell; export shares original ledger and allocation lock",
+    "normalization": "Same immutable training-only normalizer and complete 26-symbol development panel for all arms"
+  },
+  "execution": {
+    "preflight": "512-transition CPU Colab smoke for each of3 datasets; verify actual default Python and frozen contracts; same committed source for all arms",
+    "runner": "Existing centrally metered Colab fleet",
+    "initial_concurrency": 2,
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "stop_on_screen_failure": true,
+    "cleanup": "Retrieve and validate artifacts; verify owned teardown; retain selected/final weights and curves; publish checksums before removing duplicates"
+  },
+  "version": 1,
+  "name": "trend-context-2026-10-20",
+  "hypothesis": "Explicit causal quarterly/annual price momentum and trailing closing-high drawdown may help direction decisions beyond the short-horizon baseline. Test information against both matched-warmup legacy and same-dimension zero controls; no predictive power assumed.",
+  "algorithm": "ppo",
+  "reference_arm": "masked",
+  "arms": [
+    "matched_baseline",
+    "masked",
+    "full"
+  ],
+  "screen_cells": 3,
+  "confirmation_additional_cells_maximum": 6,
+  "start_sampling": "legacy_uniform",
+  "study_kind": "trend_context",
+  "observation_profile": "execution_full",
+  "promotion_candidate": "full",
+  "promotion_references": [
+    "matched_baseline",
+    "masked"
+  ],
+  "arm_config": {
+    "matched_baseline": {
+      "dataset": "fcde438c6423ec15f8d42fd6d7afe08deb0e434653bead517757d42be1ce4546",
+      "market_features": 7,
+      "trend_context": "matched_baseline"
+    },
+    "masked": {
+      "dataset": "d603bad1d698d53ac9aadf7890c84c055a4b4b7e51eff6033ab0270420f22ae3",
+      "market_features": 10,
+      "trend_context": "masked"
+    },
+    "full": {
+      "dataset": "830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed",
+      "market_features": 10,
+      "trend_context": "full"
+    }
+  },
+  "context": {
+    "log_price_return_sessions": [
+      63,
+      252
+    ],
+    "drawdown_closes": 252,
+    "observations_required": 253,
+    "cash_dividends_in_signal": false,
+    "future_declining_labels": "Reporting only, never input, weight, reward or checkpoint selection",
+    "normalization": "Each training dataset only; identical first7 statistics across arms",
+    "comparison": "All3 datasets have identical eligible bars/ATR, original validation execution dates unchanged; older short-warmup models are not matched controls"
+  }
+}

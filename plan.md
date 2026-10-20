@@ -833,3 +833,16 @@ final20.43%, control22.59%, holding30.60%. Selected gain0.79pp and final loss2.1
 fail the gate; stocks/ETFs worsen, declining-stock joint success0/3. No confirmation.
 Four sessions stopped,312 frozen predictions exact, native control fully reproduced.
 Project35.795378/150; [evidence](results/reward-objectives-2026-10-20/README.md).
+
+## 31. Longer-horizon causal price context — implemented; diagnosis/preflight
+
+Add optional63/252-session log price returns and252-close drawdown. Preserve
+forward-only split continuity, completed-bar availability and training-only fit.
+Require253 contiguous observations; reset across known gaps. Prepare legacy7
+matched-warmup,10-dimensional masked and full controls with identical raw panels
+and first7 preprocessing. Default `none` must reproduce the original dataset.
+This is an information hypothesis, not evidence of predictive power. No allocation
+until data preflight and a committed numeric dual-control protocol; CPU smokes
+then seed11 screen, confirmation23/37 only if both control gates pass. Preserve
+short-side joint total/P&L reports and retired-test isolation.
+See [feature guide](docs/trend-context.md).

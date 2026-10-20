@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "profiles": {
+    "matched_baseline": {
+      "gymnasium_checker": true,
+      "sb3_checker": true,
+      "observation_size": 21,
+      "market_feature_count": 7,
+      "initial_parameter_count": 3689
+    },
+    "masked": {
+      "gymnasium_checker": true,
+      "sb3_checker": true,
+      "observation_size": 24,
+      "market_feature_count": 10,
+      "initial_parameter_count": 3881
+    },
+    "full": {
+      "gymnasium_checker": true,
+      "sb3_checker": true,
+      "observation_size": 24,
+      "market_feature_count": 10,
+      "initial_parameter_count": 3881
+    }
+  },
+  "masked_full_initial_tensors_exact": true,
+  "training_performed": false,
+  "colab_allocated": false
+}

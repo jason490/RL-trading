@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "source_dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "source_snapshot": "be5a8d56ab667294ac741ba0ad55f9d25e391cd2740811f965ad77543d9c283f",
+  "default_dataset_identity_unchanged": true,
+  "source_sessions_end": "2023-12-29",
+  "datasets": {
+    "matched_baseline": {
+      "dataset": "fcde438c6423ec15f8d42fd6d7afe08deb0e434653bead517757d42be1ce4546",
+      "schema": "daily-indicators-v1-trend-context-v1-matched_baseline",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "normalizer_sha256": "c4c15b7cfc6051391ca86a9e9f6454b546f4909a5c909109cb106b9e391b7be5",
+      "training_rows": 64922,
+      "validation_rows": 19058
+    },
+    "masked": {
+      "dataset": "d603bad1d698d53ac9aadf7890c84c055a4b4b7e51eff6033ab0270420f22ae3",
+      "schema": "daily-indicators-v1-trend-context-v1-masked",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "price_log_return_63",
+        "price_log_return_252",
+        "price_drawdown_252"
+      ],
+      "normalizer_sha256": "d78043fc7b80f1c7788e28d985efd45d64234bbdff161a6b6d8206483551666b",
+      "training_rows": 64922,
+      "validation_rows": 19058
+    },
+    "full": {
+      "dataset": "830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed",
+      "schema": "daily-indicators-v1-trend-context-v1-full",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "price_log_return_63",
+        "price_log_return_252",
+        "price_drawdown_252"
+      ],
+      "normalizer_sha256": "fc28c160bac81d11c6c45dd01e3e1b5e965ea899c311cd86210107225c6de4f4",
+      "training_rows": 64922,
+      "validation_rows": 19058
+    }
+  },
+  "matched_train_bars_atr_sha256": "e8ebd664ddab42abe7eb694bdbc70b0b1a27e39ce5bede3da0412ea104fb0e77",
+  "matched_validation_bars_atr_sha256": "d3d049b173c3929dac2d8bca44265ef851545a3220f1f2490b927b0737eb6527",
+  "baseline_normalization_identical_across_arms": true,
+  "original_validation_bars_unchanged": true,
+  "training_only_context_diagnostic": {
+    "price_log_return_63": {
+      "minimum": -0.7913437487102436,
+      "mean": 0.030466949335013992,
+      "maximum": 0.6769852273940877
+    },
+    "price_log_return_252": {
+      "minimum": -0.9396097406575744,
+      "mean": 0.12202908879853361,
+      "maximum": 0.959057706846658
+    },
+    "price_drawdown_252": {
+      "minimum": -0.6727869002545466,
+      "mean": -0.07166562319076457,
+      "maximum": 0.0
+    },
+    "annual_and_quarterly_negative_fraction": 0.12853886201903822
+  },
+  "normalization_fit": "Each dataset training rows only; first7 statistics identical",
+  "training_performed": false,
+  "test_evaluated": false,
+  "sessions_allocated": 0,
+  "limits": "Descriptive input coverage, not evidence of future predictive power or profitability"
+}

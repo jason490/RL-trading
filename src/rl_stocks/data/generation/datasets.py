@@ -41,7 +41,9 @@ def split_name(session):
 def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
              zone_timeframes=(), zone_config=None, universe=None, sector_rotation=False,
              sector_records=(), sector_labels=False, evaluation_symbols=None, include_test=True,
-             coverage_scope='snapshot'):
+             coverage_scope='snapshot', trend_context='none'):
+    from rl_stocks.features.trend.context import validate_mode
+    validate_mode(trend_context)
     if coverage_scope not in ('snapshot','universe') or coverage_scope=='universe' and universe is None:
         raise ValueError('coverage scope requires snapshot or an explicit configured universe')
     if purge < 20:
@@ -95,7 +97,7 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
         starts=[0]+[i for i in range(1,len(series)) if any(series[i-1].session<day<series[i].session for day in missing)]+[len(series)]
         rows=[]
         for start,end in zip(starts,starts[1:]):
-            chunk,names=assemble(series[start:end],weekly,zone_timeframes,zone_config)
+            chunk,names=assemble(series[start:end],weekly,zone_timeframes,zone_config,trend_context)
             rows.extend([{**r,"bar":r["bar"]+start} for r in chunk])
         if rotation:
             names += rotation.names
@@ -188,6 +190,15 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
             "weekly_release": "first observed decision of next week; first week discarded",
             "atr_seed": "first 14 true ranges; Wilder recursion; differs from TA-Lib seed",
             "distance_clip": 20, "strength_log_clip": 10, "age_scale": 252, "age_clip": 10}
+    if trend_context != 'none':
+        payload['schema'] += '-trend-context-v1-' + trend_context
+        payload['manifest']['trend_context'] = {
+            'version':1,'mode':trend_context,'return_sessions':[63,252],
+            'drawdown_sessions':252,'contiguous_observations_required':253,
+            'return_convention':'Log price return; forward-only split continuity; excludes cash dividends',
+            'high_convention':'Maximum close over latest252 sessions including current close',
+            'availability':'Current completed bar availability; reset warmup across known gaps',
+            'mask':'Zero extra columns after identical readiness; matched_baseline drops extra columns'}
     identity = digest(payload)
     destination = Path(output)/identity
     destination.mkdir(parents=True,exist_ok=True)
