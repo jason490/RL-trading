@@ -1,0 +1,91 @@
+{
+  "verified": true,
+  "asset_count": 14,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/sac-diversity-2026-10-20",
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773544,
+      "digest": "sha256:5494ad1f8f247e82d644156bb52e104f74528555453358462226a13e0cf7252a",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 341,
+      "digest": "sha256:7c1109186a354d6cbf396b250d63c752d523617f498a2dfeea8474420739dd45",
+      "state": "uploaded"
+    },
+    {
+      "name": "controller-source-proof.json",
+      "size": 411,
+      "digest": "sha256:a2d925752e17ab6587c378e60b3875bcb615b0821acfc7ed462a565dbba56ac3",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 1847,
+      "digest": "sha256:da323a509731bcdedeaa5cd736d53ea5462a5bb11884a19d674a2dc158526ae9",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 483171,
+      "digest": "sha256:cd729229ae321dc198dbe6d3e758c0184272c1f16231f617e39f495cb38ad9bc",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 8814,
+      "digest": "sha256:a28a73dbe63a48006c24563c50f75dabe4b47f6f7e129d9fe21c28ae4dbc43e3",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 2702194,
+      "digest": "sha256:75015de2957bb01f7e825112d0452299c6ae4e98b0fdea241d978abca90c4d54",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2121,
+      "digest": "sha256:6d2e5a0ce2620e73e45dfaa5a81583866dfb1b68338c8262b6079f2ab727acc0",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2121,
+      "digest": "sha256:aed90ebcb891e67cc18347970f6bc22ff948d6ad3f2826bab6af4ab5149c0d6d",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 4235,
+      "digest": "sha256:ed4299fcac44d0ddf777076c4f3c8d509dca5af35b1d708fc8d528f0ca648ec3",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 400,
+      "digest": "sha256:8933ae978cd87e0d61dd255766be9ad6efab8bdb63d3a99c0f483bd370557cbc",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 205583,
+      "digest": "sha256:da13d526129bbe83ff21ae6b753141611a61854383f7cae4f996d7be80ddf8d3",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3338451,
+      "digest": "sha256:54df009c693c790572f02e82e4485696f24b5abab66ea4cc7fb2acb77a8f59ec",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1229,
+      "digest": "sha256:d8731482860014accbd6cebe2cbf36136fd742fb49f0b1fc9db9a92a802b1c94",
+      "state": "uploaded"
+    }
+  ]
+}

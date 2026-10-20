@@ -377,3 +377,27 @@ gates. Prior PPO expansion failures remain negative evidence. Runtime/sampler
 integration and Colab smokes pending, no allocation; project36.149107/150.
 [Guide](sac-diversity.md),
 [audit](../results/sac-diversity-data-2026-10-20/README.md).
+
+## Completed training-diversity comparison
+
+Both100k seed11 Colab CPU screens are complete. Original selected/final mean
+returns24.35%/10.38%; expanded24.19%/24.19%; matched holding30.60%.
+Expanded final stocks26.06%/ETFs13.88% trail holding32.63%/19.47%; median
+stock excess−5.49pp. Selected gain−0.16pp fails the required2pp. All absolute
+gates fail and expanded joint profitable-total/short cases are0/3. No extension,
+confirmation seeds or promotion under this protocol.
+
+All training symbols receive transitions. Intended ETF probability matches,
+but actual ETF transitions differ15.36% versus19.97%; added stocks alone cannot
+explain the observed return difference. Both survivor-data and repeatedly-used
+development limitations remain. All312 frozen prefix predictions are exact,
+all4 owned sessions stopped,14 release asset digests verified. Duplicate cleanup
+removes16 files/248,893,520 bytes with643 retained hashes unchanged; the complete
+report reproduces byte for byte afterward. Thirty-six focused sampling/job/
+archive/gate/report tests pass. Project usage36.263895/150, remaining113.736105;
+post-shutdown account350.31, zero rate/assignments. Retired test stays isolated.
+[Evidence and interactive artifacts](../results/sac-diversity-2026-10-20/README.md).
+
+Next inspect saved selected/final cost, exposure and directional contributions
+before a distinct hypothesis. This requires no fitting/provider/Colab; do not
+extend the failed family solely because its late checkpoint improved.
