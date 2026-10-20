@@ -840,3 +840,13 @@ Portable array fixtures test ordering, averaging, restoration and invalid/cyclic
 inputs. 264 non-training regression tests plus3 focused checks pass. No forest
 fit, new Colab allocation, policy or performance claim.
 [Preflight](../results/forest-signal-2026-10-20/README.md).
+
+## Completed forest feasibility (2026-10-20)
+
+Six fixed forests trained in Colab CPU, Python3.13.16; 42 focused checks pass.
+All111,696 immutable-probe forecasts pass restoration, exact local repeats,
+normalization and schema/source/nonfinite checks. Both arms fail the predictive
+gate (16.23%/17.47% worse than ridge, zero passing seeds), so no PPO transfer,
+trading promotion or profitable-short claim. Project conservative35.871240/150;
+owned shutdown verified, rate0 with zero assignments. See the
+[complete evidence](../results/forest-signal-2026-10-20/README.md).

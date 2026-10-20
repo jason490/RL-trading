@@ -914,22 +914,15 @@ or PPO allocation. All source hashes unchanged; no new units. Next investigate
 a distinct tabular tree learner under a new compatible, bounded CPU protocol.
 [Evidence](results/signal-centering-2026-10-20/README.md).
 
-## 35. Tabular forest signal feasibility — dependency/data preflight accepted
+## 35. Tabular forest signal feasibility — completed, gate failed
 
-Preregister a distinct bagged tree learner against unchanged constant/ridge
-controls, target folds, feature masks and predictive gates. Six128-tree forests,
-seeds11/23/37, depth8, leaf minimum50 and fixed bootstrap/feature fractions; two
-prefix trees first. Optional hash-locked dependencies support verified Colab
-Python3.13.16; all previous pins preserved. Portable numerical tree arrays and
-malformed/finite input checks pass without fitting. 264 non-training regression
-tests and3 focused forest checks pass. Actual fitting and complete metered
-job/artifact integration are pending. No new session or credits at preflight.
-[Protocol](configs/experiments/forest_signal.json), [guide](docs/forest-signal.md).
-
-Version14 forest jobs, Colab-only fitting worker, portable six-forest bundle and
-independent metric/gate verification are implemented. Two prefix trees precede
-768 full trees, with explicit tree work units and durable per-fit checkpoints.
-Dependency manifests, paired seed fingerprints and source contracts are checked;
-post-download verification compares every forecast against immutable probe data.
-42 focused tests pass without local fitting. Commit/freeze source before the
-one-CPU allocation; the original ledger and one-unit study cap remain shared.
+Six fixed128-tree forests plus2 prefix trees were fitted on Colab CPU using
+Python3.13.16 and protocol49aa716b. Both predictive arms fail: masked/full mean
+MSE0.00672440/0.00679195 is16.23%/17.47% worse than own ridge, zero passing seeds,
+and2020 constraints fail. All111,696 restored forecasts pass parity and frozen
+input checks. No PPO transfer or model promotion; profitable shorting and the
+stock/ETF objective remain unachieved. Owned shutdown verified, project usage
+35.871240/150, zero active assignments. Preserve all models and evidence; stop
+this configuration rather than enlarging the failed fit.
+[Results](results/forest-signal-2026-10-20/README.md),
+[protocol](configs/experiments/forest_signal.json), [guide](docs/forest-signal.md).

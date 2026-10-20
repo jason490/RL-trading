@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "owned_cleanup_verified": true,
+  "release_assets_verified": 10,
+  "removed_files": [
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/artifacts.tar.gz",
+      "bytes": 3412275,
+      "sha256": "13fc1ebaf72442a1e3d3c40f184900923258eea9b8c4316f0e52aca791da38bf"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/export.ready",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-c9b3167edff5/research-upload.tar.gz",
+      "bytes": 8535249,
+      "sha256": "6f076d88d92a6ea774572010a7e4e226c8ec7d8a5d73747a8c783526ee2c9634"
+    },
+    {
+      "path": ".runtime/forest-signal-source.tar",
+      "bytes": 1044480,
+      "sha256": "bcb724d0882af454eecb10e8d0fc68e09e9fa5821a8c8e03f56cd380a0779693"
+    },
+    {
+      "path": "artifacts/forest-signal-release/forest-models.tar.gz",
+      "bytes": 1124647,
+      "sha256": "4be0d8dc3d7acb09f547d2e2dc21e32973c744d5fbd6f81ab7749653dfc952e3"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/retrieved/artifacts/runs/20261020T074456-forest-d08b7048/models/full-23.npz",
+      "bytes": 246553,
+      "sha256": "298a9bb58c55ae2f1c6d7ee703ea9e0c8844e9a632a40353d0461be2b87a7b23"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/retrieved/artifacts/runs/20261020T074456-forest-d08b7048/models/masked-37.npz",
+      "bytes": 307334,
+      "sha256": "45fc7d4a89a4db4c2c1427aaf23a50c8617cfcec4f03b5c2580282222b6e76c3"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/retrieved/artifacts/runs/20261020T074456-forest-d08b7048/models/masked-11.npz",
+      "bytes": 301196,
+      "sha256": "03780e150beda3a1ade26b6909e0c9ee5b4ce8ec1bdeb1de21c80bbcc8ac94be"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/retrieved/artifacts/runs/20261020T074456-forest-d08b7048/models/full-11.npz",
+      "bytes": 254280,
+      "sha256": "6e16fcf53e217cc235844c93d63c7f897436a63037668368fd4664d74cd631a4"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/retrieved/artifacts/runs/20261020T074456-forest-d08b7048/models/full-37.npz",
+      "bytes": 257542,
+      "sha256": "b3936a885ea02524ae2f84afc5660ab213c63fd94f0543c32e190f6c8db19bd7"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/retrieved/artifacts/runs/20261020T074456-forest-d08b7048/models/masked-23.npz",
+      "bytes": 305033,
+      "sha256": "0efff56c20e218a0042d44da9a13a1453adc51ca3e4a5b57e19af9505996683c"
+    }
+  ],
+  "removed_count": 11,
+  "removed_logical_bytes": 15788589,
+  "retained_file_count": 246,
+  "retained_hashes_unchanged": true,
+  "archive_comparisons": [
+    {
+      "archive": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/artifacts.tar.gz",
+      "all_extracted_files_match": true,
+      "files": 25
+    },
+    {
+      "archive": ".runtime/payloads/rl-stocks-cpu-c9b3167edff5/research-upload.tar.gz",
+      "all_preserved_source_data_plan_files_match": true,
+      "files": 271
+    }
+  ],
+  "conservatively_retained_snapshots": [
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-c9b3167edff5/checkpoint.tar.gz",
+      "reason": "Contains an earlier snapshot not byte-identical to final extraction; retain conservatively"
+    }
+  ],
+  "raw_data_models_reports_curves_ledger_preserved": true
+}

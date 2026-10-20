@@ -75,23 +75,24 @@ research feature contract rejects missing/nonfinite observations.
 
 Tests use explicit tree fixtures, not locally fitted forests, to verify threshold
 ordering, equal averaging, serialization parity, malformed/cyclic nodes,
-incorrect file sets and invalid inputs. Actual sklearn-to-array parity must still
-pass in the Colab prefix before full fits. A complete forest bundle, fitting
-worker and strict metered job/artifact integration are the next implementation
-stage; their acceptance is not implied by these array tests.
+incorrect file sets and invalid inputs. Actual sklearn-to-array parity passed in the Colab prefix and for all six
+final forests. Complete bundle and strict metered job/artifact integration
+were exercised by the completed run.
 
 ## Current evidence
 
-[Preflight](../results/forest-signal-2026-10-20/preflight.json) confirms Python,
-locked dependencies, immutable folds, constructor settings and unfitted state.
-There are 45,266 fit and 18,616 probe rows. No forest model has been fitted,
-no new Colab allocation occurred, and no performance has been measured.
+[Completed results](../results/forest-signal-2026-10-20/README.md) report a failed
+predictive gate. Masked/full mean MSE is 0.00672440/0.00679195, respectively
+16.23%/17.47% worse than each arm's ridge control, with zero passing seeds.
+Both fail the 2020 constraint. Full context worsens every paired seed. No PPO
+transfer or trading promotion follows. Forecast rank IC alone does not pass.
 
-264 non-training regression tests and three focused forest checks pass. The
-existing training integration suite was excluded to keep fitting in Colab.
-Project usage remains 35.861240/150 units. The planned one-CPU run remains capped
-at one additional unit, shares the original ledger and enforces the two-hour
-allocation deadline and 130-unit project working stop.
+All 111,696 restored forecasts pass parity, immutable preprocessing and input
+rejection checks. The immutable 45,266 fit and 18,616 probe rows remain unchanged.
+Colab used Python 3.13.16, CPU, six final forests and two discarded prefix trees.
+Project conservative usage is 35.871240/150 units (0.010000 for this study).
+Owned shutdown is verified; zero active assignments remain. Models and evidence
+are published with server checksum verification and duplicate-only cleanup.
 
 ## Implemented Colab worker and restoration
 
@@ -124,5 +125,5 @@ repeat predictions, checks immutable targets/sessions/symbols and fit-only
 normalization, and rejects incompatible schema/source/nonfinite inputs.
 
 42 focused forest, existing neural, target, fleet, budget and artifact checks pass
-without local fitting. The actual Colab fit is next; this is wiring evidence,
-not predictive performance or a successful trading model.
+without local fitting. The completed Colab fit and restoration checks pass operationally; both
+predictive arms fail. This is not a successful trading model.

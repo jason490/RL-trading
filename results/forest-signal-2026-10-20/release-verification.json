@@ -1,0 +1,67 @@
+{
+  "verified": true,
+  "asset_count": 10,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/forest-signal-2026-10-20",
+  "assets": [
+    {
+      "name": "comparison.svg",
+      "size": 36353,
+      "digest": "sha256:2bd0636b4946b2d50df60f6e37d9b2e620628e9d4923a59ac03b1698e976ab2a",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 343,
+      "digest": "sha256:51bab5812ed99f379eed7a7a908547951d61869180e652816fe90dc856f815c2",
+      "state": "uploaded"
+    },
+    {
+      "name": "fit-summary.json",
+      "size": 418,
+      "digest": "sha256:5b73d95ceb17c371a8c112d4b2fa13cf693a23904c7eafa7b785485972da6c75",
+      "state": "uploaded"
+    },
+    {
+      "name": "forest-models.tar.gz",
+      "size": 1124647,
+      "digest": "sha256:4be0d8dc3d7acb09f547d2e2dc21e32973c744d5fbd6f81ab7749653dfc952e3",
+      "state": "uploaded"
+    },
+    {
+      "name": "metadata.json",
+      "size": 1732,
+      "digest": "sha256:d5ab27616923ac7618909154f14ebf60cf681c7c8a265750c306daccc128b466",
+      "state": "uploaded"
+    },
+    {
+      "name": "preflight.json",
+      "size": 1403,
+      "digest": "sha256:29fe9fb8e16f4871b5231d458d41b260e3c7419a1ef2e9b449352d839c28bcf5",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 5432,
+      "digest": "sha256:ff0fbcce0d34f98810fc55bdb8b14e469c9f2071733dba32d90087b1fa51bfcf",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 1385,
+      "digest": "sha256:871063a0334954a7ed0acd55819b6b73eb9d2e0e99583f5e79fb26d64076cdc5",
+      "state": "uploaded"
+    },
+    {
+      "name": "result.json",
+      "size": 3531,
+      "digest": "sha256:ec22362b08ee77cfb29fe3ce21e34eda2b45cf811846ff4ccca8b9a5ecfbba6f",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 400,
+      "digest": "sha256:3669ebecb8c22e975755cbd2c8c9249c3cc89ea07af0d37a3811feae4c7373a1",
+      "state": "uploaded"
+    }
+  ]
+}

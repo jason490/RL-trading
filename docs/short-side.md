@@ -93,3 +93,13 @@ long-only fixed-policy paths across every symbol, recomputing account inputs
 after each actual restricted fill. It preserves all original risk outputs and
 keeps future declining-stock labels reporting-only. Side attribution on the
 original path is not a substitute for this counterfactual simulation.
+
+## Latest forecasting experiment
+
+The [fixed forest feasibility study](../results/forest-signal-2026-10-20/README.md)
+failed its predictive gates and was not transferred into a trading policy.
+Forecast accuracy, a negative target prediction, or reduced long exposure does
+not establish positive short P&L. The existing joint positive-return/positive-
+net-short-P&L requirement remains unmet; report unsuccessful declining-stock
+cases as well as successful ones. Continue using causal inputs and cost-aware
+accounting without selecting checkpoints from future declining-stock labels.
