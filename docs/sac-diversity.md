@@ -76,3 +76,37 @@ PYTHONPATH=src .venv/bin/python scripts/prepare_sac_diversity.py \
 
 The output path must be new. The existing content-addressed dataset is reused
 only when exact bytes match; source caches are never overwritten.
+
+## Version19 preflight implemented
+
+`stock_etf_cycle_windows` now uses fixed group probabilities, per-group shuffled
+decks and uniform complete-window starts. Explicit seeded resets clear decks;
+ordinary episode resets continue the current cycles. Counts use deep copies,
+including zero-transition automatic reset starts, so parity checks cannot mutate
+saved diagnostics. Screen coverage requires positive transitions, not just starts.
+Local Gymnasium/SB3 checks pass without fitting.
+
+Version19 jobs, preallocation/worker payload checks and returned archives pin
+data, original normalizer, SAC settings, initial network/alpha records and
+sampling summaries. Per-symbol totals and group-cycle balance must reconcile;
+every screen symbol must actually trade through at least one transition.
+The strict reporter independently validates complete saved accounting, matching
+holding paths, initial-network equality and selected/final scores before gates.
+Only dataset identity differs in the matched contract.
+
+Eighty-two focused data/sampling/job/archive/gate/fleet/budget/report tests pass.
+Both actual immutable smoke payloads validate, and scripts compile. Fixture
+coverage/noise/network records do not replace real Colab evidence. Source freeze
+and two1024 CPU smokes are next; no new allocation at this preflight checkpoint.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_diversity_jobs.py --smoke \
+  --output .runtime/diversity-smoke-jobs.json
+PYTHONPATH=src .venv/bin/python scripts/report_diversity.py \
+  --state .runtime/diversity-screen-state.json \
+  --output artifacts/diversity/screen-report.json
+```
+
+Account balance350.42, zero rate and assignments verified before source freeze.
+Project36.149107/150. The new study allowance2 units includes smokes and screen,
+starting at the unchanged current cumulative ledger; it never resets the project.

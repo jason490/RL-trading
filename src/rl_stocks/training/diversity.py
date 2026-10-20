@@ -72,3 +72,72 @@ def fixed_preprocessing_expansion(original, expanded):
         validation='Exact original26-symbol development episodes; no test reconstructed',
         sampling='Planned fixed original stock/ETF probabilities; explicit kinds, full windows; no future-outcome labels')
     return result
+
+PROTOCOL_SHA256='3fd2f8f484d40d4abec51524ebb4c4087d56924103622019107a8d2b6931e616'
+
+
+def protocol():
+    import json
+    from pathlib import Path
+    from rl_stocks.rl.registry.factory import resolved_parameters
+    p=json.loads((Path(__file__).resolve().parents[3]/'configs/experiments/sac_diversity.json').read_text())
+    if digest(p)!=PROTOCOL_SHA256:raise ValueError('SAC diversity protocol changed')
+    params=resolved_parameters('sac');params['net_arch']=params.pop('policy_kwargs')['net_arch']
+    if params!=p['parameters'] or digest(p['frozen_normalizer'])!=p['normalizer_sha256']:raise ValueError('SAC diversity parameters/preprocessing changed')
+    return p
+
+
+def validate_payload(data,arm):
+    p=protocol()
+    if arm not in p['arms'] or digest(data)!=p['datasets'][arm]:raise ValueError('diversity dataset identity mismatch')
+    if (digest(data['normalizer'])!=p['normalizer_sha256']
+        or data['manifest']['included_splits']!=['train','validation'] or data['manifest']['unverified_override'] is not False
+        or sorted(e['symbol'] for e in data['episodes'].values() if e['split']=='train')!=p['training_symbols'][arm]
+        or any(e['split'] not in ('train','validation') or any(b['session']>('2020-12-31' if e['split']=='train' else '2023-12-31') for b in e['bars']) for e in data['episodes'].values())):
+        raise ValueError('diversity data/preprocessing contract mismatch')
+    return data
+
+
+def sampling_summary(arm,smoke):
+    p=protocol();n=len(p['training_symbols'][arm])
+    return dict(mode=p['start_sampling'],window_transitions=128 if smoke else 512,episode_count=n,
+        selection='Fixed group probability, shuffled episode cycles within group, uniform full-window start',
+        future_outcomes_used=False,downtrend_counts_measured=False,
+        group_probability=dict(stock_numerator=22,etf_numerator=4,denominator=26),etf_symbols=list(ETFS),
+        episode_cycle='Without replacement until group exhausted',group_episodes=dict(stock=n-4,etf=4))
+
+
+def validate_counts(counts,arm,smoke,steps):
+    p=protocol();summary=sampling_summary(arm,smoke);allowed=set(p['training_symbols'][arm]);groups=counts.get('history_groups',{})
+    if (counts.get('mode')!=p['start_sampling'] or counts.get('downtrend_counts_measured') is not False
+        or type(counts.get('transitions')) is not int or counts.get('transitions')!=steps or counts.get('downtrend_starts')!=0 or counts.get('downtrend_transitions')!=0
+        or type(counts.get('starts')) is not int or counts['starts']<=0 or not groups):
+        raise ValueError('diversity sampling totals mismatch')
+    per_symbol={s:dict(starts=0,transitions=0) for s in allowed}
+    for key,row in groups.items():
+        symbol,period=key.split(':')
+        if (symbol not in allowed or period!='recent' or set(row)!={'starts','transitions'}
+            or any(type(x) is not int or x<0 for x in row.values()) or row['transitions']>summary['window_transitions']*row['starts']):
+            raise ValueError('invalid diversity symbol sampling')
+        per_symbol[symbol]=row
+    if sum(r['starts'] for r in per_symbol.values())!=counts['starts'] or sum(r['transitions'] for r in per_symbol.values())!=steps:
+        raise ValueError('diversity per-symbol totals mismatch')
+    group_counts={}
+    for kind in ('stock','etf'):
+        rows=[r for s,r in per_symbol.items() if (s in ETFS)==(kind=='etf')]
+        starts=[r['starts'] for r in rows]
+        if max(starts)-min(starts)>1:raise ValueError('diversity group cycle imbalance')
+        group_counts[kind]={k:sum(r[k] for r in rows) for k in ('starts','transitions')}
+    if not smoke and any(r['starts']<=0 or r['transitions']<=0 for r in per_symbol.values()):
+        raise ValueError('diversity screen did not actually cover all symbols')
+    return dict(summary=summary,group_counts=group_counts,symbols_with_transitions=sum(r['transitions']>0 for r in per_symbol.values()),
+                actual_etf_transition_fraction=group_counts['etf']['transitions']/steps)
+
+
+def validate_initialization(record):
+    import math,re
+    if (not math.isclose(record.get('alpha',float('nan')),1.,rel_tol=1e-6)
+        or record.get('target_entropy')!=-4. or set(record.get('network_sha256',{}))!={'actor','critic','critic_target'}
+        or any(not isinstance(v,str) or not re.fullmatch('[0-9a-f]{64}',v) for v in record['network_sha256'].values())):
+        raise ValueError('diversity initialization mismatch')
+    return record

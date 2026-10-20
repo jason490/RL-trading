@@ -30,3 +30,32 @@ class FullWindows:
     def label(self,episode,index):
         # Common sampler interface; no downtrend/outcome classes are computed.
         return False
+
+
+class StockEtfCycles(FullWindows):
+    """Fixed original-panel group mass, shuffled per-group episode coverage."""
+    mode='stock_etf_cycle_windows'
+    etfs=('SPY','QQQ','IWM','DIA')
+
+    def __init__(self,episodes,steps):
+        super().__init__(episodes,steps)
+        symbols=[e['symbol'] for e in episodes]
+        if len(symbols)!=len(set(symbols)) or not set(self.etfs)<=set(symbols):
+            raise ValueError('unique symbols and all four broad ETFs required')
+        self.buckets={kind:[i for i,s in enumerate(symbols) if (s in self.etfs)==(kind=='etf')]
+                      for kind in ('stock','etf')}
+        if not self.buckets['stock']:raise ValueError('stock episodes required')
+        self.reset_cycles()
+        self.summary.update(selection='Fixed group probability, shuffled episode cycles within group, uniform full-window start',
+            group_probability=dict(stock_numerator=22,etf_numerator=4,denominator=26),
+            etf_symbols=list(self.etfs),episode_cycle='Without replacement until group exhausted',
+            group_episodes={k:len(v) for k,v in self.buckets.items()})
+
+    def reset_cycles(self):
+        self.decks={'stock':[],'etf':[]}
+
+    def choose(self,rng):
+        kind='etf' if int(rng.integers(26))<4 else 'stock'
+        if not self.decks[kind]:self.decks[kind]=[int(i) for i in rng.permutation(self.buckets[kind])]
+        index=self.decks[kind].pop()
+        return index,int(rng.integers(self.bounds[index]))

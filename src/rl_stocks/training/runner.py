@@ -132,6 +132,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm=='sac':
         from rl_stocks.training.sac_temperature import PROTOCOL_SHA256 as TEMP_PROTOCOL,initialization_record
         if study_protocol_sha256==TEMP_PROTOCOL:metadata['temperature_initialization']=initialization_record(model)
+        from rl_stocks.training.diversity import PROTOCOL_SHA256 as DIVERSITY_PROTOCOL
+        if study_protocol_sha256==DIVERSITY_PROTOCOL:metadata['diversity_initialization']=initialization_record(model)
     if 'history_augmentation' in dataset['manifest']:
         from rl_stocks.training.history.spec import PROTOCOL_SHA256
         metadata['history_augmentation']=dataset['manifest']['history_augmentation']

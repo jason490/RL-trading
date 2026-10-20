@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==18:
+    if plan.get('version')==19:
+        try:expected=diversity_plan(**plan['diversity_study'])
+        except (KeyError,TypeError):raise ValueError('malformed diversity plan') from None
+        if plan!=expected:raise ValueError('unsupported diversity plan')
+    elif plan.get('version')==18:
         try:expected=td3_state_plan(**plan['td3_state_study'])
         except (KeyError,TypeError):raise ValueError('malformed TD3 state plan') from None
         if plan!=expected:raise ValueError('unsupported TD3 state plan')
@@ -325,4 +329,16 @@ def td3_state_plan(arm,seed=11,smoke=False):
     plan=sac_state_plan(arm,seed,smoke);plan.pop('sac_state_study')
     plan.update(version=18,td3_state_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
     plan['jobs'][0].update(algorithm='td3',study_protocol_sha256=PROTOCOL_SHA256)
+    return plan
+
+
+def diversity_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.diversity import protocol,PROTOCOL_SHA256
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported diversity arm, seed or smoke mode')
+    plan=sac_state_plan('execution_full',seed,smoke);plan.pop('sac_state_study')
+    steps=p['smoke_steps'] if smoke else p['steps_per_cell']
+    plan.update(version=19,diversity_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,dataset_contract=dict(identity=p['datasets'][arm]))
+    plan['jobs'][0].update(steps=steps,milestones=[steps],start_sampling=p['start_sampling'],study_protocol_sha256=PROTOCOL_SHA256)
     return plan

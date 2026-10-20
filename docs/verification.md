@@ -1101,3 +1101,9 @@ gates. Prior PPO expansion failures remain negative evidence. Runtime/sampler
 integration and Colab smokes pending, no allocation; project36.149107/150.
 [Guide](sac-diversity.md),
 [audit](../results/sac-diversity-data-2026-10-20/README.md).
+
+SAC diversity version19 preflight passes82 focused checks and both actual
+immutable payload validations. Group cycles, seeded resets, full-window counts,
+positive-transition coverage and frozen normalizer/initial-state/archive gates
+implemented. No fitting; real smoke parity still required.
+[Details](sac-diversity.md#version19-preflight-implemented).

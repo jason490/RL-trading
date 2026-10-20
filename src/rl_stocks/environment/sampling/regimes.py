@@ -1,7 +1,7 @@
 """Training-only start pools based on prices already observed at each start."""
 import math
 
-MODES = ('legacy_uniform', 'ready_uniform', 'downtrend_balanced', 'full_window_uniform')
+MODES = ('legacy_uniform', 'ready_uniform', 'downtrend_balanced', 'full_window_uniform', 'stock_etf_cycle_windows')
 
 
 class CausalStarts:

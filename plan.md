@@ -1125,3 +1125,8 @@ cycles and actual coverage are required before interpreting the result. Sampler/
 runtime integration and smokes next; no relaxation of absolute or prospective
 requirements. [Guide](docs/sac-diversity.md),
 [protocol](configs/experiments/sac_diversity.json).
+
+Diversity version19 integration complete:82 focused checks, actual immutable
+payload checks and script compilation pass. Source freeze then2x1024 Colab CPU
+smokes next, before matched2x100k screen. Positive-transition coverage and
+actual initial network/normalizer parity remain required.

@@ -19,7 +19,10 @@ class TradingEnv(gym.Env):
         if start_sampling not in MODES:raise ValueError('unknown start sampling mode')
         if start_sampling!='legacy_uniform' and (not random_start or episodes[0]['split']!='train'):
             raise ValueError('causal start sampling requires random-start training only')
-        if start_sampling=='full_window_uniform':
+        if start_sampling=='stock_etf_cycle_windows':
+            from rl_stocks.environment.sampling.windows import StockEtfCycles
+            self.start_sampler=StockEtfCycles(episodes,episode_steps)
+        elif start_sampling=='full_window_uniform':
             from rl_stocks.environment.sampling.windows import FullWindows
             self.start_sampler=FullWindows(episodes,episode_steps)
         else:
@@ -34,6 +37,8 @@ class TradingEnv(gym.Env):
         self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(len(names)+len(self.observation_spec["portfolio_fields"]),),dtype=np.float32)
     def reset(self,*,seed=None,options=None):
         super().reset(seed=seed)
+        if seed is not None and self.start_sampler and self.start_sampler.mode=='stock_etf_cycle_windows':
+            self.start_sampler.reset_cycles()
         if self.start_sampler is None:
             index=(options or {}).get("episode",int(self.np_random.integers(len(self.episodes))))
             start=None
@@ -47,14 +52,15 @@ class TradingEnv(gym.Env):
         if self.start_sampler:
             self.sampling_counts['starts']+=1
             self.sampling_counts['downtrend_starts']+=int(self.start_sampler.label(index,self.i))
-        if self.start_sampler and self.start_sampler.mode=='full_window_uniform':
+        if self.start_sampler and self.start_sampler.mode in ('full_window_uniform','stock_etf_cycle_windows'):
             group=self.start_sampler.groups[index]
             self.sampling_counts['history_groups'].setdefault(group,dict(starts=0,transitions=0))['starts']+=1
         self.steps=0;self.done=False;self.sim=Simulator(self.config)
         return self.observation(),{"symbol":self.episode["symbol"],"session":self.bars[self.i].session}
     def reset_sampling_statistics(self):
+        if self.start_sampler and self.start_sampler.mode=='stock_etf_cycle_windows':self.start_sampler.reset_cycles()
         self.sampling_counts=dict(starts=0,downtrend_starts=0,transitions=0,downtrend_transitions=0)
-        if self.start_sampler and self.start_sampler.mode=='full_window_uniform':
+        if self.start_sampler and self.start_sampler.mode in ('full_window_uniform','stock_etf_cycle_windows'):
             self.sampling_counts['history_groups']={}
             self.sampling_counts['downtrend_counts_measured']=False
     def sampling_statistics(self):
@@ -72,7 +78,7 @@ class TradingEnv(gym.Env):
         if self.start_sampler:
             self.sampling_counts['transitions']+=1
             self.sampling_counts['downtrend_transitions']+=int(self.start_sampler.label(self.episode_index,self.i))
-        if self.start_sampler and self.start_sampler.mode=='full_window_uniform':
+        if self.start_sampler and self.start_sampler.mode in ('full_window_uniform','stock_etf_cycle_windows'):
             group=self.start_sampler.groups[self.episode_index]
             self.sampling_counts['history_groups'].setdefault(group,dict(starts=0,transitions=0))['transitions']+=1
         previous=self.bars[self.i];atr=self.episode["atr"][self.i]
