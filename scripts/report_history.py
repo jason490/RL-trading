@@ -1,5 +1,5 @@
 """Report strict matched historical screens after verified owned shutdown."""
-import argparse,json,math
+import argparse,json,math,tarfile,tempfile
 from pathlib import Path
 from rl_stocks.core.contracts import digest
 from rl_stocks.inference.bundle import checksum
@@ -25,7 +25,15 @@ def main():
         if len(paths)!=1:raise ValueError('one run per task required')
         path=paths[0];m=json.loads(path.read_text());arm=m['history_augmentation']['arm']
         if arm in cells or arm not in spec['arms'] or m['seed']!=11 or m['smoke']:raise ValueError('one screen seed per arm required')
-        validate_archive(root/'artifacts.tar.gz',history_plan(arm),spec['datasets'][arm])
+        archive=root/'artifacts.tar.gz'
+        if archive.exists():validate_archive(archive,history_plan(arm),spec['datasets'][arm])
+        else:
+            # Duplicate transport archives may be removed after verified retrieval.
+            # Revalidate the retained complete extraction through a temporary tar.
+            with tempfile.TemporaryDirectory(prefix='history-verify-') as work:
+                packed=Path(work)/'retained.tar'
+                with tarfile.open(packed,'w') as t:t.add(artifact,arcname='artifacts')
+                validate_archive(packed,history_plan(arm),spec['datasets'][arm])
         data=validate_payload(read_dataset(Path('data/datasets')/m['dataset']),arm)
         current={k:m[k] for k in ('source_hash','git','simulation','versions','resolved_parameters','reward_config','evaluation_every','initialization','observation','policy_architecture')}
         if current['git']['dirty'] or contract is not None and current!=contract:raise ValueError('matched source/settings required')

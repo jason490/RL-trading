@@ -982,3 +982,11 @@ Historical smokes passed in Colab:3x512 transitions,234 exact frozen predictions
 Python3.13.16 and3 owned shutdowns verified. Screen launched:3x50k seed11,
 same4be5219 source, original2-unit study allowance including smoke.
 [Acceptance](results/historical-augmentation-2026-10-20/smoke-summary.json).
+
+Milestone37 completed, gate failed. Earlier17.06% selected/final versus
+original19.23%/15.01%, recent15.33%/15.33%, holding30.60%. No confirmation or
+extension. Augmented symbol transition counts match exactly, so nominal
+sampling imbalance does not explain this comparison.468 frozen checks pass;
+6 owned shutdowns,15 verified assets,186.45MiB duplicate cleanup with377 retained
+hashes unchanged. Project35.917535/150.
+[Results](results/historical-augmentation-2026-10-20/README.md).

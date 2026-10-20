@@ -1,0 +1,9 @@
+{
+  "realized_augmented_symbol_transition_counts_exact": true,
+  "older_transitions": 7680,
+  "etf_transitions_per_augmented_arm": 14336,
+  "total_transitions": 50000,
+  "old_fraction": 0.1536,
+  "etf_fraction": 0.28672,
+  "future_outcome_sampling": false
+}

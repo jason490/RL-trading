@@ -902,3 +902,13 @@ Historical fixed screen reporter implemented before reading completed screen
 metrics. Two focused gate tests cover both controls/phases, absolute stock/ETF
 and median targets, drawdown, incomplete/nonfinite rejection. Actual50k screen
 is still running; no gate verdict has been computed.
+
+## Historical augmentation screen completed
+
+Three50k PPO screens complete, kernel3.13.16; earlier selected/final17.06% fails
+against original19.23%/15.01%, recent15.33%/15.33%, holding30.60%. Both stock/ETF
+absolute targets fail; joint declining-stock total/short successes1/3. No
+confirmation.468 exact smoke/screen predictions,6 owned stops,15 verified
+release assets; duplicate cleanup21 files195,506,959 bytes,377 retained hashes
+unchanged. Conservative project35.917535/150.
+[Full evidence](../results/historical-augmentation-2026-10-20/README.md).

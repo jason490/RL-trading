@@ -4,7 +4,7 @@ The [source/overlap audits](historical-regimes.md) accepted a chronological
 2001–2009 four-ETF panel. The [fixed experiment](../configs/experiments/historical_augmentation.json)
 now compares original episodes, recent-ETF oversampling and earlier-ETF
 augmentation. It tests extra market history against extra ETF sampling, without
-selecting future losing symbols. Three Colab smokes have passed; the50k screen is running.
+selecting future losing symbols. The completed50k screen fails its fixed gates; no confirmation follows.
 
 ## Dataset arms
 
@@ -95,3 +95,24 @@ The reporter also writes a standalone interactive HTML chart: compact10k
 checkpoint returns with matched holding, and final stock/ETF return comparisons.
 Click legends to toggle curves. The chart uses saved development records and
 does not reselect checkpoints or reinterpret validation as independent evidence.
+
+## Completed screen outcome
+
+[Complete evidence](../results/historical-augmentation-2026-10-20/README.md):
+original selected19.23%/final15.01%, recent15.33%/15.33%, earlier17.06%/17.06%,
+matched holding30.60%. Earlier loses to selected original and fails the2pp gain
+against recent, ETF noninferiority, absolute group and stock-median limits.
+Only1/3 falling stocks has joint positive total/short P&L; DIS/NEE total returns
+remain negative. No23/37 confirmation, more steps or promotion.
+
+Augmented arms have exactly matching realized transitions per symbol, including
+14,336 totalETF transitions each and7,680 old-history transitions in the earlier
+arm. All468 smoke/screen frozen predictions are exact. All6 owned sessions
+stopped,15 public assets verified,21 duplicate files removed with377 retained
+hashes unchanged. Conservative project35.917535/150, study0.046295 units,
+separate account350.58, zero assignments/rate after teardown.
+
+After duplicate transport cleanup, the reporter reconstructs a temporary tar
+from retained extraction for identical archive validation, then deletes it.
+Actual post-cleanup replay reproduces the summary byte-for-byte; all377 retained
+hashes remain unchanged. [Proof](../results/historical-augmentation-2026-10-20/reproduction.json).

@@ -222,3 +222,22 @@ beating both controls and passing absolute stock/ETF gates before confirmation,
 not merely improving an already weak control. Complete metered job/artifact
 integration and source freeze before threeCPU smokes. No fitting or credits
 used at preparation; [protocol](../configs/experiments/historical_augmentation.json).
+
+## Historical augmentation outcome
+
+Chronological oldETF augmentation improves final17.06% versus original15.01%
+but loses selected−2.17pp and misses the recent-control2pp gain. Stock/ETF
+benchmarks and median targets fail; joint falling-stock total/short success1/3.
+Exact augmented symbol transition counts remove one sampling confound, not
+market uncertainty. Stop this family; no longer runs or confirmation. All6
+owned sessions stopped,468 parity checks and15 release assets pass; project
+35.917535/150. [Evidence](../results/historical-augmentation-2026-10-20/README.md).
+
+Before another allocation, inspect saved off-policy SAC behavior and whether
+its previous experiments included complete execution state. A separately fixed
+full-state off-policy comparison may test a different optimization mechanism;
+a past selected peak alone is not evidence for promotion. Keep the existing
+base data, causal inputs and short-side accounting rather than adding another
+feature/data family without a diagnosis. Any new comparison must retain
+selected/final stock/ETF and drawdown gates, multiple seeds when justified, and
+frozen prospective confirmation.
