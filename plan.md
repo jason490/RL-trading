@@ -1090,3 +1090,8 @@ TD3 version18 runtime/report integration complete:50 focused checks, actual
 immutable smoke payload validation and script compilation pass without fitting.
 Freeze committed source before three Colab CPU smokes. Actual network/noise and
 frozen-prefix parity must precede the fixed50k screen.
+
+TD3 actual Colab smokes3x1024 pass on Python3.13.16; matching initial four-network
+hashes/noise,234 exact frozen predictions and3 owned stops verified. Fixed3x50k
+screen next from same76151d1 source and original2-unit allowance.
+[Acceptance](results/td3-execution-state-2026-10-20/smoke-summary.json).

@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "records": {
+    "execution_masked": {
+      "session": "rl-stocks-cpu-ecda07316801",
+      "run": "20261020T150318-td3-11-2cbd0df3",
+      "bundle_id": "c5c751b98f6468b41ed97e5d91f35786a0311209ec665b066f0820de31e789f0",
+      "python": "3.13.16",
+      "actual_steps": 1024,
+      "initialization": {
+        "network_sha256": {
+          "actor": "c7b0344f589699f70985e1f0ee57ff164b374f3ae4e8839288fb4e9a5279941c",
+          "actor_target": "c7b0344f589699f70985e1f0ee57ff164b374f3ae4e8839288fb4e9a5279941c",
+          "critic": "394944c6e15bce2be82b5469d121b37437aa1d06a852869588293f5fec470b2c",
+          "critic_target": "394944c6e15bce2be82b5469d121b37437aa1d06a852869588293f5fec470b2c"
+        },
+        "exploration_noise": {
+          "kind": "NormalActionNoise",
+          "mean": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sigma": [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        "policy_delay": 2,
+        "target_policy_noise": 0.2,
+        "target_noise_clip": 0.5
+      },
+      "metadata_sha256": "913d5299f6da53240555ac73b4a9b2af1a61e5c576517d51189fe83552620119"
+    },
+    "execution_full": {
+      "session": "rl-stocks-cpu-bae935b513c7",
+      "run": "20261020T150336-td3-11-d3023206",
+      "bundle_id": "ec873702968d570d22b2f81cfaa1fcbd873eb593f2dbc20754b9fb0d3a7875b6",
+      "python": "3.13.16",
+      "actual_steps": 1024,
+      "initialization": {
+        "network_sha256": {
+          "actor": "c7b0344f589699f70985e1f0ee57ff164b374f3ae4e8839288fb4e9a5279941c",
+          "actor_target": "c7b0344f589699f70985e1f0ee57ff164b374f3ae4e8839288fb4e9a5279941c",
+          "critic": "394944c6e15bce2be82b5469d121b37437aa1d06a852869588293f5fec470b2c",
+          "critic_target": "394944c6e15bce2be82b5469d121b37437aa1d06a852869588293f5fec470b2c"
+        },
+        "exploration_noise": {
+          "kind": "NormalActionNoise",
+          "mean": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sigma": [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        "policy_delay": 2,
+        "target_policy_noise": 0.2,
+        "target_noise_clip": 0.5
+      },
+      "metadata_sha256": "93bd5f2ea19692353dd25df761f210f98a73ec719e81e5d3bd63a55366860a95"
+    },
+    "legacy": {
+      "session": "rl-stocks-cpu-b5d295a6d3a4",
+      "run": "20261020T150454-td3-11-da871cb6",
+      "bundle_id": "88e2055821349cc419b9df3ef0e18438aa4b0a77baea7ecbc5ec06b827aa8ee4",
+      "python": "3.13.16",
+      "actual_steps": 1024,
+      "initialization": {
+        "network_sha256": {
+          "actor": "12b5d05c3121005b2072d7f16dee009acfc155aa5b4828fbfb573a42934e69a0",
+          "actor_target": "12b5d05c3121005b2072d7f16dee009acfc155aa5b4828fbfb573a42934e69a0",
+          "critic": "a142a555b2e2bc4a4e946f78f2529672e8b173fb248a0dfc28c491d9a85449c0",
+          "critic_target": "a142a555b2e2bc4a4e946f78f2529672e8b173fb248a0dfc28c491d9a85449c0"
+        },
+        "exploration_noise": {
+          "kind": "NormalActionNoise",
+          "mean": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sigma": [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        "policy_delay": 2,
+        "target_policy_noise": 0.2,
+        "target_noise_clip": 0.5
+      },
+      "metadata_sha256": "e22f5dfbb285dd6c6ece283983da130b6386d19654bcbdae78f6680910c3e6b1"
+    }
+  },
+  "masked_full_initial_networks_identical": true,
+  "actual_noise_and_delay_verified": true,
+  "project_units": 36.090878427779,
+  "study_start_units": 36.06919800117743,
+  "smoke_incremental_units": 0.02168042660156999,
+  "account_balance": 350.46,
+  "reported_rate": 0.0,
+  "active_assignments": 0,
+  "owned_cleanup_verified": true,
+  "test_evaluated": false,
+  "objective_achieved": false,
+  "source_revision": "76151d145250519aacedc05a6314436e7868a15c",
+  "source_hash": "c7c36a92b396261a5f9b0ac0ef1d321c12f73a3e15f70c89b2e251d2f115048a"
+}

@@ -79,3 +79,14 @@ PYTHONPATH=src .venv/bin/python scripts/report_td3_state.py \
   --state .runtime/td3-state-screen-state.json \
   --output artifacts/td3-state/screen-report.json
 ```
+
+## Actual TD3 Colab smoke acceptance
+
+Three1024-transition CPU smokes pass on default Python3.13.16 from source76151d1.
+Actual masked/full initial actor, actor-target, critic and critic-target hashes
+match; Gaussian noise and delay/smoothing match the fixed protocol.234 exact
+frozen-prefix predictions, immutable normalization and incompatible-schema
+rejection pass. All3 owned sessions stopped. Project36.090878/150; study start
+36.069198 and2-unit allowance stay unchanged. Proceed only to the fixed3x50k
+seed11 screen; no smoke-return tuning or retired-test reuse.
+[Evidence](../results/td3-execution-state-2026-10-20/README.md).

@@ -1057,3 +1057,14 @@ checks; actual immutable smoke payloads validate. Runner fingerprints all four
 initial networks/noise, and strict reporter enforces matched selected/final
 accounting and gates. No fitting or allocation yet; actual initialization/parity
 remains required. [Details](td3-execution-state.md#version-18-preflight).
+
+## Actual TD3 Colab smoke acceptance
+
+Three1024-transition CPU smokes pass on default Python3.13.16 from source76151d1.
+Actual masked/full initial actor, actor-target, critic and critic-target hashes
+match; Gaussian noise and delay/smoothing match the fixed protocol.234 exact
+frozen-prefix predictions, immutable normalization and incompatible-schema
+rejection pass. All3 owned sessions stopped. Project36.090878/150; study start
+36.069198 and2-unit allowance stay unchanged. Proceed only to the fixed3x50k
+seed11 screen; no smoke-return tuning or retired-test reuse.
+[Evidence](../results/td3-execution-state-2026-10-20/README.md).
