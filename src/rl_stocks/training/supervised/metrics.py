@@ -20,11 +20,11 @@ def score(y,pred,sessions):
         'mean_daily_spearman_ic':float(mean(ics)) if ics else 0.,'ic_days':len(ics),'undefined_ic_days':undefined,'rows':len(y)}
 
 
-def gate(metrics):
+def gate(metrics,model_key="mlp"):
     baseline=metrics['constant'];comparisons={};passing=[]
     if baseline['mse']<=0 or any(metrics['ridge'][a]['mse']<=0 for a in ('masked','full')):raise ValueError('positive baseline MSE required')
     for arm in ('masked','full'):
-        runs=metrics['mlp'][arm]
+        runs=metrics[model_key][arm]
         if set(runs)!={'11','23','37'} or set(baseline['year_mse'])!={'2018','2019','2020'}:raise ValueError('all seeds and probe years required')
         ridge=metrics['ridge'][arm];mse=mean(r['mse'] for r in runs.values())
         reductions={name:1-mse/ref['mse'] for name,ref in [('constant',baseline),('ridge',ridge)]}
@@ -36,4 +36,4 @@ def gate(metrics):
         if passed:passing.append(arm)
     chosen=min(passing,key=lambda a:comparisons[a]['mean_mse']) if passing else None
     return {'passed':bool(passing),'candidate':chosen,'comparisons':comparisons,
-        'paired_full_minus_masked_mse':{seed:metrics['mlp']['full'][seed]['mse']-metrics['mlp']['masked'][seed]['mse'] for seed in ('11','23','37')},'profitability_established':False,'ppo_training_performed':False}
+        'paired_full_minus_masked_mse':{seed:metrics[model_key]['full'][seed]['mse']-metrics[model_key]['masked'][seed]['mse'] for seed in ('11','23','37')},'profitability_established':False,'ppo_training_performed':False}

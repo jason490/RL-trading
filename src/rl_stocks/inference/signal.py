@@ -10,13 +10,14 @@ from rl_stocks.training.supervised.models import network,design,predict,ridge_pr
 
 
 class SignalBundle:
+    KIND="signal-feasibility-v1"
     def __init__(self,path,names,source_dataset):
         self.path=Path(path);hashes=json.loads((self.path/'checksums.json').read_text())
         if set(hashes)!={p.name for p in self.path.iterdir() if p.is_file() and p.name!='checksums.json'}:
             raise ValueError('signal bundle file set mismatch')
         if any(PurePosixPath(n).name!=n or checksum(self.path/n)!=h for n,h in hashes.items()):raise ValueError('signal bundle checksum mismatch')
         m=json.loads((self.path/'manifest.json').read_text())
-        if (digest(m)!=self.path.name or m.get('kind')!='signal-feasibility-v1'
+        if (digest(m)!=self.path.name or m.get('kind')!=self.KIND
             or list(names)!=m['names'] or source_dataset!=m['source_dataset']):raise ValueError('signal bundle input contract mismatch')
         expected={f'{arm}-{seed}' for arm in ('masked','full') for seed in (11,23,37)}
         if set(m['weights'])!=expected:raise ValueError('complete signal seed set required')

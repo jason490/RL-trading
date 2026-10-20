@@ -925,3 +925,11 @@ malformed/finite input checks pass without fitting. 264 non-training regression
 tests and3 focused forest checks pass. Actual fitting and complete metered
 job/artifact integration are pending. No new session or credits at preflight.
 [Protocol](configs/experiments/forest_signal.json), [guide](docs/forest-signal.md).
+
+Version14 forest jobs, Colab-only fitting worker, portable six-forest bundle and
+independent metric/gate verification are implemented. Two prefix trees precede
+768 full trees, with explicit tree work units and durable per-fit checkpoints.
+Dependency manifests, paired seed fingerprints and source contracts are checked;
+post-download verification compares every forecast against immutable probe data.
+42 focused tests pass without local fitting. Commit/freeze source before the
+one-CPU allocation; the original ledger and one-unit study cap remain shared.

@@ -40,7 +40,11 @@ def main():
         print('Starting job:', job, flush=True)
         seed = job.get('seed', plan.get('seed'))
         parameters = {k:v for k,v in job.items() if k!='seed'}
-        if plan.get('version')==13:
+        if plan.get('version')==14:
+            from rl_stocks.training.supervised.forest_runner import run as fit_forest
+            os.environ['RL_COLAB_OWNED_WORKER']='1'
+            run,bundle=fit_forest(dataset,root/'artifacts')
+        elif plan.get('version')==13:
             from rl_stocks.training.supervised.runner import run as fit_signal
             os.environ['RL_COLAB_OWNED_WORKER']='1'
             run,bundle=fit_signal(dataset,root/'artifacts')

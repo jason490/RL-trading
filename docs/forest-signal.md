@@ -92,3 +92,37 @@ existing training integration suite was excluded to keep fitting in Colab.
 Project usage remains 35.861240/150 units. The planned one-CPU run remains capped
 at one additional unit, shares the original ledger and enforces the two-hour
 allocation deadline and 130-unit project working stop.
+
+## Implemented Colab worker and restoration
+
+Version14 binds the prepared signal identity and complete protocol hash. The
+worker fits only on the completed pre-2018 fold, with one CPU thread, checks two
+prefix trees before full fitting, and saves a durable checkpoint after each of
+six complete forests. Paired feature arms record identical per-tree seed
+fingerprints. Scores use only final 128-tree forests; fit MSE is diagnostic and
+does not select checkpoints. Work metadata explicitly records 770 fitted trees.
+
+`ForestSignalBundle` shares the strict name/source/frozen-preprocessing contract
+with neural forecasts and restores six numerical forests, ridge and constant
+controls. Its manifest includes the dependency lock and actual package versions.
+The archive verifier recomputes all MSE/IC/year metrics and gate decisions from
+returned predictions, checks complete model/date/symbol panels, counts and seed
+fingerprints, and verifies the dependency-manifest hash.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_signal_jobs.py --forest \
+  --output .runtime/forest-feasibility-jobs.json
+# Run through the existing metered fleet after committed-source export.
+PYTHONPATH=src .venv/bin/python scripts/verify_signal_runs.py \
+  artifacts/colab/OWNED_SESSION/retrieved/artifacts \
+  --output artifacts/forest-signal/restoration.json
+```
+
+Post-download verification compares every restored forest forecast with the
+recorded sklearn prediction to absolute tolerance 1e-10, requires exact local
+repeat predictions, checks immutable targets/sessions/symbols and fit-only
+normalization, and rejects incompatible schema/source/nonfinite inputs.
+
+42 focused forest, existing neural, target, fleet, budget and artifact checks pass
+without local fitting. The actual Colab fit is next; this is wiring evidence,
+not predictive performance or a successful trading model.

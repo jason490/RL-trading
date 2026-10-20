@@ -88,7 +88,7 @@ def validate_tasks(tasks,root):
             from rl_stocks.runtime.colab.jobs import validate_context_payload
             if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('trend-context task dataset identity mismatch')
             validate_context_payload(read_dataset(dataset),plan)
-        if plan.get('version')==13:
+        if plan.get('version') in (13,14):
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.supervised.spec import validate_payload
             if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('signal task dataset identity mismatch')

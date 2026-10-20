@@ -66,7 +66,9 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==13:
+    if plan.get('version')==14:
+        if plan!=forest_plan():raise ValueError('unsupported forest-signal plan')
+    elif plan.get('version')==13:
         if plan!=signal_plan():raise ValueError('unsupported supervised-signal plan')
     elif plan.get('version')==12:
         try:expected=context_plan(**plan['context_study'])
@@ -251,3 +253,12 @@ def signal_plan():
     return {'version':13,'accelerator':'CPU','protocol_sha256':PROTOCOL_SHA256,
         'dataset_contract':{'identity':SIGNAL_DATASET,'kind':'completed-training-signal-v1'},
         'jobs':[{'algorithm':'signal_feasibility','device':'cpu','smoke':False,'seed':11,'steps':12002}]}
+
+
+def forest_plan():
+    from rl_stocks.training.supervised.forest_spec import protocol,PROTOCOL_SHA256
+    from rl_stocks.training.supervised.spec import SIGNAL_DATASET
+    protocol()
+    return {'version':14,'accelerator':'CPU','protocol_sha256':PROTOCOL_SHA256,
+        'dataset_contract':{'identity':SIGNAL_DATASET,'kind':'completed-training-signal-v1'},
+        'jobs':[{'algorithm':'forest_signal_feasibility','device':'cpu','smoke':False,'seed':11,'steps':770}]}

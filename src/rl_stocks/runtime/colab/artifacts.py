@@ -118,6 +118,16 @@ def validate_archive(path, plan, dataset_id):
                         or run['algorithm']!='signal_feasibility' or run.get('device')!='cpu'
                         or manifest['metadata']!={k:v for k,v in run.items() if k!='bundle_id'}):raise RuntimeError('signal archive contract mismatch')
                     verify_report(read,prefix,run,manifest)
+                if plan.get('version')==14:
+                    from rl_stocks.training.supervised.forest_artifacts import verify_report
+                    from rl_stocks.training.supervised.spec import SIGNAL_DATASET
+                    manifest=json.loads(read(folder+'manifest.json'))
+                    prefix=next(n.rsplit('/',1)[0]+'/' for n in names if n.endswith('/metadata.json') and json.loads(read(n)).get('bundle_id')==run['bundle_id'])
+                    if (dataset_id!=SIGNAL_DATASET or manifest.get('kind')!='forest-signal-feasibility-v1'
+                        or run['algorithm']!='forest_signal_feasibility' or run.get('device')!='cpu'
+                        or manifest['metadata']!={k:v for k,v in run.items() if k!='bundle_id'}):raise RuntimeError('forest archive contract mismatch')
+                    if hashlib.sha256(read(folder+'requirements.lock')).hexdigest()!=run['requirements_lock_sha256'] or json.loads(read(folder+'dependencies.json'))!=run['versions']:raise RuntimeError('forest dependency manifest mismatch')
+                    verify_report(read,prefix,run,manifest)
                 if digest(json.loads(read(folder+'manifest.json'))) != run['bundle_id']:
                     raise RuntimeError('remote bundle identity mismatch')
             if actual != expected or len(completion['completed']) != len(runs):

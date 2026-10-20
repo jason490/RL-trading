@@ -7,6 +7,7 @@ import torch
 from rl_stocks.core.contracts import canonical
 from rl_stocks.data.generation.datasets import read_dataset
 from rl_stocks.inference.signal import SignalBundle
+from rl_stocks.inference.forest_signal import ForestSignalBundle
 from rl_stocks.training.supervised.spec import SIGNAL_DATASET,validate_payload
 
 
@@ -17,7 +18,7 @@ def main():
     raw=np.asarray([r['features'] for r in probe]);target=np.asarray([r['target_log_total_return'] for r in probe])
     paths=list((a.root/'runs').glob('*/metadata.json'))
     if len(paths)!=1:raise ValueError('one supervised run required')
-    path=paths[0];m=json.loads(path.read_text());bundle=SignalBundle(a.root/'frozen'/m['bundle_id'],data['names'],data['source_dataset'])
+    path=paths[0];m=json.loads(path.read_text());forest=m['algorithm']=='forest_signal_feasibility';loader=ForestSignalBundle if forest else SignalBundle;bundle=loader(a.root/'frozen'/m['bundle_id'],data['names'],data['source_dataset'])
     if bundle.manifest['normalizers']!=data['fold_normalizers']:raise ValueError('fit preprocessing mismatch')
     before=canonical({arm:asdict(n) for arm,n in bundle.normalizers.items()});records=[]
     with np.load(path.parent/'probe-predictions.npz',allow_pickle=False) as arrays:
@@ -28,14 +29,14 @@ def main():
             for seed in (11,23,37):
                 restored=bundle.predict(raw,arm,seed);repeat=bundle.predict(raw,arm,seed)
                 np.testing.assert_array_equal(restored,repeat)
-                np.testing.assert_allclose(restored,arrays[f'{arm}-{seed}'],rtol=0.,atol=1e-6)
+                np.testing.assert_allclose(restored,arrays[f'{arm}-{seed}'],rtol=0.,atol=1e-10 if forest else 1e-6)
                 records.append({'arm':arm,'seed':seed,'predictions':len(restored),'deterministic_repeat_exact':True,
                     'max_remote_prediction_error':float(np.max(np.abs(restored-arrays[f'{arm}-{seed}'])))})
         for arm in ('masked','full'):
             for kind,key in [('constant','constant'),('ridge','ridge_'+arm)]:np.testing.assert_allclose(bundle.predict(raw,arm,kind=kind),arrays[key],rtol=0,atol=1e-10)
     assert canonical({arm:asdict(n) for arm,n in bundle.normalizers.items()})==before
     for names,source in [(list(reversed(data['names'])),data['source_dataset']),(data['names'],'wrong-source')]:
-        try:SignalBundle(a.root/'frozen'/m['bundle_id'],names,source)
+        try:loader(a.root/'frozen'/m['bundle_id'],names,source)
         except ValueError:pass
         else:raise ValueError('signal schema accepted')
     try:bundle.predict([[float('nan')]*10],'full')

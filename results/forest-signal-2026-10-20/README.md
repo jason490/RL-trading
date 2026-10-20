@@ -19,8 +19,9 @@ local model fitting. Tests verify numerical threshold/averaging behavior,
 serialization and malformed/nonfinite rejection. Actual trained sklearn-to-NPZ
 prediction parity and model-quality results remain pending.
 
-Next implement the CPU fitting worker, complete frozen forecast bundle, strict
-fleet/artifact contracts and post-download verification, then use the existing
+The CPU fitting worker, complete frozen forecast bundle, strict version14
+fleet/artifact contracts and post-download verification are now implemented.
+42 focused tests pass without local fitting. Next use the existing
 metered Colab fleet under the one-unit study cap. No trading policy, PPO warm
 start, order interface or profitability claim is introduced. Project usage stays
 35.861240/150; no cleanup of an owned runtime was needed at this stage.
