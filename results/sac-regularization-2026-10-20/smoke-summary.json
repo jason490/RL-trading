@@ -1,0 +1,259 @@
+{
+  "protocol_sha256": "b9b0b310684628c5994b08075769924223577a2265db268b345bc147f9a0388d",
+  "passed": true,
+  "records": {
+    "control": {
+      "session": "rl-stocks-cpu-b35abc4b5e62",
+      "run": "20261020T202034-sac-11-12a8df23",
+      "bundle_id": "ddfcde38b105aa28cae8c5bad896379e24e771c7995dbb6951753dd6010160e8",
+      "initial": {
+        "initialization": {
+          "alpha": 1.0,
+          "target_entropy": -4.0,
+          "network_sha256": {
+            "actor": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+            "critic": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c",
+            "critic_target": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c"
+          }
+        },
+        "optimizers": {
+          "actor": {
+            "class": "torch.optim.adam.Adam",
+            "weight_decay": [
+              0.0
+            ]
+          },
+          "critic": {
+            "class": "torch.optim.adam.Adam",
+            "weight_decay": [
+              0.0
+            ]
+          },
+          "entropy": {
+            "class": "torch.optim.adam.Adam",
+            "weight_decay": [
+              0
+            ]
+          }
+        }
+      },
+      "sampling": {
+        "starts": 9,
+        "downtrend_starts": 0,
+        "transitions": 1024,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SHW:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "LMT:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "MCD:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "COST:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "stock_etf_cycle_windows"
+      },
+      "sampling_checked": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 111,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 107,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 8,
+            "transitions": 896
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 8,
+        "actual_etf_transition_fraction": 0.125
+      },
+      "metadata_sha256": "e125e13bf2f8864a8c2a1d9fc86a1604453482356bf05656b4317a69b9de2997",
+      "restored_selected_final_optimizers_exact": true
+    },
+    "weight_decay": {
+      "session": "rl-stocks-cpu-f1f40c9c660b",
+      "run": "20261020T202131-sac-11-2e49eb33",
+      "bundle_id": "853c0db75578792aa5eebc5c4aa7165f76644e74de315ab3f199731dd9c36637",
+      "initial": {
+        "initialization": {
+          "alpha": 1.0,
+          "target_entropy": -4.0,
+          "network_sha256": {
+            "actor": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+            "critic": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c",
+            "critic_target": "46716bc1879b7599b3757b9798c7803c4873746eb2f2bcddc9952d270e01103c"
+          }
+        },
+        "optimizers": {
+          "actor": {
+            "class": "torch.optim.adam.Adam",
+            "weight_decay": [
+              0.0001
+            ]
+          },
+          "critic": {
+            "class": "torch.optim.adam.Adam",
+            "weight_decay": [
+              0.0001
+            ]
+          },
+          "entropy": {
+            "class": "torch.optim.adam.Adam",
+            "weight_decay": [
+              0
+            ]
+          }
+        }
+      },
+      "sampling": {
+        "starts": 9,
+        "downtrend_starts": 0,
+        "transitions": 1024,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SHW:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "LMT:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "MCD:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "COST:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "stock_etf_cycle_windows"
+      },
+      "sampling_checked": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 111,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 107,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 8,
+            "transitions": 896
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 8,
+        "actual_etf_transition_fraction": 0.125
+      },
+      "metadata_sha256": "f51a2cd5adbd6dec0ee0b8a593e075f2c0fc4bf01b28dad8c77b800d5fd8fc0b",
+      "restored_selected_final_optimizers_exact": true
+    }
+  },
+  "initial_networks_alpha_equal": true,
+  "actual_sampling_equal": true,
+  "frozen_predictions_exact": 156,
+  "cleanup_verified": true,
+  "failed_attempt_retained": true,
+  "project_units": 36.29759749508099,
+  "study_start_units": 36.26389526975882,
+  "screen_allocated": false,
+  "test_evaluated": false
+}

@@ -1183,3 +1183,8 @@ Regularization version20 integration complete:40 focused tests, actual immutable
 payload checks and script compilation pass. Strict reports restore selected/
 latest optimizers and require matching actual sampling counts. Freeze source,
 check account usage, then two1024 Colab CPU smokes; no screen before acceptance.
+
+Regularization replacement2x1024 Colab CPU smokes accepted:156 exact frozen
+predictions, actual optimizer save/load, identical initial tensors/alpha and
+actual sampling;4 total attempt sessions stopped. Failed mutation attempt kept,
+fix6792d2b. Project36.297597/150, fixed paired100k screening next.

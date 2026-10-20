@@ -99,3 +99,14 @@ project36.277597/150 includes this attempt. Retry must use a newly frozen fixed
 source, new owned sessions/deadlines and the original study starting budget;
 this was not a budget stop. Do not relax archive validation or overwrite failed
 evidence. [Failure record](../results/sac-regularization-2026-10-20/smoke-attempt-1.json).
+
+## Replacement Colab smoke acceptance
+
+Two1024-transition CPU smokes pass on actual Python3.13.16, worker6792d2b.
+Actual initial networks/alpha and sampling counts match. Selected/final saved
+optimizer records restore exactly;156 frozen prefix predictions pass with
+immutable normalization/schema rejection. Both replacement sessions stopped;
+all4 attempt sessions have verified cleanup. Project36.297597/150 includes the
+failed attempt; account350.29 zero rate/assignments. Fixed100k screen next from
+same frozen source and original2-unit allowance.
+[Evidence](../results/sac-regularization-2026-10-20/README.md).
