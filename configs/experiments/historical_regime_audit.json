@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "name": "chronological-etf-history-audit-2026-10-20",
+  "hypothesis": "Audit whether earlier chronological market history can broaden training regimes before another learner experiment; no selection of symbols or windows from future losses.",
+  "symbols": ["SPY", "QQQ", "IWM", "DIA"],
+  "start": "2001-01-01",
+  "end_exclusive": "2010-01-01",
+  "reason_for_start": "Fixed first full calendar year after the youngest baseline ETF listing; include every available session through 2009 without outcome-based filtering.",
+  "provider": "yahoo",
+  "adjustments": "split_adjusted_with_dividends",
+  "corrections": "None; invalid source rows stop acceptance, never fabricate a price.",
+  "acquisition": "Existing immutable accumulation, full-range symbol chunks, at most 3 transient attempts per chunk, 30-second request timeout, no feed fallback.",
+  "acceptance": ["All four declared symbols and every XNYS session, with no extra sessions", "Canonical UTC chronology, finite prices/actions and valid OHLC geometry", "Every normalized OHLCV and dividend agrees with retained raw source", "Raw stock splits are retained and never applied twice to split-adjusted prices", "No negative cash dividends, invalid split factors, or unsupported nonzero capital-gain distributions"],
+  "regime_reporting": "Past-only 63-session and 252-session close returns, and joint trailing declines; report by symbol/year, never select future losing symbols.",
+  "constraints": {"training_performed": false, "automatic_dataset_merge": false, "automatic_model_allocation": false, "retired_test_access": false, "independent_action_verification": false},
+  "follow_up": "If source-consistent and coverage-complete, separately preregister original training versus equal-mass recent-ETF versus old-ETF augmentation; match ETF sampling mass, observations, transitions, costs and validation. Audit cross-snapshot price-unit continuity before merging. Keep existing stock/ETF, selected/final, drawdown and multi-seed gates, plus prospective confirmation. ETF evidence does not solve stock delisting coverage.",
+  "colab": {"allocations": 0, "project_ceiling": 150, "working_stop": 130, "ledger": "Existing original shared project ledger"}
+}

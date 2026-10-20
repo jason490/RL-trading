@@ -17,6 +17,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Longer-horizon price context | [trend-context.md](trend-context.md) | Causal63/252-session price returns, trailing-high drawdown and matched warmup/masked controls |
 | Multi-timeframe supply/demand | [supply-demand.md](supply-demand.md) | Implemented D1/W1 base/impulse zones, lifecycle, availability, RL inputs and ablations |
 | Stock universe and sector rotation | [sectors-universe.md](sectors-universe.md) | Configurable symbols, dated classifications, historical ETF rotation, scaling and commands |
+| Historical market-regime coverage | [historical-regimes.md](historical-regimes.md) | Fixed chronological pre-2010 ETF source/action/coverage audit before training |
 | Historical universe coverage | [historical-universe.md](historical-universe.md) | Membership, delistings, provider audit and training-only decline coverage before expansion |
 | Historical evidence import and audit | [historical-data.md](historical-data.md) | Stable IDs, causal membership events, delisting outcomes, immutable imports, listing discovery and coverage reports |
 | Matched universe expansion | [universe-expansion.md](universe-expansion.md) | Fixed 22-versus-55-stock training comparison, common validation panel, no retired-test reuse, and Colab operations |

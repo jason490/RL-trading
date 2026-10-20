@@ -926,3 +926,15 @@ stock/ETF objective remain unachieved. Owned shutdown verified, project usage
 this configuration rather than enlarging the failed fit.
 [Results](results/forest-signal-2026-10-20/README.md),
 [protocol](configs/experiments/forest_signal.json), [guide](docs/forest-signal.md).
+
+## 36. Chronological historical-regime audit — preregistered
+
+Audit fixedSPY/QQQ/IWM/DIA2001–2009 source consistency and all-session coverage
+before another learner. No future losing-symbol selection, automatic merging,
+Colab allocation or fitting. Past-only63/252-session decline counts are
+descriptive. Source splits retained without reapplying; dividend/source fields
+reconciled and unsupported capital gains rejected. A later matched protocol
+must separate recent-ETF sampling mass from old-history information and preserve
+all existing stock/ETF, short-side and prospective gates.
+[Protocol](configs/experiments/historical_regime_audit.json),
+[guide](docs/historical-regimes.md).
