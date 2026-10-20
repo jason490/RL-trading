@@ -81,7 +81,7 @@ identities, matched native full-state PPO controls, unchanged log-equity reward,
 actions/costs/starts/discount, seeds, budgets and selected/final gates. Run CPU
 smokes first; a seed11 screen must beat both controls before seeds23/37. Keep
 stock/ETF absolute gates, joint total/short reporting and independent prospective
-evidence. No model has yet been trained using this feature family.
+evidence. No research model has yet been accepted using this feature family.
 
 ## Current preflight evidence
 
@@ -118,3 +118,12 @@ with this protocol and state path. Dataset differences are allowed only through
 the fixed3-arm mapping. Source, parameters, reward, starts, costs and versions
 must agree, and holding baselines must match. Every cell retains its actual
 dataset ID and selected/final side attribution. Both control gates must pass.
+
+## Verified CPU smoke acceptance
+
+All3 512-transition Colab CPU smokes completed using defaultPython3.13.16.
+All234 frozen prefix predictions match exactly, normalization stays immutable,
+and all3 owned sessions stopped. Source780f382f6ea6cd862535b12c1723ee4dc06ade87
+is shared across arms. [Acceptance](../results/trend-context-2026-10-20/smoke-acceptance.json)
+records datasets/models, checksum proof and cumulative35.818227/150-unit usage.
+The50k selected/final screen is next; smoke acceptance does not promote a policy.

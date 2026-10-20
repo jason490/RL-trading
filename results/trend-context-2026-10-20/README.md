@@ -1,4 +1,4 @@
-# Longer-horizon context — prepared; no training yet
+# Longer-horizon context — smokes accepted; screen pending
 
 The optional family adds causal63/252-session log price returns and252-close
 trailing drawdown. It uses forward-only split continuity and excludes cash
@@ -25,4 +25,19 @@ each ([environment receipt](environment-preflight.json)). Source snapshot ends
 2023-12-29 and its full provenance matches the existing dataset. Default dataset
 regeneration and all causal/matched-data checks pass. Relevant checks:53 core/
 data tests,32 feature/profile tests,6 final focused tests (overlapping suites).
-No new training, allocation, or credits consumed; project35.795378/150.
+That preflight used no allocation; subsequent remote smoke acceptance is recorded below.
+
+## Colab smoke acceptance
+
+All3 variants completed512 transitions on Google Colab CPU, defaultPython3.13.16.
+Artifacts passed strict dataset/feature/source/curve checks. All3 owned sessions
+stopped and shutdown was verified; account350.65,rate0.00 and0 active assignments.
+The3 frozen bundles pass234 exact CPU prefix predictions, deterministic repeat,
+immutable normalization, and schema/feed/nonfinite rejection. This verifies
+wiring and restoration; smoke returns are not model-performance evidence.
+
+[Acceptance receipt](smoke-acceptance.json) binds all models/datasets to frozen
+source780f382f6ea6cd862535b12c1723ee4dc06ade87. Study conservative usage0.022849
+units; project35.818227/150. The same exact study baseline35.79537808105018
+and2-unit allowance apply across all phases. Next run the preregistered3-arm
+seed11 50k screen, then confirm only if full context beats BOTH controls.
