@@ -157,3 +157,16 @@ checks pass, project35.856639/150. Next inspect saved exposure/turnover/cost and
 protective-exit behavior to identify missed market participation versus signal
 errors before preregistering another change. Do not infer that a gain against
 the smaller baseline alone establishes feature value.
+
+## Participation/cost diagnosis and next hypothesis
+
+The saved-path audit covers5 recent50k PPO models and both phases, with no
+dataset access, training or Colab. Native stock/ETF shortfalls7.49/10.83pp split
+into4.85/3.88pp incremental cost drag and2.65/6.95pp non-cost gaps. Full-context
+ETF short contribution−6.79pp versus−0.15pp masked accompanies lower costs.
+Sub5%-equity resize costs are only0.05–0.12pp, so a small deadband is low priority.
+Holding-limit exits remain required. Next investigate strictly training-only
+supervised signal/warm-start feasibility, with chronological target completion,
+purging and independent preprocessing before allocation. This proposes no new
+training yet; future validation decline labels remain reporting-only.
+[Evidence](../results/participation-diagnostic-2026-10-20/README.md).

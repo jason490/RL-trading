@@ -788,3 +788,13 @@ release assets verified,21 duplicates removed (187.35MiB),316 retained hashes
 unchanged. Source/data/ledger retained; no retired test or orders. Project
 35.856639/150,account350.62,rate0.00,active0.
 [Evidence](../results/trend-context-2026-10-20/README.md).
+
+## 2026-10-20 saved-path participation audit
+
+Five source runs, ten selected/final phases, matched26-symbol development
+holding panels; costs and aggregate side/equity totals reconcile. Source report
+checksums remain unchanged, diagnostic code hashes recorded. Twelve relevant
+tests pass, including intraday short versus flat-close distinction, cost identity,
+pretrade resize scale, and bad date/horizon/accounting rejection. No weights,
+datasets, retired-test reports or Colab allocations opened; no new credits used.
+[Report and charts](../results/participation-diagnostic-2026-10-20/README.md).

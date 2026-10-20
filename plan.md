@@ -857,3 +857,15 @@ masked13.93%, baseline0.83%, holding30.60%. Full fails both gates, ETFs worsen a
 joint declining-stock total/short success is0/3; no confirmation. All6 owned
 sessions stopped,468 frozen predictions exact, project35.856639/150.
 [Evidence](results/trend-context-2026-10-20/README.md).
+
+## 32. Saved-path participation diagnosis — complete
+
+Audit5 completed50k models and both phases using saved development reports only.
+Reconcile costs and side P&L; separate accounting cost drag from non-cost excess,
+close exposure from intraday activity, and holding-limit/protective re-entries.
+Native stock/ETF gaps7.49/10.83pp include4.85/3.88pp cost drag. Full-context ETF
+short contribution−6.79pp versus−0.15pp masked; costs are lower. Small same-side
+resizes incur only0.05–0.12pp historical costs, so a small band is low priority.
+No training, data access, test use or Colab allocation. Next investigate strictly
+training-only supervised signal/warm-start feasibility before a new bounded
+protocol. [Evidence](results/participation-diagnostic-2026-10-20/README.md).

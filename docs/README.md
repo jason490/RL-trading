@@ -31,6 +31,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Learning diagnostics and improvement | [learning-experiments.md](learning-experiments.md) | Trading behavior, compact checkpoint curves, controlled CPU comparisons and sequential learning gates |
 | Matched 250k indicator follow-up | [indicator-experiments.md](indicator-experiments.md) | Combined, zones-only and sector-only comparisons against the completed 250k baseline |
 | Algorithm stability and deterioration | [algorithm-stability.md](algorithm-stability.md) | Saved-path diagnosis and bounded PPO-versus-SAC CPU comparison |
+| Participation and cost diagnosis | [participation-diagnostics.md](participation-diagnostics.md) | Saved-path cost identity, close versus intraday exposure, resize costs and exit behavior |
 | Research evaluation | [evaluation.md](evaluation.md) | Baselines, portfolio metrics and final-test isolation |
 | Fixed-policy direction replay | [direction-replay.md](direction-replay.md) | Universal sign filters, counterfactual paths, immutable inputs and paired phase reuse |
 | Short-side performance | [short-side.md](short-side.md) | Reconciled long/short P&L, falling-stock reports and positive-return requirements |
