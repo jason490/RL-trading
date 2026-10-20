@@ -998,3 +998,29 @@ conditions, recomputes metrics and complete cash/holding paths, and reconciles
 reported long/short attribution. A validation label alone cannot admit future
 dates or altered benchmarks.14 focused tests pass;12 actual retained selected/
 final SAC/history reports pass without fitting. No training-source change.
+
+## Completed initial-temperature comparison
+
+The two 50k SAC seed-11 screens are complete and fail the preregistered gates.
+Initial alpha 0.001 improves selected mean return to 19.67% versus default
+7.93%, but final falls to 9.84%; the final gain of 1.92pp misses 2pp and
+drawdown worsens 4.27pp. Final stocks/ETFs 10.78%/4.72% trail matched holding
+32.63%/19.47%; joint falling-stock total/short positives are 1/3 selected,
+0/3 final. No extension, confirmation seeds, temperature sweep or promotion.
+
+Fresh default configuration, all checkpoint scores and selected/final network
+tensors reproduce the prior full-state SAC exactly. Initial network hashes
+match across arms; 312 smoke/screen selected-bundle prefix predictions are exact.
+All four owned sessions stopped. Thirteen release assets have verified server
+digests; duplicate-only cleanup removes 15 files (167,684,918 bytes), preserving
+354 file hashes including models, replay, data, source, ledger and plan.html.
+The post-cleanup report reproduces byte for byte. Eighteen focused temperature
+and report-contract checks pass. Cumulative project 36.069198/150; account
+350.48 with zero assignments/rate after shutdown. Retired test stays isolated.
+[Complete evidence](../results/sac-temperature-2026-10-20/README.md).
+
+Next inspect saved selected/final action paths, directional contributions,
+exposure and cost differences to distinguish deterioration mechanisms before
+preregistering another bounded hypothesis. This diagnostic needs no fitting,
+provider calls or Colab allocation. Development results remain repeatedly used;
+prospective confirmation and the overall benchmark/short objective remain unmet.

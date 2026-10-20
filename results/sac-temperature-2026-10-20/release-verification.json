@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "asset_count": 13,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/sac-temperature-2026-10-20",
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773298,
+      "digest": "sha256:3b97294806a424516e6013e8e334a162104849e735dbdc01d21686dc9261381e",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 341,
+      "digest": "sha256:89cebce790719e36326204f6295ecdc7c7be957e43b625e627168fb56686cf71",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 942,
+      "digest": "sha256:a6a1d40e201125d01e6ebc4aac0bfee75e37b70a2f639f7b71caef10576724e7",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 387407,
+      "digest": "sha256:cc220154cf10c1b5cae77c5f48da1cbcb012f0469944870976f9997d5d1cc860",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 4512,
+      "digest": "sha256:697bcb5544697e821c6406619ea4947ca676865e41abc43404e9b3c871154d74",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 2595445,
+      "digest": "sha256:b4d439f04450c8f16c4fa477e81e941e7ee29db79aaa1b7c82a38fb6a7bf68a5",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2121,
+      "digest": "sha256:42c2d4b3223918c2a5bd60c238e873ee76e2f537f4dc679bfc87d5fed577572d",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2121,
+      "digest": "sha256:fe90618fed7120d3f05173e34920f42220981b1cd720bd488490ed86cf137ca6",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 2931,
+      "digest": "sha256:6a483daf7bd477bec350ca0b228627af76b27a452404dd209374905ed01b8786",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 402,
+      "digest": "sha256:e868df646a5e15f8b42f049dd7ce46384430010e92e29291cf9c3973d4bd5438",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 106566,
+      "digest": "sha256:199b1f7b88556ca9d9f52f3731b78c2010f8dd1d1f32488acb354c60a859b804",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3351422,
+      "digest": "sha256:f0935f9680e475f4105b47bcee675af91741173601357b165db9360e219186d3",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1131,
+      "digest": "sha256:1ffc0c490dcda86092cd2c9c0f751ca17df42b3f78d686ba06152a4c20bd74ee",
+      "state": "uploaded"
+    }
+  ]
+}
