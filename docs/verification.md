@@ -1068,3 +1068,11 @@ rejection pass. All3 owned sessions stopped. Project36.090878/150; study start
 36.069198 and2-unit allowance stay unchanged. Proceed only to the fixed3x50k
 seed11 screen; no smoke-return tuning or retired-test reuse.
 [Evidence](../results/td3-execution-state-2026-10-20/README.md).
+
+## TD3 state screen outcome
+
+Full TD3 selected/final6.19% fails fixed controls and absolute stock/ETF gates;
+all arms achieve0/3 joint profitable-short cases. No more steps/confirmation.
+468 exact restored predictions,6 owned stops,13 verified release assets and
+post-cleanup byte-identical report pass; project36.149107/150.
+[Outcome and next fit-versus-generalization diagnostic](td3-execution-state.md#completed-td3-state-comparison).

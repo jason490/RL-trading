@@ -1095,3 +1095,13 @@ TD3 actual Colab smokes3x1024 pass on Python3.13.16; matching initial four-netwo
 hashes/noise,234 exact frozen predictions and3 owned stops verified. Fixed3x50k
 screen next from same76151d1 source and original2-unit allowance.
 [Acceptance](results/td3-execution-state-2026-10-20/smoke-summary.json).
+
+## 42. TD3 state screen — failed, retained and cleaned
+
+Full selected/final6.19% versus holding30.60%; stocks5.38%/ETF10.65% and median
+stock excess-16.16pp fail. No extension/confirmation.468 frozen-prefix checks,
+6 verified owned stops,13 asset digests and post-cleanup report reproduction
+pass. Removed21 duplicate files preserving405 hashes. Project36.149107/150.
+Before new fitting, predeclare fixed training-only saved-policy replay to
+distinguish weak fitting from a generalization gap; no diagnostic selection.
+[Evidence](results/td3-execution-state-2026-10-20/README.md).

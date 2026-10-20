@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "asset_count": 13,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/td3-execution-state-2026-10-20",
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773678,
+      "digest": "sha256:8760744d223e05fdd0d5d89ecb7172a31afd79adc5c29b5da23688778ef8a597",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 341,
+      "digest": "sha256:f4a2a5e3e29e2b51523174fa95deee45cf382f940c7d61d0352b12aa1d37e4ca",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 1450,
+      "digest": "sha256:3bc37676ab0e52416ca170330c3a1c0c700aed74b0ab21355399acfe6041679e",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 579916,
+      "digest": "sha256:d4f6bdca327449198bacd5e13a18c9e902dba5b9b105bbcfa5424733ed46d18a",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 5199,
+      "digest": "sha256:77fe1fdf0df493d210bb794ec44b0a3837d62ba39760375eaa63c8b2e909a75b",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 3929053,
+      "digest": "sha256:d7127551c53e7a8fbb284ac0c4e03ec9fc8ed47bb15ceee867dc4caca88e7860",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 3123,
+      "digest": "sha256:089f57356f16f8b4b8cded9f8351682ff81acdcf47cf3e73f83e50a624ddab5e",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 3123,
+      "digest": "sha256:98168cf21cf4b45d07e4ad5cfdb4e5f7efcbce26d7d94a32c8d8f0ab8ea4d0c3",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 4099,
+      "digest": "sha256:cfd0cd5709b3d0006701c653ad57bb6d07f55788b1c4b334c56a43e8db5b9e8e",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 396,
+      "digest": "sha256:d58e4f9ac64486aa57c4c3271faab93d8d755bcdcb8c6cd5703ef527f93d0164",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 159249,
+      "digest": "sha256:25a1b3948c672a75cf6456621fdd8896d7db856f54aec1949af74821ef4be546",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 5055048,
+      "digest": "sha256:27e87ae05cec38a24acb786b1e664a672e4ca16e8b19fd0c830c9c0f03f20f17",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1489,
+      "digest": "sha256:86d9d6c74de9e70958fc377b4108099c4f76f9fbc17b85fa676295a66ebb0fe6",
+      "state": "uploaded"
+    }
+  ]
+}

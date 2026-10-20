@@ -341,3 +341,11 @@ reward, costs, parameters and strict absolute/relative gates;12 protocol/off-pol
 checks pass. No allocation before runtime/initial-noise preflight.
 [Category guide](td3-execution-state.md),
 [audit](../results/td3-diagnostic-2026-10-20/README.md).
+
+## TD3 state screen outcome
+
+Full TD3 selected/final6.19% fails fixed controls and absolute stock/ETF gates;
+all arms achieve0/3 joint profitable-short cases. No more steps/confirmation.
+468 exact restored predictions,6 owned stops,13 verified release assets and
+post-cleanup byte-identical report pass; project36.149107/150.
+[Outcome and next fit-versus-generalization diagnostic](td3-execution-state.md#completed-td3-state-comparison).

@@ -90,3 +90,30 @@ rejection pass. All3 owned sessions stopped. Project36.090878/150; study start
 36.069198 and2-unit allowance stay unchanged. Proceed only to the fixed3x50k
 seed11 screen; no smoke-return tuning or retired-test reuse.
 [Evidence](../results/td3-execution-state-2026-10-20/README.md).
+
+## Completed TD3 state comparison
+
+The fixed three-arm50k screen fails. Selected/final returns: legacy4.59%/2.87%,
+masked9.94%/0.45%, full6.19%/6.19%, versus holding30.60%. Full final stocks5.38%
+and ETFs10.65% miss holding32.63%/19.47%; median stock excess-16.16pp fails.
+Full gains3.32/5.75pp final over controls but misses both selected-gain gates.
+Final drawdown-24.59% cannot override return failures. All arms/phases have0/3
+joint falling-stock positive-total/positive-short cases. No extension, noise
+sweep, confirmation or promotion.
+
+Actual initial masked/full four-network hashes match;468 smoke/screen frozen
+prefix predictions are exact with immutable normalization/schema rejection.
+All6 owned sessions stopped;13 server assets verified. Duplicate-only cleanup
+removed21 files (241,549,725 bytes), preserving405 file hashes including models,
+replay, raw data, frozen source, ledger and plan.html. Post-cleanup report is
+byte-identical;28 focused TD3/report-contract checks pass. Project36.149107/150;
+separate account350.42 with zero rate/assignments.
+[Complete evidence](../results/td3-execution-state-2026-10-20/README.md).
+
+Before another algorithm or feature study, preregister a saved-policy replay on
+a fixed training-only interval to compare fitted-period performance with the
+known development failures. This can distinguish weak fitting from a
+generalization gap without new fitting or Colab. Preserve normalization/models
+and do not select checkpoints from the diagnostic. Earlier state-study failures
+remain negative evidence, not proof that all execution information is useless.
+Prospective confirmation and the full objective remain unmet.
