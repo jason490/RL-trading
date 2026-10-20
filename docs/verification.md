@@ -937,3 +937,11 @@ allocation, including actual Gym/SB3 observation checks without model fitting.
 SAC fixed reporter and interactive chart are implemented before screen results;
 13 common/SAC gate/archive checks pass. Smoke fleet3x1024 is running from
 bb0f3e2; runtime/parity/shutdown acceptance pending, no performance claim.
+
+## Actual SAC state Colab smoke acceptance
+
+All3x1024-transition CPU smokes pass onPython3.13.16,234 frozen predictions
+exact with immutable normalization and incompatible-input rejection.3 owned
+sessions stopped and cleanup verified. Project35.939018 after smoke. Fixed
+3x50k screen launched frombb0f3e2 with original2-unit study allowance.
+[Evidence](../results/sac-execution-state-2026-10-20/README.md).

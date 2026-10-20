@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "owned_cleanup_verified": true,
+  "records": [
+    {
+      "task": "sac-state-legacy-11-smoke",
+      "session": "rl-stocks-cpu-f99ccf260ea7",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "bundle_id": "e42d1ec9c393497297639c933be6ffde95bff69cff7166a2b562ec862f501d88",
+      "steps": 1024,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "observation": {
+        "version": 1,
+        "profile": "legacy",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return"
+        ]
+      },
+      "resolved_parameters": {
+        "buffer_size": 100000,
+        "batch_size": 64,
+        "learning_starts": 64,
+        "train_freq": 1,
+        "gradient_steps": 1,
+        "tau": 0.005,
+        "ent_coef": "auto",
+        "learning_rate": 0.0003,
+        "gamma": 0.99,
+        "policy_kwargs": {
+          "net_arch": [
+            32,
+            32
+          ]
+        }
+      },
+      "source_hash": "c25b24c2b5035ad46590d98b8ef826793a3e964e34dfdd91adb35962914dedb2"
+    },
+    {
+      "task": "sac-state-execution_masked-11-smoke",
+      "session": "rl-stocks-cpu-9e32bbc5986d",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "bundle_id": "e43a335985a75dfd2aed728d783db71bd12ccbbf0372021b19fff3c0b4f8b506",
+      "steps": 1024,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "observation": {
+        "version": 1,
+        "profile": "execution_masked",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "resolved_parameters": {
+        "buffer_size": 100000,
+        "batch_size": 64,
+        "learning_starts": 64,
+        "train_freq": 1,
+        "gradient_steps": 1,
+        "tau": 0.005,
+        "ent_coef": "auto",
+        "learning_rate": 0.0003,
+        "gamma": 0.99,
+        "policy_kwargs": {
+          "net_arch": [
+            32,
+            32
+          ]
+        }
+      },
+      "source_hash": "c25b24c2b5035ad46590d98b8ef826793a3e964e34dfdd91adb35962914dedb2"
+    },
+    {
+      "task": "sac-state-execution_full-11-smoke",
+      "session": "rl-stocks-cpu-32a6c4c6eda3",
+      "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+      "bundle_id": "8d9cd2e568ec071ef92c7dbc0d5457d4622136ff1fe0b2608d17999e2d47b6b5",
+      "steps": 1024,
+      "python": [
+        3,
+        13,
+        16
+      ],
+      "observation": {
+        "version": 1,
+        "profile": "execution_full",
+        "portfolio_fields": [
+          "exposure",
+          "cash_fraction",
+          "holding_age",
+          "unrealized_fraction",
+          "equity_return",
+          "stop_distance",
+          "near_distance",
+          "far_distance",
+          "protection_present",
+          "near_done",
+          "last_stop_action",
+          "last_near_action",
+          "last_width_action",
+          "unit_share_fraction"
+        ]
+      },
+      "resolved_parameters": {
+        "buffer_size": 100000,
+        "batch_size": 64,
+        "learning_starts": 64,
+        "train_freq": 1,
+        "gradient_steps": 1,
+        "tau": 0.005,
+        "ent_coef": "auto",
+        "learning_rate": 0.0003,
+        "gamma": 0.99,
+        "policy_kwargs": {
+          "net_arch": [
+            32,
+            32
+          ]
+        }
+      },
+      "source_hash": "c25b24c2b5035ad46590d98b8ef826793a3e964e34dfdd91adb35962914dedb2"
+    }
+  ],
+  "source_revision": "bb0f3e25bcf60765df158401434959458508da7c",
+  "project_units_after_smoke": 35.93901783077053,
+  "smoke_conservative_increment": 0.021482691561516276,
+  "account_balance_after_smoke": 350.57,
+  "rate_after_smoke": 0.0,
+  "active_assignments_after_smoke": 0,
+  "performance_gate_evaluated": false
+}

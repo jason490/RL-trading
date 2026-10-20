@@ -1009,3 +1009,8 @@ SAC state version16 metered job/worker/artifact contracts implemented. Three
 immutable1024-transition CPU smoke tasks validate locally; full/legacy/masked
 archive fixtures pass and semantic tampering is rejected. Freeze committed
 source before allocation; share original ledger and2-unit study allowance.
+
+SAC state Colab smokes pass:3x1024 transitions,Python3.13.16,234 exact frozen
+predictions and3 verified owned stops.3x50k seed11 screen launched from the same
+bb0f3e2 source and shared original2-unit allowance. No performance verdict.
+[Evidence](results/sac-execution-state-2026-10-20/README.md).

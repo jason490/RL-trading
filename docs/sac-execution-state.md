@@ -66,9 +66,11 @@ local validation. Actual Colab acceptance is next, not implied by fixtures.
 
 ## Smoke fleet and report readiness
 
-All three1024-transition CPU smokes are now running from frozen sourcebb0f3e2
-with original ledger/lock and2-unit total study allowance. Completion/parity and
-owned cleanup are still pending; no smoke return selects the configuration.
+All three1024-transition CPU smokes passed from frozen sourcebb0f3e2, actual
+Python3.13.16,234 exact frozen predictions and3 verified owned shutdowns. The
+fixed50k three-arm screen is now launched with the same source, original
+ledger/lock and2-unit allowance including smoke. Performance remains pending;
+no smoke return selects the configuration.
 
 After complete50k screen retrieval and shutdown, use:
 
@@ -86,3 +88,6 @@ checkpoint journal and emits short-side cohorts plus standalone interactive
 After transport cleanup it can reconstruct a temporary archive from retained
 files for the same checks. Reporting never trains or marks the goal achieved.
 Thirteen focused common/SAC gate-and-archive checks pass before screen results.
+
+[Actual Colab smoke evidence](../results/sac-execution-state-2026-10-20/README.md):
+project35.939018 after smoke; screen launched, no gate verdict.
