@@ -897,3 +897,8 @@ Actual historical Colab smoke acceptance:3x512 PPO transitions,Python3.13.16,
 234 exact restored predictions,3 owned shutdowns verified. Project35.888374
 after smoke; no performance gate assessed.50k three-arm screen launched from
 same source and original2-unit study allowance.
+
+Historical fixed screen reporter implemented before reading completed screen
+metrics. Two focused gate tests cover both controls/phases, absolute stock/ETF
+and median targets, drawdown, incomplete/nonfinite rejection. Actual50k screen
+is still running; no gate verdict has been computed.

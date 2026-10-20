@@ -72,3 +72,21 @@ sessions stopped and234 restored predictions are exact. Archive checks and
 normalization/schema rejection pass. Conservative project35.888374 after smoke.
 The50k three-arm seed11 screen is launched from frozen revision4be5219 and shares
 the original2-unit study allowance. [Evidence](../results/historical-augmentation-2026-10-20/README.md).
+
+## Fixed screen reporting
+
+After complete artifact retrieval and owned shutdown:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/report_history.py \
+  --state .runtime/history-screen-state.json \
+  --output artifacts/historical-regimes/screen-report.json
+```
+
+The reporter revalidates each archive against its fixed plan, verifies immutable
+payloads and shared source/configuration, and requires identical full holding
+paths and symbol panels across both phases/all arms. Short-side cohorts are
+reporting-only. Both dual-control gains and absolute selected/final group/median
+thresholds must pass; development promotion never sets objective achievement.
+Tests reject one-control-only gains, phase-specific ETF/median failures, excess
+drawdown and nonfinite/incomplete metrics. No new training is run by reporting.
