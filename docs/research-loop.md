@@ -241,3 +241,15 @@ base data, causal inputs and short-side accounting rather than adding another
 feature/data family without a diagnosis. Any new comparison must retain
 selected/final stock/ETF and drawdown gates, multiple seeds when justified, and
 frozen prospective confirmation.
+
+## SAC diagnostic and next fixed hypothesis
+
+All three saved100k SAC models actually have12 legacy inputs, omitting active
+protection/partial-exit/previous-risk state. Six saved phases reconcile without
+opening datasets; final mostly-long behavior and costs do not explain the
+entire holding gap. Missing state is verified, its performance effect is not.
+The fixed SAC legacy/masked/full protocol tests that effect with unchanged base
+data/reward/costs and equal50k cells. Require both controls and absolute selected/
+final stock/ETF gates before confirmation. No assumption that failed PPO state
+ablations imply SAC success. Ten checks pass; project35.917535/150, no new units.
+[Protocol](../configs/experiments/sac_execution_state.json).

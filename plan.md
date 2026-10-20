@@ -990,3 +990,17 @@ sampling imbalance does not explain this comparison.468 frozen checks pass;
 6 owned shutdowns,15 verified assets,186.45MiB duplicate cleanup with377 retained
 hashes unchanged. Project35.917535/150.
 [Results](results/historical-augmentation-2026-10-20/README.md).
+
+## 38. SAC execution-state diagnosis and protocol — preregistered
+
+Three100k frozen SAC models load with12 legacy inputs;9 execution fields omitted.
+Six saved phases audited without dataset access or fitting. Final stock/ETF
+returns17.69%/9.97% versus holding32.63%/19.47%, close shorts2.53%/0.25%;
+costs explain5.98/3.91pp of14.94/9.50pp gaps. No fabricated direction P&L.
+New fixed SAC legacy/masked/full50k comparison uses current train/validation-only
+data, same params/costs/reward and both controls. Strict selected/final absolute
+stock/ETF gates before23/37 confirmation; prospective evidence still required.
+Ten focused tests pass; no new Colab allocation. Job/worker acceptance pending.
+[Diagnosis](results/sac-diagnostic-2026-10-20/README.md),
+[protocol](configs/experiments/sac_execution_state.json),
+[guide](docs/sac-execution-state.md).

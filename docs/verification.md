@@ -912,3 +912,15 @@ confirmation.468 exact smoke/screen predictions,6 owned stops,15 verified
 release assets; duplicate cleanup21 files195,506,959 bytes,377 retained hashes
 unchanged. Conservative project35.917535/150.
 [Full evidence](../results/historical-augmentation-2026-10-20/README.md).
+
+## SAC saved-path diagnosis
+
+Three frozen100k SAC models restore with12 legacy inputs. Six development
+reports reconcile costs/equity and identical holding paths without dataset
+access; all original hashes unchanged. Final stock/ETF17.69%/9.97%, holding
+32.63%/19.47%; close shorts2.53%/0.25% are not short-profit evidence. Ten
+focused tests pass. New three-arm SAC state protocol fixed but no allocation.
+[Evidence](../results/sac-diagnostic-2026-10-20/README.md).
+
+Broader SAC diagnostic/participation/observation regression:19 tests pass,
+including actual Gymnasium/SB3 observation-profile checkers, without fitting.
