@@ -156,3 +156,13 @@ kept because they are not byte-identical to final output. Original models, full
 reports/curves, source export, raw snapshot,3 datasets and ledger remain.
 [Cleanup](../results/trend-context-2026-10-20/cleanup.json),
 [server receipts](../results/trend-context-2026-10-20/release-verification.json).
+
+## Supervised feasibility cleanup — 2026-10-20
+
+One owned CPU session stopped;12 forecast-only release assets passed server
+SHA-256/size checks. Final transfers matched all extracted files, upload payloads
+matched retained source/data/plans, and6 staged model copies matched the frozen
+bundle. Cleanup removed11 duplicates (10,857,969 logical bytes;10.36MiB), with233
+retained hashes unchanged. Unique snapshots, probe predictions, fit logs, prepared
+data, source export and ledger remain. [Cleanup](../results/supervised-signal-2026-10-20/cleanup.json),
+[server receipts](../results/supervised-signal-2026-10-20/release-verification.json).

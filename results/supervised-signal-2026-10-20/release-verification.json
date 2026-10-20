@@ -1,0 +1,81 @@
+{
+  "assets": [
+    {
+      "digest": "sha256:0c7a97aae52369e12bbe016d0de3810d93a4c1d66d2484406ffe8f29adb2acf8",
+      "name": "comparison.html",
+      "size": 8290,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:c81233665e3f51c905b19011612f2ab825f3cb24aad44dad4a976263f9951200",
+      "name": "compute.json",
+      "size": 342,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:bbe27fe2addfbcea84fee3ec9b2c9fbff70151616a6c58db0366bd735ae88340",
+      "name": "metadata.json",
+      "size": 1422,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:6ec4d4e9bc35ea7eeffb970093052e7a9edf774821a6cba81052fc9727d86495",
+      "name": "preflight.json",
+      "size": 3256,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:98eeb63736159ec4904d91025c1144cfb3db2f97b3c480b735055fdc1eb1c9c7",
+      "name": "protocol.json",
+      "size": 4911,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:47834e435e1bccebe2608aedf93dc75610f6f07c53a1637d2bd3a90dd504dd93",
+      "name": "README.md",
+      "size": 3343,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:2c67f15d2dafae127fc70e864b377131441757297f8adbb83cdf4235a4688e71",
+      "name": "restoration.json",
+      "size": 1498,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:1b47e77270538e2a02ef18fd1999dbf4f1c7d667de3972788f23d6ac7cc02284",
+      "name": "result.json",
+      "size": 3527,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:f899b631f77c1ad1c317ae4e941873d0ce536260e067a3d717ec365de4cfd246",
+      "name": "SHA256SUMS",
+      "size": 895,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:a2148dbdfe6f5ac200b6bd3b91c2c8458baea0852af4bd57923535070b232b20",
+      "name": "signal-models.tar.gz",
+      "size": 120890,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:9329b744aa64656d3dcb58ea1610e17bb44f8b982af721a9b6ebd1ebba8734b2",
+      "name": "source-proof.json",
+      "size": 327,
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:2d2ae26ee44aa71e0966c2f5a97632368bbd0de522197f2e8210e38e39bfc6f3",
+      "name": "training-loss.json",
+      "size": 4878,
+      "state": "uploaded"
+    }
+  ],
+  "tag": "supervised-signal-2026-10-20",
+  "url": "https://github.com/jason490/RL-trading/releases/tag/supervised-signal-2026-10-20",
+  "verified": true,
+  "asset_count": 12,
+  "all_server_sha256_and_sizes_match": true
+}

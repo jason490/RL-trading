@@ -90,8 +90,7 @@ horizon, separate episodes, entry-day dividend/split exclusion, subsequent actio
 delayed availability, fit-only preprocessing, and unused project-validation data.
 
 The prepared data has 45,266 fit and 18,616 probe examples across 26 instruments.
-No supervised model has been fitted yet. The planned one-CPU feasibility
-allocation will use the existing metered fleet, original ledger, a one-unit
+The completed one-CPU feasibility allocation used the existing metered fleet, original ledger, a one-unit
 incremental study allowance and two-hour deadline. Actual Colab Python and tiny
 finite-loss/save/load checks must pass before the fixed full fits. No dependency
 or interpreter changes, orders, or new allocations occurred during preparation.
@@ -127,8 +126,7 @@ PYTHONPATH=src .venv/bin/python scripts/verify_signal_runs.py \
 
 Thirty-six focused model, target, fleet and artifact tests pass without local
 model fitting. They include predictor restoration, nonfinite/schema/checksum
-rejection, fixed-plan checks and tampered-metric detection. The real Colab fits
-remain pending; these tests do not establish forecast accuracy.
+rejection, fixed-plan checks and tampered-metric detection. The actual Colab outcome is recorded below; these tests alone do not establish forecast accuracy.
 
 ## Completed feasibility: rejected
 
@@ -139,3 +137,10 @@ but has rank correlation below 0.02. No PPO warm start or longer MLP run follows
 One Colab CPU session stopped; all 111,696 forecasts restore with maximum
 cloud/CPU error 5.96e-8 and exact local repeats. Project 35.861240/150 units.
 [Full evidence](../results/supervised-signal-2026-10-20/README.md).
+
+All12 release assets passed server digest/size checks. Cleanup removed11 duplicate
+files (10.36MiB), with233 retained hashes unchanged. Six forecast MLPs remain in
+the checksummed bundle. Fixed prediction moments show positive within-day rank
+correlation but negative pooled prediction/target covariance for every MLP.
+A separately preregistered causal common-component diagnostic is next; no source
+weights, failed gate or trading inference contract is changed by this finding.

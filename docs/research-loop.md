@@ -170,3 +170,16 @@ supervised signal/warm-start feasibility, with chronological target completion,
 purging and independent preprocessing before allocation. This proposes no new
 training yet; future validation decline labels remain reporting-only.
 [Evidence](../results/participation-diagnostic-2026-10-20/README.md).
+
+## Supervised feasibility outcome
+
+Neither fixed MLP arm passes predictive gates; errors exceed the constant by
+5.52% masked and12.56% full. Positive daily rank correlation around0.04 does not
+establish accurate level forecasts or profitable trades. Ridge error is about
+2.7% better but its rank correlation is below0.02. No PPO transfer or more MLP
+updates follow. All6 predictors restore, the owned session stopped, and12 assets
+passed publication checks. Project35.861240/150. Fixed forecast moments find
+negative pooled prediction/target covariance for every MLP despite positive
+within-day ranking. Next preregister a causal same-session common-component
+diagnostic on fixed forecasts before any new fitting; retain the original failed
+gate and the internal probe's development-only status.

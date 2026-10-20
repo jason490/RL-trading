@@ -809,3 +809,15 @@ splits, episodes, future perturbations, delayed/UTC timestamps and normalization
 Immutable readback and protocol/data identity checks pass. No supervised model
 fit, new Colab allocation, policy change or profitability result yet.
 [Preflight evidence](../results/supervised-signal-2026-10-20/README.md).
+
+## 2026-10-20 supervised feasibility completed
+
+One Colab CPU runtime (Python3.13.16) completed2 discarded prefix updates and
+12000 full-fit updates across6 models, plus ridge/constant controls. Both MLP
+gates fail: masked/full mean MSE5.52%/12.56% worse than constant, no passing
+seeds. No PPO warm start. All111,696 forecasts restore against immutable probe
+inputs; maximum cloud/CPU error5.96e-8, local repeats exact. Metric/gate and
+normalization/schema checks pass. Session stopped,12 release assets verified,
+11 duplicates removed,233 retained hashes unchanged. No project-validation or
+retired-test labels used; no profitability established. Project35.861240/150.
+[Evidence](../results/supervised-signal-2026-10-20/README.md).
