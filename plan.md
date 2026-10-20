@@ -846,3 +846,8 @@ until data preflight and a committed numeric dual-control protocol; CPU smokes
 then seed11 screen, confirmation23/37 only if both control gates pass. Preserve
 short-side joint total/P&L reports and retired-test isolation.
 See [feature guide](docs/trend-context.md).
+
+Version12 context jobs now lock dataset/feature contracts before allocation,
+inside the worker and on artifact retrieval. Matched reporting handles the fixed
+3-dataset mapping and both gates. Focused job/fleet/report/artifact checks pass;
+CPU smokes are next after committed-source export and account preflight.

@@ -83,6 +83,11 @@ def validate_tasks(tasks,root):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
+        if plan.get('version')==12:
+            from rl_stocks.data.generation.datasets import read_dataset
+            from rl_stocks.runtime.colab.jobs import validate_context_payload
+            if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('trend-context task dataset identity mismatch')
+            validate_context_payload(read_dataset(dataset),plan)
         result.append({**task,'dataset':str(dataset)});seen.add(task['id'])
     return result
 

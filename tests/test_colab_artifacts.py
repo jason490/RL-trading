@@ -266,3 +266,42 @@ class ArtifactTests(unittest.TestCase):
         run['reward_config']['kind']='net_log_equity'
         (folder/'metadata.json').write_text(json.dumps(run))
         with self.assertRaisesRegex(RuntimeError,'configuration mismatch'):self.check()
+
+    def test_context_study_verifies_frozen_feature_contract(self):
+        from rl_stocks.runtime.colab.jobs import context_plan
+        from rl_stocks.training.initialization import initialization_spec
+        from rl_stocks.environment.observations.state import observation_spec
+        from rl_stocks.rl.ppo.architecture import architecture_spec
+        from rl_stocks.rl.registry.factory import resolved_parameters
+        from rl_stocks.features.registry.assemble import NAMES as BASE
+        from rl_stocks.features.trend.context import NAMES as EXTRA
+        self.plan=context_plan('full',smoke=True);job=self.plan['jobs'][0];run=self.runs[0]
+        curve=[{'steps':256,'phase':'on_step','score':.01},{'steps':512,'phase':'post_update','score':.01}]
+        identity=self.plan['dataset_contract']['identity']
+        run.update(job,dataset=identity,requested_steps=512,actual_steps=512,
+            reward_config={'kind':'net_log_equity','scale':1.},validation_checkpoints=curve,
+            initialization=initialization_spec('wide','ppo'),observation=observation_spec('execution_full'),
+            start_sampling={'mode':'legacy_uniform'},policy_architecture=architecture_spec('native',7),
+            resolved_parameters=resolved_parameters('ppo',True,None,'native',7))
+        for index in (1,2,3,4):(self.artifacts/'runs'/str(index)/'metadata.json').unlink()
+        folder=self.artifacts/'runs/0'
+        (folder/'learning-curve.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in curve))
+        (folder/'learning-curve.csv').write_text('steps,return_pct\n256,1.0\n512,1.0\n')
+        (folder/'learning-curve.html').write_text('curve')
+        def bundle(names):
+            m={'metadata':{'observation':run['observation'],'policy_architecture':run['policy_architecture'],
+                'reward_config':run['reward_config']},'feature_schema':self.plan['dataset_contract']['schema'],
+                'names':names,'data_manifest':{'trend_context':{'mode':'full'}}}
+            run['bundle_id']=digest(m);target=self.artifacts/'frozen'/run['bundle_id'];target.mkdir(exist_ok=True)
+            (target/'manifest.json').write_bytes(canonical(m));(target/'model.zip').write_bytes(b'fixture')
+            (target/'checksums.json').write_bytes(canonical({p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in target.iterdir() if p.name!='checksums.json'}))
+            (folder/'metadata.json').write_text(json.dumps(run))
+            self.completion.update(plan=self.plan,dataset=identity,gpu=None,completed=[run]);self.write_completion()
+            archive=self.root/'context.tar.gz'
+            with tarfile.open(archive,'w:gz') as t:t.add(self.artifacts,arcname='artifacts')
+            return archive
+        names=list(BASE)+list(EXTRA);archive=bundle(names)
+        self.assertEqual(len(validate_archive(archive,self.plan,identity)),1)
+        with self.assertRaisesRegex(RuntimeError,'dataset identity'):validate_archive(archive,self.plan,'wrong')
+        archive=bundle(list(reversed(names)))
+        with self.assertRaisesRegex(RuntimeError,'frozen trend-context'):validate_archive(archive,self.plan,identity)

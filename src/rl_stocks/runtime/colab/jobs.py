@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==11:
+    if plan.get('version')==12:
+        try:expected=context_plan(**plan['context_study'])
+        except (KeyError,TypeError):raise ValueError('malformed trend-context study plan') from None
+        if plan!=expected:raise ValueError('unsupported trend-context study plan')
+    elif plan.get('version')==11:
         try:expected=reward_plan(**plan['reward_study'])
         except (KeyError,TypeError):raise ValueError('malformed reward study plan') from None
         if plan!=expected:raise ValueError('unsupported reward study plan')
@@ -205,3 +209,35 @@ def reward_plan(kind, seed=11, smoke=False):
             'milestones':[steps],'reward_scale':1.,'initialization':'wide',
             'start_sampling':'legacy_uniform','observation_profile':'execution_full',
             'policy_variant':'native','reward_kind':kind}]}
+
+
+CONTEXT_DATASETS = {
+    'matched_baseline':'fcde438c6423ec15f8d42fd6d7afe08deb0e434653bead517757d42be1ce4546',
+    'masked':'d603bad1d698d53ac9aadf7890c84c055a4b4b7e51eff6033ab0270420f22ae3',
+    'full':'830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed'}
+
+
+def context_plan(arm, seed=11, smoke=False):
+    if arm not in CONTEXT_DATASETS or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported trend-context arm, seed or smoke mode')
+    plan=reward_plan('net_log_equity',seed,smoke)
+    plan.pop('reward_study')
+    plan.update(version=12,context_study={'arm':arm,'seed':seed,'smoke':smoke},
+        dataset_contract={'identity':CONTEXT_DATASETS[arm],'mode':arm,
+            'market_features':7 if arm=='matched_baseline' else 10,
+            'schema':'daily-indicators-v1-trend-context-v1-'+arm})
+    return plan
+
+
+def validate_context_payload(data, plan):
+    from rl_stocks.features.registry.assemble import NAMES as BASE
+    from rl_stocks.features.trend.context import NAMES as EXTRA
+    contract=plan['dataset_contract'];mode=contract['mode']
+    names=list(BASE)+(list(EXTRA) if mode!='matched_baseline' else [])
+    if (data['names']!=names or len(names)!=contract['market_features']
+        or data['schema']!=contract['schema']
+        or data['manifest'].get('trend_context',{}).get('mode')!=mode
+        or data['manifest'].get('included_splits')!=['train','validation']
+        or data['manifest'].get('unverified_override') is not False
+        or any(e['split'] not in ('train','validation') or any(b['session']>'2023-12-31' for b in e['bars']) for e in data['episodes'].values())):
+        raise ValueError('trend-context dataset contract mismatch')

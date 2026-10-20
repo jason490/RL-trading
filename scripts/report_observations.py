@@ -31,6 +31,11 @@ def main():
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete study and verified cleanup required')
     architecture=protocol.get('study_kind')=='policy_architecture'
     reward=protocol.get('study_kind')=='reward_objective'
+    context=protocol.get('study_kind')=='trend_context'
+    if context:
+        from rl_stocks.runtime.colab.jobs import CONTEXT_DATASETS
+        if {a:c['dataset'] for a,c in protocol['arm_config'].items()}!=CONTEXT_DATASETS:raise ValueError('fixed context dataset mapping required')
+        arm_by_dataset={v:k for k,v in CONTEXT_DATASETS.items()}
     candidate='net_initial_equity_change' if reward else protocol.get('promotion_candidate','execution_full')
     references=[protocol['reference_arm']] if reward else protocol['promotion_references']
     previous=json.loads(a.screen.read_text()) if a.screen else None
@@ -44,13 +49,20 @@ def main():
     for item in state['completed'].values():
         paths=list((Path(item['root'])/'runs').glob('*/metadata.json'))
         if len(paths)!=1:raise ValueError('one run per task required')
-        path=paths[0];m=json.loads(path.read_text());arm=(m.get('reward_config',{}).get('kind') if reward else m.get('policy_architecture',{}).get('variant') if architecture else m.get('observation',{}).get('profile'));seed=str(m['seed'])
-        if (arm not in protocol['arms'] or m.get('observation')!=observation_spec('execution_full' if architecture or reward else arm)
+        path=paths[0];m=json.loads(path.read_text());arm=(arm_by_dataset.get(m['dataset']) if context else m.get('reward_config',{}).get('kind') if reward else m.get('policy_architecture',{}).get('variant') if architecture else m.get('observation',{}).get('profile'));seed=str(m['seed'])
+        if (arm not in protocol['arms'] or m.get('observation')!=observation_spec('execution_full' if architecture or reward or context else arm)
             or m['status']!='complete' or m['smoke'] or m['algorithm']!='ppo' or m['device']!='cpu'
-            or m['actual_steps']!=50000 or m['requested_steps']!=50000 or m['dataset']!=protocol['dataset']
+            or m['actual_steps']!=50000 or m['requested_steps']!=50000 or m['dataset']!=(protocol['arm_config'].get(arm,{}).get('dataset') if context else protocol['dataset'])
             or m['initialization']!=initialization_spec('wide') or m['start_sampling']!={'mode':'legacy_uniform'}
             or m['seed'] not in ((23,37) if previous else (11,))):raise ValueError('unexpected execution-observation cell')
         current={k:m[k] for k in ('dataset','source_hash','git','simulation','versions','resolved_parameters','reward_config','evaluation_every','initialization','start_sampling')}
+        if context:
+            from rl_stocks.rl.ppo.architecture import architecture_spec
+            from rl_stocks.rl.registry.factory import resolved_parameters
+            if (m.get('policy_architecture')!=architecture_spec('native',7)
+                or m['resolved_parameters']!=resolved_parameters('ppo',False,{'n_steps':protocol['n_steps'],'batch_size':protocol['batch_size']})
+                or m['reward_config']!={'kind':'net_log_equity','scale':1.}):raise ValueError('context native/reward mismatch')
+            current['dataset']={'varied_datasets':CONTEXT_DATASETS}
         if reward:
             from rl_stocks.rl.ppo.architecture import architecture_spec
             from rl_stocks.rl.registry.factory import resolved_parameters
@@ -69,7 +81,7 @@ def main():
             current['resolved_parameters']=resolved_parameters('ppo',False,overrides)
         if current['git']['dirty'] or contract is not None and current!=contract:raise ValueError('source/configuration mismatch')
         contract=current
-        cell={'seed':m['seed'],'run':path.parent.name,'bundle_id':m['bundle_id'],'observation':m['observation'],'reports':{},'policy_architecture':m.get('policy_architecture'),'reward_config':m.get('reward_config')}
+        cell={'dataset':m['dataset'],'seed':m['seed'],'run':path.parent.name,'bundle_id':m['bundle_id'],'observation':m['observation'],'reports':{},'policy_architecture':m.get('policy_architecture'),'reward_config':m.get('reward_config')}
         cell['learning_curve']=[{k:r[k] for k in ('steps','phase','return_pct','change_pp','mean_max_drawdown_pct','mean_costs')} for r in latest_points(m['validation_checkpoints'])]
         for phase,file in [('selected','selected-validation.json'),('final','validation.json')]:
             rp=path.parent/file;results=json.loads(rp.read_text())

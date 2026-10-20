@@ -92,3 +92,29 @@ matched raw panels and first7 normalization agree. Actual Gymnasium/SB3 checkers
 pass with21/24/24 observation fields, and masked/full initial tensors match
 exactly. The [numeric protocol](../configs/experiments/trend_context.json) is
 fixed before allocation. No profitability or training result is available yet.
+
+## Colab jobs and matched reporting
+
+Version12 plans bind each arm to its immutable dataset identity, exact feature
+order/count/schema, mode and development-only manifest. The fleet rejects a
+wrong task dataset before allocation; the remote worker verifies identity and
+content before training. Retrieval checks the frozen feature contract as well
+as weights, curves, reward, observations, architecture, Python and hardware.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_observation_jobs.py \
+  --protocol configs/experiments/trend_context.json --phase smoke \
+  --output .runtime/trend-context-smoke-jobs.json
+```
+
+Run through the existing centrally metered fleet with the original cumulative
+ledger and a2-unit study allowance. Use the same exact study-start ledger value
+across smoke/screen/confirmation, never reset it. Freeze one committed source
+for all arms. Smoke acceptance includes CPU frozen prediction parity before
+50k tasks. Confirmation task preparation requires a matching passing screen.
+
+After verified screen completion/cleanup, use `scripts/report_observations.py`
+with this protocol and state path. Dataset differences are allowed only through
+the fixed3-arm mapping. Source, parameters, reward, starts, costs and versions
+must agree, and holding baselines must match. Every cell retains its actual
+dataset ID and selected/final side attribution. Both control gates must pass.

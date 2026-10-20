@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from rl_stocks.core.contracts import digest
-from rl_stocks.runtime.colab.jobs import observation_plan,architecture_plan,reward_plan
+from rl_stocks.runtime.colab.jobs import observation_plan,architecture_plan,reward_plan,context_plan,CONTEXT_DATASETS
 from rl_stocks.rl.ppo.architecture import VARIANTS
 
 
@@ -16,9 +16,12 @@ def main():
     args=parser.parse_args();protocol=json.loads(args.protocol.read_text())
     architecture=protocol.get('study_kind')=='policy_architecture'
     reward=protocol.get('study_kind')=='reward_objective'
-    expected=['net_log_equity','net_initial_equity_change'] if reward else list(VARIANTS) if architecture else ['legacy','execution_masked','execution_full']
+    context=protocol.get('study_kind')=='trend_context'
+    expected=list(CONTEXT_DATASETS) if context else ['net_log_equity','net_initial_equity_change'] if reward else list(VARIANTS) if architecture else ['legacy','execution_masked','execution_full']
     if protocol['arms']!=expected or protocol['steps_per_cell']!=50000:
         raise ValueError('unsupported execution-observation protocol')
+    if context and {a:c['dataset'] for a,c in protocol['arm_config'].items()}!=CONTEXT_DATASETS:
+        raise ValueError('fixed context dataset identities required')
     seeds=(11,)
     if args.phase=='confirm':
         if not args.screen:raise ValueError('passing screen required')
@@ -27,8 +30,8 @@ def main():
             raise ValueError('matching passing screen required')
         seeds=(23,37)
     elif args.screen:raise ValueError('unexpected screen input')
-    tasks=[{'id':f'{profile}-{seed}','dataset':'data/datasets/'+protocol['dataset'],
-            'plan':(reward_plan if reward else architecture_plan if architecture else observation_plan)(profile,seed,args.phase=='smoke')}
+    tasks=[{'id':f'{profile}-{seed}','dataset':'data/datasets/'+(protocol['arm_config'][profile]['dataset'] if context else protocol['dataset']),
+            'plan':(context_plan if context else reward_plan if reward else architecture_plan if architecture else observation_plan)(profile,seed,args.phase=='smoke')}
            for seed in seeds for profile in protocol['arms']]
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(tasks,indent=2)+'\n')
