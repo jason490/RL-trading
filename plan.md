@@ -1208,3 +1208,13 @@ checks reject corruption/non-final markers; legacy reports stay compatible and
 require separate alignment evidence.33 tests pass without fitting, no Colab or
 ledger reset. Remote acceptance pending authorization after metering stop.
 [Contract](docs/training.md#checkpoint-identity-during-interruptions).
+
+## 50. Retained regularization numerical diagnosis — complete
+
+Same-host inference-only audit finds5942 subnormal policy values and14.10×
+flush-mode forward speedup versus control0/1.02×, fixed-batch outputs exact,
+weights/update/source hashes unchanged. No training/backward/optimizer benchmark,
+no Colab or arithmetic-setting adoption. Eleven focused checks pass. Project
+37.787213/150 and budget stop preserved. Future matched numerical preflight
+requires reviewed allocation authorization; incomplete return gates unchanged.
+[Evidence](results/regularization-numerics-2026-10-21/README.md).

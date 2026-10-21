@@ -444,3 +444,12 @@ corruption and final markers without fitting. Do not relabel old partial reports
 existing interruption outcome remains unchanged. No allocation/stop-flag reset.
 Next offline work may diagnose retained partial policy behavior; new Colab runs
 still require explicit review after the metering stop.
+
+Offline numerical audit finds5942 subnormal regularized-policy elements versus0
+control. Same-host fixed synthetic forward comparison changes14.10× versus1.02×
+with flush arithmetic, outputs exact on that batch and source/weights/updates
+unchanged. This supports a possible speed mechanism, not proof of training
+causality, return improvement or all-input parity. No local backward/optimizer
+steps or Colab. Training numerical settings remain unchanged; explicit reviewed
+authorization is still needed before allocation after the metering stop.
+[Evidence and profiling limits](numerical-performance.md).

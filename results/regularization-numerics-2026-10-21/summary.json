@@ -1,0 +1,239 @@
+{
+  "records": {
+    "control": {
+      "run": "20261020T202759-sac-11-ef1cb73f",
+      "restored_steps": 100000,
+      "counts": {
+        "policy": {
+          "elements": 29644,
+          "nonfinite": 0,
+          "zero": 0,
+          "subnormal": 0
+        },
+        "actor_moments": {
+          "elements": 12176,
+          "nonfinite": 0,
+          "zero": 20,
+          "subnormal": 328
+        },
+        "critic_moments": {
+          "elements": 23556,
+          "nonfinite": 0,
+          "zero": 58,
+          "subnormal": 1766
+        }
+      },
+      "forward_timings": {
+        "False": {
+          "seconds_per_forward": 0.0004470816196408123,
+          "blocks": [
+            0.0004470816196408123,
+            0.00046418929006904365,
+            0.00044495254987850783
+          ]
+        },
+        "True": {
+          "seconds_per_forward": 0.00043775504105724393,
+          "blocks": [
+            0.0004498799506109208,
+            0.00043711589998565617,
+            0.00043775504105724393
+          ]
+        }
+      },
+      "forward_speedup_flush_on": 1.0213054738582639,
+      "outputs_exact_on_fixed_synthetic_batch": true,
+      "max_abs_output_difference": 0.0,
+      "weights_sha256": "9ed4c57d2ef9e9c69b069c5872b64818d8630906d3e1df9604fa1a26e50a63ff",
+      "weights_updates_unchanged": true,
+      "logged_checkpoint_intervals": [
+        {
+          "steps": 10000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 85.04997721399997
+        },
+        {
+          "steps": 20000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 103.91327564599999
+        },
+        {
+          "steps": 30000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 106.80669334600009
+        },
+        {
+          "steps": 40000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 108.21134408599994
+        },
+        {
+          "steps": 50000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 104.15069958200002
+        },
+        {
+          "steps": 60000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 108.49354630900012
+        },
+        {
+          "steps": 70000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 103.55102508100003
+        },
+        {
+          "steps": 80000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 105.10282647999998
+        },
+        {
+          "steps": 90000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 105.44955215999994
+        },
+        {
+          "steps": 100000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 105.77107778000004
+        },
+        {
+          "steps": 100000,
+          "phase": "post_update",
+          "transitions": 0,
+          "elapsed_seconds": 19.998782409999876
+        }
+      ]
+    },
+    "weight_decay": {
+      "run": "20261020T202912-sac-11-5e31c9b7",
+      "restored_steps": 80000,
+      "counts": {
+        "policy": {
+          "elements": 29644,
+          "nonfinite": 0,
+          "zero": 0,
+          "subnormal": 5942
+        },
+        "actor_moments": {
+          "elements": 12176,
+          "nonfinite": 0,
+          "zero": 2,
+          "subnormal": 4230
+        },
+        "critic_moments": {
+          "elements": 23556,
+          "nonfinite": 0,
+          "zero": 1,
+          "subnormal": 3413
+        }
+      },
+      "forward_timings": {
+        "False": {
+          "seconds_per_forward": 0.0062658219796139746,
+          "blocks": [
+            0.006268167690141126,
+            0.006265374639770016,
+            0.0062658219796139746
+          ]
+        },
+        "True": {
+          "seconds_per_forward": 0.00044448208063840866,
+          "blocks": [
+            0.000443008370930329,
+            0.00044535467983223496,
+            0.00044448208063840866
+          ]
+        }
+      },
+      "forward_speedup_flush_on": 14.096905707907027,
+      "outputs_exact_on_fixed_synthetic_batch": true,
+      "max_abs_output_difference": 0.0,
+      "weights_sha256": "5fa287f7f39929d821bdcac333d411042d1c1e116a565ebde7e537bdfc62973d",
+      "weights_updates_unchanged": true,
+      "logged_checkpoint_intervals": [
+        {
+          "steps": 10000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 126.77057882500003
+        },
+        {
+          "steps": 20000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 159.796895274
+        },
+        {
+          "steps": 30000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 171.78036425200003
+        },
+        {
+          "steps": 40000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 170.39433544000008
+        },
+        {
+          "steps": 50000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 243.6617567689998
+        },
+        {
+          "steps": 60000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 486.336763602
+        },
+        {
+          "steps": 70000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 493.96707381700026
+        },
+        {
+          "steps": 80000,
+          "phase": "on_step",
+          "transitions": 10000,
+          "elapsed_seconds": 485.07036177999976
+        }
+      ]
+    }
+  },
+  "source_sha256": {
+    "results/sac-regularization-2026-10-20/interruption-summary.json": "f2d83c81b9d42b37a0d3c7db0a53e8dcd9f2084cd9094e355c25575f1ed47f43",
+    "/home/vibe/projects/rl-stocks/.runtime/sac-regularization-fixed-source/artifacts/colab/rl-stocks-cpu-c4f5b2b61157/retrieved/artifacts/runs/20261020T202759-sac-11-ef1cb73f/latest.zip": "78b3d9396e55ff267c3452ab9ad610a92438161f823092f77c670722a024b493",
+    "artifacts/colab/rl-stocks-cpu-b30e88282e11/interruption-retrieved/artifacts/runs/20261020T202912-sac-11-5e31c9b7/latest-checkpoint.zip": "50947803acdd30b540b78d74dca613279007b30066f7eacb3b1d1a683899e10e"
+  },
+  "script_sha256": "3cd72acbb1d6dd77c8c50a0884616c93c26fda900e5409966197dfb0b6c91ca3",
+  "torch_version": "2.8.0+cu128",
+  "local_cpu_threads": 1,
+  "batch_shape": [
+    256,
+    21
+  ],
+  "warmup_forwards": 10,
+  "measurement_forwards_per_block": 100,
+  "blocks_per_mode": 3,
+  "source_files_unchanged": true,
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "backward_calls": 0,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "numerical_setting_applied_to_training": false,
+  "interpretation": "Isolated local inference arithmetic experiment on synthetic observations, not a Colab training benchmark or performance improvement. Logged intervals include learning/evaluation/export; differing remote hosts confound cross-arm timings. No model/optimizer state exported or training configuration changed. Incomplete study remains unassessable."
+}
