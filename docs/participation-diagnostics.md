@@ -88,3 +88,14 @@ bookkeeping bounds, not counterfactual profits. Resize-only savings insufficient
 required protections/20-session exits/borrow remain.18 checks pass, source hashes
 unchanged, no fitting/data/Colab. Next separate direction from protective-exit
 participation before a distinct protocol. [Audit](../results/recurrent-fill-costs-2026-10-21/README.md).
+
+## Saved action/execution relationship
+
+Masked final stock/ETF requested long magnitude74.06%/73.15% versus end-long
+67.04%/67.44%; sign agrees93.93%/94.77% of sessions. Flat-after-protection
+2.09%/0.92%, flat-after-holding2.84%/3.65%; rejected rows separate. These observed
+relationships do not prove a causal protection bottleneck. Nine checks reconcile
+action categories and net P&L with unchanged sources; no fit/data/Colab. Next
+consider preregistered fixed unit-magnitude sign-preserving replay, with original
+protective outputs and exact unrestricted parity gates before interpretation;
+no replay yet. [Evidence](../results/recurrent-actions-2026-10-21/README.md).
