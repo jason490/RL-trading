@@ -1,0 +1,12 @@
+{
+  "time": 1792595098.814237,
+  "authorization": "User explicitly reactivated research and authorized resumption provided account credits never fall below150 on2026-10-21; retain original cumulative project limits and prior conservative charges.",
+  "stopped_session": "rl-stocks-fleet-33eb40694488",
+  "previous_stop_reason": "aggregate usage unavailable; stop all owned sessions",
+  "consumed_preserved": 37.78721340380374,
+  "account_balance": 349.97,
+  "minimum_account_balance": 150.0,
+  "account_teardown_balance": 170.0,
+  "assignments": 0,
+  "rate": 0.0
+}

@@ -1227,3 +1227,13 @@ relaxation or parity claim. Stocks6.92%/ETFs−4.87%, zero short exposure/P&L,
 0/3 joint positives. Weights/optimizer/normalization/source unchanged;20 tests
 pass, no fitting/Colab. Incomplete screen and budget stop preserved.
 [Evidence](results/regularization-80k-replay-2026-10-21/README.md).
+
+## 52. Reviewed resumption and account credit protection — implemented
+
+Explicit user approval allows research to resume while account balance stays150
+or higher. Allocation/projection guards now begin teardown170 account units,
+retain150 project ceiling/130 project teardown, and preserve37.787213 prior
+charges. Separate locked review requires exact stopped fleet, verified cleanup,
+idle metering, headroom and explicit authorization. Historical failures remain.
+20 checks pass; account349.97, no allocation. Future fleets need newly frozen
+floor-aware code. [Review evidence](results/budget-review-2026-10-21/README.md).

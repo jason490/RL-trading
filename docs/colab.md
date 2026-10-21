@@ -375,3 +375,32 @@ assignments. Do not automatically restart after a budget or metering stop.
 The legacy `ColabJob` runner is serial and must not be launched in parallel
 against its single-active-attempt ledger. Use the [concurrent coordinator](colab-concurrency.md) for a pool; its
 accounting and failure/cleanup acceptance are separate from remote preflight.
+
+## Account balance floor and reviewed resumption
+
+User direction2026-10-21 adds a150-unit minimum account balance, independent of
+the cumulative150-unit project ceiling. Begin teardown by170 account units,
+reserving20 for latency/shutdown, and by130 cumulative project units. The shared
+ledger's `minimum_account_balance=150` makes allocation/deadline/projection guards
+use170 as the account working threshold. Project charges are not reset when
+credits are purchased, runtimes change, or research resumes. All concurrent
+sessions share the same account estimate; metering uncertainty still stops them.
+
+Reviewed resumption is a separate operator command, never called automatically
+by the fleet. It requires exact stopped fleet, verified cleanup, explicit user
+authorization, healthy idle usage and headroom under both limits. It records an
+audit while preserving every historical attempt and conservative charge.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.review \
+ --cli-python /path/to/existing/colab-cli/python \
+ --stopped-session EXACT_RECORDED_FLEET \
+ --authorization 'Explicit user authorization and completed review' \
+ --minimum-account-balance 150 --output /new/review.json
+```
+
+Do not run this command without authorization or use it to bypass unresolved
+cleanup. Use a new source freeze containing these guards for subsequent fleets;
+old exports do not implement the new account-floor rule. No additional package
+installation or CLI upgrade is required.
+[Actual reviewed resumption](../results/budget-review-2026-10-21/README.md).

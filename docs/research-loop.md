@@ -460,3 +460,14 @@ Replay misses the declared1e-10 score tolerance by2.21088e-8; preserve that fail
 and no parity claim despite only$0.00221 mean equity difference. Original study
 remains incomplete.20 accounting checks pass, no fitting/Colab or stop reset.
 [Evidence](../results/regularization-80k-replay-2026-10-21/README.md).
+
+## Reviewed resumption and additional account protection
+
+User reactivated the blocked goal and explicitly permits further research while
+account credits stay≥150. Reviewed resumption records that authorization,
+healthy idle349.97 balance/zero assignments and verified cleanup; preserves all
+37.787213 conservative units and prior failure records. Account teardown170 with
+20 reserve complements original project150/130 ceilings.20 budget/fleet tests
+pass. No session allocated at review. New fixed studies require new frozen source
+with floor enforcement; old interrupted family remains incomplete, no extension.
+[Audit](../results/budget-review-2026-10-21/README.md).
