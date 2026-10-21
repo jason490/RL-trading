@@ -534,3 +534,11 @@ without fitting. No allocation: job/worker/archive/restored-report integration
 remains required. Project37.897158 retained; incremental study allowance3 includes
 all attempts, account150/170 and project150/130 enforced at future allocation.
 [Protocol and status](recurrent-execution-state.md).
+
+Recurrent version22 remote integration complete: fixed plans, actual dataset
+preflight, floor-aware controller, saved-model fingerprints, mandatory checkpoint
+identity, strict archives and restored-weight matched report.69 focused checks
+pass; actual three smoke payloads validate, scripts compile. No allocation or
+training yet. Freeze/push source and official usage check precede three512 CPU
+smokes; frozen sequence/reset acceptance precedes any100k screen.
+[Guide](recurrent-execution-state.md).

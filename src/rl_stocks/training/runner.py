@@ -130,6 +130,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
     if study_protocol_sha256 is not None:metadata['study_protocol_sha256']=study_protocol_sha256
+    from rl_stocks.training.recurrent_state import PROTOCOL_SHA256 as RECURRENT_PROTOCOL,model_record as recurrent_record
+    if study_protocol_sha256==RECURRENT_PROTOCOL:
+        metadata['recurrent_state_initialization']=recurrent_record(model)
     if algorithm=='td3':
         from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record
         if study_protocol_sha256==TD3_PROTOCOL:metadata['td3_initialization']=td3_initialization_record(model)
@@ -178,6 +181,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if algorithm=='sac' and study_protocol_sha256==DISCOUNT_PROTOCOL:
             metadata['discount_final']=discount_record(model)
             metadata['discount_selected']=discount_record(selected)
+        if study_protocol_sha256==RECURRENT_PROTOCOL:
+            metadata['recurrent_state_final']=recurrent_record(model)
+            metadata['recurrent_state_selected']=recurrent_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

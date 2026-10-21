@@ -83,6 +83,11 @@ def validate_tasks(tasks,root):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
+        if plan.get('version')==22:
+            from rl_stocks.data.generation.datasets import read_dataset
+            from rl_stocks.training.recurrent_state import validate_payload
+            if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('recurrent state dataset identity mismatch')
+            validate_payload(read_dataset(dataset))
         if plan.get('version')==21:
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.sac_discount import validate_payload
@@ -353,8 +358,8 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version')==21 for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
-                raise BudgetStop('discount study requires account floor150/teardown170')
+            if any(t['plan'].get('version') in (21,22) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+                raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
             if any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):
                 git=repository_state(self.root)

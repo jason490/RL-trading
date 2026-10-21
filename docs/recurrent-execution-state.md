@@ -75,7 +75,32 @@ Protocol and construction contracts are implemented in
 Seven tests cover actual fresh model construction, equal recurrent tensor hashes,
 unchanged caller overrides, invalid actual records, untrained save/load sequence
 and reset parity, and mandatory relative/absolute gates. No training or allocation
-has occurred for this study. Job, worker, artifact and restored-report integration
-must be completed and verified before building runnable Colab tasks. In particular,
+has occurred for this study. Version22 job, worker, artifact and restored-report integration is now implemented
+and checked. Actual immutable smoke payloads validate. In particular,
 selected steps must remain distinct from final100k post-update identity; never
 infer the latest report from a legacy selected validation file.
+
+## Integrated remote acceptance
+
+Exact version22 plans reject unregistered changes and bind the account150/170
+contract. Controller and worker validate expanded111 immutable data before fitting.
+The runner records actual initial/selected/final model settings, dimensions, LSTM
+configuration, steps and policy tensor hashes. Archives require current checkpoint
+identities, fixed preprocessing, source metadata, exact sampling totals and saved
+records.15 archive fixtures include semantic corruption despite recomputed hashes.
+69 focused model/plan/archive/checkpoint/account/fleet/report checks pass. These
+checks do not replace actual training or frozen recurrent sequence acceptance.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_recurrent_state_jobs.py \
+ --smoke --output .runtime/recurrent-state-smoke-jobs.json
+```
+
+The builder does not allocate. Freeze and push clean source, check official CLI
+usage and actual default Python, then run three512 CPU smokes using the existing
+owned fleet. Accept sequence/reset/frozen parity and exact initial recurrent
+records before any100k screen. After verified screen shutdown,
+`scripts/report_recurrent_state.py --state STATE --output NEW_JSON` restores
+actual weights, revalidates paths against immutable development data and evaluates
+predefined gates. It refuses incomplete states or mismatched sampling/source.
+No new Colab study session has been provisioned at this integration milestone.

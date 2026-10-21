@@ -69,3 +69,19 @@ def test_no_sweeps_or_implicit_smoke():
     spec = overrides('recurrent_full')
     spec['policy_kwargs']['net_arch'][0] = 999
     assert overrides('recurrent_full')['policy_kwargs']['net_arch'] == [64, 64]
+
+
+def test_remote_plans_are_exact_and_reject_sweeps():
+    from rl_stocks.runtime.colab.jobs import recurrent_state_plan, validate_plan
+    for arm in protocol()['arms']:
+        for smoke in (False, True):
+            plan = recurrent_state_plan(arm, smoke=smoke)
+            assert validate_plan(plan) == plan
+            for mutate in [lambda p: p['jobs'][0].update(steps=250000),
+                           lambda p: p['jobs'][0]['overrides'].update(gamma=.95),
+                           lambda p: p.update(account_contract={'minimum_balance': 0, 'teardown_balance': 20}),
+                           lambda p: p['jobs'][0].update(observation_profile='legacy')]:
+                bad=deepcopy(plan);mutate(bad)
+                with pytest.raises(ValueError):validate_plan(bad)
+    with pytest.raises(ValueError): recurrent_state_plan('recurrent_full', 23, True)
+    with pytest.raises(ValueError): recurrent_state_plan('recurrent_full', True)

@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==21:
+    if plan.get('version')==22:
+        try:expected=recurrent_state_plan(**plan['recurrent_state_study'])
+        except (KeyError,TypeError):raise ValueError('malformed recurrent state plan') from None
+        if plan!=expected:raise ValueError('unsupported recurrent state plan')
+    elif plan.get('version')==21:
         try:expected=discount_plan(**plan['discount_study'])
         except (KeyError,TypeError):raise ValueError('malformed discount plan') from None
         if plan!=expected:raise ValueError('unsupported discount plan')
@@ -372,4 +376,18 @@ def discount_plan(arm,seed=11,smoke=False):
     plan.update(version=21,discount_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
                 account_contract=dict(minimum_balance=150,teardown_balance=170))
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke))
+    return plan
+
+
+def recurrent_state_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.recurrent_state import protocol,PROTOCOL_SHA256,overrides,arm_spec
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported recurrent state arm/seed/smoke')
+    plan=discount_plan('control',seed,smoke);plan.pop('discount_study')
+    steps=p['smoke_steps'] if smoke else p['steps_per_cell']
+    plan.update(version=22,recurrent_state_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
+    plan['jobs'][0].update(**arm_spec(arm),steps=steps,milestones=[steps],
+        evaluation_every=p['smoke_evaluation_every'] if smoke else p['evaluation_every'],
+        study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke))
     return plan

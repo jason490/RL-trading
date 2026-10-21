@@ -61,7 +61,7 @@ def model_record(model):
                 policy_tensor_sha256=tensor_hash.hexdigest())
 
 
-def validate_record(record, arm, smoke=False, initial=False):
+def validate_record(record, arm, smoke=False, initial=False, selected_steps=None):
     expected = overrides(arm, smoke)
     algo = arm_spec(arm)['algorithm']
     fixed = dict(algorithm='PPO' if algo == 'ppo' else 'RecurrentPPO', observation_size=21, action_size=4,
@@ -72,9 +72,17 @@ def validate_record(record, arm, smoke=False, initial=False):
     if any(record.get(key) != value for key, value in fixed.items()):
         raise ValueError('actual recurrent-state model configuration mismatch')
     steps = record.get('num_timesteps')
-    target = 0 if initial else protocol()['smoke_steps' if smoke else 'steps_per_cell']
+    final_steps = protocol()['smoke_steps' if smoke else 'steps_per_cell']
+    if selected_steps is not None and (initial or type(selected_steps) is not int or not 0 < selected_steps <= final_steps):
+        raise ValueError('valid selected checkpoint step required')
+    target = 0 if initial else final_steps if selected_steps is None else selected_steps
     if type(steps) is not int or steps != target:
         raise ValueError('actual recurrent-state model step mismatch')
     value = record.get('policy_tensor_sha256', '')
     if len(value) != 64 or any(c not in '0123456789abcdef' for c in value):
         raise ValueError('policy tensor hash required')
+
+
+def validate_payload(data):
+    from rl_stocks.training.diversity import validate_payload as validate
+    return validate(data, 'expanded')
