@@ -1276,3 +1276,16 @@ reproduces byte-for-byte. Project37.897158/150, remaining112.102842; last accoun
 remain. Next inspect saved selected/final cost and directional contributions,
 without fitting or allocation, before any distinct hypothesis.
 [Detailed evidence and release](results/sac-discount-2026-10-21/README.md).
+
+### Milestone55: retained recurrent contracts audited
+
+
+Six retained100k recurrent selected/final models use legacy12 inputs, omitting9
+explicit execution fields.96 fixed synthetic sequence observations show exact
+direct-call/stream parity and reset replay; resetting each observation changes
+actions, so memory is active. One regression passes, weights/updates/source
+hashes unchanged; no fitting/dataset/test/Colab access. Missing explicit state
+is a distinct testable hypothesis, not proof of the previous performance cause.
+Next freeze a matched recurrent masked21/full21 comparison with feed-forward
+control and unchanged absolute/relative gates before smoke acceptance.
+[Audit](results/recurrent-contract-2026-10-21/README.md).

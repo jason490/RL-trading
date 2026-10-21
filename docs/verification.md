@@ -1196,3 +1196,15 @@ Both costs and participation matter; no optimizer-cause claim or more-step/gamma
 sweep follows.12 accounting/behavior/report checks pass, source hashes unchanged,
 no fitting/data access/Colab. Next audit existing recurrent input/memory contracts
 before any distinct protocol. [Evidence](../results/sac-discount-paths-2026-10-21/README.md).
+
+## Recurrent input and memory audit
+
+Six retained100k recurrent selected/final models use legacy12 inputs, omitting9
+explicit execution fields.96 fixed synthetic sequence observations show exact
+direct-call/stream parity and reset replay; resetting each observation changes
+actions, so memory is active. One regression passes, weights/updates/source
+hashes unchanged; no fitting/dataset/test/Colab access. Missing explicit state
+is a distinct testable hypothesis, not proof of the previous performance cause.
+Next freeze a matched recurrent masked21/full21 comparison with feed-forward
+control and unchanged absolute/relative gates before smoke acceptance.
+[Audit](../results/recurrent-contract-2026-10-21/README.md).

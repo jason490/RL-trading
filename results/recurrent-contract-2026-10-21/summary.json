@@ -1,0 +1,251 @@
+{
+  "records": [
+    {
+      "seed": 23,
+      "phase": "selected",
+      "source_files": {
+        "artifacts/colab/rl-stocks-cpu-181afb3935e0/retrieved/artifacts/runs/20261016T205251-recurrent_ppo-23-20d13137/metadata.json": "664e4ae560186c8f5e024911b41b1b81a15eac5f30c6f1c09ff170f01fc47497",
+        "artifacts/colab/rl-stocks-cpu-181afb3935e0/retrieved/artifacts/runs/20261016T205251-recurrent_ppo-23-20d13137/best.zip": "f967f2ef1a816cd3646349bf3bf505fbe8390e7da1485f2185ecfa77f99e949a",
+        "artifacts/colab/rl-stocks-cpu-181afb3935e0/retrieved/artifacts/frozen/46d6a526d1e80f625b9026a42141646f5e524b8501cfdda0c2d5b7b3118f82a8/manifest.json": "46d6a526d1e80f625b9026a42141646f5e524b8501cfdda0c2d5b7b3118f82a8"
+      },
+      "observation_size": 12,
+      "market_inputs": 7,
+      "market_names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "portfolio_inputs": 5,
+      "missing_explicit_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "actual_steps": 50000,
+      "actor_hidden_size": 64,
+      "actor_layers": 1,
+      "separate_critic_lstm": true,
+      "carried_sequence_exact": true,
+      "independent_stream_reset_exact": true,
+      "synthetic_reset_vs_carried_max_action_delta": 0.34810885787010193,
+      "unchanged_weights_updates_and_sources": true
+    },
+    {
+      "seed": 23,
+      "phase": "final",
+      "source_files": {
+        "artifacts/colab/rl-stocks-cpu-181afb3935e0/retrieved/artifacts/runs/20261016T205251-recurrent_ppo-23-20d13137/metadata.json": "664e4ae560186c8f5e024911b41b1b81a15eac5f30c6f1c09ff170f01fc47497",
+        "artifacts/colab/rl-stocks-cpu-181afb3935e0/retrieved/artifacts/runs/20261016T205251-recurrent_ppo-23-20d13137/latest.zip": "7cb18c04c085ed0af4a4685a7271ebd5d1e99ee3d0774457fee8960a45e75472",
+        "artifacts/colab/rl-stocks-cpu-181afb3935e0/retrieved/artifacts/frozen/46d6a526d1e80f625b9026a42141646f5e524b8501cfdda0c2d5b7b3118f82a8/manifest.json": "46d6a526d1e80f625b9026a42141646f5e524b8501cfdda0c2d5b7b3118f82a8"
+      },
+      "observation_size": 12,
+      "market_inputs": 7,
+      "market_names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "portfolio_inputs": 5,
+      "missing_explicit_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "actual_steps": 100000,
+      "actor_hidden_size": 64,
+      "actor_layers": 1,
+      "separate_critic_lstm": true,
+      "carried_sequence_exact": true,
+      "independent_stream_reset_exact": true,
+      "synthetic_reset_vs_carried_max_action_delta": 1.1191134452819824,
+      "unchanged_weights_updates_and_sources": true
+    },
+    {
+      "seed": 11,
+      "phase": "selected",
+      "source_files": {
+        "artifacts/colab/rl-stocks-cpu-2bf901070ec9/retrieved/artifacts/runs/20261016T202143-recurrent_ppo-11-de7d8197/metadata.json": "eaf9a3570e917139b69bdc462166fa7802762b932f4bf602dee555d21f8ed8b7",
+        "artifacts/colab/rl-stocks-cpu-2bf901070ec9/retrieved/artifacts/runs/20261016T202143-recurrent_ppo-11-de7d8197/best.zip": "f6c07475ed0d951350861eccbbf44e14d85739470118972b46e335732268d403",
+        "artifacts/colab/rl-stocks-cpu-2bf901070ec9/retrieved/artifacts/frozen/b7b0e2b0ac6697a7a940e25320fb5dcb7413af99fdb0205f7070b37c64032c2d/manifest.json": "b7b0e2b0ac6697a7a940e25320fb5dcb7413af99fdb0205f7070b37c64032c2d"
+      },
+      "observation_size": 12,
+      "market_inputs": 7,
+      "market_names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "portfolio_inputs": 5,
+      "missing_explicit_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "actual_steps": 40000,
+      "actor_hidden_size": 64,
+      "actor_layers": 1,
+      "separate_critic_lstm": true,
+      "carried_sequence_exact": true,
+      "independent_stream_reset_exact": true,
+      "synthetic_reset_vs_carried_max_action_delta": 0.31931477785110474,
+      "unchanged_weights_updates_and_sources": true
+    },
+    {
+      "seed": 11,
+      "phase": "final",
+      "source_files": {
+        "artifacts/colab/rl-stocks-cpu-2bf901070ec9/retrieved/artifacts/runs/20261016T202143-recurrent_ppo-11-de7d8197/metadata.json": "eaf9a3570e917139b69bdc462166fa7802762b932f4bf602dee555d21f8ed8b7",
+        "artifacts/colab/rl-stocks-cpu-2bf901070ec9/retrieved/artifacts/runs/20261016T202143-recurrent_ppo-11-de7d8197/latest.zip": "d8c8ffdbdc4798de52a3242a2c8f63deceb609d184e6d4fcbd9242c4117ba049",
+        "artifacts/colab/rl-stocks-cpu-2bf901070ec9/retrieved/artifacts/frozen/b7b0e2b0ac6697a7a940e25320fb5dcb7413af99fdb0205f7070b37c64032c2d/manifest.json": "b7b0e2b0ac6697a7a940e25320fb5dcb7413af99fdb0205f7070b37c64032c2d"
+      },
+      "observation_size": 12,
+      "market_inputs": 7,
+      "market_names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "portfolio_inputs": 5,
+      "missing_explicit_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "actual_steps": 100000,
+      "actor_hidden_size": 64,
+      "actor_layers": 1,
+      "separate_critic_lstm": true,
+      "carried_sequence_exact": true,
+      "independent_stream_reset_exact": true,
+      "synthetic_reset_vs_carried_max_action_delta": 0.7995826005935669,
+      "unchanged_weights_updates_and_sources": true
+    },
+    {
+      "seed": 37,
+      "phase": "selected",
+      "source_files": {
+        "artifacts/colab/rl-stocks-cpu-ce2880667b1e/retrieved/artifacts/runs/20261016T211109-recurrent_ppo-37-5d15e28a/metadata.json": "6de15c632c512a88ea1ad64db5725c240efa8becbec24546299bb66aa4611bbd",
+        "artifacts/colab/rl-stocks-cpu-ce2880667b1e/retrieved/artifacts/runs/20261016T211109-recurrent_ppo-37-5d15e28a/best.zip": "8bd091ff196313a10703d87294fbcaba072df6343c23a14a484bb98f3d979f67",
+        "artifacts/colab/rl-stocks-cpu-ce2880667b1e/retrieved/artifacts/frozen/8b003b708e171f7ea3a21234d526824174c6e0849a55cfaabea19f7cfd0ef4e1/manifest.json": "8b003b708e171f7ea3a21234d526824174c6e0849a55cfaabea19f7cfd0ef4e1"
+      },
+      "observation_size": 12,
+      "market_inputs": 7,
+      "market_names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "portfolio_inputs": 5,
+      "missing_explicit_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "actual_steps": 90000,
+      "actor_hidden_size": 64,
+      "actor_layers": 1,
+      "separate_critic_lstm": true,
+      "carried_sequence_exact": true,
+      "independent_stream_reset_exact": true,
+      "synthetic_reset_vs_carried_max_action_delta": 0.8799625635147095,
+      "unchanged_weights_updates_and_sources": true
+    },
+    {
+      "seed": 37,
+      "phase": "final",
+      "source_files": {
+        "artifacts/colab/rl-stocks-cpu-ce2880667b1e/retrieved/artifacts/runs/20261016T211109-recurrent_ppo-37-5d15e28a/metadata.json": "6de15c632c512a88ea1ad64db5725c240efa8becbec24546299bb66aa4611bbd",
+        "artifacts/colab/rl-stocks-cpu-ce2880667b1e/retrieved/artifacts/runs/20261016T211109-recurrent_ppo-37-5d15e28a/latest.zip": "d33df924b06bd9a519e6ef46f04559169eac32ed67871e43e2a119b870aa40c4",
+        "artifacts/colab/rl-stocks-cpu-ce2880667b1e/retrieved/artifacts/frozen/8b003b708e171f7ea3a21234d526824174c6e0849a55cfaabea19f7cfd0ef4e1/manifest.json": "8b003b708e171f7ea3a21234d526824174c6e0849a55cfaabea19f7cfd0ef4e1"
+      },
+      "observation_size": 12,
+      "market_inputs": 7,
+      "market_names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "portfolio_inputs": 5,
+      "missing_explicit_execution_fields": [
+        "stop_distance",
+        "near_distance",
+        "far_distance",
+        "protection_present",
+        "near_done",
+        "last_stop_action",
+        "last_near_action",
+        "last_width_action",
+        "unit_share_fraction"
+      ],
+      "actual_steps": 100000,
+      "actor_hidden_size": 64,
+      "actor_layers": 1,
+      "separate_critic_lstm": true,
+      "carried_sequence_exact": true,
+      "independent_stream_reset_exact": true,
+      "synthetic_reset_vs_carried_max_action_delta": 0.9329068660736084,
+      "unchanged_weights_updates_and_sources": true
+    }
+  ],
+  "synthetic_observations_per_model": 16,
+  "training_performed": false,
+  "dataset_opened": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "conclusion": "Historical recurrent models use legacy12 inputs. Memory carry/reset works on fixed synthetic probes; this does not establish return improvement or equivalence to execution_full21.",
+  "objective_achieved": false
+}

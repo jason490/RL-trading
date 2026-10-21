@@ -160,3 +160,15 @@ Every owned session stopped; cumulative conservative usage is 35.389379 units.
 See [complete results and next steps](../results/algorithm-stability-2026-10-16/README.md)
 and [downloadable graphs/models](https://github.com/jason490/RL-trading/releases/tag/algorithm-stability-2026-10-16).
 Do not reuse the retired final-test interval to rescue a failed comparison.
+
+## Recurrent input and memory audit
+
+Six retained100k recurrent selected/final models use legacy12 inputs, omitting9
+explicit execution fields.96 fixed synthetic sequence observations show exact
+direct-call/stream parity and reset replay; resetting each observation changes
+actions, so memory is active. One regression passes, weights/updates/source
+hashes unchanged; no fitting/dataset/test/Colab access. Missing explicit state
+is a distinct testable hypothesis, not proof of the previous performance cause.
+Next freeze a matched recurrent masked21/full21 comparison with feed-forward
+control and unchanged absolute/relative gates before smoke acceptance.
+[Audit](../results/recurrent-contract-2026-10-21/README.md).
