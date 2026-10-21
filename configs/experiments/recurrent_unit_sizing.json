@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "name": "recurrent-unit-sizing-2026-10-21",
+  "hypothesis": "Masked recurrent requests long exposure below full capacity and costs alone do not close holding gaps. Test fixed unit-magnitude signed exposure while retaining every learned protective component and recomputing account/memory state. This may amplify losing trades; no assumption of improved returns.",
+  "source_study": "recurrent-state-2026-10-21",
+  "source_arm": "recurrent_masked",
+  "source_revision": "dd3b256fe0b830fb3d662e8cff75077a88e5aa10",
+  "source_seed": 11,
+  "source_transitions": 100000,
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "algorithm": "recurrent_ppo",
+  "observation_profile": "execution_masked",
+  "arms": [
+    "control",
+    "unit_magnitude"
+  ],
+  "candidate": "unit_magnitude",
+  "phases": [
+    "selected",
+    "final"
+  ],
+  "maximum_cells": 4,
+  "split": "validation",
+  "dates": "2021-2023",
+  "exposure_mode": {
+    "control": "unrestricted",
+    "unit_magnitude": "unit_magnitude"
+  },
+  "transform": "For every symbol/session, exposure becomes sign(raw exposure): -1,0,+1. Other three raw outputs remain bitwise unchanged. All actions remain risk-approved under existing simulator; target exposure is not guaranteed executed exposure.",
+  "parity_tolerance": {
+    "return_absolute": 1e-06,
+    "equity_dollars": 0.1,
+    "cost_dollars": 0.01,
+    "action_absolute": 2e-06,
+    "quantity_absolute": 0,
+    "quantity_mismatch_rows": 0
+  },
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Stop this fixed sizing diagnostic with no threshold/magnitude sweep or promotion after any gate failure"
+  },
+  "constraints": {
+    "training_performed": false,
+    "colab_allocated": false,
+    "test_evaluated": false,
+    "selection": "No checkpoint/threshold selection or promotion. Report both fixed phases on every original26 symbol. Future declining labels reporting only.",
+    "causality": "Fresh simulator per episode/mode, recompute causal account and masked execution state and carry/reset recurrent memory on that path.",
+    "execution": "Same costs,whole shares,100k equity,exposure cap1,next-session fills,learned protections,corporate actions and20-session holding limit. Never disable stops/targets or borrowing.",
+    "gate": "Verify BOTH unrestricted phases against source paths before candidate replay. On any parity failure record differences, stop, do not relax tolerance or interpret candidate results.",
+    "integrity": "Require clean committed source/protocol, complete owned-session cleanup, accepted model/report hashes, frozen selected bundle, immutable weights/normalization and unchanged updates.",
+    "limits": "Repeated development and survivor history; no independent or prospective evidence. A passing diagnostic alone never achieves the objective.",
+    "failure": "No magnitude/threshold grid, sign inversion, extra phases, candidate checkpoint selection or new training after failure."
+  }
+}

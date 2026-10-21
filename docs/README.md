@@ -31,6 +31,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Random-forest signal feasibility | [forest-signal.md](forest-signal.md) | Locked tree dependencies, fixed comparison and portable non-pickle tree arrays |
 | Supervised signal feasibility | [supervised-signal.md](supervised-signal.md) | Completed training-only targets, internal chronological probe, frozen preprocessing and gated warm-start research |
 | Numerical performance | [numerical-performance.md](numerical-performance.md) | Saved-weight subnormal counts and isolated forward timing without fitting |
+| Fixed recurrent sizing replay | [recurrent-sizing.md](recurrent-sizing.md) | Sign-preserving unit exposure, unchanged protections, strict path parity and fixed diagnostic gates |
 | Recurrent execution-state research | [recurrent-execution-state.md](recurrent-execution-state.md) | Fixed masked/full memory comparison, feed-forward control, sequence acceptance and gates |
 | SAC discount horizon | [sac-discount.md](sac-discount.md) | Fixed0.99/0.95 comparison, unchanged execution and mandatory checkpoint identity |
 | SAC regularization | [sac-regularization.md](sac-regularization.md) | Fixed actor/critic L2 protocol, actual optimizer acceptance and generalization gates |

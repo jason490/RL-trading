@@ -1,7 +1,7 @@
 """Universal sign restrictions for fixed-policy counterfactual diagnostics."""
 import numpy as np
 
-EXPOSURE_MODES = ('unrestricted', 'long_only', 'short_only')
+EXPOSURE_MODES = ('unrestricted', 'long_only', 'short_only', 'unit_magnitude')
 
 
 def filter_exposure(action, mode):
@@ -14,4 +14,6 @@ def filter_exposure(action, mode):
         result[0] = max(0, result[0])
     elif mode == 'short_only':
         result[0] = min(0, result[0])
+    elif mode == 'unit_magnitude':
+        result[0] = np.sign(result[0])
     return result

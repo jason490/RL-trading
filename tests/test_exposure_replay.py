@@ -149,3 +149,35 @@ def test_declared_one_share_bridge_is_bounded_and_cannot_change_position_sign():
     base=deepcopy(results);base["SPY/validation"]["rows"][0]["quantity"]=1
     altered=deepcopy(base);altered["SPY/validation"]["rows"][0]["quantity"]=0
     with pytest.raises(ValueError):verify(altered,base,tolerance)
+
+
+def test_unit_magnitude_preserves_signed_zero_and_all_learned_protection():
+    from rl_stocks.evaluation.exposure import filter_exposure
+    import numpy as np
+    for value, expected in [(-.001,-1.),(0.,0.),(.001,1.)]:
+        action=np.array([value,.123,-.456,.789],dtype=np.float32)
+        before=action.copy();actual=filter_exposure(action,'unit_magnitude')
+        assert actual[0]==expected
+        np.testing.assert_array_equal(actual[1:],before[1:])
+        np.testing.assert_array_equal(action,before)
+
+
+def test_unit_sizing_recurrent_replay_carries_memory_and_recomputes_account_state():
+    from types import SimpleNamespace
+    class Recurrent:
+        policy=SimpleNamespace(lstm_actor=object())
+        def __init__(self):self.starts=[];self.seen=[]
+        def predict(self,obs,*,state,episode_start,deterministic):
+            self.starts.append(bool(episode_start[0]));self.seen.append(obs.copy())
+            count=0 if episode_start[0] else state
+            return np.array([-.25,1.,1.,1.],dtype=np.float32),count+1
+    data=fixture();data['episodes']['AAPL/validation']=deepcopy(data['episodes']['SPY/validation']);data['episodes']['AAPL/validation']['symbol']='AAPL'
+    before=deepcopy(data);ordinary=Recurrent();unit=Recurrent()
+    a=evaluate(ordinary,data);b=evaluate(unit,data,exposure_mode='unit_magnitude')
+    assert ordinary.starts==unit.starts==[True,False,False,True,False,False]
+    assert not np.array_equal(ordinary.seen[1],unit.seen[1])
+    for key in a:
+        assert b[key]['metrics']['net_return']>a[key]['metrics']['net_return']
+        assert all(row['raw_action'][0]==-1 and row['policy_action'][0]==-.25 for row in b[key]['rows'])
+        assert b[key]['directional']['long_net_pnl']==0
+    assert data==before

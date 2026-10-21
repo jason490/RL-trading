@@ -1333,3 +1333,9 @@ recurrent tensors, all-arm sampling counts and matched holding paths pass. Proje
 Next saved-path cost/directional diagnosis without fitting before a distinct
 hypothesis. Overall multi-seed/prospective objective remains unmet.
 [Evidence and release](results/recurrent-state-2026-10-21/README.md).
+
+### Milestone58: fixed recurrent sizing diagnostic prepared
+
+Four frozen-policy cells, unchanged signs/protections/costs/holding cap; strict
+unrestricted-path parity precedes candidates.12 filter/state/reference checks,
+no fitting or replay yet. [Guide](docs/recurrent-sizing.md).

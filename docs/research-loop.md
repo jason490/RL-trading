@@ -610,3 +610,13 @@ action categories and net P&L with unchanged sources; no fit/data/Colab. Next
 consider preregistered fixed unit-magnitude sign-preserving replay, with original
 protective outputs and exact unrestricted parity gates before interpretation;
 no replay yet. [Evidence](../results/recurrent-actions-2026-10-21/README.md).
+
+## Fixed recurrent sizing replay prepared
+
+Preregister four saved masked100k seed11 cells: selected/final unrestricted versus
+unit-magnitude sign-preserving exposure. Other three protective outputs, costs,
+holding cap and causal recurrent/account updates stay intact. Both unrestricted
+paths must pass exact-quantity/bounded-numeric parity before any candidate replay.
+Fixed relative+absolute selected/final gates, no threshold sweep or promotion.
+12 filter/state/reference checks pass; no actual replay/fitting/Colab yet. Freeze
+clean source before execution. [Protocol](recurrent-sizing.md).
