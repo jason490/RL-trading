@@ -147,3 +147,15 @@ publication archives47,914,914 bytes removed,439 retained hashes unchanged. Stri
 report reproduces byte for byte after cleanup. All6 sessions stopped; all models,
 frozen bundles, current checkpoint identities, source, data and ledger retained.
 [Audit](../results/recurrent-state-2026-10-21/cleanup.json).
+
+## Saved recurrent path diagnosis
+
+Three100k runs/six phases audited without fitting/data/test/Colab access. Full
+recurrent final stock/ETF gaps34.88/27.31pp include5.81/5.20pp costs; weak non-cost
+participation dominates. Masked control gaps6.81/5.19pp include6.11/4.73pp costs,
+non-cost excess−0.69/−0.47pp. Small-resize costs0.067/0.081pp cannot close gaps.
+Whole-panel shorts contribute+0.48%/−1.52% masked,−3.78%/−6.13% full. Cost addback
+is descriptive, not a cost-free replay; no cause/profitability claim.15 checks
+include explicit mixed algorithm rejection, accounting and source immutability.
+Next audit cost by fill reason before any distinct matched cost intervention;
+failed state family stays closed. [Evidence](../results/recurrent-state-paths-2026-10-21/README.md).
