@@ -1,0 +1,34 @@
+{
+  "project_units": 38.136658363972735,
+  "study_start_units": 38.01440797126489,
+  "study_conservative_units": 0.12225039270784777,
+  "remaining_units": 111.86334163602726,
+  "owned_sessions_stopped": 6,
+  "cleanup_verified": true,
+  "account_balance": 349.71,
+  "reported_rate": 0.0,
+  "active_assignments": 0,
+  "budget_stopped": false,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "ledger_measured_debits": 0.08000000000004093,
+  "study_rate_estimate_units": 0.1222503927078512,
+  "rounded_account_balance_decrease": 0.09000000000003183,
+  "metering_note": "Ledger observed debits0.08; post-shutdown rounded account balance decrease0.09 includes metering delay. Conservative rate charge0.12225039 retained, never reduced to the lower reading.",
+  "fleet_charges": [
+    {
+      "session": "rl-stocks-fleet-8debc2d8bf27",
+      "measured": 0.020000000000038654,
+      "estimated": 0.03344749959243669,
+      "charged": 0.03344749959243669,
+      "status": "stopped"
+    },
+    {
+      "session": "rl-stocks-fleet-e1ef8662345d",
+      "measured": 0.060000000000002274,
+      "estimated": 0.0888028931154145,
+      "charged": 0.0888028931154145,
+      "status": "stopped"
+    }
+  ]
+}

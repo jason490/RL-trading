@@ -1,38 +1,80 @@
-# Recurrent sizing-alignment smoke acceptance
+# Recurrent sizing alignment — complete, candidate gates failed
 
-Three512-transition Google Colab CPU smokes complete on actual default Python
-3.13.16, clean workercaddfcb3bbccc855c769e194fe10a075ce596a96. All use identical
-masked21 inputs, immutable expanded111 data, normalization and sampling.
+Fresh fixed100k seed11 Google Colab CPU runs isolate training/evaluation sizing
+with identical masked21 observations, expanded111 training symbols, original26
+2021–2023 development episodes, normalization, sampling, model initialization,
+PPO settings, reward, costs and20-session holding limit.
 
-| Arm | Actual training mode | Changed sizes | Processed non-unit sizes | Changed protections |
-| --- | --- | ---: | ---: | ---: |
-| adaptive | unrestricted | 0 | 340 | 0 |
-| posthoc_unit | unrestricted | 0 | 340 | 0 |
-| aligned_unit | unit magnitude | 343 | 0 | 0 |
+| Arm | Training / evaluation sizing | Selected return | Final post-update return |
+| --- | --- | ---: | ---: |
+| Adaptive | adaptive / adaptive | 24.99% | 24.04% |
+| Posthoc unit control | adaptive / unit | 32.80% | 32.80% |
+| Aligned unit candidate | unit / unit | 20.04% | 13.93% |
+| Matched holding | — | 30.60% | 30.60% |
 
-Each counter covers exactly512 transitions after checker resets. Actual model
-settings/steps/tensor fingerprints and current checkpoint identities restore.
-All initial tensors match; adaptive/posthoc final tensors match exactly despite
-different validation execution and selection. All actual sampling counts agree.
-Unit selected/final validation traces preserve all three protective components.
+Separate cumulative development episodes, not annualized returns or an investable
+portfolio. Adaptive and posthoc final policy tensors match exactly; their training
+is identical, while validation execution changes selection. Posthoc selects its
+final weights under unit evaluation, explaining why its selected score differs
+from the earlier fixed replay's adaptively selected checkpoint. Do not relabel
+that earlier failed replay as successful.
 
-234 exact frozen prefix predictions cover three observations on each26-symbol
-original development episode per model. Mapped actions, carried hidden/cell state,
-deterministic repeats, independent resets and caller-state immutability pass.
-Normalization/data match immutable source; schema/feed/nonfinite rejection passes.
-These are wiring checks, not financial-performance evidence; smoke returns do
-not tune the fixed experiment. [Acceptance](smoke-summary.json),
-[frozen checks](smoke-restoration.json),
-[protocol](../../configs/experiments/recurrent_alignment.json),
-[guide](../../docs/recurrent-sizing-alignment.md).
+**Aligned training fails every required return gate.** Selected/final gains are
+−4.95/−10.12pp versus adaptive and−12.76/−18.88pp versus posthoc. Candidate final
+stocks14.86% versus holding32.63%, ETFs8.77% versus19.47%, median stock excess
+−24.77pp. Final mean drawdown−37.41% worsens7.42pp versus adaptive and4.21pp versus
+posthoc, beyond2pp. No extension, threshold/architecture sweep, confirmation or
+promotion follows this fixed family. Posthoc control's32.80% result is still
+one-seed repeatedly used development evidence; it does not establish robustness
+or prospective success. Its drawdown is3.21pp worse than adaptive.
 
-All three owned sessions stopped and cleanup verified. Project38.04785547/150,
-study increment0.03344750 including setup/idle/retrieval, remaining111.95214453.
-Official post-shutdown account349.78, zero rate/assignments. Existing CLI reused;
-ledger not reset; project150/130 and account150/170 safeguards remain. No provider
-calls, retired-test evaluation or orders.
+## Short side and interpretation
 
-Next fixed fresh100k seed11 adaptive/posthoc/aligned screen on the same worker,
-within the existing3-unit total study allowance. Both controls, absolute stock/
-ETF selected/final targets and drawdown gates remain; no promotion or prospective
-success claimed. Original failed state/sizing-replay evidence remains unchanged.
+Aligned selected joint positive total return AND positive net short P&L succeeds
+on2/3 reporting-only declining stocks; final falls to0/3. Adaptive1/3 selected,
+0/3 final; posthoc0/3 both. A temporary selected short outcome cannot rescue final
+or whole-panel failures. Future decline labels never enter learning or selection.
+
+Alignment alone did not improve this configuration. Unit execution requests no
+voluntary flat allocation except exact zero; all100,000 training requests were
+nonzero. The candidate transformed62,293 sizes, processed0 non-unit exposures
+and changed0 protective components. Both controls preserve55,315 non-unit raw
+sizes with0 transforms. This proves execution, not a cause of poor returns.
+A separate hypothesis would need evidence and fixed controls; this failed study
+cannot be rescued by changing thresholds or dropping its stronger control.
+
+## Integrity and operations
+
+All3 initial tensor records and actual sampling counts match; all111 symbols
+receive transitions. Actual initial/selected/final settings, steps, tensor hashes,
+execution counters/action traces and mandatory checkpoint identities restore.
+468 smoke/screen frozen predictions match exactly, including mapped action,
+hidden/cell state, repeats, independent resets and caller-state immutability.
+Normalization is frozen, incompatible inputs reject, and strict reports reconcile
+source bars, equity, costs, directions and matched holding paths.
+
+All6 owned sessions stopped, artifacts retrieved and teardown verified. Actual
+Python3.13.16, clean workercaddfcb3bbccc855c769e194fe10a075ce596a96; existing CLI
+reused. Project38.13665836/150, remaining111.86334164; study increment0.12225039
+includes setup/idle/retrieval/all attempts. Official account349.71, zero rate and
+assignments. Original ledger and account150/170/project150/130 safeguards retained.
+No provider calls, retired2024–September2026 evaluation, local fitting or orders.
+
+[Exact gates and per-symbol metrics](summary.json), [10k curves](learning-curves.csv),
+[screen frozen restoration](restoration.json), [smokes](smoke-summary.json),
+[compute](compute.json), [protocol](../../configs/experiments/recurrent_alignment.json),
+[guide](../../docs/recurrent-sizing-alignment.md),
+[interactive comparison](https://github.com/jason490/RL-trading/releases/download/recurrent-alignment-2026-10-21/comparison.html),
+[models and reports](https://github.com/jason490/RL-trading/releases/tag/recurrent-alignment-2026-10-21).
+
+Overall robust multi-seed/prospective objective remains unmet. Next inspect saved
+risk/action behavior before any different preregistered learning hypothesis.
+
+Ledger observed debits0.08 units; rounded account balance decrease0.09 includes
+metering delay. Conservative rate estimate/charge0.12225039 stays retained.
+
+Publication verifies13 server assets. Cleanup removes48,871,879 duplicate bytes,
+456 retained hashes unchanged. Strict report reproduces byte for byte after
+cleanup; all weights, frozen bundles, execution counters, curves, source, data
+and ledger remain. [Publication](release-verification.json), [cleanup](cleanup.json),
+[reproduction](reproduction.json).

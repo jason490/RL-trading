@@ -674,3 +674,32 @@ policy tensors match exactly. Actual selected/final records/checkpoint identitie
 and unit traces pass. All3 sessions stopped; project38.047855/150, account349.78
 zero rate/assignments. Fixed same-source three100k screen next within3-unit study
 allowance; no tuning from smoke returns. [Evidence](../results/recurrent-alignment-2026-10-21/README.md).
+
+## Completed alignment screen — candidate gates failed
+
+Fresh100k seed11 selected/final means:adaptive24.99%/24.04%, posthoc unit32.80%/
+32.80%, aligned unit20.04%/13.93%, holding30.60%. Adaptive/posthoc final tensors
+match exactly. Candidate selected/final loses4.95/10.12pp to adaptive and12.76/
+18.88pp to posthoc. Candidate final stocks14.86% versus holding32.63%, ETFs8.77%
+versus19.47%, median stock excess−24.77pp. Final mean drawdown−37.41% worsens
+7.42pp versus adaptive and4.21pp versus posthoc. Selected joint short outcomes
+2/3 deteriorate to0/3 final. Relative/absolute/risk gates fail: no extension,
+threshold/architecture sweep, confirmation or promotion of this family.
+
+All6 owned sessions stopped;468 exact frozen mapped-action/state predictions,
+actual execution counters/traces, restored models and checkpoint identities pass.
+All initial tensors and actual sampling counts match; all111 symbols receive
+training transitions. Unit training maps62,293 sizes, processes0 non-unit sizes,
+changes0 protection components; all100,000 requests nonzero. These facts establish
+execution, not a proven failure cause. Posthoc remains a one-seed development
+control, not robust/prospective success; original failed replay is unchanged.
+
+Project38.136658/150, remaining111.863342; study conservative0.12225039 (ledger
+observed debits0.08; rounded account decrease0.09 includes meter delay). Account
+349.71 zero rate/assignments, account150/170 and project150/130 retained. No retired
+test or orders. Overall goal unmet. [Full evidence](../results/recurrent-alignment-2026-10-21/README.md).
+
+Alignment publication/cleanup accepted:13 server sizes/digests match;48,871,879
+duplicate bytes removed,456 retained hashes unchanged. Post-cleanup strict report
+reproduces byte for byte. All6 sessions stopped and required source/data/model/
+counter/curve evidence retained. [Audit](../results/recurrent-alignment-2026-10-21/cleanup.json).

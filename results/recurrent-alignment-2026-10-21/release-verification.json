@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "asset_count": 13,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/recurrent-alignment-2026-10-21",
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773552,
+      "digest": "sha256:6f16044d43592ab9f8b492361a2eb8d2762b94ce5eabd4c1a078e4c2cc742168",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 1212,
+      "digest": "sha256:cb270cecdefb849c4338d196774d8a7adc084f7857b24d154d28c4bf07324c69",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 2815,
+      "digest": "sha256:6d4a4c1e8b6340a9bd2c65e9eb7486e51d20311dfe186cfaa4966e78a03ed405",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 751811,
+      "digest": "sha256:17124da6dfd2259d3d094c75c993799d91592debd90628c0304fc35f1adb7609",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 8245,
+      "digest": "sha256:5ab624ecca56d247dc1256bb5d3a06d08637043719d1719dc95c0d249eae6e9c",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 43839485,
+      "digest": "sha256:53185b8a132615603add2558ff881bf18cb0ca288c3b81fb6210083044f338b3",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 3792,
+      "digest": "sha256:a4e2763ec317572b8dd0cad3800b78828ef925a05295199e0afc8f6a65ea5746",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 3792,
+      "digest": "sha256:9f7e1a9e3b7f2f08c7b7d025415d105364857e44fdbff94717000e51ad3c09a4",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 13186,
+      "digest": "sha256:94c5c6576856f2476cefe5891be09c2af9bbfb33e5db788ba0f7b0fc0c3c5b7b",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 396,
+      "digest": "sha256:d97cb4d1f89bb71ff24dffa2e91ae587d586f598e665b168987af804e8745d42",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 325515,
+      "digest": "sha256:f54cb33952f0b770a4f09e2db1249729fe737481e9300440cf74e50f09df2f86",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 5032394,
+      "digest": "sha256:c2e77306cbac50a02ecae1a585964a4a561607182ccf29c8f804c607d4b26311",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1797,
+      "digest": "sha256:561a0198cd57383f158c6064c952288c39c099e8a193e77aade9a2a231585a28",
+      "state": "uploaded"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "report_byte_identical": true,
+  "sha256": "f54cb33952f0b770a4f09e2db1249729fe737481e9300440cf74e50f09df2f86",
+  "post_cleanup": true,
+  "command": "PYTHONPATH=src .venv/bin/python scripts/report_alignment.py --state .runtime/alignment-screen-state.json --output /tmp/alignment-reproduced.json"
+}

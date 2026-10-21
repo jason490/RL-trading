@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "owned_cleanup_verified": true,
+  "release_assets_verified": 13,
+  "removed_files": [
+    {
+      "path": "artifacts/alignment-release/validation-reports.tar.gz",
+      "bytes": 5032394,
+      "sha256": "c2e77306cbac50a02ecae1a585964a4a561607182ccf29c8f804c607d4b26311"
+    },
+    {
+      "path": "artifacts/alignment-release/research-models.tar.gz",
+      "bytes": 43839485,
+      "sha256": "53185b8a132615603add2558ff881bf18cb0ca288c3b81fb6210083044f338b3"
+    }
+  ],
+  "removed_count": 2,
+  "removed_logical_bytes": 48871879,
+  "retained_file_count": 456,
+  "retained_hashes_unchanged": true,
+  "raw_data_models_reports_curves_ledger_preserved": true,
+  "scope": "Only server-digest-verified duplicate publication archives removed; original transport, all models/checkpoints, frozen bundles, execution counters and source archives retained."
+}
