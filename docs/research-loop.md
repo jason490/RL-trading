@@ -521,3 +521,16 @@ is a distinct testable hypothesis, not proof of the previous performance cause.
 Next freeze a matched recurrent masked21/full21 comparison with feed-forward
 control and unchanged absolute/relative gates before smoke acceptance.
 [Audit](../results/recurrent-contract-2026-10-21/README.md).
+
+## Recurrent full-state protocol prepared
+
+Distinct fixed three-arm comparison: recurrent_full candidate, recurrent_masked
+and feedforward_full controls; expanded111 data, unchanged normalization/sampler/
+reward/costs, fresh100k seed11 screen after three512 CPU smokes. Same recurrent
+initial tensors; feed-forward is not parameter-count matched. Both relative and
+absolute selected/final gates required before three-seed confirmation/prospective
+evidence. Seven actual-construction/save-load/sequence/reset/gate checks pass
+without fitting. No allocation: job/worker/archive/restored-report integration
+remains required. Project37.897158 retained; incremental study allowance3 includes
+all attempts, account150/170 and project150/130 enforced at future allocation.
+[Protocol and status](recurrent-execution-state.md).
