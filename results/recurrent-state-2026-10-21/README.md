@@ -1,25 +1,64 @@
-# Recurrent execution-state Colab acceptance
+# Recurrent execution-state comparison — complete, gates failed
 
-Three512 CPU smokes complete on actual default Python3.13.16, clean worker
-dd3b256fe0b830fb3d662e8cff75077a88e5aa10. Feed-forward full21, recurrent masked21
-and recurrent full21 retain identical data, sampling and execution contracts.
-Actual selected/final models restore matching settings, tensors and steps.
-Recurrent initial tensors match exactly; all three actual sampling counts agree.
+Fresh fixed100k seed11 Colab CPU runs compare feed-forward full21, recurrent
+masked21 and recurrent full21. Same expanded111 training source, original26
+2021–2023 development episodes, immutable normalization, sampler, reward, costs,
+PPO rollout/batch/epochs and gamma. Recurrent initial weights match exactly.
 
-234 exact frozen predictions cover three causal observations on each of26
-original development episodes per model. Recurrent action/hidden/cell parity,
-repeatability, caller-memory immutability and independent episode resets pass.
-Normalization stays immutable; incompatible schema/feed/nonfinite inputs reject.
-Mandatory current checkpoint identities and post-update completion are verified.
-[Acceptance](smoke-summary.json), [frozen restoration](smoke-restoration.json).
+| Arm | Selected return | Final post-update return |
+| --- | ---: | ---: |
+| Feed-forward full | 4.46% | 3.34% |
+| Recurrent masked | 24.99% | 24.04% |
+| Recurrent full candidate | 3.95% | −3.11% |
+| Matched holding | 30.60% | 30.60% |
 
-All three owned sessions stopped and cleanup verified. Project37.927940/150,
-study increment0.03078248 including setup/idle/retrieval. Official account349.86,
-zero rate/assignments. Shared study allowance3, project150/130 and account150/170
-protections remain. No retired-test evaluation, provider calls or orders.
+Means of separate cumulative development episodes, not annualized returns or an
+investable portfolio. Candidate loses0.51/6.45pp selected/final to feed-forward
+and21.05/27.16pp to recurrent masked. Required+2pp gains fail. Candidate final
+stocks−2.25% versus holding32.63%, ETFs−7.84% versus19.47%; median stock excess
+−29.25pp. Drawdown cannot override failed return gates. No extension, recurrent
+architecture/sequence sweep, confirmation or promotion follows this protocol.
+Masked control is the best arm here but still misses absolute holding targets;
+it is not retrospectively promoted. Repeated development evidence is not fresh
+out-of-sample proof, and the overall objective remains unmet.
 
-Next run the fixed fresh100k seed11 three-arm screen on the same worker, then
-apply relative AND absolute selected/final gates. Smoke acceptance establishes
-wiring, not profitability. Confirmation/prospective evidence remain gated.
-[Protocol](../../configs/experiments/recurrent_state.json),
-[guide](../../docs/recurrent-execution-state.md).
+## Short side and limits
+
+Candidate selected/final0/3 joint positive total return AND positive net short
+P&L on reporting-only declining stocks; feed-forward0/3, masked1/3 selected and
+0/3 final. Positive individual short contributions do not establish profitable
+whole strategies. Future decline labels never enter learning or selection.
+Explicit execution state did not help this configuration. One seed cannot prove
+memory or state universally harmful; feed-forward and LSTM parameter counts differ.
+Retired2024–September2026 stays unopened. Survivor-data limitations remain.
+
+## Integrity and operations
+
+Three512 smokes plus three100k screens complete on actual Python3.13.16, clean
+workerdd3b256fe0b830fb3d662e8cff75077a88e5aa10. Actual initial/selected/final model
+settings, tensors and steps restore correctly; checkpoint identities bind weights
+and reports. All-arm sampling counts match; all111 symbols receive transitions.
+468 smoke/screen frozen predictions are exact, including recurrent hidden/cell
+carry, repeats, independent resets, immutable normalization and schema rejection.
+
+All6 owned sessions stopped, artifacts retrieved and shutdown verified. Project
+38.01440797/150, remaining111.98559203; study increment0.11725006 including setup,
+idle, retrieval and all attempts. Post-shutdown official account349.80, zero rate
+and assignments. Existing CLI reused, ledger not reset; project150/130 and
+account150/170 protections remain. No broker orders or prospective success.
+
+[Exact gates and symbols](summary.json), [10k curves](learning-curves.csv),
+[screen restoration](restoration.json), [smokes](smoke-summary.json),
+[compute](compute.json), [protocol](../../configs/experiments/recurrent_state.json),
+[guide](../../docs/recurrent-execution-state.md),
+[interactive comparison](https://github.com/jason490/RL-trading/releases/download/recurrent-state-2026-10-21/comparison.html),
+[models and reports](https://github.com/jason490/RL-trading/releases/tag/recurrent-state-2026-10-21).
+
+Next diagnose saved selected/final costs and directional participation without
+fitting before choosing a distinct hypothesis. Preserve every failed gate.
+
+Publication verifies13 server assets. Cleanup removes47,914,914 duplicate bytes
+with439 retained hashes unchanged. Post-cleanup strict report reproduces byte
+for byte. All selected/final/checkpoint/frozen/source/data evidence remains.
+[Publication](release-verification.json), [cleanup](cleanup.json),
+[reproduction](reproduction.json).

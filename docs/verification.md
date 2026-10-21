@@ -1236,3 +1236,29 @@ steps/settings/tensor fingerprints, equal recurrent initialization and all-arm
 sampling pass. All three owned sessions stopped; project37.927940/150, account
 349.86 zero rate/assignments. Next fixed three100k seed11 screen on same worker,
 no tuning from smoke returns. [Evidence](../results/recurrent-state-2026-10-21/README.md).
+
+## Completed recurrent screen — gates failed
+
+Fresh100k seed11 selected/final means:feed-forward4.46%/3.34%, recurrent masked
+24.99%/24.04%, full-state recurrent candidate3.95%/−3.11%, holding30.60%. Candidate
+loses0.51/6.45pp to feed-forward and21.05/27.16pp to masked. Candidate final
+stock−2.25% versus holding32.63%, ETF−7.84% versus19.47%, median stock excess
+−29.25pp. Candidate selected/final joint profitable-short outcomes0/3; masked
+1/3 selected,0/3 final. Relative AND absolute gates fail. No extension, sweep,
+confirmation or promotion; masked control cannot be retrospectively promoted.
+
+All6 owned smoke/screen sessions stopped and cleanup verified.468 exact frozen
+predictions include recurrent action/hidden/cell/reset parity and immutable
+normalization. Actual selected/final records/checkpoint identities, equal initial
+recurrent tensors, all-arm sampling counts and matched holding paths pass. Project
+38.014408/150, remaining111.985592; study increment0.11725006. Official account
+349.80, zero rate/assignments; floor150/teardown170 retained. No retired-test use.
+Next saved-path cost/directional diagnosis without fitting before a distinct
+hypothesis. Overall multi-seed/prospective objective remains unmet.
+[Evidence and release](../results/recurrent-state-2026-10-21/README.md).
+
+Recurrent outcome publication accepted:13 server sizes/digests match; duplicate
+publication archives47,914,914 bytes removed,439 retained hashes unchanged. Strict
+report reproduces byte for byte after cleanup. All6 sessions stopped; all models,
+frozen bundles, current checkpoint identities, source, data and ledger retained.
+[Audit](../results/recurrent-state-2026-10-21/cleanup.json).

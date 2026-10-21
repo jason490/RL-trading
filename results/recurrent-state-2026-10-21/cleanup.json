@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "owned_cleanup_verified": true,
+  "release_assets_verified": 13,
+  "removed_files": [
+    {
+      "path": "artifacts/recurrent-state-release/validation-reports.tar.gz",
+      "bytes": 4907212,
+      "sha256": "34a35a57e761f2aa870605012657f500d5e081b8c9309fbfdb5f2e99ca8a8701"
+    },
+    {
+      "path": "artifacts/recurrent-state-release/research-models.tar.gz",
+      "bytes": 43007702,
+      "sha256": "584587eb9f92c0787e0709d2d56eab10e5af6a6ed7da5d2b112c6637a07a9213"
+    }
+  ],
+  "removed_count": 2,
+  "removed_logical_bytes": 47914914,
+  "retained_file_count": 439,
+  "retained_hashes_unchanged": true,
+  "raw_data_models_reports_curves_ledger_preserved": true,
+  "scope": "Only server-digest-verified duplicate publication archives removed; original transport, source, all selected/final/checkpoint weights and frozen bundles retained."
+}

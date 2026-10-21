@@ -1,0 +1,6 @@
+{
+  "report_byte_identical": true,
+  "sha256": "251db00fe6889575607e2016ce67e095b6f8d0f31e4c1ef2acccae3220f98580",
+  "post_cleanup": true,
+  "command": "PYTHONPATH=src .venv/bin/python scripts/report_recurrent_state.py --state .runtime/recurrent-state-screen-state.json --output /tmp/recurrent-state-reproduced.json"
+}
