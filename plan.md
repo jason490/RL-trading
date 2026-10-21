@@ -1357,3 +1357,8 @@ Alignment integration complete:79 checks, actual immutable payload validation
 and compilation pass. Strict version23 modes/counters/archives/restored reports
 implemented; actual3x512 CPU smokes/frozen parity/equal-control fingerprints next.
 No allocation yet. Original failed replay remains closed.
+
+Alignment actual3x512 CPU smokes accepted:234 exact frozen mapped-action/state
+predictions, actual execution counters, equal initial/control-final tensors and
+sampling. Three owned sessions stopped; project38.047855/150, account349.78 idle.
+Same frozen-worker three100k seed11 screen next; no performance claim.

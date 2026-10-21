@@ -1,0 +1,418 @@
+{
+  "passed": true,
+  "protocol_sha256": "bf5c5ab3a3230367eb763405d1764a77968fd0ccb461f64751ae35adb79cb47e",
+  "source_proof": {
+    "source_revision": "caddfcb3bbccc855c769e194fe10a075ce596a96",
+    "source_hash": "9afeb4464d51ec44fcf9fb0e2a0a76c7b26b512bcb1eec074e4b29c966b29550",
+    "source_archive_sha256": "96804bda0e88eddd11f9ccd45bbc4ec4ee2485fdd6f393aa90db69ffd7fb7f26",
+    "shared_original_ledger_and_lock_verified": true,
+    "root": "/home/vibe/projects/rl-stocks/.runtime/alignment-source",
+    "sessions_allocated": 0
+  },
+  "records": {
+    "adaptive": {
+      "session": "rl-stocks-cpu-4e396a9c6941",
+      "run": "20261021T185035-recurrent_ppo-11-474e4446",
+      "bundle_id": "4aea7c8af913a2b0d394373b929382cbb714c9a287505f8940f3f444ba31ac68",
+      "initial": {
+        "algorithm": "RecurrentPPO",
+        "observation_size": 21,
+        "action_size": 4,
+        "num_timesteps": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.0,
+        "learning_rate": 0.0003,
+        "net_arch": [
+          32,
+          32
+        ],
+        "actor_lstm": {
+          "hidden_size": 32,
+          "num_layers": 1
+        },
+        "critic_lstm": true,
+        "shared_lstm": false,
+        "policy_tensor_sha256": "b039fca876b95f96e391a6e4b963d160954a16a2a062d5c4846a0e9ec7fdcc0d"
+      },
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "stock_etf_cycle_windows"
+      },
+      "training_execution": {
+        "mode": "unrestricted",
+        "transitions": 512,
+        "requested_nonzero": 512,
+        "processed_nonunit": 340,
+        "sizing_changed": 0,
+        "protective_changed": 0
+      },
+      "final_tensor_sha256": "dd858285206ee86e741a2141d13ff9ab0a6363f553034ebacd3a0fba01c63961",
+      "sampling_checked": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 111,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 107,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 4,
+            "transitions": 384
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 4,
+        "actual_etf_transition_fraction": 0.25
+      },
+      "checkpoint_identity": {
+        "version": 1,
+        "latest": {
+          "steps": 512,
+          "phase": "post_update",
+          "model": "checkpoint-512.zip",
+          "report": "checkpoint-validation.json",
+          "model_sha256": "30087f48f698d3f2186fa80aa0d51337811bfab3ae133a75e87157565be53141",
+          "report_sha256": "629757f07b598a2953e0426ba4b431791da564405e4d89542793e9edd64322d8"
+        },
+        "selected": {
+          "steps": 256,
+          "phase": "on_step",
+          "model": "best.zip",
+          "report": "selected-validation.json",
+          "model_sha256": "68b27db16cf9c7a263b7af21ab168f88c4424a58a6b3e8f1d08042d5b0992721",
+          "report_sha256": "bac98296a61a705e9444e4033106246b8b2c8f420fe20c0f1c4c73e6e121ddcd"
+        },
+        "score": -0.024755521576483357,
+        "final_post_update": true
+      },
+      "metadata_sha256": "c83acec6f4b48a231cf72f9e3980504e497f6c5e73d899bfc60c0af52c63269f",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true
+    },
+    "posthoc_unit": {
+      "session": "rl-stocks-cpu-fda8fbe57639",
+      "run": "20261021T184737-recurrent_ppo-11-c22d0070",
+      "bundle_id": "0a3a6ac43f7c50c270b4f04891f0240705230b0e992bc0126daba4505a27aff9",
+      "initial": {
+        "algorithm": "RecurrentPPO",
+        "observation_size": 21,
+        "action_size": 4,
+        "num_timesteps": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.0,
+        "learning_rate": 0.0003,
+        "net_arch": [
+          32,
+          32
+        ],
+        "actor_lstm": {
+          "hidden_size": 32,
+          "num_layers": 1
+        },
+        "critic_lstm": true,
+        "shared_lstm": false,
+        "policy_tensor_sha256": "b039fca876b95f96e391a6e4b963d160954a16a2a062d5c4846a0e9ec7fdcc0d"
+      },
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "stock_etf_cycle_windows"
+      },
+      "training_execution": {
+        "mode": "unrestricted",
+        "transitions": 512,
+        "requested_nonzero": 512,
+        "processed_nonunit": 340,
+        "sizing_changed": 0,
+        "protective_changed": 0
+      },
+      "final_tensor_sha256": "dd858285206ee86e741a2141d13ff9ab0a6363f553034ebacd3a0fba01c63961",
+      "sampling_checked": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 111,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 107,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 4,
+            "transitions": 384
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 4,
+        "actual_etf_transition_fraction": 0.25
+      },
+      "checkpoint_identity": {
+        "version": 1,
+        "latest": {
+          "steps": 512,
+          "phase": "post_update",
+          "model": "checkpoint-512.zip",
+          "report": "checkpoint-validation.json",
+          "model_sha256": "fa9d6127f2d1d53a33184b9c199af18629f28743cd03c7beb85df55ba1e0f536",
+          "report_sha256": "a539d40339c2e97df1b61873331ad4ec576352ef7b8ec973918eb3bb00045952"
+        },
+        "selected": {
+          "steps": 256,
+          "phase": "on_step",
+          "model": "best.zip",
+          "report": "selected-validation.json",
+          "model_sha256": "64718ced6c3b8e892a91f881248095b8498f85edce596bd1f74275bd92e463ca",
+          "report_sha256": "66e4ab5a5ec4ca9db538b29ab45ee8c7b294ec20b64971070c3d98047650e7d4"
+        },
+        "score": -0.3758672105833944,
+        "final_post_update": true
+      },
+      "metadata_sha256": "1a82206278154320091ceb120f55cf83d549d82ee6315de3d88af06c7ecf10f3",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true
+    },
+    "aligned_unit": {
+      "session": "rl-stocks-cpu-bd2a0ab8b270",
+      "run": "20261021T184735-recurrent_ppo-11-9088b4f7",
+      "bundle_id": "9e7fb0de382dfcd4d979f0a5f8c628a8392acceb6c397c3001fbdc96c7495b31",
+      "initial": {
+        "algorithm": "RecurrentPPO",
+        "observation_size": 21,
+        "action_size": 4,
+        "num_timesteps": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.0,
+        "learning_rate": 0.0003,
+        "net_arch": [
+          32,
+          32
+        ],
+        "actor_lstm": {
+          "hidden_size": 32,
+          "num_layers": 1
+        },
+        "critic_lstm": true,
+        "shared_lstm": false,
+        "policy_tensor_sha256": "b039fca876b95f96e391a6e4b963d160954a16a2a062d5c4846a0e9ec7fdcc0d"
+      },
+      "sampling": {
+        "starts": 5,
+        "downtrend_starts": 0,
+        "transitions": 512,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 128
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 0
+          }
+        },
+        "downtrend_counts_measured": false,
+        "mode": "stock_etf_cycle_windows"
+      },
+      "training_execution": {
+        "mode": "unit_magnitude",
+        "transitions": 512,
+        "requested_nonzero": 512,
+        "processed_nonunit": 0,
+        "sizing_changed": 343,
+        "protective_changed": 0
+      },
+      "final_tensor_sha256": "ee7b7bf09d0c10991412121bb8fc77dafdc13e9ca682b4b93306dabe04df0ca3",
+      "sampling_checked": {
+        "summary": {
+          "mode": "stock_etf_cycle_windows",
+          "window_transitions": 128,
+          "episode_count": 111,
+          "selection": "Fixed group probability, shuffled episode cycles within group, uniform full-window start",
+          "future_outcomes_used": false,
+          "downtrend_counts_measured": false,
+          "group_probability": {
+            "stock_numerator": 22,
+            "etf_numerator": 4,
+            "denominator": 26
+          },
+          "etf_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "DIA"
+          ],
+          "episode_cycle": "Without replacement until group exhausted",
+          "group_episodes": {
+            "stock": 107,
+            "etf": 4
+          }
+        },
+        "group_counts": {
+          "stock": {
+            "starts": 4,
+            "transitions": 384
+          },
+          "etf": {
+            "starts": 1,
+            "transitions": 128
+          }
+        },
+        "symbols_with_transitions": 4,
+        "actual_etf_transition_fraction": 0.25
+      },
+      "checkpoint_identity": {
+        "version": 1,
+        "latest": {
+          "steps": 512,
+          "phase": "post_update",
+          "model": "checkpoint-512.zip",
+          "report": "checkpoint-validation.json",
+          "model_sha256": "94e19ab126e22fb513290a76110ca9bd334e48ce0f232ac5d51da31582ceb61c",
+          "report_sha256": "35f70b65581659dd9240a15759ae0a060340ae4150282ff7dcf8e729ef957a1e"
+        },
+        "selected": {
+          "steps": 256,
+          "phase": "on_step",
+          "model": "best.zip",
+          "report": "selected-validation.json",
+          "model_sha256": "6b10a2ed17cbd92eb220e8fe812419f1e1f7a0e6c8f4ab4aa2667ae983680c55",
+          "report_sha256": "7f57344fb4b09eacbd51c0fccad96288a53509752301ef749aee21c12bcbc77f"
+        },
+        "score": -0.3761329750726041,
+        "final_post_update": true
+      },
+      "metadata_sha256": "67bfab58329584c73b8f931119a4145601603afc4552f1e371b7ce90c546d0ba",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true
+    }
+  },
+  "frozen_predictions_exact": 234,
+  "recurrent_initialization_equal": true,
+  "adaptive_posthoc_final_weights_equal": true,
+  "actual_sampling_equal": true,
+  "cleanup_verified": true,
+  "screen_allocated": false,
+  "test_evaluated": false,
+  "project_units": 38.04785547085732,
+  "study_start_units": 38.01440797126489,
+  "account_balance": 349.78,
+  "reported_rate": 0,
+  "active_assignments": 0,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170
+}

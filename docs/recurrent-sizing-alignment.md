@@ -140,3 +140,15 @@ start the fixed three100k screen. `report_alignment.py` independently restores
 selected/final weights, validates action traces and matched source/accounting/
 holding panels, requires adaptive/posthoc final equality, then applies original
 gates. No training or provisioning has occurred at this integration milestone.
+
+## Actual alignment Colab smoke acceptance
+
+Three512 CPU smokes accepted on Python3.13.16, clean workercaddfcb.234 exact
+frozen mapped-action/hidden/cell/repeat/reset predictions, immutable normalization
+and input rejection pass. Actual counters:adaptive/posthoc512 transitions each,
+340 non-unit raw sizes and0 changes; aligned343 changes,0 processed non-unit sizes,
+0 protective changes. All initial tensors/sampling match; adaptive/posthoc final
+policy tensors match exactly. Actual selected/final records/checkpoint identities
+and unit traces pass. All3 sessions stopped; project38.047855/150, account349.78
+zero rate/assignments. Fixed same-source three100k screen next within3-unit study
+allowance; no tuning from smoke returns. [Evidence](../results/recurrent-alignment-2026-10-21/README.md).

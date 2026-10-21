@@ -662,3 +662,15 @@ acceptance requires234 exact frozen action/state predictions plus adaptive/posth
 final tensor equality. No allocation at integration, project38.014408 retained.
 Freeze clean pushed source and official usage check before three512 CPU smokes.
 [Guide](recurrent-sizing-alignment.md).
+
+## Actual alignment Colab smoke acceptance
+
+Three512 CPU smokes accepted on Python3.13.16, clean workercaddfcb.234 exact
+frozen mapped-action/hidden/cell/repeat/reset predictions, immutable normalization
+and input rejection pass. Actual counters:adaptive/posthoc512 transitions each,
+340 non-unit raw sizes and0 changes; aligned343 changes,0 processed non-unit sizes,
+0 protective changes. All initial tensors/sampling match; adaptive/posthoc final
+policy tensors match exactly. Actual selected/final records/checkpoint identities
+and unit traces pass. All3 sessions stopped; project38.047855/150, account349.78
+zero rate/assignments. Fixed same-source three100k screen next within3-unit study
+allowance; no tuning from smoke returns. [Evidence](../results/recurrent-alignment-2026-10-21/README.md).
