@@ -30,7 +30,7 @@ class ValidationCheckpoint(BaseCallback):
     def __init__(self,dataset,config,path,every,compact=False,target_steps=None,sampling_env=None,observation_profile="legacy"):
         super().__init__();self.dataset=dataset;self.config=config;self.path=path
         self.every=every;self.best=-float("inf");self.history=[]
-        self.best_step=None;self.best_metrics={}
+        self.best_step=None;self.best_phase=None;self.best_metrics={}
         self.compact=compact;self.target_steps=target_steps;self.started=time.monotonic()
         self.sampling_env=sampling_env;self.observation_profile=observation_profile
     def validate(self,phase='on_step'):
@@ -55,7 +55,7 @@ class ValidationCheckpoint(BaseCallback):
         improved=score>self.best
         if improved:
             self.best=score;self.model.save(self.path/"best")
-            self.best_step=self.num_timesteps
+            self.best_step=self.num_timesteps;self.best_phase=phase
             self.best_metrics={key:{"symbol":value["symbol"],"policy":value["metrics"],
                 "baselines":{name:baseline["metrics"] for name,baseline in value["baselines"].items()}}
                 for key,value in results.items()}
@@ -65,6 +65,10 @@ class ValidationCheckpoint(BaseCallback):
             if improved:
                 for suffix in ("html","json"):
                     shutil.copyfile(self.path/f"validation.{suffix}",self.path/f"selected-validation.{suffix}")
+        from rl_stocks.training.checkpoint_state import write_checkpoint_state
+        write_checkpoint_state(self.path,results,filename+'.zip',self.num_timesteps,phase,
+            self.best_step,self.best_phase,
+            final_post_update=phase=='post_update' and self.num_timesteps==self.target_steps)
         snapshot=os.environ.get("RL_CHECKPOINT_ARCHIVE")
         if snapshot:
             target=Path(snapshot)

@@ -1152,3 +1152,14 @@ estimate and stop flag. Actual checkpoint/optimizer restoration and saved-path
 accounting pass;78 control plus156 smoke frozen predictions exact.13 server
 asset hashes verified;3 archive duplicates removed,656 retained hashes unchanged.
 [Evidence and reproduction](../results/sac-regularization-2026-10-20/README.md).
+
+## Interruption checkpoint identity fix — 2026-10-21
+
+New snapshots explicitly bind current and selected weights/reports to steps,
+evaluation phases and checksums. A worsening non-selected checkpoint now has its
+own saved paths; legacy reports are not misidentified as current. Complete
+archive validation checks the manifest when present; earlier archives stay
+compatible.33 focused callback/archive/curve/publication checks pass with fake
+saves/evaluations and no local training. Actual new-format Colab smoke remains
+pending after the reviewed budget stop. Ledger remains37.787213/150; no allocation.
+[Checkpoint contract](training.md#checkpoint-identity-during-interruptions).

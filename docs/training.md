@@ -82,3 +82,29 @@ export verifies the action and state from an explicitly reset prediction. The
 [inference guide](inference.md#recurrent-bundles) covers sequence use and state
 validation; [algorithm stability](algorithm-stability.md) describes the controlled
 CPU comparison. Memory adds model capacity and is not established as an improvement.
+
+## Checkpoint identity during interruptions
+
+New runs write `checkpoint-validation.json` at every evaluation, including a
+worse non-selected checkpoint. `checkpoint-state.json` is atomically published
+last, before the existing atomic snapshot archive, and binds latest/selected
+model filenames to report filenames with SHA-256 hashes, transition counts and
+`on_step`/`post_update` phases. Only the declared final post-update evaluation
+sets `final_post_update`. Selected reports/weights remain the best checkpoint;
+producing current interruption evidence does not change selection or rewards.
+
+Legacy `validation.json`/HTML can stay at a prior selected checkpoint in compact
+runs until final reporting. Do not infer their identity from the newest learning
+curve. Use the explicit checkpoint-state mapping and current checkpoint report.
+`read_checkpoint_state(run_directory)` rejects corrupted/mismatched files,
+non-validation reports, unsafe filenames, invalid phases and inconsistent scores.
+A new complete archive containing this manifest must have the final post-update
+marker and agree with recorded final/selected steps and curve score. Old archives
+without the manifest remain readable; their paths require separate identity
+verification and may be unaligned, as in the interrupted regularization study.
+
+Current JSON evidence adds bounded storage per run; HTML generation remains at
+existing selected/final cadence. Published research model archives include both
+new files when present. Callback regression tests use fake saves/evaluations,
+never local optimizer updates. Actual remote acceptance of this new format is
+pending further authorized Colab work; the existing budget-stop flag stays set.

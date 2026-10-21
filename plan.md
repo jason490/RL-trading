@@ -1199,3 +1199,12 @@ Conservative ledger37.787213/150 includes monitoring-gap extrapolation; measured
 screen debit0.32 differs from estimate1.489616. Preserve stop flag; further
 allocation requires explicit reviewed authorization. Offline diagnostics allowed.
 [Full interruption evidence](results/sac-regularization-2026-10-20/README.md).
+
+## 49. Explicit interruption checkpoint identity — implemented
+
+Every new checkpoint has current validation JSON and an atomic manifest binding
+latest/selected weights/reports to counts, phases and hashes. Complete archive
+checks reject corruption/non-final markers; legacy reports stay compatible and
+require separate alignment evidence.33 tests pass without fitting, no Colab or
+ledger reset. Remote acceptance pending authorization after metering stop.
+[Contract](docs/training.md#checkpoint-identity-during-interruptions).

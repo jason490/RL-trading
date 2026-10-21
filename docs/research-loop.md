@@ -436,3 +436,11 @@ Project conservative37.787213/150 retains gap estimate (screen measured0.32,
 estimated1.489616). Budget-stop flag stays set; additional allocation requires
 explicit reviewed authorization. Offline evidence diagnostics remain possible.
 [Full incomplete evidence](../results/sac-regularization-2026-10-20/README.md).
+
+Interruption evidence fix completed offline: new snapshots bind latest/selected
+weights and validation paths to exact steps/phases/checksums, with a separate
+current JSON report on every checkpoint.33 checks cover worsening snapshots,
+corruption and final markers without fitting. Do not relabel old partial reports;
+existing interruption outcome remains unchanged. No allocation/stop-flag reset.
+Next offline work may diagnose retained partial policy behavior; new Colab runs
+still require explicit review after the metering stop.

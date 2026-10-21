@@ -81,6 +81,14 @@ def validate_archive(path, plan, dataset_id):
                             or any(points[s]['phase']!='post_update' for s in job['milestones'])
                             or curve!=run['validation_checkpoints']):
                         raise RuntimeError('incomplete or inconsistent learning curve')
+                    if prefix+'checkpoint-state.json' in names:
+                        from rl_stocks.training.checkpoint_state import validate_checkpoint_state
+                        checkpoint=validate_checkpoint_state(None,json.loads(read(prefix+'checkpoint-state.json')),
+                            read=lambda name:read(prefix+name))
+                        if (not checkpoint['final_post_update'] or checkpoint['latest']['steps']!=job['steps']
+                            or checkpoint['selected']['steps']!=run['selected_step']
+                            or not math.isclose(checkpoint['score'],points[job['steps']]['score'],abs_tol=1e-12,rel_tol=0)):
+                            raise RuntimeError('checkpoint identity/final completion mismatch')
                     table=list(csv.DictReader(StringIO(read(prefix+'learning-curve.csv').decode())))
                     if ([int(r['steps']) for r in table]!=sorted(points)
                             or any(not math.isclose(float(r['return_pct']),100*points[int(r['steps'])]['score'],abs_tol=1e-9) for r in table)):
