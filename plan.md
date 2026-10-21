@@ -1307,3 +1307,8 @@ all attempts, account150/170 and project150/130 enforced at future allocation.
 Recurrent remote integration:69 focused checks, three immutable smoke payloads
 and compilation pass. Exact version22 plans/worker/archives/report implemented;
 actual512 CPU smokes and frozen sequence acceptance remain next. No allocation.
+
+Recurrent actual3x512 CPU acceptance passes:234 exact frozen predictions, model
+records/checkpoint identity, equal initial recurrent tensors and all-arm sampling.
+Three sessions stopped; project37.927940/150, account349.86 idle. Fixed same-worker
+three100k seed11 screen next; no performance or prospective success claimed.

@@ -1229,3 +1229,10 @@ pass; actual three smoke payloads validate, scripts compile. No allocation or
 training yet. Freeze/push source and official usage check precede three512 CPU
 smokes; frozen sequence/reset acceptance precedes any100k screen.
 [Guide](recurrent-execution-state.md).
+
+Actual three512 Colab CPU smokes accepted on Python3.13.16, clean workerdd3b256.234 exact frozen prefix predictions include carried
+hidden/cell state, repeats, reset and caller-state immutability; actual saved
+steps/settings/tensor fingerprints, equal recurrent initialization and all-arm
+sampling pass. All three owned sessions stopped; project37.927940/150, account
+349.86 zero rate/assignments. Next fixed three100k seed11 screen on same worker,
+no tuning from smoke returns. [Evidence](../results/recurrent-state-2026-10-21/README.md).
