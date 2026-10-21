@@ -104,3 +104,13 @@ records before any100k screen. After verified screen shutdown,
 actual weights, revalidates paths against immutable development data and evaluates
 predefined gates. It refuses incomplete states or mismatched sampling/source.
 No new Colab study session has been provisioned at this integration milestone.
+
+Recurrent frozen acceptance now checks action AND hidden/cell-state equality on
+causal three-step prefixes of every development symbol, deterministic repeats
+from the same prior state, caller-state immutability and fresh episode resets.
+Regression probes reject lost memory and state mutation;4 focused checks pass.
+`scripts/accept_recurrent_smokes.py` requires three complete cleaned runs, actual
+restored selected/final records, exact source proof, equal recurrent initial
+tensors/sampling and234 exact frozen predictions. Actual smoke acceptance remains
+pending while the original frozen-source Colab controller executes. Local verifier
+changes do not alter running workers or fit parameters.
