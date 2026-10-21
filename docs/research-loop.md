@@ -453,3 +453,10 @@ causality, return improvement or all-input parity. No local backward/optimizer
 steps or Colab. Training numerical settings remain unchanged; explicit reviewed
 authorization is still needed before allocation after the metering stop.
 [Evidence and profiling limits](numerical-performance.md).
+
+Fixed retained80k diagnostic replay reveals long/flat behavior,0/3 joint short
+successes and stock/ETF returns6.92%/−4.87%. Cost and non-cost gaps both matter.
+Replay misses the declared1e-10 score tolerance by2.21088e-8; preserve that failure
+and no parity claim despite only$0.00221 mean equity difference. Original study
+remains incomplete.20 accounting checks pass, no fitting/Colab or stop reset.
+[Evidence](../results/regularization-80k-replay-2026-10-21/README.md).

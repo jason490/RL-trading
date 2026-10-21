@@ -1218,3 +1218,12 @@ no Colab or arithmetic-setting adoption. Eleven focused checks pass. Project
 37.787213/150 and budget stop preserved. Future matched numerical preflight
 requires reviewed allocation authorization; incomplete return gates unchanged.
 [Evidence](results/regularization-numerics-2026-10-21/README.md).
+
+## 51. Fixed80k regularization replay — diagnostic, tolerance failed
+
+Recovered diagnostic paths from retained intermediate weights, originals intact.
+Score differs2.21088e-8 from logged80k and fails declared1e-10 tolerance; no
+relaxation or parity claim. Stocks6.92%/ETFs−4.87%, zero short exposure/P&L,
+0/3 joint positives. Weights/optimizer/normalization/source unchanged;20 tests
+pass, no fitting/Colab. Incomplete screen and budget stop preserved.
+[Evidence](results/regularization-80k-replay-2026-10-21/README.md).

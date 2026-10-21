@@ -148,3 +148,24 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
 Use a new output directory. The script checks restored step counts and actual
 optimizer settings, recorded source identity, train/development-only data and
 saved report accounting. It never labels the stale path as80k final performance.
+
+## Fixed partial-checkpoint diagnostic replay
+
+Offline80k replay recovers current diagnostic paths, preserving stale original
+files. Replay5.10354112% versus recorded5.10354333% misses fixed1e-10 return
+score tolerance by2.21088e-8 (about$0.00221 mean equity). This remains failed
+replay acceptance, not a relaxed threshold or exact parity claim. Original
+incomplete screen is unchanged. Diagnostic stocks6.92%/ETFs−4.87% trail
+holding32.63%/19.47%; short exposure/P&L0, joint declining-stock success0/3.
+Source/weights/alpha/optimizer/update counts/normalization remain unchanged.
+20 accounting/direction checks pass, no fitting or Colab.
+[Results and charts location](../results/regularization-80k-replay-2026-10-21/README.md).
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+ .venv/bin/python scripts/replay_partial_regularization.py \
+ --output /tmp/partial80k-summary.json --artifacts /tmp/partial80k-paths
+```
+
+This generates diagnostic evidence even when strict score parity fails, with an
+explicit failed status. It never promotes, selects, allocates or resets the stop.
