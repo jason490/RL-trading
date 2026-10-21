@@ -501,3 +501,11 @@ reproduces byte-for-byte. Project37.897158/150, remaining112.102842; last accoun
 remain. Next inspect saved selected/final cost and directional contributions,
 without fitting or allocation, before any distinct hypothesis.
 [Detailed evidence and release](../results/sac-discount-2026-10-21/README.md).
+
+Saved discount-path diagnosis finds candidate final stock/ETF excess−8.74/−6.82pp
+equals non-cost excess−4.73/−3.94 minus cost drag4.01/2.89pp. Whole-panel shorts
+contribute−1.42%/−1.30% despite positive shorts on reporting-only decliners.
+Both costs and participation matter; no optimizer-cause claim or more-step/gamma
+sweep follows.12 accounting/behavior/report checks pass, source hashes unchanged,
+no fitting/data access/Colab. Next audit existing recurrent input/memory contracts
+before any distinct protocol. [Evidence](../results/sac-discount-paths-2026-10-21/README.md).
