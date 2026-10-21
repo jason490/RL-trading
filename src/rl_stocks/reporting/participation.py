@@ -5,6 +5,49 @@ from statistics import mean
 from rl_stocks.evaluation.behavior import behavior
 
 
+COST_CATEGORIES = ('same_side_resize', 'entry', 'discretionary_close', 'reversal', 'protective_exit', 'holding_limit', 'borrow')
+
+
+def fill_cost_attribution(result, initial=100000.):
+    """Partition observed fees/impact/borrow; never infer removable costs."""
+    if not math.isfinite(initial) or initial <= 0:
+        raise ValueError('positive initial equity required')
+    categories = {name: dict(fills=0, fees=0., impact=0., borrow=0.) for name in COST_CATEGORIES}
+    reasons = {}
+    for event in result['events']:
+        reason = event['reason']; old = event['quantity'] - event['delta']; target = event['quantity']
+        if reason in ('stop', 'target_near', 'target_far'):
+            category = 'protective_exit'
+        elif reason == 'holding_limit':
+            category = 'holding_limit'
+        elif reason in ('reverse_close', 'reverse'):
+            category = 'reversal'
+        elif reason in ('add', 'reduce', 'close', 'hold'):
+            if old == 0 and target != 0: category = 'entry'
+            elif target == 0 and old != 0: category = 'discretionary_close'
+            elif old * target > 0 and event['delta'] != 0: category = 'same_side_resize'
+            else: raise ValueError('unclassified discretionary fill geometry')
+        else:
+            raise ValueError('unknown fill reason')
+        values = (event['fee'], event['impact'])
+        if any(not math.isfinite(v) or v < 0 for v in values):
+            raise ValueError('finite nonnegative fill costs required')
+        row = categories[category]; row['fills'] += 1; row['fees'] += values[0]; row['impact'] += values[1]
+        reasons[reason] = reasons.get(reason, 0.) + sum(values)
+    borrow = [row.get('borrow_cost', 0.) for row in result['rows']]
+    if any(not math.isfinite(v) or v < 0 for v in borrow):
+        raise ValueError('finite nonnegative borrow costs required')
+    categories['borrow']['borrow'] = sum(borrow)
+    for row in categories.values():
+        row['cost'] = row['fees'] + row['impact'] + row['borrow']
+        row['cost_pp'] = 100 * row['cost'] / initial
+    total = sum(row['cost'] for row in categories.values())
+    if not math.isclose(total, result['metrics']['costs'], abs_tol=1e-5, rel_tol=1e-9):
+        raise ValueError('fill-category cost reconciliation failed')
+    return dict(categories=categories, fees_impact_by_reason=reasons, total_cost=total,
+                interpretation='Observed costs only; changing fills also changes exposure, protection and P&L. Required exits are retained.')
+
+
 def episode_diagnosis(result, initial=100000.):
     rows=result['rows'];events=result['events'];holding=result['baselines']['buy_hold']
     if (result['split']!='validation' or not rows
@@ -40,7 +83,7 @@ def episode_diagnosis(result, initial=100000.):
         if pretrade<=0 or not math.isfinite(pretrade) or not math.isfinite(e['reference_price']) or e['reference_price']<=0:
             raise ValueError('invalid rebalance notional/equity')
         if abs(e['delta'])*e['reference_price']/pretrade<.05:small.append(e)
-    return {'symbol':result['symbol'],**b,
+    return {'symbol':result['symbol'],**b,'fill_cost_attribution':fill_cost_attribution(result,initial),
         'buy_hold_return':hold,'net_excess_pp':100*(net-hold),
         'incremental_cost_drag_pp':cost_drag,'saved_path_noncost_excess_pp':noncost,
         'mean_signed_exposure':mean(r['exposure'] for r in rows),
@@ -71,6 +114,6 @@ def diagnose_groups(results,stocks):
         if not rows:raise ValueError('both stock/ETF groups required')
         reasons=Counter()
         for r in rows:reasons.update(r['fill_reasons'])
-        groups[kind]={'count':len(rows),'equal_weight_means':{k:mean(r[k] for r in rows) for k in keys},'total_fill_reasons':dict(reasons)}
+        groups[kind]={'count':len(rows),'equal_weight_cost_categories':{category:{key:mean(r['fill_cost_attribution']['categories'][category][key] for r in rows) for key in ('fills','fees','impact','borrow','cost','cost_pp')} for category in COST_CATEGORIES},'equal_weight_means':{k:mean(r[k] for r in rows) for k in keys},'total_fill_reasons':dict(reasons)}
     return {'groups':groups,'per_symbol':records,
         'interpretation':'Fixed saved paths only. Net excess equals non-cost excess minus incremental cost drag. Add-back is not a zero-cost replay or causal attribution. Exposure/fractions are end-of-session; touched fractions include intraday positions and may overlap. Future declining-stock cohorts never select policies.'}

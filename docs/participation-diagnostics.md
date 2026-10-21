@@ -76,3 +76,15 @@ research direction, not an implemented or selected model. Any such experiment
 needs purged labels, frozen normalization, matched controls and its own committed
 protocol. Validation declining-stock outcomes remain reporting-only; their labels
 must never enter supervision, rewards, sampling weights or checkpoint selection.
+
+## Recurrent fill-cost attribution
+
+Observed masked final stock/ETF same-side resizing costs2.13/1.51pp, entries
+1.22/0.97, protective+holding exits1.69/1.26, borrow0.64/0.77. Categories reconcile
+all fees/impact/borrow and executed quantities; unknown reasons/corruption reject.
+Even arithmetic addback of every resize leaves4.68/3.68pp gaps; adding all entries,
+resizes, closes and reversals still leaves~2.99/2.47pp. These are saved-path
+bookkeeping bounds, not counterfactual profits. Resize-only savings insufficient;
+required protections/20-session exits/borrow remain.18 checks pass, source hashes
+unchanged, no fitting/data/Colab. Next separate direction from protective-exit
+participation before a distinct protocol. [Audit](../results/recurrent-fill-costs-2026-10-21/README.md).

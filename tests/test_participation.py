@@ -46,3 +46,35 @@ def test_small_resize_uses_pretrade_equity_excludes_protective_exits():
     assert d['same_side_resizes_below_5pct_equity']==1
     assert d['saved_fees_impact_on_small_resizes_pp']==pytest.approx(.0003)
     assert d['discretionary_same_side_resize_fills']==1
+
+
+def test_fill_cost_categories_keep_intraday_protection_and_borrow_separate():
+    from rl_stocks.reporting.participation import fill_cost_attribution
+    result=fill_cost_attribution(fixture())
+    assert result['categories']['entry']['cost']==30.
+    assert result['categories']['protective_exit']['cost']==30.
+    assert result['categories']['borrow']['cost']==5.
+    assert result['total_cost']==65.
+
+
+def test_hold_intent_with_actual_share_resize_is_not_free_or_an_entry():
+    from rl_stocks.reporting.participation import fill_cost_attribution
+    r=fixture();r['events']=[dict(reason='hold',quantity=110,delta=10,fee=1.,impact=2.)]
+    r['rows'][0]['borrow_cost']=0.;r['metrics']['costs']=3.
+    result=fill_cost_attribution(r)
+    assert result['categories']['same_side_resize']['cost']==3.
+    assert result['categories']['entry']['cost']==0.
+
+
+def test_reverse_legs_and_required_holding_limit_remain_distinct():
+    from rl_stocks.reporting.participation import fill_cost_attribution
+    r=fixture();r['events']=[dict(reason='reverse_close',quantity=0,delta=-100,fee=1.,impact=2.),
+        dict(reason='reverse',quantity=-100,delta=-100,fee=1.,impact=2.),
+        dict(reason='holding_limit',quantity=0,delta=100,fee=1.,impact=2.)]
+    r['rows'][0]['borrow_cost']=0.;r['metrics']['costs']=9.
+    result=fill_cost_attribution(r)
+    assert result['categories']['reversal']['cost']==6.
+    assert result['categories']['holding_limit']['cost']==3.
+    for mutate in [lambda q:q['events'][0].update(reason='unknown'),lambda q:q['events'][0].update(fee=-1),lambda q:q['metrics'].update(costs=8.)]:
+        q=deepcopy(r);mutate(q)
+        with pytest.raises(ValueError):fill_cost_attribution(q)
