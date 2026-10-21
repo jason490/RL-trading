@@ -52,6 +52,9 @@ class FrozenPolicy:
         self.observation_profile=self.observation_spec['profile']
         self.observation_size=len(self.manifest['names'])+len(self.observation_spec['portfolio_fields'])
         self.normalizer=normalizer_from(self.manifest["normalizer"])
+        from rl_stocks.risk.exposure import execution_contract,validate_execution_contract
+        self.action_execution=validate_execution_contract(self.manifest['metadata'].get('action_execution',execution_contract()))
+        self.exposure_execution=self.action_execution['evaluation_exposure_mode']
         algorithm=self.manifest["metadata"]["algorithm"]
         self._model=CLASSES[algorithm].load(self.path/"model.zip",device=device)
         if self._model.observation_space.shape!=(self.observation_size,):
@@ -69,7 +72,8 @@ class FrozenPolicy:
     def predict(self,observation):
         from rl_stocks.rl.registry.prediction import recurrent
         if recurrent(self._model):raise ValueError('recurrent policy requires explicit state and episode_start')
-        return self._model.predict(self._observation(observation),deterministic=True)[0]
+        from rl_stocks.risk.exposure import filter_exposure
+        return filter_exposure(self._model.predict(self._observation(observation),deterministic=True)[0],self.exposure_execution)
     def predict_recurrent(self,observation,*,state,episode_start):
         """Return action and new memory; callers own a separate state per stream."""
         import numpy as np
@@ -83,8 +87,10 @@ class FrozenPolicy:
             if not isinstance(state,tuple) or len(state)!=2:raise ValueError('hidden/cell state pair required')
             state=tuple(np.array(s,dtype=np.float32,copy=True) for s in state)
             if any(s.shape!=shape or not np.isfinite(s).all() for s in state):raise ValueError('recurrent state shape/nonfinite mismatch')
-        return self._model.predict(self._observation(observation),state=state,
+        action,new_state=self._model.predict(self._observation(observation),state=state,
             episode_start=np.array([episode_start],dtype=bool),deterministic=True)
+        from rl_stocks.risk.exposure import filter_exposure
+        return filter_exposure(action,self.exposure_execution),new_state
     def decide(self,features,names,portfolio_state,symbol,decision_time,expiry_time,reference,atr,equity,quantity,
                available_time,now=None,max_age_seconds=86400):
         from rl_stocks.risk.decisions import decode

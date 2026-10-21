@@ -20,6 +20,9 @@ def check_recurrent_prediction(selected, frozen, observation, expected_state, ac
     previous = None if actual_state is None else tuple(s.copy() for s in actual_state)
     expected, new_expected = selected.predict(observation, state=expected_state,
         episode_start=np.array([episode_start], dtype=bool), deterministic=True)
+    from rl_stocks.risk.exposure import filter_exposure
+    mode=getattr(frozen,'exposure_execution','unrestricted')
+    if mode!='unrestricted':expected=filter_exposure(expected,mode)
     actual, new_actual = frozen.predict_recurrent(observation, state=actual_state, episode_start=episode_start)
     repeat, repeat_state = frozen.predict_recurrent(observation, state=actual_state, episode_start=episode_start)
     np.testing.assert_array_equal(actual, expected)
@@ -65,7 +68,8 @@ def verify(roots, data_root):
                     continue
                 env = TradingEnv([episode], normalizer_from(dataset['normalizer']),
                                  dataset['names'], SimulationConfig(**metadata['simulation']),
-                                 observation_profile=metadata.get('observation',{}).get('profile','legacy'))
+                                 observation_profile=metadata.get('observation',{}).get('profile','legacy'),
+                                 exposure_execution=frozen.exposure_execution)
                 try:
                     observation, _ = env.reset(seed=11, options={'episode': 0})
                     expected_state = actual_state = None
@@ -77,6 +81,8 @@ def verify(roots, data_root):
                                 selected, frozen, observation, expected_state, actual_state, index == 0)
                         else:
                             expected = selected.predict(observation, deterministic=True)[0]
+                            from rl_stocks.risk.exposure import filter_exposure
+                            expected=filter_exposure(expected,frozen.exposure_execution)
                             actual = frozen.predict(observation)
                             np.testing.assert_array_equal(actual, expected)
                             np.testing.assert_array_equal(actual, frozen.predict(observation))

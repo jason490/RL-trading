@@ -1326,3 +1326,17 @@ checks passed. Overall goal remains unmet. A separately preregistered training/
 execution-alignment hypothesis may examine why deploying unit size reverses
 selected/final ranking; it is not confirmation of this failed replay or a proven
 cause. [Outcome and audit](../results/recurrent-unit-sizing-2026-10-21/README.md).
+
+## Training/execution sizing alignment prepared
+
+New fixed hypothesis distinguishes adaptive training/evaluation, adaptive training
+with unit evaluation, and aligned unit training/evaluation. Same fresh masked21
+RecurrentPPO/data/initialization/sampling/100k budget; both controls required.
+Adaptive/posthoc final tensors must match. Shared explicit execution contract now
+routes training action mapping, actual net-equity reward, validation selection
+and frozen predictions consistently; default historical bundles stay adaptive.
+43 focused checks including unit Gymnasium/SB3 checkers pass without fitting.
+Dedicated job/archive/report/counter integration remains before three512 Colab
+smokes. No allocation, project38.014408 retained, study allowance3 with account
+150/170 and project150/130. Prior failed replay remains closed; this is a new
+learning-contract intervention. [Protocol and status](recurrent-sizing-alignment.md).

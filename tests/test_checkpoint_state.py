@@ -11,17 +11,22 @@ def result(score):
     return {'A':dict(split='validation',symbol='A',metrics=dict(net_return=score,max_drawdown=-.1,sharpe=0.,costs=1.,turnover=2.),baselines={'buy_hold':{'metrics':{'net_return':.3}}})}
 
 
-def test_worse_checkpoint_exports_its_own_paths_without_replacing_best(tmp_path,monkeypatch):
+@pytest.mark.parametrize('exposure_mode',['unrestricted','unit_magnitude'])
+def test_worse_checkpoint_exports_its_own_paths_without_replacing_best(tmp_path,monkeypatch,exposure_mode):
     import rl_stocks.training.runner as runner
     run=tmp_path/'artifacts/runs/fixture';run.mkdir(parents=True)
     archive=tmp_path/'snapshot.tar.gz';monkeypatch.setenv('RL_CHECKPOINT_ARCHIVE',str(archive))
-    scores=iter([.2,.05,.04]);monkeypatch.setattr(runner,'evaluate',lambda *a,**k:result(next(scores)))
+    scores=iter([.2,.05,.04])
+    def evaluate(*args,**kwargs):
+        assert args[-1]==exposure_mode
+        return result(next(scores))
+    monkeypatch.setattr(runner,'evaluate',evaluate)
     monkeypatch.setattr(runner,'render_curve',lambda *a:None)
     def report(results,destination,*a):
         destination.write_text('html')
         destination.with_suffix('.json').write_text(json.dumps(results))
     monkeypatch.setattr(runner,'report',report)
-    cb=ValidationCheckpoint({},None,run,10,compact=True,target_steps=20)
+    cb=ValidationCheckpoint({},None,run,10,compact=True,target_steps=20,exposure_mode=exposure_mode)
     cb.model=SimpleNamespace(logger=SimpleNamespace(name_to_value={}),save=lambda p:Path(str(p)+'.zip').write_text(str(cb.num_timesteps)))
     cb.num_timesteps=10;cb.validate()
     cb.num_timesteps=20;cb.validate()

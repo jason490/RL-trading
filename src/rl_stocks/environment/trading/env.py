@@ -8,7 +8,7 @@ from rl_stocks.environment.observations.state import observation_spec, portfolio
 
 class TradingEnv(gym.Env):
     metadata={"render_modes":[]}
-    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform',observation_profile='legacy',reward_kind='net_log_equity'):
+    def __init__(self,episodes,normalizer,names,config=SimulationConfig(),random_start=False,episode_steps=None,reward_scale=1.,start_sampling='legacy_uniform',observation_profile='legacy',reward_kind='net_log_equity',exposure_execution='unrestricted'):
         super().__init__()
         if not episodes:raise ValueError("no episodes")
         if tuple(names)!=normalizer.names:raise ValueError("feature names mismatch")
@@ -31,6 +31,9 @@ class TradingEnv(gym.Env):
         if not np.isfinite(reward_scale) or reward_scale<=0:raise ValueError('positive finite reward scale required')
         self.reward_scale=float(reward_scale)
         self.reward_kind=validate_reward_kind(reward_kind)
+        from rl_stocks.risk.exposure import execution_contract
+        execution_contract(exposure_execution,exposure_execution)
+        self.exposure_execution=exposure_execution
         self.observation_profile=observation_profile
         self.observation_spec=observation_spec(observation_profile)
         self.action_space=gym.spaces.Box(-1.,1.,shape=(4,),dtype=np.float32)
@@ -85,7 +88,13 @@ class TradingEnv(gym.Env):
         self.i+=1;self.steps+=1
         bar=self.bars[self.i]
         event_start=len(self.sim.portfolio.events)
+        if self.exposure_execution!='unrestricted':
+            from rl_stocks.risk.exposure import filter_exposure
+            original_action=tuple(float(x) for x in action)
+            action=filter_exposure(action,self.exposure_execution)
         info=self.sim.advance(action,previous,bar,atr)
+        if self.exposure_execution!='unrestricted':
+            info.update(policy_action=original_action,exposure_execution=self.exposure_execution)
         terminated=info["equity"]<=0
         truncated=not terminated and (self.i==len(self.bars)-1 or
             (self.episode_steps is not None and self.steps>=self.episode_steps))

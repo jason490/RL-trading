@@ -1345,3 +1345,10 @@ ETF/median and3.21pp drawdown worsening fail original gates. No promotion or
 threshold sweep.8 verified release assets, four saved-path metric reproductions,
 source/model/preprocessing unchanged. No Colab units. See
 [full outcome](results/recurrent-unit-sizing-2026-10-21/README.md).
+
+### Milestone59: sizing alignment protocol and execution contracts
+
+Three fresh masked recurrent arms isolate training versus evaluation unit sizing.
+Shared training/reward/validation/frozen execution routing and43 focused checks
+pass without fitting. Job/archive/report/counters and actual CPU smokes remain;
+no allocation or old-protocol promotion. [Guide](docs/recurrent-sizing-alignment.md).
