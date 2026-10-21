@@ -1163,3 +1163,10 @@ compatible.33 focused callback/archive/curve/publication checks pass with fake
 saves/evaluations and no local training. Actual new-format Colab smoke remains
 pending after the reviewed budget stop. Ledger remains37.787213/150; no allocation.
 [Checkpoint contract](training.md#checkpoint-identity-during-interruptions).
+
+Discount-horizon Colab acceptance passes2x1024 CPU transitions, actual gamma/
+saved-step/optimizer restoration, matching initial networks/alpha/sampling,
+156 exact frozen predictions and new checkpoint identity. Both sessions stopped;
+project37.805591/150, account349.96 zero rate/assignments, floor150/teardown170.
+[Evidence](../results/sac-discount-2026-10-21/README.md). Paired100k screen next;
+no performance result or promotion from smoke validation.

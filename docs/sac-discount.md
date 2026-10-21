@@ -71,3 +71,14 @@ report tests pass without local fitting; actual immutable payload checks and
 script compilation pass. Actual initial/final/selected saved model step counts
 are recorded and validated alongside gamma and optimizer state. Source freeze
 and official account usage check precede twoCPU smokes.
+
+## Actual Colab smoke acceptance
+
+Two1024 CPU smokes pass on actual default Python3.13.16, frozen workercf41830.
+Actual gamma, seeded network/alpha equality, matched sampling and selected/final
+saved model steps/optimizers restore correctly.156 exact frozen predictions,
+immutable normalization/input rejection and mandatory checkpoint identity pass.
+Both sessions stopped. Project37.805591/150; account349.96, zero rate/assignments,
+floor150/teardown170 retained. Fixed two100k screen next under original2-unit
+study allowance, same worker; no screen outcome or promotion yet.
+[Evidence](../results/sac-discount-2026-10-21/README.md).

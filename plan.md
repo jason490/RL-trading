@@ -1251,3 +1251,9 @@ prospective gates unchanged. [Guide](docs/sac-discount.md).
 Discount preparation acceptance:59 focused checks, actual immutable payloads and
 script compilation pass; actual saved-step records required. Freeze source and
 check official account usage before two1024 CPU smokes. No performance claim.
+
+Discount actual2x1024 Colab CPU smokes accepted:Python3.13.16, actual gamma/
+optimizer/step restoration, matching initial tensors/alpha/sampling, new checkpoint
+identities and156 frozen predictions. Both owned sessions stopped; project
+37.805591/150, account349.96 zero rate/assignments. Same-source paired100k screen
+next under existing2-unit study cap and account floor150/teardown170.
