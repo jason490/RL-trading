@@ -425,3 +425,14 @@ expanded111 dataset/sampling, fresh100k cells and unchanged entropy optimizer.
 Six actual-construction/protocol checks pass without fitting. Runtime/archive/
 report integration must precede Colab smokes; no allocation yet.
 [Protocol and gates](sac-regularization.md).
+
+## Regularization screen interruption
+
+Fresh control finishes21.63%; candidate latest80k curve5.10% lacks100k final.
+Metering outage caused protective budget stop; do not substitute partial results
+for fixed endpoints, promote, extend or restart. Exact-fleet recovery now verifies
+all6 attempt sessions stopped;13 asset digests and656 retained hashes pass.
+Project conservative37.787213/150 retains gap estimate (screen measured0.32,
+estimated1.489616). Budget-stop flag stays set; additional allocation requires
+explicit reviewed authorization. Offline evidence diagnostics remain possible.
+[Full incomplete evidence](../results/sac-regularization-2026-10-20/README.md).

@@ -110,3 +110,41 @@ all4 attempt sessions have verified cleanup. Project36.297597/150 includes the
 failed attempt; account350.29 zero rate/assignments. Fixed100k screen next from
 same frozen source and original2-unit allowance.
 [Evidence](../results/sac-regularization-2026-10-20/README.md).
+
+## Interrupted screen and verified recovery
+
+Aggregate metering became unavailable2026-10-20, triggering a protective stop.
+Control completed100k:selected21.97%, final21.63%; candidate latest retrieved
+curve80k5.10%, selected6.39%, no final100k. Holding30.60%. Candidate80k is not
+substituted for final; the screen is incomplete/unassessable, no promotion or
+confirmation. Snapshot `validation.json` is stale50k-selected output, explicitly
+labeled unaligned to80k. Actual80k checkpoint and both saved policies restore;
+strict available-path accounting passes. Control78 plus smoke156 frozen prefix
+predictions pass. No incomplete candidate frozen acceptance is claimed.
+
+On2026-10-21 exact-fleet recovery verifies all6 attempt sessions stopped.
+Account349.97, rate0, assignments0. Conservative project37.787213/150,
+remaining112.212787; screen measured debit0.32 versus estimate1.489616 units.
+Ledger conservatively extrapolates the previous rate across the monitoring gap;
+retain this estimate and the budget-stop flag. Do not restart automatically.
+Further allocation requires explicit reviewed authorization, even though the
+150-unit ceiling itself has not been reached. Offline evidence work can proceed.
+
+Thirteen published assets have server digests verified. Cleanup removes3 public
+archive duplicates/25,401,659 bytes, preserving656 hashes of retained models,
+replay, partial/failure evidence, data, sources, ledger and plan.html. The evidence
+report reproduces byte-identically before duplicate cleanup. Complete and
+explicitly incomplete assets remain available from the release. No retired test.
+[Outcome, recovery and artifacts](../results/sac-regularization-2026-10-20/README.md).
+
+Reproduce retained interruption evidence without fitting or allocating:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+ .venv/bin/python scripts/report_regularization_interruption.py \
+ --output /tmp/regularization-recheck
+```
+
+Use a new output directory. The script checks restored step counts and actual
+optimizer settings, recorded source identity, train/development-only data and
+saved report accounting. It never labels the stale path as80k final performance.

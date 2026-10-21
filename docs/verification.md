@@ -1141,3 +1141,14 @@ post-shutdown account350.31, zero rate/assignments. Retired test stays isolated.
 Next inspect saved selected/final cost, exposure and directional contributions
 before a distinct hypothesis. This requires no fitting/provider/Colab; do not
 extend the failed family solely because its late checkpoint improved.
+
+## Regularization interruption recovery — 2026-10-21
+
+Fixed100k screen incomplete:control final21.63%, candidate last retrieved80k
+curve5.10%, no candidate final. Strict report remains unassessable/no promotion.
+All6 owned attempt sessions stopped after exact-fleet recovery; account349.97,
+rate0/assignments0. Conservative ledger37.787213/150 retains monitoring-gap
+estimate and stop flag. Actual checkpoint/optimizer restoration and saved-path
+accounting pass;78 control plus156 smoke frozen predictions exact.13 server
+asset hashes verified;3 archive duplicates removed,656 retained hashes unchanged.
+[Evidence and reproduction](../results/sac-regularization-2026-10-20/README.md).

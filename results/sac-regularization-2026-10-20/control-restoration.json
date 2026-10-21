@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "bundles": [
+    {
+      "bundle_id": "0242345e47fd920d3ab660fa0ecb13a59ab7a38cd04e666f45a2844bf11ae7fe",
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "algorithm": "sac",
+      "seed": 11,
+      "symbols_checked": [
+        "AAPL",
+        "AMT",
+        "AMZN",
+        "APD",
+        "BAC",
+        "CAT",
+        "CVX",
+        "DIA",
+        "DIS",
+        "DUK",
+        "GOOGL",
+        "HD",
+        "HON",
+        "IWM",
+        "JNJ",
+        "JPM",
+        "KO",
+        "LIN",
+        "MSFT",
+        "NEE",
+        "PG",
+        "PLD",
+        "QQQ",
+        "SPY",
+        "UNH",
+        "XOM"
+      ],
+      "predictions_checked": 78,
+      "exact_prediction_parity": true,
+      "deterministic_repeat": true,
+      "normalization_and_data_match_dataset": true,
+      "normalization_unchanged": true,
+      "schema_feed_nonfinite_rejection": true,
+      "selected_weights_sha256": "2b7816de26f170347bc5c0f729eff06de1f852a2cbada934a24b747b206737ee"
+    }
+  ],
+  "device": "cpu",
+  "training_performed": false,
+  "test_evaluated": false
+}

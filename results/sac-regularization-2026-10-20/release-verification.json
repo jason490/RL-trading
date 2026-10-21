@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "asset_count": 13,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/sac-regularization-2026-10-20",
+  "assets": [
+    {
+      "name": "control-restoration.json",
+      "size": 1119,
+      "digest": "sha256:44dd08446f91214daf51c0673f68fdd8df41548e5bf865b1f8c9f358e9ec3fc0",
+      "state": "uploaded"
+    },
+    {
+      "name": "incomplete-candidate-80k.tar.gz",
+      "size": 21098950,
+      "digest": "sha256:d63a947a02884237e8204100d69d2270277942c4ab5d56a09dc85ede4169178c",
+      "state": "uploaded"
+    },
+    {
+      "name": "interruption-summary.json",
+      "size": 188267,
+      "digest": "sha256:f2d83c81b9d42b37a0d3c7db0a53e8dcd9f2084cd9094e355c25575f1ed47f43",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 868,
+      "digest": "sha256:038cc4e856756453168467d4e6b3136a6de5625ec047e750bf8b11ad7469b8d2",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 339063,
+      "digest": "sha256:7a541d406ec5646356e3aba696b38576c23002ead23f693205aa73839741bd73",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 6428,
+      "digest": "sha256:c23241fb4e720fe76367f6f1a4fec065a5b7fbe404f3a6414b0602bec21e477c",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 1812016,
+      "digest": "sha256:6fb40c8b621b59428e2e99f8a32da8ab708598dd502383d69edeced5e642d325",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-attempt-1.json",
+      "size": 1164,
+      "digest": "sha256:67de540e85a130d0176adc0f2ce4c1fc7dcba1c4ab208d74cefea33e2de750b1",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2121,
+      "digest": "sha256:9010bed4885177739a724ed1e5623d91a495a82e2423e3b58c79c8c1eba4e1bf",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 7417,
+      "digest": "sha256:cc62ff2a7acb42ab55a5f4fc10c5a0a8c95e9da5f8954a9fc162e7205bf76203",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 411,
+      "digest": "sha256:751f214444aaa954c9e64e46097187089ad424876603bd4b171a512f73292fa8",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 2490693,
+      "digest": "sha256:15693f0d179b52f25bf4514931bf74844fe0d5b71b0c91b89eca75ee01f4d48a",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1008,
+      "digest": "sha256:9e761192426319a391854cf4185e73048e1c081bcf1e9d43ad9f39495e316e68",
+      "state": "uploaded"
+    }
+  ]
+}

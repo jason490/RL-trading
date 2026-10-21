@@ -1188,3 +1188,14 @@ Regularization replacement2x1024 Colab CPU smokes accepted:156 exact frozen
 predictions, actual optimizer save/load, identical initial tensors/alpha and
 actual sampling;4 total attempt sessions stopped. Failed mutation attempt kept,
 fix6792d2b. Project36.297597/150, fixed paired100k screening next.
+
+## 48. Regularization screen interrupted; recovery complete
+
+Metering failure stops the owned fleet. Control finishes21.63%; candidate80k
+curve5.10% lacks final100k, so no promotion/confirmation and no automatic restart.
+Exact-fleet recovery on2026-10-21 verifies all6 attempt sessions stopped.13 release
+assets verified,3 duplicate archives removed/656 retained hashes unchanged.
+Conservative ledger37.787213/150 includes monitoring-gap extrapolation; measured
+screen debit0.32 differs from estimate1.489616. Preserve stop flag; further
+allocation requires explicit reviewed authorization. Offline diagnostics allowed.
+[Full interruption evidence](results/sac-regularization-2026-10-20/README.md).

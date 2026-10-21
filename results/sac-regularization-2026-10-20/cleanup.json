@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "removed": [
+    {
+      "path": "artifacts/regularization-release/incomplete-candidate-80k.tar.gz",
+      "size": 21098950,
+      "sha256": "d63a947a02884237e8204100d69d2270277942c4ab5d56a09dc85ede4169178c"
+    },
+    {
+      "path": "artifacts/regularization-release/research-models.tar.gz",
+      "size": 1812016,
+      "sha256": "6fb40c8b621b59428e2e99f8a32da8ab708598dd502383d69edeced5e642d325"
+    },
+    {
+      "path": "artifacts/regularization-release/validation-reports.tar.gz",
+      "size": 2490693,
+      "sha256": "15693f0d179b52f25bf4514931bf74844fe0d5b71b0c91b89eca75ee01f4d48a"
+    }
+  ],
+  "removed_bytes": 25401659,
+  "retained_hashes_unchanged": 656,
+  "owned_sessions_stopped": 6,
+  "cleanup_verified": true,
+  "incomplete_and_failed_evidence_retained": true,
+  "ledger_stop_flag_preserved": true
+}
