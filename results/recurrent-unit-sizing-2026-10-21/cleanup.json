@@ -1,0 +1,30 @@
+{
+  "removed_count": 4,
+  "removed_logical_bytes": 19493536,
+  "removed_files": [
+    {
+      "path": "artifacts/recurrent-unit-sizing-release/control-final.json.gz",
+      "bytes": 5199281,
+      "sha256": "e6fc2583f7c7b98e4061aca92ca57256ccabb2fe2d75428bbe5c45d8c53f74da"
+    },
+    {
+      "path": "artifacts/recurrent-unit-sizing-release/unit_magnitude-selected.json.gz",
+      "bytes": 4551725,
+      "sha256": "51c9b0c061822f0b4f1003e111ad776b83115c760c8218f6b34450a57f494fda"
+    },
+    {
+      "path": "artifacts/recurrent-unit-sizing-release/unit_magnitude-final.json.gz",
+      "bytes": 4547320,
+      "sha256": "b9c087d9bc9bfb2bd2f9270e1f179740b800907b3740f203a14e76406aa6a2f7"
+    },
+    {
+      "path": "artifacts/recurrent-unit-sizing-release/control-selected.json.gz",
+      "bytes": 5195210,
+      "sha256": "c631e377863820db9daafaacb223a5a143430387017b049907cd47f42a081b8d"
+    }
+  ],
+  "retained_hashes_unchanged": true,
+  "retained_file_count": 13,
+  "release_assets_verified": 8,
+  "source_data_models_reports_curves_ledger_preserved": true
+}

@@ -1307,3 +1307,22 @@ paths must pass exact-quantity/bounded-numeric parity before any candidate repla
 Fixed relative+absolute selected/final gates, no threshold sweep or promotion.
 12 filter/state/reference checks pass; no actual replay/fitting/Colab yet. Freeze
 clean source before execution. [Protocol](recurrent-sizing.md).
+
+## Completed fixed sizing replay — full gates failed
+
+Both unrestricted phases pass preregistered tolerances with exact quantities;
+reports are not byte-identical (maximum equity differences$0.013815/$0.005020).
+Four cells complete with unchanged weights/updates/normalization. Unit selected/
+final means28.53%/32.80% versus control24.99%/24.04%, holding30.60%. Final stocks
+35.40% (+2.77pp excess), ETFs18.55% (−0.92pp), median stock excess+0.41pp meet
+final comparability targets. Selected ETF excess−3.36pp and median stock−7.56pp
+fail; final mean drawdown worsens3.21pp versus allowed2. Unit joint short success
+0/3 in both phases. Preserve the full failure: no threshold sweep, phase reselection,
+extra training or promotion under this replay protocol. No new Colab units.
+
+Eight published asset sizes/digests match; verified duplicates removed, retained
+paths reproduce all four group/short metrics exactly.12 filter/state/reference
+checks passed. Overall goal remains unmet. A separately preregistered training/
+execution-alignment hypothesis may examine why deploying unit size reverses
+selected/final ranking; it is not confirmation of this failed replay or a proven
+cause. [Outcome and audit](../results/recurrent-unit-sizing-2026-10-21/README.md).

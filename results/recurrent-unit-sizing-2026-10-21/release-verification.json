@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "asset_count": 8,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/recurrent-unit-sizing-2026-10-21",
+  "assets": [
+    {
+      "name": "checksums.json",
+      "size": 665,
+      "digest": "sha256:1411951eccb26b416f438539a1e53261b2a57573184247b26e87efcd494e046a",
+      "state": "uploaded"
+    },
+    {
+      "name": "comparison.html",
+      "size": 4773722,
+      "digest": "sha256:22a313c69de002ebc0ee10b1d51cf4074f90b4319e35abeaca340073f850afae",
+      "state": "uploaded"
+    },
+    {
+      "name": "control-final.json.gz",
+      "size": 5199281,
+      "digest": "sha256:e6fc2583f7c7b98e4061aca92ca57256ccabb2fe2d75428bbe5c45d8c53f74da",
+      "state": "uploaded"
+    },
+    {
+      "name": "control-selected.json.gz",
+      "size": 5195210,
+      "digest": "sha256:c631e377863820db9daafaacb223a5a143430387017b049907cd47f42a081b8d",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 3379,
+      "digest": "sha256:d3994df4bdaf4f42e1b60aa9d8ccd7fd65d4f558499dce347bf0b6a00ddfb47b",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 24069,
+      "digest": "sha256:dfb34829952d08e07078a57475ca20fb34533956bff71496d64b9ba120c2fa89",
+      "state": "uploaded"
+    },
+    {
+      "name": "unit_magnitude-final.json.gz",
+      "size": 4547320,
+      "digest": "sha256:b9c087d9bc9bfb2bd2f9270e1f179740b800907b3740f203a14e76406aa6a2f7",
+      "state": "uploaded"
+    },
+    {
+      "name": "unit_magnitude-selected.json.gz",
+      "size": 4551725,
+      "digest": "sha256:51c9b0c061822f0b4f1003e111ad776b83115c760c8218f6b34450a57f494fda",
+      "state": "uploaded"
+    }
+  ]
+}

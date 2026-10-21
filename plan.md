@@ -1339,3 +1339,9 @@ hypothesis. Overall multi-seed/prospective objective remains unmet.
 Four frozen-policy cells, unchanged signs/protections/costs/holding cap; strict
 unrestricted-path parity precedes candidates.12 filter/state/reference checks,
 no fitting or replay yet. [Guide](docs/recurrent-sizing.md).
+
+Sizing diagnostic complete: final32.80% versus holding30.60%, but selected
+ETF/median and3.21pp drawdown worsening fail original gates. No promotion or
+threshold sweep.8 verified release assets, four saved-path metric reproductions,
+source/model/preprocessing unchanged. No Colab units. See
+[full outcome](results/recurrent-unit-sizing-2026-10-21/README.md).
