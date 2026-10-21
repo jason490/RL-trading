@@ -74,3 +74,44 @@ def test_unit_environment_passes_gymnasium_and_sb3_checkers_without_fitting():
     from stable_baselines3.common.env_checker import check_env as sb3_check
     env=environment('unit_magnitude')
     gym_check(env,skip_render_check=True);sb3_check(env)
+
+
+def test_actual_processed_action_counters_reset_and_reject_corruption():
+    from rl_stocks.training.recurrent_alignment import validate_execution_counts
+    for arm,mode in [('adaptive','unrestricted'),('posthoc_unit','unrestricted'),('aligned_unit','unit_magnitude')]:
+        env=environment(mode);env.reset(seed=11)
+        for _ in range(3):env.step(np.array([-.25,1.,1.,1.],dtype=np.float32))
+        stats=env.execution_statistics();validate_execution_counts(stats,arm,3)
+        assert stats['sizing_changed']==(3 if mode=='unit_magnitude' else 0)
+        assert stats['protective_changed']==0
+        with pytest.raises(ValueError):validate_execution_counts(dict(stats,protective_changed=1),arm,3)
+        with pytest.raises(ValueError):validate_execution_counts(dict(stats,transitions=2),arm,3)
+        env.reset_execution_statistics();assert env.execution_statistics()['transitions']==0
+
+
+def test_alignment_jobs_require_exact_modes_and_floor():
+    from copy import deepcopy
+    from rl_stocks.runtime.colab.jobs import alignment_plan,validate_plan
+    from rl_stocks.training.recurrent_alignment import protocol
+    for arm in protocol()['arms']:
+        for smoke in (True,False):
+            plan=alignment_plan(arm,smoke=smoke);assert validate_plan(plan)==plan
+            for change in [lambda p:p['jobs'][0].update(training_exposure_mode='short_only'),
+                           lambda p:p['jobs'][0].update(evaluation_exposure_mode='long_only'),
+                           lambda p:p['jobs'][0].update(steps=250000),
+                           lambda p:p.update(account_contract={'minimum_balance':0,'teardown_balance':20})]:
+                bad=deepcopy(plan);change(bad)
+                with pytest.raises(ValueError):validate_plan(bad)
+
+
+def test_report_trace_rejects_wrong_unit_size_and_changed_protection():
+    from copy import deepcopy
+    from rl_stocks.training.recurrent_alignment import validate_execution_report
+    r={'fixture':{'split':'validation','rows':[dict(raw_action=[-1.,.2,.3,.4],policy_action=[-.25,.2,.3,.4],exposure_mode='unit_magnitude')]}}
+    assert validate_execution_report(r,'aligned_unit') is r
+    for mutate in [lambda q:q['fixture']['rows'][0]['raw_action'].__setitem__(0,-.5),
+                   lambda q:q['fixture']['rows'][0]['raw_action'].__setitem__(1,.9),
+                   lambda q:q['fixture']['rows'][0].pop('policy_action')]:
+        bad=deepcopy(r);mutate(bad)
+        with pytest.raises(ValueError):validate_execution_report(bad,'aligned_unit')
+    with pytest.raises(ValueError):validate_execution_report(r,'adaptive')

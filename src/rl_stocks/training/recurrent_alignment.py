@@ -32,3 +32,40 @@ def validate_record(record,arm,smoke=False,initial=False,selected_steps=None):
     modes(arm)
     from rl_stocks.training.recurrent_state import validate_record as validate
     return validate(record,'recurrent_masked',smoke,initial,selected_steps)
+
+
+def validate_payload(data):
+    from rl_stocks.training.recurrent_state import validate_payload as validate
+    return validate(data)
+
+
+def validate_execution_counts(counts,arm,steps):
+    expected=modes(arm)['training_exposure_mode']
+    fields={'transitions','requested_nonzero','processed_nonunit','sizing_changed','protective_changed'}
+    if (set(counts)!={'mode',*fields} or counts['mode']!=expected
+        or any(type(counts[k]) is not int or not 0<=counts[k]<=steps for k in fields)
+        or counts['transitions']!=steps or counts['protective_changed']!=0):
+        raise ValueError('actual training execution counters mismatch')
+    if expected=='unit_magnitude':
+        if counts['processed_nonunit'] or counts['sizing_changed']<=0:raise ValueError('unit action mapping not applied')
+    elif counts['sizing_changed'] or counts['processed_nonunit']<=0:
+        raise ValueError('adaptive action mapping mismatch')
+    return counts
+
+
+def validate_execution_report(results,arm):
+    import numpy as np
+    from rl_stocks.risk.exposure import filter_exposure
+    mode=modes(arm)['evaluation_exposure_mode']
+    if not results:raise ValueError('nonempty execution report required')
+    for result in results.values():
+        if result['split']!='validation' or not result['rows']:raise ValueError('validation execution rows required')
+        for row in result['rows']:
+            if mode=='unit_magnitude':
+                if row.get('exposure_mode')!=mode or 'policy_action' not in row:
+                    raise ValueError('unit evaluation action trace missing')
+                if not np.array_equal(filter_exposure(row['policy_action'],mode),row['raw_action']):
+                    raise ValueError('unit evaluation exposure/protection mapping mismatch')
+            elif row.get('exposure_mode','unrestricted')!='unrestricted':
+                raise ValueError('adaptive evaluation execution mismatch')
+    return results

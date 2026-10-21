@@ -100,6 +100,43 @@ protective-output preservation, manual execution/reward equivalence, default
 bundle compatibility and exact contract rejection. Script compilation passes.
 
 Dedicated job/worker/archive/restored-report integration and actual processed-
-action counters remain required before Colab provisioning. No training, allocation
+action counters are now implemented. Actual Colab smoke acceptance remains required
+before the fixed screen. No training, allocation
 or smoke acceptance has occurred for this study. Project38.014408/150 is retained;
 no owned sessions are active. Existing failed replay/state evidence is unchanged.
+
+## Integrated Colab acceptance
+
+Version23 plans exactly bind training/evaluation modes, dataset, source protocol
+and account150/170 contract. Controller and worker validate immutable expanded
+data before fitting. Training counters record transitions, nonzero requests,
+processed non-unit sizes, changed sizing and protective-component changes. Gym/SB3
+checker activity is reset before actual training counts begin. Unit counters must
+show transformed non-unit requests and no non-unit processed exposures; protective
+changes must stay zero. Adaptive counts must show unchanged raw sizing.
+
+Every checkpoint preserves `training-execution.json`; final metadata and frozen
+manifest must match it. Unit selected/final validation traces must preserve all
+three protective components and exactly transform the original policy request.
+Archives also require saved-model fingerprints, fixed preprocessing/sampling and
+current checkpoint/report identities. Model releases retain execution/sampling
+counters alongside weights. Legacy default paths remain unchanged.
+
+79 focused checks pass, including malformed modes, corrupted counters, changed
+protective outputs, checkpoint identity, budget/floor and owned fleet cleanup.
+Actual three immutable smoke payloads validate and scripts compile. No local
+fitting was performed. The builder does not allocate:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_alignment_jobs.py \
+ --smoke --output .runtime/alignment-smoke-jobs.json
+```
+
+Freeze clean pushed source and check official usage before three512 CPU smokes.
+After retrieval and verified shutdown, `accept_alignment_smokes.py` requires234
+exact frozen predictions, actual mode/counter/step restoration, equal recurrent
+initialization/sampling and adaptive/posthoc final tensor equality. Only then
+start the fixed three100k screen. `report_alignment.py` independently restores
+selected/final weights, validates action traces and matched source/accounting/
+holding panels, requires adaptive/posthoc final equality, then applies original
+gates. No training or provisioning has occurred at this integration milestone.

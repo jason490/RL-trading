@@ -120,7 +120,7 @@ def verify(roots, data_root):
             records.append({'bundle_id': bundle.name, 'dataset': identity, 'algorithm': metadata['algorithm'],
                 'seed': metadata['seed'], 'symbols_checked': symbols, 'predictions_checked': count,
                 'exact_prediction_parity': True, 'deterministic_repeat': True,
-                'recurrent_sequence_and_reset_parity': is_recurrent,
+                'recurrent_sequence_and_reset_parity': is_recurrent,'action_execution':frozen.action_execution,
                 'normalization_and_data_match_dataset': True,
                 'normalization_unchanged': True, 'schema_feed_nonfinite_rejection': True,
                 'selected_weights_sha256': checksum(path.parent / 'best.zip')})

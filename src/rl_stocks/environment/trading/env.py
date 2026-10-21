@@ -34,6 +34,7 @@ class TradingEnv(gym.Env):
         from rl_stocks.risk.exposure import execution_contract
         execution_contract(exposure_execution,exposure_execution)
         self.exposure_execution=exposure_execution
+        self.reset_execution_statistics()
         self.observation_profile=observation_profile
         self.observation_spec=observation_spec(observation_profile)
         self.action_space=gym.spaces.Box(-1.,1.,shape=(4,),dtype=np.float32)
@@ -69,6 +70,10 @@ class TradingEnv(gym.Env):
     def sampling_statistics(self):
         from copy import deepcopy
         return {**deepcopy(self.sampling_counts),'mode':self.start_sampler.mode} if self.start_sampler else None
+    def reset_execution_statistics(self):
+        self.execution_counts=dict(transitions=0,requested_nonzero=0,processed_nonunit=0,sizing_changed=0,protective_changed=0)
+    def execution_statistics(self):
+        return dict(mode=self.exposure_execution,**self.execution_counts)
     def observation(self):
         p=self.sim.portfolio;price=self.bars[self.i].close;equity=p.equity(price)
         vector=self.normalizer.transform(self.episode["features"][self.i],self.names)
@@ -88,11 +93,16 @@ class TradingEnv(gym.Env):
         self.i+=1;self.steps+=1
         bar=self.bars[self.i]
         event_start=len(self.sim.portfolio.events)
+        original_action=tuple(float(x) for x in action)
         if self.exposure_execution!='unrestricted':
             from rl_stocks.risk.exposure import filter_exposure
-            original_action=tuple(float(x) for x in action)
             action=filter_exposure(action,self.exposure_execution)
         info=self.sim.advance(action,previous,bar,atr)
+        self.execution_counts['transitions']+=1
+        self.execution_counts['requested_nonzero']+=int(original_action[0]!=0)
+        self.execution_counts['processed_nonunit']+=int(action[0]!=0 and abs(action[0])!=1)
+        self.execution_counts['sizing_changed']+=int(original_action[0]!=action[0])
+        self.execution_counts['protective_changed']+=int(tuple(action[1:])!=original_action[1:])
         if self.exposure_execution!='unrestricted':
             info.update(policy_action=original_action,exposure_execution=self.exposure_execution)
         terminated=info["equity"]<=0

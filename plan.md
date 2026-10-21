@@ -1352,3 +1352,8 @@ Three fresh masked recurrent arms isolate training versus evaluation unit sizing
 Shared training/reward/validation/frozen execution routing and43 focused checks
 pass without fitting. Job/archive/report/counters and actual CPU smokes remain;
 no allocation or old-protocol promotion. [Guide](docs/recurrent-sizing-alignment.md).
+
+Alignment integration complete:79 checks, actual immutable payload validation
+and compilation pass. Strict version23 modes/counters/archives/restored reports
+implemented; actual3x512 CPU smokes/frozen parity/equal-control fingerprints next.
+No allocation yet. Original failed replay remains closed.

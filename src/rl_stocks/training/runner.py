@@ -36,6 +36,8 @@ class ValidationCheckpoint(BaseCallback):
     def validate(self,phase='on_step'):
         if self.sampling_env is not None and self.sampling_env.start_sampler:
             (self.path/'training-sampling.json').write_text(json.dumps(self.sampling_env.sampling_statistics(),indent=2))
+        if self.sampling_env is not None:
+            (self.path/'training-execution.json').write_text(json.dumps(self.sampling_env.execution_statistics(),indent=2))
         results=evaluate(self.model,self.dataset,"validation",self.config,self.observation_profile,self.exposure_mode)
         score=selection_score(results)
         training={}
@@ -102,7 +104,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     env=TradingEnv(episodes,normalizer_from(dataset["normalizer"]),dataset["names"],config,random_start=True,episode_steps=128 if smoke else 512,reward_scale=reward_scale,reward_kind=reward_kind,start_sampling=start_sampling,observation_profile=observation_profile,exposure_execution=training_exposure_mode)
     env.action_space.seed(seed);env.observation_space.seed(seed)
     gym_check(env,skip_render_check=True);sb3_check(env)
-    env.reset_sampling_statistics()
+    env.reset_sampling_statistics();env.reset_execution_statistics()
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
     initialized=initialize_policy(model,initialization,algorithm)
     steps=steps if steps is not None else 512 if algorithm in ON_POLICY else 1024
@@ -135,6 +137,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.recurrent_state import PROTOCOL_SHA256 as RECURRENT_PROTOCOL,model_record as recurrent_record
     if study_protocol_sha256==RECURRENT_PROTOCOL:
         metadata['recurrent_state_initialization']=recurrent_record(model)
+    from rl_stocks.training.recurrent_alignment import PROTOCOL_SHA256 as ALIGNMENT_PROTOCOL
+    if study_protocol_sha256==ALIGNMENT_PROTOCOL:
+        metadata['alignment_initialization']=recurrent_record(model)
     if algorithm=='td3':
         from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record
         if study_protocol_sha256==TD3_PROTOCOL:metadata['td3_initialization']=td3_initialization_record(model)
@@ -178,6 +183,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
             validation_checkpoints=callback.history,selected_score=callback.best)
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         metadata['sampling_diagnostics']=sampling_diagnostics
+        metadata['training_execution']=env.execution_statistics()
         if algorithm=='sac' and study_protocol_sha256==REG_PROTOCOL:
             metadata['regularization_final']=optimizer_record(model)
             metadata['regularization_selected']=optimizer_record(selected)
@@ -187,6 +193,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==RECURRENT_PROTOCOL:
             metadata['recurrent_state_final']=recurrent_record(model)
             metadata['recurrent_state_selected']=recurrent_record(selected)
+        if study_protocol_sha256==ALIGNMENT_PROTOCOL:
+            metadata['alignment_final']=recurrent_record(model)
+            metadata['alignment_selected']=recurrent_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

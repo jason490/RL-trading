@@ -27,6 +27,9 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==23:
+        from rl_stocks.training.recurrent_alignment import validate_payload
+        validate_payload(payload)
     if plan.get('version')==22:
         from rl_stocks.training.recurrent_state import validate_payload
         validate_payload(payload)

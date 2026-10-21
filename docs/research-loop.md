@@ -653,3 +653,12 @@ Dedicated job/archive/report/counter integration remains before three512 Colab
 smokes. No allocation, project38.014408 retained, study allowance3 with account
 150/170 and project150/130. Prior failed replay remains closed; this is a new
 learning-contract intervention. [Protocol and status](recurrent-sizing-alignment.md).
+
+Alignment version23 integration complete: actual processed-action counters,
+strict training/evaluation modes, saved records, unit action/protection traces,
+checkpoint identities and restored matched reporting.79 focused checks and actual
+three immutable smoke payloads pass without fitting; scripts compile. Smoke
+acceptance requires234 exact frozen action/state predictions plus adaptive/posthoc
+final tensor equality. No allocation at integration, project38.014408 retained.
+Freeze clean pushed source and official usage check before three512 CPU smokes.
+[Guide](recurrent-sizing-alignment.md).
