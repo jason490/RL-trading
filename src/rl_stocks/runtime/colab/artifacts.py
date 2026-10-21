@@ -22,7 +22,7 @@ def validate_archive(path, plan, dataset_id):
                 raise RuntimeError('missing required remote artifact: '+name)
             return stream.read()
         try:
-            if plan.get('version') in (12,15,16,17,18,19,20) and dataset_id!=plan['dataset_contract']['identity']:
+            if plan.get('version') in (12,15,16,17,18,19,20,21) and dataset_id!=plan['dataset_contract']['identity']:
                 raise RuntimeError('trend-context dataset identity mismatch')
             completion = json.loads(read('artifacts/completion.json'))
             hardware_ok = (completion['gpu'] is None if plan['accelerator']=='CPU'
@@ -39,18 +39,18 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5,7,8,9,10,11,12,15,16,17,18,19,20):
+                if plan.get('version') in (4,5,7,8,9,10,11,12,15,16,17,18,19,20,21):
                     job=plan['jobs'][0]
-                    if plan.get('version') in (7,8,9,10,11,12,15,16,17,18,19,20):
+                    if plan.get('version') in (7,8,9,10,11,12,15,16,17,18,19,20,21):
                         from rl_stocks.training.initialization import initialization_spec
                         if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
                             raise RuntimeError('initialization-study configuration mismatch')
-                    if plan.get('version') in (9,10,11,12,15,16,17,18,19,20):
+                    if plan.get('version') in (9,10,11,12,15,16,17,18,19,20,21):
                         from rl_stocks.environment.observations.state import observation_spec
                         if (run.get('observation')!=observation_spec(job['observation_profile'])
-                                or plan.get('version') not in (15,19,20) and run.get('start_sampling')!={'mode':'legacy_uniform'}):
+                                or plan.get('version') not in (15,19,20,21) and run.get('start_sampling')!={'mode':'legacy_uniform'}):
                             raise RuntimeError('execution-observation configuration mismatch')
-                    if plan.get('version') in (10,11,12,15,16,17,18,19,20):
+                    if plan.get('version') in (10,11,12,15,16,17,18,19,20,21):
                         from rl_stocks.rl.ppo.architecture import architecture_spec
                         from rl_stocks.rl.registry.factory import resolved_parameters
                         if (run.get('policy_architecture')!=architecture_spec(job['policy_variant'],7)
@@ -81,6 +81,8 @@ def validate_archive(path, plan, dataset_id):
                             or any(points[s]['phase']!='post_update' for s in job['milestones'])
                             or curve!=run['validation_checkpoints']):
                         raise RuntimeError('incomplete or inconsistent learning curve')
+                    if plan.get('version')==21 and prefix+'checkpoint-state.json' not in names:
+                        raise RuntimeError('mandatory checkpoint identity missing')
                     if prefix+'checkpoint-state.json' in names:
                         from rl_stocks.training.checkpoint_state import validate_checkpoint_state
                         checkpoint=validate_checkpoint_state(None,json.loads(read(prefix+'checkpoint-state.json')),
@@ -103,11 +105,11 @@ def validate_archive(path, plan, dataset_id):
                 for name, checksum in hashes.items():
                     if PurePosixPath(name).name != name or hashlib.sha256(read(folder+name)).hexdigest() != checksum:
                         raise RuntimeError('remote bundle checksum mismatch')
-                if plan.get('version') in (9,10,11,12,15,16,17,18,19,20) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
+                if plan.get('version') in (9,10,11,12,15,16,17,18,19,20,21) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
                     raise RuntimeError('frozen observation schema mismatch')
-                if plan.get('version') in (10,11,12,15,16,17,18,19,20) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
+                if plan.get('version') in (10,11,12,15,16,17,18,19,20,21) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
                     raise RuntimeError('frozen policy architecture mismatch')
-                if plan.get('version') in (11,12,15,16,17,18,19,20) and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
+                if plan.get('version') in (11,12,15,16,17,18,19,20,21) and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
                     raise RuntimeError('frozen reward configuration mismatch')
                 if plan.get('version')==12:
                     from rl_stocks.features.registry.assemble import NAMES as BASE
@@ -202,6 +204,23 @@ def validate_archive(path, plan, dataset_id):
                         or frozen.get('names')!=list(NAMES) or frozen.get('feature_schema')!='daily-indicators-v1'
                         or digest(frozen.get('normalizer',{}))!=reg_protocol()['normalizer_sha256']
                         or frozen['data_manifest'].get('included_splits')!=['train','validation']):raise RuntimeError('regularization bundle contract mismatch')
+                if plan.get('version')==21:
+                    from rl_stocks.training.sac_discount import PROTOCOL_SHA256,validate_record,protocol as reg_protocol
+                    from rl_stocks.training.diversity import validate_counts
+                    from rl_stocks.features.registry.assemble import NAMES
+                    frozen=json.loads(read(folder+'manifest.json'));arm=plan['discount_study']['arm'];job=plan['jobs'][0]
+                    validate_record(run['discount_initialization'],arm,initial=True)
+                    if (run['discount_final']['num_timesteps']!=job['steps'] or run['discount_selected']['num_timesteps']!=run['selected_step']):
+                        raise RuntimeError('discount actual saved-model step mismatch')
+                    for field in ('discount_final','discount_selected'):
+                        validate_record(run[field],arm)
+                    checked=validate_counts(run['sampling_diagnostics'],'expanded',job['smoke'],job['steps'])
+                    if (run.get('study_protocol_sha256')!=PROTOCOL_SHA256 or run.get('start_sampling')!=checked['summary']
+                        or run['sampling_diagnostics']!=json.loads(read(prefix+'training-sampling.json'))
+                        or frozen.get('metadata')!={k:v for k,v in run.items() if k!='bundle_id'}
+                        or frozen.get('names')!=list(NAMES) or frozen.get('feature_schema')!='daily-indicators-v1'
+                        or digest(frozen.get('normalizer',{}))!=reg_protocol()['normalizer_sha256']
+                        or frozen['data_manifest'].get('included_splits')!=['train','validation']):raise RuntimeError('discount bundle contract mismatch')
                 if digest(json.loads(read(folder+'manifest.json'))) != run['bundle_id']:
                     raise RuntimeError('remote bundle identity mismatch')
             if actual != expected or len(completion['completed']) != len(runs):

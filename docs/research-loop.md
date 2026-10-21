@@ -471,3 +471,15 @@ healthy idle349.97 balance/zero assignments and verified cleanup; preserves all
 pass. No session allocated at review. New fixed studies require new frozen source
 with floor enforcement; old interrupted family remains incomplete, no extension.
 [Audit](../results/budget-review-2026-10-21/README.md).
+
+## Fixed discount-horizon hypothesis
+
+After reviewed resumption, preregister a distinct SAC gamma0.99/0.95 comparison.
+Both fresh expanded-data arms keep actor/critic/alpha initialization, reward,
+costs and actual sampling matched; no weight decay or numerical flush change.
+Shorter discounted targets are a hypothesis, not equivalence to20-day holding or
+proof of a cure. Mandatory checkpoint identities and floor-aware controllers
+precede two1024 CPU smokes, then fixed100k screen only after acceptance. Keep
+absolute/relative selected/final, seed and prospective gates. Project37.787213
+retained, study allowance2 includes all attempts; account floor150/teardown170.
+[Protocol and controls](sac-discount.md).

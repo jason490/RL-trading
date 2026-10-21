@@ -140,6 +140,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==DIVERSITY_PROTOCOL:metadata['diversity_initialization']=initialization_record(model)
         from rl_stocks.training.sac_regularization import PROTOCOL_SHA256 as REG_PROTOCOL,optimizer_record
         if study_protocol_sha256==REG_PROTOCOL:metadata['regularization_initialization']=optimizer_record(model)
+        from rl_stocks.training.sac_discount import PROTOCOL_SHA256 as DISCOUNT_PROTOCOL,model_record as discount_record
+        if study_protocol_sha256==DISCOUNT_PROTOCOL:metadata['discount_initialization']=discount_record(model)
     if 'history_augmentation' in dataset['manifest']:
         from rl_stocks.training.history.spec import PROTOCOL_SHA256
         metadata['history_augmentation']=dataset['manifest']['history_augmentation']
@@ -173,6 +175,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if algorithm=='sac' and study_protocol_sha256==REG_PROTOCOL:
             metadata['regularization_final']=optimizer_record(model)
             metadata['regularization_selected']=optimizer_record(selected)
+        if algorithm=='sac' and study_protocol_sha256==DISCOUNT_PROTOCOL:
+            metadata['discount_final']=discount_record(model)
+            metadata['discount_selected']=discount_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

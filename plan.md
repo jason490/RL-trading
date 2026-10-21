@@ -1237,3 +1237,17 @@ charges. Separate locked review requires exact stopped fleet, verified cleanup,
 idle metering, headroom and explicit authorization. Historical failures remain.
 20 checks pass; account349.97, no allocation. Future fleets need newly frozen
 floor-aware code. [Review evidence](results/budget-review-2026-10-21/README.md).
+
+## 53. Fixed SAC discount-horizon study — integrated preparation
+
+Distinct0.99/0.95 hypothesis, fresh identical expanded-data100k cells; no reward,
+feature, numerical, temperature, initialization, sampler or execution changes.
+Runtime contracts require actual model gamma/optimizer fingerprints and mandatory
+current checkpoint identity; allocation requires floor-aware150/170 controller.
+Two1024 CPU smokes precede screen; no allocations at preparation. Original
+37.787213 project charges retained,2-unit study allowance, absolute and seed/
+prospective gates unchanged. [Guide](docs/sac-discount.md).
+
+Discount preparation acceptance:59 focused checks, actual immutable payloads and
+script compilation pass; actual saved-step records required. Freeze source and
+check official account usage before two1024 CPU smokes. No performance claim.
