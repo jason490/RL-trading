@@ -483,3 +483,21 @@ precede two1024 CPU smokes, then fixed100k screen only after acceptance. Keep
 absolute/relative selected/final, seed and prospective gates. Project37.787213
 retained, study allowance2 includes all attempts; account floor150/teardown170.
 [Protocol and controls](sac-discount.md).
+
+## Completed discount screen — gates failed
+
+Fresh100k CPU candidate gamma0.95 selected/final22.79%/22.16% trails gamma0.99
+control24.19%/24.19% and matched holding30.60%. Final stocks23.88% and ETFs12.64%
+trail holding32.63%/19.47%; median stock excess−9.78pp. Candidate joint short
+success1/3 versus control0/3 does not rescue failed return gates. No extension,
+gamma sweep, confirmation seeds or promotion. Reused development is not independent
+evidence; retired test remains unopened and the overall objective is unmet.
+
+All4 owned sessions stopped;312 exact frozen predictions and35 focused checks
+pass.13 server asset digests verified; duplicate publication archives totaling
+31,529,571 bytes removed with398 retained file hashes unchanged. Strict report
+reproduces byte-for-byte. Project37.897158/150, remaining112.102842; last account
+349.88 with zero assignments/rate. Account150/170 and project150/130 protections
+remain. Next inspect saved selected/final cost and directional contributions,
+without fitting or allocation, before any distinct hypothesis.
+[Detailed evidence and release](../results/sac-discount-2026-10-21/README.md).

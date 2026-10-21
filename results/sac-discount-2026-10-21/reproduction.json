@@ -1,0 +1,6 @@
+{
+  "report_byte_identical": true,
+  "sha256": "9f5f11840e4212d0bf1d5cf992b9b7346a11bbf325fd2b918d3b6511f9f36447",
+  "retained_inputs_unchanged_during_cleanup": true,
+  "command": "PYTHONPATH=src .venv/bin/python scripts/report_discount.py --state .runtime/discount-screen-state.json --output /tmp/discount-reproduced.json"
+}

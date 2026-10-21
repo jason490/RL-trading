@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "asset_count": 13,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/sac-discount-2026-10-21",
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773552,
+      "digest": "sha256:6f16044d43592ab9f8b492361a2eb8d2762b94ce5eabd4c1a078e4c2cc742168",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 410,
+      "digest": "sha256:c082c7c9c12619f95d819a16f48f6582f9974c2f7c2a08eeb3737be223ebe0cf",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 1890,
+      "digest": "sha256:884efe741bac0e716f50ea68cc5c6b4e2eed81ff2526f6fbafcacda4cfaca053",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 501348,
+      "digest": "sha256:04018cbb86a2790364c17413cd8b0993f3683601a5acc1e8735397259abcaf39",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 7040,
+      "digest": "sha256:7a5d0c8f0732bab834bce4533072a8e3d967c81662f14bb7c3016ca62611ce62",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 28191011,
+      "digest": "sha256:02ab8aedbac9e173237ddb7a8eff60ef937a679da10440b0aaa4e06d8d8f3449",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2121,
+      "digest": "sha256:ec081e33ec264d7484bcc68043f0b3cec904071723bfdfd7d395440f685d90ce",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2121,
+      "digest": "sha256:356e1cc46a7fd33effea3f2f083db856aa67d6d18657baf0fa6cb788b5615ee1",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 9472,
+      "digest": "sha256:3cd80db6fa01d1e7ea4be41ffc78191f199d738bb9653c72871f2ffd63e5e935",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 399,
+      "digest": "sha256:fda7dab9c81925fd1bb538f6197f956e6e6cac3e478c5f7eb6e1cbd66c98143c",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 213856,
+      "digest": "sha256:9f5f11840e4212d0bf1d5cf992b9b7346a11bbf325fd2b918d3b6511f9f36447",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3338560,
+      "digest": "sha256:4e9eb9ae85ff944039c0fb9fc7940262b695c9488a1705ed960b099055131e0b",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1229,
+      "digest": "sha256:a29696e6fd9f2069fd6d4e20c13cbd74b98adac2a5fe10f7262ed7946c713548",
+      "state": "uploaded"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "owned_cleanup_verified": true,
+  "release_assets_verified": 13,
+  "removed_files": [
+    {
+      "path": "artifacts/discount-release/validation-reports.tar.gz",
+      "bytes": 3338560,
+      "sha256": "4e9eb9ae85ff944039c0fb9fc7940262b695c9488a1705ed960b099055131e0b"
+    },
+    {
+      "path": "artifacts/discount-release/research-models.tar.gz",
+      "bytes": 28191011,
+      "sha256": "02ab8aedbac9e173237ddb7a8eff60ef937a679da10440b0aaa4e06d8d8f3449"
+    }
+  ],
+  "removed_count": 2,
+  "removed_logical_bytes": 31529571,
+  "retained_file_count": 398,
+  "retained_hashes_unchanged": true,
+  "raw_data_models_reports_curves_ledger_preserved": true,
+  "scope": "Only server-digest-verified duplicate publication archives removed; original transport, replay and source archives retained."
+}
