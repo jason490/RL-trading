@@ -17,11 +17,17 @@ def test_report_binds_actual_arm_dataset_for_transport_or_retained_extraction(tm
     state=tmp_path/'state.json';state.write_text(json.dumps(dict(status='complete',cleanup_verified=True,completed={'task':dict(session='session')})))
     universe=tmp_path/'configs/universes/sector_research.json';universe.parent.mkdir(parents=True);universe.write_text(json.dumps(dict(instruments=[])))
     class ValidatedDataset(Exception):pass
+    archives=[];payload=object()
     def validate(path,plan,dataset):
         assert dataset==identity and plan['dataset_contract']['identity']==identity
         assert Path(path).exists()
+        archives.append(dataset)
+    def validate_payload(data,actual_arm):
+        assert data is payload and actual_arm==arm and archives==[identity]
         raise ValidatedDataset
     monkeypatch.chdir(tmp_path);monkeypatch.setattr(module,'identify_arm',lambda m:arm)
     monkeypatch.setattr(module,'validate_archive',validate)
+    monkeypatch.setattr(module,'read_dataset',lambda p:payload if p.name==identity else None)
+    monkeypatch.setattr(module,'validate_payload',validate_payload)
     monkeypatch.setattr(sys,'argv',['report','--state',str(state),'--output',str(tmp_path/'summary.json')])
     with pytest.raises(ValidatedDataset):module.main()

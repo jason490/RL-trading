@@ -170,3 +170,7 @@ Report identity fix: each archive is validated against its actual arm dataset,
 including retained-extraction fallback. Six regression cases cover all three
 arms and both transport paths;27 focused report/artifact checks pass. This fixes
 a report-only single-dataset assumption; recorded training/protocol unchanged.
+
+The report now also passes the arm explicitly into immutable-payload validation.
+The six transport/arm regression cases exercise archive and payload binding
+together;27 focused report/artifact checks pass. Training evidence unchanged.

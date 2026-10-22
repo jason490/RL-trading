@@ -36,7 +36,7 @@ def main():
                 packed=Path(work)/'retained.tar'
                 with tarfile.open(packed,'w') as t:t.add(artifact,arcname='artifacts')
                 validate_archive(packed,session_plan(arm),m['dataset'])
-        data=validate_payload(read_dataset(Path('data/datasets')/m['dataset']))
+        data=validate_payload(read_dataset(Path('data/datasets')/m['dataset']),arm)
         current={k:m[k] for k in ('source_hash','git','simulation','versions','reward_config','evaluation_every','initialization','policy_architecture')}
         if current['git']['dirty'] or contract is not None and current!=contract:raise ValueError('matched source/settings required')
         contract=current;cell=dict(dataset=m['dataset'],run=path.parent.name,bundle_id=m['bundle_id'],seed=11,observation=m['observation'],reports={},sampling=m['sampling_diagnostics'])
