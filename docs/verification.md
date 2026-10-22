@@ -1390,3 +1390,15 @@ Alignment publication/cleanup accepted:13 server sizes/digests match;48,871,879
 duplicate bytes removed,456 retained hashes unchanged. Post-cleanup strict report
 reproduces byte for byte. All6 sessions stopped and required source/data/model/
 counter/curve evidence retained. [Audit](../results/recurrent-alignment-2026-10-21/cleanup.json).
+
+## Alignment saved risk/action audit — 2026-10-22
+
+All six accepted phases audited without fitting/data/Colab. Aligned final stock/ETF
+cost drag11.08/8.37pp and noncost excess−6.68/−2.33pp both contribute to failure.
+Mean symbol drawdowns−37.89%/−34.78% contain only2.87%/2.63% of peak equity in
+window costs; this is descriptive bookkeeping, not a cost-free replay. All saved
+policy exposure requests are nonzero; original Gaussian output and issued unit
+action are now distinguished. Consider explicit categorical cash as a separate
+preregistered hypothesis; no causal fix established, no allocation or promotion.
+19 focused tests pass; accepted source hashes unchanged. Project38.136658 retained,
+all owned sessions stopped. [Evidence](../results/alignment-risk-actions-2026-10-22/README.md).

@@ -99,3 +99,15 @@ action categories and net P&L with unchanged sources; no fit/data/Colab. Next
 consider preregistered fixed unit-magnitude sign-preserving replay, with original
 protective outputs and exact unrestricted parity gates before interpretation;
 no replay yet. [Evidence](../results/recurrent-actions-2026-10-21/README.md).
+
+## Alignment saved risk/action audit — 2026-10-22
+
+All six accepted phases audited without fitting/data/Colab. Aligned final stock/ETF
+cost drag11.08/8.37pp and noncost excess−6.68/−2.33pp both contribute to failure.
+Mean symbol drawdowns−37.89%/−34.78% contain only2.87%/2.63% of peak equity in
+window costs; this is descriptive bookkeeping, not a cost-free replay. All saved
+policy exposure requests are nonzero; original Gaussian output and issued unit
+action are now distinguished. Consider explicit categorical cash as a separate
+preregistered hypothesis; no causal fix established, no allocation or promotion.
+19 focused tests pass; accepted source hashes unchanged. Project38.136658 retained,
+all owned sessions stopped. [Evidence](../results/alignment-risk-actions-2026-10-22/README.md).

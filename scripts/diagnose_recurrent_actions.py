@@ -7,10 +7,12 @@ from rl_stocks.reporting.action_execution import diagnose_groups
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--study',choices=('recurrent-state','alignment'),default='recurrent-state')
     p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+    result_study='recurrent-state' if a.study=='recurrent-state' else 'recurrent-alignment'
     if a.output.exists():raise ValueError('new output required')
-    state=json.loads(Path('.runtime/recurrent-state-screen-state.json').read_text())
-    accepted=json.loads(Path('results/recurrent-state-2026-10-21/summary.json').read_text())
+    state=json.loads(Path(f'.runtime/{a.study}-screen-state.json').read_text())
+    accepted=json.loads(Path(f'results/{result_study}-2026-10-21/summary.json').read_text())
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete verified shutdown required')
     universe=json.loads(Path('configs/universes/sector_research.json').read_text())
     stocks={i['symbol'] for i in universe['instruments'] if i['kind']=='stock'}
@@ -29,7 +31,7 @@ def main():
             records.append(dict(arm=arm,phase=phase,source_report_sha256=checksum(rp),**diagnose_groups(results,stocks)))
     if seen!=set(accepted['cells']) or len(records)!=6:raise ValueError('all six phases required')
     if any(checksum(Path(p))!=h for p,h in protected.items()):raise ValueError('source changed')
-    result=dict(records=records,source_files_unchanged=True,training_performed=False,dataset_opened=False,
+    result=dict(study=a.study,records=records,source_files_unchanged=True,training_performed=False,dataset_opened=False,
         colab_allocated=False,test_evaluated=False,objective_achieved=False,
         source_sha256={p:checksum(Path(p)) for p in ['scripts/diagnose_recurrent_actions.py','src/rl_stocks/reporting/action_execution.py']})
     a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(result,indent=2)+'\n')
