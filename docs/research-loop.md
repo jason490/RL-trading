@@ -966,3 +966,15 @@ and2-unit allowance, project150/130 and account150/170 remain. Same-source two10
 seed11 screen next; no tuning from smoke returns.
 
 [Evidence](../results/recurrent-guard-2026-10-22/README.md).
+
+
+## Completed update-guard screen
+
+Fixed seed11 control selected/final19.62/18.48%, guard28.07/24.44%, holding30.60%.
+Guard reduces actual Adam steps20,000→6,165 and passes relative/risk gates, but
+both absolute target gates fail. Final stocks27.78% versus32.63% holding;
+ETFs6.11% versus19.47%; joint short/total success0/3. No confirmation, extension,
+KL sweep or promotion. All six study sessions stopped,156 screen frozen checks
+pass, original ledger retained. Project38.39201565/150; official account349.51,
+zero rate/assignments. Publication/duplicate cleanup and saved-path diagnosis next.
+[Full evidence](../results/recurrent-guard-2026-10-22/README.md).

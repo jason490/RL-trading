@@ -1434,3 +1434,8 @@ Guard protocol2 shared untrained tensor/RNG initialization prepared after
 version1 rejected unequal hashes.94 focused checks and revised payload validation
 pass. Original evidence/budget retained; actual retry smokes remain.
 [Details](docs/recurrent-update-guard.md).
+
+Update-guard100k screen complete: relative improvement passes, absolute targets
+fail; no promotion/confirmation. Six owned sessions stopped, frozen parity
+verified, project38.39201565/150. Publication/cleanup then saved-path diagnosis.
+[Evidence](results/recurrent-guard-2026-10-22/README.md).
