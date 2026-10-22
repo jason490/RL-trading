@@ -899,3 +899,14 @@ generalization tradeoff, not pure deterioration on every period; fitted benchmar
 weakness remains and no cause/promotion proven.32 focused checks passed before
 committed protocol6f2e10c and actual replay. All sessions stopped, project38.309006
 retained. [Evidence](../results/recurrent-fit-2026-10-22/README.md).
+
+## Separate Gaussian policy-update guard protocol — 2026-10-22
+
+Fixed fresh control target_kl=None versus candidate0.01, same strongest Gaussian
+posthoc training/evaluation contract, data/reward/memory/sampling and100kseed11.
+No categorical/cash rescue. Same selected/final relative/absolute/risk gates;
+actual candidate Adam-step reduction required for activation. No grids/extension.
+Construction records distinguish nominal epochs from actual Adam steps, and a
+forward-only high-KL library test forbids optimizer.step and proves no learning.
+Dedicated Colab integration and two512 smokes remain; no allocation.
+[Protocol and constraints](recurrent-update-guard.md).

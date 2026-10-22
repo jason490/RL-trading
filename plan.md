@@ -1420,3 +1420,8 @@ Recurrent fitted replay complete: eight policies,153,088 execution rows total;
 all fitted comparability flags fail, sources/tensors/full optimizer/normalization
 unchanged. Cash fits this window better late but development worsens; no simple
 optimizer-cause claim. See [results](results/recurrent-fit-2026-10-22/README.md).
+
+Separate fixed Gaussian update-guard protocol/construction prepared; target_kl
+0.01 versus unchanged fresh strongest control, same100k budget. No actual
+allocation; dedicated Colab integration and smokes required. See
+[guide](docs/recurrent-update-guard.md).
