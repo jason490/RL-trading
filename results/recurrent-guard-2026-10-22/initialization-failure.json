@@ -1,0 +1,71 @@
+{
+  "status": "smoke_comparison_rejected",
+  "reason": "Exact initial policy tensor hashes differ across runtimes despite same source, seed, settings and package versions. Frozen inference individually passes but initial-pair equality fails; do not allocate screen.",
+  "records": {
+    "guard-kl_guard-11-smoke": {
+      "session": "rl-stocks-cpu-eeab5335ac97",
+      "run": "20261022T060756-recurrent_ppo-11-748ac6eb",
+      "bundle_id": "58aaa6d89b7c55e3dcd2c9de9d41347d4c41dc8338dbd4a9fffb85b8ab99ccd2",
+      "initial_policy_tensor_sha256": "4af57830f7ce8817872bd922fa6be22aa57ee17610933f7f1b00d2138224e0f5",
+      "target_kl": 0.01,
+      "actual_adam_steps": 80,
+      "nominal_epoch_counter": 40,
+      "source_hash": "6d78cc9fe5e1a105166e10b4acae5649b70d6211706a737ce15a0ad35572f256",
+      "versions": {
+        "numpy": "2.2.6",
+        "torch": "2.8.0",
+        "gymnasium": "1.2.0",
+        "stable-baselines3": "2.7.0",
+        "sb3-contrib": "2.7.0",
+        "pandas": "2.3.2",
+        "plotly": "6.3.0"
+      }
+    },
+    "guard-control-11-smoke": {
+      "session": "rl-stocks-cpu-91f4c4d23015",
+      "run": "20261022T060839-recurrent_ppo-11-836d0e49",
+      "bundle_id": "748caccf240f77666424544577edf29ee4ee43e3fd86b97b37bffa6b78dc0271",
+      "initial_policy_tensor_sha256": "b039fca876b95f96e391a6e4b963d160954a16a2a062d5c4846a0e9ec7fdcc0d",
+      "target_kl": null,
+      "actual_adam_steps": 80,
+      "nominal_epoch_counter": 40,
+      "source_hash": "6d78cc9fe5e1a105166e10b4acae5649b70d6211706a737ce15a0ad35572f256",
+      "versions": {
+        "numpy": "2.2.6",
+        "torch": "2.8.0",
+        "gymnasium": "1.2.0",
+        "stable-baselines3": "2.7.0",
+        "sb3-contrib": "2.7.0",
+        "pandas": "2.3.2",
+        "plotly": "6.3.0"
+      }
+    }
+  },
+  "source_proof": {
+    "source_revision": "84e97b19ef8c937dcd9131b26d6ecea145361878",
+    "source_hash": "6d78cc9fe5e1a105166e10b4acae5649b70d6211706a737ce15a0ad35572f256",
+    "source_archive_sha256": "721be3208be006f4e1fcc490e6dc2c875515c24650f4caf5c297636f88e4f4fb",
+    "shared_original_ledger_and_lock_verified": true,
+    "root": "/home/vibe/projects/rl-stocks/.runtime/guard-source",
+    "sessions_allocated": 0
+  },
+  "cleanup_verified": true,
+  "frozen_predictions_exact": 156,
+  "screen_allocated": false,
+  "project_units": 38.326072507126426,
+  "study_start_units": 38.30900602702892,
+  "incremental_units": 0.017066480097504666,
+  "observed_debit": 0.0,
+  "rate_estimate": 0.01706648009750578,
+  "charged": 0.01706648009750578,
+  "last_official_usage": {
+    "balance": 349.56,
+    "rate": 0,
+    "assignments": 0
+  },
+  "budget_stopped": false,
+  "diagnosis": "Local untrained constructions match each other across target settings, but differ from both remote hashes. Cause not established. Original runs stored initial fingerprints but not initial arrays, so no claim about magnitude of differences.",
+  "next_action": "Preserve failed source/protocol and ledger. Preregister checksum-pinned common untrained initialization tensors/RNG per seed before revised smokes; load before fitting and keep exact equality gate. Do not relax tolerance or select initialization by performance.",
+  "test_evaluated": false,
+  "objective_achieved": false
+}

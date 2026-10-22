@@ -1,8 +1,8 @@
 # Recurrent policy-update safeguard
 
-Status: fixed protocol, construction/record contracts and forward-only library
-acceptance prepared. Colab jobs/worker/archive/report integration is complete;
-actual smoke acceptance remains. No runtime allocated for this study.
+Status: initial smoke comparison rejected for unequal initial tensors; both owned
+sessions stopped. No100k screen allocated. Shared initialization and a revised
+preregistered smoke attempt remain.
 
 ## Evidence and separate hypothesis
 
@@ -114,3 +114,17 @@ Commit/freeze source, check official usage, then two512 CPU smokes. After durabl
 retrieval and verified shutdown, `accept_guard_smokes.py` restores saved settings/
 Adam states and requires156 exact frozen predictions, matching initial networks
 and sampling. Only then run the same-source two100k screen.
+
+## Initial guard smoke comparison rejected
+
+Both512 CPU runs completed/retrieved,156 exact frozen predictions pass individually
+and both owned sessions stopped. Combined acceptance rejects different initial
+tensor hashes despite matching seed/source/settings/version records. Local
+untrained pair hashes agree but differ from both remote hashes; cause/magnitude
+not proven, initial arrays unavailable in this attempt. Keep exact equality gate.
+Next checksum-pin shared untrained tensor/RNG snapshots per seed, with explicit
+revised protocol before repeat smokes; no learning/performance initialization
+selection or tolerance relaxation. No100k screen allocation. Both had80 Adam
+steps/40 nominal epochs; short-smoke nonactivation was allowed and is separate.
+Project38.32607251, original study baseline38.309006 retained, no budget stop.
+[Failure evidence](../results/recurrent-guard-2026-10-22/README.md).
