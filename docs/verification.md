@@ -1572,3 +1572,17 @@ execution rules. Explicit original-panel slicing preserves legacy rejection;
 full optimizer fingerprint guards read-only replay. Commit before actual inference,
 no fitting/provider/Colab; descriptive flags never promote failed cash family.
 [Protocol/method](training-fit-diagnostic.md). Actual replay pending.
+
+## Actual recurrent fitted-period replay
+
+Eight saved selected/final models complete26 episodes/19,136 rows each, with
+unchanged tensors, full Adam fingerprints, counters, normalization and source
+hashes; all matched holding paths equal. No fitting/provider/Colab/test access.
+All eight fitted stock/ETF/median flags fail. Fitted holding58.15% stocks,47.15%
+ETFs. Posthoc final stocks27.22%, ETFs68.43%; cash final19.92%/27.07%. Cash
+fitted mean improves3.22→21.02% while development29.24→6.63%; binary fitted
+mean7.79→15.28% while development34.38→−1.25%. This is consistent with a
+generalization tradeoff, not pure deterioration on every period; fitted benchmark
+weakness remains and no cause/promotion proven.32 focused checks passed before
+committed protocol6f2e10c and actual replay. All sessions stopped, project38.309006
+retained. [Evidence](../results/recurrent-fit-2026-10-22/README.md).

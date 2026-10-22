@@ -17,3 +17,17 @@ Keep the last evaluation at each step; final post-update supersedes on-step. Sav
 All eight models have finite accepted states and expected updates. Late KL/clipping generally increase, including the successful one-seed posthoc control, so these logs alone do not explain deterioration. Cash/binary direction drift is documented separately in [participation diagnostics](participation-diagnostics.md). Any policy-update safeguard must be a distinct preregistered hypothesis with matched controls and actual Adam-step logging; no closed-family rescue, threshold grid or retrospective promotion. Inspect fitted-period versus development behavior before another training decision.
 
 The CLI requires complete/cleaned accepted study state and published summary identity, checks original file hashes, restores all models read-only and rejects changes. Tests use synthetic saved state and never call optimizer.step or learn. See the linked audit for actual checks, CSVs, source hashes, reproduction command and limitations.
+
+## Actual recurrent fitted-period replay
+
+Eight saved selected/final models complete26 episodes/19,136 rows each, with
+unchanged tensors, full Adam fingerprints, counters, normalization and source
+hashes; all matched holding paths equal. No fitting/provider/Colab/test access.
+All eight fitted stock/ETF/median flags fail. Fitted holding58.15% stocks,47.15%
+ETFs. Posthoc final stocks27.22%, ETFs68.43%; cash final19.92%/27.07%. Cash
+fitted mean improves3.22→21.02% while development29.24→6.63%; binary fitted
+mean7.79→15.28% while development34.38→−1.25%. This is consistent with a
+generalization tradeoff, not pure deterioration on every period; fitted benchmark
+weakness remains and no cause/promotion proven.32 focused checks passed before
+committed protocol6f2e10c and actual replay. All sessions stopped, project38.309006
+retained. [Evidence](../results/recurrent-fit-2026-10-22/README.md).

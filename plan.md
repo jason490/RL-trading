@@ -1415,3 +1415,8 @@ Recurrent selected/final fitted-period diagnosis prepared with a fixed common
 2018–2020 window and original26 panel. Commit before eight read-only replays;
 no new training, provider calls or retired-test access. See
 [method](docs/training-fit-diagnostic.md).
+
+Recurrent fitted replay complete: eight policies,153,088 execution rows total;
+all fitted comparability flags fail, sources/tensors/full optimizer/normalization
+unchanged. Cash fits this window better late but development worsens; no simple
+optimizer-cause claim. See [results](results/recurrent-fit-2026-10-22/README.md).
