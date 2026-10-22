@@ -111,3 +111,16 @@ action are now distinguished. Consider explicit categorical cash as a separate
 preregistered hypothesis; no causal fix established, no allocation or promotion.
 19 focused tests pass; accepted source hashes unchanged. Project38.136658 retained,
 all owned sessions stopped. [Evidence](../results/alignment-risk-actions-2026-10-22/README.md).
+
+## Cash-choice saved action audit — 2026-10-22
+
+All eight accepted phases/208 symbol episodes audited with unchanged source hashes
+and no fit/model/data/provider/Colab access. Cash stock long/short/cash requests
+shift98.01/0.35/1.64%→68.78/16.30/14.92%; stock short contribution+0.83→−9.21pp.
+Binary stock shorts6.06%→31.04%, contribution+3.45→−15.66pp. Cash final stock/ETF
+excess−25.35/−16.43pp reconciles noncost−17.83/−8.95 minus cost7.51/7.49pp;
+costs alone insufficient. Observed direction drift is not a proven optimizer
+cause.28 focused tests pass, including exact registered arms/source identities,
+cash requests and legacy compatibility. No family rescue or new training; saved
+optimizer diagnosis next. Project38.309006 retained, all sessions stopped.
+[Full audit](../results/cash-actions-2026-10-22/README.md).
