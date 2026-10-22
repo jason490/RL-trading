@@ -1,0 +1,9 @@
+arm,phase,steps,sb3_nominal_epoch_counter,adam_step_min,adam_step_max,optimizer_states,finite
+posthoc_unit,selected,100000,1000,20000,20000,21,True
+posthoc_unit,final,100000,1000,20000,20000,21,True
+categorical_binary,selected,40000,390,7800,7800,21,True
+categorical_binary,final,100000,1000,20000,20000,21,True
+gaussian_unit,selected,70000,690,13800,13800,21,True
+gaussian_unit,final,100000,1000,20000,20000,21,True
+categorical_cash,selected,10000,90,1800,1800,21,True
+categorical_cash,final,100000,1000,20000,20000,21,True

@@ -250,3 +250,15 @@ cause.28 focused tests pass, including exact registered arms/source identities,
 cash requests and legacy compatibility. No family rescue or new training; saved
 optimizer diagnosis next. Project38.309006 retained, all sessions stopped.
 [Full audit](../results/cash-actions-2026-10-22/README.md).
+
+## Saved cash-study optimizer audit — 2026-10-22
+
+All eight selected/final models restored read-only against retained/publication
+hashes. All weights/Adam moments finite; all21 parameter states present, expected
+shapes and counts. Final100k has20,000 Adam steps, distinct from1,000 nominal PPO
+epochs; selected cash/binary have1,800/7,800 actual steps. Late logged KL/clipping
+rise in failed categorical models and strongest posthoc control alike, so no
+causal optimizer explanation established.12 helper checks pass; no fit/dataset/
+provider/Colab access, sources unchanged. Fitted-period/generalization diagnosis
+next before any distinct safeguard protocol. Project38.309006 retained, all
+sessions stopped. [Audit](../results/cash-optimizer-2026-10-22/README.md).

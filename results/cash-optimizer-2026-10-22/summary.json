@@ -1,0 +1,936 @@
+{
+  "cells": {
+    "posthoc_unit": {
+      "run": "20261022T045047-recurrent_ppo-11-3a4b1ab4",
+      "metadata_sha256": "8a6e4fa543f5b332090a51d701cf396c0ad412c9718bc3ab60da5af7b98b1b76",
+      "selected_step": 100000,
+      "models": {
+        "selected": {
+          "model_sha256": "af2e34e7cb4e408b546bf552ce4fc473e9887c7f992a38edb37b157b1d7d40de",
+          "num_timesteps": 100000,
+          "sb3_nominal_epoch_counter": 1000,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61513,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 20000,
+          "adam_step_max": 20000,
+          "per_parameter_adam_steps": {
+            "log_std": 20000,
+            "mlp_extractor.policy_net.0.weight": 20000,
+            "mlp_extractor.policy_net.0.bias": 20000,
+            "mlp_extractor.policy_net.2.weight": 20000,
+            "mlp_extractor.policy_net.2.bias": 20000,
+            "mlp_extractor.value_net.0.weight": 20000,
+            "mlp_extractor.value_net.0.bias": 20000,
+            "mlp_extractor.value_net.2.weight": 20000,
+            "mlp_extractor.value_net.2.bias": 20000,
+            "action_net.weight": 20000,
+            "action_net.bias": 20000,
+            "value_net.weight": 20000,
+            "value_net.bias": 20000,
+            "lstm_actor.weight_ih_l0": 20000,
+            "lstm_actor.weight_hh_l0": 20000,
+            "lstm_actor.bias_ih_l0": 20000,
+            "lstm_actor.bias_hh_l0": 20000,
+            "lstm_critic.weight_ih_l0": 20000,
+            "lstm_critic.weight_hh_l0": 20000,
+            "lstm_critic.bias_ih_l0": 20000,
+            "lstm_critic.bias_hh_l0": 20000
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.01713830977678299,
+          "maximum_second_moment": 0.0012542284093797207,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        },
+        "final": {
+          "model_sha256": "70ccefa1c8f55a94536791f51c97afc849747cd24df358186b03660b9ff5969a",
+          "num_timesteps": 100000,
+          "sb3_nominal_epoch_counter": 1000,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61513,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 20000,
+          "adam_step_max": 20000,
+          "per_parameter_adam_steps": {
+            "log_std": 20000,
+            "mlp_extractor.policy_net.0.weight": 20000,
+            "mlp_extractor.policy_net.0.bias": 20000,
+            "mlp_extractor.policy_net.2.weight": 20000,
+            "mlp_extractor.policy_net.2.bias": 20000,
+            "mlp_extractor.value_net.0.weight": 20000,
+            "mlp_extractor.value_net.0.bias": 20000,
+            "mlp_extractor.value_net.2.weight": 20000,
+            "mlp_extractor.value_net.2.bias": 20000,
+            "action_net.weight": 20000,
+            "action_net.bias": 20000,
+            "value_net.weight": 20000,
+            "value_net.bias": 20000,
+            "lstm_actor.weight_ih_l0": 20000,
+            "lstm_actor.weight_hh_l0": 20000,
+            "lstm_actor.bias_ih_l0": 20000,
+            "lstm_actor.bias_hh_l0": 20000,
+            "lstm_critic.weight_ih_l0": 20000,
+            "lstm_critic.weight_hh_l0": 20000,
+            "lstm_critic.bias_ih_l0": 20000,
+            "lstm_critic.bias_hh_l0": 20000
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.01713830977678299,
+          "maximum_second_moment": 0.0012542284093797207,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        }
+      },
+      "training": {
+        "points": [
+          {
+            "steps": 10000,
+            "phase": "on_step",
+            "return_pct": 21.15699371607755,
+            "train/approx_kl": 0.009549614042043686,
+            "train/clip_fraction": 0.11119999941438437,
+            "train/entropy_loss": -5.543371965885163,
+            "train/std": 0.9663088321685791
+          },
+          {
+            "steps": 20000,
+            "phase": "on_step",
+            "return_pct": -11.593152610191234,
+            "train/approx_kl": 0.013255271129310131,
+            "train/clip_fraction": 0.1273000000230968,
+            "train/entropy_loss": -5.449501261711121,
+            "train/std": 0.9433683156967163
+          },
+          {
+            "steps": 30000,
+            "phase": "on_step",
+            "return_pct": 15.995808398406533,
+            "train/approx_kl": 0.015680592507123947,
+            "train/clip_fraction": 0.1591999992914498,
+            "train/entropy_loss": -5.296647140979767,
+            "train/std": 0.9076209664344788
+          },
+          {
+            "steps": 40000,
+            "phase": "on_step",
+            "return_pct": 23.75205450753448,
+            "train/approx_kl": 0.01763290911912918,
+            "train/clip_fraction": 0.1666999999061227,
+            "train/entropy_loss": -5.109141471385956,
+            "train/std": 0.8665342926979065
+          },
+          {
+            "steps": 50000,
+            "phase": "on_step",
+            "return_pct": 26.069536849584455,
+            "train/approx_kl": 0.02421272173523903,
+            "train/clip_fraction": 0.23129999980330468,
+            "train/entropy_loss": -4.884991443157196,
+            "train/std": 0.819450318813324
+          },
+          {
+            "steps": 60000,
+            "phase": "on_step",
+            "return_pct": 21.035287224312356,
+            "train/approx_kl": 0.024413444101810455,
+            "train/clip_fraction": 0.25309999987483023,
+            "train/entropy_loss": -4.728992130756378,
+            "train/std": 0.7904424667358398
+          },
+          {
+            "steps": 70000,
+            "phase": "on_step",
+            "return_pct": 16.204750593051124,
+            "train/approx_kl": 0.03010997176170349,
+            "train/clip_fraction": 0.2288999992981553,
+            "train/entropy_loss": -4.612370676994324,
+            "train/std": 0.7707524299621582
+          },
+          {
+            "steps": 80000,
+            "phase": "on_step",
+            "return_pct": 20.20990348780944,
+            "train/approx_kl": 0.03530427813529968,
+            "train/clip_fraction": 0.3021000009588897,
+            "train/entropy_loss": -4.53047993183136,
+            "train/std": 0.7538524866104126
+          },
+          {
+            "steps": 90000,
+            "phase": "on_step",
+            "return_pct": 26.088432302563945,
+            "train/approx_kl": 0.029751041904091835,
+            "train/clip_fraction": 0.285099999345839,
+            "train/entropy_loss": -4.46681088924408,
+            "train/std": 0.7433260083198547
+          },
+          {
+            "steps": 100000,
+            "phase": "post_update",
+            "return_pct": 32.803999770390575,
+            "train/approx_kl": 0.037699144333601,
+            "train/clip_fraction": 0.2922000001557171,
+            "train/entropy_loss": -4.45425044298172,
+            "train/std": 0.7407031059265137
+          }
+        ],
+        "ranges": {
+          "train/approx_kl": {
+            "min": 0.009549614042043686,
+            "median": 0.024313082918524742,
+            "max": 0.037699144333601
+          },
+          "train/clip_fraction": {
+            "min": 0.11119999941438437,
+            "median": 0.23009999955073,
+            "max": 0.3021000009588897
+          },
+          "train/entropy_loss": {
+            "min": -5.543371965885163,
+            "median": -4.806991786956787,
+            "max": -4.45425044298172
+          },
+          "train/std": {
+            "min": 0.7407031059265137,
+            "median": 0.8049463927745819,
+            "max": 0.9663088321685791
+          }
+        },
+        "interpretation": "Sparse last-rollout logs, not all optimizer steps. On-step evaluation precedes its rollout update. Approximate KL is logged from the last epoch; clip fraction and entropy loss average the update minibatches. Joint entropy differs across action distributions and is not directly comparable as direction uncertainty. No causal conclusion."
+      }
+    },
+    "categorical_binary": {
+      "run": "20261022T045049-hybrid_recurrent_ppo-11-a03e27ca",
+      "metadata_sha256": "f1cfbf18b92c95fe1219cbc84aa0c7a66c75fba9249d04b9b2c6eb5ab2ea0faf",
+      "selected_step": 40000,
+      "models": {
+        "selected": {
+          "model_sha256": "b616125d6e7859219d46383870755223f11c46bdd275de21fbcfbe410f11d957",
+          "num_timesteps": 40000,
+          "sb3_nominal_epoch_counter": 390,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61642,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 7800,
+          "adam_step_max": 7800,
+          "per_parameter_adam_steps": {
+            "log_std": 7800,
+            "mlp_extractor.policy_net.0.weight": 7800,
+            "mlp_extractor.policy_net.0.bias": 7800,
+            "mlp_extractor.policy_net.2.weight": 7800,
+            "mlp_extractor.policy_net.2.bias": 7800,
+            "mlp_extractor.value_net.0.weight": 7800,
+            "mlp_extractor.value_net.0.bias": 7800,
+            "mlp_extractor.value_net.2.weight": 7800,
+            "mlp_extractor.value_net.2.bias": 7800,
+            "action_net.weight": 7800,
+            "action_net.bias": 7800,
+            "value_net.weight": 7800,
+            "value_net.bias": 7800,
+            "lstm_actor.weight_ih_l0": 7800,
+            "lstm_actor.weight_hh_l0": 7800,
+            "lstm_actor.bias_ih_l0": 7800,
+            "lstm_actor.bias_hh_l0": 7800,
+            "lstm_critic.weight_ih_l0": 7800,
+            "lstm_critic.weight_hh_l0": 7800,
+            "lstm_critic.bias_ih_l0": 7800,
+            "lstm_critic.bias_hh_l0": 7800
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.020012209191918373,
+          "maximum_second_moment": 0.0040501817129552364,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        },
+        "final": {
+          "model_sha256": "b139ae71562db5ff1e1c5c86eac8d410eb8e55a086b39292cf0b70218371b8a4",
+          "num_timesteps": 100000,
+          "sb3_nominal_epoch_counter": 1000,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61642,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 20000,
+          "adam_step_max": 20000,
+          "per_parameter_adam_steps": {
+            "log_std": 20000,
+            "mlp_extractor.policy_net.0.weight": 20000,
+            "mlp_extractor.policy_net.0.bias": 20000,
+            "mlp_extractor.policy_net.2.weight": 20000,
+            "mlp_extractor.policy_net.2.bias": 20000,
+            "mlp_extractor.value_net.0.weight": 20000,
+            "mlp_extractor.value_net.0.bias": 20000,
+            "mlp_extractor.value_net.2.weight": 20000,
+            "mlp_extractor.value_net.2.bias": 20000,
+            "action_net.weight": 20000,
+            "action_net.bias": 20000,
+            "value_net.weight": 20000,
+            "value_net.bias": 20000,
+            "lstm_actor.weight_ih_l0": 20000,
+            "lstm_actor.weight_hh_l0": 20000,
+            "lstm_actor.bias_ih_l0": 20000,
+            "lstm_actor.bias_hh_l0": 20000,
+            "lstm_critic.weight_ih_l0": 20000,
+            "lstm_critic.weight_hh_l0": 20000,
+            "lstm_critic.bias_ih_l0": 20000,
+            "lstm_critic.bias_hh_l0": 20000
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.011553481221199036,
+          "maximum_second_moment": 0.0011789585696533322,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        }
+      },
+      "training": {
+        "points": [
+          {
+            "steps": 10000,
+            "phase": "on_step",
+            "return_pct": 12.01962797977433,
+            "train/approx_kl": 0.0075284866616129875,
+            "train/clip_fraction": 0.109499999769032,
+            "train/entropy_loss": -4.79831371307373,
+            "train/std": 0.9914754033088684
+          },
+          {
+            "steps": 20000,
+            "phase": "on_step",
+            "return_pct": 14.267724805165344,
+            "train/approx_kl": 0.01295385044068098,
+            "train/clip_fraction": 0.12850000001490117,
+            "train/entropy_loss": -4.642739467620849,
+            "train/std": 0.9739131927490234
+          },
+          {
+            "steps": 30000,
+            "phase": "on_step",
+            "return_pct": 17.600049726106363,
+            "train/approx_kl": 0.014552387408912182,
+            "train/clip_fraction": 0.12879999974742531,
+            "train/entropy_loss": -4.421403465270996,
+            "train/std": 0.9450417160987854
+          },
+          {
+            "steps": 40000,
+            "phase": "on_step",
+            "return_pct": 34.38452818554049,
+            "train/approx_kl": 0.021222174167633057,
+            "train/clip_fraction": 0.18770000049844385,
+            "train/entropy_loss": -4.1533782887458806,
+            "train/std": 0.8742136359214783
+          },
+          {
+            "steps": 50000,
+            "phase": "on_step",
+            "return_pct": 18.111791844239335,
+            "train/approx_kl": 0.020750155672430992,
+            "train/clip_fraction": 0.20719999948516488,
+            "train/entropy_loss": -4.094455885887146,
+            "train/std": 0.8433239459991455
+          },
+          {
+            "steps": 60000,
+            "phase": "on_step",
+            "return_pct": 9.49529624911911,
+            "train/approx_kl": 0.01897973194718361,
+            "train/clip_fraction": 0.2069999995455146,
+            "train/entropy_loss": -4.007112473249435,
+            "train/std": 0.8214550018310547
+          },
+          {
+            "steps": 70000,
+            "phase": "on_step",
+            "return_pct": 1.835888643983644,
+            "train/approx_kl": 0.0199863500893116,
+            "train/clip_fraction": 0.2259999990835786,
+            "train/entropy_loss": -3.9478426480293276,
+            "train/std": 0.7917050719261169
+          },
+          {
+            "steps": 80000,
+            "phase": "on_step",
+            "return_pct": -9.34520421219352,
+            "train/approx_kl": 0.023708628490567207,
+            "train/clip_fraction": 0.2519999999925494,
+            "train/entropy_loss": -3.763138973712921,
+            "train/std": 0.7662234902381897
+          },
+          {
+            "steps": 90000,
+            "phase": "on_step",
+            "return_pct": 0.27774792676581916,
+            "train/approx_kl": 0.03463975340127945,
+            "train/clip_fraction": 0.2734000002965331,
+            "train/entropy_loss": -3.7131575417518614,
+            "train/std": 0.7584279179573059
+          },
+          {
+            "steps": 100000,
+            "phase": "post_update",
+            "return_pct": -1.2461531135777475,
+            "train/approx_kl": 0.03854375332593918,
+            "train/clip_fraction": 0.28109999978914857,
+            "train/entropy_loss": -3.4876950800418856,
+            "train/std": 0.7092644572257996
+          }
+        ],
+        "ranges": {
+          "train/approx_kl": {
+            "min": 0.0075284866616129875,
+            "median": 0.020368252880871296,
+            "max": 0.03854375332593918
+          },
+          "train/clip_fraction": {
+            "min": 0.109499999769032,
+            "median": 0.20709999951533975,
+            "max": 0.28109999978914857
+          },
+          "train/entropy_loss": {
+            "min": -4.79831371307373,
+            "median": -4.050784179568291,
+            "max": -3.4876950800418856
+          },
+          "train/std": {
+            "min": 0.7092644572257996,
+            "median": 0.8323894739151001,
+            "max": 0.9914754033088684
+          }
+        },
+        "interpretation": "Sparse last-rollout logs, not all optimizer steps. On-step evaluation precedes its rollout update. Approximate KL is logged from the last epoch; clip fraction and entropy loss average the update minibatches. Joint entropy differs across action distributions and is not directly comparable as direction uncertainty. No causal conclusion."
+      }
+    },
+    "gaussian_unit": {
+      "run": "20261022T045131-recurrent_ppo-11-103e7d6e",
+      "metadata_sha256": "ff03a3b67d07cf288395580451d84a3eeb55c10bddce1a0581aaff87a12e6860",
+      "selected_step": 70000,
+      "models": {
+        "selected": {
+          "model_sha256": "51df645d0c557ea52ff1db3c51b596683728234026a83ac26775c50428b63990",
+          "num_timesteps": 70000,
+          "sb3_nominal_epoch_counter": 690,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61513,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 13800,
+          "adam_step_max": 13800,
+          "per_parameter_adam_steps": {
+            "log_std": 13800,
+            "mlp_extractor.policy_net.0.weight": 13800,
+            "mlp_extractor.policy_net.0.bias": 13800,
+            "mlp_extractor.policy_net.2.weight": 13800,
+            "mlp_extractor.policy_net.2.bias": 13800,
+            "mlp_extractor.value_net.0.weight": 13800,
+            "mlp_extractor.value_net.0.bias": 13800,
+            "mlp_extractor.value_net.2.weight": 13800,
+            "mlp_extractor.value_net.2.bias": 13800,
+            "action_net.weight": 13800,
+            "action_net.bias": 13800,
+            "value_net.weight": 13800,
+            "value_net.bias": 13800,
+            "lstm_actor.weight_ih_l0": 13800,
+            "lstm_actor.weight_hh_l0": 13800,
+            "lstm_actor.bias_ih_l0": 13800,
+            "lstm_actor.bias_hh_l0": 13800,
+            "lstm_critic.weight_ih_l0": 13800,
+            "lstm_critic.weight_hh_l0": 13800,
+            "lstm_critic.bias_ih_l0": 13800,
+            "lstm_critic.bias_hh_l0": 13800
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.017490200698375702,
+          "maximum_second_moment": 0.0016535957111045718,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        },
+        "final": {
+          "model_sha256": "83306ffd7d1f2a86b17bf1aa90555e13dd7bc8071ad3b71dc70e2ca9c2066b00",
+          "num_timesteps": 100000,
+          "sb3_nominal_epoch_counter": 1000,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61513,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 20000,
+          "adam_step_max": 20000,
+          "per_parameter_adam_steps": {
+            "log_std": 20000,
+            "mlp_extractor.policy_net.0.weight": 20000,
+            "mlp_extractor.policy_net.0.bias": 20000,
+            "mlp_extractor.policy_net.2.weight": 20000,
+            "mlp_extractor.policy_net.2.bias": 20000,
+            "mlp_extractor.value_net.0.weight": 20000,
+            "mlp_extractor.value_net.0.bias": 20000,
+            "mlp_extractor.value_net.2.weight": 20000,
+            "mlp_extractor.value_net.2.bias": 20000,
+            "action_net.weight": 20000,
+            "action_net.bias": 20000,
+            "value_net.weight": 20000,
+            "value_net.bias": 20000,
+            "lstm_actor.weight_ih_l0": 20000,
+            "lstm_actor.weight_hh_l0": 20000,
+            "lstm_actor.bias_ih_l0": 20000,
+            "lstm_actor.bias_hh_l0": 20000,
+            "lstm_critic.weight_ih_l0": 20000,
+            "lstm_critic.weight_hh_l0": 20000,
+            "lstm_critic.bias_ih_l0": 20000,
+            "lstm_critic.bias_hh_l0": 20000
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.013005324639379978,
+          "maximum_second_moment": 0.001085741794668138,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        }
+      },
+      "training": {
+        "points": [
+          {
+            "steps": 10000,
+            "phase": "on_step",
+            "return_pct": 16.11095271473651,
+            "train/approx_kl": 0.010935666039586067,
+            "train/clip_fraction": 0.10609999978914857,
+            "train/entropy_loss": -5.545117900371552,
+            "train/std": 0.9681702852249146
+          },
+          {
+            "steps": 20000,
+            "phase": "on_step",
+            "return_pct": -4.58917490395294,
+            "train/approx_kl": 0.0165997464209795,
+            "train/clip_fraction": 0.15689999997615814,
+            "train/entropy_loss": -5.456756327152252,
+            "train/std": 0.94324791431427
+          },
+          {
+            "steps": 30000,
+            "phase": "on_step",
+            "return_pct": 1.2614132890045315,
+            "train/approx_kl": 0.01800559274852276,
+            "train/clip_fraction": 0.16729999912902713,
+            "train/entropy_loss": -5.344492838382721,
+            "train/std": 0.91733717918396
+          },
+          {
+            "steps": 40000,
+            "phase": "on_step",
+            "return_pct": 19.335923994948672,
+            "train/approx_kl": 0.018327994272112846,
+            "train/clip_fraction": 0.18120000056922436,
+            "train/entropy_loss": -5.178756392002105,
+            "train/std": 0.8813559412956238
+          },
+          {
+            "steps": 50000,
+            "phase": "on_step",
+            "return_pct": 11.647573586081291,
+            "train/approx_kl": 0.02061779983341694,
+            "train/clip_fraction": 0.20459999961778522,
+            "train/entropy_loss": -4.968072066307068,
+            "train/std": 0.8347870111465454
+          },
+          {
+            "steps": 60000,
+            "phase": "on_step",
+            "return_pct": 13.348011618426778,
+            "train/approx_kl": 0.024550404399633408,
+            "train/clip_fraction": 0.24459999984130262,
+            "train/entropy_loss": -4.923998680114746,
+            "train/std": 0.82643723487854
+          },
+          {
+            "steps": 70000,
+            "phase": "on_step",
+            "return_pct": 20.03955775024008,
+            "train/approx_kl": 0.033628035336732864,
+            "train/clip_fraction": 0.28199999963864686,
+            "train/entropy_loss": -4.772937567234039,
+            "train/std": 0.7949416637420654
+          },
+          {
+            "steps": 80000,
+            "phase": "on_step",
+            "return_pct": 5.072201822979163,
+            "train/approx_kl": 0.02931000292301178,
+            "train/clip_fraction": 0.27480000076815486,
+            "train/entropy_loss": -4.633923485279083,
+            "train/std": 0.769721508026123
+          },
+          {
+            "steps": 90000,
+            "phase": "on_step",
+            "return_pct": 12.821871288400736,
+            "train/approx_kl": 0.04312468320131302,
+            "train/clip_fraction": 0.2838000007160008,
+            "train/entropy_loss": -4.535129556655884,
+            "train/std": 0.7535399198532104
+          },
+          {
+            "steps": 100000,
+            "phase": "post_update",
+            "return_pct": 13.92649151371682,
+            "train/approx_kl": 0.04077577963471413,
+            "train/clip_fraction": 0.3210000007413328,
+            "train/entropy_loss": -4.518705677986145,
+            "train/std": 0.7508005499839783
+          }
+        ],
+        "ranges": {
+          "train/approx_kl": {
+            "min": 0.010935666039586067,
+            "median": 0.022584102116525173,
+            "max": 0.04312468320131302
+          },
+          "train/clip_fraction": {
+            "min": 0.10609999978914857,
+            "median": 0.22459999972954392,
+            "max": 0.3210000007413328
+          },
+          "train/entropy_loss": {
+            "min": -5.545117900371552,
+            "median": -4.946035373210907,
+            "max": -4.518705677986145
+          },
+          "train/std": {
+            "min": 0.7508005499839783,
+            "median": 0.8306121230125427,
+            "max": 0.9681702852249146
+          }
+        },
+        "interpretation": "Sparse last-rollout logs, not all optimizer steps. On-step evaluation precedes its rollout update. Approximate KL is logged from the last epoch; clip fraction and entropy loss average the update minibatches. Joint entropy differs across action distributions and is not directly comparable as direction uncertainty. No causal conclusion."
+      }
+    },
+    "categorical_cash": {
+      "run": "20261022T045121-hybrid_recurrent_ppo-11-f2b0f612",
+      "metadata_sha256": "94f842c270e1ec3e9cc4ef3791dde166e8a2a799e7a8df4baa710ca927af54d3",
+      "selected_step": 10000,
+      "models": {
+        "selected": {
+          "model_sha256": "8103fa3ea57d97dccc171bb5b147e1ad01aabe5e44a4c73c6c100b0cd9e0e1bb",
+          "num_timesteps": 10000,
+          "sb3_nominal_epoch_counter": 90,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61642,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 1800,
+          "adam_step_max": 1800,
+          "per_parameter_adam_steps": {
+            "log_std": 1800,
+            "mlp_extractor.policy_net.0.weight": 1800,
+            "mlp_extractor.policy_net.0.bias": 1800,
+            "mlp_extractor.policy_net.2.weight": 1800,
+            "mlp_extractor.policy_net.2.bias": 1800,
+            "mlp_extractor.value_net.0.weight": 1800,
+            "mlp_extractor.value_net.0.bias": 1800,
+            "mlp_extractor.value_net.2.weight": 1800,
+            "mlp_extractor.value_net.2.bias": 1800,
+            "action_net.weight": 1800,
+            "action_net.bias": 1800,
+            "value_net.weight": 1800,
+            "value_net.bias": 1800,
+            "lstm_actor.weight_ih_l0": 1800,
+            "lstm_actor.weight_hh_l0": 1800,
+            "lstm_actor.bias_ih_l0": 1800,
+            "lstm_actor.bias_hh_l0": 1800,
+            "lstm_critic.weight_ih_l0": 1800,
+            "lstm_critic.weight_hh_l0": 1800,
+            "lstm_critic.bias_ih_l0": 1800,
+            "lstm_critic.bias_hh_l0": 1800
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.023721903562545776,
+          "maximum_second_moment": 0.010521023534238338,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        },
+        "final": {
+          "model_sha256": "9dea3fe24716fc10f178c4e0797b6d1781841c2eea977b1c9850f681e1d21fa9",
+          "num_timesteps": 100000,
+          "sb3_nominal_epoch_counter": 1000,
+          "n_steps": 1000,
+          "batch_size": 50,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61642,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 21,
+          "adam_step_min": 20000,
+          "adam_step_max": 20000,
+          "per_parameter_adam_steps": {
+            "log_std": 20000,
+            "mlp_extractor.policy_net.0.weight": 20000,
+            "mlp_extractor.policy_net.0.bias": 20000,
+            "mlp_extractor.policy_net.2.weight": 20000,
+            "mlp_extractor.policy_net.2.bias": 20000,
+            "mlp_extractor.value_net.0.weight": 20000,
+            "mlp_extractor.value_net.0.bias": 20000,
+            "mlp_extractor.value_net.2.weight": 20000,
+            "mlp_extractor.value_net.2.bias": 20000,
+            "action_net.weight": 20000,
+            "action_net.bias": 20000,
+            "value_net.weight": 20000,
+            "value_net.bias": 20000,
+            "lstm_actor.weight_ih_l0": 20000,
+            "lstm_actor.weight_hh_l0": 20000,
+            "lstm_actor.bias_ih_l0": 20000,
+            "lstm_actor.bias_hh_l0": 20000,
+            "lstm_critic.weight_ih_l0": 20000,
+            "lstm_critic.weight_hh_l0": 20000,
+            "lstm_critic.bias_ih_l0": 20000,
+            "lstm_critic.bias_hh_l0": 20000
+          },
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.010936939157545567,
+          "maximum_second_moment": 0.0017134969821199775,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0
+            }
+          ]
+        }
+      },
+      "training": {
+        "points": [
+          {
+            "steps": 10000,
+            "phase": "on_step",
+            "return_pct": 29.24047346642251,
+            "train/approx_kl": 0.008147108368575573,
+            "train/clip_fraction": 0.08229999981820584,
+            "train/entropy_loss": -5.26513503074646,
+            "train/std": 0.9975752234458923
+          },
+          {
+            "steps": 20000,
+            "phase": "on_step",
+            "return_pct": 17.145643189756314,
+            "train/approx_kl": 0.01316059846431017,
+            "train/clip_fraction": 0.1326999994367361,
+            "train/entropy_loss": -4.833088698387146,
+            "train/std": 0.9572771191596985
+          },
+          {
+            "steps": 30000,
+            "phase": "on_step",
+            "return_pct": 23.82474324414575,
+            "train/approx_kl": 0.012784935534000397,
+            "train/clip_fraction": 0.12849999973550438,
+            "train/entropy_loss": -4.7451769995689395,
+            "train/std": 0.9374337792396545
+          },
+          {
+            "steps": 40000,
+            "phase": "on_step",
+            "return_pct": 11.900584491994918,
+            "train/approx_kl": 0.017325563356280327,
+            "train/clip_fraction": 0.17209999928250908,
+            "train/entropy_loss": -4.538242325782776,
+            "train/std": 0.9175853729248047
+          },
+          {
+            "steps": 50000,
+            "phase": "on_step",
+            "return_pct": 2.0763765172348956,
+            "train/approx_kl": 0.017540600150823593,
+            "train/clip_fraction": 0.19270000010728836,
+            "train/entropy_loss": -4.443559761047363,
+            "train/std": 0.89164799451828
+          },
+          {
+            "steps": 60000,
+            "phase": "on_step",
+            "return_pct": 22.900502486662333,
+            "train/approx_kl": 0.0195709727704525,
+            "train/clip_fraction": 0.20920000061392785,
+            "train/entropy_loss": -4.214521116018295,
+            "train/std": 0.8601377606391907
+          },
+          {
+            "steps": 70000,
+            "phase": "on_step",
+            "return_pct": 22.179166214276336,
+            "train/approx_kl": 0.02133132889866829,
+            "train/clip_fraction": 0.20899999929592014,
+            "train/entropy_loss": -4.16767671585083,
+            "train/std": 0.8338826298713684
+          },
+          {
+            "steps": 80000,
+            "phase": "on_step",
+            "return_pct": 22.283260918404714,
+            "train/approx_kl": 0.03235446661710739,
+            "train/clip_fraction": 0.2180999996699393,
+            "train/entropy_loss": -4.074546898603439,
+            "train/std": 0.8063945770263672
+          },
+          {
+            "steps": 90000,
+            "phase": "on_step",
+            "return_pct": 19.59514070670589,
+            "train/approx_kl": 0.03529302775859833,
+            "train/clip_fraction": 0.25950000032782555,
+            "train/entropy_loss": -3.87172279715538,
+            "train/std": 0.7862421870231628
+          },
+          {
+            "steps": 100000,
+            "phase": "post_update",
+            "return_pct": 6.627481660103982,
+            "train/approx_kl": 0.03527120128273964,
+            "train/clip_fraction": 0.27499999897554517,
+            "train/entropy_loss": -3.8758005785942076,
+            "train/std": 0.7471820712089539
+          }
+        ],
+        "ranges": {
+          "train/approx_kl": {
+            "min": 0.008147108368575573,
+            "median": 0.018555786460638046,
+            "max": 0.03529302775859833
+          },
+          "train/clip_fraction": {
+            "min": 0.08229999981820584,
+            "median": 0.20084999970160425,
+            "max": 0.27499999897554517
+          },
+          "train/entropy_loss": {
+            "min": -5.26513503074646,
+            "median": -4.329040438532829,
+            "max": -3.87172279715538
+          },
+          "train/std": {
+            "min": 0.7471820712089539,
+            "median": 0.8758928775787354,
+            "max": 0.9975752234458923
+          }
+        },
+        "interpretation": "Sparse last-rollout logs, not all optimizer steps. On-step evaluation precedes its rollout update. Approximate KL is logged from the last epoch; clip fraction and entropy loss average the update minibatches. Joint entropy differs across action distributions and is not directly comparable as direction uncertainty. No causal conclusion."
+      }
+    }
+  },
+  "accepted_summary_sha256": "d9f47c3008aa4d08f7b0a1b22595120619b58a446495db3bce71b298f11fa97f",
+  "source_files_sha256": {
+    ".runtime/cash-screen-state.json": "0937bf07f4867a7af359296e195eb3e9c3c7409694c7b7d748ea0fe6d27f9923",
+    "results/recurrent-cash-2026-10-22/summary.json": "d9f47c3008aa4d08f7b0a1b22595120619b58a446495db3bce71b298f11fa97f",
+    "results/recurrent-cash-2026-10-22/release-verification.json": "ac7a8fa8620a7f50e62d8b6fb33a78d242359d414e0219274013cbd547291faa",
+    ".runtime/cash-retained-hashes.json": "65f349a034cd0c6bbb3498806ed785e552d2ca4c276e967779ebd413cfee022d",
+    "artifacts/colab/rl-stocks-cpu-a09d2d3895ad/retrieved/artifacts/runs/20261022T045047-recurrent_ppo-11-3a4b1ab4/metadata.json": "8a6e4fa543f5b332090a51d701cf396c0ad412c9718bc3ab60da5af7b98b1b76",
+    "artifacts/colab/rl-stocks-cpu-a09d2d3895ad/retrieved/artifacts/runs/20261022T045047-recurrent_ppo-11-3a4b1ab4/best.zip": "af2e34e7cb4e408b546bf552ce4fc473e9887c7f992a38edb37b157b1d7d40de",
+    "artifacts/colab/rl-stocks-cpu-a09d2d3895ad/retrieved/artifacts/runs/20261022T045047-recurrent_ppo-11-3a4b1ab4/latest.zip": "70ccefa1c8f55a94536791f51c97afc849747cd24df358186b03660b9ff5969a",
+    "artifacts/colab/rl-stocks-cpu-9e926a05e1b1/retrieved/artifacts/runs/20261022T045049-hybrid_recurrent_ppo-11-a03e27ca/metadata.json": "f1cfbf18b92c95fe1219cbc84aa0c7a66c75fba9249d04b9b2c6eb5ab2ea0faf",
+    "artifacts/colab/rl-stocks-cpu-9e926a05e1b1/retrieved/artifacts/runs/20261022T045049-hybrid_recurrent_ppo-11-a03e27ca/best.zip": "b616125d6e7859219d46383870755223f11c46bdd275de21fbcfbe410f11d957",
+    "artifacts/colab/rl-stocks-cpu-9e926a05e1b1/retrieved/artifacts/runs/20261022T045049-hybrid_recurrent_ppo-11-a03e27ca/latest.zip": "b139ae71562db5ff1e1c5c86eac8d410eb8e55a086b39292cf0b70218371b8a4",
+    "artifacts/colab/rl-stocks-cpu-b1a50659f481/retrieved/artifacts/runs/20261022T045131-recurrent_ppo-11-103e7d6e/metadata.json": "ff03a3b67d07cf288395580451d84a3eeb55c10bddce1a0581aaff87a12e6860",
+    "artifacts/colab/rl-stocks-cpu-b1a50659f481/retrieved/artifacts/runs/20261022T045131-recurrent_ppo-11-103e7d6e/best.zip": "51df645d0c557ea52ff1db3c51b596683728234026a83ac26775c50428b63990",
+    "artifacts/colab/rl-stocks-cpu-b1a50659f481/retrieved/artifacts/runs/20261022T045131-recurrent_ppo-11-103e7d6e/latest.zip": "83306ffd7d1f2a86b17bf1aa90555e13dd7bc8071ad3b71dc70e2ca9c2066b00",
+    "artifacts/colab/rl-stocks-cpu-6a0a5ab37ea7/retrieved/artifacts/runs/20261022T045121-hybrid_recurrent_ppo-11-f2b0f612/metadata.json": "94f842c270e1ec3e9cc4ef3791dde166e8a2a799e7a8df4baa710ca927af54d3",
+    "artifacts/colab/rl-stocks-cpu-6a0a5ab37ea7/retrieved/artifacts/runs/20261022T045121-hybrid_recurrent_ppo-11-f2b0f612/best.zip": "8103fa3ea57d97dccc171bb5b147e1ad01aabe5e44a4c73c6c100b0cd9e0e1bb",
+    "artifacts/colab/rl-stocks-cpu-6a0a5ab37ea7/retrieved/artifacts/runs/20261022T045121-hybrid_recurrent_ppo-11-f2b0f612/latest.zip": "9dea3fe24716fc10f178c4e0797b6d1781841c2eea977b1c9850f681e1d21fa9",
+    "scripts/diagnose_cash_optimizer.py": "dc68a86032f9e54cfe570df50d5be3a6598cb846610d48d03c694c696a65f727",
+    "src/rl_stocks/reporting/optimizer.py": "894fd187262ea740b33956083e418d1b5263bb3f2e119e52e6959c5b5eee2fda"
+  },
+  "source_files_unchanged": true,
+  "training_performed": false,
+  "dataset_opened": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "objective_achieved": false,
+  "interpretation": "Saved finite optimizer states and sparse last-rollout logs. No policy update, replay, causal optimizer diagnosis or new selection. SB3 nominal epoch counter is not Adam steps and can overcount executed epochs when KL stopping is enabled."
+}
