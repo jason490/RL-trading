@@ -1012,3 +1012,7 @@ all opens; next preregister exact bar-backed overnight/intraday cash-flow
 reconciliation before another intervention.26 focused tests pass. Guard closed;
 project38.39201565 unchanged, all sessions stopped.
 [Evidence](../results/guard-exits-2026-10-22/README.md).
+
+Fixed bar-backed P&L bridge implemented with40 focused checks; commit method
+before actual four-phase development-bar diagnostic. No training or allocation.
+[Method](pnl-bridge.md).

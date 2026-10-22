@@ -69,3 +69,6 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Current verification | [verification.md](verification.md) | Checks actually performed, artifacts, usage and remaining research |
 
 No broker-order adapter is enabled. Advanced data families and extra reward terms remain gated behind separate matched experiments.
+
+[Overnight/intraday P&L bridge](pnl-bridge.md) documents exact saved-fill
+cash-flow identities, immutable-bar reconciliation and limitations.
