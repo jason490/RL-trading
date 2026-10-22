@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "source_snapshot": "09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f",
+  "datasets": {
+    "legacy": {
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "schema": "daily-indicators-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f"
+    },
+    "masked": {
+      "dataset": "f2c19d39acb1e4554e1298d9d8067e9509759106edcc76250ae87f0a3bf99c0d",
+      "generated_dataset": "fd6e55ab449caf33d729251941f1975358e5200f30fc8e597fe5e2cbc21cc656",
+      "schema": "daily-indicators-v1-session-context-v1-masked",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "overnight_log_return",
+        "intraday_log_return",
+        "overnight_ema_20",
+        "intraday_ema_20"
+      ],
+      "normalizer_sha256": "7f350143ce42efdf5da0c7cd446a94e2772dba4dc8b7bea6790227006964005a",
+      "training_rows": 298946,
+      "validation_rows": 19058
+    },
+    "full": {
+      "dataset": "52cd1de3c2de45e99da2c58bdf850afd41b34d2a7019e4700e7d435c59968eaa",
+      "generated_dataset": "66394b999cfd8034be8b3bdac183be41dd0b06ea8fdda1e887c912a451326001",
+      "schema": "daily-indicators-v1-session-context-v1-full",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "overnight_log_return",
+        "intraday_log_return",
+        "overnight_ema_20",
+        "intraday_ema_20"
+      ],
+      "normalizer_sha256": "991ace34f2c94258be0551ea396da54c340c65a00338e717fa4ef7453af58eb0",
+      "training_rows": 298946,
+      "validation_rows": 19058
+    }
+  },
+  "default_generated_dataset_identity_unchanged": true,
+  "all_source_bars_atr_and_original_features_exact": true,
+  "matched_bars_atr_sha256": "9d7b31b79d39d5117816b5cf1228b3023c339e585bb93e5a1d8cb33ba0297ad1",
+  "original_seven_normalization_frozen": true,
+  "training_only_feature_diagnostic": {
+    "overnight_log_return": {
+      "minimum": -0.5446501782728433,
+      "mean": 0.00024763574055498367,
+      "maximum": 0.3324936683853366
+    },
+    "intraday_log_return": {
+      "minimum": -0.3402049627637528,
+      "mean": 0.00012638088205497885,
+      "maximum": 0.2196671978555149
+    },
+    "overnight_ema_20": {
+      "minimum": -0.05676747032896598,
+      "mean": 0.000237122530394504,
+      "maximum": 0.047306011851496334
+    },
+    "intraday_ema_20": {
+      "minimum": -0.07850412000149612,
+      "mean": 0.00013383941685335404,
+      "maximum": 0.03540319862978094
+    }
+  },
+  "training_performed": false,
+  "test_evaluated": false,
+  "sessions_allocated": 0,
+  "limitations": "Retrospective survivors, revised Yahoo data and repeatedly reused development; input coverage is not predictive evidence"
+}

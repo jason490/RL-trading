@@ -8,6 +8,7 @@ from rl_stocks.core.contracts import Request
 from rl_stocks.data.providers.synthetic.adapter import SyntheticProvider
 from rl_stocks.data.storage.immutable import put
 from rl_stocks.data.generation.datasets import generate,read_dataset,normalizer_from
+from rl_stocks.data.generation.session_context import preserve_preprocessing
 
 
 def bars(end=date(2020,1,1)):
@@ -59,6 +60,20 @@ def test_dataset_shared_panels_training_only_fit_masks_and_gap_reset(tmp_path):
         for k,e in d['episodes'].items():assert e['bars']==data['none']['episodes'][k]['bars']
     norm=normalizer_from(data['masked']['normalizer'])
     assert all(norm.transform(r,data['masked']['names'])[-4:]==[0.]*4 for e in data['masked']['episodes'].values() for r in e['features'])
+    from copy import deepcopy
+    frozen=deepcopy(data['none']);frozen['normalizer']['means'][0]+=1.
+    prepared=preserve_preprocessing(frozen,data['full'],'full')
+    assert prepared['normalizer']['means'][:7]==frozen['normalizer']['means']
+    assert prepared['normalizer']['means'][-4:]==data['full']['normalizer']['means'][-4:]
+    for corruption in ['panel','normalizer','features','split','mask']:
+        candidate=deepcopy(data['masked'] if corruption=='mask' else data['full'])
+        key=next(iter(candidate['episodes']));episode=candidate['episodes'][key]
+        if corruption=='panel':episode['bars'][0]['close']+=1
+        if corruption=='normalizer':candidate['normalizer']['means'][-1]+=1
+        if corruption=='features':episode['features'][0][0]+=1
+        if corruption=='split':episode['split']='test'
+        if corruption=='mask':episode['features'][0][-1]=1.
+        with pytest.raises(ValueError):preserve_preprocessing(frozen,candidate,'masked' if corruption=='mask' else 'full')
     future=[replace(x,open=x.open*2,high=x.high*2,low=x.low*2,close=x.close*2) if x.session>'2020-12-31' else x for x in b]
     altered=read_dataset(generate(put(tmp_path/'raw',future,provenance),tmp_path/'data',session_mode='full',**options))
     assert altered['normalizer']==data['full']['normalizer']

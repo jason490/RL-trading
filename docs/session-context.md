@@ -83,3 +83,15 @@ prepared; no allocation, hyperparameter sweep or checkpoint promotion now.
 scale/split continuity, exact information witness, masks, availability, shared
 panels, training-only fit, gap resets and invalid mode rejection. These establish
 correct implementation only. Project38.39201565/150 retained; no new Colab usage.
+
+
+## Actual session-context data preflight
+
+Retained development-only raw source verifies; default generated identity
+unchanged. New masked/full datasets preserve all bars/ATR/original features and
+original first7 normalization exactly. Each has298,946 training and19,058
+development rows,111 training/26 development symbols. Added-column normalization
+fits training rows only; future/test data unopened.53 focused checks pass.
+No training/allocation; next fixed three-arm protocol and shared untrained
+initialization, then Colab integration/checkers/smokes. Project38.39201565 unchanged.
+[Evidence](../results/session-context-2026-10-22/README.md).

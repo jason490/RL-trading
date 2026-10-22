@@ -1443,3 +1443,7 @@ verified, project38.39201565/150. Publication/cleanup then saved-path diagnosis.
 Optional completed-session context implemented/tested (53 focused checks);
 real-data preflight, fixed protocol and Colab acceptance remain before training.
 [Method](docs/session-context.md). Defaults unchanged, no new usage.
+
+Session-context retained-data preflight accepted: exact111/26 symbol panels,
+original normalization and298,946/19,058 rows. Numeric protocol, initialization
+and Colab acceptance remain. [Evidence](results/session-context-2026-10-22/README.md).
