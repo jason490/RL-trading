@@ -86,3 +86,54 @@ No retired-test access or broker orders.
 
 [Acceptance](smoke-summary.json), [frozen checks](smoke-restoration.json),
 [compute and cleanup](smoke-compute.json).
+
+
+## Completed100k screen — feature candidate failed
+
+All three fixed-source100kseed11 CPU runs completed, retrieved and verified
+stopped. Strict source-bar/accounting/holding validation, saved selected/final
+model and optimizer restoration, matched sampling and masked/full exact initial
+tensors/RNG pass. All111 training symbols received transitions.
+
+| Arm | Trainable parameters | Selected mean | Final mean |
+| --- | ---: | ---: | ---: |
+| Legacy |61,513|19.62%|18.48%|
+| Masked |63,561|27.66%|10.76%|
+| Full candidate |63,561|26.42%|16.08%|
+| Holding |—|30.60%|30.60%|
+
+Each model has separate actor/criticLSTM64 and64×64 dense heads. Masked/full
+capacity is identical; parameter counts stay fixed while values train. Final
+Adam states record20,000 steps, distinct from1,000 nominal epochs.
+
+Full selected/final gains versus legacy+6.80/−2.41pp and masked−1.24/+5.32pp
+fail the selected AND final relative gates. Final full stock gain versus legacy
+−5.21pp, ETF gain versus masked−4.74pp also fail. Mean drawdown improves about
+0.64/0.60pp but does not offset failed return gates.
+
+Full selected stocks29.30% versus holding32.63%, ETFs10.58% versus19.47%;
+median stock excess−2.73pp. Final stocks16.56%, ETFs13.45%, median stock excess
+−14.53pp. Both absolute phases fail. Joint positive total AND short P&L on
+reporting-only declining stocks2/3 selected→1/3 final; not consistent profitable
+shorting or overall success. No future cohort labels entered learning/selection.
+
+The fixed session-context family is closed: no feature/window/step/reward grids,
+confirmation or promotion. Retain negative results; do not use temporary peaks
+as a winner or reopen retired test. Next publish/checksum/clean only duplicate
+archives, then review saved evidence before a distinct hypothesis.
+
+234 screen exact frozen predictions pass;468 across smoke/screen. All six
+owned sessions stopped/verified. Models, complete reports, counters, initial
+snapshots, checkpoints and compact10k incremental curves retained. Legacy final
+tensors and sampling exactly reproduce prior guard-study control despite source
+organization changes. Report-only per-arm validation bugs were fixed separately
+with27 focused checks; no trained model, protocol or gate was changed.
+
+Project38.51487741/150, remaining111.48512259; conservative study increment
+0.12286176 includes setup/idle/transfers and both allocations. Official account
+349.41 zero rate/assignments. Original ledger, study baseline38.39201564833781,
+project150/130 and account150/170 protections remain. No orders or test access.
+
+[Strict summary](summary.json), [frozen checks](restoration.json),
+[compute and cleanup](compute.json), [10k curves](learning-curves.csv),
+[legacy reproduction](legacy-reproduction.json).

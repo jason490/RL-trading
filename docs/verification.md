@@ -1789,3 +1789,20 @@ tuning from smoke returns. Project38.42515390/150, study increment0.03313825;
 official account349.48 zero rate/assignments. Original2-unit study baseline
 38.39201564833781 and all project/account protections retained.
 [Evidence](../results/session-context-2026-10-22/README.md).
+
+
+## Completed session-context screen — gates failed
+
+Legacy selected/final19.62/18.48%, masked27.66/10.76%, full26.42/16.08%,
+holding30.60%. Full fails both relative control gates and both absolute phases;
+final stock/ETF16.56/13.45% versus holding32.63/19.47%. Joint short/total
+reporting-only cohort2/3 selected→1/3 final. No feature/window/step/reward sweep,
+confirmation or promotion; fixed family closed.
+
+Strict immutable source/accounting/holding and actual optimizer restoration pass;
+full/masked exact initialization and sampling match. Final20,000 Adam steps,
+61,513 legacy/63,561 augmented trainable parameters.234 screen frozen predictions,
+all six owned sessions stopped; legacy tensors/sampling reproduce prior control.
+Project38.51487741/150, study increment0.12286176; official account349.41 zero
+rate/assignments. Source/ledger/data retained. Publication/verified duplicate
+cleanup next. [Full evidence](../results/session-context-2026-10-22/README.md).

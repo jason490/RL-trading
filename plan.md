@@ -1460,3 +1460,8 @@ Session-context three512 Colab CPU smokes accepted:234 frozen predictions and
 actual saved models/initialization/sampling pass; all sessions stopped. Same-source
 three100k screen next within original allowance. Project38.42515390/150.
 [Evidence](results/session-context-2026-10-22/README.md).
+
+Session-context100k screen complete; both control and absolute gates fail, no
+promotion/confirmation. Six owned sessions stopped;468 total frozen checks pass.
+Project38.51487741/150. Publication/checksummed duplicate cleanup next.
+[Evidence](results/session-context-2026-10-22/README.md).

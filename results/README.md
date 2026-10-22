@@ -19,14 +19,13 @@ seed label. Compare candidates with their own matched controls, not as if every
 row were an identical initialization. Best interim checkpoint results do not
 establish stable final or multi-seed performance.
 
-## Current prepared experiment
+## Latest completed feature experiment
 
-[Session-context study](session-context-2026-10-22/README.md) adds causal completed
-overnight/intraday price-return decomposition with legacy and masked controls.
-Feature/data preflight, fixed protocol, shared untrained starts and actual
-Gymnasium/SB3 construction checks pass. Dedicated Colab plan/worker/artifact
-integration is implemented and tested; three actual remote smokes now pass; fixed100k screen remains.
-There are no model performance results for this feature yet.
+[Session-context study](session-context-2026-10-22/README.md) completed three
+matched100k recurrent PPO runs. Full selected/final26.42/16.08%, masked27.66/10.76%,
+legacy19.62/18.48%, holding30.60%. Both relative comparisons and absolute targets
+fail; no confirmation/promotion. All six smoke/screen sessions stopped,468 frozen
+predictions pass. Publication/checksummed duplicate cleanup remains.
 
 ## Recent diagnostics
 
