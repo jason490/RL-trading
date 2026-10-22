@@ -9,6 +9,41 @@ CATEGORIES = ('flat_request', 'same_direction', 'opposite_direction', 'flat_reje
               'flat_after_protection', 'flat_after_holding_limit', 'flat_approved_zero', 'flat_other')
 
 
+def exit_partition(result):
+    """Partition observed daily excess by inherited side and exit flags, not causes."""
+    accounting=episode_diagnosis(result)
+    rows=result['rows']; baseline=result['baselines']['buy_hold']['rows']
+    by_day={r['session']:[] for r in rows}
+    for e in result['events']:by_day[e['time'][:10]].append(e)
+    buckets={f'{side}/{flags}':dict(sessions=0,policy_pp=0.,holding_pp=0.,excess_pp=0.)
+             for side in ('flat','long','short') for flags in ('neither','protection','holding','both')}
+    previous=previous_hold=100000.; quantity=0
+    for row,bh in zip(rows,baseline,strict=True):
+        if not math.isclose(row['previous_equity'],previous,abs_tol=1e-6,rel_tol=0):
+            raise ValueError('saved equity chain mismatch')
+        events=by_day[row['session']];reasons={e['reason'] for e in events}
+        protection=bool(reasons & {'stop','target_near','target_far'})
+        holding='holding_limit' in reasons
+        flags='both' if protection and holding else 'protection' if protection else 'holding' if holding else 'neither'
+        side='long' if quantity>0 else 'short' if quantity<0 else 'flat'
+        # Event order is simulator execution order, not necessarily timestamp order.
+        for e in events:
+            if e['quantity']-e['delta']!=quantity:raise ValueError('fill quantity chain mismatch')
+            quantity=e['quantity']
+        if quantity!=row['quantity']:raise ValueError('closing quantity mismatch')
+        if not math.isfinite(bh['equity']):raise ValueError('finite holding equity required')
+        p=(row['equity']-previous)/1000.;b=(bh['equity']-previous_hold)/1000.
+        bucket=buckets[f'{side}/{flags}'];bucket['sessions']+=1
+        bucket['policy_pp']+=p;bucket['holding_pp']+=b;bucket['excess_pp']+=p-b
+        previous=row['equity'];previous_hold=bh['equity']
+    expected=accounting['net_excess_pp']
+    if not math.isclose(sum(v['excess_pp'] for v in buckets.values()),expected,abs_tol=1e-8,rel_tol=0):
+        raise ValueError('daily excess partition reconciliation failed')
+    if not math.isclose(previous_hold/100000.-1,accounting['buy_hold_return'],abs_tol=1e-10,rel_tol=0):
+        raise ValueError('holding terminal return mismatch')
+    return buckets
+
+
 def worst_drawdown_window(result):
     """Ex-post descriptive window only; never a feature or selection signal."""
     rows=result['rows']; peak=100000.; peak_index=-1; low=0.; window=(-1,-1,peak,peak)
@@ -60,7 +95,7 @@ def diagnose_episode(result):
         pnl[category]+=(row['equity']-row['previous_equity'])/100000.
     if not math.isclose(sum(pnl.values()),result['metrics']['net_return'],abs_tol=1e-10,rel_tol=0):
         raise ValueError('action-category P&L reconciliation failed')
-    return dict(symbol=result['symbol'],sessions=len(rows),worst_drawdown=worst_drawdown_window(result),
+    return dict(symbol=result['symbol'],sessions=len(rows),exit_partition=exit_partition(result),worst_drawdown=worst_drawdown_window(result),
         net_return=accounting['net_return'],incremental_cost_drag_pp=accounting['incremental_cost_drag_pp'],
         noncost_excess_pp=accounting['saved_path_noncost_excess_pp'],
         long_return_contribution=accounting['long_return_contribution'],short_return_contribution=accounting['short_return_contribution'],
@@ -86,6 +121,8 @@ def diagnose_groups(results,stocks):
             ('net_return','incremental_cost_drag_pp','noncost_excess_pp','long_return_contribution','short_return_contribution',
              'policy_zero_fraction','mean_policy_long_output','mean_policy_short_output','requested_long_fraction','requested_short_fraction','mean_requested_long_exposure',
              'mean_requested_short_exposure','mean_end_long_exposure','mean_end_short_exposure')},
+            exit_partition={key:{field:mean(r['exit_partition'][key][field] for r in rows)
+                for field in ('sessions','policy_pp','holding_pp','excess_pp')} for key in rows[0]['exit_partition']},
             worst_drawdown={k:mean(r['worst_drawdown'][k] for r in rows) for k in ('max_drawdown','cost_fraction_of_peak','noncost_loss_fraction','mean_abs_end_exposure','end_short_fraction')},
             categories={k:{field:mean(r['categories'][k][field] for r in rows) for field in
                 ('fraction','observed_return_contribution')} for k in CATEGORIES})

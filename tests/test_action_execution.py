@@ -6,7 +6,47 @@ from rl_stocks.reporting.action_execution import diagnose_episode
 
 def sample():
     r=fixture();r['rows'][0].update(raw_action=[-.5,.5,.5,.5],approved_target_quantity=-100)
+    r['baselines']['buy_hold']['rows'][0]['equity']=102000.
     return r
+
+
+def test_exit_partition_reconciles_daily_dollar_excess_and_keeps_overlap():
+    from rl_stocks.reporting.action_execution import exit_partition
+    r=sample();r['events'][-1].update(reason='target_near',quantity=-50,delta=50)
+    r['events'].append(dict(time='2021-01-04T21:00:00Z',reason='holding_limit',
+        quantity=0,delta=50,fee=0.,impact=0.))
+    x=exit_partition(r)
+    assert x['flat/both']['sessions']==1
+    assert x['flat/both']['policy_pp']==pytest.approx(1.)
+    assert x['flat/both']['holding_pp']==pytest.approx(2.)
+    assert sum(v['excess_pp'] for v in x.values())==pytest.approx(-1.)
+    assert sum(v['sessions'] for v in x.values())==1
+
+
+def test_exit_partition_uses_prior_quantity_not_request_or_closing_position():
+    from rl_stocks.reporting.action_execution import exit_partition
+    r=sample();r['rows']=[dict(session='2021-01-04',previous_equity=100000.,equity=101000.,
+        quantity=100,exposure=.1,borrow_cost=0.),dict(session='2021-01-05',
+        previous_equity=101000.,equity=103000.,quantity=0,exposure=0.,borrow_cost=0.)]
+    r['events']=[dict(time='2021-01-04T14:30:00Z',reason='add',quantity=100,delta=100,fee=0.,impact=0.),
+        dict(time='2021-01-05T21:00:00Z',reason='holding_limit',quantity=0,delta=-100,fee=0.,impact=0.)]
+    r['metrics'].update(net_return=.03,costs=0.)
+    r['directional'].update(long_net_pnl=3000.,short_net_pnl=0.,long_costs=0.,short_costs=0.)
+    r['baselines']['buy_hold']=dict(rows=[dict(session='2021-01-04',equity=102000.),
+        dict(session='2021-01-05',equity=104000.)],metrics=dict(net_return=.04,costs=0.))
+    x=exit_partition(r)
+    assert x['flat/neither']['sessions']==1 and x['flat/neither']['excess_pp']==pytest.approx(-1.)
+    assert x['long/holding']['sessions']==1 and x['long/holding']['excess_pp']==pytest.approx(0.)
+
+
+@pytest.mark.parametrize('corruption',['quantity','holding','equity'])
+def test_exit_partition_rejects_unreconciled_sources(corruption):
+    from rl_stocks.reporting.action_execution import exit_partition
+    r=sample()
+    if corruption=='quantity':r['events'][-1]['delta']=99
+    if corruption=='holding':r['baselines']['buy_hold']['rows'][0]['equity']=103000.
+    if corruption=='equity':r['rows'][0]['previous_equity']=99999.
+    with pytest.raises(ValueError):exit_partition(r)
 
 
 def test_intraday_protection_is_not_a_flat_policy_request():

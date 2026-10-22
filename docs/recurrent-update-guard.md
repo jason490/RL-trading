@@ -229,3 +229,15 @@ costs. No causal explanation established.15 focused tests pass. Guard stays
 closed; next fixed exit/gap participation audit before another intervention.
 Project38.39201565 unchanged, all sessions stopped.
 [Evidence](../results/guard-actions-2026-10-22/README.md).
+
+
+## Saved exit/inherited-position diagnosis
+
+Four phases/104 episodes partitioned with reconciled fill/quantity/equity/holding
+chains; no fit/data/Colab. Guard final ETF excess−13.35pp includes flat/no-exit
+−5.13pp and inherited-short/no-exit−4.74pp, versus protection−0.03pp. Daily
+observed partitions are not isolated gap P&L or causal effects. Reports lack
+all opens; next preregister exact bar-backed overnight/intraday cash-flow
+reconciliation before another intervention.26 focused tests pass. Guard closed;
+project38.39201565 unchanged, all sessions stopped.
+[Evidence](../results/guard-exits-2026-10-22/README.md).
