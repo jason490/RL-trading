@@ -910,3 +910,11 @@ Construction records distinguish nominal epochs from actual Adam steps, and a
 forward-only high-KL library test forbids optimizer.step and proves no learning.
 Dedicated Colab integration and two512 smokes remain; no allocation.
 [Protocol and constraints](recurrent-update-guard.md).
+
+Update-guard version25 integration complete: exact target/floor plans and worker,
+actual Adam metadata and strict archives, restored smoke/screen reporting with
+performance AND activation gates.75 focused checks and two actual immutable smoke
+payload validations pass; scripts compile. No allocation at this milestone.
+Commit/freeze source and official usage check before two512 CPU smokes requiring
+156 exact frozen predictions and verified cleanup. Project38.309006 retained.
+[Guide](recurrent-update-guard.md).

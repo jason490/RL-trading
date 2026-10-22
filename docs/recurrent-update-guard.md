@@ -1,8 +1,8 @@
 # Recurrent policy-update safeguard
 
 Status: fixed protocol, construction/record contracts and forward-only library
-acceptance prepared. Dedicated Colab jobs/worker/archive/report integration and
-actual smoke acceptance remain. No runtime allocated for this study.
+acceptance prepared. Colab jobs/worker/archive/report integration is complete;
+actual smoke acceptance remains. No runtime allocated for this study.
 
 ## Evidence and separate hypothesis
 
@@ -90,3 +90,27 @@ Update-guard construction acceptance:27 focused checks pass, including identical
 initial tensors, exact sole-setting difference, nominal/actual update rejection,
 activation/nonactivation and a real library high-KL stop before any optimizer
 step. No fitting or allocation; dedicated Colab integration remains.
+
+## Integrated preflight
+
+Version25 binds exact targets, dataset/normalization, sampling and account floor
+on controller and worker. Initial/selected/final records preserve actual settings,
+finite Adam ownership/moments and per-parameter steps; archived/frozen metadata
+must agree. Checkpoint identities and unit exposure/protection traces remain
+mandatory. Restored reporting requires return/risk gates AND actual final-step
+reduction; nonactivation cannot promote even if performance metrics pass.
+
+75 focused checks pass, including that negative activation case, malformed saved
+settings/counts, missing checkpoints, legacy cash artifacts and fleet budget/
+cleanup regressions. Two actual immutable smoke payloads validate; scripts
+compile. No allocation at this integration milestone.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_guard_jobs.py \
+ --smoke --output .runtime/guard-smoke-jobs.json
+```
+
+Commit/freeze source, check official usage, then two512 CPU smokes. After durable
+retrieval and verified shutdown, `accept_guard_smokes.py` restores saved settings/
+Adam states and requires156 exact frozen predictions, matching initial networks
+and sampling. Only then run the same-source two100k screen.

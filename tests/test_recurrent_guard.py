@@ -79,3 +79,21 @@ def test_activation_requires_actual_step_reduction_and_does_not_promote():
     equal=deepcopy(records['kl_guard']);equal['optimizer'].update(adam_step_min=20000,adam_step_max=20000,
         per_parameter_adam_steps={str(i):20000 for i in range(21)})
     assert activation(records['control'],equal)['guard_activated'] is False
+
+
+def test_performance_pass_cannot_promote_without_actual_guard_activation():
+    from rl_stocks.training.recurrent_guard import screen_verdict
+    cells={}
+    for arm,score in [('control',.32),('kl_guard',.36)]:
+        m=create('recurrent_ppo',Dummy(),smoke=False,overrides=overrides(arm))
+        r=model_record(m);r['num_timesteps']=100000
+        r['optimizer'].update(num_timesteps=100000,sb3_nominal_epoch_counter=1000,optimizer_state_count=21,
+            adam_step_min=20000,adam_step_max=20000,per_parameter_adam_steps={str(i):20000 for i in range(21)})
+        row=dict(score=score,mean_max_drawdown=-.2,groups={g:dict(net_return=score,excess_return=.01,median_excess_return=.01) for g in ['stock','etf']})
+        cells[arm]=dict(selected=deepcopy(row),final=deepcopy(row),final_model_record=r)
+    result=screen_verdict(cells)
+    assert result['performance_gates_passed'] and not result['passed'] and result['promoted_candidate'] is None
+    cells['kl_guard']['final_model_record']['optimizer'].update(adam_step_min=12000,adam_step_max=12000,
+        per_parameter_adam_steps={str(i):12000 for i in range(21)})
+    result=screen_verdict(cells)
+    assert result['passed'] and result['promoted_candidate']=='kl_guard' and not result['objective_achieved']

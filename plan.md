@@ -1425,3 +1425,7 @@ Separate fixed Gaussian update-guard protocol/construction prepared; target_kl
 0.01 versus unchanged fresh strongest control, same100k budget. No actual
 allocation; dedicated Colab integration and smokes required. See
 [guide](docs/recurrent-update-guard.md).
+
+Update-guard version25 integration passes75 focused checks and actual smoke
+payload validation; actual two512 CPU smokes remain before fixed100k screen.
+No allocation at integration milestone.

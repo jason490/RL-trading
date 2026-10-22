@@ -97,3 +97,33 @@ def activation(control,candidate):
     validate_record(control,'control');validate_record(candidate,'kl_guard')
     c=control['optimizer']['adam_step_min'];g=candidate['optimizer']['adam_step_min']
     return dict(control_adam_steps=c,candidate_adam_steps=g,guard_activated=g<c)
+
+
+def identify_arm(metadata):
+    matches=[a for a in protocol()['arms'] if metadata.get('algorithm')=='recurrent_ppo'
+        and metadata.get('guard_final',{}).get('target_kl','missing')==target(a)
+        and metadata.get('action_execution')==modes(a)]
+    if len(matches)!=1:raise ValueError('exact update-guard arm identity required')
+    return matches[0]
+
+
+def validate_initial_pairs(records,smoke=False):
+    if set(records)!=set(protocol()['arms']):raise ValueError('both initial models required')
+    normalized=[]
+    for arm,r in records.items():
+        validate_record(r,arm,smoke,initial=True)
+        clean=json.loads(json.dumps(r));clean.pop('target_kl');clean['optimizer'].pop('target_kl')
+        normalized.append(clean)
+    if normalized[0]!=normalized[1]:raise ValueError('initial networks/settings differ beyond target_kl')
+    return True
+
+
+def screen_verdict(cells):
+    from rl_stocks.reporting.history import screen_gate
+    verdict=screen_gate(cells,protocol())
+    activated=activation(cells['control']['final_model_record'],cells['kl_guard']['final_model_record'])
+    verdict['performance_gates_passed']=verdict['passed']
+    verdict['passed']=verdict['passed'] and activated['guard_activated']
+    if not verdict['passed']:verdict['promoted_candidate']=None
+    verdict['activation']=activated
+    return verdict

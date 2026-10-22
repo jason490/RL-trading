@@ -1604,3 +1604,11 @@ Update-guard construction acceptance:27 focused checks pass, including identical
 initial tensors, exact sole-setting difference, nominal/actual update rejection,
 activation/nonactivation and a real library high-KL stop before any optimizer
 step. No fitting or allocation; dedicated Colab integration remains.
+
+Update-guard version25 integration complete: exact target/floor plans and worker,
+actual Adam metadata and strict archives, restored smoke/screen reporting with
+performance AND activation gates.75 focused checks and two actual immutable smoke
+payload validations pass; scripts compile. No allocation at this milestone.
+Commit/freeze source and official usage check before two512 CPU smokes requiring
+156 exact frozen predictions and verified cleanup. Project38.309006 retained.
+[Guide](recurrent-update-guard.md).
