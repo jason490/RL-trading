@@ -944,3 +944,25 @@ pass; source compilation passes. No allocation during fix. Commit/freeze new
 source and repeat two512 CPU smokes using new state; original2-unit study baseline
 38.309006 and project/account safeguards retained. Project38.326073 currently.
 [Method](recurrent-update-guard.md).
+
+## Version2 actual smokes accepted
+
+Two512 CPU runs from clean workered9d834, Python3.13.16 accepted after durable
+retrieval and verified shutdown.156 exact frozen action/hidden/cell/repeat/reset
+predictions, immutable normalization/input rejection, restored selected/final
+settings/Adam evidence and current checkpoint identities pass. Both load the
+same pinned tensors and CPU RNG, with exact initial fingerprint equality and
+matching actual sampling. Input snapshots are retained in both runs.
+
+Both smokes record40 nominal epochs and80 actual Adam steps. The short guard
+does not activate early stopping, explicitly allowed; actual reduction is still
+required at the fixed100k screen. This is wiring acceptance, not performance
+evidence or a threshold-selection exercise. Original version1 rejection remains.
+
+All four owned smoke sessions stopped. Project38.34607251/150, remaining
+111.65392749; study conservative increment0.03706648 includes rejected attempt.
+Official account349.54, zero assignments/rate. Original study baseline38.309006
+and2-unit allowance, project150/130 and account150/170 remain. Same-source two100k
+seed11 screen next; no tuning from smoke returns.
+
+[Evidence](../results/recurrent-guard-2026-10-22/README.md).

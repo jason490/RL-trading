@@ -1,0 +1,142 @@
+{
+  "study_start_units": 38.30900602702892,
+  "current_project_units": 38.34607250712641,
+  "incremental_units": 0.037066480097486476,
+  "remaining_project_units": 111.65392749287359,
+  "last_account_balance": 349.54,
+  "last_rate": 0,
+  "last_assignments": 0,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "original_ledger_preserved": true,
+  "all_four_smoke_sessions_stopped": true,
+  "attempts": [
+    {
+      "session": "rl-stocks-fleet-e93bec8be1ca",
+      "status": "stopped",
+      "measured": 0.0,
+      "estimated": 0.01706648009750578,
+      "charged": 0.01706648009750578,
+      "meter_readings": [
+        {
+          "time": 1792649125.491757,
+          "balance": 349.56,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792649132.065462,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792649192.0584755,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792649252.6881974,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792649312.6097884,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792649373.1721241,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792649433.3499541,
+          "balance": 349.56,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792649493.6957939,
+          "balance": 349.56,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792649529.681391,
+          "balance": 349.56,
+          "rate": 0.0,
+          "assignments": 0
+        }
+      ]
+    },
+    {
+      "session": "rl-stocks-fleet-2de23c34c1c9",
+      "status": "stopped",
+      "measured": 0.01999999999998181,
+      "estimated": 0.019836278407441246,
+      "charged": 0.01999999999998181,
+      "meter_readings": [
+        {
+          "time": 1792676358.3996801,
+          "balance": 349.56,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792676365.3667052,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676424.858271,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676485.6045678,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676545.6898575,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676605.9445355,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676665.9014661,
+          "balance": 349.56,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676728.8620822,
+          "balance": 349.54,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792676775.811584,
+          "balance": 349.54,
+          "rate": 0.0,
+          "assignments": 0
+        }
+      ]
+    }
+  ],
+  "note": "Includes rejected version1 attempt; conservative estimates and delayed rounded account debits can differ. No charges reset."
+}
