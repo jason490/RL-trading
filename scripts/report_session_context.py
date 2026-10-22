@@ -28,14 +28,14 @@ def main():
         path=paths[0];m=json.loads(path.read_text());arm=identify_arm(m)
         if arm in cells or arm not in spec['arms'] or m['seed']!=11 or m['smoke']:raise ValueError('one screen seed per arm required')
         archive=root/'artifacts.tar.gz'
-        if archive.exists():validate_archive(archive,session_plan(arm),spec['dataset'])
+        if archive.exists():validate_archive(archive,session_plan(arm),m['dataset'])
         else:
             # Duplicate transport archives may be removed after verified retrieval.
             # Revalidate the retained complete extraction through a temporary tar.
             with tempfile.TemporaryDirectory(prefix='session-verify-') as work:
                 packed=Path(work)/'retained.tar'
                 with tarfile.open(packed,'w') as t:t.add(artifact,arcname='artifacts')
-                validate_archive(packed,session_plan(arm),spec['dataset'])
+                validate_archive(packed,session_plan(arm),m['dataset'])
         data=validate_payload(read_dataset(Path('data/datasets')/m['dataset']))
         current={k:m[k] for k in ('source_hash','git','simulation','versions','reward_config','evaluation_every','initialization','policy_architecture')}
         if current['git']['dirty'] or contract is not None and current!=contract:raise ValueError('matched source/settings required')

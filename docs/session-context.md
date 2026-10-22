@@ -165,3 +165,8 @@ tuning from smoke returns. Project38.42515390/150, study increment0.03313825;
 official account349.48 zero rate/assignments. Original2-unit study baseline
 38.39201564833781 and all project/account protections retained.
 [Evidence](../results/session-context-2026-10-22/README.md).
+
+Report identity fix: each archive is validated against its actual arm dataset,
+including retained-extraction fallback. Six regression cases cover all three
+arms and both transport paths;27 focused report/artifact checks pass. This fixes
+a report-only single-dataset assumption; recorded training/protocol unchanged.
