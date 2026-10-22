@@ -205,13 +205,18 @@ def validate_archive(path, plan, dataset_id):
                         or digest(frozen.get('normalizer',{}))!=reg_protocol()['normalizer_sha256']
                         or frozen['data_manifest'].get('included_splits')!=['train','validation']):raise RuntimeError('regularization bundle contract mismatch')
                 if plan.get('version')==25:
-                    from rl_stocks.training.recurrent_guard import PROTOCOL_SHA256,validate_record,modes,validate_execution_counts,validate_execution_report,protocol as recurrent_protocol
+                    from rl_stocks.training.recurrent_guard import PROTOCOL_SHA256,validate_record,modes,validate_execution_counts,validate_execution_report,protocol as recurrent_protocol,shared_initialization_spec,initialization_entry
                     from rl_stocks.training.diversity import validate_counts,sampling_summary
                     from rl_stocks.features.registry.assemble import NAMES
                     frozen=json.loads(read(folder+'manifest.json'));arm=plan['guard_study']['arm'];job=plan['jobs'][0]
-                    validate_record(run['guard_initialization'],arm,job['smoke'],initial=True)
-                    validate_record(run['guard_final'],arm,job['smoke'])
-                    validate_record(run['guard_selected'],arm,job['smoke'],selected_steps=run['selected_step'])
+                    validate_record(run['guard_initialization'],arm,job['smoke'],initial=True,seed=job['seed'])
+                    validate_record(run['guard_final'],arm,job['smoke'],seed=job['seed'])
+                    validate_record(run['guard_selected'],arm,job['smoke'],selected_steps=run['selected_step'],seed=job['seed'])
+                    from rl_stocks.training.shared_initialization import read_initialization
+                    proof=shared_initialization_spec(job['seed'],job['smoke'])
+                    if digest(run.get('guard_shared_initialization',{}))!=digest(proof) or plan.get('initialization_contract')!=proof:
+                        raise RuntimeError('shared initialization provenance mismatch')
+                    read_initialization(read(prefix+'guard-initialization.npz'),initialization_entry(job['seed'],job['smoke']))
                     validate_execution_counts(run['training_execution'],arm,job['steps'])
                     from rl_stocks.rl.registry.distribution import distribution_spec
                     if digest(run.get('action_distribution',{}))!=digest(distribution_spec()):

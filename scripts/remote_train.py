@@ -28,7 +28,8 @@ def main():
 
     payload = json.loads((root/'dataset.json').read_text())
     if plan.get('version')==25:
-        from rl_stocks.training.recurrent_guard import validate_payload
+        from rl_stocks.training.recurrent_guard import validate_payload,validate_initialization_assets
+        validate_initialization_assets(plan["guard_study"]["seed"],plan["guard_study"]["smoke"])
         validate_payload(payload)
     if plan.get('version')==24:
         from rl_stocks.training.recurrent_cash import validate_payload

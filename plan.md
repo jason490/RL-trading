@@ -1429,3 +1429,8 @@ allocation; dedicated Colab integration and smokes required. See
 Update-guard version25 integration passes75 focused checks and actual smoke
 payload validation; actual two512 CPU smokes remain before fixed100k screen.
 No allocation at integration milestone.
+
+Guard protocol2 shared untrained tensor/RNG initialization prepared after
+version1 rejected unequal hashes.94 focused checks and revised payload validation
+pass. Original evidence/budget retained; actual retry smokes remain.
+[Details](docs/recurrent-update-guard.md).

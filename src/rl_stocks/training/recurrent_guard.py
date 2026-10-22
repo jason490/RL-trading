@@ -4,7 +4,7 @@ from pathlib import Path
 from rl_stocks.core.contracts import digest
 from rl_stocks.risk.exposure import execution_contract
 
-PROTOCOL_SHA256='b67fc7e4be4331b13855354e7daf6c1a4512aa2c5ec45d970ec5cf010ba17cfc'
+PROTOCOL_SHA256='ff999f0508ca0eb65a007eb1a7a9dd64deaf331ab1118a9f4ea044ccab6d252c'
 
 
 def protocol():
@@ -41,12 +41,19 @@ def model_record(model):
     from rl_stocks.reporting.optimizer import optimizer_record
     return dict(base(model),target_kl=model.target_kl,clip_range=float(model.clip_range(1.)),
                 max_grad_norm=model.max_grad_norm,policy_class=type(model.policy).__name__,
-                optimizer=json.loads(json.dumps(optimizer_record(model))))
+                optimizer=json.loads(json.dumps(optimizer_record(model))),
+                shared_initialization=json.loads(json.dumps(getattr(model,'_research_initialization',None))))
 
 
-def validate_record(record,arm,smoke=False,initial=False,selected_steps=None):
+def validate_record(record,arm,smoke=False,initial=False,selected_steps=None,seed=11):
     from rl_stocks.training.recurrent_state import validate_record as base
     base(record,'recurrent_masked',smoke,initial,selected_steps)
+    from rl_stocks.core.contracts import canonical
+    proof=shared_initialization_spec(seed,smoke)
+    if canonical(record.get('shared_initialization'))!=canonical(proof):
+        raise ValueError('shared initialization proof mismatch')
+    if initial and record['policy_tensor_sha256']!=proof['policy_tensor_sha256']:
+        raise ValueError('exact shared initial tensors required')
     if (record.get('target_kl')!=target(arm) or record.get('clip_range')!=.2
             or record.get('max_grad_norm')!=.5 or record.get('policy_class')!='RecurrentActorCriticPolicy'):
         raise ValueError('actual policy-update guard settings mismatch')
@@ -94,7 +101,10 @@ def validate_execution_report(results,arm):
 
 def activation(control,candidate):
     """Descriptive final-step reduction; never substitutes for return/risk gates."""
-    validate_record(control,'control');validate_record(candidate,'kl_guard')
+    proof=control.get('shared_initialization')
+    if not isinstance(proof,dict):raise ValueError('shared initialization required for activation')
+    seed=proof.get('seed')
+    validate_record(control,'control',seed=seed);validate_record(candidate,'kl_guard',seed=seed)
     c=control['optimizer']['adam_step_min'];g=candidate['optimizer']['adam_step_min']
     return dict(control_adam_steps=c,candidate_adam_steps=g,guard_activated=g<c)
 
@@ -107,11 +117,11 @@ def identify_arm(metadata):
     return matches[0]
 
 
-def validate_initial_pairs(records,smoke=False):
+def validate_initial_pairs(records,smoke=False,seed=11):
     if set(records)!=set(protocol()['arms']):raise ValueError('both initial models required')
     normalized=[]
     for arm,r in records.items():
-        validate_record(r,arm,smoke,initial=True)
+        validate_record(r,arm,smoke,initial=True,seed=seed)
         clean=json.loads(json.dumps(r));clean.pop('target_kl');clean['optimizer'].pop('target_kl')
         normalized.append(clean)
     if normalized[0]!=normalized[1]:raise ValueError('initial networks/settings differ beyond target_kl')
@@ -127,3 +137,49 @@ def screen_verdict(cells):
     if not verdict['passed']:verdict['promoted_candidate']=None
     verdict['activation']=activated
     return verdict
+
+
+def initialization_entry(seed=11,smoke=False):
+    import hashlib
+    if type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('fixed initialization seed/size required')
+    root=Path(__file__).resolve().parents[3];spec=protocol()['shared_initialization']
+    path=root/spec['manifest']
+    if hashlib.sha256(path.read_bytes()).hexdigest()!=spec['manifest_sha256']:
+        raise ValueError('initialization manifest checksum mismatch')
+    manifest=json.loads(path.read_text())
+    if manifest['version']!=1 or manifest['generated_without_fitting'] is not True or manifest['no_dataset_or_provider_access'] is not True:
+        raise ValueError('untrained initialization provenance required')
+    entry=manifest['artifacts'][('smoke' if smoke else 'screen')+'-'+str(seed)]
+    if entry['seed']!=seed or entry['smoke'] is not smoke or not (root/entry['file']).resolve().is_relative_to(root/'configs/initializations'):
+        raise ValueError('initialization seed/size/path mismatch')
+    return entry
+
+
+def initialization_path(seed=11,smoke=False):
+    return Path(__file__).resolve().parents[3]/initialization_entry(seed,smoke)['file']
+
+
+def shared_initialization_spec(seed=11,smoke=False):
+    e=initialization_entry(seed,smoke)
+    return dict(version=1,artifact_sha256=e['sha256'],policy_tensor_sha256=e['policy_tensor_sha256'],
+        rng_sha256=e['rng_sha256'],torch_version=e['torch_version'],generated_without_fitting=True,
+        seed=seed,smoke=smoke,artifact_file=e['file'])
+
+
+def validate_initialization_assets(seed=11,smoke=False):
+    import torch
+    from rl_stocks.training.shared_initialization import read_initialization
+    e=initialization_entry(seed,smoke)
+    if torch.__version__.split('+')[0]!=e['torch_version']:raise ValueError('shared initialization Torch version mismatch')
+    read_initialization(initialization_path(seed,smoke).read_bytes(),e)
+    return shared_initialization_spec(seed,smoke)
+
+
+def apply_shared_initialization(model,seed=11,smoke=False):
+    from rl_stocks.training.shared_initialization import load_initialization
+    actual=load_initialization(model,initialization_path(seed,smoke),initialization_entry(seed,smoke))
+    proof=shared_initialization_spec(seed,smoke)
+    if any(actual[k]!=proof[k] for k in actual):raise ValueError('loaded shared initialization proof mismatch')
+    model._research_initialization=proof
+    return proof

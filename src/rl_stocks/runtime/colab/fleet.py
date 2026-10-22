@@ -85,7 +85,8 @@ def validate_tasks(tasks,root):
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
         if plan.get('version')==25:
             from rl_stocks.data.generation.datasets import read_dataset
-            from rl_stocks.training.recurrent_guard import validate_payload
+            from rl_stocks.training.recurrent_guard import validate_payload,validate_initialization_assets
+            validate_initialization_assets(plan['guard_study']['seed'],plan['guard_study']['smoke'])
             if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('update-guard dataset identity mismatch')
             validate_payload(read_dataset(dataset))
         if plan.get('version')==24:

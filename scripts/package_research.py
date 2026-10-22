@@ -61,7 +61,7 @@ def package(roots, output):
                 if any(p.name not in allowed or not p.is_file() for p in bundle.iterdir()):
                     raise ValueError('unexpected frozen asset; review before publication')
                 archive.add(bundle,arcname='frozen/'+bundle.name)
-                for name in ('metadata.json','best.zip','latest.zip','checkpoints.json','checkpoint-state.json','checkpoint-validation.json','training-sampling.json','training-execution.json'):
+                for name in ('metadata.json','best.zip','latest.zip','checkpoints.json','checkpoint-state.json','checkpoint-validation.json','training-sampling.json','training-execution.json','guard-initialization.npz'):
                     if (run/name).exists():archive.add(run/name,arcname='runs/'+run.name+'/'+name)
                 selected=run/'selected-validation.json'
                 if not selected.exists():selected=run/'selected-validation-cpu.json'

@@ -106,6 +106,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     gym_check(env,skip_render_check=True);sb3_check(env)
     env.reset_sampling_statistics();env.reset_execution_statistics()
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
+    from rl_stocks.training.recurrent_guard import (PROTOCOL_SHA256 as GUARD_PROTOCOL,
+        model_record as guard_record,apply_shared_initialization,initialization_path)
+    shared_initialization=apply_shared_initialization(model,seed,smoke) if study_protocol_sha256==GUARD_PROTOCOL else None
     initialized=initialize_policy(model,initialization,algorithm)
     from rl_stocks.rl.registry.distribution import model_distribution
     action_distribution=model_distribution(model)
@@ -146,8 +149,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.recurrent_cash import PROTOCOL_SHA256 as CASH_PROTOCOL,model_record as cash_record
     if study_protocol_sha256==CASH_PROTOCOL:
         metadata['cash_initialization']=cash_record(model)
-    from rl_stocks.training.recurrent_guard import PROTOCOL_SHA256 as GUARD_PROTOCOL,model_record as guard_record
     if study_protocol_sha256==GUARD_PROTOCOL:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'guard-initialization.npz'
+        shutil.copyfile(initialization_path(seed,smoke),snapshot)
+        if checksum(snapshot)!=shared_initialization['artifact_sha256']:raise ValueError('initialization snapshot checksum mismatch')
+        metadata['guard_shared_initialization']=shared_initialization
         metadata['guard_initialization']=guard_record(model)
     if algorithm=='td3':
         from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record

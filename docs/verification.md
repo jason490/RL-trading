@@ -1626,3 +1626,15 @@ selection or tolerance relaxation. No100k screen allocation. Both had80 Adam
 steps/40 nominal epochs; short-smoke nonactivation was allowed and is separate.
 Project38.32607251, original study baseline38.309006 retained, no budget stop.
 [Failure evidence](../results/recurrent-guard-2026-10-22/README.md).
+
+## Update-guard shared initialization version2
+
+Fixed untrained tensor/CPU-RNG artifacts enforce exact paired initialization
+after version1 hash mismatch; original failed source/plans/charges retained. No
+learning/data/performance selection, no tolerance/gate relaxation. Manifest and
+per-file/schema/RNG checksums bind controller, worker, metadata, saved model and
+retained run snapshot.94 focused checks and two revised actual immutable payloads
+pass; source compilation passes. No allocation during fix. Commit/freeze new
+source and repeat two512 CPU smokes using new state; original2-unit study baseline
+38.309006 and project/account safeguards retained. Project38.326073 currently.
+[Method](recurrent-update-guard.md).

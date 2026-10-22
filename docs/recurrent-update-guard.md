@@ -1,8 +1,8 @@
 # Recurrent policy-update safeguard
 
-Status: initial smoke comparison rejected for unequal initial tensors; both owned
-sessions stopped. No100k screen allocated. Shared initialization and a revised
-preregistered smoke attempt remain.
+Status: version2 shared initialization and contracts verified; revised actual
+Colab smokes pending. Version1 remains rejected; both owned sessions stopped.
+No100k screen allocated.
 
 ## Evidence and separate hypothesis
 
@@ -128,3 +128,49 @@ selection or tolerance relaxation. No100k screen allocation. Both had80 Adam
 steps/40 nominal epochs; short-smoke nonactivation was allowed and is separate.
 Project38.32607251, original study baseline38.309006 retained, no budget stop.
 [Failure evidence](../results/recurrent-guard-2026-10-22/README.md).
+
+## Version2: exact shared initialization
+
+The [version1 failure](../results/recurrent-guard-2026-10-22/README.md) retained
+matching seeds/source/versions but different initial fingerprints. Cause and
+magnitude are unproven; do not describe a confirmed hardware bug. Version2
+realizes the same-initial-tensors requirement with fixed untrained inputs instead
+of relying on independent runtime reconstruction. Original version1 protocol,
+plans, models and charges remain unchanged; no gate/tolerance is relaxed.
+
+[Artifacts and manifest](../configs/initializations/recurrent_guard_v2/README.md)
+contain policy tensors plus CPU RNG for smoke11 and screen/confirmation11/23/37.
+They were generated once by the standard seeded constructor without fitting,
+datasets or performance selection. Protocol2 pins the manifest, which pins each
+file, tensor schema/fingerprint and RNG checksum. These are initialization
+inputs, not learned model weights. Both arms load the same seed/size input.
+
+Loading is CPU-only, non-pickle and rejects trained/nonempty-optimizer models,
+wrong versions, keys, shapes, dtypes, nonfinite data or invalid RNG. Validation
+precedes mutation. Tensor copies preserve parameter identities/optimizer
+ownership; exact tensor and RNG restoration is checked. Proof survives actual
+model save/load. Initial RNG is a learning-start state, not exact resume support.
+Backend numerical differences during training remain possible.
+
+Each run retains `guard-initialization.npz`, copied and checksummed before fitting;
+metadata, restored models, plan contract and archive must agree. Model publication
+retains this input alongside weights. Controller/worker check assets before fit.
+Full initial equality is still mandatory after actual Colab loading.
+
+94 focused checks pass, including restoration from deliberately different weights
+and RNG states, all four fixed seed/size inputs, corruption rejection without
+model/RNG mutation, saved provenance, archive snapshots, actual Adam steps,
+activation and existing budget/cleanup behavior. Two revised actual immutable
+payloads validate; scripts compile. No allocation during the fix.
+
+Use new retry paths, preserving version1 state:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_guard_jobs.py \
+ --smoke --output .runtime/guard-smoke-v2-jobs.json
+```
+
+Commit/freeze version2 source, official usage check, then repeat two512 CPU
+smokes with156 frozen predictions and verified shutdown before screen. Shared
+study baseline remains38.309006, allowance2 units including the rejected attempt.
+Current project38.326073; last official account349.56 zero assignments/rate.

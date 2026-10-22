@@ -7,7 +7,7 @@ from rl_stocks.inference.bundle import checksum
 from rl_stocks.rl.registry.factory import CLASSES
 from rl_stocks.training.checkpoint_state import read_checkpoint_state
 from rl_stocks.training.diversity import validate_counts
-from rl_stocks.training.recurrent_guard import protocol, PROTOCOL_SHA256, model_record, validate_record, modes, validate_execution_counts, validate_execution_report,validate_initial_pairs,identify_arm
+from rl_stocks.training.recurrent_guard import protocol, PROTOCOL_SHA256, model_record, validate_record, modes, validate_execution_counts, validate_execution_report,validate_initial_pairs,identify_arm,shared_initialization_spec,initialization_entry
 
 
 def accept(state_path, restoration_path, source_proof):
@@ -27,6 +27,10 @@ def accept(state_path, restoration_path, source_proof):
                 or m['source_hash']!=proof['source_hash'] or m['git']['dirty'] or not m['smoke'] or m['seed']!=11):
             raise ValueError('fixed clean smoke source required')
         if identify_arm(m)!=arm:raise ValueError('guard smoke task/arm mismatch')
+        from rl_stocks.training.shared_initialization import read_initialization
+        init_proof=shared_initialization_spec(11,True)
+        if m.get('guard_shared_initialization')!=init_proof:raise ValueError('loaded shared initialization metadata required')
+        read_initialization((path.parent/'guard-initialization.npz').read_bytes(),initialization_entry(11,True))
         validate_record(m['guard_initialization'],arm,True,initial=True)
         if m.get('action_execution')!=modes(arm):raise ValueError('actual guard execution modes mismatch')
         validate_execution_counts(m['training_execution'],arm,512)

@@ -432,12 +432,13 @@ def cash_plan(arm,seed=11,smoke=False):
 
 
 def guard_plan(arm,seed=11,smoke=False):
-    from rl_stocks.training.recurrent_guard import protocol,PROTOCOL_SHA256,modes,overrides
+    from rl_stocks.training.recurrent_guard import protocol,PROTOCOL_SHA256,modes,overrides,shared_initialization_spec
     p=protocol()
     if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
         raise ValueError('unsupported update-guard arm/seed/smoke')
     plan=alignment_plan('posthoc_unit',seed,smoke);plan.pop('alignment_study')
-    plan.update(version=25,guard_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
+    plan.update(version=25,guard_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
+        initialization_contract=shared_initialization_spec(seed,smoke))
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke),
         training_exposure_mode=modes(arm)['training_exposure_mode'],evaluation_exposure_mode=modes(arm)['evaluation_exposure_mode'])
     return plan

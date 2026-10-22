@@ -34,7 +34,7 @@
     "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
     "budget_justification": "Same expanded111 dataset in both arms,100k for full symbol transition coverage; fixed budget, not an extension of completed diversity study"
   },
-  "version": 1,
+  "version": 2,
   "name": "recurrent-update-guard-2026-10-22",
   "hypothesis": "Saved policies show rising late KL/clipping and direction drift without numerical corruption; fitted-period/development outcomes differ and do not establish a cause. Test one fixed library policy-update safeguard on the strongest Gaussian posthoc baseline, with unchanged objective/data/actions and a fresh matched control. Lower KL alone is not success.",
   "arms": [
@@ -103,7 +103,7 @@
     "limitations": "Survivor stocks, revised Yahoo history, correlated development episodes; no live/paper broker orders",
     "checkpoint_identity": "Mandatory current checkpoint/model/report hashes. Record actual target_kl, clip range, nominal epoch counter and per-parameter Adam steps separately at initial/selected/final. Frozen settings/actions/state must restore exactly.",
     "observations": "All arms identical masked21 input contract: seven market, five legacy account fields, nine execution zeros. Actual modified-path portfolio and recurrent state are carried causally.",
-    "initialization": "Same fresh Gaussian masked21 RecurrentPPO tensors, separate64-unit actor/critic LSTMs and64x64 heads. No categorical/cash variant, feature or architecture change.",
+    "initialization": "Both arms load the same checksum-pinned untrained policy tensors and CPU RNG state for the fixed seed/size before fitting; artifacts created once with no data/learning/performance selection. Preserve exact initial tensor equality and retain each input snapshot in run/release evidence. This enforces the original intended matched initialization after version1 rejection, not tolerance relaxation.",
     "memory": "Same masked21 observations, actual causal portfolio path and separate recurrent state/reset; no sequence tuning.",
     "comparison": "Two fresh100k runs with identical data/source/sampling/seed/initial weights/optimizer settings. Only target_kl differs. Same transition/maximum epoch budgets; actual Adam steps intentionally may differ. Final tensor equality is not expected if guard activates.",
     "rollout": "Fixed1000 rollout/batch50/ten maximum epochs, actual100k transitions. Library guard stops remaining minibatches/epochs within a rollout when estimated KL exceeds1.5*target_kl; it is not a guaranteed bound on executed trades or cumulative drift. Smoke128 rollout/batch64/ten epochs/512 transitions.",
@@ -113,7 +113,7 @@
     "device": "cpu",
     "training_location": "Google Colab only, actual default Python checked before dependency sync",
     "initial_concurrency": 2,
-    "preflight": "Forward-only synthetic high-KL library guard check proves stop before any Adam step without local fitting; two512 Colab CPU smokes verify actual target settings/Adam counters/weights, matched initial tensors/sampling, checkpoint and156 exact frozen sequence predictions before fixed two100k screen.",
+    "preflight": "Forward-only synthetic high-KL library guard check proves stop before any Adam step without local fitting; two512 Colab CPU smokes verify actual target settings/Adam counters/weights, matched initial tensors/sampling, checkpoint and156 exact frozen sequence predictions before fixed two100k screen. Version2 validates shared untrained tensor/RNG checksums/schema/version locally and on the worker, then requires exact loaded fingerprints. Original failed smoke charges and source retained within the same allowance.",
     "max_study_incremental_units": 2.0,
     "project_ceiling_units": 150,
     "working_stop_units": 130,
@@ -142,5 +142,13 @@
     "screen": "Candidate actual final Adam steps must be positive and strictly below the unchanged control maximum; otherwise record nonactivation and do not promote. No extending/tuning to force activation.",
     "smoke": "Positive actual Adam steps up to the fixed maximum, finite changed weights and explicit saved target_kl. Short-smoke nonactivation is allowed; separate forward-only high-KL control-flow proof required."
   },
-  "implementation_status": "Protocol and saved-record construction prepared; dedicated job/worker/archive/report integration and actual Colab smoke acceptance still required. No allocation."
+  "implementation_status": "Shared untrained initialization version2 prepared; repeat revised smoke acceptance before screen. Original version1 comparison remains rejected.",
+  "previous_protocol_sha256": "b67fc7e4be4331b13855354e7daf6c1a4512aa2c5ec45d970ec5cf010ba17cfc",
+  "previous_protocol": "results/recurrent-guard-2026-10-22/protocol-v1.json",
+  "shared_initialization": {
+    "manifest": "configs/initializations/recurrent_guard_v2/manifest.json",
+    "manifest_sha256": "ae4209c96aa770276818fbe94ee4bf66af448c2b9896161c1e6e92e9af20d0ef",
+    "format": "non-pickle-npz-policy-plus-cpu-rng-v1",
+    "generated_without_fitting": true
+  }
 }

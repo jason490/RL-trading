@@ -5,7 +5,7 @@ import torch
 from stable_baselines3.common.logger import configure
 from test_hybrid_recurrent import Dummy
 from rl_stocks.rl.registry.factory import create
-from rl_stocks.training.recurrent_guard import protocol,overrides,model_record,validate_record,modes
+from rl_stocks.training.recurrent_guard import protocol,overrides,model_record,validate_record,modes,apply_shared_initialization
 
 
 @pytest.mark.parametrize('smoke',[True,False])
@@ -13,6 +13,7 @@ def test_guard_changes_only_target_and_preserves_initial_tensors(smoke):
     records={}
     for arm in protocol()['arms']:
         m=create('recurrent_ppo',Dummy(),smoke=smoke,overrides=overrides(arm,smoke))
+        apply_shared_initialization(m,11,smoke)
         records[arm]=model_record(m);validate_record(records[arm],arm,smoke,initial=True)
         bad=deepcopy(records[arm]);bad['target_kl']=.02
         with pytest.raises(ValueError):validate_record(bad,arm,smoke,initial=True)
@@ -53,6 +54,7 @@ def test_actual_step_contract_rejects_nominal_counter_substitution():
     # Static contract fixture, not evidence of actual learning.
     for arm in protocol()['arms']:
         m=create('recurrent_ppo',Dummy(),smoke=True,overrides=overrides(arm,True))
+        apply_shared_initialization(m,11,True)
         r=model_record(m);r['num_timesteps']=512;o=r['optimizer']
         o.update(num_timesteps=512,sb3_nominal_epoch_counter=40,optimizer_state_count=21,
                  adam_step_min=80,adam_step_max=80,per_parameter_adam_steps={str(i):80 for i in range(21)})
@@ -71,6 +73,7 @@ def test_activation_requires_actual_step_reduction_and_does_not_promote():
     records={}
     for arm,steps in [('control',20000),('kl_guard',12000)]:
         m=create('recurrent_ppo',Dummy(),smoke=False,overrides=overrides(arm))
+        apply_shared_initialization(m,11,False)
         r=model_record(m);r['num_timesteps']=100000
         r['optimizer'].update(num_timesteps=100000,sb3_nominal_epoch_counter=1000,optimizer_state_count=21,
             adam_step_min=steps,adam_step_max=steps,per_parameter_adam_steps={str(i):steps for i in range(21)})
@@ -86,6 +89,7 @@ def test_performance_pass_cannot_promote_without_actual_guard_activation():
     cells={}
     for arm,score in [('control',.32),('kl_guard',.36)]:
         m=create('recurrent_ppo',Dummy(),smoke=False,overrides=overrides(arm))
+        apply_shared_initialization(m,11,False)
         r=model_record(m);r['num_timesteps']=100000
         r['optimizer'].update(num_timesteps=100000,sb3_nominal_epoch_counter=1000,optimizer_state_count=21,
             adam_step_min=20000,adam_step_max=20000,per_parameter_adam_steps={str(i):20000 for i in range(21)})
