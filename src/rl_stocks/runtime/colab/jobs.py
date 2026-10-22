@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==25:
+    if plan.get('version')==26:
+        try:expected=session_plan(**plan['session_study'])
+        except (KeyError,TypeError):raise ValueError('malformed session-context plan') from None
+        if plan!=expected:raise ValueError('unsupported session-context plan')
+    elif plan.get('version')==25:
         try:expected=guard_plan(**plan['guard_study'])
         except (KeyError,TypeError):raise ValueError('malformed update-guard plan') from None
         if plan!=expected:raise ValueError('unsupported update-guard plan')
@@ -441,4 +445,17 @@ def guard_plan(arm,seed=11,smoke=False):
         initialization_contract=shared_initialization_spec(seed,smoke))
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke),
         training_exposure_mode=modes(arm)['training_exposure_mode'],evaluation_exposure_mode=modes(arm)['evaluation_exposure_mode'])
+    return plan
+
+
+def session_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.session_context import protocol,PROTOCOL_SHA256,overrides,initialization_spec,arm_spec
+    p=protocol();c=arm_spec(arm)
+    if type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported session-context seed/size')
+    plan=alignment_plan('posthoc_unit',seed,smoke);plan.pop('alignment_study')
+    plan.update(version=26,session_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
+        initialization_contract=initialization_spec(arm,seed,smoke),dataset_contract=dict(identity=c['dataset'],
+            schema=p['dataset_contracts'][arm]['schema'],names=p['dataset_contracts'][arm]['names'],market_features=c['market_features']))
+    plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke))
     return plan

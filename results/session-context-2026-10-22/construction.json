@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "protocol_sha256": "b5fdd94552db62142aab2c08b3a052133e51c9983d17099e64c6995a21bdf466",
+  "observation_sizes": {
+    "legacy": [
+      21
+    ],
+    "masked": [
+      25
+    ],
+    "full": [
+      25
+    ]
+  },
+  "initial_records": {
+    "legacy": {
+      "algorithm": "RecurrentPPO",
+      "observation_size": 21,
+      "action_size": 4,
+      "num_timesteps": 0,
+      "n_steps": 128,
+      "batch_size": 64,
+      "n_epochs": 10,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "net_arch": [
+        32,
+        32
+      ],
+      "actor_lstm": {
+        "hidden_size": 32,
+        "num_layers": 1
+      },
+      "critic_lstm": true,
+      "shared_lstm": false,
+      "policy_tensor_sha256": "b9c86edd220aea1b150fc1d405079b90d24fe7a93b8e2b8b12ec165322880012",
+      "target_kl": null,
+      "clip_range": 0.2,
+      "max_grad_norm": 0.5,
+      "policy_class": "RecurrentActorCriticPolicy",
+      "optimizer": {
+        "num_timesteps": 0,
+        "sb3_nominal_epoch_counter": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "target_kl": null,
+        "parameter_count": 18473,
+        "optimizer_parameter_count": 21,
+        "optimizer_state_count": 0,
+        "adam_step_min": null,
+        "adam_step_max": null,
+        "per_parameter_adam_steps": {},
+        "all_parameters_and_moments_finite": true,
+        "maximum_abs_first_moment": 0.0,
+        "maximum_second_moment": 0.0,
+        "parameter_groups": [
+          {
+            "lr": 0.0003,
+            "eps": 1e-05,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "weight_decay": 0
+          }
+        ]
+      },
+      "shared_initialization": {
+        "version": 1,
+        "artifact_sha256": "c6cd099d2e049dfa5e13b98232624dca3efaca78b1b4d5b09474f30c6b5a12bc",
+        "policy_tensor_sha256": "b9c86edd220aea1b150fc1d405079b90d24fe7a93b8e2b8b12ec165322880012",
+        "rng_sha256": "def8bb3bc0d16415eaa88eabc19ef835776d4999c9469d4f1be21fb3f13a3777",
+        "torch_version": "2.8.0",
+        "generated_without_fitting": true,
+        "seed": 11,
+        "smoke": true,
+        "artifact_file": "configs/initializations/recurrent_guard_v2/smoke-11.npz"
+      }
+    },
+    "masked": {
+      "algorithm": "RecurrentPPO",
+      "observation_size": 25,
+      "action_size": 4,
+      "num_timesteps": 0,
+      "n_steps": 128,
+      "batch_size": 64,
+      "n_epochs": 10,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "net_arch": [
+        32,
+        32
+      ],
+      "actor_lstm": {
+        "hidden_size": 32,
+        "num_layers": 1
+      },
+      "critic_lstm": true,
+      "shared_lstm": false,
+      "policy_tensor_sha256": "60634bb22a54274dbf9e7c42591ce7f3fb5419462d1cce800210f622a2c994ff",
+      "target_kl": null,
+      "clip_range": 0.2,
+      "max_grad_norm": 0.5,
+      "policy_class": "RecurrentActorCriticPolicy",
+      "optimizer": {
+        "num_timesteps": 0,
+        "sb3_nominal_epoch_counter": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "target_kl": null,
+        "parameter_count": 19497,
+        "optimizer_parameter_count": 21,
+        "optimizer_state_count": 0,
+        "adam_step_min": null,
+        "adam_step_max": null,
+        "per_parameter_adam_steps": {},
+        "all_parameters_and_moments_finite": true,
+        "maximum_abs_first_moment": 0.0,
+        "maximum_second_moment": 0.0,
+        "parameter_groups": [
+          {
+            "lr": 0.0003,
+            "eps": 1e-05,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "weight_decay": 0
+          }
+        ]
+      },
+      "shared_initialization": {
+        "version": 1,
+        "artifact_sha256": "796773661ca81ce64235903bf841fa4b6aadcce7f3a54b75efdac7618486ef9b",
+        "policy_tensor_sha256": "60634bb22a54274dbf9e7c42591ce7f3fb5419462d1cce800210f622a2c994ff",
+        "rng_sha256": "b13a041e7b7819aef5892217d82461f22afcf479f025641308e0e6d94d1c9c55",
+        "torch_version": "2.8.0",
+        "generated_without_fitting": true,
+        "seed": 11,
+        "smoke": true,
+        "artifact_file": "configs/initializations/session_context_v1/smoke-11.npz"
+      }
+    },
+    "full": {
+      "algorithm": "RecurrentPPO",
+      "observation_size": 25,
+      "action_size": 4,
+      "num_timesteps": 0,
+      "n_steps": 128,
+      "batch_size": 64,
+      "n_epochs": 10,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "net_arch": [
+        32,
+        32
+      ],
+      "actor_lstm": {
+        "hidden_size": 32,
+        "num_layers": 1
+      },
+      "critic_lstm": true,
+      "shared_lstm": false,
+      "policy_tensor_sha256": "60634bb22a54274dbf9e7c42591ce7f3fb5419462d1cce800210f622a2c994ff",
+      "target_kl": null,
+      "clip_range": 0.2,
+      "max_grad_norm": 0.5,
+      "policy_class": "RecurrentActorCriticPolicy",
+      "optimizer": {
+        "num_timesteps": 0,
+        "sb3_nominal_epoch_counter": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "target_kl": null,
+        "parameter_count": 19497,
+        "optimizer_parameter_count": 21,
+        "optimizer_state_count": 0,
+        "adam_step_min": null,
+        "adam_step_max": null,
+        "per_parameter_adam_steps": {},
+        "all_parameters_and_moments_finite": true,
+        "maximum_abs_first_moment": 0.0,
+        "maximum_second_moment": 0.0,
+        "parameter_groups": [
+          {
+            "lr": 0.0003,
+            "eps": 1e-05,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "weight_decay": 0
+          }
+        ]
+      },
+      "shared_initialization": {
+        "version": 1,
+        "artifact_sha256": "796773661ca81ce64235903bf841fa4b6aadcce7f3a54b75efdac7618486ef9b",
+        "policy_tensor_sha256": "60634bb22a54274dbf9e7c42591ce7f3fb5419462d1cce800210f622a2c994ff",
+        "rng_sha256": "b13a041e7b7819aef5892217d82461f22afcf479f025641308e0e6d94d1c9c55",
+        "torch_version": "2.8.0",
+        "generated_without_fitting": true,
+        "seed": 11,
+        "smoke": true,
+        "artifact_file": "configs/initializations/session_context_v1/smoke-11.npz"
+      }
+    }
+  },
+  "gymnasium_and_sb3_checkers_passed": true,
+  "actual_recurrent_forward_passed": true,
+  "masked_full_exact_initial_tensors": true,
+  "training_performed": false,
+  "test_evaluated": false,
+  "sessions_allocated": 0
+}

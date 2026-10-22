@@ -3,6 +3,7 @@ import json,math
 from pathlib import Path
 from rl_stocks.core.contracts import digest
 from rl_stocks.risk.exposure import execution_contract
+from rl_stocks.training.recurrent_record import model_record
 
 PROTOCOL_SHA256='ff999f0508ca0eb65a007eb1a7a9dd64deaf331ab1118a9f4ea044ccab6d252c'
 
@@ -34,15 +35,6 @@ def overrides(arm,smoke=False):
 def validate_payload(data):
     from rl_stocks.training.diversity import validate_payload as base
     return base(data,'expanded')
-
-
-def model_record(model):
-    from rl_stocks.training.recurrent_state import model_record as base
-    from rl_stocks.reporting.optimizer import optimizer_record
-    return dict(base(model),target_kl=model.target_kl,clip_range=float(model.clip_range(1.)),
-                max_grad_norm=model.max_grad_norm,policy_class=type(model.policy).__name__,
-                optimizer=json.loads(json.dumps(optimizer_record(model))),
-                shared_initialization=json.loads(json.dumps(getattr(model,'_research_initialization',None))))
 
 
 def validate_record(record,arm,smoke=False,initial=False,selected_steps=None,seed=11):

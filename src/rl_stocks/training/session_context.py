@@ -3,7 +3,7 @@ import hashlib,json,math
 from pathlib import Path
 from rl_stocks.core.contracts import digest,canonical
 from rl_stocks.risk.exposure import execution_contract
-from rl_stocks.training.recurrent_guard import model_record
+from rl_stocks.training.recurrent_record import model_record
 
 PROTOCOL_SHA256='b5fdd94552db62142aab2c08b3a052133e51c9983d17099e64c6995a21bdf466'
 ROOT=Path(__file__).resolve().parents[3]
@@ -24,6 +24,26 @@ def arm_spec(arm):
 
 def modes(arm):
     arm_spec(arm);return execution_contract('unrestricted','unit_magnitude')
+
+
+def validate_execution_counts(counts,arm,steps):
+    arm_spec(arm)
+    from rl_stocks.training.recurrent_alignment import validate_execution_counts as base
+    return base(counts,'posthoc_unit',steps)
+
+
+def validate_execution_report(results,arm):
+    arm_spec(arm)
+    from rl_stocks.training.recurrent_alignment import validate_execution_report as base
+    return base(results,'posthoc_unit')
+
+
+def identify_arm(metadata):
+    arm=metadata.get('session_context_arm');arm_spec(arm)
+    if (metadata.get('algorithm')!='recurrent_ppo' or metadata.get('dataset')!=arm_spec(arm)['dataset']
+            or metadata.get('action_execution')!=modes(arm)):
+        raise ValueError('actual session arm/data/execution identity mismatch')
+    return arm
 
 
 def overrides(arm,smoke=False):

@@ -124,3 +124,29 @@ Actual save/load retains provenance; corrupt size/guard/step/hash rejection pass
 Controller/worker/archive integration, real Gymnasium/SB3 checkers and actual
 Colab smokes remain before allocation. No training or performance result yet;
 project38.39201565 unchanged and all owned sessions stopped.
+
+
+## Colab integration and actual construction checks
+
+Version26 plans bind exact arm dataset/schema/feature count, initialization
+artifact, source protocol and original account floor. Controller and worker
+validate payloads and starts before fitting; runner retains initialization
+snapshots and actual initial/selected/final optimizer/model records. Common
+retrieval checks remain shared; study-specific validation lives in
+`runtime/colab/session_artifacts.py`. Shared read-only recurrent evidence is
+extracted into `training/recurrent_record.py`, preserving the legacy guard API.
+
+76 focused protocol/artifact/shared-start/account-floor checks pass, including
+all three smoke/screen arms, wrong schema/dimension/preprocessing, missing
+checkpoint/snapshot and corrupt RNG evidence. Scripts compile. Actual immutable
+three-task payload validation passes. [Construction](../results/session-context-2026-10-22/construction.json)
+records real Gymnasium/SB3 checker acceptance and untrained recurrent forwards
+with21/25/25 observations; no learning or allocation.
+
+Commands prepared: `build_session_jobs.py`, `accept_session_smokes.py` and
+`report_session_context.py`. Actual three512 Colab CPU smokes still required,
+including234 exact frozen action/state/reset predictions, same-source/sampling
+and masked/full initialization equality, durable retrieval and verified shutdown.
+Official usage/source export/default Python checks precede allocation. No screen
+before smoke acceptance; original study baseline38.39201564833781/2-unit allowance
+and project/account protections remain. No new credits used.

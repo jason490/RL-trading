@@ -47,7 +47,28 @@ Imports must remain side-effect free: importing a provider does not authenticate
 
 Reuse modules from thin scripts or future notebooks. Extend one family at a time, add an explicit feature/action version, record a matched ablation and retrain the bundle when its schema changes. Data provider changes must preserve canonical contracts and remain visible in manifests; feed harmonization is a separate audited experiment.
 
-The source checkout exposes no usable Git metadata in this sandbox. Runs record a null revision/dirty status rather than inventing a revision. In a normal Git checkout the same runner records both automatically.
+Runs record the source revision and dirty status when Git metadata is available.
+Frozen worker exports retain their verified source identity. Missing Git metadata
+is recorded explicitly rather than replaced with an invented revision.
+
+## Experiment files and generated evidence
+
+Keep reusable feature math in `features/`, dataset preparation in
+`data/generation/`, and fixed study contracts in `training/`. Numeric experiment
+definitions belong in `configs/experiments/`; untrained shared tensors and their
+checksum manifests belong in `configs/initializations/`. Colab orchestration and
+retrieval checks live in `runtime/colab/`, with study-specific validation in
+separate modules when it would crowd the common lifecycle code.
+
+Scripts are command entry points that call package modules. Tests live under
+`tests/`; category guides live under `docs/`. Each study's compact, committed
+evidence belongs in its dated `results/` directory with a README linking the
+method, limitations and machine-readable results. Large models, derived HTML,
+transports and immutable market data stay in ignored `artifacts/` and `data/`
+directories; checksummed public release assets provide durable distribution.
+Private controller state, logs, ledgers and temporary exports stay in ignored
+`.runtime/`. Preserve retained artifact paths and historical evidence when
+organizing code; move files only with their imports, references and checks.
 
 ## Why `src/rl_stocks/` exists
 

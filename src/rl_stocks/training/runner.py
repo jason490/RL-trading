@@ -109,6 +109,13 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.recurrent_guard import (PROTOCOL_SHA256 as GUARD_PROTOCOL,
         model_record as guard_record,apply_shared_initialization,initialization_path)
     shared_initialization=apply_shared_initialization(model,seed,smoke) if study_protocol_sha256==GUARD_PROTOCOL else None
+    from rl_stocks.training.session_context import (PROTOCOL_SHA256 as SESSION_PROTOCOL,protocol as session_protocol,
+        apply_initialization as apply_session_initialization,model_record as session_record,initialization_entry as session_initialization_entry,
+        validate_payload as validate_session_payload,ROOT as SESSION_ROOT)
+    if study_protocol_sha256==SESSION_PROTOCOL:
+        session_arm=next(a for a,d in session_protocol()['datasets'].items() if d==Path(dataset_path).name)
+        validate_session_payload(dataset,session_arm)
+        session_shared=apply_session_initialization(model,session_arm,seed,smoke)
     initialized=initialize_policy(model,initialization,algorithm)
     from rl_stocks.rl.registry.distribution import model_distribution
     action_distribution=model_distribution(model)
@@ -156,6 +163,14 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if checksum(snapshot)!=shared_initialization['artifact_sha256']:raise ValueError('initialization snapshot checksum mismatch')
         metadata['guard_shared_initialization']=shared_initialization
         metadata['guard_initialization']=guard_record(model)
+    if study_protocol_sha256==SESSION_PROTOCOL:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'session-initialization.npz'
+        shutil.copyfile(SESSION_ROOT/session_initialization_entry(session_arm,seed,smoke)['file'],snapshot)
+        if checksum(snapshot)!=session_shared['artifact_sha256']:raise ValueError('session snapshot checksum mismatch')
+        metadata['session_context_arm']=session_arm
+        metadata['session_context_shared_initialization']=session_shared
+        metadata['session_context_initialization']=session_record(model)
     if algorithm=='td3':
         from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record
         if study_protocol_sha256==TD3_PROTOCOL:metadata['td3_initialization']=td3_initialization_record(model)
@@ -218,6 +233,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==GUARD_PROTOCOL:
             metadata['guard_final']=guard_record(model)
             metadata['guard_selected']=guard_record(selected)
+        if study_protocol_sha256==SESSION_PROTOCOL:
+            metadata['session_context_final']=session_record(model)
+            metadata['session_context_selected']=session_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

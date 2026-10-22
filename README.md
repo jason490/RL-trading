@@ -18,13 +18,15 @@ The default research universe is **SPY, QQQ, IWM and DIA**, with one symbol trad
 | Multi-timeframe supply/demand inputs and sector rotation | Implemented, opt-in | Causality/metadata tests, CPU smoke, 36-run comparison and frozen held-out audit complete |
 | Live-data shadow orchestration and Alpaca paper orders | Shadow implemented; paper orders remain a future milestone | Frozen shadow activation is paused; no orders submitted |
 
-The recorded verification run has **207 passing tests with no skips**. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
+The early baseline verification recorded **207 passing tests with no skips**; later features have their own focused acceptance evidence. Direct and transitive dependencies are pinned in a hash lock. See [verification status](docs/verification.md) for the evidence, limitations and generated artifacts, and [the documentation index](docs/README.md) for detailed category guides.
 
 The [matched training-universe comparison](docs/universe-expansion.md) tests 22
 versus 55 stocks, plus four ETFs, on the same validation panel. Its six Colab CPU
 PPO runs did not show an improvement from expansion: mean selected/final returns
 were 10.53%/5.60% versus control 11.77%/10.49% and buy-and-hold 30.60%. The sample
 remains retrospective; this is development validation, not fresh test evidence.
+
+Current experiment outcomes and pending work are indexed in [research results](results/README.md).
 
 ## Controlled learning experiments
 

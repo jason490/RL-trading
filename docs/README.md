@@ -75,3 +75,6 @@ cash-flow identities, immutable-bar reconciliation and limitations.
 
 [Completed-session decomposition](session-context.md) describes optional causal
 overnight/intraday fields, same-dimension masks and pending research preflight.
+
+[Current research results](../results/README.md) indexes recent comparisons,
+diagnostics, pending training and artifact locations.

@@ -1076,3 +1076,11 @@ allowance from38.39201564833781.31 focused protocol/data/shared-start checks pas
 including all fixed seed/size constructions and actual save/load without learning.
 Dedicated Colab integration/checkers/smokes remain; no allocation.
 [Protocol and initialization](session-context.md).
+
+
+Session-context version26 Colab integration implemented;76 focused checks pass.
+Actual three immutable smoke tasks validate; real Gymnasium/SB3 checkers and
+untrained recurrent forwards pass at21/25/25 fields. Shared model evidence and
+study-specific artifact checks are separated by ownership. Source compilation
+passes. Actual remote smokes remain before screen; no allocation/usage yet.
+[Details](session-context.md), [current results index](../results/README.md).
