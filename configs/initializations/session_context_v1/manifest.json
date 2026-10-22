@@ -1,0 +1,1192 @@
+{
+  "version": 1,
+  "generated_without_fitting": true,
+  "no_dataset_or_provider_access": true,
+  "legacy_reuses_untrained_pinned_guard_initializations": true,
+  "artifacts": {
+    "legacy-smoke-11": {
+      "file": "configs/initializations/recurrent_guard_v2/smoke-11.npz",
+      "seed": 11,
+      "smoke": true,
+      "sha256": "c6cd099d2e049dfa5e13b98232624dca3efaca78b1b4d5b09474f30c6b5a12bc",
+      "policy_tensor_sha256": "b9c86edd220aea1b150fc1d405079b90d24fe7a93b8e2b8b12ec165322880012",
+      "rng_sha256": "def8bb3bc0d16415eaa88eabc19ef835776d4999c9469d4f1be21fb3f13a3777",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            128,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            128,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            128,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            128,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "augmented-smoke-11": {
+      "file": "configs/initializations/session_context_v1/smoke-11.npz",
+      "seed": 11,
+      "smoke": true,
+      "sha256": "796773661ca81ce64235903bf841fa4b6aadcce7f3a54b75efdac7618486ef9b",
+      "policy_tensor_sha256": "60634bb22a54274dbf9e7c42591ce7f3fb5419462d1cce800210f622a2c994ff",
+      "rng_sha256": "b13a041e7b7819aef5892217d82461f22afcf479f025641308e0e6d94d1c9c55",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            128,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            128,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            128,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            128,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "legacy-screen-11": {
+      "file": "configs/initializations/recurrent_guard_v2/screen-11.npz",
+      "seed": 11,
+      "smoke": false,
+      "sha256": "a8eb8f95476b3705a2b618f5ffc501d78f02572be88124324b69aa3fc6bad9a9",
+      "policy_tensor_sha256": "2e5e6ba89da038a0d207d2411e5197f0cf73cdf129afc10dfa1c53d4aee01798",
+      "rng_sha256": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            256,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            256,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "augmented-screen-11": {
+      "file": "configs/initializations/session_context_v1/screen-11.npz",
+      "seed": 11,
+      "smoke": false,
+      "sha256": "e6341ac535a3f5aab4aa5a1101d78dfc8e6616f079ca058a3c003aa3b634ee74",
+      "policy_tensor_sha256": "e2c78b95ae9522221dda73047162ebc678ce576625b51a9282f7fb515cab1baf",
+      "rng_sha256": "0fdaa853ebd9c231f860de56c33424b52a3155ac6653616dc6f20591bbb06013",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            256,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            256,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "legacy-screen-23": {
+      "file": "configs/initializations/recurrent_guard_v2/screen-23.npz",
+      "seed": 23,
+      "smoke": false,
+      "sha256": "4cbed5a8130652f1d8d55fa92b4e97d8620b9f600b3781f1d3f8af676c4722dd",
+      "policy_tensor_sha256": "54cb2b57cba216c1341e9bd9483cd9ef80076d3986c19e16145b6981547b7551",
+      "rng_sha256": "2633347d2b9e30a07593948c7db302e57938c20610d395669474b69e0bc2a1ab",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            256,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            256,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "augmented-screen-23": {
+      "file": "configs/initializations/session_context_v1/screen-23.npz",
+      "seed": 23,
+      "smoke": false,
+      "sha256": "194c0e8dc27c41501c8285c6f267c720492019361c5a43160c6ab4b654f397e9",
+      "policy_tensor_sha256": "f05ffdcccb0f76ba42cb395d719a319f9968ad2acc9ee522f5e57b778c5fd22f",
+      "rng_sha256": "f86a946e6c10527ed11e7c9bbf9eefaa5d325f8d7617d73d0508f3b26a88437f",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            256,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            256,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "legacy-screen-37": {
+      "file": "configs/initializations/recurrent_guard_v2/screen-37.npz",
+      "seed": 37,
+      "smoke": false,
+      "sha256": "9b6b1bfc6d81973c7f540463f1e705ce9bf1573ced896fd7f0d7025e963bb8d6",
+      "policy_tensor_sha256": "0d80c2c32200207bb83d3a040079d7216db03f82c8567b0c2b9e9abde05e470f",
+      "rng_sha256": "baff4f28444a52a310574a96057b03200d221e7926bf1b073ad20177efc30589",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            256,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            256,
+            21
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "augmented-screen-37": {
+      "file": "configs/initializations/session_context_v1/screen-37.npz",
+      "seed": 37,
+      "smoke": false,
+      "sha256": "04a8ddbaec801f57d994a9d7af47e52b4fc22da0528e234e1b592edf944dd419",
+      "policy_tensor_sha256": "5450f094b7e14b8bed2b091a5e700a71c33de9e1285c92a1f8e1ff2106d68dbf",
+      "rng_sha256": "5164ede94dcb2bac2502824bf63b990479bca248e7ecfe31f683c567180128e6",
+      "rng_bytes": 5056,
+      "torch_version": "2.8.0",
+      "tensors": {
+        "log_std": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.policy_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "mlp_extractor.value_net.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "action_net.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "value_net.weight": {
+          "shape": [
+            1,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "value_net.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_ih_l0": {
+          "shape": [
+            256,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_actor.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_ih_l0": {
+          "shape": [
+            256,
+            25
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.weight_hh_l0": {
+          "shape": [
+            256,
+            64
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_ih_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        "lstm_critic.bias_hh_l0": {
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        }
+      }
+    }
+  }
+}

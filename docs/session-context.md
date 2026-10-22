@@ -95,3 +95,32 @@ fits training rows only; future/test data unopened.53 focused checks pass.
 No training/allocation; next fixed three-arm protocol and shared untrained
 initialization, then Colab integration/checkers/smokes. Project38.39201565 unchanged.
 [Evidence](../results/session-context-2026-10-22/README.md).
+
+
+## Fixed three-arm numeric protocol and shared starts
+
+[Protocol](../configs/experiments/session_context.json) SHA-256
+`b5fdd94552db62142aab2c08b3a052133e51c9983d17099e64c6995a21bdf466`
+binds the actual three datasets, normalization,100k seed11 screen,10k reporting,
+all original relative/absolute/risk gates and conditional11/23/37 confirmation.
+Full must pass against both legacy and masked; failed seed11 closes this fixed
+feature family with no window/feature/step/reward grid or promotion.
+
+All arms use native Gaussian recurrent PPO, target_klNone, adaptive train/unit-sign
+evaluation, masked account/execution observation contract, unchanged net-log
+reward/simulation/cyclic sampling. The update-guard family stays closed. Three
+CPU smokes must pass before three100k tasks. Shared incremental allowance2 units
+starts at project38.39201564833781 across all attempts; original150/130 project,
+150/170 account and7200-second per-allocation inclusive deadlines remain.
+
+[Shared initialization](../configs/initializations/session_context_v1/README.md)
+adds four untrained25-field files and reuses four existing pinned21-field starts.
+No data/learning/performance selection. Masked/full tensor/RNG/settings equality
+is enforced; legacy is a different-capacity control. Actual fresh constructions
+for all three arms × smoke11/screen11/23/37 restore exact fingerprints and RNG.
+Actual save/load retains provenance; corrupt size/guard/step/hash rejection passes.
+31 focused protocol/session/shared-start tests pass. No local optimizer updates.
+
+Controller/worker/archive integration, real Gymnasium/SB3 checkers and actual
+Colab smokes remain before allocation. No training or performance result yet;
+project38.39201565 unchanged and all owned sessions stopped.

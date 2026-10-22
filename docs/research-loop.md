@@ -1067,3 +1067,12 @@ fits training rows only; future/test data unopened.53 focused checks pass.
 No training/allocation; next fixed three-arm protocol and shared untrained
 initialization, then Colab integration/checkers/smokes. Project38.39201565 unchanged.
 [Evidence](../results/session-context-2026-10-22/README.md).
+
+
+Session-context numeric protocol and pinned untrained starts prepared: actual
+legacy/masked/full dataset IDs, fixed100kseed11 screen, unchanged selected/final
+relative+absolute/risk gates, conditional11/23/37 confirmation,2-unit incremental
+allowance from38.39201564833781.31 focused protocol/data/shared-start checks pass,
+including all fixed seed/size constructions and actual save/load without learning.
+Dedicated Colab integration/checkers/smokes remain; no allocation.
+[Protocol and initialization](session-context.md).

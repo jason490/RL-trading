@@ -1,0 +1,236 @@
+{
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "evaluation_every": 10000,
+  "initialization": "standard",
+  "policy_variant": "native",
+  "start_sampling": "stock_etf_cycle_windows",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Same expanded111 dataset in both arms,100k for full symbol transition coverage; fixed budget, not an extension of completed diversity study"
+  },
+  "smoke_steps": 512,
+  "smoke_evaluation_every": 256,
+  "parameters": {
+    "n_steps": 1000,
+    "batch_size": 50,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "recurrent_parameters": {
+    "lstm_hidden_size": 64,
+    "n_lstm_layers": 1,
+    "shared_lstm": false,
+    "enable_critic_lstm": true
+  },
+  "smoke_parameters": {
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "net_arch": [
+      32,
+      32
+    ],
+    "lstm_hidden_size": 32
+  },
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected/final separately reported, actual100k final post-update required",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Close fixed session-context family on failed seed11 full selected/final relative or absolute/risk gates. No EMA/window/feature/step/reward grids, confirmation or promotion."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only, actual default Python checked before dependency sync",
+    "initial_concurrency": 3,
+    "preflight": "Local causal data checks and untrained model construction only; three512 Colab CPU smokes,234 exact frozen predictions, matched initialization/sampling and verified owned cleanup before fixed three100k screen",
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "runner": "Existing central metered owned fleet, original cumulative ledger, bound downloads, verified shutdown and recovery IDs",
+    "cleanup": "Retain all models/checkpoints/curves; verify publication checksums before removing duplicates; verify every owned session stopped",
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "study_start_project_units": 38.39201564833781
+  },
+  "version": 1,
+  "name": "session-context-2026-10-22",
+  "hypothesis": "Completed close-return features do not explicitly separate overnight/intraday price moves. Test four causal completed-session fields; saved overnight gaps motivate a distinct information hypothesis, not predictive or causal evidence.",
+  "arms": [
+    "legacy",
+    "masked",
+    "full"
+  ],
+  "candidate": "full",
+  "screen_cells": 3,
+  "datasets": {
+    "legacy": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "masked": "f2c19d39acb1e4554e1298d9d8067e9509759106edcc76250ae87f0a3bf99c0d",
+    "full": "52cd1de3c2de45e99da2c58bdf850afd41b34d2a7019e4700e7d435c59968eaa"
+  },
+  "dataset_contracts": {
+    "legacy": {
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "schema": "daily-indicators-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f"
+    },
+    "masked": {
+      "dataset": "f2c19d39acb1e4554e1298d9d8067e9509759106edcc76250ae87f0a3bf99c0d",
+      "generated_dataset": "fd6e55ab449caf33d729251941f1975358e5200f30fc8e597fe5e2cbc21cc656",
+      "schema": "daily-indicators-v1-session-context-v1-masked",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "overnight_log_return",
+        "intraday_log_return",
+        "overnight_ema_20",
+        "intraday_ema_20"
+      ],
+      "normalizer_sha256": "7f350143ce42efdf5da0c7cd446a94e2772dba4dc8b7bea6790227006964005a",
+      "training_rows": 298946,
+      "validation_rows": 19058
+    },
+    "full": {
+      "dataset": "52cd1de3c2de45e99da2c58bdf850afd41b34d2a7019e4700e7d435c59968eaa",
+      "generated_dataset": "66394b999cfd8034be8b3bdac183be41dd0b06ea8fdda1e887c912a451326001",
+      "schema": "daily-indicators-v1-session-context-v1-full",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "overnight_log_return",
+        "intraday_log_return",
+        "overnight_ema_20",
+        "intraday_ema_20"
+      ],
+      "normalizer_sha256": "991ace34f2c94258be0551ea396da54c340c65a00338e717fa4ef7453af58eb0",
+      "training_rows": 298946,
+      "validation_rows": 19058
+    }
+  },
+  "market_features": {
+    "legacy": 7,
+    "masked": 11,
+    "full": 11
+  },
+  "observation_sizes": {
+    "legacy": 21,
+    "masked": 25,
+    "full": 25
+  },
+  "observation_profile": "execution_masked",
+  "execution_modes": {
+    "legacy": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    },
+    "masked": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    },
+    "full": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    }
+  },
+  "feature_mode": {
+    "legacy": "none",
+    "masked": "masked",
+    "full": "full"
+  },
+  "target_kl": null,
+  "feature_contract": {
+    "names": [
+      "overnight_log_return",
+      "intraday_log_return",
+      "overnight_ema_20",
+      "intraday_ema_20"
+    ],
+    "ema_alpha": 0.09523809523809523,
+    "ema_seed": "First observed return pair",
+    "observations_required": 21,
+    "availability": "Current completed bar availability; next-session execution",
+    "price_convention": "Forward-only split continuity; price-only excludes dividends",
+    "gaps": "Reset all feature state at known gaps"
+  },
+  "preprocessing": "Original seven normalization statistics frozen; four extra columns fit expanded training only. Identical bars/ATR/first7 values/eligibility across all arms.",
+  "constraints": {
+    "data": "Retained111 training/original26 development only; immutable source and generated lineage pinned; no provider requests or raw test access",
+    "comparison": "Fresh same-seed three-arm runs; full and masked exact initial tensors/RNG; legacy21 versus augmented25 differs in capacity and is a second control, not parameter-matched",
+    "simulation": "Unchanged100k initial equity, whole shares,100% cap,20-session holding, signed four-component action, short-capable, next-session fills, learned stop/target zone and original costs",
+    "learning": "Unchanged native Gaussian recurrent PPO, net-log-equity reward, rollout/batch/epochs/discount/architecture/sampling; target_kl None in every arm. Guard family closed.",
+    "integrity": "Train through2020; repeatedly reused2021-2023 development only;2024-September2026 retired and unopened; training-only preprocessing; purge20",
+    "short_side": "Report positive total AND net short P&L jointly; ex-post declining-stock labels reporting only, never inputs/sampling/selection",
+    "checkpoints": "Selected and actual final post-update required, exact model/report hashes, actual optimizer state/steps and frozen recurrent prediction parity",
+    "failure": "Close fixed session-context family on failed seed11 full selected/final relative or absolute/risk gates. No EMA/window/feature/step/reward grids, confirmation or promotion.",
+    "limitations": "Surviving stocks, revised Yahoo history, non-PIT sectors, correlated/reused development; no independent prospective success or broker orders"
+  },
+  "shared_initialization": {
+    "manifest": "configs/initializations/session_context_v1/manifest.json",
+    "manifest_sha256": "98e0c5160963a3ac88123297eb443517722d4cef3f63ae79cd292ec8d8543241",
+    "group_rule": "legacy uses21-field pinned untrained artifacts; masked/full use same25-field artifact per seed/size; no data or performance selection"
+  },
+  "implementation_status": "Fixed protocol, data preflight and untrained artifacts; dedicated controller/worker/archive/checker integration and actual Colab smokes pending"
+}
