@@ -1,0 +1,58 @@
+{
+  "status": "smoke_failure_before_acceptance",
+  "source_proof": {
+    "source_revision": "d5cadc0552120ea320600d25834bf7cc738fa779",
+    "source_hash": "a156d255ff583184e9adbd930b0b69942c85c57458b23f8e268e325ffbb8d7e7",
+    "source_archive_sha256": "a9e8cc19728cf89ef3722db3ec82843aca0c15cb78290f77755f9b1528b38313",
+    "shared_original_ledger_and_lock_verified": true,
+    "root": "/home/vibe/projects/rl-stocks/.runtime/cash-source",
+    "sessions_allocated": 0
+  },
+  "fleet": "rl-stocks-fleet-37f61438d4d3",
+  "accepted_runs": 0,
+  "cause": "Binary direction log_prob rejected all-zero recurrent minibatch padding during the first optimizer pass. sb3-contrib evaluates padded actions before applying its loss mask.",
+  "correction": "Only all-zero binary evaluate_actions placeholder rows receive a valid dummy direction; sampled/executed actions, distribution support, rollout masks and likelihoods for valid rows remain unchanged.",
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-96b6fb9dbcae": {
+      "status": "stopped",
+      "cleanup_verified": true,
+      "training_verified": false
+    },
+    "rl-stocks-cpu-e08b1b222d70": {
+      "status": "stopped",
+      "cleanup_verified": true,
+      "training_verified": false
+    },
+    "rl-stocks-cpu-732ec98ff64d": {
+      "status": "stopped",
+      "cleanup_verified": true,
+      "training_verified": false
+    },
+    "rl-stocks-cpu-5585d0710d48": {
+      "status": "stopped",
+      "cleanup_verified": true,
+      "training_verified": false
+    }
+  },
+  "project_units": 38.148144854900536,
+  "study_start_units": 38.136658363972735,
+  "attempt_observed_debit": 0.0,
+  "attempt_rate_estimate": 0.011486490927802193,
+  "attempt_charged": 0.011486490927802193,
+  "last_official_usage": {
+    "account_balance": 349.7,
+    "rate": 0,
+    "assignments": 0
+  },
+  "retrieved_failure_archive": {
+    "path": "artifacts/colab/rl-stocks-cpu-732ec98ff64d/artifacts.tar.gz",
+    "bytes": 208950,
+    "sha256": "70762d4d31f309ae2557950e44c0010c75170ad5e091d1dae3f8a67ce0d25784"
+  },
+  "other_artifacts": "Other cells stopped before salvage snapshot became available; no completion or performance claim.",
+  "budget_stopped": false,
+  "test_evaluated": false,
+  "objective_achieved": false,
+  "next_action": "Commit padding fix and no-fit real-buffer regression, export corrected source, use new retry state while retaining failed state and original cumulative ledger/study baseline; repeat fixed four512 smokes before screen."
+}

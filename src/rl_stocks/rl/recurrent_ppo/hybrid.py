@@ -76,6 +76,20 @@ class HybridRecurrentPolicy(RecurrentActorCriticPolicy):
         self.action_dist = DirectionProtectionDistribution(self.cash_enabled)
         super()._build(lr_schedule)
 
+    def evaluate_actions(self, obs, actions, lstm_states, episode_starts):
+        # sb3-contrib zero-pads recurrent minibatches before evaluating them,
+        # then excludes padded rows with its rollout mask. Zero is outside the
+        # binary support. Give only all-zero placeholder rows a valid dummy
+        # direction so their unused likelihood/gradient remains finite. Real
+        # sampled actions and the caller's tensor are unchanged; distribution
+        # log_prob and execution validation still reject real binary cash.
+        if not self.cash_enabled:
+            padding = (actions == 0).all(dim=-1)
+            if bool(padding.any()):
+                actions = actions.clone()
+                actions[padding, 0] = -1
+        return super().evaluate_actions(obs, actions, lstm_states, episode_starts)
+
     def _get_constructor_parameters(self):
         data = super()._get_constructor_parameters()
         data['cash_enabled'] = self.cash_enabled

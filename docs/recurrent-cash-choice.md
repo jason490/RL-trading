@@ -127,3 +127,21 @@ equality is expected because their training execution differs.
 Last verified project charge remains38.136658/150 and last account349.71 with
 zero assignments/rate. New usage must be checked before provisioning; the original
 shared ledger, account150/170 and project150/130 rules remain authoritative.
+
+## Initial smoke failure and correction
+
+The first four512 CPU attempt failed before acceptance: the binary policy
+rejected all-zero recurrent padding when sb3-contrib evaluated minibatches before
+masking their losses. This is a compatibility bug, not a failed performance gate.
+Only all-zero binary evaluation placeholders now receive a valid dummy direction;
+valid actions and strict binary distribution/execution support remain unchanged.
+A real recurrent-buffer regression exercises unequal sequence lengths, padded
+likelihoods, masks and finite gradients without local fitting or optimizer steps.
+
+All four owned sessions stopped and verified; one failure archive retained with
+checksums, others had no salvage snapshot. No accepted model/performance claim.
+Project38.14814485, attempt conservatively0.01148649; rounded observed debit0,
+official account349.70 zero rate/assignments. Original failed state, ledger, source
+and four-unit study baseline retained. Corrected source needs a new export/retry
+state and repeated four512 smokes before screen.
+[Failure evidence](../results/recurrent-cash-2026-10-22/README.md).

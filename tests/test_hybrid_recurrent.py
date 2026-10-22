@@ -145,3 +145,32 @@ def test_factory_rejects_undeclared_hybrid_policy_configuration():
                       ('hybrid_recurrent_ppo',{'policy_kwargs':{'cash_enabled':1}}),
                       ('recurrent_ppo',{'policy_kwargs':{'cash_enabled':True}})]:
         with pytest.raises(ValueError):resolved_parameters(algo,smoke=True,overrides=over)
+
+
+@pytest.mark.parametrize('cash',[False,True])
+def test_real_recurrent_buffer_padding_has_finite_masked_likelihood_gradients(cash):
+    m=model(cash);buffer=m.rollout_buffer
+    # Unequal episode lengths create real library padding, including artificial
+    # all-zero actions. Build a buffer only; no learn() or optimizer update.
+    for i in range(m.n_steps):
+        buffer.add(np.zeros((1,21),dtype=np.float32),np.array([[-1.,.2,.3,.4]],dtype=np.float32),
+            np.zeros(1),np.array([i in (0,13,44,89)]),torch.zeros(1),torch.zeros(1),
+            lstm_states=m._last_lstm_states)
+    buffer.compute_returns_and_advantage(last_values=torch.zeros(1),dones=np.zeros(1))
+    padded=0
+    for batch in buffer.get(64):
+        original=batch.actions.clone();mask=batch.mask>1e-8
+        padded+=int((~mask).sum())
+        assert torch.all(batch.actions[~mask]==0)
+        values,likelihood,entropy=m.policy.evaluate_actions(batch.observations,batch.actions,
+            batch.lstm_states,batch.episode_starts)
+        assert torch.isfinite(likelihood).all() and torch.isfinite(entropy).all()
+        assert torch.equal(original,batch.actions)
+        loss=(-likelihood[mask].mean()-entropy[mask].mean()+values.flatten()[mask].square().mean())
+        m.policy.zero_grad();loss.backward()
+        assert all(torch.isfinite(p.grad).all() for p in m.policy.parameters() if p.grad is not None)
+    assert padded>0 and m.num_timesteps==0 and not m.policy.optimizer.state
+    if not cash:
+        # Zero direction with real protective outputs is not a padding row.
+        with pytest.raises(ValueError):m.policy.evaluate_actions(torch.zeros((1,21)),
+            torch.tensor([[0.,.2,.3,.4]]),m._last_lstm_states,torch.ones(1))
