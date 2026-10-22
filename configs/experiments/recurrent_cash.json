@@ -1,0 +1,161 @@
+{
+  "market_features": 7,
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "evaluation_every": 10000,
+  "initialization": "standard",
+  "policy_variant": "native",
+  "start_sampling": "stock_etf_cycle_windows",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Same expanded111 dataset in both arms,100k for full symbol transition coverage; fixed budget, not an extension of completed diversity study"
+  },
+  "version": 1,
+  "name": "recurrent-cash-choice-2026-10-22",
+  "hypothesis": "A learned explicit cash category can reduce harmful compulsory exposure. Compare ternary direction against a matched binary categorical control, an aligned Gaussian sign control and the strongest posthoc Gaussian unit control. Distribution and cash availability effects are separate contrasts; no claim that cash caused the prior failure.",
+  "arms": [
+    "posthoc_unit",
+    "gaussian_unit",
+    "categorical_binary",
+    "categorical_cash"
+  ],
+  "candidate": "categorical_cash",
+  "screen_cells": 4,
+  "smoke_steps": 512,
+  "smoke_evaluation_every": 256,
+  "parameters": {
+    "n_steps": 1000,
+    "batch_size": 50,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "recurrent_parameters": {
+    "lstm_hidden_size": 64,
+    "n_lstm_layers": 1,
+    "shared_lstm": false,
+    "enable_critic_lstm": true
+  },
+  "smoke_parameters": {
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "net_arch": [
+      32,
+      32
+    ],
+    "lstm_hidden_size": 32
+  },
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected/final separately reported, actual100k final post-update required",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Close fixed cash-choice family after failed seed11 gates; no extra steps, cash thresholds, entropy/architecture grids or promotion. Preserve all negative results."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "constraints": {
+    "data": "Expanded111-tradable source preserves all original episodes exactly; derived expanded payload replaces only preprocessing with original immutable normalizer and records lineage. Additional85 symbols contribute training only. Original26-symbol development episodes stay exact.",
+    "causality": "Only current completed market data and actual held execution state. Full-period losing-stock labels reporting only, never inputs/sampling/rewards/checkpoint selection",
+    "simulation": "Unchanged four-component actions,100k equity, whole shares, exposure cap1,20-session holding limit, next-session fills, costs and corporate actions",
+    "splits": "Train through2020, repeated development2021-2023 only; never open/evaluate2024-September2026",
+    "short_side": "Reconcile every new run's long/short costs and marked P&L. Report joint positive total return AND positive net short P&L on declining stocks; never loss reduction alone",
+    "limitations": "Survivor stocks, revised Yahoo history, correlated development episodes; no live/paper broker orders",
+    "checkpoint_identity": "Current checkpoint/report/model/settings/tensor identities required. Explicit distribution/cash availability metadata and protection/exposure trace support validation, selection and frozen inference. No final-test selection.",
+    "observations": "All arms identical masked21 input contract: seven market, five legacy account fields, nine execution zeros. Actual modified-path portfolio and recurrent state are carried causally.",
+    "initialization": "Binary and ternary share identical seeded tensors, six-output head and three Gaussian deviations. Binary omits cash logit from likelihood/sample support. Gaussian controls share identical initial tensors with one another; cross-family tensor equality is neither possible nor claimed. Record parameter counts and actual hashes.",
+    "memory": "Same separate one-layer64 LSTMs and masked21 inputs. Carry actual recurrent state and reset at episodes. Actual sampled actions/log probabilities, gradient updates, save/load and frozen sequence parity required.",
+    "comparison": "Four fresh100k runs, fixed source/data/sampling/seed/optimizer/rollout. All actual sampling counts must match. Cash contrasts binary; binary contrasts aligned Gaussian; strongest posthoc Gaussian prevents a weak-control promotion. No shared final-weight equality expected because execution paths differ.",
+    "rollout": "1000 rollout transitions, batch50, ten epochs in all screen arms, actual100k steps. Standard library recurrent minibatch sequence boundaries/masks; no BPTT length tuning. Smoke128 rollout, batch64,512 actual steps.",
+    "action": "Output signed exposure is categorical -1/+1 in binary or -1/0/+1 in cash. Learned stop/near/width use independent Gaussian outputs with standard SB3 clipping. Joint categorical plus Gaussian log likelihood and summed entropy; no sign transform of a learned Gaussian direction in hybrid arms. Cash request still follows normal next-session and protective preemption rules; no immediate-fill promise."
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only, actual default Python checked before dependency sync",
+    "initial_concurrency": 4,
+    "preflight": "Four512 Colab CPU smokes after protocol/integration checks. Verify actual hybrid direction support, voluntary sampled cash, finite categorical/protection losses and changed weights, matched within-family initialization and all-arm sampling, selected/final checkpoint identities and frozen action/state parity. Only then fixed four100k seed11 screen.",
+    "max_study_incremental_units": 4.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "runner": "Existing central metered owned fleet, original cumulative ledger, bound downloads, verified shutdown and recovery IDs",
+    "cleanup": "Retain all models/checkpoints/curves; verify publication checksums before removing duplicates; verify every owned session stopped",
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170
+  },
+  "observation_profile": "execution_masked",
+  "arm_contracts": {
+    "posthoc_unit": {
+      "distribution": "gaussian",
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude",
+      "cash_enabled": null
+    },
+    "gaussian_unit": {
+      "distribution": "gaussian",
+      "training": "unit_magnitude",
+      "evaluation": "unit_magnitude",
+      "cash_enabled": null
+    },
+    "categorical_binary": {
+      "distribution": "direction_protection",
+      "training": "unrestricted",
+      "evaluation": "unrestricted",
+      "cash_enabled": false
+    },
+    "categorical_cash": {
+      "distribution": "direction_protection",
+      "training": "unrestricted",
+      "evaluation": "unrestricted",
+      "cash_enabled": true
+    }
+  },
+  "contrasts": {
+    "cash_availability": "categorical_cash minus categorical_binary",
+    "distribution": "categorical_binary minus gaussian_unit",
+    "strong_control": "categorical_cash minus posthoc_unit; candidate must pass against every control"
+  },
+  "implementation_status": "Protocol and distribution/policy construction prepared; job/worker/archive/frozen metadata integration and actual Colab smoke acceptance required before screen. No allocation authorized by a mere builder call."
+}

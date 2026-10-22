@@ -31,6 +31,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Random-forest signal feasibility | [forest-signal.md](forest-signal.md) | Locked tree dependencies, fixed comparison and portable non-pickle tree arrays |
 | Supervised signal feasibility | [supervised-signal.md](supervised-signal.md) | Completed training-only targets, internal chronological probe, frozen preprocessing and gated warm-start research |
 | Numerical performance | [numerical-performance.md](numerical-performance.md) | Saved-weight subnormal counts and isolated forward timing without fitting |
+| Recurrent cash availability | [recurrent-cash-choice.md](recurrent-cash-choice.md) | Fixed cash/binary/Gaussian controls, joint action likelihood and Colab acceptance gates |
 | Recurrent sizing alignment | [recurrent-sizing-alignment.md](recurrent-sizing-alignment.md) | Fresh adaptive/posthoc/aligned execution controls, shared action contracts and frozen prediction |
 | Fixed recurrent sizing replay | [recurrent-sizing.md](recurrent-sizing.md) | Sign-preserving unit exposure, unchanged protections, strict path parity and fixed diagnostic gates |
 | Recurrent execution-state research | [recurrent-execution-state.md](recurrent-execution-state.md) | Fixed masked/full memory comparison, feed-forward control, sequence acceptance and gates |

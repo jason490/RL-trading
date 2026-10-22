@@ -1402,3 +1402,15 @@ action are now distinguished. Consider explicit categorical cash as a separate
 preregistered hypothesis; no causal fix established, no allocation or promotion.
 19 focused tests pass; accepted source hashes unchanged. Project38.136658 retained,
 all owned sessions stopped. [Evidence](../results/alignment-risk-actions-2026-10-22/README.md).
+
+## Recurrent cash-choice protocol and policy construction — 2026-10-22
+
+Separate fixed four-arm hypothesis: explicit categorical short/cash/long versus
+matched binary short/long, aligned Gaussian unit and strongest posthoc Gaussian
+unit control. Candidate must pass relative gates against every control plus
+selected/final stock/ETF/median holding and drawdown targets before11/23/37
+confirmation and prospective evidence. Same data/reward/memory/sampling,100kseed11;
+no rescue of failed alignment family. Hybrid policy/likelihood construction and
+local no-fit checks prepared; dedicated plan/worker/archive/frozen integration and
+actual four512 Colab smokes remain. No allocation; project38.136658 retained.
+[Protocol, implementation and acceptance](recurrent-cash-choice.md).

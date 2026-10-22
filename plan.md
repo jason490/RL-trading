@@ -1387,3 +1387,11 @@ Project38.136658/150, remaining111.863342; study conservative0.12225039 (ledger
 observed debits0.08; rounded account decrease0.09 includes meter delay). Account
 349.71 zero rate/assignments, account150/170 and project150/130 retained. No retired
 test or orders. Overall goal unmet. [Full evidence](results/recurrent-alignment-2026-10-21/README.md).
+
+### Recurrent cash-choice research (2026-10-22)
+
+Fixed four-arm action-distribution/cash-availability protocol and hybrid recurrent
+policy prepared; integration, actual Colab smokes, screen and any gated
+confirmation/prospective comparison remain. No allocation at this milestone.
+See [category guide](docs/recurrent-cash-choice.md). Prior failed alignment remains
+closed; this is a separate hypothesis, not a promoted result.
