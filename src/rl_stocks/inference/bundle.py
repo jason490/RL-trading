@@ -62,6 +62,9 @@ class FrozenPolicy:
         from rl_stocks.rl.ppo.architecture import architecture_spec,validate_loaded_architecture
         self.policy_architecture=self.manifest['metadata'].get('policy_architecture',architecture_spec())
         validate_loaded_architecture(self._model,self.policy_architecture,len(self.manifest['names']))
+        from rl_stocks.rl.registry.distribution import validate_model_distribution
+        self.action_distribution=validate_model_distribution(self._model,
+            self.manifest['metadata'].get('action_distribution'),algorithm)
         self._model.policy.set_training_mode(False)
     def _observation(self,observation):
         import numpy as np

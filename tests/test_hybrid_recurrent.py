@@ -98,3 +98,50 @@ def test_frozen_protocol_and_exact_arm_contracts():
     assert arm_spec('gaussian_unit')['training']=='unit_magnitude'
     for call in (lambda:arm_spec('adaptive'),lambda:overrides('categorical_cash',1)):
         with pytest.raises(ValueError):call()
+
+
+@pytest.mark.parametrize('cash',[False,True])
+def test_factory_and_frozen_distribution_contract(tmp_path,cash):
+    from dataclasses import asdict
+    from test_execution_contract import environment
+    from rl_stocks.rl.registry.factory import create
+    from rl_stocks.rl.registry.distribution import model_distribution,validate_model_distribution
+    from rl_stocks.inference.bundle import freeze,FrozenPolicy
+    env=environment('unrestricted');obs,_=env.reset(seed=11)
+    m=create('hybrid_recurrent_ppo',env,seed=11,smoke=True,
+             overrides={'policy_kwargs':dict(cash_enabled=cash,net_arch=[32,32],lstm_hidden_size=32)})
+    spec=model_distribution(m)
+    assert spec['cash_enabled'] is cash
+    assert validate_model_distribution(m,spec,'hybrid_recurrent_ppo')==spec
+    m.save(tmp_path/'policy')
+    data=dict(schema='fixture',names=env.names,normalizer=asdict(env.normalizer),
+              manifest={'provenance':{'capabilities':{'feed':'fixture'}}})
+    metadata=dict(algorithm='hybrid_recurrent_ppo',action_distribution=spec)
+    bundle=freeze(tmp_path/'policy.zip',data,metadata,tmp_path/'good')
+    frozen=FrozenPolicy(bundle,'fixture','fixture')
+    prior=state=None
+    for i in range(3):
+        action,state=m.predict(obs,state=state,episode_start=np.array([i==0]),deterministic=True)
+        actual,prior=frozen.predict_recurrent(obs,state=prior,episode_start=i==0)
+        assert np.array_equal(actual,action)
+        assert all(np.array_equal(a,b) for a,b in zip(state,prior))
+    # Re-freeze malformed metadata with valid checksums: semantic rejection must
+    # work independently of file hash integrity.
+    bad_specs=[None,dict(spec,cash_enabled=not cash),dict(spec,version=True),dict(spec,extra=1),
+               dict(spec,directions=[-1,False,True] if cash else [-1,True])]
+    for i,bad in enumerate(bad_specs):
+        bad_meta=dict(metadata)
+        if bad is None:bad_meta.pop('action_distribution')
+        else:bad_meta['action_distribution']=bad
+        invalid=freeze(tmp_path/'policy.zip',data,bad_meta,tmp_path/f'bad-{i}')
+        with pytest.raises(ValueError):FrozenPolicy(invalid,'fixture','fixture')
+    with pytest.raises(ValueError):validate_model_distribution(m,spec,'recurrent_ppo')
+    assert m.num_timesteps==0 and not m.policy.optimizer.state
+
+
+def test_factory_rejects_undeclared_hybrid_policy_configuration():
+    from rl_stocks.rl.registry.factory import resolved_parameters
+    for algo,over in [('hybrid_recurrent_ppo',None),
+                      ('hybrid_recurrent_ppo',{'policy_kwargs':{'cash_enabled':1}}),
+                      ('recurrent_ppo',{'policy_kwargs':{'cash_enabled':True}})]:
+        with pytest.raises(ValueError):resolved_parameters(algo,smoke=True,overrides=over)

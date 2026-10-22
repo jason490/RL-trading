@@ -44,7 +44,7 @@ def verify(roots, data_root):
             metadata = json.loads(path.read_text())
             if metadata['status'] != 'complete' or metadata['bundle_id'] in seen:
                 raise ValueError('complete unique runs required')
-            if metadata['algorithm'] not in ('ppo', 'sac', 'td3', 'recurrent_ppo'):
+            if metadata['algorithm'] not in ('ppo', 'sac', 'td3', 'recurrent_ppo', 'hybrid_recurrent_ppo'):
                 raise ValueError('unsupported frozen policy algorithm')
             identity = metadata['dataset']
             if identity not in datasets:
@@ -60,7 +60,10 @@ def verify(roots, data_root):
             selected = CLASSES[metadata['algorithm']].load(path.parent / 'best.zip', device='cpu')
             if checksum(path.parent / 'best.zip') != checksum(bundle / 'model.zip'):
                 raise ValueError('frozen weights differ from selected weights')
-            is_recurrent = metadata['algorithm'] == 'recurrent_ppo'
+            from rl_stocks.rl.registry.prediction import recurrent
+            from rl_stocks.rl.registry.distribution import validate_model_distribution
+            validate_model_distribution(selected,metadata.get('action_distribution'),metadata['algorithm'])
+            is_recurrent = recurrent(selected)
             before = canonical(asdict(frozen.normalizer))
             count, symbols = 0, []
             for episode in dataset['episodes'].values():

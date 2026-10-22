@@ -1414,3 +1414,10 @@ no rescue of failed alignment family. Hybrid policy/likelihood construction and
 local no-fit checks prepared; dedicated plan/worker/archive/frozen integration and
 actual four512 Colab smokes remain. No allocation; project38.136658 retained.
 [Protocol, implementation and acceptance](recurrent-cash-choice.md).
+
+Cash-choice factory/frozen integration: explicit hybrid algorithm and strict
+action-distribution metadata now bind actual policy/cash support to frozen
+loading; semantic corruption rejects despite valid bundle checksums. Native
+legacy compatibility retained.37 focused no-fit checks pass, including branch,
+checkpoint and sequence regressions. Dedicated Colab plans/worker/archive/report
+integration and actual smokes remain; no new credits used.

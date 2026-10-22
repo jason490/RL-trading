@@ -107,6 +107,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     env.reset_sampling_statistics();env.reset_execution_statistics()
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
     initialized=initialize_policy(model,initialization,algorithm)
+    from rl_stocks.rl.registry.distribution import model_distribution
+    action_distribution=model_distribution(model)
     steps=steps if steps is not None else 512 if algorithm in ON_POLICY else 1024
     if steps<=0:raise ValueError("positive training steps required")
     milestones=list(milestones) if milestones is not None else [steps]
@@ -126,6 +128,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "selection_metric":"Equal-weight mean validation net return", "status":"running",
         "paper_eligible":False,"dependency_lock_present":(Path(__file__).resolve().parents[3]/"requirements.lock").exists(),
         "reward_config":{"kind":reward_kind,"scale":reward_scale},"action_execution":action_execution,
+        "action_distribution":action_distribution,
         "initialization":initialized,"observation":env.observation_spec,
         "policy_architecture":architecture_spec(policy_variant,len(dataset["names"])),
         "research_variant":initialized['arm']+('' if start_sampling=='legacy_uniform' else ':'+start_sampling)+('' if observation_profile=='legacy' else ':'+observation_profile)+('' if policy_variant=='native' else ':'+policy_variant)+('' if reward_kind=='net_log_equity' else ':'+reward_kind),

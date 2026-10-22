@@ -1,6 +1,6 @@
 # Recurrent cash availability research
 
-Status: protocol and hybrid distribution/policy prepared; integration and actual
+Status: protocol, hybrid policy, factory and frozen contracts prepared; Colab integration and actual
 Colab training remain. No runtime has been allocated for this study.
 
 ## Evidence and hypothesis
@@ -70,8 +70,14 @@ finite losses and changed weights; matched within-family initialization and
 all-arm sampling; exact selected/final identities; frozen action/hidden/cell/reset
 parity and immutable normalization. Actual Colab Python must match before syncing
 dependencies. Screen integration must bind distribution and cash availability in
-plans, workers, archive verification, metadata and frozen loading. It is not yet
-implemented; the existing research runner does not select this policy.
+plans, workers, archive verification, metadata and frozen loading. Dedicated Colab study integration is not yet implemented. The shared training
+factory now supports `hybrid_recurrent_ppo` with explicit boolean `cash_enabled`
+in policy kwargs; missing/ambiguous settings reject. Training metadata records
+`action_distribution`. Frozen loading verifies this against the actual policy,
+algorithm, categorical support and head/deviation shapes. Missing hybrid metadata,
+wrong cash availability and malformed schemas reject even with valid checksums.
+Historical native bundles retain their established compatibility. The saved-run
+frozen verifier recognizes the hybrid recurrent algorithm and carries its state.
 
 Use the original centralized fleet ledger, one-minute metering,7200-second session
 deadlines and a4-unit incremental study allowance including setup/idle/retrieval/
@@ -88,3 +94,8 @@ parameter ownership, actual recurrent forward/evaluate likelihood agreement and
 save/load action/state parity. Backpropagation tests inspect derivatives only;
 no local optimizer updates or model fitting occur. Actual Colab smoke updates
 remain mandatory before any performance claim.
+
+Factory/frozen integration:37 focused checks pass, including existing native/branch
+architecture, checkpoint identity and sequence-verifier regressions. Both hybrid
+variants have exact untrained frozen recurrent action/state parity. No optimizer
+updates occurred; actual Colab smoke acceptance remains outstanding.
