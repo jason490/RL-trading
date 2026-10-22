@@ -1,7 +1,7 @@
 # Recurrent cash availability research
 
-Status: protocol, hybrid policy, factory and frozen contracts prepared; Colab integration and actual
-Colab training remain. No runtime has been allocated for this study.
+Status: protocol, hybrid policy, factory and frozen contracts prepared; Colab study integration prepared; actual
+Colab smoke acceptance and training remain. No runtime has been allocated for this study.
 
 ## Evidence and hypothesis
 
@@ -70,7 +70,9 @@ finite losses and changed weights; matched within-family initialization and
 all-arm sampling; exact selected/final identities; frozen action/hidden/cell/reset
 parity and immutable normalization. Actual Colab Python must match before syncing
 dependencies. Screen integration must bind distribution and cash availability in
-plans, workers, archive verification, metadata and frozen loading. Dedicated Colab study integration is not yet implemented. The shared training
+plans, workers, archive verification, metadata and frozen loading. Version24
+implements these bindings with actual saved optimizer/parameter-count records,
+execution counters and mandatory checkpoint identities. The shared training
 factory now supports `hybrid_recurrent_ppo` with explicit boolean `cash_enabled`
 in policy kwargs; missing/ambiguous settings reject. Training metadata records
 `action_distribution`. Frozen loading verifies this against the actual policy,
@@ -99,3 +101,29 @@ Factory/frozen integration:37 focused checks pass, including existing native/bra
 architecture, checkpoint identity and sequence-verifier regressions. Both hybrid
 variants have exact untrained frozen recurrent action/state parity. No optimizer
 updates occurred; actual Colab smoke acceptance remains outstanding.
+
+## Integrated preflight
+
+Version24 builders/worker/fleet/archive integration, smoke acceptance and restored
+screen reporting are prepared.96 focused checks pass, including malformed cash
+counters/support, optimizer update evidence, paired initialization, mandatory
+checkpoints, account floor, shared metering and cleanup regressions. All four
+actual immutable smoke payloads pass validation; scripts compile. No local fit
+or runtime allocation occurred. `plan.html` is unchanged.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_cash_jobs.py \
+ --smoke --output .runtime/cash-smoke-jobs.json
+```
+
+Freeze clean pushed source and inspect official account usage before allocation.
+Four512 CPU smokes require312 exact frozen sequence predictions, actual updates
+and sampled cash/binary support, paired initial tensors, identical sampling and
+verified shutdown. `accept_cash_smokes.py` restores selected/final models;
+`report_cash.py` also checks full source-bar/accounting/matched-holding paths and
+requires gates against all three controls. No Gaussian/hybrid final-weight
+equality is expected because their training execution differs.
+
+Last verified project charge remains38.136658/150 and last account349.71 with
+zero assignments/rate. New usage must be checked before provisioning; the original
+shared ledger, account150/170 and project150/130 rules remain authoritative.

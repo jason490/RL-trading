@@ -143,6 +143,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.recurrent_alignment import PROTOCOL_SHA256 as ALIGNMENT_PROTOCOL
     if study_protocol_sha256==ALIGNMENT_PROTOCOL:
         metadata['alignment_initialization']=recurrent_record(model)
+    from rl_stocks.training.recurrent_cash import PROTOCOL_SHA256 as CASH_PROTOCOL,model_record as cash_record
+    if study_protocol_sha256==CASH_PROTOCOL:
+        metadata['cash_initialization']=cash_record(model)
     if algorithm=='td3':
         from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record
         if study_protocol_sha256==TD3_PROTOCOL:metadata['td3_initialization']=td3_initialization_record(model)
@@ -199,6 +202,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==ALIGNMENT_PROTOCOL:
             metadata['alignment_final']=recurrent_record(model)
             metadata['alignment_selected']=recurrent_record(selected)
+        if study_protocol_sha256==CASH_PROTOCOL:
+            metadata['cash_final']=cash_record(model)
+            metadata['cash_selected']=cash_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

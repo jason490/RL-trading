@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==23:
+    if plan.get('version')==24:
+        try:expected=cash_plan(**plan['cash_study'])
+        except (KeyError,TypeError):raise ValueError('malformed cash-choice plan') from None
+        if plan!=expected:raise ValueError('unsupported cash-choice plan')
+    elif plan.get('version')==23:
         try:expected=alignment_plan(**plan['alignment_study'])
         except (KeyError,TypeError):raise ValueError('malformed alignment plan') from None
         if plan!=expected:raise ValueError('unsupported alignment plan')
@@ -405,5 +409,19 @@ def alignment_plan(arm,seed=11,smoke=False):
     plan=recurrent_state_plan('recurrent_masked',seed,smoke);plan.pop('recurrent_state_study')
     plan.update(version=23,alignment_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke),
+        training_exposure_mode=modes(arm)['training_exposure_mode'],evaluation_exposure_mode=modes(arm)['evaluation_exposure_mode'])
+    return plan
+
+
+def cash_plan(arm,seed=11,smoke=False):
+    from rl_stocks.training.recurrent_cash import protocol,PROTOCOL_SHA256,arm_spec,modes,overrides
+    p=protocol()
+    if arm not in p['arms'] or type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported cash-choice arm/seed/smoke')
+    c=arm_spec(arm)
+    plan=alignment_plan('adaptive',seed,smoke);plan.pop('alignment_study')
+    plan.update(version=24,cash_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256)
+    plan['jobs'][0].update(algorithm='hybrid_recurrent_ppo' if c['distribution']=='direction_protection' else 'recurrent_ppo',
+        study_protocol_sha256=PROTOCOL_SHA256,overrides=overrides(arm,smoke),
         training_exposure_mode=modes(arm)['training_exposure_mode'],evaluation_exposure_mode=modes(arm)['evaluation_exposure_mode'])
     return plan

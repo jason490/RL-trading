@@ -1395,3 +1395,7 @@ policy prepared; integration, actual Colab smokes, screen and any gated
 confirmation/prospective comparison remain. No allocation at this milestone.
 See [category guide](docs/recurrent-cash-choice.md). Prior failed alignment remains
 closed; this is a separate hypothesis, not a promoted result.
+
+Cash-choice integration preflight now passes96 focused no-fit checks and actual
+immutable payload validation. Version24 plans/worker/archive/smoke/report paths
+are implemented; actual Colab smoke acceptance remains before the fixed screen.

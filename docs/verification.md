@@ -1421,3 +1421,12 @@ loading; semantic corruption rejects despite valid bundle checksums. Native
 legacy compatibility retained.37 focused no-fit checks pass, including branch,
 checkpoint and sequence regressions. Dedicated Colab plans/worker/archive/report
 integration and actual smokes remain; no new credits used.
+
+Cash-choice version24 integration complete: fixed four-arm plans/worker/archive,
+actual optimizer/parameter-count records and cash execution counters, mandatory
+checkpoint identities, restored smoke/screen reporters and all-control gates.
+96 focused checks and four actual immutable payload validations pass; scripts
+compile. No fitting/allocation. Freeze clean pushed source, official usage check,
+then four512 CPU smokes requiring312 exact sequence predictions and verified
+cleanup before100k screen. Project38.136658 retained; account150/170 and
+project150/130 remain. [Guide](recurrent-cash-choice.md).
