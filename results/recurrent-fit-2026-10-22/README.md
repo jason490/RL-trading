@@ -32,3 +32,14 @@ No training flag overrides failed development gates or selects/promotes/confirms
 Full derived training JSON/HTML remains in `artifacts/recurrent-fit-2026-10-22/ARM/PHASE/training.{json,html}`. Source models are in the [cash-study release](https://github.com/jason490/RL-trading/releases/tag/recurrent-cash-2026-10-22). Reproduce into new paths with the command in [the category guide](../../docs/training-fit-diagnostic.md).32 focused checks cover explicit panel slicing, future-row/split rejection, memory/reset, execution mapping, optimizer fingerprints and existing contracts.
 
 All12 owned Colab study sessions remain stopped. This replay adds no Colab charge: project38.309006/150; last official account349.56 with zero rate/assignments. Original source/model/failure artifacts and cumulative ledger are retained. No robust/prospective objective achievement.
+
+## Derived charts published
+
+[Diagnostic release](https://github.com/jason490/RL-trading/releases/tag/recurrent-fit-2026-10-22) contains six verified assets: standalone
+interactive group-excess comparison,208 derived equity charts in an archive,
+compact CSV/JSON, fixed protocol and checksums. Models remain in the original
+cash-study release and were not duplicated; raw provider bars/private files
+excluded. All server sizes/digests match. Removed only the duplicate6,722,998-byte
+report archive after verification; all30 retained hashes unchanged, including
+full original derived paths and extracted charts. No additional compute or
+model promotion. [Release checks](release-verification.json), [cleanup](cleanup.json).

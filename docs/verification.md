@@ -1586,3 +1586,5 @@ generalization tradeoff, not pure deterioration on every period; fitted benchmar
 weakness remains and no cause/promotion proven.32 focused checks passed before
 committed protocol6f2e10c and actual replay. All sessions stopped, project38.309006
 retained. [Evidence](../results/recurrent-fit-2026-10-22/README.md).
+
+Recurrent fitted-period charts published: [release](https://github.com/jason490/RL-trading/releases/tag/recurrent-fit-2026-10-22), six server sizes/digests verified,6,722,998 duplicate bytes removed and30 retained hashes unchanged. Original complete paths retained, no model duplication or new Colab charge. [Evidence](../results/recurrent-fit-2026-10-22/README.md).

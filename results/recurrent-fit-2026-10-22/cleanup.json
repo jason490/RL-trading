@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "release_assets_verified": 6,
+  "removed_files": [
+    {
+      "path": "artifacts/recurrent-fit-release/equity-reports.tar.gz",
+      "bytes": 6722998,
+      "sha256": "e69a869a73f6cfb2b039b915fd249e267000dd3936e96057e1398388e679453c"
+    }
+  ],
+  "removed_logical_bytes": 6722998,
+  "retained_file_count": 30,
+  "retained_hashes_unchanged": true,
+  "all_full_derived_paths_retained": true,
+  "models_not_duplicated": true
+}

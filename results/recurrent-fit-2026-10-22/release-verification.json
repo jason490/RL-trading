@@ -1,0 +1,43 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/recurrent-fit-2026-10-22",
+  "asset_count": 6,
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4775798,
+      "digest": "sha256:baec4a4410e72730121d618ba121b254cecc2af4717a039ee252419fa285cd56",
+      "state": "uploaded"
+    },
+    {
+      "name": "equity-reports.tar.gz",
+      "size": 6722998,
+      "digest": "sha256:e69a869a73f6cfb2b039b915fd249e267000dd3936e96057e1398388e679453c",
+      "state": "uploaded"
+    },
+    {
+      "name": "groups.csv",
+      "size": 2845,
+      "digest": "sha256:f4ec1a60b9239d44476560d8694919d90524b95c85050c3f80123c2ea4671a64",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 113014,
+      "digest": "sha256:25967c898f8d42edafad4451ad9f9f39e69a6d205752ab382ec195b4ce77b7e6",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 2393,
+      "digest": "sha256:c27c1991bec41494c7d2186a91079df0184b94db85153ff0d9d34bc3b93a8006",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 406,
+      "digest": "sha256:ad0f23b2062742c607511b154cccb901191818b81b37193f8a688bfa74444245",
+      "state": "uploaded"
+    }
+  ]
+}
