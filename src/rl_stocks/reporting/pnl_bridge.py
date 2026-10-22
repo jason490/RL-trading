@@ -5,6 +5,37 @@ from types import SimpleNamespace
 COMPONENTS=('overnight','inherited_intraday','fill_to_close','dividends','fees','impact','borrow')
 
 
+def overnight_partition(policy, holding, events, initial=100000.):
+    """Partition reconciled overnight differences using only preceding exits.
+
+    Flags describe all prior-session fills, not a causal reason for inventory.
+    Partial target fills count as protection; both flags are retained explicitly.
+    """
+    if not math.isfinite(initial) or initial<=0:raise ValueError('positive initial equity required')
+    rows=policy['rows'];base=holding['rows']
+    if not rows or [r['session'] for r in rows]!=[r['session'] for r in base]:
+        raise ValueError('matched complete bridge sessions required')
+    reasons={r['session']:set() for r in rows}
+    for e in events:
+        if e['time'][:10] not in reasons:raise ValueError('fill outside matched bridge')
+        reasons[e['time'][:10]].add(e['reason'])
+    out={f'{side}/{flag}':dict(sessions=0,policy_pp=0.,holding_pp=0.,excess_pp=0.)
+         for side in ['flat','long','short'] for flag in ['initial','neither','protection','holding','both']}
+    for i,(r,b) in enumerate(zip(rows,base,strict=True)):
+        prior=set() if i==0 else reasons[rows[i-1]['session']]
+        protection=bool(prior & {'stop','target_near','target_far'});limit='holding_limit' in prior
+        flag='initial' if i==0 else 'both' if protection and limit else 'protection' if protection else 'holding' if limit else 'neither'
+        if r['inherited_side'] not in ['flat','long','short']:raise ValueError('known inherited side required')
+        a=r['components']['overnight']*100/initial;v=b['components']['overnight']*100/initial
+        if not math.isfinite(a+v):raise ValueError('finite overnight components required')
+        bucket=out[f"{r['inherited_side']}/{flag}"];bucket['sessions']+=1
+        bucket['policy_pp']+=a;bucket['holding_pp']+=v;bucket['excess_pp']+=a-v
+    expected=policy['components_pp']['overnight']-holding['components_pp']['overnight']
+    if not math.isclose(sum(v['excess_pp'] for v in out.values()),expected,rel_tol=0,abs_tol=1e-8):
+        raise ValueError('overnight partition mismatch')
+    return out
+
+
 def holding_bridge(episode, saved, config):
     """Reconstruct only the declared holding baseline, never a policy or orders."""
     from rl_stocks.environment.accounting.portfolio import Portfolio

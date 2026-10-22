@@ -57,3 +57,16 @@ Overnight differences are substantial, not proof of a holding-rule cause. Next
 fixed partition by inherited side and preceding actual exit reason before any
 intervention. Project38.39201565 unchanged, all sessions stopped.
 [Evidence](../results/guard-bridge-2026-10-22/README.md).
+
+
+## Fixed overnight partition
+
+Partition all four accepted phases by inherited flat/long/short side and the
+preceding session's neither/protection/holding/both exit flags; initial session
+has its own flag. Retain all15 buckets and actual partial-target overlap. No
+current-session events label the preceding overnight move. Report policy and
+holding overnight contributions and their difference, scaled by original equity,
+with equal-symbol stock/ETF means. Counts and component sums must reconcile to
+the original exact bridge. Flags are descriptive associations, never proof that
+removing an exit would reproduce holding.41 focused tests pass before actual
+execution. Run the same script to a new output directory; preserve prior output.

@@ -7,7 +7,7 @@ from rl_stocks.data.generation.datasets import read_dataset
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.evaluation.report_contract import validate_development_report
 from rl_stocks.inference.bundle import checksum
-from rl_stocks.reporting.pnl_bridge import COMPONENTS,bridge,holding_bridge
+from rl_stocks.reporting.pnl_bridge import COMPONENTS,bridge,holding_bridge,overnight_partition
 
 
 def main():
@@ -29,11 +29,14 @@ def main():
                 policy=bridge(episode,result['rows'],result['events'],config.initial_equity)
                 holding=holding_bridge(episode,result['baselines']['buy_hold'],config)
                 records.append(dict(symbol=result['symbol'],sessions=len(policy['rows']),policy=policy,holding=holding,
+                    overnight_partition=overnight_partition(policy,holding,result['events'],config.initial_equity),
                     excess_components_pp={k:policy['components_pp'][k]-holding['components_pp'][k] for k in COMPONENTS}))
             groups={}
             for kind in ['stock','etf']:
                 members=[r for r in records if (r['symbol'] in stocks)==(kind=='stock')]
                 groups[kind]=dict(count=len(members),excess_components_pp={k:mean(v['excess_components_pp'][k] for v in members) for k in COMPONENTS},
+                    overnight_partition={k:{f:mean(v['overnight_partition'][k][f] for v in members) for f in ['sessions','policy_pp','holding_pp','excess_pp']}
+                        for k in members[0]['overnight_partition']},
                     max_session_error=max(v[side]['max_session_error'] for v in members for side in ['policy','holding']))
             # Keep compact component totals, no per-session bar-derived records in Git.
             for r in records:

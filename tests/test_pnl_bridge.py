@@ -60,3 +60,24 @@ def test_holding_bridge_uses_original_initial_equity_and_matches_saved_path():
     assert x['components_pp']['dividends']==pytest.approx(.196)
     saved['rows'][-1]['equity']+=1
     with pytest.raises(ValueError):holding_bridge(e,saved,c)
+
+
+def test_overnight_partition_lags_exit_flags_and_preserves_overlap():
+    from rl_stocks.reporting.pnl_bridge import overnight_partition
+    rows=[dict(session=f'2021-01-0{i+4}',inherited_side=side,components=dict(overnight=v))
+          for i,(side,v) in enumerate([('flat',0.),('long',100.),('flat',0.)])]
+    policy=dict(rows=rows,components_pp=dict(overnight=.1))
+    base=deepcopy(policy)
+    for r in base['rows']:r['components']['overnight']=200.
+    base['components_pp']['overnight']=.6
+    events=[dict(time='2021-01-04T21:00:00Z',reason='target_near'),
+            dict(time='2021-01-04T21:00:00Z',reason='holding_limit'),
+            dict(time='2021-01-05T21:00:00Z',reason='stop')]
+    x=overnight_partition(policy,base,events)
+    assert x['flat/initial']['excess_pp']==pytest.approx(-.2)
+    assert x['long/both']['excess_pp']==pytest.approx(-.1)
+    assert x['flat/protection']['excess_pp']==pytest.approx(-.2)
+    assert sum(v['sessions'] for v in x.values())==3
+    assert sum(v['excess_pp'] for v in x.values())==pytest.approx(-.5)
+    policy['components_pp']['overnight']=1.
+    with pytest.raises(ValueError):overnight_partition(policy,base,events)
