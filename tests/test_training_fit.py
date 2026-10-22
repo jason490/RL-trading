@@ -58,3 +58,52 @@ def test_real_simulation_keeps_train_labels_and_next_session_anchor():
     assert source==before and result['split']=='train'
     assert [r['session'] for r in result['rows']]==['2018-01-02','2020-12-02']
     assert result['metrics']['net_return']==0 and result['directional']['short_net_pnl']==0
+
+
+def test_original_panel_view_excludes_extra_training_symbols_without_loosening_dates():
+    x=data();extra=deepcopy(x['episodes']['train']);extra['symbol']='EXTRA';x['episodes']['extra']=extra
+    before=deepcopy(x)
+    with pytest.raises(ValueError):training_window(x)
+    view=training_window(x,original_panel_only=True)
+    assert set(view['episodes'])=={'train'} and x==before
+    x['episodes']['extra']['bars'][-1]['session']='2024-01-01'
+    with pytest.raises(ValueError):training_window(x,original_panel_only=True)
+    with pytest.raises(ValueError):training_window(data(),original_panel_only=1)
+
+
+def test_recurrent_original_panel_execution_uses_memory_and_keeps_training_labels():
+    from dataclasses import asdict
+    from types import SimpleNamespace
+    import numpy as np
+    from test_core import bar
+    from rl_stocks.evaluation.training_fit import evaluate_common_recurrent_training_window
+    from rl_stocks.environment.execution.simulator import SimulationConfig
+    x=data();x['episodes']['train']['bars']=[asdict(bar(d)) for d in ['2017-12-28','2017-12-29','2018-01-02','2020-12-02','2020-12-03']]
+    x.update(names=['fixture'],normalizer=dict(names=['fixture'],means=[0.],scales=[1.]))
+    class Model:
+        policy=SimpleNamespace(lstm_actor=True)
+        def __init__(self):self.starts=[]
+        def predict(self,obs,*,state,episode_start,deterministic):
+            assert deterministic and np.all(obs[-9:]==0)
+            self.starts.append(bool(episode_start[0]))
+            assert (state is None)==bool(episode_start[0])
+            return np.array([.25,1.,1.,1.]),(np.zeros((1,1,1)),np.zeros((1,1,1)))
+    model=Model();before=deepcopy(x)
+    r=evaluate_common_recurrent_training_window(model,x,SimulationConfig(),'unit_magnitude')['train']
+    assert model.starts==[True,False] and x==before and r['split']=='train'
+    assert r['rows'][0]['raw_action'][0]==1 and r['rows'][0]['policy_action'][0]==.25
+    with pytest.raises(ValueError):evaluate_common_recurrent_training_window(model,x,SimulationConfig(),'short_only')
+
+
+def test_recurrent_fit_protocol_and_full_optimizer_fingerprint():
+    import importlib.util
+    from pathlib import Path
+    from test_optimizer_diagnostic import fixture
+    spec=importlib.util.spec_from_file_location('recurrent_fit',Path(__file__).resolve().parents[1]/'scripts/diagnose_recurrent_fit.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    p=module.protocol()
+    assert p['phases']==['selected','final'] and len(p['arms'])==4
+    assert p['anchor_session']=='2017-12-29' and p['last_session']=='2020-12-02'
+    m=fixture();before=module.optimizer_fingerprint(m)
+    next(iter(m.policy.optimizer.state.values()))['exp_avg'].flatten()[0]=.5
+    assert module.optimizer_fingerprint(m)!=before

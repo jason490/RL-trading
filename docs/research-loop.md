@@ -878,3 +878,10 @@ causal optimizer explanation established.12 helper checks pass; no fit/dataset/
 provider/Colab access, sources unchanged. Fitted-period/generalization diagnosis
 next before any distinct safeguard protocol. Project38.309006 retained, all
 sessions stopped. [Audit](../results/cash-optimizer-2026-10-22/README.md).
+
+Recurrent fitted-period protocol prepared: all four accepted arms × selected/final,
+original26 symbols, fixed2018–2020 common window, frozen normalization/memory and
+execution rules. Explicit original-panel slicing preserves legacy rejection;
+full optimizer fingerprint guards read-only replay. Commit before actual inference,
+no fitting/provider/Colab; descriptive flags never promote failed cash family.
+[Protocol/method](training-fit-diagnostic.md). Actual replay pending.

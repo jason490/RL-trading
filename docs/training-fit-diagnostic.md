@@ -102,3 +102,38 @@ generalization cause is proven and no training outcome selects a checkpoint.
 [Exact results and retained path locations](../results/sac-diversity-fit-2026-10-20/README.md).
 Next consider a separately fixed regularization comparison with fresh matched
 expanded-data control; this is a proposal, not authorization to skip preflight.
+
+## Fixed recurrent selected/final fitted-period comparison
+
+[Protocol](../configs/experiments/recurrent_fit_diagnostic.json) fixes all four
+cash-study arms and both already-selected/final weights. Replay the original26
+symbols only on the established2017-12-29 decision anchor and2018-01-02 through
+2020-12-02 executions. Additional85 training symbols are excluded from the
+comparison, without changing the immutable expanded source or normalization.
+All source training episodes still reject future/misaligned rows before filtering.
+The default legacy training-window behavior remains strict; standard evaluation
+still rejects train. An explicit recurrent diagnostic carries memory, resets per
+symbol, uses masked observations and each accepted arm's execution mode.
+
+The implementation requires committed protocol/source before actual replay. It
+checks original metadata/weights against the retained publication inventory and
+verifies unchanged policy tensors, full Adam state fingerprint, counters,
+normalization and files after inference. Full derived paths stay under ignored
+artifacts, compact group/per-symbol summaries in results. No fitting, optimizer
+step, provider request, new checkpoint selection or Colab allocation.
+
+Use group/median excess against matched holding; periods differ in regimes and
+training windows may not have sampled every eligible bar. The−2pp descriptive
+flags cannot establish capacity/overfit causes or override failed development
+gates. The closed cash family stays closed. Commit verified implementation and
+protocol before invoking:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+ .venv/bin/python scripts/diagnose_recurrent_fit.py \
+ --output results/recurrent-fit-2026-10-22/summary.json \
+ --artifacts artifacts/recurrent-fit-2026-10-22
+```
+
+Actual replay pending at this implementation milestone. Project38.309006
+retained; all owned sessions stopped.

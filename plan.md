@@ -1410,3 +1410,8 @@ Cash-choice publication/cleanup accepted:15 server assets verified,58,832,238
 duplicate bytes removed,249 retained hashes unchanged; strict report reproduces
 byte for byte. All12 owned sessions stopped. Saved behavior/optimizer audit next,
 no family extension or promotion.
+
+Recurrent selected/final fitted-period diagnosis prepared with a fixed common
+2018–2020 window and original26 panel. Commit before eight read-only replays;
+no new training, provider calls or retired-test access. See
+[method](docs/training-fit-diagnostic.md).
