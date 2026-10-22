@@ -61,3 +61,28 @@ and masked/full initialization equality, durable retrieval and verified shutdown
 Official usage/source export/default Python checks precede allocation. No screen
 before smoke acceptance; original study baseline38.39201564833781/2-unit allowance
 and project/account protections remain. No new credits used.
+
+
+## Actual three512 CPU smokes accepted
+
+All three fixed-sourceb1cfa00 smokes completed on Colab defaultPython3.13.16,
+retrieved and verified stopped.234 exact frozen predictions pass, including
+recurrent hidden/cell/reset/repeat parity, immutable normalization and
+schema/feed/nonfinite rejection. Actual selected/final models and optimizers
+restore exactly; each run records40 nominal PPO epochs and80 actual Adam steps.
+Checkpoints, input snapshots, execution/sampling counters and full reports retained.
+
+Masked/full exact initial tensor/RNG/settings equality passes; legacy has the
+separately pinned21-field start. Actual training sampling agrees across all arms.
+The full-arm CLI reply timeout was recovered by the existing completed-export
+probe; no training restart or settings change occurred. No performance selection
+from smokes. The fixed three100kseed11 screen is next, using the same clean
+worker source and original study allowance.
+
+Project38.42515390/150; conservative study increment0.03313825 includes setup,
+idle, transfer and shutdown. Official account349.48, zero assignments/rate. All
+three owned sessions stopped; ledger/account150/170 and project150/130 retained.
+No retired-test access or broker orders.
+
+[Acceptance](smoke-summary.json), [frozen checks](smoke-restoration.json),
+[compute and cleanup](smoke-compute.json).

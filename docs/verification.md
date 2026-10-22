@@ -1774,3 +1774,18 @@ untrained recurrent forwards pass at21/25/25 fields. Shared model evidence and
 study-specific artifact checks are separated by ownership. Source compilation
 passes. Actual remote smokes remain before screen; no allocation/usage yet.
 [Details](session-context.md), [current results index](../results/README.md).
+
+
+## Actual session-context smokes accepted
+
+Three512 Colab CPU runs from cleanb1cfa00/defaultPython3.13.16 completed and
+retrieved; all owned sessions verified stopped.234 exact frozen recurrent
+predictions, normalization/rejection checks, actual selected/final optimizer
+restoration and checkpoint identities pass. Each has80 Adam steps/40 nominal
+epochs. Masked/full initial tensors/RNG/settings match exactly; actual sampling
+agrees across all arms. One CLI reply timeout recovered from completed export,
+without training restart. Fixed same-source three100kseed11 screen next; no
+tuning from smoke returns. Project38.42515390/150, study increment0.03313825;
+official account349.48 zero rate/assignments. Original2-unit study baseline
+38.39201564833781 and all project/account protections retained.
+[Evidence](../results/session-context-2026-10-22/README.md).

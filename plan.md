@@ -1455,3 +1455,8 @@ Session-context fixed numeric protocol/shared untrained initialization prepared;
 Session-context Colab integration and real environment construction pass;76
 focused checks. Actual three512 remote smokes remain before100k screen.
 [Evidence](results/session-context-2026-10-22/README.md). No new usage.
+
+Session-context three512 Colab CPU smokes accepted:234 frozen predictions and
+actual saved models/initialization/sampling pass; all sessions stopped. Same-source
+three100k screen next within original allowance. Project38.42515390/150.
+[Evidence](results/session-context-2026-10-22/README.md).

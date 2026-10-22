@@ -25,7 +25,7 @@ establish stable final or multi-seed performance.
 overnight/intraday price-return decomposition with legacy and masked controls.
 Feature/data preflight, fixed protocol, shared untrained starts and actual
 Gymnasium/SB3 construction checks pass. Dedicated Colab plan/worker/artifact
-integration is implemented and tested; actual remote smokes/training remain.
+integration is implemented and tested; three actual remote smokes now pass; fixed100k screen remains.
 There are no model performance results for this feature yet.
 
 ## Recent diagnostics
