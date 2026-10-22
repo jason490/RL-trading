@@ -1,0 +1,4218 @@
+{
+  "records": [
+    {
+      "arm": "kl_guard",
+      "phase": "selected",
+      "groups": {
+        "stock": {
+          "count": 22,
+          "excess_components_pp": {
+            "overnight": 2.003765101692893,
+            "inherited_intraday": -2.603202267473393,
+            "fill_to_close": 1.6625511484380664,
+            "dividends": -0.22128555790909085,
+            "fees": -0.9928777359230196,
+            "impact": -1.9857555482241225,
+            "borrow": -0.028565381134103385
+          },
+          "max_session_error": 4.865796654485166e-11
+        },
+        "etf": {
+          "count": 4,
+          "excess_components_pp": {
+            "overnight": -1.2071182708740236,
+            "inherited_intraday": 3.2868673095703125,
+            "fill_to_close": -3.916348768632372,
+            "dividends": -0.16450275000000025,
+            "fees": -0.851955612449671,
+            "impact": -1.7039111782578762,
+            "borrow": -0.0033138480958484467
+          },
+          "max_session_error": 2.97859514830634e-11
+        }
+      },
+      "per_symbol": [
+        {
+          "symbol": "AAPL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -40.114711441040036,
+              "inherited_intraday": 95.17755389404297,
+              "fill_to_close": -8.179749093029725,
+              "dividends": 2.09244,
+              "fees": -0.9403685006612355,
+              "impact": -1.8807330337840726,
+              "borrow": 0.0
+            },
+            "net_return_pp": 46.15443182552794,
+            "max_session_error": 2.091837814077735e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -42.167551803588864,
+              "inherited_intraday": 87.8460536956787,
+              "fill_to_close": 1.6429962158203124,
+              "dividends": 2.111875,
+              "fees": -0.009990972747688296,
+              "impact": -0.01997794990539674,
+              "borrow": 0.0
+            },
+            "net_return_pp": 49.40340418525706,
+            "max_session_error": 5.002220859751105e-12
+          },
+          "excess_components_pp": {
+            "overnight": 2.052840362548828,
+            "inherited_intraday": 7.331500198364267,
+            "fill_to_close": -9.822745308850038,
+            "dividends": -0.01943500000000009,
+            "fees": -0.9303775279135471,
+            "impact": -1.860755083878676,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "AMT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -3.7842293853759768,
+              "inherited_intraday": 5.806204727172852,
+              "fill_to_close": -5.96587324230729,
+              "dividends": 7.290890000000001,
+              "fees": -0.8191039438329926,
+              "impact": -1.6382036962802942,
+              "borrow": 0.0
+            },
+            "net_return_pp": 0.8896844593763165,
+            "max_session_error": 2.5920599000528455e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -4.4264722900390625,
+              "inherited_intraday": -0.9897513122558593,
+              "fill_to_close": 0.2678652648925781,
+              "dividends": 7.182279999999999,
+              "fees": -0.009995446467875976,
+              "impact": -0.019986895556640603,
+              "borrow": 0.0
+            },
+            "net_return_pp": 2.003939320573145,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 0.6422429046630858,
+            "inherited_intraday": 6.795956039428711,
+            "fill_to_close": -6.2337385071998686,
+            "dividends": 0.10861000000000232,
+            "fees": -0.8091084973651166,
+            "impact": -1.6182168007236535,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 9.81074875640869,
+              "inherited_intraday": -30.15874095916748,
+              "fill_to_close": 5.124281802017102,
+              "dividends": 0.0,
+              "fees": -0.6985436580075012,
+              "impact": -1.3970834054325247,
+              "borrow": 0.0
+            },
+            "net_return_pp": -17.31933746418176,
+            "max_session_error": 1.864464138634503e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.009491958618163,
+              "inherited_intraday": -26.370698928833008,
+              "fill_to_close": 1.656375,
+              "dividends": 0.0,
+              "fees": -0.009990759718335572,
+              "impact": -0.0199775239318798,
+              "borrow": 0.0
+            },
+            "net_return_pp": -7.7348002538650595,
+            "max_session_error": 2.5011104298755527e-12
+          },
+          "excess_components_pp": {
+            "overnight": -7.198743202209473,
+            "inherited_intraday": -3.7880420303344735,
+            "fill_to_close": 3.4679068020171027,
+            "dividends": 0.0,
+            "fees": -0.6885528982891657,
+            "impact": -1.377105881500645,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "APD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 5.933529556274414,
+              "inherited_intraday": -44.50766731262207,
+              "fill_to_close": 38.841201613318766,
+              "dividends": 5.74859,
+              "fees": -0.9459538092262801,
+              "impact": -1.8919035167750518,
+              "borrow": -0.07779397003900437
+            },
+            "net_return_pp": 3.100002560930748,
+            "max_session_error": 2.4101609596982598e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 5.9442802734375,
+              "inherited_intraday": -10.348770263671875,
+              "fill_to_close": 5.26008544921875,
+              "dividends": 6.59556,
+              "fees": -0.00998089578,
+              "impact": -0.019957800000001726,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.421216763204375,
+            "max_session_error": 5.684341886080801e-13
+          },
+          "excess_components_pp": {
+            "overnight": -0.010750717163086065,
+            "inherited_intraday": -34.158897048950195,
+            "fill_to_close": 33.58111616410002,
+            "dividends": -0.8469699999999998,
+            "fees": -0.9359729134462801,
+            "impact": -1.87194571677505,
+            "borrow": -0.07779397003900437
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 39.12683860206604,
+              "inherited_intraday": -49.12426523590088,
+              "fill_to_close": 17.0665987625689,
+              "dividends": 8.171240000000001,
+              "fees": -1.0366439566614347,
+              "impact": -2.0732837494278913,
+              "borrow": -0.05992954599516732
+            },
+            "net_return_pp": 12.07055487664963,
+            "max_session_error": 2.5693225325085223e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.65658244895935,
+              "inherited_intraday": -38.8945939655304,
+              "fill_to_close": 0.29817050552368163,
+              "dividends": 8.481279999999998,
+              "fees": -0.00999732008948124,
+              "impact": -0.019990642050551597,
+              "borrow": 0.0
+            },
+            "net_return_pp": 9.511451026812612,
+            "max_session_error": 1.864464138634503e-11
+          },
+          "excess_components_pp": {
+            "overnight": -0.5297438468933109,
+            "inherited_intraday": -10.229671270370481,
+            "fill_to_close": 16.76842825704522,
+            "dividends": -0.3100399999999972,
+            "fees": -1.0266466365719535,
+            "impact": -2.0532931073773395,
+            "borrow": -0.05992954599516732
+          }
+        },
+        {
+          "symbol": "CAT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 34.09884434509277,
+              "inherited_intraday": 11.270584426879882,
+              "fill_to_close": -6.905702677266662,
+              "dividends": 7.756329999999998,
+              "fees": -1.0705352026745538,
+              "impact": -2.141066227481837,
+              "borrow": -0.02538958777473086
+            },
+            "net_return_pp": 42.983065076774764,
+            "max_session_error": 3.865352482534945e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 28.552706329345703,
+              "inherited_intraday": 8.40837467956543,
+              "fill_to_close": 1.3389259643554687,
+              "dividends": 7.6589,
+              "fees": -0.009986668304208069,
+              "impact": -0.01996934273986676,
+              "borrow": 0.0
+            },
+            "net_return_pp": 45.92895096222254,
+            "max_session_error": 1.7394086171407253e-11
+          },
+          "excess_components_pp": {
+            "overnight": 5.5461380157470686,
+            "inherited_intraday": 2.862209747314452,
+            "fill_to_close": -8.24462864162213,
+            "dividends": 0.09742999999999835,
+            "fees": -1.0605485343703458,
+            "impact": -2.12109688474197,
+            "borrow": -0.02538958777473086
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 93.45466271209717,
+              "inherited_intraday": -2.3286678924560547,
+              "fill_to_close": 1.8758092552345926,
+              "dividends": 22.70964,
+              "fees": -1.5867149035647619,
+              "impact": -3.173425100753116,
+              "borrow": -0.09559835257030669
+            },
+            "net_return_pp": 110.85570571798749,
+            "max_session_error": 3.774403012357652e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.97445571899414,
+              "inherited_intraday": 27.190951416015626,
+              "fill_to_close": 1.7651924972534179,
+              "dividends": 19.90807,
+              "fees": -0.009995779506424713,
+              "impact": -0.01998756150055051,
+              "borrow": 0.0
+            },
+            "net_return_pp": 87.80868629125622,
+            "max_session_error": 2.091837814077735e-11
+          },
+          "excess_components_pp": {
+            "overnight": 54.48020699310303,
+            "inherited_intraday": -29.51961930847168,
+            "fill_to_close": 0.11061675798117476,
+            "dividends": 2.8015700000000017,
+            "fees": -1.5767191240583371,
+            "impact": -3.1534375392525655,
+            "borrow": -0.09559835257030669
+          }
+        },
+        {
+          "symbol": "DIA",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -0.11917776489257813,
+              "inherited_intraday": 12.561155303955077,
+              "fill_to_close": 6.002398698533005,
+              "dividends": 5.844011,
+              "fees": -0.9483302250983929,
+              "impact": -1.8966563351715915,
+              "borrow": -0.013255392383393787
+            },
+            "net_return_pp": 21.430145284942025,
+            "max_session_error": 2.97859514830634e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 3.31339404296875,
+              "inherited_intraday": 15.275567169189452,
+              "fill_to_close": 0.6322112121582031,
+              "dividends": 5.972895,
+              "fees": -0.009995881534119873,
+              "impact": -0.01998776551513106,
+              "borrow": 0.0
+            },
+            "net_return_pp": 25.164083777267155,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": -3.4325718078613283,
+            "inherited_intraday": -2.714411865234375,
+            "fill_to_close": 5.370187486374802,
+            "dividends": -0.12888400000000022,
+            "fees": -0.938334343564273,
+            "impact": -1.8766685696564605,
+            "borrow": -0.013255392383393787
+          }
+        },
+        {
+          "symbol": "DIS",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 11.25534136199951,
+              "inherited_intraday": -49.836058280944826,
+              "fill_to_close": -2.9370828363746067,
+              "dividends": 0.0,
+              "fees": -0.6853108455785227,
+              "impact": -1.3706200304448466,
+              "borrow": -0.06590782012485322
+            },
+            "net_return_pp": -43.639638451468066,
+            "max_session_error": 2.3931079340400174e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 12.649807548522949,
+              "inherited_intraday": -61.27005754852295,
+              "fill_to_close": 1.2700831146240235,
+              "dividends": 0.0,
+              "fees": -0.009992537934930726,
+              "impact": -0.019981079653920944,
+              "borrow": 0.0
+            },
+            "net_return_pp": -47.38014050296483,
+            "max_session_error": 2.0463630789890885e-12
+          },
+          "excess_components_pp": {
+            "overnight": -1.394466186523438,
+            "inherited_intraday": 11.433999267578123,
+            "fill_to_close": -4.20716595099863,
+            "dividends": 0.0,
+            "fees": -0.675318307643592,
+            "impact": -1.3506389507909256,
+            "borrow": -0.06590782012485322
+          }
+        },
+        {
+          "symbol": "DUK",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 10.846970504760742,
+              "inherited_intraday": -14.71669686126709,
+              "fill_to_close": 2.0015196393780075,
+              "dividends": 13.560609999999997,
+              "fees": -0.9185201484905665,
+              "impact": -1.8370358666367208,
+              "borrow": 0.0
+            },
+            "net_return_pp": 8.93684726774444,
+            "max_session_error": 1.6370904631912708e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 15.837874855041504,
+              "inherited_intraday": -13.021986213684082,
+              "fill_to_close": -0.04452101898193359,
+              "dividends": 13.28922,
+              "fees": -0.009995625827318574,
+              "impact": -0.019987254203790186,
+              "borrow": 0.0
+            },
+            "net_return_pp": 16.03060474234439,
+            "max_session_error": 7.503331289626658e-12
+          },
+          "excess_components_pp": {
+            "overnight": -4.990904350280761,
+            "inherited_intraday": -1.6947106475830083,
+            "fill_to_close": 2.046040658359941,
+            "dividends": 0.2713899999999967,
+            "fees": -0.9085245226632479,
+            "impact": -1.8170486124329306,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -6.563713081359864,
+              "inherited_intraday": 63.623465347290036,
+              "fill_to_close": -7.2906790079570385,
+              "dividends": 0.0,
+              "fees": -0.9897471927176481,
+              "impact": -1.9794905077696987,
+              "borrow": 0.0
+            },
+            "net_return_pp": 46.799835557485814,
+            "max_session_error": 3.2741809263825417e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -2.1267904663085937,
+              "inherited_intraday": 54.893158721923825,
+              "fill_to_close": 0.8669332733154297,
+              "dividends": 0.0,
+              "fees": -0.009998896084968569,
+              "impact": -0.019993793411249614,
+              "borrow": 0.0
+            },
+            "net_return_pp": 53.603308839434426,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": -4.4369226150512695,
+            "inherited_intraday": 8.730306625366211,
+            "fill_to_close": -8.157612281272469,
+            "dividends": 0.0,
+            "fees": -0.9797482966326795,
+            "impact": -1.9594967143584492,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "HD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -26.273245697021483,
+              "inherited_intraday": 48.119059997558594,
+              "fill_to_close": 1.1983500911888652,
+              "dividends": 8.01692,
+              "fees": -1.0212656288136484,
+              "impact": -2.042527063236977,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.997291699675266,
+            "max_session_error": 2.3533175408374518e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -32.786370544433595,
+              "inherited_intraday": 50.81357147216797,
+              "fill_to_close": 1.2881939697265625,
+              "dividends": 8.572799999999999,
+              "fees": -0.009983076355187987,
+              "impact": -0.019962160278316786,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.85824966082744,
+            "max_session_error": 1.1823431123048067e-11
+          },
+          "excess_components_pp": {
+            "overnight": 6.5131248474121115,
+            "inherited_intraday": -2.694511474609378,
+            "fill_to_close": -0.08984387853769737,
+            "dividends": -0.5558799999999984,
+            "fees": -1.0112825524584603,
+            "impact": -2.0225649029586603,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "HON",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 14.51743635559082,
+              "inherited_intraday": -20.78228224182129,
+              "fill_to_close": -1.9460456075379309,
+              "dividends": 5.717059934000001,
+              "fees": -0.80285448200927,
+              "impact": -1.605704839822395,
+              "borrow": 0.0
+            },
+            "net_return_pp": -4.902390881600072,
+            "max_session_error": 2.063416104647331e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.86706530761719,
+              "inherited_intraday": -23.916028442382814,
+              "fill_to_close": 0.7139129638671875,
+              "dividends": 5.745073208000001,
+              "fees": -0.009986170345444337,
+              "impact": -0.01996834702147703,
+              "borrow": 0.0
+            },
+            "net_return_pp": 0.3800685197346443,
+            "max_session_error": 1.3415046851150692e-11
+          },
+          "excess_components_pp": {
+            "overnight": -3.349628952026368,
+            "inherited_intraday": 3.133746200561525,
+            "fill_to_close": -2.6599585714051184,
+            "dividends": -0.028013274000000088,
+            "fees": -0.7928683116638257,
+            "impact": -1.5857364928009179,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "IWM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 26.059238662719725,
+              "inherited_intraday": -34.88632907104492,
+              "fill_to_close": -3.024041973993763,
+              "dividends": 3.1498869999999997,
+              "fees": -0.788952562735164,
+              "impact": -1.5779011013432018,
+              "borrow": 0.0
+            },
+            "net_return_pp": -11.068099046397428,
+            "max_session_error": 1.2505552149377763e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 27.266472396850585,
+              "inherited_intraday": -35.96758334350586,
+              "fill_to_close": 1.757804733276367,
+              "dividends": 3.4349479999999994,
+              "fees": -0.009984749361231079,
+              "impact": -0.019965505621342146,
+              "borrow": 0.0
+            },
+            "net_return_pp": -3.538308468361473,
+            "max_session_error": 9.663381206337363e-12
+          },
+          "excess_components_pp": {
+            "overnight": -1.2072337341308597,
+            "inherited_intraday": 1.0812542724609386,
+            "fill_to_close": -4.78184670727013,
+            "dividends": -0.2850609999999998,
+            "fees": -0.778967813373933,
+            "impact": -1.5579355957218597,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -1.1826810455322265,
+              "inherited_intraday": 20.906641540527342,
+              "fill_to_close": -10.779684751454212,
+              "dividends": 7.2134199999999975,
+              "fees": -0.9350833337103048,
+              "impact": -1.8701625029329247,
+              "borrow": -0.1803921326700846
+            },
+            "net_return_pp": 13.172057774227497,
+            "max_session_error": 2.3533175408374518e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -12.44126252746582,
+              "inherited_intraday": 10.0897472076416,
+              "fill_to_close": 1.3355076599121094,
+              "dividends": 8.52426,
+              "fees": -0.009986371875,
+              "impact": -0.01996875,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.478297218212893,
+            "max_session_error": 1.1027623258996755e-11
+          },
+          "excess_components_pp": {
+            "overnight": 11.258581481933593,
+            "inherited_intraday": 10.816894332885742,
+            "fill_to_close": -12.115192411366321,
+            "dividends": -1.3108400000000024,
+            "fees": -0.9250969618353049,
+            "impact": -1.8501937529329247,
+            "borrow": -0.1803921326700846
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 35.38390663909912,
+              "inherited_intraday": 11.643202186584473,
+              "fill_to_close": 0.28528220270638666,
+              "dividends": 8.2068,
+              "fees": -1.0938400252612275,
+              "impact": -2.187675862140963,
+              "borrow": -0.08957743100847518
+            },
+            "net_return_pp": 52.148097709979346,
+            "max_session_error": 2.2282620193436742e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.53029359436035,
+              "inherited_intraday": 6.783276649475098,
+              "fill_to_close": 0.5273429260253907,
+              "dividends": 8.66915,
+              "fees": -0.00998869816948105,
+              "impact": -0.019973401658624993,
+              "borrow": 0.0
+            },
+            "net_return_pp": 33.48010107003272,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 17.853613044738772,
+            "inherited_intraday": 4.859925537109375,
+            "fill_to_close": -0.24206072331900402,
+            "dividends": -0.4623500000000007,
+            "fees": -1.0838513270917465,
+            "impact": -2.1677024604823383,
+            "borrow": -0.08957743100847518
+          }
+        },
+        {
+          "symbol": "KO",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 33.19285838699341,
+              "inherited_intraday": -20.276130275726317,
+              "fill_to_close": -0.7927769096060849,
+              "dividends": 9.52524,
+              "fees": -0.9538278093355635,
+              "impact": -1.9076513910275343,
+              "borrow": -0.03384954476765224
+            },
+            "net_return_pp": 18.753862456530456,
+            "max_session_error": 3.3651303965598345e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 31.6869221496582,
+              "inherited_intraday": -19.730325355529786,
+              "fill_to_close": -0.28650291442871095,
+              "dividends": 10.0848,
+              "fees": -0.009997029355801391,
+              "impact": -0.019990060699456507,
+              "borrow": 0.0
+            },
+            "net_return_pp": 21.72490678964445,
+            "max_session_error": 1.1709744285326451e-11
+          },
+          "excess_components_pp": {
+            "overnight": 1.5059362373352059,
+            "inherited_intraday": -0.5458049201965309,
+            "fill_to_close": -0.506273995177374,
+            "dividends": -0.5595599999999994,
+            "fees": -0.9438307799797622,
+            "impact": -1.8876613303280778,
+            "borrow": -0.03384954476765224
+          }
+        },
+        {
+          "symbol": "LIN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -26.60019123840332,
+              "inherited_intraday": 78.91494303894044,
+              "fill_to_close": 2.6733836380816607,
+              "dividends": 4.170034999999999,
+              "fees": -1.0069585431527688,
+              "impact": -2.0139130461793053,
+              "borrow": 0.0
+            },
+            "net_return_pp": 56.13729884928671,
+            "max_session_error": 2.589217729109805e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -22.8337431640625,
+              "inherited_intraday": 81.38294079589843,
+              "fill_to_close": 2.060279052734375,
+              "dividends": 4.94506,
+              "fees": -0.009995326570854491,
+              "impact": -0.019986655810546382,
+              "borrow": 0.0
+            },
+            "net_return_pp": 65.5245547021889,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -3.7664480743408184,
+            "inherited_intraday": -2.467997756957999,
+            "fill_to_close": 0.6131045853472856,
+            "dividends": -0.7750250000000012,
+            "fees": -0.9969632165819143,
+            "impact": -1.993926390368759,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 14.308316864013673,
+              "inherited_intraday": 35.62881147766113,
+              "fill_to_close": 2.5418122877318967,
+              "dividends": 2.7848999999999995,
+              "fees": -0.9749283081897692,
+              "impact": -1.9498526378205239,
+              "borrow": 0.0
+            },
+            "net_return_pp": 52.33905968339645,
+            "max_session_error": 2.3646862246096134e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.363941040039066,
+              "inherited_intraday": 35.70066345214844,
+              "fill_to_close": 0.29439971923828123,
+              "dividends": 3.5098000000000007,
+              "fees": -0.009995958539263916,
+              "impact": -0.019987919494626,
+              "borrow": 0.0
+            },
+            "net_return_pp": 77.8388203333919,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -24.055624176025393,
+            "inherited_intraday": -0.07185197448730918,
+            "fill_to_close": 2.2474125684936155,
+            "dividends": -0.7249000000000012,
+            "fees": -0.9649323496505052,
+            "impact": -1.929864718325898,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "NEE",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 32.58285620117187,
+              "inherited_intraday": -68.67591673278808,
+              "fill_to_close": 14.946331760538907,
+              "dividends": 6.929551000000001,
+              "fees": -0.8846021482778271,
+              "impact": -1.7692001273183877,
+              "borrow": 0.0
+            },
+            "net_return_pp": -16.870980046673434,
+            "max_session_error": 1.5575096767861396e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 30.54814205932617,
+              "inherited_intraday": -52.3527998085022,
+              "fill_to_close": 0.3486526336669922,
+              "dividends": 6.855192,
+              "fees": -0.009993789644725798,
+              "impact": -0.019983582572930914,
+              "borrow": 0.0
+            },
+            "net_return_pp": -14.630790487726685,
+            "max_session_error": 1.1596057447604835e-11
+          },
+          "excess_components_pp": {
+            "overnight": 2.0347141418457007,
+            "inherited_intraday": -16.323116924285884,
+            "fill_to_close": 14.597679126871915,
+            "dividends": 0.07435900000000117,
+            "fees": -0.8746083586331014,
+            "impact": -1.7492165447454568,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "PG",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -6.768965377807617,
+              "inherited_intraday": 14.762060211181641,
+              "fill_to_close": 5.913935105288332,
+              "dividends": 7.018646000000001,
+              "fees": -0.9559983286083996,
+              "impact": -1.9119924973631959,
+              "borrow": 0.0
+            },
+            "net_return_pp": 18.05768511269068,
+            "max_session_error": 1.5347723092418164e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -5.075595062255859,
+              "inherited_intraday": 15.805280364990235,
+              "fill_to_close": 0.5140338134765625,
+              "dividends": 7.780103999999998,
+              "fees": -0.009992474492984618,
+              "impact": -0.019980952795404162,
+              "borrow": 0.0
+            },
+            "net_return_pp": 18.993849688922527,
+            "max_session_error": 1.2278178473934531e-11
+          },
+          "excess_components_pp": {
+            "overnight": -1.6933703155517579,
+            "inherited_intraday": -1.0432201538085941,
+            "fill_to_close": 5.399901291811769,
+            "dividends": -0.7614579999999966,
+            "fees": -0.946005854115415,
+            "impact": -1.8920115445677916,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "PLD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 38.605442512512205,
+              "inherited_intraday": -33.16442662811279,
+              "fill_to_close": 8.39039472851305,
+              "dividends": 8.5876,
+              "fees": -1.00762013003229,
+              "impact": -2.015236041427185,
+              "borrow": 0.0
+            },
+            "net_return_pp": 19.396154441453128,
+            "max_session_error": 2.4556356947869062e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 44.5732839050293,
+              "inherited_intraday": -25.102426124572755,
+              "fill_to_close": 0.041560951232910155,
+              "dividends": 8.613310000000002,
+              "fees": -0.009991983155570525,
+              "impact": -0.019979970317072982,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.095756778216806,
+            "max_session_error": 2.2168933355715126e-11
+          },
+          "excess_components_pp": {
+            "overnight": -5.967841392517094,
+            "inherited_intraday": -8.062000503540037,
+            "fill_to_close": 8.34883377728014,
+            "dividends": -0.025710000000001898,
+            "fees": -0.9976281468767195,
+            "impact": -1.9952560711101122,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 2.4625376892089843,
+              "inherited_intraday": 30.161494873046873,
+              "fill_to_close": -6.797633690673972,
+              "dividends": 1.509675,
+              "fees": -0.8186344127293598,
+              "impact": -1.637264865937535,
+              "borrow": 0.0
+            },
+            "net_return_pp": 24.880174592915026,
+            "max_session_error": 1.5688783605583012e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 1.52274462890625,
+              "inherited_intraday": 23.41553576660156,
+              "fill_to_close": 1.1566724853515624,
+              "dividends": 1.731456,
+              "fees": -0.009990593996110839,
+              "impact": -0.01997719255370407,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.796441094309564,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 0.9397930603027342,
+            "inherited_intraday": 6.745959106445312,
+            "fill_to_close": -7.9543061760255345,
+            "dividends": -0.221781,
+            "fees": -0.808643818733249,
+            "impact": -1.617287673383831,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 1.863290740966797,
+              "inherited_intraday": 28.09688836669922,
+              "fill_to_close": -7.424104970577375,
+              "dividends": 4.520217,
+              "fees": -0.8918539793946674,
+              "impact": -1.783703894600168,
+              "borrow": 0.0
+            },
+            "net_return_pp": 24.380733263093912,
+            "max_session_error": 1.340083599643549e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 2.9917513427734375,
+              "inherited_intraday": 20.062220642089844,
+              "fill_to_close": 0.87532470703125,
+              "dividends": 4.542502000000001,
+              "fees": -0.009977505267438356,
+              "impact": -0.019951020330814515,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.44187016629629,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": -1.1284606018066405,
+            "inherited_intraday": 8.034667724609374,
+            "fill_to_close": -8.299429677608625,
+            "dividends": -0.022285000000001,
+            "fees": -0.881876474127229,
+            "impact": -1.7637528742693536,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "UNH",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 47.40522573852539,
+              "inherited_intraday": 14.371947845458985,
+              "fill_to_close": -0.6032266073309334,
+              "dividends": 4.57796,
+              "fees": -1.1261540573142097,
+              "impact": -2.2523073101225966,
+              "borrow": 0.0
+            },
+            "net_return_pp": 62.3734456092166,
+            "max_session_error": 4.172306944383308e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.72818249511719,
+              "inherited_intraday": 19.8084326171875,
+              "fill_to_close": -1.112544189453125,
+              "dividends": 4.979260000000001,
+              "fees": -0.009974528576638183,
+              "impact": -0.01994506813964165,
+              "borrow": 0.0
+            },
+            "net_return_pp": 63.373411326135276,
+            "max_session_error": 2.3305801732931286e-11
+          },
+          "excess_components_pp": {
+            "overnight": 7.6770432434082,
+            "inherited_intraday": -5.436484771728514,
+            "fill_to_close": 0.5093175821221916,
+            "dividends": -0.4013000000000009,
+            "fees": -1.1161795287375715,
+            "impact": -2.2323622419829547,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 6.796622665405273,
+              "inherited_intraday": 129.441507976532,
+              "fill_to_close": 5.1307275994232695,
+              "dividends": 24.16992,
+              "fees": -1.6085431188795016,
+              "impact": -3.2170814705675004,
+              "borrow": 0.0
+            },
+            "net_return_pp": 160.71315365191361,
+            "max_session_error": 3.956301952712238e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 14.883787872314453,
+              "inherited_intraday": 126.64056702423096,
+              "fill_to_close": 3.9657396354675294,
+              "dividends": 25.61008,
+              "fees": -0.009997575151660538,
+              "impact": -0.019991152072900517,
+              "borrow": 0.0
+            },
+            "net_return_pp": 171.07018580478837,
+            "max_session_error": 4.865796654485166e-11
+          },
+          "excess_components_pp": {
+            "overnight": -8.08716520690918,
+            "inherited_intraday": 2.8009409523010333,
+            "fill_to_close": 1.1649879639557401,
+            "dividends": -1.4401599999999988,
+            "fees": -1.598545543727841,
+            "impact": -3.1970903184946,
+            "borrow": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "arm": "kl_guard",
+      "phase": "final",
+      "groups": {
+        "stock": {
+          "count": 22,
+          "excess_components_pp": {
+            "overnight": -1.4254886564774947,
+            "inherited_intraday": -0.03697044060446963,
+            "fill_to_close": -0.2246757838335922,
+            "dividends": -0.31703162604545465,
+            "fees": -0.9332116071422492,
+            "impact": -1.8664230389977048,
+            "borrow": -0.04558813960400494
+          },
+          "max_session_error": 4.865796654485166e-11
+        },
+        "etf": {
+          "count": 4,
+          "excess_components_pp": {
+            "overnight": -7.635135940551757,
+            "inherited_intraday": -1.2039559440612795,
+            "fill_to_close": -1.5044107505355773,
+            "dividends": -0.48412600000000006,
+            "fees": -0.8094861075385289,
+            "impact": -1.6189721793418796,
+            "borrow": -0.09800620110557193
+          },
+          "max_session_error": 2.637534635141492e-11
+        }
+      },
+      "per_symbol": [
+        {
+          "symbol": "AAPL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -41.851475860595706,
+              "inherited_intraday": 90.24319438171386,
+              "fill_to_close": -4.793822700500488,
+              "dividends": 2.0692199999999996,
+              "fees": -0.853544042770001,
+              "impact": -1.7070841081617354,
+              "borrow": 0.0
+            },
+            "net_return_pp": 43.106487669685876,
+            "max_session_error": 2.319211489520967e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -42.167551803588864,
+              "inherited_intraday": 87.8460536956787,
+              "fill_to_close": 1.6429962158203124,
+              "dividends": 2.111875,
+              "fees": -0.009990972747688296,
+              "impact": -0.01997794990539674,
+              "borrow": 0.0
+            },
+            "net_return_pp": 49.40340418525706,
+            "max_session_error": 5.002220859751105e-12
+          },
+          "excess_components_pp": {
+            "overnight": 0.3160759429931588,
+            "inherited_intraday": 2.397140686035158,
+            "fill_to_close": -6.436818916320801,
+            "dividends": -0.04265500000000033,
+            "fees": -0.8435530700223126,
+            "impact": -1.6871061582563387,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "AMT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -3.848684310913086,
+              "inherited_intraday": -2.1533553466796875,
+              "fill_to_close": 0.7940428161621094,
+              "dividends": 7.154230000000001,
+              "fees": -0.809296693663555,
+              "impact": -1.618589203835836,
+              "borrow": -0.013718713833036878
+            },
+            "net_return_pp": -0.4953714527630826,
+            "max_session_error": 1.3415046851150692e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -4.4264722900390625,
+              "inherited_intraday": -0.9897513122558593,
+              "fill_to_close": 0.2678652648925781,
+              "dividends": 7.182279999999999,
+              "fees": -0.009995446467875976,
+              "impact": -0.019986895556640603,
+              "borrow": 0.0
+            },
+            "net_return_pp": 2.003939320573145,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 0.5777879791259766,
+            "inherited_intraday": -1.163604034423828,
+            "fill_to_close": 0.5261775512695313,
+            "dividends": -0.028049999999997688,
+            "fees": -0.799301247195679,
+            "impact": -1.5986023082791954,
+            "borrow": -0.013718713833036878
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 8.270108688354492,
+              "inherited_intraday": -26.37933275604248,
+              "fill_to_close": 1.796071804090751,
+              "dividends": 0.0,
+              "fees": -0.6145473361621858,
+              "impact": -1.2290907473821588,
+              "borrow": 0.0
+            },
+            "net_return_pp": -18.15679034714155,
+            "max_session_error": 1.4097167877480388e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.009491958618163,
+              "inherited_intraday": -26.370698928833008,
+              "fill_to_close": 1.656375,
+              "dividends": 0.0,
+              "fees": -0.009990759718335572,
+              "impact": -0.0199775239318798,
+              "borrow": 0.0
+            },
+            "net_return_pp": -7.7348002538650595,
+            "max_session_error": 2.5011104298755527e-12
+          },
+          "excess_components_pp": {
+            "overnight": -8.739383270263671,
+            "inherited_intraday": -0.008633827209472145,
+            "fill_to_close": 0.13969680409075114,
+            "dividends": 0.0,
+            "fees": -0.6045565764438503,
+            "impact": -1.209113223450279,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "APD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 4.133453659057617,
+              "inherited_intraday": -14.621877258300781,
+              "fill_to_close": 6.976899361938878,
+              "dividends": 5.66991,
+              "fees": -0.8103748922730483,
+              "impact": -1.620745661589044,
+              "borrow": -0.05881420029413133
+            },
+            "net_return_pp": -0.3315489914605285,
+            "max_session_error": 1.4097167877480388e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 5.9442802734375,
+              "inherited_intraday": -10.348770263671875,
+              "fill_to_close": 5.26008544921875,
+              "dividends": 6.59556,
+              "fees": -0.00998089578,
+              "impact": -0.019957800000001726,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.421216763204375,
+            "max_session_error": 5.684341886080801e-13
+          },
+          "excess_components_pp": {
+            "overnight": -1.8108266143798835,
+            "inherited_intraday": -4.273106994628906,
+            "fill_to_close": 1.716813912720128,
+            "dividends": -0.9256500000000001,
+            "fees": -0.8003939964930482,
+            "impact": -1.6007878615890423,
+            "borrow": -0.05881420029413133
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 41.605155920028686,
+              "inherited_intraday": -26.38109432029724,
+              "fill_to_close": -5.4233843936961454,
+              "dividends": 8.246439999999998,
+              "fees": -0.9379739634866585,
+              "impact": -1.8759437491589832,
+              "borrow": -0.07250953673067546
+            },
+            "net_return_pp": 15.16068995665898,
+            "max_session_error": 2.3646862246096134e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.65658244895935,
+              "inherited_intraday": -38.8945939655304,
+              "fill_to_close": 0.29817050552368163,
+              "dividends": 8.481279999999998,
+              "fees": -0.00999732008948124,
+              "impact": -0.019990642050551597,
+              "borrow": 0.0
+            },
+            "net_return_pp": 9.511451026812612,
+            "max_session_error": 1.864464138634503e-11
+          },
+          "excess_components_pp": {
+            "overnight": 1.9485734710693379,
+            "inherited_intraday": 12.513499645233157,
+            "fill_to_close": -5.721554899219827,
+            "dividends": -0.23484000000000016,
+            "fees": -0.9279766433971772,
+            "impact": -1.8559531071084316,
+            "borrow": -0.07250953673067546
+          }
+        },
+        {
+          "symbol": "CAT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 36.348976486206055,
+              "inherited_intraday": 28.968981689453123,
+              "fill_to_close": -10.570169939524904,
+              "dividends": 8.300370000000001,
+              "fees": -1.072806125397842,
+              "impact": -2.1456080523613714,
+              "borrow": -0.07022446359180268
+            },
+            "net_return_pp": 59.75951959478325,
+            "max_session_error": 2.2509993868879974e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 28.552706329345703,
+              "inherited_intraday": 8.40837467956543,
+              "fill_to_close": 1.3389259643554687,
+              "dividends": 7.6589,
+              "fees": -0.009986668304208069,
+              "impact": -0.01996934273986676,
+              "borrow": 0.0
+            },
+            "net_return_pp": 45.92895096222254,
+            "max_session_error": 1.7394086171407253e-11
+          },
+          "excess_components_pp": {
+            "overnight": 7.796270156860352,
+            "inherited_intraday": 20.560607009887693,
+            "fill_to_close": -11.909095903880372,
+            "dividends": 0.6414700000000009,
+            "fees": -1.062819457093634,
+            "impact": -2.1256387096215046,
+            "borrow": -0.07022446359180268
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 43.38527130126953,
+              "inherited_intraday": 25.406876678466798,
+              "fill_to_close": -14.263029705071183,
+              "dividends": 18.23079,
+              "fees": -1.2397947756841026,
+              "impact": -2.479584977588364,
+              "borrow": -0.04431415707724434
+            },
+            "net_return_pp": 68.99621436431558,
+            "max_session_error": 2.637534635141492e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.97445571899414,
+              "inherited_intraday": 27.190951416015626,
+              "fill_to_close": 1.7651924972534179,
+              "dividends": 19.90807,
+              "fees": -0.009995779506424713,
+              "impact": -0.01998756150055051,
+              "borrow": 0.0
+            },
+            "net_return_pp": 87.80868629125622,
+            "max_session_error": 2.091837814077735e-11
+          },
+          "excess_components_pp": {
+            "overnight": 4.41081558227539,
+            "inherited_intraday": -1.7840747375488277,
+            "fill_to_close": -16.0282222023246,
+            "dividends": -1.6772799999999997,
+            "fees": -1.2297989961776779,
+            "impact": -2.4595974160878136,
+            "borrow": -0.04431415707724434
+          }
+        },
+        {
+          "symbol": "DIA",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -10.4232255859375,
+              "inherited_intraday": 6.205647583007813,
+              "fill_to_close": 4.764966327081323,
+              "dividends": 5.061125000000001,
+              "fees": -0.8635633814227349,
+              "impact": -1.727122680740842,
+              "borrow": -0.23306887464614137
+            },
+            "net_return_pp": 2.7847583873418458,
+            "max_session_error": 1.864464138634503e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 3.31339404296875,
+              "inherited_intraday": 15.275567169189452,
+              "fill_to_close": 0.6322112121582031,
+              "dividends": 5.972895,
+              "fees": -0.009995881534119873,
+              "impact": -0.01998776551513106,
+              "borrow": 0.0
+            },
+            "net_return_pp": 25.164083777267155,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": -13.73661962890625,
+            "inherited_intraday": -9.06991958618164,
+            "fill_to_close": 4.13275511492312,
+            "dividends": -0.9117699999999989,
+            "fees": -0.853567499888615,
+            "impact": -1.707134915225711,
+            "borrow": -0.23306887464614137
+          }
+        },
+        {
+          "symbol": "DIS",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 9.176672523498535,
+              "inherited_intraday": -58.1422375869751,
+              "fill_to_close": 11.394403679251294,
+              "dividends": 0.0,
+              "fees": -0.753587417077165,
+              "impact": -1.5071709324903897,
+              "borrow": -0.1029098622331165
+            },
+            "net_return_pp": -39.93482959602594,
+            "max_session_error": 2.4982682589325123e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 12.649807548522949,
+              "inherited_intraday": -61.27005754852295,
+              "fill_to_close": 1.2700831146240235,
+              "dividends": 0.0,
+              "fees": -0.009992537934930726,
+              "impact": -0.019981079653920944,
+              "borrow": 0.0
+            },
+            "net_return_pp": -47.38014050296483,
+            "max_session_error": 2.0463630789890885e-12
+          },
+          "excess_components_pp": {
+            "overnight": -3.4731350250244137,
+            "inherited_intraday": 3.12781996154785,
+            "fill_to_close": 10.12432056462727,
+            "dividends": 0.0,
+            "fees": -0.7435948791422343,
+            "impact": -1.4871898528364687,
+            "borrow": -0.1029098622331165
+          }
+        },
+        {
+          "symbol": "DUK",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 11.347236389160157,
+              "inherited_intraday": -19.584928131103517,
+              "fill_to_close": 9.083714569960078,
+              "dividends": 12.41374,
+              "fees": -0.8643416860792265,
+              "impact": -1.7286789839416477,
+              "borrow": -0.012635553147452218
+            },
+            "net_return_pp": 10.654106604848511,
+            "max_session_error": 1.830358087318018e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 15.837874855041504,
+              "inherited_intraday": -13.021986213684082,
+              "fill_to_close": -0.04452101898193359,
+              "dividends": 13.28922,
+              "fees": -0.009995625827318574,
+              "impact": -0.019987254203790186,
+              "borrow": 0.0
+            },
+            "net_return_pp": 16.03060474234439,
+            "max_session_error": 7.503331289626658e-12
+          },
+          "excess_components_pp": {
+            "overnight": -4.4906384658813465,
+            "inherited_intraday": -6.562941917419435,
+            "fill_to_close": 9.128235588942012,
+            "dividends": -0.8754799999999996,
+            "fees": -0.8543460602519078,
+            "impact": -1.7086917297378574,
+            "borrow": -0.012635553147452218
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -5.4756175308227535,
+              "inherited_intraday": 55.843129356384274,
+              "fill_to_close": -2.468040354744807,
+              "dividends": 0.0,
+              "fees": -0.96288087733856,
+              "impact": -1.9257578764442238,
+              "borrow": 0.0
+            },
+            "net_return_pp": 45.0108327170341,
+            "max_session_error": 2.5124791136477143e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -2.1267904663085937,
+              "inherited_intraday": 54.893158721923825,
+              "fill_to_close": 0.8669332733154297,
+              "dividends": 0.0,
+              "fees": -0.009998896084968569,
+              "impact": -0.019993793411249614,
+              "borrow": 0.0
+            },
+            "net_return_pp": 53.603308839434426,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": -3.34882706451416,
+            "inherited_intraday": 0.949970634460449,
+            "fill_to_close": -3.334973628060237,
+            "dividends": 0.0,
+            "fees": -0.9528819812535914,
+            "impact": -1.9057640830329743,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "HD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -31.28720864868164,
+              "inherited_intraday": 29.255418823242188,
+              "fill_to_close": 14.712714999313583,
+              "dividends": 8.50159,
+              "fees": -1.0543192131145822,
+              "impact": -2.108634231116128,
+              "borrow": -0.1458396323830741
+            },
+            "net_return_pp": 17.873722097260348,
+            "max_session_error": 2.2737367544323206e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -32.786370544433595,
+              "inherited_intraday": 50.81357147216797,
+              "fill_to_close": 1.2881939697265625,
+              "dividends": 8.572799999999999,
+              "fees": -0.009983076355187987,
+              "impact": -0.019962160278316786,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.85824966082744,
+            "max_session_error": 1.1823431123048067e-11
+          },
+          "excess_components_pp": {
+            "overnight": 1.4991618957519535,
+            "inherited_intraday": -21.558152648925784,
+            "fill_to_close": 13.424521029587021,
+            "dividends": -0.07120999999999889,
+            "fees": -1.0443361367593942,
+            "impact": -2.088672070837811,
+            "borrow": -0.1458396323830741
+          }
+        },
+        {
+          "symbol": "HON",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 16.820242233276367,
+              "inherited_intraday": -23.383129608154295,
+              "fill_to_close": -1.006780777375353,
+              "dividends": 5.324320434999999,
+              "fees": -0.7648248156136713,
+              "impact": -1.52964551718726,
+              "borrow": -0.03373287362234933
+            },
+            "net_return_pp": -4.573550923676628,
+            "max_session_error": 2.3987922759260982e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.86706530761719,
+              "inherited_intraday": -23.916028442382814,
+              "fill_to_close": 0.7139129638671875,
+              "dividends": 5.745073208000001,
+              "fees": -0.009986170345444337,
+              "impact": -0.01996834702147703,
+              "borrow": 0.0
+            },
+            "net_return_pp": 0.3800685197346443,
+            "max_session_error": 1.3415046851150692e-11
+          },
+          "excess_components_pp": {
+            "overnight": -1.0468230743408213,
+            "inherited_intraday": 0.5328988342285186,
+            "fill_to_close": -1.7206937412425405,
+            "dividends": -0.420752773000002,
+            "fees": -0.754838645268227,
+            "impact": -1.509677170165783,
+            "borrow": -0.03373287362234933
+          }
+        },
+        {
+          "symbol": "IWM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 23.604983627319335,
+              "inherited_intraday": -33.530140060424806,
+              "fill_to_close": -4.971085815429688,
+              "dividends": 3.091584999999999,
+              "fees": -0.7480460782064138,
+              "impact": -1.496088125463707,
+              "borrow": -0.04019143201918829
+            },
+            "net_return_pp": -14.088982884224443,
+            "max_session_error": 1.2732925824820995e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 27.266472396850585,
+              "inherited_intraday": -35.96758334350586,
+              "fill_to_close": 1.757804733276367,
+              "dividends": 3.4349479999999994,
+              "fees": -0.009984749361231079,
+              "impact": -0.019965505621342146,
+              "borrow": 0.0
+            },
+            "net_return_pp": -3.538308468361473,
+            "max_session_error": 9.663381206337363e-12
+          },
+          "excess_components_pp": {
+            "overnight": -3.6614887695312497,
+            "inherited_intraday": 2.437443283081052,
+            "fill_to_close": -6.728890548706055,
+            "dividends": -0.34336300000000053,
+            "fees": -0.7380613288451827,
+            "impact": -1.476122619842365,
+            "borrow": -0.04019143201918829
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -8.65117840576172,
+              "inherited_intraday": -10.228557968139649,
+              "fill_to_close": 12.990242799487381,
+              "dividends": 7.83174,
+              "fees": -0.9079568803436607,
+              "impact": -1.8159095658112185,
+              "borrow": -0.07666226461319697
+            },
+            "net_return_pp": -0.858282285182077,
+            "max_session_error": 1.7053025658242404e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -12.44126252746582,
+              "inherited_intraday": 10.0897472076416,
+              "fill_to_close": 1.3355076599121094,
+              "dividends": 8.52426,
+              "fees": -0.009986371875,
+              "impact": -0.01996875,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.478297218212893,
+            "max_session_error": 1.1027623258996755e-11
+          },
+          "excess_components_pp": {
+            "overnight": 3.7900841217041012,
+            "inherited_intraday": -20.318305175781248,
+            "fill_to_close": 11.654735139575273,
+            "dividends": -0.69252,
+            "fees": -0.8979705084686608,
+            "impact": -1.7959408158112184,
+            "borrow": -0.07666226461319697
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 31.60044835662842,
+              "inherited_intraday": 10.085930046081543,
+              "fill_to_close": 0.06735103277905091,
+              "dividends": 9.1985,
+              "fees": -0.9874618285563606,
+              "impact": -1.9749194149510876,
+              "borrow": -0.0895876501428513
+            },
+            "net_return_pp": 47.90026054183869,
+            "max_session_error": 3.456079866737127e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.53029359436035,
+              "inherited_intraday": 6.783276649475098,
+              "fill_to_close": 0.5273429260253907,
+              "dividends": 8.66915,
+              "fees": -0.00998869816948105,
+              "impact": -0.019973401658624993,
+              "borrow": 0.0
+            },
+            "net_return_pp": 33.48010107003272,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 14.070154762268068,
+            "inherited_intraday": 3.3026533966064457,
+            "fill_to_close": -0.45999189324633977,
+            "dividends": 0.5293499999999991,
+            "fees": -0.9774731303868796,
+            "impact": -1.9549460132924625,
+            "borrow": -0.0895876501428513
+          }
+        },
+        {
+          "symbol": "KO",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 30.995062824249267,
+              "inherited_intraday": -30.51785189819336,
+              "fill_to_close": 8.365153396444118,
+              "dividends": 10.373800000000001,
+              "fees": -0.9561516334606374,
+              "impact": -1.9122990085309333,
+              "borrow": -0.08105848083677747
+            },
+            "net_return_pp": 16.266655199671675,
+            "max_session_error": 2.2026824808563106e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 31.6869221496582,
+              "inherited_intraday": -19.730325355529786,
+              "fill_to_close": -0.28650291442871095,
+              "dividends": 10.0848,
+              "fees": -0.009997029355801391,
+              "impact": -0.019990060699456507,
+              "borrow": 0.0
+            },
+            "net_return_pp": 21.72490678964445,
+            "max_session_error": 1.1709744285326451e-11
+          },
+          "excess_components_pp": {
+            "overnight": -0.6918593254089345,
+            "inherited_intraday": -10.787526542663574,
+            "fill_to_close": 8.651656310872829,
+            "dividends": 0.2890000000000015,
+            "fees": -0.946154604104836,
+            "impact": -1.8923089478314767,
+            "borrow": -0.08105848083677747
+          }
+        },
+        {
+          "symbol": "LIN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -28.321975936889647,
+              "inherited_intraday": 73.8435382232666,
+              "fill_to_close": 4.640936309814453,
+              "dividends": 4.307995000000001,
+              "fees": -0.9093315651856299,
+              "impact": -1.8186590792783697,
+              "borrow": -0.04020588149297805
+            },
+            "net_return_pp": 51.70229707023448,
+            "max_session_error": 2.8194335754960775e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -22.8337431640625,
+              "inherited_intraday": 81.38294079589843,
+              "fill_to_close": 2.060279052734375,
+              "dividends": 4.94506,
+              "fees": -0.009995326570854491,
+              "impact": -0.019986655810546382,
+              "borrow": 0.0
+            },
+            "net_return_pp": 65.5245547021889,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -5.488232772827146,
+            "inherited_intraday": -7.539402572631829,
+            "fill_to_close": 2.580657257080078,
+            "dividends": -0.6370649999999989,
+            "fees": -0.8993362386147754,
+            "impact": -1.7986724234678233,
+            "borrow": -0.04020588149297805
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 14.755404968261718,
+              "inherited_intraday": 36.56004295349121,
+              "fill_to_close": -1.1938151550292968,
+              "dividends": 2.76374,
+              "fees": -0.9067196679483306,
+              "impact": -1.8134353388273596,
+              "borrow": 0.0
+            },
+            "net_return_pp": 50.165217759948,
+            "max_session_error": 2.319211489520967e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.363941040039066,
+              "inherited_intraday": 35.70066345214844,
+              "fill_to_close": 0.29439971923828123,
+              "dividends": 3.5098000000000007,
+              "fees": -0.009995958539263916,
+              "impact": -0.019987919494626,
+              "borrow": 0.0
+            },
+            "net_return_pp": 77.8388203333919,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -23.608536071777348,
+            "inherited_intraday": 0.8593795013427723,
+            "fill_to_close": -1.488214874267578,
+            "dividends": -0.7460600000000008,
+            "fees": -0.8967237094090666,
+            "impact": -1.7934474193327337,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "NEE",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 38.04320363235474,
+              "inherited_intraday": -25.068312343597412,
+              "fill_to_close": -17.83345466103975,
+              "dividends": 6.46547,
+              "fees": -0.9162248748509852,
+              "impact": -1.832445607104571,
+              "borrow": -0.09761955155463445
+            },
+            "net_return_pp": -1.2393834057926045,
+            "max_session_error": 2.5067947717616335e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 30.54814205932617,
+              "inherited_intraday": -52.3527998085022,
+              "fill_to_close": 0.3486526336669922,
+              "dividends": 6.855192,
+              "fees": -0.009993789644725798,
+              "impact": -0.019983582572930914,
+              "borrow": 0.0
+            },
+            "net_return_pp": -14.630790487726685,
+            "max_session_error": 1.1596057447604835e-11
+          },
+          "excess_components_pp": {
+            "overnight": 7.495061573028568,
+            "inherited_intraday": 27.284487464904785,
+            "fill_to_close": -18.18210729470674,
+            "dividends": -0.3897219999999999,
+            "fees": -0.9062310852062595,
+            "impact": -1.81246202453164,
+            "borrow": -0.09761955155463445
+          }
+        },
+        {
+          "symbol": "PG",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -7.610373443603516,
+              "inherited_intraday": 5.205163307189942,
+              "fill_to_close": 6.080158811766833,
+              "dividends": 7.754332999999999,
+              "fees": -0.8591786245209044,
+              "impact": -1.7183530483529885,
+              "borrow": -0.04938970002673921
+            },
+            "net_return_pp": 8.802360302452627,
+            "max_session_error": 4.155964461460826e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -5.075595062255859,
+              "inherited_intraday": 15.805280364990235,
+              "fill_to_close": 0.5140338134765625,
+              "dividends": 7.780103999999998,
+              "fees": -0.009992474492984618,
+              "impact": -0.019980952795404162,
+              "borrow": 0.0
+            },
+            "net_return_pp": 18.993849688922527,
+            "max_session_error": 1.2278178473934531e-11
+          },
+          "excess_components_pp": {
+            "overnight": -2.5347783813476568,
+            "inherited_intraday": -10.600117057800293,
+            "fill_to_close": 5.56612499829027,
+            "dividends": -0.025770999999998878,
+            "fees": -0.8491861500279199,
+            "impact": -1.6983720955575843,
+            "borrow": -0.04938970002673921
+          }
+        },
+        {
+          "symbol": "PLD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 34.7264917755127,
+              "inherited_intraday": -24.464836837768555,
+              "fill_to_close": -0.6007955703735351,
+              "dividends": 8.4261,
+              "fees": -0.9306105139267049,
+              "impact": -1.861216807893141,
+              "borrow": 0.0
+            },
+            "net_return_pp": 15.29513204555073,
+            "max_session_error": 2.2808421817899216e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 44.5732839050293,
+              "inherited_intraday": -25.102426124572755,
+              "fill_to_close": 0.041560951232910155,
+              "dividends": 8.613310000000002,
+              "fees": -0.009991983155570525,
+              "impact": -0.019979970317072982,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.095756778216806,
+            "max_session_error": 2.2168933355715126e-11
+          },
+          "excess_components_pp": {
+            "overnight": -9.8467921295166,
+            "inherited_intraday": 0.6375892868042001,
+            "fill_to_close": -0.6423565216064453,
+            "dividends": -0.1872100000000021,
+            "fees": -0.9206185307711344,
+            "impact": -1.8412368375760682,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -3.9706393737792967,
+              "inherited_intraday": 26.767703735351564,
+              "fill_to_close": -3.5368969116210938,
+              "dividends": 1.666427,
+              "fees": -0.761840453560204,
+              "impact": -1.5236769338010772,
+              "borrow": 0.0
+            },
+            "net_return_pp": 18.641077062589883,
+            "max_session_error": 1.3528733688872308e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 1.52274462890625,
+              "inherited_intraday": 23.41553576660156,
+              "fill_to_close": 1.1566724853515624,
+              "dividends": 1.731456,
+              "fees": -0.009990593996110839,
+              "impact": -0.01997719255370407,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.796441094309564,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": -5.493384002685547,
+            "inherited_intraday": 3.3521679687500026,
+            "fill_to_close": -4.693569396972656,
+            "dividends": -0.065029,
+            "fees": -0.7518498595640932,
+            "impact": -1.5036997412473732,
+            "borrow": 0.0
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -4.657300018310547,
+              "inherited_intraday": 18.526705200195313,
+              "fill_to_close": 2.1473865356445314,
+              "dividends": 3.92616,
+              "fees": -0.9044432471236628,
+              "impact": -1.8088824613828838,
+              "borrow": -0.11876449775695802
+            },
+            "net_return_pp": 17.110861511265906,
+            "max_session_error": 2.637534635141492e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 2.9917513427734375,
+              "inherited_intraday": 20.062220642089844,
+              "fill_to_close": 0.87532470703125,
+              "dividends": 4.542502000000001,
+              "fees": -0.009977505267438356,
+              "impact": -0.019951020330814515,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.44187016629629,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": -7.649051361083984,
+            "inherited_intraday": -1.5355154418945318,
+            "fill_to_close": 1.2720618286132814,
+            "dividends": -0.6163420000000008,
+            "fees": -0.8944657418562244,
+            "impact": -1.7889314410520694,
+            "borrow": -0.11876449775695802
+          }
+        },
+        {
+          "symbol": "UNH",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 39.23026058959961,
+              "inherited_intraday": 26.443687377929688,
+              "fill_to_close": -6.732251303740393,
+              "dividends": 4.57587,
+              "fees": -1.046490434093603,
+              "impact": -2.0929768335220333,
+              "borrow": -0.013716549708048502
+            },
+            "net_return_pp": 60.36438284646539,
+            "max_session_error": 2.4783730623312294e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.72818249511719,
+              "inherited_intraday": 19.8084326171875,
+              "fill_to_close": -1.112544189453125,
+              "dividends": 4.979260000000001,
+              "fees": -0.009974528576638183,
+              "impact": -0.01994506813964165,
+              "borrow": 0.0
+            },
+            "net_return_pp": 63.373411326135276,
+            "max_session_error": 2.3305801732931286e-11
+          },
+          "excess_components_pp": {
+            "overnight": -0.497921905517579,
+            "inherited_intraday": 6.635254760742189,
+            "fill_to_close": -5.619707114287268,
+            "dividends": -0.4033900000000008,
+            "fees": -1.0365159055169648,
+            "impact": -2.0730317653823915,
+            "borrow": -0.013716549708048502
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 7.1968060455322265,
+              "inherited_intraday": 131.6217816581726,
+              "fill_to_close": 7.053670223236084,
+              "dividends": 24.533219999999996,
+              "fees": -1.5920453802759114,
+              "impact": -3.1840859762355063,
+              "borrow": 0.0
+            },
+            "net_return_pp": 165.6293465704295,
+            "max_session_error": 4.638422979041934e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 14.883787872314453,
+              "inherited_intraday": 126.64056702423096,
+              "fill_to_close": 3.9657396354675294,
+              "dividends": 25.61008,
+              "fees": -0.009997575151660538,
+              "impact": -0.019991152072900517,
+              "borrow": 0.0
+            },
+            "net_return_pp": 171.07018580478837,
+            "max_session_error": 4.865796654485166e-11
+          },
+          "excess_components_pp": {
+            "overnight": -7.686981826782227,
+            "inherited_intraday": 4.981214633941647,
+            "fill_to_close": 3.087930587768555,
+            "dividends": -1.0768600000000035,
+            "fees": -1.5820478051242508,
+            "impact": -3.1640948241626057,
+            "borrow": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "arm": "control",
+      "phase": "selected",
+      "groups": {
+        "stock": {
+          "count": 22,
+          "excess_components_pp": {
+            "overnight": 6.717892375599254,
+            "inherited_intraday": -2.2042673978805536,
+            "fill_to_close": -7.738360418693955,
+            "dividends": -1.9933920289999998,
+            "fees": -1.5559205854609952,
+            "impact": -3.111841409976923,
+            "borrow": -0.6120424640059987
+          },
+          "max_session_error": 1.0095391189679503e-10
+        },
+        "etf": {
+          "count": 4,
+          "excess_components_pp": {
+            "overnight": -4.58547225189209,
+            "inherited_intraday": 3.313975704193115,
+            "fill_to_close": -7.413341460183618,
+            "dividends": -0.5179695000000003,
+            "fees": -1.3976085121818629,
+            "impact": -2.7952175551093217,
+            "borrow": -0.2183053214500064
+          },
+          "max_session_error": 3.794298208958935e-11
+        }
+      },
+      "per_symbol": [
+        {
+          "symbol": "AAPL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -22.33212664794922,
+              "inherited_intraday": 55.69869223022461,
+              "fill_to_close": 19.544820569300022,
+              "dividends": 1.5972,
+              "fees": -1.4691543909573612,
+              "impact": -2.938304933939988,
+              "borrow": -0.8275759930401757
+            },
+            "net_return_pp": 49.27355083363809,
+            "max_session_error": 3.2741809263825417e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -42.167551803588864,
+              "inherited_intraday": 87.8460536956787,
+              "fill_to_close": 1.6429962158203124,
+              "dividends": 2.111875,
+              "fees": -0.009990972747688296,
+              "impact": -0.01997794990539674,
+              "borrow": 0.0
+            },
+            "net_return_pp": 49.40340418525706,
+            "max_session_error": 5.002220859751105e-12
+          },
+          "excess_components_pp": {
+            "overnight": 19.835425155639644,
+            "inherited_intraday": -32.1473614654541,
+            "fill_to_close": 17.90182435347971,
+            "dividends": -0.514675,
+            "fees": -1.4591634182096729,
+            "impact": -2.918326984034591,
+            "borrow": -0.8275759930401757
+          }
+        },
+        {
+          "symbol": "AMT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -3.0532320098876955,
+              "inherited_intraday": 6.925638687133789,
+              "fill_to_close": -0.7194910909735668,
+              "dividends": 5.49759,
+              "fees": -1.3434433006113977,
+              "impact": -2.6868825767927578,
+              "borrow": -0.6506390872846328
+            },
+            "net_return_pp": 3.9695406215835893,
+            "max_session_error": 2.5011104298755527e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -4.4264722900390625,
+              "inherited_intraday": -0.9897513122558593,
+              "fill_to_close": 0.2678652648925781,
+              "dividends": 7.182279999999999,
+              "fees": -0.009995446467875976,
+              "impact": -0.019986895556640603,
+              "borrow": 0.0
+            },
+            "net_return_pp": 2.003939320573145,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 1.373240280151367,
+            "inherited_intraday": 7.915389999389649,
+            "fill_to_close": -0.9873563558661449,
+            "dividends": -1.684689999999999,
+            "fees": -1.3334478541435217,
+            "impact": -2.666895681236117,
+            "borrow": -0.6506390872846328
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 59.791537796020506,
+              "inherited_intraday": -40.523209785461425,
+              "fill_to_close": 5.336856679198574,
+              "dividends": 0.0,
+              "fees": -1.5196128826383262,
+              "impact": -3.0392219869497614,
+              "borrow": -0.8528023534475055
+            },
+            "net_return_pp": 19.193547466722173,
+            "max_session_error": 3.0468072509393096e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.009491958618163,
+              "inherited_intraday": -26.370698928833008,
+              "fill_to_close": 1.656375,
+              "dividends": 0.0,
+              "fees": -0.009990759718335572,
+              "impact": -0.0199775239318798,
+              "borrow": 0.0
+            },
+            "net_return_pp": -7.7348002538650595,
+            "max_session_error": 2.5011104298755527e-12
+          },
+          "excess_components_pp": {
+            "overnight": 42.78204583740234,
+            "inherited_intraday": -14.152510856628417,
+            "fill_to_close": 3.680481679198574,
+            "dividends": 0.0,
+            "fees": -1.5096221229199906,
+            "impact": -3.0192444630178814,
+            "borrow": -0.8528023534475055
+          }
+        },
+        {
+          "symbol": "APD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -7.487622299194336,
+              "inherited_intraday": -29.705886978149415,
+              "fill_to_close": 8.274263453129652,
+              "dividends": 3.91775,
+              "fees": -1.3010267180568402,
+              "impact": -2.6020494656236615,
+              "borrow": -0.5711531303569249
+            },
+            "net_return_pp": -29.475725138251597,
+            "max_session_error": 3.456079866737127e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 5.9442802734375,
+              "inherited_intraday": -10.348770263671875,
+              "fill_to_close": 5.26008544921875,
+              "dividends": 6.59556,
+              "fees": -0.00998089578,
+              "impact": -0.019957800000001726,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.421216763204375,
+            "max_session_error": 5.684341886080801e-13
+          },
+          "excess_components_pp": {
+            "overnight": -13.431902572631836,
+            "inherited_intraday": -19.35711671447754,
+            "fill_to_close": 3.014178003910902,
+            "dividends": -2.67781,
+            "fees": -1.2910458222768402,
+            "impact": -2.58209166562366,
+            "borrow": -0.5711531303569249
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 52.07498973274231,
+              "inherited_intraday": -3.7171659431457518,
+              "fill_to_close": -29.27708854766488,
+              "dividends": 7.20467,
+              "fees": -1.6127377768952487,
+              "impact": -3.2254715361876642,
+              "borrow": -0.9696728309944699
+            },
+            "net_return_pp": 20.47752309785451,
+            "max_session_error": 5.502442945726216e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.65658244895935,
+              "inherited_intraday": -38.8945939655304,
+              "fill_to_close": 0.29817050552368163,
+              "dividends": 8.481279999999998,
+              "fees": -0.00999732008948124,
+              "impact": -0.019990642050551597,
+              "borrow": 0.0
+            },
+            "net_return_pp": 9.511451026812612,
+            "max_session_error": 1.864464138634503e-11
+          },
+          "excess_components_pp": {
+            "overnight": 12.418407283782962,
+            "inherited_intraday": 35.177428022384646,
+            "fill_to_close": -29.575259053188564,
+            "dividends": -1.276609999999998,
+            "fees": -1.6027404568057675,
+            "impact": -3.2054808941371125,
+            "borrow": -0.9696728309944699
+          }
+        },
+        {
+          "symbol": "CAT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 15.506211883544921,
+              "inherited_intraday": -33.59762214660645,
+              "fill_to_close": -0.35813154733022157,
+              "dividends": 2.58542,
+              "fees": -1.3821209657566615,
+              "impact": -2.764238034459349,
+              "borrow": -0.9842921926571073
+            },
+            "net_return_pp": -20.994773003264775,
+            "max_session_error": 5.3660187404602766e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 28.552706329345703,
+              "inherited_intraday": 8.40837467956543,
+              "fill_to_close": 1.3389259643554687,
+              "dividends": 7.6589,
+              "fees": -0.009986668304208069,
+              "impact": -0.01996934273986676,
+              "borrow": 0.0
+            },
+            "net_return_pp": 45.92895096222254,
+            "max_session_error": 1.7394086171407253e-11
+          },
+          "excess_components_pp": {
+            "overnight": -13.046494445800782,
+            "inherited_intraday": -42.00599682617188,
+            "fill_to_close": -1.6970575116856903,
+            "dividends": -5.07348,
+            "fees": -1.3721342974524535,
+            "impact": -2.744268691719482,
+            "borrow": -0.9842921926571073
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 28.797102485656737,
+              "inherited_intraday": 11.789387985229492,
+              "fill_to_close": -23.997608759696288,
+              "dividends": 14.61553,
+              "fees": -1.8280323793740367,
+              "impact": -3.656060425022651,
+              "borrow": -0.6504651022320702
+            },
+            "net_return_pp": 25.069853804561305,
+            "max_session_error": 4.092726157978177e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.97445571899414,
+              "inherited_intraday": 27.190951416015626,
+              "fill_to_close": 1.7651924972534179,
+              "dividends": 19.90807,
+              "fees": -0.009995779506424713,
+              "impact": -0.01998756150055051,
+              "borrow": 0.0
+            },
+            "net_return_pp": 87.80868629125622,
+            "max_session_error": 2.091837814077735e-11
+          },
+          "excess_components_pp": {
+            "overnight": -10.177353233337406,
+            "inherited_intraday": -15.401563430786133,
+            "fill_to_close": -25.762801256949707,
+            "dividends": -5.292539999999999,
+            "fees": -1.818036599867612,
+            "impact": -3.6360728635221005,
+            "borrow": -0.6504651022320702
+          }
+        },
+        {
+          "symbol": "DIA",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -3.1272035827636717,
+              "inherited_intraday": 5.235108612060547,
+              "fill_to_close": -3.988193467298155,
+              "dividends": 4.847872999999999,
+              "fees": -1.5897689848674863,
+              "impact": -3.179535936123072,
+              "borrow": -0.35185389095124747
+            },
+            "net_return_pp": -2.153574249942991,
+            "max_session_error": 2.2282620193436742e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 3.31339404296875,
+              "inherited_intraday": 15.275567169189452,
+              "fill_to_close": 0.6322112121582031,
+              "dividends": 5.972895,
+              "fees": -0.009995881534119873,
+              "impact": -0.01998776551513106,
+              "borrow": 0.0
+            },
+            "net_return_pp": 25.164083777267155,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": -6.440597625732422,
+            "inherited_intraday": -10.040458557128906,
+            "fill_to_close": -4.6204046794563585,
+            "dividends": -1.1250220000000013,
+            "fees": -1.5797731033333664,
+            "impact": -3.1595481706079407,
+            "borrow": -0.35185389095124747
+          }
+        },
+        {
+          "symbol": "DIS",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 19.28235054779053,
+              "inherited_intraday": -59.46187907409668,
+              "fill_to_close": -3.71753378763207,
+              "dividends": 0.0,
+              "fees": -1.1532266489805305,
+              "impact": -2.306449462114707,
+              "borrow": -0.5466159623463948
+            },
+            "net_return_pp": -47.903354387379736,
+            "max_session_error": 2.7284841053187847e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 12.649807548522949,
+              "inherited_intraday": -61.27005754852295,
+              "fill_to_close": 1.2700831146240235,
+              "dividends": 0.0,
+              "fees": -0.009992537934930726,
+              "impact": -0.019981079653920944,
+              "borrow": 0.0
+            },
+            "net_return_pp": -47.38014050296483,
+            "max_session_error": 2.0463630789890885e-12
+          },
+          "excess_components_pp": {
+            "overnight": 6.63254299926758,
+            "inherited_intraday": 1.8081784744262706,
+            "fill_to_close": -4.987616902256094,
+            "dividends": 0.0,
+            "fees": -1.1432341110455997,
+            "impact": -2.2864683824607863,
+            "borrow": -0.5466159623463948
+          }
+        },
+        {
+          "symbol": "DUK",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 18.5032121963501,
+              "inherited_intraday": -26.387689765930176,
+              "fill_to_close": 12.32570953025687,
+              "dividends": 11.448494999999998,
+              "fees": -1.1961363482070813,
+              "impact": -2.3922683929464634,
+              "borrow": -0.22645528993424915
+            },
+            "net_return_pp": 12.074866929588946,
+            "max_session_error": 2.3419488570652902e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 15.837874855041504,
+              "inherited_intraday": -13.021986213684082,
+              "fill_to_close": -0.04452101898193359,
+              "dividends": 13.28922,
+              "fees": -0.009995625827318574,
+              "impact": -0.019987254203790186,
+              "borrow": 0.0
+            },
+            "net_return_pp": 16.03060474234439,
+            "max_session_error": 7.503331289626658e-12
+          },
+          "excess_components_pp": {
+            "overnight": 2.665337341308595,
+            "inherited_intraday": -13.365703552246094,
+            "fill_to_close": 12.370230549238803,
+            "dividends": -1.8407250000000026,
+            "fees": -1.1861407223797626,
+            "impact": -2.3722811387426734,
+            "borrow": -0.22645528993424915
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 50.6307553024292,
+              "inherited_intraday": 96.42772333526611,
+              "fill_to_close": -44.36805742969299,
+              "dividends": 0.0,
+              "fees": -1.8634160783215652,
+              "impact": -3.726828423784869,
+              "borrow": -0.960956915831793
+            },
+            "net_return_pp": 96.13921979006395,
+            "max_session_error": 7.599965101690032e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -2.1267904663085937,
+              "inherited_intraday": 54.893158721923825,
+              "fill_to_close": 0.8669332733154297,
+              "dividends": 0.0,
+              "fees": -0.009998896084968569,
+              "impact": -0.019993793411249614,
+              "borrow": 0.0
+            },
+            "net_return_pp": 53.603308839434426,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": 52.75754576873779,
+            "inherited_intraday": 41.53456461334228,
+            "fill_to_close": -45.23499070300842,
+            "dividends": 0.0,
+            "fees": -1.8534171822365966,
+            "impact": -3.7068346303736193,
+            "borrow": -0.960956915831793
+          }
+        },
+        {
+          "symbol": "HD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -16.16243537902832,
+              "inherited_intraday": 27.416230270385743,
+              "fill_to_close": 0.06672323530827134,
+              "dividends": 7.992740000000001,
+              "fees": -1.4564944283140469,
+              "impact": -2.912984732494647,
+              "borrow": -0.4495846200452532
+            },
+            "net_return_pp": 14.494194345811762,
+            "max_session_error": 3.559819106158102e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -32.786370544433595,
+              "inherited_intraday": 50.81357147216797,
+              "fill_to_close": 1.2881939697265625,
+              "dividends": 8.572799999999999,
+              "fees": -0.009983076355187987,
+              "impact": -0.019962160278316786,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.85824966082744,
+            "max_session_error": 1.1823431123048067e-11
+          },
+          "excess_components_pp": {
+            "overnight": 16.623935165405275,
+            "inherited_intraday": -23.39734120178223,
+            "fill_to_close": -1.2214707344182911,
+            "dividends": -0.5800599999999978,
+            "fees": -1.4465113519588588,
+            "impact": -2.89302257221633,
+            "borrow": -0.4495846200452532
+          }
+        },
+        {
+          "symbol": "HON",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 20.331094024658203,
+              "inherited_intraday": -25.47451705932617,
+              "fill_to_close": 2.426063271445511,
+              "dividends": 2.8073865700000002,
+              "fees": -1.1856208131811654,
+              "impact": -2.371237675428675,
+              "borrow": -0.3827239685022264
+            },
+            "net_return_pp": -3.8495556503343575,
+            "max_session_error": 2.773958840407431e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.86706530761719,
+              "inherited_intraday": -23.916028442382814,
+              "fill_to_close": 0.7139129638671875,
+              "dividends": 5.745073208000001,
+              "fees": -0.009986170345444337,
+              "impact": -0.01996834702147703,
+              "borrow": 0.0
+            },
+            "net_return_pp": 0.3800685197346443,
+            "max_session_error": 1.3415046851150692e-11
+          },
+          "excess_components_pp": {
+            "overnight": 2.464028717041014,
+            "inherited_intraday": -1.5584886169433574,
+            "fill_to_close": 1.7121503075783235,
+            "dividends": -2.9376866380000006,
+            "fees": -1.1756346428357212,
+            "impact": -2.351269328407198,
+            "borrow": -0.3827239685022264
+          }
+        },
+        {
+          "symbol": "IWM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 15.672912338256836,
+              "inherited_intraday": -13.219530715942383,
+              "fill_to_close": -15.03817679393388,
+              "dividends": 3.253961,
+              "fees": -1.2205674849330859,
+              "impact": -2.4411310026292625,
+              "borrow": -0.27602163812546504
+            },
+            "net_return_pp": -13.268554297307123,
+            "max_session_error": 2.7853275241795927e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 27.266472396850585,
+              "inherited_intraday": -35.96758334350586,
+              "fill_to_close": 1.757804733276367,
+              "dividends": 3.4349479999999994,
+              "fees": -0.009984749361231079,
+              "impact": -0.019965505621342146,
+              "borrow": 0.0
+            },
+            "net_return_pp": -3.538308468361473,
+            "max_session_error": 9.663381206337363e-12
+          },
+          "excess_components_pp": {
+            "overnight": -11.593560058593749,
+            "inherited_intraday": 22.748052627563474,
+            "fill_to_close": -16.795981527210248,
+            "dividends": -0.18098699999999956,
+            "fees": -1.2105827355718548,
+            "impact": -2.4211654970079204,
+            "borrow": -0.27602163812546504
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 5.930808456420898,
+              "inherited_intraday": 7.487372909545899,
+              "fill_to_close": 8.699351847928183,
+              "dividends": 5.19297,
+              "fees": -1.788899052342072,
+              "impact": -3.5777941392474273,
+              "borrow": -0.5585584405808222
+            },
+            "net_return_pp": 21.38525158172446,
+            "max_session_error": 2.6261659513693303e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -12.44126252746582,
+              "inherited_intraday": 10.0897472076416,
+              "fill_to_close": 1.3355076599121094,
+              "dividends": 8.52426,
+              "fees": -0.009986371875,
+              "impact": -0.01996875,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.478297218212893,
+            "max_session_error": 1.1027623258996755e-11
+          },
+          "excess_components_pp": {
+            "overnight": 18.37207098388672,
+            "inherited_intraday": -2.602374298095702,
+            "fill_to_close": 7.363844188016073,
+            "dividends": -3.33129,
+            "fees": -1.778912680467072,
+            "impact": -3.5578253892474274,
+            "borrow": -0.5585584405808222
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 38.893096282958986,
+              "inherited_intraday": -10.534664932250976,
+              "fill_to_close": 3.759216094420204,
+              "dividends": 6.62305,
+              "fees": -1.4437187968234197,
+              "impact": -2.887433534173104,
+              "borrow": -0.6407959497315541
+            },
+            "net_return_pp": 33.76874916440023,
+            "max_session_error": 3.964828465541359e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.53029359436035,
+              "inherited_intraday": 6.783276649475098,
+              "fill_to_close": 0.5273429260253907,
+              "dividends": 8.66915,
+              "fees": -0.00998869816948105,
+              "impact": -0.019973401658624993,
+              "borrow": 0.0
+            },
+            "net_return_pp": 33.48010107003272,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 21.362802688598634,
+            "inherited_intraday": -17.317941581726075,
+            "fill_to_close": 3.2318731683948134,
+            "dividends": -2.0461,
+            "fees": -1.4337300986539387,
+            "impact": -2.8674601325144793,
+            "borrow": -0.6407959497315541
+          }
+        },
+        {
+          "symbol": "KO",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 30.97477799987793,
+              "inherited_intraday": -16.988772605895996,
+              "fill_to_close": -4.4321426892446665,
+              "dividends": 9.73808,
+              "fees": -1.56019163822817,
+              "impact": -3.120379118991361,
+              "borrow": -0.20868099225089665
+            },
+            "net_return_pp": 14.402690955266962,
+            "max_session_error": 3.342393029015511e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 31.6869221496582,
+              "inherited_intraday": -19.730325355529786,
+              "fill_to_close": -0.28650291442871095,
+              "dividends": 10.0848,
+              "fees": -0.009997029355801391,
+              "impact": -0.019990060699456507,
+              "borrow": 0.0
+            },
+            "net_return_pp": 21.72490678964445,
+            "max_session_error": 1.1709744285326451e-11
+          },
+          "excess_components_pp": {
+            "overnight": -0.7121441497802721,
+            "inherited_intraday": 2.74155274963379,
+            "fill_to_close": -4.1456397748159555,
+            "dividends": -0.3467199999999995,
+            "fees": -1.5501946088723686,
+            "impact": -3.1003890582919045,
+            "borrow": -0.20868099225089665
+          }
+        },
+        {
+          "symbol": "LIN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -45.019281112670896,
+              "inherited_intraday": 81.80300614929199,
+              "fill_to_close": -11.306575536664528,
+              "dividends": 3.740515,
+              "fees": -1.5463669669677265,
+              "impact": -3.092730004332042,
+              "borrow": -0.6115997739773705
+            },
+            "net_return_pp": 23.96696775467959,
+            "max_session_error": 3.387867764104158e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -22.8337431640625,
+              "inherited_intraday": 81.38294079589843,
+              "fill_to_close": 2.060279052734375,
+              "dividends": 4.94506,
+              "fees": -0.009995326570854491,
+              "impact": -0.019986655810546382,
+              "borrow": 0.0
+            },
+            "net_return_pp": 65.5245547021889,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -22.185537948608395,
+            "inherited_intraday": 0.42006535339355366,
+            "fill_to_close": -13.366854589398903,
+            "dividends": -1.204545,
+            "fees": -1.536371640396872,
+            "impact": -3.072743348521495,
+            "borrow": -0.6115997739773705
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 34.62214912414551,
+              "inherited_intraday": 19.933930969238283,
+              "fill_to_close": -1.3077614225922125,
+              "dividends": 3.30513,
+              "fees": -1.650617788129927,
+              "impact": -3.301231673945026,
+              "borrow": -0.6706368676485334
+            },
+            "net_return_pp": 50.93096234106809,
+            "max_session_error": 4.780531526193954e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.363941040039066,
+              "inherited_intraday": 35.70066345214844,
+              "fill_to_close": 0.29439971923828123,
+              "dividends": 3.5098000000000007,
+              "fees": -0.009995958539263916,
+              "impact": -0.019987919494626,
+              "borrow": 0.0
+            },
+            "net_return_pp": 77.8388203333919,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -3.7417919158935575,
+            "inherited_intraday": -15.766732482910157,
+            "fill_to_close": -1.6021611418304937,
+            "dividends": -0.20467000000000057,
+            "fees": -1.6406218295906632,
+            "impact": -3.2812437544504,
+            "borrow": -0.6706368676485334
+          }
+        },
+        {
+          "symbol": "NEE",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 17.217331958770753,
+              "inherited_intraday": -29.06691645812988,
+              "fill_to_close": -11.6825018800272,
+              "dividends": 5.018187000000001,
+              "fees": -1.2821517825896744,
+              "impact": -2.5642995392484687,
+              "borrow": -0.4744321368994031
+            },
+            "net_return_pp": -22.8347828381238,
+            "max_session_error": 4.888534022029489e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 30.54814205932617,
+              "inherited_intraday": -52.3527998085022,
+              "fill_to_close": 0.3486526336669922,
+              "dividends": 6.855192,
+              "fees": -0.009993789644725798,
+              "impact": -0.019983582572930914,
+              "borrow": 0.0
+            },
+            "net_return_pp": -14.630790487726685,
+            "max_session_error": 1.1596057447604835e-11
+          },
+          "excess_components_pp": {
+            "overnight": -13.330810100555418,
+            "inherited_intraday": 23.285883350372316,
+            "fill_to_close": -12.031154513694192,
+            "dividends": -1.8370049999999987,
+            "fees": -1.2721579929449487,
+            "impact": -2.5443159566755376,
+            "borrow": -0.4744321368994031
+          }
+        },
+        {
+          "symbol": "PG",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -6.834625595092773,
+              "inherited_intraday": 5.807126792907715,
+              "fill_to_close": 10.6237805678146,
+              "dividends": 7.0953159999999995,
+              "fees": -1.320597903542524,
+              "impact": -2.641193924980671,
+              "borrow": -0.04954310642787388
+            },
+            "net_return_pp": 12.680262830678423,
+            "max_session_error": 2.0179413695586845e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -5.075595062255859,
+              "inherited_intraday": 15.805280364990235,
+              "fill_to_close": 0.5140338134765625,
+              "dividends": 7.780103999999998,
+              "fees": -0.009992474492984618,
+              "impact": -0.019980952795404162,
+              "borrow": 0.0
+            },
+            "net_return_pp": 18.993849688922527,
+            "max_session_error": 1.2278178473934531e-11
+          },
+          "excess_components_pp": {
+            "overnight": -1.7590305328369142,
+            "inherited_intraday": -9.99815357208252,
+            "fill_to_close": 10.109746754338039,
+            "dividends": -0.6847879999999984,
+            "fees": -1.3106054290495393,
+            "impact": -2.621212972185267,
+            "borrow": -0.04954310642787388
+          }
+        },
+        {
+          "symbol": "PLD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 43.97200112915039,
+              "inherited_intraday": -5.189354255676269,
+              "fill_to_close": -27.930064282697668,
+              "dividends": 6.314200000000001,
+              "fees": -1.4435951864795789,
+              "impact": -2.8871863155977904,
+              "borrow": -0.4772354682740711
+            },
+            "net_return_pp": 12.358765620425105,
+            "max_session_error": 2.751221472863108e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 44.5732839050293,
+              "inherited_intraday": -25.102426124572755,
+              "fill_to_close": 0.041560951232910155,
+              "dividends": 8.613310000000002,
+              "fees": -0.009991983155570525,
+              "impact": -0.019979970317072982,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.095756778216806,
+            "max_session_error": 2.2168933355715126e-11
+          },
+          "excess_components_pp": {
+            "overnight": -0.6012827758789072,
+            "inherited_intraday": 19.913071868896488,
+            "fill_to_close": -27.971625233930578,
+            "dividends": -2.2991100000000007,
+            "fees": -1.4336032033240083,
+            "impact": -2.8672063452807173,
+            "borrow": -0.4772354682740711
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 6.859864013671875,
+              "inherited_intraday": 26.68518829345703,
+              "fill_to_close": -8.081003573291913,
+              "dividends": 1.490472,
+              "fees": -1.1932794014598376,
+              "impact": -2.3865549066703644,
+              "borrow": -0.12987975551423572
+            },
+            "net_return_pp": 23.244806670192595,
+            "max_session_error": 1.8417267710901797e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 1.52274462890625,
+              "inherited_intraday": 23.41553576660156,
+              "fill_to_close": 1.1566724853515624,
+              "dividends": 1.731456,
+              "fees": -0.009990593996110839,
+              "impact": -0.01997719255370407,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.796441094309564,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 5.337119384765625,
+            "inherited_intraday": 3.26965252685547,
+            "fill_to_close": -9.237676058643475,
+            "dividends": -0.2409840000000001,
+            "fees": -1.1832888074637267,
+            "impact": -2.3665777141166604,
+            "borrow": -0.12987975551423572
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -2.653099365234375,
+              "inherited_intraday": 17.340876861572266,
+              "fill_to_close": 1.8760211316068565,
+              "dividends": 4.017617,
+              "fees": -1.6267669076259423,
+              "impact": -3.25352985903558,
+              "borrow": -0.11546600120907737
+            },
+            "net_return_pp": 15.58565286007414,
+            "max_session_error": 3.794298208958935e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 2.9917513427734375,
+              "inherited_intraday": 20.062220642089844,
+              "fill_to_close": 0.87532470703125,
+              "dividends": 4.542502000000001,
+              "fees": -0.009977505267438356,
+              "impact": -0.019951020330814515,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.44187016629629,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": -5.644850708007812,
+            "inherited_intraday": -2.7213437805175786,
+            "fill_to_close": 1.0006964245756065,
+            "dividends": -0.5248850000000003,
+            "fees": -1.6167894023585039,
+            "impact": -3.2335788387047653,
+            "borrow": -0.11546600120907737
+          }
+        },
+        {
+          "symbol": "UNH",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 55.89714892578125,
+              "inherited_intraday": 15.788812133789062,
+              "fill_to_close": -1.659701497815708,
+              "dividends": 2.6986099999999995,
+              "fees": -2.1526168456993675,
+              "impact": -4.305233152510007,
+              "borrow": -0.598266913906279
+            },
+            "net_return_pp": 65.66875264963856,
+            "max_session_error": 7.526068657170981e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.72818249511719,
+              "inherited_intraday": 19.8084326171875,
+              "fill_to_close": -1.112544189453125,
+              "dividends": 4.979260000000001,
+              "fees": -0.009974528576638183,
+              "impact": -0.01994506813964165,
+              "borrow": 0.0
+            },
+            "net_return_pp": 63.373411326135276,
+            "max_session_error": 2.3305801732931286e-11
+          },
+          "excess_components_pp": {
+            "overnight": 16.168966430664064,
+            "inherited_intraday": -4.0196204833984375,
+            "fill_to_close": -0.5471573083625831,
+            "dividends": -2.2806500000000014,
+            "fees": -2.1426423171227293,
+            "impact": -4.285288084370365,
+            "borrow": -0.598266913906279
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 28.207419158935547,
+              "inherited_intraday": 156.44145492172242,
+              "fill_to_close": -56.5313735005491,
+              "dividends": 17.86861,
+              "fees": -2.950282072739016,
+              "impact": -5.900559834536068,
+              "borrow": -1.102247111762365
+            },
+            "net_return_pp": 136.033021561071,
+            "max_session_error": 1.0095391189679503e-10
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 14.883787872314453,
+              "inherited_intraday": 126.64056702423096,
+              "fill_to_close": 3.9657396354675294,
+              "dividends": 25.61008,
+              "fees": -0.009997575151660538,
+              "impact": -0.019991152072900517,
+              "borrow": 0.0
+            },
+            "net_return_pp": 171.07018580478837,
+            "max_session_error": 4.865796654485166e-11
+          },
+          "excess_components_pp": {
+            "overnight": 13.323631286621094,
+            "inherited_intraday": 29.800887897491464,
+            "fill_to_close": -60.49711313601663,
+            "dividends": -7.74147,
+            "fees": -2.940284497587356,
+            "impact": -5.880568682463168,
+            "borrow": -1.102247111762365
+          }
+        }
+      ]
+    },
+    {
+      "arm": "control",
+      "phase": "final",
+      "groups": {
+        "stock": {
+          "count": 22,
+          "excess_components_pp": {
+            "overnight": 3.44732634414326,
+            "inherited_intraday": -4.045217709801413,
+            "fill_to_close": -2.451851377244863,
+            "dividends": -1.739438181272727,
+            "fees": -1.8187496411412114,
+            "impact": -3.63749999648627,
+            "borrow": -0.6136868140846826
+          },
+          "max_session_error": 1.2778400559909642e-10
+        },
+        "etf": {
+          "count": 4,
+          "excess_components_pp": {
+            "overnight": -0.3202060546874993,
+            "inherited_intraday": -2.344797866821289,
+            "fill_to_close": -10.328908607553489,
+            "dividends": -0.9136409999999999,
+            "fees": -1.5933383822477882,
+            "impact": -3.1866773467083056,
+            "borrow": -0.3510090400995527
+          },
+          "max_session_error": 4.774847184307873e-11
+        }
+      },
+      "per_symbol": [
+        {
+          "symbol": "AAPL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -1.9093806228637695,
+              "inherited_intraday": 24.82282989501953,
+              "fill_to_close": -7.801679128538191,
+              "dividends": 1.17342,
+              "fees": -1.5569331276655145,
+              "impact": -3.113862437765638,
+              "borrow": -0.9283406498373121
+            },
+            "net_return_pp": 10.68605392834916,
+            "max_session_error": 4.746425474877469e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -42.167551803588864,
+              "inherited_intraday": 87.8460536956787,
+              "fill_to_close": 1.6429962158203124,
+              "dividends": 2.111875,
+              "fees": -0.009990972747688296,
+              "impact": -0.01997794990539674,
+              "borrow": 0.0
+            },
+            "net_return_pp": 49.40340418525706,
+            "max_session_error": 5.002220859751105e-12
+          },
+          "excess_components_pp": {
+            "overnight": 40.25817118072509,
+            "inherited_intraday": -63.023223800659174,
+            "fill_to_close": -9.444675344358503,
+            "dividends": -0.938455,
+            "fees": -1.5469421549178262,
+            "impact": -3.093884487860241,
+            "borrow": -0.9283406498373121
+          }
+        },
+        {
+          "symbol": "AMT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 23.431494430541992,
+              "inherited_intraday": 15.797351959228516,
+              "fill_to_close": -7.682865037694105,
+              "dividends": 5.94038,
+              "fees": -1.697935471116794,
+              "impact": -3.395877640703559,
+              "borrow": -0.7110458864393691
+            },
+            "net_return_pp": 31.681502353816704,
+            "max_session_error": 5.161382432561368e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -4.4264722900390625,
+              "inherited_intraday": -0.9897513122558593,
+              "fill_to_close": 0.2678652648925781,
+              "dividends": 7.182279999999999,
+              "fees": -0.009995446467875976,
+              "impact": -0.019986895556640603,
+              "borrow": 0.0
+            },
+            "net_return_pp": 2.003939320573145,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 27.857966720581054,
+            "inherited_intraday": 16.787103271484376,
+            "fill_to_close": -7.950730302586683,
+            "dividends": -1.2418999999999984,
+            "fees": -1.687940024648918,
+            "impact": -3.3758907451469184,
+            "borrow": -0.7110458864393691
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 8.747860038757324,
+              "inherited_intraday": -32.685940719604496,
+              "fill_to_close": 7.143658358047435,
+              "dividends": 0.0,
+              "fees": -1.4902076539359106,
+              "impact": -2.980411509768588,
+              "borrow": -0.5516982240558805
+            },
+            "net_return_pp": -21.816739710559986,
+            "max_session_error": 2.660272002685815e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.009491958618163,
+              "inherited_intraday": -26.370698928833008,
+              "fill_to_close": 1.656375,
+              "dividends": 0.0,
+              "fees": -0.009990759718335572,
+              "impact": -0.0199775239318798,
+              "borrow": 0.0
+            },
+            "net_return_pp": -7.7348002538650595,
+            "max_session_error": 2.5011104298755527e-12
+          },
+          "excess_components_pp": {
+            "overnight": -8.26163191986084,
+            "inherited_intraday": -6.315241790771488,
+            "fill_to_close": 5.487283358047435,
+            "dividends": 0.0,
+            "fees": -1.480216894217575,
+            "impact": -2.960433985836708,
+            "borrow": -0.5516982240558805
+          }
+        },
+        {
+          "symbol": "APD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 10.146471145629883,
+              "inherited_intraday": -2.783518341064453,
+              "fill_to_close": 2.16023772437064,
+              "dividends": 5.52629,
+              "fees": -1.7709588696398748,
+              "impact": -3.5419137589411664,
+              "borrow": -0.5903759718686058
+            },
+            "net_return_pp": 9.14623192848647,
+            "max_session_error": 3.376499080331996e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 5.9442802734375,
+              "inherited_intraday": -10.348770263671875,
+              "fill_to_close": 5.26008544921875,
+              "dividends": 6.59556,
+              "fees": -0.00998089578,
+              "impact": -0.019957800000001726,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.421216763204375,
+            "max_session_error": 5.684341886080801e-13
+          },
+          "excess_components_pp": {
+            "overnight": 4.202190872192383,
+            "inherited_intraday": 7.565251922607422,
+            "fill_to_close": -3.0998477248481104,
+            "dividends": -1.0692699999999995,
+            "fees": -1.7609779738598748,
+            "impact": -3.521955958941165,
+            "borrow": -0.5903759718686058
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 27.617225772857665,
+              "inherited_intraday": 9.208590589523315,
+              "fill_to_close": -39.63325909938518,
+              "dividends": 8.181220000000001,
+              "fees": -1.8378857188660764,
+              "impact": -3.675767419055238,
+              "borrow": -1.409290915235565
+            },
+            "net_return_pp": -1.5491667901612827,
+            "max_session_error": 4.75210981676355e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.65658244895935,
+              "inherited_intraday": -38.8945939655304,
+              "fill_to_close": 0.29817050552368163,
+              "dividends": 8.481279999999998,
+              "fees": -0.00999732008948124,
+              "impact": -0.019990642050551597,
+              "borrow": 0.0
+            },
+            "net_return_pp": 9.511451026812612,
+            "max_session_error": 1.864464138634503e-11
+          },
+          "excess_components_pp": {
+            "overnight": -12.039356676101683,
+            "inherited_intraday": 48.103184555053716,
+            "fill_to_close": -39.93142960490886,
+            "dividends": -0.30005999999999666,
+            "fees": -1.8278883987765953,
+            "impact": -3.6557767770046863,
+            "borrow": -1.409290915235565
+          }
+        },
+        {
+          "symbol": "CAT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 34.02754133605957,
+              "inherited_intraday": 1.9458041534423829,
+              "fill_to_close": -33.14732147106869,
+              "dividends": 3.6785200000000007,
+              "fees": -1.3941913283479515,
+              "impact": -2.788378718101279,
+              "borrow": -0.8010774539239063
+            },
+            "net_return_pp": 1.5208965180598222,
+            "max_session_error": 4.0472514228895307e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 28.552706329345703,
+              "inherited_intraday": 8.40837467956543,
+              "fill_to_close": 1.3389259643554687,
+              "dividends": 7.6589,
+              "fees": -0.009986668304208069,
+              "impact": -0.01996934273986676,
+              "borrow": 0.0
+            },
+            "net_return_pp": 45.92895096222254,
+            "max_session_error": 1.7394086171407253e-11
+          },
+          "excess_components_pp": {
+            "overnight": 5.474835006713867,
+            "inherited_intraday": -6.462570526123047,
+            "fill_to_close": -34.48624743542416,
+            "dividends": -3.9803799999999994,
+            "fees": -1.3842046600437434,
+            "impact": -2.7684093753614123,
+            "borrow": -0.8010774539239063
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 21.407177101135254,
+              "inherited_intraday": -19.81655490875244,
+              "fill_to_close": -1.2992647740605499,
+              "dividends": 13.709860000000003,
+              "fees": -1.7373650624079833,
+              "impact": -3.474725816981573,
+              "borrow": -0.7074261322430203
+            },
+            "net_return_pp": 8.081700406689807,
+            "max_session_error": 7.73070496506989e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.97445571899414,
+              "inherited_intraday": 27.190951416015626,
+              "fill_to_close": 1.7651924972534179,
+              "dividends": 19.90807,
+              "fees": -0.009995779506424713,
+              "impact": -0.01998756150055051,
+              "borrow": 0.0
+            },
+            "net_return_pp": 87.80868629125622,
+            "max_session_error": 2.091837814077735e-11
+          },
+          "excess_components_pp": {
+            "overnight": -17.56727861785889,
+            "inherited_intraday": -47.007506324768066,
+            "fill_to_close": -3.0644572713139677,
+            "dividends": -6.198209999999996,
+            "fees": -1.7273692829015586,
+            "impact": -3.4547382554810224,
+            "borrow": -0.7074261322430203
+          }
+        },
+        {
+          "symbol": "DIA",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 2.223842498779297,
+              "inherited_intraday": 9.952757690429687,
+              "fill_to_close": -11.141644547106628,
+              "dividends": 4.274774000000002,
+              "fees": -1.8448736462421977,
+              "impact": -3.6897453466822046,
+              "borrow": -0.41148310840788344
+            },
+            "net_return_pp": -0.636372459229928,
+            "max_session_error": 4.774847184307873e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 3.31339404296875,
+              "inherited_intraday": 15.275567169189452,
+              "fill_to_close": 0.6322112121582031,
+              "dividends": 5.972895,
+              "fees": -0.009995881534119873,
+              "impact": -0.01998776551513106,
+              "borrow": 0.0
+            },
+            "net_return_pp": 25.164083777267155,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": -1.0895515441894532,
+            "inherited_intraday": -5.3228094787597655,
+            "fill_to_close": -11.773855759264832,
+            "dividends": -1.6981209999999987,
+            "fees": -1.8348777647080778,
+            "impact": -3.6697575811670733,
+            "borrow": -0.41148310840788344
+          }
+        },
+        {
+          "symbol": "DIS",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 3.1722175140380857,
+              "inherited_intraday": -66.37137059020996,
+              "fill_to_close": -7.114034489331929,
+              "dividends": 0.0,
+              "fees": -0.9990821018114266,
+              "impact": -1.9981603381368171,
+              "borrow": -0.3570497369521004
+            },
+            "net_return_pp": -73.66747974240418,
+            "max_session_error": 2.0881074647149944e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 12.649807548522949,
+              "inherited_intraday": -61.27005754852295,
+              "fill_to_close": 1.2700831146240235,
+              "dividends": 0.0,
+              "fees": -0.009992537934930726,
+              "impact": -0.019981079653920944,
+              "borrow": 0.0
+            },
+            "net_return_pp": -47.38014050296483,
+            "max_session_error": 2.0463630789890885e-12
+          },
+          "excess_components_pp": {
+            "overnight": -9.477590034484862,
+            "inherited_intraday": -5.101313041687014,
+            "fill_to_close": -8.384117603955952,
+            "dividends": 0.0,
+            "fees": -0.9890895638764959,
+            "impact": -1.978179258482896,
+            "borrow": -0.3570497369521004
+          }
+        },
+        {
+          "symbol": "DUK",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 17.784181686401368,
+              "inherited_intraday": -12.587088333129882,
+              "fill_to_close": 25.453713891403886,
+              "dividends": 12.372429999999998,
+              "fees": -2.208891766722237,
+              "impact": -4.417779318647459,
+              "borrow": -0.26931357998348415
+            },
+            "net_return_pp": 36.12725257932221,
+            "max_session_error": 3.9108272176235914e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 15.837874855041504,
+              "inherited_intraday": -13.021986213684082,
+              "fill_to_close": -0.04452101898193359,
+              "dividends": 13.28922,
+              "fees": -0.009995625827318574,
+              "impact": -0.019987254203790186,
+              "borrow": 0.0
+            },
+            "net_return_pp": 16.03060474234439,
+            "max_session_error": 7.503331289626658e-12
+          },
+          "excess_components_pp": {
+            "overnight": 1.9463068313598644,
+            "inherited_intraday": 0.43489788055419965,
+            "fill_to_close": 25.49823491038582,
+            "dividends": -0.9167900000000024,
+            "fees": -2.198896140894919,
+            "impact": -4.397792064443669,
+            "borrow": -0.26931357998348415
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 7.996219230651856,
+              "inherited_intraday": 69.37096870422363,
+              "fill_to_close": -22.803147776783263,
+              "dividends": 0.0,
+              "fees": -1.7151936865510125,
+              "impact": -3.4303836077169136,
+              "borrow": -0.5734033170164201
+            },
+            "net_return_pp": 48.84505954680796,
+            "max_session_error": 5.127276381244883e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -2.1267904663085937,
+              "inherited_intraday": 54.893158721923825,
+              "fill_to_close": 0.8669332733154297,
+              "dividends": 0.0,
+              "fees": -0.009998896084968569,
+              "impact": -0.019993793411249614,
+              "borrow": 0.0
+            },
+            "net_return_pp": 53.603308839434426,
+            "max_session_error": 8.185452315956354e-12
+          },
+          "excess_components_pp": {
+            "overnight": 10.12300969696045,
+            "inherited_intraday": 14.477809982299803,
+            "fill_to_close": -23.67008105009869,
+            "dividends": 0.0,
+            "fees": -1.7051947904660438,
+            "impact": -3.410389814305664,
+            "borrow": -0.5734033170164201
+          }
+        },
+        {
+          "symbol": "HD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -26.23873974609375,
+              "inherited_intraday": 50.903255874633786,
+              "fill_to_close": 0.31039846831013307,
+              "dividends": 7.968879999999999,
+              "fees": -1.5927029893662272,
+              "impact": -3.185401874111665,
+              "borrow": -0.44854217944917235
+            },
+            "net_return_pp": 27.717147553923095,
+            "max_session_error": 3.40207861881936e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -32.786370544433595,
+              "inherited_intraday": 50.81357147216797,
+              "fill_to_close": 1.2881939697265625,
+              "dividends": 8.572799999999999,
+              "fees": -0.009983076355187987,
+              "impact": -0.019962160278316786,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.85824966082744,
+            "max_session_error": 1.1823431123048067e-11
+          },
+          "excess_components_pp": {
+            "overnight": 6.547630798339846,
+            "inherited_intraday": 0.08968440246581366,
+            "fill_to_close": -0.9777955014164295,
+            "dividends": -0.6039200000000005,
+            "fees": -1.5827199130110392,
+            "impact": -3.165439713833348,
+            "borrow": -0.44854217944917235
+          }
+        },
+        {
+          "symbol": "HON",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 19.82297868347168,
+              "inherited_intraday": -9.767821884155273,
+              "fill_to_close": -14.662734573258065,
+              "dividends": 4.619007219999999,
+              "fees": -1.6599312258933583,
+              "impact": -3.319858487215782,
+              "borrow": -0.3700626806985765
+            },
+            "net_return_pp": -5.338422947749432,
+            "max_session_error": 3.61524143954739e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.86706530761719,
+              "inherited_intraday": -23.916028442382814,
+              "fill_to_close": 0.7139129638671875,
+              "dividends": 5.745073208000001,
+              "fees": -0.009986170345444337,
+              "impact": -0.01996834702147703,
+              "borrow": 0.0
+            },
+            "net_return_pp": 0.3800685197346443,
+            "max_session_error": 1.3415046851150692e-11
+          },
+          "excess_components_pp": {
+            "overnight": 1.9559133758544895,
+            "inherited_intraday": 14.14820655822754,
+            "fill_to_close": -15.376647537125253,
+            "dividends": -1.1260659880000015,
+            "fees": -1.649945055547914,
+            "impact": -3.299890140194305,
+            "borrow": -0.3700626806985765
+          }
+        },
+        {
+          "symbol": "IWM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 30.963815719604494,
+              "inherited_intraday": -32.425859985351565,
+              "fill_to_close": -7.016156775425137,
+              "dividends": 2.837649,
+              "fees": -1.5122660304860278,
+              "impact": -3.024528150202755,
+              "borrow": -0.47644767132713683
+            },
+            "net_return_pp": -10.653793893188269,
+            "max_session_error": 2.6830093702301383e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 27.266472396850585,
+              "inherited_intraday": -35.96758334350586,
+              "fill_to_close": 1.757804733276367,
+              "dividends": 3.4349479999999994,
+              "fees": -0.009984749361231079,
+              "impact": -0.019965505621342146,
+              "borrow": 0.0
+            },
+            "net_return_pp": -3.538308468361473,
+            "max_session_error": 9.663381206337363e-12
+          },
+          "excess_components_pp": {
+            "overnight": 3.697343322753909,
+            "inherited_intraday": 3.541723358154293,
+            "fill_to_close": -8.773961508701504,
+            "dividends": -0.5972989999999996,
+            "fees": -1.5022812811247968,
+            "impact": -3.0045626445814126,
+            "borrow": -0.47644767132713683
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 10.507057983398438,
+              "inherited_intraday": 9.862275238037109,
+              "fill_to_close": 2.53457533164375,
+              "dividends": 4.526299999999999,
+              "fees": -2.125474610830922,
+              "impact": -4.250945318612074,
+              "borrow": -0.4217199857530139
+            },
+            "net_return_pp": 20.632068637883314,
+            "max_session_error": 3.3651303965598345e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -12.44126252746582,
+              "inherited_intraday": 10.0897472076416,
+              "fill_to_close": 1.3355076599121094,
+              "dividends": 8.52426,
+              "fees": -0.009986371875,
+              "impact": -0.01996875,
+              "borrow": 0.0
+            },
+            "net_return_pp": 7.478297218212893,
+            "max_session_error": 1.1027623258996755e-11
+          },
+          "excess_components_pp": {
+            "overnight": 22.948320510864257,
+            "inherited_intraday": -0.22747196960449223,
+            "fill_to_close": 1.1990676717316406,
+            "dividends": -3.997960000000001,
+            "fees": -2.1154882389559218,
+            "impact": -4.230976568612074,
+            "borrow": -0.4217199857530139
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 30.804742698669433,
+              "inherited_intraday": 8.598718078613281,
+              "fill_to_close": 5.902578400027525,
+              "dividends": 7.29035,
+              "fees": -1.7752785832243771,
+              "impact": -3.5505531163251165,
+              "borrow": -0.6042952882930213
+            },
+            "net_return_pp": 46.6662621894677,
+            "max_session_error": 4.092726157978177e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 17.53029359436035,
+              "inherited_intraday": 6.783276649475098,
+              "fill_to_close": 0.5273429260253907,
+              "dividends": 8.66915,
+              "fees": -0.00998869816948105,
+              "impact": -0.019973401658624993,
+              "borrow": 0.0
+            },
+            "net_return_pp": 33.48010107003272,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": 13.274449104309081,
+            "inherited_intraday": 1.8154414291381835,
+            "fill_to_close": 5.375235474002134,
+            "dividends": -1.3788,
+            "fees": -1.7652898850548961,
+            "impact": -3.5305797146664917,
+            "borrow": -0.6042952882930213
+          }
+        },
+        {
+          "symbol": "KO",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 29.68273180770874,
+              "inherited_intraday": -23.756904808044432,
+              "fill_to_close": 5.0570605953722,
+              "dividends": 7.684940000000001,
+              "fees": -1.8442181519149925,
+              "impact": -3.688432257290735,
+              "borrow": -0.10211732940083457
+            },
+            "net_return_pp": 13.033059856429974,
+            "max_session_error": 2.6943780540023e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 31.6869221496582,
+              "inherited_intraday": -19.730325355529786,
+              "fill_to_close": -0.28650291442871095,
+              "dividends": 10.0848,
+              "fees": -0.009997029355801391,
+              "impact": -0.019990060699456507,
+              "borrow": 0.0
+            },
+            "net_return_pp": 21.72490678964445,
+            "max_session_error": 1.1709744285326451e-11
+          },
+          "excess_components_pp": {
+            "overnight": -2.00419034194946,
+            "inherited_intraday": -4.026579452514646,
+            "fill_to_close": 5.343563509800911,
+            "dividends": -2.3998599999999985,
+            "fees": -1.8342211225591911,
+            "impact": -3.6684421965912786,
+            "borrow": -0.10211732940083457
+          }
+        },
+        {
+          "symbol": "LIN",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -35.22242793273926,
+              "inherited_intraday": 78.56082460021973,
+              "fill_to_close": -4.225098812914577,
+              "dividends": 3.9015899999999992,
+              "fees": -1.829125453708686,
+              "impact": -3.658246993634279,
+              "borrow": -0.5020810927218482
+            },
+            "net_return_pp": 37.025434314501204,
+            "max_session_error": 4.18367562815547e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -22.8337431640625,
+              "inherited_intraday": 81.38294079589843,
+              "fill_to_close": 2.060279052734375,
+              "dividends": 4.94506,
+              "fees": -0.009995326570854491,
+              "impact": -0.019986655810546382,
+              "borrow": 0.0
+            },
+            "net_return_pp": 65.5245547021889,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -12.388684768676757,
+            "inherited_intraday": -2.822116195678703,
+            "fill_to_close": -6.285377865648952,
+            "dividends": -1.0434700000000006,
+            "fees": -1.8191301271378315,
+            "impact": -3.6382603378237324,
+            "borrow": -0.5020810927218482
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 20.061523574829103,
+              "inherited_intraday": 35.20580160522461,
+              "fill_to_close": -9.524883720985637,
+              "dividends": 2.02212,
+              "fees": -1.702604268554206,
+              "impact": -3.4052047134684136,
+              "borrow": -0.9109930754579818
+            },
+            "net_return_pp": 41.74575940158771,
+            "max_session_error": 3.728928277269006e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 38.363941040039066,
+              "inherited_intraday": 35.70066345214844,
+              "fill_to_close": 0.29439971923828123,
+              "dividends": 3.5098000000000007,
+              "fees": -0.009995958539263916,
+              "impact": -0.019987919494626,
+              "borrow": 0.0
+            },
+            "net_return_pp": 77.8388203333919,
+            "max_session_error": 1.750777300912887e-11
+          },
+          "excess_components_pp": {
+            "overnight": -18.302417465209963,
+            "inherited_intraday": -0.4948618469238326,
+            "fill_to_close": -9.819283440223918,
+            "dividends": -1.4876800000000006,
+            "fees": -1.692608310014942,
+            "impact": -3.3852167939737874,
+            "borrow": -0.9109930754579818
+          }
+        },
+        {
+          "symbol": "NEE",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 36.06272179794311,
+              "inherited_intraday": -55.73565714263916,
+              "fill_to_close": 3.31522986277284,
+              "dividends": 6.835445,
+              "fees": -1.5493305109542446,
+              "impact": -3.0986569669989175,
+              "borrow": -0.7428444158690314
+            },
+            "net_return_pp": -14.913092375745418,
+            "max_session_error": 3.353761712787673e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 30.54814205932617,
+              "inherited_intraday": -52.3527998085022,
+              "fill_to_close": 0.3486526336669922,
+              "dividends": 6.855192,
+              "fees": -0.009993789644725798,
+              "impact": -0.019983582572930914,
+              "borrow": 0.0
+            },
+            "net_return_pp": -14.630790487726685,
+            "max_session_error": 1.1596057447604835e-11
+          },
+          "excess_components_pp": {
+            "overnight": 5.514579738616941,
+            "inherited_intraday": -3.3828573341369648,
+            "fill_to_close": 2.9665772291058476,
+            "dividends": -0.019746999999999737,
+            "fees": -1.5393367213095188,
+            "impact": -3.0786733844259864,
+            "borrow": -0.7428444158690314
+          }
+        },
+        {
+          "symbol": "PG",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 9.504314399719238,
+              "inherited_intraday": 13.120587677001954,
+              "fill_to_close": -7.079936375099212,
+              "dividends": 5.5911919999999995,
+              "fees": -1.921717353160409,
+              "impact": -3.8434330130372807,
+              "borrow": -0.20347907366798038
+            },
+            "net_return_pp": 15.167528261756203,
+            "max_session_error": 2.2737367544323206e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": -5.075595062255859,
+              "inherited_intraday": 15.805280364990235,
+              "fill_to_close": 0.5140338134765625,
+              "dividends": 7.780103999999998,
+              "fees": -0.009992474492984618,
+              "impact": -0.019980952795404162,
+              "borrow": 0.0
+            },
+            "net_return_pp": 18.993849688922527,
+            "max_session_error": 1.2278178473934531e-11
+          },
+          "excess_components_pp": {
+            "overnight": 14.579909461975097,
+            "inherited_intraday": -2.6846926879882815,
+            "fill_to_close": -7.593970188575774,
+            "dividends": -2.1889119999999984,
+            "fees": -1.9117248786674244,
+            "impact": -3.8234520602418764,
+            "borrow": -0.20347907366798038
+          }
+        },
+        {
+          "symbol": "PLD",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 43.78457817840576,
+              "inherited_intraday": 4.357012176513672,
+              "fill_to_close": -6.79214474680916,
+              "dividends": 5.992629999999999,
+              "fees": -2.1174691812372433,
+              "impact": -4.234934403270573,
+              "borrow": -0.6025430528667994
+            },
+            "net_return_pp": 40.387128970735795,
+            "max_session_error": 7.753442332614213e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 44.5732839050293,
+              "inherited_intraday": -25.102426124572755,
+              "fill_to_close": 0.041560951232910155,
+              "dividends": 8.613310000000002,
+              "fees": -0.009991983155570525,
+              "impact": -0.019979970317072982,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.095756778216806,
+            "max_session_error": 2.2168933355715126e-11
+          },
+          "excess_components_pp": {
+            "overnight": -0.7887057266235402,
+            "inherited_intraday": 29.45943830108643,
+            "fill_to_close": -6.83370569804207,
+            "dividends": -2.620680000000003,
+            "fees": -2.1074771980816727,
+            "impact": -4.2149544329535,
+            "borrow": -0.6025430528667994
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": -0.3682205810546875,
+              "inherited_intraday": 7.881283355712891,
+              "fill_to_close": -6.304417619902163,
+              "dividends": 1.194216,
+              "fees": -1.299164215389943,
+              "impact": -2.5983245597191327,
+              "borrow": -0.4731253311120895
+            },
+            "net_return_pp": -1.9677529514650405,
+            "max_session_error": 2.376054908381775e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 1.52274462890625,
+              "inherited_intraday": 23.41553576660156,
+              "fill_to_close": 1.1566724853515624,
+              "dividends": 1.731456,
+              "fees": -0.009990593996110839,
+              "impact": -0.01997719255370407,
+              "borrow": 0.0
+            },
+            "net_return_pp": 27.796441094309564,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": -1.8909652099609375,
+            "inherited_intraday": -15.53425241088867,
+            "fill_to_close": -7.461090105253726,
+            "dividends": -0.5372400000000002,
+            "fees": -1.289173621393832,
+            "impact": -2.5783473671654287,
+            "borrow": -0.4731253311120895
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 0.9941005554199219,
+              "inherited_intraday": 27.99836770629883,
+              "fill_to_close": -12.43140234996264,
+              "dividends": 3.7205979999999994,
+              "fees": -1.7569983670318843,
+              "impact": -3.513992814250123,
+              "borrow": -0.042980049551100956
+            },
+            "net_return_pp": 14.967692680922973,
+            "max_session_error": 2.091837814077735e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 2.9917513427734375,
+              "inherited_intraday": 20.062220642089844,
+              "fill_to_close": 0.87532470703125,
+              "dividends": 4.542502000000001,
+              "fees": -0.009977505267438356,
+              "impact": -0.019951020330814515,
+              "borrow": 0.0
+            },
+            "net_return_pp": 28.44187016629629,
+            "max_session_error": 1.4551915228366852e-11
+          },
+          "excess_components_pp": {
+            "overnight": -1.9976507873535154,
+            "inherited_intraday": 7.936147064208985,
+            "fill_to_close": -13.306727056993891,
+            "dividends": -0.8219040000000013,
+            "fees": -1.7470208617644458,
+            "impact": -3.4940417939193082,
+            "borrow": -0.042980049551100956
+          }
+        },
+        {
+          "symbol": "UNH",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 41.31361846923828,
+              "inherited_intraday": 3.98398583984375,
+              "fill_to_close": -12.963441666835283,
+              "dividends": 2.50575,
+              "fees": -2.0849853936325236,
+              "impact": -4.169969492731673,
+              "borrow": -0.7510980344281878
+            },
+            "net_return_pp": 27.83385972145449,
+            "max_session_error": 4.092726157978177e-11
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 39.72818249511719,
+              "inherited_intraday": 19.8084326171875,
+              "fill_to_close": -1.112544189453125,
+              "dividends": 4.979260000000001,
+              "fees": -0.009974528576638183,
+              "impact": -0.01994506813964165,
+              "borrow": 0.0
+            },
+            "net_return_pp": 63.373411326135276,
+            "max_session_error": 2.3305801732931286e-11
+          },
+          "excess_components_pp": {
+            "overnight": 1.58543597412109,
+            "inherited_intraday": -15.824446777343748,
+            "fill_to_close": -11.850897477382158,
+            "dividends": -2.473510000000001,
+            "fees": -2.0750108650558854,
+            "impact": -4.150024424592032,
+            "borrow": -0.7510980344281878
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sessions": 732,
+          "policy": {
+            "components_pp": {
+              "overnight": 15.286103721618652,
+              "inherited_intraday": 62.137640853881834,
+              "fill_to_close": 92.92431122891624,
+              "dividends": 21.32811,
+              "fees": -3.6208174802585242,
+              "impact": -7.241630583998048,
+              "borrow": -0.9423118337009065
+            },
+            "net_return_pp": 179.8714059064591,
+            "max_session_error": 1.2778400559909642e-10
+          },
+          "holding": {
+            "components_pp": {
+              "overnight": 14.883787872314453,
+              "inherited_intraday": 126.64056702423096,
+              "fill_to_close": 3.9657396354675294,
+              "dividends": 25.61008,
+              "fees": -0.009997575151660538,
+              "impact": -0.019991152072900517,
+              "borrow": 0.0
+            },
+            "net_return_pp": 171.07018580478837,
+            "max_session_error": 4.865796654485166e-11
+          },
+          "excess_components_pp": {
+            "overnight": 0.4023158493041983,
+            "inherited_intraday": -64.50292617034913,
+            "fill_to_close": 88.95857159344871,
+            "dividends": -4.281970000000001,
+            "fees": -3.610819905106864,
+            "impact": -7.221639431925148,
+            "borrow": -0.9423118337009065
+          }
+        }
+      ]
+    }
+  ],
+  "accepted_summary_sha256": "f1b4d0511a8b855bae9e0707cc7bb32b9dac9f9a368e554792034fe42271aa38",
+  "source_files_sha256": {
+    ".runtime/guard-screen-v2-state.json": "9c47ef42c8553debd8796072b2c5dc937aff6fc3b4a45d0297c7777fcdb92f0c",
+    "results/recurrent-guard-2026-10-22/summary.json": "f1b4d0511a8b855bae9e0707cc7bb32b9dac9f9a368e554792034fe42271aa38",
+    "configs/universes/sector_research.json": "0bb7966d30ed37ec6fc8ed6fc6c11a212311b18ec3bccb2a4bb0197cf44dc71d",
+    "/home/vibe/projects/rl-stocks/.runtime/guard-source-v2/artifacts/colab/rl-stocks-cpu-53774478becd/retrieved/artifacts/runs/20261022T135401-recurrent_ppo-11-ec947da8/metadata.json": "83e8488d2f871cf271108f1bbc158664206b735ecb6eda755c4ca62c64fa6042",
+    "/home/vibe/projects/rl-stocks/.runtime/guard-source-v2/artifacts/colab/rl-stocks-cpu-53774478becd/retrieved/artifacts/runs/20261022T135401-recurrent_ppo-11-ec947da8/selected-validation.json": "6a9ba6edd6d0f7312e24cfe5be26937623de58e9afc4bd4e583dddb8fccf374b",
+    "/home/vibe/projects/rl-stocks/.runtime/guard-source-v2/artifacts/colab/rl-stocks-cpu-53774478becd/retrieved/artifacts/runs/20261022T135401-recurrent_ppo-11-ec947da8/validation.json": "ac3054e0b248ad1ed7396e0b4f567f53f31eb482a3d5f36eaea84efcc08184a8",
+    "/home/vibe/projects/rl-stocks/.runtime/guard-source-v2/artifacts/colab/rl-stocks-cpu-f7d1aabb35da/retrieved/artifacts/runs/20261022T135447-recurrent_ppo-11-2c250948/metadata.json": "d57f24b06e6245de7ce79e23ab394d6f9503d9f25aaa2227275790d8cf160faa",
+    "/home/vibe/projects/rl-stocks/.runtime/guard-source-v2/artifacts/colab/rl-stocks-cpu-f7d1aabb35da/retrieved/artifacts/runs/20261022T135447-recurrent_ppo-11-2c250948/selected-validation.json": "3e0d55578e3390c70dc002b0712920f707b5251ed9baab49a39659c92f13a4be",
+    "/home/vibe/projects/rl-stocks/.runtime/guard-source-v2/artifacts/colab/rl-stocks-cpu-f7d1aabb35da/retrieved/artifacts/runs/20261022T135447-recurrent_ppo-11-2c250948/validation.json": "1fd7db1e21873b13e7dde853de4231495ae66258cc53bca8c59df5e2d9ac17f0"
+  },
+  "source_files_unchanged": true,
+  "source_sha256": {
+    "/home/vibe/projects/rl-stocks/scripts/diagnose_guard_bridge.py": "84db53e79fdf8c0bd66478ead6caa7e7b07f0595daecaae02166729c10f878bb",
+    "src/rl_stocks/reporting/pnl_bridge.py": "cafd9d8cde8c2d965591dcb232f63343546c43956ff0a5e3451cd73b9a3400ae"
+  },
+  "training_performed": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "immutable_development_bars_opened": true,
+  "objective_achieved": false
+}

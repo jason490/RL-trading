@@ -44,3 +44,16 @@ included in the public summary. Original source/data/ledger remain retained.
 fractional splits, dividends, partial exits, reversals, borrow, ordered fills,
 corrupt quantities/costs/equity, and hand-calculated holding reconstruction.
 Actual results pending. No policy promotion follows from this diagnostic.
+
+
+## Actual bar-backed cash-flow bridge
+
+Committed method96dddd9 precedes four accepted phases/104 episodes. Every
+policy/holding session reconciles (worst error1.28e-10 dollars); source hashes
+unchanged, no fitting/new prediction/provider/Colab/test access. Guard final
+ETF excess−13.3541pp comprises overnight−7.6351, inherited intraday−1.2040,
+fill-to-close−1.5044, dividends−0.4841 and fees/impact/borrow−2.5265pp.
+Overnight differences are substantial, not proof of a holding-rule cause. Next
+fixed partition by inherited side and preceding actual exit reason before any
+intervention. Project38.39201565 unchanged, all sessions stopped.
+[Evidence](../results/guard-bridge-2026-10-22/README.md).

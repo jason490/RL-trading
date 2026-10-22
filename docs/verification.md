@@ -1706,3 +1706,16 @@ all opens; next preregister exact bar-backed overnight/intraday cash-flow
 reconciliation before another intervention.26 focused tests pass. Guard closed;
 project38.39201565 unchanged, all sessions stopped.
 [Evidence](../results/guard-exits-2026-10-22/README.md).
+
+
+## Actual bar-backed cash-flow bridge
+
+Committed method96dddd9 precedes four accepted phases/104 episodes. Every
+policy/holding session reconciles (worst error1.28e-10 dollars); source hashes
+unchanged, no fitting/new prediction/provider/Colab/test access. Guard final
+ETF excess−13.3541pp comprises overnight−7.6351, inherited intraday−1.2040,
+fill-to-close−1.5044, dividends−0.4841 and fees/impact/borrow−2.5265pp.
+Overnight differences are substantial, not proof of a holding-rule cause. Next
+fixed partition by inherited side and preceding actual exit reason before any
+intervention. Project38.39201565 unchanged, all sessions stopped.
+[Evidence](../results/guard-bridge-2026-10-22/README.md).
