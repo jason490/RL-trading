@@ -28,6 +28,7 @@ def main():
     generate.add_argument("--sector-labels",action="store_true",help="Requires audited training-era issuer classifications")
     generate.add_argument("--coverage-scope",choices=['snapshot','universe'],default='snapshot')
     generate.add_argument("--trend-context",choices=["none","matched_baseline","masked","full"],default="none")
+    generate.add_argument("--session-context",choices=["none","masked","full"],default="none")
     generate.add_argument("--development-only",action="store_true",help="Build train/validation only; exclude test")
     generate.add_argument("--evaluation-symbols",nargs='+',help="Explicit common validation/test panel")
     train_parser=sub.add_parser("train");train_parser.add_argument("dataset")
@@ -83,7 +84,7 @@ def main():
                        zone_timeframes=tuple(args.supply_demand),zone_config=zone_config,universe=universe,
                        sector_rotation=args.sector_rotation,
                        sector_records=read_sectors(args.sectors) if args.sectors else (),
-                       sector_labels=args.sector_labels,coverage_scope=args.coverage_scope,trend_context=args.trend_context,
+                       sector_labels=args.sector_labels,coverage_scope=args.coverage_scope,trend_context=args.trend_context,session_mode=args.session_context,
                        include_test=not args.development_only,evaluation_symbols=args.evaluation_symbols))
     elif args.command=="compare":
         from rl_stocks.reporting.comparison import compare

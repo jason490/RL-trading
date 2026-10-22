@@ -72,3 +72,6 @@ No broker-order adapter is enabled. Advanced data families and extra reward term
 
 [Overnight/intraday P&L bridge](pnl-bridge.md) documents exact saved-fill
 cash-flow identities, immutable-bar reconciliation and limitations.
+
+[Completed-session decomposition](session-context.md) describes optional causal
+overnight/intraday fields, same-dimension masks and pending research preflight.

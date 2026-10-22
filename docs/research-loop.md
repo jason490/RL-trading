@@ -1043,3 +1043,15 @@ Diagnostic sequence complete; choose a distinct preregistered learning
 hypothesis before new allocation, preserving short/holding/absolute gates.
 Guard closed, no promotion. Project38.39201565 unchanged, all sessions stopped.
 [Evidence](../results/guard-overnight-2026-10-22/README.md).
+
+
+## Distinct session-decomposition information hypothesis
+
+Optional completed overnight/intraday log returns and EMA20 components implemented
+with none/masked/full modes; defaults unchanged. Synthetic witness proves baseline
+seven features omit this open/close decomposition, not predictive value.53 focused
+checks pass (formulas, causality, splits, masks, training-only normalization, gaps).
+No real-data preflight/training or allocation yet. Next bind expanded111/original26
+datasets, exact shared controls/initialization and numeric gates before Colab
+smokes. Guard family remains closed; project38.39201565 unchanged.
+[Method and pending requirements](session-context.md).

@@ -38,3 +38,6 @@ family requires a new feature schema, dataset, ablation and retrained bundle.
 [Sector rotation](sectors-universe.md) is implemented as opt-in historical ETF context; issuer labels require audited training-era classifications. Filings, options/OI, sentiment and order flow remain disabled. Add each family independently with event/public-availability/retrieval/revision metadata and backward as-of joins. A current snapshot is not historical evidence. Estimated signed trades or bar-derived volume profiles must be labelled as proxies. Match data windows, costs, seeds and budgets when evaluating each feature ablation.
 
 Offline tests compare full-series outputs with causal prefixes and altered future suffixes, verify current-volume exclusion, weekly prefix parity and forward split continuity. Incremental production feature state is a future shadow-inference extension; current inference should recompute the same batch feature functions on available history.
+
+[Completed-session decomposition](session-context.md) describes optional causal
+overnight/intraday fields, same-dimension masks and pending research preflight.

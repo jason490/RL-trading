@@ -41,7 +41,9 @@ def split_name(session):
 def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
              zone_timeframes=(), zone_config=None, universe=None, sector_rotation=False,
              sector_records=(), sector_labels=False, evaluation_symbols=None, include_test=True,
-             coverage_scope='snapshot', trend_context='none'):
+             coverage_scope='snapshot', trend_context='none', session_mode='none'):
+    from rl_stocks.features.price.sessions import MODES
+    if session_mode not in MODES:raise ValueError('unknown session context mode')
     from rl_stocks.features.trend.context import validate_mode
     validate_mode(trend_context)
     if coverage_scope not in ('snapshot','universe') or coverage_scope=='universe' and universe is None:
@@ -97,7 +99,7 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
         starts=[0]+[i for i in range(1,len(series)) if any(series[i-1].session<day<series[i].session for day in missing)]+[len(series)]
         rows=[]
         for start,end in zip(starts,starts[1:]):
-            chunk,names=assemble(series[start:end],weekly,zone_timeframes,zone_config,trend_context)
+            chunk,names=assemble(series[start:end],weekly,zone_timeframes,zone_config,trend_context,session_mode)
             rows.extend([{**r,"bar":r["bar"]+start} for r in chunk])
         if rotation:
             names += rotation.names
@@ -199,6 +201,12 @@ def generate(snapshot, output, weekly=False, purge=20, allow_unverified=False,
             'high_convention':'Maximum close over latest252 sessions including current close',
             'availability':'Current completed bar availability; reset warmup across known gaps',
             'mask':'Zero extra columns after identical readiness; matched_baseline drops extra columns'}
+    if session_mode!='none':
+        payload['schema']+='-session-context-v1-'+session_mode
+        payload['manifest']['session_context']=dict(version=1,mode=session_mode,ema_window=20,
+            contiguous_observations_required=21,return_convention='Log price returns; forward-only split continuity; excludes cash dividends',
+            availability='All fields released at current completed bar availability; gap chunks reset state',
+            mask='Four zeros with identical readiness in masked arm')
     identity = digest(payload)
     destination = Path(output)/identity
     destination.mkdir(parents=True,exist_ok=True)

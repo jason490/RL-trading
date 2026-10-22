@@ -1439,3 +1439,7 @@ Update-guard100k screen complete: relative improvement passes, absolute targets
 fail; no promotion/confirmation. Six owned sessions stopped, frozen parity
 verified, project38.39201565/150. Publication/cleanup then saved-path diagnosis.
 [Evidence](results/recurrent-guard-2026-10-22/README.md).
+
+Optional completed-session context implemented/tested (53 focused checks);
+real-data preflight, fixed protocol and Colab acceptance remain before training.
+[Method](docs/session-context.md). Defaults unchanged, no new usage.
