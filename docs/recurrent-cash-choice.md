@@ -1,7 +1,7 @@
 # Recurrent cash availability research
 
-Status: corrected four512 Colab smokes accepted; fixed four100k seed11 screen is next.
-Initial failed smoke evidence and all eight verified session stops are retained.
+Status: completed fixed100k screen; cash candidate failed. All12 owned sessions
+stopped. Publication and verified duplicate cleanup remain.
 
 ## Evidence and hypothesis
 
@@ -168,3 +168,52 @@ failure evidence retained. Fixed same-source four100k seed11 screen next within
 original4-unit study allowance; no tuning from smoke returns.
 
 [Evidence](../results/recurrent-cash-2026-10-22/README.md).
+
+## Completed fixed screen — cash candidate failed
+
+Strict matched source-bar/accounting/holding validation, actual selected/final
+model restoration, mandatory checkpoint identities, within-family initial tensor
+equality and identical actual sampling pass. All111 training symbols receive
+transitions. Mean net returns on the original26 development episodes:
+
+| Arm | Selected | Final100k |
+| --- | ---: | ---: |
+| Posthoc Gaussian unit | 32.80% | 32.80% |
+| Aligned Gaussian unit | 20.04% | 13.93% |
+| Binary categorical | 34.38% | −1.25% |
+| Cash categorical candidate | 29.24% | 6.63% |
+| Matched holding | 30.60% | 30.60% |
+
+Cash final stocks7.28% versus holding32.63%, ETFs3.03% versus19.47%; median stock
+excess−25.65pp. Cash selected stocks32.02%, ETFs13.97%, median stock excess−3.25pp;
+selected ETF/median targets fail. Selected/final gains versus strongest posthoc
+control are−3.56/−26.18pp. Cash final mean symbol drawdown−31.03% improves2.16pp
+over posthoc's−33.20%, but lower drawdown alone cannot pass return gates. Cash
+loses selected5.14pp to binary, while final beats binary7.87pp; final ETF gain
+versus binary is−0.45pp. All three relative control gates and both absolute
+selected/final gates fail.
+
+Cash joint positive total return AND positive net short P&L improves from1/3
+selected declining stocks to2/3 final: AMZN+9.49% with+$4,299.85 short P&L,
+NEE+20.35% with+$10,635.29. DIS remains−31.09%, short P&L−$6,968.94. These
+future-defined cohorts are reporting-only. Partial short success does not offset
+weak overall stock/ETF results. Binary joint outcomes fall2/3 selected to0/3 final;
+its temporary34.38% checkpoint is not a stable winner. Posthoc remains one-seed
+reused-development evidence, not robust/prospective success.
+
+The fixed cash-choice family is closed: no extra steps, cash thresholds, entropy
+or architecture grids, confirmation or promotion. No retired-test evaluation,
+orders or prospective success. Next inspect saved action/participation and
+optimizer diagnostics before any distinct preregistered intervention.
+
+All12 owned sessions stopped/verified, including initial failure.624 exact frozen
+predictions across accepted smokes and screens pass. Models, full reports, source,
+execution/sampling counters, checkpoints and compact10k curves retained.
+Publication/checksummed duplicate cleanup remain.
+
+Project38.30900603/150, remaining111.69099397; conservative study increment
+0.17234766 includes failure/setup/idle/retrieval. Ledger observed debits0.14.
+Account349.56 zero rate/assignments; original account150/170 and project150/130
+limits retained. Original ledger and all failure evidence preserved.
+
+[Full evidence](../results/recurrent-cash-2026-10-22/README.md).
