@@ -18,7 +18,10 @@ input rejection, actual saved selected/final optimizer/configuration restoration
 current checkpoint identities and equal sampling. Initial tensors match within
 Gaussian and categorical pairs; cross-family equality is not claimed. Cash arm
 requests205 cash/307 directional samples, binary512 directional/zero cash; both
-perform40 optimizer updates, have21 optimizer parameter states and changed weights.
+record40 PPO epochs and80 actual Adam steps, have21 optimizer parameter states
+and changed weights. The saved `optimizer_updates` field is SB3’s `_n_updates`
+epoch counter; it is not an Adam minibatch-step count. Restoring all four final
+smoke optimizers confirms every parameter state has step80.
 No sizing/protection transforms occur in categorical arms. These are wiring
 checks, not performance evidence or settings selection.
 
