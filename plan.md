@@ -1474,3 +1474,8 @@ remain, runtime projection required before100k. No new usage.
 Capacity Colab integration/full-architecture checkers pass;96 focused tests and
 actual immutable tasks validate. Actual two512 smokes/runtime profile remain
 before100k. [Evidence](results/recurrent-capacity-2026-10-22/README.md). No new usage.
+
+Capacity full64/128 Colab smokes accepted:156 frozen checks and saved model/
+optimizer/sampling/RNG evidence pass; sessions stopped. Runtime projection50.3min
+passes two-hour limit; same-source two100k screen next. Project38.53588481/150.
+[Evidence](results/recurrent-capacity-2026-10-22/README.md).

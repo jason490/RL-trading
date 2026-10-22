@@ -31,9 +31,8 @@ predictions pass. Publication and checksummed duplicate cleanup are verified; mo
 
 [Recurrent capacity](recurrent-capacity-2026-10-22/README.md) fixes64 versus128
 recurrent/dense widths (61,513 versus221,321 parameters), with unchanged inputs
-and100k budget. Local checkers and96 focused integration tests pass. Actual
-Colab smokes and runtime approval remain before screen allocation; no performance
-results or new compute usage yet.
+and100k budget. Local checkers and96 focused integration tests pass. Actual two Colab smokes and runtime approval pass; fixed100k screen remains.
+There are no capacity-screen performance results yet.
 
 ## Recent diagnostics
 

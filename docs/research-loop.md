@@ -1153,3 +1153,17 @@ Worker/runner/retrieval/model/optimizer evidence and confirmation/report routing
 are integrated using existing lifecycle/budget code. Source compilation passes.
 Actual two512 CPU smokes still required before100k; no allocation/usage yet.
 [Evidence](../results/recurrent-capacity-2026-10-22/README.md).
+
+
+## Actual capacity smokes accepted and runtime projection passes
+
+Two512 full64/128 CPU runs from39f94a0/defaultPython3.13.16 completed/retrieved
+and verified stopped.156 frozen recurrent predictions, immutable normalization
+and rejection checks, restored models/optimizers/checkpoints, same sampling and
+common CPU RNG pass. Full61,513/221,321-parameter architectures each perform
+80 Adam steps/40 nominal epochs. Durations140.96/136.94s are mixed train/evaluate,
+not a reliable speed ranking. Fixed projection3016s/50.3min passes7200s; exact
+acceptance bytes bind approved plans. Same-source two100kseed11 screen next.
+Project38.53588481, study increment0.02100741; official account349.40 zero rate/
+assignments. Original baseline38.514877408036206/2-unit allowance retained.
+[Evidence](../results/recurrent-capacity-2026-10-22/README.md).

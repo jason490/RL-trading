@@ -37,3 +37,32 @@ no screen or automatic hardware restart. Smoke returns do not tune settings.
 Project38.51487741/150; last official account349.41 zero rate/assignments.
 Original shared ledger and2-unit study baseline38.514877408036206 retained.
 All owned sessions are stopped; no new usage.
+
+
+## Actual full-width CPU smokes accepted
+
+Two512 Colab CPU runs from clean39f94a0/defaultPython3.13.16 completed, retrieved
+and verified stopped.156 exact frozen action/hidden/cell/repeat/reset predictions
+pass; normalization/input rejection, saved selected/final model/optimizer and
+checkpoint identities pass. Actual sampling matches. Per-arm tensors match pinned
+starts and CPU RNG matches across widths; cross-width weights differ as intended.
+
+Both full architectures trained:61,513/221,321 parameters,40 nominal PPO epochs
+and80 actual Adam steps. Smoke returns did not choose settings. Measured
+train/evaluate duration control140.9608s, larger136.9381s; evaluation and hardware
+variation prevent interpreting that as a training-speed advantage. The protocol
+clamps the duration ratio to at least1.0. Conservative projected screen allocation
+3015.9971 seconds (50.3 minutes), including1200-second setup/retrieval/shutdown
+reserve, passes7200 seconds. This remains a heuristic, not a runtime guarantee.
+
+The exact smoke-acceptance bytes and runtime projection bind prepared100k plans
+and controller pre-allocation checks. Fixed same-source two100kseed11 screen is
+next; no width/step/feature/reward adjustment or model promotion from smokes.
+
+All two owned sessions stopped. Project38.53588481/150; study conservative
+increment0.02100741 includes setup/idle/downloads/shutdown. Official account
+349.40, zero assignments/rate. Original study baseline38.514877408036206/2-unit
+allowance and project150/130/account150/170 safeguards remain. No orders/test access.
+
+[Acceptance](smoke-summary.json), [frozen checks](smoke-restoration.json),
+[compute](smoke-compute.json), [runtime profile](runtime-profile.json).
