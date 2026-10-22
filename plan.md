@@ -1405,3 +1405,8 @@ final cash29.24%/6.63%, binary34.38%/−1.25%, posthoc32.80%/32.80%, holding30.6
 All12 owned sessions stopped;624 exact smoke/screen frozen predictions. No
 confirmation/promotion; publication and verified duplicate cleanup remain.
 [Outcome](results/recurrent-cash-2026-10-22/README.md).
+
+Cash-choice publication/cleanup accepted:15 server assets verified,58,832,238
+duplicate bytes removed,249 retained hashes unchanged; strict report reproduces
+byte for byte. All12 owned sessions stopped. Saved behavior/optimizer audit next,
+no family extension or promotion.

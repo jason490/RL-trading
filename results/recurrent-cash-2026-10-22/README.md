@@ -1,6 +1,6 @@
 # Recurrent cash-choice study
 
-Status: fixed100k screen complete; cash candidate failed. All12 owned sessions stopped. Publication and verified duplicate cleanup remain.
+Status: fixed100k screen complete; cash candidate failed. All12 owned sessions stopped. Publication and verified duplicate cleanup complete.
 
 [Failure and cleanup record](smoke-failure.json) preserves four owned session IDs, source identity, retained archive checksum and charges. Binary policy likelihood rejected the library's zero-padded recurrent minibatch rows. The controller retrieved the failure archive and verified shutdown of all four sessions. Other cells had no retrievable snapshot when stopped.
 
@@ -81,3 +81,23 @@ Account349.56 zero rate/assignments; original account150/170 and project150/130
 limits retained. Original ledger and all failure evidence preserved.
 
 [Strict summary](summary.json), [10k incremental curves](learning-curves.csv), [screen restoration](restoration.json), [compute](compute.json).
+
+## Publication and cleanup accepted
+
+[Model/report release](https://github.com/jason490/RL-trading/releases/tag/recurrent-cash-2026-10-22) contains15 assets, all server sizes and
+SHA-256 digests verified. Eight accepted model bundles retain selected/latest
+weights, metadata, checkpoint identities and execution/sampling counters.
+`comparison.html` shows interactive10k curves; `learning-curves.csv` retains
+percentage-point increments. Failure evidence remains visible.
+
+Cleanup removed only two verified duplicate publication archives,58,832,238 bytes
+(about56.1MiB). All249 inventoried retained hashes are unchanged, including
+original transports, complete model/frozen/report/checkpoint evidence, source
+archives, failure archive, immutable dataset and original ledger. The strict
+summary reproduces byte for byte after cleanup, restoring all four screen models
+and rechecking source/accounting/gates. All12 owned sessions remain stopped.
+Project38.30900603 and last official account349.56 remain; no further compute
+allocated. Next audit saved behavior/optimizer evidence before a distinct
+preregistered intervention. No cash-family extension or promotion.
+
+[Server checksums](release-verification.json), [cleanup inventory](cleanup.json), [post-cleanup reproduction](reproduction.json).

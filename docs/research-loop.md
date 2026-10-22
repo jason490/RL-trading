@@ -833,3 +833,23 @@ Account349.56 zero rate/assignments; original account150/170 and project150/130
 limits retained. Original ledger and all failure evidence preserved.
 
 [Full evidence](../results/recurrent-cash-2026-10-22/README.md).
+
+## Publication and cleanup accepted
+
+[Model/report release](https://github.com/jason490/RL-trading/releases/tag/recurrent-cash-2026-10-22) contains15 assets, all server sizes and
+SHA-256 digests verified. Eight accepted model bundles retain selected/latest
+weights, metadata, checkpoint identities and execution/sampling counters.
+`comparison.html` shows interactive10k curves; `learning-curves.csv` retains
+percentage-point increments. Failure evidence remains visible.
+
+Cleanup removed only two verified duplicate publication archives,58,832,238 bytes
+(about56.1MiB). All249 inventoried retained hashes are unchanged, including
+original transports, complete model/frozen/report/checkpoint evidence, source
+archives, failure archive, immutable dataset and original ledger. The strict
+summary reproduces byte for byte after cleanup, restoring all four screen models
+and rechecking source/accounting/gates. All12 owned sessions remain stopped.
+Project38.30900603 and last official account349.56 remain; no further compute
+allocated. Next audit saved behavior/optimizer evidence before a distinct
+preregistered intervention. No cash-family extension or promotion.
+
+[Verification](../results/recurrent-cash-2026-10-22/release-verification.json), [cleanup](../results/recurrent-cash-2026-10-22/cleanup.json), [reproduction](../results/recurrent-cash-2026-10-22/reproduction.json).

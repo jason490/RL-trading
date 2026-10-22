@@ -166,3 +166,7 @@ bundle. Cleanup removed11 duplicates (10,857,969 logical bytes;10.36MiB), with23
 retained hashes unchanged. Unique snapshots, probe predictions, fit logs, prepared
 data, source export and ledger remain. [Cleanup](../results/supervised-signal-2026-10-20/cleanup.json),
 [server receipts](../results/supervised-signal-2026-10-20/release-verification.json).
+
+## Cash-choice publication cleanup — 2026-10-22
+
+All15 server asset sizes/digests verified before removing two duplicate publication archives totaling58,832,238 bytes. All249 retained hashes unchanged; original transports, complete model/frozen/checkpoint/report/counter evidence, source/failure archives, immutable dataset and ledger retained. Post-cleanup strict summary reproduces byte for byte. All12 owned sessions stopped. [Inventory](../results/recurrent-cash-2026-10-22/cleanup.json), [reproduction](../results/recurrent-cash-2026-10-22/reproduction.json).

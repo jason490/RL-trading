@@ -144,3 +144,7 @@ and the synthetic execution-observability witness are also included.
 These are negative development results, not a new winning model or independent
 performance evidence. [Full results](../results/causal-sampling-2026-10-19/README.md)
 retain the gate, source identity, budget and cleanup receipts.
+
+## Recurrent cash-choice screen — 2026-10-22
+
+[Verified release](https://github.com/jason490/RL-trading/releases/tag/recurrent-cash-2026-10-22) publishes eight accepted smoke/screen models and15 assets. Cash candidate failed selected/final return gates; binary’s34.38% selected checkpoint deteriorated to−1.25% final. No robust/prospective winner. Open `comparison.html` for checkpoint curves; extract `validation-reports.tar.gz` for derived equity reports and `research-models.tar.gz` for frozen/selected/latest models. Server sizes/digests all match; original data and private logs excluded. [Full study](../results/recurrent-cash-2026-10-22/README.md).
