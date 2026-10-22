@@ -1,5 +1,6 @@
 """Fresh model construction, fixed tensors/RNG and capacity contracts; no learning."""
 from copy import deepcopy
+import json
 import numpy as np
 import pytest
 import torch
@@ -7,7 +8,7 @@ from gymnasium import Env,spaces
 from sb3_contrib import RecurrentPPO
 from rl_stocks.rl.registry.factory import create
 from rl_stocks.training.recurrent_capacity import (protocol,overrides,model_record,apply_initialization,
-    validate_initialization_assets,validate_record,validate_initial_records,runtime_projection)
+    validate_initialization_assets,validate_record,validate_initial_records,runtime_projection,make_runtime_profile,validate_runtime_profile,PROTOCOL_SHA256)
 
 
 class Dummy(Env):
@@ -64,3 +65,19 @@ def test_runtime_projection_blocks_infeasible_allocation_without_resizing_or_new
     assert p['steps_per_cell']==100000 and p['screen_gate']['minimum_selected_and_final_gain_pp_vs_each_control']==2.
     with pytest.raises(ValueError):overrides('other')
     with pytest.raises(ValueError):overrides('control',1)
+
+
+def test_runtime_profile_binds_actual_acceptance_bytes_and_rejects_stale_or_failed_evidence(tmp_path):
+    p=tmp_path/'.runtime/capacity-smoke-acceptance.json';p.parent.mkdir()
+    fixture=dict(passed=True,protocol_sha256=PROTOCOL_SHA256,cleanup_verified=True,actual_sampling_equal=True,
+        initialization_checks=dict(sampling_rng_identical=True),records={
+            'control':dict(actual_saved_models_restored=True,duration_seconds=10.),
+            'larger':dict(actual_saved_models_restored=True,duration_seconds=12.)})
+    p.write_text(json.dumps(fixture));profile=make_runtime_profile(tmp_path)
+    assert validate_runtime_profile(profile,tmp_path)==profile
+    fixture['records']['larger']['duration_seconds']=13.;p.write_text(json.dumps(fixture))
+    with pytest.raises(ValueError):validate_runtime_profile(profile,tmp_path)
+    fixture['cleanup_verified']=False;p.write_text(json.dumps(fixture))
+    with pytest.raises(ValueError):make_runtime_profile(tmp_path)
+    fixture['cleanup_verified']=True;fixture['records']['larger']['duration_seconds']=1000.;p.write_text(json.dumps(fixture))
+    with pytest.raises(ValueError):make_runtime_profile(tmp_path)

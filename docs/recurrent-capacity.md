@@ -104,3 +104,49 @@ Next integrate the fixed plans/worker/runner/retrieval/report gates, run actual
 environment checkers, then commit/freeze source and verify official usage before
 two Colab smokes. Project38.51487741 and last official account349.41 unchanged;
 all owned sessions are stopped.
+
+
+## Version27 Colab integration and actual construction acceptance
+
+Exact capacity plans bind widths, full-architecture initial snapshots, data and
+account floor. Worker/runner restore pinned starts before fitting and retain
+`capacity-initialization.npz`, initial/selected/final records and actual Adam
+evidence. Study-specific retrieval checks live in `runtime/colab/capacity_artifacts.py`;
+common lifecycle, checksum and checkpoint logic is reused.
+
+Long plans require a valid runtime profile. Controller validation checks its
+SHA-256 against actual smoke-acceptance bytes and recomputes the projection
+before allocating. Profile arithmetic is validated remotely and retained in
+the completion plan and final summary. Missing/stale/failed/over-deadline
+approval rejects; no automatic hardware restart. Confirmation job preparation
+also requires a passing same-protocol screen summary.
+
+96 focused checks pass. Both actual dataset environments/checkers and untrained
+recurrent forwards pass; two actual immutable smoke tasks validate. Source
+compiles. [Construction evidence](../results/recurrent-capacity-2026-10-22/construction.json)
+is model construction/inference only, not local fitting.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_capacity_jobs.py \
+ --smoke --output .runtime/capacity-smoke-jobs.json
+```
+
+Commit/freeze source and verify official usage before running those tasks through
+the existing metered fleet at concurrency2. Preserve the original study baseline
+38.514877408036206 and2-unit allowance across attempts. After retrieval/frozen
+verification and owned shutdown, run `accept_capacity_smokes.py` with output
+`.runtime/capacity-smoke-acceptance.json`. The accepted file is retained unchanged;
+its exact bytes bind later profiles. This is operational acceptance, not a
+performance or model-selection gate.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_capacity_jobs.py \
+ --output .runtime/capacity-screen-jobs.json
+```
+
+This writes the exact profile beside the task list as
+`.runtime/capacity-screen-jobs.runtime-profile.json`, and refuses missing or
+over-deadline approval. After a complete/cleaned screen, pass that same file to
+`report_recurrent_capacity.py --runtime-profile`, together with state/output
+paths. Strict source/accounting/baseline/optimizer checks and unchanged
+selected/final gates still apply. No Colab allocation or new usage yet.

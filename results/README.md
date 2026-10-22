@@ -27,6 +27,14 @@ legacy19.62/18.48%, holding30.60%. Both relative comparisons and absolute target
 fail; no confirmation/promotion. All six smoke/screen sessions stopped,468 frozen
 predictions pass. Publication and checksummed duplicate cleanup are verified; models/reports are linked by the study README.
 
+## Prepared next experiment
+
+[Recurrent capacity](recurrent-capacity-2026-10-22/README.md) fixes64 versus128
+recurrent/dense widths (61,513 versus221,321 parameters), with unchanged inputs
+and100k budget. Local checkers and96 focused integration tests pass. Actual
+Colab smokes and runtime approval remain before screen allocation; no performance
+results or new compute usage yet.
+
 ## Recent diagnostics
 
 - [Saved actions and costs](guard-actions-2026-10-22/README.md)

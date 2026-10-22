@@ -24,6 +24,31 @@ def modes(arm):
     width(arm);return execution_contract('unrestricted','unit_magnitude')
 
 
+def validate_execution_counts(counts,arm,steps):
+    width(arm)
+    from rl_stocks.training.recurrent_alignment import validate_execution_counts as base
+    return base(counts,'posthoc_unit',steps)
+
+
+def validate_execution_report(results,arm):
+    width(arm)
+    from rl_stocks.training.recurrent_alignment import validate_execution_report as base
+    return base(results,'posthoc_unit')
+
+
+def identify_arm(metadata):
+    arm=metadata.get('capacity_arm');width(arm)
+    if metadata.get('algorithm')!='recurrent_ppo' or metadata.get('dataset')!=protocol()['dataset'] or metadata.get('action_execution')!=modes(arm):
+        raise ValueError('actual capacity arm/data/execution identity mismatch')
+    return arm
+
+
+def identify_parameters(params,smoke):
+    matches=[a for a in protocol()['arms'] if params==overrides(a,smoke)]
+    if len(matches)!=1:raise ValueError('fixed capacity training parameters required')
+    return matches[0]
+
+
 def overrides(arm,smoke=False):
     w=width(arm)
     if type(smoke) is not bool:raise ValueError('explicit boolean smoke required')
@@ -93,10 +118,39 @@ def validate_initial_records(records,smoke=False,seed=11):
 
 def runtime_projection(durations):
     spec=protocol();rule=spec['runtime_projection']
-    if (set(durations)!=set(spec['arms']) or any(isinstance(v,bool) or not isinstance(v,(int,float))
+    if (not isinstance(durations,dict) or set(durations)!=set(spec['arms']) or any(isinstance(v,bool) or not isinstance(v,(int,float))
             or not math.isfinite(v) or v<=0 for v in durations.values())):
         raise ValueError('positive actual smoke durations for both arms required')
     ratio=max(1.,durations['larger']/durations['control'])
     seconds=rule['safety_multiplier']*rule['reference_control_seconds']*ratio+rule['setup_retrieval_shutdown_reserve_seconds']
     return dict(projected_seconds=seconds,smoke_duration_ratio=ratio,
         screen_allocation_allowed=seconds<=rule['maximum_allocation_seconds'],heuristic_not_guarantee=True)
+
+
+def make_runtime_profile(root=ROOT):
+    path=Path(root)/'.runtime/capacity-smoke-acceptance.json'
+    result=json.loads(path.read_text())
+    if (result.get('passed') is not True or result.get('protocol_sha256')!=PROTOCOL_SHA256
+            or result.get('cleanup_verified') is not True or result.get('actual_sampling_equal') is not True
+            or result.get('initialization_checks',{}).get('sampling_rng_identical') is not True
+            or set(result.get('records',{}))!=set(protocol()['arms'])
+            or any(r.get('actual_saved_models_restored') is not True for r in result['records'].values())):
+        raise ValueError('actual accepted owned-cleaned capacity smokes required')
+    durations={a:r['duration_seconds'] for a,r in result['records'].items()}
+    profile=dict(version=1,protocol_sha256=PROTOCOL_SHA256,smoke_acceptance_file='.runtime/capacity-smoke-acceptance.json',
+        smoke_acceptance_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),durations_seconds=durations,
+        projection=runtime_projection(durations))
+    validate_runtime_profile(profile)
+    return profile
+
+
+def validate_runtime_profile(profile,root=None):
+    required={'version','protocol_sha256','smoke_acceptance_file','smoke_acceptance_sha256','durations_seconds','projection'}
+    if (not isinstance(profile,dict) or set(profile)!=required or type(profile['version']) is not int or profile['version']!=1
+            or profile['protocol_sha256']!=PROTOCOL_SHA256 or profile['smoke_acceptance_file']!='.runtime/capacity-smoke-acceptance.json'
+            or not isinstance(profile['smoke_acceptance_sha256'],str) or len(profile['smoke_acceptance_sha256'])!=64 or any(c not in '0123456789abcdef' for c in profile['smoke_acceptance_sha256'])
+            or profile['projection']!=runtime_projection(profile['durations_seconds'])
+            or profile['projection']['screen_allocation_allowed'] is not True):
+        raise ValueError('accepted under-deadline capacity runtime profile required')
+    if root is not None and profile!=make_runtime_profile(root):raise ValueError('runtime profile differs from actual smoke acceptance')
+    return profile

@@ -1833,3 +1833,13 @@ save/load and invalid/runtime-deadline rejection. Conservative smoke-duration
 projection must pass before long CPU allocation. Dedicated integration/checkers/
 Colab smokes remain; no allocation or new usage.
 [Protocol and constraints](recurrent-capacity.md).
+
+
+Capacity version27 integration prepared:96 focused tests pass, actual full64/128
+environment checkers/untrained forwards and two immutable smoke tasks validate.
+Required runtime profile is bound to actual accepted smoke bytes and recomputed
+before controller allocation; missing/stale/over-deadline profiles reject.
+Worker/runner/retrieval/model/optimizer evidence and confirmation/report routing
+are integrated using existing lifecycle/budget code. Source compilation passes.
+Actual two512 CPU smokes still required before100k; no allocation/usage yet.
+[Evidence](../results/recurrent-capacity-2026-10-22/README.md).

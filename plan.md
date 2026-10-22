@@ -1470,3 +1470,7 @@ Distinct fixed64/128 recurrent-capacity protocol/shared starts prepared;65
 focused construction/regression checks pass. Integration/checkers/Colab smokes
 remain, runtime projection required before100k. No new usage.
 [Method](docs/recurrent-capacity.md).
+
+Capacity Colab integration/full-architecture checkers pass;96 focused tests and
+actual immutable tasks validate. Actual two512 smokes/runtime profile remain
+before100k. [Evidence](results/recurrent-capacity-2026-10-22/README.md). No new usage.
