@@ -761,3 +761,23 @@ official account349.70 zero rate/assignments. Original failed state, ledger, sou
 and four-unit study baseline retained. Corrected source needs a new export/retry
 state and repeated four512 smokes before screen.
 [Failure evidence](../results/recurrent-cash-2026-10-22/README.md).
+
+## Corrected Colab smokes accepted
+
+Four512 CPU smokes from clean worker70aa505 on Python3.13.16 accepted:312 exact
+frozen action/hidden/cell/repeat/reset predictions, immutable normalization and
+input rejection, actual saved selected/final optimizer/configuration restoration,
+current checkpoint identities and equal sampling. Initial tensors match within
+Gaussian and categorical pairs; cross-family equality is not claimed. Cash arm
+requests205 cash/307 directional samples, binary512 directional/zero cash; both
+perform40 optimizer updates, have21 optimizer parameter states and changed weights.
+No sizing/protection transforms occur in categorical arms. These are wiring
+checks, not performance evidence or settings selection.
+
+All four retry sessions stopped/verified (eight including initial failure).
+Project38.18725015/150; study increment0.05059178 including failure, remaining
+111.81274985. Account349.67 zero rate/assignments. Source, original ledger and
+failure evidence retained. Fixed same-source four100k seed11 screen next within
+original4-unit study allowance; no tuning from smoke returns.
+
+[Evidence](../results/recurrent-cash-2026-10-22/README.md).

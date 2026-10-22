@@ -1,0 +1,141 @@
+{
+  "study_start_units": 38.136658363972735,
+  "current_project_units": 38.187250147496954,
+  "incremental_units": 0.05059178352421867,
+  "remaining_project_units": 111.81274985250305,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "last_account_balance": 349.67,
+  "last_rate": 0,
+  "last_assignments": 0,
+  "attempts": [
+    {
+      "session": "rl-stocks-fleet-37f61438d4d3",
+      "status": "stopped",
+      "measured": 0.0,
+      "estimated": 0.011486490927802193,
+      "charged": 0.011486490927802193,
+      "meter_readings": [
+        {
+          "time": 1792643457.0497127,
+          "balance": 349.7,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792643463.3495944,
+          "balance": 349.7,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792643470.7563033,
+          "balance": 349.7,
+          "rate": 0.24,
+          "assignments": 3
+        },
+        {
+          "time": 1792643477.8849828,
+          "balance": 349.7,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792643539.3836093,
+          "balance": 349.7,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792643585.9108913,
+          "balance": 349.7,
+          "rate": 0.0,
+          "assignments": 0
+        }
+      ]
+    },
+    {
+      "session": "rl-stocks-fleet-a56c8274cbc1",
+      "status": "stopped",
+      "measured": 0.029999999999972715,
+      "estimated": 0.03910529259641965,
+      "charged": 0.03910529259641965,
+      "meter_readings": [
+        {
+          "time": 1792643804.8395226,
+          "balance": 349.7,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792643811.8100233,
+          "balance": 349.7,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792643818.2834141,
+          "balance": 349.7,
+          "rate": 0.24,
+          "assignments": 3
+        },
+        {
+          "time": 1792643824.8135939,
+          "balance": 349.7,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792643886.434702,
+          "balance": 349.7,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792643946.3666182,
+          "balance": 349.69,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792644006.8732347,
+          "balance": 349.69,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792644067.283672,
+          "balance": 349.69,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792644127.9127796,
+          "balance": 349.69,
+          "rate": 0.32,
+          "assignments": 4
+        },
+        {
+          "time": 1792644187.4625027,
+          "balance": 349.69,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792644247.069825,
+          "balance": 349.67,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792644279.8546689,
+          "balance": 349.67,
+          "rate": 0.0,
+          "assignments": 0
+        }
+      ]
+    }
+  ],
+  "all_eight_smoke_sessions_stopped": true,
+  "note": "Conservative original shared ledger retained, including initial failure; rounded account debit and delayed metering need not equal rate estimate. No charges reset."
+}
