@@ -1029,3 +1029,17 @@ Overnight differences are substantial, not proof of a holding-rule cause. Next
 fixed partition by inherited side and preceding actual exit reason before any
 intervention. Project38.39201565 unchanged, all sessions stopped.
 [Evidence](../results/guard-bridge-2026-10-22/README.md).
+
+
+## Actual overnight partition complete
+
+Fixed methoda19f350, four phases/104 episodes;41 focused checks and exact
+bar-backed bridge pass, sources unchanged. Guard final ETF overnight excess
+−7.6351pp splits flat-after-holding−3.1580, inherited short−4.3602,
+flat-after-protection−0.6304 and long+0.5135pp. Guard selected same holding
+rule gives flat-after-holding−0.1277pp; no fixed performance ceiling or causal
+rule-change benefit established. Both short timing and missed exposure matter.
+Diagnostic sequence complete; choose a distinct preregistered learning
+hypothesis before new allocation, preserving short/holding/absolute gates.
+Guard closed, no promotion. Project38.39201565 unchanged, all sessions stopped.
+[Evidence](../results/guard-overnight-2026-10-22/README.md).
