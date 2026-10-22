@@ -25,7 +25,7 @@ establish stable final or multi-seed performance.
 matched100k recurrent PPO runs. Full selected/final26.42/16.08%, masked27.66/10.76%,
 legacy19.62/18.48%, holding30.60%. Both relative comparisons and absolute targets
 fail; no confirmation/promotion. All six smoke/screen sessions stopped,468 frozen
-predictions pass. Publication/checksummed duplicate cleanup remains.
+predictions pass. Publication and checksummed duplicate cleanup are verified; models/reports are linked by the study README.
 
 ## Recent diagnostics
 

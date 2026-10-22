@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "owned_cleanup_verified": true,
+  "release_assets_verified": 17,
+  "removed_files": [
+    {
+      "path": "artifacts/session-release/research-models.tar.gz",
+      "bytes": 44491660,
+      "sha256": "6f1d21fec9a3c4970e4a3bd2ddc33f3b095da89386ac0c993df6d58e1b905979"
+    },
+    {
+      "path": "artifacts/session-release/validation-reports.tar.gz",
+      "bytes": 5088305,
+      "sha256": "3ab216f6e5f7b3ce23e36bcfb1943766e5d9ce686d635bc9494a9d621a08503d"
+    }
+  ],
+  "removed_count": 2,
+  "removed_logical_bytes": 49579965,
+  "observed_free_space_change": 49586176,
+  "retained_file_count": 178,
+  "retained_hashes_unchanged": true,
+  "raw_data_models_reports_curves_ledger_preserved": true,
+  "scope": "Only two server-digest-verified duplicate publication archives removed; all original transports, complete models/frozen/reports/checkpoints/counters, original source/export, immutable raw and generated dataset lineage, initialization snapshots and original ledger retained."
+}

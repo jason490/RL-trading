@@ -1,0 +1,109 @@
+{
+  "verified": true,
+  "asset_count": 17,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/session-context-2026-10-22",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 1351,
+      "digest": "sha256:43d4a72c567834157042a7cc902cb42d1784238342c79396c3808020bf079d93",
+      "state": "uploaded"
+    },
+    {
+      "name": "comparison.html",
+      "size": 4774017,
+      "digest": "sha256:aa842f2666684d571348b29f3ccdb576323866966569a08f96709272aa8d3a5e",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 11447,
+      "digest": "sha256:16dd698d0d430d59ad9a9fbc475ffe7497f8f0620c3aa48e3a89dafbfacf4233",
+      "state": "uploaded"
+    },
+    {
+      "name": "construction.json",
+      "size": 6596,
+      "digest": "sha256:dcebcfdded1632a6de3715036b0c3d5a40a50985133a5a1a0a06a80f858ba31d",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 1770,
+      "digest": "sha256:11fb108ef364f305a9ab62254325b391b9af988554fadf65a842310694141d1b",
+      "state": "uploaded"
+    },
+    {
+      "name": "legacy-reproduction.json",
+      "size": 301,
+      "digest": "sha256:7d52345cef6e29f8505545e69b85d81cfdd6ef30aae60fccc678e4a35a797287",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 793598,
+      "digest": "sha256:6d3f544ba034e7c8e4bd404a5c73cb52f1342c1d163a2f3f5425fdcb64e9f62c",
+      "state": "uploaded"
+    },
+    {
+      "name": "preflight.json",
+      "size": 3229,
+      "digest": "sha256:1f6e15048b0f9ecda2588af82cd1df4d8d2953880fa1739fb49c30a44f4651c4",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 10150,
+      "digest": "sha256:67675b759da688746170026fce0534359fefbf340c8d5a824a00a65893ec61f2",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 44491660,
+      "digest": "sha256:6f1d21fec9a3c4970e4a3bd2ddc33f3b095da89386ac0c993df6d58e1b905979",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 3792,
+      "digest": "sha256:14f1e134d1da3490ed3480c375a491a60d97357c2fe7cad74638c00d81dbdaf2",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 3792,
+      "digest": "sha256:dd8deca7c977538e42e24690eab6e3d5755c02228ac667eaddb0d28b62e9ac24",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 27659,
+      "digest": "sha256:d066a78b59396376c0cc6fccc037874c1ec764ad952d93cf1dc7b4dceba30a78",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 397,
+      "digest": "sha256:fc0eb80a9c13aeb2f45bc9123e45e15ddc3754aa6665437fe86eedaa6120aaee",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 339826,
+      "digest": "sha256:9f1f78a02f9bbdc245773da175ddf99907721b99cceb7c92604c57a7bb9c7c90",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 5088305,
+      "digest": "sha256:3ab216f6e5f7b3ce23e36bcfb1943766e5d9ce686d635bc9494a9d621a08503d",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1798,
+      "digest": "sha256:97fa71487b3c04f52093c3ee9d2333fb3277f9119f743cfa4f21db0039e0bcf2",
+      "state": "uploaded"
+    }
+  ]
+}

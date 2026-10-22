@@ -137,3 +137,28 @@ project150/130 and account150/170 protections remain. No orders or test access.
 [Strict summary](summary.json), [frozen checks](restoration.json),
 [compute and cleanup](compute.json), [10k curves](learning-curves.csv),
 [legacy reproduction](legacy-reproduction.json).
+
+
+## Publication and verified duplicate cleanup
+
+[Public model/report release](https://github.com/jason490/RL-trading/releases/tag/session-context-2026-10-22)
+contains17 assets, all server sizes andSHA-256 digests verified. Six accepted
+smoke/screen bundles retain selected/latest weights, frozen dependency/data
+contracts, initialization snapshots and checkpoint/counter evidence. Interactive
+10k curves and derived per-symbol holding comparisons are included; raw bars
+and replay buffers are excluded.
+
+Removed only two verified duplicate publication archives,49,579,965 bytes
+(47.3MiB). All178 inventoried retained hashes are unchanged, including original
+transports, full model/report evidence, immutable raw snapshot and all generated
+dataset lineage, source archive/export proof, original ledger and plan.html.
+The strict summary reproduces byte for byte after cleanup, reloading all three
+screen models and checking accounting/source/gates again.
+
+All six sessions remain stopped. Project38.51487741 and last official account
+349.41 unchanged; no further compute allocated. Fixed session-feature family
+stays closed. Next review a distinct learning hypothesis with preregistered
+controls before further allocation; no blind extension or new feature grid.
+
+[Release verification](release-verification.json), [cleanup](cleanup.json),
+[reproduction](reproduction.json).

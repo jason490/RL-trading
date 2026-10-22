@@ -191,3 +191,12 @@ all six owned sessions stopped; legacy tensors/sampling reproduce prior control.
 Project38.51487741/150, study increment0.12286176; official account349.41 zero
 rate/assignments. Source/ledger/data retained. Publication/verified duplicate
 cleanup next. [Full evidence](../results/session-context-2026-10-22/README.md).
+
+
+Session-context publication complete:17 server assets verified, six accepted
+model bundles and interactive reports public. Only two duplicate publication
+archives removed (49,579,965 bytes);178 retained hashes unchanged. Strict summary
+reproduces byte for byte, all three screen models/accounting/gates rechecked.
+All six sessions stopped; project38.51487741 unchanged. Fixed family closed;
+next distinct preregistered learning hypothesis, no extension/feature grid.
+[Evidence](../results/session-context-2026-10-22/README.md).
