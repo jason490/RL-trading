@@ -1,0 +1,156 @@
+{
+  "market_features": 7,
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "evaluation_every": 10000,
+  "initialization": "standard",
+  "policy_variant": "native",
+  "start_sampling": "stock_etf_cycle_windows",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Same expanded111 dataset in both arms,100k for full symbol transition coverage; fixed budget, not an extension of completed diversity study"
+  },
+  "smoke_steps": 512,
+  "smoke_evaluation_every": 256,
+  "parameters": {
+    "n_steps": 1000,
+    "batch_size": 50,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "recurrent_parameters": {
+    "lstm_hidden_size": 64,
+    "n_lstm_layers": 1,
+    "shared_lstm": false,
+    "enable_critic_lstm": true
+  },
+  "smoke_parameters": {
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 10
+  },
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected/final separately reported, actual100k final post-update required",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Close this fixed capacity family if seed11 relative/absolute/risk gates fail. No width/depth/budget/feature/reward grid, extension, confirmation or promotion."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only, actual default Python checked before dependency sync",
+    "initial_concurrency": 2,
+    "preflight": "Untrained construction/checkers locally; two512 full-architecture Colab CPU smokes,156 exact frozen predictions, sampling/RNG and actual Adam evidence; enforce runtime projection before100k tasks",
+    "max_study_incremental_units": 2.0,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "allocation_deadline_seconds": 7200,
+    "runner": "Existing central metered owned fleet, original cumulative ledger, bound downloads, verified shutdown and recovery IDs",
+    "cleanup": "Retain all models/checkpoints/curves; verify publication checksums before removing duplicates; verify every owned session stopped",
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "study_start_project_units": 38.514877408036206
+  },
+  "observation_profile": "execution_masked",
+  "version": 1,
+  "name": "recurrent-capacity-2026-10-22",
+  "hypothesis": "Prior fixed-width recurrent models fail stock/ETF development and fitted-period benchmark criteria. Test one uniform width increase to128 with unchanged inputs and transition budget. This is an unproven representational/optimization hypothesis; weakness is not established capacity limitation.",
+  "arms": [
+    "control",
+    "larger"
+  ],
+  "candidate": "larger",
+  "screen_cells": 2,
+  "widths": {
+    "control": 64,
+    "larger": 128
+  },
+  "parameter_counts": {
+    "control": 61513,
+    "larger": 221321
+  },
+  "execution_modes": {
+    "control": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    },
+    "larger": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    }
+  },
+  "target_kl": null,
+  "constraints": {
+    "data": "Same immutable expanded111 training/original26 development dataset and original seven-field normalization; no session/supply-demand/sector features",
+    "simulation": "Unchanged100k initial equity, whole shares,100% cap,20-session holding, next-session signed four-component actions, learned protective geometry, costs/adjustments and short capability",
+    "learning": "Native Gaussian RecurrentPPO, separate actor/critic LSTMs, one layer each, equal recurrent/dense width64 or128. No reward/discount/KL/epoch/sampling/sizing/cadence change.",
+    "initializations": "Within each arm seed/size, exact pinned untrained tensors; same CPU sampling RNG across widths. Shapes and active capacity differ, so cross-arm initial tensor equality is impossible. Single-seed improvement is not a causal initialization-independent effect.",
+    "rollout": "Screen1000 rollout/batch50/ten epochs. Smoke512 transitions with128 rollout/batch64/ten epochs and128-session windows, but full64/128 architectures;80 actual Adam steps. Smoke returns never choose settings.",
+    "splits": "Train through2020, repeated2021-2023 development only. Retired2024-September2026 stays unopened. No historical delisting/PIT claims.",
+    "short_side": "Joint positive total AND short net P&L reported; future full-period decline cohorts never inputs/sampling/reward/selection",
+    "checkpoints": "Actual selected/final model settings, initial weights/RNG, optimizer counts/moments, sampling/execution counters and mandatory checkpoint hashes restored; frozen sequence/repeat/reset and normalization/schema rejection pass",
+    "failure": "Close this fixed capacity family if seed11 relative/absolute/risk gates fail. No width/depth/budget/feature/reward grid, extension, confirmation or promotion.",
+    "evaluation": "Development gates only; passing allows fixed11/23/37 paired confirmation then frozen prospective evidence. More parameters are not evidence of better prediction or trading.",
+    "limitations": "Retrospective survivors, revised Yahoo data, repeated/correlated development; no orders"
+  },
+  "shared_initialization": {
+    "manifest": "configs/initializations/recurrent_capacity_v1/manifest.json",
+    "manifest_sha256": "f52409d726b55d46c8da556b8b56750ecf1773e367478f6dcb92d5515f47e2c3",
+    "rule": "Reuse pinned untrained64 starts; once-generated128 starts with control CPU RNG restored after weight generation; same full architecture snapshots in smoke and screen"
+  },
+  "runtime_projection": {
+    "reference_control_metadata_sha256": "8d7bcc0825b62d8aacb15552231fafa2421917c3e756d2985aa7a0b582e6aa2d",
+    "reference_control_run": "20261022T211745-recurrent_ppo-11-77b0bcab",
+    "reference_control_seconds": 907.9985324679999,
+    "rule": "Before screen allocation require2*reference_control_seconds*max(1,larger_smoke_duration/control_smoke_duration)+1200<=7200; duration ratio is a conservative heuristic, not a runtime guarantee",
+    "safety_multiplier": 2.0,
+    "setup_retrieval_shutdown_reserve_seconds": 1200.0,
+    "maximum_allocation_seconds": 7200.0,
+    "failure": "Do not allocate screen if projection exceeds deadline; no automatic hardware restart. Retain smoke/charges and hardware limitation."
+  },
+  "implementation_status": "Fixed width hypothesis and untrained artifacts; validation/checker/Colab integration and actual smokes pending"
+}

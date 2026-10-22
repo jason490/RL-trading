@@ -110,3 +110,6 @@ never local optimizer updates. Actual remote acceptance of this new format is
 pending further authorized Colab work; the existing budget-stop flag stays set.
 
 For the Gaussian update-guard study, [shared initialization](recurrent-update-guard.md) pins untrained tensors and CPU RNG across hosts before fitting, while retaining exact equality gates and initial snapshots. Independent same-seed construction was insufficient in the rejected first smoke comparison. Initial RNG provenance does not promise exact continued-learning restoration.
+
+[Recurrent-capacity comparison](recurrent-capacity.md) specifies the fixed
+64/128-width hypothesis, shared untrained RNG starts and resource gates.

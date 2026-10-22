@@ -1465,3 +1465,8 @@ Session-context100k screen complete; both control and absolute gates fail, no
 promotion/confirmation. Six owned sessions stopped;468 total frozen checks pass.
 Project38.51487741/150. Publication/checksummed duplicate cleanup next.
 [Evidence](results/session-context-2026-10-22/README.md).
+
+Distinct fixed64/128 recurrent-capacity protocol/shared starts prepared;65
+focused construction/regression checks pass. Integration/checkers/Colab smokes
+remain, runtime projection required before100k. No new usage.
+[Method](docs/recurrent-capacity.md).

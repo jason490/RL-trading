@@ -1125,3 +1125,21 @@ reproduces byte for byte, all three screen models/accounting/gates rechecked.
 All six sessions stopped; project38.51487741 unchanged. Fixed family closed;
 next distinct preregistered learning hypothesis, no extension/feature grid.
 [Evidence](../results/session-context-2026-10-22/README.md).
+
+
+## Distinct fixed recurrent-capacity hypothesis
+
+Prior recent recurrent protocols keep64-unit widths; no direct64/128 ablation
+found. Weak fitted-period benchmarks motivate a capacity hypothesis but do not
+prove underfitting. Freeze control64 versus candidate128 recurrent/dense widths,
+61,513/221,321 parameters, unchanged baseline seven features/data/reward/actions/
+sampling and100kseed11 budget. No session-feature rescue or width/depth grid.
+Original selected/final relative/absolute/risk and conditional11/23/37/prospective
+gates retained. Fixed2-unit allowance from38.514877408036206.
+
+Pinned untrained per-arm starts/common CPU RNG prepared; both smokes use full
+architectures.65 focused construction/regression checks pass, including actual
+save/load and invalid/runtime-deadline rejection. Conservative smoke-duration
+projection must pass before long CPU allocation. Dedicated integration/checkers/
+Colab smokes remain; no allocation or new usage.
+[Protocol and constraints](recurrent-capacity.md).

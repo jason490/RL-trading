@@ -78,3 +78,6 @@ overnight/intraday fields, same-dimension masks and pending research preflight.
 
 [Current research results](../results/README.md) indexes recent comparisons,
 diagnostics, pending training and artifact locations.
+
+[Recurrent-capacity comparison](recurrent-capacity.md) specifies the fixed
+64/128-width hypothesis, shared untrained RNG starts and resource gates.
