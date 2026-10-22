@@ -1672,3 +1672,11 @@ KL sweep or promotion. All six study sessions stopped,156 screen frozen checks
 pass, original ledger retained. Project38.39201565/150; official account349.51,
 zero rate/assignments. Publication/duplicate cleanup and saved-path diagnosis next.
 [Full evidence](../results/recurrent-guard-2026-10-22/README.md).
+
+
+Update-guard publication accepted:15 server assets match SHA-256/size, four
+accepted bundles and interactive curves retained publicly. Only two verified
+duplicate archives removed (32,215,676 bytes);167 retained hashes unchanged.
+Strict summary reproduces byte for byte after cleanup. All six sessions stopped;
+project38.39201565 unchanged. Saved-path diagnosis next, no guard promotion.
+[Evidence](../results/recurrent-guard-2026-10-22/README.md).

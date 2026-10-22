@@ -1,0 +1,97 @@
+{
+  "verified": true,
+  "asset_count": 15,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/recurrent-guard-2026-10-22",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 1195,
+      "digest": "sha256:7500b528131d8b30d8698b85bc40554adfe414e98a1f3833e4afd9a235e4d20a",
+      "state": "uploaded"
+    },
+    {
+      "name": "comparison.html",
+      "size": 4773549,
+      "digest": "sha256:173a46fea1716ff14b672253c5d65a3a1c4d60168ed9a3700ae37465aa2636f0",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 12427,
+      "digest": "sha256:6bc8470054eeb501503cbd93304e6c4dd8c5839a6d9b82751021f60f6a960aa8",
+      "state": "uploaded"
+    },
+    {
+      "name": "initialization-failure.json",
+      "size": 3247,
+      "digest": "sha256:0dec12e5e5bfe7d5584a8f1c3417d5d7a20e97a3f1673149bb4e82fc03f07900",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 1238,
+      "digest": "sha256:6797affefe3bd4e057fe40a492a08f2ce42aa27241ccae40442b046be21c8f05",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 528566,
+      "digest": "sha256:c176b08000c43e597bf2b50ebca5ccb084a3cadf60c6acda69766ab7e8651942",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 9544,
+      "digest": "sha256:72f5c5962586b1c9bf17e679c8545713051c83f2a9b4d1b92886f589f1d2e3e8",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 28822219,
+      "digest": "sha256:e97214cd8b0e5ea2129f7452d4acb7edbedef0dea32c494c078542218f799c0b",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2548,
+      "digest": "sha256:328ee8ef2bb21cb881267e19a883afbf7829c44ff15327db806ff852e53d3831",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-v2-restoration.json",
+      "size": 2567,
+      "digest": "sha256:c903d3df43c9108f67ab924c2ecd5ddafaa30c4ae9709556eb0714dacbeb589c",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-v2-summary.json",
+      "size": 18684,
+      "digest": "sha256:f0472874583b1f2cb14fd79cab0fb016ee340305a5c9f4c469b3855605ec817e",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 395,
+      "digest": "sha256:db1add3ad5d4ce4f212c1642408ecd8a8f311ee156c928716f380ba5a9bbb5e3",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 227132,
+      "digest": "sha256:f1b4d0511a8b855bae9e0707cc7bb32b9dac9f9a368e554792034fe42271aa38",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3393457,
+      "digest": "sha256:2529989a843c258a669986cbf1e6de2439b5b1be414e0b2760727da5988d7075",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1317,
+      "digest": "sha256:a11602ccf3b9e01093735e534ef2757c93c345c967320f2ad566555ddfaef2a9",
+      "state": "uploaded"
+    }
+  ]
+}

@@ -64,3 +64,23 @@ Original ledger, project150/130 and account150/170 safeguards remain.
 
 [Strict summary](summary.json), [frozen checks](restoration.json),
 [usage and cleanup](compute.json), [10k curves](learning-curves.csv).
+
+
+## Publication and duplicate cleanup
+
+[Public models and interactive reports](https://github.com/jason490/RL-trading/releases/tag/recurrent-guard-2026-10-22)
+contain15 assets, all server sizes/SHA-256 hashes verified. Four accepted
+smoke/screen bundles retain selected/latest weights, frozen manifests, initial
+snapshots, metadata/checkpoints and counters. Original rejected initialization
+evidence remains visible. No raw bars or replay buffers are published.
+
+Removed only two verified duplicate publication archives,32,215,676 bytes
+(30.7MiB). All167 inventoried retained hashes are unchanged, including original
+transports, full extracted models/reports, rejected smoke evidence, dataset and
+original ledger. Strict summary reproduces byte for byte after cleanup, restoring
+both screen optimizers and rechecking source/accounting/gates. All six sessions
+remain stopped; project38.39201565 and official account349.51 remain.
+
+[Asset verification](release-verification.json), [cleanup](cleanup.json),
+[reproduction](reproduction.json). Next saved action/participation diagnosis;
+no guard-family extension or promotion.

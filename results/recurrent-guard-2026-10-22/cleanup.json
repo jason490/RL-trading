@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "owned_cleanup_verified": true,
+  "release_assets_verified": 15,
+  "removed_files": [
+    {
+      "path": "artifacts/guard-release/research-models.tar.gz",
+      "bytes": 28822219,
+      "sha256": "e97214cd8b0e5ea2129f7452d4acb7edbedef0dea32c494c078542218f799c0b"
+    },
+    {
+      "path": "artifacts/guard-release/validation-reports.tar.gz",
+      "bytes": 3393457,
+      "sha256": "2529989a843c258a669986cbf1e6de2439b5b1be414e0b2760727da5988d7075"
+    }
+  ],
+  "removed_count": 2,
+  "removed_logical_bytes": 32215676,
+  "observed_free_space_change": 32083968,
+  "retained_file_count": 167,
+  "retained_hashes_unchanged": true,
+  "raw_data_models_reports_curves_ledger_preserved": true,
+  "scope": "Only two server-digest-verified duplicate publication archives removed; original transports, complete extracted models/frozen/checkpoints/reports, failure evidence, initialization snapshots, immutable dataset and original ledger retained."
+}

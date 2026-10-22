@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "summary_sha256": "f1b4d0511a8b855bae9e0707cc7bb32b9dac9f9a368e554792034fe42271aa38",
+  "byte_identical_after_cleanup": true,
+  "both_screen_models_restored_again": true,
+  "strict_archive_source_accounting_and_gates_rechecked": true,
+  "training_performed": false,
+  "test_evaluated": false
+}
