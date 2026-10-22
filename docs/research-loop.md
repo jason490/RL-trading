@@ -986,3 +986,17 @@ duplicate archives removed (32,215,676 bytes);167 retained hashes unchanged.
 Strict summary reproduces byte for byte after cleanup. All six sessions stopped;
 project38.39201565 unchanged. Saved-path diagnosis next, no guard promotion.
 [Evidence](../results/recurrent-guard-2026-10-22/README.md).
+
+
+## Saved update-guard action audit
+
+Four accepted phases/104 episodes audited against exact accepted hashes/panel;
+no fit/model/data/provider/Colab access and source hashes unchanged. Guard final
+stock/ETF long requests99.51/98.91% versus control93.60/95.77%; cost drag falls
+6.07→2.85pp stocks,5.13→2.53pp ETFs. Relative gains combine lower costs and
+residual path improvements. Final ETF shortfall13.35pp still includes10.83pp
+residual plus2.53pp costs; selected-to-final deterioration occurs despite lower
+costs. No causal explanation established.15 focused tests pass. Guard stays
+closed; next fixed exit/gap participation audit before another intervention.
+Project38.39201565 unchanged, all sessions stopped.
+[Evidence](../results/guard-actions-2026-10-22/README.md).

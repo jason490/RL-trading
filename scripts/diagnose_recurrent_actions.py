@@ -7,17 +7,18 @@ from rl_stocks.reporting.action_execution import diagnose_groups
 
 STUDIES={'recurrent-state':('recurrent-state','2026-10-21'),
          'alignment':('recurrent-alignment','2026-10-21'),
-         'cash':('recurrent-cash','2026-10-22')}
+         'cash':('recurrent-cash','2026-10-22'),
+         'guard':('recurrent-guard','2026-10-22')}
 
 
 def audit(study):
     if study not in STUDIES:raise ValueError('registered accepted study required')
     result_study,date=STUDIES[study]
-    state_path=Path(f'.runtime/{study}-screen-state.json')
+    state_path=Path('.runtime/guard-screen-v2-state.json' if study=='guard' else f'.runtime/{study}-screen-state.json')
     accepted_path=Path(f'results/{result_study}-{date}/summary.json')
     state=json.loads(state_path.read_text())
     accepted=json.loads(accepted_path.read_text())
-    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash'}[study]
+    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard'}[study]
     required=set(importlib.import_module('rl_stocks.training.'+module).protocol()['arms'])
     if set(accepted.get('cells',{}))!=required:raise ValueError('all registered study arms required')
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete verified shutdown required')

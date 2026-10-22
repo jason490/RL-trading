@@ -13,7 +13,7 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 def prepare(root,study="cash"):
     import importlib
-    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state"}[study]
+    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard"}[study]
     arms=importlib.import_module("rl_stocks.training."+module_name).protocol()["arms"]
     state=dict(status='complete',cleanup_verified=True,completed={});accepted={'cells':{}}
     for arm in arms:
@@ -29,7 +29,7 @@ def prepare(root,study="cash"):
             reports[phase]=dict(file=name,sha256=checksum(p))
         state['completed'][arm]=dict(root=str(run.parents[1]))
         accepted['cells'][arm]=dict(run=run.name,bundle_id=arm,dataset='fixture',reports=reports)
-    s=root/f'.runtime/{study}-screen-state.json';s.parent.mkdir();s.write_text(json.dumps(state))
+    s=root/('.runtime/guard-screen-v2-state.json' if study=='guard' else f'.runtime/{study}-screen-state.json');s.parent.mkdir();s.write_text(json.dumps(state))
     name,date=module.STUDIES[study]
     p=root/f'results/{name}-{date}/summary.json';p.parent.mkdir(parents=True);p.write_text(json.dumps(accepted))
     u=root/'configs/universes/sector_research.json';u.parent.mkdir(parents=True)
@@ -67,3 +67,12 @@ def test_existing_three_arm_registered_studies_remain_supported(tmp_path,monkeyp
     prepare(tmp_path,study);monkeypatch.chdir(tmp_path)
     result=module.audit(study)
     assert len(result['records'])==6 and result['source_files_unchanged']
+
+
+def test_guard_audits_exact_v2_pair_without_opening_dataset(tmp_path,monkeypatch):
+    prepare(tmp_path,'guard');monkeypatch.chdir(tmp_path)
+    result=module.audit('guard')
+    assert {(r['arm'],r['phase']) for r in result['records']}=={
+        (a,p) for a in ['control','kl_guard'] for p in ['selected','final']}
+    assert result['source_files_unchanged'] and not result['dataset_opened']
+    assert '.runtime/guard-screen-v2-state.json' in result['source_files_sha256']
