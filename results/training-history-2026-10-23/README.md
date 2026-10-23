@@ -89,3 +89,30 @@ pass. [Construction](construction.json); [commands and contracts](../../docs/tra
 No local learning, new Colab allocation or performance evidence. Commit/freeze,
 usage/default-Python check and two512 CPU smokes next;100k plans remain blocked
 until actual accepted smoke bytes and runtime approval are available.
+
+## Actual full/recent Colab smokes accepted
+
+Two512-transition CPU smokes from clean2dfa1fbd45d6a3c120fb11311c9d285781556b57
+(defaultPython3.13.16) completed and retrieved; both owned sessions verified
+stopped.156 exact frozen recurrent action/hidden/cell/repeat/reset predictions
+pass, with immutable normalization and schema/feed/nonfinite rejection. Actual
+selected/final model/optimizer records and checkpoint identities restore; both
+full64 architectures have61,513 parameters,80 Adam updates/40 nominal epochs.
+Identical untrained tensors/CPU RNG and actual symbol draw counts pass. Required
+decision/execution year logs reconcile to512 transitions per arm; year masses
+intentionally differ. No smoke returns used to select settings.
+
+Measured train/evaluate durations138.8675s full,147.3082s recent. Conservative
+runtime projection3504.0053s (58.4min), including1200s setup/retrieval/shutdown
+reserve, passes7200s. This is a mixed-duration heuristic, not a speed guarantee.
+Exact accepted smoke bytes bind the prepared two100k seed11 plans. Same frozen
+worker source and original protocol/data/reward/model/steps/gates retained.
+
+Project38.62221390/150; study conservative increment0.02054866 (observed account
+0.02), including setup/idle/transfers/shutdown. Official account349.32, zero
+rate/assignments. Original baseline38.60166524433091/shared2-unit allowance,
+project150/130 and account150/170 safeguards preserved. No orders/test access.
+
+[Acceptance](smoke-summary.json), [frozen parity](smoke-restoration.json),
+[compute and owned cleanup](smoke-compute.json), [runtime approval](runtime-profile.json).
+Next same-source full/recent100k screen; no performance result established.

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "protocol_sha256": "fefff889ad189136e55b2689fd0532f50e8a636f7cdf96b94e4008449e653a49",
+  "smoke_acceptance_file": ".runtime/recency-smoke-acceptance.json",
+  "smoke_acceptance_sha256": "0f54056e7c3a043669a502ef905e7e22a8fc79f0688558f348b10638f96e7e10",
+  "durations_seconds": {
+    "full": 138.86749704299996,
+    "recent": 147.30821454400007
+  },
+  "projection": {
+    "projected_seconds": 3504.0052976753805,
+    "smoke_duration_ratio": 1.060782527810568,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  }
+}

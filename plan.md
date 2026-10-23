@@ -1533,3 +1533,9 @@ rows; original features/normalization frozen. Measured year logs implemented,
 unchanged gates and2-unit allowance from38.60166524; dedicated Colab integration/
 actual construction/smokes required before training. No allocation or performance
 claim. [Method](docs/training-history.md), [preflight](results/training-history-2026-10-23/preflight.json).
+
+2026-10-23: training-history actual two512 CPU smokes accepted.156 exact frozen
+checks, measured year margins, equal starts and restored model/optimizer proof;
+both sessions stopped. Runtime projection3504s passes7200s; same-source two100k
+seed11 screen next. Project38.62221390/150, account349.32 zero rate/assignments.
+[Evidence](results/training-history-2026-10-23/README.md).

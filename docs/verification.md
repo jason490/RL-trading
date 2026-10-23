@@ -1936,3 +1936,11 @@ confirmation reject. Older historical/capacity/guard/account-floor regressions
 pass; compile passes. No local fitting or Colab allocation; actual two512 smokes
 remain required. Project38.60166524 unchanged.
 [Evidence](../results/training-history-2026-10-23/README.md).
+
+Actual training-history smokes accepted: two512 Colab CPU runs/defaultPython
+3.13.16,156 exact frozen recurrent checks and actual selected/final optimizer/
+model/checkpoint restoration. Equal pinned initial tensors/RNG and symbol counts;
+measured year margins pass. Both owned sessions stopped. Runtime projection
+3504.0053s passes two-hour limit; exact accepted bytes bind prepared100k plans.
+Project38.62221390/150, study increment0.02054866, account349.32 zero rate and
+assignments. [Evidence](../results/training-history-2026-10-23/README.md).

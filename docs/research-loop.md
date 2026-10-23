@@ -1262,3 +1262,11 @@ historical study. Missing year logs reject new artifacts; exact actual smoke
 acceptance bytes and runtime projection required before100k. Commit/freeze and
 official usage/Python check before two512 CPU smokes; no allocation/new units.
 [Evidence](../results/training-history-2026-10-23/README.md).
+
+Training-history actual smokes accepted: both512 CPU/defaultPython3.13.16 runs,
+156 exact frozen predictions, equal initial tensors/RNG/symbol counts, measured
+year reconciliation and restored models/optimizers/checkpoints pass. Both stopped.
+Projection3504s/58.4min passes7200s; acceptance bytes bind prepared100k plans.
+Same-source full/recent seed11 screen next. Project38.62221390; original baseline
+38.60166524433091/shared2-unit allowance retained, official account349.32 zero
+rate/assignments. [Evidence](../results/training-history-2026-10-23/README.md).

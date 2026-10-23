@@ -143,3 +143,18 @@ manifest hash and snapshot bytes. No new untrained files or trained weights reus
 
 Actual two512 Colab smokes remain before100k; no allocation or new usage yet.
 Project38.60166524/150, last official account349.34, zero assignments/rate.
+
+## Actual Colab smoke acceptance and runtime approval
+
+Two512 full/recent CPU smokes from2dfa1fb/defaultPython3.13.16 complete/retrieved
+and verified stopped.156 frozen sequence/repeat/reset predictions, normalization/
+input rejection and actual model/optimizer/checkpoint restoration pass. Same
+61,513-parameter architecture and pinned tensors/RNG;80 actual Adam updates and
+40 nominal epochs. Actual symbol draw counts match; measured year logs reconcile
+to512 each, with intentionally different year distributions. No smoke-return
+selection. Durations138.8675/147.3082s yield conservative3504.0053s/58.4min
+projection including1200s reserve, below7200s. Exact acceptance bytes bind100k
+plans and controller pre-allocation checks. Same-source seed11 full/recent100k
+screen next; no performance claim. Project38.62221390, study increment0.02054866,
+official account349.32 zero rate/assignments. Original shared2-unit baseline and
+project/account limits unchanged. [Evidence](../results/training-history-2026-10-23/README.md).
