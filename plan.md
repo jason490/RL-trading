@@ -1611,3 +1611,10 @@ archives removed (35,931,249 bytes),148 retained hashes unchanged. Original
 transports/models/source/both datasets/ledger/plan.html retained. All four sessions
 stopped, project38.68329334 unchanged. Fixed family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23).
+
+2026-10-23: distinct fixed recurrent PPO L2 protocol prepared,0 versus0.0001 on
+unchanged full-history source/64-unit model/100k. Same untrained tensors and
+explicit eps1e-5/coupled Adam verified without fitting/data access. Shared2-unit
+allowance from38.68329334; unchanged gates. Dedicated integration/checkers/smokes
+remain before allocation; no failed-family sweep or performance claim.
+[Method](docs/recurrent-regularization.md).

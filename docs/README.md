@@ -84,3 +84,6 @@ diagnostics, pending training and artifact locations.
 
 [Training-history composition](training-history.md) documents date-only coverage,
 full-window year expectations and prerequisites for a matched recency study.
+
+[Recurrent PPO regularization](recurrent-regularization.md) specifies a distinct
+fixed coupled-Adam coefficient comparison, preserved epsilon, controls and gates.

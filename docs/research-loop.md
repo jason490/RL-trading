@@ -1427,3 +1427,16 @@ differ, and KL growth in both arms does not prove cause or a useful remedy.
 L2 study not found in configs; any fixed experiment must be distinct, preregistered
 and gated, with no coefficient or closed-family grid. Project38.68329334 unchanged.
 [Evidence](../results/history-optimizer-2026-10-23/README.md).
+
+## Distinct fixed recurrent PPO L2 hypothesis prepared
+
+Current config search finds no direct recurrent PPO weight decay comparison.
+Prepare control0 versus coupled Adam0.0001 on original full-history111/26 source,
+same64-unit model/actions/reward/100k. Explicit eps1e-5 retained; actual untrained
+models confirm coupled semantics and identical pinned tensors with no optimizer
+steps or data access. This is unproven; KL/norm observations do not establish
+cause, and failed SAC/MLP decay does not prove PPO outcome. Fixed2pp selected+final
+relative/−2pp group/median/risk gates and shared2 units from38.68329334472413.
+Dedicated integration/checkers/Colab smokes remain, no allocation or performance.
+Closed history/capacity/guard families remain closed; no coefficient grid.
+[Protocol and next work](recurrent-regularization.md).
