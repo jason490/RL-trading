@@ -122,6 +122,13 @@ def validate_counts(counts,arm,smoke,steps):
         per_symbol[symbol]=row
     if sum(r['starts'] for r in per_symbol.values())!=counts['starts'] or sum(r['transitions'] for r in per_symbol.values())!=steps:
         raise ValueError('diversity per-symbol totals mismatch')
+    if 'year_counts' in counts:
+        from rl_stocks.environment.sampling.years import validate_year_counts
+        years=validate_year_counts(counts['year_counts'],counts['starts'],steps)
+        if (set(years['per_symbol'])-allowed or any(
+            {k:years['per_symbol'].get(s,{}).get(k,0) for k in ('starts','transitions')}!=row
+            for s,row in per_symbol.items())):
+            raise ValueError('year counts differ from symbol sampling')
     group_counts={}
     for kind in ('stock','etf'):
         rows=[r for s,r in per_symbol.items() if (s in ETFS)==(kind=='etf')]

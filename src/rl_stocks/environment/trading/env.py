@@ -56,12 +56,15 @@ class TradingEnv(gym.Env):
         if self.start_sampler:
             self.sampling_counts['starts']+=1
             self.sampling_counts['downtrend_starts']+=int(self.start_sampler.label(index,self.i))
+            self.year_counts.start(self.episode['symbol'],self.bars[self.i].session)
         if self.start_sampler and self.start_sampler.mode in ('full_window_uniform','stock_etf_cycle_windows'):
             group=self.start_sampler.groups[index]
             self.sampling_counts['history_groups'].setdefault(group,dict(starts=0,transitions=0))['starts']+=1
         self.steps=0;self.done=False;self.sim=Simulator(self.config)
         return self.observation(),{"symbol":self.episode["symbol"],"session":self.bars[self.i].session}
     def reset_sampling_statistics(self):
+        from rl_stocks.environment.sampling.years import YearCounts
+        self.year_counts=YearCounts()
         if self.start_sampler and self.start_sampler.mode=='stock_etf_cycle_windows':self.start_sampler.reset_cycles()
         self.sampling_counts=dict(starts=0,downtrend_starts=0,transitions=0,downtrend_transitions=0)
         if self.start_sampler and self.start_sampler.mode in ('full_window_uniform','stock_etf_cycle_windows'):
@@ -69,7 +72,8 @@ class TradingEnv(gym.Env):
             self.sampling_counts['downtrend_counts_measured']=False
     def sampling_statistics(self):
         from copy import deepcopy
-        return {**deepcopy(self.sampling_counts),'mode':self.start_sampler.mode} if self.start_sampler else None
+        return {**deepcopy(self.sampling_counts),'mode':self.start_sampler.mode,
+            'year_counts':self.year_counts.snapshot(self.sampling_counts['starts'],self.sampling_counts['transitions'])} if self.start_sampler else None
     def reset_execution_statistics(self):
         self.execution_counts=dict(transitions=0,requested_nonzero=0,processed_nonunit=0,sizing_changed=0,protective_changed=0)
     def execution_statistics(self):
@@ -86,6 +90,7 @@ class TradingEnv(gym.Env):
         if self.start_sampler:
             self.sampling_counts['transitions']+=1
             self.sampling_counts['downtrend_transitions']+=int(self.start_sampler.label(self.episode_index,self.i))
+            self.year_counts.transition(self.episode['symbol'],self.bars[self.i].session,self.bars[self.i+1].session)
         if self.start_sampler and self.start_sampler.mode in ('full_window_uniform','stock_etf_cycle_windows'):
             group=self.start_sampler.groups[self.episode_index]
             self.sampling_counts['history_groups'].setdefault(group,dict(starts=0,transitions=0))['transitions']+=1

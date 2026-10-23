@@ -1237,3 +1237,11 @@ Colab usage. Next add measured decision/execution year counters, then preregiste
 one immutable composition comparison with unchanged evaluation/model/reward/
 normalization/budget. No date choice from profits or capacity-family reopening.
 [Evidence](../results/training-history-2026-10-23/README.md).
+
+Measured sampling-year instrumentation is implemented: episode-start, decision,
+next-bar execution, cross-year pair and per-symbol counters. Existing runner
+persists them at checkpoints/final metadata. Global/pair/symbol margins reconcile
+and reject corrupt year evidence; legacy artifacts remain readable but cannot
+claim measured year visitation. No model fitting or Colab allocation. Next build
+an immutable recent subset and freeze the numeric matched-history protocol before
+smoke acceptance/training. [Contract](training-history.md).

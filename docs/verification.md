@@ -1916,3 +1916,14 @@ closed. Next audit training-history coverage/sampling before preregistering a
 distinct matched full-history/recent-window study; no allocation or window
 selection from returns. Project38.60166524 unchanged.
 [Evidence](../results/capacity-actions-2026-10-23/README.md).
+
+## Measured training-year instrumentation — 2026-10-23
+
+48 focused sampling/history/capacity artifact/report checks pass. Actual
+Gymnasium/SB3 environment checkers pass (existing unbounded-Box warnings).
+Cross-year decision/execution counts, partial-window/mid-episode resets,
+immutable snapshots, RNG invariance, corrupt margins/future years and independent
+symbol-total rejection tested. Existing callback/final metadata paths persist
+new counters; no training/provider requests/Colab allocation. Historical artifacts
+without counters remain accepted and do not prove year visitation. Project
+38.60166524 unchanged. See [year-log contract](training-history.md).
