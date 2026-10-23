@@ -172,3 +172,11 @@ data, source export and ledger remain. [Cleanup](../results/supervised-signal-20
 All15 server asset sizes/digests verified before removing two duplicate publication archives totaling58,832,238 bytes. All249 retained hashes unchanged; original transports, complete model/frozen/checkpoint/report/counter evidence, source/failure archives, immutable dataset and ledger retained. Post-cleanup strict summary reproduces byte for byte. All12 owned sessions stopped. [Inventory](../results/recurrent-cash-2026-10-22/cleanup.json), [reproduction](../results/recurrent-cash-2026-10-22/reproduction.json).
 
 Recurrent fitted-period charts published: [release](https://github.com/jason490/RL-trading/releases/tag/recurrent-fit-2026-10-22), six server sizes/digests verified,6,722,998 duplicate bytes removed and30 retained hashes unchanged. Original complete paths retained, no model duplication or new Colab charge. [Evidence](../results/recurrent-fit-2026-10-22/README.md).
+
+
+Capacity publication verified:15 GitHub assets match server sizes/SHA-256,
+four accepted model bundles and interactive reports retained. Only two duplicate
+publication archives removed (45,880,597 bytes),142 retained hashes unchanged.
+Original transports/source/data/models/checkpoints/ledger/plan.html preserved.
+All four sessions stopped; project38.60166524 unchanged. Fixed family closed.
+[Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-capacity-2026-10-22).

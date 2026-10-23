@@ -1517,3 +1517,11 @@ Project150/130 and account150/170 safeguards unchanged; original ledger retained
 
 
 [Evidence](results/recurrent-capacity-2026-10-22/README.md).
+
+
+Capacity publication verified:15 GitHub assets match server sizes/SHA-256,
+four accepted model bundles and interactive reports retained. Only two duplicate
+publication archives removed (45,880,597 bytes),142 retained hashes unchanged.
+Original transports/source/data/models/checkpoints/ledger/plan.html preserved.
+All four sessions stopped; project38.60166524 unchanged. Fixed family closed.
+[Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-capacity-2026-10-22).

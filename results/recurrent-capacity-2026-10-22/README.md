@@ -107,3 +107,18 @@ Project150/130 and account150/170 safeguards unchanged; original ledger retained
 `artifacts/recurrent-capacity/summary.html` after publication packaging; source
 models/full reports remain under `artifacts/colab/<session>/retrieved/artifacts`.
 GitHub publication and verified duplicate cleanup follow this outcome commit.
+
+
+## Verified publication and duplicate cleanup
+
+[GitHub release](https://github.com/jason490/RL-trading/releases/tag/recurrent-capacity-2026-10-22)
+contains15 server-size/SHA-256-verified assets: four complete frozen model bundles,
+interactive comparison and individual selected equity reports, compact curves,
+protocol, source and restoration evidence. Download comparison.html to inspect
+checkpoint performance, or extract validation-reports.tar.gz for individual
+stock/ETF policy-versus-holding charts.
+
+Only two verified duplicate publication archives removed (45,880,597 bytes);
+142 retained hashes unchanged. Original transports, full models/checkpoints,
+reports, source archive, immutable dataset, ledger and plan.html retained.
+[Server receipts](release-verification.json), [cleanup](cleanup.json).

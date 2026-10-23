@@ -34,8 +34,8 @@ runs complete. Control64 selected/final19.62/18.48%; larger12828.15/13.43%;
 matched holding30.60%. Larger selected improvement fails to persist; final and
 absolute gates fail. Fixed family closed, no extension/confirmation/promotion.
 312 total frozen checks pass; all four sessions stopped. Project38.601665/150,
-account349.34 zero rate/assignments. Strict evidence/curves retained; publication
-and verified duplicate cleanup follow.
+account349.34 zero rate/assignments. Strict evidence/curves retained;15 release assets verified and45.88MB duplicate
+publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 

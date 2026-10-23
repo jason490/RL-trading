@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "release_assets_verified": 15,
+  "owned_cleanup_verified": true,
+  "removed_files": [
+    {
+      "path": "artifacts/capacity-release/research-models.tar.gz",
+      "bytes": 42486296,
+      "sha256": "241d0f0558f08fd7055fae9bd3d5221e14a2e44dbb68f318be41da0868807ef3"
+    },
+    {
+      "path": "artifacts/capacity-release/validation-reports.tar.gz",
+      "bytes": 3394301,
+      "sha256": "42f08264a73190954a346bc8a71f670aeab675c647f4fe1095cf10db69cd9ed2"
+    }
+  ],
+  "removed_logical_bytes": 45880597,
+  "retained_file_count": 142,
+  "retained_hashes_unchanged": true,
+  "original_transports_models_reports_source_dataset_ledger_preserved": true
+}
