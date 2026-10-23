@@ -51,3 +51,16 @@ and invalid scales. Actual dataset/source normalization remain unchanged; all ni
 extreme examples match source arithmetic. Full result JSON and compact CSV are
 tracked, original data remains local. Project38.74617914/150 unchanged; last
 verified account349.23 zero rate/assignments, prior owned sessions stopped.
+
+## Fixed cap5 preregistration
+
+[Numeric preregistration](../configs/experiments/input_clipping_preregistration.json)
+freezes control versus market-z cap5 before implementation. Same original means/
+scales/full-history111/26 source,64-unit Gaussian recurrent model, default zero
+Adam decay and100kseed11/10kcadence. Original selected+final relative2pp,
+stock/ETF/median−2pp and drawdown2pp gates retained; failure closes the fixed cap
+family without threshold/normalizer/model/reward/step grid. Conditional11/23/37
+and prospective requirements unchanged. Shared2-unit allowance starts38.746179136005324
+with unchanged project150/130/account150/170 limits. Candidate content identity
+will be filled only from deterministic immutable preflight before Colab integration;
+cap/gates/budget stay fixed. No allocation or performance claim.

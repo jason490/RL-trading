@@ -1,0 +1,149 @@
+{
+  "market_features": 7,
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "evaluation_every": 10000,
+  "initialization": "standard",
+  "policy_variant": "native",
+  "start_sampling": "stock_etf_cycle_windows",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Same111 full-history symbols and100k; only explicitly versioned market-input clipping differs, no outcome-ranked sampling."
+  },
+  "smoke_steps": 512,
+  "smoke_evaluation_every": 256,
+  "parameters": {
+    "n_steps": 1000,
+    "batch_size": 50,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "recurrent_parameters": {
+    "lstm_hidden_size": 64,
+    "n_lstm_layers": 1,
+    "shared_lstm": false,
+    "enable_critic_lstm": true
+  },
+  "smoke_parameters": {
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 10
+  },
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected/final separately reported, actual100k final post-update required",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Close fixed clipping family on failed seed11 gates. No cap/normalizer/model/reward/step grid, extension, confirmation or promotion."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "observation_profile": "execution_masked",
+  "target_kl": null,
+  "version": 1,
+  "name": "market-input-clipping-2026-10-23",
+  "hypothesis": "Frozen original normalization produces training tails up to80 sigma in the expanded universe. Test one explicit cap on standardized market inputs, not raw prices/rewards or data repair. Input-scale observations do not prove causality or performance benefit.",
+  "arms": [
+    "control",
+    "clip5"
+  ],
+  "candidate": "clip5",
+  "screen_cells": 2,
+  "parameter_count": 61513,
+  "execution_modes": {
+    "control": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    },
+    "clip5": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    }
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only; check actual default Python before dependency sync",
+    "initial_concurrency": 2,
+    "max_study_incremental_units": 2.0,
+    "study_start_project_units": 38.746179136005324,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "allocation_deadline_seconds": 7200,
+    "preflight": "Actual immutable payloads/environment checkers and pinned untrained construction locally; two512 full64-architecture Colab smokes,156 frozen predictions, optimizer restoration and measured year margins, followed by valid runtime approval before100k screen",
+    "runner": "Existing central aggregate metered owned fleet and original ledger; setup/idle/transfers/failures/retries count; no automatic restart on budget stop; verify all owned shutdown",
+    "cleanup": "Durable retrieval/checkpoints; verify server publication before duplicate deletion; retain source/data/models/ledger"
+  },
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "candidate_dataset": "pending immutable preflight before Colab integration",
+  "clip_abs": 5.0,
+  "normalization": "Same frozen original seven means/scales; clip only their transformed market values after standardization, before float32 cast. No refit.",
+  "schema": "daily-indicators-v1-zclip5-v1",
+  "shared_initialization": {
+    "manifest": "configs/initializations/recurrent_capacity_v1/manifest.json",
+    "manifest_sha256": "f52409d726b55d46c8da556b8b56750ecf1773e367478f6dcb92d5515f47e2c3",
+    "hash_convention": "raw-file SHA-256",
+    "entry_arm": "control",
+    "rule": "Same pinned full64 per-seed tensors/CPU RNG; smoke uses full64 control snapshot, never trained weights."
+  },
+  "constraints": {
+    "data": "Raw episodes/bars/features/ATR/availability/splits/labels/provenance exact, train/development only. New explicit normalizer clip field and schema; original normalization serialization/default generation identities/bundles unchanged.",
+    "market": "Cap seven normalized market inputs at5 in absolute value; never clip portfolio state, raw price/volume/corporate action/ATR execution, reward, equity, costs or baselines.",
+    "learning": "Same native Gaussian64 recurrent/dense model,21 masked observations,100kseed11/10kcadence/rollout1000/batch50/10epochs/defaultAdam0decay/eps1e-5; no L2/history/model/reward changes.",
+    "evaluation": "Original26 repeatedly reused2021\u20132023 development, same stock/ETF/median/relative/risk selected+final gates. Conditional11/23/37 then prospective evidence; no retired2024+ access.",
+    "short_side": "Declining-stock cohort reporting-only, positive total AND short P&L required for success descriptions; no future label routing.",
+    "failure": "Close fixed clipping family on failed seed11 gates. No cap/normalizer/model/reward/step grid, extension, confirmation or promotion.",
+    "limitations": "Retrospective survivors/revised data/reused development. Source arithmetic does not independently verify provider truth. Input clipping may discard meaningful stress magnitude; benefit unproven."
+  },
+  "runtime_projection": {
+    "reference_control_seconds": 780.2240944900001,
+    "reference_control_metadata_sha256": "35253c2a7e2575619da6ffa968e6795e8d6e5b38af648ec9afcb59e3aa0e19d8",
+    "rule": "Before100k require2*reference_control_seconds*max(1,clip5_smoke_seconds/control_smoke_seconds)+1200<=7200, exact accepted smoke bytes bound to plans; heuristic not guarantee",
+    "safety_multiplier": 2.0,
+    "setup_retrieval_shutdown_reserve_seconds": 1200.0,
+    "maximum_allocation_seconds": 7200.0
+  },
+  "implementation_status": "Fixed numeric cap/gates/budget preregistered before implementation; immutable candidate identity pending preflight. No allocation/training."
+}
