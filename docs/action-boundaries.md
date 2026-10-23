@@ -33,3 +33,25 @@ handling, actual constructor/save-load/frozen checks and Colab smoke acceptance;
 simply changing an inference action transform is not a matched training study.
 No distribution, exploration coefficient or model is selected by this diagnostic.
 Existing failed clipping, capacity, L2 and guard families remain closed.
+
+## Implementation and verification
+
+`reporting/action_boundaries.py` computes stable analytic lower/upper Gaussian
+tails and per-observation joint probabilities. The recurrent reader carries
+hidden/cell state per symbol, holds the account flat and restores policy mode.
+The CLI binds the accepted summary, exact model/metadata hashes and original
+immutable dataset; it fingerprints full Adam, policy tensors, Torch RNG,
+normalization and source files before and after. It rejects validation episodes
+and unsupported distributions. No policy action is executed or sampled.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+  scripts/diagnose_action_boundaries.py --output artifacts/action-boundaries/summary.json
+```
+
+54 focused checks pass: analytic normal tails/joint mass, asymmetry, invalid
+parameters, extreme finite scale, real untrained recurrent carry/reset/repeat,
+model/optimizer/RNG invariants and existing registered-study/action contracts.
+Actual saved-model diagnostic remains to run; these tests are not performance
+evidence. Protocol canonical SHA-256:
+`f49c54441bec512c6b8170c0d8e437987aba08a503b22eab5cc31559e4036ba4`.

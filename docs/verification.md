@@ -2259,3 +2259,8 @@ contribution−0.99→−4.04pp/+1.73→−5.98pp, incremental cost drag5.11→5
 for disabling shorts/reward edits. Exact source hashes preserved; no fitting/data
 access/Colab allocation. Family remains closed; distinct hypothesis review before
 new training. [Evidence](../results/clipping-actions-2026-10-23/README.md).
+
+- Gaussian action-boundary diagnostic implementation:54 focused tests pass,
+  including analytic tails, numerical extremes and actual untrained recurrent
+  carry/reset/model/Adam/Torch-RNG invariants. Fixed source/model/data contracts;
+  no actual saved-policy diagnostic or training result yet. See[action boundaries](action-boundaries.md).
