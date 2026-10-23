@@ -13,7 +13,7 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 def prepare(root,study="cash"):
     import importlib
-    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard","capacity":"recurrent_capacity"}[study]
+    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard","capacity":"recurrent_capacity","training-history":"training_history"}[study]
     arms=importlib.import_module("rl_stocks.training."+module_name).protocol()["arms"]
     state=dict(status='complete',cleanup_verified=True,completed={});accepted={'cells':{}}
     for arm in arms:
@@ -29,7 +29,7 @@ def prepare(root,study="cash"):
             reports[phase]=dict(file=name,sha256=checksum(p))
         state['completed'][arm]=dict(root=str(run.parents[1]))
         accepted['cells'][arm]=dict(run=run.name,bundle_id=arm,dataset='fixture',reports=reports)
-    s=root/('.runtime/guard-screen-v2-state.json' if study=='guard' else f'.runtime/{study}-screen-state.json');s.parent.mkdir();s.write_text(json.dumps(state))
+    s=root/({'guard':'.runtime/guard-screen-v2-state.json','training-history':'.runtime/recency-screen-state.json'}.get(study,f'.runtime/{study}-screen-state.json'));s.parent.mkdir();s.write_text(json.dumps(state))
     name,date=module.STUDIES[study]
     p=root/f'results/{name}-{date}/summary.json';p.parent.mkdir(parents=True);p.write_text(json.dumps(accepted))
     u=root/'configs/universes/sector_research.json';u.parent.mkdir(parents=True)
@@ -78,13 +78,14 @@ def test_guard_audits_exact_v2_pair_without_opening_dataset(tmp_path,monkeypatch
     assert '.runtime/guard-screen-v2-state.json' in result['source_files_sha256']
 
 
-def test_capacity_audits_exact_pair_and_rejects_changed_report(tmp_path,monkeypatch):
-    state_path,_=prepare(tmp_path,'capacity');monkeypatch.chdir(tmp_path)
-    result=module.audit('capacity')
+@pytest.mark.parametrize('study,arms',[('capacity',['control','larger']),('training-history',['full','recent'])])
+def test_exact_pair_and_changed_report_rejection(tmp_path,monkeypatch,study,arms):
+    state_path,_=prepare(tmp_path,study);monkeypatch.chdir(tmp_path)
+    result=module.audit(study)
     assert {(r['arm'],r['phase']) for r in result['records']}=={
-        (a,p) for a in ['control','larger'] for p in ['selected','final']}
+        (a,p) for a in arms for p in ['selected','final']}
     assert result['source_files_unchanged'] and not result['dataset_opened']
     state=json.loads(state_path.read_text())
     root=Path(next(iter(state['completed'].values()))['root'])
     next((root/'runs').glob('*/validation.json')).write_text('{}')
-    with pytest.raises(ValueError,match='hash mismatch'):module.audit('capacity')
+    with pytest.raises(ValueError,match='hash mismatch'):module.audit(study)

@@ -49,6 +49,8 @@ publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 
+- [History-study saved actions and costs](history-actions-2026-10-23/README.md)
+
 - [Capacity selected-to-final actions and costs](capacity-actions-2026-10-23/README.md)
 
 - [Saved actions and costs](guard-actions-2026-10-22/README.md)

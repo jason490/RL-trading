@@ -9,17 +9,19 @@ STUDIES={'recurrent-state':('recurrent-state','2026-10-21'),
          'alignment':('recurrent-alignment','2026-10-21'),
          'cash':('recurrent-cash','2026-10-22'),
          'guard':('recurrent-guard','2026-10-22'),
-         'capacity':('recurrent-capacity','2026-10-22')}
+         'capacity':('recurrent-capacity','2026-10-22'),
+         'training-history':('training-history','2026-10-23')}
 
 
 def audit(study):
     if study not in STUDIES:raise ValueError('registered accepted study required')
     result_study,date=STUDIES[study]
-    state_path=Path('.runtime/guard-screen-v2-state.json' if study=='guard' else f'.runtime/{study}-screen-state.json')
+    state_path=Path({'guard':'.runtime/guard-screen-v2-state.json',
+        'training-history':'.runtime/recency-screen-state.json'}.get(study,f'.runtime/{study}-screen-state.json'))
     accepted_path=Path(f'results/{result_study}-{date}/summary.json')
     state=json.loads(state_path.read_text())
     accepted=json.loads(accepted_path.read_text())
-    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard','capacity':'recurrent_capacity'}[study]
+    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard','capacity':'recurrent_capacity','training-history':'training_history'}[study]
     required=set(importlib.import_module('rl_stocks.training.'+module).protocol()['arms'])
     if set(accepted.get('cells',{}))!=required:raise ValueError('all registered study arms required')
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete verified shutdown required')

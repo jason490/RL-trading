@@ -1342,3 +1342,16 @@ archives removed (35,931,249 bytes),148 retained hashes unchanged. Original
 transports/models/source/both datasets/ledger/plan.html retained. All four sessions
 stopped, project38.68329334 unchanged. Fixed family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23).
+
+
+## Saved history-study actions — 2026-10-23
+
+Four accepted phases/104 episodes audited without dataset/model fitting/provider/
+Colab access. Recent stock return22.25→4.46%, short contribution−3.58→−10.54pp,
+closing short exposure11.82→19.56%; cost drag declines7.89→7.26pp. Observed
+accounting, not a causal explanation or short-ban justification.22 focused
+audit/action tests pass; source hashes unchanged. Fixed history family closed.
+Next preregister read-only saved-policy replay on a common eligible2018–2020
+training window before new training; not yet executed. No prospective success
+or assumption that every bar was sampled. Project38.68329334 unchanged.
+[Evidence](../results/history-actions-2026-10-23/README.md).
