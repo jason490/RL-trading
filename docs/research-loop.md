@@ -1600,3 +1600,13 @@ contribution−0.99→−4.04pp/+1.73→−5.98pp, incremental cost drag5.11→5
 for disabling shorts/reward edits. Exact source hashes preserved; no fitting/data
 access/Colab allocation. Family remains closed; distinct hypothesis review before
 new training. [Evidence](../results/clipping-actions-2026-10-23/README.md).
+
+### Next diagnostic: native Gaussian action-boundary mass
+
+Preregistered a read-only conditional-distribution diagnostic on32 fixed training
+prefix observations for all111 symbols, comparing pinned untrained and existing
+control selected/final models. Flat fixed actions, original normalization, no
+policy-action execution or validation return evaluation. Exact Gaussian boundary
+mass may identify an exploration/execution mechanism but cannot establish poor
+performance causality or a better policy. Separate fixed protocol/compatibility
+checks required before any support-aware training. [Method](action-boundaries.md).

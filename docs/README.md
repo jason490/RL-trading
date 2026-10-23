@@ -94,3 +94,6 @@ native-control reproduction requirements.
 
 [Feature preprocessing](feature-preprocessing.md) owns frozen-scale distribution
 audits and requirements for any optional, explicitly versioned input transform.
+
+- [Gaussian action boundaries](action-boundaries.md): fixed training-prefix
+  distribution audit, probability interpretation and bounded-policy prerequisites.

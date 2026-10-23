@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "name": "gaussian-action-boundary-diagnostic-2026-10-23",
+  "hypothesis": "Hard-clipping native Gaussian samples may place substantial probability at executed action boundaries. Measure conditional mass without fitting before proposing a support-aware policy. Boundary mass is not proof of poor returns or a training-causal explanation.",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "accepted_summary": "results/input-clipping-2026-10-23/summary.json",
+  "accepted_summary_sha256": "ded5dfa7746a0faa4387ffa7326fe21bc7466929f6291eadedfb8e10ce960c64",
+  "source_run": "20261023T133039-recurrent_ppo-11-658667c0",
+  "metadata_sha256": "a83e2cdf44fc71347c60a94aebac8ec1c3816ec3a8161a9a9e101418337ecc52",
+  "models": {
+    "selected": {
+      "filename": "best.zip",
+      "sha256": "0c6a7142d15828266d56119e87b06d09d066ec81737e40ce767653ed72240b0a"
+    },
+    "final": {
+      "filename": "latest.zip",
+      "sha256": "fecfb464b496ab401a19c786ad34f7aab681a472c9783fb0cc40494e4f91ed61"
+    }
+  },
+  "untrained": "Pinned full64 control seed11 initialization from recurrent_capacity_v1; exact policy tensor and RNG proof, default zero decay/eps1e-5",
+  "selection": {
+    "split": "train",
+    "symbols": "All111 source training episodes, sorted by symbol",
+    "decisions_per_symbol": 32,
+    "start_index": 0,
+    "account_path": "Fixed [0,0,0,0] action after each observation keeps the account flat; do not execute policy actions or rank symbols/dates by outcomes",
+    "memory": "Independent actor hidden/cell state reset for each symbol/model and carried over32 observations",
+    "normalization": "Original frozen seven-field training-only normalizer, no refit or clipping",
+    "observation_profile": "execution_masked"
+  },
+  "measurements": [
+    "Exact Normal marginal probabilities below-1/above+1 for each action",
+    "Joint any-component boundary mass from conditional diagonal independence",
+    "Mean/range of Gaussian means and standard deviations",
+    "Recurrent model/optimizer/normalizer/source invariants"
+  ],
+  "constraints": {
+    "training_performed": false,
+    "optimizer_steps": false,
+    "provider_requests": false,
+    "colab_allocated": false,
+    "validation_performance_evaluated": false,
+    "retired_test_evaluated": false,
+    "policy_action_simulation": false,
+    "checkpoint_selection": false,
+    "parameter_updates": false,
+    "interpretation": "Conditional distribution diagnostic on fixed training prefixes, not observed historical rollout clipping frequency or an economic return result",
+    "next": "Review mechanism and installed-library bounded-support implementation before a separate fixed matched training protocol; no automatic training allocation, no reopening closed families"
+  }
+}
