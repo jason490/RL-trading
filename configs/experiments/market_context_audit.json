@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "name": "broad-market-context-coverage-2026-10-23",
+  "hypothesis": "Audit whether three compact causal SPY context fields can be added to the existing111/26 source without changing raw episodes or reading retired outcomes. Coverage is not a predictive or performance result.",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "raw_snapshot": "09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f",
+  "benchmark": "SPY",
+  "window": 20,
+  "names": [
+    "market_return_20",
+    "market_volatility_20",
+    "relative_market_return_20"
+  ],
+  "definitions": {
+    "market_return_20": "log(SPY split-continuous close_t/close_t-20)",
+    "market_volatility_20": "population standard deviation of the20 completed SPY close-to-close log returns",
+    "relative_market_return_20": "own20-session split-continuous price log return minus SPY20-session price log return",
+    "dividends": "Excluded from these price features; execution cash-dividend accounting unchanged"
+  },
+  "alignment": "Exact same21 session dates in own and SPY windows; every contributing available_time<=decision bar available_time; no stale fill or future window; reject known missing-session crossings",
+  "coverage": "Use only cached Yahoo snapshot2010-01-04 through2023-12-29 and existing source train/development rows; require source/raw bar identity, audited calendars and explicit missing-session metadata. Inspect every source row without ranking realized returns.",
+  "normalization": "No fitting/refit or dataset generation in this audit; preserve original seven feature preprocessing. Later candidate requires separately preregistered training-only new-field normalization and matched same-dimension masks.",
+  "constraints": {
+    "training_performed": false,
+    "model_inference": false,
+    "normalization_fitted": false,
+    "provider_requested": false,
+    "colab_allocated": false,
+    "test_evaluated": false,
+    "validation_performance_scored": false,
+    "checkpoint_selection": false,
+    "raw_source_modified": false
+  },
+  "next": "Only complete source/alignment/causality acceptance permits a separate immutable dataset and fixed matched full/masked/legacy-control training protocol. No automatic training allocation or closed-family retuning.",
+  "limitations": "Revised Yahoo bars and retrospective survivors remain; recorded bar availability is an assumption, not verified historical vendor publication. Broad-market context differs from old high-dimensional sector proxies but benefit is unproven."
+}

@@ -1654,3 +1654,11 @@ relationships, not a cause or justification for disabling shorts/reward edits.
 Exact source hashes preserved; no fitting/data access/Colab allocation. Fixed
 family closed; distinct hypothesis review before new training.
 [Evidence](../results/squashed-actions-diagnosis-2026-10-23/README.md).
+
+### Next distinct information-family preflight
+
+Preregistered a no-fit/no-performance coverage audit for compact SPY20-session
+return/volatility and own-minus-SPY20-session return, using only cached2010–2023
+bars and original111/26 rows. Require exact matched sessions/availability/known-gap
+and raw-source identity before any new feature payload or training. Distinct from
+old high-dimensional sector proxies; benefit unproven. [Method](market-context.md).

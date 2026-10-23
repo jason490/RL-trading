@@ -97,3 +97,5 @@ audits and requirements for any optional, explicitly versioned input transform.
 
 - [Gaussian action boundaries](action-boundaries.md): fixed training-prefix
   distribution audit, probability interpretation and bounded-policy prerequisites.
+- [Compact broad-market context](market-context.md): fixed cached-data coverage,
+  synchronized availability and causal SPY-relative feature preflight.
