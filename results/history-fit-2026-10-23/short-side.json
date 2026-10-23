@@ -1,0 +1,186 @@
+{
+  "reporting_only": true,
+  "never_used_for_selection": true,
+  "records": {
+    "full-selected": {
+      "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+      "count": 2,
+      "positive_policy_and_short_pnl_count": 0,
+      "records": [
+        {
+          "episode": "CVX-train-0",
+          "symbol": "CVX",
+          "policy_return": -0.3115858366061035,
+          "buy_hold_return": -0.17074780922193677,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -22250.82307932296,
+          "short_net_pnl": -8907.760581287446,
+          "long_return_contribution": -0.2225082307932296,
+          "short_return_contribution": -0.08907760581287447,
+          "long_costs": 3408.343852372823,
+          "short_costs": 1258.1528301701464,
+          "long_active_sessions": 682,
+          "short_active_sessions": 77,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 8.731149137020111e-11,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        },
+        {
+          "episode": "XOM-train-0",
+          "symbol": "XOM",
+          "policy_return": -0.3613095976669901,
+          "buy_hold_return": -0.40248057303353013,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -44205.15652705697,
+          "short_net_pnl": 8074.196760357889,
+          "long_return_contribution": -0.4420515652705697,
+          "short_return_contribution": 0.08074196760357889,
+          "long_costs": 2793.834906177144,
+          "short_costs": 683.4250736396004,
+          "long_active_sessions": 696,
+          "short_active_sessions": 57,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 8.003553375601768e-11,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        }
+      ]
+    },
+    "full-final": {
+      "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+      "count": 2,
+      "positive_policy_and_short_pnl_count": 0,
+      "records": [
+        {
+          "episode": "CVX-train-0",
+          "symbol": "CVX",
+          "policy_return": -0.4365972092209087,
+          "buy_hold_return": -0.17074780922193677,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -34659.18565199437,
+          "short_net_pnl": -9000.535270096516,
+          "long_return_contribution": -0.3465918565199437,
+          "short_return_contribution": -0.09000535270096516,
+          "long_costs": 3894.185292399299,
+          "short_costs": 548.3692154090161,
+          "long_active_sessions": 717,
+          "short_active_sessions": 33,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 1.0186340659856796e-10,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        },
+        {
+          "episode": "XOM-train-0",
+          "symbol": "XOM",
+          "policy_return": -0.34511701569778463,
+          "buy_hold_return": -0.40248057303353013,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -42777.31295418437,
+          "short_net_pnl": 8265.611384405907,
+          "long_return_contribution": -0.42777312954184366,
+          "short_return_contribution": 0.08265611384405908,
+          "long_costs": 4281.565560225121,
+          "short_costs": 402.29519365807727,
+          "long_active_sessions": 724,
+          "short_active_sessions": 19,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 8.731149137020111e-11,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        }
+      ]
+    },
+    "recent-selected": {
+      "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+      "count": 2,
+      "positive_policy_and_short_pnl_count": 0,
+      "records": [
+        {
+          "episode": "CVX-train-0",
+          "symbol": "CVX",
+          "policy_return": -0.19032216650038192,
+          "buy_hold_return": -0.17074780922193677,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -18569.590503445113,
+          "short_net_pnl": -462.62614659308747,
+          "long_return_contribution": -0.18569590503445113,
+          "short_return_contribution": -0.004626261465930875,
+          "long_costs": 3520.294721829935,
+          "short_costs": 73.07784489630995,
+          "long_active_sessions": 734,
+          "short_active_sessions": 2,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 5.820766091346741e-11,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        },
+        {
+          "episode": "XOM-train-0",
+          "symbol": "XOM",
+          "policy_return": -0.5092388017616791,
+          "buy_hold_return": -0.40248057303353013,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -50923.880176167964,
+          "short_net_pnl": 0.0,
+          "long_return_contribution": -0.5092388017616797,
+          "short_return_contribution": 0.0,
+          "long_costs": 2937.035115019592,
+          "short_costs": 0.0,
+          "long_active_sessions": 733,
+          "short_active_sessions": 0,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 9.458744898438454e-11,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        }
+      ]
+    },
+    "recent-final": {
+      "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+      "count": 2,
+      "positive_policy_and_short_pnl_count": 0,
+      "records": [
+        {
+          "episode": "CVX-train-0",
+          "symbol": "CVX",
+          "policy_return": -0.255497536227562,
+          "buy_hold_return": -0.17074780922193677,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -18987.433607656552,
+          "short_net_pnl": -6562.3200150997,
+          "long_return_contribution": -0.18987433607656554,
+          "short_return_contribution": -0.065623200150997,
+          "long_costs": 3458.8616441563754,
+          "short_costs": 1909.5898941725325,
+          "long_active_sessions": 676,
+          "short_active_sessions": 77,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 1.0186340659856796e-10,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        },
+        {
+          "episode": "XOM-train-0",
+          "symbol": "XOM",
+          "policy_return": -0.2789121256395273,
+          "buy_hold_return": -0.40248057303353013,
+          "method": "signed-cash-flows-plus-final-mark-v1",
+          "long_net_pnl": -38101.20978373478,
+          "short_net_pnl": 10209.997219782057,
+          "long_return_contribution": -0.38101209783734785,
+          "short_return_contribution": 0.10209997219782058,
+          "long_costs": 3474.1016805112467,
+          "short_costs": 1260.0776870179332,
+          "long_active_sessions": 702,
+          "short_active_sessions": 51,
+          "sessions": 736,
+          "max_equity_reconciliation_error": 6.548361852765083e-11,
+          "includes_open_position_mark": true,
+          "positive_policy_and_short_pnl": false
+        }
+      ]
+    }
+  }
+}

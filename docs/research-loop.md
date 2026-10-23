@@ -1363,3 +1363,39 @@ including exact paired-view and commit-before-replay rejection. Commit before
 actual replay. No fitting/provider/Colab usage or checkpoint selection; eligibility
 is not proof every bar sampled. Closed history family stays closed.
 [Method](../results/history-fit-2026-10-23/README.md).
+
+
+## Actual saved-policy replay completed
+
+All four original26-symbol replays complete:19,136 execution rows per model,
+76,544 total. Both immutable datasets produce identical common eligible
+2018-01-02–2020-12-02 execution bars/features/ATR and original normalization,
+anchored2017-12-29. All four descriptive training stock/ETF/median−2pp flags fail.
+
+| Saved model | Training-window stocks | Training-window ETFs | Development mean |
+| --- | ---: | ---: | ---: |
+| Full selected |40.53%|50.22%|19.62%|
+| Full final |33.32%|36.13%|18.48%|
+| Recent selected |32.36%|28.54%|20.95%|
+| Recent final |46.66%|31.18%|5.60%|
+| Matched training-window holding |58.15%|47.15%|—|
+
+Separate-symbol mean net total returns, not annualized or a combined portfolio.
+Training and development have different dates/regimes/durations; raw cross-period
+returns cannot identify a causal generalization effect. Recent training-window
+mean improves31.77→44.28% while development20.95→5.60% declines, consistent with
+a generalization tradeoff but not proof of its sole cause. Full training mean
+42.02→33.76% and development19.62→18.48% both decline. Final recent median stock
+excess−4.88pp still misses−2pp; all fitted stock means underperform holding.
+
+This does not establish an accepted winner, justify more width/steps, reopen
+history/capacity families or select another checkpoint. Actual visitation year
+counts cannot prove every replay row was sampled. All phases are preexisting
+saved weights and flags are reporting-only. No fitting, optimizer step,
+normalization change, provider request, Colab allocation or retired-test access.
+Complete weights/Adam moments and source hashes remain unchanged. Original
+project ledger38.68329334/150 and last official account349.27 zero usage remain;
+all prior owned sessions stopped.
+
+
+[Evidence](../results/history-fit-2026-10-23/README.md).

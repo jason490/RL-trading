@@ -49,6 +49,8 @@ publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 
+- [Full/recent saved-model common training-window replay](history-fit-2026-10-23/README.md): all four benchmark flags fail; no fitting or new units.
+
 - [History-study saved actions and costs](history-actions-2026-10-23/README.md)
 
 - [Capacity selected-to-final actions and costs](capacity-actions-2026-10-23/README.md)
