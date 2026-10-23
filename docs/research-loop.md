@@ -1543,3 +1543,13 @@ must reproduce full accepted paths before mixed cases; predeclared exact counts/
 labels and numeric tolerance.40 focused checks pass. Commit before actual replay;
 no fitting/Colab or hybrid selection/promotion. Closed L2 family unchanged.
 [Method](action-crossover.md).
+
+
+L2 crossover native control rejected fixed tolerance before any mixed case.
+Bounded diagnostic retry retained exact failure; direct unwrapped replay equals
+wrapper result exactly. Both differ from original Colab by at most$0.00467059
+daily equity, with no structural/count/quantity/date mismatch. Runtime rounding
+is plausible, not established cause. No tolerance widening, mixed-policy returns,
+hybrid selection/promotion or family rescue.41 tests pass; source/model/optimizer/
+normalizer unchanged, no training/provider/Colab/test access or new credits.
+[Evidence](../results/l2-crossover-2026-10-23/README.md).

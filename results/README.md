@@ -59,6 +59,8 @@ publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 
+- [Rejected native crossover control](l2-crossover-2026-10-23/README.md): direct and wrapper match, source Colab sub-cent differences exceed fixed tolerance; no mixed outcomes.
+
 - [Saved recurrent L2 actions and costs](l2-actions-2026-10-23/README.md): stock deterioration with similar exposure and lower costs; crossover diagnostic pending.
 
 - [Saved history optimizer/parameter audit](history-optimizer-2026-10-23/README.md): finite restored Adam states; displacement and KL are descriptive, not causal proof.

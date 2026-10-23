@@ -1694,3 +1694,13 @@ ledger/plan.html preserved. Strict summary reproduces byte for byte from retaine
 transports with actual models/Adam/coupling restored. All four sessions stopped;
 project38.74617914 unchanged. Fixed L2 family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-regularization-2026-10-23).
+
+
+L2 crossover native control rejected fixed tolerance before any mixed case.
+Bounded diagnostic retry retained exact failure; direct unwrapped replay equals
+wrapper result exactly. Both differ from original Colab by at most$0.00467059
+daily equity, with no structural/count/quantity/date mismatch. Runtime rounding
+is plausible, not established cause. No tolerance widening, mixed-policy returns,
+hybrid selection/promotion or family rescue.41 tests pass; source/model/optimizer/
+normalizer unchanged, no training/provider/Colab/test access or new credits.
+[Evidence](results/l2-crossover-2026-10-23/README.md).

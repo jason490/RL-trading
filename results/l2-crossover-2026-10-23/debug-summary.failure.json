@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "4b33f924813e9dd0fe337477b9ca80925ea4afe4e6cf53ba3f0adf6b1ece3e1f",
+  "passed": false,
+  "failed_native_case": "selected_selected",
+  "error": "native control numeric path differs at $.AAPL-validation-0.rows[89].equity: expected=96532.63682138521, actual=96532.6373412129",
+  "source_models_optimizer_normalizer_unchanged": true,
+  "source_sha256": {
+    "configs/experiments/l2_crossover.json": "2d14849807ca4c890cef04e3968bdf27630a0962f6cb7df68dee59928932ef17",
+    "scripts/diagnose_l2_crossover.py": "ef873d2d117641c3450096bdd523b03f15740a099d7a0570084157108855f950",
+    "src/rl_stocks/inference/crossover.py": "697e9a85e90b3c214570566924a2ab4a0e35cf037ffe5c858de4852bc756c9fd",
+    "src/rl_stocks/evaluation/runner.py": "59c29ef7db47631d5c8e55fedd8682954256280dbf4b5d0698bf76f61204daa5",
+    ".runtime/l2-screen-state.json": "26b1937322d67adeaa550ab60075e1e4596f3a2b1abc1dd63a46acbd76dcd22a",
+    "results/recurrent-regularization-2026-10-23/summary.json": "61532dd7c2e27fe5efd8d84bcc453ffdcb425c7b8bfd05607bbab775cf544872",
+    ".runtime/l2-retained-hashes.json": "272f7dd2bc5fca7fe107341b800914184ed62e693d740ca565a35b2056aae68c",
+    "artifacts/colab/rl-stocks-cpu-d2d72374b107/retrieved/artifacts/runs/20261023T052342-recurrent_ppo-11-9cb3270e/metadata.json": "219cb77e0ede15bd4fde5fe821c469c3f30cf3b28db11b1feea676e52c5bb864",
+    "data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "artifacts/colab/rl-stocks-cpu-d2d72374b107/retrieved/artifacts/runs/20261023T052342-recurrent_ppo-11-9cb3270e/best.zip": "e96a6acf0713eb261619c557c30873db074e27550ef4477093cb9f2abca2b76d",
+    "artifacts/colab/rl-stocks-cpu-d2d72374b107/retrieved/artifacts/runs/20261023T052342-recurrent_ppo-11-9cb3270e/selected-validation.json": "3e7948890b3f1c03c521c183bff343384ebca571e9b2128f98b0c6e6ba9f229e",
+    "artifacts/colab/rl-stocks-cpu-d2d72374b107/retrieved/artifacts/runs/20261023T052342-recurrent_ppo-11-9cb3270e/latest.zip": "f1472b318db27942874f9e8460e84b490686dfe79eb64f89fe9ba0fba242a44c",
+    "artifacts/colab/rl-stocks-cpu-d2d72374b107/retrieved/artifacts/runs/20261023T052342-recurrent_ppo-11-9cb3270e/validation.json": "7e7146361f436d11c8c80a9586837ae1e8058ff017fd243a72b6c618ad5ecff5"
+  },
+  "mixed_cases_executed": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "tolerance_unchanged": true
+}

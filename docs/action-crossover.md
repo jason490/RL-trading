@@ -1,8 +1,7 @@
 # Read-only recurrent action-component crossover
 
-Status: fixed protocol and verified implementation prepared; actual replay pending.
-This is diagnostic inference, not a trained/deployable hybrid or rescue of the
-closed L2 family. No Colab allocation, fitting, orders or retired-test access.
+Status: actual native control rejected fixed tolerance; no mixed cases executed.
+Latest evidence below; original preregistration retained.
 
 ## Question and fixed controls
 
@@ -77,3 +76,11 @@ exact mismatch, source/model/optimizer/normalizer invariance and an explicit
 no-mixed-replay receipt. Tolerance/protocol unchanged.41 focused checks pass.
 Commit logging fix before a bounded diagnostic retry with a separate artifact
 path; this does not authorize widening tolerances or interpreting failed controls.
+
+
+Actual native control rejected; direct selected-model replay and wrapper result
+are exactly identical. Both have sub-cent differences from the source Colab
+report (maximum equity$0.00467059), no structural/quantity/date/event-count
+mismatch. Consistent with runtime rounding, precise cause unproven. Native gate
+remains failed, original tolerance unchanged, no mixed-policy result or promotion.
+41 checks pass; no additional credits. [Evidence](../results/l2-crossover-2026-10-23/README.md).
