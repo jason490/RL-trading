@@ -69,3 +69,11 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
 
 Project38.74617914/150 unchanged; last official account349.23 zero rate/assignments.
 All prior owned sessions stopped. No live trading or new training from this recipe.
+
+First actual selected/selected control rejected the fixed numerical tolerance;
+no mixed cases ran. Initial implementation did not retain the rejected native
+path or report its numeric location. Failure capture now preserves that path,
+exact mismatch, source/model/optimizer/normalizer invariance and an explicit
+no-mixed-replay receipt. Tolerance/protocol unchanged.41 focused checks pass.
+Commit logging fix before a bounded diagnostic retry with a separate artifact
+path; this does not authorize widening tolerances or interpreting failed controls.

@@ -1,0 +1,13 @@
+{
+  "status": "rejected_native_control",
+  "source_revision": "8fe0104",
+  "protocol_sha256": "4b33f924813e9dd0fe337477b9ca80925ea4afe4e6cf53ba3f0adf6b1ece3e1f",
+  "native_case": "selected_selected",
+  "error": "native control numeric path differs",
+  "mixed_cases_executed": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "artifact_root": "artifacts/l2-crossover-2026-10-23",
+  "next": "Retain rejected path and exact difference location; tolerance and protocol unchanged"
+}

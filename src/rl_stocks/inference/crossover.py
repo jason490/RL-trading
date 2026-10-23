@@ -42,16 +42,16 @@ class RecurrentCrossover:
         return result,states
 
 
-def require_native_parity(expected,actual,*,atol=1e-5,rtol=1e-9):
+def require_native_parity(expected,actual,*,atol=1e-5,rtol=1e-9,_path='$'):
     """Counts/labels exact; declared finite-float tolerance only, including daily paths."""
     if isinstance(expected,dict):
         if not isinstance(actual,dict) or set(expected)!=set(actual):raise ValueError('native control keys differ')
-        for key in expected:require_native_parity(expected[key],actual[key],atol=atol,rtol=rtol)
+        for key in expected:require_native_parity(expected[key],actual[key],atol=atol,rtol=rtol,_path=_path+'.'+str(key))
     elif isinstance(expected,list):
         if not isinstance(actual,list) or len(expected)!=len(actual):raise ValueError('native control lengths differ')
-        for x,y in zip(expected,actual,strict=True):require_native_parity(x,y,atol=atol,rtol=rtol)
+        for i,(x,y) in enumerate(zip(expected,actual,strict=True)):require_native_parity(x,y,atol=atol,rtol=rtol,_path=f'{_path}[{i}]')
     elif isinstance(expected,float):
         if isinstance(actual,bool) or not isinstance(actual,(int,float)) or not np.isfinite([expected,actual]).all() or not np.isclose(expected,actual,atol=atol,rtol=rtol):
-            raise ValueError('native control numeric path differs')
+            raise ValueError(f'native control numeric path differs at {_path}: expected={expected}, actual={actual}')
     elif type(expected) is not type(actual) or expected!=actual:
         raise ValueError('native control exact labels/counts differ')

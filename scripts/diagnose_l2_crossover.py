@@ -69,7 +69,20 @@ def main():
         if baseline is not None and baseline!=bh:raise ValueError('matched holding paths required')
         baseline=bh
         if case['name'] in spec['native_controls']:
-            require_native_parity(saved[case['direction']],results,atol=spec['native_tolerance']['atol'],rtol=spec['native_tolerance']['rtol']);native[case['name']]=True
+            try:
+                require_native_parity(saved[case['direction']],results,atol=spec['native_tolerance']['atol'],rtol=spec['native_tolerance']['rtol'])
+            except ValueError as error:
+                directory=a.artifacts/case['name'];directory.mkdir()
+                report(results,directory/'rejected-native.html','Rejected native control; no mixed replay')
+                unchanged=(all(model_record(model)==before[k] and optimizer_fingerprint(model)==optim[k] for k,model in models.items())
+                    and digest(data['normalizer'])==normalizer and all(checksum(root/k)==v for k,v in protected.items()))
+                failure=dict(protocol_sha256=PROTOCOL_SHA256,passed=False,failed_native_case=case['name'],error=str(error),
+                    source_models_optimizer_normalizer_unchanged=unchanged,source_sha256=protected,mixed_cases_executed=False,
+                    training_performed=False,colab_allocated=False,test_evaluated=False,tolerance_unchanged=True)
+                a.output.parent.mkdir(parents=True,exist_ok=True)
+                a.output.with_suffix('.failure.json').write_text(json.dumps(failure,indent=2)+'\n')
+                raise
+            native[case['name']]=True
         elif set(native)!=set(spec['native_controls']):raise ValueError('both native controls must pass before mixed replay')
         directory=a.artifacts/case['name'];directory.mkdir();report(results,directory/'validation.html','Diagnostic component crossover; not selected/promoted')
         records[case['name']]=dict(**case,metrics=group_metrics(results,stocks),declining_stocks=declining_stock_summary(results,stocks),derived_report_sha256=checksum(directory/'validation.json'))

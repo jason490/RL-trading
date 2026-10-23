@@ -51,3 +51,8 @@ def test_native_paths_preserve_exact_labels_counts_and_declared_float_tolerance(
     for mutate in [lambda x:x.update(qty=1.0),lambda x:x.update(reason='target'),lambda x:x['rows'][0].update(action=.11),lambda x:x['rows'].append({})]:
         x=deepcopy(r);mutate(x)
         with pytest.raises(ValueError):require_native_parity(r,x)
+
+
+def test_failed_control_reports_exact_numeric_location_without_widening_tolerance():
+    with pytest.raises(ValueError,match=r'\$\.rows\[0\]\.action'):
+        require_native_parity({'rows':[{'action':.1}]},{'rows':[{'action':.2}]})
