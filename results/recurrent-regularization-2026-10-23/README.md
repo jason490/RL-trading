@@ -1,9 +1,7 @@
 # Fixed recurrent PPO L2 hypothesis
 
-Status: actual two512 Colab smokes accepted; fixed100k screen next.
-No research performance result. Earlier sections retain preparation history. [Method and gates](../../docs/recurrent-regularization.md),
-[protocol](../../configs/experiments/recurrent_regularization.json),
-[actual untrained probe](untrained-probe.json).
+Status: completed seed11 screen failed; fixed L2 family closed. Latest outcome
+below; earlier sections retain preparation history.
 
 Compare coupled Adam weight decay0 versus0.0001 on original full-history111/26
 source, same61,513-parameter64-unit recurrent policy, seven indicators/actions/
@@ -56,3 +54,64 @@ no retired-test access or orders. Next same-source fixed100k control/L2 screen.
 
 [Acceptance](smoke-summary.json), [frozen checks](smoke-restoration.json),
 [compute and owned cleanup](smoke-compute.json), [runtime approval](runtime-profile.json).
+
+
+## Completed coupled-L2 screen — 2026-10-23
+
+Status: fixed recurrent PPO L2 comparison failed; family closed. No coefficient,
+optimizer/model/reward/step grid, extension, confirmation or promotion. Earlier
+sections retain preparation/smoke history. Both100k seed11 CPU runs completed in
+Google Colab/defaultPython3.13.16 from clean frozen
+1d640eebf0ad604461d0d510f584477efee75844.
+
+| Arm | Selected return | Selected step | Final return |
+| --- | ---: | ---: | ---: |
+| Control decay0 |19.6245%|80,000|18.4844%|
+| Coupled L2 decay0.0001 |30.4487%|50,000|18.4155%|
+| Matched holding |30.6019%|—|30.6019%|
+
+Separate26-symbol mean net total returns on repeatedly reused2021–2023
+development history; neither annualized, combined portfolio nor independent test.
+Selected relative gain+10.8241pp passes2pp, final−0.0689pp fails. Final stock
+change−2.4975pp fails nonworsening; ETF+13.2886pp improves. Mean symbol drawdown
+improves1.3741pp but cannot compensate for failed return gates.
+
+Candidate selected stocks33.9981% versus holding32.6265%, but ETFs10.9265%
+versus19.4660%; selected median stock excess−3.1679pp. Thus the near-matched
+selected overall mean does not pass separate stock/ETF/median−2pp gates. Final
+stocks19.2699%/ETFs13.7160%, excess−13.3566/−5.7500pp and median−6.7186pp,
+all fail. Reporting-only declining-stock joint positive total AND net short P&L
+1/3 selected→0/3 final. No robust profitable-short capability established.
+
+## Actual optimizer/data/frozen evidence
+
+Both actual selected/final models, moments, checkpoint IDs and default accounting/
+holding paths restore and reconcile. Actual coupled Adam defaults and group
+flagsFalse, coefficient0/0.0001 and explicit eps1e-5 verified. Final20,000 actual
+Adam updates/1000 nominal epochs,61,513 parameters each. Exact same pinned
+untrained tensors/CPU RNG, actual symbol sampling and measured year margins pass.
+Fresh control reproduces prior full-history control's exact selected/final
+tensor hashes and sampling, supporting preserved epsilon/default behavior; model
+ZIP bytes need not match across saved provenance. No trained weights reused.
+
+156 exact screen frozen action/hidden/cell/repeat/reset predictions,312 including
+smokes; immutable normalization/schema/feed/nonfinite rejection pass. Source/data/
+reward/action/model architecture/steps remain fixed. No retired2024+ access,
+local fitting, new provider calls or broker orders in report generation.
+
+## Compute, retained artifacts and next work
+
+All four smoke/screen sessions verified stopped; official account349.23, zero
+rate/assignments. Original project ledger38.74617914/150, remaining111.25382086;
+study conservative increment0.06288579 versus observed rounded account debit0.04,
+including setup/idle/transfers/shutdown. Original baseline38.68329334472413/shared
+2-unit allowance and project150/130/account150/170 safeguards retained.
+
+Strict summary, compact10k curves with incremental changes, actual optimizer/
+initialization/year/checkpoint records, full models/reports/source/dataset/ledger
+retained. Interactive comparison: `artifacts/recurrent-l2/summary.html`. Verified
+GitHub publication and duplicate-only cleanup follow this outcome commit, then
+saved-path diagnosis before any distinct hypothesis. No automatic restart or
+relaxed gates. The full research objective remains unachieved.
+
+[Strict report](summary.json), [10k curves](learning-curves.csv), [frozen checks](restoration.json), [control reproduction](control-reproduction.json), [compute and cleanup](compute.json).

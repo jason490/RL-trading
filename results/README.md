@@ -15,6 +15,15 @@ Measured2020 stock exposure1.98%→6.64% confirms intended composition change.
 account349.27 zero rate/assignments. 17 release assets verified;35.93MB duplicate archives removed with148 retained
 hashes unchanged.
 
+## Latest completed optimizer comparison
+
+[Recurrent coupled L2](recurrent-regularization-2026-10-23/README.md): control
+selected/final19.62/18.48%, candidate30.45/18.42%, holding30.60%. Selected overall
+near holding but ETF/median targets fail; final and relative gates fail. Fixed
+family closed, no confirmation or coefficient sweep.312 frozen checks including
+smokes, all four sessions stopped; project38.746179/150, account349.23 zero
+rate/assignments. Publication/duplicate cleanup next.
+
 ## Recent completed comparisons
 
 | Study / arm | Selected | Final | Interpretation |
@@ -81,7 +90,7 @@ availability and expected window year mass. Both full/recent sources support111
 symbols; expected2020 mass2.4% versus7.3%. No training or performance claim;
 actual year logging and a frozen matched protocol remain prerequisites.
 
-[Prepared recurrent PPO regularization](recurrent-regularization-2026-10-23/README.md):
+[Completed recurrent PPO regularization](recurrent-regularization-2026-10-23/README.md):
 fixed Adam decay0/0.0001, same full-history model/data/steps.138 integration checks
 and actual untrained construction pass. Actual Colab smokes accepted with exact saved optimizer/frozen proof;
 runtime approval passes,100k screen next. No research performance or promotion.
