@@ -1,0 +1,236 @@
+{
+  "project_units": 38.81646887344713,
+  "remaining_project_units": 111.18353112655288,
+  "study_start_units": 38.746179136005324,
+  "study_incremental_units": 0.07028973744180433,
+  "measured_units": 0.049999999999954525,
+  "estimated_units": 0.0702897374418047,
+  "charged_units": 0.0702897374418047,
+  "official_account_balance": 349.17,
+  "official_rate": 0,
+  "official_assignments": 0,
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-48dfad256bfe": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-cf8459ccba8d": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-4709348419fa": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-99ae2bb14dcd": {
+      "status": "stopped",
+      "phase": "verify"
+    }
+  },
+  "meter_readings": {
+    "rl-stocks-fleet-11f684e229a7": [
+      {
+        "time": 1792761376.7308698,
+        "balance": 349.23,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792761383.0583596,
+        "balance": 349.23,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761443.552022,
+        "balance": 349.23,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761503.9745977,
+        "balance": 349.23,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761564.609751,
+        "balance": 349.23,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761624.6587734,
+        "balance": 349.22,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761684.6056855,
+        "balance": 349.22,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761745.1702783,
+        "balance": 349.22,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792761805.2291102,
+        "balance": 349.22,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792761833.4507422,
+        "balance": 349.22,
+        "rate": 0.0,
+        "assignments": 0
+      }
+    ],
+    "rl-stocks-fleet-8df610be8498": [
+      {
+        "time": 1792762001.223518,
+        "balance": 349.21,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792762008.2146337,
+        "balance": 349.21,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762067.909285,
+        "balance": 349.21,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762127.9677103,
+        "balance": 349.21,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762187.986859,
+        "balance": 349.21,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762248.6010878,
+        "balance": 349.2,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762308.704973,
+        "balance": 349.2,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762368.8080611,
+        "balance": 349.2,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762428.764363,
+        "balance": 349.2,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762489.1339335,
+        "balance": 349.2,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762549.1784935,
+        "balance": 349.19,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762609.1009936,
+        "balance": 349.19,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762669.341883,
+        "balance": 349.19,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762729.981822,
+        "balance": 349.19,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762789.8334394,
+        "balance": 349.18,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792762851.452922,
+        "balance": 349.18,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792762910.2966766,
+        "balance": 349.18,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792762970.5900834,
+        "balance": 349.18,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792763031.0865076,
+        "balance": 349.18,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792763091.1489654,
+        "balance": 349.17,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792763151.4224749,
+        "balance": 349.17,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792763209.7614129,
+        "balance": 349.17,
+        "rate": 0.0,
+        "assignments": 0
+      }
+    ]
+  },
+  "study_limit_units": 2,
+  "project_ceiling_units": 150,
+  "project_teardown_units": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "automatic_restart": false,
+  "test_evaluated": false
+}

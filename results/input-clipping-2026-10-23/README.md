@@ -1,10 +1,7 @@
 # Fixed standardized market-input clipping comparison
 
-Status: immutable payload, fixed training contracts and version30 Colab integration
-implemented; actual local construction/checkers pass. Colab smokes remain before
-training screens. No allocation/performance result. [Method](../../docs/feature-preprocessing.md),
-[original preregistration](../../configs/experiments/input_clipping_preregistration.json),
-[final fixed protocol](../../configs/experiments/input_clipping.json), [preflight](preflight.json).
+Status: completed seed11 comparison failed; fixed clipping family closed. Latest
+verified outcome below; earlier sections retain preparation history.
 
 Compare unchanged frozen normalization versus cap5 on seven standardized market
 inputs. Same raw full-history111/26 data, means/scales,64-unit Gaussian recurrent
@@ -78,3 +75,57 @@ Next: same-source fixed100k paired screen; no performance result/promotion yet.
 
 [Smoke acceptance](smoke-summary.json), [frozen checks](smoke-restoration.json),
 [runtime approval](runtime-profile.json), [metering and cleanup](smoke-compute.json).
+
+
+## Completed fixed-cap comparison
+
+Both100k seed11 CPU runs completed in Google Colab/defaultPython3.13.16 from
+frozenac497107a444ec5e1c8771bc01362092c34f56ae. Family closed: no cap grid,
+normalizer refit, longer training, confirmation or promotion.
+
+| Arm | Selected return | Selected step | Final return |
+| --- | ---: | ---: | ---: |
+| Original normalization |19.6245%|80,000|18.4844%|
+| Standardized market inputs capped at5 |24.7028%|60,000|18.5720%|
+| Matched holding |30.6019%|—|30.6019%|
+
+Separate26-symbol mean net total returns on repeatedly reused2021–2023 development
+history, not annualized, a combined portfolio or independent test. Selected gain
++5.0783pp passes the relative2pp threshold, final+0.0877pp fails. Final stocks
+fall1.3014pp versus control while ETFs improve7.7272pp; stock nonworsening fails.
+Mean symbol drawdown improves2.5327pp but cannot offset failed return gates.
+
+Candidate selected stocks26.6837%/ETFs13.8080% versus holding32.6265%/19.4660%;
+median stock excess−7.4558pp. Final stocks20.4661%/ETFs8.1547%, excess
+−12.1605/−11.3113pp, median stock excess−13.5943pp. All selected/final absolute
+stock/ETF/median−2pp gates fail. Reporting-only declining-stock joint positive
+total AND short P&L0/3 at both selected and final. No robust short-profit evidence.
+
+## Restoration, reproducibility and operational evidence
+
+Actual selected/final saved models and full Adam records restore exactly, final
+20,000 actual updates/1000 nominal epochs,61,513 parameters, zero decay/eps1e-5.
+Pinned initial tensors/RNG and actual symbol/year sampling match across arms.
+Fresh control selected/final tensors and sampling exactly reproduce prior control.
+312 exact frozen action/hidden/cell/reset/repeat predictions including smokes,
+immutable normalization and schema/feed/nonfinite rejection pass. No local fitting,
+provider requests, retired2024+ access or orders.
+
+The control CLI connection was lost during training. Retrieved checkpoints
+continued advancing, so no training restart was issued. The same worker ultimately
+completed and its full final export passed strict validation; both owned screen
+sessions were retrieved and verified stopped. Together with smokes all four owned
+sessions stopped. Conservative project38.81646887/150, remaining111.18353113;
+shared study increment0.07028974 including setup/idle/transfers/failures/shutdown.
+Official account349.17, zero rate/assignments; original project150/130/account
+150/170 constraints and2-unit study allowance retained.
+
+Interactive comparison: `artifacts/input-clipping/summary.html`; compact10k curves
+retain incremental percentage-point changes. Full models/checkpoints/reports,
+transports/source/data/ledger retained. Next: server-verified publication,
+duplicate-only cleanup and saved-path diagnosis before a distinct hypothesis.
+Overall robust-return objective remains unachieved.
+
+[Strict report](summary.json), [10k curves](learning-curves.csv),
+[frozen restoration](restoration.json), [fresh control reproduction](control-reproduction.json),
+[metering/owned cleanup](compute.json).

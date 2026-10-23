@@ -106,3 +106,10 @@ training/development z distributions and source arithmetic. Large training tails
 no model fitting or new units. The fixed cap5 preprocessing protocol and immutable
 payload are now prepared in [input-clipping](input-clipping-2026-10-23/README.md);
 Colab integration/smokes remain before training.
+
+
+## Fixed input clipping completed
+
+[Clipping](input-clipping-2026-10-23/README.md) failed: selected/final24.70/18.57%
+versus control19.62/18.48% and holding30.60%. No cap sweep or extension.312 frozen
+checks including smokes, four sessions stopped, project38.816469/account349.17.

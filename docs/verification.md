@@ -2229,3 +2229,19 @@ actual study smokes remain. [Evidence](../results/input-clipping-2026-10-23/READ
   unchanged normalization and matched initial tensors/RNG/sampling pass. Both owned
   sessions retrieved and stopped; project38.76724093, account349.22 zero assignments.
   Runtime projection3970.4465s passes7200s; fixed100k plans prepared, not allocated.
+
+
+### 2026-10-23 — fixed market-input clipping screen failed
+
+Two100k Colab CPU runs completed; control selected/final19.6245/18.4844%,
+clip5 selected/final24.7028/18.5720%, matched holding30.6019%. Selectedrelative
++5.0783pp but final+0.0877pp fails2pp; stock nonworsening and all absolute
+stock/ETF/median gates fail. Family closed, no cap grid/extension/confirmation.
+312 frozen checks including smokes pass; actual models/Adam/initialization/year
+sampling restore; fresh control exactly reproduces prior tensors/sampling.
+Control CLI disconnect recovered via advancing checkpoints/final export without
+restarting training. All four owned sessions retrieved/stopped. Project38.81646887,
+account349.17 zero rate/assignments. Full artifacts retained; publication and
+saved-path diagnosis next, robust-return objective unachieved.
+
+[Detailed evidence](../results/input-clipping-2026-10-23/README.md).
