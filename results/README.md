@@ -12,7 +12,8 @@ the full required multi-seed and prospective acceptance process.
 final and absolute gates fail. Fixed family closed, no confirmation/promotion.
 Measured2020 stock exposure1.98%→6.64% confirms intended composition change.
 312 frozen checks including smokes; all four sessions stopped. Project38.683293,
-account349.27 zero rate/assignments. Publication/duplicate cleanup next.
+account349.27 zero rate/assignments. 17 release assets verified;35.93MB duplicate archives removed with148 retained
+hashes unchanged.
 
 ## Recent completed comparisons
 

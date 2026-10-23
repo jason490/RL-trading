@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "release_assets_verified": 17,
+  "owned_cleanup_verified": true,
+  "removed_files": [
+    {
+      "path": "artifacts/training-history-release/research-models.tar.gz",
+      "bytes": 32539665,
+      "sha256": "314ac98d6e814b521ab269c8e770fe75e6f8d95c814ce4ab6bd1c1143f4cd4b4"
+    },
+    {
+      "path": "artifacts/training-history-release/validation-reports.tar.gz",
+      "bytes": 3391584,
+      "sha256": "805d1e795754d36968aa53a634298b4859f18d237fcb9f6f93ed10808ae461ed"
+    }
+  ],
+  "removed_logical_bytes": 35931249,
+  "retained_file_count": 148,
+  "retained_hashes_unchanged": true,
+  "original_transports_models_reports_source_dataset_ledger_preserved": true
+}

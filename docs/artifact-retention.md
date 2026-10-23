@@ -180,3 +180,11 @@ publication archives removed (45,880,597 bytes),142 retained hashes unchanged.
 Original transports/source/data/models/checkpoints/ledger/plan.html preserved.
 All four sessions stopped; project38.60166524 unchanged. Fixed family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-capacity-2026-10-22).
+
+
+Training-history publication verified:17 GitHub asset sizes/digests match, four
+frozen bundles and interactive reports public. Only two duplicate publication
+archives removed (35,931,249 bytes),148 retained hashes unchanged. Original
+transports/models/source/both datasets/ledger/plan.html retained. All four sessions
+stopped, project38.68329334 unchanged. Fixed family closed.
+[Release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23).

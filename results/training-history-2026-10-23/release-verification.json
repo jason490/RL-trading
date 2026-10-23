@@ -1,0 +1,109 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23",
+  "asset_count": 17,
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773536,
+      "digest": "sha256:be2a3ae3a0278d53ba13d82b2db0fb94df56f2f1230842d4abb10272f47cca26",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 9432,
+      "digest": "sha256:38be1c51a6496053181cedd7f580062c439bc8299fefbe39d2092f894eb2797e",
+      "state": "uploaded"
+    },
+    {
+      "name": "control-reproduction.json",
+      "size": 415,
+      "digest": "sha256:63d0f0019db38e588e2622af23e5dda0718d9a7035e0707e2459fba24f6eba58",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 4869,
+      "digest": "sha256:fd0904513bf92450433cab34472a60e04d66610831cd522250f99fcc4eeb538e",
+      "state": "uploaded"
+    },
+    {
+      "name": "measured-years.csv",
+      "size": 4106,
+      "digest": "sha256:fa7962e78ff262f095f98ebe28c47ca1274b9b3f7de664f7f3b18badb811c4dc",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 620345,
+      "digest": "sha256:4bd2a2460618f0998c37bb8ef48821739441432438ffc5b3ff544634f0ec36fb",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 8839,
+      "digest": "sha256:54e5cdfe09e38ee967e2a963cf23c6846c5ac3c7dddfec7d602f26c4692c959c",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 32539665,
+      "digest": "sha256:314ac98d6e814b521ab269c8e770fe75e6f8d95c814ce4ab6bd1c1143f4cd4b4",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2567,
+      "digest": "sha256:f10d13eb575259261ce77036cd43975b61a3e99260a7ae9fe86003f0ba74dae2",
+      "state": "uploaded"
+    },
+    {
+      "name": "runtime-profile.json",
+      "size": 559,
+      "digest": "sha256:bd11288d9aa1b34fd72fe2c78b303e7b62fd0be67de27bf2168734c388dc65da",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2567,
+      "digest": "sha256:29b4f994a1cbacde71544e78d6d885769682edb0b2126b6d368dfcd6f92d40a9",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 23068,
+      "digest": "sha256:0f54056e7c3a043669a502ef905e7e22a8fc79f0688558f348b10638f96e7e10",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 397,
+      "digest": "sha256:2ccf40fe250263bccc496bbe533c2d73ddd5aa3052c92d9208b69dd0c0279bc5",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 322399,
+      "digest": "sha256:6625ef897c554fdf2ee7baaf0e1a1b3761ff63e70a2b8d3d790f724cf7751887",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3391584,
+      "digest": "sha256:805d1e795754d36968aa53a634298b4859f18d237fcb9f6f93ed10808ae461ed",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1317,
+      "digest": "sha256:9069108996491a4277d02dda32223fec17470122b45fbede94cce4fb544f89b8",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 1359,
+      "digest": "sha256:38bd572604fcaa68ec16b4262a572cacd9d0d7ee6acf66ce0fe0e5f3b9187c8c",
+      "state": "uploaded"
+    }
+  ]
+}

@@ -150,3 +150,11 @@ retain the gate, source identity, budget and cleanup receipts.
 [Verified release](https://github.com/jason490/RL-trading/releases/tag/recurrent-cash-2026-10-22) publishes eight accepted smoke/screen models and15 assets. Cash candidate failed selected/final return gates; binary’s34.38% selected checkpoint deteriorated to−1.25% final. No robust/prospective winner. Open `comparison.html` for checkpoint curves; extract `validation-reports.tar.gz` for derived equity reports and `research-models.tar.gz` for frozen/selected/latest models. Server sizes/digests all match; original data and private logs excluded. [Full study](../results/recurrent-cash-2026-10-22/README.md).
 
 Recurrent fitted-period charts published: [release](https://github.com/jason490/RL-trading/releases/tag/recurrent-fit-2026-10-22), six server sizes/digests verified,6,722,998 duplicate bytes removed and30 retained hashes unchanged. Original complete paths retained, no model duplication or new Colab charge. [Evidence](../results/recurrent-fit-2026-10-22/README.md).
+
+
+Training-history publication verified:17 GitHub asset sizes/digests match, four
+frozen bundles and interactive reports public. Only two duplicate publication
+archives removed (35,931,249 bytes),148 retained hashes unchanged. Original
+transports/models/source/both datasets/ledger/plan.html retained. All four sessions
+stopped, project38.68329334 unchanged. Fixed family closed.
+[Release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23).

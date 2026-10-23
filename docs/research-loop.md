@@ -1334,3 +1334,11 @@ Next diagnose accepted saved paths before choosing a distinct experiment; no
 automatic training restart or retired-test evaluation.
 
 [Evidence](../results/training-history-2026-10-23/README.md).
+
+
+Training-history publication verified:17 GitHub asset sizes/digests match, four
+frozen bundles and interactive reports public. Only two duplicate publication
+archives removed (35,931,249 bytes),148 retained hashes unchanged. Original
+transports/models/source/both datasets/ledger/plan.html retained. All four sessions
+stopped, project38.68329334 unchanged. Fixed family closed.
+[Release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23).

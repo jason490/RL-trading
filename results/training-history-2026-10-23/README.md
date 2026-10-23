@@ -180,3 +180,22 @@ Next diagnose accepted saved paths before choosing a distinct experiment; no
 automatic training restart or retired-test evaluation.
 
 [Strict report](summary.json), [curve](learning-curves.csv), [actual years](measured-years.csv), [frozen checks](restoration.json), [control reproduction](control-reproduction.json), [compute and cleanup](compute.json).
+
+
+## Verified publication and duplicate cleanup
+
+[GitHub release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23)
+contains17 server-size/SHA-256-verified assets, including four accepted complete
+frozen bundles, selected/latest weights, interactive comparison and individual
+selected equity reports, compact curves, measured-year CSV and control-reproduction
+proof. Download comparison.html or extract validation-reports.tar.gz for charts.
+Raw provider bars, credentials and private runtime files excluded.
+
+Only two verified duplicate publication archives removed (35,931,249 bytes);
+148 retained hashes unchanged. Original transports, models/checkpoints/reports,
+source archive, both immutable datasets, ledger and plan.html preserved.
+[Receipts](release-verification.json), [cleanup](cleanup.json). All four sessions
+remain verified stopped; project38.68329334 unchanged. Fixed family closed.
+
+Strict summary reproduces byte for byte from retained transports, with both actual
+selected/final models and Adam states reloaded. [Reproduction](reproduction.json).
