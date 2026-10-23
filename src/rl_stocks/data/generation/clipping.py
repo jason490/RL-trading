@@ -17,7 +17,9 @@ class ClippedNormalizer(Normalizer):
             raise ValueError('positive finite explicit clipping bound required')
 
     def transform(self,values,names):
-        return [max(-self.clip_abs,min(self.clip_abs,z)) for z in super().transform(values,names)]
+        transformed=super().transform(values,names)
+        if not all(math.isfinite(z) for z in transformed):raise ValueError('nonfinite standardized market feature')
+        return [max(-self.clip_abs,min(self.clip_abs,z)) for z in transformed]
 
     @classmethod
     def fit(cls,*args,**kwargs):

@@ -92,3 +92,8 @@ def test_actual_untrained_frozen_recurrent_bundle_preserves_clipping_and_predict
     for x,y in zip(state,expected_state):np.testing.assert_array_equal(x,y)
     assert asdict(frozen.normalizer)==before
     with pytest.raises(ValueError):FrozenPolicy(bundle,'fixture','fixture')
+
+
+def test_clipping_does_not_hide_standardization_overflow():
+    n=normalizer_from(dict(names=['x'],means=[0.],scales=[1e-308],clip_abs=5.))
+    with pytest.raises(ValueError,match='nonfinite standardized'):n.transform([1e308],['x'])

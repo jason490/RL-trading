@@ -30,3 +30,8 @@ def test_summary_respects_explicit_clipped_transform_without_refitting():
     result=summarize_scale([[100.],[-100.]],['x'],normal)['x']
     assert result['maximum_abs']==5 and result['fraction_abs_above_5']==0
     assert result['mean']==0 and normal==before
+
+
+def test_scale_summary_rejects_overflow_before_clipping():
+    normal=dict(names=['x'],means=[0.],scales=[1e-308],clip_abs=5.)
+    with pytest.raises(ValueError,match='finite normalized'):summarize_scale([[1e308]],['x'],normal)

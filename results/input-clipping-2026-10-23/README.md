@@ -32,3 +32,14 @@ conditional11/23/37 then prospective requirements retained. Failure closes cap
 family without threshold/model/reward/step grids/extensions/promotion. Shared
 2-unit allowance starts38.746179136005324; project150/130/account150/170 safeguards
 unchanged. Last official account349.23 zero rate/assignments; prior sessions stopped.
+
+## Additional preprocessing verification
+
+85 focused checks pass, including rejection of standardization overflow before
+clipping in both preprocessing and the feature-scale audit. The cap cannot hide
+infinite intermediate values. [Legacy restoration](legacy-restoration.json)
+passes156 exact current-host saved/frozen recurrent predictions on prior control
+and L2 bundles. This does not resolve the previously rejected original-Colab
+full-equity-path parity diagnostic. Clipped bundles require clipping-aware code;
+legacy bundles retain their original preprocessing behavior. No new training or
+allocation in this verification.

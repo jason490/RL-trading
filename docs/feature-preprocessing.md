@@ -107,3 +107,18 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
 Colab protocol/plan/worker/artifact/report wiring, full untrained construction/
 checkers and two512 CPU smokes still required before100k. No allocation or
 performance result; project38.74617914 and last official account349.23 unchanged.
+
+### Overflow rejection and legacy restoration
+
+Standardization must produce finite values before clipping. Finite raw inputs can
+still overflow when divided by a very small scale; both inference preprocessing
+and the distribution audit reject this condition instead of converting infinity
+to an apparently valid capped value. The focused suite passes85 checks (two
+existing Gymnasium warnings about unbounded observation spaces).
+
+[Legacy restoration](../results/input-clipping-2026-10-23/legacy-restoration.json)
+records156 exact saved-model versus frozen-bundle recurrent predictions across
+the prior control/L2 bundles on the current host. This preserves legacy inference
+behavior; it is not full-path parity with the original Colab reports. Clipped
+bundles require the clipping-aware source and their explicit new feature schema;
+historical clients that ignore extra normalizer fields are unsupported.
