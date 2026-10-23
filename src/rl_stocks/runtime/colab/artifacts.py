@@ -22,7 +22,7 @@ def validate_archive(path, plan, dataset_id):
                 raise RuntimeError('missing required remote artifact: '+name)
             return stream.read()
         try:
-            if plan.get('version') in (12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30) and dataset_id!=plan['dataset_contract']['identity']:
+            if plan.get('version') in (12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) and dataset_id!=plan['dataset_contract']['identity']:
                 raise RuntimeError('trend-context dataset identity mismatch')
             completion = json.loads(read('artifacts/completion.json'))
             hardware_ok = (completion['gpu'] is None if plan['accelerator']=='CPU'
@@ -39,18 +39,18 @@ def validate_archive(path, plan, dataset_id):
                 if (run['status'] != 'complete' or run['dataset'] != dataset_id
                         or run['actual_steps'] != run['requested_steps']):
                     raise RuntimeError('incomplete remote training run')
-                if plan.get('version') in (4,5,7,8,9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30):
+                if plan.get('version') in (4,5,7,8,9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31):
                     job=plan['jobs'][0]
-                    if plan.get('version') in (7,8,9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30):
+                    if plan.get('version') in (7,8,9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31):
                         from rl_stocks.training.initialization import initialization_spec
                         if run.get('initialization')!=initialization_spec(job['initialization'],job['algorithm']):
                             raise RuntimeError('initialization-study configuration mismatch')
-                    if plan.get('version') in (9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30):
+                    if plan.get('version') in (9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31):
                         from rl_stocks.environment.observations.state import observation_spec
                         if (run.get('observation')!=observation_spec(job['observation_profile'])
-                                or plan.get('version') not in (15,19,20,21,22,23,24,25,26,27,28,29,30) and run.get('start_sampling')!={'mode':'legacy_uniform'}):
+                                or plan.get('version') not in (15,19,20,21,22,23,24,25,26,27,28,29,30,31) and run.get('start_sampling')!={'mode':'legacy_uniform'}):
                             raise RuntimeError('execution-observation configuration mismatch')
-                    if plan.get('version') in (10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30):
+                    if plan.get('version') in (10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31):
                         from rl_stocks.rl.ppo.architecture import architecture_spec
                         from rl_stocks.rl.registry.factory import resolved_parameters
                         if (run.get('policy_architecture')!=architecture_spec(job['policy_variant'],plan['dataset_contract']['market_features'] if plan.get('version')==26 else 7)
@@ -81,7 +81,7 @@ def validate_archive(path, plan, dataset_id):
                             or any(points[s]['phase']!='post_update' for s in job['milestones'])
                             or curve!=run['validation_checkpoints']):
                         raise RuntimeError('incomplete or inconsistent learning curve')
-                    if plan.get('version') in (21,22,23,24,25,26,27,28,29,30) and prefix+'checkpoint-state.json' not in names:
+                    if plan.get('version') in (21,22,23,24,25,26,27,28,29,30,31) and prefix+'checkpoint-state.json' not in names:
                         raise RuntimeError('mandatory checkpoint identity missing')
                     if prefix+'checkpoint-state.json' in names:
                         from rl_stocks.training.checkpoint_state import validate_checkpoint_state
@@ -105,11 +105,11 @@ def validate_archive(path, plan, dataset_id):
                 for name, checksum in hashes.items():
                     if PurePosixPath(name).name != name or hashlib.sha256(read(folder+name)).hexdigest() != checksum:
                         raise RuntimeError('remote bundle checksum mismatch')
-                if plan.get('version') in (9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
+                if plan.get('version') in (9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) and json.loads(read(folder+'manifest.json'))['metadata'].get('observation')!=run['observation']:
                     raise RuntimeError('frozen observation schema mismatch')
-                if plan.get('version') in (10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
+                if plan.get('version') in (10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) and json.loads(read(folder+'manifest.json'))['metadata'].get('policy_architecture')!=run['policy_architecture']:
                     raise RuntimeError('frozen policy architecture mismatch')
-                if plan.get('version') in (11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30) and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
+                if plan.get('version') in (11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) and json.loads(read(folder+'manifest.json'))['metadata'].get('reward_config')!=run['reward_config']:
                     raise RuntimeError('frozen reward configuration mismatch')
                 if plan.get('version')==12:
                     from rl_stocks.features.registry.assemble import NAMES as BASE
@@ -210,6 +210,9 @@ def validate_archive(path, plan, dataset_id):
                 if plan.get('version')==30:
                     from rl_stocks.runtime.colab.clipping_artifacts import validate_clipping_artifacts
                     validate_clipping_artifacts(read,prefix,folder,run,plan)
+                if plan.get('version')==31:
+                    from rl_stocks.runtime.colab.squashed_artifacts import validate_squashed_artifacts
+                    validate_squashed_artifacts(read,prefix,folder,run,plan)
                 if plan.get('version')==29:
                     from rl_stocks.runtime.colab.l2_artifacts import validate_l2_artifacts
                     validate_l2_artifacts(read,prefix,folder,run,plan)

@@ -2282,3 +2282,8 @@ No allocation or extra units. [Evidence](../results/action-boundaries-2026-10-23
   actual128-transition synthetic recurrent rollout likelihood parity and frozen
   save/load/state parity. No local learning/optimizer updates or allocation.
   Native/hybrid legacy tests pass; dedicated study wiring/smokes still required.
+- Version31 squashed-action integration:125 focused policy/protocol/artifact/
+  report/legacy/account-floor checks pass;62 shared-controller/frozen/hybrid
+  checks pass separately with overlap. Both immutable-dataset Gymnasium/SB3
+  checkers/full64 forwards restore identical initial tensors/RNG. No local
+  learning/optimizer updates. Colab512 smokes/runtime approval precede100k.

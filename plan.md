@@ -1766,3 +1766,13 @@ probabilities, not historical rollout frequencies or a causal return diagnosis.
 Next separately preregister a same-network squashed-diagonal-Gaussian comparison;
 do not conflate with failed market-input clipping or add gSDE simultaneously.
 No allocation or extra units. [Evidence](results/action-boundaries-2026-10-23/README.md).
+
+### 2026-10-23 — squashed-action implementation and integration
+
+Fixed protocol2195938b… implemented with explicit tanh diagonal-Gaussian rollout/
+likelihood/Jacobian, same61,513 parameters/full64 tensors and original data/reward/
+optimizer. Version31 worker/runner/strict artifacts/report and runtime gates added;
+125 focused checks plus separate62 overlapping controller/frozen/hybrid checks pass.
+Actual immutable source/checkers/full64 forwards pass. No local optimizer updates.
+Two512 Colab smokes remain before100k; project38.81646887/account349.17 safeguards
+unchanged. [Evidence](results/squashed-actions-2026-10-23/README.md).

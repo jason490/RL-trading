@@ -12,13 +12,13 @@ def model_record(model):
                 shared_initialization=json.loads(json.dumps(getattr(model,'_research_initialization',None))))
 
 
-def validate_record(record,params,observation_size,final_steps,proof,*,initial=False,selected_steps=None,weight_decay=0.):
+def validate_record(record,params,observation_size,final_steps,proof,*,initial=False,selected_steps=None,weight_decay=0.,policy_class='RecurrentActorCriticPolicy'):
     """Validate fixed Gaussian recurrent architecture, checkpoint and Adam evidence."""
     policy=params['policy_kwargs'];obs=observation_size
     fixed=dict(algorithm='RecurrentPPO',observation_size=obs,action_size=4,
         **{k:params[k] for k in ['n_steps','batch_size','n_epochs','gamma','gae_lambda','ent_coef','learning_rate']},
         net_arch=policy['net_arch'],actor_lstm=dict(hidden_size=policy['lstm_hidden_size'],num_layers=1),critic_lstm=True,
-        shared_lstm=False,target_kl=None,clip_range=.2,max_grad_norm=.5,policy_class='RecurrentActorCriticPolicy')
+        shared_lstm=False,target_kl=None,clip_range=.2,max_grad_norm=.5,policy_class=policy_class)
     if any(record.get(k)!=v for k,v in fixed.items()):raise ValueError('actual recurrent model configuration mismatch')
     final=final_steps;steps=record.get('num_timesteps')
     if selected_steps is not None and (initial or type(selected_steps) is not int or not 0<selected_steps<=final):

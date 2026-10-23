@@ -123,3 +123,7 @@ increased short exposure/costs and deteriorating net short contribution at final
 conditional any-component out-of-bounds mass~79% on fixed flat-account training
 prefixes; model/Adam/RNG/normalization unchanged, no fitting or new Colab units.
 Supports a distinct preregistered bounded-policy hypothesis, not causal proof.
+
+[Prepared squashed-action comparison](squashed-actions-2026-10-23/README.md):
+explicit transformed Gaussian sampling/likelihood, unchanged full64 tensors/data/
+optimizer. Construction/checkers and focused contracts pass; Colab smokes pending.

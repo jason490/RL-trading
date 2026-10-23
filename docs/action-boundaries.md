@@ -110,3 +110,20 @@ Analytic Jacobian/mean-transform, bounded samples and numerical saturation check
 also pass.70 focused policy/distribution/frozen/legacy checks pass (two existing
 Gymnasium unbounded-Box warnings). Dedicated version31 study wiring and real
 immutable-dataset construction/Colab smokes remain before100k allocation.
+
+### Version31 integration acceptance
+
+`training/squashed_actions.py` owns fixed source/parameter/distribution/Adam/
+initialization/sampling/runtime acceptance. Version31 plans route each algorithm
+explicitly; runner and retrieved artifacts retain exact snapshots and initial/
+selected/final records. Record validation accepts the custom policy class only
+for the declared candidate and keeps legacy defaults unchanged. Strict reports
+restore both model/Adam phases, match holding paths and apply the frozen gates.
+Long plans bind actual accepted smoke bytes and an under7200s projection.
+
+125 focused new/legacy checks and a separate62-check shared-controller/frozen/
+hybrid invocation pass (overlapping policy checks). Both actual immutable-dataset
+checkers/full64 recurrent forwards and exact initial tensors/RNG pass without
+local learning/optimizer updates. [Evidence](../results/squashed-actions-2026-10-23/construction.json).
+Two512 Colab CPU smokes remain before100k. Original project38.81646887 and
+account349.17 zero assignments; no allocation or performance result yet.

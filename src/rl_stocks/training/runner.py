@@ -122,6 +122,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if study_protocol_sha256==CAPACITY_PROTOCOL:
         capacity_arm=capacity_parameters(overrides,smoke);validate_capacity_payload(dataset)
         capacity_shared=apply_capacity_initialization(model,capacity_arm,seed,smoke)
+    from rl_stocks.training.squashed_actions import (PROTOCOL_SHA256 as SQUASHED_PROTOCOL,identify_parameters as squashed_parameters,
+        apply_initialization as apply_squashed_initialization,model_record as squashed_record,initialization_entry as squashed_entry,
+        validate_payload as validate_squashed_payload,ROOT as SQUASHED_ROOT)
+    if study_protocol_sha256==SQUASHED_PROTOCOL:
+        squashed_arm=squashed_parameters(overrides,smoke,algorithm);validate_squashed_payload(dataset)
+        squashed_shared=apply_squashed_initialization(model,squashed_arm,seed,smoke)
     from rl_stocks.training.recurrent_regularization import (PROTOCOL_SHA256 as L2_PROTOCOL,identify_parameters as l2_parameters,
         apply_initialization as apply_l2_initialization,model_record as l2_record,initialization_entry as l2_entry,
         validate_payload as validate_l2_payload,ROOT as L2_ROOT)
@@ -203,6 +209,14 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['capacity_arm']=capacity_arm
         metadata['capacity_shared_initialization']=capacity_shared
         metadata['capacity_initialization']=capacity_record(model)
+    if study_protocol_sha256==SQUASHED_PROTOCOL:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'squashed-initialization.npz'
+        shutil.copyfile(SQUASHED_ROOT/squashed_entry(squashed_arm,seed,smoke)['file'],snapshot)
+        if checksum(snapshot)!=squashed_shared['artifact_sha256']:raise ValueError('squashed snapshot checksum mismatch')
+        metadata['squashed_arm']=squashed_arm
+        metadata['squashed_shared_initialization']=squashed_shared
+        metadata['squashed_initialization']=squashed_record(model)
     if study_protocol_sha256==L2_PROTOCOL:
         from rl_stocks.inference.bundle import checksum
         snapshot=run/'l2-initialization.npz'
@@ -295,6 +309,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==CAPACITY_PROTOCOL:
             metadata['capacity_final']=capacity_record(model)
             metadata['capacity_selected']=capacity_record(selected)
+        if study_protocol_sha256==SQUASHED_PROTOCOL:
+            metadata['squashed_final']=squashed_record(model)
+            metadata['squashed_selected']=squashed_record(selected)
         if study_protocol_sha256==L2_PROTOCOL:
             metadata['l2_final']=l2_record(model)
             metadata['l2_selected']=l2_record(selected)
