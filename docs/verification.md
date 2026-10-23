@@ -2287,3 +2287,17 @@ No allocation or extra units. [Evidence](../results/action-boundaries-2026-10-23
   checks pass separately with overlap. Both immutable-dataset Gymnasium/SB3
   checkers/full64 forwards restore identical initial tensors/RNG. No local
   learning/optimizer updates. Colab512 smokes/runtime approval precede100k.
+
+
+### Actual squashed-action Colab smokes accepted
+
+Both512 CPU/defaultPython3.13.16 runs from cleanfa63d6c… complete;156 exact frozen
+recurrent sequence/reset predictions, immutable normalization, actual saved models/
+Adam, distribution flags/Jacobian and identical initial tensors/RNG/symbol/year
+sampling pass.80 actual updates/40 nominal epochs,61,513 parameters each. Both
+owned sessions retrieved/stopped. Runtime129.7219s control/159.4628s candidate gives
+fixed3472.1638s projection including1200s reserve, below7200s. Exact accepted smoke
+bytes bind prepared100k plans, not yet allocated. Project38.83857572/account349.16
+zero rate/assignments, shared2-unit allowance/original project/account limits
+unchanged. No smoke-return selection, promotion or retired-test access.
+[Evidence](../results/squashed-actions-2026-10-23/README.md).

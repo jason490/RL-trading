@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "protocol_sha256": "2195938b456723b0434dfbc39dba06ce288feec56c669477ddf6de75170d17a0",
+  "smoke_acceptance_file": ".runtime/squashed-smoke-acceptance.json",
+  "smoke_acceptance_sha256": "12fcc570d81a5d470198f8bd55e49d5d9294d4a9ae8d34c37535c8913ec84409",
+  "durations_seconds": {
+    "control": 129.7218880050001,
+    "squashed": 159.46284782599992
+  },
+  "projection": {
+    "projected_seconds": 3472.163767232163,
+    "smoke_duration_ratio": 1.2292670903760934,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  }
+}

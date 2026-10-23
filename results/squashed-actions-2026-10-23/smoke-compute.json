@@ -1,0 +1,98 @@
+{
+  "project_units": 38.83857572415466,
+  "remaining_project_units": 111.16142427584535,
+  "study_start_units": 38.81646887344713,
+  "study_incremental_units": 0.022106850707530157,
+  "measured_units": 0.009999999999990905,
+  "estimated_units": 0.02210685070753098,
+  "charged_units": 0.02210685070753098,
+  "official_account_balance": 349.16,
+  "official_rate": 0,
+  "official_assignments": 0,
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-e0fa367f2e55": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-6225025b50f3": {
+      "status": "stopped",
+      "phase": "verify"
+    }
+  },
+  "meter_readings": [
+    {
+      "time": 1792764613.5697272,
+      "balance": 349.17,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792764620.5786443,
+      "balance": 349.17,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792764680.7939124,
+      "balance": 349.17,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792764740.7476668,
+      "balance": 349.17,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792764801.2189937,
+      "balance": 349.17,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792764862.002611,
+      "balance": 349.17,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792764921.9108486,
+      "balance": 349.16,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792764982.4130797,
+      "balance": 349.16,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792765042.649777,
+      "balance": 349.16,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792765108.656697,
+      "balance": 349.16,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792765111.0950124,
+      "balance": 349.16,
+      "rate": 0.0,
+      "assignments": 0
+    }
+  ],
+  "study_limit_units": 2,
+  "project_ceiling_units": 150,
+  "project_teardown_units": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "automatic_restart": false,
+  "test_evaluated": false
+}
