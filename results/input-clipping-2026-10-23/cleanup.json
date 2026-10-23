@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "release_assets_verified": 16,
+  "owned_cleanup_verified": true,
+  "removed_files": [
+    {
+      "path": "artifacts/clipping-release/research-models.tar.gz",
+      "bytes": 32325706,
+      "sha256": "aa928da7293cc2d1f01282fe3ff565b3cdebbeb07a5b9e6066607a67651e81da"
+    },
+    {
+      "path": "artifacts/clipping-release/validation-reports.tar.gz",
+      "bytes": 3393680,
+      "sha256": "161203c4093ac960a9fc69b5d4df4f796b642e5e4ae09977ee4406b2f9ef4b9c"
+    }
+  ],
+  "removed_logical_bytes": 35719386,
+  "retained_file_count": 146,
+  "retained_hashes_unchanged": true,
+  "original_transports_models_reports_source_dataset_ledger_preserved": true
+}

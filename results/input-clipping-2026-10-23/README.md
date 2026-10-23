@@ -129,3 +129,21 @@ Overall robust-return objective remains unachieved.
 [Strict report](summary.json), [10k curves](learning-curves.csv),
 [frozen restoration](restoration.json), [fresh control reproduction](control-reproduction.json),
 [metering/owned cleanup](compute.json).
+
+
+## Verified publication and duplicate-only cleanup
+
+[GitHub release](https://github.com/jason490/RL-trading/releases/tag/input-clipping-2026-10-23)
+has16 server-size/SHA-256-verified assets: four complete frozen bundles,
+selected/latest models, initialization/checkpoint/optimizer/sampling/year evidence,
+interactive comparison and individual selected equity reports, compact curves and
+protocol/restoration/control reproduction. Raw provider bars and credentials excluded.
+Only two duplicate publication archives removed (35,719,386 bytes);146 retained
+hashes unchanged. Original transports/models/reports/source/data/ledger and
+plan.html preserved. Strict summary reproduces byte for byte with actual saved
+models/Adam restored. Four owned sessions remain stopped, project38.81646887,
+account349.17 zero rate/assignments; no additional training units.
+
+[Release verification](release-verification.json), [cleanup](cleanup.json),
+[reproduction](reproduction.json). Next saved-path action diagnosis, no cap sweep
+or extension. Overall robust-return objective unachieved.

@@ -1,0 +1,103 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/input-clipping-2026-10-23",
+  "asset_count": 16,
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773545,
+      "digest": "sha256:bbf8cb390849bee62892b17fbaa2628b947674f6a5787310a4229d369a4a6341",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 5202,
+      "digest": "sha256:2ca5ee36cfef0f97f8e97b2cabfa51b1a452f32c6803886f03aba8024f6d3a43",
+      "state": "uploaded"
+    },
+    {
+      "name": "control-reproduction.json",
+      "size": 393,
+      "digest": "sha256:afd9491a3f52c8d283286111869385e4137ea3730f7ff5b61f95e5178c08f874",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 4937,
+      "digest": "sha256:be9e048f601c030b469d7eb8799c3ddda9f616cbd89143fafa094baea86b2310",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 627927,
+      "digest": "sha256:27051183e1a8e665150d5622410f881b8b3bf86eae7c041a1063377902ff5dc2",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 8714,
+      "digest": "sha256:b9787cda26e34bf95998597832f14e4f4410308a53b1f0a9b999d05447557b74",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 32325706,
+      "digest": "sha256:aa928da7293cc2d1f01282fe3ff565b3cdebbeb07a5b9e6066607a67651e81da",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2567,
+      "digest": "sha256:e56b9afbed8128468909f5d49d71b606471f89f8acb56bf9cd2f6df5f4e1dc05",
+      "state": "uploaded"
+    },
+    {
+      "name": "runtime-profile.json",
+      "size": 562,
+      "digest": "sha256:afd6c6a5519cab426bda45700b84fdc5af2a16a95a31f1c0e5947f9ff03d7b8b",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2567,
+      "digest": "sha256:e78f85e5873f577f4ed98adf9679765cf3a31bae6f9aafbb8a62bd6a47aa856d",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 23647,
+      "digest": "sha256:0020e8625eb0fc507b31c44878ad6c559c72a05717f9c8ffede9e5e856690092",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 398,
+      "digest": "sha256:04d183d1d4d37a9ba4fcbed07959d066c9e894da4c9f0af5a47f22687b49ead8",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 328245,
+      "digest": "sha256:ded5dfa7746a0faa4387ffa7326fe21bc7466929f6291eadedfb8e10ce960c64",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3393680,
+      "digest": "sha256:161203c4093ac960a9fc69b5d4df4f796b642e5e4ae09977ee4406b2f9ef4b9c",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1317,
+      "digest": "sha256:6645dfa4ebdd7d0a9e65b9e6760803d57a388e612723dadff93b2aeb2f666f6e",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 1274,
+      "digest": "sha256:1e4eefe41357b4d5db7a3307fe0a68f83d8068a475a96cd4ad93cd0dd1872045",
+      "state": "uploaded"
+    }
+  ]
+}

@@ -174,3 +174,8 @@ account349.17 zero rate/assignments. Full artifacts retained; publication and
 saved-path diagnosis next, robust-return objective unachieved.
 
 [Detailed evidence](../results/input-clipping-2026-10-23/README.md).
+
+Clipping publication:16 GitHub server-size/SHA-verified assets, four complete
+bundles/reports; only two duplicate archives35,719,386bytes removed,146 retained
+hashes unchanged. Strict summary byte-identical after actual model/Adam restoration.
+[Receipts](../results/input-clipping-2026-10-23/release-verification.json).
