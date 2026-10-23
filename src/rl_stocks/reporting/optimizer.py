@@ -81,3 +81,21 @@ def optimizer_fingerprint(model):
                 h.update(str((tuple(value.shape),value.dtype)).encode());h.update(value.detach().cpu().numpy().tobytes())
             else:h.update(canonical(value))
     return h.hexdigest()
+
+
+def parameter_drift(before,after):
+    """Read-only named-tensor norms/deltas; no optimality or causal claim."""
+    if not before or set(before)!=set(after):raise ValueError('matching nonempty parameter names required')
+    rows={};totals=dict(before_squared=0.,after_squared=0.,delta_squared=0.,count=0)
+    for name in sorted(before):
+        a=torch.as_tensor(before[name]).detach();b=torch.as_tensor(after[name]).detach()
+        if a.shape!=b.shape or a.dtype!=b.dtype or not a.is_floating_point() or not a.numel():
+            raise ValueError('matching nonempty floating parameter schema required')
+        if not torch.isfinite(a).all() or not torch.isfinite(b).all():raise ValueError('finite parameters required')
+        a=a.cpu().double();b=b.cpu().double();delta=b-a
+        aa=float(a.square().sum());bb=float(b.square().sum());dd=float(delta.square().sum())
+        rows[name]=dict(count=a.numel(),before_l2=math.sqrt(aa),after_l2=math.sqrt(bb),delta_l2=math.sqrt(dd),max_abs_delta=float(delta.abs().max()))
+        for key,value in [('before_squared',aa),('after_squared',bb),('delta_squared',dd),('count',a.numel())]:totals[key]+=value
+    return dict(count=totals['count'],before_l2=math.sqrt(totals['before_squared']),after_l2=math.sqrt(totals['after_squared']),
+        delta_l2=math.sqrt(totals['delta_squared']),per_parameter=rows,
+        interpretation='Norms and displacement only, not gradients, generalization, risk or a causal diagnosis.')

@@ -54,3 +54,23 @@ def test_last_postupdate_log_supersedes_onstep_and_ranges_are_descriptive():
 def test_invalid_training_logs_reject(field,value):
     p=point();p['training'][field]=value
     with pytest.raises(ValueError):training_diagnostics([p])
+
+
+def test_parameter_displacement_matches_exact_norms_without_mutation():
+    from rl_stocks.reporting.optimizer import parameter_drift
+    a={'weight':torch.tensor([3.,4.]),'bias':torch.tensor([0.])};b={'weight':torch.tensor([0.,4.]),'bias':torch.tensor([4.])}
+    before={k:v.clone() for k,v in a.items()};after={k:v.clone() for k,v in b.items()}
+    r=parameter_drift(a,b)
+    assert r['count']==3 and r['before_l2']==5 and r['after_l2']==pytest.approx(32**.5) and r['delta_l2']==5
+    assert all(torch.equal(a[k],before[k]) and torch.equal(b[k],after[k]) for k in a)
+
+
+@pytest.mark.parametrize('bad',['names','shape','dtype','nan'])
+def test_parameter_displacement_rejects_incompatible_evidence(bad):
+    from rl_stocks.reporting.optimizer import parameter_drift
+    a={'x':torch.ones(2)};b={'x':torch.zeros(2)}
+    if bad=='names':b={'y':b['x']}
+    if bad=='shape':b['x']=torch.zeros(1)
+    if bad=='dtype':b['x']=b['x'].double()
+    if bad=='nan':b['x'][0]=float('nan')
+    with pytest.raises(ValueError):parameter_drift(a,b)

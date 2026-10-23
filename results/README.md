@@ -49,6 +49,8 @@ publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 
+- [Saved history optimizer/parameter audit](history-optimizer-2026-10-23/README.md): finite restored Adam states; displacement and KL are descriptive, not causal proof.
+
 - [Training/development saved action comparison](history-fit-actions-2026-10-23/README.md): similar final short exposure, different payoffs; descriptive only.
 
 - [Full/recent saved-model common training-window replay](history-fit-2026-10-23/README.md): all four benchmark flags fail; no fitting or new units.

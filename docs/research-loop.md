@@ -1417,3 +1417,13 @@ Explicit fixed training-window reporting scope added; default development-only
 checks preserved.29 focused regressions pass. Next saved optimizer/parameter
 audit before a distinct learning hypothesis; closed families remain closed.
 [Evidence](../results/history-fit-actions-2026-10-23/README.md).
+
+
+History saved optimizer/parameter audit: four accepted models finite/exact; final
+20,000 actual Adam updates. Recent selected/final norms29.00→29.89, displacement
+5.88 over10,200 updates; full29.28→29.71, displacement3.74 over4,200. Intervals
+differ, and KL growth in both arms does not prove cause or a useful remedy.
+37 focused checks pass, no fitting/dataset/provider/Colab. Direct recurrent PPO
+L2 study not found in configs; any fixed experiment must be distinct, preregistered
+and gated, with no coefficient or closed-family grid. Project38.68329334 unchanged.
+[Evidence](../results/history-optimizer-2026-10-23/README.md).

@@ -1,0 +1,5 @@
+arm,phase,num_timesteps,adam_steps,nominal_epochs,parameters,finite
+recent,selected,50000,9800,490,61513,True
+recent,final,100000,20000,1000,61513,True
+full,selected,80000,15800,790,61513,True
+full,final,100000,20000,1000,61513,True
