@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "recent_dataset": "5fb2be66917f4498f0589f063ee60640e1d636f9cd4204e347aa033b3229f732",
+  "recent_start": "2016-01-01",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "schema": "daily-indicators-v1",
+  "development_sha256": "904b2e83355f06fbbb76e4a317f18902bbe6f740329dfa7fab43078c11de220f",
+  "training_symbols": 111,
+  "training_rows": 137529,
+  "validation_rows": 19058,
+  "retained_source_features_bars_atr_exact": true,
+  "development_exact": true,
+  "normalization_unchanged": true,
+  "source_unchanged": true,
+  "training_performed": false,
+  "test_evaluated": false,
+  "colab_allocated": false
+}

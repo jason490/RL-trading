@@ -1245,3 +1245,12 @@ and reject corrupt year evidence; legacy artifacts remain readable but cannot
 claim measured year visitation. No model fitting or Colab allocation. Next build
 an immutable recent subset and freeze the numeric matched-history protocol before
 smoke acceptance/training. [Contract](training-history.md).
+
+Immutable history suffix preflight passes:111 symbols,137,529 recent training
+rows and19,058 exact common development rows; retained features/ATR/bars and
+full-training normalization unchanged. Fixed numeric `training_history.json`
+pins full/recent64-unit100k seed11,2pp selected+final improvement, stock/ETF/
+median−2pp targets and shared2-unit allowance from38.60166524433091. Failure closes
+that single window comparison, no year grid.23 subset/coverage checks pass.
+Dedicated Colab contracts/checkers/smokes still required, no allocation.
+[Details](training-history.md).

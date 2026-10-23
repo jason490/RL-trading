@@ -45,3 +45,46 @@ validation cross-checks against independently recorded symbol/group counts.
 Old artifacts lacking the optional field remain valid historical evidence; they
 cannot establish actual year visitation. New history-composition plans must
 explicitly require this field rather than silently accepting missing logs.
+
+## Immutable recent suffix and fixed comparison prepared
+
+The [actual subset preflight](../results/training-history-2026-10-23/preflight.json)
+passes:111 symbols,137,529 recent training rows,19,058 exact unchanged development
+rows. Recent dataset `5fb2be66917f4498f0589f063ee60640e1d636f9cd4204e347aa033b3229f732`
+retains source bars/features/ATR suffixes starting2016-01-01. Original full-history
+normalization stays fixed across arms; this isolates sampled-row composition,
+not recency of preprocessing. Causal indicator context may predate2016. No feature
+recomputation, provider request, test reconstruction or source mutation.
+
+[Numeric protocol](../configs/experiments/training_history.json) freezes full/recent
+same64-unit RecurrentPPO (61,513 parameters),21 observations, original seven market
+features,100k seed11,10k evaluation, same costs/actions/reward/holding rules and
+common pinned untrained tensors/RNG. Both selected and final must improve2pp,
+final stock/ETF cannot worsen, drawdown worsening at most2pp. Both phases must
+reach stock/ETF and median-stock excess at least−2pp versus holding. Failure
+closes this fixed family with no start-year/window/step/model/reward grid.
+Only passing allows paired11/23/37 confirmation then prospective evaluation.
+
+Shared2-unit incremental allowance starts at project38.60166524433091; project
+150/130 and account150/170 safeguards persist. Two512 full64 CPU smokes, actual
+checkers,156 frozen checks, optimizer/initialization/sampling-year proof and a
+smoke-bound runtime projection must pass before screen allocation. Original
+central fleet/ledger/deadline/cleanup/recovery code is reused. No allocation yet:
+dedicated plan/worker/runner/retrieval/report contracts and acceptance remain.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/preflight_training_history.py \
+ --output .runtime/training-history-preflight.json
+PYTHONPATH=src .venv/bin/python -m pytest -q \
+ tests/test_training_history.py tests/test_history_coverage.py
+```
+
+23 subset/coverage checks pass: exact suffix, copied validation/normalization,
+source immutability, tamper rejection, short/misaligned/duplicate/future/test
+sources and exact expected year mass. Actual immutable dataset save/read and
+strict source/subset revalidation pass. No local training.
+
+Frozen protocol canonical SHA-256:
+`fefff889ad189136e55b2689fd0532f50e8a636f7cdf96b94e4008449e653a49`.
+Changes to this numeric protocol after commitment require an explicit versioned
+new study; do not silently alter gates in response to results.

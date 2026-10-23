@@ -60,3 +60,19 @@ PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_history_coverage.py
 invalid/nontraining inputs, outcome-free sources, unchanged input and unread
 development episode. Project38.60166524/150 unchanged; last official account
 349.34, zero rate/assignments. No sessions allocated; all prior owned sessions stopped.
+
+## Actual subset and numeric protocol prepared
+
+[Preflight](preflight.json) passes: recent dataset
+`5fb2be66917f4498f0589f063ee60640e1d636f9cd4204e347aa033b3229f732`,111 training
+symbols,137,529 training rows,19,058 exact common development rows. All retained
+source bars/features/ATR exact and original normalization unchanged. Source
+hash unchanged, no retired-test/provider/training/Colab access.
+
+[Fixed protocol](../../configs/experiments/training_history.json) and
+[category guide](../../docs/training-history.md) pin same64 architecture/common
+untrained starts and unchanged100k/10k settings,2-unit allowance from38.60166524,
+selected+final2pp relative improvement and stock/ETF/median−2pp absolute gates.
+Measured decision/execution year counters implemented and required for acceptance.
+23 subset/coverage checks pass. Dedicated Colab integration/construction/smokes
+remain before allocation. This is prepared methodology, not performance evidence.

@@ -1525,3 +1525,11 @@ publication archives removed (45,880,597 bytes),142 retained hashes unchanged.
 Original transports/source/data/models/checkpoints/ledger/plan.html preserved.
 All four sessions stopped; project38.60166524 unchanged. Fixed family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-capacity-2026-10-22).
+
+2026-10-23: training-history composition protocol and immutable2016-onward
+suffix prepared.111 symbols/137,529 training rows,19,058 unchanged development
+rows; original features/normalization frozen. Measured year logs implemented,
+23 subset/coverage checks pass. Fixed same64-unit100k full/recent comparison,
+unchanged gates and2-unit allowance from38.60166524; dedicated Colab integration/
+actual construction/smokes required before training. No allocation or performance
+claim. [Method](docs/training-history.md), [preflight](results/training-history-2026-10-23/preflight.json).
