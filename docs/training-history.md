@@ -158,3 +158,67 @@ plans and controller pre-allocation checks. Same-source seed11 full/recent100k
 screen next; no performance claim. Project38.62221390, study increment0.02054866,
 official account349.32 zero rate/assignments. Original shared2-unit baseline and
 project/account limits unchanged. [Evidence](../results/training-history-2026-10-23/README.md).
+
+
+## Completed history-composition screen — 2026-10-23
+
+Status: fixed seed11 comparison failed; family closed. No confirmation,
+extension, start-year/window grid, promotion or performance goal achieved.
+Both fresh100k runs completed in Google Colab CPU/defaultPython3.13.16 from
+frozen clean2dfa1fbd45d6a3c120fb11311c9d285781556b57. Earlier sections retain
+preparation/smoke history; this is the latest outcome.
+
+| Arm | Selected return | Selected step | Final return |
+| --- | ---: | ---: | ---: |
+| Full2010–2020 |19.6245%|80,000|18.4844%|
+| Recent2016–2020 |20.9523%|50,000|5.5976%|
+| Matched holding |30.6019%|—|30.6019%|
+
+Mean net total returns across separate26-symbol episodes on repeatedly reused
+2021–2023 development history; neither annualized nor a combined portfolio or
+independent test. Candidate selected improvement1.3278pp misses the2pp gate;
+final change−12.8868pp fails. Candidate final stock/ETF4.4602/11.8533% versus
+holding32.6265/19.4660%. Its final stock change−17.3073pp versus control fails
+the nonworsening group gate; ETF improves11.4258pp. Mean drawdown worsening
+0.0127pp is within risk tolerance but cannot compensate for failed return gates.
+Both phases fail stock/ETF/median−2pp absolute targets. Selected stock/ETF excess
+−10.3746/−5.6617pp, median−8.5500pp; final−28.1664/−7.6127pp, median−15.6457pp.
+Reporting-only declining-stock joint positive total AND net short success1/3
+selected→0/3 final; no robust profitable-short capability established.
+
+## Actual training years and verification
+
+Measured2020 execution share rises as intended: full stocks1.978%/ETFs3.005%,
+recent stocks6.637%/ETFs8.263%. These realized finite samples differ from exact
+complete-window expectations. Per-symbol/global/decision/execution/pair margins
+reconcile; actual symbol draw counts match. Recent history changed composition
+without providing stable development improvement. It does not prove all recency
+methods fail, or establish a sole cause of deterioration. This fixed family is
+closed; a future study needs a distinct preregistered hypothesis, not a year grid.
+
+Full control reproduces the prior capacity control's exact selected/final tensor
+hashes and symbol sampling, supporting instrumentation invariance. It was trained
+fresh, not resumed or selected from old weights. Both arms restore identical
+pinned untrained tensors/RNG. Strict source/data/accounting/holding checks and
+actual selected/final models/Adam records restore. Final20,000 actual Adam steps,
+1000 nominal epochs,61,513 parameters.156 screen frozen recurrent action/state/
+repeat/reset checks pass;312 including smokes. Normalization remains immutable;
+schema/feed/nonfinite rejection passes. Retired2024+ unopened; no local fitting,
+new provider call or orders in reporting.
+
+## Compute, artifacts and next work
+
+All four smoke/screen sessions verified stopped. Official account349.27, zero
+rate/assignments. Original project ledger38.68329334/150, remaining111.31670666;
+study conservative increment0.08162810 versus observed account debit0.07,
+including setup/idle/transfers/shutdown. Original baseline38.60166524433091/shared
+2-unit allowance and project150/130/account150/170 safeguards retained.
+
+Strict summary, compact10k learning curves with incremental changes, measured
+year CSV, restored models, checkpoints, complete reports/source/datasets/ledger
+retained. Interactive comparison is `artifacts/training-history/summary.html`.
+Verified GitHub publication and duplicate-only cleanup follow this outcome commit.
+Next diagnose accepted saved paths before choosing a distinct experiment; no
+automatic training restart or retired-test evaluation.
+
+[Evidence](../results/training-history-2026-10-23/README.md).

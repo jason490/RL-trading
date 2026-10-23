@@ -5,6 +5,15 @@ on repeatedly reused2021–2023 development data. They are not annualized return
 a combined portfolio, or independent prospective evidence. No model has passed
 the full required multi-seed and prospective acceptance process.
 
+## Latest completed history comparison
+
+[Full/recent history](training-history-2026-10-23/README.md): full selected/final
+19.62/18.48%, recent20.95/5.60%, holding30.60%. Selected improvement below2pp;
+final and absolute gates fail. Fixed family closed, no confirmation/promotion.
+Measured2020 stock exposure1.98%→6.64% confirms intended composition change.
+312 frozen checks including smokes; all four sessions stopped. Project38.683293,
+account349.27 zero rate/assignments. Publication/duplicate cleanup next.
+
 ## Recent completed comparisons
 
 | Study / arm | Selected | Final | Interpretation |
