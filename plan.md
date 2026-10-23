@@ -1839,3 +1839,10 @@ RNG exact; full/masked identical63,049 parameters, legacy61,513.54 focused check
 pass; no observed-data access/fitting/optimizer updates or allocation. Final
 protocolf9045fe8… preserves preregistered settings. Dedicated Colab integration,
 actual source checkers and three512 smokes remain. [Evidence](results/market-context-2026-10-23/initialization.json).
+
+Market-context version32 integration subsequently implemented: three-arm protocol,
+plans/worker/runner/artifact/report and required actual masked-input frozen check.
+All immutable-dataset model/environment checkers pass;53 initial new,156 shared/
+legacy and updated121 focused checks pass with overlap. Three512 CPU smoke plans
+prepared, actual Colab acceptance still required before100k. No local learning/
+updates, project38.90354117/account349.10 unchanged. [Evidence](results/market-context-2026-10-23/construction.json).

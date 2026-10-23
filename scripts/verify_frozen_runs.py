@@ -36,6 +36,16 @@ def check_recurrent_prediction(selected, frozen, observation, expected_state, ac
     return actual, new_expected, new_actual
 
 
+def check_market_mask(frozen,observation,is_recurrent):
+    if getattr(frozen,'market_context_mode',None)!='masked':return False
+    invalid=np.array(observation,copy=True);invalid[7:10]=1.
+    try:
+        if is_recurrent:frozen.predict_recurrent(invalid,state=None,episode_start=True)
+        else:frozen.predict(invalid)
+    except ValueError:return True
+    raise ValueError('nonzero masked market input accepted')
+
+
 def verify(roots, data_root):
     torch.set_num_threads(1)
     datasets, records, seen = {}, [], set()
@@ -127,6 +137,7 @@ def verify(roots, data_root):
                 'normalization_and_data_match_dataset': True,
                 'normalization_unchanged': True, 'schema_feed_nonfinite_rejection': True,
                 'selected_weights_sha256': checksum(path.parent / 'best.zip')})
+            if check_market_mask(frozen,first_observation,is_recurrent):records[-1]['market_mask_rejection']=True
             seen.add(bundle.name)
     if not records:
         raise ValueError('no completed runs')

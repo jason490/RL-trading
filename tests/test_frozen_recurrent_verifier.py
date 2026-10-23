@@ -44,3 +44,12 @@ def test_input_state_mutation_rejected():
             return super().predict_recurrent(observation,state=state,episode_start=episode_start)
     _,a,b=module.check_recurrent_prediction(Model(),Frozen(),np.array([1.]),None,None,True)
     with pytest.raises(AssertionError):module.check_recurrent_prediction(Model(),Mutating(),np.array([1.]),a,b,False)
+
+
+def test_market_mask_verifier_rejects_a_policy_that_accepts_nonzero_channels():
+    class Wrong:
+        market_context_mode='masked'
+        def predict_recurrent(self,*args,**kwargs):return np.zeros(4),None
+    with pytest.raises(ValueError,match='nonzero masked market input accepted'):
+        module.check_market_mask(Wrong(),np.zeros(24),True)
+    assert not module.check_market_mask(Frozen(),np.zeros(24),True)

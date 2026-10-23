@@ -134,6 +134,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if study_protocol_sha256==L2_PROTOCOL:
         l2_arm=l2_parameters(overrides,smoke);validate_l2_payload(dataset)
         l2_shared=apply_l2_initialization(model,l2_arm,seed,smoke)
+    from rl_stocks.training.market_context import (PROTOCOL_SHA256 as MARKET_PROTOCOL,identify_parameters as market_parameters,
+        apply_initialization as apply_market_initialization,model_record as market_record,initialization_entry as market_entry,
+        validate_payload as validate_market_payload,ROOT as MARKET_ROOT)
+    if study_protocol_sha256==MARKET_PROTOCOL:
+        market_arm=market_parameters(overrides,smoke,Path(dataset_path).name);validate_market_payload(dataset,market_arm)
+        market_shared=apply_market_initialization(model,market_arm,seed,smoke)
     from rl_stocks.training.input_clipping import (PROTOCOL_SHA256 as CLIPPING_PROTOCOL,identify_parameters as clipping_parameters,
         apply_initialization as apply_clipping_initialization,model_record as clipping_record,initialization_entry as clipping_entry,
         validate_payload as validate_clipping_payload,ROOT as CLIPPING_ROOT)
@@ -225,6 +231,14 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['l2_arm']=l2_arm
         metadata['l2_shared_initialization']=l2_shared
         metadata['l2_initialization']=l2_record(model)
+    if study_protocol_sha256==MARKET_PROTOCOL:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'market-initialization.npz'
+        shutil.copyfile(MARKET_ROOT/market_entry(market_arm,seed,smoke)['file'],snapshot)
+        if checksum(snapshot)!=market_shared['artifact_sha256']:raise ValueError('market snapshot checksum mismatch')
+        metadata['market_arm']=market_arm
+        metadata['market_shared_initialization']=market_shared
+        metadata['market_initialization']=market_record(model)
     if study_protocol_sha256==CLIPPING_PROTOCOL:
         from rl_stocks.inference.bundle import checksum
         snapshot=run/'clipping-initialization.npz'
@@ -315,6 +329,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==L2_PROTOCOL:
             metadata['l2_final']=l2_record(model)
             metadata['l2_selected']=l2_record(selected)
+        if study_protocol_sha256==MARKET_PROTOCOL:
+            metadata['market_final']=market_record(model)
+            metadata['market_selected']=market_record(selected)
         if study_protocol_sha256==CLIPPING_PROTOCOL:
             metadata['clipping_final']=clipping_record(model)
             metadata['clipping_selected']=clipping_record(selected)

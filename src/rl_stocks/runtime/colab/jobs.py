@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==31:
+    if plan.get('version')==32:
+        try:expected=market_plan(**plan['market_study'],profile=plan.get('runtime_acceptance'))
+        except (KeyError,TypeError):raise ValueError('malformed market-context plan') from None
+        if plan!=expected:raise ValueError('unsupported market-context plan')
+    elif plan.get('version')==31:
         try:expected=squashed_plan(**plan['squashed_study'],profile=plan.get('runtime_acceptance'))
         except (KeyError,TypeError):raise ValueError('malformed squashed-action plan') from None
         if plan!=expected:raise ValueError('unsupported squashed-action plan')
@@ -559,5 +563,22 @@ def squashed_plan(arm,seed=11,smoke=False,profile=None):
     plan.update(version=31,squashed_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
         initialization_contract=initialization_spec(arm,seed,smoke))
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=params,algorithm=protocol()['algorithms'][arm])
+    if not smoke:plan['runtime_acceptance']=deepcopy(profile)
+    return plan
+
+
+def market_plan(arm,seed=11,smoke=False,profile=None):
+    from copy import deepcopy
+    from rl_stocks.training.market_context import PROTOCOL_SHA256,overrides,initialization_spec,validate_runtime_profile,protocol
+    if type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported market seed/phase')
+    params=overrides(arm,smoke)
+    if smoke and profile is not None:raise ValueError('smokes precede runtime acceptance')
+    if not smoke:validate_runtime_profile(profile)
+    plan=alignment_plan('posthoc_unit',seed,smoke);plan.pop('alignment_study')
+    plan.update(version=32,market_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
+        initialization_contract=initialization_spec(arm,seed,smoke))
+    plan['dataset_contract'].update(identity=protocol()['datasets'][arm],**protocol()['dataset_contracts'][arm])
+    plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=params)
     if not smoke:plan['runtime_acceptance']=deepcopy(profile)
     return plan

@@ -101,6 +101,9 @@ def test_actual_frozen_mask_requires_zero_channels_and_preserves_recurrent_predi
     reset,_=frozen.predict_recurrent(initial,state=fstate,episode_start=True);np.testing.assert_array_equal(reset,first_action)
     assert digest(data['normalizer'])==normal_before and digest(asdict(frozen.normalizer))==normal_before
     assert model.num_timesteps==0 and not model.policy.optimizer.state
+    if mode=='masked':
+        from test_frozen_recurrent_verifier import module
+        assert module.check_market_mask(frozen,initial,True)
     bad=obs.copy();bad[8]=1.
     if mode=='masked':
         with pytest.raises(ValueError,match='must remain zero'):frozen.predict_recurrent(bad,state=None,episode_start=True)

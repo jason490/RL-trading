@@ -27,6 +27,10 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==32:
+        from rl_stocks.training.market_context import validate_payload,validate_initialization_assets
+        c=plan['market_study'];validate_initialization_assets(c['arm'],c['seed'],c['smoke'])
+        validate_payload(payload,c['arm'])
     if plan.get('version')==30:
         from rl_stocks.training.input_clipping import validate_payload,validate_initialization_assets
         c=plan['clipping_study'];validate_initialization_assets(c['arm'],c['seed'],c['smoke'])

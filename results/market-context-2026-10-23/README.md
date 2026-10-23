@@ -78,3 +78,21 @@ SHAf9045fe85e0e756b3397cb27d4231a82ced8645b1a41c1b20cba093160d7cbad;
 preregistered gates/settings unchanged. Dedicated training/worker/artifact/report
 integration, actual source/model construction and three512 Colab smokes/runtime
 approval remain before100k. No new units or return result; project38.90354117.
+
+## Version32 integration and actual construction
+
+Training/plan/worker/runner/retrieved-artifact/report/smoke-acceptance integration
+implemented. Each immutable dataset and actual full64 environment passes both
+Gymnasium/SB3 checkers, finite recurrent forwards and fixed model/Adam validation.
+Legacy21 versus masked/full24 inputs and common-column/RNG proofs explicit; only
+full/masked complete tensors identical. [Construction](construction.json).
+
+53 initial new contract checks,156 separate shared/legacy checks and updated121
+focused checks pass (overlap across invocations). Actual masked frozen-bundle
+nonzero-input rejection is mandatory for smoke acceptance, alongside234 exact
+predictions/restored optimizer/models and matched sampling. Strict final reports
+require both controls and all predefined gates, never retired-test data.
+
+Three512 CPU smoke plans prepared; no Colab allocation yet. Official account349.10,
+zero rate/assignments and project38.90354117 unchanged. No local policy learning
+or optimizer updates. Actual three-arm smoke/runtime acceptance precedes100k.

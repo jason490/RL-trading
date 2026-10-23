@@ -153,3 +153,32 @@ Dedicated training/worker/artifact/report wiring, actual immutable-dataset model
 checkers and three512 Colab smokes/runtime acceptance still precede100k. No new
 allocation or return result; project38.90354117 unchanged. All failed families
 remain closed and robust-return objective unachieved.
+
+## Version32 Colab integration acceptance
+
+`training/market_context.py` validates the final protocol, each immutable payload/
+normalizer/schema, mapped initial tensors and actual optimizer/model records.
+Legacy21 versus masked/full24 inputs are explicit. Initialization asset validation
+rechecks the original-to-augmented column mapping and common per-seed RNG; only
+full/masked entire tensors match. Each run retains its exact NPZ snapshot and
+initial/selected/final records, execution counts and measured year sampling.
+
+Version32 plans bind schema/names/statistics/data and enforce original account
+150/170/project150/130 reserves. Worker and retrieved artifact checks reject
+mismatched identities, normalization, model dimensions, checkpoint evidence or
+sampling. Strict reports restore actual models/Adam and compare full against
+BOTH legacy and masked with unchanged holding paths and fixed gates. Long plans
+require exact accepted smoke bytes and the three-arm runtime projection.
+
+Actual immutable datasets pass all three Gymnasium/SB3 checkers/full64 recurrent
+forwards.53 initial new protocol/artifact/report checks,156 separate shared and
+legacy checks, and an updated121-check focused suite pass (overlap between runs).
+The frozen verifier now checks nonzero masked-market rejection on the actual
+bundle; smoke acceptance requires that proof,234 exact sequence/reset predictions,
+saved model/Adam restoration, mapped tensors/RNG and identical actual sampling.
+[Construction](../results/market-context-2026-10-23/construction.json).
+
+Three512 CPU smoke tasks prepared; no policy learning/optimizer updates locally.
+Official preallocation account349.10, zero rate/assignments, project38.90354117.
+Original2-unit baseline and all reserves/deadlines retained. Commit/freeze and
+actual Colab smoke acceptance still required before100k.

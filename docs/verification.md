@@ -2351,3 +2351,9 @@ family closed; distinct hypothesis review before new training.
   hashes verified. No dataset opened by generator, fitting/optimizer updates or
   allocation. Final protocolf9045fe8… binds actual payload/initialization identities
   without changing preregistered settings. [Evidence](../results/market-context-2026-10-23/initialization.json).
+- Market-context version32: all three actual immutable environments pass
+  Gymnasium/SB3 checkers/full64 untrained forwards and fixed model/Adam/mapped
+  initialization validation.53 new contract,156 shared/legacy and updated121
+  focused checks pass (overlap). Actual frozen mask rejection now mandatory in
+  three-smoke acceptance. No local policy fitting/updates; official349.10 zero
+  assignments/project38.90354117. [Construction](../results/market-context-2026-10-23/construction.json).
