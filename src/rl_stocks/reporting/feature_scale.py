@@ -10,6 +10,8 @@ def summarize_scale(rows,names,normalizer):
     if values.ndim!=2 or values.shape[0]==0 or values.shape[1]!=len(names) or not np.isfinite(values).all():
         raise ValueError('nonempty finite feature matrix required')
     z=(values-np.asarray(frozen.means))/np.asarray(frozen.scales)
+    if getattr(frozen,'clip_abs',None) is not None:
+        z=np.clip(z,-frozen.clip_abs,frozen.clip_abs)
     if not np.isfinite(z).all():raise ValueError('finite normalized values required')
     result={}
     for i,name in enumerate(names):

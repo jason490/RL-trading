@@ -103,4 +103,6 @@ complete; no confirmation, sweep or promotion.
 
 [Feature-scale audit](feature-scale-2026-10-23/README.md): outcome-free frozen
 training/development z distributions and source arithmetic. Large training tails,
-no clipping/model fitting or new units; a numeric preprocessing protocol is pending.
+no model fitting or new units. The fixed cap5 preprocessing protocol and immutable
+payload are now prepared in [input-clipping](input-clipping-2026-10-23/README.md);
+Colab integration/smokes remain before training.

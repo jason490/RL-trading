@@ -23,3 +23,10 @@ def test_exact_frozen_transform_statistics_and_fixed_strict_thresholds():
     ([[float('inf')]],['x'],N)])
 def test_invalid_sources_or_schema_reject(rows,names,norm):
     with pytest.raises(ValueError):summarize_scale(rows,names,norm)
+
+
+def test_summary_respects_explicit_clipped_transform_without_refitting():
+    normal=dict(N,clip_abs=5.);before=deepcopy(normal)
+    result=summarize_scale([[100.],[-100.]],['x'],normal)['x']
+    assert result['maximum_abs']==5 and result['fraction_abs_above_5']==0
+    assert result['mean']==0 and normal==before

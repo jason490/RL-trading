@@ -2205,3 +2205,13 @@ witnesses computed without fitting/model/provider/Colab/test access. Raw source
 and normalizer unchanged. Input tails are observed, not proof of cause/benefit;
 no clipping or altered trading data applied. Project38.74617914 unchanged.
 [Evidence](../results/feature-scale-2026-10-23/README.md).
+
+Input clipping preparation:83 focused tests pass, actual immutable candidate
+c895d6af… has identical raw298,946 training/19,058 development rows and means/
+scales, bounded transformed market values. Old default generationc2e6c58c… and
+sourcecdb93a33… unchanged. Untrained recurrent bundle action/state parity,
+schema rejection, frozen normalization and fixed-action accounting pass. Legacy
+three-field Normalizer unchanged, explicit optional factory only. No candidate
+preprocessing fit or model training/Colab/provider/test access; default-generation
+identity verification recomputes training-only legacy statistics. Integration/
+actual study smokes remain. [Evidence](../results/input-clipping-2026-10-23/README.md).

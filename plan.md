@@ -1704,3 +1704,11 @@ is plausible, not established cause. No tolerance widening, mixed-policy returns
 hybrid selection/promotion or family rescue.41 tests pass; source/model/optimizer/
 normalizer unchanged, no training/provider/Colab/test access or new credits.
 [Evidence](results/l2-crossover-2026-10-23/README.md).
+
+2026-10-23: fixed cap5 market-input protocol/preprocessing/payload prepared.
+Candidatec895d6af… preserves raw111/26 data/means/scales, explicit new schema;
+legacy defaultc2e6c58c… identity and default bundles unchanged.83 focused tests
+and actual untrained frozen/accounting checks pass. Original cap/gates/budget
+unchanged in finalized protocol; dedicated Colab integration/checkers/smokes
+remain before training. No allocation/new units.
+[Method](docs/feature-preprocessing.md), [evidence](results/input-clipping-2026-10-23/README.md).

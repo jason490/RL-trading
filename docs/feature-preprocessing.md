@@ -64,3 +64,46 @@ and prospective requirements unchanged. Shared2-unit allowance starts38.74617913
 with unchanged project150/130/account150/170 limits. Candidate content identity
 will be filled only from deterministic immutable preflight before Colab integration;
 cap/gates/budget stay fixed. No allocation or performance claim.
+
+## Explicit cap5 transform implemented; immutable protocol finalized
+
+`data/generation/clipping.py` owns `ClippedNormalizer` and the clipping-only
+payload fork. Original `Normalizer` remains a three-field frozen dataclass with
+unchanged transforms/serialization. The shared `normalizer_from` factory accepts
+only the legacy fields or an explicit positive finite `clip_abs`; unknown fields
+reject rather than silently dropping preprocessing. `ClippedNormalizer.fit`
+rejects: candidate means/scales are copied from frozen source, not refitted.
+
+The environment and FrozenPolicy already share that factory. New candidate schema
+`daily-indicators-v1-zclip5-v1` and normalizer metadata make clipping explicit in
+checksummed bundles; wrong schema requests reject. Default old bundles use the
+unchanged class/three fields. Only transformed market features are capped; raw
+feature matrices, bars, ATR execution and portfolio-state observations remain exact.
+
+[Final protocol](../configs/experiments/input_clipping.json), canonical SHA-256
+`ad11f4beb9022b73ad9c1d7843a5714614fc4cc02a251a7c4d340afbd8163877`, binds the
+original preregistration hash and deterministic candidate identity. Cap5, original
+relative/absolute/risk gates and2-unit allowance remain unchanged. Candidate:
+`c895d6af1c98f1326f9f585009e8ad0b224ca13e885027bbc7a02c4ebc5a8894`.
+Original normalizer SHA staysb3c8a298…; candidate includes explicit bound with
+SHAde3ab713…. Raw episode hash is identical across arms. Same111 training symbols,
+298,946 training rows/19,058 development rows, no retired test reconstructed.
+
+83 focused checks pass: legacy serialization/transforms, immutable clipping and
+invalid bounds, schema/unknown fields/source corruption, fixed-action rewards/
+costs/quantities/events equivalence, untrained recurrent save/load/frozen prediction
+and hidden-state parity, normalization immutability and wrong-schema rejection.
+Actual preflight verifies all candidate transformed values≤5 and exact raw data/
+original means/scales. Legacy default generator reruns its training-only statistics
+and produces the exact oldc2e6c58c… identity. This is an identity check, not candidate
+normalizer refitting or policy training. Sourcecdb93a33… unchanged.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+ scripts/preflight_input_clipping.py --output .runtime/input-clipping-preflight.json
+```
+
+[Actual evidence](../results/input-clipping-2026-10-23/preflight.json). Dedicated
+Colab protocol/plan/worker/artifact/report wiring, full untrained construction/
+checkers and two512 CPU smokes still required before100k. No allocation or
+performance result; project38.74617914 and last official account349.23 unchanged.

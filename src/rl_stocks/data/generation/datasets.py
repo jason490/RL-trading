@@ -225,4 +225,9 @@ def read_dataset(path):
     return json.loads(raw)
 
 def normalizer_from(value):
+    if set(value) not in ({'names','means','scales'},{'names','means','scales','clip_abs'}):
+        raise ValueError('unknown normalizer contract fields')
+    if 'clip_abs' in value:
+        from rl_stocks.data.generation.clipping import ClippedNormalizer
+        return ClippedNormalizer(tuple(value['names']),tuple(value['means']),tuple(value['scales']),value['clip_abs'])
     return Normalizer(tuple(value["names"]),tuple(value["means"]),tuple(value["scales"]))

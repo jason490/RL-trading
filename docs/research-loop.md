@@ -1565,3 +1565,13 @@ Colab/test access. Consider one preregistered explicit input cap, preserving raw
 prices/execution/rewards and legacy defaults/bundles; no clipping implemented or
 performance inference. Project38.74617914 unchanged.
 [Evidence](../results/feature-scale-2026-10-23/README.md).
+
+Cap5 preprocessing and immutable payload prepared after fixed preregistration.
+Original raw full-history111/26 episodes and means/scales unchanged; candidate
+c895d6af… uses explicit clipped-normalizer field/new schema, no candidate refit.
+Legacy default generator identityc2e6c58c… reproduced exactly; old default class/
+serialization unchanged.83 focused contracts/core/frozen checks pass, including
+actual untrained recurrent bundle parity and fixed-action accounting equivalence.
+Final protocolad11f4be… pins deterministic payload without changing cap/gates/
+resource limits. Dedicated Colab integration/construction/smokes remain, no
+allocation or performance claim. [Evidence](../results/input-clipping-2026-10-23/README.md).
