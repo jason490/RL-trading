@@ -13,7 +13,7 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 def prepare(root,study="cash"):
     import importlib
-    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard"}[study]
+    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard","capacity":"recurrent_capacity"}[study]
     arms=importlib.import_module("rl_stocks.training."+module_name).protocol()["arms"]
     state=dict(status='complete',cleanup_verified=True,completed={});accepted={'cells':{}}
     for arm in arms:
@@ -76,3 +76,15 @@ def test_guard_audits_exact_v2_pair_without_opening_dataset(tmp_path,monkeypatch
         (a,p) for a in ['control','kl_guard'] for p in ['selected','final']}
     assert result['source_files_unchanged'] and not result['dataset_opened']
     assert '.runtime/guard-screen-v2-state.json' in result['source_files_sha256']
+
+
+def test_capacity_audits_exact_pair_and_rejects_changed_report(tmp_path,monkeypatch):
+    state_path,_=prepare(tmp_path,'capacity');monkeypatch.chdir(tmp_path)
+    result=module.audit('capacity')
+    assert {(r['arm'],r['phase']) for r in result['records']}=={
+        (a,p) for a in ['control','larger'] for p in ['selected','final']}
+    assert result['source_files_unchanged'] and not result['dataset_opened']
+    state=json.loads(state_path.read_text())
+    root=Path(next(iter(state['completed'].values()))['root'])
+    next((root/'runs').glob('*/validation.json')).write_text('{}')
+    with pytest.raises(ValueError,match='hash mismatch'):module.audit('capacity')

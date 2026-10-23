@@ -8,7 +8,8 @@ from rl_stocks.reporting.action_execution import diagnose_groups
 STUDIES={'recurrent-state':('recurrent-state','2026-10-21'),
          'alignment':('recurrent-alignment','2026-10-21'),
          'cash':('recurrent-cash','2026-10-22'),
-         'guard':('recurrent-guard','2026-10-22')}
+         'guard':('recurrent-guard','2026-10-22'),
+         'capacity':('recurrent-capacity','2026-10-22')}
 
 
 def audit(study):
@@ -18,7 +19,7 @@ def audit(study):
     accepted_path=Path(f'results/{result_study}-{date}/summary.json')
     state=json.loads(state_path.read_text())
     accepted=json.loads(accepted_path.read_text())
-    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard'}[study]
+    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard','capacity':'recurrent_capacity'}[study]
     required=set(importlib.import_module('rl_stocks.training.'+module).protocol()['arms'])
     if set(accepted.get('cells',{}))!=required:raise ValueError('all registered study arms required')
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete verified shutdown required')

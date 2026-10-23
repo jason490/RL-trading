@@ -39,6 +39,8 @@ publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 
+- [Capacity selected-to-final actions and costs](capacity-actions-2026-10-23/README.md)
+
 - [Saved actions and costs](guard-actions-2026-10-22/README.md)
 - [Exit and inherited-position partitions](guard-exits-2026-10-22/README.md)
 - [Exact overnight/intraday P&L bridge](guard-bridge-2026-10-22/README.md)

@@ -1903,3 +1903,16 @@ publication archives removed (45,880,597 bytes),142 retained hashes unchanged.
 Original transports/source/data/models/checkpoints/ledger/plan.html preserved.
 All four sessions stopped; project38.60166524 unchanged. Fixed family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-capacity-2026-10-22).
+
+
+## Capacity saved-path diagnosis — 2026-10-23
+
+Four accepted phases/104 episodes audited without data/model fitting/Colab.
+Larger stock selected→final29.41→12.83%, short contribution−0.89→−7.41pp,
+cost drag3.78→5.14pp and noncost excess+0.57→−14.66pp. ETF21.21→16.73%,
+cost3.01→5.13pp; neither causal explanation nor a short-ban justification.
+21 focused audit/action checks pass; source hashes unchanged. Capacity family
+closed. Next audit training-history coverage/sampling before preregistering a
+distinct matched full-history/recent-window study; no allocation or window
+selection from returns. Project38.60166524 unchanged.
+[Evidence](../results/capacity-actions-2026-10-23/README.md).
