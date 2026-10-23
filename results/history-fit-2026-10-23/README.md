@@ -81,3 +81,15 @@ all prior owned sessions stopped.
 Next publish allowlisted derived charts/compact results without duplicating source
 models, then inspect these saved fitted/development differences before a distinct
 preregistered hypothesis. No new training has been authorized by a diagnostic flag.
+
+
+## Verified derived-chart publication
+
+[Release](https://github.com/jason490/RL-trading/releases/tag/history-fit-2026-10-23)
+contains7 server-size/SHA-256-verified assets. comparison.html shows group excess;
+extract equity-reports.tar.gz and open index.html for104 derived policy/holding
+plots. No model duplication or raw bars. Compact group/short-side evidence and
+fixed protocol included. Only the duplicate publication archive removed
+(3,373,270 bytes),19 retained hashes unchanged; all full derived paths retained.
+[Server receipts](release-verification.json), [cleanup](cleanup.json). No additional
+Colab usage; project38.68329334 unchanged and prior sessions stopped.

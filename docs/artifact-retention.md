@@ -188,3 +188,10 @@ archives removed (35,931,249 bytes),148 retained hashes unchanged. Original
 transports/models/source/both datasets/ledger/plan.html retained. All four sessions
 stopped, project38.68329334 unchanged. Fixed family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/training-history-2026-10-23).
+
+
+History-model fitted-period charts published:7 server assets verified,104 equity
+plots on four pages, no model duplication or raw bars. Duplicate chart archive
+removed (3,373,270 bytes),19 retained hashes unchanged; full paths retained. No
+additional Colab units; project38.68329334 unchanged.
+[Release](https://github.com/jason490/RL-trading/releases/tag/history-fit-2026-10-23).

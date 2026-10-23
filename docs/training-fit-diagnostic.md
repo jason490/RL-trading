@@ -206,3 +206,10 @@ all prior owned sessions stopped.
 
 
 [Evidence](../results/history-fit-2026-10-23/README.md).
+
+
+History-model fitted-period charts published:7 server assets verified,104 equity
+plots on four pages, no model duplication or raw bars. Duplicate chart archive
+removed (3,373,270 bytes),19 retained hashes unchanged; full paths retained. No
+additional Colab units; project38.68329334 unchanged.
+[Release](https://github.com/jason490/RL-trading/releases/tag/history-fit-2026-10-23).

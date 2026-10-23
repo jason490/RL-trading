@@ -1,0 +1,49 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/history-fit-2026-10-23",
+  "asset_count": 7,
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773963,
+      "digest": "sha256:8710609d6723a6a085bdde8953c32dab34aaaf05cab7b22b2546d6d8bd2015a8",
+      "state": "uploaded"
+    },
+    {
+      "name": "equity-reports.tar.gz",
+      "size": 3373270,
+      "digest": "sha256:2354a7239316636de9ddca31a2e23d013cbbb4cefc135018946c931b095468ec",
+      "state": "uploaded"
+    },
+    {
+      "name": "groups.csv",
+      "size": 1885,
+      "digest": "sha256:071a06c7c002af80da2fe72192619cf61f39829da25a0d09ac04b760138d8441",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 67240,
+      "digest": "sha256:1e45263e7cba7391ff2ba690d463e82c458382555b948cf185fadc7c0904df04",
+      "state": "uploaded"
+    },
+    {
+      "name": "short-side.json",
+      "size": 7295,
+      "digest": "sha256:c21b1c4d43eba4a9df827bb0ff5112afdf3804804195c7f1109253e1268f745f",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 2728,
+      "digest": "sha256:19d4d3a1d8b37983f6e28f8593c212ad566c1b4e0a1e8a40c695f4300ed37190",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 488,
+      "digest": "sha256:e51219151d62dae6040f32354e677c879a540a3bfed709e6f86b33d6c6aac093",
+      "state": "uploaded"
+    }
+  ]
+}

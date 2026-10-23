@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "release_assets_verified": 7,
+  "removed_files": [
+    {
+      "path": "artifacts/history-fit-release/equity-reports.tar.gz",
+      "bytes": 3373270,
+      "sha256": "2354a7239316636de9ddca31a2e23d013cbbb4cefc135018946c931b095468ec"
+    }
+  ],
+  "removed_logical_bytes": 3373270,
+  "retained_file_count": 19,
+  "retained_hashes_unchanged": true,
+  "all_full_derived_paths_retained": true,
+  "models_not_duplicated": true
+}
