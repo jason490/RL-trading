@@ -1,0 +1,861 @@
+{
+  "passed": true,
+  "protocol_sha256": "4d610a3c133b94ebe74426a9ab21d66c55304f1d7945fc7d69eb3d4c06ae44b0",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "raw_snapshot": "09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f",
+  "names": [
+    "market_return_20",
+    "market_volatility_20",
+    "relative_market_return_20"
+  ],
+  "benchmark": "SPY",
+  "window": 20,
+  "counts": {
+    "train_rows": 298946,
+    "train_ready": 298946,
+    "validation_rows": 19058,
+    "validation_ready": 19058
+  },
+  "episodes": {
+    "AAPL-train-0": {
+      "symbol": "AAPL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "AAPL-validation-0": {
+      "symbol": "AAPL",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "ABBV-train-0": {
+      "symbol": "ABBV",
+      "split": "train",
+      "rows": 1946,
+      "ready": 1946
+    },
+    "ABT-train-0": {
+      "symbol": "ABT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "ADBE-train-0": {
+      "symbol": "ADBE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "AEP-train-0": {
+      "symbol": "AEP",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "AMGN-train-0": {
+      "symbol": "AMGN",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "AMT-train-0": {
+      "symbol": "AMT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "AMT-validation-0": {
+      "symbol": "AMT",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "AMZN-train-0": {
+      "symbol": "AMZN",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "AMZN-validation-0": {
+      "symbol": "AMZN",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "APA-train-0": {
+      "symbol": "APA",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "APD-train-0": {
+      "symbol": "APD",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "APD-validation-0": {
+      "symbol": "APD",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "AXP-train-0": {
+      "symbol": "AXP",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "BA-train-0": {
+      "symbol": "BA",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "BAC-train-0": {
+      "symbol": "BAC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "BAC-validation-0": {
+      "symbol": "BAC",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "BLK-train-0": {
+      "symbol": "BLK",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "BMY-train-0": {
+      "symbol": "BMY",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "C-train-0": {
+      "symbol": "C",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "CAT-train-0": {
+      "symbol": "CAT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "CAT-validation-0": {
+      "symbol": "CAT",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "CL-train-0": {
+      "symbol": "CL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "CMCSA-train-0": {
+      "symbol": "CMCSA",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "COP-train-0": {
+      "symbol": "COP",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "COST-train-0": {
+      "symbol": "COST",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "CSCO-train-0": {
+      "symbol": "CSCO",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "CVX-train-0": {
+      "symbol": "CVX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "CVX-validation-0": {
+      "symbol": "CVX",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "D-train-0": {
+      "symbol": "D",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "DE-train-0": {
+      "symbol": "DE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "DIA-train-0": {
+      "symbol": "DIA",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "DIA-validation-0": {
+      "symbol": "DIA",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "DIS-train-0": {
+      "symbol": "DIS",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "DIS-validation-0": {
+      "symbol": "DIS",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "DUK-train-0": {
+      "symbol": "DUK",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "DUK-validation-0": {
+      "symbol": "DUK",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "DVN-train-0": {
+      "symbol": "DVN",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "ECL-train-0": {
+      "symbol": "ECL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "ED-train-0": {
+      "symbol": "ED",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "EOG-train-0": {
+      "symbol": "EOG",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "EQIX-train-0": {
+      "symbol": "EQIX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "EXC-train-0": {
+      "symbol": "EXC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "F-train-0": {
+      "symbol": "F",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "FCX-train-0": {
+      "symbol": "FCX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "GD-train-0": {
+      "symbol": "GD",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "GE-train-0": {
+      "symbol": "GE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "GILD-train-0": {
+      "symbol": "GILD",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "GOOGL-train-0": {
+      "symbol": "GOOGL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "GOOGL-validation-0": {
+      "symbol": "GOOGL",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "GS-train-0": {
+      "symbol": "GS",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "HAL-train-0": {
+      "symbol": "HAL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "HD-train-0": {
+      "symbol": "HD",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "HD-validation-0": {
+      "symbol": "HD",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "HON-train-0": {
+      "symbol": "HON",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "HON-validation-0": {
+      "symbol": "HON",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "HSY-train-0": {
+      "symbol": "HSY",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "IBM-train-0": {
+      "symbol": "IBM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "INTC-train-0": {
+      "symbol": "INTC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "IWM-train-0": {
+      "symbol": "IWM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "IWM-validation-0": {
+      "symbol": "IWM",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "JNJ-train-0": {
+      "symbol": "JNJ",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "JNJ-validation-0": {
+      "symbol": "JNJ",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "JPM-train-0": {
+      "symbol": "JPM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "JPM-validation-0": {
+      "symbol": "JPM",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "KMB-train-0": {
+      "symbol": "KMB",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "KO-train-0": {
+      "symbol": "KO",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "KO-validation-0": {
+      "symbol": "KO",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "KR-train-0": {
+      "symbol": "KR",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "LIN-train-0": {
+      "symbol": "LIN",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "LIN-validation-0": {
+      "symbol": "LIN",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "LLY-train-0": {
+      "symbol": "LLY",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "LMT-train-0": {
+      "symbol": "LMT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "LOW-train-0": {
+      "symbol": "LOW",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MCD-train-0": {
+      "symbol": "MCD",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MDLZ-train-0": {
+      "symbol": "MDLZ",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MLM-train-0": {
+      "symbol": "MLM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MRK-train-0": {
+      "symbol": "MRK",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MS-train-0": {
+      "symbol": "MS",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MSFT-train-0": {
+      "symbol": "MSFT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "MSFT-validation-0": {
+      "symbol": "MSFT",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "NEE-train-0": {
+      "symbol": "NEE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "NEE-validation-0": {
+      "symbol": "NEE",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "NEM-train-0": {
+      "symbol": "NEM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "NFLX-train-0": {
+      "symbol": "NFLX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "NKE-train-0": {
+      "symbol": "NKE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "NUE-train-0": {
+      "symbol": "NUE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "NVDA-train-0": {
+      "symbol": "NVDA",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "O-train-0": {
+      "symbol": "O",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "OMC-train-0": {
+      "symbol": "OMC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "ORCL-train-0": {
+      "symbol": "ORCL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "OXY-train-0": {
+      "symbol": "OXY",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PEG-train-0": {
+      "symbol": "PEG",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PEP-train-0": {
+      "symbol": "PEP",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PFE-train-0": {
+      "symbol": "PFE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PG-train-0": {
+      "symbol": "PG",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PG-validation-0": {
+      "symbol": "PG",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "PLD-train-0": {
+      "symbol": "PLD",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PLD-validation-0": {
+      "symbol": "PLD",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "PNC-train-0": {
+      "symbol": "PNC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PPG-train-0": {
+      "symbol": "PPG",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "PSA-train-0": {
+      "symbol": "PSA",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "QCOM-train-0": {
+      "symbol": "QCOM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "QQQ-train-0": {
+      "symbol": "QQQ",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "QQQ-validation-0": {
+      "symbol": "QQQ",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "ROST-train-0": {
+      "symbol": "ROST",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "RTX-train-0": {
+      "symbol": "RTX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SBUX-train-0": {
+      "symbol": "SBUX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SHW-train-0": {
+      "symbol": "SHW",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SLB-train-0": {
+      "symbol": "SLB",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SO-train-0": {
+      "symbol": "SO",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SPG-train-0": {
+      "symbol": "SPG",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SPY-train-0": {
+      "symbol": "SPY",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "SPY-validation-0": {
+      "symbol": "SPY",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "SRE-train-0": {
+      "symbol": "SRE",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "T-train-0": {
+      "symbol": "T",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "TGT-train-0": {
+      "symbol": "TGT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "TJX-train-0": {
+      "symbol": "TJX",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "TMUS-train-0": {
+      "symbol": "TMUS",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "TTWO-train-0": {
+      "symbol": "TTWO",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "TXN-train-0": {
+      "symbol": "TXN",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "UNH-train-0": {
+      "symbol": "UNH",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "UNH-validation-0": {
+      "symbol": "UNH",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    },
+    "UNP-train-0": {
+      "symbol": "UNP",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "UPS-train-0": {
+      "symbol": "UPS",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "USB-train-0": {
+      "symbol": "USB",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "VLO-train-0": {
+      "symbol": "VLO",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "VMC-train-0": {
+      "symbol": "VMC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "VTR-train-0": {
+      "symbol": "VTR",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "VZ-train-0": {
+      "symbol": "VZ",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "WELL-train-0": {
+      "symbol": "WELL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "WFC-train-0": {
+      "symbol": "WFC",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "WMT-train-0": {
+      "symbol": "WMT",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "XEL-train-0": {
+      "symbol": "XEL",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "XOM-train-0": {
+      "symbol": "XOM",
+      "split": "train",
+      "rows": 2700,
+      "ready": 2700
+    },
+    "XOM-validation-0": {
+      "symbol": "XOM",
+      "split": "validation",
+      "rows": 733,
+      "ready": 733
+    }
+  },
+  "unavailable": [],
+  "raw_source_bars_exact": true,
+  "source_files_unchanged": true,
+  "protected_sha256": {
+    "configs/experiments/market_context_audit.json": "a57ee29604da5648ca6b5b531335697c22e242dc9096cd3d1d75abe991fac5e1",
+    "data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "data/raw/universe-expansion/09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f/snapshot.json": "09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f",
+    "scripts/audit_market_context.py": "c8c790741973c2b5a92929cb1d3170169f8b98e644469d52848cb588a2f7ff04",
+    "src/rl_stocks/features/market/context.py": "531d18ff05b7fcda27b76d099a9d0a60880d88677c5796353136a1a766449b14"
+  },
+  "training_performed": false,
+  "model_inference": false,
+  "normalization_fitted": false,
+  "provider_requested": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "validation_performance_scored": false,
+  "interpretation": "Revised Yahoo bars and retrospective survivors remain; recorded bar availability is an assumption, not verified historical vendor publication. Broad-market context differs from old high-dimensional sector proxies but benefit is unproven."
+}

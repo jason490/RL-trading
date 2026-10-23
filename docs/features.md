@@ -41,3 +41,9 @@ Offline tests compare full-series outputs with causal prefixes and altered futur
 
 [Completed-session decomposition](session-context.md) describes optional causal
 overnight/intraday fields, same-dimension masks and pending research preflight.
+
+[Compact broad-market context](market-context.md) implements an opt-in feature
+reader for synchronized SPY20-session price return/volatility and own-relative
+return. Cached111/26 source coverage passes for every row; dataset integration,
+training-only extra-field normalization and matched model ablation remain pending.
+This coverage audit is not evidence of predictive or trading improvement.

@@ -1662,3 +1662,11 @@ return/volatility and own-minus-SPY20-session return, using only cached2010–20
 bars and original111/26 rows. Require exact matched sessions/availability/known-gap
 and raw-source identity before any new feature payload or training. Distinct from
 old high-dimensional sector proxies; benefit unproven. [Method](market-context.md).
+
+Compact market-context coverage passed: all298,946 training/19,058 development
+rows available with exact raw/source identity and synchronized causal windows.
+60 focused checks pass; original preprocessing/data unchanged, no fitting,
+inference or extra Colab units. Next separately fix full/masked/legacy controls,
+extra-field training-only normalization and immutable payload identities before
+model/construction/Colab acceptance. Coverage is not predictive evidence.
+[Audit](../results/market-context-2026-10-23/README.md).

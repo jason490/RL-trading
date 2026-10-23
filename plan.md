@@ -1814,3 +1814,13 @@ relationships, not a cause or justification for disabling shorts/reward edits.
 Exact source hashes preserved; no fitting/data access/Colab allocation. Fixed
 family closed; distinct hypothesis review before new training.
 [Evidence](results/squashed-actions-diagnosis-2026-10-23/README.md).
+
+### 2026-10-23 — compact broad-market context coverage
+
+Fixed three-field SPY20-session price return/volatility and own-relative return
+reader implemented with matched sessions/availability/known-gap and forward-split
+barriers.60 focused checks pass; all298,946 training/19,058 development source
+rows available and raw/source/protocol/implementation hashes unchanged. No new
+dataset, preprocessing fit, model/inference/performance scoring or Colab units.
+Separately preregister matched full/masked/legacy-control study before allocation.
+[Evidence](results/market-context-2026-10-23/README.md). Objective unachieved.

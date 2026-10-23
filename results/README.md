@@ -149,3 +149,8 @@ project38.903541/account349.10. Publication and saved-path diagnosis next.
 [Squashed saved-action diagnosis](squashed-actions-diagnosis-2026-10-23/README.md):
 both long/short contributions deteriorate at final while short exposure and costs
 increase;104 saved episodes, no causal claim, fitting or additional Colab units.
+
+[Compact market-context coverage](market-context-2026-10-23/README.md): SPY return/
+volatility and own-relative20-session features are causally available on all
+298,946 train/19,058 development rows.60 checks pass; no fitting, new model,
+performance score or Colab allocation. Matched dataset/model study remains pending.

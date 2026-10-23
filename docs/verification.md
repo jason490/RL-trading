@@ -2330,3 +2330,10 @@ relationships, not a cause or justification for disabling shorts/reward edits.
 Exact source hashes preserved; no fitting/data access/Colab allocation. Fixed
 family closed; distinct hypothesis review before new training.
 [Evidence](../results/squashed-actions-diagnosis-2026-10-23/README.md).
+
+- Compact market context:60 focused feature/core checks pass. Actual cached
+  source audit validates all298,946 train/19,058 development rows with zero
+  unavailable contexts, exact raw/source bars and unchanged source/protocol/
+  implementation hashes. No normalization fit, new dataset/model, inference,
+  performance scoring, provider requests, Colab allocation or retired-test access.
+  See[coverage evidence](../results/market-context-2026-10-23/README.md).
