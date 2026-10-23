@@ -1678,3 +1678,10 @@ tensors plus original21-input control/common-column proofs separate information
 from input dimension. Existing all-control/absolute/risk gates unchanged, no grids
 or extension on failure. Three512 Colab CPU smokes precede100k;2-unit allowance
 starts38.90354116934003. [Protocol](../configs/experiments/market_context_preregistration.json).
+
+Market-context payload stage passes: immutable maskeda392ba93…/fullf439b8f4…,
+original318,004 rows retained (298,946 train/19,058 development), first-seven stats
+exact, full three-field fit training-only and masked zero/identity.48 focused
+checks plus156 actual legacy frozen predictions pass; no policy fitting or new
+units. Next shared untrained initialization assets and final identity-bound
+protocol before dedicated Colab integration/checkers/smokes. [Evidence](../results/market-context-2026-10-23/payload-preflight.json).

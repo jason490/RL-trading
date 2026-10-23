@@ -2337,3 +2337,10 @@ family closed; distinct hypothesis review before new training.
   implementation hashes. No normalization fit, new dataset/model, inference,
   performance scoring, provider requests, Colab allocation or retired-test access.
   See[coverage evidence](../results/market-context-2026-10-23/README.md).
+- Market-context immutable payloads: maskeda392ba93…/fullf439b8f4… reconstructed
+  exactly after content-addressed readback. Original298,946 train/19,058 development
+  rows/bars/ATR/features/first-seven stats exact. Extra fit uses train only; masked
+  zero/identity without fitting.48 focused contracts pass, including untrained
+  full/masked recurrent frozen carry/reset parity and nonzero-mask rejection.
+  156 actual legacy native/squashed frozen predictions pass on current host.
+  No policy learning/updates, provider/test access or allocation. See[preflight](../results/market-context-2026-10-23/payload-preflight.json).

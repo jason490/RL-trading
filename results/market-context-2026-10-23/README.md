@@ -37,3 +37,26 @@ frozen inference, then run Colab smokes before any research training. Coverage
 acceptance alone does not select a model or authorize automatic allocation.
 Closed failed feature/optimizer/distribution families remain closed. Robust-return
 objective remains unachieved.
+
+## Immutable full/masked payloads prepared
+
+Actual write/read/reconstruction preflight passed. Masked dataset
+`a392ba935e3026ab737ad539122d584242994e27a0e02bcad96d3868914913a5`;
+full dataset`f439b8f4ed367573998998db30af4100bcd3cb167843efeab322b060729447db`.
+Both keep every original bar/ATR/row/original feature and first-seven statistics.
+Full's three added statistics fit298,946 training rows only; masked fits none,
+with exact zero fields/means and identity scales. No row exclusion;19,058
+development rows preserved. All normalized inputs finite for float32, masked
+channels exactly zero. Source/preregistration/implementation hashes unchanged.
+
+48 focused checks pass: source immutability, validation isolation, unsafe source/
+payload rejection, explicit frozen contracts and untrained recurrent save/load/
+action/hidden/cell carry/reset/caller-state/normalization parity. Direct frozen
+predictions reject nonzero masked channels.156 actual prior native/squashed
+saved/frozen predictions pass on current host; not original-Colab full-path parity.
+[Preflight](payload-preflight.json), [legacy restoration](legacy-restoration.json).
+
+No policy learning/optimizer update, provider request, test access or Colab
+allocation. Next shared untrained initialization assets/final identity protocol
+and dedicated training integration/checkers/three512 Colab smokes before100k.
+Original project38.90354117/last official account349.10 unchanged. No return claim.

@@ -74,3 +74,46 @@ and extensions. Shared2-unit baseline38.90354116934003 and original project150/1
 account150/170,7200s limits retained. Three512 CPU Colab smokes and exact measured
 runtime acceptance required first. Immutable dataset/normalizer/initialization
 identities and dedicated training integration remain pending; no allocation yet.
+
+## Immutable payload and frozen-input acceptance
+
+`data/generation/market_context.py` appends the three fields to a deep copy of the
+original source. All episode keys, bars, ATR, original features and first-seven
+means/scales remain exact. Full fits only extra-field means/population scales on
+298,946 training rows; validation never contributes. Masked fields/means are zero
+and scales one, without fitting. No input clipping or default generator change.
+The feature builder rejects unavailable full context and emits exact masked zeros.
+
+| Arm | Immutable dataset | Normalizer SHA-256 |
+| --- | --- | --- |
+| Masked |`a392ba935e3026ab737ad539122d584242994e27a0e02bcad96d3868914913a5`|`f3bf1d780c675c7da397a08437f9628bb6929fab083e01663b57e31fb3b14c7d`|
+| Full |`f439b8f4ed367573998998db30af4100bcd3cb167843efeab322b060729447db`|`e10423ea538967364d99a790a3265dbf9b00e3ab0c299d5f6b8eb3fe72a35081`|
+
+Both payloads preserve298,946 training and19,058 development rows. Actual
+content-addressed write/read/reconstruction checks pass; all transformed inputs
+are finite in float32 and every masked extra channel is exactly zero. Original
+source and preregistration/implementation hashes stayed unchanged. Full's extra
+training statistics are fitted preprocessing, not policy training.
+
+Frozen loading validates the explicit mode/schema/ordered names, original
+normalizer lineage and masked identity scaling. Predictions reject any nonzero
+masked extra channel, including direct normalized-observation calls. Full and
+masked untrained recurrent save/load/action/hidden/cell carry/reset parity pass,
+with caller state and normalization unchanged.48 focused feature/payload/frozen/
+legacy checks pass (two existing Gymnasium unbounded-Box warnings).
+
+156 actual prior native/squashed saved-versus-frozen predictions also pass on the
+current host. This preserves legacy inference behavior; it does not establish
+full equity-path parity with original Colab output. No local policy learning,
+optimizer updates, provider requests, retired-test access or allocation.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+  scripts/prepare_market_context.py --output artifacts/market-context/payloads.json
+```
+
+[Payload evidence](../results/market-context-2026-10-23/payload-preflight.json),
+[legacy restoration](../results/market-context-2026-10-23/legacy-restoration.json).
+Next generate/verify the preregistered shared untrained initialization assets,
+freeze the final protocol with identities and wire model/checker/Colab acceptance.
+Three512 Colab smokes still required before100k. No new return result.

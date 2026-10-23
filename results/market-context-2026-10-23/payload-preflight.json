@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "preregistration_sha256": "ca987adbfa0355b843cd9e0a545e9695db4b1bc046f5c63d6e83dc85ad0d52c7",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "records": {
+    "masked": {
+      "dataset": "a392ba935e3026ab737ad539122d584242994e27a0e02bcad96d3868914913a5",
+      "schema": "daily-indicators-v1-market-masked-v1",
+      "normalizer_sha256": "f3bf1d780c675c7da397a08437f9628bb6929fab083e01663b57e31fb3b14c7d",
+      "normalizer": {
+        "means": [
+          0.0004990544866644428,
+          0.012735132296023969,
+          0.00469844447216914,
+          0.012019454990342297,
+          0.5389047390801802,
+          0.018389739889369705,
+          1.0153090843440746,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20",
+          "market_return_20",
+          "market_volatility_20",
+          "relative_market_return_20"
+        ],
+        "scales": [
+          0.015313643928828525,
+          0.00786943611664361,
+          0.029180487735227603,
+          0.04507155802842066,
+          0.11677961862593828,
+          0.009077586213247573,
+          0.456061113252682,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "raw_bars_atr_original_features_and_rows_exact": true,
+      "extra_normalizer_fit_rows": 0,
+      "maximum_abs_normalized_value": 80.73032154131965,
+      "finite_float32_inputs": true
+    },
+    "full": {
+      "dataset": "f439b8f4ed367573998998db30af4100bcd3cb167843efeab322b060729447db",
+      "schema": "daily-indicators-v1-market-full-v1",
+      "normalizer_sha256": "e10423ea538967364d99a790a3265dbf9b00e3ab0c299d5f6b8eb3fe72a35081",
+      "normalizer": {
+        "means": [
+          0.0004990544866644428,
+          0.012735132296023969,
+          0.00469844447216914,
+          0.012019454990342297,
+          0.5389047390801802,
+          0.018389739889369705,
+          1.0153090843440746,
+          0.00857522551001645,
+          0.008855622518226478,
+          -0.0011342000545700405
+        ],
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20",
+          "market_return_20",
+          "market_volatility_20",
+          "relative_market_return_20"
+        ],
+        "scales": [
+          0.015313643928828525,
+          0.00786943611664361,
+          0.029180487735227603,
+          0.04507155802842066,
+          0.11677961862593828,
+          0.009077586213247573,
+          0.456061113252682,
+          0.04332054556714474,
+          0.006141700005113114,
+          0.06265471939073487
+        ]
+      },
+      "raw_bars_atr_original_features_and_rows_exact": true,
+      "extra_normalizer_fit_rows": 298946,
+      "maximum_abs_normalized_value": 80.73032154131965,
+      "finite_float32_inputs": true
+    }
+  },
+  "source_files_unchanged": true,
+  "protected_sha256": {
+    "configs/experiments/market_context_preregistration.json": "d3e39902a40bbc38af3aa3e2307af7808db6bea96650b4257d088a5124fc85bd",
+    "results/market-context-2026-10-23/coverage.json": "bf345131df13c20382a112713c8a76abcef5aa106735ea14fa4f1d4d78e11a49",
+    "data/raw/universe-expansion/09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f/snapshot.json": "09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f",
+    "data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "scripts/prepare_market_context.py": "d31da9e42a050155dcf2cb18a1321b7b57569ebd0236f2d326b62fdc953e935d",
+    "src/rl_stocks/data/generation/market_context.py": "0781908b31e33862d78005b3e0dd941e6bbb7673c486c9eaba8db3c251893a00"
+  },
+  "training_rows": 298946,
+  "validation_rows": 19058,
+  "policy_training_performed": false,
+  "extra_normalizer_fitted_on_training_only": true,
+  "validation_used_for_fit": false,
+  "provider_requested": false,
+  "colab_allocated": false,
+  "test_evaluated": false
+}

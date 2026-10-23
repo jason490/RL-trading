@@ -1824,3 +1824,11 @@ rows available and raw/source/protocol/implementation hashes unchanged. No new
 dataset, preprocessing fit, model/inference/performance scoring or Colab units.
 Separately preregister matched full/masked/legacy-control study before allocation.
 [Evidence](results/market-context-2026-10-23/README.md). Objective unachieved.
+
+Market-context immutable payload stage subsequently passed: masked/full preserve
+298,946 training/19,058 development rows, original bars/ATR/features/first-seven
+normalizer exact. Full extra-field fit training-only; masked zero/identity and
+frozen rejection of nonzero masks.48 focused checks and156 actual legacy frozen
+predictions pass; no local policy learning/updates or allocation. Shared untrained
+initialization assets, final protocol and dedicated training integration/smokes
+remain. [Evidence](results/market-context-2026-10-23/payload-preflight.json).
