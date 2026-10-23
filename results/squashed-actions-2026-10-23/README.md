@@ -1,8 +1,7 @@
 # Fixed squashed-action recurrent comparison
 
-Status: policy/version31 integration and actual Colab512 CPU smokes accepted.
-Fixed100k paired screen plans prepared, not allocated. No performance result yet. [Protocol](../../configs/experiments/squashed_actions.json),
-[method](../../docs/action-boundaries.md), [construction](construction.json).
+Status: completed seed11 screen failed; fixed squashed-action family closed.
+Latest verified outcome below; earlier sections retain preparation history.
 
 Compare native Gaussian versus explicitly tanh-squashed diagonal Gaussian during
 both rollout sampling and PPO likelihood evaluation. Same full64 actor/critic
@@ -64,3 +63,58 @@ no promotion or return claim from smoke acceptance.
 
 [Acceptance](smoke-summary.json), [frozen restoration](smoke-restoration.json),
 [runtime approval](runtime-profile.json), [metering and cleanup](smoke-compute.json).
+
+
+## Completed fixed squashed-action comparison
+
+Both100k seed11 CPU runs completed in Google Colab/defaultPython3.13.16 from
+frozenfa63d6c90b347c51d460e82e6d08dd6f757e6b23. Fixed family closed: no
+transform/temperature/log_std/model/reward/step grid, extension, confirmation or
+promotion. Large conditional Gaussian boundary mass did not establish benefit
+from this specific support-aware parameterization.
+
+| Arm | Selected return | Selected step | Final return |
+| --- | ---: | ---: | ---: |
+| Native Gaussian |19.6245%|80,000|18.4844%|
+| Tanh-squashed Gaussian |15.4740%|80,000|5.1381%|
+| Matched holding |30.6019%|—|30.6019%|
+
+Separate26-symbol mean net total returns on repeatedly reused2021–2023 development
+history, not annualized, a combined portfolio or independent test. Candidate
+selected−4.1505pp/final−13.3463pp versus control both fail2pp. Final stocks
+fall15.2958pp and ETFs2.6239pp versus control. Mean symbol drawdown improves
+0.6867pp but cannot offset failed return gates.
+
+Candidate selected stocks15.9937%/ETFs12.6157% versus holding32.6265%/19.4660%;
+median stock excess−11.4972pp. Final stocks6.4716%/ETFs−2.1964%, excess
+−26.1549/−21.6625pp, median stock excess−18.4688pp. All selected/final absolute
+stock/ETF/median−2pp gates fail. Reporting-only declining-stock joint positive
+total AND short P&L1/3 selected→0/3 final. No robust short-profit evidence.
+
+## Restoration and operational evidence
+
+Actual selected/final saved models/full Adam records restore exactly, final
+20,000 actual updates/1000 nominal epochs,61,513 parameters, zero decay/eps1e-5.
+Candidate transformed distribution/Jacobian/flags and control native identity
+validate. Pinned initial tensors/CPU RNG and actual symbol/year sampling match.
+Fresh control selected/final tensors and sampling exactly reproduce prior control.
+312 exact frozen action/hidden/cell/reset/repeat predictions including smokes,
+immutable normalization and schema/feed/nonfinite rejection pass. No local fitting,
+provider requests, retired2024+ access or orders.
+
+All four smoke/screen sessions retrieved and verified stopped. Conservative
+project38.90354117/150, remaining111.09645883; shared study increment0.08707230
+including setup/idle/transfers/failures/shutdown. Official account349.10, zero
+rate/assignments; original project150/130/account150/170 and2-unit study allowance
+retained. Screen durations1097.8909s control/1042.6297s candidate include training/
+evaluation; they do not establish a general speed advantage.
+
+Interactive comparison: `artifacts/squashed-actions/summary.html`; compact10k
+curves retain incremental percentage-point changes. Full models/checkpoints/
+reports/transports/source/data/ledger retained. Next server-verified publication,
+duplicate-only cleanup and saved-path diagnosis before a distinct hypothesis.
+Overall robust-return objective remains unachieved.
+
+[Strict report](summary.json), [10k curves](learning-curves.csv),
+[frozen restoration](restoration.json), [fresh control reproduction](control-reproduction.json),
+[metering/owned cleanup](compute.json).

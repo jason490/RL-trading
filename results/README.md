@@ -124,6 +124,14 @@ conditional any-component out-of-bounds mass~79% on fixed flat-account training
 prefixes; model/Adam/RNG/normalization unchanged, no fitting or new Colab units.
 Supports a distinct preregistered bounded-policy hypothesis, not causal proof.
 
-[Prepared squashed-action comparison](squashed-actions-2026-10-23/README.md):
+[Completed squashed-action comparison](squashed-actions-2026-10-23/README.md):
 explicit transformed Gaussian sampling/likelihood, unchanged full64 tensors/data/
-optimizer. Construction/checkers and focused contracts pass; Colab smokes pending.
+optimizer. Completed100k screen failed; details and verified cleanup in the dated result.
+
+
+## Fixed squashed-action comparison completed
+
+[Squashed Gaussian](squashed-actions-2026-10-23/README.md) selected/final15.47/5.14%
+versus native19.62/18.48% and holding30.60%. Fixed gates fail; family closed with
+no extension or transform/noise grid.312 frozen checks, four sessions stopped;
+project38.903541/account349.10. Publication and saved-path diagnosis next.

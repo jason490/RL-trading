@@ -1630,3 +1630,17 @@ candidate versus matched native control, same full64 tensors/model/data/reward/
 optimizer/100k, no gSDE or input preprocessing change. Existing2pp relative,
 stock/ETF/median/risk gates and conditional11/23/37/prospective requirements
 retained. Shared2-unit baseline38.81646887344713; no implementation/allocation yet.
+
+
+### 2026-10-23 — fixed squashed-action screen failed
+
+Two100k Colab CPU runs completed; native control selected/final19.6245/18.4844%,
+squashed15.4740/5.1381%, matched holding30.6019%. Relative and absolute stock/ETF/
+median gates fail; final stock6.4716%/ETF−2.1964%. Fixed family closed with no
+transform/temperature/log_std grid/extension/confirmation.312 frozen checks
+including smokes, actual model/Adam/distribution/initialization/year proofs pass;
+fresh control exactly reproduces prior tensors/sampling. All four owned sessions
+retrieved/stopped. Project38.90354117/account349.10 zero assignments. Large
+conditional boundary mass did not demonstrate a causal cure or policy improvement.
+Full artifacts retained; publication and saved-path diagnosis next. Robust-return
+objective unachieved. [Evidence](../results/squashed-actions-2026-10-23/README.md).
