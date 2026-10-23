@@ -148,3 +148,13 @@ cap/schema rejection, legacy L2/history regressions, overflow and account floors
 passes both immutable-dataset Gymnasium/SB3 checkers, full64 recurrent forwards,
 61,513 parameters and exact shared initial tensors/RNG without optimizer steps.
 No actual smoke performance is implied by construction acceptance.
+
+### Actual Colab smoke acceptance
+
+Both512 CPU smokes on defaultPython3.13.16 from cleanac497107… pass156 exact
+frozen recurrent predictions/reset checks, immutable preprocessing, actual saved
+models/Adam, identical initial tensors/RNG and measured sampling. Both owned
+sessions retrieved/stopped. Runtime85.4786s control/151.7602s clip5 gives fixed
+projection3970.4465s including1200s reserve, below7200s. Exact accepted bytes bind
+the prepared100k plans; no smoke-return selection. Project38.76724093/account349.22,
+zero rate/assignments. [Evidence](../results/input-clipping-2026-10-23/smoke-summary.json).

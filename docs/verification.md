@@ -2224,3 +2224,8 @@ actual study smokes remain. [Evidence](../results/input-clipping-2026-10-23/READ
   `results/input-clipping-2026-10-23/construction.json`.
 - Additional shared fleet/budget/job/artifact/control regression suite:41 pass
   (197 checks across the two focused invocations). Original `plan.html` preserved.
+- Actual input-clipping Colab smokes: both512 CPU/defaultPython3.13.16 complete;
+  156 exact frozen sequence/reset predictions, actual saved optimizer/model records,
+  unchanged normalization and matched initial tensors/RNG/sampling pass. Both owned
+  sessions retrieved and stopped; project38.76724093, account349.22 zero assignments.
+  Runtime projection3970.4465s passes7200s; fixed100k plans prepared, not allocated.

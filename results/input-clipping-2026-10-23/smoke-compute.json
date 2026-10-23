@@ -1,0 +1,92 @@
+{
+  "project_units": 38.767240925943135,
+  "remaining_project_units": 111.23275907405687,
+  "study_start_units": 38.746179136005324,
+  "study_incremental_units": 0.021061789937810715,
+  "measured_units": 0.009999999999990905,
+  "estimated_units": 0.02106178993781408,
+  "charged_units": 0.02106178993781408,
+  "official_account_balance": 349.22,
+  "official_rate": 0,
+  "official_assignments": 0,
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-48dfad256bfe": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-cf8459ccba8d": {
+      "status": "stopped",
+      "phase": "verify"
+    }
+  },
+  "meter_readings": [
+    {
+      "time": 1792761376.7308698,
+      "balance": 349.23,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792761383.0583596,
+      "balance": 349.23,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761443.552022,
+      "balance": 349.23,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761503.9745977,
+      "balance": 349.23,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761564.609751,
+      "balance": 349.23,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761624.6587734,
+      "balance": 349.22,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761684.6056855,
+      "balance": 349.22,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761745.1702783,
+      "balance": 349.22,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792761805.2291102,
+      "balance": 349.22,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792761833.4507422,
+      "balance": 349.22,
+      "rate": 0.0,
+      "assignments": 0
+    }
+  ],
+  "study_limit_units": 2,
+  "project_ceiling_units": 150,
+  "project_teardown_units": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "automatic_restart": false,
+  "test_evaluated": false
+}

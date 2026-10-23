@@ -1722,3 +1722,9 @@ untrained construction/environment checkers. No local training or retired-test
 access. Colab512 smokes/runtime approval required before fixed100k paired screen;
 original gates,2-unit study allowance,150/130 project and150/170 account safeguards
 unchanged. Overall robust-return objective remains unachieved.
+
+Actual clipping smokes subsequently accepted: two512 CPU Colab runs/defaultPython
+3.13.16,156 exact frozen predictions, actual Adam/models and matched initialization/
+sampling restored. Both owned sessions retrieved/stopped. Project38.76724093,
+account349.22 zero assignments. Runtime projection3970.4465s permits prepared fixed
+100k screen plans; screen not yet allocated, no clipping return claim.

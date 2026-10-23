@@ -53,3 +53,28 @@ both actual immutable-dataset checkers/full64 forwards and exact pinned starting
 tensors/RNG without learning. Two512 Colab smokes and measured runtime acceptance
 remain before100k. Official preallocation usage349.23, rate0, assignments0;
 original project38.74617914/shared2-unit baseline unchanged.
+
+## Actual Colab smokes accepted
+
+Both512-transition CPU runs from frozenac497107a444ec5e1c8771bc01362092c34f56ae
+completed on defaultPython3.13.16.156 exact frozen action/hidden/cell/reset/repeat
+checks, immutable normalization/schema/feed rejection, actual saved models/Adam,
+pinned common initial tensors/RNG and identical measured symbol/year sampling pass.
+Both selected/final optimizer records restore; each run performed80 actual Adam
+updates with zero decay and eps1e-5. Both owned sessions retrieved and verified
+stopped. No smoke returns selected or changed settings.
+
+Control duration85.4786s and clip5 duration151.7602s are hardware-dependent whole
+training/evaluation measurements. Fixed conservative projection3970.4465s
+(66.2minutes including1200s reserve) passes7200s. Exact accepted-smoke bytes bind
+the prepared two100k screen plans. This projection is not a runtime guarantee.
+
+Conservative project38.76724093/150, remaining111.23275907; study increment
+0.02106179 including setup/idle/transfers/shutdown versus rounded measured account
+debit0.01. Official account349.22, zero rate/assignments. Original study baseline
+38.746179136005324/shared2-unit allowance and all project/account reserves retained.
+Full models/checkpoints/reports/transports and original data/source/ledger retained.
+Next: same-source fixed100k paired screen; no performance result/promotion yet.
+
+[Smoke acceptance](smoke-summary.json), [frozen checks](smoke-restoration.json),
+[runtime approval](runtime-profile.json), [metering and cleanup](smoke-compute.json).

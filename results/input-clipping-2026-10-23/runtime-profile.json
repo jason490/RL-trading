@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "protocol_sha256": "ad11f4beb9022b73ad9c1d7843a5714614fc4cc02a251a7c4d340afbd8163877",
+  "smoke_acceptance_file": ".runtime/clipping-smoke-acceptance.json",
+  "smoke_acceptance_sha256": "0020e8625eb0fc507b31c44878ad6c559c72a05717f9c8ffede9e5e856690092",
+  "durations_seconds": {
+    "control": 85.47861702199998,
+    "clip5": 151.76020278600004
+  },
+  "projection": {
+    "projected_seconds": 3970.4464794476207,
+    "smoke_duration_ratio": 1.7754171519520594,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  }
+}
