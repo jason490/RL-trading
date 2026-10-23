@@ -13,7 +13,7 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 def prepare(root,study="cash"):
     import importlib
-    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard","capacity":"recurrent_capacity","training-history":"training_history","l2":"recurrent_regularization"}[study]
+    module_name={"cash":"recurrent_cash","alignment":"recurrent_alignment","recurrent-state":"recurrent_state","guard":"recurrent_guard","capacity":"recurrent_capacity","training-history":"training_history","l2":"recurrent_regularization","clipping":"input_clipping"}[study]
     arms=importlib.import_module("rl_stocks.training."+module_name).protocol()["arms"]
     state=dict(status='complete',cleanup_verified=True,completed={});accepted={'cells':{}}
     for arm in arms:
@@ -78,7 +78,7 @@ def test_guard_audits_exact_v2_pair_without_opening_dataset(tmp_path,monkeypatch
     assert '.runtime/guard-screen-v2-state.json' in result['source_files_sha256']
 
 
-@pytest.mark.parametrize('study,arms',[('capacity',['control','larger']),('training-history',['full','recent']),('l2',['control','l2'])])
+@pytest.mark.parametrize('study,arms',[('capacity',['control','larger']),('training-history',['full','recent']),('l2',['control','l2']),('clipping',['control','clip5'])])
 def test_exact_pair_and_changed_report_rejection(tmp_path,monkeypatch,study,arms):
     state_path,_=prepare(tmp_path,study);monkeypatch.chdir(tmp_path)
     result=module.audit(study)

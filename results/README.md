@@ -113,3 +113,7 @@ Colab integration/smokes remain before training.
 [Clipping](input-clipping-2026-10-23/README.md) failed: selected/final24.70/18.57%
 versus control19.62/18.48% and holding30.60%. No cap sweep or extension.312 frozen
 checks including smokes, four sessions stopped, project38.816469/account349.17.
+
+[Clipping saved-action diagnosis](clipping-actions-2026-10-23/README.md):
+increased short exposure/costs and deteriorating net short contribution at final;
+104 saved episodes, no causal claim, fitting or additional Colab units.

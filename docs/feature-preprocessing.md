@@ -179,3 +179,12 @@ Clipping publication:16 GitHub server-size/SHA-verified assets, four complete
 bundles/reports; only two duplicate archives35,719,386bytes removed,146 retained
 hashes unchanged. Strict summary byte-identical after actual model/Adam restoration.
 [Receipts](../results/input-clipping-2026-10-23/release-verification.json).
+
+
+Clipping saved-action audit: four accepted phases/104 episodes,31 focused tests.
+Selected→final closing short exposure stock3.47→6.87%/ETF1.15→10.59%; net short
+contribution−0.99→−4.04pp/+1.73→−5.98pp, incremental cost drag5.11→5.92pp/
+4.90→6.50pp. Observational relationships, not causal attribution or justification
+for disabling shorts/reward edits. Exact source hashes preserved; no fitting/data
+access/Colab allocation. Family remains closed; distinct hypothesis review before
+new training. [Evidence](../results/clipping-actions-2026-10-23/README.md).
