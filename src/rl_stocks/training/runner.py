@@ -122,6 +122,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if study_protocol_sha256==CAPACITY_PROTOCOL:
         capacity_arm=capacity_parameters(overrides,smoke);validate_capacity_payload(dataset)
         capacity_shared=apply_capacity_initialization(model,capacity_arm,seed,smoke)
+    from rl_stocks.training.training_history import (PROTOCOL_SHA256 as HISTORY_PROTOCOL,identify_parameters as history_parameters,
+        apply_initialization as apply_history_initialization,model_record as history_record,initialization_entry as history_entry,
+        validate_payload as validate_history_payload,ROOT as HISTORY_ROOT)
+    if study_protocol_sha256==HISTORY_PROTOCOL:
+        recency_arm=history_parameters(overrides,smoke,Path(dataset_path).name);validate_history_payload(dataset,recency_arm)
+        history_shared=apply_history_initialization(model,recency_arm,seed,smoke)
     initialized=initialize_policy(model,initialization,algorithm)
     from rl_stocks.rl.registry.distribution import model_distribution
     action_distribution=model_distribution(model)
@@ -185,6 +191,14 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['capacity_arm']=capacity_arm
         metadata['capacity_shared_initialization']=capacity_shared
         metadata['capacity_initialization']=capacity_record(model)
+    if study_protocol_sha256==HISTORY_PROTOCOL:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'recency-initialization.npz'
+        shutil.copyfile(HISTORY_ROOT/history_entry(recency_arm,seed,smoke)['file'],snapshot)
+        if checksum(snapshot)!=history_shared['artifact_sha256']:raise ValueError('history snapshot checksum mismatch')
+        metadata['recency_arm']=recency_arm
+        metadata['recency_shared_initialization']=history_shared
+        metadata['recency_initialization']=history_record(model)
     if algorithm=='td3':
         from rl_stocks.training.td3_state import PROTOCOL_SHA256 as TD3_PROTOCOL,initialization_record as td3_initialization_record
         if study_protocol_sha256==TD3_PROTOCOL:metadata['td3_initialization']=td3_initialization_record(model)
@@ -253,6 +267,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==CAPACITY_PROTOCOL:
             metadata['capacity_final']=capacity_record(model)
             metadata['capacity_selected']=capacity_record(selected)
+        if study_protocol_sha256==HISTORY_PROTOCOL:
+            metadata['recency_final']=history_record(model)
+            metadata['recency_selected']=history_record(selected)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

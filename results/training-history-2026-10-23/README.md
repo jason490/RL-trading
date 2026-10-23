@@ -76,3 +76,16 @@ selected+final2pp relative improvement and stock/ETF/median−2pp absolute gates
 Measured decision/execution year counters implemented and required for acceptance.
 23 subset/coverage checks pass. Dedicated Colab integration/construction/smokes
 remain before allocation. This is prepared methodology, not performance evidence.
+
+## Integrated construction acceptance
+
+Version28 plans/worker/runner/retrieval/frozen-package/report acceptance integrated
+under distinct `recency` runtime names, preserving older historical interfaces.
+111 focused tests pass, including actual tensor/RNG construction, strict artifact
+and year-count rejection, runtime-profile binding, report routing and historical/
+capacity/guard/account-floor regressions. Source compiles. Actual two immutable
+smoke tasks validate and both environments/checkers/untrained recurrent forwards
+pass. [Construction](construction.json); [commands and contracts](../../docs/training-history.md).
+No local learning, new Colab allocation or performance evidence. Commit/freeze,
+usage/default-Python check and two512 CPU smokes next;100k plans remain blocked
+until actual accepted smoke bytes and runtime approval are available.

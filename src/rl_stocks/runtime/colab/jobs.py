@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==27:
+    if plan.get('version')==28:
+        try:expected=recency_plan(**plan['recency_study'],profile=plan.get('runtime_acceptance'))
+        except (KeyError,TypeError):raise ValueError('malformed recency plan') from None
+        if plan!=expected:raise ValueError('unsupported recency plan')
+    elif plan.get('version')==27:
         try:expected=capacity_plan(**plan['capacity_study'],profile=plan.get('runtime_acceptance'))
         except (KeyError,TypeError):raise ValueError('malformed capacity plan') from None
         if plan!=expected:raise ValueError('unsupported capacity plan')
@@ -476,6 +480,23 @@ def capacity_plan(arm,seed=11,smoke=False,profile=None):
     plan=alignment_plan('posthoc_unit',seed,smoke);plan.pop('alignment_study')
     plan.update(version=27,capacity_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
         initialization_contract=initialization_spec(arm,seed,smoke))
+    plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=params)
+    if not smoke:plan['runtime_acceptance']=deepcopy(profile)
+    return plan
+
+
+def recency_plan(arm,seed=11,smoke=False,profile=None):
+    from copy import deepcopy
+    from rl_stocks.training.training_history import PROTOCOL_SHA256,overrides,initialization_spec,validate_runtime_profile,protocol
+    if type(seed) is not int or seed not in (11,23,37) or type(smoke) is not bool or smoke and seed!=11:
+        raise ValueError('unsupported history seed/phase')
+    params=overrides(arm,smoke)
+    if smoke and profile is not None:raise ValueError('smokes precede runtime acceptance')
+    if not smoke:validate_runtime_profile(profile)
+    plan=alignment_plan('posthoc_unit',seed,smoke);plan.pop('alignment_study')
+    plan.update(version=28,recency_study=dict(arm=arm,seed=seed,smoke=smoke),protocol_sha256=PROTOCOL_SHA256,
+        initialization_contract=initialization_spec(arm,seed,smoke))
+    plan['dataset_contract']['identity']=protocol()['datasets'][arm]
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=params)
     if not smoke:plan['runtime_acceptance']=deepcopy(profile)
     return plan

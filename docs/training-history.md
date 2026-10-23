@@ -88,3 +88,58 @@ Frozen protocol canonical SHA-256:
 `fefff889ad189136e55b2689fd0532f50e8a636f7cdf96b94e4008449e653a49`.
 Changes to this numeric protocol after commitment require an explicit versioned
 new study; do not silently alter gates in response to results.
+
+## Version28 Colab integration and construction acceptance
+
+`recency_plan`/`recency_study` distinguish this comparison from the existing
+version15 historical augmentation experiment. Old `history_plan` and its scripts
+retain their interfaces. Common fleet, bootstrap, metering, account-floor,
+checkpoint integrity and retrieval logic remain shared.
+
+`training/training_history.py` binds exact protocol/dataset identities, per-arm
+payloads, common64-unit initial tensors/RNG and restored optimizer records.
+`runtime/colab/recency_artifacts.py` requires actual measured year evidence and
+independent symbol/year margins, exact input snapshot, checkpoint, execution,
+normalization and frozen metadata. Missing counters reject new-study retrieval.
+Source-export package includes `recency-initialization.npz` without raw bars.
+
+The actual two immutable smoke payloads validate before allocation. Both source
+environments pass Gymnasium/SB3 checkers; untrained recurrent predictions and
+unchanged model/optimizer records pass. See [construction evidence](../results/training-history-2026-10-23/construction.json).
+111 focused contracts/regressions pass, including wrong dataset/model/optimizer/
+snapshot/missing-year/future-year rejection, runtime-profile stale/failed/overdue
+blocking, report arm/dataset routing, confirmation gating, prior historical/
+capacity/guard contracts and account floor. Compilation passes; no local fitting.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+ scripts/build_recency_jobs.py --smoke --output .runtime/recency-smoke-jobs.json
+```
+
+Commit/freeze source and verify official usage/default Python before running
+those tasks with the existing central fleet. Retain study baseline38.60166524433091
+and shared2-unit allowance across all phases/attempts. Full64 architecture in
+both512 smokes; no smoke-return selection. After exact frozen checks, model/
+optimizer restoration, measured-year acceptance and verified owned cleanup:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/accept_recency_smokes.py \
+ --state .runtime/recency-smoke-state.json \
+ --restoration .runtime/recency-smoke-restoration.json \
+ --source-proof .runtime/recency-source-v1/export-proof.json \
+ --output .runtime/recency-smoke-acceptance.json
+PYTHONPATH=src .venv/bin/python scripts/build_recency_jobs.py \
+ --output .runtime/recency-screen-jobs.json
+```
+
+The accepted file's exact raw bytes bind the generated runtime profile. Controller
+validation checks it against actual acceptance before allocation. Preserve that
+file unchanged; screen report requires the same profile via `--runtime-profile`.
+Long/confirmation tasks reject absent approval or failing screen evidence.
+Same per-symbol draw counts are required; year distributions/offsets intentionally
+differ. Initial-manifest hash in this protocol uses canonical JSON digest;
+reused capacity initialization loader independently verifies its original raw
+manifest hash and snapshot bytes. No new untrained files or trained weights reused.
+
+Actual two512 Colab smokes remain before100k; no allocation or new usage yet.
+Project38.60166524/150, last official account349.34, zero assignments/rate.

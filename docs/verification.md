@@ -1927,3 +1927,12 @@ symbol-total rejection tested. Existing callback/final metadata paths persist
 new counters; no training/provider requests/Colab allocation. Historical artifacts
 without counters remain accepted and do not prove year visitation. Project
 38.60166524 unchanged. See [year-log contract](training-history.md).
+
+Training-history version28 integration:111 focused tests pass; actual two immutable
+payloads/environment Gymnasium+SB3 checkers/untrained64-unit recurrent forward
+and equal initial tensor/RNG checks pass. Missing/corrupt measured-year evidence,
+wrong dataset/model/optimizer/checkpoint, stale/failed runtime profile and invalid
+confirmation reject. Older historical/capacity/guard/account-floor regressions
+pass; compile passes. No local fitting or Colab allocation; actual two512 smokes
+remain required. Project38.60166524 unchanged.
+[Evidence](../results/training-history-2026-10-23/README.md).

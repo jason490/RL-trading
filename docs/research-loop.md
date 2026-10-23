@@ -1254,3 +1254,11 @@ median−2pp targets and shared2-unit allowance from38.60166524433091. Failure c
 that single window comparison, no year grid.23 subset/coverage checks pass.
 Dedicated Colab contracts/checkers/smokes still required, no allocation.
 [Details](training-history.md).
+
+Training-history version28 integration and actual construction acceptance pass:
+111 focused regressions, both actual datasets/checkers/untrained forwards and
+immutable smoke task preflight. Distinct recency runtime names preserve older
+historical study. Missing year logs reject new artifacts; exact actual smoke
+acceptance bytes and runtime projection required before100k. Commit/freeze and
+official usage/Python check before two512 CPU smokes; no allocation/new units.
+[Evidence](../results/training-history-2026-10-23/README.md).
