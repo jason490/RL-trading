@@ -2101,3 +2101,10 @@ Both actual datasets/checkers/untrained full64 forwards and two immutable tasks
 validate. Source compiles, no local fitting/Colab allocation. Actual two512 CPU
 smokes and bound runtime approval remain before100k. Project38.68329334 unchanged.
 [Evidence](../results/recurrent-regularization-2026-10-23/README.md).
+
+Actual recurrent L2 smokes accepted: two512 CPU/defaultPython3.13.16 runs,
+156 exact frozen recurrent checks, correct saved coupled decay/epsilon/moments,
+initialization/sampling/year/checkpoint proof. Both owned sessions stopped.
+Projection3426.6427s passes7200s; actual acceptance bytes bind100k plans. Project
+38.70365471, study increment0.02036137, account349.26 zero rate/assignments.
+[Evidence](../results/recurrent-regularization-2026-10-23/README.md).

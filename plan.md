@@ -1618,3 +1618,9 @@ explicit eps1e-5/coupled Adam verified without fitting/data access. Shared2-unit
 allowance from38.68329334; unchanged gates. Dedicated integration/checkers/smokes
 remain before allocation; no failed-family sweep or performance claim.
 [Method](docs/recurrent-regularization.md).
+
+2026-10-23: recurrent L2 actual two512 CPU smokes accepted.156 frozen predictions,
+actual coupled coefficient/epsilon/moments/model/sampling/year/checkpoint proof;
+both stopped. Runtime3426.6427s passes7200s, exact acceptance binds100k plans.
+Same-source two100k seed11 screen next; project38.70365471/150, account349.26
+zero rate/assignments. [Evidence](results/recurrent-regularization-2026-10-23/README.md).

@@ -1,8 +1,7 @@
 # Fixed recurrent PPO regularization comparison
 
-Status: distinct numeric protocol and actual untrained optimizer construction
-prepared; dedicated validation/integration, actual environment checkers and Colab
-smokes remain before training. No allocation or performance result.
+Status: actual Colab smokes accepted; fixed100k screen next. Earlier sections
+retain preparation history. No research performance or promotion claim.
 
 ## Hypothesis and scope
 
@@ -128,3 +127,17 @@ failed/over-deadline approval; confirmation requires a passing same-protocol
 screen. Strict final report uses `scripts/report_recurrent_l2.py --state ...
 --runtime-profile .runtime/l2-screen-jobs.runtime-profile.json --output ...`.
 Actual two512 Colab smokes remain before100k; no allocation or new usage yet.
+
+## Actual Colab smoke acceptance and runtime approval
+
+Two512 CPU/defaultPython3.13.16 runs from1d640ee completed/retrieved and verified
+stopped.156 exact frozen sequence/repeat/reset predictions, normalization/input
+rejection and actual model/optimizer/checkpoint restoration pass. Both full64
+architectures61,513 parameters,80 Adam updates/40 nominal epochs. Correct coupled
+Adam0/0.0001 and explicit eps1e-5 verified in actual saved models; same initial
+weights/CPU RNG and actual sampling/year margins. No smoke-return selection.
+Durations144.9779/151.7729s give conservative3426.6427s/57.1min projection with
+1200s reserve, under7200s. Exact actual acceptance binds prepared100k plans.
+Same-source seed11 screen next. Project38.70365471, study increment0.02036137,
+official account349.26 zero rate/assignments; original baseline/reserves retained.
+[Evidence](../results/recurrent-regularization-2026-10-23/README.md).

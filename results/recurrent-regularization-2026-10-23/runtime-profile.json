@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "protocol_sha256": "f47e93a8fbe3911a2bcd872b7e26e71a7f5f7730a6cd6bd09daace9c5b40f41a",
+  "smoke_acceptance_file": ".runtime/l2-smoke-acceptance.json",
+  "smoke_acceptance_sha256": "94180660f4edda0d4fcb06a0daa1eff689b9072ec3da2cd33ecfd26d55d5e65d",
+  "durations_seconds": {
+    "control": 144.9779060200001,
+    "l2": 151.77292422799997
+  },
+  "projection": {
+    "projected_seconds": 3426.6427141037066,
+    "smoke_duration_ratio": 1.0468693361253436,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  }
+}

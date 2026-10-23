@@ -1447,3 +1447,11 @@ coefficient/epsilon/coupling plus required years/checkpoint/initialization resto
 legacy formats unchanged. Commit/freeze and usage/Python check before two512 CPU
 smokes, actual acceptance/runtime bound before100k. No allocation/new units.
 [Evidence](../results/recurrent-regularization-2026-10-23/README.md).
+
+Recurrent L2 actual two512 CPU smokes accepted:156 exact frozen checks, restored
+coefficient/epsilon/coupled Adam/model/moments, same initial tensors/RNG and
+sampling/year/checkpoint proof. Both stopped. Actual-bound runtime projection
+3426.6427s/57.1min passes7200s; same-source two100k seed11 screen next. Project
+38.70365471, original study baseline38.68329334472413/shared2-unit allowance
+retained; official account349.26 zero rate/assignments. No smoke-return tuning.
+[Evidence](../results/recurrent-regularization-2026-10-23/README.md).

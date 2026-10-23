@@ -83,5 +83,5 @@ actual year logging and a frozen matched protocol remain prerequisites.
 
 [Prepared recurrent PPO regularization](recurrent-regularization-2026-10-23/README.md):
 fixed Adam decay0/0.0001, same full-history model/data/steps.138 integration checks
-and actual untrained construction pass. Colab smokes remain before100k; no
-performance evidence or promotion.
+and actual untrained construction pass. Actual Colab smokes accepted with exact saved optimizer/frozen proof;
+runtime approval passes,100k screen next. No research performance or promotion.
