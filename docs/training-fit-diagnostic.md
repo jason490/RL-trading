@@ -153,3 +153,20 @@ committed protocol6f2e10c and actual replay. All sessions stopped, project38.309
 retained. [Evidence](../results/recurrent-fit-2026-10-22/README.md).
 
 Recurrent fitted-period charts published: [release](https://github.com/jason490/RL-trading/releases/tag/recurrent-fit-2026-10-22), six server sizes/digests verified,6,722,998 duplicate bytes removed and30 retained hashes unchanged. Original complete paths retained, no model duplication or new Colab charge. [Evidence](../results/recurrent-fit-2026-10-22/README.md).
+
+## History-model paired training-window diagnosis
+
+[Fixed protocol](../configs/experiments/history_fit_diagnostic.json) compares saved
+full/recent selected/final seed11 models on the same eligible2018–2020 window.
+`common_training_views` checks exact accounting bars/features/ATR, schema, names
+and preprocessing across both immutable sources. Same original26 panel, unit-sign
+execution,21 masked observations and simulator; no normalization or model fitting.
+The complete optimizer fingerprint is shared in `reporting/optimizer.py`; the
+existing recurrent-fit script import remains compatible.
+
+39 focused fit/optimizer/history-contract checks pass. Actual replay remains
+pending until committed code/protocol. Different market periods and missing
+bar-level visitation proof limit interpretation; descriptive−2pp training flags
+cannot select checkpoints or override failed development gates. Source hashes,
+weights, optimizer moments and normalization must remain unchanged.
+[Method and command](../results/history-fit-2026-10-23/README.md).

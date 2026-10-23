@@ -107,3 +107,36 @@ def test_recurrent_fit_protocol_and_full_optimizer_fingerprint():
     m=fixture();before=module.optimizer_fingerprint(m)
     next(iter(m.policy.optimizer.state.values()))['exp_avg'].flatten()[0]=.5
     assert module.optimizer_fingerprint(m)!=before
+
+
+def test_paired_training_views_ignore_other_eligible_history_but_match_window_exactly():
+    from rl_stocks.evaluation.training_fit import common_training_views
+    full=data();full.update(schema='fixture',names=['x']);recent=deepcopy(full)
+    for key in ['bars','features','atr']:recent['episodes']['train'][key]=recent['episodes']['train'][key][1:]
+    original=deepcopy({'full':full,'recent':recent})
+    views=common_training_views(original)
+    assert views['full']['episodes']==views['recent']['episodes']
+    assert original=={'full':full,'recent':recent}
+
+
+@pytest.mark.parametrize('field',['features','atr','price','normalizer','schema','names'])
+def test_paired_replay_rejects_different_inputs_or_accounting_bars(field):
+    from rl_stocks.evaluation.training_fit import common_training_views
+    full=data();full.update(schema='fixture',names=['x']);recent=deepcopy(full)
+    if field in ['features','atr']:recent['episodes']['train'][field][2]=99
+    elif field=='price':recent['episodes']['train']['bars'][2]['close']=99
+    elif field=='normalizer':recent['normalizer']={'fixed':False}
+    elif field=='schema':recent['schema']='other'
+    else:recent['names']=['y']
+    with pytest.raises(ValueError,match='exact common'):common_training_views({'full':full,'recent':recent})
+
+
+def test_history_fit_refuses_uncommitted_implementation_before_opening_data(tmp_path,monkeypatch):
+    import importlib.util,sys
+    from pathlib import Path
+    spec=importlib.util.spec_from_file_location('history_fit',Path(__file__).resolve().parents[1]/'scripts/diagnose_history_fit.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    monkeypatch.setattr(module.subprocess,'check_output',lambda *a,**k:b'uncommitted mismatch')
+    monkeypatch.setattr(sys,'argv',['fit','--output',str(tmp_path/'summary.json'),'--artifacts',str(tmp_path/'artifacts')])
+    with pytest.raises(ValueError,match='commit verified'):module.main()
+    assert not (tmp_path/'artifacts').exists() and not (tmp_path/'summary.json').exists()

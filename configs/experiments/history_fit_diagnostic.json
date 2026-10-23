@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "name": "history-fitted-period-diagnostic-2026-10-23",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "window_protocol_sha256": "0ea7aa3d793a6f0469234883dba2ddef07b135427989f4eb728e094c0b696196",
+  "anchor_session": "2017-12-29",
+  "first_execution_session": "2018-01-02",
+  "last_session": "2020-12-02",
+  "source_state": ".runtime/recency-screen-state.json",
+  "source_summary": "results/training-history-2026-10-23/summary.json",
+  "source_inventory": ".runtime/recency-retained-hashes.json",
+  "arms": [
+    "full",
+    "recent"
+  ],
+  "phases": [
+    "selected",
+    "final"
+  ],
+  "source_final_steps": 100000,
+  "seed": 11,
+  "observation_profile": "execution_masked",
+  "symbols": "Exactly the original26 evaluation_symbols in the immutable manifest; additional85 symbols remain training-source only and are excluded from this comparison",
+  "execution": "Use each accepted arm's declared evaluation exposure mode and unchanged default simulator/costs; carry recurrent state within each episode and reset per symbol",
+  "benchmark_flags": {
+    "minimum_stock_and_etf_excess_pp": -2.0,
+    "minimum_median_stock_excess_pp": -2.0
+  },
+  "hypothesis": "Describe whether full/recent saved selected-to-final deterioration also appears on identical eligible2018\u20132020 training-period rows. Replay does not fit or select checkpoints and cannot identify a sole generalization cause.",
+  "interpretation": "Identical common source features/normalization/accounting window across both arms, fixed before replay. Eligibility and year counts do not prove every bar was actually sampled. Different training/development market periods limit causal interpretation. Flags never override failed development gates or reopen the history family.",
+  "constraints": [
+    "No fitting, optimizer steps, normalization update, provider request or Colab allocation",
+    "No retired-test access; preserve train labels and original shared ledger",
+    "Both preexisting selected/final weights only; no checkpoint selection, fitting, threshold sweep, extension or rescue of the closed history-composition family",
+    "Commit this fixed protocol and verified implementation before running the actual replay",
+    "Verify accepted metadata/model hashes and unchanged tensors, optimizer states, preprocessing and source files; keep full derived paths outside Git and compact summaries tracked"
+  ],
+  "datasets": {
+    "full": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "recent": "5fb2be66917f4498f0589f063ee60640e1d636f9cd4204e347aa033b3229f732"
+  },
+  "source_protocol_sha256": "fefff889ad189136e55b2689fd0532f50e8a636f7cdf96b94e4008449e653a49"
+}

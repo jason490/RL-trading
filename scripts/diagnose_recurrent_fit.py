@@ -1,8 +1,8 @@
 """Fixed saved recurrent policies on eligible training history; no fitting."""
-import argparse,hashlib,json,subprocess
+import argparse,json,subprocess
 from pathlib import Path
 import torch
-from rl_stocks.core.contracts import digest,canonical
+from rl_stocks.core.contracts import digest
 from rl_stocks.data.generation.datasets import read_dataset
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.evaluation.training_fit import (PROTOCOL_SHA256 as WINDOW_SHA,protocol as window_protocol,
@@ -29,16 +29,7 @@ def protocol():
     return spec
 
 
-def optimizer_fingerprint(model):
-    state=model.policy.optimizer.state_dict();h=hashlib.sha256(canonical(state['param_groups']))
-    for parameter,values in sorted(state['state'].items()):
-        h.update(str(parameter).encode())
-        for name,value in sorted(values.items()):
-            h.update(name.encode())
-            if isinstance(value,torch.Tensor):
-                h.update(str((tuple(value.shape),value.dtype)).encode());h.update(value.detach().cpu().numpy().tobytes())
-            else:h.update(canonical(value))
-    return h.hexdigest()
+from rl_stocks.reporting.optimizer import optimizer_fingerprint
 
 
 def main():

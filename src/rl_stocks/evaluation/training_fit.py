@@ -60,3 +60,15 @@ def evaluate_common_recurrent_training_window(model, window, config, exposure_mo
         raise ValueError('declared training-diagnostic exposure mode required')
     view=training_window(window,original_panel_only=True)
     return _evaluate(model,view,'train',config,'execution_masked',exposure_mode)
+
+
+def common_training_views(datasets):
+    """Require exact common model inputs and accounting bars across paired sources."""
+    if not isinstance(datasets,dict) or set(datasets)!={'full','recent'}:
+        raise ValueError('both full/recent sources required')
+    views={a:training_window(data,original_panel_only=True) for a,data in datasets.items()}
+    reference=views['full']
+    for view in views.values():
+        if any(digest(view[key])!=digest(reference[key]) for key in ('episodes','normalizer','names','schema')):
+            raise ValueError('exact common training window and preprocessing required')
+    return views

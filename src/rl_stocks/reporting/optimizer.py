@@ -1,5 +1,7 @@
 """Read-only PPO/Adam evidence; counters and logged KL are not causal proof."""
 import math
+import hashlib
+from rl_stocks.core.contracts import canonical
 from statistics import median
 import torch
 from rl_stocks.training.curves import latest_points
@@ -67,3 +69,15 @@ def training_diagnostics(history):
                    max=max(r[k] for r in records)) for k in fields}
     return dict(points=records,ranges=ranges,
         interpretation='Sparse last-rollout logs, not all optimizer steps. On-step evaluation precedes its rollout update. Approximate KL is logged from the last epoch; clip fraction and entropy loss average the update minibatches. Joint entropy differs across action distributions and is not directly comparable as direction uncertainty. No causal conclusion.')
+
+
+def optimizer_fingerprint(model):
+    state=model.policy.optimizer.state_dict();h=hashlib.sha256(canonical(state['param_groups']))
+    for parameter,values in sorted(state['state'].items()):
+        h.update(str(parameter).encode())
+        for name,value in sorted(values.items()):
+            h.update(name.encode())
+            if isinstance(value,torch.Tensor):
+                h.update(str((tuple(value.shape),value.dtype)).encode());h.update(value.detach().cpu().numpy().tobytes())
+            else:h.update(canonical(value))
+    return h.hexdigest()

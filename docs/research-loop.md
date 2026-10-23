@@ -1355,3 +1355,11 @@ Next preregister read-only saved-policy replay on a common eligible2018–2020
 training window before new training; not yet executed. No prospective success
 or assumption that every bar was sampled. Project38.68329334 unchanged.
 [Evidence](../results/history-actions-2026-10-23/README.md).
+
+History-model read-only fitted-period protocol prepared: identical common
+2018–2020 bars/features/normalizer across full/recent saved selected/final models,
+original26 panel, unchanged simulator/unit exposure.39 focused checks pass,
+including exact paired-view and commit-before-replay rejection. Commit before
+actual replay. No fitting/provider/Colab usage or checkpoint selection; eligibility
+is not proof every bar sampled. Closed history family stays closed.
+[Method](../results/history-fit-2026-10-23/README.md).
