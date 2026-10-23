@@ -12,7 +12,7 @@ candidate selected/final15.47/5.14%, native control19.62/18.48%, holding30.60%.
 Family closed; no transform/noise grid or extension.312 frozen checks including
 smokes, four sessions stopped.16 verified release assets; duplicate-only cleanup
 and byte-identical strict reproduction complete. Project38.903541/150, last official
-account349.10, zero rate/assignments. Saved-path diagnosis before new training.
+account349.10, zero rate/assignments. Saved-path diagnosis complete; distinct hypothesis review before new training.
 
 ## Latest completed history comparison
 
@@ -144,3 +144,8 @@ optimizer. Completed100k screen failed; details and verified cleanup in the date
 versus native19.62/18.48% and holding30.60%. Fixed gates fail; family closed with
 no extension or transform/noise grid.312 frozen checks, four sessions stopped;
 project38.903541/account349.10. Publication and saved-path diagnosis next.
+
+
+[Squashed saved-action diagnosis](squashed-actions-diagnosis-2026-10-23/README.md):
+both long/short contributions deteriorate at final while short exposure and costs
+increase;104 saved episodes, no causal claim, fitting or additional Colab units.

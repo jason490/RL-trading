@@ -12,7 +12,8 @@ STUDIES={'recurrent-state':('recurrent-state','2026-10-21'),
          'capacity':('recurrent-capacity','2026-10-22'),
          'training-history':('training-history','2026-10-23'),
          'l2':('recurrent-regularization','2026-10-23'),
-         'clipping':('input-clipping','2026-10-23')}
+         'clipping':('input-clipping','2026-10-23'),
+         'squashed':('squashed-actions','2026-10-23')}
 
 
 def audit(study):
@@ -23,7 +24,7 @@ def audit(study):
     accepted_path=Path(f'results/{result_study}-{date}/summary.json')
     state=json.loads(state_path.read_text())
     accepted=json.loads(accepted_path.read_text())
-    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard','capacity':'recurrent_capacity','training-history':'training_history','l2':'recurrent_regularization','clipping':'input_clipping'}[study]
+    module={'recurrent-state':'recurrent_state','alignment':'recurrent_alignment','cash':'recurrent_cash','guard':'recurrent_guard','capacity':'recurrent_capacity','training-history':'training_history','l2':'recurrent_regularization','clipping':'input_clipping','squashed':'squashed_actions'}[study]
     required=set(importlib.import_module('rl_stocks.training.'+module).protocol()['arms'])
     if set(accepted.get('cells',{}))!=required:raise ValueError('all registered study arms required')
     if state['status']!='complete' or not state['cleanup_verified']:raise ValueError('complete verified shutdown required')

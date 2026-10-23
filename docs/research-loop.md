@@ -1644,3 +1644,13 @@ retrieved/stopped. Project38.90354117/account349.10 zero assignments. Large
 conditional boundary mass did not demonstrate a causal cure or policy improvement.
 Full artifacts retained; publication and saved-path diagnosis next. Robust-return
 objective unachieved. [Evidence](../results/squashed-actions-2026-10-23/README.md).
+
+
+Squashed saved-path diagnosis: four accepted phases/104 episodes,32 focused tests.
+Selected→final closing short exposure stock4.59→10.14%/ETF4.34→9.26%; net short
+contribution−5.38→−11.18pp/−1.24→−5.41pp; long contributions also deteriorate.
+Incremental cost drag3.88→5.05pp/3.54→4.56pp is not the whole gap. Observational
+relationships, not a cause or justification for disabling shorts/reward edits.
+Exact source hashes preserved; no fitting/data access/Colab allocation. Fixed
+family closed; distinct hypothesis review before new training.
+[Evidence](../results/squashed-actions-diagnosis-2026-10-23/README.md).
