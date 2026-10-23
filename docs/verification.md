@@ -2198,3 +2198,10 @@ is plausible, not established cause. No tolerance widening, mixed-policy returns
 hybrid selection/promotion or family rescue.41 tests pass; source/model/optimizer/
 normalizer unchanged, no training/provider/Colab/test access or new credits.
 [Evidence](../results/l2-crossover-2026-10-23/README.md).
+
+Feature-scale audit:7 exact-transform/strict-threshold/schema/nonfinite/immutability
+checks pass. Actual immutable111/26 source distributions and9 top source-arithmetic
+witnesses computed without fitting/model/provider/Colab/test access. Raw source
+and normalizer unchanged. Input tails are observed, not proof of cause/benefit;
+no clipping or altered trading data applied. Project38.74617914 unchanged.
+[Evidence](../results/feature-scale-2026-10-23/README.md).

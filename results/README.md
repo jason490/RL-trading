@@ -100,3 +100,7 @@ fixed Adam decay0/0.0001, same full-history model/data/steps. Candidate selected
 final30.45/18.42% versus control19.62/18.48%; absolute and final gates fail.
 Family closed. Publication/verified duplicate cleanup and strict reproduction
 complete; no confirmation, sweep or promotion.
+
+[Feature-scale audit](feature-scale-2026-10-23/README.md): outcome-free frozen
+training/development z distributions and source arithmetic. Large training tails,
+no clipping/model fitting or new units; a numeric preprocessing protocol is pending.

@@ -91,3 +91,6 @@ fixed coupled-Adam coefficient comparison, preserved epsilon, controls and gates
 [Action-component crossover](action-crossover.md) documents fixed read-only
 selected/final direction/protection mixing with independent recurrent state and
 native-control reproduction requirements.
+
+[Feature preprocessing](feature-preprocessing.md) owns frozen-scale distribution
+audits and requirements for any optional, explicitly versioned input transform.

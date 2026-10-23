@@ -1553,3 +1553,15 @@ is plausible, not established cause. No tolerance widening, mixed-policy returns
 hybrid selection/promotion or family rescue.41 tests pass; source/model/optimizer/
 normalizer unchanged, no training/provider/Colab/test access or new credits.
 [Evidence](../results/l2-crossover-2026-10-23/README.md).
+
+## Outcome-free frozen feature-scale audit
+
+Expanded training stocks reach50.55σ return,51.13σ ATR ratio,80.73σ relative
+volume under the original frozen normalizer. Fixed per-feature>5σ fractions
+roughly0.57–1.20% except RSI0; distributions are available-row, not sampled mass.
+Nine source arithmetic examples match; independent provider truth not established.
+Seven focused checks pass, source/normalizer unchanged, no model/provider/fitting/
+Colab/test access. Consider one preregistered explicit input cap, preserving raw
+prices/execution/rewards and legacy defaults/bundles; no clipping implemented or
+performance inference. Project38.74617914 unchanged.
+[Evidence](../results/feature-scale-2026-10-23/README.md).
