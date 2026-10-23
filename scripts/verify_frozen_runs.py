@@ -44,7 +44,7 @@ def verify(roots, data_root):
             metadata = json.loads(path.read_text())
             if metadata['status'] != 'complete' or metadata['bundle_id'] in seen:
                 raise ValueError('complete unique runs required')
-            if metadata['algorithm'] not in ('ppo', 'sac', 'td3', 'recurrent_ppo', 'hybrid_recurrent_ppo'):
+            if metadata['algorithm'] not in ('ppo', 'sac', 'td3', 'recurrent_ppo', 'hybrid_recurrent_ppo', 'squashed_recurrent_ppo'):
                 raise ValueError('unsupported frozen policy algorithm')
             identity = metadata['dataset']
             if identity not in datasets:

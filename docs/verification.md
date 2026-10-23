@@ -2277,3 +2277,8 @@ probabilities, not historical rollout frequencies or a causal return diagnosis.
 Next separately preregister a same-network squashed-diagonal-Gaussian comparison;
 do not conflate with failed market-input clipping or add gSDE simultaneously.
 No allocation or extra units. [Evidence](../results/action-boundaries-2026-10-23/README.md).
+- Squashed recurrent policy:70 focused checks pass. Same61,513 parameters/pinned
+  initial tensors, correct transformed sample likelihood/Jacobian/entropy fallback,
+  actual128-transition synthetic recurrent rollout likelihood parity and frozen
+  save/load/state parity. No local learning/optimizer updates or allocation.
+  Native/hybrid legacy tests pass; dedicated study wiring/smokes still required.

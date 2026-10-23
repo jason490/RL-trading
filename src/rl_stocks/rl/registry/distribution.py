@@ -22,6 +22,14 @@ def model_distribution(model):
                 or policy.action_net.out_features!=6 or tuple(policy.log_std.shape)!=(3,)):
             raise ValueError('hybrid model distribution mismatch')
         return distribution_spec(policy.cash_enabled)
+    from rl_stocks.rl.recurrent_ppo.squashed import SquashedRecurrentPolicy
+    from stable_baselines3.common.distributions import SquashedDiagGaussianDistribution
+    if isinstance(policy,SquashedRecurrentPolicy):
+        if (type(policy.action_dist) is not SquashedDiagGaussianDistribution or policy.use_sde is not False
+                or policy.squash_output is not True or policy.action_net.out_features!=4
+                or tuple(policy.log_std.shape)!=(4,) or policy.action_dist.epsilon!=1e-6):
+            raise ValueError('squashed recurrent distribution mismatch')
+        return {'version':1,'kind':'tanh_squashed_diagonal_gaussian','components':4,'jacobian_epsilon':1e-6}
     # SAC uses a squashed Gaussian; TD3 is deterministic with external exploration.
     if isinstance(model,SAC):return {'version':1,'kind':'squashed_gaussian','components':4}
     if isinstance(model,TD3):return {'version':1,'kind':'deterministic','components':4}
@@ -35,9 +43,13 @@ def validate_model_distribution(model,declared,algorithm):
     hybrid=actual['kind']=='categorical_direction_gaussian_protection'
     if hybrid != (algorithm=='hybrid_recurrent_ppo'):
         raise ValueError('algorithm and action distribution mismatch')
+    bounded=actual['kind']=='tanh_squashed_diagonal_gaussian'
+    if bounded != (algorithm=='squashed_recurrent_ppo'):
+        raise ValueError('algorithm and squashed distribution mismatch')
     # Legacy bundles predate this field; only established native policies qualify.
     if declared is None:
         if hybrid:raise ValueError('hybrid distribution metadata required')
+        if bounded:raise ValueError('squashed distribution metadata required')
         return actual
     # bool is an int subclass, so dict equality alone would accept version=True.
     from rl_stocks.core.contracts import canonical

@@ -90,3 +90,23 @@ Shared study allowance2units starts38.81646887344713; project150/130/account
 150/170 and7200-second allocation limits unchanged. Full constructor, likelihood,
 entropy, numerical saturation, actual rollout/frozen and legacy tests plus two512
 Colab CPU smokes must precede100k. Implementation and allocation remain pending.
+
+### Squashed policy implementation acceptance
+
+`rl/recurrent_ppo/squashed.py` adds an explicit policy using SB3's maintained
+`SquashedDiagGaussianDistribution` with epsilon1e-6. It transforms samples during
+rollout and uses the matching inverse/Jacobian likelihood during PPO evaluation.
+The Gaussian action head and four log-standard-deviation parameters retain their
+names/shapes; the full64 initial policy has exactly61,513 parameters and the same
+pinned tensors as control. Native algorithms remain unchanged. gSDE and unsquashed
+overrides reject; the custom distribution requires explicit matching metadata.
+
+The factory, frozen loader and recurrent verifier recognize
+`squashed_recurrent_ppo`. Save/load/frozen action and hidden/cell parity pass.
+A128-transition synthetic SB3 rollout verifies stored and reevaluated transformed
+likelihoods, recurrent padding and finite entropy fallback without learning or
+optimizer updates. This is local simulation acceptance, not local model training.
+Analytic Jacobian/mean-transform, bounded samples and numerical saturation checks
+also pass.70 focused policy/distribution/frozen/legacy checks pass (two existing
+Gymnasium unbounded-Box warnings). Dedicated version31 study wiring and real
+immutable-dataset construction/Colab smokes remain before100k allocation.
