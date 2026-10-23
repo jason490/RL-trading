@@ -1535,3 +1535,11 @@ read-only2×2 selected/final direction/protection crossover with independent
 recurrent states, native-control reproduction and unchanged execution. Not yet
 implemented/executed, no hybrid selection/promotion or failed-family rescue.
 Project38.74617914 unchanged. [Evidence](../results/l2-actions-2026-10-23/README.md).
+
+Fixed L2 component crossover prepared: all four selected/final direction/protection
+combinations, same original26 development episodes, source-specific recurrent
+memory on shared account observations and unchanged execution. Native diagonals
+must reproduce full accepted paths before mixed cases; predeclared exact counts/
+labels and numeric tolerance.40 focused checks pass. Commit before actual replay;
+no fitting/Colab or hybrid selection/promotion. Closed L2 family unchanged.
+[Method](action-crossover.md).

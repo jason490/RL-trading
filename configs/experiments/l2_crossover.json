@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "name": "l2-component-crossover-2026-10-23",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "source_protocol_sha256": "f47e93a8fbe3911a2bcd872b7e26e71a7f5f7730a6cd6bd09daace9c5b40f41a",
+  "source_state": ".runtime/l2-screen-state.json",
+  "source_summary": "results/recurrent-regularization-2026-10-23/summary.json",
+  "source_inventory": ".runtime/l2-retained-hashes.json",
+  "source_arm": "l2",
+  "seed": 11,
+  "source_final_steps": 100000,
+  "cases": [
+    {
+      "name": "selected_selected",
+      "direction": "selected",
+      "protection": "selected"
+    },
+    {
+      "name": "final_final",
+      "direction": "final",
+      "protection": "final"
+    },
+    {
+      "name": "selected_final",
+      "direction": "selected",
+      "protection": "final"
+    },
+    {
+      "name": "final_selected",
+      "direction": "final",
+      "protection": "selected"
+    }
+  ],
+  "native_controls": [
+    "selected_selected",
+    "final_final"
+  ],
+  "observation_profile": "execution_masked",
+  "exposure_mode": "unit_magnitude",
+  "native_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-09,
+    "exact": "Keys, row/event counts, integer quantities, reasons, labels and dates exact; all finite numeric floats use declared tolerance"
+  },
+  "question": "Describe counterfactual direction/protection component sensitivity when aggregate closing exposure/costs do not explain saved deterioration.",
+  "constraints": [
+    "Commit fixed protocol/implementation before replay; exact source/model/report hashes and native-path controls required before mixed cases",
+    "Both sources see identical current hybrid-account observation with separate carried hidden/cell states reset per symbol; no hidden-state mixing",
+    "Four fixed cases and original26 validation symbols only; original frozen normalization, four-component contract, costs,20-session hold, whole shares and next-session execution unchanged",
+    "No fitting, optimizer updates, provider request, Colab allocation, retired-test access, new checkpoint selection, hybrid selection/promotion, coefficient sweep or failed L2-family rescue",
+    "Full model tensors/Adam states/source files/normalizer unchanged; all holding baselines match; report short-side cohort only, never use future labels for selection"
+  ],
+  "interpretation": "Counterfactual component policy paths, not additive attribution: protective changes alter account state and subsequent direction/protection outputs. Reused development outcomes cannot establish an independent winner or revive the closed L2 family."
+}

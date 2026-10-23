@@ -87,3 +87,7 @@ full-window year expectations and prerequisites for a matched recency study.
 
 [Recurrent PPO regularization](recurrent-regularization.md) specifies a distinct
 fixed coupled-Adam coefficient comparison, preserved epsilon, controls and gates.
+
+[Action-component crossover](action-crossover.md) documents fixed read-only
+selected/final direction/protection mixing with independent recurrent state and
+native-control reproduction requirements.
