@@ -49,6 +49,8 @@ publication archives removed with142 retained hashes unchanged.
 
 ## Recent diagnostics
 
+- [Training/development saved action comparison](history-fit-actions-2026-10-23/README.md): similar final short exposure, different payoffs; descriptive only.
+
 - [Full/recent saved-model common training-window replay](history-fit-2026-10-23/README.md): all four benchmark flags fail; no fitting or new units.
 
 - [History-study saved actions and costs](history-actions-2026-10-23/README.md)

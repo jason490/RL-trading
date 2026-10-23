@@ -48,12 +48,14 @@ def fill_cost_attribution(result, initial=100000.):
                 interpretation='Observed costs only; changing fills also changes exposure, protection and P&L. Required exits are retained.')
 
 
-def episode_diagnosis(result, initial=100000.):
+def episode_diagnosis(result, initial=100000., *, period='development'):
+    if period not in ('development','training-window'):raise ValueError('declared diagnostic period required')
+    split,first,last=('validation','2021-01-01','2023-12-31') if period=='development' else ('train','2018-01-02','2020-12-02')
     rows=result['rows'];events=result['events'];holding=result['baselines']['buy_hold']
-    if (result['split']!='validation' or not rows
-        or any(not '2021-01-01'<=r['session']<='2023-12-31' for r in rows)
+    if (result['split']!=split or not rows
+        or any(not first<=r['session']<=last for r in rows)
         or [r['session'] for r in rows]!=sorted({r['session'] for r in rows})):
-        raise ValueError('unique development-validation sessions required')
+        raise ValueError('unique development-validation sessions required' if period=='development' else 'unique fixed training-window sessions required')
     if not math.isfinite(initial) or initial<=0:raise ValueError('positive initial equity required')
     if rows[0]['previous_equity']!=initial:raise ValueError('initial equity mismatch')
     if [r['session'] for r in rows]!=[r['session'] for r in holding['rows']][:len(rows)]:

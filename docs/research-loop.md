@@ -1406,3 +1406,14 @@ plots on four pages, no model duplication or raw bars. Duplicate chart archive
 removed (3,373,270 bytes),19 retained hashes unchanged; full paths retained. No
 additional Colab units; project38.68329334 unchanged.
 [Release](https://github.com/jason490/RL-trading/releases/tag/history-fit-2026-10-23).
+
+
+Saved fitted/development action comparison:8 accepted paths/208 episodes, source/
+model/report hashes verified with no fitting/dataset/provider/Colab access. Final
+recent stock closing shorts19.36% training versus19.56% development, but short
+contribution−4.07 versus−10.54pp. Training cost drag8.95pp exceeds development
+7.26pp despite better return; aggregate frequency/cost does not establish cause.
+Explicit fixed training-window reporting scope added; default development-only
+checks preserved.29 focused regressions pass. Next saved optimizer/parameter
+audit before a distinct learning hypothesis; closed families remain closed.
+[Evidence](../results/history-fit-actions-2026-10-23/README.md).

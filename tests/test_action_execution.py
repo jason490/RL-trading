@@ -93,3 +93,16 @@ def test_original_policy_magnitude_is_distinct_from_issued_unit_request():
     x=diagnose_episode(r)
     assert x['mean_policy_short_output']==.2 and x['mean_requested_short_exposure']==1
     assert x['policy_zero_fraction']==0
+
+
+def test_fixed_training_period_is_explicit_and_default_stays_development_only():
+    r=sample();r['split']='train'
+    for row in r['rows']:row['session']='2018-01-02'
+    for row in r['baselines']['buy_hold']['rows']:row['session']='2018-01-02'
+    for event in r['events']:event['time']='2018-01-02'+event['time'][10:]
+    with pytest.raises(ValueError,match='development-validation'):diagnose_episode(r)
+    got=diagnose_episode(r,period='training-window')
+    assert got['sessions']==1
+    for row in r['rows']:row['session']='2024-01-02'
+    with pytest.raises(ValueError,match='fixed training-window'):diagnose_episode(r,period='training-window')
+    with pytest.raises(ValueError,match='declared diagnostic period'):diagnose_episode(r,period='test')

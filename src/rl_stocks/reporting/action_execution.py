@@ -9,9 +9,9 @@ CATEGORIES = ('flat_request', 'same_direction', 'opposite_direction', 'flat_reje
               'flat_after_protection', 'flat_after_holding_limit', 'flat_approved_zero', 'flat_other')
 
 
-def exit_partition(result):
+def exit_partition(result, *, period='development'):
     """Partition observed daily excess by inherited side and exit flags, not causes."""
-    accounting=episode_diagnosis(result)
+    accounting=episode_diagnosis(result,period=period)
     rows=result['rows']; baseline=result['baselines']['buy_hold']['rows']
     by_day={r['session']:[] for r in rows}
     for e in result['events']:by_day[e['time'][:10]].append(e)
@@ -66,8 +66,8 @@ def worst_drawdown_window(result):
         end_short_fraction=mean(r['quantity']<0 for r in subset) if subset else 0.)
 
 
-def diagnose_episode(result):
-    accounting=episode_diagnosis(result)  # Require causal saved dates and reconciled costs/P&L.
+def diagnose_episode(result, *, period='development'):
+    accounting=episode_diagnosis(result,period=period)  # Require causal saved dates and reconciled costs/P&L.
     rows=result['rows']; events={row['session']:set() for row in rows}
     for event in result['events']:events[event['time'][:10]].add(event['reason'])
     counts=Counter(); pnl=Counter(); requests=[]; policy_requests=[]; previous=100000.
@@ -95,7 +95,7 @@ def diagnose_episode(result):
         pnl[category]+=(row['equity']-row['previous_equity'])/100000.
     if not math.isclose(sum(pnl.values()),result['metrics']['net_return'],abs_tol=1e-10,rel_tol=0):
         raise ValueError('action-category P&L reconciliation failed')
-    return dict(symbol=result['symbol'],sessions=len(rows),exit_partition=exit_partition(result),worst_drawdown=worst_drawdown_window(result),
+    return dict(symbol=result['symbol'],sessions=len(rows),exit_partition=exit_partition(result,period=period),worst_drawdown=worst_drawdown_window(result),
         net_return=accounting['net_return'],incremental_cost_drag_pp=accounting['incremental_cost_drag_pp'],
         noncost_excess_pp=accounting['saved_path_noncost_excess_pp'],
         long_return_contribution=accounting['long_return_contribution'],short_return_contribution=accounting['short_return_contribution'],
@@ -110,8 +110,8 @@ def diagnose_episode(result):
         categories={k:dict(sessions=counts[k],fraction=counts[k]/len(rows),observed_return_contribution=pnl[k]) for k in CATEGORIES})
 
 
-def diagnose_groups(results,stocks):
-    records=[diagnose_episode(r) for r in results.values()]
+def diagnose_groups(results,stocks, *, period='development'):
+    records=[diagnose_episode(r,period=period) for r in results.values()]
     if len({r['symbol'] for r in records})!=len(records):raise ValueError('one episode per symbol required')
     groups={}
     for kind in ('stock','etf'):
