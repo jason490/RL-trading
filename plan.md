@@ -1753,3 +1753,16 @@ contribution−0.99→−4.04pp/+1.73→−5.98pp, incremental cost drag5.11→5
 for disabling shorts/reward edits. Exact source hashes preserved; no fitting/data
 access/Colab allocation. Family remains closed; distinct hypothesis review before
 new training. [Evidence](results/clipping-actions-2026-10-23/README.md).
+
+
+### Completed action-boundary diagnostic
+
+Three fixed Gaussian policies ×111 training prefixes ×32 observations audited
+without fitting/policy-action execution/validation-return scoring. Conditional
+any-component mass beyond[-1,1]:untrained78.28%, selected79.65%, final79.38%.
+Final marginals exposure36.23%, stop32.44%, near37.67%, width24.06%. Full model/
+Adam/RNG/normalizer/source invariants pass;54 focused tests. These are conditional
+probabilities, not historical rollout frequencies or a causal return diagnosis.
+Next separately preregister a same-network squashed-diagonal-Gaussian comparison;
+do not conflate with failed market-input clipping or add gSDE simultaneously.
+No allocation or extra units. [Evidence](results/action-boundaries-2026-10-23/README.md).

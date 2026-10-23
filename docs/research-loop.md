@@ -1610,3 +1610,16 @@ policy-action execution or validation return evaluation. Exact Gaussian boundary
 mass may identify an exploration/execution mechanism but cannot establish poor
 performance causality or a better policy. Separate fixed protocol/compatibility
 checks required before any support-aware training. [Method](action-boundaries.md).
+
+
+### Completed action-boundary diagnostic
+
+Three fixed Gaussian policies ×111 training prefixes ×32 observations audited
+without fitting/policy-action execution/validation-return scoring. Conditional
+any-component mass beyond[-1,1]:untrained78.28%, selected79.65%, final79.38%.
+Final marginals exposure36.23%, stop32.44%, near37.67%, width24.06%. Full model/
+Adam/RNG/normalizer/source invariants pass;54 focused tests. These are conditional
+probabilities, not historical rollout frequencies or a causal return diagnosis.
+Next separately preregister a same-network squashed-diagonal-Gaussian comparison;
+do not conflate with failed market-input clipping or add gSDE simultaneously.
+No allocation or extra units. [Evidence](../results/action-boundaries-2026-10-23/README.md).

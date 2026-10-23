@@ -105,7 +105,7 @@ complete; no confirmation, sweep or promotion.
 training/development z distributions and source arithmetic. Large training tails,
 no model fitting or new units. The fixed cap5 preprocessing protocol and immutable
 payload are now prepared in [input-clipping](input-clipping-2026-10-23/README.md);
-Colab integration/smokes remain before training.
+The completed fixed clipping comparison failed its gates; see its dated result below.
 
 
 ## Fixed input clipping completed
@@ -117,3 +117,9 @@ checks including smokes, four sessions stopped, project38.816469/account349.17.
 [Clipping saved-action diagnosis](clipping-actions-2026-10-23/README.md):
 increased short exposure/costs and deteriorating net short contribution at final;
 104 saved episodes, no causal claim, fitting or additional Colab units.
+
+
+[Gaussian action-boundary audit](action-boundaries-2026-10-23/README.md): exact
+conditional any-component out-of-bounds mass~79% on fixed flat-account training
+prefixes; model/Adam/RNG/normalization unchanged, no fitting or new Colab units.
+Supports a distinct preregistered bounded-policy hypothesis, not causal proof.
