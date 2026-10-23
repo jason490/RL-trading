@@ -1,8 +1,7 @@
 # Fixed recurrent-capacity experiment
 
-Status: numeric protocol, pinned untrained starts and construction contracts are
-prepared. Dedicated Colab integration, actual environment/model acceptance and
-two512 CPU smokes remain before a100k screen. No performance result or allocation.
+Status: completed seed11 screen failed the fixed gates; capacity family closed.
+Latest verified outcome is recorded below; earlier sections retain preparation history.
 
 ## Hypothesis and boundaries
 
@@ -164,3 +163,45 @@ acceptance bytes bind approved plans. Same-source two100kseed11 screen next.
 Project38.53588481, study increment0.02100741; official account349.40 zero rate/
 assignments. Original baseline38.514877408036206/2-unit allowance retained.
 [Evidence](../results/recurrent-capacity-2026-10-22/README.md).
+
+
+## Completed capacity screen — 2026-10-23
+
+Both fixed seed11 runs completed100,000 transitions in Colab CPU, defaultPython
+3.13.16, from frozen clean source39f94a001044d9a0f24e4f2b1384014495f835e1.
+
+| Arm | Parameters | Selected return | Final return |
+| --- | ---: | ---: | ---: |
+| Control64 |61,513|19.6245%|18.4844%|
+| Larger128 |221,321|28.1508%|13.4278%|
+| Matched holding |—|30.6019%|30.6019%|
+
+Separate26-symbol mean net total returns on repeatedly reused2021–2023
+ development history; neither annualized nor a combined portfolio or independent
+evidence. Larger selected at60k versus control80k. Selected improvement8.5263pp,
+final change−5.0565pp; final stock gain−8.9396pp and ETF gain+16.3002pp versus
+control. Mean drawdown worsens0.5327pp. Larger selected stock excess−3.2133pp
+misses−2pp; final stock/ETF excess−19.7987/−2.7383pp and median stock
+excess−13.4832pp fail. Fixed capacity family closes: no width/depth/step grid,
+extension, confirmation or promotion. No robust accepted winner established.
+
+Strict source/dataset/accounting/holding checks pass. Both selected/final actual
+weights, settings and Adam states restore; each final has20,000 actual Adam
+steps/1000 nominal epochs. Same actual111-symbol training sampling and common
+initial CPU RNG verified, with different pinned per-width tensors as declared.
+156 screen frozen action/hidden/cell/repeat/reset predictions pass;312 including
+smokes. Normalization immutable, schema/feed/nonfinite rejection passes. Retired
+2024+ data unopened; no fitting by local reports or broker orders.
+
+All four owned smoke/screen sessions stopped and cleanup verified. Official
+account349.34, zero rate/assignments. Cumulative conservative project38.60166524,
+remaining111.39833476; study increment0.08678784 includes setup/idle/downloads/
+shutdown. Observed account debit0.07 versus conservative charge0.08678784.
+Project150/130 and account150/170 safeguards unchanged; original ledger retained.
+
+[Strict report](summary.json), [frozen checks](restoration.json),
+[compact10k curves with incremental percentage-point changes](learning-curves.csv),
+[compute and owned cleanup](compute.json). Interactive comparison generated at
+`artifacts/recurrent-capacity/summary.html` after publication packaging; source
+models/full reports remain under `artifacts/colab/<session>/retrieved/artifacts`.
+GitHub publication and verified duplicate cleanup follow this outcome commit.

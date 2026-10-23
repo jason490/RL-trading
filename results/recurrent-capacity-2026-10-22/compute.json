@@ -1,0 +1,335 @@
+{
+  "study_start_units": 38.514877408036206,
+  "current_project_units": 38.60166524433091,
+  "incremental_units": 0.08678783629470388,
+  "remaining_project_units": 111.39833475566908,
+  "working_units_until_130": 91.39833475566908,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "last_account_balance": 349.34,
+  "last_rate": 0,
+  "last_assignments": 0,
+  "original_ledger_preserved": true,
+  "all_four_owned_sessions_stopped": true,
+  "attempts": [
+    {
+      "session": "rl-stocks-fleet-445cab3c2161",
+      "status": "stopped",
+      "start": 1792706499.5174124,
+      "last_time": 1792706959.089486,
+      "initial_balance": 349.41,
+      "last_balance": 349.4,
+      "rate": 0.0,
+      "estimated": 0.021007405700948507,
+      "measured": 0.010000000000047748,
+      "charged": 0.021007405700948507,
+      "base_consumed": 38.514877408036206,
+      "deadline": 1792720899.5174124,
+      "retrieved": [],
+      "meter_readings": [
+        {
+          "time": 1792706504.3693814,
+          "balance": 349.41,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792706510.8049629,
+          "balance": 349.41,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706570.821135,
+          "balance": 349.41,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706631.5958838,
+          "balance": 349.41,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706691.8239777,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706751.9863508,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706812.8330486,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706872.4247916,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792706932.6819727,
+          "balance": 349.4,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792706959.089486,
+          "balance": 349.4,
+          "rate": 0.0,
+          "assignments": 0
+        }
+      ],
+      "kind": "fleet",
+      "children": {
+        "rl-stocks-cpu-227412de05e4": {
+          "session": "rl-stocks-cpu-227412de05e4",
+          "accelerator": "CPU",
+          "start": 1792706499.5734966,
+          "deadline": 1792713699.5734966,
+          "status": "stopped",
+          "phase": "verify",
+          "retrieved": [
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-227412de05e4/checkpoint.tar.gz",
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-227412de05e4/artifacts.tar.gz"
+          ],
+          "training_verified": true,
+          "endpoint": "m-s-kkb-euw4b1-28lvwcpvovf1q",
+          "cleanup_verified": true,
+          "end": 1792706886.531957
+        },
+        "rl-stocks-cpu-7d238a35c6d3": {
+          "session": "rl-stocks-cpu-7d238a35c6d3",
+          "accelerator": "CPU",
+          "start": 1792706505.9035144,
+          "deadline": 1792713705.9035144,
+          "status": "stopped",
+          "phase": "verify",
+          "retrieved": [
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-7d238a35c6d3/checkpoint.tar.gz",
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-7d238a35c6d3/artifacts.tar.gz"
+          ],
+          "training_verified": true,
+          "endpoint": "m-s-ase1a11-3dr9ntodsck2l",
+          "cleanup_verified": true,
+          "end": 1792706957.8236473
+        }
+      },
+      "task_count": 2,
+      "end": 1792706959.1061466
+    },
+    {
+      "session": "rl-stocks-fleet-a7c77b60af73",
+      "status": "stopped",
+      "start": 1792707126.5572643,
+      "last_time": 1792708521.835198,
+      "initial_balance": 349.4,
+      "last_balance": 349.34,
+      "rate": 0.0,
+      "estimated": 0.06578043059375552,
+      "measured": 0.060000000000002274,
+      "charged": 0.06578043059375552,
+      "base_consumed": 38.535884813737155,
+      "deadline": 1792721526.5572643,
+      "retrieved": [],
+      "meter_readings": [
+        {
+          "time": 1792707131.405635,
+          "balance": 349.4,
+          "rate": 0.08,
+          "assignments": 1
+        },
+        {
+          "time": 1792707137.8728447,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707197.872138,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707258.482616,
+          "balance": 349.4,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707318.4078512,
+          "balance": 349.39,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707378.9037511,
+          "balance": 349.39,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707439.361914,
+          "balance": 349.39,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707500.1971216,
+          "balance": 349.39,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707560.175515,
+          "balance": 349.39,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707620.7918105,
+          "balance": 349.38,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707681.0390346,
+          "balance": 349.38,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707741.8877418,
+          "balance": 349.38,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707801.4155796,
+          "balance": 349.38,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707861.5095365,
+          "balance": 349.38,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707921.4383836,
+          "balance": 349.36,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792707981.8675337,
+          "balance": 349.36,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708043.1100898,
+          "balance": 349.36,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708102.606241,
+          "balance": 349.36,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708163.429412,
+          "balance": 349.36,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708223.4313636,
+          "balance": 349.35,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708283.6694143,
+          "balance": 349.35,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708343.7062383,
+          "balance": 349.35,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708403.6716013,
+          "balance": 349.35,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708464.0903893,
+          "balance": 349.35,
+          "rate": 0.16,
+          "assignments": 2
+        },
+        {
+          "time": 1792708521.835198,
+          "balance": 349.34,
+          "rate": 0.0,
+          "assignments": 0
+        }
+      ],
+      "kind": "fleet",
+      "children": {
+        "rl-stocks-cpu-b017ab92a021": {
+          "session": "rl-stocks-cpu-b017ab92a021",
+          "accelerator": "CPU",
+          "start": 1792707126.6235764,
+          "deadline": 1792714326.6235764,
+          "status": "stopped",
+          "phase": "verify",
+          "retrieved": [
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-b017ab92a021/checkpoint.tar.gz",
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-b017ab92a021/artifacts.tar.gz"
+          ],
+          "training_verified": true,
+          "endpoint": "m-s-ase1a3-2ebj0qnw1fqp",
+          "exec_cli_failed": true,
+          "cleanup_verified": true,
+          "end": 1792708520.63015
+        },
+        "rl-stocks-cpu-416544138aae": {
+          "session": "rl-stocks-cpu-416544138aae",
+          "accelerator": "CPU",
+          "start": 1792707132.9463727,
+          "deadline": 1792714332.9463727,
+          "status": "stopped",
+          "phase": "verify",
+          "retrieved": [
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-416544138aae/checkpoint.tar.gz",
+            "/home/vibe/projects/rl-stocks/.runtime/capacity-source-v1/artifacts/colab/rl-stocks-cpu-416544138aae/artifacts.tar.gz"
+          ],
+          "training_verified": true,
+          "endpoint": "m-s-kkb-use1b0-qpbfiuor2qf5",
+          "cleanup_verified": true,
+          "end": 1792708502.7093303
+        }
+      },
+      "task_count": 2,
+      "end": 1792708521.8523068
+    }
+  ]
+}

@@ -27,12 +27,15 @@ legacy19.62/18.48%, holding30.60%. Both relative comparisons and absolute target
 fail; no confirmation/promotion. All six smoke/screen sessions stopped,468 frozen
 predictions pass. Publication and checksummed duplicate cleanup are verified; models/reports are linked by the study README.
 
-## Prepared next experiment
+## Latest completed capacity experiment
 
-[Recurrent capacity](recurrent-capacity-2026-10-22/README.md) fixes64 versus128
-recurrent/dense widths (61,513 versus221,321 parameters), with unchanged inputs
-and100k budget. Local checkers and96 focused integration tests pass. Actual two Colab smokes and runtime approval pass; fixed100k screen remains.
-There are no capacity-screen performance results yet.
+[Recurrent capacity](recurrent-capacity-2026-10-22/README.md): both100k seed11
+runs complete. Control64 selected/final19.62/18.48%; larger12828.15/13.43%;
+matched holding30.60%. Larger selected improvement fails to persist; final and
+absolute gates fail. Fixed family closed, no extension/confirmation/promotion.
+312 total frozen checks pass; all four sessions stopped. Project38.601665/150,
+account349.34 zero rate/assignments. Strict evidence/curves retained; publication
+and verified duplicate cleanup follow.
 
 ## Recent diagnostics
 
