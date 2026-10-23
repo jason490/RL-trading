@@ -155,3 +155,8 @@ retrieved/stopped. Project38.90354117/account349.10 zero assignments. Large
 conditional boundary mass did not demonstrate a causal cure or policy improvement.
 Full artifacts retained; publication and saved-path diagnosis next. Robust-return
 objective unachieved. [Evidence](../results/squashed-actions-2026-10-23/README.md).
+
+Squashed-action publication:16 GitHub server-size/SHA-verified assets, four complete
+bundles/reports; only two duplicate archives35,834,973bytes removed,144 retained
+hashes unchanged. Strict summary byte-identical after actual model/Adam restoration.
+[Receipts](../results/squashed-actions-2026-10-23/release-verification.json).

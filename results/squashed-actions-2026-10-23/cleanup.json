@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "release_assets_verified": 16,
+  "owned_cleanup_verified": true,
+  "removed_files": [
+    {
+      "path": "artifacts/squashed-release/research-models.tar.gz",
+      "bytes": 32442325,
+      "sha256": "b57bead53bc0b53a71953a4b416f69298a7aa1fdff50befad65b6501ee71347b"
+    },
+    {
+      "path": "artifacts/squashed-release/validation-reports.tar.gz",
+      "bytes": 3392648,
+      "sha256": "714cadf95b615c28854fd76a4d9c28a68685f8cabfc138758566fd670b34013b"
+    }
+  ],
+  "removed_logical_bytes": 35834973,
+  "retained_file_count": 144,
+  "retained_hashes_unchanged": true,
+  "original_transports_models_reports_source_dataset_ledger_preserved": true
+}

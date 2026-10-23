@@ -5,6 +5,15 @@ on repeatedly reused2021–2023 development data. They are not annualized return
 a combined portfolio, or independent prospective evidence. No model has passed
 the full required multi-seed and prospective acceptance process.
 
+## Current research status
+
+[Latest squashed-action screen](squashed-actions-2026-10-23/README.md) failed:
+candidate selected/final15.47/5.14%, native control19.62/18.48%, holding30.60%.
+Family closed; no transform/noise grid or extension.312 frozen checks including
+smokes, four sessions stopped.16 verified release assets; duplicate-only cleanup
+and byte-identical strict reproduction complete. Project38.903541/150, last official
+account349.10, zero rate/assignments. Saved-path diagnosis before new training.
+
 ## Latest completed history comparison
 
 [Full/recent history](training-history-2026-10-23/README.md): full selected/final

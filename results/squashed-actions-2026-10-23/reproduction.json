@@ -1,0 +1,8 @@
+{
+  "strict_summary_byte_identical": true,
+  "summary_sha256": "d1d89691b7c7890497784efdbd9ea37ce9030d319bab967adb75bd7343804be7",
+  "actual_selected_and_final_models_and_adam_restored": true,
+  "training_performed": false,
+  "test_evaluated": false,
+  "cleanup_verified": true
+}

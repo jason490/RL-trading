@@ -1,0 +1,103 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/squashed-actions-2026-10-23",
+  "asset_count": 16,
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773544,
+      "digest": "sha256:df7377ce5a6eb91931fd7a4c971130deaf226f1e8ff8f78073598300816d3e32",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 5836,
+      "digest": "sha256:0cb1357dad5a2c4fe643e62034472d9b2a088d64fcda39e70dfb953038c19cdb",
+      "state": "uploaded"
+    },
+    {
+      "name": "control-reproduction.json",
+      "size": 393,
+      "digest": "sha256:16e590ac39d654ba4715bd866ef3eac431fe7ca42e275ae544516773615c3220",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 4938,
+      "digest": "sha256:5d1778e9df12924d2c06823226f05fd14ae1c30564e9eee68bf0ef13eaa2d296",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 630561,
+      "digest": "sha256:76c0c931731ae9f23f4cc320975156067f100ba3a4ef470e64e58af2d4222685",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 8866,
+      "digest": "sha256:a9931fadc238fb35be2dcf963a1b1763ca5136fed39959f79c01d73225792dcf",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 32442325,
+      "digest": "sha256:b57bead53bc0b53a71953a4b416f69298a7aa1fdff50befad65b6501ee71347b",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2576,
+      "digest": "sha256:f78373b32054cac426fe89e0c6d146e78d1db8f6c148608019d6fc76f3c186b9",
+      "state": "uploaded"
+    },
+    {
+      "name": "runtime-profile.json",
+      "size": 564,
+      "digest": "sha256:176e2c31d0591572e27ec886b488d90dca6cc5ba764753813eb85f1a27c1eee6",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2576,
+      "digest": "sha256:e7432dc9324dc145457680ab634040c035bdd56f08b83d468742cb61ff13e555",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 24090,
+      "digest": "sha256:12fcc570d81a5d470198f8bd55e49d5d9294d4a9ae8d34c37535c8913ec84409",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 398,
+      "digest": "sha256:bc897699e3a1f42d4cf8c96f75b5d84d0ea9828f9e490a8228941a3df20cdc93",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 329189,
+      "digest": "sha256:d1d89691b7c7890497784efdbd9ea37ce9030d319bab967adb75bd7343804be7",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3392648,
+      "digest": "sha256:714cadf95b615c28854fd76a4d9c28a68685f8cabfc138758566fd670b34013b",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1353,
+      "digest": "sha256:c03a3f87b59305472b94659b170415d92d6ed20547752fb17dadf493026e64c1",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 1274,
+      "digest": "sha256:25afbfc55f015a6d4bb7a523f94e25b3c9a6454191b24238473aba63ef93d5dc",
+      "state": "uploaded"
+    }
+  ]
+}
