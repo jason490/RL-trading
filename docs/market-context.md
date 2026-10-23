@@ -49,3 +49,28 @@ rows and19,058/19,058 development rows available, with no exclusions or source
 changes.60 focused checks pass. [Evidence](../results/market-context-2026-10-23/README.md).
 No new preprocessing fit, dataset/model or performance result was produced.
 A matched feature study remains to be specified before any Colab allocation.
+
+## Fixed matched study preregistered
+
+[Preregistration](../configs/experiments/market_context_preregistration.json)
+fixes legacy7-feature/21-observation and masked/full10-feature/24-observation
+arms. Legacy has61,513 parameters; augmented arms63,049. Full/masked share exact
+untrained tensors, with original common parameters/LSTM columns copied and only
+the three new columns generated without data. Every arm restores the original
+per-seed CPU RNG. Shape differences prevent claiming exact legacy/augmented
+floating-point trajectory equality; the same-dimension masked control is essential.
+
+Original seven normalization statistics stay exact. Only full's extra fields fit
+means/scales on training rows; masked uses exact zero extra fields and identity
+scaling, with an explicit schema/builder honoring the mask during frozen inference.
+No new row exclusion, input cap, sector labels, distribution/reward/optimizer change.
+Default dataset/bundle behavior must remain unchanged.
+
+Three100k seed11 runs,10k cadence; full must beat BOTH controls by2pp at selected
+and final, avoid final stock/ETF deterioration and>2pp drawdown worsening, and meet
+selected/final stock/ETF/median−2pp versus holding gates. Only a pass permits paired
+11/23/37 then prospective evidence. Failure closes benchmark/window/subset grids
+and extensions. Shared2-unit baseline38.90354116934003 and original project150/130,
+account150/170,7200s limits retained. Three512 CPU Colab smokes and exact measured
+runtime acceptance required first. Immutable dataset/normalizer/initialization
+identities and dedicated training integration remain pending; no allocation yet.

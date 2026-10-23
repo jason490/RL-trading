@@ -1670,3 +1670,11 @@ inference or extra Colab units. Next separately fix full/masked/legacy controls,
 extra-field training-only normalization and immutable payload identities before
 model/construction/Colab acceptance. Coverage is not predictive evidence.
 [Audit](../results/market-context-2026-10-23/README.md).
+
+Compact-market-context numeric preregistration now fixes legacy/masked/full arms,
+100k seed11/10k cadence, exact raw/source/first-seven normalization, training-only
+full extra statistics and exact masked-zero inference. Matched24-input initial
+tensors plus original21-input control/common-column proofs separate information
+from input dimension. Existing all-control/absolute/risk gates unchanged, no grids
+or extension on failure. Three512 Colab CPU smokes precede100k;2-unit allowance
+starts38.90354116934003. [Protocol](../configs/experiments/market_context_preregistration.json).

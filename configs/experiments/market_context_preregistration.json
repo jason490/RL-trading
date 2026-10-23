@@ -1,0 +1,187 @@
+{
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "evaluation_every": 10000,
+  "initialization": "standard",
+  "start_sampling": "stock_etf_cycle_windows",
+  "reward_kind": "net_log_equity",
+  "reward_scale": 1.0,
+  "episode_steps": 512,
+  "smoke_episode_steps": 128,
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Same111 full-history source and100k per arm. Only compact market context information differs between matched24-input full/masked arms; original21-input legacy control prevents attributing an input-dimension change to information."
+  },
+  "smoke_steps": 512,
+  "smoke_evaluation_every": 256,
+  "parameters": {
+    "n_steps": 1000,
+    "batch_size": 50,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "recurrent_parameters": {
+    "lstm_hidden_size": 64,
+    "n_lstm_layers": 1,
+    "shared_lstm": false,
+    "enable_critic_lstm": true
+  },
+  "smoke_parameters": {
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 10
+  },
+  "selection_metric": "Unchanged equal-weight mean validation net return; selected/final separately reported, actual100k final post-update required",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Close fixed compact-market-context family on failed seed11 gates. No benchmark/window/feature-subset/normalization/model/reward/step grid, extension, confirmation or promotion."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required"
+  },
+  "observation_profile": "execution_masked",
+  "target_kl": null,
+  "version": 1,
+  "name": "compact-market-context-preregistration-2026-10-23",
+  "hypothesis": "Three compact broad-market signals may distinguish stock-relative weakness and shared market conditions unavailable in own-symbol indicators. Compare full with same-dimension masked and original legacy controls; prior sector-proxy outcomes do not establish benefit.",
+  "arms": [
+    "legacy",
+    "masked",
+    "full"
+  ],
+  "candidate": "full",
+  "controls": [
+    "legacy",
+    "masked"
+  ],
+  "algorithm": "recurrent_ppo",
+  "policy_variant": "native",
+  "screen_cells": 3,
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "raw_snapshot": "09bc69ec15798c6bf2987c3332397104ce3066846bad638b1512e29e41f1028f",
+  "raw_episodes_sha256": "8f1e6f7076dea64bd2de4f2c04d7da0c230eec19d0cec9dc9ca562604fa8a814",
+  "original_normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "audit_protocol_sha256": "4d610a3c133b94ebe74426a9ab21d66c55304f1d7945fc7d69eb3d4c06ae44b0",
+  "audit_evidence_sha256": "bf345131df13c20382a112713c8a76abcef5aa106735ea14fa4f1d4d78e11a49",
+  "market_context": {
+    "benchmark": "SPY",
+    "window": 20,
+    "names": [
+      "market_return_20",
+      "market_volatility_20",
+      "relative_market_return_20"
+    ],
+    "availability": "Every contributing bar available by own current decision bar availability; exact21 matching sessions; no known gaps/stale fill. Cached source audited all298946 train/19058 development rows ready.",
+    "definition": "Price-only forward split-continuous20-session log return, population20-return SPY volatility and own-minus-SPY20-session price return. Dividends remain simulator cash events."
+  },
+  "market_features": {
+    "legacy": 7,
+    "masked": 10,
+    "full": 10
+  },
+  "observation_sizes": {
+    "legacy": 21,
+    "masked": 24,
+    "full": 24
+  },
+  "parameter_counts": {
+    "legacy": 61513,
+    "masked": 63049,
+    "full": 63049
+  },
+  "normalization": {
+    "legacy": "Exact original three-field seven-feature frozen normalizer",
+    "full": "Preserve original seven means/scales exactly; fit only three additional means/population-standard-deviations on source training rows. Freeze for development/inference; no clipping/refit grid.",
+    "masked": "Same10 field names as full; original seven statistics exact, extra raw fields and normalization means zero/scales one. Explicit masked schema/feature builder always emits zero extras during training/evaluation/inference. No fit for constant masked fields."
+  },
+  "shared_initialization": {
+    "source_manifest": "configs/initializations/recurrent_capacity_v1/manifest.json",
+    "source_manifest_sha256": "f52409d726b55d46c8da556b8b56750ecf1773e367478f6dcb92d5515f47e2c3",
+    "source_entry_arm": "control",
+    "legacy": "Original full64 control per-seed untrained tensors and CPU RNG, even in smoke",
+    "augmented": "Generate native24-input full64 untrained model per seed without data/fitting; preserve its new three input columns, copy original common tensors and original LSTM input columns0:7 and7:21 into new columns0:7 and10:24 respectively. Full/masked use exact same complete augmented tensors; all arms restore original per-seed CPU RNG.",
+    "proofs": "New immutable NPZ/manifest hashes before allocation; validate full/masked equality, all common tensor/input-column copies and RNG; no claim of bit-identical21-versus24 floating-point paths."
+  },
+  "execution_modes": {
+    "legacy": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    },
+    "masked": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    },
+    "full": {
+      "training": "unrestricted",
+      "evaluation": "unit_magnitude"
+    }
+  },
+  "constraints": {
+    "data": "All source episode keys/raw bars/ATR/availability/splits/original seven features exact, no row/date exclusion; only explicit appended fields/schema/normalizer/lineage differ. Legacy/default identities untouched.",
+    "learning": "Full64 actor/critic LSTM and64x64 heads, original Gaussian/zero Adam decay/eps1e-5/net-log reward/sampling/100k/10k cadence. No input clipping, squashed distribution, gSDE, reward, history or capacity tuning.",
+    "evaluation": "Original26 repeatedly reused2021\u20132023 development, same stock/ETF/median/risk selected+final gates. Full must pass against BOTH controls. Conditional paired11/23/37 then prospective evidence; retired2024+ never reopened.",
+    "short_side": "All shorts remain available. Future declining-stock labels reporting-only; positive total AND net short P&L required.",
+    "limitations": "Revised Yahoo/survivor universe and assumed historical availability. Coverage does not prove signal. Shared market features can be redundant; added columns increase parameter count, hence same-dimension masked control."
+  },
+  "execution": {
+    "device": "cpu",
+    "training_location": "Google Colab only; check actual default Python before dependency sync",
+    "initial_concurrency": 3,
+    "max_study_incremental_units": 2.0,
+    "study_start_project_units": 38.90354116934003,
+    "project_ceiling_units": 150,
+    "working_stop_units": 130,
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "allocation_deadline_seconds": 7200,
+    "preflight": "Freeze exact immutable dataset/normalizer/initialization identities after implementation without changing this preregistered cap/gates/settings. Actual dataset/checkers/full64 forwards and frozen/mask/availability/source tests, then three512 CPU Colab smokes with234 exact frozen predictions, saved models/Adam/initialization and measured sampling/year parity. Bind exact accepted bytes and runtime profile before100k.",
+    "runner": "Existing central aggregate metered owned fleet and original ledger; setup/idle/transfers/failures/retries count; no automatic restart on budget stop; verify all owned shutdown",
+    "cleanup": "Durable retrieval/checkpoints; verify server publication before duplicate deletion; retain source/data/models/ledger"
+  },
+  "runtime_projection": {
+    "reference_control_seconds": 1097.8908965790001,
+    "reference_control_metadata_sha256": "515edee6a6dfbf3a3d4f87f897aff1a7c20fc56fe34a4754697ecb2a20a3424b",
+    "rule": "Before100k require2*reference_control_seconds*max(1,masked_smoke_seconds/legacy_smoke_seconds,full_smoke_seconds/legacy_smoke_seconds)+1200<=7200; exact accepted smoke bytes bound to plans, heuristic not guarantee",
+    "safety_multiplier": 2.0,
+    "setup_retrieval_shutdown_reserve_seconds": 1200.0,
+    "maximum_allocation_seconds": 7200.0
+  },
+  "implementation_status": "Causal feature reader and complete coverage audit pass. Immutable payload/extra-field preprocessing/initialization generation and dedicated training integration/smokes pending. Final identities must be frozen before allocation; no training performed."
+}
