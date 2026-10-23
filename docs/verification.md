@@ -2215,3 +2215,12 @@ three-field Normalizer unchanged, explicit optional factory only. No candidate
 preprocessing fit or model training/Colab/provider/test access; default-generation
 identity verification recomputes training-only legacy statistics. Integration/
 actual study smokes remain. [Evidence](../results/input-clipping-2026-10-23/README.md).
+
+- 2026-10-23 input clipping version30 integration:156 focused protocol/artifact/
+  report/preprocessing/legacy/account-floor tests pass. Both actual immutable
+  datasets pass Gymnasium/SB3 checkers and full64 untrained recurrent forwards;
+  exact shared initial tensors/RNG,61,513 parameters. No local fitting. Actual
+  Colab512 smokes/runtime acceptance remain before100k. Evidence:
+  `results/input-clipping-2026-10-23/construction.json`.
+- Additional shared fleet/budget/job/artifact/control regression suite:41 pass
+  (197 checks across the two focused invocations). Original `plan.html` preserved.

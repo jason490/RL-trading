@@ -128,6 +128,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if study_protocol_sha256==L2_PROTOCOL:
         l2_arm=l2_parameters(overrides,smoke);validate_l2_payload(dataset)
         l2_shared=apply_l2_initialization(model,l2_arm,seed,smoke)
+    from rl_stocks.training.input_clipping import (PROTOCOL_SHA256 as CLIPPING_PROTOCOL,identify_parameters as clipping_parameters,
+        apply_initialization as apply_clipping_initialization,model_record as clipping_record,initialization_entry as clipping_entry,
+        validate_payload as validate_clipping_payload,ROOT as CLIPPING_ROOT)
+    if study_protocol_sha256==CLIPPING_PROTOCOL:
+        clipping_arm=clipping_parameters(overrides,smoke,Path(dataset_path).name);validate_clipping_payload(dataset,clipping_arm)
+        clipping_shared=apply_clipping_initialization(model,clipping_arm,seed,smoke)
     from rl_stocks.training.training_history import (PROTOCOL_SHA256 as HISTORY_PROTOCOL,identify_parameters as history_parameters,
         apply_initialization as apply_history_initialization,model_record as history_record,initialization_entry as history_entry,
         validate_payload as validate_history_payload,ROOT as HISTORY_ROOT)
@@ -205,6 +211,14 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['l2_arm']=l2_arm
         metadata['l2_shared_initialization']=l2_shared
         metadata['l2_initialization']=l2_record(model)
+    if study_protocol_sha256==CLIPPING_PROTOCOL:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'clipping-initialization.npz'
+        shutil.copyfile(CLIPPING_ROOT/clipping_entry(clipping_arm,seed,smoke)['file'],snapshot)
+        if checksum(snapshot)!=clipping_shared['artifact_sha256']:raise ValueError('clipping snapshot checksum mismatch')
+        metadata['clipping_arm']=clipping_arm
+        metadata['clipping_shared_initialization']=clipping_shared
+        metadata['clipping_initialization']=clipping_record(model)
     if study_protocol_sha256==HISTORY_PROTOCOL:
         from rl_stocks.inference.bundle import checksum
         snapshot=run/'recency-initialization.npz'
@@ -284,6 +298,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==L2_PROTOCOL:
             metadata['l2_final']=l2_record(model)
             metadata['l2_selected']=l2_record(selected)
+        if study_protocol_sha256==CLIPPING_PROTOCOL:
+            metadata['clipping_final']=clipping_record(model)
+            metadata['clipping_selected']=clipping_record(selected)
         if study_protocol_sha256==HISTORY_PROTOCOL:
             metadata['recency_final']=history_record(model)
             metadata['recency_selected']=history_record(selected)

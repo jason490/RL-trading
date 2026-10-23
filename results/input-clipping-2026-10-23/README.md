@@ -1,8 +1,8 @@
 # Fixed standardized market-input clipping comparison
 
-Status: immutable payload/preprocessing and numeric protocol prepared; dedicated
-Colab integration/checkers/smokes remain before training. No allocation/performance
-result. [Method](../../docs/feature-preprocessing.md),
+Status: immutable payload, fixed training contracts and version30 Colab integration
+implemented; actual local construction/checkers pass. Colab smokes remain before
+training screens. No allocation/performance result. [Method](../../docs/feature-preprocessing.md),
 [original preregistration](../../configs/experiments/input_clipping_preregistration.json),
 [final fixed protocol](../../configs/experiments/input_clipping.json), [preflight](preflight.json).
 
@@ -43,3 +43,13 @@ and L2 bundles. This does not resolve the previously rejected original-Colab
 full-equity-path parity diagnostic. Clipped bundles require clipping-aware code;
 legacy bundles retain their original preprocessing behavior. No new training or
 allocation in this verification.
+
+## Version30 integration acceptance
+
+Dedicated protocol/plan/worker/runner/artifact/report and smoke-acceptance wiring
+implemented.156 focused tests pass, including candidate preprocessing rejection,
+legacy regressions and account floors. [Construction](construction.json) passes
+both actual immutable-dataset checkers/full64 forwards and exact pinned starting
+tensors/RNG without learning. Two512 Colab smokes and measured runtime acceptance
+remain before100k. Official preallocation usage349.23, rate0, assignments0;
+original project38.74617914/shared2-unit baseline unchanged.

@@ -1712,3 +1712,13 @@ and actual untrained frozen/accounting checks pass. Original cap/gates/budget
 unchanged in finalized protocol; dedicated Colab integration/checkers/smokes
 remain before training. No allocation/new units.
 [Method](docs/feature-preprocessing.md), [evidence](results/input-clipping-2026-10-23/README.md).
+
+### 2026-10-23 — fixed clipping integration
+
+Version30 input clipping plans/worker/runner/artifact checks, actual model and
+optimizer records, initialization snapshots, strict report and smoke acceptance
+implemented.156 focused checks pass, and both immutable datasets pass full64
+untrained construction/environment checkers. No local training or retired-test
+access. Colab512 smokes/runtime approval required before fixed100k paired screen;
+original gates,2-unit study allowance,150/130 project and150/170 account safeguards
+unchanged. Overall robust-return objective remains unachieved.

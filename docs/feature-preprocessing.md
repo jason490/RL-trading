@@ -122,3 +122,29 @@ the prior control/L2 bundles on the current host. This preserves legacy inferenc
 behavior; it is not full-path parity with the original Colab reports. Clipped
 bundles require the clipping-aware source and their explicit new feature schema;
 historical clients that ignore extra normalizer fields are unsupported.
+
+### Version30 Colab integration
+
+`training/input_clipping.py` validates the pinned protocol, arm-specific dataset,
+raw-episode and preprocessing hashes, identical64-unit initialization, zero-decay
+Adam/eps1e-5, actual optimizer records and measured training-year sampling. Both
+arms have identical model parameters, so arm identity comes from the immutable
+dataset as well as the parameters. Version30 plans preserve account150/170,
+project150/130, two-hour allocation deadlines and the original aggregate ledger.
+The worker, runner, artifact validator and frozen-package allowlist retain the
+initialization snapshot, selected/final records and explicit clipping schema.
+
+`build_clipping_jobs.py --smoke --output ...` prepares two512-transition CPU jobs.
+After actual retrieval, frozen verification and owned cleanup,
+`accept_clipping_smokes.py` produces the acceptance used by long-job preparation.
+`report_input_clipping.py` revalidates transports or retained extractions, actual
+models/Adam, matched holding paths and the fixed selected/final gates. It cannot
+promote a failed family or substitute an earlier checkpoint for the final run.
+These tools prepare/validate work; actual training remains Colab-only.
+
+156 focused tests pass, covering new protocol/artifact/report routing, candidate
+cap/schema rejection, legacy L2/history regressions, overflow and account floors.
+[Actual construction](../results/input-clipping-2026-10-23/construction.json)
+passes both immutable-dataset Gymnasium/SB3 checkers, full64 recurrent forwards,
+61,513 parameters and exact shared initial tensors/RNG without optimizer steps.
+No actual smoke performance is implied by construction acceptance.
