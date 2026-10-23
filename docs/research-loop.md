@@ -1685,3 +1685,10 @@ exact, full three-field fit training-only and masked zero/identity.48 focused
 checks plus156 actual legacy frozen predictions pass; no policy fitting or new
 units. Next shared untrained initialization assets and final identity-bound
 protocol before dedicated Colab integration/checkers/smokes. [Evidence](../results/market-context-2026-10-23/payload-preflight.json).
+
+Market-context shared initialization assets and final protocolf9045fe8… frozen:
+all three seeds, full/masked identical mapped24-input tensors, original common
+columns/parameters and per-seed RNG exact, native new columns preserved.54 checks
+pass; no observed data/fitting in generation, no extra Colab units. Fixed gates
+unchanged. Next dedicated training/worker/artifact/report wiring and actual source/
+model construction/checkers before three512 CPU smokes. [Evidence](../results/market-context-2026-10-23/initialization.json).

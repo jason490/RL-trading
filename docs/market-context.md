@@ -117,3 +117,39 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
 Next generate/verify the preregistered shared untrained initialization assets,
 freeze the final protocol with identities and wire model/checker/Colab acceptance.
 Three512 Colab smokes still required before100k. No new return result.
+
+## Shared untrained initialization and final protocol
+
+`training/market_initialization.py` maps the pinned original64-unit policy into
+24 inputs. Original feature columns0:7 stay in0:7; portfolio columns7:21 move to
+10:24. Actor and critic LSTM columns7:10 retain the native24-input seeded draw.
+All other tensors copy exactly. Full/masked use the same complete mapped tensors;
+legacy retains its original21-input artifact. All three restore the original
+per-seed CPU RNG. The generator checks zero steps/empty Adam, finite matching
+schema and exact common/new columns, writes immutable NPZ and verifies readback.
+
+Three mapped snapshots, seeds11/23/37, are pinned in
+[the initialization manifest](../configs/initializations/market_context_v1/manifest.json).
+Smoke uses the same full64 tensors as the screen. No raw dataset, provider,
+trained checkpoint, performance score or optimizer update was used. Shape changes
+can alter floating-point summation; no exact21/24-input trajectory parity is claimed.
+
+[Final protocol](../configs/experiments/market_context.json), canonical SHA-256
+`f9045fe85e0e756b3397cb27d4231a82ced8645b1a41c1b20cba093160d7cbad`,
+binds the unchanged preregistration/gates/settings, all dataset/normalizer IDs
+and the new manifest raw SHA-256
+`a417c68fd42a3cb69acd78124418d25bb0c369e18f08c8764bb49ca160481dc8`.
+Legacy61,513 versus matched63,049 parameters; additional capacity is explicitly
+controlled, not attributed to the features alone.
+
+54 focused mapping/payload/feature/legacy protocol checks pass, including all
+actual seed assets and original generator/source hashes. Mapping corruption in
+old/new/account columns or common parameters rejects; readback into a different
+seed fresh model restores exact tensors/RNG without optimizer state. The earlier
+native-draw fingerprint is captured before any common-column mapping.
+[Evidence](../results/market-context-2026-10-23/initialization.json).
+
+Dedicated training/worker/artifact/report wiring, actual immutable-dataset model
+checkers and three512 Colab smokes/runtime acceptance still precede100k. No new
+allocation or return result; project38.90354117 unchanged. All failed families
+remain closed and robust-return objective unachieved.

@@ -2344,3 +2344,10 @@ family closed; distinct hypothesis review before new training.
   full/masked recurrent frozen carry/reset parity and nonzero-mask rejection.
   156 actual legacy native/squashed frozen predictions pass on current host.
   No policy learning/updates, provider/test access or allocation. See[preflight](../results/market-context-2026-10-23/payload-preflight.json).
+- Market-context initialization/final protocol:54 focused checks pass. Three actual
+  mapped24-input snapshots for11/23/37 retain original common tensors/input/account
+  columns, native new columns and exact original per-seed RNG; full/masked share
+  complete tensors. Legacy61,513/augmented63,049 parameters. All original/generator
+  hashes verified. No dataset opened by generator, fitting/optimizer updates or
+  allocation. Final protocolf9045fe8… binds actual payload/initialization identities
+  without changing preregistered settings. [Evidence](../results/market-context-2026-10-23/initialization.json).

@@ -60,3 +60,21 @@ No policy learning/optimizer update, provider request, test access or Colab
 allocation. Next shared untrained initialization assets/final identity protocol
 and dedicated training integration/checkers/three512 Colab smokes before100k.
 Original project38.90354117/last official account349.10 unchanged. No return claim.
+
+## Initialization assets and final identities frozen
+
+Three untrained mapped24-input snapshots generated for11/23/37. Full/masked
+complete tensors are identical; original common parameters/market/account columns
+remain exact, new three columns retain the native seeded draw. Original per-seed
+CPU RNG for every arm. Original assets unchanged, no dataset opened by generator,
+no fitting/optimizer updates or checkpoint selection. Legacy61,513/augmented63,049
+parameters; no21-versus24-input floating-point trajectory equality claim.
+
+54 focused mapping/payload/feature/legacy checks pass, including all actual assets
+and generator/source hashes. [Evidence](initialization.json),
+[manifest](../../configs/initializations/market_context_v1/manifest.json),
+[final protocol](../../configs/experiments/market_context.json). Canonical final
+SHAf9045fe85e0e756b3397cb27d4231a82ced8645b1a41c1b20cba093160d7cbad;
+preregistered gates/settings unchanged. Dedicated training/worker/artifact/report
+integration, actual source/model construction and three512 Colab smokes/runtime
+approval remain before100k. No new units or return result; project38.90354117.

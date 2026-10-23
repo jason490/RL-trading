@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "protocol_sha256": "f9045fe85e0e756b3397cb27d4231a82ced8645b1a41c1b20cba093160d7cbad",
+  "preregistration_sha256": "ca987adbfa0355b843cd9e0a545e9695db4b1bc046f5c63d6e83dc85ad0d52c7",
+  "manifest_file": "configs/initializations/market_context_v1/manifest.json",
+  "manifest_sha256": "a417c68fd42a3cb69acd78124418d25bb0c369e18f08c8764bb49ca160481dc8",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "mapping_proofs": {
+    "11": {
+      "common_tensors_exact": true,
+      "original_input_columns_exact": true,
+      "new_columns_sha256": "048c20b016b93aef91f516b9e7cd216bffb27a7bd3aa724f687cf71e44aac82c",
+      "legacy_parameters": 61513,
+      "augmented_parameters": 63049,
+      "native_draw_sha256": "e372c34856ed84f6472b72a49a8e636a910dc5ba0fbec495c0d74c2fbff060bc"
+    },
+    "23": {
+      "common_tensors_exact": true,
+      "original_input_columns_exact": true,
+      "new_columns_sha256": "ee31407559073cffc666255f30bad290eebd5e805d3b7e0c83ea9b293741c50b",
+      "legacy_parameters": 61513,
+      "augmented_parameters": 63049,
+      "native_draw_sha256": "7977db5c71cd729cfb676e009f2ecfaaeaab6bde439d0c4d6f5de7d67ac257eb"
+    },
+    "37": {
+      "common_tensors_exact": true,
+      "original_input_columns_exact": true,
+      "new_columns_sha256": "6e1f08d08dc587197c40b6cfbcd6616ebb3e883f6b77d4a533fcabe91e918c6d",
+      "legacy_parameters": 61513,
+      "augmented_parameters": 63049,
+      "native_draw_sha256": "644506630df3ad6d7acd60533fb471880ee04dd25af47856a385e378044d8c90"
+    }
+  },
+  "full_masked_artifacts_identical": true,
+  "all_arms_original_per_seed_rng": true,
+  "original_assets_unchanged": true,
+  "parameter_counts": {
+    "legacy": 61513,
+    "masked": 63049,
+    "full": 63049
+  },
+  "training_performed": false,
+  "optimizer_steps": false,
+  "dataset_opened_by_generator": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "interpretation": "Exact tensor/column/RNG mapping, not a claim of bit-identical21-versus24-input floating-point predictions or trajectories."
+}

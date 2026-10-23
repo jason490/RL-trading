@@ -1832,3 +1832,10 @@ frozen rejection of nonzero masks.48 focused checks and156 actual legacy frozen
 predictions pass; no local policy learning/updates or allocation. Shared untrained
 initialization assets, final protocol and dedicated training integration/smokes
 remain. [Evidence](results/market-context-2026-10-23/payload-preflight.json).
+
+Market-context shared initializations/final protocol subsequently frozen: three
+mapped24-input untrained snapshots, original common/input/account tensors and CPU
+RNG exact; full/masked identical63,049 parameters, legacy61,513.54 focused checks
+pass; no observed-data access/fitting/optimizer updates or allocation. Final
+protocolf9045fe8… preserves preregistered settings. Dedicated Colab integration,
+actual source checkers and three512 smokes remain. [Evidence](results/market-context-2026-10-23/initialization.json).
