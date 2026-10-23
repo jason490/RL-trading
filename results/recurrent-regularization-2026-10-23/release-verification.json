@@ -1,0 +1,103 @@
+{
+  "verified": true,
+  "url": "https://github.com/jason490/RL-trading/releases/tag/recurrent-regularization-2026-10-23",
+  "asset_count": 16,
+  "assets": [
+    {
+      "name": "comparison.html",
+      "size": 4773526,
+      "digest": "sha256:86ceb2e9779aea31ba6f9084acdcfa7c1277cbe7d5b1410287a7bbe7dffee9cd",
+      "state": "uploaded"
+    },
+    {
+      "name": "compute.json",
+      "size": 8943,
+      "digest": "sha256:c4cb69a3152cf6604105976644497951f3a7814745375e550beb55817b86b572",
+      "state": "uploaded"
+    },
+    {
+      "name": "control-reproduction.json",
+      "size": 393,
+      "digest": "sha256:0b5183bff2d54c218fb520d0e553843953ffa89064d5a991d2e380d78e89c3bd",
+      "state": "uploaded"
+    },
+    {
+      "name": "learning-curves.csv",
+      "size": 4869,
+      "digest": "sha256:bd50b4e65c67e02709611284f1dc6995fda3a6cc0df9699623051335800a5c31",
+      "state": "uploaded"
+    },
+    {
+      "name": "model-catalog.json",
+      "size": 627791,
+      "digest": "sha256:fb24adc1e906be66f42150169f93050cba83c58fa5c2beadc8b3fbb428a86022",
+      "state": "uploaded"
+    },
+    {
+      "name": "protocol.json",
+      "size": 8827,
+      "digest": "sha256:0a329d8e1c8b6cb4febd93e41ebf2d924a1e8fa53987d731f69065d19dc23004",
+      "state": "uploaded"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "size": 32350388,
+      "digest": "sha256:b4a63dab4aec75138010925c21301f17e8bd52b4869d2bda6cd42583d5dd61bf",
+      "state": "uploaded"
+    },
+    {
+      "name": "restoration.json",
+      "size": 2567,
+      "digest": "sha256:06a811c2fbf96a6fdf1d064095be572f7c44a258cc5c6351cf80b0d883f45d88",
+      "state": "uploaded"
+    },
+    {
+      "name": "runtime-profile.json",
+      "size": 553,
+      "digest": "sha256:2bd62754cf9307e4f56b1fcea51d4ff29145213ddfbda3bb2c3b37176196246f",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-restoration.json",
+      "size": 2567,
+      "digest": "sha256:a7c898880594e9d54cdc559cc6a1eed6ba46279ec78c0b0e45b67cfe224d7eff",
+      "state": "uploaded"
+    },
+    {
+      "name": "smoke-summary.json",
+      "size": 23651,
+      "digest": "sha256:94180660f4edda0d4fcb06a0daa1eff689b9072ec3da2cd33ecfd26d55d5e65d",
+      "state": "uploaded"
+    },
+    {
+      "name": "source-proof.json",
+      "size": 392,
+      "digest": "sha256:87ace6aec8023e0fce5dbdce607f5aa45171bfa7e5c6dff82343b93e96a99d14",
+      "state": "uploaded"
+    },
+    {
+      "name": "summary.json",
+      "size": 328196,
+      "digest": "sha256:61532dd7c2e27fe5efd8d84bcc453ffdcb425c7b8bfd05607bbab775cf544872",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "size": 3393917,
+      "digest": "sha256:90bd16f82a6477e599646cf02db43a6d87aa02f14aff455c40d9f3da5731fb17",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.html",
+      "size": 1317,
+      "digest": "sha256:514e15a8c7377fbe778559a895c942966833bfcb4ae9b6a65bafd98889a20c17",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 1274,
+      "digest": "sha256:642b33a0a19221c4822c452d1c1150efaa6b09f997e3bf4ab6f7db0b38ab3c20",
+      "state": "uploaded"
+    }
+  ]
+}

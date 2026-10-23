@@ -115,3 +115,18 @@ saved-path diagnosis before any distinct hypothesis. No automatic restart or
 relaxed gates. The full research objective remains unachieved.
 
 [Strict report](summary.json), [10k curves](learning-curves.csv), [frozen checks](restoration.json), [control reproduction](control-reproduction.json), [compute and cleanup](compute.json).
+
+
+## Verified publication and duplicate-only cleanup
+
+[Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-regularization-2026-10-23)
+contains16 server-size/SHA-256-verified assets: four complete frozen bundles,
+selected/latest models, checkpoint and optimizer/sampling/year evidence, interactive
+comparison and individual selected equity reports, compact curves, protocol and
+control reproduction. Raw provider bars/credentials/private runtime files excluded.
+Only two duplicate publication archives removed (35,744,305 bytes),145 retained
+hashes unchanged. Original transports, models/checkpoints/reports/source/dataset/
+ledger and plan.html retained. Strict summary reproduces byte for byte with actual
+models/Adam/coupling restored. All four sessions remain stopped, no additional
+units: project38.74617914, official account349.23 zero rate/assignments.
+[Receipts](release-verification.json), [cleanup](cleanup.json), [reproduction](reproduction.json).

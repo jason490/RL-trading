@@ -22,7 +22,8 @@ selected/final19.62/18.48%, candidate30.45/18.42%, holding30.60%. Selected overa
 near holding but ETF/median targets fail; final and relative gates fail. Fixed
 family closed, no confirmation or coefficient sweep.312 frozen checks including
 smokes, all four sessions stopped; project38.746179/150, account349.23 zero
-rate/assignments. Publication/duplicate cleanup next.
+rate/assignments. 16 release assets verified;35.74MB duplicate archives removed with145 retained
+hashes unchanged.
 
 ## Recent completed comparisons
 
@@ -91,6 +92,7 @@ symbols; expected2020 mass2.4% versus7.3%. No training or performance claim;
 actual year logging and a frozen matched protocol remain prerequisites.
 
 [Completed recurrent PPO regularization](recurrent-regularization-2026-10-23/README.md):
-fixed Adam decay0/0.0001, same full-history model/data/steps.138 integration checks
-and actual untrained construction pass. Actual Colab smokes accepted with exact saved optimizer/frozen proof;
-runtime approval passes,100k screen next. No research performance or promotion.
+fixed Adam decay0/0.0001, same full-history model/data/steps. Candidate selected/
+final30.45/18.42% versus control19.62/18.48%; absolute and final gates fail.
+Family closed. Publication/verified duplicate cleanup and strict reproduction
+complete; no confirmation, sweep or promotion.

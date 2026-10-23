@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "release_assets_verified": 16,
+  "owned_cleanup_verified": true,
+  "removed_files": [
+    {
+      "path": "artifacts/l2-release/research-models.tar.gz",
+      "bytes": 32350388,
+      "sha256": "b4a63dab4aec75138010925c21301f17e8bd52b4869d2bda6cd42583d5dd61bf"
+    },
+    {
+      "path": "artifacts/l2-release/validation-reports.tar.gz",
+      "bytes": 3393917,
+      "sha256": "90bd16f82a6477e599646cf02db43a6d87aa02f14aff455c40d9f3da5731fb17"
+    }
+  ],
+  "removed_logical_bytes": 35744305,
+  "retained_file_count": 145,
+  "retained_hashes_unchanged": true,
+  "original_transports_models_reports_source_dataset_ledger_preserved": true
+}

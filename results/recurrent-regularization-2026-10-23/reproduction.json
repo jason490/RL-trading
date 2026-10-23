@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "strict_summary_byte_identical": true,
+  "summary_sha256": "61532dd7c2e27fe5efd8d84bcc453ffdcb425c7b8bfd05607bbab775cf544872",
+  "selected_final_models_optimizers_coupling_reloaded": true,
+  "retained_source_transports_revalidated": true,
+  "publication_cleanup_verified": true,
+  "training_performed": false,
+  "test_evaluated": false
+}
