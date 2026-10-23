@@ -57,3 +57,8 @@ published, checksummed GitHub releases linked by the study README. Historical
 studies remain in their dated directories to preserve source and artifact links.
 
 The detailed chronological decision record is [the research log](../docs/research-loop.md).
+
+[Training-history coverage](training-history-2026-10-23/README.md) audits date-only
+availability and expected window year mass. Both full/recent sources support111
+symbols; expected2020 mass2.4% versus7.3%. No training or performance claim;
+actual year logging and a frozen matched protocol remain prerequisites.

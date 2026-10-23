@@ -81,3 +81,6 @@ diagnostics, pending training and artifact locations.
 
 [Recurrent-capacity comparison](recurrent-capacity.md) specifies the fixed
 64/128-width hypothesis, shared untrained RNG starts and resource gates.
+
+[Training-history composition](training-history.md) documents date-only coverage,
+full-window year expectations and prerequisites for a matched recency study.

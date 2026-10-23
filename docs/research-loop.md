@@ -1226,3 +1226,14 @@ closed. Next audit training-history coverage/sampling before preregistering a
 distinct matched full-history/recent-window study; no allocation or window
 selection from returns. Project38.60166524 unchanged.
 [Evidence](../results/capacity-actions-2026-10-23/README.md).
+
+## Date-only history audit — 2026-10-23
+
+All111 symbols support512-transition windows in full history and fixed2016-onward
+subset. Uniform starts underweight edge years: expected2020 execution share
+about2.4% full versus7.3% subset. Existing logs cannot establish actual year
+visitation.11 exact enumeration/boundary/isolation checks pass, no fitting/provider/
+Colab usage. Next add measured decision/execution year counters, then preregister
+one immutable composition comparison with unchanged evaluation/model/reward/
+normalization/budget. No date choice from profits or capacity-family reopening.
+[Evidence](../results/training-history-2026-10-23/README.md).
