@@ -1623,3 +1623,10 @@ probabilities, not historical rollout frequencies or a causal return diagnosis.
 Next separately preregister a same-network squashed-diagonal-Gaussian comparison;
 do not conflate with failed market-input clipping or add gSDE simultaneously.
 No allocation or extra units. [Evidence](../results/action-boundaries-2026-10-23/README.md).
+
+Fixed support-aware recurrent policy protocol prepared in
+[Squashed actions](../configs/experiments/squashed_actions.json): one tanh Gaussian
+candidate versus matched native control, same full64 tensors/model/data/reward/
+optimizer/100k, no gSDE or input preprocessing change. Existing2pp relative,
+stock/ETF/median/risk gates and conditional11/23/37/prospective requirements
+retained. Shared2-unit baseline38.81646887344713; no implementation/allocation yet.

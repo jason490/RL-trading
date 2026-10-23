@@ -68,3 +68,25 @@ probabilities, not historical rollout frequencies or a causal return diagnosis.
 Next separately preregister a same-network squashed-diagonal-Gaussian comparison;
 do not conflate with failed market-input clipping or add gSDE simultaneously.
 No allocation or extra units. [Evidence](../results/action-boundaries-2026-10-23/README.md).
+
+## Next fixed model comparison preregistered
+
+[Squashed actions](../configs/experiments/squashed_actions.json) fixes two100k
+seed11 arms: unchanged Gaussian control and explicit tanh-squashed diagonal
+Gaussian recurrent policy. Keep61,513 parameters, identical initial tensors/RNG,
+original111/26 dataset and preprocessing, masked21 observations, reward,
+zero-decay Adam/eps1e-5, sampling/costs/holding and10k cadence. No gSDE, new
+indicators, clipping/refit or simultaneous optimizer change. Correct transformed
+log probabilities must be used during training, not just inference.
+
+Both selected/final gains must reach2pp versus control, final stock/ETF results
+must not worsen, drawdown worsening≤2pp; selected/final stock/ETF and median-stock
+excess must each reach−2pp versus holding. Only a passing screen permits paired
+11/23/37 confirmation and prospective evidence. Failure closes the fixed family,
+without transform/temperature/log_std grids or extensions. Diagnostic mass is
+motivation, not expected return or a causal conclusion.
+
+Shared study allowance2units starts38.81646887344713; project150/130/account
+150/170 and7200-second allocation limits unchanged. Full constructor, likelihood,
+entropy, numerical saturation, actual rollout/frozen and legacy tests plus two512
+Colab CPU smokes must precede100k. Implementation and allocation remain pending.
