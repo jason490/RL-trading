@@ -2093,3 +2093,11 @@ differ, and KL growth in both arms does not prove cause or a useful remedy.
 L2 study not found in configs; any fixed experiment must be distinct, preregistered
 and gated, with no coefficient or closed-family grid. Project38.68329334 unchanged.
 [Evidence](../results/history-optimizer-2026-10-23/README.md).
+
+Recurrent L2 version29 integration/construction acceptance:138 focused checks
+pass, including coefficient/epsilon/coupling/type rejection, actual saved snapshot/
+checkpoint/year contracts and prior capacity/history/guard/account-floor paths.
+Both actual datasets/checkers/untrained full64 forwards and two immutable tasks
+validate. Source compiles, no local fitting/Colab allocation. Actual two512 CPU
+smokes and bound runtime approval remain before100k. Project38.68329334 unchanged.
+[Evidence](../results/recurrent-regularization-2026-10-23/README.md).

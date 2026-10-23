@@ -31,6 +31,10 @@ def main():
         from rl_stocks.training.training_history import validate_payload,validate_initialization_assets
         c=plan['recency_study'];validate_initialization_assets(c['arm'],c['seed'],c['smoke'])
         validate_payload(payload,c['arm'])
+    if plan.get('version')==29:
+        from rl_stocks.training.recurrent_regularization import validate_payload,validate_initialization_assets
+        c=plan['l2_study'];validate_initialization_assets(c['arm'],c['seed'],c['smoke'])
+        validate_payload(payload)
     if plan.get('version')==27:
         from rl_stocks.training.recurrent_capacity import validate_payload,validate_initialization_assets
         c=plan['capacity_study'];validate_initialization_assets(c['arm'],c['seed'],c['smoke'])

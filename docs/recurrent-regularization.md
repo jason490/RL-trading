@@ -81,3 +81,50 @@ data/checkers and regression checks, commit/freeze source, verify official usage
 and current Colab Python, then two512 CPU smokes before any100k allocation.
 Project/account unchanged:38.68329334 and last verified349.27 zero rate/assignments.
 No retired2024+ access or orders. Declining-stock cohort remains reporting-only.
+
+## Version29 integration and actual construction acceptance
+
+Fixed `l2_plan`/`l2_study` contracts bind data, coefficients, initialization and
+runtime approval. The runner records initial/selected/final L2-specific model
+records, actual coupled-Adam defaults/group flags and exact `l2-initialization.npz`.
+`runtime/colab/l2_artifacts.py` validates required measured years, coefficient,
+epsilon, coupling, optimizer moments/steps, snapshot, checkpoint, execution,
+normalization and frozen identity. Older record formats remain unchanged; shared
+validation defaults to zero decay and the new caller supplies its fixed value.
+
+138 focused tests pass, including wrong coefficient/epsilon/coupling/boolean
+flags, missing-year/checkpoint/snapshot, runtime-profile stale/failed/overdue
+rejection, report routing, conditional confirmation, and prior capacity/history/
+guard/account-floor regressions. Actual two immutable smoke tasks validate before
+allocation. Both actual data environments pass Gymnasium/SB3 checkers; fresh full64
+recurrent forwards, matching pinned tensors/RNG and exact optimizer records pass.
+[Construction evidence](../results/recurrent-regularization-2026-10-23/construction.json).
+No local learning, backpropagation or optimizer steps; source compiles.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+ scripts/build_l2_jobs.py --smoke --output .runtime/l2-smoke-jobs.json
+```
+
+Commit/freeze source, check official usage and actual default Python, then run
+the two512 CPU tasks under the existing central fleet, original ledger and
+shared study baseline38.68329334472413/2-unit allowance. After retrieval,
+156 frozen checks, actual saved models/moments/coupling/year proof and owned
+shutdown, accept without changing settings based on smoke returns:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/accept_l2_smokes.py \
+ --state .runtime/l2-smoke-state.json \
+ --restoration .runtime/l2-smoke-restoration.json \
+ --source-proof .runtime/l2-source-v1/export-proof.json \
+ --output .runtime/l2-smoke-acceptance.json
+PYTHONPATH=src .venv/bin/python scripts/build_l2_jobs.py \
+ --output .runtime/l2-screen-jobs.json
+```
+
+The exact accepted file bytes bind generated runtime profiles, checked against
+actual acceptance before controller allocation. Long plans reject missing/stale/
+failed/over-deadline approval; confirmation requires a passing same-protocol
+screen. Strict final report uses `scripts/report_recurrent_l2.py --state ...
+--runtime-profile .runtime/l2-screen-jobs.runtime-profile.json --output ...`.
+Actual two512 Colab smokes remain before100k; no allocation or new usage yet.

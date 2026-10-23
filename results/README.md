@@ -80,3 +80,8 @@ The detailed chronological decision record is [the research log](../docs/researc
 availability and expected window year mass. Both full/recent sources support111
 symbols; expected2020 mass2.4% versus7.3%. No training or performance claim;
 actual year logging and a frozen matched protocol remain prerequisites.
+
+[Prepared recurrent PPO regularization](recurrent-regularization-2026-10-23/README.md):
+fixed Adam decay0/0.0001, same full-history model/data/steps.138 integration checks
+and actual untrained construction pass. Colab smokes remain before100k; no
+performance evidence or promotion.

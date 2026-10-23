@@ -12,7 +12,7 @@ def model_record(model):
                 shared_initialization=json.loads(json.dumps(getattr(model,'_research_initialization',None))))
 
 
-def validate_record(record,params,observation_size,final_steps,proof,*,initial=False,selected_steps=None):
+def validate_record(record,params,observation_size,final_steps,proof,*,initial=False,selected_steps=None,weight_decay=0.):
     """Validate fixed Gaussian recurrent architecture, checkpoint and Adam evidence."""
     policy=params['policy_kwargs'];obs=observation_size
     fixed=dict(algorithm='RecurrentPPO',observation_size=obs,action_size=4,
@@ -48,7 +48,8 @@ def validate_record(record,params,observation_size,final_steps,proof,*,initial=F
         raise ValueError('actual Adam steps mismatch')
     if any(not math.isfinite(o[k]) or o[k]<0 for k in ['maximum_abs_first_moment','maximum_second_moment']):
         raise ValueError('finite optimizer moments required')
-    if o['parameter_groups']!=[dict(lr=.0003,eps=1e-5,betas=[.9,.999],weight_decay=0)]:raise ValueError('unchanged Adam groups required')
+    if isinstance(weight_decay,bool) or not math.isfinite(weight_decay) or weight_decay<0:raise ValueError('fixed finite weight decay required')
+    if o['parameter_groups']!=[dict(lr=.0003,eps=1e-5,betas=[.9,.999],weight_decay=weight_decay)]:raise ValueError('unchanged Adam groups required')
     return record
 
 

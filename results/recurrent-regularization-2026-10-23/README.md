@@ -18,3 +18,15 @@ sweeps/extensions/promotion. Shared2-unit allowance starts38.68329334472413;
 project150/130/account150/170 constraints unchanged. Dedicated integration,
 actual checkers and two512 Colab CPU smokes remain before screen allocation.
 Last official account349.27 zero rate/assignments; all prior owned sessions stopped.
+
+## Version29 integration and construction acceptance
+
+138 focused tests pass; both actual immutable smoke tasks/data environments
+Gymnasium+SB3 checkers/untrained recurrent forwards pass. Same full64 tensors/RNG,
+coefficient/epsilon/coupled defaults verified. [Construction](construction.json).
+Strict worker/runner/artifact/frozen-package/report contracts preserve old record
+formats and reject missing year/model/optimizer/coefficient/coupling/checkpoint
+proofs. Long plans require actual smoke bytes and valid runtime projection.
+Source compiles; no local fitting or Colab allocation. Commit/freeze and official
+usage/default-Python checks before actual two512 CPU smokes. Original baseline
+38.68329334472413/shared2-unit allowance and project/account reserves retained.

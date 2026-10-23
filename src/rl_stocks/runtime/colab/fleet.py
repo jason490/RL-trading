@@ -91,6 +91,14 @@ def validate_tasks(tasks,root):
             validate_initialization_assets(c['arm'],c['seed'],c['smoke'])
             if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('history dataset identity mismatch')
             validate_payload(read_dataset(dataset),c['arm'])
+        if plan.get('version')==29:
+            from rl_stocks.data.generation.datasets import read_dataset
+            from rl_stocks.training.recurrent_regularization import validate_payload,validate_initialization_assets,validate_runtime_profile
+            c=plan['l2_study']
+            if not c['smoke']:validate_runtime_profile(plan['runtime_acceptance'],root)
+            validate_initialization_assets(c['arm'],c['seed'],c['smoke'])
+            if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('l2 dataset identity mismatch')
+            validate_payload(read_dataset(dataset))
         if plan.get('version')==27:
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.recurrent_capacity import validate_payload,validate_initialization_assets,validate_runtime_profile
@@ -396,7 +404,7 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
                 raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
             if any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):

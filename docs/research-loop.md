@@ -1440,3 +1440,10 @@ relative/−2pp group/median/risk gates and shared2 units from38.68329334472413.
 Dedicated integration/checkers/Colab smokes remain, no allocation or performance.
 Closed history/capacity/guard families remain closed; no coefficient grid.
 [Protocol and next work](recurrent-regularization.md).
+
+Recurrent L2 version29 wiring/actual construction prepared:138 focused regressions,
+actual data/checkers/untrained models and immutable smoke tasks validate. Strict
+coefficient/epsilon/coupling plus required years/checkpoint/initialization restored;
+legacy formats unchanged. Commit/freeze and usage/Python check before two512 CPU
+smokes, actual acceptance/runtime bound before100k. No allocation/new units.
+[Evidence](../results/recurrent-regularization-2026-10-23/README.md).
