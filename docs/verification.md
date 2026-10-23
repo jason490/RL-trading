@@ -2178,3 +2178,13 @@ ledger/plan.html preserved. Strict summary reproduces byte for byte from retaine
 transports with actual models/Adam/coupling restored. All four sessions stopped;
 project38.74617914 unchanged. Fixed L2 family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-regularization-2026-10-23).
+
+
+L2 saved-action diagnosis:4 phases/104 episodes, accepted hashes/panel unchanged,
+no model fitting/dataset/provider/Colab access. Candidate stock return34.00→19.27%,
+closing longs91.36→91.31%, cost drag4.33→3.74pp; aggregate participation/cost
+does not explain deterioration.30 focused regressions pass. Next preregister a
+read-only2×2 selected/final direction/protection crossover with independent
+recurrent states, native-control reproduction and unchanged execution. Not yet
+implemented/executed, no hybrid selection/promotion or failed-family rescue.
+Project38.74617914 unchanged. [Evidence](../results/l2-actions-2026-10-23/README.md).
