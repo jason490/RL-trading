@@ -272,3 +272,15 @@ Conservative project39.039379/150, incremental0.025001, official account349.00
 with zero assignments. Fixed screen runtime projection3717.83<7200seconds;
 50k seed11 three-arm plans prepared. No completed screen, return improvement,
 retired-test access or promotion. Evidence:results/distributional-critics-2026-10-24/smokes.json.
+
+
+[Saved critic final-update sensitivity](critic-update-2026-10-24/README.md) complete: three one-update pairs on
+256 fixed candidate training-replay observations; truncatedTQC actor relativeL2
+0.03356%, exposure mean absolute delta0.001462, GaussianKL0.001133 and zero
+exposure-sign flips. These are normalized action/tensor diagnostics, not returns
+or a cause of development deterioration. Independent Torch arithmetic agrees;
+all protected files/model/Adam state unchanged, worker exited0, no local
+optimization or Colab units. First phase-filename rejection and reviewed v2
+correction retained; sample/metrics unchanged. Fixed failed family remains
+closed. Next bounded saved-development-path audit before another training
+hypothesis; no promotion or retired-test access.

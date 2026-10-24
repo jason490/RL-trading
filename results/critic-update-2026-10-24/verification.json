@@ -1,0 +1,27 @@
+{
+  "independent_tensor_action_and_torch_distribution_arithmetic_passed": true,
+  "errors": {
+    "sac_native": {
+      "actor_l2_error": 0.0,
+      "torch_normal_kl_mean_error": 1.0408340855860843e-17,
+      "action_mean_absolute_delta_error": 0.0
+    },
+    "tqc_untruncated": {
+      "actor_l2_error": 8.673617379884035e-19,
+      "torch_normal_kl_mean_error": 1.3010426069826053e-17,
+      "action_mean_absolute_delta_error": 0.0
+    },
+    "tqc_truncated": {
+      "actor_l2_error": 0.0,
+      "torch_normal_kl_mean_error": 1.6046192152785466e-17,
+      "action_mean_absolute_delta_error": 0.0
+    }
+  },
+  "protected_files_unchanged": true,
+  "summary_sha256": "3da51f6d0a78f9e91010608dbc66620c68da8d566d648789cd1f0f1b7d5a0a22",
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "returns_recomputed": false,
+  "retired_test_evaluated": false,
+  "colab_allocated": false
+}

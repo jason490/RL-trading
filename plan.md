@@ -2081,3 +2081,15 @@ stopped, zero assignments; no additional units or training. Fixed critic study
 failed and remains closed; next work is bounded saved-policy/execution sensitivity
 diagnosis, not extension or promotion. Release:
 https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24
+
+
+[Saved critic final-update sensitivity](results/critic-update-2026-10-24/README.md) complete: three one-update pairs on
+256 fixed candidate training-replay observations; truncatedTQC actor relativeL2
+0.03356%, exposure mean absolute delta0.001462, GaussianKL0.001133 and zero
+exposure-sign flips. These are normalized action/tensor diagnostics, not returns
+or a cause of development deterioration. Independent Torch arithmetic agrees;
+all protected files/model/Adam state unchanged, worker exited0, no local
+optimization or Colab units. First phase-filename rejection and reviewed v2
+correction retained; sample/metrics unchanged. Fixed failed family remains
+closed. Next bounded saved-development-path audit before another training
+hypothesis; no promotion or retired-test access.
