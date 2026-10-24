@@ -1,0 +1,57 @@
+{
+  "schema": "sec-filing-coverage-audit-v1",
+  "status": "preregistered_before_download_and_outcome_scoring",
+  "purpose": "Establish causal financial-data feasibility; this is not a model promotion experiment.",
+  "source": "SEC quarterly Financial Statement Data Sets; original accession filings for verification",
+  "source_documentation": [
+    "https://www.sec.gov/dera/data/financial-statement-data-sets.html",
+    "https://www.sec.gov/dera/data/fsds.pdf",
+    "https://www.sec.gov/about/developer-resources"
+  ],
+  "archive_quarters": {"first": "2009q2", "last": "2023q4"},
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "retired_test_start": "2024-01-01",
+  "training_end_year": 2020,
+  "development_years": [2021, 2022, 2023],
+  "forms": ["10-K", "10-Q", "10-K/A", "10-Q/A"],
+  "tables": ["sub", "num", "tag", "pre"],
+  "join_key": "adsh",
+  "preserve": ["archive_sha256", "retrieval_utc", "source_url", "adsh", "cik", "form", "accepted", "filed", "period", "tag", "version", "ddate", "qtrs", "uom", "coreg"],
+  "candidate_families_not_enabled": ["revenue_growth", "profitability", "leverage"],
+  "excluded_inputs": ["prevrpt", "current_ticker_mapping", "current_sector", "future_amendment_flag", "future_returns", "future_declining_cohort"],
+  "availability_policy": {
+    "status": "must_verify_timestamp_timezone_and_public_dissemination_before_features",
+    "minimum_conservative_rule": "No same-local-calendar-day use; first eligible exchange session strictly after both verified acceptance and filed local dates. Add any longer documented publication delay.",
+    "missing_or_ambiguous_timestamp": "exclude_and_report",
+    "amendments": "new_vintage_only_after_own_availability; never_overwrite_earlier_accession",
+    "quarter_archive_posting": "retrieval_is_not_historical_filing_availability; reconstruct_only_with_verified_original_filing_evidence"
+  },
+  "required_reports": [
+    "per_symbol_year_and_split_CIK_mapping_evidence_and_ambiguities",
+    "per_symbol_year_form_accession_counts_and_missing_periods",
+    "accepted_filed_period_dates_missing_invalid_and_order_anomalies",
+    "amendment_counts_and_original_vintage_retention",
+    "standard_custom_tags_units_durations_coregistrants_duplicates_and_conflicts",
+    "training_only_candidate_family_readiness_and_staleness",
+    "development_coverage_without_returns_or_performance_scoring",
+    "archive_revision_reprocessing_and_original_filing_verification"
+  ],
+  "stop_conditions": [
+    "any_retired_test_access_or_performance_selection",
+    "unresolved_historical_identity_or_public_availability",
+    "silent_currency_duration_or_concept_substitution",
+    "rewriting_prior_vintages_using_current_archive_or_summary_values"
+  ],
+  "training_authorized_by_this_protocol": false,
+  "normalization_fitted": false,
+  "performance_scoring": false,
+  "colab_allocation": false,
+  "next_gate": "Freeze a separate feature specification and quantitative coverage/model acceptance gates after outcome-free source audit; no training until then.",
+  "limitations": [
+    "Coverage is not evidence of predictive value.",
+    "Retrospective surviving-stock universe remains biased; CIK mapping alone does not fix delistings.",
+    "Financial statements are slow-moving relative to a 20-session holding limit.",
+    "ETFs are not operating companies; no invented ETF financials.",
+    "Repeatedly reused development returns are not independent prospective evidence."
+  ]
+}

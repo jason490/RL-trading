@@ -1716,3 +1716,15 @@ gap. Observational accounting, not a sole cause or reason to ban shorts/change
 rewards. Source hashes unchanged; no fitting/data/provider access or new units.
 Family closed; distinct hypothesis review before new allocation.
 [Evidence](../results/market-actions-2026-10-24/README.md).
+
+### Financial filing source audit registered — 2026-10-24 UTC
+
+Next distinct information-family review: outcome-free SEC filing coverage audit,
+2009q2–2023q4, no financial inputs or training yet. Primary table documentation
+identifies a future-information trap: `prevrpt` describes subsequent amendment;
+exclude it from historical inputs/eligibility. Acceptance versus filing date,
+public dissemination, historical CIK mapping, NUM durations/units and archive
+reprocessing need verification. No configured SEC identity, no bulk downloads or
+new allocation/units. Freeze feature/quantitative model protocol only after
+source feasibility; retired test remains isolated. [Guide](filing-data.md) and
+[fixed scope](../configs/experiments/filing_coverage_audit.json).
