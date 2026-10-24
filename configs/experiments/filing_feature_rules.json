@@ -1,0 +1,22 @@
+{
+  "schema": "filing-financial-snapshot-rules-v1",
+  "status": "fixed_before_any_price_join_or_performance_scoring",
+  "names": ["filing_revenue_growth", "filing_net_margin", "filing_liabilities_assets"],
+  "revenue_concepts": ["Revenues", "SalesRevenueNet", "RevenueFromContractWithCustomerExcludingAssessedTax", "RevenueFromContractWithCustomerIncludingAssessedTax"],
+  "multiple_total_revenue_concepts": "Require equal amounts for the same exact interval; no preference or summing components.",
+  "form_duration_days_inclusive": {"10-K": [330, 380], "10-K/A": [330, 380], "10-Q": [28, 330], "10-Q/A": [28, 330]},
+  "current_flow_interval": "Longest revenue-and-NetIncomeLoss interval ending on original report_end within the form bounds. No fallback to shorter intervals when selected facts conflict.",
+  "prior_comparable": "Exactly one revenue interval with both endpoints 350-380 days earlier and duration differing by at most7 days. At least one same revenue concept must be present in current and prior intervals.",
+  "duplicates": "Same concept/period/unit exact decimal agreement permitted; conflicting values make arithmetic unready, never last-row wins.",
+  "instant_facts": "Assets and Liabilities must share the exact original report end.",
+  "formulas": {"filing_revenue_growth": "current_revenue / prior_comparable_revenue - 1", "filing_net_margin": "current_NetIncomeLoss / current_revenue", "filing_liabilities_assets": "current_Liabilities / current_Assets"},
+  "valid_denominators": "Current/prior revenue and assets strictly positive; liabilities nonnegative. Net income may be negative.",
+  "period_kind": "Reported annual or longest reported subannual interval, not assumed calendar quarter, YTD or trailing-twelve-month estimate.",
+  "coherent_vintage": "Every value comes from one original accession. Comparative restatements are available only with that accession; never rewrite an earlier snapshot.",
+  "units": "Unqualified expected-issuer simple USD facts only; no currency conversion or scale refit.",
+  "inorganic_growth": "Reported ratios, not organic growth or proof of economic comparability across reorganizations/mergers.",
+  "arithmetic_ready_is_model_ready": false,
+  "publication_identity_price_link_and_staleness_gates": "Still required before any dataset or model input.",
+  "default_registry_enabled": false,
+  "training_performed": false
+}

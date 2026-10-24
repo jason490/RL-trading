@@ -485,3 +485,45 @@ sets exact-publication verification true. Source dates from2024 onward reject;
 a late2023 filing whose reconstructed availability falls in2024 is unavailable
 to all2023 decisions.90 focused SEC tests pass. No financial dataset or training
 has been promoted by these evidence queries.
+
+## Fixed coherent-accession financial snapshot rules
+
+[Feature rules](../configs/experiments/filing_feature_rules.json) are fixed before
+any price join or performance scoring. The optional pure builder in
+`features/fundamentals/snapshot.py` computes three reported ratios: revenue growth,
+net margin and liabilities/assets. It is not registered in the default market
+schema, does not fit normalization, and never enables financial inputs itself.
+
+For annual forms, current flows must end at the original reporting date and span
+330–380 inclusive days. Quarterly forms permit28–330 days, accommodating16-week
+quarters and other fiscal calendars. Choose the longest common revenue/net-income
+interval within those bounds; do not substitute a shorter interval when selected
+facts conflict. This is the longest reported subannual interval, not an assertion
+that every source represents a calendar quarter, YTD or trailing-twelve-month
+figure. Assets/liabilities must have the exact same current instant date.
+
+Prior revenue must have exactly one comparable interval: both endpoints350–380
+days earlier and duration difference at most7 days. Current/prior must share a
+supported revenue concept. Duplicate or competing total-revenue facts require
+exact decimal agreement; otherwise arithmetic is unready. No priority/summing
+rule silently combines potentially different accounting measures. Current/prior
+revenue and assets must be positive, liabilities nonnegative; net income may be
+negative. Every amount comes from one accession, preserving that publication's
+own comparative/restatement vintage without rewriting earlier observations.
+
+The output distinguishes `arithmetic_ready` from financial/publication/price-link
+readiness. Excluded facts cannot influence ratios; mixed accessions, issuers,
+units, unexcluded forward facts and nonfinite values reject. Conflicts, missing
+comparables and invalid denominators produce an explicit unready reason and no
+feature values. There is no clipping, imputation, currency conversion or fitting.
+This is reported financial growth, not organic or merger-adjusted performance.
+
+Actual IBM/Kroger original annual snapshots both pass arithmetic inspection,
+with exact ratio equality against an independent rational-arithmetic calculation.
+IBM uses2019-01-01–2019-12-31; Kroger uses2019-02-03–2020-02-01. The
+[historical inspection](../results/filing-source-review-2026-10-24/financial-snapshot-inspection.json)
+records source/rule/code hashes, ratios and scope. These numbers describe company
+filings, not model trading returns.108 focused SEC/financial checks pass. No
+price join, financial dataset promotion, training or normalization was performed;
+chronological issuer/price eligibility, availability and feature coverage remain
+required before a bounded model experiment.

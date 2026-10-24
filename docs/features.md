@@ -47,3 +47,10 @@ reader for synchronized SPY20-session price return/volatility and own-relative
 return. Cached111/26 source coverage passes for every row; dataset integration,
 training-only extra-field normalization and matched model ablation remain pending.
 This coverage audit is not evidence of predictive or trading improvement.
+
+[Financial filing snapshots](filing-data.md) now have an optional source-only
+arithmetic builder for coherent-accession revenue growth, net margin and
+liabilities/assets. Exact fiscal intervals, duplicate/concept agreement and
+original comparatives are required. It remains outside the default registry:
+arithmetic readiness is not publication/identity/price-link or dataset readiness.
+No financial family has yet trained or passed model acceptance.

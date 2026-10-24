@@ -1865,3 +1865,15 @@ not guaranteed first-publication evidence; exact-publication flag remains false.
 outside2023. Actual two source-backed queries verified. No financial inputs,
 normalization, training, retired price/return access or additional units.
 Next issuer/price-history completion and financial concept/vintage acceptance.
+
+### Coherent-accession financial arithmetic — 2026-10-24 UTC
+
+Fixed three source ratios before price joins/performance scoring: revenue growth,
+net margin, liabilities/assets. Exact interval/form bounds, same-concept unique
+prior comparables, duplicate equality and coherent accession vintage required;
+conflicts/missing denominators remain unready. Actual IBM/Kroger original snapshots
+match independent rational arithmetic exactly.108 focused SEC/financial checks
+pass. Pure optional module remains outside market registry; no normalization,
+price join, financial dataset acceptance, training or additional Colab units.
+Reported ratios are company financials, not model return results. Chronological
+issuer/price/availability coverage and bounded experiment gates remain pending.

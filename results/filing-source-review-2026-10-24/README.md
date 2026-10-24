@@ -214,3 +214,22 @@ conflicting parent/subsidiary observations, DST/holiday/weekend lag and late2023
 availability crossing into2024. No model fitting, normalization update, retired
 price/return evaluation or new Colab units. Full chronological identity and
 financial feature eligibility remain pending.
+
+## Financial snapshot arithmetic verified
+
+Fixed[coherent-accession rules](../../configs/experiments/filing_feature_rules.json)
+produce revenue growth, net margin and liabilities/assets without price joins,
+normalization fitting, concept-priority substitution or cross-accession vintage
+mixing. Annual and subannual interval bounds distinguish fiscal calendars;
+unique comparable prior periods and exact duplicate-value agreement are required.
+Conflicting/missing sources remain unready rather than imputed.
+
+Actual original IBM/Kroger annual snapshots pass, with all three values exactly
+equal to independently computed rational arithmetic. Source/rule/code hashes and
+historic company ratios are in[inspection evidence](financial-snapshot-inspection.json).
+These are financial statement ratios, **not model returns**.108 focused checks
+pass, including16-week quarters, negative net margin, conflict rejection,
+ambiguous comparables, mixed-vintage/unit rejection and source immutability.
+All publication/price-link/model-enabled flags remain false. Full chronological
+financial dataset acceptance and a separate training protocol are still pending.
+No training or new Colab units.

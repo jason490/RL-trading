@@ -1,0 +1,83 @@
+{
+  "schema": "filing-financial-snapshot-inspection-v1",
+  "records": [
+    {
+      "schema": "filing-financial-snapshot-v1",
+      "names": [
+        "filing_revenue_growth",
+        "filing_net_margin",
+        "filing_liabilities_assets"
+      ],
+      "values": [
+        -0.030706989483735597,
+        0.1222471385795948,
+        0.8621160947787576
+      ],
+      "source_sha256": "fc20caf0ec24a58f966801b157cd5a8d5964e5ad3f8a0ee79df483e0251370d2",
+      "accession": "0001558370-20-001334",
+      "cik": "51143",
+      "form": "10-K",
+      "report_end": "2019-12-31",
+      "filed": "2020-02-25",
+      "arithmetic_ready": true,
+      "financial_features_enabled": false,
+      "publication_verified": false,
+      "historical_price_link_verified": false,
+      "reason": null,
+      "current_interval": [
+        "2019-01-01",
+        "2019-12-31"
+      ],
+      "prior_interval": [
+        "2018-01-01",
+        "2018-12-31"
+      ],
+      "interval_days": 365,
+      "comparability_scope": "Reported same-accession periods; not organic or merger-adjusted growth",
+      "independent_fraction_arithmetic_verified": true,
+      "original_fact_payload_sha256": "6c99fda85b833cbd5713712c9481b983b30f9e858868ca4308e676526705cc6b"
+    },
+    {
+      "schema": "filing-financial-snapshot-v1",
+      "names": [
+        "filing_revenue_growth",
+        "filing_net_margin",
+        "filing_liabilities_assets"
+      ],
+      "values": [
+        0.003561697797327906,
+        0.01356655708748344,
+        0.8105665547109776
+      ],
+      "source_sha256": "9e326eefb300e35d421dc93f4f3f5d459b69f87753e71b5d0bbf74e3c4bfc507",
+      "accession": "0001558370-20-003501",
+      "cik": "56873",
+      "form": "10-K",
+      "report_end": "2020-02-01",
+      "filed": "2020-04-01",
+      "arithmetic_ready": true,
+      "financial_features_enabled": false,
+      "publication_verified": false,
+      "historical_price_link_verified": false,
+      "reason": null,
+      "current_interval": [
+        "2019-02-03",
+        "2020-02-01"
+      ],
+      "prior_interval": [
+        "2018-02-04",
+        "2019-02-02"
+      ],
+      "interval_days": 364,
+      "comparability_scope": "Reported same-accession periods; not organic or merger-adjusted growth",
+      "independent_fraction_arithmetic_verified": true,
+      "original_fact_payload_sha256": "80d2c2d9842ea6d9738cde50d641855ef314f578de212e401c27955d31c81ebe"
+    }
+  ],
+  "rules_sha256": "fe2525434ff068bfd2960da999288f5976bf1d300b7d9caf35d79522ddde449c",
+  "feature_source_sha256": "1464163cd5cf78cd44cd46af2aed6f572bc7ad93be677931feafda0a70d9f54a",
+  "price_join_performed": false,
+  "normalization_fitted": false,
+  "training_performed": false,
+  "financial_features_enabled": false
+}
