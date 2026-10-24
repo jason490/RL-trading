@@ -62,3 +62,54 @@ alone without the normal preflight and frozen study protocol.
 This review runs independently of financial-source feasibility. No SEC feature
 is enabled, no financial coverage failure is hidden, and no trading-return
 improvement is claimed.
+
+## Fixed saved-SAC soft-consistency diagnostic
+
+[Protocol](../configs/experiments/sac_soft_consistency.json) now fixes the final
+50k full-execution SAC seed11 model, original26-symbol train/development-only
+source, exact model/metadata/source-state hashes and frozen source revision
+`bb0f3e25bcf60765df158401434959458508da7c`. The frozen package identity is verified
+before execution. The current environment has changed since training; the worker
+must import the retained original package instead of approximating its behavior.
+
+64 distinct reset seeds sample the original `legacy_uniform` training-start
+contract; four fixed action-noise seeds repeat each flat-account state. Each
+stochastic frozen-policy rollout ends at the original512-session timeout, data
+cutoff or true termination. Its action-conditioned soft target is:
+
+```text
+r0 + sum(t=1..H-1, gamma^t * (rt - alpha * logpi_t))
+   + gamma^H * (min_target_critic_Q - alpha * logpi_tail)
+```
+
+The tail is removed only on true termination; timeouts/data cutoffs bootstrap
+exactly as training does. Initial-action entropy is excluded from Q(s0,a0), and
+the tail uses the saved target critics. Alpha is the saved final value, never
+adapted. This is a multistep soft-Bellman consistency diagnostic with a **learned**
+bootstrap, not an unbiased true-value estimator. Flat reset states do not establish
+held-position/replay-wide calibration or identify wrong action gradients.
+
+Window means are the sampling units. The predeclared descriptive evidence flag
+requires mean(minQ−soft-target) minus two conditional sampling standard errors to
+be at least0.1 soft-reward units and at least75% of trajectories to reach512 steps.
+These are not profit percentages or confidence bounds for future markets. A
+passing flag only motivates separately preregistering a matched critic study;
+no model is promoted and no trading screen is automatically launched. A failed
+flag closes this particular diagnostic rationale without changing seeds/horizon.
+
+Run locally for **inference only**, with the original frozen package:
+
+```bash
+PYTHONPATH=.runtime/sac-execution-source/src \
+MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/diagnose_soft_consistency.py \
+  --output results/sac-soft-consistency-2026-10-24/summary.json \
+  --artifacts artifacts/sac-soft-consistency-v1
+```
+
+The worker has a900-second execution bound, a durable per-window journal and no
+automatic restart. It verifies source hashes, weights, all three optimizer states,
+update count, normalization and Torch/NumPy RNG immutability. No replay buffer is
+loaded, normalization fitted, optimizer stepped or validation/test policy scored.
+11 focused target/termination/timeout/RNG/deadline tests and targeted Ruff pass
+before the first actual diagnostic; no outcome is claimed by this preparation.

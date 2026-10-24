@@ -1988,3 +1988,10 @@ verified, all297 snapshots reproduce. Initial stop preserved; collector exited0,
 locks released/no task temporaries.188 checks/Ruff pass. No bulk financial data
 acceptance, training, threshold loosening or new Colab units. A distinct critic
 calibration review is the next candidate, not a promoted model. [Evidence](results/filing-source-review-2026-10-24/original-flow-pilot-reviewed-summary.json).
+
+Saved-SAC soft-consistency diagnostic fixed/implemented: exact original source
+export/model/data identities;64 flat training reset states×4 stochastic repeats,
+original512 horizon, proper future entropy/target-critic timeout bootstrap.11
+focused tests/Ruff pass; no local optimization or Colab allocation. Descriptive
+conditional inconsistency flag is not true-Q calibration, trading return or model
+promotion. Actual run pending. See[protocol](configs/experiments/sac_soft_consistency.json).
