@@ -324,3 +324,13 @@ Standalone interactive HTML accompanies the compact JSON. Preserve raw artifacts
 and release-checksum verification before removing redundant transports. The
 reporter is implemented during training; no screen outcome is implied by its
 unit tests or availability.
+
+
+Selected/final critic reports also include the existing reconciled action/exit
+diagnostics for stocks and ETFs: requested and closing exposure, modeled cost
+drag, long/short net contributions, protective/holding exits and drawdown-window
+exposure. Same-session partitions describe observed paths, not counterfactual
+causal action effects.20 focused action/accounting/gate checks pass, and both
+actual completed nativeSAC reports reconcile across26 development episodes.
+No model inference, fitting, normalization change or checkpoint reselection is
+needed to inspect these retained paths.

@@ -15,6 +15,7 @@ from rl_stocks.evaluation.direction import declining_stock_summary
 from rl_stocks.evaluation.report_contract import validate_development_report
 from rl_stocks.inference.bundle import checksum
 from rl_stocks.reporting.distributional_critics import historical_reproduction, screen_gate
+from rl_stocks.reporting.action_execution import diagnose_groups
 from rl_stocks.reporting.history import render_report
 from rl_stocks.reporting.initialization import group_metrics
 from rl_stocks.runtime.colab.artifacts import validate_archive
@@ -125,6 +126,11 @@ def report(state_path, source_path, root):
             baseline = current_baseline
             cell[phase] = group_metrics(values, stocks)
             cell[phase]["declining_stocks"] = declining_stock_summary(values, stocks)
+            diagnosis = diagnose_groups(values, stocks, period="development")
+            cell[phase]["action_execution"] = {
+                "groups": diagnosis["groups"],
+                "interpretation": diagnosis["interpretation"],
+            }
             cell["reports"][phase] = dict(
                 sha256=checksum(
                     run / ("selected-validation.json" if phase == "selected" else "validation.json")
