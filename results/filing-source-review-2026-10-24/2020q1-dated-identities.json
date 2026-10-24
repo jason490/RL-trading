@@ -1,0 +1,237 @@
+{
+  "schema": "sec-dated-identity-inspection-v1",
+  "archive_sha256": "48ed9834c66d565c21130d087eae941b25770e2d7cc8351d17652612289fcd67",
+  "records": [
+    {
+      "schema": "sec-filing-identity-evidence-v1",
+      "source_sha256": "355915737042390e9a29795c196b1601521174828bafb2e747dab3f714276fbc",
+      "expected_cik": "6769",
+      "expected_symbol": "APA",
+      "declared_ciks": [
+        "6769"
+      ],
+      "declared_symbols": [
+        "APA",
+        "APA/29"
+      ],
+      "issuer_and_ticker_match": true,
+      "facts": [
+        {
+          "concept": "dei:entitycentralindexkey",
+          "context": "FD2019Q4YTD",
+          "value": "0000006769"
+        },
+        {
+          "concept": "dei:documenttype",
+          "context": "FD2019Q4YTD",
+          "value": "10-K"
+        },
+        {
+          "concept": "dei:documentperiodenddate",
+          "context": "FD2019Q4YTD",
+          "value": "December 31, 2019"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "Common Stock, $0.625 par value"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "APA"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "New York Stock Exchange"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XCHI_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "Common Stock, $0.625 par value"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XCHI_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "APA"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XCHI_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "Chicago Stock Exchange"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNGS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "Common Stock, $0.625 par value"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNGS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "APA"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNGS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember",
+          "value": "Nasdaq Global Select Market"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_apa_A7.75NotesDue2029Member",
+          "value": "7.75% Notes Due 2029"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_apa_A7.75NotesDue2029Member",
+          "value": "APA/29"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "FD2019Q4YTD_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_apa_A7.75NotesDue2029Member",
+          "value": "New York Stock Exchange"
+        }
+      ],
+      "historical_mapping_verified": false,
+      "validity_interval_inferred": false,
+      "model_inputs_enabled": false,
+      "accession": "0001733037-20-000004",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/6769/000173303720000004/apa10-k2019.htm",
+      "source_bytes": 6663974,
+      "filed": "20200228",
+      "accepted_source_string": "2020-02-27 17:44:00.0",
+      "reporting_period": "20191231",
+      "identity_scope": "Only this dated document; no earlier/later validity interval inferred"
+    },
+    {
+      "schema": "sec-filing-identity-evidence-v1",
+      "source_sha256": "af9e696510dea0223ba6010b8c63538e1fde950fded251a9fecc6d7b0a6465aa",
+      "expected_cik": "34088",
+      "expected_symbol": "XOM",
+      "declared_ciks": [
+        "34088"
+      ],
+      "declared_symbols": [
+        "XOM"
+      ],
+      "issuer_and_ticker_match": true,
+      "facts": [
+        {
+          "concept": "dei:entitycentralindexkey",
+          "context": "FROM_Jan01_2019_TO_Dec31_2019_Entity_0000034088",
+          "value": "0000034088"
+        },
+        {
+          "concept": "dei:documenttype",
+          "context": "FROM_Jan01_2019_TO_Dec31_2019_Entity_0000034088",
+          "value": "10-K"
+        },
+        {
+          "concept": "dei:documentperiodenddate",
+          "context": "FROM_Jan01_2019_TO_Dec31_2019_Entity_0000034088",
+          "value": "December 31, 2019"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "FROM_Jan01_2019_TO_Dec31_2019_Entity_0000034088",
+          "value": "Common Stock, without par value"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "FROM_Jan01_2019_TO_Dec31_2019_Entity_0000034088",
+          "value": "XOM"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "FROM_Jan01_2019_TO_Dec31_2019_Entity_0000034088",
+          "value": "New York Stock Exchange"
+        }
+      ],
+      "historical_mapping_verified": false,
+      "validity_interval_inferred": false,
+      "model_inputs_enabled": false,
+      "accession": "0000034088-20-000016",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000003408820000016/xom10k2019.htm",
+      "source_bytes": 10165344,
+      "filed": "20200226",
+      "accepted_source_string": "2020-02-26 16:15:00.0",
+      "reporting_period": "20191231",
+      "identity_scope": "Only this dated document; no earlier/later validity interval inferred"
+    },
+    {
+      "schema": "sec-filing-identity-evidence-v1",
+      "source_sha256": "d169227e3ad69d6b13296966638f78614ecd17f2c5b58491a41cd2287b0f44bd",
+      "expected_cik": "1364742",
+      "expected_symbol": "BLK",
+      "declared_ciks": [
+        "1364742"
+      ],
+      "declared_symbols": [
+        "BLK",
+        "BLK25"
+      ],
+      "issuer_and_ticker_match": true,
+      "facts": [
+        {
+          "concept": "dei:entitycentralindexkey",
+          "context": "C_0001364742_20190101_20191231",
+          "value": "0001364742"
+        },
+        {
+          "concept": "dei:documenttype",
+          "context": "C_0001364742_20190101_20191231",
+          "value": "10-K"
+        },
+        {
+          "concept": "dei:documentperiodenddate",
+          "context": "C_0001364742_20190101_20191231",
+          "value": "December 31, 2019"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "C_0001364742_us-gaapStatementClassOfStockAxis_blkCommonStockPointZeroOneParValueMember_20190101_20191231",
+          "value": "Common Stock, $.01 par value"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "C_0001364742_us-gaapStatementClassOfStockAxis_blkCommonStockPointZeroOneParValueMember_20190101_20191231",
+          "value": "BLK"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "C_0001364742_us-gaapStatementClassOfStockAxis_blkCommonStockPointZeroOneParValueMember_20190101_20191231",
+          "value": "New York Stock Exchange"
+        },
+        {
+          "concept": "dei:security12btitle",
+          "context": "C_0001364742_us-gaapStatementClassOfStockAxis_blkOnePointTwoFiveZeroPercentNotesDueTwoThousandTwentyFiveMember_20190101_20191231",
+          "value": "1.250% Notes due 2025"
+        },
+        {
+          "concept": "dei:tradingsymbol",
+          "context": "C_0001364742_us-gaapStatementClassOfStockAxis_blkOnePointTwoFiveZeroPercentNotesDueTwoThousandTwentyFiveMember_20190101_20191231",
+          "value": "BLK25"
+        },
+        {
+          "concept": "dei:securityexchangename",
+          "context": "C_0001364742_us-gaapStatementClassOfStockAxis_blkOnePointTwoFiveZeroPercentNotesDueTwoThousandTwentyFiveMember_20190101_20191231",
+          "value": "New York Stock Exchange"
+        }
+      ],
+      "historical_mapping_verified": false,
+      "validity_interval_inferred": false,
+      "model_inputs_enabled": false,
+      "accession": "0001564590-20-007807",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1364742/000156459020007807/blk-10k_20191231.htm",
+      "source_bytes": 11693816,
+      "filed": "20200228",
+      "accepted_source_string": "2020-02-28 16:30:00.0",
+      "reporting_period": "20191231",
+      "identity_scope": "Only this dated document; no earlier/later validity interval inferred"
+    }
+  ],
+  "current_candidates_not_backdated": true,
+  "historical_mapping_verified": false,
+  "model_inputs_enabled": false,
+  "training_performed": false
+}

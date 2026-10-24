@@ -265,3 +265,30 @@ never fill missing records with current statements or silently change CIKs.
 unverified after matching, expose shared/absent candidates and keep unrelated
 forms from filling required financial coverage. Candidate counts do not establish
 historical continuity, per-quarter completeness or any predictive value.
+
+## Dated issuer evidence for missing current candidates
+
+Original2019 annual filings published in2020 explicitly declare issuer CIK and
+trading symbols for three candidates missed by today's CIKs:
+
+| Stock | CIK in original2020 filing | Accession |
+| --- | --- | --- |
+| APA | 6769 | 0001733037-20-000004 |
+| BLK | 1364742 | 0001564590-20-007807 |
+| XOM | 34088 | 0000034088-20-000016 |
+
+The new inline-identity inspector verifies original HTML checksum, records explicit
+DEI facts and their contexts, requires exact expected ticker/issuer matching and
+preserves alternative securities. For example,APA also lists`APA/29` and BlackRock
+lists`BLK25`; substring matching or dropping alternate classes is unsafe. The
+inspector rejects ambiguous or malformed issuer facts and does not infer a
+validity interval from a dated document.56 focused SEC checks pass.
+
+Original HTML and acquisition receipts remain under content hashes in
+`data/raw/sec-filings/`. The [dated identity evidence](../results/filing-source-review-2026-10-24/2020q1-dated-identities.json)
+links each source URL, checksum, filing metadata and observed DEI facts. It proves
+those three document-level pairings, not full2010–2023 ticker continuity or
+same-security financial-history eligibility. It does not authorize replacing
+current IDs globally or applying evidence before public availability. Financial
+inputs remain disabled. IBM/KR archive absences and wider chronological coverage
+still require investigation.

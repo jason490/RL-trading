@@ -104,3 +104,19 @@ shows a later parent-registrant change. Current identifiers cannot substitute fo
 dated instrument/issuer evidence. This inspection does not yet verify any full
 2010–2023 identity history or train a model.51 focused tests pass, lint passes,
 and exact derived report reproduction succeeds. No new Colab allocation/units.
+
+## Three document-level historical issuer matches
+
+Original2019 reports filed in2020 declare APA/CIK6769,BLK/CIK1364742 and
+XOM/CIK34088. Checksummed original HTML and receipts are retained; the
+[dated evidence](2020q1-dated-identities.json) records exact DEI issuer/ticker,
+security-title/exchange and context metadata. These older IDs explain three
+current-candidate absences without inventing filings or globally backdating a
+new parent. Alternate symbols`APA/29` and`BLK25` are retained distinctly.
+
+56 focused SEC tests pass, including exact ticker matching, current-parent
+mismatch, shared/invalid issuer ambiguity, source tampering and no inferred
+historical interval. No whole-history identity chain or financial feature dataset
+is certified. IBM/KR absence and chronological source coverage remain pending.
+No model fitting, normalization updates, retired test prices/returns, Colab
+allocation or new compute units were involved.

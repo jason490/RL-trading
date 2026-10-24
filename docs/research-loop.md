@@ -1799,3 +1799,13 @@ false.51 focused checks/lint pass; raw metadata/receipts retained privately,
 derived evidence documented. No training, normalization or new compute units.
 Next dated source identities and actual missing-accession/quarter coverage;
 do not infer full-history readiness from102 positive current-ID matches.
+
+### Dated original issuer/ticker evidence — 2026-10-24 UTC
+
+Three original2020 filings verify document-level APA/6769,BLK/1364742,XOM/34088
+pairings, distinct from current CIK candidates. HTML/checksummed receipts retained;
+inline extractor preserves security classes/context and rejects malformed/shared
+issuer ambiguity. No whole-history validity interval or feature eligibility
+inferred.56 focused SEC checks/lint pass. Derived dated evidence published;
+IBM/KR source gaps and chronological identity coverage remain pending. No model
+training, normalization, retired prices/returns or additional compute units.
