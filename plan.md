@@ -2005,3 +2005,11 @@ sources unchanged; worker exited0/environment closed, zero local optimization or
 Colab allocation.199 combined focused checks pass. Next preregister a distinct
 three-arm critic study and implement its required acceptance, then Colab smokes;
 no TQC model/promotion exists. [Evidence](results/sac-soft-consistency-2026-10-24/README.md).
+
+Distinct distributional-critic study preregistered after the saved-policy flag:
+nativeSAC versus2x25quantileTQCdrop0/drop2, matched original26-symbol source,
+50k seed11/10k curves and fixed shared actor/nativeRNG acceptance. Candidate must
+pass relative gains versusbothcontrols plus unchanged absolute stock/ETF/risk
+gates; onlythen11/23/37/prospective.2-unit incremental allowance inside existing
+project/account/owned-deadline limits. No TQC construction/training, implementation
+and Colabsmokes pending. [Protocol](configs/experiments/distributional_critics.json).

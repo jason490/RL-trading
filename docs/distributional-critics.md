@@ -136,3 +136,35 @@ verify configuration, frozen inference, optimizer restoration and actual Colab
 smokes before a screen. No TQC model exists yet. The result supports that study's
 rationale without proving true-value bias, wrong gradients, a trading improvement
 or permission to tune the truncation setting after failure.
+
+## Three-arm study preregistered; implementation pending
+
+[Fixed protocol](../configs/experiments/distributional_critics.json) uses native
+SAC, untruncated TQC and TQC dropping two of25 quantiles per each of two critics.
+All arms retain64x64 actor networks, the original26-symbol source and50k-step
+seed11 budgets, full execution state, sampling, costs, reward and10k checkpoint
+cadence. This preserves the diagnostic/control data rather than confounding the
+algorithm test with the separate107-stock expansion. TQC0 versus TQC2 isolates
+truncation; SAC versus TQC0 also changes critic objective/output/aggregation.
+
+Initial actor tensors must match across all arms. Both TQC arms must have exact
+shared initial actor/critic/target tensors and optimizer states, and all arms must
+restore the native SAC standard post-initialization RNG state. Full SAC/TQC
+network equality is not claimed. Native SAC historical scores must reproduce
+within fixed0.01pp checkpoint-mean and0.05pp selected/final per-symbol tolerances;
+final learned tensors across hardware are not assumed bitwise identical. A control
+mismatch invalidates interpretation, without widened tolerances or automatic retry.
+
+Selected and final candidate means must beat **both** fresh controls by2pp, avoid
+final stock/ETF deterioration and more than2pp extra drawdown. Both phases must
+also meet stock/ETF holding excess≥−2pp and median stock excess≥−2pp. Failure closes
+the fixed study with no truncation/quantile/reward/step grid or extension. Only a
+passing screen proceeds to the fixed three-seed gates and later prospective
+evidence. Smokes must verify real tensors, RNG, geometry, optimizer/frozen parity
+and artifacts before any screen. No TQC model has been constructed or trained.
+
+The study has a2-unit incremental allowance within the unchanged original shared
+ledger and project150/130/account150/170 stops. Prefer CPU, inspect actual Colab
+Python, meter every minute and enforce7200-second inclusive owned deadlines with
+profiling/projection reserve. Reuse the existing central fleet and cleanup logic.
+Factory/configuration/runtime/report support is the next implementation task.
