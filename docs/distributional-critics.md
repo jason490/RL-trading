@@ -113,3 +113,26 @@ update count, normalization and Torch/NumPy RNG immutability. No replay buffer i
 loaded, normalization fitted, optimizer stepped or validation/test policy scored.
 11 focused target/termination/timeout/RNG/deadline tests and targeted Ruff pass
 before the first actual diagnostic; no outcome is claimed by this preparation.
+
+## Completed diagnostic — descriptive flag passes
+
+[Actual result](../results/sac-soft-consistency-2026-10-24/README.md):64 flat training
+reset states/256 frozen stochastic trajectories complete in38.6seconds. Mean
+minimumQ4.031877 versus multistep soft target0.234971 gives gap3.796906; descriptive
+lower-two-SE3.625062 exceeds0.1.204/256 trajectories(79.69%) reach512 steps, above75%.
+Both fixed criteria pass, with all64 window-mean gaps positive. These numbers are
+soft-reward units, not profit percentages or new trading returns.
+
+Original source/simulation/reward/normalization are verified; all weights,
+optimizer states, updates, normalization, RNG and protected files stayed unchanged.
+All durable window/trajectory arithmetic and aggregate/flag reproduce.11 focused
+checks passed before execution and199 combined source/financial/diagnostic checks
+pass afterward. Worker exited0/environment closed; no task temporary files or
+Colab allocation. No training, checkpoint selection or retired-test evaluation.
+
+The next authorized research work is to preregister and implement one bounded
+native-SAC versus untruncated-TQC versus fixed-truncation-TQC comparison, then
+verify configuration, frozen inference, optimizer restoration and actual Colab
+smokes before a screen. No TQC model exists yet. The result supports that study's
+rationale without proving true-value bias, wrong gradients, a trading improvement
+or permission to tune the truncation setting after failure.

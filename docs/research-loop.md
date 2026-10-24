@@ -1931,3 +1931,15 @@ against source commit, evidence retained/no temporaryfiles. No new Colab units.
 Next balance-sheet identities/original concept equivalence before bulk extraction
 or allocating model runs; avoid spending training credits on unresolved inputs.
 [Evidence](../results/filing-source-review-2026-10-24/README.md).
+
+## Fixed saved-SAC soft-consistency evidence — 2026-10-24
+
+Original-source inference-only diagnostic passes its descriptive flag:64 flat
+training-reset states×4 stochastic rollouts, mean minQ−soft-target3.796906,
+lower-two-SE3.625062≥0.1 and204/256 full512 trajectories≥75%. Learned target-critic
+bootstrap and conditional sampling limit interpretation; no unbiased true-Q,
+wrong-gradient or trading-performance claim. Source weights/optimizers/updates/
+normalization/RNG unchanged; environment closed, zero optimizer/Colab steps.
+199 combined focused checks pass. Supports one separately preregistered critic
+algorithm comparison, not reopening closed SAC grids. No TQC screen or model
+promotion yet. [Evidence](../results/sac-soft-consistency-2026-10-24/README.md).

@@ -239,3 +239,11 @@ verified, all297 snapshots reproduce. Initial stop preserved; collector exited0,
 locks released/no task temporaries.188 checks/Ruff pass. No bulk financial data
 acceptance, training, threshold loosening or new Colab units. A distinct critic
 calibration review is the next candidate, not a promoted model. [Evidence](filing-source-review-2026-10-24/original-flow-pilot-reviewed-summary.json).
+
+[Saved SAC soft-consistency](sac-soft-consistency-2026-10-24/README.md):64 fixed flat
+training-reset states/256 frozen stochastic trajectories, meanQ−soft-target3.796906,
+lower-two-SE3.625062 and79.69% full512 trajectories pass the fixed descriptive flag.
+Not trading returns or unbiased true-Q calibration; learned bootstrap and reset-only
+scope retained. All states/sources unchanged,199 combined focused checks pass,
+worker exited/environment closed. Supports preregistering a distinct critic study;
+no TQC training, promotion, retired-test evaluation or new Colab units.

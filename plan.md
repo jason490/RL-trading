@@ -1995,3 +1995,13 @@ original512 horizon, proper future entropy/target-critic timeout bootstrap.11
 focused tests/Ruff pass; no local optimization or Colab allocation. Descriptive
 conditional inconsistency flag is not true-Q calibration, trading return or model
 promotion. Actual run pending. See[protocol](configs/experiments/sac_soft_consistency.json).
+
+Saved-SAC soft-consistency complete: mean minimumQ4.031877 versus multistep soft
+target0.234971 on64 fixed flat training reset states×4 stochastic repetitions.
+Descriptive gap lower-two-SE3.625062≥0.1 and204/256 full512 trajectories≥75%, flag
+passes. All64 window means positive; soft units, not trading returns or true-Q
+calibration proof. All weights/optimizer states/updates/normalization/RNG and
+sources unchanged; worker exited0/environment closed, zero local optimization or
+Colab allocation.199 combined focused checks pass. Next preregister a distinct
+three-arm critic study and implement its required acceptance, then Colab smokes;
+no TQC model/promotion exists. [Evidence](results/sac-soft-consistency-2026-10-24/README.md).
