@@ -167,3 +167,14 @@ ledger/plan.html preserved. Strict summary reproduces byte for byte from retaine
 transports with actual models/Adam/coupling restored. All four sessions stopped;
 project38.74617914 unchanged. Fixed L2 family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-regularization-2026-10-23).
+
+
+## Distributional critic assets
+
+The model packager includes `critic-initialization.npz` beside each critic-study
+run's selected/final weights and metadata. Catalog entries preserve `critic_arm`;
+validation index/page labels use it before the generic policy variant, making
+nativeSAC, untruncatedTQC and truncatedTQC distinguishable. Complete frozen
+bundles remain intact. Replay buffers, credential files and original report
+price rows stay excluded. Seven focused packaging/report-gate checks pass;
+this packaging support does not establish publication or a completed study.
