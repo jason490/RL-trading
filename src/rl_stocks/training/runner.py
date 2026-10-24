@@ -182,6 +182,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         "evaluation_every":every,"milestones":milestones,"compact_checkpoints":compact_checkpoints,
         "versions":versions,
         "nondeterminism":"Seeds fixed; hardware/backend floating point may differ", "resume":"Replay buffer saved; exact RNG/env restoration not claimed"}
+    if algorithm=='tqc':
+        from rl_stocks.rl.tqc.geometry import model_spec as tqc_spec
+        metadata['critic_geometry']=tqc_spec(model)
     if study_protocol_sha256 is not None:metadata['study_protocol_sha256']=study_protocol_sha256
     from rl_stocks.training.recurrent_state import PROTOCOL_SHA256 as RECURRENT_PROTOCOL,model_record as recurrent_record
     if study_protocol_sha256==RECURRENT_PROTOCOL:

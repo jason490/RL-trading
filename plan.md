@@ -2013,3 +2013,12 @@ pass relative gains versusbothcontrols plus unchanged absolute stock/ETF/risk
 gates; onlythen11/23/37/prospective.2-unit incremental allowance inside existing
 project/account/owned-deadline limits. No TQC construction/training, implementation
 and Colabsmokes pending. [Protocol](configs/experiments/distributional_critics.json).
+
+Distributional-critic base implementation: TQC factory/configuration, strict
+quantile/truncation validation, actual critic/target geometry and mandatory frozen
+critic declaration. Existing SAC defaults/weights/RNG preserved; SAC/TQC actors
+and TQC0/TQC2 initial tensors verified at32/64 widths.23 TQC checks within42
+passing algorithm/frozen checks; no optimizer steps/Colab allocation. Nonempty
+Adam serialization fixtures are not learned acceptance. Shared nativeRNG payload,
+study/runtime/archive/gate integration and actual Colabsmokes are next. No TQC
+trained model or performance result. [Guide](docs/distributional-critics.md).

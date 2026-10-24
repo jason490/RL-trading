@@ -168,3 +168,36 @@ ledger and project150/130/account150/170 stops. Prefer CPU, inspect actual Colab
 Python, meter every minute and enforce7200-second inclusive owned deadlines with
 profiling/projection reserve. Reuse the existing central fleet and cleanup logic.
 Factory/configuration/runtime/report support is the next implementation task.
+
+## Base TQC algorithm and frozen contract implemented
+
+The factory now resolves/constructs `tqc` with the existing SAC collection/update
+settings, explicit two25-quantile critics and default drop2. Policy overrides keep
+explicit critic defaults; noninteger/invalid critic counts, empty retained-target
+geometry and gSDE overrides reject before construction. The fixed study can set
+drop0 without changing the architecture. Existing native SAC full/smoke parameters
+remain exactly equal to their prior frozen contracts.
+
+Saved TQC bundles require an explicit `critic_geometry` declaration matching the
+actual actor/critic/target model. The loader verifies algorithm/policy identity,
+critic counts/head widths/target agreement, truncation and retained quantiles.
+Missing declarations, checksummed false metadata (including bool-as-int fields),
+wrong target heads and TQC checkpoints mislabeled as SAC reject. The generic
+training runner now records this declaration for TQC; this does not enable the
+pending study's Colab tasks or bypass its initialization/validation requirements.
+
+23 TQC checks form part of42 passing algorithm/frozen regression checks. They
+verify actual `(batch,2,25)` critic/target outputs,46 retained targets for drop2
+and50 for drop0, exact shared actor tensors across SAC/TQC at32/64 widths,
+identical initial TQC0/TQC2 networks/optimizer states, native SAC parameter/
+weight/RNG preservation and exact untrained frozen prediction parity with
+immutable normalization. A nonempty Adam serialization fixture round-trips
+without calling any optimizer step; it is **not learned optimizer acceptance**.
+One unrelated gradient-check test was deliberately excluded from this run.
+New files pass Ruff; touched legacy modules add no findings to their existing
+lint baselines. No local optimization, provider access or Colab allocation.
+
+Next implement the shared native-SAC post-initialization RNG payload, strict study
+parameter/archive identity checks and metered Colab job integration. Actual
+learned optimizer restoration and all smoke/screen performance gates remain
+unverified. No TQC model has been trained or promoted.

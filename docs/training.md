@@ -113,3 +113,10 @@ For the Gaussian update-guard study, [shared initialization](recurrent-update-gu
 
 [Recurrent-capacity comparison](recurrent-capacity.md) specifies the fixed
 64/128-width hypothesis, shared untrained RNG starts and resource gates.
+
+The native `tqc` factory configuration and frozen critic contract are implemented
+for the [registered distributional-critic study](distributional-critics.md).
+Local construction/serialization checks perform zero optimizer steps. Shared
+initialization, central runtime/archive integration and actual Colab smokes remain
+pending; this base API acceptance is not permission to skip those study gates or
+claim a trained TQC result. Existing SAC defaults are unchanged.

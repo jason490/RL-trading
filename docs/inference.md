@@ -53,3 +53,10 @@ next-session simulated execution. It preserves per-stream memory across process
 restarts, enforces observed-before-open signals and rejects gaps or revisions.
 The registered campaign and its forward reports are separate from validation
 selection and the retired test audit. It does not connect to a broker.
+
+TQC bundles require `metadata.critic_geometry` matching actual quantile critics,
+target heads, dropped/retained quantiles and algorithm/policy identity. The loader
+rejects missing or internally checksummed inconsistent declarations, including a
+TQC checkpoint mislabeled as SAC. Untrained deterministic prediction parity and
+normalization immutability pass; learned Colab restoration remains pending in the
+[distributional-critic study](distributional-critics.md).
