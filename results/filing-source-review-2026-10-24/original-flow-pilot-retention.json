@@ -1,0 +1,25 @@
+{
+  "schema": "original-flow-pilot-retention-v1",
+  "state_sha256": "4ce714f41af87e5f9df956af2512298333016e5020fca89c28ed02ca64d94771",
+  "source_git_revision": "6c5610baf907a29cc2afc733e79c528a98722633",
+  "source_files_match_recorded_revision": {
+    "src/rl_stocks/data/providers/sec/facts.py": "cd14e94fb239da5743fa2c1b371c8e8627798b2a9f95f137ac13466857d15109",
+    "src/rl_stocks/features/fundamentals/snapshot.py": "8a848c405058b1a2213c95da27cee24bfb1d5b55d35e8e3271b4b7052c200891",
+    "src/rl_stocks/data/providers/sec/originals.py": "d5645ea2b3dc5e52363880fa948bd390b6d2794d0c596a7347ec0ff6ee4f4cb4",
+    "src/rl_stocks/core/files.py": "8cd3138015b4a0fa135147bd89b64a078af742b7a92ae5189e0c7eda4d5e1285",
+    "scripts/collect_original_flow_pilot.py": "00e461cf4c00f1380c61de897ded5550e5002106763f7069324f92c7bfd509c4",
+    "configs/experiments/filing_flow_feature_rules.json": "950a0143e633e140d00669b11d07578f1d687a2490bea04ebba4fbbf43d30a1b",
+    "configs/experiments/filing_original_flow_pilot.json": "9841794e27d5cee866c579e6acd353189fe3a6e1e727625b054b7e359ba2e855",
+    "configs/experiments/filing_original_flow_pilot_resume.json": "a0aedb0637d3f0f7cd0cff2447e53ba20cc39af3841ca9525647bf6113a36641"
+  },
+  "retained_original_receipts_verified": 300,
+  "independent_fraction_arithmetic_verified": 210,
+  "prior_failed_journal_and_summary_unchanged": true,
+  "collector_handle_terminal_exit_code": 0,
+  "task_locks_released": true,
+  "no_task_temporary_files": true,
+  "raw_evidence_retained": true,
+  "plan_html_unchanged": true,
+  "training_performed": false,
+  "colab_allocated": false
+}

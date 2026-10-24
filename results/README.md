@@ -229,3 +229,13 @@ collector exited, no retry/replacement/restart or Colab units.183 focused checks
 pass; source hashes/extraction/snapshots reproduce. A reviewed continuation must
 retain the failure and count oversized unsupported sources in the fixed sample.
 [Evidence](filing-source-review-2026-10-24/original-flow-pilot-summary.json).
+
+
+Cross-era original-flow pilot complete, **failed**:210/319 ready(65.83%) versus80%
+overall; eras69/104(66.35%),66/107(61.68%),75/108(69.44%) all miss70%.297 inspected
+include67missingflow/19conflict/1prior failure;19oversized+3unsupported stay in
+fixed denominator.300 complete originals/1.44GB retained;210 ratios independently
+verified, all297 snapshots reproduce. Initial stop preserved; collector exited0,
+locks released/no task temporaries.188 checks/Ruff pass. No bulk financial data
+acceptance, training, threshold loosening or new Colab units. A distinct critic
+calibration review is the next candidate, not a promoted model. [Evidence](filing-source-review-2026-10-24/original-flow-pilot-reviewed-summary.json).

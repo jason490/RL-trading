@@ -1,13 +1,11 @@
 # Causal financial filing research
 
-Status: the registered financial/master catalogs and concept-presence audits are
-complete. Original-filing prototypes work, but a complete causal financial dataset
-has not been accepted. Only43.7% of assessed financial-table candidates contain
-all required current tags; this is not an arithmetic or stock-price readiness rate.
-No financial inputs, model fitting or Colab allocations have been enabled for this
-family. The [fixed audit specification](../configs/experiments/filing_coverage_audit.json)
-is separate from any later training experiment. Existing failed price-feature
-and model families remain closed; this proposal does not establish improved return.
+Status: the original-flow feasibility pilot is complete and **failed** its fixed
+coverage gates:210/319 selected originals (65.83%) are arithmetic-ready, below80%
+overall and70% in every era. Financial inputs remain disabled; no causal financial
+dataset or model is accepted. Earlier catalog/concept audits and the initial
+source-cap stop are retained in the chronology below. This source result does not
+change trading returns. See the final pilot section for counts and retention proof.
 
 ## Source and scope
 
@@ -1002,3 +1000,57 @@ and does not authorize financial-input training. No Colab allocation is required
 Reviewed-deadline regression:188 focused source/financial checks now pass,
 including an expired original deadline that fails before any acquisition.
 A continuation never receives a fresh3600-second allowance.
+
+
+## Cross-era original-flow pilot completed: feasibility gate failed
+
+The reviewed collector completed all **319 selected originals** from the frozen
+manifest, retaining all17 absent issuer/era slots separately. **210/319 (65.83%)**
+yield ready flow arithmetic, below the fixed80% overall requirement. Every era
+also misses its70% requirement:
+
+| Filing-year era | Selected originals | Arithmetic-ready | Ready fraction | Gate |
+| --- | ---: | ---: | ---: | --- |
+| 2009–2011 | 104 | 69 | 66.35% | Fail |
+| 2015–2017 | 107 | 66 | 61.68% | Fail |
+| 2021–2023 | 108 | 75 | 69.44% | Fail |
+
+Of297 successfully inspected originals,67 lack supported current comparable
+flows,19 have conflicting current flow values and1 lacks an unambiguous prior
+interval.19 oversized selected documents and3 unsupported originals remain
+failures in the319 denominator; none was retried or replaced.39 inspected
+original report dates differ from the archive labels. No income/revenue aliases,
+source cap, selected stocks or gate thresholds changed. Passing a source gate
+would not have proven stock/day coverage or causal publication, and this pilot
+has not passed even that source gate.
+
+**This fixed flow family is not accepted for bulk dataset construction or model
+training.** Do not launch a financial-input screen, lower the thresholds, drop
+failed issuers, enlarge source caps or substitute income concepts to promote this
+result. Any future information-family proposal must be a distinct, explicitly
+specified hypothesis with its own preregistration; this failed result remains
+recorded. There is no change to model returns or the robust-performance goal.
+
+[Terminal result](../results/filing-source-review-2026-10-24/original-flow-pilot-reviewed-summary.json) records the frozen selection/input hashes and failure
+counts. All300 complete originals (**1,439,535,724bytes**) and receipts are retained.
+The19 rejected streaming responses consumed380,000,019 separately counted bytes;
+no incomplete response is represented as a complete original. Total elapsed time
+is1433.33seconds from the original start, including the reviewed stop interval,
+within the unchanged3600-second deadline.
+
+[Retention proof](../results/filing-source-review-2026-10-24/original-flow-pilot-retention.json) verifies all300 receipt URL/hash/size fields,
+all210 ready ratios independently with Fraction arithmetic, and eight critical
+source/configuration files against collection commit`6c5610b`. The reporter
+re-extracted all297 inspected fact payloads and reproduced their snapshots from
+checksummed originals. The initial failed journal/public summary are unchanged.
+Collector handle92537 exited0; task locks are released and no task temporary files
+remain. Raw evidence, manifest, terminal journals and payloads are preserved.
+188 focused source/financial tests and targeted Ruff pass;`plan.html` is unchanged.
+
+No financial input was enabled, normalization fitted, price series accessed,
+retired test reopened or model trained. No Colab session was allocated; the last
+official account reading remains349.02units,0rate,0assignments. Cumulative project
+usage remains approximately39.01438units. The separate
+[distributional-critic review](distributional-critics.md) identifies saved-policy calibration as a
+possible next research step; it does not claim TQC trading performance or revive
+closed SAC parameter families.

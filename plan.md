@@ -1978,3 +1978,13 @@ value-distribution/truncation research from closed SAC parameter families. No
 trading evidence or overestimation-cause claim; fixed saved-policy calibration
 review is required before any study protocol or training allocation. See
 [review](docs/distributional-critics.md). No model fitting/new Colab units.
+
+
+Cross-era original-flow pilot complete, **failed**:210/319 ready(65.83%) versus80%
+overall; eras69/104(66.35%),66/107(61.68%),75/108(69.44%) all miss70%.297 inspected
+include67missingflow/19conflict/1prior failure;19oversized+3unsupported stay in
+fixed denominator.300 complete originals/1.44GB retained;210 ratios independently
+verified, all297 snapshots reproduce. Initial stop preserved; collector exited0,
+locks released/no task temporaries.188 checks/Ruff pass. No bulk financial data
+acceptance, training, threshold loosening or new Colab units. A distinct critic
+calibration review is the next candidate, not a promoted model. [Evidence](results/filing-source-review-2026-10-24/original-flow-pilot-reviewed-summary.json).

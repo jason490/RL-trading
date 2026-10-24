@@ -1,0 +1,71 @@
+{
+  "absent_issuer_strata": 17,
+  "all_completed_source_hashes_verified": true,
+  "archive_period_label_differences": 39,
+  "arithmetic_ready": 210,
+  "candidate_ciks": 112,
+  "colab_allocated": false,
+  "collection_status": "complete",
+  "completed_originals": 319,
+  "elapsed_seconds": 1433.3259921073914,
+  "financial_inputs_enabled": false,
+  "fixed_source_feasibility_gate_passed": false,
+  "gate_evaluated": true,
+  "historical_price_links_verified": false,
+  "incomplete_selected_sources": 0,
+  "inspected_fact_extractions_and_snapshots_reproduced": true,
+  "manifest_sha256": "ede0b4e0a62950b6031255c9673cebaf78392f7560a3615c2d77f3f022628f97",
+  "normalization_fitted": false,
+  "original_vintage_verified": false,
+  "per_stratum": {
+    "2009-2011": {
+      "absent_issuer_slots": 8,
+      "arithmetic_ready": 69,
+      "readiness_fraction": 0.6634615384615384,
+      "selected": 104,
+      "threshold_pass": false
+    },
+    "2015-2017": {
+      "absent_issuer_slots": 5,
+      "arithmetic_ready": 66,
+      "readiness_fraction": 0.616822429906542,
+      "selected": 107,
+      "threshold_pass": false
+    },
+    "2021-2023": {
+      "absent_issuer_slots": 4,
+      "arithmetic_ready": 75,
+      "readiness_fraction": 0.6944444444444444,
+      "selected": 108,
+      "threshold_pass": false
+    }
+  },
+  "prior_source_git_revision": "4b248f5a83098636909f08a8216237b189b6b375",
+  "prior_state_sha256": "6ffbf0c72c48cd38b7e58acc91ebdce7f36ccb56651bf30eb37a2b6c83942b2a",
+  "protocol_sha256": "9841794e27d5cee866c579e6acd353189fe3a6e1e727625b054b7e359ba2e855",
+  "readiness_fraction": 0.658307210031348,
+  "rejected_response_bytes": 380000019,
+  "resume_protocol_sha256": "a0aedb0637d3f0f7cd0cff2447e53ba20cc39af3841ca9525647bf6113a36641",
+  "rules_sha256": "950a0143e633e140d00669b11d07578f1d687a2490bea04ebba4fbbf43d30a1b",
+  "schema": "sec-original-flow-pilot-summary-v1",
+  "selected_originals": 319,
+  "source_git_revision": "6c5610baf907a29cc2afc733e79c528a98722633",
+  "state_sha256": "4ce714f41af87e5f9df956af2512298333016e5020fca89c28ed02ca64d94771",
+  "status_counts": {
+    "inspected": 297,
+    "source_exceeds_limit": 19,
+    "unsupported_original": 3
+  },
+  "terminal_error_type": null,
+  "total_verified_source_bytes": 1439535724,
+  "training_performed": false,
+  "unfinished_current_accession": null,
+  "unready_reasons": {
+    "conflicting_current_flow_values": 19,
+    "missing_current_comparable_flows": 67,
+    "missing_or_ambiguous_prior_interval": 1
+  },
+  "unsupported_error_types": {
+    "ValueError": 3
+  }
+}
