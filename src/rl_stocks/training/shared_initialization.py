@@ -16,8 +16,20 @@ def tensor_fingerprint(arrays):
 
 
 def _untrained(model):
-    if model.num_timesteps!=0 or model._n_updates!=0 or model.policy.optimizer.state:
+    optimizer=getattr(model.policy,'optimizer',None)
+    if optimizer is not None:
+        optimizers=[optimizer]
+    else:
+        optimizers=[getattr(getattr(model,name,None),'optimizer',None) for name in ('actor','critic')]
+        entropy=getattr(model,'ent_coef_optimizer',None)
+        if entropy is not None:
+            optimizers.append(entropy)
+    if (model.num_timesteps!=0 or model._n_updates!=0
+            or any(o is None or o.state for o in optimizers)):
         raise ValueError('untrained policy and empty optimizer required')
+    replay=getattr(model,'replay_buffer',None)
+    if replay is not None and (replay.pos!=0 or replay.full):
+        raise ValueError('fresh empty replay required')
     if any(p.device.type!='cpu' for p in model.policy.parameters()):raise ValueError('CPU initialization required')
     if getattr(model,'_research_initialization',None) is not None:raise ValueError('initialization already applied')
 

@@ -1,0 +1,199 @@
+{
+  "schema": "distributional-initialization-acceptance-v1",
+  "protocol_sha256": "c8836a26cc2ac5e0b1c771ead4124656203d824ff86ea6aaee85fc8e66897451",
+  "binding_sha256": "0fb4dea46d1147848b7a3cbaf4369868e9cfd481fc46db149799f04bf031ca2b",
+  "manifest_sha256": "b1b65d492d0111957525326073387affb6bd043e8f9a1ef36753762c7a12293b",
+  "artifacts": 12,
+  "groups": {
+    "smoke-11": {
+      "comparison": {
+        "actor_tensors_identical": true,
+        "tqc_initial_tensors_identical": true,
+        "tqc_initial_optimizer_states_identical": true,
+        "sampling_rng_identical": true
+      },
+      "actual_records": {
+        "sac_native": {
+          "artifact_sha256": "389d6bc638210d1d1b3ba36a5caa884c03ade9b10c43eec447754fbdaa02f432",
+          "policy_tensor_sha256": "546e0a30af00dfa3f9abd98dfb72909d381cf6363f026cab74f3c1b2397513d5",
+          "actor_sha256": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "global_rng_sha256": {
+            "torch": "774b994ca7cf5b8b8eee01888a86eff3cadcf6e1cb56d9b8a98e68b4478b0363",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "policy_parameters": 9708
+        },
+        "tqc_untruncated": {
+          "artifact_sha256": "7292184edc8d3baf1e6ecfd00a5ccd715bdc424e491e8eba8644bc321092a729",
+          "policy_tensor_sha256": "9ffb4921ae7ebd81d5614103151e9646f0e8425bd318de8ee1cc2a9c62b33601",
+          "actor_sha256": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "global_rng_sha256": {
+            "torch": "774b994ca7cf5b8b8eee01888a86eff3cadcf6e1cb56d9b8a98e68b4478b0363",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "policy_parameters": 12876
+        },
+        "tqc_truncated": {
+          "artifact_sha256": "7292184edc8d3baf1e6ecfd00a5ccd715bdc424e491e8eba8644bc321092a729",
+          "policy_tensor_sha256": "9ffb4921ae7ebd81d5614103151e9646f0e8425bd318de8ee1cc2a9c62b33601",
+          "actor_sha256": "5c1fd7742a4859f5b5277d31e3565a6c93d24880a7fceb72ae3561897908237f",
+          "global_rng_sha256": {
+            "torch": "774b994ca7cf5b8b8eee01888a86eff3cadcf6e1cb56d9b8a98e68b4478b0363",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "policy_parameters": 12876
+        }
+      },
+      "native_standard_sac_unchanged": true
+    },
+    "screen-11": {
+      "comparison": {
+        "actor_tensors_identical": true,
+        "tqc_initial_tensors_identical": true,
+        "tqc_initial_optimizer_states_identical": true,
+        "sampling_rng_identical": true
+      },
+      "actual_records": {
+        "sac_native": {
+          "artifact_sha256": "423640f5c22891987cff9186a3b59d19dd16f1d5a59db330c1a617d51aca84cf",
+          "policy_tensor_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+          "actor_sha256": "ed3a93409c17fbb9382522c5a14658a882500a8f9181c81383a8c0ba21ca9a30",
+          "global_rng_sha256": {
+            "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "policy_parameters": 29644
+        },
+        "tqc_untruncated": {
+          "artifact_sha256": "42164b755d7d871b6615a237156eab3ab94cd1f7ed63aa7d6d21acaaedc04dbd",
+          "policy_tensor_sha256": "84f5df8a46ad4ac64fde5d49aaad462b0e5a5b741f6f2c963af5f84e212202e0",
+          "actor_sha256": "ed3a93409c17fbb9382522c5a14658a882500a8f9181c81383a8c0ba21ca9a30",
+          "global_rng_sha256": {
+            "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "policy_parameters": 35884
+        },
+        "tqc_truncated": {
+          "artifact_sha256": "42164b755d7d871b6615a237156eab3ab94cd1f7ed63aa7d6d21acaaedc04dbd",
+          "policy_tensor_sha256": "84f5df8a46ad4ac64fde5d49aaad462b0e5a5b741f6f2c963af5f84e212202e0",
+          "actor_sha256": "ed3a93409c17fbb9382522c5a14658a882500a8f9181c81383a8c0ba21ca9a30",
+          "global_rng_sha256": {
+            "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "policy_parameters": 35884
+        }
+      },
+      "native_standard_sac_unchanged": true
+    },
+    "screen-23": {
+      "comparison": {
+        "actor_tensors_identical": true,
+        "tqc_initial_tensors_identical": true,
+        "tqc_initial_optimizer_states_identical": true,
+        "sampling_rng_identical": true
+      },
+      "actual_records": {
+        "sac_native": {
+          "artifact_sha256": "a6060496d55d596f2ae31f7aeba42ab8f3392a82ab6cdc39eee45748ad91b05c",
+          "policy_tensor_sha256": "3a69285603845c13e035e82975691eeb5e343d5da3ea1bcd0c824fd1d8d22459",
+          "actor_sha256": "0c343c1e05a5e043c1ecbee2c34e3e8c52fa54b137b72583be20401b9914e662",
+          "global_rng_sha256": {
+            "torch": "cdb97b76192d834731b544c43c9f9dea4ee480d64009d9a2c6f0c7a4c8fc194a",
+            "numpy": "248398c9df9338201a45e28bb50e988625bec0818958028a49e68acbfd5fe7cd",
+            "python": "de45534bf1c3bfdf057afdb8b1d7f47ccb7766c7f56b77d8cd38fe5a16b784bc"
+          },
+          "policy_parameters": 29644
+        },
+        "tqc_untruncated": {
+          "artifact_sha256": "71d2b59650d540b4fbffceee96fa0584df7c33b023dc36afff88324d3fb453ae",
+          "policy_tensor_sha256": "38278b9dc7786d4d82c1422e05ac1dfb8556b3da42235c2a4e058edc187865a0",
+          "actor_sha256": "0c343c1e05a5e043c1ecbee2c34e3e8c52fa54b137b72583be20401b9914e662",
+          "global_rng_sha256": {
+            "torch": "cdb97b76192d834731b544c43c9f9dea4ee480d64009d9a2c6f0c7a4c8fc194a",
+            "numpy": "248398c9df9338201a45e28bb50e988625bec0818958028a49e68acbfd5fe7cd",
+            "python": "de45534bf1c3bfdf057afdb8b1d7f47ccb7766c7f56b77d8cd38fe5a16b784bc"
+          },
+          "policy_parameters": 35884
+        },
+        "tqc_truncated": {
+          "artifact_sha256": "71d2b59650d540b4fbffceee96fa0584df7c33b023dc36afff88324d3fb453ae",
+          "policy_tensor_sha256": "38278b9dc7786d4d82c1422e05ac1dfb8556b3da42235c2a4e058edc187865a0",
+          "actor_sha256": "0c343c1e05a5e043c1ecbee2c34e3e8c52fa54b137b72583be20401b9914e662",
+          "global_rng_sha256": {
+            "torch": "cdb97b76192d834731b544c43c9f9dea4ee480d64009d9a2c6f0c7a4c8fc194a",
+            "numpy": "248398c9df9338201a45e28bb50e988625bec0818958028a49e68acbfd5fe7cd",
+            "python": "de45534bf1c3bfdf057afdb8b1d7f47ccb7766c7f56b77d8cd38fe5a16b784bc"
+          },
+          "policy_parameters": 35884
+        }
+      },
+      "native_standard_sac_unchanged": true
+    },
+    "screen-37": {
+      "comparison": {
+        "actor_tensors_identical": true,
+        "tqc_initial_tensors_identical": true,
+        "tqc_initial_optimizer_states_identical": true,
+        "sampling_rng_identical": true
+      },
+      "actual_records": {
+        "sac_native": {
+          "artifact_sha256": "34a5462225e66a3267d9fe162fc8c54027adb0f9d37e0df195f259adc4141644",
+          "policy_tensor_sha256": "a92794f7c4f0f8ba7705fbdb651c8f7c921475b1ccd9908a98df656f2e22a416",
+          "actor_sha256": "abdb7793477e50e59f39a23c7fb4c033133b1ff31db445f9c5e24630dc69ce86",
+          "global_rng_sha256": {
+            "torch": "0251db55e5cc70f8562a1fe89e436598d10d2db4d690f7bcc7b93eafcb5a9c4c",
+            "numpy": "bae942ccb1be7a1dc24f20d50b35dadd2a839b200d2f1952105f08015a0b2468",
+            "python": "4adf42a2b55e4154a6449db632240df814fdeb5c31b6664dbd229a2d0d7d7088"
+          },
+          "policy_parameters": 29644
+        },
+        "tqc_untruncated": {
+          "artifact_sha256": "701cd820a73096ec1d2501a5b6166fb9a87e9249c5b4080e2997b6240280f90a",
+          "policy_tensor_sha256": "14dec17171073f433cea379a1abb554352c2c7e6d392fd6d8b270eb61bc1d59a",
+          "actor_sha256": "abdb7793477e50e59f39a23c7fb4c033133b1ff31db445f9c5e24630dc69ce86",
+          "global_rng_sha256": {
+            "torch": "0251db55e5cc70f8562a1fe89e436598d10d2db4d690f7bcc7b93eafcb5a9c4c",
+            "numpy": "bae942ccb1be7a1dc24f20d50b35dadd2a839b200d2f1952105f08015a0b2468",
+            "python": "4adf42a2b55e4154a6449db632240df814fdeb5c31b6664dbd229a2d0d7d7088"
+          },
+          "policy_parameters": 35884
+        },
+        "tqc_truncated": {
+          "artifact_sha256": "701cd820a73096ec1d2501a5b6166fb9a87e9249c5b4080e2997b6240280f90a",
+          "policy_tensor_sha256": "14dec17171073f433cea379a1abb554352c2c7e6d392fd6d8b270eb61bc1d59a",
+          "actor_sha256": "abdb7793477e50e59f39a23c7fb4c033133b1ff31db445f9c5e24630dc69ce86",
+          "global_rng_sha256": {
+            "torch": "0251db55e5cc70f8562a1fe89e436598d10d2db4d690f7bcc7b93eafcb5a9c4c",
+            "numpy": "bae942ccb1be7a1dc24f20d50b35dadd2a839b200d2f1952105f08015a0b2468",
+            "python": "4adf42a2b55e4154a6449db632240df814fdeb5c31b6664dbd229a2d0d7d7088"
+          },
+          "policy_parameters": 35884
+        }
+      },
+      "native_standard_sac_unchanged": true
+    }
+  },
+  "versions": {
+    "python": "3.13.16",
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "sb3": "2.7.0",
+    "sb3_contrib": "2.7.0"
+  },
+  "generation_implementation_files_unchanged": true,
+  "source_git_dirty_recorded_at_generation": true,
+  "untrained_acceptance_only": true,
+  "optimizer_steps": 0,
+  "market_data_access": false,
+  "colab_allocated": false,
+  "learned_optimizer_acceptance_pending": true
+}

@@ -247,3 +247,9 @@ Not trading returns or unbiased true-Q calibration; learned bootstrap and reset-
 scope retained. All states/sources unchanged,199 combined focused checks pass,
 worker exited/environment closed. Supports preregistering a distinct critic study;
 no TQC training, promotion, retired-test evaluation or new Colab units.
+
+[Distributional-critic initialization](distributional-critics-2026-10-24/README.md):
+12 pinned untrained SAC/TQC artifacts, nativeSAC globalTorch/NumPy/Python sampling
+RNG, exact actor/TQC-control tensor checks and61 passing focused tests. No local
+optimization, trained TQC return or Colab units. Runtime/archive/controller
+integration and actual smokes remain next; existing failed families stay closed.

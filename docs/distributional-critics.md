@@ -201,3 +201,42 @@ Next implement the shared native-SAC post-initialization RNG payload, strict stu
 parameter/archive identity checks and metered Colab job integration. Actual
 learned optimizer restoration and all smoke/screen performance gates remain
 unverified. No TQC model has been trained or promoted.
+
+## Shared untrained initialization accepted
+
+[Acceptance](../results/distributional-critics-2026-10-24/README.md) now pins12
+native actor/critic/target artifacts and the native SAC post-construction global
+Torch/NumPy/Python RNG for smoke11 and full11/23/37. Canonical files are under
+`artifacts/distributional-initialization-v3`; the tracked binding and loader hashes
+prevent silent regeneration. No dataset or provider was accessed by the builder.
+
+`training.distributional_critics` fixes parameters and checks actual fresh models;
+`training.distributional_assets` validates the binding/manifest/NPZ/global RNG;
+`apply_initialization` preserves Parameter ownership and verifies exact state.
+The shared tensor loader now supports fresh off-policy actor/critic/entropy
+optimizers and rejects nonempty replay. It preserves existing PPO behavior.
+All RNG schema validation precedes mutation, using private generators as probes.
+Future restoration of trained checkpoints does not imply restoration of process
+RNG; these assets bind the start of learning only.
+
+61 focused tests pass without optimizer steps. They include actual perturbed
+state restoration at both widths/all seeds, exact cross-arm draws from all three
+global streams, save/load proof retention, ownership, and rejection of malformed
+state, wrong seeds, changed effective step-unit/Adam/critic settings, used replay
+or optimizers and double application. Package/source hashes and all12 archives are
+verified. New files pass Ruff and the touched shared loader adds no legacy findings.
+SAC/TQC total policy parameters are29,644/35,884 including target critics.
+
+To deliberately build a new unbound artifact set (never overwrite the pinned set):
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/build_distributional_initializations.py \
+  --output artifacts/distributional-initialization-NEW
+```
+
+A new set is not adopted automatically; a reviewed binding/version change and
+checks are required, without any performance-based seed/tensor selection. The
+remaining work is training/task/archive/report integration and actual Colab
+smokes, including learned optimizer/replay restoration. No trained TQC result,
+financial input, checkpoint promotion or new Colab allocation is claimed.

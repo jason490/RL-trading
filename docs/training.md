@@ -120,3 +120,10 @@ Local construction/serialization checks perform zero optimizer steps. Shared
 initialization, central runtime/archive integration and actual Colab smokes remain
 pending; this base API acceptance is not permission to skip those study gates or
 claim a trained TQC result. Existing SAC defaults are unchanged.
+
+The critic study's shared initialization is now accepted:12 pinned untrained
+SAC/TQC tensor archives, native SAC global Torch/NumPy/Python RNG, fresh-optimizer/
+replay/counter/seed checks and exact restoration without Parameter replacement.
+61 focused checks pass. The [study guide](distributional-critics.md) distinguishes
+this from the still-pending actual learned optimizer, runtime and Colab smoke
+acceptance. No model has been trained in this stage.

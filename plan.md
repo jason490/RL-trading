@@ -2022,3 +2022,12 @@ passing algorithm/frozen checks; no optimizer steps/Colab allocation. Nonempty
 Adam serialization fixtures are not learned acceptance. Shared nativeRNG payload,
 study/runtime/archive/gate integration and actual Colabsmokes are next. No TQC
 trained model or performance result. [Guide](docs/distributional-critics.md).
+
+Distributional-critic initialization accepted:12 pinned untrained archives for
+three arms×(smoke11/full11/23/37). NativeSAC standard initialization unchanged;
+actors identical, TQC0/TQC2 full tensors/empty optimizers identical, globalTorch/
+NumPy/Python native sampling RNG restored. Fresh off-policy/replay/seed/unit/Adam
+checks reject before mutation;61 focused tests pass, no optimizer steps or market
+data access. Binding/source/package/hash evidence retained. Training metadata,
+task/archive/controller integration and actual Colabsmokes still pending. No
+new model return or Colab units. [Evidence](results/distributional-critics-2026-10-24/README.md).

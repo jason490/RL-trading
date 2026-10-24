@@ -1943,3 +1943,12 @@ normalization/RNG unchanged; environment closed, zero optimizer/Colab steps.
 199 combined focused checks pass. Supports one separately preregistered critic
 algorithm comparison, not reopening closed SAC grids. No TQC screen or model
 promotion yet. [Evidence](../results/sac-soft-consistency-2026-10-24/README.md).
+
+Critic-study initialization milestone:12 untrained actor/critic/target archives
+and the native SAC post-initialization globalTorch/NumPy/Python RNG are pinned.
+All three actors match; TQC0/TQC2 full tensors/empty optimizers match; nativeSAC
+standard initialization remains unchanged.61 fresh-model/state/seed/ownership/
+RNG/serialization checks pass, no optimizer steps, data access or Colab units.
+Local assets are retained and package/source hashes recorded; actual learned
+optimizer, task/archive/controller and Colabsmoke acceptance remain pending.
+[Evidence](../results/distributional-critics-2026-10-24/README.md).
