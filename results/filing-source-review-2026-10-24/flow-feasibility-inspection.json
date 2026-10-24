@@ -1,0 +1,175 @@
+{
+  "schema": "filing-flow-feasibility-inspection-v1",
+  "protocol_sha256": "950a0143e633e140d00669b11d07578f1d687a2490bea04ebba4fbbf43d30a1b",
+  "table_records_sha256": "9af90f73e35ee63ca5fd99d9284a5db0a8c4a58f089b9ebde801651f8189555a",
+  "records": [
+    {
+      "payload_sha256": "385887a5a0d6c9941223ed30942ff4fac14ff20219890d4a6a41556de680ac51",
+      "snapshot": {
+        "schema": "filing-flow-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin"
+        ],
+        "values": null,
+        "source_sha256": "9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c",
+        "accession": "0001047469-10-001151",
+        "cik": "51143",
+        "form": "10-K",
+        "report_end": "2009-12-31",
+        "filed": "2010-02-23",
+        "arithmetic_ready": false,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": "missing_current_comparable_flows"
+      },
+      "legacy_arithmetic_ready": false,
+      "independent_fraction_arithmetic_checked": false
+    },
+    {
+      "payload_sha256": "d9e3ac203a9fe7d8ad70e4450fb3fcafb3a478dd7e8ab5766bacc627f21ca731",
+      "snapshot": {
+        "schema": "filing-flow-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin"
+        ],
+        "values": null,
+        "source_sha256": "d9a0e225bb09dd27a907455b1382608b4c557ab7246e74a31b9288db750e9abe",
+        "accession": "0001104659-10-017258",
+        "cik": "56873",
+        "form": "10-K",
+        "report_end": "2010-01-30",
+        "filed": "2010-03-30",
+        "arithmetic_ready": false,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": "missing_current_comparable_flows"
+      },
+      "legacy_arithmetic_ready": false,
+      "independent_fraction_arithmetic_checked": false
+    },
+    {
+      "payload_sha256": "6c99fda85b833cbd5713712c9481b983b30f9e858868ca4308e676526705cc6b",
+      "snapshot": {
+        "schema": "filing-flow-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin"
+        ],
+        "values": [
+          -0.030706989483735597,
+          0.1222471385795948
+        ],
+        "source_sha256": "fc20caf0ec24a58f966801b157cd5a8d5964e5ad3f8a0ee79df483e0251370d2",
+        "accession": "0001558370-20-001334",
+        "cik": "51143",
+        "form": "10-K",
+        "report_end": "2019-12-31",
+        "filed": "2020-02-25",
+        "arithmetic_ready": true,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": null,
+        "current_interval": [
+          "2019-01-01",
+          "2019-12-31"
+        ],
+        "prior_interval": [
+          "2018-01-01",
+          "2018-12-31"
+        ],
+        "interval_days": 365,
+        "comparability_scope": "Reported same-accession periods; not organic or merger-adjusted growth"
+      },
+      "legacy_arithmetic_ready": true,
+      "independent_fraction_arithmetic_checked": true
+    },
+    {
+      "payload_sha256": "80d2c2d9842ea6d9738cde50d641855ef314f578de212e401c27955d31c81ebe",
+      "snapshot": {
+        "schema": "filing-flow-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin"
+        ],
+        "values": [
+          0.003561697797327906,
+          0.01356655708748344
+        ],
+        "source_sha256": "9e326eefb300e35d421dc93f4f3f5d459b69f87753e71b5d0bbf74e3c4bfc507",
+        "accession": "0001558370-20-003501",
+        "cik": "56873",
+        "form": "10-K",
+        "report_end": "2020-02-01",
+        "filed": "2020-04-01",
+        "arithmetic_ready": true,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": null,
+        "current_interval": [
+          "2019-02-03",
+          "2020-02-01"
+        ],
+        "prior_interval": [
+          "2018-02-04",
+          "2019-02-02"
+        ],
+        "interval_days": 364,
+        "comparability_scope": "Reported same-accession periods; not organic or merger-adjusted growth"
+      },
+      "legacy_arithmetic_ready": true,
+      "independent_fraction_arithmetic_checked": true
+    },
+    {
+      "payload_sha256": "006d8e14c2180783061f6a44ef56c9aef6c16055be34ba5a77dc793fbe3b01bd",
+      "snapshot": {
+        "schema": "filing-flow-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin"
+        ],
+        "values": [
+          0.01576614724480578,
+          0.2924755089279511
+        ],
+        "source_sha256": "b7b59760abcb0026c90814d3a5709ca8e26a02a38e56a018e21de025b9193fa7",
+        "accession": "0000050863-20-000011",
+        "cik": "50863",
+        "form": "10-K",
+        "report_end": "2019-12-28",
+        "filed": "2020-01-24",
+        "arithmetic_ready": true,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": null,
+        "current_interval": [
+          "2018-12-30",
+          "2019-12-28"
+        ],
+        "prior_interval": [
+          "2017-12-31",
+          "2018-12-29"
+        ],
+        "interval_days": 364,
+        "comparability_scope": "Reported same-accession periods; not organic or merger-adjusted growth"
+      },
+      "legacy_arithmetic_ready": false,
+      "independent_fraction_arithmetic_checked": true
+    }
+  ],
+  "assessed_financial_pairs": 6161,
+  "table_current_flow_presence_pairs": 4512,
+  "table_current_flow_presence_is_original_readiness": false,
+  "unassessed_master_pairs": 251,
+  "five_originals_are_representative": false,
+  "financial_inputs_enabled": false,
+  "normalization_fitted": false,
+  "training_performed": false,
+  "colab_allocated": false
+}

@@ -1936,3 +1936,13 @@ filings is Intel0000050863-20-000011. Original end2019-12-28 differs from archiv
 snapshot remains unready. One case only; no general coverage estimate, imputation,
 financial-input activation, model return or Colab units. Offline source/selection/
 report reproduction verified. [Evidence](results/filing-source-review-2026-10-24/missing-liabilities-probe.json).
+
+
+Distinct flow-only financial family fixed/implemented: same-accession comparable
+revenue growth and parent margin, no liabilities substitution or income aliases.
+Five retained originals yield3 arithmetic-ready/2 unready; legacy IBM/Kroger
+snapshots unchanged, ready ratios independently checked by Fraction arithmetic.
+Current common-flow tag presence4,512/6,161 (73.2%) is metadata only, not causal
+stock coverage.162 focused checks/Ruff pass; family remains disabled, no training
+or Colab units. Original-source/issuer-price-day coverage gates remain before any
+matched model experiment. [Evidence](results/filing-source-review-2026-10-24/flow-feasibility-inspection.json).

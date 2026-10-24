@@ -1,0 +1,16 @@
+{
+  "schema": "filing-flow-snapshot-rules-v1",
+  "status": "fixed_before_price_join_or_performance_scoring",
+  "hypothesis": "Reported comparable revenue growth and parent net margin may supply slow company information without requiring an unavailable direct liabilities total. This is a distinct two-feature family, not a repair or replacement of the existing three-feature snapshot.",
+  "names": ["filing_revenue_growth", "filing_net_margin"],
+  "formulas": ["current_revenue / prior_comparable_revenue - 1", "current_NetIncomeLoss / current_revenue"],
+  "source_rules": "Inherit the exact revenue concepts, original accession, issuer/USD checks, taxonomy agreement, duration selection, duplicate agreement and prior-period comparability rules in filing_feature_rules.json. Do not alias ProfitLoss, add revenue components or use an archive date as original report end.",
+  "balances": "No balance amounts used or synthesized. The source payload still undergoes the shared coherence validation; invalid unexcluded facts are not ignored.",
+  "denominators": "Current and prior comparable total revenue must be strictly positive. Parent net income may be negative.",
+  "missingness": "Missing or conflicting required flow facts emit no values; never fill from another accession or future filing.",
+  "initial_review_scope": "All five retained original money payloads: IBM/Kroger early and 2019 annual filings plus fixed Intel missing-liabilities probe. This is not a coverage estimate or stock selection.",
+  "next_coverage_gate": "Before training, assess full eligible original-filing coverage and causal issuer/price-day availability using predeclared universe/thresholds; preserve failed and missing cases. No checkpoint or stock selection from this source arithmetic.",
+  "default_registry_enabled": false,
+  "financial_inputs_enabled": false,
+  "training_performed": false
+}

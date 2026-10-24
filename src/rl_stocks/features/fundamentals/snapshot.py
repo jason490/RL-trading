@@ -13,13 +13,25 @@ USD = ['{http://www.xbrl.org/2003/iso4217}USD']
 
 
 def build_snapshot(payload, form):
+    """Original three-feature contract, including direct reported liabilities."""
+    return _build_snapshot(payload, form, include_balance=True)
+
+
+def build_flow_snapshot(payload, form):
+    """Separate two-flow research family; never infer or fill balance amounts."""
+    return _build_snapshot(payload, form, include_balance=False)
+
+
+def _build_snapshot(payload, form, *, include_balance):
     if payload.get('schema') != 'sec-original-money-facts-v1' or form not in BOUNDS:
         raise ValueError('supported original fact payload and filing form required')
     end = date.fromisoformat(payload['report_end'])
     filed = date.fromisoformat(payload['filed'])
     if end > filed or filed >= date(2024, 1, 1):
         raise ValueError('invalid or retired original filing dates')
-    result = dict(schema='filing-financial-snapshot-v1', names=list(NAMES), values=None,
+    result = dict(schema=('filing-financial-snapshot-v1' if include_balance
+                          else 'filing-flow-snapshot-v1'),
+                  names=list(NAMES if include_balance else NAMES[:2]), values=None,
                   source_sha256=payload['source_sha256'], accession=payload['accession'],
                   cik=payload['cik'], form=form, report_end=payload['report_end'], filed=payload['filed'],
                   arithmetic_ready=False, financial_features_enabled=False,
@@ -95,15 +107,20 @@ def build_snapshot(payload, form):
         return unready('no_same_revenue_concept_comparable')
     prior_revenue = revenue(prior)
     assets, liabilities = unique(instants['Assets']), unique(instants['Liabilities'])
-    if prior_revenue is None or assets is None or liabilities is None:
-        return unready('missing_or_conflicting_prior_or_balance_values')
-    if current_revenue <= 0 or prior_revenue <= 0 or assets <= 0 or liabilities < 0:
-        return unready('invalid_denominator_or_liabilities')
+    if prior_revenue is None or (include_balance and (assets is None or liabilities is None)):
+        return unready('missing_or_conflicting_prior_or_balance_values' if include_balance
+                       else 'conflicting_prior_revenue_values')
+    if (current_revenue <= 0 or prior_revenue <= 0
+            or (include_balance and (assets <= 0 or liabilities < 0))):
+        return unready('invalid_denominator_or_liabilities' if include_balance
+                       else 'invalid_revenue_denominator')
     try:
         with localcontext() as context:
             context.prec = 50
             values = [float(current_revenue / prior_revenue - 1),
-                      float(income / current_revenue), float(liabilities / assets)]
+                      float(income / current_revenue)]
+            if include_balance:
+                values.append(float(liabilities / assets))
     except (DecimalException, OverflowError):
         return unready('nonfinite_ratio')
     if not all(math.isfinite(v) for v in values):

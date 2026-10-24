@@ -54,3 +54,10 @@ liabilities/assets. Exact fiscal intervals, duplicate/concept agreement and
 original comparatives are required. It remains outside the default registry:
 arithmetic readiness is not publication/identity/price-link or dataset readiness.
 No financial family has yet trained or passed model acceptance.
+
+
+Optional flow-only source arithmetic (`build_flow_snapshot`, separate
+`filing-flow-snapshot-v1` schema) is implemented but disabled. It preserves
+revenue-growth/parent-margin comparability rules without synthesizing balance
+amounts. See [filing-data](filing-data.md) for the five-original review, missing
+coverage and mandatory dataset/experiment gates; no financial model is trained.

@@ -827,3 +827,54 @@ review should consider a separately specified flow-only family with explicit
 missingness and coverage gates, rather than silently changing liabilities or
 parent-income definitions. Any such family still requires original vintage,
 issuer/price links and causal availability before a training screen.
+
+
+## Distinct flow-only feasibility family — 2026-10-24
+
+A separately fixed [two-flow definition](../configs/experiments/filing_flow_feature_rules.json) is implemented as
+`build_flow_snapshot(payload, form)` in the financial snapshot module. Its
+`filing-flow-snapshot-v1` schema contains reported comparable revenue growth and
+parent net margin. This is an optional new information family, not a replacement
+for `filing-financial-snapshot-v1`; the latter still requires directly reported
+liabilities/assets. Default registries and the existing financial as-of history
+acceptance have not been expanded to enable the new schema.
+
+The two-flow family inherits exact same-accession issuer/USD/taxonomy validation,
+original report end, form-duration bounds, longest common revenue/income interval,
+unique same-concept prior comparable and exact duplicate agreement. Current/prior
+revenue must be positive; negative parent income is allowed. No ProfitLoss alias,
+component summing, shorter-interval fallback, cross-filing fill or balance inference
+is introduced. All unexcluded source facts still undergo coherence checks, even
+when a balance amount is not used in the formula. Invalid required flows emit no
+partial vector. No normalization or clipping is fitted.
+
+All five previously retained originals were inspected, without outcome-based
+selection. IBM2009 and Kroger2009 remain unready (missing supported current flows).
+IBM2019 and Kroger2019 reproduce exactly the first two existing three-feature
+ratios; their complete legacy snapshots are unchanged. Intel2019 is newly ready
+for source arithmetic: revenue growth **1.5766%**, parent net margin **29.2476%**.
+These are company accounting ratios, **not trading returns**. Its three-feature
+snapshot remains unready. Every ready flow result was independently verified
+using exact Fraction arithmetic, and the five-original sample is not a general
+coverage estimate.
+
+Of 6,161 assessed financial-table pairs, **4,512 (73.2%)** have supported current
+revenue and parent income in a common source quarter group. This diagnostic omits
+the assets/liabilities requirement; it does not establish prior comparables,
+original exact periods, values, duplicates, vintage, stock-day coverage or causal
+availability. The 251 master-only pairs remain unassessed. It is not a trained
+family, an accepted dataset or permission to drop difficult stocks.
+
+[Source arithmetic and presence evidence](../results/filing-source-review-2026-10-24/flow-feasibility-inspection.json) reproduces offline with:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/inspect_filing_flows.py
+```
+
+162 focused checks and targeted Ruff pass. Evidence/raw sources remain retained;
+no worker/runtime allocated and no additional Colab units consumed. Before any
+training, preregister a bounded original-source coverage collection and fixed
+issuer/price-day acceptance thresholds, retain failures/missingness and audit
+original publication/vintage availability. Then freeze preprocessing/data and a
+matched masked/full control with unchanged gates, followed by multi-seed and
+prospective confirmation only if it passes. Existing failed families stay closed.
