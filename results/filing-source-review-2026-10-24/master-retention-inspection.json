@@ -1,0 +1,19 @@
+{
+  "schema": "sec-master-retention-inspection-v1",
+  "source_archives_retained": 59,
+  "compressed_bytes": 186760088,
+  "collection_seconds": 157.91222953796387,
+  "collection_terminal": true,
+  "no_temporary_download_files": true,
+  "additional_unique_accessions": 249,
+  "counterpart_pair_note": "251 additional issuer/accession pairs include two joint-filer links to existing documents;249 additional unique accessions.",
+  "full_catalog_sha256": "38c3fb993d0b4953ea2e2f332e5bf25e85299d42cd75a6db7d917a50abfa25bb",
+  "parser_source_sha256": "fb699396e826d9473310a8378776fbf696c3ca03221389b6ec8bf3ec6c15c75e",
+  "comparison_source_sha256": "be8ba4d127d7f53099ae794226a5ce83be61afef1970e5f63d09b5be59a7fcdf",
+  "official_account_balance": 349.02,
+  "official_rate": 0,
+  "official_active_assignments": 0,
+  "colab_units_used": 0,
+  "financial_features_enabled": false,
+  "original_filing_cohort_complete": false
+}

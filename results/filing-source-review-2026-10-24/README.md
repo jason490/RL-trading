@@ -272,3 +272,27 @@ revenue. Mixed taxonomy versions also remain unready. [Early-source evidence](ea
 unsafe paths, incomplete source range and corrupted archives. No model fitting,
 price joins, final-test evaluation or new Colab units. Next complete filing-index
 catalog and concept-coverage audit before scaling original extraction.
+
+## Complete registered-quarter master comparison
+
+59 master ZIPs retained,186,760,088 compressed bytes/157.9seconds;14,876,676
+metadata rows scanned. Same112 candidate CIKs/forms:6,412 issuer/accession pairs,
+6,410 unique accessions. All6,161 financial-table pairs match, with251 additional
+pairs and zero financial-only pairs. Additional unique documents total249;
+two Google/Alphabet2016 joint accessions add co-registrant links, not new documents.
+The known omitted IBM annual is recovered. Six filing-date discrepancies remain
+explicitly unresolved; no form differences or duplicate-master conflict observed.
+[Comparison/deltas](master-catalog-comparison.json).
+
+Bounded parser verifies source hash, compressed/expanded size, unique member,
+metadata dates and safe paths. Joint issuers remain separate, including a distinct
+filing-directory CIK.131 focused tests/lint pass; full comparison reproduces exact
+bytes. Candidate catalog completeness is relative to current SEC indexes, which
+can reflect corrections. It is not financial-fact, original-vintage, price-link
+or model-input approval. The original statement cohort is still uncollected.
+
+[Retention inspection](master-retention-inspection.json): collector terminal,
+all59 archives/receipts kept, no temporary downloads. Original preflight bytes
+reused without another request. Official Colab349.02/rate0/assignments0; no
+additional compute units or model fitting. Next audit concept coverage and collect
+validated original filings from the corrected catalog before training.

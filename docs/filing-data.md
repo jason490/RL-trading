@@ -626,3 +626,44 @@ one-hour deadline, operation reserve, private identity and immediate403/429 stop
 Existing financial collection behavior remains unchanged. Verified cache entries
 must respect the requested byte limit too; cache reuse cannot bypass a smaller
 limit. Collection still does not parse or certify original financial statements.
+
+## Full master-catalog comparison completed
+
+All59 compressed master indexes are retained:186,760,088 bytes collected in
+157.9seconds, including reuse of the verified preflight ZIP. The comparison reads
+14,876,676 index rows and preserves `(registrant CIK, accession)` rather than
+assuming a filing belongs to only one issuer. The filing-directory CIK is retained
+separately; it need not equal the registrant in a joint filing.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/compare_sec_master_catalog.py \
+  --state .runtime/sec-master-collection.json \
+  --discovery artifacts/filings/current-identity-discovery.json \
+  --financial-ledger artifacts/filings/original-candidate-ledger.json \
+  --output artifacts/filings/master-candidate-catalog.json \
+  --summary results/filing-source-review-2026-10-24/master-catalog-comparison.json
+```
+
+For the same112 candidate CIKs/forms, master metadata identifies6,412 issuer/
+accession pairs,6,410 unique accessions. All6,161 financial-table pairs are found;
+251 additional pairs correspond to249 additional unique documents. Two joint
+Google/Alphabet2016 accessions explain the difference: they register both old
+Google and new Alphabet. Do not count co-registrant links as extra independent
+statements or assign private Google filings to public Alphabet shares.
+
+The known omitted IBM annual is recovered. Six matched pairs have differing
+filing dates between master and financial-table metadata; their forms agree.
+Every discrepancy is retained, not silently resolved to a convenient earlier
+publication date. No cross-quarter duplicate conflict was observed. The
+[comparison](../results/filing-source-review-2026-10-24/master-catalog-comparison.json)
+contains all deltas; the full paired candidate catalog remains in ignored artifacts.
+
+This completes the index comparison over the registered candidate scope, not an
+original-statement collection, historical price/issuer certification or vintage
+availability guarantee. SEC indexes can reflect post-acceptance corrections.
+Original statements, header dates, concept coverage and financial eligibility
+still need validation before a financial model experiment.131 focused checks pass;
+full comparison output reproduces exactly on repeated generation. All source
+ZIPs/receipts remain retained, no temporary downloads remain, and the master
+collector is terminal. Last official Colab balance349.02/rate0/assignments0;
+no additional units were consumed. [Retention evidence](../results/filing-source-review-2026-10-24/master-retention-inspection.json).

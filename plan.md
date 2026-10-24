@@ -1903,3 +1903,12 @@ conflicts.81 focused checks pass; candidate-year visual report saved. Source
 coverage is not financial-feature acceptance: issuer lineage, exact concepts/
 periods/vintages and public availability remain pending. No financial model
 training or additional Colab units. Source retention/terminal collection verified.
+
+Master-index source update:59/59 registered compressed indexes collected,
+186.76MB/157.9sec. Comparison scans14.88million metadata rows and finds6,412
+issuer/accession pairs/6,410 unique documents for112 candidate CIKs. All6,161
+financial-table pairs recovered;251 extra pairs include249 additional documents
+and2 joint-filer links. Six date discrepancies retained, no form conflict.
+131 focused checks pass. This is current-index metadata scope completeness,
+not original-fact/vintage/price-link approval; financial models remain disabled.
+Source retention/terminal cleanup verified, no additional Colab units.

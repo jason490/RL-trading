@@ -180,3 +180,9 @@ submission records. Current-CIK candidate coverage heatmap and issuer/year count
 are available;81 focused checks pass. These are source-audit results only;
 financial features and training remain disabled pending historical identity,
 publication and concept/period gates. No new model returns or Colab units.
+
+Master-index comparison now recovers251 additional issuer/accession pairs
+(249 unique documents) beyond financial-table candidates.131 focused checks pass;
+all59 master indexes retained, collectors terminal. Original statement coverage,
+financial concepts and issuer/price eligibility remain pending; no new model
+returns, financial-input activation or Colab consumption.

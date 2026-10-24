@@ -1903,3 +1903,17 @@ No alias/gate relaxation to force a pass; mixed taxonomy versions unready.
 121 focused checks/lint pass. No financial inputs, normalization, training,
 retired price/return evaluation or additional Colab units. Retain negative
 source outcomes and audit concept coverage before large original downloads.
+
+### Complete master-index candidate comparison — 2026-10-24 UTC
+
+Separate bounded master collector complete:59ZIPs/186.76MB/157.9sec;preflight
+cache reused.14,876,676 metadata rows scanned:6,412 issuer/accession pairs,
+6,410 unique accessions. All6,161 financial pairs found,251 additional pairs
+represent249 additional documents plus2 joint Google/Alphabet links. Six date
+differences retained; forms agree, no duplicate conflict. No silent current-ID
+backdating, co-registrant collapse or earlier-date selection.131 focused tests/
+lint pass; full output reproducible. Current-master metadata completeness is not
+original-vintage/price-link/financial acceptance. All sources retained, collectors
+terminal/no temporaryfiles; official account349.02/rate0/assignments0, no new units.
+Next concept-coverage audit and validated original-statement collection rather
+than assuming financial-table completeness. [Evidence](../results/filing-source-review-2026-10-24/README.md).
