@@ -1971,3 +1971,10 @@ initial source-cap stop, counts oversized selected sources as unsupported withou
 retry/replacement and retains original sample/20MBcap/80%overall/70%era gates.
 Original3600s wall-clock deadline and byte accounting preserved.187 focused
 checks pass; initial terminal report unchanged. No training/Colab allocation.
+
+Distinct critic-algorithm review: installedSB3Contrib2.7.0 providesTQC, but the
+project factory/runtime do not yet support it. Primary-source review distinguishes
+value-distribution/truncation research from closed SAC parameter families. No
+trading evidence or overestimation-cause claim; fixed saved-policy calibration
+review is required before any study protocol or training allocation. See
+[review](docs/distributional-critics.md). No model fitting/new Colab units.

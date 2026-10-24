@@ -101,3 +101,6 @@ audits and requirements for any optional, explicitly versioned input transform.
   synchronized availability and causal SPY-relative feature preflight.
 - [Causal filing data](filing-data.md): SEC source-audit scope, accession vintages,
   retrospective-field exclusion and prerequisites before financial features.
+
+- [Distributional critic research review](distributional-critics.md): candidate
+  TQC rationale, missing calibration evidence and requirements before a new study.
