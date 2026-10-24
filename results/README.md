@@ -261,3 +261,12 @@ study baseline implemented.12 checksum-identical initializers now ship in tracke
 configs.115 focused checks pass without local optimization; actual Colab smokes
 and all new performance gates remain pending. No new return or promoted model.
 See[study guide](../docs/distributional-critics.md).
+
+
+Distributional-critic actual Colab smokes accepted:3×1024 CPU transitions, actual
+Python3.13.16, initial tensor/RNG and learned Adam/replay restoration,192 exact
+frozen predictions and immutable normalization. All3owned sessions stopped.
+Conservative project39.039379/150, incremental0.025001, official account349.00
+with zero assignments. Fixed screen runtime projection3717.83<7200seconds;
+50k seed11 three-arm plans prepared. No completed screen, return improvement,
+retired-test access or promotion. Evidence:results/distributional-critics-2026-10-24/smokes.json.

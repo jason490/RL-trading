@@ -1,7 +1,7 @@
 # Distributional critic study — initialization acceptance
 
-**No SAC/TQC study model has been trained yet.** The registered three-arm method
-comparison is being integrated before any Colab allocation or performance score.
+**All three1024-transition Colab smoke runs are accepted. No50k performance
+screen has completed yet.** Earlier sections retain the initialization history.
 The [prior saved-SAC diagnostic](../sac-soft-consistency-2026-10-24/README.md) supplies
 a limited critic-consistency rationale, not a TQC return claim.
 
@@ -105,3 +105,27 @@ retain artifacts and verify every owned session stops. After the fleet completes
 `scripts/accept_critic_smokes.py` requires its state, source proof and dataset;
 only passing actual restoration/development-report/runtime checks authorize
 building full jobs. No failed-family reopening or retired-test access is allowed.
+
+
+## Actual Colab smoke acceptance
+
+[Retained evidence](smokes.json) accepts nativeSAC/TQC0/TQC2 actual1024-transition
+CPU runs from clean source8c27af4. Each Colab kernel reported Python3.13.16 before
+dependency sync. All arms passed initial tensor/RNG checks, actual learned
+optimizer/replay restoration, report/accounting validation and64 exact frozen
+predictions each (192 total). Normalization and retained source files stayed
+unchanged; verification performed no optimizer steps.
+
+Training durations were79.87/122.41/143.23seconds. The fixed conservative
+projection is3717.83seconds including1200reserve, within the inclusive7200
+allocation deadline. This permits the predefined50k seed11 screens; it is not
+a profitability result or a guarantee of runtime. Two CLI execution connections
+timed out after actual work; the controller retrieved completed artifacts without
+restarting training. All three sessions are verified stopped.
+
+Conservative cumulative project usage39.039379/150, smoke increment0.025001;
+remaining project allowance110.960621 (working allowance90.960621 to130). Official
+account349.00, zero usage rate/assignments after cleanup; account floor150 and
+teardown170 remain enforced. Models, replay, curves and full reports remain under
+the source export's ignored artifacts/colab directories; public smoke evidence
+records their paths/hashes. No retired-test rows or broker orders were used.

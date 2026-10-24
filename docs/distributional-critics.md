@@ -282,3 +282,12 @@ retain artifacts and verify every owned session stops. After the fleet completes
 `scripts/accept_critic_smokes.py` requires its state, source proof and dataset;
 only passing actual restoration/development-report/runtime checks authorize
 building full jobs. No failed-family reopening or retired-test access is allowed.
+
+
+Distributional-critic actual Colab smokes accepted:3×1024 CPU transitions, actual
+Python3.13.16, initial tensor/RNG and learned Adam/replay restoration,192 exact
+frozen predictions and immutable normalization. All3owned sessions stopped.
+Conservative project39.039379/150, incremental0.025001, official account349.00
+with zero assignments. Fixed screen runtime projection3717.83<7200seconds;
+50k seed11 three-arm plans prepared. No completed screen, return improvement,
+retired-test access or promotion. Evidence:results/distributional-critics-2026-10-24/smokes.json.
