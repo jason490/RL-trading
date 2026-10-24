@@ -7,7 +7,7 @@ from rl_stocks.evaluation.soft_consistency import fingerprint
 from rl_stocks.training.distributional_critics import PROTOCOL_SHA256, ROOT, parsed_global_rng, protocol, validate_initial_comparison
 from rl_stocks.training.shared_initialization import read_initialization
 
-BINDING_SHA256 = '0fb4dea46d1147848b7a3cbaf4369868e9cfd481fc46db149799f04bf031ca2b'
+BINDING_SHA256 = '09e1de58e99689d3807c05e8ba47504afb9aa323c224f69e4a3c1051e2a790f0'
 
 
 def _path(name):

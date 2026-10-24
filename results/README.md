@@ -253,3 +253,11 @@ no TQC training, promotion, retired-test evaluation or new Colab units.
 RNG, exact actor/TQC-control tensor checks and61 passing focused tests. No local
 optimization, trained TQC return or Colab units. Runtime/archive/controller
 integration and actual smokes remain next; existing failed families stay closed.
+
+
+Distributional-critic version33 integration ready: training/task/archive/fleet
+contracts, actual saved-model/replay restoration and persistent shared two-unit
+study baseline implemented.12 checksum-identical initializers now ship in tracked
+configs.115 focused checks pass without local optimization; actual Colab smokes
+and all new performance gates remain pending. No new return or promoted model.
+See[study guide](../docs/distributional-critics.md).

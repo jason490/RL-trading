@@ -63,3 +63,45 @@ Inspect the actual default Colab Python before dependency sync; then run three
 artifact and deadline-projection checks pass. Preserve retired-test isolation and
 all fixed failure gates. No trained model, new trading returns, normalization fit,
 broker orders or Colab units occurred in this initialization milestone.
+
+
+## Metered study integration ready for Colab smoke validation
+
+Version33 jobs now connect the fixed SAC/TQC study to the training runner,
+immutable payload checks, archive validation and aggregate Colab fleet. The12
+initializer archives are packaged under `configs/initializations/distributional_v1/`
+so uploads include them; their tensor/RNG bytes are unchanged. The original
+artifact-generation evidence remains historical provenance.
+
+Training records bind actual initial/final/selected tensors, raw learned entropy,
+Adam moment shapes/steps and shared initialization. Owned-artifact restoration
+checks actual selected/final/frozen models, replay contents and64 exact frozen
+predictions per arm without learning or changing normalization. Local nonempty
+optimizer fixtures test serialization only; they do not establish learned smoke
+acceptance. Archive validation enforces the original26-symbol development panel,
+execution contract, dataset and pinned normalization.
+
+The controller persists one shared two-unit study baseline across smoke/screen
+controllers and retries. It also retains the original project150/130 and account
+150/170 limits. Full runs require accepted actual smoke artifacts and a conservative
+CPU projection within the inclusive7200-second allocation deadline. The projection
+is a heuristic with reserve, not a runtime guarantee.
+
+115 focused algorithm, initialization, learned-record serialization, job, archive,
+fleet and budget tests pass without local optimization. Actual Colab smoke
+validation is next; no new SAC/TQC return or completed screen is claimed.
+
+Prepare the three CPU smoke jobs without allocating:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_critic_jobs.py \
+  --smoke --output .runtime/critic-smoke-jobs.json
+```
+
+Run from a clean immutable source export through the existing fleet, sharing the
+original `.runtime` directory/ledger and immutable dataset. Inspect actual Colab
+kernel Python before dependency synchronization; meter aggregate usage each minute,
+retain artifacts and verify every owned session stops. After the fleet completes,
+`scripts/accept_critic_smokes.py` requires its state, source proof and dataset;
+only passing actual restoration/development-report/runtime checks authorize
+building full jobs. No failed-family reopening or retired-test access is allowed.

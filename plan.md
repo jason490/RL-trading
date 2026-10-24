@@ -2031,3 +2031,11 @@ checks reject before mutation;61 focused tests pass, no optimizer steps or marke
 data access. Binding/source/package/hash evidence retained. Training metadata,
 task/archive/controller integration and actual Colabsmokes still pending. No
 new model return or Colab units. [Evidence](results/distributional-critics-2026-10-24/README.md).
+
+
+Distributional-critic version33 integration ready: training/task/archive/fleet
+contracts, actual saved-model/replay restoration and persistent shared two-unit
+study baseline implemented.12 checksum-identical initializers now ship in tracked
+configs.115 focused checks pass without local optimization; actual Colab smokes
+and all new performance gates remain pending. No new return or promoted model.
+See[study guide](docs/distributional-critics.md).

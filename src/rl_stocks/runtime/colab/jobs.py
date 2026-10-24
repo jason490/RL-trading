@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==32:
+    if plan.get('version')==33:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected=critic_plan(**plan['critic_study'],profile=plan.get('runtime_acceptance'))
+        except (KeyError,TypeError):
+            raise ValueError('malformed critic-study plan') from None
+        if canonical(plan)!=canonical(expected):
+            raise ValueError('unsupported critic-study plan')
+    elif plan.get('version')==32:
         try:expected=market_plan(**plan['market_study'],profile=plan.get('runtime_acceptance'))
         except (KeyError,TypeError):raise ValueError('malformed market-context plan') from None
         if plan!=expected:raise ValueError('unsupported market-context plan')
@@ -581,4 +589,28 @@ def market_plan(arm,seed=11,smoke=False,profile=None):
     plan['dataset_contract'].update(identity=protocol()['datasets'][arm],**protocol()['dataset_contracts'][arm])
     plan['jobs'][0].update(study_protocol_sha256=PROTOCOL_SHA256,overrides=params)
     if not smoke:plan['runtime_acceptance']=deepcopy(profile)
+    return plan
+
+
+def critic_plan(arm, seed=11, smoke=False, profile=None):
+    from copy import deepcopy
+    from rl_stocks.training.distributional_critics import PROTOCOL_SHA256, overrides, protocol
+    from rl_stocks.training.distributional_assets import initialization_spec
+    from rl_stocks.training.distributional_runtime import validate_runtime_profile
+    spec = protocol()
+    if (arm not in spec['arms'] or type(seed) is not int or seed not in (11, 23, 37)
+            or type(smoke) is not bool or smoke and seed != 11):
+        raise ValueError('fixed critic arm/seed/phase required')
+    if smoke and profile is not None:
+        raise ValueError('critic smokes precede runtime acceptance')
+    if not smoke:
+        validate_runtime_profile(profile)
+    plan = sac_state_plan('execution_full', seed, smoke)
+    plan.pop('sac_state_study')
+    plan.update(version=33, critic_study=dict(arm=arm, seed=seed, smoke=smoke),
+                protocol_sha256=PROTOCOL_SHA256, initialization_contract=initialization_spec(arm, seed, smoke))
+    plan['jobs'][0].update(algorithm=spec['arms'][arm]['algorithm'], study_protocol_sha256=PROTOCOL_SHA256,
+                          overrides=overrides(arm, smoke))
+    if not smoke:
+        plan['runtime_acceptance'] = deepcopy(profile)
     return plan

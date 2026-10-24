@@ -152,6 +152,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if study_protocol_sha256==HISTORY_PROTOCOL:
         recency_arm=history_parameters(overrides,smoke,Path(dataset_path).name);validate_history_payload(dataset,recency_arm)
         history_shared=apply_history_initialization(model,recency_arm,seed,smoke)
+    from rl_stocks.training.distributional_critics import (PROTOCOL_SHA256 as CRITIC_PROTOCOL,
+        identify_parameters as critic_parameters, validate_payload as validate_critic_payload,
+        apply_initialization as apply_critic_initialization)
+    if study_protocol_sha256==CRITIC_PROTOCOL:
+        if (initialization!='standard' or policy_variant!='native' or observation_profile!='execution_full'
+                or start_sampling!='legacy_uniform' or reward_kind!='net_log_equity' or reward_scale!=1.
+                or training_exposure_mode!='unrestricted' or evaluation_exposure_mode!='unrestricted' or final_test):
+            raise ValueError('fixed critic-study input/reward/execution contract required')
+        critic_arm=critic_parameters(overrides,algorithm,smoke)
+        validate_critic_payload(dataset)
+        critic_shared=apply_critic_initialization(model,critic_arm,seed,smoke)
     initialized=initialize_policy(model,initialization,algorithm)
     from rl_stocks.rl.registry.distribution import model_distribution
     action_distribution=model_distribution(model)
@@ -163,6 +174,11 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if len(milestones)>1 and algorithm!='sac':raise ValueError('segmented learning study currently requires SAC')
     every=evaluation_every if evaluation_every is not None else 256 if smoke else 10000
     if not isinstance(every,int) or every<=0:raise ValueError('positive evaluation interval required')
+    if study_protocol_sha256==CRITIC_PROTOCOL:
+        from rl_stocks.training.distributional_critics import protocol as critic_protocol
+        spec=critic_protocol()
+        if steps!=spec['smoke_steps' if smoke else 'steps_per_cell'] or every!=spec['smoke_evaluation_every' if smoke else 'evaluation_every']:
+            raise ValueError('fixed critic-study transitions/checkpoint cadence required')
     if algorithm in ON_POLICY and steps%model.n_steps:raise ValueError("steps must be an exact PPO rollout multiple")
     run=Path(output)/"runs"/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")+f"-{algorithm}-{seed}-"+uuid.uuid4().hex[:8])
     run.mkdir(parents=True,exist_ok=False)
@@ -185,6 +201,18 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm=='tqc':
         from rl_stocks.rl.tqc.geometry import model_spec as tqc_spec
         metadata['critic_geometry']=tqc_spec(model)
+    if study_protocol_sha256==CRITIC_PROTOCOL:
+        from rl_stocks.training.distributional_records import model_record as critic_record,validate_record as validate_critic_record
+        from rl_stocks.training.distributional_assets import initialization_entry as critic_entry
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'critic-initialization.npz'
+        shutil.copyfile(Path(__file__).resolve().parents[3]/critic_entry(critic_arm,seed,smoke)[0]['file'],snapshot)
+        if checksum(snapshot)!=critic_shared['artifact_sha256']:
+            raise ValueError('critic initialization snapshot checksum mismatch')
+        metadata['critic_arm']=critic_arm
+        metadata['critic_shared_initialization']=critic_shared
+        metadata['critic_initialization']=critic_record(model)
+        validate_critic_record(metadata['critic_initialization'],critic_arm,smoke,initial=True,seed=seed)
     if study_protocol_sha256 is not None:metadata['study_protocol_sha256']=study_protocol_sha256
     from rl_stocks.training.recurrent_state import PROTOCOL_SHA256 as RECURRENT_PROTOCOL,model_record as recurrent_record
     if study_protocol_sha256==RECURRENT_PROTOCOL:
@@ -341,6 +369,11 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         if study_protocol_sha256==HISTORY_PROTOCOL:
             metadata['recency_final']=history_record(model)
             metadata['recency_selected']=history_record(selected)
+        if study_protocol_sha256==CRITIC_PROTOCOL:
+            metadata['critic_final']=critic_record(model)
+            metadata['critic_selected']=critic_record(selected)
+            validate_critic_record(metadata['critic_final'],critic_arm,smoke,seed=seed)
+            validate_critic_record(metadata['critic_selected'],critic_arm,smoke,selected_steps=metadata['selected_step'],seed=seed)
         bundle=freeze(run/"best.zip",dataset,metadata,Path(output)/"frozen")
         frozen=FrozenPolicy(bundle,dataset["schema"],dataset["manifest"]["provenance"]["capabilities"]["feed"],device)
         if recurrent(selected):

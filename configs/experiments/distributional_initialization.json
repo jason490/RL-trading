@@ -1,8 +1,8 @@
 {
   "schema": "distributional-initialization-binding-v1",
   "protocol_sha256": "c8836a26cc2ac5e0b1c771ead4124656203d824ff86ea6aaee85fc8e66897451",
-  "manifest": "artifacts/distributional-initialization-v3/manifest.json",
-  "manifest_sha256": "b1b65d492d0111957525326073387affb6bd043e8f9a1ef36753762c7a12293b",
+  "manifest": "configs/initializations/distributional_v1/manifest.json",
+  "manifest_sha256": "8aac1014aeabf58f83681807d3790917aaa06110cd7897956a8764d89242263c",
   "artifacts": 12,
   "observation_size": 21,
   "generated_without_fitting": true,

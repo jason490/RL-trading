@@ -1952,3 +1952,11 @@ RNG/serialization checks pass, no optimizer steps, data access or Colab units.
 Local assets are retained and package/source hashes recorded; actual learned
 optimizer, task/archive/controller and Colabsmoke acceptance remain pending.
 [Evidence](../results/distributional-critics-2026-10-24/README.md).
+
+
+Distributional-critic version33 integration ready: training/task/archive/fleet
+contracts, actual saved-model/replay restoration and persistent shared two-unit
+study baseline implemented.12 checksum-identical initializers now ship in tracked
+configs.115 focused checks pass without local optimization; actual Colab smokes
+and all new performance gates remain pending. No new return or promoted model.
+See[study guide](distributional-critics.md).
