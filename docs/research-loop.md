@@ -1742,3 +1742,15 @@ requests, bounded retries/timeouts/bytes, immediate access/rate-limit stop,
 checksummed archive/receipts and verified cache reuse. Real requests remain
 pending identity configuration; no downloaded-data or financial readiness claim,
 no allocation or new compute units. [Operation](filing-data.md).
+
+### SEC schema/publication review — 2026-10-24 UTC
+
+Primary-source review found December2024 archive reprocessing and a `segments`
+NUM key absent from the older linked PDF. New structural reportv2 distinguishes
+legacy/segment-aware schemas and audits duplicate/conflicting numeric keys using
+temporary SQLite storage; no totals inferred from segment values. SEC FAQ also
+confirms acceptance is not a guaranteed first-publication timestamp.37 offline
+checks pass. Original audit scope unchanged, no observed financial data, returns,
+training, allocation or additional units. Real acquisition still awaits private
+request identity; historical fidelity remains unverified.
+[Evidence](../results/filing-source-review-2026-10-24/README.md).

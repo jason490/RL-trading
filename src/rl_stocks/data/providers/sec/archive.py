@@ -2,8 +2,12 @@
 import csv
 import hashlib
 import io
+import json
+import sqlite3
+import tempfile
 import re
 from collections import Counter
+from contextlib import closing
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -40,7 +44,11 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
         before = hashlib.file_digest(source, 'sha256').hexdigest()
     counts, forms, issues = Counter(), Counter(), Counter()
     submissions = {}
-    with ZipFile(path) as archive:
+    with tempfile.TemporaryDirectory(prefix='sec-fact-audit-') as work, \
+            closing(sqlite3.connect(str(Path(work) / 'facts.sqlite'))) as facts, \
+            ZipFile(path) as archive:
+        facts.execute('CREATE TABLE facts (key TEXT PRIMARY KEY, value TEXT)')
+        numeric_schema = {}
         names = archive.namelist()
         if len(names) != len(set(names)):
             raise ValueError('duplicate ZIP member')
@@ -58,6 +66,8 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
                     fields = reader.fieldnames or []
                     if len(fields) != len(set(fields)) or not REQUIRED[table] <= set(fields):
                         raise ValueError(f'invalid {table} schema')
+                    if table == 'num':
+                        numeric_schema['segments_present'] = 'segments' in fields
                     for row in reader:
                         if None in row or any(v is None for v in row.values()):
                             raise ValueError(f'malformed {table} row')
@@ -92,6 +102,10 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
             _date(row['ddate'])
             if not re.fullmatch(r'\d+', row['qtrs']):
                 raise ValueError('invalid NUM duration')
+            key = json.dumps([row.get(k, '') for k in (
+                'adsh', 'tag', 'version', 'ddate', 'qtrs', 'uom', 'segments', 'coreg')])
+            if row.get('segments', ''):
+                counts['segment_numeric_rows'] += 1
             if row['coreg']:
                 counts['coregistrant_rows'] += 1
             if not row['value']:
@@ -102,6 +116,17 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
                         raise ValueError('nonfinite NUM value')
                 except InvalidOperation as error:
                     raise ValueError('invalid NUM value') from error
+            previous = facts.execute('SELECT value FROM facts WHERE key=?', (key,)).fetchone()
+            if previous is None:
+                facts.execute('INSERT INTO facts VALUES (?, ?)', (key, row['value']))
+                counts['unique_numeric_keys'] += 1
+            else:
+                counts['duplicate_numeric_keys'] += 1
+                # Equal decimal representations agree; missing is distinct from zero.
+                old, new = previous[0], row['value']
+                equal = (old == new or (bool(old) and bool(new) and Decimal(old) == Decimal(new)))
+                if not equal:
+                    issues['conflicting_numeric_values'] += 1
         for row in rows('tag'):
             if row['custom'] not in {'0', '1'}:
                 raise ValueError('invalid TAG custom flag')
@@ -113,7 +138,10 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
         if hashlib.file_digest(source, 'sha256').hexdigest() != before:
             raise ValueError('archive changed during inspection')
     return {
-        'schema': 'sec-archive-structural-audit-v1', 'quarter': quarter,
+        'schema': 'sec-archive-structural-audit-v2', 'quarter': quarter,
+        'numeric_schema': ('segments-v2' if numeric_schema['segments_present'] else 'legacy-v1'),
+        'numeric_unique_key': ['adsh', 'tag', 'version', 'ddate', 'qtrs', 'uom',
+                               'segments', 'coreg'],
         'archive_sha256': before, 'counts': dict(counts), 'forms': dict(forms),
         'issues': dict(issues), 'submissions': sorted(submissions.values(), key=lambda x: x['adsh']),
         'causal_ready': False, 'timezone_verified': False, 'publication_verified': False,

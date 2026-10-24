@@ -145,3 +145,32 @@ Verification:32 synthetic offline reader/downloader checks pass, including actua
 CLI report writes, immutable cache reuse, receipt tampering, short/oversized
 responses, bounded retry, access rejection and redirect rejection. No actual SEC
 archive has yet been downloaded or audited; causal readiness stays false.
+
+## Source-schema review: December2024 reprocessing
+
+The [SEC archive page](https://www.sec.gov/dera/data/financial-statement-data-sets.html)
+reports that historical archives were reprocessed in December2024 and that NUM
+added `segments`. Use its linked [current specification](https://www.sec.gov/files/financial-statement-data-sets.pdf),
+not solely the older `/dera/data/fsds.pdf`. The frozen initial audit scope stays
+unchanged; this source review adds requirements before observed financial data.
+
+Structural report version2 records `legacy-v1` or `segments-v2`. Numeric keys
+include accession, concept, taxonomy, period, duration, units, segments and
+co-registrant. Distinct segment values must not be collapsed into issuer totals.
+The reader counts identical duplicate keys and conflicting values separately,
+without choosing one for model input. Decimal representations of the same value
+agree; a missing value differs from zero. Comparisons use temporary SQLite disk
+storage rather than an in-memory set of every numeric key. This is not yet a
+concept-resolution or financial-feature pipeline.
+
+The [SEC FAQ](https://www.sec.gov/about/webmaster-frequently-asked-questions)
+explains that acceptance is distinct from public availability, lag is variable,
+and no first-publication timestamp exists in the header. Its terminology labels
+acceptance time EST; daylight-saving interpretation still needs explicit review
+before timezone conversion. The [access guide](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data)
+adds late dissemination and post-acceptance correction behavior. Conservative
+session lags remain reconstruction assumptions, not proof of original public
+availability. [Review evidence](../results/filing-source-review-2026-10-24/README.md).
+
+Current verification:37 focused reader/downloader checks pass. Actual coverage,
+public availability and historical-vintage fidelity remain unverified.

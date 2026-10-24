@@ -164,3 +164,11 @@ mapped initialization/sampling restored, three owned sessions stopped. Project
 [Market-context saved-action diagnosis](market-actions-2026-10-24/README.md):
 full model deterioration mainly reflects reduced long contribution even as short
 exposure decreases.156 saved episodes, no causal claim, fitting or extra units.
+
+## Pending distinct information-family audit
+
+[SEC source-schema/publication review](filing-source-review-2026-10-24/README.md)
+identified archive reprocessing, segment-aware numeric identity and publication
+uncertainty.37 offline acquisition/reader checks pass; no financial archive or
+model inputs yet, private request identity pending. This is feasibility work,
+not a new return result or a promoted model.

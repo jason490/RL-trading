@@ -105,3 +105,32 @@ def test_cli_creates_immutable_report(tmp_path, monkeypatch):
     output.write_text('{}')
     with pytest.raises(ValueError, match='immutable'):
         module.main()
+
+
+def test_segments_are_distinct_numeric_keys(tmp_path):
+    def change(data):
+        data['num'][0]['segments'] = ''
+        data['num'].append(dict(data['num'][0], segments='Geography=Europe', value='99'))
+    result = audit_archive(fixture(tmp_path, change), '2020q1')
+    assert result['numeric_schema'] == 'segments-v2'
+    assert result['counts']['unique_numeric_keys'] == 2
+    assert result['counts']['segment_numeric_rows'] == 1
+    assert not result['issues'].get('conflicting_numeric_values')
+    assert 'segments' in result['numeric_unique_key']
+
+
+def test_legacy_schema_reported_without_claiming_segment_fidelity(tmp_path):
+    result = audit_archive(fixture(tmp_path), '2020q1')
+    assert result['numeric_schema'] == 'legacy-v1'
+    assert not result['causal_ready']
+
+
+@pytest.mark.parametrize('value,conflicts', [('123.0000', 0), ('124', 1), ('', 1)])
+def test_duplicate_values_are_audited_without_silent_overwrite(tmp_path, value, conflicts):
+    def change(data):
+        data['num'].append(dict(data['num'][0], value=value))
+    result = audit_archive(fixture(tmp_path, change), '2020q1')
+    assert result['counts']['unique_numeric_keys'] == 1
+    assert result['counts']['duplicate_numeric_keys'] == 1
+    assert result['issues'].get('conflicting_numeric_values', 0) == conflicts
+    assert not result['financial_features_enabled']
