@@ -367,3 +367,27 @@ predictiveness or causal training readiness. Raw extracted amounts stay in
 ignored artifacts; the [public summary](../results/filing-source-review-2026-10-24/original-extraction-summary.json)
 contains metadata/counts only.71 focused SEC checks pass, including original
 period mismatch, precision, exclusions, duplicate retention and parsing rejection.
+
+## Bounded chronological archive collection
+
+The sequential collector follows the original59-quarter2009q2–2023q4 scope:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/collect_sec_archives.py \
+  --state .runtime/sec-coverage-collection.json
+```
+
+It reuses verified immutable cached archives, permits at most8GB of retained
+compressed bytes in the planned range, keeps a2GB free-disk reserve plus one
+maximum-sized request, and has a one-hour inclusive deadline with140 seconds
+reserved before starting each source operation. Per-request byte/timeout/retry
+limits remain in the downloader. It allocates no Colab runtime and never trains.
+
+An atomic progress journal records protocol hash, deadline, current quarter,
+completed archive identities/sizes and terminal status without request identity.
+A controller lock prevents duplicate use of the same journal. Existing journals
+are rejected rather than automatically restarting an interrupted/failed run;
+review terminal state, retained files and the provider failure before any new
+explicit collection window. Verified cache reuse avoids repeating prior downloads.
+`downloaded_only` means source bytes were collected, not that all tables passed
+inspection or financial model inputs are ready.74 focused SEC tests pass.
