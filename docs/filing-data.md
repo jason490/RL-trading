@@ -997,3 +997,8 @@ folder.187 focused checks and targeted Ruff pass; original terminal report still
 reproduces unchanged. This operational handling does not establish a passed
 source gate, original publication/vintage or historical issuer/share eligibility,
 and does not authorize financial-input training. No Colab allocation is required.
+
+
+Reviewed-deadline regression:188 focused source/financial checks now pass,
+including an expired original deadline that fails before any acquisition.
+A continuation never receives a fresh3600-second allowance.

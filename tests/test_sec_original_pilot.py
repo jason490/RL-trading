@@ -93,3 +93,31 @@ def test_reviewed_resume_preserves_original_journal_and_completed_prefix(tmp_pat
     source.write_bytes(b'changed!')
     with pytest.raises(ValueError, match='corruption'):
         m.reviewed_start(manifest)
+
+
+def test_reviewed_continuation_cannot_reset_expired_original_deadline(tmp_path, monkeypatch):
+    m = module(monkeypatch)
+    spec = json.loads(m.PROTOCOL.read_text())
+    monkeypatch.chdir(tmp_path)
+    protocol = tmp_path / 'protocol.json'
+    protocol.write_text(json.dumps(spec))
+    manifest_path = tmp_path / 'manifest.json'
+    manifest_path.write_text('{}')
+    monkeypatch.setattr(m, 'PROTOCOL', protocol)
+    monkeypatch.setattr(m, 'MANIFEST', manifest_path)
+    monkeypatch.setattr(m, 'REVIEWED_STATE', tmp_path / 'reviewed.json')
+    monkeypatch.setattr(m, 'prepare', lambda: dict(selected=[dict(accession='next', cik='1', stratum='early')]))
+    monkeypatch.setattr(m, 'identity', lambda: 'Research private@example.org')
+    monkeypatch.setattr(m, 'reviewed_start', lambda manifest: dict(
+        status='running', completed=[], started_utc_epoch=100, total_source_bytes=0,
+        current_accession=None, rejected_response_bytes=20000001))
+    monkeypatch.setattr(m.time, 'time', lambda: 4000)
+    import subprocess
+    monkeypatch.setattr(subprocess, 'check_output', lambda *args, **kwargs: 'fixed-revision')
+    calls = []
+    monkeypatch.setattr(m, 'acquire_original', lambda *args: calls.append(True))
+    with pytest.raises(TimeoutError, match='deadline'):
+        m.collect(reviewed_resume=True)
+    state = json.loads(m.REVIEWED_STATE.read_text())
+    assert state['status'] == 'failed' and state['started_utc_epoch'] == 100
+    assert state['elapsed_seconds'] == 3900 and not calls
