@@ -1851,3 +1851,17 @@ financial-feature or full NUM readiness claim; no amount read by inventory.
 Last official account349.02/zero rate/assignments; no new Colab units or training.
 Next dated lineage, concept/period equivalence and causal financial acceptance;
 retired test remains isolated. [Evidence](../results/filing-source-review-2026-10-24/README.md).
+
+### Source-backed issuer events and conservative daily availability — 2026-10-24 UTC
+
+Original event/index sources verify Google→Alphabet2015-10-02 and
+Praxair/LindeAG→Lindeplc2018-10-31. Registry preserves event type/source hashes;
+no ratio comparability or full price-history identity inferred. Causal query
+requires both effective session and available timestamp, keeps prehistory unknown,
+and rejects an undocumented CIK switch. Fixed source-date+two-XNYS-open policy
+reconstructs availability without guessing naive-hour UTC/DST. Explicit assumption,
+not guaranteed first-publication evidence; exact-publication flag remains false.
+90 focused SEC checks pass, including future isolation and late2023 availability
+outside2023. Actual two source-backed queries verified. No financial inputs,
+normalization, training, retired price/return access or additional units.
+Next issuer/price-history completion and financial concept/vintage acceptance.

@@ -441,3 +441,47 @@ All59 original ZIPs/receipts and original-filing evidence are retained, with no
 raw evidence deleted. Last checked Colab balance349.02, rate0/assignments0;
 collection allocated no runtime and consumed no Colab units. Next: issuer lineage,
 original-period/concept equivalence and causal financial feature acceptance.
+
+## Source-backed succession and daily availability policy
+
+The first two [issuer succession records](../configs/filings/issuer_evidence_v1.json)
+are retained with original event/index HTML checksums:
+
+| Research symbol | Predecessor CIK | Successor CIK | Effective event date | Event type |
+| --- | --- | --- | --- | --- |
+| GOOGL | 1288776 | 1652044 | 2015-10-02 | Holding-company reorganization |
+| LIN | 884905 | 1707925 | 2018-10-31 | Business combination |
+
+[Alphabet's filing](https://www.sec.gov/Archives/edgar/data/1652044/000119312515336577/d82837d8k12b.htm)
+documents corresponding share-class conversion. The separate
+[Nasdaq notice](https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2015-156)
+also identifies Class A/GOOGL and Class C/GOOG. This does not resolve the earlier
+2014 Google ticker/share-class transition or certify Yahoo's entire adjusted
+history. [Linde's filing](https://www.sec.gov/Archives/edgar/data/1707925/000119312518313073/d643979d8k.htm)
+combines Praxair and Linde AG under Linde plc; do not infer economic equivalence
+of predecessor/successor financial ratios. Linde's pre-merger registrant existence
+in2017 is not evidence that those statements describe the stock's earlier
+operating history. An unrelated company named Alphabet Holding is present in
+inventory too: name matching alone is unsafe.
+
+The issuer query is metadata-only. It filters evidence by both effective session
+and available timestamp, returns unknown before the first eligible observation,
+and requires an explicit predecessor link for a changed CIK. A later subsidiary
+observation cannot silently replace the public parent. Queries never enable
+financial features or certify price links/comparability. Full issuer histories
+and price-security joins remain incomplete. [Actual query evidence](../results/filing-source-review-2026-10-24/issuer-query-inspection.json).
+
+The [fixed daily availability policy](../configs/experiments/filing_availability_policy.json)
+uses the second XNYS open strictly after the later original source-local filing
+or acceptance date. It retains original naive acceptance strings and avoids
+inventing a UTC interpretation of their hours. Holiday/weekend/DST-aware calendar
+opens produce reconstructed timestamps: Alphabet2015-10-06T13:30Z and
+Linde2018-11-02T13:30Z. Effective and availability dates remain distinct.
+
+This lag is an explicit research assumption. SEC says dissemination latency is
+variable and no first-publication timestamp exists; the rule cannot guarantee
+actual first-publication timing or solve post-acceptance corrections. It never
+sets exact-publication verification true. Source dates from2024 onward reject;
+a late2023 filing whose reconstructed availability falls in2024 is unavailable
+to all2023 decisions.90 focused SEC tests pass. No financial dataset or training
+has been promoted by these evidence queries.

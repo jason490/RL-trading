@@ -1,0 +1,18 @@
+{
+  "schema": "sec-daily-availability-policy-v1",
+  "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+  "scope": "Source-evidence queries only; does not enable financial model inputs.",
+  "inputs": ["original_official_filing_date", "original_source_local_acceptance_date"],
+  "rule": "Use the second XNYS session open strictly after the later source-local date. Preserve original strings; do not infer UTC from naive acceptance hours.",
+  "exact_first_publication_verified": false,
+  "availability_reconstructed": true,
+  "assumption": "The daily lag is conservative relative to typical SEC dissemination but does not guarantee actual first-publication timing or resolve post-acceptance corrections.",
+  "retired_source_filing_or_acceptance": "reject 2024 onward",
+  "identity_event": "Require effective session and reconstructed availability both eligible; never backfill pre-event observations.",
+  "historical_price_link_and_financial_comparability": "Separate gates; not certified by this policy.",
+  "source_documentation": [
+    "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+    "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data"
+  ],
+  "training_performed": false
+}

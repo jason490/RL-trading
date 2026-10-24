@@ -1,0 +1,38 @@
+{
+  "schema": "sec-issuer-query-inspection-v1",
+  "source_event_config_sha256": "01c7a470ed7a111e31141b303c8535a3a87a466c9e67dfc05926853720bf82b1",
+  "queries": [
+    {
+      "symbol": "GOOGL",
+      "before_date": "2015-10-05",
+      "before_result": null,
+      "after_date": "2015-10-06",
+      "after_result": {
+        "cik": "1652044",
+        "source_sha256": "6264e0e9f04aebba538b57d176a18a50f1b839849772942987528ef371971d27",
+        "effective_session": "2015-10-02",
+        "available_time": "2015-10-06T13:30:00Z",
+        "historical_price_link_verified": false,
+        "financial_comparability_verified": false,
+        "financial_features_enabled": false
+      }
+    },
+    {
+      "symbol": "LIN",
+      "before_date": "2018-11-01",
+      "before_result": null,
+      "after_date": "2018-11-02",
+      "after_result": {
+        "cik": "1707925",
+        "source_sha256": "9346d11920135a40fd969c1b3ae2d3f46a4dc79436fca4eb944f6f1748913780",
+        "effective_session": "2018-10-31",
+        "available_time": "2018-11-02T13:30:00Z",
+        "historical_price_link_verified": false,
+        "financial_comparability_verified": false,
+        "financial_features_enabled": false
+      }
+    }
+  ],
+  "financial_features_enabled": false,
+  "training_performed": false
+}

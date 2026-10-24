@@ -189,3 +189,28 @@ filings kept, no temporary download files or new Colab allocation. Last official
 balance349.02/rate0/assignments0; source collection used zero Colab units.
 Source financial concepts, exact periods, historical lineage and availability
 must still pass before a matched training protocol is enabled.
+
+## Succession events and causal issuer queries
+
+Retained original filings/indexes establish Google→Alphabet effective2015-10-02
+and Praxair/LindeAG→Lindeplc effective2018-10-31. Source hashes, official dates and
+event types are in the[review registry](../../configs/filings/issuer_evidence_v1.json).
+The latter is a business combination, not proof of financial-ratio continuity.
+Neither certifies the full adjusted price-security history. Name-only discovery
+also encounters an unrelated Alphabet Holding company, so cannot substitute for
+source-backed identity.
+
+The fixed daily reconstruction waits until the second XNYS open after the later
+filing/acceptance local date: AlphabetOct6,2015 and LindeNov2,2018. Effective event
+and reconstructed availability must both pass the as-of query. Before then the
+unanchored issuer remains unknown; no earlier CIK is inferred from future events.
+Actual[query evidence](issuer-query-inspection.json) retains all financial/price
+comparability flags false. This is not guaranteed first-publication timing:
+[policy](../../configs/experiments/filing_availability_policy.json) records the
+assumption and leaves exact-publication verification false.
+
+90 focused SEC tests pass, including future-event isolation, unknown prehistory,
+conflicting parent/subsidiary observations, DST/holiday/weekend lag and late2023
+availability crossing into2024. No model fitting, normalization update, retired
+price/return evaluation or new Colab units. Full chronological identity and
+financial feature eligibility remain pending.

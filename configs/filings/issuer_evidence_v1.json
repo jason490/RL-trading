@@ -1,0 +1,49 @@
+{
+  "schema": "sec-issuer-event-review-v1",
+  "records": [
+    {
+      "symbol": "GOOGL",
+      "cik": "1652044",
+      "predecessor_cik": "1288776",
+      "kind": "successor",
+      "corporate_event_kind": "holding_company_reorganization",
+      "effective_session": "2015-10-02",
+      "available_time": "2015-10-06T13:30:00Z",
+      "availability_policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+      "exact_first_publication_verified": false,
+      "source_sha256": "6264e0e9f04aebba538b57d176a18a50f1b839849772942987528ef371971d27",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312515336577/d82837d8k12b.htm",
+      "accession": "0001193125-15-336577",
+      "index_source_sha256": "c073c2d42a225aa3f18ed812b8b6409da68103c683f51fa8e7450f86a9ae4c74",
+      "index_source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312515336577/0001193125-15-336577-index.htm",
+      "original_filed": "2015-10-02",
+      "original_accepted": "2015-10-02 16:17:13",
+      "historical_price_link_verified": false,
+      "financial_comparability_verified": false
+    },
+    {
+      "symbol": "LIN",
+      "cik": "1707925",
+      "predecessor_cik": "884905",
+      "kind": "successor",
+      "corporate_event_kind": "business_combination",
+      "effective_session": "2018-10-31",
+      "available_time": "2018-11-02T13:30:00Z",
+      "availability_policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+      "exact_first_publication_verified": false,
+      "source_sha256": "9346d11920135a40fd969c1b3ae2d3f46a4dc79436fca4eb944f6f1748913780",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1707925/000119312518313073/d643979d8k.htm",
+      "accession": "0001193125-18-313073",
+      "index_source_sha256": "cfded06341e65757a7580143bac54585444a38c739fe141839146def0c093915",
+      "index_source_url": "https://www.sec.gov/Archives/edgar/data/1707925/000119312518313073/0001193125-18-313073-index.htm",
+      "original_filed": "2018-10-31",
+      "original_accepted": "2018-10-31 10:10:18",
+      "historical_price_link_verified": false,
+      "financial_comparability_verified": false
+    }
+  ],
+  "scope": "Two source-backed successor events; not a complete issuer history or price-security mapping.",
+  "unresolved_before_first_evidence": true,
+  "financial_features_enabled": false,
+  "source_inspection_sha256": "632792b9a1359d38c0d6bc38d660be27975a08baf52a848a24c6b3ba027aa191"
+}
