@@ -1946,3 +1946,11 @@ Current common-flow tag presence4,512/6,161 (73.2%) is metadata only, not causal
 stock coverage.162 focused checks/Ruff pass; family remains disabled, no training
 or Colab units. Original-source/issuer-price-day coverage gates remain before any
 matched model experiment. [Evidence](results/filing-source-review-2026-10-24/flow-feasibility-inspection.json).
+
+
+Cross-era original-flow pilot preregistered/prepared:319 selected annual instances
+across112 candidate CIKs/three fixed eras,17 absent issuer-era slots.176 focused
+checks pass. Sequential bounded acquisition, terminal journal and no automatic
+restart;80%overall/70%per-era source arithmetic gate fixed before collection.
+No financial dataset/training approval, original vintage/price links unresolved.
+See[protocol](configs/experiments/filing_original_flow_pilot.json).

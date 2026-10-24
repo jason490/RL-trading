@@ -878,3 +878,52 @@ issuer/price-day acceptance thresholds, retain failures/missingness and audit
 original publication/vintage availability. Then freeze preprocessing/data and a
 matched masked/full control with unchanged gates, followed by multi-seed and
 prospective confirmation only if it passes. Existing failed families stay closed.
+
+
+## Cross-era original-flow pilot prepared — 2026-10-24
+
+The fixed [pilot protocol](../configs/experiments/filing_original_flow_pilot.json) selects the earliest original10-K by archive
+filing date/accession in each of2009–2011,2015–2017 and2021–2023 for every one of
+112 candidate CIKs, including issuer IDs with no ledger records. No amendments,
+flow-presence filtering, price outcomes or replacement after failure. The manifest
+has **319 selected originals and17 absent issuer/era slots** (336 possible slots).
+Candidate issuer IDs do not imply a verified historical share/price identity.
+
+Prepare or verify the immutable manifest without any network request:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/collect_original_flow_pilot.py --prepare-only
+```
+
+Then collect locally (source preprocessing only; all model training stays in Colab):
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/collect_original_flow_pilot.py
+```
+
+Acquisition uses the private configured SEC identity, exact ledger URLs, a shared
+original-cache lock and2-second inter-request delay. One request per selected
+source, no retries/redirects,20MB source maximum,6GB cumulative source ceiling,
+2GB free-disk reserve and3600-second collection deadline with80 seconds reserved
+before the next operation.60-second checked request deadlines use at most20-second
+socket waits. HTTP404 is retained as a missing case;403/429/other transport/status
+errors stop the collection. Existing journals never restart automatically.
+
+Content-addressed original bytes and URL-keyed acquisition receipts stay under
+`data/raw/sec-xbrl`; identities/contact information never enter those receipts.
+The manifest and extracted fact payloads remain in `artifacts/filings`; mutable
+progress/terminal state is `.runtime/sec-original-flow-pilot.json`. The collector
+persists the source commit and manifest/rules/ledger hashes, original report dates,
+unready or unsupported cases, source hashes/bytes and elapsed time. SIGTERM is
+handled as an interruption and terminal state is saved; no worker pool or remote
+runtime is created. Original extracted-instance timestamps are not proof of the
+original publication/vintage; that gate remains explicitly unresolved.
+
+At least80% of selected originals overall and70% in each era must yield ready
+flow arithmetic. Missing/unsupported/unready selected documents count as failures;
+absent issuer/era slots are reported separately. Passing permits further causal
+coverage review only, not training or dropping difficult stocks. A failure must
+remain recorded, without expanding income/revenue aliases or moving thresholds.
+176 focused source/financial checks and targeted Ruff pass before acquisition.
+No pilot outcomes, causal price coverage, trained model or return improvement are
+claimed by this preparation step. Original/raw evidence must remain retained.

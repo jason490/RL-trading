@@ -1,0 +1,22 @@
+{
+  "schema": "sec-original-flow-pilot-v1",
+  "scope": "Outcome-free source feasibility across all112 candidate CIKs in the fixed original-candidate ledger; not a historical stock universe or accepted training dataset.",
+  "strata": [[2009, 2011], [2015, 2017], [2021, 2023]],
+  "selection": "For each candidate CIK and filing-year stratum select the earliest archive_filed then accession original10-K. No amendments, replacement after failure, price outcomes or source-presence selection. Preserve empty strata as absent.",
+  "maximum_source_bytes": 20000000,
+  "maximum_total_source_bytes": 6000000000,
+  "minimum_free_disk_bytes": 2000000000,
+  "maximum_collection_seconds": 3600,
+  "per_request_seconds": 60,
+  "next_operation_reserve_seconds": 80,
+  "request_interval_seconds": 2,
+  "retries": 0,
+  "http_policy": "Record404 as missing and continue. Stop the entire collection on403,429,other transport/status errors or corrupt cache. Never switch identity or endpoint.",
+  "arithmetic_policy": "Fixed filing_flow_feature_rules.json, original DEI report end, exact original instance checksum. Record unsupported parsing or unready arithmetic; no concept broadening or replacement samples.",
+  "feasibility_gate": "At least80% of selected original documents must yield ready flow arithmetic overall and at least70% in every stratum; failures/missing documents count in denominators. Empty issuer strata reported separately. Passing authorizes only further source/causal coverage review, never model training or selecting stocks.",
+  "publication_and_identity": "Extracted instances may be derived later. Original publication/vintage and issuer-to-share links remain unverified and block dataset acceptance.",
+  "financial_inputs_enabled": false,
+  "normalization_fitted": false,
+  "training_performed": false,
+  "colab_allocated": false
+}
