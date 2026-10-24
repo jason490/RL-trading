@@ -193,3 +193,39 @@ reader stopped under its existing cutoff rule. No normalized financial dataset
 was created. Source-period metadata needs inspection to distinguish known-at-filing
 future disclosures from date errors; no future numeric record may silently pass
 into model inputs. The source ZIP and failed-run evidence remain retained.
+
+## Forward-period quarantine and resolved first exception
+
+Original accession`0001062231-20-000009`, filed2020-02-14, has an inline XBRL
+context for2024-01-01 through2024-12-31 explicitly carrying
+`srt:ScenarioForecastMember`. Its amortization amount is a forward disclosure,
+not a realized2024 result. The original HTML is retained by checksum with its
+receipt; [resolution evidence](../results/filing-source-review-2026-10-24/forward-period-resolution.json)
+records metadata without the amount. Numeric period and public availability are
+different concepts. This resolves that exception's meaning without proving
+point-in-time fidelity for the full archive.
+
+The initial strict audit failure remains recorded. The default reader still
+rejects post2023 NUM dates. An [explicit addendum](../configs/experiments/filing_forward_period_addendum.json)
+adds a separate inspection mode:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/audit_sec_archive.py \
+  --archive /path/to/2020q1.zip --quarter 2020q1 \
+  --quarantine-forward-periods \
+  --output artifacts/filings/2020q1-quarantined-structural.json
+```
+
+Version3 reports which policy was used. Quarantine excludes **every** NUM period
+later than that accession's SUB reporting period, including forward periods before
+2024; it is not a one-record exception. Excluded amounts do not enter numeric
+comparisons or model preparation. Counts and at most20 metadata examples are
+reported, while original records stay in the immutable ZIP. Dates must still be
+valid; retired SUB filing, acceptance and reporting dates remain rejected.
+
+A period comparison does not identify every forecast or make remaining facts
+model-ready. Concept/scenario/duration selection, original-vintage verification,
+identity mapping and publication evidence remain separate mandatory work. The
+mode never enables financial inputs or training.48 focused checks pass, including
+quarantine of both2020 and2024 periods, amount exclusion and retained strict
+retired-submission rejection. Actual archive results are recorded separately.

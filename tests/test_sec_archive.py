@@ -158,3 +158,30 @@ def test_ambiguous_or_retired_acceptance_rejected(tmp_path, value):
     path = fixture(tmp_path, lambda d: d['sub'][0].update(accepted=value))
     with pytest.raises(ValueError):
         audit_archive(path, '2020q1')
+
+
+@pytest.mark.parametrize('future_period', ['20201231', '20241231'])
+def test_explicit_mode_quarantines_all_forward_periods(tmp_path, future_period):
+    def change(data):
+        data['num'].append(dict(data['num'][0], ddate=future_period, value='NaN'))
+    path = fixture(tmp_path, change)
+    result = audit_archive(path, '2020q1', quarantine_forward_periods=True)
+    assert result['counts']['num'] == 2
+    assert result['counts']['inspected_numeric_rows'] == 1
+    assert result['counts']['quarantined_forward_period_rows'] == 1
+    assert result['quarantine_examples'][0]['ddate'] == future_period
+    assert 'value' not in result['quarantine_examples'][0]
+    assert not result['causal_ready']
+    assert result['forward_period_policy'] == 'quarantine'
+
+
+def test_quarantine_mode_does_not_allow_retired_submissions(tmp_path):
+    path = fixture(tmp_path, lambda d: d['sub'][0].update(filed='20240101'))
+    with pytest.raises(ValueError, match='retired'):
+        audit_archive(path, '2020q1', quarantine_forward_periods=True)
+
+
+def test_quarantine_mode_rejects_invalid_numeric_dates(tmp_path):
+    path = fixture(tmp_path, lambda d: d['num'][0].update(ddate='20241301'))
+    with pytest.raises(ValueError):
+        audit_archive(path, '2020q1', quarantine_forward_periods=True)

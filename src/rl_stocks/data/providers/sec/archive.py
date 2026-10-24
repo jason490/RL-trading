@@ -22,16 +22,17 @@ REQUIRED = {
 CUTOFF = datetime(2024, 1, 1)
 
 
-def _date(value):
+def _date(value, *, allow_post2023=False):
     if not re.fullmatch(r'\d{8}', value):
         raise ValueError('invalid SEC date')
     result = datetime.strptime(value, '%Y%m%d')
-    if result >= CUTOFF:
+    if result >= CUTOFF and not allow_post2023:
         raise ValueError('retired-period record rejected')
     return result
 
 
-def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_000):
+def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_000,
+                  quarantine_forward_periods=False):
     """Read local FSDS ZIP; counts are structural evidence, not causal readiness.
 
     Acceptance timestamps stay naive source strings: their timezone/publication
@@ -44,6 +45,9 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
         before = hashlib.file_digest(source, 'sha256').hexdigest()
     counts, forms, issues = Counter(), Counter(), Counter()
     submissions = {}
+    quarantine_examples = []
+    if type(quarantine_forward_periods) is not bool:
+        raise ValueError('quarantine mode must be boolean')
     with tempfile.TemporaryDirectory(prefix='sec-fact-audit-') as work, \
             closing(sqlite3.connect(str(Path(work) / 'facts.sqlite'))) as facts, \
             ZipFile(path) as archive:
@@ -104,7 +108,14 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
         for row in rows('num'):
             if row['adsh'] not in submissions:
                 raise ValueError('orphan NUM accession')
-            _date(row['ddate'])
+            numeric_period = _date(row['ddate'], allow_post2023=quarantine_forward_periods)
+            if quarantine_forward_periods and numeric_period > _date(submissions[row['adsh']]['period']):
+                counts['quarantined_forward_period_rows'] += 1
+                if len(quarantine_examples) < 20:
+                    quarantine_examples.append({k: row[k] for k in
+                                                ('adsh', 'tag', 'version', 'ddate', 'qtrs', 'uom')})
+                continue
+            counts['inspected_numeric_rows'] += 1
             if not re.fullmatch(r'\d+', row['qtrs']):
                 raise ValueError('invalid NUM duration')
             key = json.dumps([row.get(k, '') for k in (
@@ -143,7 +154,9 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
         if hashlib.file_digest(source, 'sha256').hexdigest() != before:
             raise ValueError('archive changed during inspection')
     return {
-        'schema': 'sec-archive-structural-audit-v2', 'quarter': quarter,
+        'schema': 'sec-archive-structural-audit-v3', 'quarter': quarter,
+        'forward_period_policy': ('quarantine' if quarantine_forward_periods else 'strict'),
+        'quarantine_examples': quarantine_examples,
         'numeric_schema': ('segments-v2' if numeric_schema['segments_present'] else 'legacy-v1'),
         'numeric_unique_key': ['adsh', 'tag', 'version', 'ddate', 'qtrs', 'uom',
                                'segments', 'coreg'],

@@ -1767,3 +1767,23 @@ Its semantics need original-filing review; no amount copied into diagnostic, no
 model inputs, retired bars/returns, normalization, training or Colab allocation.
 Source/receipt and failed outcome retained. No new compute units.
 [Evidence](../results/filing-source-review-2026-10-24/README.md).
+
+### First forward SEC period resolved — 2026-10-24 UTC
+
+Original2020 filing's inline XBRL context explicitly labels the2024 amortization
+record`ScenarioForecastMember`: known forward disclosure, not realized retired
+period data. Original HTML/receipt retained SHA dede7989…; metadata-only resolution
+published. Preserve strict failure/default reader; separate explicit addendum
+quarantines every NUM period later than its accession SUB period, including
+pre2024 forecasts. No excluded amount enters numeric comparisons/model inputs.
+48 focused checks pass; optional actual archive inspection running. Publication,
+identity, concept/duration and vintage fidelity remain unverified. No training,
+normalization, new allocation or compute units.
+
+Explicit-quarantine2020q1 inspection completed:5,816 filings/5,404CIKs,
+3,099,352NUM total,3,103 excluded forward-period records,3,096,249 inspected unique
+keys.108,017 missing values,1,538,091 segmented rows;3 acceptance-date anomalies.
+No duplicate-key conflict among inspected records. Full immutable report retained
+SHAbc452aa8…; compact summary in results. Not all excluded records are forecasts,
+and structural completion leaves all causal-readiness flags false. Original
+strict failure preserved. No financial features, fitting, test bars or new units.

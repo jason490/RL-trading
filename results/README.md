@@ -169,7 +169,8 @@ exposure decreases.156 saved episodes, no causal claim, fitting or extra units.
 
 [SEC source-schema/publication review](filing-source-review-2026-10-24/README.md)
 identified archive reprocessing, segment-aware numeric identity and publication
-uncertainty.44 focused checks pass. First2020q1 archive acquired; strict audit
-failed on one future-period NUM label. Original source semantics remain pending;
-no financial model inputs or training. This is feasibility work, not a new return
-result or a promoted model.
+uncertainty.48 focused checks pass. First2020q1 strict failure retained; original
+filing identifies the2024 label as a forecast. Explicit-quarantine inspection
+completed3,096,249 numeric keys with3,103 forward-period exclusions. Causal
+readiness remains unverified; no financial model inputs or training. This is
+feasibility work, not a new return result or a promoted model.

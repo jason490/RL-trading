@@ -1,0 +1,19 @@
+{
+  "schema": "sec-source-period-resolution-v1",
+  "archive_sha256": "48ed9834c66d565c21130d087eae941b25770e2d7cc8351d17652612289fcd67",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1062231/000106223120000009/axl201910-k.htm",
+  "source_sha256": "dede798937e493045292e5ead915c23403a1e6331f9534f2d82c1397a5f4737f",
+  "accession": "0001062231-20-000009",
+  "filing_date": "2020-02-14",
+  "reporting_period": "2019-12-31",
+  "concept": "us-gaap:AmortizationOfIntangibleAssets",
+  "context_id": "D2024Q4SD_srt_StatementScenarioAxis_srt_ScenarioForecastMember",
+  "scenario_member": "srt:ScenarioForecastMember",
+  "numeric_period_start": "2024-01-01",
+  "numeric_period_end": "2024-12-31",
+  "interpretation": "2020-filed forward amortization forecast, not a realized 2024 result. Exclude from current historical financial features; preserve original strict audit failure.",
+  "amount_recorded_in_evidence": false,
+  "retired_test_bars_accessed": false,
+  "model_inputs_enabled": false,
+  "training_performed": false
+}

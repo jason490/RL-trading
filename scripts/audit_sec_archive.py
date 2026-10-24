@@ -12,8 +12,11 @@ def main():
     parser.add_argument('--archive', type=Path, required=True)
     parser.add_argument('--quarter', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--quarantine-forward-periods', action='store_true',
+                        help='Explicitly exclude NUM periods later than their SUB reporting period')
     args = parser.parse_args()
-    result = audit_archive(args.archive, args.quarter)
+    result = audit_archive(args.archive, args.quarter,
+                           quarantine_forward_periods=args.quarantine_forward_periods)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     write_once(args.output, (json.dumps(result, indent=2, sort_keys=True) + '\n').encode())
     print('Structural audit saved; causal readiness remains unverified.')

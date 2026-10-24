@@ -1,0 +1,27 @@
+{
+  "schema": "sec-filing-forward-period-addendum-v1",
+  "extends": "filing_coverage_audit.json",
+  "reason": "Original 2020 filing confirms a 2024 amortization fact uses ScenarioForecastMember; numeric period is not publication time.",
+  "original_strict_failure_preserved": true,
+  "default_reader_still_rejects_retired_periods": true,
+  "optional_mode": "quarantine_forward_periods",
+  "rule": "For every NUM record, parse its period and compare with that accession's SUB period. Quarantine every later NUM period, including years before 2024; no financial value from these rows enters numeric comparisons or model preparation.",
+  "invalid_dates": "reject",
+  "retired_SUB_period_filed_or_acceptance": "reject",
+  "quarantine_evidence": "counts and bounded accession/concept/period metadata only; raw archive retained unchanged",
+  "no_inference_of_actual_vs_forecast_from_date_alone": true,
+  "causal_readiness": false,
+  "publication_and_identity_verification_still_required": true,
+  "feature_and_training_protocol": "not_enabled",
+  "performance_scoring": false,
+  "original_source": {
+    "accession": "0001062231-20-000009",
+    "url": "https://www.sec.gov/Archives/edgar/data/1062231/000106223120000009/axl201910-k.htm",
+    "sha256": "dede798937e493045292e5ead915c23403a1e6331f9534f2d82c1397a5f4737f",
+    "context_id": "D2024Q4SD_srt_StatementScenarioAxis_srt_ScenarioForecastMember",
+    "fact_concept": "us-gaap:AmortizationOfIntangibleAssets",
+    "period_start": "2024-01-01",
+    "period_end": "2024-12-31",
+    "scenario_member": "srt:ScenarioForecastMember"
+  }
+}
