@@ -1,7 +1,8 @@
 # Distributional critic study — initialization acceptance
 
-**All three1024-transition Colab smoke runs are accepted. No50k performance
-screen has completed yet.** Earlier sections retain the initialization history.
+**The three-arm50k Colab screen is complete and failed its fixed gates.**
+All six smoke/screen sessions are stopped; no confirmation or promotion. Earlier
+sections retain implementation history; the completed results are below.
 The [prior saved-SAC diagnostic](../sac-soft-consistency-2026-10-24/README.md) supplies
 a limited critic-consistency rationale, not a TQC return claim.
 
@@ -153,3 +154,57 @@ normalization/files unchanged and no local optimizer steps. The control's
 artifacts are retrieved and its owned session is verified stopped. Both TQC
 screens are still running; this control acceptance is not a full-study gate
 result, return improvement, confirmation allocation or promotion.
+
+
+## Completed fixed50k screen — failed
+
+[Formal result](screen.json) verifies actual saved-model/Adam/replay restoration,
+192 exact frozen predictions for the three full runs, development accounting,
+matched holding paths and exact nativeSAC historical reproduction. Together with
+smokes,384 frozen comparisons pass. All six owned sessions are verified stopped.
+
+| Arm | Selected net total return | Actual final net total return |
+| --- | ---: | ---: |
+| Native SAC |7.9281%|7.9281%|
+| Untruncated TQC |1.9991%|1.9991%|
+| Truncated TQC |9.7018%|7.6975%|
+| Matched buy-and-hold |30.6019%|30.6019%|
+
+These are means of26 separate original-symbol episodes on repeatedly reused
+2021–2023 development data, not annualized/combined-portfolio or independent
+prospective performance. Retrospective stock selection remains a limitation.
+
+Candidate selected gain versusSAC is1.7736pp, below required2pp; final gain
+−0.2306pp also fails. Final ETF gain versusSAC is−7.9600pp and mean drawdown
+worsens5.7672pp (maximum2pp). Candidate final stock/ETF holding excess is
+−22.7669/−23.6604pp; median stock excess−23.1614pp, failing fixed−2pp targets.
+Both-control and absolute gates fail. Historical control reproduces exactly,
+so interpretation is valid; no tolerance change, retry or rescue sweep. The
+fixed study is closed: no quantile/truncation/reward/step grid, extension or
+confirmation. The broader robust-performance objective remains unmet.
+
+Observed final net short contribution is negative for both TQC variants on
+stocks and ETFs. TruncatedTQC final stock long/short contributions are
++17.109%/−7.249%; ETF+3.338%/−7.532%. Mean closing short exposure is8.77%/8.03%.
+UntruncatedTQC has much greater short exposure22.91%/27.24% and net short
+contribution−9.672%/−9.116%. These saved paths do not prove that truncation,
+shorting or costs caused the outcome; no profitable-short claim is justified.
+The report retains reconciled cost/exposure/exit/drawdown diagnostics and compact
+10k-step curves, including incremental percentage-point changes.
+
+[Compute evidence](compute.json) records conservative project39.154379/150,
+remaining110.845621 (90.845621 to130 teardown), study0.140001/2 units. Official
+account348.89 with zero rate/assignments after cleanup; account floor150 and
+teardown170 remain enforced. Artifact publication/checksum verification and
+scoped duplicate cleanup are next; retained models/replay/source data are not
+deleted. No retired-test rows, normalization refitting or broker orders.
+
+
+Final relevant regression suite:139 tests pass (algorithm, initializer, learned
+serialization, payload/archive/fleet/budget, report gates, publication allowlist
+and action/accounting). No local optimization was performed. `plan.html` remains
+SHA25626c4bf4b910013bf47231d47b74ccf82ece9fe05296cd5eefddccc300d3a365f.
+Twelve allowlisted release assets are prepared, including complete frozen models,
+selected/final weights, initialization evidence, sparse learning curves, derived
+validation reports and the standalone interactive comparison. Original bars,
+replay buffers, credentials and runtime logs stay local.

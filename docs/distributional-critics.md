@@ -334,3 +334,15 @@ causal action effects.20 focused action/accounting/gate checks pass, and both
 actual completed nativeSAC reports reconcile across26 development episodes.
 No model inference, fitting, normalization change or checkpoint reselection is
 needed to inspect these retained paths.
+
+
+Completed fixed critic50k screen failed: nativeSAC selected/final7.9281/7.9281%,
+untruncatedTQC1.9991/1.9991%, truncatedTQC9.7018/7.6975%, holding30.6019%.
+Candidate fails both-control/absolute/risk gates; no confirmation, grid or
+extension. NativeSAC reproduces every checkpoint and selected/final symbol
+exactly.384 smoke/full frozen comparisons and actual learned optimizer/replay
+checks pass; six owned sessions stopped. Conservative project39.154379/150,
+study0.140001/2, official account348.89 with zero rate/assignments. Retired-test
+isolation and immutable normalization preserved; objective remains unmet. See
+results/distributional-critics-2026-10-24/screen.json and compute.json. Publication
+and scoped duplicate cleanup remain next; no promoted model.

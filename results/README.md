@@ -7,11 +7,13 @@ the full required multi-seed and prospective acceptance process.
 
 ## Current research status
 
-[Latest compact-market-context screen](market-context-2026-10-23/README.md) failed:
-full selected/final7.70/−3.77%, masked18.73/18.73%, legacy19.62/18.48%, holding
-30.60%. Both-control/absolute/risk gates fail; fixed family closed.468 frozen
-checks including smokes, six owned sessions stopped. Project39.014378/150,
-last official account349.02 zero assignments. 16 release assets and cleanup verified; saved-path diagnosis complete. Robust-return objective remains unmet.
+[Fixed distributional critics](distributional-critics-2026-10-24/README.md) failed:
+nativeSAC selected/final7.93/7.93%, untruncatedTQC2.00/2.00%, truncatedTQC9.70/7.70%,
+matched holding30.60%. Both-control, absolute and risk gates fail; fixed family
+closed without confirmation or tuning extension. Historical nativeSAC reproduces
+exactly.384 smoke/full frozen checks pass; all six owned sessions are stopped.
+Project39.154379/150, official account348.89 with zero assignments. Publication
+and duplicate cleanup pending. No robust winner or prospective acceptance exists.
 
 ## Latest completed history comparison
 

@@ -1,0 +1,26 @@
+{
+  "project_conservative_units": 39.154379081176344,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "remaining_project_units": 110.84562091882366,
+  "working_units_to_teardown": 90.84562091882366,
+  "study_conservative_units": 0.14000118670198702,
+  "study_allowance": 2,
+  "study_reported_account_debit": 0.12999999999999545,
+  "study_estimated_units": 0.14000118670198652,
+  "account_balance": 348.89,
+  "minimum_account_balance": 150,
+  "account_teardown": 170,
+  "active_assignments": 0,
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-cbcbbf80f023": "done",
+    "rl-stocks-cpu-5fcae0fee531": "done",
+    "rl-stocks-cpu-f55cb457faa5": "done",
+    "rl-stocks-cpu-947ab1c90cd0": "done",
+    "rl-stocks-cpu-53f15cb9f33f": "done",
+    "rl-stocks-cpu-5fe91c3022af": "done"
+  },
+  "ledger_sha256": "2b0f50df226bc5985b31d8f9c238dffae5375a86503944b466b51bff5f56ad37",
+  "interpretation": "Conservative project accounting includes estimated usage between rounded official account readings; measured and estimated totals overlap and must not be added."
+}
