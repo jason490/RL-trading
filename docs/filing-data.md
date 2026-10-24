@@ -323,3 +323,47 @@ this is dated-document evidence only. [Absence/source resolution](../results/fil
 [IBM identity](../results/filing-source-review-2026-10-24/ibm-dated-identity.json)
 and [Q2 metadata](../results/filing-source-review-2026-10-24/2020q2-ibm-kr-sub.json)
 retain the scope and uncertainty. No financial dataset or training is enabled.
+
+## Restricted original XBRL financial extraction
+
+`sec.facts.extract_facts` now reads the original accession's SEC-extracted XBRL
+instance, including IBM's exhibit statements. It is a source-review tool, not a
+financial-feature assembler. It requires source SHA256, accession, expected issuer,
+original report end and filing date. A mismatched original DEI report end rejects
+an archive's rounded month-end substitute. Filing dates from2024 onward reject.
+
+Only a small explicit standard US-GAAP money-concept set is inspected: assets,
+liabilities, net income and specified revenue concepts. Original namespace/concept,
+context/unit references, exact instant or duration, decimal text and declared
+precision are retained. No float conversion, scaling refit or concept priority is
+applied. Every matching fact is kept; duplicate/conflicting candidates are not
+silently collapsed into a preferred value. Growth, margin and leverage features
+remain disabled until a separate concept/duration/vintage specification passes.
+
+Only unqualified expected-issuer, non-forward, simple USD facts receive source
+amounts in the private extraction. Segment/scenario, forward, nil, wrong-issuer
+and non-USD rows carry explicit exclusions and no amount. This conservative
+filter is not a guarantee that all forecast or accounting ambiguities are solved.
+It does not infer availability or certify ticker continuity. Orphan references,
+invalid/nonfinite eligible values, namespace rebinding, DTD/entities, malformed
+periods and source checksum mismatches reject. No external schemas or entities
+are fetched. Source files are bounded at20MB and retained unchanged.
+
+Example (substitute the recorded source hash/path):
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/extract_sec_original_facts.py \
+  --source data/raw/sec-xbrl/SHA/instance.xml --sha256 SHA \
+  --accession 0001558370-20-003501 --cik 56873 \
+  --report-end 2020-02-01 --filed 2020-04-01 \
+  --output artifacts/filings/kr-original-money-facts.json
+```
+
+Actual source inspection found IBM237 selected rows,211 excluded qualified rows
+and26 unqualified USD rows; Kroger54 selected,21 excluded and33 unqualified USD
+rows. Kroger retains exact2019-02-03–2020-02-01 duration endpoints. These counts
+show extraction works on two sources, not chronological coverage, financial
+predictiveness or causal training readiness. Raw extracted amounts stay in
+ignored artifacts; the [public summary](../results/filing-source-review-2026-10-24/original-extraction-summary.json)
+contains metadata/counts only.71 focused SEC checks pass, including original
+period mismatch, precision, exclusions, duplicate retention and parsing rejection.

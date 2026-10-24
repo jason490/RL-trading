@@ -1,0 +1,139 @@
+{
+  "schema": "sec-original-extraction-inspection-v1",
+  "records": [
+    {
+      "schema": "sec-original-money-facts-v1",
+      "source_sha256": "fc20caf0ec24a58f966801b157cd5a8d5964e5ad3f8a0ee79df483e0251370d2",
+      "accession": "0001558370-20-001334",
+      "cik": "51143",
+      "report_end": "2019-12-31",
+      "filed": "2020-02-25",
+      "counts": {
+        "selected_concept_rows": 237,
+        "excluded_rows": 211,
+        "excluded_segment_or_scenario": 211,
+        "unqualified_usd_rows": 26
+      },
+      "financial_features_enabled": false,
+      "historical_mapping_verified": false,
+      "publication_verified": false,
+      "causal_ready": false,
+      "training_performed": false,
+      "symbol_for_source_review": "IBM",
+      "unqualified_concepts": {
+        "Revenues": 13,
+        "NetIncomeLoss": 6,
+        "Assets": 5,
+        "Liabilities": 2
+      },
+      "unqualified_periods": [
+        [
+          "2017-01-01",
+          "2017-12-31"
+        ],
+        [
+          "2018-01-01",
+          "2018-12-31"
+        ],
+        [
+          "2019-01-01",
+          "2019-12-31"
+        ],
+        [
+          null,
+          "2017-12-31"
+        ],
+        [
+          null,
+          "2018-12-31"
+        ],
+        [
+          null,
+          "2019-12-31"
+        ]
+      ]
+    },
+    {
+      "schema": "sec-original-money-facts-v1",
+      "source_sha256": "9e326eefb300e35d421dc93f4f3f5d459b69f87753e71b5d0bbf74e3c4bfc507",
+      "accession": "0001558370-20-003501",
+      "cik": "56873",
+      "report_end": "2020-02-01",
+      "filed": "2020-04-01",
+      "counts": {
+        "selected_concept_rows": 54,
+        "unqualified_usd_rows": 33,
+        "excluded_rows": 21,
+        "excluded_segment_or_scenario": 21
+      },
+      "financial_features_enabled": false,
+      "historical_mapping_verified": false,
+      "publication_verified": false,
+      "causal_ready": false,
+      "training_performed": false,
+      "symbol_for_source_review": "KR",
+      "unqualified_concepts": {
+        "Assets": 2,
+        "Liabilities": 2,
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 16,
+        "NetIncomeLoss": 13
+      },
+      "unqualified_periods": [
+        [
+          "2017-01-29",
+          "2018-02-03"
+        ],
+        [
+          "2018-02-04",
+          "2018-05-26"
+        ],
+        [
+          "2018-02-04",
+          "2019-02-02"
+        ],
+        [
+          "2018-05-27",
+          "2018-08-18"
+        ],
+        [
+          "2018-08-19",
+          "2018-11-10"
+        ],
+        [
+          "2018-11-11",
+          "2019-02-02"
+        ],
+        [
+          "2019-02-03",
+          "2019-05-25"
+        ],
+        [
+          "2019-02-03",
+          "2020-02-01"
+        ],
+        [
+          "2019-05-26",
+          "2019-08-17"
+        ],
+        [
+          "2019-08-18",
+          "2019-11-09"
+        ],
+        [
+          "2019-11-10",
+          "2020-02-01"
+        ],
+        [
+          null,
+          "2019-02-02"
+        ],
+        [
+          null,
+          "2020-02-01"
+        ]
+      ]
+    }
+  ],
+  "financial_amounts_in_summary": false,
+  "causal_ready": false
+}

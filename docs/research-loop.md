@@ -1824,3 +1824,15 @@ pass. No model fitting, retired price/return access or new Colab units. Large
 master-index request stopped at byte cap; no data used. [Evidence](../results/filing-source-review-2026-10-24/README.md).
 Next chronological source coverage and original-filing financial extraction/
 period validation; current candidate matches remain insufficient for model inputs.
+
+### Original XBRL money-source extraction — 2026-10-24 UTC
+
+Restricted source reader now preserves exact original periods/units/decimal
+values and all competing selected US-GAAP facts; no feature formulas or readiness
+promotion. Actual IBM237/211excluded/26unqualifiedUSD and Kroger54/21/33 records.
+Kroger exactannual2019-02-03–2020-02-01 retained; rounded ZIPperiod mismatch rejects.
+71 focused SEC checks pass, including excluded amount suppression, duplicates,
+source corruption and parser/reference failures. Original instances/receipts and
+private amount-bearing extraction retained; public summary has metadata only.
+No fitting, retired test prices/returns or new Colab units. Next chronological
+source coverage and explicit financial-concept/vintage gates before any training.

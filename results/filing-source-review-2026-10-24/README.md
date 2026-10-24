@@ -144,3 +144,20 @@ lint pass; source checks confirm recorded dates/hashes and exact accession
 presence. No fitting, retired prices/returns, allocation or additional units.
 An attempted large Q1 master-index inspection exceeded its20MB cap and stopped;
 no response was retained or used. Targeted original indexes supplied the evidence.
+
+## Original money-fact extraction feasibility
+
+Two checksummed original SEC-extracted XBRL instances were inspected: IBM
+SHAfc20caf0… and KrogerSHA9e326eef…. Restricted US-GAAP money extractor preserves
+exact contexts, units, decimals, original dates and all competing fact rows.
+IBM237 selected/211 excluded/26 unqualified USD rows; Kroger54/21/33. Qualified
+segments/scenarios have no extracted amount. Publication, historical identity
+and financial-feature readiness stay false. [Metadata-only summary](original-extraction-summary.json).
+
+Kroger's original annual duration2019-02-03–2020-02-01 remains exact, and supplying
+the ZIP's2020-01-31 report end rejects. Source instance bytes/receipts and full
+amount-bearing extraction remain in ignored data/artifacts.71 focused SEC tests
+pass, including exact decimal preservation, forward/non-USD/nil exclusions,
+original-period mismatch, source integrity, orphan references and duplicate
+retention. No normalization fitting, training, retired prices/returns or new units.
+Chronological coverage and a separate concept/feature protocol remain required.
