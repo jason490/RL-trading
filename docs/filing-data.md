@@ -667,3 +667,32 @@ full comparison output reproduces exactly on repeated generation. All source
 ZIPs/receipts remain retained, no temporary downloads remain, and the master
 collector is terminal. Last official Colab balance349.02/rate0/assignments0;
 no additional units were consumed. [Retention evidence](../results/filing-source-review-2026-10-24/master-retention-inspection.json).
+
+## Bounded financial-table concept audit
+
+The fixed[concept-audit protocol](../configs/experiments/filing_concept_audit.json)
+checks current-period metadata for all financial-table candidates before large
+original-document collection. It requires standard US-GAAP tags, USD, empty
+segment/co-registrant labels, matching accession/period label and compatible
+quarter-count groups. No amounts are retained or used to compute ratios.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/audit_sec_concept_coverage.py \
+  --collection .runtime/sec-coverage-collection.json \
+  --ledger artifacts/filings/original-candidate-ledger.json \
+  --output artifacts/filings/concept-audit-v1 \
+  --state .runtime/sec-concept-audit-v1.json
+```
+
+Two local preprocessing workers stream cached tables, with300-second per-archive
+checks and2GB expanded NUM limits. The journal records code/protocol/source hashes
+and completed quarters. Failure cancels pending work and waits for active workers
+to stop before marking cleanup complete; existing journals/outputs are not
+restarted automatically. No training or Colab allocation is involved.
+
+Tag presence is not arithmetic, original-context or price coverage readiness.
+Archive period labels/quarter counts are approximate; amounts may conflict,
+comparables may be absent, and original filings can contain facts omitted from
+flat tables. Unsupported operating income, ProfitLoss, goods/services and bank
+revenue labels are diagnostic only, never aliases for the fixed feature formulas.
+The251 master-only issuer/accession pairs remain unassessed by this table scan.

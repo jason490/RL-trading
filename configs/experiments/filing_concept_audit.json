@@ -1,0 +1,19 @@
+{
+  "schema": "sec-financial-table-concept-audit-v1",
+  "scope": "Outcome-free current-period tag-presence audit of the fixed financial-table candidate ledger; not original-fact arithmetic or stock-price coverage.",
+  "archive_quarters": {"first": "2009q2", "last": "2023q4"},
+  "required_current_concepts": ["supported total revenue", "NetIncomeLoss", "Assets", "Liabilities"],
+  "filters": "Same accession/current archive period label, standard us-gaap version, USD, empty coreg and segments, nonempty source amount field. No amounts retained or used in ratios.",
+  "annual_flow_quarters": [4],
+  "quarterly_flow_quarters": [1, 2, 3],
+  "balance_quarters": 0,
+  "unsupported_labels_report_only": ["OperatingIncomeLoss", "ProfitLoss", "SalesRevenueGoodsNet", "SalesRevenueServicesNet", "RevenuesNetOfInterestExpense", "NetIncomeLossAvailableToCommonStockholdersBasic"],
+  "missing_financial_archive_pairs": "Report as unassessed, not zero financial facts.",
+  "presence_pass_is_readiness": false,
+  "limitations": ["Archive labels/quarter counts are not exact original intervals.", "Original extraction can contain facts absent from flat tables.", "Presence does not establish values, duplicate agreement, comparables, identity, vintage or availability."],
+  "maximum_workers": 2,
+  "per_archive_seconds": 300,
+  "financial_features_enabled": false,
+  "normalization_fitted": false,
+  "training_performed": false
+}
