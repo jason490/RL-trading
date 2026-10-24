@@ -184,3 +184,20 @@ and saved-path diagnosis before a distinct hypothesis. Objective remains unachie
 [Strict report](summary.json), [10k curves](learning-curves.csv),
 [frozen restoration](restoration.json), [legacy reproduction](control-reproduction.json),
 [metering/owned cleanup](compute.json).
+
+
+## Verified publication and duplicate-only cleanup
+
+[GitHub release](https://github.com/jason490/RL-trading/releases/tag/market-context-2026-10-23)
+has16 server-size/SHA-256-verified assets, including six complete frozen bundles,
+selected/latest models, exact snapshots/checkpoint/optimizer/year evidence,
+interactive comparison and individual selected equity reports, compact curves
+and fixed protocol/proofs. Raw provider bars/credentials excluded. Only two
+duplicate publication archives removed (53,422,663bytes);204 retained hashes
+unchanged. All three dataset file hashes reverified against immutable identities.
+Original transports/models/reports/source/data/ledger and plan.html preserved.
+Strict summary reproduces byte for byte with actual saved models/Adam restored.
+All six owned sessions remain stopped, project39.01437789/account349.02 zero
+rate/assignments. No additional units. [Release receipts](release-verification.json),
+[cleanup](cleanup.json), [reproduction](reproduction.json). Saved-path diagnosis
+follows; fixed family remains closed.

@@ -209,3 +209,8 @@ reproduces prior native tensors/sampling. All six sessions retrieved/stopped.
 Project39.01437789/account349.02 zero assignments. Coverage did not imply alpha;
 full artifacts retained, publication/diagnosis next, objective unachieved.
 [Evidence](../results/market-context-2026-10-23/README.md).
+
+Market-context publication:16 GitHub server-size/SHA-verified assets, six complete
+bundles/reports; only two duplicate archives53,422,663bytes removed,204 retained
+hashes unchanged. All three immutable dataset hashes reverified. Strict summary
+byte-identical after actual model/Adam restoration. [Receipts](../results/market-context-2026-10-23/release-verification.json).

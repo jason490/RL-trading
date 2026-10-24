@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "release_assets_verified": 16,
+  "owned_cleanup_verified": true,
+  "removed_files": [
+    {
+      "path": "artifacts/market-release/research-models.tar.gz",
+      "bytes": 48331242,
+      "sha256": "dd41f55e32148d605b2fe56934dd19b212f6bb49916aa50028e297590ad5d49a"
+    },
+    {
+      "path": "artifacts/market-release/validation-reports.tar.gz",
+      "bytes": 5091421,
+      "sha256": "503bf514a566a7d44d1e5ad0fbb7d697045a8d78ea070de35f43e7f00b7cf71c"
+    }
+  ],
+  "removed_logical_bytes": 53422663,
+  "retained_file_count": 204,
+  "retained_hashes_unchanged": true,
+  "original_transports_models_reports_source_dataset_ledger_preserved": true,
+  "all_declared_datasets_sha256_verified": true,
+  "dataset_file_sha256": {
+    "legacy": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "masked": "a392ba935e3026ab737ad539122d584242994e27a0e02bcad96d3868914913a5",
+    "full": "f439b8f4ed367573998998db30af4100bcd3cb167843efeab322b060729447db"
+  }
+}
