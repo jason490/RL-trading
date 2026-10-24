@@ -2357,3 +2357,16 @@ family closed; distinct hypothesis review before new training.
   focused checks pass (overlap). Actual frozen mask rejection now mandatory in
   three-smoke acceptance. No local policy fitting/updates; official349.10 zero
   assignments/project38.90354117. [Construction](../results/market-context-2026-10-23/construction.json).
+
+
+### Actual market-context Colab smokes accepted — 2026-10-24 UTC
+
+Three512 CPU/defaultPython3.13.16 runs from clean88fb98c… complete.234 exact frozen
+sequence/reset predictions and actual masked nonzero-input rejection pass; saved
+models/Adam, mapped initial tensors/RNG and actual symbol/year sampling restore.
+80 actual updates/40 nominal epochs each, legacy61,513/augmented63,049 parameters.
+All three sessions retrieved/stopped. Durations138.0922/138.7362/136.6898s give
+fixed3406.0216s projection including1200s reserve, below7200s. Exact accepted bytes
+bind prepared three100k seed11 plans, not allocated. Project38.93466769/account
+349.08 zero rate/assignments; original2-unit allowance and project/account limits
+unchanged. No smoke-return tuning or retired-test access. [Evidence](../results/market-context-2026-10-23/README.md).

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "protocol_sha256": "f9045fe85e0e756b3397cb27d4231a82ced8645b1a41c1b20cba093160d7cbad",
+  "smoke_acceptance_file": ".runtime/market-smoke-acceptance.json",
+  "smoke_acceptance_sha256": "cad4ba98b4e8de2d33221f93f5df1b6cdb3a4a355c988b0b8a00d2ff137d170a",
+  "durations_seconds": {
+    "legacy": 138.09221916600006,
+    "masked": 138.73619556699998,
+    "full": 136.689837087
+  },
+  "projection": {
+    "projected_seconds": 3406.0215565934714,
+    "smoke_duration_ratio": 1.0046633793336741,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  }
+}

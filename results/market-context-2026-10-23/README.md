@@ -1,9 +1,8 @@
 # Compact market-context coverage audit
 
-Status: fixed cached-data coverage/availability preflight passed. No new dataset,
-normalization fit, policy inference, model training, validation-performance score
-or Colab allocation. [Protocol](../../configs/experiments/market_context_audit.json),
-[method](../../docs/market-context.md), [complete evidence](coverage.json).
+Status: immutable payloads, mapped initialization and actual three-arm Colab smokes
+accepted. Fixed100k screen plans prepared, not allocated. Latest stage below;
+earlier sections retain preparation history. No return result yet.
 
 | Existing split | Rows checked | Context available | Unavailable |
 | --- | ---: | ---: | ---: |
@@ -96,3 +95,33 @@ require both controls and all predefined gates, never retired-test data.
 Three512 CPU smoke plans prepared; no Colab allocation yet. Official account349.10,
 zero rate/assignments and project38.90354117 unchanged. No local policy learning
 or optimizer updates. Actual three-arm smoke/runtime acceptance precedes100k.
+
+
+## Actual Colab smoke acceptance — 2026-10-24 UTC
+
+Three512 CPU runs from clean88fb98c743702e4446a10a62dafed7da7c5fe6bf completed
+on actual defaultPython3.13.16, retrieved and verified stopped.234 exact frozen
+action/hidden/cell/reset/repeat predictions, immutable normalization and schema/
+feed/nonfinite rejection pass. Actual masked bundle rejects nonzero context.
+Actual selected/final models and complete Adam records restore,80 actual updates/
+40 nominal epochs each. Legacy61,513 versus augmented63,049 parameters; mapped
+common columns/original RNG verified and full/masked initial tensors exact.
+Actual symbol/year sampling and checkpoint proofs match. No smoke returns changed
+settings or checkpoint-selection rules.
+
+Durations138.0922s legacy/138.7362s masked/136.6898s full include training/evaluation
+and do not prove a speed ranking. Fixed projection3406.0216s (56.8min including
+1200s reserve) passes7200s. Exact accepted-smoke bytes bind the prepared three100k
+seed11 plans. Projection is heuristic; minute metering/deadline/aggregate guards
+remain active during future allocations.
+
+Conservative project38.93466769/150, remaining111.06533231; study increment
+0.03112652 including setup/idle/transfers/shutdown. Official account349.08, zero
+rate/assignments. All three owned sessions stopped. Original2-unit baseline
+38.90354116934003/project150/130/account150/170 safeguards retained. Full models/
+checkpoints/reports/transports/source/data and original ledger retained. No
+retired-test access, provider requests or orders. Next fixed100k paired comparison
+against BOTH controls; no promotion or return claim from smoke acceptance.
+
+[Acceptance](smoke-summary.json), [frozen restoration](smoke-restoration.json),
+[runtime approval](runtime-profile.json), [metering and cleanup](smoke-compute.json).

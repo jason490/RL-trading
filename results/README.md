@@ -154,3 +154,9 @@ increase;104 saved episodes, no causal claim, fitting or additional Colab units.
 volatility and own-relative20-session features are causally available on all
 298,946 train/19,058 development rows.60 checks pass; no fitting, new model,
 performance score or Colab allocation. Matched dataset/model study remains pending.
+
+
+[Market-context smokes accepted](market-context-2026-10-23/README.md): three512
+CPU Colab runs,234 exact frozen predictions and actual mask rejection, models/Adam/
+mapped initialization/sampling restored, three owned sessions stopped. Project
+38.934668/account349.08. Fixed100k three-arm plans prepared, no return result yet.

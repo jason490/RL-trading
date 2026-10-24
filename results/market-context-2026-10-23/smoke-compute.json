@@ -1,0 +1,102 @@
+{
+  "project_units": 38.93466769283939,
+  "remaining_project_units": 111.06533230716062,
+  "study_start_units": 38.90354116934003,
+  "study_incremental_units": 0.03112652349935985,
+  "measured_units": 0.020000000000038654,
+  "estimated_units": 0.031126523499356372,
+  "charged_units": 0.031126523499356372,
+  "official_account_balance": 349.08,
+  "official_rate": 0,
+  "official_assignments": 0,
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-19a4f7bf537c": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-f5034f6185e7": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-9ad4d8307ef9": {
+      "status": "stopped",
+      "phase": "verify"
+    }
+  },
+  "meter_readings": [
+    {
+      "time": 1792799671.0843012,
+      "balance": 349.1,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792799677.3887331,
+      "balance": 349.1,
+      "rate": 0.16,
+      "assignments": 2
+    },
+    {
+      "time": 1792799685.5918663,
+      "balance": 349.1,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792799744.15337,
+      "balance": 349.1,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792799804.7177298,
+      "balance": 349.1,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792799864.7998333,
+      "balance": 349.1,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792799924.8675253,
+      "balance": 349.1,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792799985.0083723,
+      "balance": 349.08,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792800045.1880488,
+      "balance": 349.08,
+      "rate": 0.24,
+      "assignments": 3
+    },
+    {
+      "time": 1792800105.1861985,
+      "balance": 349.08,
+      "rate": 0.08,
+      "assignments": 1
+    },
+    {
+      "time": 1792800145.2385118,
+      "balance": 349.08,
+      "rate": 0.0,
+      "assignments": 0
+    }
+  ],
+  "study_limit_units": 2,
+  "project_ceiling_units": 150,
+  "project_teardown_units": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "automatic_restart": false,
+  "test_evaluated": false
+}
