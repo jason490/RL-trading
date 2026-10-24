@@ -357,3 +357,31 @@ stopped, zero assignments; no additional units or training. Fixed critic study
 failed and remains closed; next work is bounded saved-policy/execution sensitivity
 diagnosis, not extension or promotion. Release:
 https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24
+
+
+## Fixed inference-only final-update diagnosis
+
+`configs/experiments/critic_update_diagnostic.json` pins the accepted failed study
+summary, cleanup inventory, frozen source package and numeric helper before
+execution. For all three arms, compare the retained50k-transition checkpoints
+with48,999 versus49,000 actual updates. Measure actor/critic tensor displacement,
+normalized deterministic-action differences and diagonal pre-tanh Gaussian
+KL(before||after) on256 evenly spaced observations from the accepted truncated
+model's training replay. The exact same observations are used for all arms.
+This selected replay is not representative deployment or independent validation
+coverage. No new price rows, returns, checkpoints or data preprocessing are fit
+or selected; no promotion threshold or rescue sweep is introduced.
+
+The worker requires verified owned shutdown/source hashes and learned-state
+contracts; it preserves weights, optimizers, files and all global RNG streams.
+It has a120-second computation deadline and durable progress journal; an existing
+journal rejects automatic restart. Three numeric tests cover known parameter
+norms, action sign/shape/bounds and analytical Gaussian KL/asymmetry. This is
+preflight evidence; actual diagnostic outcomes remain pending.
+
+```bash
+PYTHONPATH=.runtime/distributional-source-v1/src \
+MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/diagnose_critic_update.py \
+  --output results/critic-update-2026-10-24/summary.json
+```
