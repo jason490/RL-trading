@@ -1,7 +1,8 @@
 # Causal financial filing research
 
-Status: outcome-free coverage audit preregistered on 2026-10-24. No financial
-features, provider downloads, model fitting, or Colab allocations have been
+Status: outcome-free coverage audit preregistered on 2026-10-24. The first
+2020q1 archive is downloaded; structural acceptance failed on future NUM period
+labels. No financial features, model fitting or Colab allocations have been
 performed for this family. The [fixed audit specification](../configs/experiments/filing_coverage_audit.json)
 is separate from any later training experiment. Existing failed price-feature
 and model families remain closed; this proposal does not establish improved return.
@@ -174,3 +175,21 @@ availability. [Review evidence](../results/filing-source-review-2026-10-24/READM
 
 Current verification:37 focused reader/downloader checks pass. Actual coverage,
 public availability and historical-vintage fidelity remain unverified.
+
+
+## First actual archive inspection
+
+The first official2020q1 archive is retained under SHA256
+`48ed9834c66d565c21130d087eae941b25770e2d7cc8351d17652612289fcd67`,
+96,584,608 compressed bytes, with its acquisition receipt. The request identity
+is now configured privately. The ZIP includes an optional exact `readme.htm`;
+the reader now accepts that name without extraction and rejects other unexpected
+members. All5,816 submission acceptance strings end in `.0`. Strict optional
+fractional-second parsing preserves these source strings without timezone guesses.
+
+44 focused checks pass, including these actual-format regressions. Full structural
+acceptance did **not** pass: NUM contains period labels in2024 onward and the
+reader stopped under its existing cutoff rule. No normalized financial dataset
+was created. Source-period metadata needs inspection to distinguish known-at-filing
+future disclosures from date errors; no future numeric record may silently pass
+into model inputs. The source ZIP and failed-run evidence remain retained.

@@ -52,9 +52,10 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
         names = archive.namelist()
         if len(names) != len(set(names)):
             raise ValueError('duplicate ZIP member')
-        if any(n not in {f'{t}.txt' for t in REQUIRED} for n in names):
+        required_members = {f'{t}.txt' for t in REQUIRED}
+        if any(n not in required_members | {'readme.htm'} for n in names):
             raise ValueError('unexpected ZIP member; no extraction performed')
-        if set(names) != {f'{t}.txt' for t in REQUIRED}:
+        if not required_members <= set(names):
             raise ValueError('missing SEC table')
         if sum(m.file_size for m in archive.infolist()) > max_uncompressed_bytes:
             raise ValueError('SEC archive exceeds uncompressed byte limit')
@@ -83,11 +84,15 @@ def audit_archive(path: Path, quarter: str, *, max_uncompressed_bytes=2_000_000_
             if not re.fullmatch(r'[1-9]\d{0,9}', row['cik']):
                 raise ValueError('invalid CIK')
             period, filed = _date(row['period']), _date(row['filed'])
-            accepted = datetime.strptime(row['accepted'], '%Y-%m-%d %H:%M:%S')
+            if not re.fullmatch(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(?:\.\d{1,6})?',
+                                row['accepted']):
+                raise ValueError('invalid acceptance format')
+            accepted_format = '%Y-%m-%d %H:%M:%S'
+            if '.' in row['accepted']:
+                accepted_format += '.%f'
+            accepted = datetime.strptime(row['accepted'], accepted_format)
             if accepted >= CUTOFF:
                 raise ValueError('retired acceptance rejected')
-            if accepted.strftime('%Y-%m-%d %H:%M:%S') != row['accepted']:
-                raise ValueError('invalid acceptance format')
             if period > filed:
                 issues['period_after_filed'] += 1
             if accepted.date() > filed.date():

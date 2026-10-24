@@ -1,0 +1,27 @@
+{
+  "archive_sha256": "48ed9834c66d565c21130d087eae941b25770e2d7cc8351d17652612289fcd67",
+  "quarter": "2020q1",
+  "structural_audit_passed": false,
+  "failure": "NUM contains period dates at or after retired boundary; strict reader stopped",
+  "counts": {
+    "numeric_rows": 3099352,
+    "post2023_period_rows": 1,
+    "post2023_AmortizationOfIntangibleAssets": 1
+  },
+  "future_period_min": "20241231",
+  "future_period_max": "20241231",
+  "metadata_examples": [
+    {
+      "adsh": "0001062231-20-000009",
+      "tag": "AmortizationOfIntangibleAssets",
+      "version": "us-gaap/2019",
+      "ddate": "20241231",
+      "qtrs": "4",
+      "uom": "USD"
+    }
+  ],
+  "financial_values_recorded": false,
+  "model_inputs_created": false,
+  "training_performed": false,
+  "interpretation": "Period labels alone do not establish publication date or future realized information; source semantics require review. Retired test bars and returns were not accessed."
+}

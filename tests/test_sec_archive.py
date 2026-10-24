@@ -134,3 +134,27 @@ def test_duplicate_values_are_audited_without_silent_overwrite(tmp_path, value, 
     assert result['counts']['duplicate_numeric_keys'] == 1
     assert result['issues'].get('conflicting_numeric_values', 0) == conflicts
     assert not result['financial_features_enabled']
+
+
+def test_official_optional_readme_allowed_without_extraction(tmp_path):
+    path = fixture(tmp_path, extra='readme.htm')
+    result = audit_archive(path, '2020q1')
+    assert result['counts']['sub'] == 1
+    assert not (tmp_path / 'readme.htm').exists()
+
+
+@pytest.mark.parametrize('suffix', ['.0', '.123456'])
+def test_acceptance_fraction_preserved(tmp_path, suffix):
+    value = '2020-02-03 18:01:02' + suffix
+    path = fixture(tmp_path, lambda d: d['sub'][0].update(accepted=value))
+    result = audit_archive(path, '2020q1')
+    assert result['submissions'][0]['accepted'] == value
+    assert not result['timezone_verified']
+
+
+@pytest.mark.parametrize('value', ['2024-01-01 00:00:00.0', '2020-2-03 18:01:02.0',
+                                  '2020-02-03 18:01:02Z', '2020-02-03 18:01:02.1234567'])
+def test_ambiguous_or_retired_acceptance_rejected(tmp_path, value):
+    path = fixture(tmp_path, lambda d: d['sub'][0].update(accepted=value))
+    with pytest.raises(ValueError):
+        audit_archive(path, '2020q1')

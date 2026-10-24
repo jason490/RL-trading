@@ -1754,3 +1754,16 @@ checks pass. Original audit scope unchanged, no observed financial data, returns
 training, allocation or additional units. Real acquisition still awaits private
 request identity; historical fidelity remains unverified.
 [Evidence](../results/filing-source-review-2026-10-24/README.md).
+
+### Actual first SEC archive inspection — 2026-10-24 UTC
+
+Request identity configured privately; official2020q1 archive acquired once,
+96,584,608 bytes/SHA48ed9834…. Real-format regressions fixed: exact optional
+`readme.htm` allowed without extraction; `.0`/fractional acceptance strings
+strictly parsed/preserved.44 focused tests and lint pass. Full structural audit
+failed on the retained pre2024 NUM-period rule. Separate metadata-only complete
+scan:3,099,352 numeric records, one2024-12-31`AmortizationOfIntangibleAssets`label.
+Its semantics need original-filing review; no amount copied into diagnostic, no
+model inputs, retired bars/returns, normalization, training or Colab allocation.
+Source/receipt and failed outcome retained. No new compute units.
+[Evidence](../results/filing-source-review-2026-10-24/README.md).
