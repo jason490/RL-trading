@@ -1,0 +1,434 @@
+{
+  "schema": "sec-filing-identity-evidence-v1",
+  "source_sha256": "7a6779096842a2f3ebabf701b0d820df2351dc17c8006a3db8e987eafbe41074",
+  "expected_cik": "51143",
+  "expected_symbol": "IBM",
+  "declared_ciks": [
+    "51143"
+  ],
+  "declared_symbols": [
+    "IBM",
+    "IBM 20A",
+    "IBM 20B",
+    "IBM 21B",
+    "IBM 22A",
+    "IBM 23A",
+    "IBM 23B",
+    "IBM 24A",
+    "IBM 25",
+    "IBM 25A",
+    "IBM 25B",
+    "IBM 25C",
+    "IBM 26B",
+    "IBM 27",
+    "IBM 27B",
+    "IBM 28",
+    "IBM 28A",
+    "IBM 28B",
+    "IBM 29",
+    "IBM 31",
+    "IBM 32A",
+    "IBM 40",
+    "IBM 45",
+    "IBM 96"
+  ],
+  "issuer_and_ticker_match": true,
+  "facts": [
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XCHI_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember_zzjrcIqLsECdDjwUpMFOFQ",
+      "value": "Capital stock, par value $.20 per share"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XCHI_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember_zzjrcIqLsECdDjwUpMFOFQ",
+      "value": "IBM"
+    },
+    {
+      "concept": "dei:entitycentralindexkey",
+      "context": "Duration_1_1_2019_To_12_31_2019_RJpMlk4fQkqBIF4a3txbxA",
+      "value": "0000051143"
+    },
+    {
+      "concept": "dei:documenttype",
+      "context": "Duration_1_1_2019_To_12_31_2019_RJpMlk4fQkqBIF4a3txbxA",
+      "value": "10-K"
+    },
+    {
+      "concept": "dei:documentperiodenddate",
+      "context": "Duration_1_1_2019_To_12_31_2019_RJpMlk4fQkqBIF4a3txbxA",
+      "value": "DECEMBER 31, 2019"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember_ixda-_0fXUG1mnyl5qsKzQ",
+      "value": "Capital stock, par value $.20 per share"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember_ixda-_0fXUG1mnyl5qsKzQ",
+      "value": "IBM"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember_ixda-_0fXUG1mnyl5qsKzQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XCHI_us-gaap_StatementClassOfStockAxis_us-gaap_CommonStockMember_zzjrcIqLsECdDjwUpMFOFQ",
+      "value": "Chicago Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.750PercentDue2020Member_Gn6UXC66TkqBG9yXUm6r1w",
+      "value": "2.750% Notes due 2020"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.750PercentDue2020Member_Gn6UXC66TkqBG9yXUm6r1w",
+      "value": "IBM 20B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.750PercentDue2020Member_Gn6UXC66TkqBG9yXUm6r1w",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.875PercentDue2020Member_4TNRAqmJrEKrrBy8aGrUcg",
+      "value": "1.875% Notes due 2020"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.875PercentDue2020Member_4TNRAqmJrEKrrBy8aGrUcg",
+      "value": "IBM 20A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.875PercentDue2020Member_4TNRAqmJrEKrrBy8aGrUcg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.500PercentDue2021Member_lnxa5tj9XU2UWODw6yReKA",
+      "value": "0.500% Notes due 2021"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.500PercentDue2021Member_lnxa5tj9XU2UWODw6yReKA",
+      "value": "IBM 21B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.500PercentDue2021Member_lnxa5tj9XU2UWODw6yReKA",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.625PercentDue2022Member_EqwiFdk9JkWUMWoRe1_UEg",
+      "value": "2.625% Notes due 2022"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.625PercentDue2022Member_EqwiFdk9JkWUMWoRe1_UEg",
+      "value": "IBM 22A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.625PercentDue2022Member_EqwiFdk9JkWUMWoRe1_UEg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.25PercentDue2023Member_VURr1f1C5Um8Bmaa9zcRPQ",
+      "value": "1.25% Notes due 2023"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.25PercentDue2023Member_VURr1f1C5Um8Bmaa9zcRPQ",
+      "value": "IBM 23A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.25PercentDue2023Member_VURr1f1C5Um8Bmaa9zcRPQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.375PercentDue2023Member_2JArL1gbPEuaOk8C4T5ghg",
+      "value": "0.375% Notes due 2023"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.375PercentDue2023Member_2JArL1gbPEuaOk8C4T5ghg",
+      "value": "IBM 23B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.375PercentDue2023Member_2JArL1gbPEuaOk8C4T5ghg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.125PercentDue2024Member_KNsjq507-UuA2qBdeWnJVQ",
+      "value": "1.125% Notes due 2024"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.125PercentDue2024Member_KNsjq507-UuA2qBdeWnJVQ",
+      "value": "IBM 24A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.125PercentDue2024Member_KNsjq507-UuA2qBdeWnJVQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.875PercentDue2025Member_AloGH5tIUUec8F9zHBWmNg",
+      "value": "2.875% Notes due 2025"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.875PercentDue2025Member_AloGH5tIUUec8F9zHBWmNg",
+      "value": "IBM 25A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes2.875PercentDue2025Member_AloGH5tIUUec8F9zHBWmNg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.950PercentDue2025Member_c8N7T34MF0y4yS_S_wCZbg",
+      "value": "0.950% Notes due 2025"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.950PercentDue2025Member_c8N7T34MF0y4yS_S_wCZbg",
+      "value": "IBM 25B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.950PercentDue2025Member_c8N7T34MF0y4yS_S_wCZbg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.875PercentDue2025Member_vtktkVhhO0eVk7TfO77gfg",
+      "value": "0.875% Notes due 2025"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.875PercentDue2025Member_vtktkVhhO0eVk7TfO77gfg",
+      "value": "IBM 25C"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.875PercentDue2025Member_vtktkVhhO0eVk7TfO77gfg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.300PercentDue2026Member_6xpPZrUAaUmmZyivSsE9HQ",
+      "value": "0.300% Notes due 2026"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.300PercentDue2026Member_6xpPZrUAaUmmZyivSsE9HQ",
+      "value": "IBM 26B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.300PercentDue2026Member_6xpPZrUAaUmmZyivSsE9HQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.250PercentDue2027Member_AGbQ6_Js6US2FcpCOSSSnQ",
+      "value": "1.250% Notes due 2027"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.250PercentDue2027Member_AGbQ6_Js6US2FcpCOSSSnQ",
+      "value": "IBM 27B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.250PercentDue2027Member_AGbQ6_Js6US2FcpCOSSSnQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.300PercentDue2028Member_1fGoAvA2f0WED7S6VYEsNg",
+      "value": "0.300% Notes due 2028"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.300PercentDue2028Member_1fGoAvA2f0WED7S6VYEsNg",
+      "value": "IBM 28B"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.300PercentDue2028Member_1fGoAvA2f0WED7S6VYEsNg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.750PercentDue2028Member_rfLtjO5C40aHAW561AhMmw",
+      "value": "1.750% Notes due 2028"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.750PercentDue2028Member_rfLtjO5C40aHAW561AhMmw",
+      "value": "IBM 28A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.750PercentDue2028Member_rfLtjO5C40aHAW561AhMmw",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.500PercentDue2029Member_7d8Jp78j1EWtEUkRS89JCQ",
+      "value": "1.500% Notes due 2029"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.500PercentDue2029Member_7d8Jp78j1EWtEUkRS89JCQ",
+      "value": "IBM 29"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.500PercentDue2029Member_7d8Jp78j1EWtEUkRS89JCQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.750PercentDue2031Member_ElgfU0mDeEyi0lk9FiQlzQ",
+      "value": "1.750% Notes due 2031"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.750PercentDue2031Member_ElgfU0mDeEyi0lk9FiQlzQ",
+      "value": "IBM 31"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.750PercentDue2031Member_ElgfU0mDeEyi0lk9FiQlzQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.650PercentDue2032Member_dkWoVvwliE-DSFEiu9As_g",
+      "value": "0.650% Notes due 2032"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.650PercentDue2032Member_dkWoVvwliE-DSFEiu9As_g",
+      "value": "IBM 32A"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes0.650PercentDue2032Member_dkWoVvwliE-DSFEiu9As_g",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.200PercentDue2040Member_KW6uhm6DwUCNSJIncbHc9Q",
+      "value": "1.200% Notes due 2040"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.200PercentDue2040Member_KW6uhm6DwUCNSJIncbHc9Q",
+      "value": "IBM 40"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Notes1.200PercentDue2040Member_KW6uhm6DwUCNSJIncbHc9Q",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.00PercentDue2025Member_wNdYg69IPkCX_KrZ7pDjJQ",
+      "value": "7.00% Debentures due 2025"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.00PercentDue2025Member_wNdYg69IPkCX_KrZ7pDjJQ",
+      "value": "IBM 25"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.00PercentDue2025Member_wNdYg69IPkCX_KrZ7pDjJQ",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures6.22PercentDue2027Member_A1oQAeFsJE-dOCtI2umO5g",
+      "value": "6.22% Debentures due 2027"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures6.22PercentDue2027Member_A1oQAeFsJE-dOCtI2umO5g",
+      "value": "IBM 27"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures6.22PercentDue2027Member_A1oQAeFsJE-dOCtI2umO5g",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures6.50PercentDue2028Member_7ZQpoItM8kG2s7yPsSoxJg",
+      "value": "6.50% Debentures due 2028"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures6.50PercentDue2028Member_7ZQpoItM8kG2s7yPsSoxJg",
+      "value": "IBM 28"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures6.50PercentDue2028Member_7ZQpoItM8kG2s7yPsSoxJg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.00PercentDue2045Member_VInznsBhnkq4Li50BdSiVg",
+      "value": "7.00% Debentures due 2045"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.00PercentDue2045Member_VInznsBhnkq4Li50BdSiVg",
+      "value": "IBM 45"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.00PercentDue2045Member_VInznsBhnkq4Li50BdSiVg",
+      "value": "New York Stock Exchange"
+    },
+    {
+      "concept": "dei:security12btitle",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.125PercentDue2096Member_HQPlNefXXEqftZomFDKJ7g",
+      "value": "7.125% Debentures due 2096"
+    },
+    {
+      "concept": "dei:tradingsymbol",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.125PercentDue2096Member_HQPlNefXXEqftZomFDKJ7g",
+      "value": "IBM 96"
+    },
+    {
+      "concept": "dei:securityexchangename",
+      "context": "Duration_1_1_2019_To_12_31_2019_dei_EntityListingsExchangeAxis_exch_XNYS_us-gaap_StatementClassOfStockAxis_ibm_Debentures7.125PercentDue2096Member_HQPlNefXXEqftZomFDKJ7g",
+      "value": "New York Stock Exchange"
+    }
+  ],
+  "historical_mapping_verified": false,
+  "validity_interval_inferred": false,
+  "model_inputs_enabled": false,
+  "accession": "0001558370-20-001334",
+  "filed": "2020-02-25",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000155837020001334/ibm-20191231x10k2af531.htm"
+}

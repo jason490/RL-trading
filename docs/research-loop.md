@@ -1809,3 +1809,18 @@ issuer ambiguity. No whole-history validity interval or feature eligibility
 inferred.56 focused SEC checks/lint pass. Derived dated evidence published;
 IBM/KR source gaps and chronological identity coverage remain pending. No model
 training, normalization, retired prices/returns or additional compute units.
+
+### IBM/Kroger adjacent-quarter/source inspection — 2026-10-24 UTC
+
+Kroger annual published2020-04-01: exact accession appears in newly retained Q2
+ZIP; IBM April/Kroger June quarterly filings also present in SUB. Targeted
+metadata inspection only, no full Q2 NUM audit. IBM February annual main has no
+selected financial concepts; Exhibit13 has them. Actual extraction cause unknown;
+original supplementation needs its own validated contract. Main IBM issuer/ticker
+match confirmed. Kroger original periodFeb1 versus SUBJan31 and acceptedseconds
+versus minute label require preserving both; no exact-period/time parity claim.
+Original sources/receipts and derived evidence retained.56 focused tests/lint
+pass. No model fitting, retired price/return access or new Colab units. Large
+master-index request stopped at byte cap; no data used. [Evidence](../results/filing-source-review-2026-10-24/README.md).
+Next chronological source coverage and original-filing financial extraction/
+period validation; current candidate matches remain insufficient for model inputs.

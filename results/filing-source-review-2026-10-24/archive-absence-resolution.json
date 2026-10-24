@@ -1,0 +1,67 @@
+{
+  "schema": "sec-archive-absence-source-review-v1",
+  "sources": [
+    {
+      "label": "IBM-index",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000155837020001334/0001558370-20-001334-index.htm",
+      "sha256": "f3e0938514daba6ad485cbb9ac1b7a815768020f56fb9f6893b0e039160a7e55",
+      "bytes": 15830,
+      "accession": "0001558370-20-001334",
+      "cik": "51143",
+      "selected_numeric_concept_counts": {}
+    },
+    {
+      "label": "IBM-main",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000155837020001334/ibm-20191231x10k2af531.htm",
+      "sha256": "7a6779096842a2f3ebabf701b0d820df2351dc17c8006a3db8e987eafbe41074",
+      "bytes": 1585368,
+      "accession": "0001558370-20-001334",
+      "cik": "51143",
+      "selected_numeric_concept_counts": {}
+    },
+    {
+      "label": "IBM-exhibit13",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000155837020001334/ibm-20191231xex13907c3.htm",
+      "sha256": "e18513f020b75b459c68a1cddf16ab1f980bff56ed4ed5f4734d38416d69ef82",
+      "bytes": 8675577,
+      "accession": "0001558370-20-001334",
+      "cik": "51143",
+      "selected_numeric_concept_counts": {
+        "us-gaap:Revenues": 147,
+        "us-gaap:NetIncomeLoss": 24,
+        "us-gaap:Assets": 32,
+        "us-gaap:Liabilities": 2,
+        "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": 32
+      }
+    },
+    {
+      "label": "KR-index",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000155837020003501/0001558370-20-003501-index.htm",
+      "sha256": "25c43465accafb2263c56020b8d9e581a7a28f8957e4d43b0d079f5840ce26f9",
+      "bytes": 13642,
+      "accession": "0001558370-20-003501",
+      "cik": "56873",
+      "selected_numeric_concept_counts": {}
+    }
+  ],
+  "archive_sha256": "48ed9834c66d565c21130d087eae941b25770e2d7cc8351d17652612289fcd67",
+  "IBM": {
+    "filed": "2020-02-25",
+    "reporting_period": "2019-12-31",
+    "accession": "0001558370-20-001334",
+    "in_2020q1_SUB": false,
+    "interpretation": "Original annual filing exists; financial concepts appear in exhibit13. Archive omission is a source coverage gap; exact extraction cause is not established."
+  },
+  "KR": {
+    "filed": "2020-04-01",
+    "reporting_period": "2020-02-01",
+    "accession": "0001558370-20-003501",
+    "in_2020q1_SUB": false,
+    "interpretation": "Annual filing date is in Q2, not Q1; fiscal-period date must not assign it to Q1."
+  },
+  "original_financial_values_recorded_in_report": false,
+  "causal_ready": false,
+  "model_inputs_enabled": false,
+  "training_performed": false,
+  "failed_acquisition_note": "One earlier Q1 master-index acquisition exceeded the 20MB inspection cap and stopped without retaining or using that response; targeted original indexes were used instead."
+}

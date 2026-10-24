@@ -292,3 +292,34 @@ same-security financial-history eligibility. It does not authorize replacing
 current IDs globally or applying evidence before public availability. Financial
 inputs remain disabled. IBM/KR archive absences and wider chronological coverage
 still require investigation.
+
+## IBM/Kroger archive absences: source inspection
+
+Kroger's original annual filing`0001558370-20-003501` was published2020-04-01,
+placing it in Q2, not Q1. The retained2020q2 archive
+SHA`bd796ea10c88e21205da013f9c3f6a20b2b14d3de94f0075e9f529e0ef9a3543`
+contains that accession plus its June quarterly filing. It also contains IBM's
+April quarterly filing. This adjacent-quarter inspection reads SUB metadata only;
+it is not a full NUM/schema/conflict audit of Q2.
+
+IBM's2019 annual filing exists in February2020; its main HTML has none of the
+selected assets/liabilities/revenue/net-income concepts inspected, while its
+Exhibit13 contains them. Main HTML, exhibit and original indexes are retained
+with hashes. This establishes that statements are available in the accession
+outside the main document; it does not establish the exact internal SEC archive
+extraction cause. Never interpret the missing ZIP submission as no annual report,
+and never merge an alternative extraction silently. A separate original-filing
+import contract and equivalence/coverage checks are needed before supplementation.
+
+Original source dates and archive labels can differ: Kroger's index gives
+2020-02-01 as report period end; the SUB row labels it20200131. The original
+accepted timestamp has seconds09:01:18, while SUB has09:01:00. Preserve both;
+do not silently relabel or claim exact timestamp/period parity. Financial growth
+and duration logic must verify original periods and fiscal-year context, not
+assume quarter/fiscal-year identity from rounded archive labels.
+
+The original main IBM filing also explicitly matches CIK51143 and tickerIBM;
+this is dated-document evidence only. [Absence/source resolution](../results/filing-source-review-2026-10-24/archive-absence-resolution.json),
+[IBM identity](../results/filing-source-review-2026-10-24/ibm-dated-identity.json)
+and [Q2 metadata](../results/filing-source-review-2026-10-24/2020q2-ibm-kr-sub.json)
+retain the scope and uncertainty. No financial dataset or training is enabled.

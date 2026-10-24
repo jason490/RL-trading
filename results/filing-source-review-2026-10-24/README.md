@@ -120,3 +120,27 @@ historical interval. No whole-history identity chain or financial feature datase
 is certified. IBM/KR absence and chronological source coverage remain pending.
 No model fitting, normalization updates, retired test prices/returns, Colab
 allocation or new compute units were involved.
+
+## IBM/Kroger source and adjacent-quarter resolution
+
+Kroger's annual filing date is2020-04-01, and its accession is present in the
+retained2020q2 archive (82,008,710 bytes/SHA bd796ea1…). IBM's April10-Q and
+Kroger's June10-Q are also in that archive's SUB table. This is a targeted SUB
+inspection, not full Q2 numeric validation. [Evidence](2020q2-ibm-kr-sub.json).
+
+IBM's February annual report exists outside the Q1 ZIP. Its retained main HTML
+has no selected assets/liabilities/revenue/net-income inline numeric concepts;
+its Exhibit13 does. The exact SEC extraction cause is unproven. Retained indexes,
+main HTML and exhibit establish source availability, not automatic permission to
+substitute an unvalidated extraction. [Source review](archive-absence-resolution.json).
+Its original main document explicitly declares issuer51143/tickerIBM, confirmed
+by the checksummed inline inspector. [Dated identity](ibm-dated-identity.json).
+
+Kroger's original report period2020-02-01 differs from SUB20200131; index
+acceptance09:01:18 differs from SUB09:01:00. Preserve original/normalized labels
+separately and verify fiscal periods before financial growth calculations.
+Causal readiness/whole-history identity remain false.56 focused SEC tests and
+lint pass; source checks confirm recorded dates/hashes and exact accession
+presence. No fitting, retired prices/returns, allocation or additional units.
+An attempted large Q1 master-index inspection exceeded its20MB cap and stopped;
+no response was retained or used. Targeted original indexes supplied the evidence.
