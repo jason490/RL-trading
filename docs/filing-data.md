@@ -112,3 +112,36 @@ explicitly leaves publication, timezone, identity mapping and causal readiness
 unverified. It does not yet resolve concept relationships, duration conflicts,
 duplicate numeric facts or source revisions, and therefore is not the complete
 coverage acceptance report. No model-ready financial dataset is produced.
+
+## Bounded archive acquisition
+
+The downloader is available once an authorized `SEC_USER_AGENT` is configured in
+`.env` (quote the application name and contact email as one value) or the process
+environment. Do not put the identity in shell arguments or commit it.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/download_sec_archive.py --quarter 2020q1
+```
+
+Only 2009q2–2023q4 quarter URLs on the fixed SEC endpoint are accepted. Redirects
+are rejected. At most three attempts are made, with a two-second pause before
+each; HTTP403/429 and other non-transient statuses stop immediately. A 120-second
+operation deadline is checked while waiting for the local lock and between reads;
+a blocking transport call can add up to its bounded20-second timeout. The256MB
+compressed limit applies with or without a Content-Length header. Responses must
+have a ZIP signature; the separate structural reader performs table validation.
+
+A shared cache-root file lock serializes local acquisitions. It does not
+coordinate other machines or SEC clients: use one downloader and coordinate
+aggregate traffic before parallelizing. Cache reuse verifies receipt hash,
+archive hash and size before returning without a request. Corruption stops rather
+than silently replacing retained evidence. Acquisitions store raw ZIPs by SHA256
+and immutable receipt files containing URL, quarter, byte count, retrieval UTC
+and attempt count; the identity is excluded. Temporary files are removed on
+handled success/failure. A hard process kill may leave a temporary file, which
+must not be mistaken for a verified archive.
+
+Verification:32 synthetic offline reader/downloader checks pass, including actual
+CLI report writes, immutable cache reuse, receipt tampering, short/oversized
+responses, bounded retry, access rejection and redirect rejection. No actual SEC
+archive has yet been downloaded or audited; causal readiness stays false.

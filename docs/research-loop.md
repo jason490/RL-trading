@@ -1735,3 +1735,10 @@ orphan accessions, nonfinite values and archive-member/resource rejection.
 Streaming local inspection only; timestamps remain source-local/unverified and
 causal readiness is explicitly false. Real coverage, source provenance, concept
 and vintage verification remain pending; no model inputs or new Colab units.
+
+SEC bounded acquisition implemented and checked with32 offline reader/downloader
+tests: fixed pre2024 endpoints, private configured identity, local serialized
+requests, bounded retries/timeouts/bytes, immediate access/rate-limit stop,
+checksummed archive/receipts and verified cache reuse. Real requests remain
+pending identity configuration; no downloaded-data or financial readiness claim,
+no allocation or new compute units. [Operation](filing-data.md).
