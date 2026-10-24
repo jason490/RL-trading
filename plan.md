@@ -2070,3 +2070,14 @@ study0.140001/2, official account348.89 with zero rate/assignments. Retired-test
 isolation and immutable normalization preserved; objective remains unmet. See
 results/distributional-critics-2026-10-24/screen.json and compute.json. Publication
 and scoped duplicate cleanup remain next; no promoted model.
+
+
+Distributional-critic publication/cleanup verified:12 GitHub release asset hashes
+and sizes match;18 duplicate transports/upload payloads removed (520,262,328
+bytes),191 retained files rehashed at cleanup. All models/replay/checkpoints,
+source/data, curves and owned recovery records retained. Subsequent README
+publication update is explicitly recorded in cleanup evidence. Six owned sessions
+stopped, zero assignments; no additional units or training. Fixed critic study
+failed and remains closed; next work is bounded saved-policy/execution sensitivity
+diagnosis, not extension or promotion. Release:
+https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24

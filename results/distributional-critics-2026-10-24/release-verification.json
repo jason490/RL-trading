@@ -1,0 +1,81 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24",
+  "tag": "distributional-critics-2026-10-24",
+  "prerelease": true,
+  "asset_count": 12,
+  "all_server_digests_and_sizes_match": true,
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "bytes": 914,
+      "sha256": "f26bfce86878c2c8c1d717afaacfa032d8764a3ef36393ba567d0071512cf493",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/SHA256SUMS"
+    },
+    {
+      "name": "compute.json",
+      "bytes": 1079,
+      "sha256": "25285950661125f272c6aecce6472b53e57979f7af4f80f289de945654b6de23",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/compute.json"
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "bytes": 8797270,
+      "sha256": "377663db665ae36d69395464321f2da675dae6be5e34cc04d26ee8c53d0014d3",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/learning-curves.tar.gz"
+    },
+    {
+      "name": "model-catalog.json",
+      "bytes": 695486,
+      "sha256": "a5f10adb2275a11a1fd11d8af242ae97cd59d5fe04c02f80917278c4de30642d",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/model-catalog.json"
+    },
+    {
+      "name": "protocol.json",
+      "bytes": 6910,
+      "sha256": "97be3941452e4df1014f81eab69636c7fdb27fe46008ae944a19b06fe67ead77",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/protocol.json"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "bytes": 44392778,
+      "sha256": "2fde72fa442ab4c8d8427f783788ef59cfb433786de349ffd87f9a5f134be6bc",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/research-models.tar.gz"
+    },
+    {
+      "name": "screen.html",
+      "bytes": 4773692,
+      "sha256": "08aa6e13e828596bfe4416c6d49723b4f315103c8b3437876113de5555dc1332",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/screen.html"
+    },
+    {
+      "name": "screen.json",
+      "bytes": 252457,
+      "sha256": "a723220005d79aaa0c837ff2b5847c2c663e845e837a33396bbf89c1fbbcad6d",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/screen.json"
+    },
+    {
+      "name": "smokes.json",
+      "bytes": 25793,
+      "sha256": "c46a2866fdeadb8f08fe2e037521a21a2f880ce2fdeae50c3a3e326f22abde87",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/smokes.json"
+    },
+    {
+      "name": "source-proof.json",
+      "bytes": 418,
+      "sha256": "2f81e5e494b91b4d283ac557779b65e3fcddaeae3c03f57fe553b01e33eb2a56",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/source-proof.json"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "bytes": 4982055,
+      "sha256": "9aa236038818af6c2d968b1a0a38436b33e5ab33c52db38a577a8d2d193e8e63",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/validation-reports.tar.gz"
+    },
+    {
+      "name": "validation.html",
+      "bytes": 1454,
+      "sha256": "64bcd68fc84c376d7cc9c71326cc2d65826a4a06e79c18758ea5ddb0d5e01de5",
+      "url": "https://github.com/jason490/RL-trading/releases/download/distributional-critics-2026-10-24/validation.html"
+    }
+  ]
+}

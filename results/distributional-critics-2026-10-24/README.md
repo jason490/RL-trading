@@ -208,3 +208,30 @@ Twelve allowlisted release assets are prepared, including complete frozen models
 selected/final weights, initialization evidence, sparse learning curves, derived
 validation reports and the standalone interactive comparison. Original bars,
 replay buffers, credentials and runtime logs stay local.
+
+
+## Publication and scoped cleanup complete
+
+[GitHub release](https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24)
+provides12 assets; [server verification](release-verification.json) confirms
+every SHA256 digest and size. Download `screen.html` for the interactive
+comparison and `learning-curves.tar.gz` for sparse percentage-gain/change curves.
+`research-models.tar.gz` contains all six complete frozen bundles, selected/final
+weights and initialization evidence. Extract `validation-reports.tar.gz` beside
+`validation.html` for individual derived equity reports.
+
+[Cleanup inventory](cleanup.json) records18 removed duplicate transports/upload
+payloads,520,262,328 logical bytes (496.16MiB), with191 retained files rehashed
+unchanged during cleanup. Models, replay, checkpoint weights, source export,
+immutable dataset, charts and recovery records remain. Publication and owned
+shutdown are verified; no cleanup recovery command is needed. This documentation
+was subsequently updated to record publication, explicitly tracked in the inventory.
+
+A bounded inference-only follow-up should inspect saved policy/execution
+sensitivity before another model experiment. Candidate selected/final checkpoints
+are at the same50k transitions but48,999/49,000 optimizer updates. The single
+update reduces mean return2.0042pp; stock long contribution falls2.5417pp, short
+contribution falls0.1624pp, while ETF net contribution rises1.8447pp. These are
+observed saved-path differences, not a causal gradient or transaction attribution.
+No immediate new training is justified by this observation; fixed family closure,
+all prior failed-family gates and retired-test isolation remain in effect.

@@ -204,3 +204,14 @@ ledger/plan.html preserved. Strict summary reproduces byte for byte from retaine
 transports with actual models/Adam/coupling restored. All four sessions stopped;
 project38.74617914 unchanged. Fixed L2 family closed.
 [Release](https://github.com/jason490/RL-trading/releases/tag/recurrent-regularization-2026-10-23).
+
+
+Distributional-critic publication/cleanup verified:12 GitHub release asset hashes
+and sizes match;18 duplicate transports/upload payloads removed (520,262,328
+bytes),191 retained files rehashed at cleanup. All models/replay/checkpoints,
+source/data, curves and owned recovery records retained. Subsequent README
+publication update is explicitly recorded in cleanup evidence. Six owned sessions
+stopped, zero assignments; no additional units or training. Fixed critic study
+failed and remains closed; next work is bounded saved-policy/execution sensitivity
+diagnosis, not extension or promotion. Release:
+https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24

@@ -12,8 +12,8 @@ nativeSAC selected/final7.93/7.93%, untruncatedTQC2.00/2.00%, truncatedTQC9.70/7
 matched holding30.60%. Both-control, absolute and risk gates fail; fixed family
 closed without confirmation or tuning extension. Historical nativeSAC reproduces
 exactly.384 smoke/full frozen checks pass; all six owned sessions are stopped.
-Project39.154379/150, official account348.89 with zero assignments. Publication
-and duplicate cleanup pending. No robust winner or prospective acceptance exists.
+Project39.154379/150, official account348.89 with zero assignments. All12 release asset hashes/sizes verified;18 duplicates/496.16MiB removed with
+191 retained-file checks. No robust winner or prospective acceptance exists.
 
 ## Latest completed history comparison
 
