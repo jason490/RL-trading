@@ -85,3 +85,30 @@ Do not infer that financial data will improve twenty-session trades. The audit
 can fail, and a feasible dataset can still produce an unsuccessful model. Record
 both outcomes rather than expanding a feature grid against reused development
 returns. See [research operation](research-loop.md) and [results](../results/README.md).
+
+## Offline archive inspection
+
+The implemented structural reader streams the four tables directly from a local
+ZIP, without extracting paths or querying a provider. Run from the repository:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/audit_sec_archive.py \
+  --archive /path/to/2020q1.zip --quarter 2020q1 \
+  --output artifacts/filings/2020q1-structural.json
+```
+
+It checks required columns, submission uniqueness, accession references, dates,
+finite numeric values and the uncompressed size limit. All records with filing,
+acceptance, accounting or numeric period dates in 2024 onward are rejected.
+The requested quarter is scope-checked; it is caller metadata, not proof that the
+archive came from SEC or belongs to that quarter. Retrieval provenance must be
+provided by a future downloader. Acceptance strings remain uninterpreted local
+source timestamps. Original and amendment accessions are retained separately;
+`prevrpt` is omitted from normalized submission evidence. The source ZIP must be
+retained unchanged so all source fields remain recoverable.
+
+Output reports counts, anomalies, archive checksum and submission records. It
+explicitly leaves publication, timezone, identity mapping and causal readiness
+unverified. It does not yet resolve concept relationships, duration conflicts,
+duplicate numeric facts or source revisions, and therefore is not the complete
+coverage acceptance report. No model-ready financial dataset is produced.

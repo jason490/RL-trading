@@ -1728,3 +1728,10 @@ reprocessing need verification. No configured SEC identity, no bulk downloads or
 new allocation/units. Freeze feature/quantitative model protocol only after
 source feasibility; retired test remains isolated. [Guide](filing-data.md) and
 [fixed scope](../configs/experiments/filing_coverage_audit.json).
+
+SEC offline structural reader implemented:18 focused synthetic checks cover
+retired-record rejection, amendment retention without retrospective `prevrpt`,
+orphan accessions, nonfinite values and archive-member/resource rejection.
+Streaming local inspection only; timestamps remain source-local/unverified and
+causal readiness is explicitly false. Real coverage, source provenance, concept
+and vintage verification remain pending; no model inputs or new Colab units.
