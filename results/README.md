@@ -186,3 +186,9 @@ Master-index comparison now recovers251 additional issuer/accession pairs
 all59 master indexes retained, collectors terminal. Original statement coverage,
 financial concepts and issuer/price eligibility remain pending; no new model
 returns, financial-input activation or Colab consumption.
+
+Financial concept audit:148.96million NUM rows scanned;2,695/6,161 assessed
+filing pairs (43.7%) have all required current tags in compatible groups. Direct
+liabilities presence is62.9%. This is source metadata, not actual arithmetic,
+stock coverage or model performance.251 master-only pairs remain unassessed.
+144 focused checks pass; local workers stopped, evidence retained, no new units.

@@ -1917,3 +1917,17 @@ original-vintage/price-link/financial acceptance. All sources retained, collecto
 terminal/no temporaryfiles; official account349.02/rate0/assignments0, no new units.
 Next concept-coverage audit and validated original-statement collection rather
 than assuming financial-table completeness. [Evidence](../results/filing-source-review-2026-10-24/README.md).
+
+### Fixed financial-concept presence audit completed — 2026-10-24 UTC
+
+Two local metadata workers scanned148,956,855NUM rows/59quarters in212.4sec,
+then stopped.6,161 financial pairs assessed/251 master-only unassessed. Supported
+revenue85.4%,NetIncomeLoss85.7%,assets99.4%,liabilities62.9%;all four/commonflow
+2,695/6,161=43.7%. Presence is not original arithmetic or stock-price readiness;
+flat-table gaps can be recoverable from originals and unsupported counts overlap.
+No labels broadened, imputation, ratios, normalization, price joins or training.
+144 focused tests/lint pass, metadata/HTML reproducible, dependencies checked
+against source commit, evidence retained/no temporaryfiles. No new Colab units.
+Next balance-sheet identities/original concept equivalence before bulk extraction
+or allocating model runs; avoid spending training credits on unresolved inputs.
+[Evidence](../results/filing-source-review-2026-10-24/README.md).

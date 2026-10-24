@@ -1,9 +1,11 @@
 # Causal financial filing research
 
-Status: outcome-free coverage audit preregistered on 2026-10-24. The first
-2020q1 archive is downloaded; structural acceptance failed on future NUM period
-labels. No financial features, model fitting or Colab allocations have been
-performed for this family. The [fixed audit specification](../configs/experiments/filing_coverage_audit.json)
+Status: the registered financial/master catalogs and concept-presence audits are
+complete. Original-filing prototypes work, but a complete causal financial dataset
+has not been accepted. Only43.7% of assessed financial-table candidates contain
+all required current tags; this is not an arithmetic or stock-price readiness rate.
+No financial inputs, model fitting or Colab allocations have been enabled for this
+family. The [fixed audit specification](../configs/experiments/filing_coverage_audit.json)
 is separate from any later training experiment. Existing failed price-feature
 and model families remain closed; this proposal does not establish improved return.
 
@@ -696,3 +698,51 @@ comparables may be absent, and original filings can contain facts omitted from
 flat tables. Unsupported operating income, ProfitLoss, goods/services and bank
 revenue labels are diagnostic only, never aliases for the fixed feature formulas.
 The251 master-only issuer/accession pairs remain unassessed by this table scan.
+
+## Completed concept-presence findings
+
+The two-worker audit streamed148,956,855 NUM rows across all59 quarters in
+212.4seconds, then stopped/reaped both workers. All6,161 financial-table candidate
+pairs were assessed;251 master-only pairs remain unassessed. Metadata-only findings:
+
+| Required current concept/group | Present candidates | Fraction of assessed pairs |
+| --- | ---: | ---: |
+| Supported total revenue | 5,259 | 85.4% |
+| NetIncomeLoss | 5,283 | 85.7% |
+| Assets | 6,125 | 99.4% |
+| Liabilities | 3,873 | 62.9% |
+| All four, with common flow-quarter group | 2,695 | 43.7% |
+
+Direct Liabilities is the largest individual presence gap. Diagnostic operating
+income/ProfitLoss/goods/services/bank-revenue labels can coexist with supported
+labels; their counts overlap and must not be summed into failure totals. No
+financial feature definition was broadened and no missing amount was imputed.
+Source tables can omit facts available in originals, so this is neither an actual
+original-snapshot readiness rate nor stock/trading-day coverage. Values, duplicate
+agreement, exact comparative periods, vintage and price/issuer links remain gates.
+
+[Summary](../results/filing-source-review-2026-10-24/concept-presence-summary.json)
+retains per-year/per-concept counts and quarterly proof hashes. Full metadata rows
+and a standalone offline heatmap are in ignored artifacts at
+`artifacts/filings/concept-presence-records-v1.json` and
+`artifacts/filings/concept-presence-v1.html`. Rebuild with:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/report_sec_concepts.py \
+  --state .runtime/sec-concept-audit-v1.json \
+  --reports artifacts/filings/concept-audit-v1 \
+  --ledger artifacts/filings/original-candidate-ledger.json \
+  --master-summary results/filing-source-review-2026-10-24/master-catalog-comparison.json \
+  --output artifacts/filings/concept-presence-records-v1.json \
+  --summary results/filing-source-review-2026-10-24/concept-presence-summary.json \
+  --html artifacts/filings/concept-presence-v1.html
+```
+
+144 focused source/financial checks pass. Reports/HTML reproduce exact bytes from
+the retained quarterly results, dependencies match the audit source commit, and
+no temporary files/workers remain. [Retention proof](../results/filing-source-review-2026-10-24/concept-audit-retention.json).
+Original/raw evidence is retained. No ratio calculation, normalization fitting,
+price join, financial input activation or new Colab allocation/units occurred in
+this audit. Next validate balance-sheet accounting identities and original concept
+equivalence before scaling original extraction or preregistering a training run;
+bigger networks cannot resolve missing/ambiguous source facts.

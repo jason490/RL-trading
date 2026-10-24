@@ -296,3 +296,26 @@ all59 archives/receipts kept, no temporary downloads. Original preflight bytes
 reused without another request. Official Colab349.02/rate0/assignments0; no
 additional compute units or model fitting. Next audit concept coverage and collect
 validated original filings from the corrected catalog before training.
+
+## Full concept-presence audit completed
+
+148,956,855 NUM rows/59 quarters scanned by two local preprocessing workers in
+212.4seconds; workers stopped and quarterly evidence retained. All6,161 financial
+candidate pairs assessed;251 master-only pairs unassessed. Required direct tag
+presence:revenue5,259/85.4%,NetIncomeLoss5,283/85.7%,assets6,125/99.4%,
+liabilities3,873/62.9%. All four in a compatible flow group:2,695/43.7%.
+[Per-year/concept summary](concept-presence-summary.json).
+
+This is **not arithmetic or stock-price coverage readiness**. Missing table facts
+may be present in originals; positive presence does not verify amounts, prior
+comparables, contexts, vintages or issuer links. Unsupported-label counts overlap
+and are diagnostic, not aliases or disjoint failure groups. Source fields remain
+unchanged; no amount imputation, price join, fitting or performance scoring.
+The direct-liabilities gap and incompatible labels require accounting/source
+validation before large original collection or financial-model training.
+
+144 focused tests/lint pass. Full metadata/HTML at`artifacts/filings/` reproduce
+exact bytes from retained quarter results. [Retention/dependency proof](concept-audit-retention.json)
+confirms stopped workers/no temporary files and source dependency integrity.
+No additional Colab units or financial-input activation. Model-return results
+remain unchanged; no robustness/promotion claim.

@@ -1912,3 +1912,10 @@ and2 joint-filer links. Six date discrepancies retained, no form conflict.
 131 focused checks pass. This is current-index metadata scope completeness,
 not original-fact/vintage/price-link approval; financial models remain disabled.
 Source retention/terminal cleanup verified, no additional Colab units.
+
+Financial source-concept update:fixed metadata audit of148.96million NUM rows
+complete. Required current concepts all present/commonflow in43.7% of6,161
+assessed pairs; direct liabilities62.9%,251 master-only pairs unassessed. These
+are not original arithmetic/price coverage results.144 focused checks pass,
+local workers stopped, evidence retained. Accounting-identity/original-concept
+validation remains before bulk extraction or model training; no new Colab units.
