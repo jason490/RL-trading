@@ -229,3 +229,39 @@ identity mapping and publication evidence remain separate mandatory work. The
 mode never enables financial inputs or training.48 focused checks pass, including
 quarantine of both2020 and2024 periods, amount exclusion and retained strict
 retired-submission rejection. Actual archive results are recorded separately.
+
+## Current identity discovery versus historical evidence
+
+SEC's current`company_tickers.json` supplies candidate CIKs for all107 research
+stocks (the four ETFs are excluded from this company-data discovery). The raw
+snapshot/receipt are retained under SHA256
+`93050f93c3540af9af80a05885d562fcf4e7de4e8e5acce0944a2891bcfbec48`.
+This is current metadata, never a historical observation or verified identity map.
+
+The reusable candidate audit compares these hints with a retained structural
+report without enabling model inputs:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/audit_sec_identity_candidates.py \
+  --discovery artifacts/filings/current-identity-discovery.json \
+  --structural artifacts/filings/2020q1-quarantined-structural.json \
+  --output artifacts/filings/2020q1-candidate-coverage.json
+```
+
+For2020q1,102/107 current candidates have qualifying10-K/10-Q/amendment records.
+APA,BLK,IBM,KR,XOM do not. These counts are not historical coverage acceptance:
+quarter timing, source extraction gaps and registrant reorganizations differ.
+Report current candidate ambiguity/shared CIKs explicitly; ticker alone is not a
+security identifier. No positive join sets a historical-verification flag.
+
+[APA's dated2021 reorganization filing](https://www.sec.gov/Archives/edgar/data/1841666/000119312521063695/d127090d8k12b.htm)
+explains why today's parent must not be backdated to2020. Meanwhile IBM's
+[original2019 annual filing index](https://www.sec.gov/Archives/edgar/data/51143/0001558370-20-001334-index.htm)
+shows a filing exists even though its current CIK has no qualifying record in the
+inspected archive. Investigate source coverage and original filings independently;
+never fill missing records with current statements or silently change CIKs.
+
+51 focused checks pass. Identity tests require current metadata to remain
+unverified after matching, expose shared/absent candidates and keep unrelated
+forms from filling required financial coverage. Candidate counts do not establish
+historical continuity, per-quarter completeness or any predictive value.

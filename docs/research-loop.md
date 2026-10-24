@@ -1787,3 +1787,15 @@ No duplicate-key conflict among inspected records. Full immutable report retaine
 SHAbc452aa8…; compact summary in results. Not all excluded records are forecasts,
 and structural completion leaves all causal-readiness flags false. Original
 strict failure preserved. No financial features, fitting, test bars or new units.
+
+### SEC identity discovery/coverage distinction — 2026-10-24 UTC
+
+Current SEC ticker snapshotSHA93050f93… matches107/107 research stocks; discovery
+only. Read-only join to2020q1 finds102 current CIK candidates with qualifying
+filings; APA/BLK/IBM/KR/XOM absent. Original IBM index proves filing existence
+independent of ZIP coverage; APA2021 reorganization proves current-parent
+backdating unsafe. Reproducible report retains all historical/model-input flags
+false.51 focused checks/lint pass; raw metadata/receipts retained privately,
+derived evidence documented. No training, normalization or new compute units.
+Next dated source identities and actual missing-accession/quarter coverage;
+do not infer full-history readiness from102 positive current-ID matches.

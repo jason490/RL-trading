@@ -86,3 +86,21 @@ SHAbc452aa8…. Structural completion does not mean causal acceptance: publicati
 timezone, historical identity mapping and feature eligibility remain unverified.
 No performance scoring or fitting occurred. The strict original failure remains
 in the earlier diagnostic and has not been overwritten or converted into a pass.
+
+## Current candidate discovery and first archive coverage
+
+Current SEC ticker discovery matches all107 research stocks, source snapshot
+SHA93050f93…. A reproducible read-only join finds qualifying10-K/10-Q/amendment
+records for102 current CIK candidates in2020q1. Five absent:APA,BLK,IBM,KR,XOM.
+All historical-verification/model-input flags remain false. Full derived
+[candidate report](2020q1-candidate-coverage.json) records accessions and counts;
+current raw metadata and discovery receipts stay outside Git.
+
+Do not classify all five as companies without filings: the original
+[IBM filing index](https://www.sec.gov/Archives/edgar/data/51143/0001558370-20-001334-index.htm)
+shows its2019 annual filing, while
+[APA's2021 reorganization disclosure](https://www.sec.gov/Archives/edgar/data/1841666/000119312521063695/d127090d8k12b.htm)
+shows a later parent-registrant change. Current identifiers cannot substitute for
+dated instrument/issuer evidence. This inspection does not yet verify any full
+2010–2023 identity history or train a model.51 focused tests pass, lint passes,
+and exact derived report reproduction succeeds. No new Colab allocation/units.

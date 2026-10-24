@@ -1883,3 +1883,15 @@ gap. Observational accounting, not a sole cause or reason to ban shorts/change
 rewards. Source hashes unchanged; no fitting/data/provider access or new units.
 Family closed; distinct hypothesis review before new allocation.
 [Evidence](results/market-actions-2026-10-24/README.md).
+
+### Filing-family feasibility update — 2026-10-24
+
+SEC acquisition/structural inspection and current-ID discovery are implemented;
+51 focused checks pass. First2020q1 archive retained, strict future-period failure
+preserved, original forecast context resolved, explicit forward-period quarantine
+inspected3,096,249 numeric records. Current ticker discovery107/107 yields102
+candidate CIKs represented in that archive, with5 absences requiring source/issuer
+review. No historical identity map, causal financial dataset or financial model
+has been accepted. Publication/vintage/concept/coverage checks and a separate
+matched training protocol remain mandatory. No Colab units used for this family.
+See[filing guide](docs/filing-data.md) and[source evidence](results/filing-source-review-2026-10-24/README.md).
