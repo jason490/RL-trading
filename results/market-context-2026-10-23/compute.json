@@ -1,0 +1,274 @@
+{
+  "project_units": 39.01437789447436,
+  "remaining_project_units": 110.98562210552564,
+  "study_start_units": 38.90354116934003,
+  "study_incremental_units": 0.11083672513432674,
+  "measured_units": 0.08000000000004093,
+  "estimated_units": 0.11083672513431972,
+  "charged_units": 0.11083672513431972,
+  "official_account_balance": 349.02,
+  "official_rate": 0,
+  "official_assignments": 0,
+  "cleanup_verified": true,
+  "owned_sessions": {
+    "rl-stocks-cpu-19a4f7bf537c": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-f5034f6185e7": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-9ad4d8307ef9": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-b1ae44231418": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-3503d02a2967": {
+      "status": "stopped",
+      "phase": "verify"
+    },
+    "rl-stocks-cpu-5c62e865833f": {
+      "status": "stopped",
+      "phase": "verify"
+    }
+  },
+  "meter_readings": {
+    "rl-stocks-fleet-40cd734aa1b0": [
+      {
+        "time": 1792799671.0843012,
+        "balance": 349.1,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792799677.3887331,
+        "balance": 349.1,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792799685.5918663,
+        "balance": 349.1,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792799744.15337,
+        "balance": 349.1,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792799804.7177298,
+        "balance": 349.1,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792799864.7998333,
+        "balance": 349.1,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792799924.8675253,
+        "balance": 349.1,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792799985.0083723,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800045.1880488,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800105.1861985,
+        "balance": 349.08,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792800145.2385118,
+        "balance": 349.08,
+        "rate": 0.0,
+        "assignments": 0
+      }
+    ],
+    "rl-stocks-fleet-8ac4b39478be": [
+      {
+        "time": 1792800384.7647665,
+        "balance": 349.08,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792800391.0357769,
+        "balance": 349.08,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792800397.5491292,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800457.5295506,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800518.3223994,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800578.416252,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800638.5021758,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800698.825764,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800759.7069542,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800819.8345878,
+        "balance": 349.08,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800879.7233438,
+        "balance": 349.06,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800939.8322213,
+        "balance": 349.06,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792800999.9872897,
+        "balance": 349.06,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792801060.1927161,
+        "balance": 349.06,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792801120.336509,
+        "balance": 349.06,
+        "rate": 0.24,
+        "assignments": 3
+      },
+      {
+        "time": 1792801180.8471155,
+        "balance": 349.04,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801240.9149404,
+        "balance": 349.04,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801300.9347596,
+        "balance": 349.04,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801360.8895206,
+        "balance": 349.04,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801421.4737391,
+        "balance": 349.04,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801481.4109538,
+        "balance": 349.02,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801541.993675,
+        "balance": 349.02,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801601.8785899,
+        "balance": 349.02,
+        "rate": 0.16,
+        "assignments": 2
+      },
+      {
+        "time": 1792801662.2738283,
+        "balance": 349.02,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792801722.6878061,
+        "balance": 349.02,
+        "rate": 0.08,
+        "assignments": 1
+      },
+      {
+        "time": 1792801730.6941867,
+        "balance": 349.02,
+        "rate": 0.0,
+        "assignments": 0
+      }
+    ]
+  },
+  "study_limit_units": 2,
+  "project_ceiling_units": 150,
+  "project_teardown_units": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "automatic_restart": false,
+  "test_evaluated": false
+}

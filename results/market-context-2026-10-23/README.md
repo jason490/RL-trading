@@ -1,8 +1,7 @@
 # Compact market-context coverage audit
 
-Status: immutable payloads, mapped initialization and actual three-arm Colab smokes
-accepted. Fixed100k screen plans prepared, not allocated. Latest stage below;
-earlier sections retain preparation history. No return result yet.
+Status: completed seed11 three-arm comparison failed; fixed compact-market-context
+family closed. Latest verified outcome below; earlier sections retain history.
 
 | Existing split | Rows checked | Context available | Unavailable |
 | --- | ---: | ---: | ---: |
@@ -125,3 +124,63 @@ against BOTH controls; no promotion or return claim from smoke acceptance.
 
 [Acceptance](smoke-summary.json), [frozen restoration](smoke-restoration.json),
 [runtime approval](runtime-profile.json), [metering and cleanup](smoke-compute.json).
+
+
+## Completed matched context screen — 2026-10-24 UTC
+
+Three100k seed11 CPU runs completed in Google Colab/defaultPython3.13.16 from
+frozen88fb98c743702e4446a10a62dafed7da7c5fe6bf. Family closed: no benchmark,
+window, feature-subset, normalization, model, reward or step grid/extension/
+confirmation/promotion. Availability and coverage acceptance did not establish
+predictive power; this tested feature parameterization worsened returns.
+
+| Arm | Selected return | Selected step | Final return |
+| --- | ---: | ---: | ---: |
+| Legacy7 features/21 inputs |19.6245%|80,000|18.4844%|
+| Masked10 features/24 inputs |18.7314%|100,000|18.7314%|
+| Full10 features/24 inputs |7.6978%|40,000|−3.7731%|
+| Matched holding |30.6019%|—|30.6019%|
+
+Separate26-symbol mean net total returns on repeatedly reused2021–2023 development
+history, not annualized, a combined portfolio or independent test. Full selected/
+final gains versus legacy−11.9267/−22.2575pp, versus masked−11.0336/−22.5046pp;
+all fail2pp. Final stock/ETF changes are−25.2483/−5.8077pp versus legacy and
+−24.2003/−13.1779pp versus masked. Mean symbol drawdown worsens4.7250/4.9084pp,
+failing2pp against both controls.
+
+Full selected stocks8.7191%/ETFs2.0809% versus holding32.6265%/19.4660%; median
+stock excess−21.4397pp. Full final stocks−3.4809%/ETFs−5.3803%, excess
+−36.1075/−24.8463pp, median stock excess−30.7053pp. All selected/final absolute
+stock/ETF/median−2pp gates fail. Reporting-only declining-stock joint positive
+total AND short P&L1/3 selected→0/3 final. No robust short-profit capability.
+
+## Actual restoration and controlled comparison
+
+Selected/final saved models and full Adam records restore exactly, final20,000
+actual updates/1000 nominal epochs, zero decay/eps1e-5. Legacy61,513 versus
+augmented63,049 parameters; full/masked initial tensors match, original common
+columns/per-seed RNG verified. Actual symbol/year sampling matches. Fresh legacy
+selected/final tensors and sampling reproduce prior native control exactly.
+Masked identity scaling/zero fields and frozen rejection of nonzero context pass.
+Full preserves original seven statistics and fits only added fields on training.
+All raw bars/ATR/panels remain matched.468 exact frozen action/hidden/cell/reset/
+repeat predictions including smokes and immutable normalization/schema/feed/
+nonfinite checks pass. No local policy fitting, provider calls, retired2024+ access
+or orders. Information effect assessed against masked, with legacy also required;
+no21-versus24-input trajectory equality or generic capacity attribution claimed.
+
+All six smoke/screen sessions retrieved and verified stopped. Conservative
+project39.01437789/150, remaining110.98562211; study increment0.11083673 including
+setup/idle/transfers/failures/shutdown. Official account349.02, zero rate/assignments;
+original project150/130/account150/170 and shared2-unit allowance retained. Screen
+durations1055.6041s legacy/986.3006s masked/567.0345s full include training/
+evaluation on different allocations; not evidence for a general speed ranking.
+
+Interactive comparison: `artifacts/market-context/summary.html`; compact10k
+curves retain incremental changes. Models/checkpoints/reports/transports/source/
+data/ledger retained. Next server-verified publication, duplicate-only cleanup
+and saved-path diagnosis before a distinct hypothesis. Objective remains unachieved.
+
+[Strict report](summary.json), [10k curves](learning-curves.csv),
+[frozen restoration](restoration.json), [legacy reproduction](control-reproduction.json),
+[metering/owned cleanup](compute.json).

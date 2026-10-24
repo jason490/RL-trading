@@ -1859,3 +1859,17 @@ fixed3406.0216s projection including1200s reserve, below7200s. Exact accepted by
 bind prepared three100k seed11 plans, not allocated. Project38.93466769/account
 349.08 zero rate/assignments; original2-unit allowance and project/account limits
 unchanged. No smoke-return tuning or retired-test access. [Evidence](results/market-context-2026-10-23/README.md).
+
+
+### Compact market-context screen failed — 2026-10-24 UTC
+
+Three100k Colab CPU runs complete: legacy selected/final19.6245/18.4844%, masked
+18.7314/18.7314%, full7.6978/−3.7731%, holding30.6019%. Full fails both-control
+relative/stock/ETF/risk and all absolute/median gates. Final stock−3.4809%/ETF−5.3803%;
+drawdown worsens4.7250/4.9084pp versus controls. Family closed, no benchmark/window/
+subset/model/reward/step grid or extension/confirmation.468 frozen checks including
+smokes, actual models/Adam/mapped tensors/RNG/year sampling restore; legacy control
+reproduces prior native tensors/sampling. All six sessions retrieved/stopped.
+Project39.01437789/account349.02 zero assignments. Coverage did not imply alpha;
+full artifacts retained, publication/diagnosis next, objective unachieved.
+[Evidence](results/market-context-2026-10-23/README.md).

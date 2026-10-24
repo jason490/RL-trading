@@ -7,12 +7,12 @@ the full required multi-seed and prospective acceptance process.
 
 ## Current research status
 
-[Latest squashed-action screen](squashed-actions-2026-10-23/README.md) failed:
-candidate selected/final15.47/5.14%, native control19.62/18.48%, holding30.60%.
-Family closed; no transform/noise grid or extension.312 frozen checks including
-smokes, four sessions stopped.16 verified release assets; duplicate-only cleanup
-and byte-identical strict reproduction complete. Project38.903541/150, last official
-account349.10, zero rate/assignments. Saved-path diagnosis complete; distinct hypothesis review before new training.
+[Latest compact-market-context screen](market-context-2026-10-23/README.md) failed:
+full selected/final7.70/−3.77%, masked18.73/18.73%, legacy19.62/18.48%, holding
+30.60%. Both-control/absolute/risk gates fail; fixed family closed.468 frozen
+checks including smokes, six owned sessions stopped. Project39.014378/150,
+last official account349.02 zero assignments. Publication and saved-path diagnosis
+next; robust-return objective remains unmet.
 
 ## Latest completed history comparison
 

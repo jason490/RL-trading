@@ -1692,3 +1692,17 @@ columns/parameters and per-seed RNG exact, native new columns preserved.54 check
 pass; no observed data/fitting in generation, no extra Colab units. Fixed gates
 unchanged. Next dedicated training/worker/artifact/report wiring and actual source/
 model construction/checkers before three512 CPU smokes. [Evidence](../results/market-context-2026-10-23/initialization.json).
+
+
+### Compact market-context screen failed — 2026-10-24 UTC
+
+Three100k Colab CPU runs complete: legacy selected/final19.6245/18.4844%, masked
+18.7314/18.7314%, full7.6978/−3.7731%, holding30.6019%. Full fails both-control
+relative/stock/ETF/risk and all absolute/median gates. Final stock−3.4809%/ETF−5.3803%;
+drawdown worsens4.7250/4.9084pp versus controls. Family closed, no benchmark/window/
+subset/model/reward/step grid or extension/confirmation.468 frozen checks including
+smokes, actual models/Adam/mapped tensors/RNG/year sampling restore; legacy control
+reproduces prior native tensors/sampling. All six sessions retrieved/stopped.
+Project39.01437789/account349.02 zero assignments. Coverage did not imply alpha;
+full artifacts retained, publication/diagnosis next, objective unachieved.
+[Evidence](../results/market-context-2026-10-23/README.md).
