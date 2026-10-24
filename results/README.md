@@ -219,3 +219,13 @@ Current common-flow tag presence4,512/6,161 (73.2%) is metadata only, not causal
 stock coverage.162 focused checks/Ruff pass; family remains disabled, no training
 or Colab units. Original-source/issuer-price-day coverage gates remain before any
 matched model experiment. [Evidence](filing-source-review-2026-10-24/flow-feasibility-inspection.json).
+
+
+Original-flow pilot first collection stopped at the20MB source cap on eighth
+selected document(AEP0000004904-15-000008). Seven complete originals/26,924,787
+bytes retained and reverified;6 arithmetic-ready/1 unready are not a coverage
+estimate.312 cases unfinished, gate not evaluated. Terminal failure preserved,
+collector exited, no retry/replacement/restart or Colab units.183 focused checks
+pass; source hashes/extraction/snapshots reproduce. A reviewed continuation must
+retain the failure and count oversized unsupported sources in the fixed sample.
+[Evidence](filing-source-review-2026-10-24/original-flow-pilot-summary.json).

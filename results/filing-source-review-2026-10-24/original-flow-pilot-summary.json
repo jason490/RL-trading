@@ -1,0 +1,61 @@
+{
+  "absent_issuer_strata": 17,
+  "all_completed_source_hashes_verified": true,
+  "archive_period_label_differences": 0,
+  "arithmetic_ready": 6,
+  "candidate_ciks": 112,
+  "colab_allocated": false,
+  "collection_status": "failed",
+  "completed_originals": 7,
+  "elapsed_seconds": 29.73851530207321,
+  "financial_inputs_enabled": false,
+  "fixed_source_feasibility_gate_passed": false,
+  "gate_evaluated": false,
+  "historical_price_links_verified": false,
+  "incomplete_selected_sources": 312,
+  "inspected_fact_extractions_and_snapshots_reproduced": true,
+  "manifest_sha256": "ede0b4e0a62950b6031255c9673cebaf78392f7560a3615c2d77f3f022628f97",
+  "normalization_fitted": false,
+  "original_vintage_verified": false,
+  "per_stratum": {
+    "2009-2011": {
+      "absent_issuer_slots": 8,
+      "arithmetic_ready": 2,
+      "readiness_fraction": null,
+      "selected": 104,
+      "threshold_pass": null
+    },
+    "2015-2017": {
+      "absent_issuer_slots": 5,
+      "arithmetic_ready": 2,
+      "readiness_fraction": null,
+      "selected": 107,
+      "threshold_pass": null
+    },
+    "2021-2023": {
+      "absent_issuer_slots": 4,
+      "arithmetic_ready": 2,
+      "readiness_fraction": null,
+      "selected": 108,
+      "threshold_pass": null
+    }
+  },
+  "protocol_sha256": "9841794e27d5cee866c579e6acd353189fe3a6e1e727625b054b7e359ba2e855",
+  "readiness_fraction": null,
+  "rules_sha256": "950a0143e633e140d00669b11d07578f1d687a2490bea04ebba4fbbf43d30a1b",
+  "schema": "sec-original-flow-pilot-summary-v1",
+  "selected_originals": 319,
+  "source_git_revision": "4b248f5a83098636909f08a8216237b189b6b375",
+  "state_sha256": "6ffbf0c72c48cd38b7e58acc91ebdce7f36ccb56651bf30eb37a2b6c83942b2a",
+  "status_counts": {
+    "inspected": 7
+  },
+  "terminal_error_type": "ValueError",
+  "total_verified_source_bytes": 26924787,
+  "training_performed": false,
+  "unfinished_current_accession": "0000004904-15-000008",
+  "unready_reasons": {
+    "missing_current_comparable_flows": 1
+  },
+  "unsupported_error_types": {}
+}

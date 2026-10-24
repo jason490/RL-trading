@@ -1954,3 +1954,13 @@ checks pass. Sequential bounded acquisition, terminal journal and no automatic
 restart;80%overall/70%per-era source arithmetic gate fixed before collection.
 No financial dataset/training approval, original vintage/price links unresolved.
 See[protocol](configs/experiments/filing_original_flow_pilot.json).
+
+
+Original-flow pilot first collection stopped at the20MB source cap on eighth
+selected document(AEP0000004904-15-000008). Seven complete originals/26,924,787
+bytes retained and reverified;6 arithmetic-ready/1 unready are not a coverage
+estimate.312 cases unfinished, gate not evaluated. Terminal failure preserved,
+collector exited, no retry/replacement/restart or Colab units.183 focused checks
+pass; source hashes/extraction/snapshots reproduce. A reviewed continuation must
+retain the failure and count oversized unsupported sources in the fixed sample.
+[Evidence](results/filing-source-review-2026-10-24/original-flow-pilot-summary.json).

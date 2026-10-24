@@ -500,3 +500,41 @@ remain recorded, without expanding income/revenue aliases or moving thresholds.
 176 focused source/financial checks and targeted Ruff pass before acquisition.
 No pilot outcomes, causal price coverage, trained model or return improvement are
 claimed by this preparation step. Original/raw evidence must remain retained.
+
+
+## Original-flow pilot first collection stopped at source cap — 2026-10-24
+
+The collector ran from source commit`4b248f5` and terminated after29.74seconds.
+Seven selected originals were retained (**26,924,787bytes**), extracted and
+inspected; six are arithmetic-ready, one lacks supported current comparable
+flows. The eighth selected original, AEP accession`0000004904-15-000008`, exceeded
+the fixed20MB download/source parser cap. The process exited with failure and
+saved its terminal journal; it did not retry, replace the document or restart.
+The partial over-limit response was not promoted to an original artifact. Byte
+accounting above describes complete retained sources, not all network traffic.
+
+**The pilot is incomplete:312 selected cases remain unfinished and no feasibility
+gate is evaluated.** The six ready cases are not a readiness/coverage estimate.
+No source threshold, feature contract, stock sample or model gate was relaxed.
+A reviewed continuation may classify oversized originals as unsupported cases
+that remain in the original denominator, without enlarging the source/parser cap
+or replacing them. Any such continuation must explicitly preserve this failure
+journal and prior retained evidence; automatic restart remains disabled.
+
+[Terminal summary](original-flow-pilot-summary.json) retains the source revision, fixed input hashes,
+source-byte accounting, unfinished accession, error type and unready reason.
+`report_original_flow_pilot.py` rechecks every completed original checksum/size,
+re-extracts its facts, verifies its saved fact hash and reproduces its snapshot.
+Partial reports expose no aggregate readiness percentage or per-era gate verdict.
+Reproduce the terminal report offline:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/report_original_flow_pilot.py
+```
+
+183 focused source/financial checks and targeted Ruff pass, including fixed
+sample order, terminal failure handling, no automatic restart, missing-document
+denominators, aggregate/per-era boundary gates and rejection of live or false-ready
+reports. The owned collector handle is terminal(exit1); no worker/runtime remains.
+Retained raw evidence/payloads/manifest/journal are preserved. No Colab allocation,
+training, price access, source normalization or model-return change occurred.
