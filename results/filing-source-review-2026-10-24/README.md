@@ -161,3 +161,31 @@ pass, including exact decimal preservation, forward/non-USD/nil exclusions,
 original-period mismatch, source integrity, orphan references and duplicate
 retention. No normalization fitting, training, retired prices/returns or new units.
 Chronological coverage and a separate concept/feature protocol remain required.
+
+## Full source collection and chronological SUB inventory
+
+All59 registered2009q2–2023q4 ZIPs are retained (4,613,634,809 bytes) with
+acquisition receipts; collector terminal after601.7 seconds. Hash-verified SUB
+inventory:366,856 unique submissions,342,981 qualifying financial filings,
+14,100 issuers. No cross-archive duplicate/conflicting accession observed.
+[Source inventory summary](chronological-inventory-summary.json).
+
+The initial inventory stopped on three blank periods in non-periodic forms,
+not the10-K/10-Q family. [Original failure/diagnostic](invalid-sub-date-diagnostic.json)
+is retained; updated inventory reports those blanks without inventing periods,
+while qualifying forms still require valid dates.81 focused SEC tests/lint pass.
+This does not mean every financial table/fact or historical security is accepted.
+
+Current-CIK candidate annual counts are saved in[candidate-year-counts.json](candidate-year-counts.json).
+Standalone offline HTML lives at`artifacts/filings/candidate-coverage.html`;
+full metadata inventory at`artifacts/filings/chronological-sub-inventory.json`.
+Repeated HTML/summary generation reproduces exact bytes. Current BLK/XOM IDs have
+zero source counts; APA begins2021 and GOOGL2015 under current IDs. Earlier
+issuers need dated evidence, not deletion or silent backfilling. None of these
+counts is a model input or a performance result. All causal-readiness flags false.
+
+[Retention receipt](collection-retention.json): all raw ZIPs/receipts and original
+filings kept, no temporary download files or new Colab allocation. Last official
+balance349.02/rate0/assignments0; source collection used zero Colab units.
+Source financial concepts, exact periods, historical lineage and availability
+must still pass before a matched training protocol is enabled.

@@ -1895,3 +1895,11 @@ review. No historical identity map, causal financial dataset or financial model
 has been accepted. Publication/vintage/concept/coverage checks and a separate
 matched training protocol remain mandatory. No Colab units used for this family.
 See[filing guide](docs/filing-data.md) and[source evidence](results/filing-source-review-2026-10-24/README.md).
+
+SEC source collection update:59/59 registered quarterly archives retained,
+4.61GB/601.7sec. Chronological SUB inventory verifies366,856 unique records,
+342,981 qualifying financial filings/14,100 issuers, no cross-archive accession
+conflicts.81 focused checks pass; candidate-year visual report saved. Source
+coverage is not financial-feature acceptance: issuer lineage, exact concepts/
+periods/vintages and public availability remain pending. No financial model
+training or additional Colab units. Source retention/terminal collection verified.

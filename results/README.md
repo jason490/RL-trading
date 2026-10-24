@@ -174,3 +174,9 @@ filing identifies the2024 label as a forecast. Explicit-quarantine inspection
 completed3,096,249 numeric keys with3,103 forward-period exclusions. Causal
 readiness remains unverified; no financial model inputs or training. This is
 feasibility work, not a new return result or a promoted model.
+
+Full SEC source collection now complete:59 quarters/4.61GB,366,856 unique
+submission records. Current-CIK candidate coverage heatmap and issuer/year counts
+are available;81 focused checks pass. These are source-audit results only;
+financial features and training remain disabled pending historical identity,
+publication and concept/period gates. No new model returns or Colab units.

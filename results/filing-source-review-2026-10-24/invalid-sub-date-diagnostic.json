@@ -1,0 +1,50 @@
+{
+  "schema": "sec-sub-date-diagnostic-v1",
+  "failed_inventory_preserved": true,
+  "reason": "strict inventory rejected invalid SUB date format",
+  "counts_by_form": {
+    "S-1": 1,
+    "486BPOS": 1,
+    "N-2": 1
+  },
+  "examples": [
+    {
+      "quarter": "2022q3",
+      "adsh": "0001193125-22-251475",
+      "cik": "1851194",
+      "form": "S-1",
+      "period": "",
+      "filed": "20220927",
+      "accepted": "2022-09-26 19:46:00.0",
+      "invalid_fields": [
+        "period"
+      ]
+    },
+    {
+      "quarter": "2023q3",
+      "adsh": "0001104659-23-101659",
+      "cik": "1930087",
+      "form": "486BPOS",
+      "period": "",
+      "filed": "20230918",
+      "accepted": "2023-09-18 17:13:00.0",
+      "invalid_fields": [
+        "period"
+      ]
+    },
+    {
+      "quarter": "2023q4",
+      "adsh": "0001104659-23-126178",
+      "cik": "1782524",
+      "form": "N-2",
+      "period": "",
+      "filed": "20231215",
+      "accepted": "2023-12-15 07:14:00.0",
+      "invalid_fields": [
+        "period"
+      ]
+    }
+  ],
+  "financial_amounts_read": false,
+  "model_inputs_enabled": false
+}

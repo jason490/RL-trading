@@ -1836,3 +1836,18 @@ source corruption and parser/reference failures. Original instances/receipts and
 private amount-bearing extraction retained; public summary has metadata only.
 No fitting, retired test prices/returns or new Colab units. Next chronological
 source coverage and explicit financial-concept/vintage gates before any training.
+
+### Full SEC source collection and chronological inventory — 2026-10-24 UTC
+
+Bounded sequential collector completed59/59 registered quarters in601.7sec,
+4,613,634,809 compressed bytes; all raw ZIPs/receipts retained, no temporaryfiles.
+Hash-verified SUB inventory:366,856 unique submissions,342,981 qualifying filings,
+14,100 issuers, no cross-archive duplicates/conflicts. First strict failure on
+three blank periods retained; all are non-periodic/outside financial-form family.
+Updated observer reports blanks, keeps period dates mandatory for10-K/10-Q.
+81 focused checks/lint pass. Candidate/year heatmap and JSON reproduce exactly;
+current CIKs fail to represent older BLK/XOM/APA/GOOGL histories. No lineage,
+financial-feature or full NUM readiness claim; no amount read by inventory.
+Last official account349.02/zero rate/assignments; no new Colab units or training.
+Next dated lineage, concept/period equivalence and causal financial acceptance;
+retired test remains isolated. [Evidence](../results/filing-source-review-2026-10-24/README.md).

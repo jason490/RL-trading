@@ -1,0 +1,15 @@
+{
+  "schema": "sec-source-collection-retention-v1",
+  "status": "downloaded_only",
+  "retained_archive_count": 59,
+  "retained_compressed_bytes": 4613634809,
+  "no_download_temporary_files": true,
+  "retained_cache_lock": true,
+  "full_inventory_sha256": "3af3351b894b8aca960d79518db186b71eb2df86d7576c08fa3728349bfc32c4",
+  "html_sha256": "122440e1f411e10fa66591e00b75d866fa494da7148274c6faa0c12c90e5dc2f",
+  "html_bytes": 4776462,
+  "financial_inputs_enabled": false,
+  "colab_allocated": false,
+  "training_performed": false,
+  "note": "Retained all source archives, acquisition receipts, original filings and derived evidence. No duplicate/raw evidence deleted."
+}

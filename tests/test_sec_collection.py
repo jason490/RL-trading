@@ -59,3 +59,19 @@ def test_disk_reserve_stops_before_download(tmp_path,monkeypatch):
     with pytest.raises(ValueError,match='free-disk reserve'):
         m.collect(tmp_path/'cache',journal,'private-contact@example.org')
     assert json.loads(journal.read_text())['status']=='failed'
+
+
+@pytest.mark.parametrize('limit_name,limit,exception', [
+    ('DEADLINE_SECONDS',139,TimeoutError),
+    ('MAX_BYTES',255_999_999,ValueError),
+])
+def test_reserve_limits_stop_before_any_request(tmp_path,monkeypatch,limit_name,limit,exception):
+    m=module()
+    monkeypatch.setattr(m,limit_name,limit)
+    calls=[]
+    monkeypatch.setattr(m,'download_archive',lambda *args:calls.append(args))
+    journal=tmp_path/'state.json'
+    with pytest.raises(exception):
+        m.collect(tmp_path/'cache',journal,'private-contact@example.org')
+    assert not calls
+    assert json.loads(journal.read_text())['status']=='failed'

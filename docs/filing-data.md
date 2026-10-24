@@ -391,3 +391,53 @@ review terminal state, retained files and the provider failure before any new
 explicit collection window. Verified cache reuse avoids repeating prior downloads.
 `downloaded_only` means source bytes were collected, not that all tables passed
 inspection or financial model inputs are ready.74 focused SEC tests pass.
+
+## Chronological submission inventory and coverage visualization
+
+The full registered collection completed:59 archives,4,613,634,809 compressed
+bytes,601.7 seconds. All source hashes were verified for the SUB inventory.
+It contains366,856 unique submissions,342,981 qualifying10-K/10-Q/amendment
+submissions across14,100 issuers. No duplicate/conflicting cross-archive accession
+was observed. This is submission metadata coverage, not all NUM validation.
+
+The first strict inventory stopped on three blank reporting periods, retained in
+[diagnostic evidence](../results/filing-source-review-2026-10-24/invalid-sub-date-diagnostic.json).
+They belong to S-1,486BPOS and N-2, outside the registered financial-form family.
+The inventory now reports missing periods for such non-periodic forms without
+inventing dates. Qualifying financial forms still require valid report periods;
+regression tests enforce that distinction. Every observation remains source-only,
+with publication/historical identity/financial-readiness flags false.
+
+Reproduce from the retained collection journal and discovery source:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/inventory_sec_submissions.py \
+  --state .runtime/sec-coverage-collection.json \
+  --output artifacts/filings/chronological-sub-inventory.json
+PYTHONPATH=src .venv/bin/python scripts/report_sec_coverage.py \
+  --inventory artifacts/filings/chronological-sub-inventory.json \
+  --discovery artifacts/filings/current-identity-discovery.json \
+  --output artifacts/filings/candidate-coverage.html \
+  --summary results/filing-source-review-2026-10-24/candidate-year-counts.json
+```
+
+The offline Plotly heatmap displays current-CIK candidate counts by filing year,
+not certified stock history. Source hash/size, registered range, terminal journal,
+incomplete scope, duplicate/conflicting accessions and retired rows are checked
+or reported. Counts distinguish filing year from the archive's period-year labels.
+The metadata-only inventory reads no financial amounts. Candidate summary and
+[collection evidence](../results/filing-source-review-2026-10-24/chronological-inventory-summary.json)
+are retained in results; full inventory/HTML stay in ignored artifacts.
+
+Examples: today's BLK/XOM CIKs produce zero counts across the range; APA's current
+parent begins2021, GOOGL's current registrant begins2015. Earlier source-verified
+registrants must not be discarded or globally backfilled without dated evidence.
+Zeros can reflect issuer changes, listing timing, source gaps or filing cadence.
+Missingness has not been supplied to a model as a trading input.
+
+81 focused SEC tests pass. The HTML/summary reproduce byte-for-byte on repeated
+report generation. Collection is terminal; no temporary download files remain.
+All59 original ZIPs/receipts and original-filing evidence are retained, with no
+raw evidence deleted. Last checked Colab balance349.02, rate0/assignments0;
+collection allocated no runtime and consumed no Colab units. Next: issuer lineage,
+original-period/concept equivalence and causal financial feature acceptance.
