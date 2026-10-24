@@ -18,6 +18,15 @@ MONEY_CONCEPTS = frozenset({
 })
 
 
+BALANCE_CONCEPTS = frozenset({
+    'Assets', 'Liabilities', 'StockholdersEquity',
+    'StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest',
+    'MinorityInterest', 'LiabilitiesAndStockholdersEquity',
+    'TemporaryEquityCarryingAmountIncludingPortionAttributableToNoncontrollingInterests',
+    'TemporaryEquityCarryingAmountAttributableToParent',
+})
+
+
 def _day(value):
     result = date.fromisoformat(value)
     if result.isoformat() != value:
@@ -26,6 +35,18 @@ def _day(value):
 
 
 def extract_facts(path, expected_sha256, accession, cik, report_end, filed):
+    """Read the fixed default money scope; source review never enables features."""
+    return _extract(path, expected_sha256, accession, cik, report_end, filed, MONEY_CONCEPTS)
+
+
+def extract_balance_facts(path, expected_sha256, accession, cik, report_end, filed):
+    """Read a separate accounting-audit scope without changing default features."""
+    result = _extract(path, expected_sha256, accession, cik, report_end, filed, BALANCE_CONCEPTS)
+    result['schema'] = 'sec-original-balance-audit-v1'
+    return result
+
+
+def _extract(path, expected_sha256, accession, cik, report_end, filed, selected_concepts):
     """Keep exact units/periods and every matching fact; do not choose concepts.
 
     This deliberately does not load schemas, linkbases, URLs or external entities.
@@ -86,7 +107,7 @@ def extract_facts(path, expected_sha256, accession, cik, report_end, filed):
         if not re.fullmatch(r'\{https?://(?:fasb.org|xbrl.us)/us-gaap/[^}]+\}[^}]+', node.tag):
             continue
         concept = node.tag.split('}', 1)[1]
-        if concept not in MONEY_CONCEPTS:
+        if concept not in selected_concepts:
             continue
         counts['selected_concept_rows'] += 1
         context_id, unit_id = node.get('contextRef'), node.get('unitRef')

@@ -1,0 +1,15 @@
+{
+  "schema": "reported-balance-identity-audit-v1",
+  "scope": "Original-source accounting reconciliation only; no liability imputation or feature-definition change.",
+  "sources": "All four previously retained IBM/Kroger early and 2019 annual XBRL instances; no price/outcome selection.",
+  "qualifying_facts": "Same accession, issuer, exact reporting instant, standard taxonomy, simple USD and no segment/scenario qualification. Duplicates must agree.",
+  "checks": ["Assets minus reported Liabilities minus equity including noncontrolling interests", "Residual minus reported total temporary equity, only when explicitly reported", "Assets minus reported Liabilities minus parent equity"],
+  "missing_temporary_equity_is_zero": false,
+  "parent_and_consolidated_equity_equivalent": false,
+  "reported_equity_excludes_temporary_equity": true,
+  "temporary_equity_is_a_liability": false,
+  "financial_inputs_enabled": false,
+  "liability_inference_permitted": false,
+  "existing_financial_feature_rules_changed": false,
+  "training_performed": false
+}

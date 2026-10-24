@@ -1,0 +1,111 @@
+{
+  "schema": "original-balance-identity-inspection-v1",
+  "records": [
+    {
+      "schema": "reported-balance-inspection-v1",
+      "accession": "0001047469-10-001151",
+      "cik": "51143",
+      "report_end": "2009-12-31",
+      "source_sha256": "9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c",
+      "reported_concepts": [
+        "Assets",
+        "Liabilities",
+        "LiabilitiesAndStockholdersEquity",
+        "MinorityInterest",
+        "StockholdersEquity",
+        "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+      ],
+      "conflicting_concepts": [],
+      "arithmetic_scope_ready": true,
+      "liability_inference_permitted": false,
+      "financial_features_enabled": false,
+      "missing_temporary_equity_is_zero": false,
+      "reported_total_temporary_equity": null,
+      "assets_minus_liabilities_minus_equity_including_nci": "0",
+      "three_term_reported_identity_holds": true,
+      "assets_minus_liabilities_minus_parent_equity": "118000000",
+      "symbol_for_source_review": "IBM"
+    },
+    {
+      "schema": "reported-balance-inspection-v1",
+      "accession": "0001104659-10-017258",
+      "cik": "56873",
+      "report_end": "2010-01-30",
+      "source_sha256": "d9a0e225bb09dd27a907455b1382608b4c557ab7246e74a31b9288db750e9abe",
+      "reported_concepts": [
+        "Assets",
+        "Liabilities",
+        "LiabilitiesAndStockholdersEquity",
+        "MinorityInterest",
+        "StockholdersEquity",
+        "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+      ],
+      "conflicting_concepts": [],
+      "arithmetic_scope_ready": true,
+      "liability_inference_permitted": false,
+      "financial_features_enabled": false,
+      "missing_temporary_equity_is_zero": false,
+      "reported_total_temporary_equity": null,
+      "assets_minus_liabilities_minus_equity_including_nci": "0",
+      "three_term_reported_identity_holds": true,
+      "assets_minus_liabilities_minus_parent_equity": "74000000",
+      "symbol_for_source_review": "KR"
+    },
+    {
+      "schema": "reported-balance-inspection-v1",
+      "accession": "0001558370-20-001334",
+      "cik": "51143",
+      "report_end": "2019-12-31",
+      "source_sha256": "fc20caf0ec24a58f966801b157cd5a8d5964e5ad3f8a0ee79df483e0251370d2",
+      "reported_concepts": [
+        "Assets",
+        "Liabilities",
+        "LiabilitiesAndStockholdersEquity",
+        "MinorityInterest",
+        "StockholdersEquity",
+        "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+      ],
+      "conflicting_concepts": [],
+      "arithmetic_scope_ready": true,
+      "liability_inference_permitted": false,
+      "financial_features_enabled": false,
+      "missing_temporary_equity_is_zero": false,
+      "reported_total_temporary_equity": null,
+      "assets_minus_liabilities_minus_equity_including_nci": "-1000000",
+      "three_term_reported_identity_holds": false,
+      "assets_minus_liabilities_minus_parent_equity": "143000000",
+      "symbol_for_source_review": "IBM"
+    },
+    {
+      "schema": "reported-balance-inspection-v1",
+      "accession": "0001558370-20-003501",
+      "cik": "56873",
+      "report_end": "2020-02-01",
+      "source_sha256": "9e326eefb300e35d421dc93f4f3f5d459b69f87753e71b5d0bbf74e3c4bfc507",
+      "reported_concepts": [
+        "Assets",
+        "Liabilities",
+        "LiabilitiesAndStockholdersEquity",
+        "MinorityInterest",
+        "StockholdersEquity",
+        "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+      ],
+      "conflicting_concepts": [],
+      "arithmetic_scope_ready": true,
+      "liability_inference_permitted": false,
+      "financial_features_enabled": false,
+      "missing_temporary_equity_is_zero": false,
+      "reported_total_temporary_equity": null,
+      "assets_minus_liabilities_minus_equity_including_nci": "0",
+      "three_term_reported_identity_holds": true,
+      "assets_minus_liabilities_minus_parent_equity": "-29000000",
+      "symbol_for_source_review": "KR"
+    }
+  ],
+  "protocol_sha256": "d597269105f18cbbf7fdee4436025c24721c251d698f57a807f18397f30b0e6f",
+  "default_money_extraction_unchanged": true,
+  "financial_feature_rules_unchanged": true,
+  "liability_inference_permitted": false,
+  "financial_features_enabled": false,
+  "training_performed": false
+}

@@ -746,3 +746,45 @@ price join, financial input activation or new Colab allocation/units occurred in
 this audit. Next validate balance-sheet accounting identities and original concept
 equivalence before scaling original extraction or preregistering a training run;
 bigger networks cannot resolve missing/ambiguous source facts.
+
+
+## Original balance-identity audit — 2026-10-24
+
+The separately registered [accounting audit](../configs/experiments/filing_balance_identity_audit.json)
+checks all four previously retained IBM/Kroger annual instances. It does not
+expand the default money extractor or change financial-feature definitions.
+`extract_balance_facts` produces a separate audit schema; `inspect_balance` checks
+same-issuer/accession, exact current instant, unqualified USD facts, agreeing
+duplicates and one taxonomy. Decimal arithmetic is independent of caller precision.
+Missing temporary equity remains unknown; missing liabilities are never inferred.
+
+| Original report end | Issuer | Assets − liabilities − equity including NCI | Assets − liabilities − parent equity |
+| --- | --- | ---: | ---: |
+| 2009-12-31 | IBM | $0 | $118,000,000 |
+| 2010-01-30 | Kroger | $0 | $74,000,000 |
+| 2019-12-31 | IBM | −$1,000,000 | $143,000,000 |
+| 2020-02-01 | Kroger | $0 | −$29,000,000 |
+
+Three of four reported three-term identities reconcile exactly. IBM 2019 does
+not: the nonzero residual is preserved, without widening tolerance or claiming a
+verified rounding explanation. None of these selected sets explicitly reports the
+total temporary-equity concept, so the four-term identity is not evaluated.
+These four source prototypes do not establish general filing coverage.
+
+Parent equity and equity including noncontrolling interests are distinct concepts;
+temporary equity needs separate treatment. Therefore the audit does not authorize
+an Assets-minus-equity substitute for the direct liabilities feature. Likewise,
+ProfitLoss and parent-attributable NetIncomeLoss must not become automatic aliases.
+The fixed financial snapshot rules remain unchanged and financial inputs remain
+disabled. A distinct equity/assets feature would require its own definition,
+original-source coverage, causal availability and matched experiment protocol.
+
+[Exact results](../results/filing-source-review-2026-10-24/balance-identity-inspection.json)
+retain source and protocol hashes. All four extended extractions, inspection
+results and unchanged default money payloads reproduced exactly from retained
+checksummed originals. 152 focused SEC/financial checks and targeted Ruff pass.
+No model fitting, normalization update, price join, retired-test access or Colab
+allocation occurred. Required next work is to decide a feasible, explicitly defined
+financial family from source evidence, establish original-filing and causal
+issuer/price coverage, then preregister a matched training comparison. This audit
+does not improve or change any recorded model return.

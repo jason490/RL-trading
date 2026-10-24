@@ -1919,3 +1919,12 @@ assessed pairs; direct liabilities62.9%,251 master-only pairs unassessed. These
 are not original arithmetic/price coverage results.144 focused checks pass,
 local workers stopped, evidence retained. Accounting-identity/original-concept
 validation remains before bulk extraction or model training; no new Colab units.
+
+
+Original balance-identity audit: four retained IBM/Kroger annual instances reproduce
+exactly; three Assets−Liabilities−equity-including-NCI residuals are zero, IBM2019
+is −$1million and remains nonzero. Parent-equity residuals differ in all four.
+Missing temporary equity is unknown, and missing liabilities are not inferred.
+Default money extraction/financial rules unchanged; 152 focused checks and targeted
+Ruff pass. No training/new Colab units. Financial dataset acceptance and a robust
+model winner remain unachieved. See [accounting evidence](results/filing-source-review-2026-10-24/balance-identity-inspection.json).

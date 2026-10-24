@@ -100,3 +100,17 @@ def test_legacy_2009_us_gaap_and_dei_namespaces_supported_explicitly(tmp_path):
     result=extract(path,hashlib.sha256(raw).hexdigest())
     assert result['counts']['unqualified_usd_rows']==1
     assert result['facts'][0]['concept'].startswith('{http://xbrl.us/us-gaap/2009-01-31}')
+
+
+def test_balance_scope_is_separate_and_does_not_expand_default_money_features(tmp_path):
+    from rl_stocks.data.providers.sec.facts import extract_balance_facts
+    extra='''<context id="instant"><entity><identifier scheme="http://www.sec.gov/CIK">123</identifier></entity><period><instant>2020-02-01</instant></period></context>
+    <us-gaap:Assets contextRef="instant" unitRef="u">100</us-gaap:Assets>
+    <us-gaap:StockholdersEquity contextRef="instant" unitRef="u">30</us-gaap:StockholdersEquity>'''
+    path,sha=write(tmp_path,extra=extra)
+    default=extract(path,sha)
+    audit=extract_balance_facts(path,sha,'0000000123-20-000001','123','2020-02-01','2020-04-01')
+    assert audit['schema']=='sec-original-balance-audit-v1'
+    assert any(r['concept'].endswith('}StockholdersEquity') for r in audit['facts'])
+    assert not any(r['concept'].endswith('}StockholdersEquity') for r in default['facts'])
+    assert not any(r['concept'].endswith('}Revenues') for r in audit['facts'])
