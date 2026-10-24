@@ -1,0 +1,16 @@
+{
+  "schema": "filing-financial-asof-rules-v1",
+  "scope": "Pre2024 source-history research only; no model-input approval.",
+  "availability_policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+  "selection": "Filter by requested issuer CIK and available_time <= decision_time; select greatest original report_end, then greatest availability time. Conflicting equal-ranked accessions reject.",
+  "older_period_amendment": "Retain as its own vintage; do not displace a newer reporting period or recompute another accession's ratios.",
+  "latest_unready_filing": "Return unready; never fall back to an older convenient snapshot.",
+  "maximum_report_age_calendar_days": {"10-K": 450, "10-K/A": 450, "10-Q": 180, "10-Q/A": 180},
+  "staleness_clock": "Original report_end to UTC decision date; amendment publication does not reset the financial period age.",
+  "unknown_issuer": "Return unavailable; never substitute another CIK or today's ticker match.",
+  "returned_records": "Independent copies; source history and caller state remain unchanged.",
+  "retired_source_and_decision_dates": "Reject 2024 onward in this research reader.",
+  "normalization_fitted": false,
+  "financial_features_enabled": false,
+  "training_performed": false
+}

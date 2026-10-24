@@ -1877,3 +1877,15 @@ pass. Pure optional module remains outside market registry; no normalization,
 price join, financial dataset acceptance, training or additional Colab units.
 Reported ratios are company financials, not model return results. Chronological
 issuer/price/availability coverage and bounded experiment gates remain pending.
+
+### Publication-gated financial source history — 2026-10-24 UTC
+
+Fixed as-of/staleness rules: source CIK and available timestamp first, latest
+reporting period then available accession; ambiguous equal-rank sources reject.
+Unready latest records block fallback. Annual450/quarterly180calendar-day age from
+report end is not reset by amendments. Source-backed IBM/Kroger before/at/expiry
+checks pass;116 focused tests total. Future amendments do not rewrite earlier
+queries and records/results remain independent copies. Complete supplied ledger
+still mandatory: two prototypes do not justify a cohort coverage percentage.
+No financial-input or price-link approval, no price join/fit/training/new units.
+Next original-filing cohort ledger and verified chronological identity/coverage.

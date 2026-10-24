@@ -233,3 +233,21 @@ ambiguous comparables, mixed-vintage/unit rejection and source immutability.
 All publication/price-link/model-enabled flags remain false. Full chronological
 financial dataset acceptance and a separate training protocol are still pending.
 No training or new Colab units.
+
+## Source-history publication/expiry boundaries
+
+The optional research history reader now selects only available same-issuer
+snapshots, respects original reporting-period precedence and handles amendments
+without rewriting past queries. New unready reports block fallback; source age
+is450days annual/180days quarterly from original report end, so amendments cannot
+refresh stale periods. Input/output copies preserve earlier query values.
+
+Actual original IBM/Kroger indexes confirm publication-boundary and expiry tests:
+IBM reconstructed2020-02-27T14:30Z; Kroger2020-04-03T13:30Z. One second before
+availability no value is returned; at availability source arithmetic matches;
+after period expiry values are absent. [Inspection](financial-asof-inspection.json).
+116 focused checks pass. This tests a **partial supplied ledger** only; omitted
+filings cannot be detected by the reader, and no full-universe coverage rate is
+claimed. Include all unready/ready sources before dataset acceptance. Stock-price
+links, complete catalog and financial-input approval remain false. No price join,
+normalization fitting, model training or new compute units.

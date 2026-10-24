@@ -1,0 +1,30 @@
+{
+  "schema": "financial-source-asof-inspection-v1",
+  "checks": [
+    {
+      "symbol": "IBM",
+      "available_time": "2020-02-27T14:30:00Z",
+      "before_publication_unavailable": true,
+      "at_boundary_source_ready": true,
+      "expired_source_unavailable": true,
+      "snapshot_accession": "0001558370-20-001334",
+      "financial_features_enabled": false
+    },
+    {
+      "symbol": "KR",
+      "available_time": "2020-04-03T13:30:00Z",
+      "before_publication_unavailable": true,
+      "at_boundary_source_ready": true,
+      "expired_source_unavailable": true,
+      "snapshot_accession": "0001558370-20-003501",
+      "financial_features_enabled": false
+    }
+  ],
+  "asof_rules_sha256": "01fd39768379b33eadfd692baed5586845a94dd7ded8880064acd2d36317ad0b",
+  "source_code_sha256": "701bf205b5d58af3073f50ee7ffe34fa62ea542c5e091447a686f7aa6a8974a5",
+  "catalog_complete": false,
+  "price_join_performed": false,
+  "full_universe_coverage_claimed": false,
+  "financial_features_enabled": false,
+  "training_performed": false
+}

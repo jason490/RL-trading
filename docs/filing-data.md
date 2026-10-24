@@ -527,3 +527,40 @@ filings, not model trading returns.108 focused SEC/financial checks pass. No
 price join, financial dataset promotion, training or normalization was performed;
 chronological issuer/price eligibility, availability and feature coverage remain
 required before a bounded model experiment.
+
+## Source-snapshot as-of history and staleness
+
+[As-of rules](../configs/experiments/filing_asof_rules.json) fix source-history
+selection before any price join/performance scoring. `ResearchFinancialHistory`
+reconstructs availability from original filing/acceptance dates, filters by exact
+requested issuer and decision timestamp, then chooses latest reporting end and
+latest available accession at that end. Equally ranked conflicting accessions
+reject. An older-period amendment stays its own vintage and does not displace a
+newer reporting period or recompose another accession's ratios.
+
+A newly available unready snapshot blocks fallback to a convenient older value.
+Annual reporting periods expire after450 calendar days, quarterly after180,
+measured from the original reporting end rather than amendment publication.
+Amendments therefore cannot refresh stale financial information. Unknown issuers,
+unavailable snapshots and stale/unready sources return no values. Dates from2024
+onward are excluded in this research reader. Input records and returned arrays
+are copied to prevent caller mutation from changing later queries.
+
+**A complete supplied filing ledger is still required.** The reader cannot detect
+an omitted filing it was never given. Include all qualifying sources, including
+unready snapshots; otherwise apparent source availability is only a partial-ledger
+upper bound. `source_ready` is a query result for that supplied ledger, not a
+publication guarantee, a stock/issuer verification, a complete-coverage claim or
+permission to enable model inputs. Every result leaves financial inputs disabled
+and historical price linkage unverified. No full-universe coverage percentage is
+claimed from the current two prototype source snapshots.
+
+Actual IBM/Kroger index hashes and timestamps verify no value one second before
+the reconstructed boundary, correct values at the boundary and no value after
+expiry. IBM boundary is2020-02-27T14:30Z; Kroger2020-04-03T13:30Z.
+[Source-backed inspection](../results/filing-source-review-2026-10-24/financial-asof-inspection.json)
+records incomplete catalog status explicitly.116 focused checks pass, including
+future-amendment isolation, old-period amendment precedence, no fallback,
+immutability, ambiguous-accession rejection and unchanged period-age expiry.
+Next: complete the original-filing cohort ledger and verify issuer/price joins
+before measuring actual training/development coverage. No financial training yet.
