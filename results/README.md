@@ -201,3 +201,11 @@ Missing temporary equity is unknown, and missing liabilities are not inferred.
 Default money extraction/financial rules unchanged; 152 focused checks and targeted
 Ruff pass. No training/new Colab units. Financial dataset acceptance and a robust
 model winner remain unachieved. See [accounting evidence](filing-source-review-2026-10-24/balance-identity-inspection.json).
+
+
+Fixed original-source missing-liabilities probe: earliest of33 eligible2020 annual
+filings is Intel0000050863-20-000011. Original end2019-12-28 differs from archive
+20191231; original also lacks qualifying current direct liabilities, so unchanged
+snapshot remains unready. One case only; no general coverage estimate, imputation,
+financial-input activation, model return or Colab units. Offline source/selection/
+report reproduction verified. [Evidence](filing-source-review-2026-10-24/missing-liabilities-probe.json).

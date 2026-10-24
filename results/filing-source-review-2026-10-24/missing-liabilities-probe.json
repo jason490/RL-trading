@@ -1,0 +1,48 @@
+{
+  "schema": "original-missing-liabilities-probe-result-v1",
+  "protocol_sha256": "588266d3202c14c06967bf6596f5f05f73d10bdfba8e55318b45950a92ecc91a",
+  "concept_records_sha256": "9af90f73e35ee63ca5fd99d9284a5db0a8c4a58f089b9ebde801651f8189555a",
+  "candidate_ledger_sha256": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+  "accession": "0000050863-20-000011",
+  "cik": "50863",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086320000011/a12282019q4-10kdocument_htm.xml",
+  "source_sha256": "b7b59760abcb0026c90814d3a5709ca8e26a02a38e56a018e21de025b9193fa7",
+  "source_bytes": 4497035,
+  "archive_period_label": "20191231",
+  "original_report_end": "2019-12-28",
+  "original_current_balance_concepts": [
+    "Assets"
+  ],
+  "original_current_direct_liabilities_present": false,
+  "snapshot": {
+    "schema": "filing-financial-snapshot-v1",
+    "names": [
+      "filing_revenue_growth",
+      "filing_net_margin",
+      "filing_liabilities_assets"
+    ],
+    "values": null,
+    "source_sha256": "b7b59760abcb0026c90814d3a5709ca8e26a02a38e56a018e21de025b9193fa7",
+    "accession": "0000050863-20-000011",
+    "cik": "50863",
+    "form": "10-K",
+    "report_end": "2019-12-28",
+    "filed": "2020-01-24",
+    "arithmetic_ready": false,
+    "financial_features_enabled": false,
+    "publication_verified": false,
+    "historical_price_link_verified": false,
+    "reason": "missing_or_conflicting_prior_or_balance_values"
+  },
+  "source_counts": {
+    "selected_concept_rows": 107,
+    "unqualified_usd_rows": 29,
+    "excluded_rows": 78,
+    "excluded_segment_or_scenario": 78
+  },
+  "sample_is_representative": false,
+  "liability_imputation_permitted": false,
+  "financial_inputs_enabled": false,
+  "training_performed": false,
+  "colab_allocated": false
+}

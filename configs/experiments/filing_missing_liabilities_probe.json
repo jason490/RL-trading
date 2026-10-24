@@ -1,0 +1,13 @@
+{
+  "schema": "original-missing-liabilities-probe-v1",
+  "selection": "Among 2020 10-K financial-table records with current Assets, NetIncomeLoss and supported revenue but no Liabilities, select the earliest archive_filed then accession; no price or model outcomes used.",
+  "eligible_count": 33,
+  "accession": "0000050863-20-000011",
+  "cik": "50863",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086320000011/a12282019q4-10kdocument_htm.xml",
+  "original_period_policy": "Read original DEI DocumentPeriodEndDate; do not substitute archive period label.",
+  "operation": "One bounded original-instance request, maximum 20MB, 60-second overall checked deadline, 20-second socket timeout, no redirects or retries. Preserve source hash/receipt and original extraction; compare direct current liabilities presence only.",
+  "liability_imputation_permitted": false,
+  "financial_inputs_enabled": false,
+  "training_performed": false
+}

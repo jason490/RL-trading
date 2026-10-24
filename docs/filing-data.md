@@ -788,3 +788,42 @@ allocation occurred. Required next work is to decide a feasible, explicitly defi
 financial family from source evidence, establish original-filing and causal
 issuer/price coverage, then preregister a matched training comparison. This audit
 does not improve or change any recorded model return.
+
+
+## Fixed missing-liabilities original-source probe — 2026-10-24
+
+The [registered probe](../configs/experiments/filing_missing_liabilities_probe.json) selected the earliest filing by archive filing
+date/accession among 33 annual 2020 candidates with supported current revenue,
+net income and assets but no current direct liabilities in the financial tables.
+The resulting Intel accession is `0000050863-20-000011`; no prices, model outcomes
+or future declining-stock labels influenced selection. One identified, bounded
+request retrieved the original extracted instance (4,497,035 bytes), retained at
+`data/raw/sec-xbrl/b7b59760abcb0026c90814d3a5709ca8e26a02a38e56a018e21de025b9193fa7/instance.xml`
+with its acquisition receipt. No identity/contact information is in that receipt.
+
+Original DEI report end is **2019-12-28**, versus archive label **20191231**.
+The original contains current unqualified Assets, but no qualifying current
+Liabilities fact. Therefore original extraction does not recover this particular
+missing direct input. The unchanged snapshot builder is unready with
+`missing_or_conflicting_prior_or_balance_values`; no ratio values are emitted.
+A single deterministic probe is not an estimate of the remaining cases or proof
+that all original extraction is infeasible. It does show that neither trusting
+archive period labels nor expecting original extraction to fill every gap is safe.
+No missing amount is imputed and no financial feature is enabled.
+
+[Result](../results/filing-source-review-2026-10-24/missing-liabilities-probe.json) records source/protocol/input hashes, exact report dates, source
+counts and the full unready snapshot. Reproduce selection and extraction offline:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/inspect_missing_liabilities.py
+```
+
+The report reproduces byte-for-byte from retained source/candidate metadata;
+targeted Ruff passes. Existing 152 focused tests remain green. Raw evidence and
+money payload remain retained; acquisition completed and no download process or
+temporary file remains. No model fitting, source normalization, price join,
+retired-test access or Colab allocation/units occurred. Next financial-family
+review should consider a separately specified flow-only family with explicit
+missingness and coverage gates, rather than silently changing liabilities or
+parent-income definitions. Any such family still requires original vintage,
+issuer/price links and causal availability before a training screen.
