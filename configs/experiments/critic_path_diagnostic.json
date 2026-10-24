@@ -1,0 +1,28 @@
+{
+  "schema": "critic-saved-path-audit-v1",
+  "source_summary": "results/distributional-critics-2026-10-24/screen.json",
+  "source_summary_sha256": "a723220005d79aaa0c837ff2b5847c2c663e845e837a33396bbf89c1fbbcad6d",
+  "state": ".runtime/critic-screen-state.json",
+  "arm": "tqc_truncated",
+  "seed": 11,
+  "symbols": 26,
+  "stocks": 22,
+  "etfs": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "DIA"
+  ],
+  "before": "selected-validation.json",
+  "after": "validation.json",
+  "comparison": "All original26 development episodes, paired same sessions/prices/buy-hold; final-minus-selected additive equity increments per100000initial equity. No outcome-based episode selection.",
+  "measurements": [
+    "first action/approved quantity/closing quantity/closing side/fill reason/protective reason differences",
+    "counts of sessions with each difference",
+    "daily final-minus-selected net P&L bridge partitioned by both inherited sides and same/different protective-reason sequences",
+    "largest absolute daily bridge difference per symbol, reporting-only",
+    "stock/ETF mean long and short contribution changes"
+  ],
+  "timeout_seconds": 120,
+  "interpretation": "Observed paired saved paths, not isolated action effects or a counterfactual protection/cost experiment. Once account paths differ, same-date actions do not share identical model inputs. No checkpoint selection, training or failed-family reopening."
+}

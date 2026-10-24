@@ -408,3 +408,33 @@ optimization or Colab units. First phase-filename rejection and reviewed v2
 correction retained; sample/metrics unchanged. Fixed failed family remains
 closed. Next bounded saved-development-path audit before another training
 hypothesis; no promotion or retired-test access.
+
+
+## Fixed saved-development-path divergence audit
+
+The separate `critic_path_diagnostic.json` protocol pins the accepted critic
+summary before inspecting all26 paired truncatedTQC selected/final development
+episodes. The worker checks accepted report/metadata hashes, actual one-update
+endpoints, full accounting, matched sessions/prices/holding, equity chains and
+whole-share fill chains. It records first action/quantity/side/reason differences
+and counts, plus an additive final-minus-selected daily net-equity bridge.
+Buckets use both inherited position sides and whether protective-reason sequences
+match. Aggregate every episode with equal symbol weights; never condition the
+mean on buckets occurring or select favorable examples.
+
+This describes observed paths. Once account states differ, same-date actions
+do not have identical model inputs; neither event labels nor P&L partitions
+isolate a policy-gradient, shorting, stop or cost effect. Largest daily differences
+are reporting-only. There is no promotion threshold, source-price download, new
+policy simulation, fitting, retired-test access or family reopening.
+
+The worker has a120-second deadline and a durable per-symbol journal; existing
+journals reject automatic restart. Nine numeric/chain tests cover telescoping
+bridges, inherited-side classification, first protective mismatches and invalid
+prices/dates/fills/equity/endpoints/baselines/actions. Actual outcome is pending.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/diagnose_critic_paths.py \
+  --output results/critic-paths-2026-10-24/summary.json
+```
