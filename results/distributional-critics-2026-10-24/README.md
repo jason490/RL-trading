@@ -129,3 +129,13 @@ account349.00, zero usage rate/assignments after cleanup; account floor150 and
 teardown170 remain enforced. Models, replay, curves and full reports remain under
 the source export's ignored artifacts/colab directories; public smoke evidence
 records their paths/hashes. No retired-test rows or broker orders were used.
+
+
+Fixed critic50k seed11 screens launched in three centrally metered Colab CPU
+sessions from immutable8c27af4 source after actual smoke acceptance; all actual
+kernels report3.13.16. No completed performance result yet. Reporting now verifies
+owned-cleaned archives, actual replay/optimizer/frozen state, matched baseline
+paths, selected/final curves and declining-stock diagnostics, checksum-pinned
+historical SAC metadata and unchanged0.01pp/0.05pp reproduction tolerances.
+118 focused checks/Ruff pass; report-time checks perform no local learning.
+Confirmation remains blocked on all fixed gates, not elapsed training steps.

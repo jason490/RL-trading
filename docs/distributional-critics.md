@@ -291,3 +291,36 @@ Conservative project39.039379/150, incremental0.025001, official account349.00
 with zero assignments. Fixed screen runtime projection3717.83<7200seconds;
 50k seed11 three-arm plans prepared. No completed screen, return improvement,
 retired-test access or promotion. Evidence:results/distributional-critics-2026-10-24/smokes.json.
+
+
+## Fixed screen reporting
+
+`scripts/report_critic_study.py` accepts only the complete three-arm seed11 fleet
+with verified owned shutdown, same clean source/settings, exact task plans and
+validated retained archives. It rechecks actual learned optimizer/replay/frozen
+restoration and development reports, reconciles matched holding paths, and retains
+checkpoint returns/change curves and reporting-only declining-stock diagnostics.
+The reporter never learns, fits normalization, selects a new checkpoint or opens
+retired data.
+
+Historical native SAC metadata is checksum-pinned. Every checkpoint mean must
+match the registered history within0.01pp; selected/final per-symbol returns must
+match within0.05pp. Any failure invalidates interpretation/promotion without
+automatic retry or widened tolerance. The candidate must also pass both fresh
+controls and all fixed absolute stock/ETF/median/drawdown gates. A passed screen
+still requires three-seed confirmation and later prospective evidence.
+
+After screen retrieval and shutdown, from the repository root:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/report_critic_study.py \
+  --state .runtime/critic-screen-state.json \
+  --source-proof .runtime/distributional-source-v1/export-proof.json \
+  --output results/distributional-critics-2026-10-24/screen.json
+```
+
+Standalone interactive HTML accompanies the compact JSON. Preserve raw artifacts
+and release-checksum verification before removing redundant transports. The
+reporter is implemented during training; no screen outcome is implied by its
+unit tests or availability.
