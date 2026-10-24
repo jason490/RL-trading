@@ -385,3 +385,14 @@ MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
 .venv/bin/python scripts/diagnose_critic_update.py \
   --output results/critic-update-2026-10-24/summary.json
 ```
+
+
+The first actual diagnostic was rejected before comparisons because the generic
+compact callback stores `checkpoint-50000.zip` after the final update. Actual
+ZIP counters and the callback implementation confirm `latest-checkpoint.zip`
+is the retained on-step48,999-update file for all three arms; latest.zip has
+49,000. The failed journal and original protocol are preserved. Reviewed v2
+(`configs/experiments/critic_update_diagnostic_v2.json`) changes only checkpoint
+file selection, pins the failure journal and uses a separate progress journal.
+Models,256 observation indices, measurements, deadlines and interpretation stay
+fixed. No returns/comparisons or optimizer steps occurred in the rejected attempt.

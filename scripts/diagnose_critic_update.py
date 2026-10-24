@@ -20,7 +20,7 @@ from rl_stocks.training.distributional_records import model_record, validate_rec
 from rl_stocks.training.distributional_restoration import _same_restored
 
 ROOT = Path(__file__).resolve().parents[1]
-PROTOCOL_SHA256 = "54efbcc2e898c8323e2d43ad0d57767feb1d2fc57d72fc2284bf65a3fdafd99c"
+PROTOCOL_SHA256 = "6a9539ca120efd932197c03c1882ec09b2a321f0fe22bbf28eeb824c103bca98"
 
 
 def save_journal(path, value):
@@ -31,10 +31,16 @@ def save_journal(path, value):
 
 def run(output):
     started = time.monotonic()
-    config_path = ROOT / "configs/experiments/critic_update_diagnostic.json"
+    config_path = ROOT / "configs/experiments/critic_update_diagnostic_v2.json"
     spec = json.loads(config_path.read_text())
     if digest(spec) != PROTOCOL_SHA256 or source_identity() != spec["source_hash"]:
         raise ValueError("fixed diagnostic and original frozen package required")
+    prior_failure = ROOT / spec["prior_failure"]
+    if (
+        checksum(prior_failure) != spec["prior_failure_sha256"]
+        or json.loads(prior_failure.read_text())["status"] != "failed"
+    ):
+        raise ValueError("reviewed version1 failure must remain preserved")
     if output.exists():
         raise ValueError("new diagnostic output required")
     summary_path, cleanup_path = (ROOT / spec[k] for k in ("source_summary", "cleanup"))
@@ -147,7 +153,8 @@ def run(output):
                 raise ValueError("inference changed weights, optimizer or RNG")
         records[arm] = record
         save_journal(
-            ROOT / ".runtime/critic-update-progress.json", dict(status="running", completed=records)
+            ROOT / ".runtime/critic-update-v2-progress.json",
+            dict(status="running", completed=records),
         )
     if any(checksum(Path(path)) != expected for path, expected in protected.items()):
         raise ValueError("diagnostic changed protected files")
@@ -176,7 +183,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    progress = ROOT / ".runtime/critic-update-progress.json"
+    progress = ROOT / ".runtime/critic-update-v2-progress.json"
     if progress.exists():
         raise ValueError("existing diagnostic journal requires review; no automatic restart")
     write_once(progress, b'{"status":"starting"}\n')

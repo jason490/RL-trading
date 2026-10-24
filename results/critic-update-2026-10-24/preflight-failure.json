@@ -1,0 +1,17 @@
+{
+  "status": "rejected_before_comparison",
+  "protocol_sha256": "54efbcc2e898c8323e2d43ad0d57767feb1d2fc57d72fc2284bf65a3fdafd99c",
+  "error": "exact one-update checkpoint pair required",
+  "observed_counters": {
+    "checkpoint_50000": 49000,
+    "latest_checkpoint": 48999,
+    "latest": 49000
+  },
+  "applies_to_all_three_arms": true,
+  "training_performed": false,
+  "colab_allocated": false,
+  "returns_recomputed": false,
+  "comparisons_completed": 0,
+  "journal_sha256": "7c090ba6c91c9f07a44417543eb50a2a97868ad5b0ab326ed756ac5eb50f46f6",
+  "reviewed_correction": "Version1 rejected before comparisons: checkpoint-50000.zip is post-update49000; latest-checkpoint.zip is the retained on-step48999 checkpoint. Hypothesis, models, indices and metrics unchanged."
+}
