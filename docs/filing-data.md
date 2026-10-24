@@ -610,3 +610,19 @@ retains that negative outcome. Source-concept equivalence and cohort coverage
 must be audited before original collection is scaled or a financial model runs.
 121 focused source/financial checks pass. No financial inputs, fitting or new
 Colab allocation/units were introduced by these preflights.
+
+## Bounded compressed master-index collection
+
+The collector also supports the separate registered master-index source:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/collect_sec_archives.py \
+  --source-kind master --state .runtime/sec-master-collection.json
+```
+
+It uses fixed SEC quarterly master.zip endpoints over2009q2–2023q4, a separate
+protocol hash/cache root,10MB per ZIP/1GB total compressed limits and the same
+one-hour deadline, operation reserve, private identity and immediate403/429 stop.
+Existing financial collection behavior remains unchanged. Verified cache entries
+must respect the requested byte limit too; cache reuse cannot bypass a smaller
+limit. Collection still does not parse or certify original financial statements.

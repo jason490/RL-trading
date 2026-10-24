@@ -46,19 +46,30 @@ class _NoRedirect(HTTPRedirectHandler):
 
 
 def download_archive(root, quarter, user_agent, *, max_bytes=256_000_000):
+    return _acquire_zip(root, quarter, user_agent, archive_url(quarter), max_bytes)
+
+
+def download_master_archive(root, quarter, user_agent, *, max_bytes=10_000_000):
+    archive_url(quarter)  # Same fixed pre2024 quarter scope.
+    if type(max_bytes) is not int or not 0 < max_bytes <= 10_000_000:
+        raise ValueError('invalid compressed master archive byte limit')
+    url = f'https://www.sec.gov/Archives/edgar/full-index/{quarter[:4]}/QTR{quarter[-1]}/master.zip'
+    return _acquire_zip(root, quarter, user_agent, url, max_bytes)
+
+
+def _acquire_zip(root, quarter, user_agent, url, max_bytes):
     """Acquire one pre2024 archive, with local cross-process request serialization.
 
     Maximum three attempts and a 120-second operation deadline. Access rejection
     and rate limiting stop immediately. The lock coordinates this cache root,
     not other machines; callers must coordinate any additional SEC clients.
     """
-    url = archive_url(quarter)
     # Validate without reading or exporting an environment identity.
     if (not isinstance(user_agent, str) or not user_agent or len(user_agent) > 256
             or any(ord(c) < 32 or ord(c) > 126 for c in user_agent)
             or not re.search(r'\S+@\S+\.\S+', user_agent)):
         raise ValueError('invalid SEC request identity')
-    if not isinstance(max_bytes, int) or not 0 < max_bytes <= 256_000_000:
+    if type(max_bytes) is not int or not 0 < max_bytes <= 256_000_000:
         raise ValueError('invalid archive byte limit')
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
@@ -88,6 +99,8 @@ def download_archive(root, quarter, user_agent, *, max_bytes=256_000_000):
                     or cached_hash != receipt.get('archive_sha256')
                     or archive.stat().st_size != receipt.get('bytes')):
                 raise ValueError('immutable SEC archive corruption')
+            if archive.stat().st_size > max_bytes:
+                raise ValueError('cached SEC archive exceeds requested byte limit')
             return archive
         for attempt in range(3):
             time.sleep(2)

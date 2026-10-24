@@ -1,0 +1,15 @@
+{
+  "schema": "sec-master-catalog-audit-v1",
+  "archive_quarters": {"first": "2009q2", "last": "2023q4"},
+  "source": "SEC full-index quarterly compressed master.zip",
+  "scope": "Compare financial-table candidate ledger with filing-index metadata for the same issuer candidates/forms; never infer absent filings from financial-table absence.",
+  "compressed_per_archive_limit": 10000000,
+  "compressed_total_limit": 1000000000,
+  "expanded_index_limit": 100000000,
+  "original_vintage_verified": false,
+  "limitation": "SEC master indexes may reflect post-acceptance corrections; index completeness does not establish historical availability or statement equivalence.",
+  "historical_mapping_verified": false,
+  "financial_features_enabled": false,
+  "training_performed": false,
+  "colab_allocation": false
+}

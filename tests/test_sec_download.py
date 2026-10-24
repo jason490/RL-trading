@@ -126,3 +126,20 @@ def test_receipt_tampering_rejected_before_cache_reuse(tmp_path, monkeypatch):
     receipt.write_text('{}')
     with pytest.raises(ValueError, match='receipt corruption'):
         d.download_archive(tmp_path, '2020q1', 'Research contact@example.org')
+
+
+def test_master_endpoint_is_fixed_and_distinct_from_financial_archive(tmp_path,monkeypatch):
+    opener=setup(monkeypatch,[Response(b'PK\x03\x04fixture')])
+    d.download_master_archive(tmp_path,'2020q1','Research contact@example.org')
+    assert opener.requests[0].full_url=='https://www.sec.gov/Archives/edgar/full-index/2020/QTR1/master.zip'
+    with pytest.raises(ValueError):
+        d.download_master_archive(tmp_path,'2024q1','Research contact@example.org')
+    with pytest.raises(ValueError):
+        d.download_master_archive(tmp_path,'2020q1','Research contact@example.org',max_bytes=10_000_001)
+
+
+def test_cached_archive_cannot_bypass_a_smaller_request_limit(tmp_path,monkeypatch):
+    setup(monkeypatch,[Response(b'PK\x03\x04fixture')])
+    d.download_archive(tmp_path,'2020q1','Research contact@example.org')
+    with pytest.raises(ValueError,match='cached SEC archive exceeds'):
+        d.download_archive(tmp_path,'2020q1','Research contact@example.org',max_bytes=4)
