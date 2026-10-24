@@ -78,12 +78,12 @@ def extract_facts(path, expected_sha256, accession, cik, report_end, filed):
 
     contexts, units = indexed('context'), indexed('unit')
     declared_ends = {n.text for n in root if isinstance(n.tag, str)
-                     and re.fullmatch(r'\{https?://xbrl.sec.gov/dei/[^}]+\}DocumentPeriodEndDate', n.tag)}
+                     and re.fullmatch(r'\{https?://(?:xbrl.sec.gov|xbrl.us)/dei/[^}]+\}DocumentPeriodEndDate', n.tag)}
     if declared_ends != {report_end}:
         raise ValueError('original document reporting period differs from supplied period')
     facts, counts = [], Counter()
     for node in root:
-        if not re.fullmatch(r'\{https?://fasb.org/us-gaap/[^}]+\}[^}]+', node.tag):
+        if not re.fullmatch(r'\{https?://(?:fasb.org|xbrl.us)/us-gaap/[^}]+\}[^}]+', node.tag):
             continue
         concept = node.tag.split('}', 1)[1]
         if concept not in MONEY_CONCEPTS:

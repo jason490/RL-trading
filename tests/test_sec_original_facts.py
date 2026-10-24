@@ -91,3 +91,12 @@ def test_duplicate_facts_retained_without_silent_concept_selection(tmp_path):
     assert len(result['facts'])==2
     assert result['facts'][0]['value']!=result['facts'][1]['value']
     assert not result['causal_ready']
+
+
+def test_legacy_2009_us_gaap_and_dei_namespaces_supported_explicitly(tmp_path):
+    path,sha=write(tmp_path)
+    raw=path.read_bytes().replace(b'http://fasb.org/us-gaap/2019-01-31',b'http://xbrl.us/us-gaap/2009-01-31').replace(b'http://xbrl.sec.gov/dei/2019-01-31',b'http://xbrl.us/dei/2009-01-31')
+    path.write_bytes(raw)
+    result=extract(path,hashlib.sha256(raw).hexdigest())
+    assert result['counts']['unqualified_usd_rows']==1
+    assert result['facts'][0]['concept'].startswith('{http://xbrl.us/us-gaap/2009-01-31}')

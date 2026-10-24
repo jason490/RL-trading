@@ -1,0 +1,21 @@
+{
+  "schema": "sec-compressed-master-inspection-v1",
+  "source_url": "https://www.sec.gov/Archives/edgar/full-index/2020/QTR1/master.zip",
+  "sha256": "a547d7b7a59b73c819c4aca653a4bb25917df0437524bbdbf2d3dd50876ed947",
+  "compressed_bytes": 3809202,
+  "quarter": "2020q1",
+  "selected_records": [
+    [
+      "51143",
+      "INTERNATIONAL BUSINESS MACHINES CORP",
+      "10-K",
+      "2020-02-25",
+      "edgar/data/51143/0001558370-20-001334.txt"
+    ]
+  ],
+  "financial_values_read": false,
+  "historical_mapping_verified": false,
+  "financial_features_enabled": false,
+  "training_performed": false,
+  "interpretation": "Full filing-index metadata can identify submissions omitted by financial-table archives. It does not itself provide facts, original publication vintages or stock identity."
+}

@@ -564,3 +564,49 @@ future-amendment isolation, old-period amendment precedence, no fallback,
 immutability, ambiguous-accession rejection and unchanged period-age expiry.
 Next: complete the original-filing cohort ledger and verify issuer/price joins
 before measuring actual training/development coverage. No financial training yet.
+
+## Original-source candidate ledger and early-taxonomy preflight
+
+The reproducible candidate builder reads the59 retained financial-table SUB
+archives and creates6,161 accession targets across112 current/predecessor CIKs.
+The fixed[discovery scope](../configs/filings/cohort_discovery_v1.json) includes
+all107 research stocks plus five explicitly source-identified predecessor IDs;
+it does not use fuzzy company-name matching or certify issuer/price intervals.
+Private/subsidiary filings may remain collection candidates and must never be
+assigned to public shares without the separate dated lineage gate.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_sec_original_ledger.py \
+  --state .runtime/sec-coverage-collection.json \
+  --discovery artifacts/filings/current-identity-discovery.json \
+  --output artifacts/filings/original-candidate-ledger.json
+```
+
+The ledger retains archive hashes, raw period/publication labels, fiscal metadata,
+original instance filenames and fixed SEC URLs. Source hashes, unique accessions,
+complete registered quarter range and safe instance basenames are checked.
+No original reporting date is invented from an archive label. The
+[compact evidence](../results/filing-source-review-2026-10-24/original-candidate-ledger-summary.json)
+explicitly says the **full filing catalog is incomplete**: IBM's known2019
+annual accession is omitted by those financial-table ZIPs.
+
+A compressed[SEC Q1 master index](https://www.sec.gov/Archives/edgar/full-index/2020/QTR1/master.zip)
+preflight recovers the missing IBM accession. The ZIP is3,809,202 bytes and
+expands to29,470,320 bytes, avoiding the earlier20MB raw-index request cap.
+Raw ZIP/receipt and[inspection](../results/filing-source-review-2026-10-24/compressed-master-inspection.json)
+are retained. Full quarterly indexes must be compared across the registered range
+before calling the accession ledger complete. These indexes describe filing
+metadata; they do not provide facts or guarantee original publication vintages.
+
+Early original IBM/Kroger2010 filings use legacy`xbrl.us` US-GAAP/DEI namespaces.
+The extractor and snapshot validator now support those namespaces explicitly,
+while mixed US-GAAP taxonomy versions remain unready without an explicit mapping.
+Both early originals extract successfully, but their arithmetic is **unready**
+under the unchanged feature definitions: IBM uses`ProfitLoss` and Kroger goods
+sales tags rather than the required comparable total concepts. No alias was
+silently broadened or added to force an arithmetic pass. The
+[early inspection](../results/filing-source-review-2026-10-24/early-original-source-inspection.json)
+retains that negative outcome. Source-concept equivalence and cohort coverage
+must be audited before original collection is scaled or a financial model runs.
+121 focused source/financial checks pass. No financial inputs, fitting or new
+Colab allocation/units were introduced by these preflights.

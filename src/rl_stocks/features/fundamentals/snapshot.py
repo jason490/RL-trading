@@ -30,6 +30,7 @@ def build_snapshot(payload, form):
 
     groups = defaultdict(lambda: defaultdict(list))
     instants = defaultdict(list)
+    taxonomies = set()
     for fact in payload['facts']:
         if fact['exclusion_reasons']:
             continue
@@ -43,8 +44,10 @@ def build_snapshot(payload, form):
         if not value.is_finite():
             raise ValueError('nonfinite source amount')
         namespace, concept = fact['concept'].split('}', 1)
-        if not namespace.startswith(('{http://fasb.org/us-gaap/', '{https://fasb.org/us-gaap/')):
+        if not namespace.startswith(('{http://fasb.org/us-gaap/', '{https://fasb.org/us-gaap/',
+                                     '{http://xbrl.us/us-gaap/', '{https://xbrl.us/us-gaap/')):
             raise ValueError('standard US-GAAP source concepts required')
+        taxonomies.add(namespace)
         if fact['period_kind'] == 'instant':
             if finish == end and concept in {'Assets', 'Liabilities'}:
                 instants[concept].append(value)
@@ -57,6 +60,8 @@ def build_snapshot(payload, form):
         else:
             raise ValueError('unsupported source period kind')
 
+    if len(taxonomies) > 1:
+        return unready('mixed_us_gaap_taxonomy_versions')
     lower, upper = BOUNDS[form]
     current_candidates = [period for period, concepts in groups.items()
                           if period[1] == end and lower <= (period[1] - period[0]).days + 1 <= upper

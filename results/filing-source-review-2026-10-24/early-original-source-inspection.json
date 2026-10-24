@@ -1,0 +1,68 @@
+{
+  "schema": "sec-early-original-source-inspection-v1",
+  "records": [
+    {
+      "symbol": "IBM",
+      "source_sha256": "9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c",
+      "accession": "0001047469-10-001151",
+      "report_end": "2009-12-31",
+      "counts": {
+        "selected_concept_rows": 13,
+        "unqualified_usd_rows": 13
+      },
+      "snapshot": {
+        "schema": "filing-financial-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin",
+          "filing_liabilities_assets"
+        ],
+        "values": null,
+        "source_sha256": "9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c",
+        "accession": "0001047469-10-001151",
+        "cik": "51143",
+        "form": "10-K",
+        "report_end": "2009-12-31",
+        "filed": "2010-02-23",
+        "arithmetic_ready": false,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": "missing_current_comparable_flows"
+      }
+    },
+    {
+      "symbol": "KR",
+      "source_sha256": "d9a0e225bb09dd27a907455b1382608b4c557ab7246e74a31b9288db750e9abe",
+      "accession": "0001104659-10-017258",
+      "report_end": "2010-01-30",
+      "counts": {
+        "selected_concept_rows": 10,
+        "unqualified_usd_rows": 10
+      },
+      "snapshot": {
+        "schema": "filing-financial-snapshot-v1",
+        "names": [
+          "filing_revenue_growth",
+          "filing_net_margin",
+          "filing_liabilities_assets"
+        ],
+        "values": null,
+        "source_sha256": "d9a0e225bb09dd27a907455b1382608b4c557ab7246e74a31b9288db750e9abe",
+        "accession": "0001104659-10-017258",
+        "cik": "56873",
+        "form": "10-K",
+        "report_end": "2010-01-30",
+        "filed": "2010-03-30",
+        "arithmetic_ready": false,
+        "financial_features_enabled": false,
+        "publication_verified": false,
+        "historical_price_link_verified": false,
+        "reason": "missing_current_comparable_flows"
+      }
+    }
+  ],
+  "original_reader_legacy_namespace_gap_fixed": true,
+  "financial_features_enabled": false,
+  "training_performed": false
+}

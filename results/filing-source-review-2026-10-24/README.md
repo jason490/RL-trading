@@ -251,3 +251,24 @@ filings cannot be detected by the reader, and no full-universe coverage rate is
 claimed. Include all unready/ready sources before dataset acceptance. Stock-price
 links, complete catalog and financial-input approval remain false. No price join,
 normalization fitting, model training or new compute units.
+
+## Original candidate ledger and earliest-source compatibility
+
+All59 financial SUB archives produce6,161 candidate original instances across112
+current/predecessor CIKs for107 research stocks. All archive hashes and target
+filenames were checked; candidates do not certify historical issuer assignment.
+The[ledger summary](original-candidate-ledger-summary.json) explicitly flags the
+full filing catalog incomplete, including the known omitted IBM annual accession.
+A3.81MB compressed2020Q1 master ZIP recovers that accession; its29.47MB expanded
+index exceeded the earlier raw request cap. [Inspection](compressed-master-inspection.json).
+Full master-index comparison remains required before catalog completeness.
+
+Original2010 IBM/Kroger instance bytes/receipts are retained. Legacy`xbrl.us`
+namespace support fixes extraction compatibility, but both snapshots remain
+arithmetic-unready under fixed concept rules. IBM uses`ProfitLoss`, Kroger goods
+sales; no silent aliasing was used to claim comparable parent net margin or total
+revenue. Mixed taxonomy versions also remain unready. [Early-source evidence](early-original-source-inspection.json).
+121 focused checks/lint pass, including predecessor selection without fuzzy names,
+unsafe paths, incomplete source range and corrupted archives. No model fitting,
+price joins, final-test evaluation or new Colab units. Next complete filing-index
+catalog and concept-coverage audit before scaling original extraction.

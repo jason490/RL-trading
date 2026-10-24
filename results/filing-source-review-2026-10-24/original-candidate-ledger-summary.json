@@ -1,0 +1,43 @@
+{
+  "schema": "sec-original-candidate-ledger-v1",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "forms": [
+    "10-K",
+    "10-Q",
+    "10-K/A",
+    "10-Q/A"
+  ],
+  "stock_count": 107,
+  "candidate_cik_count": 112,
+  "accession_count": 6161,
+  "filing_year_counts": {
+    "2009": 191,
+    "2010": 410,
+    "2011": 424,
+    "2012": 423,
+    "2013": 424,
+    "2014": 426,
+    "2015": 426,
+    "2016": 424,
+    "2017": 425,
+    "2018": 433,
+    "2019": 429,
+    "2020": 429,
+    "2021": 431,
+    "2022": 433,
+    "2023": 433
+  },
+  "source_archives_verified": true,
+  "discovery_only": true,
+  "original_instances_collected": false,
+  "historical_mapping_verified": false,
+  "financial_features_enabled": false,
+  "training_performed": false,
+  "specification_sha256": "2932036e3ea8990644341209e65a2a5134d62cf30fbdddca787bf76fe0592d08",
+  "full_ledger_sha256": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+  "full_ledger_bytes": 4467275,
+  "full_filing_catalog_complete": false,
+  "source_code_sha256": "083dc66bb240894caa02ccf618e6af3992c7b1854ee591ed771124cfca0814bf",
+  "known_missing_accession": "0001558370-20-001334",
+  "reason_incomplete": "Financial-table archives omit some real filings; compare full master indexes before original collection or coverage acceptance."
+}

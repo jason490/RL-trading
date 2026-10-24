@@ -1,0 +1,20 @@
+{
+  "schema": "sec-original-cohort-discovery-v1",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "current_candidate_source_sha256": "93050f93c3540af9af80a05885d562fcf4e7de4e8e5acce0944a2891bcfbec48",
+  "scope": "All107 stock candidates plus source-identified predecessors; source collection only, never an issuer-price mapping.",
+  "forms": ["10-K", "10-Q", "10-K/A", "10-Q/A"],
+  "additional_candidates": [
+    {"symbol": "APA", "cik": "6769", "evidence": "results/filing-source-review-2026-10-24/2020q1-dated-identities.json"},
+    {"symbol": "BLK", "cik": "1364742", "evidence": "results/filing-source-review-2026-10-24/2020q1-dated-identities.json"},
+    {"symbol": "XOM", "cik": "34088", "evidence": "results/filing-source-review-2026-10-24/2020q1-dated-identities.json"},
+    {"symbol": "GOOGL", "cik": "1288776", "evidence": "configs/filings/issuer_evidence_v1.json"},
+    {"symbol": "LIN", "cik": "884905", "evidence": "configs/filings/issuer_evidence_v1.json"}
+  ],
+  "no_name_matching": true,
+  "older_private_subsidiary_filings": "May be collected as candidates; never assigned to current public shares without dated lineage gates.",
+  "original_period_required": "Archive period labels are retained as labels only; inspect original DEI/context dates before arithmetic.",
+  "historical_mapping_verified": false,
+  "financial_features_enabled": false,
+  "training_performed": false
+}

@@ -1889,3 +1889,17 @@ queries and records/results remain independent copies. Complete supplied ledger
 still mandatory: two prototypes do not justify a cohort coverage percentage.
 No financial-input or price-link approval, no price join/fit/training/new units.
 Next original-filing cohort ledger and verified chronological identity/coverage.
+
+### Original-candidate cohort and earliest-source compatibility — 2026-10-24 UTC
+
+Hash-verified59 financial SUB archives yield6,161 original candidates/112CIKs
+for107 stocks, including explicit older IDs; no fuzzy names or historical-price
+approval. Ledger completeness remains false because table ZIPs omit real filings.
+Compressed Q1master3.81MB/expanded29.47MB recovers known IBM missing accession;
+full master-index comparison is the next completeness step. Early IBM/Kroger2010
+originals use`xbrl.us` namespaces; supported explicitly now. Extraction succeeds,
+but fixed arithmetic remains unready (ProfitLoss/goods-sales labels unsupported).
+No alias/gate relaxation to force a pass; mixed taxonomy versions unready.
+121 focused checks/lint pass. No financial inputs, normalization, training,
+retired price/return evaluation or additional Colab units. Retain negative
+source outcomes and audit concept coverage before large original downloads.

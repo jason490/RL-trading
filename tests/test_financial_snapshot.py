@@ -108,3 +108,12 @@ def test_retired_filing_rejected():
     p['filed']='2024-01-01'
     with pytest.raises(ValueError,match='retired'):
         build_snapshot(p,'10-K')
+
+
+def test_legacy_taxonomy_supported_without_mixing_versions():
+    p=payload()
+    for f in p['facts']:
+        f['concept']=f['concept'].replace('http://fasb.org/us-gaap/2019-01-31','http://xbrl.us/us-gaap/2009-01-31')
+    assert build_snapshot(p,'10-K')['arithmetic_ready']
+    p['facts'][0]['concept']=NS+'Revenues'
+    assert build_snapshot(p,'10-K')['reason']=='mixed_us_gaap_taxonomy_versions'
