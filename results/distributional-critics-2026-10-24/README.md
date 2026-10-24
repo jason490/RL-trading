@@ -139,3 +139,17 @@ paths, selected/final curves and declining-stock diagnostics, checksum-pinned
 historical SAC metadata and unchanged0.01pp/0.05pp reproduction tolerances.
 118 focused checks/Ruff pass; report-time checks perform no local learning.
 Confirmation remains blocked on all fixed gates, not elapsed training steps.
+
+
+## Native SAC50k control completed and reproduced
+
+[Actual control acceptance](native-control.json) verifies selected/final net
+returns7.928143% on the original26-symbol development panel, versus matched
+holding30.6019%. Every registered checkpoint mean and selected/final per-symbol
+return reproduces exactly (maximum discrepancies0.0pp), inside unchanged
+0.01pp/0.05pp tolerances. Actual selected/final/frozen optimizer states restore;
+50,000 replay rows validate and64 frozen predictions match exactly, with
+normalization/files unchanged and no local optimizer steps. The control's
+artifacts are retrieved and its owned session is verified stopped. Both TQC
+screens are still running; this control acceptance is not a full-study gate
+result, return improvement, confirmation allocation or promotion.
