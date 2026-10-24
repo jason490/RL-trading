@@ -11,8 +11,7 @@ the full required multi-seed and prospective acceptance process.
 full selected/final7.70/−3.77%, masked18.73/18.73%, legacy19.62/18.48%, holding
 30.60%. Both-control/absolute/risk gates fail; fixed family closed.468 frozen
 checks including smokes, six owned sessions stopped. Project39.014378/150,
-last official account349.02 zero assignments. Publication and saved-path diagnosis
-next; robust-return objective remains unmet.
+last official account349.02 zero assignments. 16 release assets and cleanup verified; saved-path diagnosis complete. Robust-return objective remains unmet.
 
 ## Latest completed history comparison
 
@@ -160,3 +159,8 @@ performance score or Colab allocation. Matched dataset/model study remains pendi
 CPU Colab runs,234 exact frozen predictions and actual mask rejection, models/Adam/
 mapped initialization/sampling restored, three owned sessions stopped. Project
 38.934668/account349.08. Fixed100k three-arm plans prepared, no return result yet.
+
+
+[Market-context saved-action diagnosis](market-actions-2026-10-24/README.md):
+full model deterioration mainly reflects reduced long contribution even as short
+exposure decreases.156 saved episodes, no causal claim, fitting or extra units.

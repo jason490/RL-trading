@@ -2389,3 +2389,13 @@ Market-context publication:16 GitHub server-size/SHA-verified assets, six comple
 bundles/reports; only two duplicate archives53,422,663bytes removed,204 retained
 hashes unchanged. All three immutable dataset hashes reverified. Strict summary
 byte-identical after actual model/Adam restoration. [Receipts](../results/market-context-2026-10-23/release-verification.json).
+
+
+Market-context saved-action audit: six accepted phases/156 episodes,33 focused
+checks. Full selected→final short exposure decreases stock15.12→8.55%/ETF4.65→1.53%,
+but net short contribution remains negative/slightly worsens; net long contribution
+falls19.74→8.53pp/5.69→−1.64pp. Cost drag4.96→5.96pp/3.20→4.63pp is not the whole
+gap. Observational accounting, not a sole cause or reason to ban shorts/change
+rewards. Source hashes unchanged; no fitting/data/provider access or new units.
+Family closed; distinct hypothesis review before new allocation.
+[Evidence](../results/market-actions-2026-10-24/README.md).
