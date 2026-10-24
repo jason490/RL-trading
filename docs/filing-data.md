@@ -965,3 +965,35 @@ denominators, aggregate/per-era boundary gates and rejection of live or false-re
 reports. The owned collector handle is terminal(exit1); no worker/runtime remains.
 Retained raw evidence/payloads/manifest/journal are preserved. No Colab allocation,
 training, price access, source normalization or model-return change occurred.
+
+
+## Reviewed continuation after oversized-source stop
+
+The [reviewed continuation addendum](../configs/experiments/filing_original_flow_pilot_resume.json) pins the original failed journal
+SHA and exact AEP stop accession. `--reviewed-resume` verifies its retained source
+and fact hashes before copying the seven-case prefix to a **separate** journal.
+The original failed journal and public terminal summary remain unchanged.
+The observed oversized eighth case is counted as unsupported, with no retry or
+replacement. Future oversized originals receive the same failure status in the
+fixed319-document denominator; no source/parser cap, feature definition, selected
+stock or80%/70% threshold changes. HTTP403/429/transport failures still stop.
+
+The20,000,001 bytes observed by the original streaming-limit branch are recorded
+as discarded response bytes, separately from complete retained source bytes.
+Subsequent streaming-limit bytes are counted too; declared-length rejections read
+zero response-body bytes. Both categories consume the6GB acquisition reserve.
+The original start+3600-second wall-clock deadline includes the stopped interval
+and is **not reset** by review. Another terminal journal cannot restart itself.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/collect_original_flow_pilot.py --reviewed-resume
+# After the continuation is terminal, verify every retained original and snapshot:
+PYTHONPATH=src .venv/bin/python scripts/report_original_flow_pilot.py --reviewed
+```
+
+Continuation state is `.runtime/sec-original-flow-pilot-reviewed.json`; the
+separate result is `original-flow-pilot-reviewed-summary.json` in the dated result
+folder.187 focused checks and targeted Ruff pass; original terminal report still
+reproduces unchanged. This operational handling does not establish a passed
+source gate, original publication/vintage or historical issuer/share eligibility,
+and does not authorize financial-input training. No Colab allocation is required.

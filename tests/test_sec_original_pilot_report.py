@@ -64,3 +64,11 @@ def test_live_reordered_or_false_ready_state_rejected(change):
         state['completed'][0]['snapshot']['arithmetic_ready'] = False
     with pytest.raises(ValueError):
         module().summarize(state, manifest)
+
+
+def test_oversized_document_remains_failure_in_fixed_denominator():
+    state, manifest = fixture(set(range(20)))
+    state['completed'][0].update(status='source_exceeds_limit', arithmetic_ready=False)
+    result = module().summarize(state, manifest)
+    assert result['selected_originals'] == 20 and result['arithmetic_ready'] == 19
+    assert result['status_counts']['source_exceeds_limit'] == 1

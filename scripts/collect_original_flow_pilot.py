@@ -13,7 +13,7 @@ from collect_sec_archives import _save
 from rl_stocks.core.files import write_once
 from rl_stocks.data.providers.sec.download import identity
 from rl_stocks.data.providers.sec.facts import extract_facts
-from rl_stocks.data.providers.sec.originals import OriginalMissing, acquire_original
+from rl_stocks.data.providers.sec.originals import OriginalMissing, OriginalTooLarge, acquire_original
 from rl_stocks.features.fundamentals.snapshot import build_flow_snapshot
 
 PROTOCOL = Path('configs/experiments/filing_original_flow_pilot.json')
@@ -21,6 +21,8 @@ RULES = Path('configs/experiments/filing_flow_feature_rules.json')
 LEDGER = Path('artifacts/filings/original-candidate-ledger.json')
 MANIFEST = Path('artifacts/filings/original-flow-pilot-manifest.json')
 STATE = Path('.runtime/sec-original-flow-pilot.json')
+REVIEWED_STATE = Path('.runtime/sec-original-flow-pilot-reviewed.json')
+RESUME_PROTOCOL = Path('configs/experiments/filing_original_flow_pilot_resume.json')
 
 
 def digest(path):
@@ -88,15 +90,54 @@ def inspect(path, record, output_root):
                 archive_period_differs=end.replace('-', '') != record['archive_period_label'])
 
 
-def collect():
+def reviewed_start(manifest):
+    """Review one fixed historical size-limit stop without mutating its journal."""
+    spec = json.loads(RESUME_PROTOCOL.read_text())
+    if digest(STATE) != spec['prior_state_sha256']:
+        raise ValueError('reviewed prior journal hash mismatch')
+    prior = json.loads(STATE.read_text())
+    if (prior['status'] != 'failed' or prior['error_type'] != 'ValueError'
+            or prior['current_accession'] != spec['prior_stop_accession']
+            or prior['manifest_sha256'] != digest(MANIFEST)):
+        raise ValueError('reviewed source-cap stop does not match prior state')
+    completed = prior['completed']
+    expected = manifest['selected'][:len(completed)]
+    if [(r['cik'], r['accession'], r['stratum']) for r in completed] != [
+            (r['cik'], r['accession'], r['stratum']) for r in expected]:
+        raise ValueError('prior completed prefix differs from manifest')
+    # Verify every retained source and derived payload before accepting the prefix.
+    for row in completed:
+        path = Path(row['source_path'])
+        if digest(path) != row['source_sha256'] or path.stat().st_size != row['bytes']:
+            raise ValueError('prior retained original source corruption')
+        if row['status'] == 'inspected' and digest(Path(row['fact_payload_path'])) != row['fact_payload_sha256']:
+            raise ValueError('prior retained fact payload corruption')
+    stopped = manifest['selected'][len(completed)]
+    if stopped['accession'] != spec['prior_stop_accession']:
+        raise ValueError('reviewed stop is not the next selected document')
+    completed.append(dict(cik=stopped['cik'], accession=stopped['accession'],
+                          stratum=stopped['stratum'], status='source_exceeds_limit',
+                          arithmetic_ready=False, observed_response_bytes=spec['prior_rejected_response_bytes'],
+                          recovered_from_reviewed_stop=True))
+    prior.update(status='running', current_accession=None,
+                 prior_state_sha256=digest(STATE), resume_protocol_sha256=digest(RESUME_PROTOCOL),
+                 prior_source_git_revision=prior['source_git_revision'],
+                 rejected_response_bytes=spec['prior_rejected_response_bytes'],
+                 reviewed_resume_utc_epoch=time.time())
+    prior.pop('error_type')
+    return prior
+
+
+def collect(*, reviewed_resume=False):
     manifest = prepare()
     spec = json.loads(PROTOCOL.read_text())
     root = Path('data/raw/sec-xbrl')
     root.mkdir(parents=True, exist_ok=True)
-    STATE.parent.mkdir(parents=True, exist_ok=True)
-    with STATE.with_suffix('.lock').open('a+b') as lock:
+    state_path = REVIEWED_STATE if reviewed_resume else STATE
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    with state_path.with_suffix('.lock').open('a+b') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        if STATE.exists():
+        if state_path.exists():
             raise ValueError('existing collection requires review; automatic restart disabled')
         user_agent = identity()
         started = time.monotonic()
@@ -105,26 +146,38 @@ def collect():
                      source_git_revision=None, completed=[], total_source_bytes=0,
                      current_accession=None, elapsed_seconds=0, financial_inputs_enabled=False,
                      training_performed=False, colab_allocated=False)
+        if reviewed_resume:
+            state = reviewed_start(manifest)
+        original_deadline = state['started_utc_epoch'] + spec['maximum_collection_seconds']
+        monotonic_deadline = started + max(0, original_deadline - time.time())
         # Source revision is recorded without environment/credential output.
         import subprocess
         state['source_git_revision'] = subprocess.check_output(
             ['git', 'rev-parse', 'HEAD'], text=True).strip()
-        _save(STATE, state)
+        _save(state_path, state)
         try:
-            for record in manifest['selected']:
-                if time.monotonic() - started + spec['next_operation_reserve_seconds'] > spec['maximum_collection_seconds']:
+            for record in manifest['selected'][len(state['completed']):]:
+                if time.monotonic() + spec['next_operation_reserve_seconds'] > monotonic_deadline:
                     raise TimeoutError('pilot operation reserve exceeds deadline')
-                if state['total_source_bytes'] + spec['maximum_source_bytes'] > spec['maximum_total_source_bytes']:
+                if (state['total_source_bytes'] + state.get('rejected_response_bytes', 0)
+                        + spec['maximum_source_bytes'] + 1 > spec['maximum_total_source_bytes']):
                     raise ValueError('pilot byte reserve exhausted')
                 if shutil.disk_usage(root).free < spec['minimum_free_disk_bytes'] + spec['maximum_source_bytes']:
                     raise ValueError('pilot free-disk reserve exhausted')
                 state['current_accession'] = record['accession']
-                _save(STATE, state)
+                _save(state_path, state)
                 result = dict(accession=record['accession'], cik=record['cik'], stratum=record['stratum'])
                 try:
                     path = acquire_original(root, record, user_agent)
                 except OriginalMissing:
                     result.update(status='source_missing_404', arithmetic_ready=False)
+                except OriginalTooLarge as error:
+                    if not reviewed_resume:
+                        raise
+                    result.update(status='source_exceeds_limit', arithmetic_ready=False,
+                                  observed_response_bytes=error.observed_bytes,
+                                  declared_response_bytes=error.declared_bytes)
+                    state['rejected_response_bytes'] += error.observed_bytes
                 else:
                     size = path.stat().st_size
                     state['total_source_bytes'] += size
@@ -138,8 +191,8 @@ def collect():
                         result.update(inspected, status='inspected',
                                       arithmetic_ready=inspected['snapshot']['arithmetic_ready'])
                 state['completed'].append(result)
-                state['elapsed_seconds'] = time.monotonic() - started
-                _save(STATE, state)
+                state['elapsed_seconds'] = time.time() - state['started_utc_epoch']
+                _save(state_path, state)
                 print(f"Inspected {len(state['completed'])}/{len(manifest['selected'])}: "
                       f"{record['accession']} {result['status']} ready={result['arithmetic_ready']}", flush=True)
             state['status'] = 'complete'
@@ -149,14 +202,16 @@ def collect():
             state['error_type'] = type(error).__name__
             raise
         finally:
-            state['elapsed_seconds'] = time.monotonic() - started
-            _save(STATE, state)
+            state['elapsed_seconds'] = time.time() - state['started_utc_epoch']
+            _save(state_path, state)
         return state
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--prepare-only', action='store_true')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--prepare-only', action='store_true')
+    mode.add_argument('--reviewed-resume', action='store_true')
     args = parser.parse_args()
     if args.prepare_only:
         prepare()
@@ -164,7 +219,7 @@ def main():
         def terminate(signum, frame):
             raise KeyboardInterrupt('pilot termination requested')
         signal.signal(signal.SIGTERM, terminate)
-        collect()
+        collect(reviewed_resume=args.reviewed_resume)
 
 
 if __name__ == '__main__':

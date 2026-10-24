@@ -1,0 +1,13 @@
+{
+  "schema": "sec-original-flow-pilot-reviewed-resume-v1",
+  "prior_state_sha256": "6ffbf0c72c48cd38b7e58acc91ebdce7f36ccb56651bf30eb37a2b6c83942b2a",
+  "prior_stop_accession": "0000004904-15-000008",
+  "reviewed_stop_reason": "Observed collector traceback: original source exceeds byte limit, from the streaming branch after20000001 bytes. No complete source was promoted.",
+  "prior_rejected_response_bytes": 20000001,
+  "policy": "Count the prior over-limit document and subsequent oversized originals as unsupported selected cases without retry/replacement. Keep the20MB source/parser cap, original319-document manifest, same source-feasibility thresholds and original3600-second wall-clock deadline. No automatic restart after another stop.",
+  "preserve_prior_journal": true,
+  "enlarge_limits_or_change_feature_rules": false,
+  "financial_inputs_enabled": false,
+  "training_performed": false,
+  "colab_allocated": false
+}

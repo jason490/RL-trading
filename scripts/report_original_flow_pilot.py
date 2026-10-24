@@ -1,4 +1,5 @@
 """Verify retained pilot originals and report the fixed source-feasibility gates."""
+import argparse
 import hashlib
 import json
 from collections import Counter
@@ -30,7 +31,7 @@ def summarize(state, manifest):
     if len(completed) > len(selected) or (state['status'] == 'complete' and len(completed) != len(selected)):
         raise ValueError('collection completeness mismatch')
     for row in completed:
-        if row['status'] not in {'inspected', 'unsupported_original', 'source_missing_404'}:
+        if row['status'] not in {'inspected', 'unsupported_original', 'source_missing_404', 'source_exceeds_limit'}:
             raise ValueError('unsupported collection result status')
         expected_ready = row['snapshot']['arithmetic_ready'] if row['status'] == 'inspected' else False
         if row['arithmetic_ready'] is not expected_ready:
@@ -62,7 +63,16 @@ def summarize(state, manifest):
 
 
 def main():
-    state = json.loads(STATE.read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--reviewed', action='store_true')
+    args = parser.parse_args()
+    state_path = Path('.runtime/sec-original-flow-pilot-reviewed.json') if args.reviewed else STATE
+    state = json.loads(state_path.read_text())
+    if args.reviewed:
+        resume_protocol = Path('configs/experiments/filing_original_flow_pilot_resume.json')
+        if (state['prior_state_sha256'] != sha(STATE)
+                or state['resume_protocol_sha256'] != sha(resume_protocol)):
+            raise ValueError('reviewed historical stop/addendum hash mismatch')
     manifest = json.loads(MANIFEST.read_text())
     if (state['manifest_sha256'] != sha(MANIFEST)
             or manifest['protocol_sha256'] != sha(PROTOCOL)
@@ -73,7 +83,7 @@ def main():
     metadata = {(r['cik'], r['accession']): r for r in manifest['selected']}
     verified_bytes = 0
     for record in state['completed']:
-        if record['status'] == 'source_missing_404':
+        if record['status'] in {'source_missing_404', 'source_exceeds_limit'}:
             continue
         path = Path(record['source_path'])
         if sha(path) != record['source_sha256'] or path.stat().st_size != record['bytes']:
@@ -98,7 +108,7 @@ def main():
                   source_git_revision=state['source_git_revision'],
                   terminal_error_type=state.get('error_type'),
                   unfinished_current_accession=state.get('current_accession'),
-                  state_sha256=sha(STATE), manifest_sha256=sha(MANIFEST),
+                  state_sha256=sha(state_path), manifest_sha256=sha(MANIFEST),
                   protocol_sha256=sha(PROTOCOL), rules_sha256=sha(RULES),
                   total_verified_source_bytes=verified_bytes,
                   elapsed_seconds=state['elapsed_seconds'], **summary,
@@ -107,7 +117,16 @@ def main():
                   original_vintage_verified=False, historical_price_links_verified=False,
                   financial_inputs_enabled=False, normalization_fitted=False,
                   training_performed=False, colab_allocated=False)
-    output = Path('results/filing-source-review-2026-10-24/original-flow-pilot-summary.json')
+    if args.reviewed:
+        rejected_bytes = sum(r.get('observed_response_bytes', 0) for r in state['completed'])
+        if rejected_bytes != state['rejected_response_bytes']:
+            raise ValueError('rejected response byte accounting mismatch')
+        result.update(prior_state_sha256=state['prior_state_sha256'],
+                      resume_protocol_sha256=state['resume_protocol_sha256'],
+                      prior_source_git_revision=state['prior_source_git_revision'],
+                      rejected_response_bytes=rejected_bytes)
+    filename = 'original-flow-pilot-reviewed-summary.json' if args.reviewed else 'original-flow-pilot-summary.json'
+    output = Path('results/filing-source-review-2026-10-24') / filename
     encoded = (json.dumps(result, indent=2, sort_keys=True) + '\n').encode()
     if output.exists():
         if output.read_bytes() != encoded:

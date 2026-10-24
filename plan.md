@@ -1964,3 +1964,10 @@ collector exited, no retry/replacement/restart or Colab units.183 focused checks
 pass; source hashes/extraction/snapshots reproduce. A reviewed continuation must
 retain the failure and count oversized unsupported sources in the fixed sample.
 [Evidence](results/filing-source-review-2026-10-24/original-flow-pilot-summary.json).
+
+
+Reviewed original-flow continuation implemented: separate journal preserves the
+initial source-cap stop, counts oversized selected sources as unsupported without
+retry/replacement and retains original sample/20MBcap/80%overall/70%era gates.
+Original3600s wall-clock deadline and byte accounting preserved.187 focused
+checks pass; initial terminal report unchanged. No training/Colab allocation.

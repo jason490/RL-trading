@@ -17,6 +17,15 @@ class OriginalMissing(Exception):
     """The selected source returned404; retain the case without replacement."""
 
 
+class OriginalTooLarge(ValueError):
+    """Bounded rejection; the selected document must not be replaced."""
+
+    def __init__(self, observed_bytes, declared_bytes=None):
+        super().__init__('original source exceeds byte limit')
+        self.observed_bytes = observed_bytes
+        self.declared_bytes = declared_bytes
+
+
 def source_url(record):
     cik, accession, filename = record['cik'], record['accession'], record['instance_filename']
     if (not re.fullmatch(r'[1-9][0-9]{0,9}', cik)
@@ -72,8 +81,11 @@ def acquire_original(root, record, user_agent):
                 if response.status != 200:
                     raise ValueError('unexpected original source HTTP status')
                 length = response.headers.get('Content-Length')
-                if length is not None and (not length.isdigit() or int(length) > 20_000_000):
-                    raise ValueError('invalid or excessive original source length')
+                if length is not None:
+                    if not length.isdigit():
+                        raise ValueError('invalid original source length')
+                    if int(length) > 20_000_000:
+                        raise OriginalTooLarge(0, int(length))
                 chunks, total = [], 0
                 while True:
                     if time.monotonic() >= deadline:
@@ -83,7 +95,7 @@ def acquire_original(root, record, user_agent):
                         break
                     total += len(chunk)
                     if total > 20_000_000:
-                        raise ValueError('original source exceeds byte limit')
+                        raise OriginalTooLarge(total)
                     chunks.append(chunk)
                 raw = b''.join(chunks)
                 if length is not None and len(raw) != int(length):

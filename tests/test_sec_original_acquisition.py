@@ -76,3 +76,19 @@ def test_endpoint_and_scope_rejected_before_network(tmp_path, monkeypatch, key, 
     with pytest.raises(ValueError):
         o.acquire_original(tmp_path, r, 'Research private@example.org')
     assert not calls
+
+
+def test_declared_oversized_original_is_typed_without_reading_body(tmp_path, monkeypatch):
+    calls = setup(monkeypatch, Response(b'unread', '20000001'))
+    with pytest.raises(o.OriginalTooLarge) as caught:
+        o.acquire_original(tmp_path, record(), 'Research private@example.org')
+    assert caught.value.observed_bytes == 0 and caught.value.declared_bytes == 20000001
+    assert len(calls) == 1 and not list(tmp_path.glob('*/instance.xml'))
+
+
+def test_streaming_oversize_reports_consumed_bytes_without_retaining_partial_source(tmp_path, monkeypatch):
+    calls = setup(monkeypatch, Response(b'x' * 20_000_001))
+    with pytest.raises(o.OriginalTooLarge) as caught:
+        o.acquire_original(tmp_path, record(), 'Research private@example.org')
+    assert caught.value.observed_bytes == 20000001
+    assert len(calls) == 1 and not list(tmp_path.glob('*/instance.xml'))

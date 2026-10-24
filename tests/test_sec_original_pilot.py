@@ -55,3 +55,41 @@ def test_failure_terminal_state_and_no_automatic_restart(tmp_path, monkeypatch, 
     with pytest.raises(ValueError, match='automatic restart disabled'):
         m.collect()
     assert len(calls) == 1
+
+
+def test_reviewed_resume_preserves_original_journal_and_completed_prefix(tmp_path, monkeypatch):
+    m = module(monkeypatch)
+    import hashlib
+    source = tmp_path / 'source.xml'
+    source.write_bytes(b'original')
+    facts = tmp_path / 'facts.json'
+    facts.write_text('{}')
+    completed = [dict(cik='1', accession='first', stratum='early', status='inspected',
+                      source_path=str(source), source_sha256=hashlib.sha256(b'original').hexdigest(),
+                      bytes=8, fact_payload_path=str(facts), fact_payload_sha256=m.digest(facts))]
+    manifest = dict(selected=[dict(cik='1', accession='first', stratum='early'),
+                              dict(cik='1', accession='oversized', stratum='late')])
+    manifest_path = tmp_path / 'manifest.json'
+    manifest_path.write_text('{}')
+    prior = dict(status='failed', error_type='ValueError', current_accession='oversized',
+                 manifest_sha256=m.digest(manifest_path), source_git_revision='old',
+                 completed=completed, total_source_bytes=8, started_utc_epoch=100)
+    prior_path = tmp_path / 'prior.json'
+    prior_path.write_text(json.dumps(prior))
+    old = prior_path.read_bytes()
+    addendum = tmp_path / 'resume.json'
+    addendum.write_text(json.dumps(dict(prior_state_sha256=m.digest(prior_path),
+                        prior_stop_accession='oversized', prior_rejected_response_bytes=20000001)))
+    monkeypatch.setattr(m, 'STATE', prior_path)
+    monkeypatch.setattr(m, 'MANIFEST', manifest_path)
+    monkeypatch.setattr(m, 'RESUME_PROTOCOL', addendum)
+    state = m.reviewed_start(manifest)
+    assert prior_path.read_bytes() == old
+    assert state['completed'][0] == completed[0]
+    assert state['completed'][1]['status'] == 'source_exceeds_limit'
+    assert state['completed'][1]['arithmetic_ready'] is False
+    assert state['rejected_response_bytes'] == 20000001
+    assert state['total_source_bytes'] == 8 and state['started_utc_epoch'] == 100
+    source.write_bytes(b'changed!')
+    with pytest.raises(ValueError, match='corruption'):
+        m.reviewed_start(manifest)
