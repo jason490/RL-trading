@@ -1,0 +1,3674 @@
+{
+  "protocol_sha256": "dcc6d33959ff58777f0ce88b1df0c58b9f7e5f00244eda769b1a3c61f653643c",
+  "per_symbol": {
+    "AAPL": {
+      "symbol": "AAPL",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-07",
+          "before_closing_side": "flat",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-02-04",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-03-11",
+          "before_closing_side": "short",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": []
+        },
+        "protective_reasons": {
+          "session": "2021-03-11",
+          "before_closing_side": "short",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 682,
+        "closing_quantity": 658,
+        "closing_side": 80,
+        "fill_reasons": 182,
+        "protective_reasons": 66
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 46,
+          "net_difference_pp": 1.260658398008425
+        },
+        "short/short/protection_same": {
+          "sessions": 67,
+          "net_difference_pp": 3.0071988184484644
+        },
+        "long/long/protection_same": {
+          "sessions": 500,
+          "net_difference_pp": -18.453819896212984
+        },
+        "short/short/protection_different": {
+          "sessions": 8,
+          "net_difference_pp": -7.578808288286556
+        },
+        "short/long/protection_same": {
+          "sessions": 15,
+          "net_difference_pp": -5.024277623249552
+        },
+        "long/long/protection_different": {
+          "sessions": 28,
+          "net_difference_pp": -15.510760914776371
+        },
+        "long/flat/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": -2.6066333315678496
+        },
+        "flat/long/protection_same": {
+          "sessions": 8,
+          "net_difference_pp": -3.8466891071776192
+        },
+        "long/flat/protection_same": {
+          "sessions": 12,
+          "net_difference_pp": 1.3675752373065775
+        },
+        "short/long/protection_different": {
+          "sessions": 8,
+          "net_difference_pp": -6.523094661447962
+        },
+        "short/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -1.9641751847172126
+        },
+        "long/short/protection_same": {
+          "sessions": 15,
+          "net_difference_pp": 8.202379630663259
+        },
+        "flat/flat/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 2.3317566895748167
+        },
+        "long/short/protection_different": {
+          "sessions": 8,
+          "net_difference_pp": -7.460454730485944
+        },
+        "flat/long/protection_different": {
+          "sessions": 7,
+          "net_difference_pp": -4.211362610540862
+        },
+        "flat/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.1429259770514036
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -1.5116121583403146
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-10-28",
+        "net_difference_pp": 7.842920762077497
+      },
+      "final_minus_selected_pp": -58.66504570985308
+    },
+    "AMT": {
+      "symbol": "AMT",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": null,
+        "fill_reasons": {
+          "session": "2021-02-04",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": null
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 506,
+        "closing_quantity": 447,
+        "closing_side": 0,
+        "fill_reasons": 22,
+        "protective_reasons": 0
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 84,
+          "net_difference_pp": -0.09449119394469016
+        },
+        "short/short/protection_same": {
+          "sessions": 114,
+          "net_difference_pp": -0.6839689585169979
+        },
+        "long/long/protection_same": {
+          "sessions": 534,
+          "net_difference_pp": -0.580778405914607
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-10-14",
+        "net_difference_pp": 0.189120537906143
+      },
+      "final_minus_selected_pp": -1.3592385583762951
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-10-07",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "stop"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-06-02",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-10-07",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "stop"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 608,
+        "closing_quantity": 557,
+        "closing_side": 22,
+        "fill_reasons": 76,
+        "protective_reasons": 23
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 85,
+          "net_difference_pp": -0.4364974036799611
+        },
+        "short/short/protection_same": {
+          "sessions": 112,
+          "net_difference_pp": -3.6041646500288773
+        },
+        "long/long/protection_same": {
+          "sessions": 497,
+          "net_difference_pp": 6.166375090634752
+        },
+        "short/short/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 0.3997831806056201
+        },
+        "flat/short/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -2.5464794595042406
+        },
+        "short/long/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": -0.17511814027595385
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.0783147026411607
+        },
+        "long/long/protection_different": {
+          "sessions": 13,
+          "net_difference_pp": -0.4490102983374231
+        },
+        "long/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -2.3533851845173777
+        },
+        "flat/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": -1.100827071713662
+        },
+        "flat/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 4.874193985075225
+        },
+        "long/flat/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -0.11748354626752555
+        },
+        "short/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 4.2934040058643586
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-07-29",
+        "net_difference_pp": 4.4930996593547174
+      },
+      "final_minus_selected_pp": 4.872475805213778
+    },
+    "APD": {
+      "symbol": "APD",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "flat",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "add",
+            "stop"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-06-23",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-03-09",
+          "before_closing_side": "flat",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce",
+            "holding_limit"
+          ],
+          "after_reasons": [
+            "holding_limit"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-06-23",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 651,
+        "closing_quantity": 599,
+        "closing_side": 30,
+        "fill_reasons": 85,
+        "protective_reasons": 17
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 82,
+          "net_difference_pp": -0.027168346106191173
+        },
+        "long/long/protection_same": {
+          "sessions": 503,
+          "net_difference_pp": 0.11198899877913887
+        },
+        "short/short/protection_same": {
+          "sessions": 106,
+          "net_difference_pp": -1.393239795452493
+        },
+        "long/long/protection_different": {
+          "sessions": 9,
+          "net_difference_pp": 1.4718955205610547
+        },
+        "flat/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": 2.2990236317654635
+        },
+        "short/long/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": 0.6611025513405329
+        },
+        "long/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.48632707569163175
+        },
+        "short/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -3.700075633045228
+        },
+        "long/flat/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": -1.4056098640984418
+        },
+        "long/short/protection_same": {
+          "sessions": 7,
+          "net_difference_pp": -0.5224768172565383
+        },
+        "short/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -1.7087808457177451
+        },
+        "flat/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -1.3350082524169702
+        },
+        "short/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.6478095821693424
+        },
+        "long/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.9222750348839327
+        },
+        "flat/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.5781580679874314
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.7669826785057812
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2021-07-08",
+        "net_difference_pp": -3.2848886304122424
+      },
+      "final_minus_selected_pp": -3.1194505637925616
+    },
+    "BAC": {
+      "symbol": "BAC",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-04-13",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-03-03",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": []
+        },
+        "protective_reasons": {
+          "session": "2022-04-13",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 651,
+        "closing_quantity": 602,
+        "closing_side": 20,
+        "fill_reasons": 62,
+        "protective_reasons": 17
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 90,
+          "net_difference_pp": 0.7701406263695532
+        },
+        "short/short/protection_same": {
+          "sessions": 85,
+          "net_difference_pp": 1.691790292525518
+        },
+        "long/long/protection_same": {
+          "sessions": 527,
+          "net_difference_pp": -1.9949672529601903
+        },
+        "long/long/protection_different": {
+          "sessions": 7,
+          "net_difference_pp": -1.5874892176090072
+        },
+        "flat/long/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -1.1912562616558133
+        },
+        "long/flat/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": -2.0721691657011543
+        },
+        "long/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 1.2128392297018145
+        },
+        "flat/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": -0.766229589407529
+        },
+        "flat/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.08648271136547556
+        },
+        "long/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.9070711121192071
+        },
+        "short/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": -0.32356589969429483
+        },
+        "short/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.19889306703882903
+        },
+        "short/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -3.1393119524178035
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.32328782842692455
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-05-23",
+        "net_difference_pp": -3.5413502916198922
+      },
+      "final_minus_selected_pp": -6.5310601287523244
+    },
+    "CAT": {
+      "symbol": "CAT",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-06-24",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-04-07",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-06-24",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 618,
+        "closing_quantity": 578,
+        "closing_side": 41,
+        "fill_reasons": 108,
+        "protective_reasons": 32
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 72,
+          "net_difference_pp": -0.12489243806034228
+        },
+        "short/short/protection_same": {
+          "sessions": 99,
+          "net_difference_pp": -2.1759194276620395
+        },
+        "long/long/protection_same": {
+          "sessions": 501,
+          "net_difference_pp": -5.434120017107376
+        },
+        "short/short/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": 1.1227427525433016
+        },
+        "flat/long/protection_same": {
+          "sessions": 7,
+          "net_difference_pp": 10.432763405420731
+        },
+        "long/short/protection_different": {
+          "sessions": 4,
+          "net_difference_pp": 1.854503587899075
+        },
+        "long/flat/protection_same": {
+          "sessions": 8,
+          "net_difference_pp": -3.8600305711453986
+        },
+        "long/short/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": -0.5308464993894305
+        },
+        "long/long/protection_different": {
+          "sessions": 14,
+          "net_difference_pp": 7.479180401869583
+        },
+        "short/long/protection_same": {
+          "sessions": 7,
+          "net_difference_pp": 6.626402056513369
+        },
+        "flat/short/protection_different": {
+          "sessions": 4,
+          "net_difference_pp": -5.37265998384908
+        },
+        "short/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.2803129844692157
+        },
+        "flat/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": -6.49640891265808
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -2.128306631667132
+        },
+        "long/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 2.060131994734242
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2021-10-28",
+        "net_difference_pp": 7.4723340834706615
+      },
+      "final_minus_selected_pp": 3.172226732972205
+    },
+    "CVX": {
+      "symbol": "CVX",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-12-20",
+          "before_closing_side": "long",
+          "after_closing_side": "short",
+          "before_reasons": [],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-24",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-12-20",
+          "before_closing_side": "long",
+          "after_closing_side": "short",
+          "before_reasons": [],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 618,
+        "closing_quantity": 590,
+        "closing_side": 60,
+        "fill_reasons": 148,
+        "protective_reasons": 46
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 67,
+          "net_difference_pp": 2.0995357704017077
+        },
+        "long/long/protection_same": {
+          "sessions": 511,
+          "net_difference_pp": -5.521462406806678
+        },
+        "short/short/protection_same": {
+          "sessions": 65,
+          "net_difference_pp": 1.0254548300732713
+        },
+        "long/long/protection_different": {
+          "sessions": 13,
+          "net_difference_pp": 5.316631914901838
+        },
+        "long/short/protection_same": {
+          "sessions": 20,
+          "net_difference_pp": -16.045384746268084
+        },
+        "flat/long/protection_same": {
+          "sessions": 6,
+          "net_difference_pp": -11.798070537956793
+        },
+        "long/flat/protection_same": {
+          "sessions": 9,
+          "net_difference_pp": -3.4804425291941152
+        },
+        "short/short/protection_different": {
+          "sessions": 11,
+          "net_difference_pp": 10.623143911057545
+        },
+        "long/flat/protection_different": {
+          "sessions": 4,
+          "net_difference_pp": -0.6875882724254625
+        },
+        "short/flat/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -8.2535727107884
+        },
+        "flat/flat/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": -0.7598625626938593
+        },
+        "short/long/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 5.784344464221707
+        },
+        "short/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.0854288322477077
+        },
+        "long/short/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 0.7499673206483422
+        },
+        "flat/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -1.427616212013876
+        },
+        "flat/long/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": -5.418840973791172
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.39518200586977764
+        },
+        "flat/short/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -0.17165949284634552
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-11-09",
+        "net_difference_pp": -9.275597683749044
+      },
+      "final_minus_selected_pp": -27.655669059858315
+    },
+    "DIA": {
+      "symbol": "DIA",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-10-05",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-01",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "target_near"
+          ],
+          "after_reasons": [
+            "reduce",
+            "target_near"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-10-05",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 566,
+        "closing_quantity": 537,
+        "closing_side": 16,
+        "fill_reasons": 92,
+        "protective_reasons": 14
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 58,
+          "net_difference_pp": -0.028046698810474488
+        },
+        "long/long/protection_same": {
+          "sessions": 599,
+          "net_difference_pp": 0.2681730942184659
+        },
+        "short/short/protection_same": {
+          "sessions": 52,
+          "net_difference_pp": -0.6413648780946533
+        },
+        "long/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.09155463274019712
+        },
+        "flat/short/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": 2.03300543841318
+        },
+        "long/flat/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 2.769773003248221
+        },
+        "flat/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -1.6850008124722518
+        },
+        "short/long/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.41179168096104696
+        },
+        "long/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.12946126812633885
+        },
+        "flat/long/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.024414291169305217
+        },
+        "short/short/protection_different": {
+          "sessions": 4,
+          "net_difference_pp": -0.8880148552813188
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 1.0675749941652322
+        },
+        "flat/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.14704035174705496
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.7888367207773699
+        },
+        "long/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.1439600599858968
+        },
+        "long/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.3061839704569429
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-03-10",
+        "net_difference_pp": 1.8518072879610845
+      },
+      "final_minus_selected_pp": 4.308512855546044
+    },
+    "DIS": {
+      "symbol": "DIS",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-06",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-06",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-04-26",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-03-02",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-10-14",
+          "before_closing_side": "flat",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "close"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 537,
+        "closing_quantity": 488,
+        "closing_side": 25,
+        "fill_reasons": 101,
+        "protective_reasons": 23
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 89,
+          "net_difference_pp": -0.06078291136019834
+        },
+        "short/short/protection_same": {
+          "sessions": 86,
+          "net_difference_pp": 0.9028910204296265
+        },
+        "long/long/protection_same": {
+          "sessions": 518,
+          "net_difference_pp": -2.6844453532940387
+        },
+        "long/long/protection_different": {
+          "sessions": 10,
+          "net_difference_pp": 2.245884812809723
+        },
+        "short/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.7352616053350357
+        },
+        "flat/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.3192321824612445
+        },
+        "short/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.430701845343574
+        },
+        "short/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": 1.2096119146438724
+        },
+        "flat/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.047086666988412615
+        },
+        "flat/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 2.3681219125585486
+        },
+        "flat/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": -2.130069672238824
+        },
+        "long/flat/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 1.6424753401350027
+        },
+        "long/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.11010223247583781
+        },
+        "long/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 10.015134942386197
+        },
+        "short/flat/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -0.48683934396014955
+        },
+        "flat/flat/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.6000034827269992
+        },
+        "long/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -2.100661336246194
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-11-09",
+        "net_difference_pp": 10.015134942386197
+      },
+      "final_minus_selected_pp": 9.973113609963285
+    },
+    "DUK": {
+      "symbol": "DUK",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-06-17",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce",
+            "target_near"
+          ],
+          "after_reasons": [
+            "close"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-01",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": []
+        },
+        "protective_reasons": {
+          "session": "2022-06-17",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce",
+            "target_near"
+          ],
+          "after_reasons": [
+            "close"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 617,
+        "closing_quantity": 559,
+        "closing_side": 4,
+        "fill_reasons": 32,
+        "protective_reasons": 4
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 76,
+          "net_difference_pp": -0.10628605532401703
+        },
+        "short/short/protection_same": {
+          "sessions": 137,
+          "net_difference_pp": -0.267840015158945
+        },
+        "long/long/protection_same": {
+          "sessions": 513,
+          "net_difference_pp": -0.6271092396109599
+        },
+        "short/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.06338430743267236
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.8718116636059713
+        },
+        "short/long/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.5495087575510407
+        },
+        "long/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.2883725381792174
+        },
+        "flat/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.9776810471945646
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.10684247331447841
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2023-08-15",
+        "net_difference_pp": -0.9776810471945646
+      },
+      "final_minus_selected_pp": -1.3247827471725322
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-10-31",
+          "before_closing_side": "long",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-11",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": []
+        },
+        "protective_reasons": null
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 533,
+        "closing_quantity": 498,
+        "closing_side": 1,
+        "fill_reasons": 41,
+        "protective_reasons": 0
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 76,
+          "net_difference_pp": -0.00329626242836094
+        },
+        "short/short/protection_same": {
+          "sessions": 94,
+          "net_difference_pp": 0.2969789476431906
+        },
+        "long/long/protection_same": {
+          "sessions": 561,
+          "net_difference_pp": 0.6324010349896777
+        },
+        "long/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.031799372728040905
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-11-02",
+        "net_difference_pp": 0.638278087242099
+      },
+      "final_minus_selected_pp": 0.8942843474764668
+    },
+    "HD": {
+      "symbol": "HD",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-03-03",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-03-03",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-03-03",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 673,
+        "closing_quantity": 627,
+        "closing_side": 10,
+        "fill_reasons": 30,
+        "protective_reasons": 3
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 77,
+          "net_difference_pp": 0.40216875363564775
+        },
+        "short/short/protection_same": {
+          "sessions": 100,
+          "net_difference_pp": -0.28053515302251636
+        },
+        "long/long/protection_same": {
+          "sessions": 543,
+          "net_difference_pp": 1.3063547777783096
+        },
+        "short/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.5566984410869628
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.9781909710547334
+        },
+        "flat/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.30319024185124727
+        },
+        "short/long/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": 0.05936969670296821
+        },
+        "long/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.19984550253342598
+        },
+        "flat/long/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.15406852461966625
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2021-03-04",
+        "net_difference_pp": 0.9781909710547334
+      },
+      "final_minus_selected_pp": 1.5598833852971712
+    },
+    "HON": {
+      "symbol": "HON",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-06",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-06",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-05-04",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near",
+            "target_far"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-11",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": []
+        },
+        "protective_reasons": {
+          "session": "2022-02-10",
+          "before_closing_side": "flat",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "close"
+          ],
+          "after_reasons": [
+            "reduce",
+            "stop"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 386,
+        "closing_quantity": 339,
+        "closing_side": 3,
+        "fill_reasons": 29,
+        "protective_reasons": 3
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 83,
+          "net_difference_pp": -0.010083996502915391
+        },
+        "short/short/protection_same": {
+          "sessions": 135,
+          "net_difference_pp": 0.32945906501446715
+        },
+        "long/long/protection_same": {
+          "sessions": 508,
+          "net_difference_pp": -0.42794871778138593
+        },
+        "long/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.5629216173265159
+        },
+        "short/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.0790814304672822
+        },
+        "flat/long/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.3639392362756043
+        },
+        "flat/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.4895098703541007
+        },
+        "short/long/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 1.272986938615606
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-05-10",
+        "net_difference_pp": 1.272986938615606
+      },
+      "final_minus_selected_pp": -0.17287600414316692
+    },
+    "IWM": {
+      "symbol": "IWM",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-19",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-19",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-03-16",
+          "before_closing_side": "short",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-05-12",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2022-05-26",
+          "before_closing_side": "long",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reduce",
+            "target_near"
+          ],
+          "after_reasons": [
+            "target_near",
+            "target_far"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 519,
+        "closing_quantity": 461,
+        "closing_side": 21,
+        "fill_reasons": 67,
+        "protective_reasons": 15
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 93,
+          "net_difference_pp": 0.022414981475958475
+        },
+        "short/short/protection_same": {
+          "sessions": 106,
+          "net_difference_pp": 1.1045795295150238
+        },
+        "long/long/protection_same": {
+          "sessions": 504,
+          "net_difference_pp": 0.9012136172381361
+        },
+        "short/long/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": 1.45778460888689
+        },
+        "long/long/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": -1.9686237832953486
+        },
+        "long/flat/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": 2.151239528788959
+        },
+        "long/short/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 0.6494528640223072
+        },
+        "short/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.5341172167023178
+        },
+        "long/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.9781120559761475
+        },
+        "flat/short/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -1.8269173742610803
+        },
+        "flat/flat/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.0615077196784623
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.12428693820470653
+        },
+        "long/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.33531415621328053
+        },
+        "short/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.582574270744808
+        },
+        "flat/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.5814995700410145
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-06-13",
+        "net_difference_pp": 2.7904918743472225
+      },
+      "final_minus_selected_pp": 3.1118343419505248
+    },
+    "JNJ": {
+      "symbol": "JNJ",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": null,
+        "fill_reasons": {
+          "session": "2021-01-11",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": null
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 550,
+        "closing_quantity": 491,
+        "closing_side": 0,
+        "fill_reasons": 38,
+        "protective_reasons": 0
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 78,
+          "net_difference_pp": 0.003387530427236926
+        },
+        "short/short/protection_same": {
+          "sessions": 99,
+          "net_difference_pp": -0.02058742659162092
+        },
+        "long/long/protection_same": {
+          "sessions": 555,
+          "net_difference_pp": -0.39012729528364426
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-05-31",
+        "net_difference_pp": -0.04202904273381864
+      },
+      "final_minus_selected_pp": -0.40732719144802826
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-07-11",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-17",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2022-07-11",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 566,
+        "closing_quantity": 521,
+        "closing_side": 5,
+        "fill_reasons": 35,
+        "protective_reasons": 6
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 88,
+          "net_difference_pp": 0.08634222177705667
+        },
+        "short/short/protection_same": {
+          "sessions": 99,
+          "net_difference_pp": -0.12468553720452472
+        },
+        "long/long/protection_same": {
+          "sessions": 537,
+          "net_difference_pp": -1.6744373551231992
+        },
+        "long/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 0.4757232975414954
+        },
+        "flat/long/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.5871670883898332
+        },
+        "flat/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -3.6531815230095086
+        },
+        "long/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 1.2360459753481845
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2023-10-02",
+        "net_difference_pp": -1.9504846403267146
+      },
+      "final_minus_selected_pp": -3.067025832280662
+    },
+    "KO": {
+      "symbol": "KO",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-12",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-12",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-12-01",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-08-30",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": []
+        },
+        "protective_reasons": {
+          "session": "2021-12-01",
+          "before_closing_side": "flat",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 591,
+        "closing_quantity": 544,
+        "closing_side": 3,
+        "fill_reasons": 23,
+        "protective_reasons": 3
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 63,
+          "net_difference_pp": 0.03884362096375846
+        },
+        "short/short/protection_same": {
+          "sessions": 90,
+          "net_difference_pp": 0.18719958459647024
+        },
+        "long/long/protection_same": {
+          "sessions": 573,
+          "net_difference_pp": 1.5142191981459479
+        },
+        "long/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 2.201697578312931
+        },
+        "flat/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.8212604401893187
+        },
+        "long/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.19656643216162048
+        },
+        "flat/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.43403793035532
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2021-12-01",
+        "net_difference_pp": 2.125103461215098
+      },
+      "final_minus_selected_pp": 3.3581710400234885
+    },
+    "LIN": {
+      "symbol": "LIN",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_side": null,
+        "fill_reasons": {
+          "session": "2021-02-12",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": null
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 268,
+        "closing_quantity": 250,
+        "closing_side": 0,
+        "fill_reasons": 32,
+        "protective_reasons": 0
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 62,
+          "net_difference_pp": -0.010744137815898289
+        },
+        "short/short/protection_same": {
+          "sessions": 98,
+          "net_difference_pp": 0.18950986991055846
+        },
+        "long/long/protection_same": {
+          "sessions": 572,
+          "net_difference_pp": -0.21678456699248638
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-08-23",
+        "net_difference_pp": -0.3020217815753276
+      },
+      "final_minus_selected_pp": -0.038018834897826294
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-08",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-02-01",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-01",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-02-01",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 671,
+        "closing_quantity": 637,
+        "closing_side": 6,
+        "fill_reasons": 52,
+        "protective_reasons": 2
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 72,
+          "net_difference_pp": 0.04285825054171441
+        },
+        "short/short/protection_same": {
+          "sessions": 104,
+          "net_difference_pp": -0.007355709760799026
+        },
+        "long/long/protection_same": {
+          "sessions": 549,
+          "net_difference_pp": -0.912862104661807
+        },
+        "long/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 2.482528354891328
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.21027328521671007
+        },
+        "flat/long/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.894366586367265
+        },
+        "long/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.9366925234818045
+        },
+        "long/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.21141030158751528
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-07-05",
+        "net_difference_pp": 3.0648511870016955
+      },
+      "final_minus_selected_pp": 1.56170583752509
+    },
+    "NEE": {
+      "symbol": "NEE",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-12",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-12",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-01-27",
+          "before_closing_side": "short",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-01-27",
+          "before_closing_side": "short",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2022-09-21",
+          "before_closing_side": "long",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse"
+          ],
+          "after_reasons": [
+            "reverse_close",
+            "reverse",
+            "stop"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 684,
+        "closing_quantity": 640,
+        "closing_side": 49,
+        "fill_reasons": 84,
+        "protective_reasons": 32
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 68,
+          "net_difference_pp": 0.3071472315584687
+        },
+        "short/short/protection_same": {
+          "sessions": 100,
+          "net_difference_pp": 0.4738261510185984
+        },
+        "long/long/protection_same": {
+          "sessions": 502,
+          "net_difference_pp": 3.7491757421146183
+        },
+        "short/long/protection_same": {
+          "sessions": 8,
+          "net_difference_pp": -1.4276244447233768
+        },
+        "short/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.12622940029983876
+        },
+        "long/flat/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": 4.162126946583812
+        },
+        "flat/long/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": -5.678579686367069
+        },
+        "flat/long/protection_same": {
+          "sessions": 8,
+          "net_difference_pp": -0.07393896151204549
+        },
+        "long/long/protection_different": {
+          "sessions": 11,
+          "net_difference_pp": -2.0531245006025425
+        },
+        "long/short/protection_same": {
+          "sessions": 6,
+          "net_difference_pp": -0.932777626089766
+        },
+        "short/long/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": 0.7219050159360051
+        },
+        "short/flat/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -1.0077386756032793
+        },
+        "flat/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.6190318887773901
+        },
+        "flat/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.27333430552791105
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 0.26575652421473933
+        },
+        "long/flat/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": -1.8027947043993042
+        },
+        "flat/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.476204709850179
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-10-03",
+        "net_difference_pp": 3.549303720840544
+      },
+      "final_minus_selected_pp": -3.006708903715859
+    },
+    "PG": {
+      "symbol": "PG",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-02-23",
+          "before_closing_side": "short",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-03-29",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2022-07-29",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "stop"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 559,
+        "closing_quantity": 510,
+        "closing_side": 16,
+        "fill_reasons": 62,
+        "protective_reasons": 9
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 72,
+          "net_difference_pp": -0.03665392863856689
+        },
+        "long/long/protection_same": {
+          "sessions": 563,
+          "net_difference_pp": 0.4791971581745309
+        },
+        "short/short/protection_same": {
+          "sessions": 75,
+          "net_difference_pp": -0.0607255931722029
+        },
+        "short/long/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": 1.4520786821798974
+        },
+        "long/long/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": 0.5813083289086062
+        },
+        "flat/long/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": 0.41136511760880234
+        },
+        "flat/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.8220443681205215
+        },
+        "long/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.6101168337015842
+        },
+        "long/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.9640909658276069
+        },
+        "flat/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.08478174536798905
+        },
+        "short/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -1.2088685963800818
+        },
+        "short/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.030162396259562227
+        },
+        "flat/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.02480733572236204
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-07-29",
+        "net_difference_pp": -1.5385665264152486
+      },
+      "final_minus_selected_pp": 1.2893824100363984
+    },
+    "PLD": {
+      "symbol": "PLD",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-10-11",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-01-19",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "target_near"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-01-19",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "target_near"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 688,
+        "closing_quantity": 644,
+        "closing_side": 64,
+        "fill_reasons": 155,
+        "protective_reasons": 43
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 51,
+          "net_difference_pp": 0.6359950418539664
+        },
+        "short/short/protection_same": {
+          "sessions": 86,
+          "net_difference_pp": 4.72645813480913
+        },
+        "long/long/protection_same": {
+          "sessions": 504,
+          "net_difference_pp": 4.548243553453639
+        },
+        "long/long/protection_different": {
+          "sessions": 19,
+          "net_difference_pp": -3.830601508246502
+        },
+        "flat/long/protection_same": {
+          "sessions": 11,
+          "net_difference_pp": -3.6103272135865114
+        },
+        "long/flat/protection_same": {
+          "sessions": 8,
+          "net_difference_pp": -2.60347435755936
+        },
+        "long/short/protection_same": {
+          "sessions": 18,
+          "net_difference_pp": -1.4619987966193
+        },
+        "long/flat/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": 6.601146101251972
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": 3.3732691818721503
+        },
+        "flat/short/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": 3.073189477662483
+        },
+        "flat/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 4.714157357619712
+        },
+        "short/flat/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": 0.06776205951861636
+        },
+        "long/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -1.8977193452396752
+        },
+        "short/long/protection_same": {
+          "sessions": 6,
+          "net_difference_pp": 5.440608810892387
+        },
+        "short/long/protection_different": {
+          "sessions": 5,
+          "net_difference_pp": 6.650003568714601
+        },
+        "short/short/protection_different": {
+          "sessions": 7,
+          "net_difference_pp": 2.6107627465191183
+        },
+        "flat/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 2.073953579937108
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-12-16",
+        "net_difference_pp": -6.310598268127447
+      },
+      "final_minus_selected_pp": 31.11142839285354
+    },
+    "QQQ": {
+      "symbol": "QQQ",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "short",
+          "after_closing_side": "short",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-01-18",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "target_near"
+          ],
+          "after_reasons": [
+            "target_near",
+            "target_far"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-01",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce",
+            "target_near"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-02-01",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce",
+            "target_near"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 665,
+        "closing_quantity": 631,
+        "closing_side": 38,
+        "fill_reasons": 114,
+        "protective_reasons": 22
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 65,
+          "net_difference_pp": 0.14339111987748765
+        },
+        "short/short/protection_same": {
+          "sessions": 91,
+          "net_difference_pp": 0.18278618471258976
+        },
+        "long/long/protection_same": {
+          "sessions": 526,
+          "net_difference_pp": -4.683886409129147
+        },
+        "long/long/protection_different": {
+          "sessions": 10,
+          "net_difference_pp": 7.602342354688386
+        },
+        "short/short/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.1687966848598444
+        },
+        "short/flat/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.060926505295705286
+        },
+        "long/flat/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 7.140676607134214
+        },
+        "flat/short/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -2.259072021982036
+        },
+        "long/short/protection_different": {
+          "sessions": 4,
+          "net_difference_pp": -3.8689146522980007
+        },
+        "short/long/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": 2.0378875817292426
+        },
+        "flat/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": -0.337111469561278
+        },
+        "long/short/protection_same": {
+          "sessions": 8,
+          "net_difference_pp": -0.43133375397908086
+        },
+        "long/flat/protection_same": {
+          "sessions": 7,
+          "net_difference_pp": -8.235420895571924
+        },
+        "flat/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": 2.5106492405074388
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-10-13",
+        "net_difference_pp": 4.336911923775667
+      },
+      "final_minus_selected_pp": -0.4277293040276551
+    },
+    "SPY": {
+      "symbol": "SPY",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2023-08-24",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce",
+            "stop"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-02-17",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2023-08-24",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "reduce",
+            "stop"
+          ],
+          "after_reasons": [
+            "reduce"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 251,
+        "closing_quantity": 230,
+        "closing_side": 9,
+        "fill_reasons": 54,
+        "protective_reasons": 6
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 69,
+          "net_difference_pp": -0.004202225125816776
+        },
+        "long/long/protection_same": {
+          "sessions": 565,
+          "net_difference_pp": 1.3493294072477002
+        },
+        "short/short/protection_same": {
+          "sessions": 86,
+          "net_difference_pp": -0.8307930244182643
+        },
+        "long/long/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": -0.5199356842969136
+        },
+        "flat/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 0.7120750066543987
+        },
+        "short/long/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": 0.8089359018869582
+        },
+        "flat/long/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -0.5223202273834322
+        },
+        "long/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.3248288788685022
+        },
+        "short/long/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.9077273203414952
+        },
+        "long/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 1.0788259810530727
+        },
+        "flat/short/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -0.4530516990492324
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2023-09-27",
+        "net_difference_pp": 1.0788259810530727
+      },
+      "final_minus_selected_pp": 0.38630723735847267
+    },
+    "UNH": {
+      "symbol": "UNH",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add"
+          ],
+          "after_reasons": [
+            "add"
+          ]
+        },
+        "closing_side": {
+          "session": "2022-11-14",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ],
+          "after_reasons": [
+            "close"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-03-10",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [],
+          "after_reasons": [
+            "reduce"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2022-11-14",
+          "before_closing_side": "short",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "reverse_close",
+            "reverse",
+            "target_near"
+          ],
+          "after_reasons": [
+            "close"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 409,
+        "closing_quantity": 369,
+        "closing_side": 3,
+        "fill_reasons": 45,
+        "protective_reasons": 3
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 74,
+          "net_difference_pp": -0.05078209213403165
+        },
+        "long/long/protection_same": {
+          "sessions": 528,
+          "net_difference_pp": -1.572593840808666
+        },
+        "short/short/protection_same": {
+          "sessions": 125,
+          "net_difference_pp": -0.2754633458138559
+        },
+        "long/long/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.962149931782289
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 2.6165825517748162
+        },
+        "long/short/protection_same": {
+          "sessions": 2,
+          "net_difference_pp": -1.901983774975117
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2022-11-15",
+        "net_difference_pp": 2.6165825517748162
+      },
+      "final_minus_selected_pp": -2.146390433739143
+    },
+    "XOM": {
+      "symbol": "XOM",
+      "sessions": 732,
+      "first_differences": {
+        "action": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "approved_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "closing_quantity": {
+          "session": "2021-01-05",
+          "before_closing_side": "long",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "add",
+            "target_near"
+          ],
+          "after_reasons": [
+            "add",
+            "target_near"
+          ]
+        },
+        "closing_side": {
+          "session": "2021-05-05",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "target_near",
+            "target_far"
+          ],
+          "after_reasons": [
+            "target_near"
+          ]
+        },
+        "fill_reasons": {
+          "session": "2021-01-27",
+          "before_closing_side": "flat",
+          "after_closing_side": "flat",
+          "before_reasons": [
+            "add",
+            "stop"
+          ],
+          "after_reasons": [
+            "stop"
+          ]
+        },
+        "protective_reasons": {
+          "session": "2021-05-05",
+          "before_closing_side": "flat",
+          "after_closing_side": "long",
+          "before_reasons": [
+            "target_near",
+            "target_far"
+          ],
+          "after_reasons": [
+            "target_near"
+          ]
+        }
+      },
+      "difference_session_counts": {
+        "action": 732,
+        "approved_quantity": 648,
+        "closing_quantity": 599,
+        "closing_side": 36,
+        "fill_reasons": 89,
+        "protective_reasons": 28
+      },
+      "buckets": {
+        "flat/flat/protection_same": {
+          "sessions": 91,
+          "net_difference_pp": -1.016156588590413
+        },
+        "long/long/protection_same": {
+          "sessions": 531,
+          "net_difference_pp": -6.145679325197605
+        },
+        "short/short/protection_same": {
+          "sessions": 58,
+          "net_difference_pp": -2.8618812809111835
+        },
+        "long/long/protection_different": {
+          "sessions": 9,
+          "net_difference_pp": 5.755620852062741
+        },
+        "flat/long/protection_same": {
+          "sessions": 5,
+          "net_difference_pp": 5.40816378937324
+        },
+        "flat/short/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": 0.5721119442154013
+        },
+        "short/long/protection_same": {
+          "sessions": 3,
+          "net_difference_pp": -0.7014215526831394
+        },
+        "short/short/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": -0.7217550281184958
+        },
+        "flat/flat/protection_different": {
+          "sessions": 6,
+          "net_difference_pp": 2.285734190118019
+        },
+        "flat/long/protection_different": {
+          "sessions": 6,
+          "net_difference_pp": -11.62940222820759
+        },
+        "long/short/protection_different": {
+          "sessions": 3,
+          "net_difference_pp": 1.3188299296439945
+        },
+        "long/flat/protection_same": {
+          "sessions": 4,
+          "net_difference_pp": -0.28360619539015175
+        },
+        "long/short/protection_same": {
+          "sessions": 7,
+          "net_difference_pp": -0.6775991253441608
+        },
+        "short/flat/protection_different": {
+          "sessions": 1,
+          "net_difference_pp": 6.862805421152501
+        },
+        "short/flat/protection_same": {
+          "sessions": 1,
+          "net_difference_pp": -7.117266130587988
+        },
+        "long/flat/protection_different": {
+          "sessions": 2,
+          "net_difference_pp": -0.8369442865827015
+        }
+      },
+      "largest_absolute_daily_difference": {
+        "session": "2023-10-06",
+        "net_difference_pp": -10.426123218741996
+      },
+      "final_minus_selected_pp": -9.788445615047529
+    }
+  },
+  "groups": {
+    "stock": {
+      "symbols": 22,
+      "mean_final_minus_selected_pp": -2.704062182805268,
+      "buckets": {
+        "flat/flat/protection_different": {
+          "mean_sessions": 0.9545454545454546,
+          "mean_difference_pp": 0.3498156929947105
+        },
+        "flat/flat/protection_same": {
+          "mean_sessions": 74.81818181818181,
+          "mean_difference_pp": 0.16678373140690678
+        },
+        "flat/long/protection_different": {
+          "mean_sessions": 1.8181818181818181,
+          "mean_difference_pp": -1.5339283315490952
+        },
+        "flat/long/protection_same": {
+          "mean_sessions": 3.3181818181818183,
+          "mean_difference_pp": -0.17855454175326688
+        },
+        "flat/short/protection_different": {
+          "mean_sessions": 0.5,
+          "mean_difference_pp": -0.09690985068984444
+        },
+        "flat/short/protection_same": {
+          "mean_sessions": 1.1818181818181819,
+          "mean_difference_pp": -0.02708646770114172
+        },
+        "long/flat/protection_different": {
+          "mean_sessions": 1.2272727272727273,
+          "mean_difference_pp": 0.4096483739129279
+        },
+        "long/flat/protection_same": {
+          "mean_sessions": 2.772727272727273,
+          "mean_difference_pp": -0.5502046441520122
+        },
+        "long/long/protection_different": {
+          "mean_sessions": 6.818181818181818,
+          "mean_difference_pp": 0.15194480051626666
+        },
+        "long/long/protection_same": {
+          "mean_sessions": 528.6363636363636,
+          "mean_difference_pp": -1.2785991010765916
+        },
+        "long/short/protection_different": {
+          "mean_sessions": 1.1363636363636365,
+          "mean_difference_pp": 0.18696556913846143
+        },
+        "long/short/protection_same": {
+          "mean_sessions": 3.8636363636363638,
+          "mean_difference_pp": -0.7376971048989814
+        },
+        "short/flat/protection_different": {
+          "mean_sessions": 0.5909090909090909,
+          "mean_difference_pp": 0.35606114469228684
+        },
+        "short/flat/protection_same": {
+          "mean_sessions": 0.9090909090909091,
+          "mean_difference_pp": -0.7339968712631817
+        },
+        "short/long/protection_different": {
+          "mean_sessions": 1.2272727272727273,
+          "mean_difference_pp": -0.15555313319851782
+        },
+        "short/long/protection_same": {
+          "mean_sessions": 3.1363636363636362,
+          "mean_difference_pp": 0.6502267589514992
+        },
+        "short/short/protection_different": {
+          "mean_sessions": 2.090909090909091,
+          "mean_difference_pp": 0.2681854363564308
+        },
+        "short/short/protection_same": {
+          "mean_sessions": 97,
+          "mean_difference_pp": 0.0488363555078745
+        }
+      },
+      "symbols_with_difference": {
+        "action": 22,
+        "approved_quantity": 22,
+        "closing_quantity": 22,
+        "closing_side": 19,
+        "fill_reasons": 22,
+        "protective_reasons": 18
+      },
+      "mean_fraction_sessions_different": {
+        "action": 1.0,
+        "approved_quantity": 0.7894932935916542,
+        "closing_quantity": 0.7294461003477397,
+        "closing_side": 0.029682066567312468,
+        "fill_reasons": 0.0950695479384004,
+        "protective_reasons": 0.022354694485842028
+      },
+      "contribution_change_pp": {
+        "long_return_contribution": -2.541696211394507,
+        "short_return_contribution": -0.1623659714107223
+      }
+    },
+    "etf": {
+      "symbols": 4,
+      "mean_final_minus_selected_pp": 1.8447312827068467,
+      "buckets": {
+        "flat/flat/protection_different": {
+          "mean_sessions": 0.75,
+          "mean_difference_pp": -0.021383158017148164
+        },
+        "flat/flat/protection_same": {
+          "mean_sessions": 71.25,
+          "mean_difference_pp": 0.033389294354288716
+        },
+        "flat/long/protection_different": {
+          "mean_sessions": 1,
+          "mean_difference_pp": 0.09374088427328017
+        },
+        "flat/long/protection_same": {
+          "mean_sessions": 2,
+          "mean_difference_pp": 0.4909786804886753
+        },
+        "flat/short/protection_different": {
+          "mean_sessions": 0.75,
+          "mean_difference_pp": -0.5666250956283165
+        },
+        "flat/short/protection_same": {
+          "mean_sessions": 2.5,
+          "mean_difference_pp": -0.6265089142197922
+        },
+        "long/flat/protection_different": {
+          "mean_sessions": 2,
+          "mean_difference_pp": 2.991846911852914
+        },
+        "long/flat/protection_same": {
+          "mean_sessions": 3.5,
+          "mean_difference_pp": -1.569887244381282
+        },
+        "long/long/protection_different": {
+          "mean_sessions": 5,
+          "mean_difference_pp": 1.3013343799590804
+        },
+        "long/long/protection_same": {
+          "mean_sessions": 548.5,
+          "mean_difference_pp": -0.5412925726062111
+        },
+        "long/short/protection_different": {
+          "mean_sessions": 2,
+          "mean_difference_pp": -0.7283194544546876
+        },
+        "long/short/protection_same": {
+          "mean_sessions": 3,
+          "mean_difference_pp": -0.059994914437924284
+        },
+        "short/flat/protection_different": {
+          "mean_sessions": 0.25,
+          "mean_difference_pp": 0.26689374854130804
+        },
+        "short/flat/protection_same": {
+          "mean_sessions": 1,
+          "mean_difference_pp": 0.15090581931923952
+        },
+        "short/long/protection_different": {
+          "mean_sessions": 0.75,
+          "mean_difference_pp": -0.09340252590979434
+        },
+        "short/long/protection_same": {
+          "mean_sessions": 2.25,
+          "mean_difference_pp": 1.1790999433660345
+        },
+        "short/short/protection_different": {
+          "mean_sessions": 1.75,
+          "mean_difference_pp": -0.40984645272149284
+        },
+        "short/short/protection_same": {
+          "mean_sessions": 83.75,
+          "mean_difference_pp": -0.046198047071326
+        }
+      },
+      "symbols_with_difference": {
+        "action": 4,
+        "approved_quantity": 4,
+        "closing_quantity": 4,
+        "closing_side": 4,
+        "fill_reasons": 4,
+        "protective_reasons": 4
+      },
+      "mean_fraction_sessions_different": {
+        "action": 1.0,
+        "approved_quantity": 0.6834016393442622,
+        "closing_quantity": 0.6349043715846995,
+        "closing_side": 0.028688524590163935,
+        "fill_reasons": 0.11168032786885246,
+        "protective_reasons": 0.0194672131147541
+      },
+      "contribution_change_pp": {
+        "long_return_contribution": 2.6264891594671904,
+        "short_return_contribution": -0.7817578767601662
+      }
+    }
+  },
+  "mean_final_minus_selected_pp": -2.004247803495712,
+  "source_files_sha256": {
+    "/home/vibe/projects/rl-stocks/configs/experiments/critic_path_diagnostic_v2.json": "e01d33ac6893bd4d09caca3a18bde523f34996e8e31adf441562513854c3a892",
+    "/home/vibe/projects/rl-stocks/results/distributional-critics-2026-10-24/screen.json": "a723220005d79aaa0c837ff2b5847c2c663e845e837a33396bbf89c1fbbcad6d",
+    "/home/vibe/projects/rl-stocks/.runtime/critic-screen-state.json": "cfafd1982292af15b2bcb69ca8de85981cad9f22918dc5248a5192ef16be5a35",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-5fe91c3022af/retrieved/artifacts/runs/20261024T150253-tqc-11-9c8f84da/metadata.json": "11aa784364fd22ea7e0481f39efd8aea36a692a5d66d2985975a414e9d51b500",
+    "/home/vibe/projects/rl-stocks/scripts/diagnose_critic_paths.py": "7440a0161ba1a532f4f8abaa4fed74ce5c20098e6969fc0dcb800c8dcc739e20",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/reporting/path_divergence.py": "5b0ece0318b1e942a84e8e21840aefdf82545344412c170acabd8e7480abed50",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-5fe91c3022af/retrieved/artifacts/runs/20261024T150253-tqc-11-9c8f84da/selected-validation.json": "ae08fff748a379f05c04e58c4adf1fbec79b68b92630331fe3fee7220ef1743b",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-5fe91c3022af/retrieved/artifacts/runs/20261024T150253-tqc-11-9c8f84da/validation.json": "72cd17ed9ae709c7c6c6a9e20d591bb3d63c81339d0419a6b5fc1e9df0180287"
+  },
+  "source_files_unchanged": true,
+  "duration_seconds": 2.012925805989653,
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "models_loaded": false,
+  "provider_requested": false,
+  "dataset_opened": false,
+  "test_evaluated": false,
+  "checkpoint_selected": false,
+  "colab_allocated": false,
+  "interpretation": "Observed paired saved paths, not isolated action effects or a counterfactual protection/cost experiment. Once account paths differ, same-date actions do not share identical model inputs. No checkpoint selection, training or failed-family reopening."
+}

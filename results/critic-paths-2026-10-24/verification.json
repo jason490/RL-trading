@@ -1,0 +1,11 @@
+{
+  "all26_numpy_equity_bridges_and_quantity_side_protection_counts_verified": true,
+  "maximum_bridge_error_pp": 1.0658141036401503e-14,
+  "source_files_unchanged": true,
+  "summary_sha256": "0c0ae1acc1531f6dc2caaf0704b89a3db885091239d1f786ea86beb1129cee10",
+  "models_loaded": false,
+  "training_performed": false,
+  "returns_resimulated": false,
+  "test_evaluated": false,
+  "colab_allocated": false
+}

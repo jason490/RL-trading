@@ -448,3 +448,17 @@ rejection; closing quantities must still be whole shares, with exact fill/equity
 chains. A tenth test covers this accepted case and rejects unexplained nulls.
 All26 source episodes, bridge definitions and interpretation remain unchanged.
 A separate v2 journal prevents automatic restart or loss of initial failure.
+
+
+[Saved TQC path audit](../results/critic-paths-2026-10-24/README.md) complete: all26 selected/final development paths
+reconcile−2.004248pp. Stocks closing quantities differ72.94% of sessions, sides
+2.97% and protective reasons2.24%; stock long contribution change−2.5417pp, short
+−0.1624pp. Same-day partitions are observations, not counterfactual causes or
+proof that earlier protection effects are absent. Initial legitimate-null
+rejection and reviewed schema correction retained.27 tests and independent
+NumPy verification pass, worker exited0/source unchanged, no models/training/
+new Colab units or retired data. Current account348.89,0rate/assignments; project
+39.154379/150. Failed critic family stays closed. Next candidate is a bounded
+source/availability audit of historical option-implied volatility, not another
+architecture/steps rescue; no new inputs or training authorized by feasibility
+evidence alone.
