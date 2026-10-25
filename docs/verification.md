@@ -2509,3 +2509,14 @@ access, nonfinite metrics, deterioration, absolute/risk failure and reproduction
 failure. The reporter does not fit or change preprocessing. Full Colab screens
 have been allocated from the original clean training export; results and owned
 cleanup remain pending, so no candidate promotion is claimed.
+
+
+### GAE public artifact packaging
+
+Fourteen GAE/generic/VIX/distributional release checks pass. Both GAE arm labels,
+initializer and all four smoke rollout-array files survive byte-for-byte export;
+private replay/credentials and raw price fields are excluded. Corruption, extra
+files, symlinks, missing arrays and failure markers reject. Fixtures construct
+models/buffers without local learning; actual full-run publication remains pending.
+New evidence helper/tests pass Ruff. No release has been created for the running
+GAE screen yet.

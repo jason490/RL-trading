@@ -200,3 +200,18 @@ private logs stay excluded. The fixed screen failed: full24.09/14.44% selected/f
 versus legacy19.62/18.48%, masked24.36/9.20% and holding30.60%. No promotion.
 Thirteen exact duplicates/419.93MiB removed with489 retained hashes unchanged;
 all six differing checkpoint snapshots preserved. All six owned sessions stopped.
+
+
+## GAE trace evidence
+
+The research packager labels GAE arms separately and includes their exact
+`gae-initialization.npz`, `gae-rollouts.jsonl` and compressed pre-update arrays.
+Before adding these files it independently verifies their complete registered
+step count, file set, hashes, target arithmetic and metadata summary. Extra,
+missing, corrupt, symlinked or failure-marked rollout evidence rejects publication.
+The arrays contain rewards, values, returns and boundary masks; they do not export
+raw market bars, observations, replay buffers or credentials. Existing frozen
+bundle allowlists remain in force. Selected/final model weights and frozen bundles
+are included; intermediate checkpoint weights are retained locally but are not
+promised by this public archive. Server-side release hash/size verification still
+precedes deletion of any duplicate local transports.
