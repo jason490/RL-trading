@@ -2219,3 +2219,10 @@ and target variation increase in both phases. Independent benchmark accounting
 exact, covariance/discount/ratio error1.12e−15, source model/data/ledger unchanged,
 worker terminal0 in5.22s. No replay/training/new units. Fixed coefficient-one
 subtraction hypothesis closed without grid or allocation; objective remains unmet.
+
+GAE trace comparison preregistered: one lambda1 candidate versus original0.95
+native recurrent control, same data/reward/gamma/architecture/initialization/
+sampler/100k steps and fixed performance gates. Parameter equality and actual
+SB3 finite-buffer telescoping/timeout/boundary tests pass (12 focused checks with
+prior diagnostics). No new policy constructed or trained. Shared-start/runtime/
+actual-rollout/archive integration and512-transition Colab smokes are next.

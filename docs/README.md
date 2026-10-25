@@ -113,3 +113,6 @@ read-only model/Adam/RNG preservation.
 
 [Fixed benchmark variance](benchmark-variance.md) covers the read-only coefficient-one
 reward decomposition, within-episode feasibility gate and limits on interpretation.
+
+[Recurrent GAE traces](gae-traces.md) specifies the fixed lambda0.95/1 comparison,
+finite-buffer return identities, unchanged controls and pending Colab acceptance.

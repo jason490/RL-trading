@@ -2090,3 +2090,13 @@ training follows. Independent cash/share accounting exact, covariance/discount
 ratio error<=1.12e−15, worker terminal0 in5.22s, no model replay/new units/source
 changes. See results/benchmark-variance-2026-10-25/README.md. Prior value-target
 consistency still does not establish a causal optimizer diagnosis or reward fix.
+
+A distinct GAE-trace comparison is preregistered before new model construction:
+lambda1 versus0.95 native RecurrentPPO, with all data/rewards/gamma/actions/
+initialization/steps unchanged. The saved value audit motivates a trace-estimator
+hypothesis, not a proven critic bias; benchmark subtraction stays closed. Only one
+candidate, fixed both-phase/group/risk gates and exact historical control tolerance;
+no trace/discount/optimizer/step grid after failure. Twelve focused parameter,
+SB3 segmented-return and prior diagnostic checks pass. No new model or training.
+See docs/gae-traces.md and configs/experiments/gae_trace_preregistration.json.
+Runtime/shared-start/actual-buffer/archive integration precedes Colab smokes.
