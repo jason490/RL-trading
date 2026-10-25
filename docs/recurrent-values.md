@@ -60,6 +60,17 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
 ```
 
 The worker has a600-second inclusive deadline, atomic progress journal, new-only
-output directory and retained compact per-phase JSONL traces. Failure records its
-stage and does not restart automatically. No provider requests, development replay,
+output directory and retained compact per-phase JSONL traces. Failure records its type and completed phase/symbol list; it does not restart automatically. No provider requests, development replay,
 retired-test access, new checkpoint selection, Colab allocation or broker orders.
+
+## Actual diagnostic outcome
+
+[Completed evidence](../results/recurrent-values-2026-10-25/README.md) records52
+fixed stochastic windows/26,624 transitions, terminal worker0 and unchanged
+weights/Adam/data/ledger. Independent discounted sums agree within4.45e−16,
+SB3 float32 GAE within9.39e−8. Across first256 decisions/window, zero-tail
+explained variance is0.029 selected and−0.084 final, versus self-bootstrapped GAE
+EV0.491/0.549. These different targets and policy-conditioned paths cannot
+establish a causal deterioration explanation or unbiased calibration accuracy.
+No training/new Colab units. A distinct benchmark/noise audit remains next;
+failed families and all performance/prospective gates remain unchanged.

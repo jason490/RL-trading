@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "protocol_sha256": "e96a850bbf3c64cba212bf58f5ceb75a4df245fbb965aab82395be05d3a8c710",
+  "rows_checked": 26624,
+  "episodes_checked": 52,
+  "independent_discount_matrix_max_error": 4.440892098500626e-16,
+  "sb3_float32_gae_max_error": 9.380296595029591e-08,
+  "independent_numpy_metrics_max_error": 0.0,
+  "protected_sources_unchanged": true,
+  "worker_terminal_exit_code": 0,
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "colab_allocated": false,
+  "test_evaluated": false
+}

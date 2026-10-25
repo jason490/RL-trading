@@ -2445,3 +2445,10 @@ VIX publication/cleanup verified:14 GitHub server asset hashes/sizes match;
 differing checkpoint snapshots preserved. Complete models/source/data/ledger and
 reports remain. All six sessions stopped; no cleanup recovery needed. Release:
 https://github.com/jason490/RL-trading/releases/tag/vix-context-2026-10-25
+
+Saved recurrent value-target diagnostic completed:52 fixed training-only stochastic
+replays/26,624 rows, worker terminal0 in40.44s. Independent discount-matrix error
+4.45e−16, SB3 float32 GAE error9.39e−8, metric error0.0; actual model/Adam/data/
+ledger unchanged.16 focused tests pass. No new training, development replay,
+retired-test access or Colab units. Descriptive target consistency is not unbiased
+calibration or causal diagnosis. See results/recurrent-values-2026-10-25/README.md.

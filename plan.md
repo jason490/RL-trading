@@ -2198,3 +2198,11 @@ Protocol pins source weights/data/seeds; no outcome selection, optimization or
 Colab allocation.16 focused target, collector, restoration and state tests pass.
 Censored/self-bootstrapped targets are not independent calibration proof; all
 failed families remain closed. Actual audit execution remains next.
+
+Saved legacy recurrent value-target audit completed52 fixed stochastic training
+windows/26,624 rows; worker exited0 in40.44s. Independent NumPy discount/SB3 GAE
+verification passes, source model/Adam/data/ledger unchanged. Zero-tail descriptive
+EV0.029 selected/−0.084 final, versus self-bootstrapped GAE0.491/0.549; no unbiased
+calibration or causal performance claim. No new optimization/Colab units/retired
+rows. Next distinct training-only benchmark/noise decomposition before another
+hypothesis; robust/prospective objective remains unmet.

@@ -345,3 +345,11 @@ are pinned,70 focused tests pass, source workers exited0. No policy optimization
 or Colab units. Learned/runtime acceptance remains pending. Next explicit family
 dispatch plus task/archive/report/runtime integration and actual Colabsmokes;
 legacy-overlap must not change previous controls. No new performance result.
+
+[Saved recurrent value targets](recurrent-values-2026-10-25/README.md):52 fixed
+training-window stochastic replays/26,624 rows, no local optimization or Colab
+allocation. Selected/final zero-tail descriptive EV0.029/−0.084 versus GAE
+0.491/0.549. Censoring/self-bootstrap/correlated-path limits prevent calibration
+or causal optimizer claims. Independent NumPy/SB3 arithmetic verifies all rows;
+source model/Adam/data/ledger unchanged, worker terminal0. Next fixed
+benchmark/noise decomposition before a distinct training hypothesis; no promotion.

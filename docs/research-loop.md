@@ -2073,3 +2073,12 @@ feed/normalization/model/reward/steps grid, extension, confirmation or promotion
 All six owned sessions stopped; project39.272458, account348.80 idle. See
 [formal evidence](../results/vix-context-2026-10-25/README.md). A new experiment
 requires a distinct saved-evidence rationale; no robust winner is established.
+
+[Saved recurrent value-target audit](../results/recurrent-values-2026-10-25/README.md)
+completed52 fixed training-only stochastic windows/26,624 transitions. Primary
+zero-tail EV0.029 selected/−0.084 final, self-bootstrapped GAE EV0.491/0.549.
+Independent NumPy/SB3 verification passes; all source models/Adam/data/ledger
+unchanged, worker terminal0, no new optimization/Colab units/retired data. These
+censored, correlated and partly self-predicted targets do not prove calibration
+or a cause of deterioration. Next separately fix a training-only benchmark/noise
+decomposition; no immediate reward/GAE grid or rescue of closed families.
