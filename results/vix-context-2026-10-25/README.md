@@ -174,3 +174,20 @@ study-overrun stop, payload packaging and semantic tampering rejection. New
 modules/scripts/tests pass Ruff. All fixtures are non-optimizing; no Colab
 allocation, new provider request or trading return occurred. Physical learned
 recurrent/optimizer/frozen restoration and actual smoke acceptance remain next.
+
+
+## Physical restoration and smoke acceptance implemented
+
+Latest/selected/frozen recurrent and Adam-state restoration,78 causal sequence
+predictions per arm, reset/repeat/caller-state checks, mask/schema rejection and
+immutable model/preprocessing/data/files are implemented. Caller global RNG is
+restored on success and failure. The smoke acceptance script also revalidates
+archives, clean source, exact owned session/task mapping and development report
+accounting before writing runtime-gating evidence.
+
+93 combined VIX/source/frozen regression checks pass; two further acceptance
+boundary checks reject incomplete or missing owned runs before data access.
+Real model files with manually populated Adam fixtures establish serialization
+only; no optimizer step, actual learned smoke, new return or allocation is claimed.
+Next export the clean source, recheck official account usage, inspect each actual
+Colab kernel Python and run the three bounded512-transition CPU smokes.

@@ -2156,3 +2156,9 @@ shared two-unit study baseline, deadline projection and complete archive contrac
 are implemented.118 focused non-optimizing job/archive/runner/fleet regressions
 pass. Physical learned-artifact restoration and actual512-transition CPU smoke
 acceptance remain before100k screens. No allocation or performance result yet.
+
+VIX physical latest/selected/frozen Adam/recurrent restoration and strict smoke
+acceptance are implemented: at least78 causal sequence checks per arm, immutable
+normalization/data/files and caller RNG/state preservation.93 combined regressions
+plus2 acceptance boundaries pass without optimization. Actual Colab512-transition
+CPU smokes remain next; serialization fixtures are not learned acceptance.

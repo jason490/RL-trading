@@ -273,3 +273,21 @@ PYTHONPATH=src .venv/bin/python scripts/build_vix_jobs.py \
 Actual learned-artifact acceptance is still pending; do not run screens until the
 three completed, owned-cleaned Colab smokes pass it. Inspect each actual default
 kernel Python before dependency synchronization. No VIX return is available yet.
+
+### Learned checkpoint acceptance
+
+`training/vix_restoration.py` restores latest, selected and frozen recurrent
+models and compares actual tensor/Adam/provenance records exactly, excluding
+unrestored global sampling streams. It checks three causal prefix decisions for
+each of26 development episodes (at least78 predictions), carried/reset hidden
+states, deterministic repeats, caller-state immutability, schema/feed/nonfinite
+rejection and nonzero masked-coordinate rejection. Models, normalization, source
+files and dataset identity must remain unchanged; caller RNG is restored on both
+success and failure. Verification performs no optimizer steps.
+
+After the owned fleet is complete and stopped, `scripts/accept_vix_smokes.py`
+revalidates retained archives, clean training-source identity, exact task/session
+mapping, report accounting against each immutable dataset, actual saved models
+and cross-arm initial-state agreement. Its output belongs at
+`.runtime/vix-smoke-acceptance.json`; it is the input to full-job runtime gating.
+Serialization fixtures validate the checker, not actual learned acceptance.
