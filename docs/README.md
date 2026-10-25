@@ -119,3 +119,7 @@ finite-buffer return identities, unchanged controls and the completed failed scr
 
 [Saved GAE target variability](gae-variance.md) describes the fixed read-only
 within-buffer trace comparison, endpoint decomposition and gradient-noise limits.
+
+[Lagged Treasury context](treasury-context.md) owns the disabled two-coordinate
+rate proposal, official annual XML source, timing/vintage assumptions and fixed
+coverage/operation gates. Offline parser only; no yield download or model input yet.

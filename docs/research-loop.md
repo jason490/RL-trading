@@ -1,5 +1,12 @@
 # Bounded autonomous research
 
+Current frontier (2026-10-25): [Treasury source feasibility](treasury-context.md),
+preregistered/offline parser verified; acquisition and coverage remain.
+[GAE screen](../results/gae-traces-2026-10-25/README.md) and
+[target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
+failed trace family stays closed. No active Colab sessions or robust winner.
+Read this frontier and its compact protocol before the historical chronology below.
+
 The user authorized continuing research toward returns comparable to or better
 than holding the same stocks and ETFs, including causal indicators, different
 models, more data, training and carefully tested reward changes. This is a
@@ -2194,3 +2201,15 @@ completed, no model/market replay, optimizer steps, new Colab units or retired d
 Raw target variance does not establish normalized recurrent-minibatch gradient
 noise or causally explain returns. No trace/gamma/optimizer/model/reward grid or
 extension follows; the fixed family stays closed. [Evidence](../results/gae-variance-2026-10-25/README.md).
+
+
+### Distinct interest-rate source proposal
+
+After closing GAE, preregister a free official Treasury source audit: two-year
+par yield and ten-minus-two-year spread,2009–2023 annual XML only, explicit
+second-following-XNYS-session availability assumption, bounded observation age,
+methodology-break and vintage limitations. Coverage99.5% overall/era and99% year
+on original111/26 episodes precedes any input or training. Offline parser checks
+units, missingness, duplicate/schema/date/retired scope and bounded UTF8 XML;
+no actual yield history, model replay, returns, preprocessing or Colab allocation.
+[Guide](treasury-context.md). Acquisition and causal coverage remain next.

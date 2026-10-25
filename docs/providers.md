@@ -119,3 +119,7 @@ for example `{"nonfinite_float":"nan"}`, rather than invalid JSON literals or
 fabricated numeric values. Required normalized bar fields still reject NaN or
 infinity. This preserves optional Yahoo metadata without weakening price/volume
 validation.
+
+[Lagged Treasury context](treasury-context.md) owns the disabled two-coordinate
+rate proposal, official annual XML source, timing/vintage assumptions and fixed
+coverage/operation gates. Offline parser only; no yield download or model input yet.
