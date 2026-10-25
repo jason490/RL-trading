@@ -2109,3 +2109,11 @@ segmented MC targets; compact hashed NPZ/JSONL evidence is retained.61 focused
 non-optimizing regressions/Ruff pass. Runner dispatch/callback attachment and
 version35 fleet/archive/learned acceptance remain before Colab smokes; no new
 session, model return, reward or data. See results/gae-traces-2026-10-25/README.md.
+
+GAE runner wiring is complete: strict requests/data/defaults validate before
+model creation, common start/snapshot and initial/selected/final learned-state
+records attach, and actual pre-update rollout auditing runs beside validation.
+Failed target arrays are retained before raising; no retry is implied.78 focused
+non-optimizing request/buffer/initialization/serializer/shared/VIX checks pass.
+Version35 job/budget/archive and learned acceptance remain before Colab smokes;
+no new training, return or session. Previous failed families remain closed.

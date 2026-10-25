@@ -107,6 +107,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
             training_exposure_mode=training_exposure_mode,evaluation_exposure_mode=evaluation_exposure_mode,
             final_test=final_test,compact_checkpoints=compact_checkpoints,milestones=milestones)
         vix_context.validate_payload(dataset,vix_arm)
+    from rl_stocks.training import gae_context,gae_initialization
+    gae_study=study_protocol_sha256==gae_context.PROTOCOL_SHA256
+    if gae_study:
+        gae_arm=gae_context.validate_request(Path(dataset_path).name,algorithm,overrides,
+            seed=seed,smoke=smoke,steps=steps if steps is not None else 512,
+            every=evaluation_every if evaluation_every is not None else 256 if smoke else 10000,
+            initialization=initialization,policy_variant=policy_variant,observation_profile=observation_profile,
+            start_sampling=start_sampling,reward_kind=reward_kind,reward_scale=reward_scale,
+            training_exposure_mode=training_exposure_mode,evaluation_exposure_mode=evaluation_exposure_mode,
+            final_test=final_test,compact_checkpoints=compact_checkpoints,milestones=milestones,device=device)
+        gae_context.validate_payload(dataset)
     config=SimulationConfig()
     torch.set_num_threads(1)
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
@@ -119,6 +130,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
     if vix_study:
         vix_shared=vix_context.apply_initialization(model,vix_arm,seed,smoke)
+    if gae_study:
+        gae_shared=gae_initialization.apply_initialization(model,gae_arm,seed,smoke)
     from rl_stocks.training.recurrent_guard import (PROTOCOL_SHA256 as GUARD_PROTOCOL,
         model_record as guard_record,apply_shared_initialization,initialization_path)
     shared_initialization=apply_shared_initialization(model,seed,smoke) if study_protocol_sha256==GUARD_PROTOCOL else None
@@ -214,6 +227,16 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm=='tqc':
         from rl_stocks.rl.tqc.geometry import model_spec as tqc_spec
         metadata['critic_geometry']=tqc_spec(model)
+    if gae_study:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'gae-initialization.npz'
+        shutil.copyfile(gae_initialization.ROOT/gae_shared['artifact_file'],snapshot)
+        if checksum(snapshot)!=gae_shared['artifact_sha256']:
+            raise ValueError('GAE initialization snapshot checksum mismatch')
+        metadata['gae_arm']=gae_arm
+        metadata['gae_shared_initialization']=gae_shared
+        metadata['gae_initialization']=gae_initialization.model_record(model)
+        gae_initialization.validate_record(metadata['gae_initialization'],gae_arm,smoke,initial=True,seed=seed)
     if vix_study:
         from rl_stocks.inference.bundle import checksum
         snapshot=run/'vix-initialization.npz'
@@ -328,10 +351,15 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['history_protocol_sha256']=PROTOCOL_SHA256
     (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
     start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env,observation_profile=observation_profile,exposure_mode=evaluation_exposure_mode)
+    callbacks=callback
+    if gae_study:
+        from rl_stocks.training.gae_rollouts import GaeRolloutAudit
+        gae_audit=GaeRolloutAudit(run,gae_arm,smoke)
+        callbacks=[callback,gae_audit]
     try:
         previous=0
         for milestone in milestones:
-            model.learn(total_timesteps=milestone-previous,callback=callback,reset_num_timesteps=previous==0)
+            model.learn(total_timesteps=milestone-previous,callback=callbacks,reset_num_timesteps=previous==0)
             # On-step evaluations precede the optimizer update; always capture
             # the completed milestone weights as a distinct post-update record.
             callback.validate(phase='post_update')
@@ -354,6 +382,13 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         metadata['sampling_diagnostics']=sampling_diagnostics
         metadata['training_execution']=env.execution_statistics()
+        if gae_study:
+            metadata['gae_rollouts']=gae_audit.summary()
+            metadata['gae_final']=gae_initialization.model_record(model)
+            metadata['gae_selected']=gae_initialization.model_record(selected)
+            gae_initialization.validate_record(metadata['gae_final'],gae_arm,smoke,seed=seed)
+            gae_initialization.validate_record(metadata['gae_selected'],gae_arm,smoke,
+                selected_steps=metadata['selected_step'],seed=seed)
         if vix_study:
             metadata['vix_final']=vix_context.model_record(model)
             metadata['vix_selected']=vix_context.model_record(selected)

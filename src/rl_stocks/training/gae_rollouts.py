@@ -1,6 +1,7 @@
 """Actual pre-update GAE buffer evidence; read-only checks never optimize."""
 
 import hashlib
+import json
 from io import BytesIO
 from pathlib import Path
 
@@ -203,7 +204,6 @@ class GaeRolloutAudit(BaseCallback):
             dones=dones,
             last_values=last,
         )
-        record = validate_arrays(arrays, self.arm, self.smoke)
         steps = model.num_timesteps
         if type(steps) is not int or steps != (len(self.records) + 1) * params["n_steps"]:
             raise ValueError("ordered actual rollout steps required")
@@ -212,6 +212,23 @@ class GaeRolloutAudit(BaseCallback):
         raw = memory.getvalue()
         name = f"rollout-{steps:06d}.npz"
         write_once(self.path / "gae-rollouts" / name, raw)
+        try:
+            record = validate_arrays(arrays, self.arm, self.smoke)
+        except BaseException as exc:
+            failure = dict(
+                protocol_sha256=PROTOCOL_SHA256,
+                arm=self.arm,
+                steps=steps,
+                arrays_file="gae-rollouts/" + name,
+                arrays_sha256=hashlib.sha256(raw).hexdigest(),
+                error_type=type(exc).__name__,
+                before_optimizer_update=True,
+            )
+            write_once(
+                self.path / "gae-rollout-failure.json",
+                (json.dumps(failure, indent=2) + "\n").encode(),
+            )
+            raise
         record.update(
             protocol_sha256=PROTOCOL_SHA256,
             arm=self.arm,

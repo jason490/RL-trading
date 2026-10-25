@@ -2,8 +2,9 @@
 
 The [preregistration](../configs/experiments/gae_trace_preregistration.json) fixes
 one candidate: native RecurrentPPO with GAE lambda1 versus the original lambda0.95
-control. The comparison is not trained or integrated with Colab yet. Parameter
-contracts and finite-buffer arithmetic checks are implemented.
+control. Runner request contracts, shared starts and pre-update rollout checks are
+implemented. Colab task/archive/learned acceptance remains pending; no study
+training result exists.
 
 ## Rationale and limits
 
@@ -73,8 +74,8 @@ or integrity stops; never stop unrelated sessions.
 
 Failure closes this fixed comparison without lambda/gamma/rollout/minibatch/epoch/
 learning-rate/model/reward/feature/step grids, schedules, extension or confirmation.
-No new training, model construction, reward change or Colab allocation has occurred
-for this study. Runtime/shared-start/rollout/archive integration is next.
+Untrained model construction and serialization fixtures are covered; no optimizer
+step, study training, reward change or Colab allocation has occurred. Runtime/shared-start/rollout/archive integration is next.
 
 ## Shared-start and rollout-check implementation
 
@@ -90,5 +91,21 @@ checks pre-update epoch/transition order, timeout correction, GAE reconstruction
 and independently segmented lambda1 returns, with fixed absolute2e−6/relative2e−5
 tolerances. It accepts continuation at rollout boundaries and rejects corrupt
 math/masks/dtypes. Fixture calls preserve model/Adam/state/RNG and forbid learning.
-The callback is not yet attached to the runner; these are not learned Colab results.
-Strict runner, job/fleet/archive and physical learned acceptance remain next.
+The runner now attaches the callback for registered GAE requests; these are not
+learned Colab results. Job/fleet/archive and physical learned acceptance remain next.
+
+### Runner integration
+
+Registered requests now validate algorithm, exact dataset/preprocessing, all fixed
+parameters, typed seed/phase/steps/cadence, CPU device, reward/exposure/observation/
+sampling and compact single-milestone contracts before environment/model creation.
+The runner restores the common initialization, retains its checksummed NPZ, records
+actual initial/selected/final model and Adam evidence, and attaches the rollout
+checker beside the unchanged validation callback. Final metadata requires complete
+per-rollout evidence. Other study dispatch remains unchanged.
+
+On target arithmetic failure, the offending arrays are durably retained with a
+hash and pre-update failure marker before the exception propagates. This is failure
+evidence, not an accepted training artifact.78 focused initialization, request,
+actual-buffer, serialization and prior shared/VIX regressions pass without
+optimization; task/budget/archive and actual learned acceptance remain pending.

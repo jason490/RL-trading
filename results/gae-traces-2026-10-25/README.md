@@ -44,8 +44,8 @@ Fixtures forbid `.learn` and `Adam.step`; no local optimizer step or policy
 training occurred. New modules/tests pass Ruff. Original initializers, dataset,
 ledger and `plan.html` remain unchanged.
 
-Next attach strict GAE request dispatch, shared start, rollout callback and
-initial/selected/final records to the runner. Version35 jobs/fleet budget/archive
+Strict GAE request dispatch, shared start, rollout callback and
+initial/selected/final records are now attached to the runner. Version35 jobs/fleet budget/archive
 acceptance and physical learned/frozen verification must precede actual512-step
 CPU Colab smokes. Reinspect default kernel Python before dependency sync, preserve
 original150/130 project and150/170 account limits, persistent two-unit study
@@ -53,3 +53,20 @@ baseline, aggregate minute meter, inclusive deadlines and owned cleanup.
 
 No new session, units, data requests, retired-test access, broker orders or
 performance improvement is claimed. Prior failed families remain closed.
+
+## Runner integration accepted; actual training still pending
+
+Strict registered GAE requests reject changes to data/preprocessing, algorithm,
+seed/phase, parameters, steps/cadence, CPU device, observation/reward/exposure/
+sampling and checkpoint settings before model/environment creation. The runner
+restores the shared start, snapshots initializer bytes and records actual
+initial/selected/final model/Adam evidence. The per-rollout checker is attached
+beside validation; final metadata requires its complete summary. Legacy study
+callback/dispatch behavior is preserved.
+
+Malformed target arrays are retained with a hash and pre-update failure marker
+before raising, enabling diagnosis without repeating training.78 focused request,
+initialization, actual-buffer, failure-preservation, serializer and prior shared/
+VIX regressions pass; new code/tests pass Ruff. All fixtures remain non-optimizing.
+Version35 jobs/fleet/budget/archive and physical learned smoke acceptance remain
+next. No actual GAE policy training, new return or Colab session is claimed.

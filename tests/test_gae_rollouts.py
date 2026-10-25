@@ -89,7 +89,10 @@ def test_checksum_valid_arrays_cannot_hide_math_mask_or_schema_errors(change):
         validate_arrays(arrays, "mc_trace", True)
 
 
-def test_actual_callback_records_pre_update_arrays_without_touching_model(tmp_path, monkeypatch):
+@pytest.mark.parametrize("bad_target", [False, True])
+def test_actual_callback_records_pre_update_arrays_without_touching_model(
+    tmp_path, monkeypatch, bad_target
+):
     from rl_stocks.training.gae_initialization import model_record
 
     m = model("mc_trace")
@@ -132,6 +135,17 @@ def test_actual_callback_records_pre_update_arrays_without_touching_model(tmp_pa
         )
     m.rollout_buffer.compute_returns_and_advantage(last, np.array([False]))
     before = model_record(m)
+    if bad_target:
+        import json
+
+        m.rollout_buffer.returns[0, 0] += 1.0
+        with pytest.raises(AssertionError):
+            callback._on_rollout_end()
+        failure = json.loads((tmp_path / "gae-rollout-failure.json").read_text())
+        assert (tmp_path / failure["arrays_file"]).is_file()
+        assert failure["before_optimizer_update"] and not callback.records
+        assert model_record(m) == before
+        return
     callback._on_rollout_end()
     after = model_record(m)
     assert before == after and not m.policy.optimizer.state

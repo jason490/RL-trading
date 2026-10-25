@@ -2233,3 +2233,9 @@ serialization regressions pass. Timeout, boundary, GAE and lambda1 segmented
 return arithmetic validates with compact retained NPZ/JSONL evidence. Runner
 request/callback wiring, version35 budget/archive and learned acceptance remain
 before Colab smokes. No allocation, new return, source data or promotion.
+
+GAE runner request/data/initialization/rollout/metadata integration completed;
+78 focused non-optimizing request, actual-buffer, failure-retention, serialization
+and prior shared/VIX regressions pass. Invalid requests fail before model/env;
+actual malformed arrays persist before failure. Version35 task/budget/archive
+and physical learned acceptance remain before Colab smokes. No new return/session.

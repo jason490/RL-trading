@@ -363,6 +363,6 @@ hypothesis closed without coefficient/benchmark/window/discount grid or training
 
 [Recurrent GAE trace implementation](gae-traces-2026-10-25/README.md): fixed0.95/1
 comparison, shared original full64 weights/RNG and actual pre-update buffer checks
-implemented;61 focused non-optimizing checks pass. Strict runner/version35 fleet/
-archive and learned acceptance remain before512-transition Colab smokes. No new
+implemented and attached to the runner;78 focused non-optimizing checks pass.
+Version35 fleet/archive and learned acceptance remain before512-transition Colab smokes. No new
 training or return. Prior families and retired-test isolation remain unchanged.

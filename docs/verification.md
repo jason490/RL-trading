@@ -2467,3 +2467,10 @@ GAE and segmented lambda1 returns before updates, preserving model/state/RNG.
 New modules/tests pass Ruff; no `.learn`, optimizer step or Colab allocation.
 Runner/fleet/archive/physical learned acceptance remains pending. See
 results/gae-traces-2026-10-25/README.md; fixtures are not learned model evidence.
+
+GAE runner integration:78 focused tests pass, including early request rejection,
+real buffer/initializer/serialization fixtures, offending-array retention and prior
+shared/VIX regressions. Registered runner now attaches shared starts, source NPZ,
+model/Adam records and actual pre-update rollout checks. New modules/tests pass
+Ruff. No local optimization or Colab allocation; version35 task/budget/archive and
+actual learned smoke acceptance remain before study execution.
