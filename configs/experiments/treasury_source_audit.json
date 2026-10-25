@@ -4,10 +4,35 @@
   "provider": "U.S. Treasury official annual daily par yield XML",
   "endpoint": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml",
   "data_parameter": "daily_treasury_yield_curve",
-  "years": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-  "source_fields": ["BC_2YEAR", "BC_10YEAR"],
-  "features": ["treasury_2y_pct", "treasury_10y_minus_2y_pp"],
-  "formulas": ["BC_2YEAR in source percent units", "BC_10YEAR minus BC_2YEAR in percentage points"],
+  "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "source_fields": [
+    "BC_2YEAR",
+    "BC_10YEAR"
+  ],
+  "features": [
+    "treasury_2y_pct",
+    "treasury_10y_minus_2y_pp"
+  ],
+  "formulas": [
+    "BC_2YEAR in source percent units",
+    "BC_10YEAR minus BC_2YEAR in percentage points"
+  ],
   "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
   "latest_source_lag_xnys_sessions": 2,
   "maximum_observation_age_xnys_sessions": 3,
@@ -15,8 +40,25 @@
   "availability": "Research assumption: second XNYS session strictly after Treasury observation date, at that session close plus15minutes. Treasury usually publishes by18:00ET but warns of delays. Historical timestamps and revisions are unverified; never claim exact point-in-time fidelity.",
   "join": "Backward as-of to latest actual eligible observation; no synthetic/interpolated yield or feed fallback. Explicit bounded age permits Treasury/NYSE holiday differences; report all age/gap counts.",
   "methodology_change": "2021-12-06: retain reported historical values and report coverage separately before/after change; no backcasting or smoothing across methods",
-  "coverage_gate": {"minimum_overall_fraction": 0.995, "minimum_era_fraction": 0.995, "minimum_year_fraction": 0.99},
-  "eras": {"early_train": ["2010-01-01", "2014-12-31"], "late_train": ["2015-01-01", "2020-12-31"], "development": ["2021-01-01", "2023-12-31"]},
+  "coverage_gate": {
+    "minimum_overall_fraction": 0.995,
+    "minimum_era_fraction": 0.995,
+    "minimum_year_fraction": 0.99
+  },
+  "eras": {
+    "early_train": [
+      "2010-01-01",
+      "2014-12-31"
+    ],
+    "late_train": [
+      "2015-01-01",
+      "2020-12-31"
+    ],
+    "development": [
+      "2021-01-01",
+      "2023-12-31"
+    ]
+  },
   "maximum_requests": 15,
   "attempts_per_year": 1,
   "minimum_request_spacing_seconds": 1,
@@ -34,5 +76,6 @@
   "training_performed": false,
   "returns_evaluated": false,
   "retired_test_requested": false,
-  "failure": "Close this fixed source proposal if coverage/access fails; no maturity/lag/staleness/gate grid or automatic retry. Any model comparison needs separate matched preregistration after source acceptance."
+  "failure": "Close this fixed source proposal if coverage/access fails; no maturity/lag/staleness/gate grid or automatic retry. Any model comparison needs separate matched preregistration after source acceptance.",
+  "coverage_denominators": "Apply every declared threshold independently to unique decision dates and all consumer rows; also report per-symbol/split and methodology-era coverage."
 }

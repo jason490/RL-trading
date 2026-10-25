@@ -1,6 +1,6 @@
 # Lagged Treasury rate context
 
-Status: source-feasibility proposal and offline XML parser only. No actual yield
+Status: source-feasibility acquisition/alignment tooling implemented and tested offline. No actual yield
 history is acquired, no model input is enabled, and no return improvement is claimed.
 The [fixed audit](../configs/experiments/treasury_source_audit.json) precedes source
 acquisition. It does not reopen failed VIX, compact-SPY-context or GAE families.
@@ -47,7 +47,7 @@ Missing two/ten-year facts remain null source rows and reduce readiness.
 
 ## Boundaries and acceptance
 
-Acquisition remains to implement: one request per year, one-second minimum spacing,
+The implemented collector enforces: one request per year, one-second minimum spacing,
 5s connection/30s read timeouts,600s total operation deadline,2MiB per response and
 300 entries per year. Stop on the first access/schema/source failure; no automatic
 retry, redirect, pagination, alternate feed or expanded cap. Cache reuse must check
@@ -55,7 +55,8 @@ receipts/raw bytes and preserve the original cumulative research budget.
 
 Coverage will use all111 training and26 development episodes in fixed dataset
 `cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b`.
-Require99.5% overall and per era,99% per year. Eras are2010–2014,2015–2020 and
+Require99.5% overall and per era,99% per year, independently for both unique
+decision dates and all consumer rows. Eras are2010–2014,2015–2020 and
 2021–2023. No normalization, model replay, return scoring or retired-test access is
 part of source acceptance. A passed source audit still needs a separately fixed
 matched legacy/masked/full experiment, training-only preprocessing, common
@@ -70,3 +71,34 @@ observations, wrong schemas, entity declarations, pagination and retired years.
 It never makes requests or fits preprocessing. Synthetic fixtures establish
 parser behavior only; they do not establish actual provider compatibility,
 coverage, historical availability or trading performance.
+
+
+## Acquisition and coverage command
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .venv/bin/python scripts/audit_treasury_source.py
+```
+
+The controller owns one local operation lock, enforces request-start pacing and
+writes `.runtime/treasury-source-progress.json` before acquisition. An existing
+journal forbids automatic restart. Failures retain complete/incomplete raw bytes
+and secret-free receipts where a response exists; transport failures retain the
+journal. The controller releases its lock, cancels/restores its alarm and writes
+failure evidence. No redirect, compressed-response expansion, retry or fallback.
+Immutable raw/receipt/index cache reuse checks hashes before returning; corruption
+fails without a replacement request. Actual complete raw responses precede XML
+parsing; a retained response does not by itself mean accepted source data.
+
+Consumer alignment uses the actual XNYS calendar, including Hurricane Sandy,
+Good Friday, early closes and daylight-saving offsets. Eligible source dates may
+be Treasury business days when NYSE is closed. The latest eligible missing fact
+reduces readiness rather than falling back to an older complete observation.
+Reports preserve source/availability timestamps, age counts, missing reasons,
+per-symbol/split coverage and methodology periods. Source/data/normalizer/ledger
+hashes must stay unchanged; model registry and preprocessing remain disabled.
+
+48 offline checks pass across parser, acquisition, pacing, calendar alignment,
+coverage and handled CLI failure. The latter verifies lock/alarm cleanup and
+restart rejection. These are fixtures, not live coverage or provider acceptance.
+Actual source acquisition is the next step after committing this implementation.

@@ -2325,3 +2325,15 @@ on original111/26 episodes precedes any input or training. Offline parser checks
 units, missingness, duplicate/schema/date/retired scope and bounded UTF8 XML;
 no actual yield history, model replay, returns, preprocessing or Colab allocation.
 [Guide](docs/treasury-context.md). Acquisition and causal coverage remain next.
+
+
+### Treasury acquisition/alignment preflight ready
+
+Bounded annual collector, immutable response/receipt/index cache, global operation
+lock/pacing/deadline and secret-free failure evidence are implemented. Lag2 XNYS
+alignment handles Treasury/NYSE holiday differences, latest-null rejection and
+bounded observation age. Both unique-date and all-consumer-row coverage thresholds
+are explicit before observed data; per-symbol/year/era/methodology reports remain
+outcome-free.48 offline checks and targeted Ruff pass, including source failure
+cleanup/no-restart. No actual yield download, model input, fitted normalization,
+training or Colab session yet. [Guide](docs/treasury-context.md).
