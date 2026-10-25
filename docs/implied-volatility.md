@@ -298,3 +298,21 @@ All default kernels were3.13.16; all owned runtimes are stopped. The conservativ
 3471.70-second screen projection fits the7200-second allocation deadline. See
 [accepted evidence and usage](../results/vix-context-2026-10-25/README.md).
 Only the fixed100k screen is next; no performance benefit is established.
+
+### Fixed screen reporting
+
+`scripts/report_vix_study.py` accepts only all three complete, retrieved and
+owned-cleaned100k seed11 tasks. It revalidates archive semantics, clean training
+source, immutable payloads, actual latest/selected/frozen Adam/recurrent state,
+matched holding paths and selected/final report accounting. Cross-arm initial
+states and actual symbol/group/year sampling counts must agree. Declining-stock
+and action-execution diagnostics remain reporting-only.
+
+Historical legacy reproduction checks the preregistered source metadata and both
+report checksums, every checkpoint mean within0.01 percentage points and both
+selected/final per-symbol returns within0.05 points. A mismatch invalidates
+interpretation/promotion without widening tolerances or automatic retry. Numeric
+performance gates are exactly those in the original preregistration; no saved
+checkpoint is reselected by the reporter. A standalone interactive chart accompanies
+the immutable summary. Passing development gates still requires multi-seed and
+prospective confirmation; failure closes the fixed VIX family.

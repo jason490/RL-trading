@@ -221,3 +221,20 @@ Next prepare the fixed100k three-arm CPU screen with10k curves and actual final
 post-update evaluation, independently verify legacy historical reproduction, then
 apply unchanged selected/final/stock/ETF/risk gates. A failure closes this fixed
 family without extension or tuning; only a pass permits11/23/37 confirmation.
+
+
+## Fixed100k screen launched; reporting gates ready
+
+Three centrally metered CPU sessions run legacy/masked/full100k seed11 from the
+same immutable33dbb56 source after actual smoke acceptance; each actual default
+Colab kernel reports3.13.16. The original usage ledger, persistent VIX allowance,
+account floor and inclusive two-hour per-allocation deadlines remain enforced.
+This is ongoing execution, not a completed return or screen result.
+
+The screen reporter revalidates owned-cleaned archives, physical model/Adam/frozen
+state, exact source/data/sampling, holding paths and selected/final accounting.
+It independently pins the historical legacy metadata and both reports, every
+registered checkpoint and fixed0.01pp/0.05pp mean/per-symbol tolerances.58 focused
+reporting, restoration, jobs and prior critic/market regressions pass without
+optimization; new/updated reporting modules and script pass Ruff. Gates remain
+unchanged; a mismatch/failure cannot authorize retry, extension or confirmation.

@@ -2170,3 +2170,10 @@ sessions stopped. Conservative cumulative project39.182288 units; official balan
 348.88, zero rate/assignments. Fixed screen projection3471.70s fits7200s; next
 predefined100k seed11 comparison and independent historical-control reproduction.
 No profitability, confirmation or promotion claimed; retired test stays isolated.
+
+VIX fixed100k seed11 legacy/masked/full screen is running in three centrally
+metered Colab CPU sessions from accepted33dbb56 source, each kernel3.13.16.
+Strict post-cleanup reporting now verifies historical source/report/checkpoint
+reproduction, actual model/Adam/frozen state, matching source/data/sampling and
+selected/final accounting before unchanged gates.58 focused checks pass; actual
+full-screen outcomes remain pending. No VIX performance improvement claimed.
