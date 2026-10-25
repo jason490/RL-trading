@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "independent_numpy_group_metric_max_error": 5.551115123125783e-17,
+  "holding_mean_return": 0.3060185074415983,
+  "protected_files_rehashed": 24,
+  "frozen_sequence_predictions": 234,
+  "failed_both_control_gain_gate_independently_confirmed": true,
+  "training_performed": false,
+  "test_evaluated": false
+}

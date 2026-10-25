@@ -2431,3 +2431,11 @@ project39.182288 units; official post-cleanup348.88 balance, zero rate/assignmen
 Fixed conservative screen projection3471.70s fits7200s. See
 [retained evidence](../results/vix-context-2026-10-25/README.md). Fixed100k screens,
 historical legacy reproduction and performance gates remain; no VIX win claimed.
+
+VIX fixed100k screen completed and failed: full selected/final24.0870/14.4391%,
+legacy19.6245/18.4844%, masked24.3625/9.2004%, holding30.6019%. Historical legacy
+reproduces exactly at all checkpoints/per-symbol.468 combined smoke/full frozen
+sequence checks pass, actual learned Adam state and report accounting validate;
+independent NumPy group error5.56e−17. All six owned sessions stopped. Cumulative
+project39.272458; official348.80 balance, zero rate/assignments. Fixed family
+closed without confirmation/extension/promotion; no retired-test access.

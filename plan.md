@@ -2177,3 +2177,10 @@ Strict post-cleanup reporting now verifies historical source/report/checkpoint
 reproduction, actual model/Adam/frozen state, matching source/data/sampling and
 selected/final accounting before unchanged gates.58 focused checks pass; actual
 full-screen outcomes remain pending. No VIX performance improvement claimed.
+
+VIX fixed100k screen completed failed: full selected/final24.09/14.44%, legacy
+19.62/18.48%, masked24.36/9.20%, matched holding30.60%. Historical legacy reproduces
+exactly at every checkpoint/per-symbol;468 actual frozen sequence checks and
+independent NumPy/accounting acceptance pass. All six sessions stopped; cumulative
+project39.272458, official account348.80 idle. Fixed family closed without tuning,
+extension, confirmation or promotion. Prospective/robust trading objective unmet.

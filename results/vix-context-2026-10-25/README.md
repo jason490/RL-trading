@@ -1,4 +1,10 @@
-# VIX context comparison — preregistered, not trained
+# VIX context comparison — completed, failed
+
+**The fixed100k seed11 screen failed; this family is closed.** Legacy selected/final
+19.62/18.48%, masked24.36/9.20%, full24.09/14.44%, matched holding30.60%.
+Historical legacy reproduces exactly. All six smoke/screen sessions are stopped;
+468 actual frozen sequence comparisons pass. No confirmation, extension or
+promotion. Earlier sections retain implementation history; final evidence is below.
 
 [Fixed protocol](../../configs/experiments/vix_context_preregistration.json)
 SHA256`c9972c2ce85d0d9bad54501f1634357919217e5aee8b4b964d197f8dd6ea6008`
@@ -243,3 +249,46 @@ Release packaging now retains VIX initializer evidence and distinct arm labels
 while excluding private replay, credentials and raw report prices. Six focused
 VIX/prior-critic packaging checks pass. No release or duplicate deletion has occurred
 for this still-running study; those follow completed artifact/performance acceptance.
+
+
+## Completed100k screen — failed
+
+[Formal result](screen.json) verifies actual latest/selected/frozen learned Adam
+and recurrent state,234 full-run sequence comparisons, unchanged data/normalization
+and full development accounting. Together with smokes,468 actual frozen comparisons
+pass. Historical legacy reproduces **exactly**, every checkpoint mean and both
+selected/final per-symbol returns (maximum discrepancy0.0pp). Independent NumPy
+[verification](screen-verification.json) reproduces group metrics within5.56e−17
+and rehashes24 protected full-run files.
+
+| Arm | Selected net return | Actual final net return |
+| --- | ---: | ---: |
+| Legacy RecurrentPPO |19.6245%|18.4844%|
+| Same-size masked context |24.3625%|9.2004%|
+| Full VIX context |24.0870%|14.4391%|
+| Matched buy-and-hold |30.6019%|30.6019%|
+
+These are equal-weight means of26 separate2021–2023 development episodes after
+modeled costs; not annualized returns, a combined portfolio or independent evidence.
+Candidate selection is40k; actual final is100k post-update. Full's selected gain
+versus masked is−0.2755pp; final gain versus legacy is−4.0452pp. Final stock/ETF
+returns16.8653/1.0952% versus holding32.6265/19.4660% miss absolute targets; stock
+median excess−9.1052pp also fails. Lower drawdown does not override return gates.
+
+Final full-model mean stock long/short net contributions are+21.4852/−4.6199pp;
+ETF contributions+4.6587/−3.5635pp. Only1/3 ex-post declining stocks has both
+positive policy return and positive short net P&L. These labels are reporting-only;
+there is no universal declining-stock short-profit claim. Group cost/noncost
+breakdowns are descriptive path identities, not causal diagnoses.
+
+The fixed two-coordinate family closes: no level/change/window/feed/normalization/
+model/reward/steps sweep, extension, confirmation or promotion. No retired-test
+prices were reopened or broker orders submitted. Future research requires a
+separate evidence-backed hypothesis rather than extending this failed study.
+
+[Compute evidence](compute.json): full-screen conservative increment0.090170,
+whole VIX study0.118079 units; cumulative project39.272458/150, working allowance
+90.727542 to130. Official account348.80 with zero rate/assignments, floor150 and
+teardown170 preserved. All six owned sessions are verified stopped, all artifacts
+retrieved. No cleanup recovery is needed. Models/curves/source/datasets remain;
+publication verification precedes scoped duplicate removal.

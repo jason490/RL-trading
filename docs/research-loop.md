@@ -2064,3 +2064,12 @@ are pinned,70 focused tests pass, source workers exited0. No policy optimization
 or Colab units. Learned/runtime acceptance remains pending. Next explicit family
 dispatch plus task/archive/report/runtime integration and actual Colabsmokes;
 legacy-overlap must not change previous controls. No new performance result.
+
+VIX fixed two-coordinate screen is closed failed (2026-10-25): full selected/final
+24.09/14.44%, legacy19.62/18.48%, masked24.36/9.20%, holding30.60%. Exact historical
+control reproduction,468 frozen sequence checks and independent group/accounting
+acceptance pass; return/stock/ETF/median gates fail. No VIX level/change/window/
+feed/normalization/model/reward/steps grid, extension, confirmation or promotion.
+All six owned sessions stopped; project39.272458, account348.80 idle. See
+[formal evidence](../results/vix-context-2026-10-25/README.md). A new experiment
+requires a distinct saved-evidence rationale; no robust winner is established.

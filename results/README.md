@@ -7,6 +7,14 @@ the full required multi-seed and prospective acceptance process.
 
 ## Current research status
 
+[Fixed VIX information study](vix-context-2026-10-25/README.md) failed: legacy
+selected/final19.62/18.48%, same-size masked24.36/9.20%, full24.09/14.44%, matched
+holding30.60%. Candidate fails relative and stock/ETF/median targets. Historical
+legacy reproduces exactly;468 smoke/screen frozen sequence checks pass and all
+six sessions are stopped. Project39.272458/150, official account348.80 with zero
+rate/assignments. Family closed without extension, confirmation or promotion.
+
+
 [Fixed distributional critics](distributional-critics-2026-10-24/README.md) failed:
 nativeSAC selected/final7.93/7.93%, untruncatedTQC2.00/2.00%, truncatedTQC9.70/7.70%,
 matched holding30.60%. Both-control, absolute and risk gates fail; fixed family

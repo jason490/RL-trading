@@ -1,10 +1,14 @@
 # Historical implied-volatility context
 
-This optional information family is **disabled in model inputs**. The first
-source/coverage audit is complete:3,774 pre2024 observations and100% coverage of
-3,433 original-dataset decision dates. No trained-model return or feature benefit
-is established by coverage. It is distinct from the failed
-SPY realized-price market-context and SAC/TQC method studies.
+This optional family remains disabled by default. Its fixed three-arm Colab screen
+completed and failed: full VIX selected/final24.09/14.44%, versus legacy19.62/18.48%,
+masked24.36/9.20% and matched holding30.60%. Historical legacy reproduces exactly;
+all six owned smoke/screen sessions are stopped. The fixed family is closed without
+confirmation, extension or promotion. See [final evidence](../results/vix-context-2026-10-25/README.md).
+
+The source audit covers3,774 pre2024 observations and all3,433 original decision
+dates. Coverage did not establish benefit. This family is distinct from the failed
+SPY realized-price context and SAC/TQC method studies.
 
 ## Source and method
 

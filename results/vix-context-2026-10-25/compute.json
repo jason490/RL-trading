@@ -1,0 +1,27 @@
+{
+  "conservative_project_units": 39.27245785293177,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "remaining_project_units": 110.72754214706822,
+  "remaining_working_units": 90.72754214706822,
+  "shared_vix_study_start_units": 39.154379081176344,
+  "conservative_screen_increment_units": 0.09017004613147606,
+  "conservative_total_vix_study_units": 0.11807877175542814,
+  "remaining_vix_study_units": 1.8819212282445719,
+  "official_post_cleanup_balance": 348.8,
+  "official_post_cleanup_rate": 0.0,
+  "official_post_cleanup_assignments": 0,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-30e5bb960f05",
+    "rl-stocks-cpu-726b02d2dd81",
+    "rl-stocks-cpu-f8dd5ac97b83",
+    "rl-stocks-cpu-58fd991ae5bd",
+    "rl-stocks-cpu-35524faa385b",
+    "rl-stocks-cpu-8d37dcfc63f0"
+  ],
+  "measured_balance_debit_during_screen": 0.08,
+  "interpretation": "Official balance is rounded/delayed; conservative ledger also estimates allocated rate/time, including setup, idle, downloads and shutdown."
+}
