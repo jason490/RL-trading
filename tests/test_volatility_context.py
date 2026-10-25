@@ -79,3 +79,52 @@ def test_context_not_exposed_before_assumed_availability():
     assert result[day] == dict(ready=False, reason="not_yet_available")
     with pytest.raises(ValueError):
         context(rows, [day], decision_times={day: day + "T23:00:00"})
+
+
+def consumer_fixture():
+    from rl_stocks.features.registry.assemble import NAMES
+
+    rows = sample()
+    episodes = {}
+    for split, day in [("train", rows[30]["session"]), ("validation", "2021-01-04")]:
+        episodes[split] = dict(
+            symbol="A",
+            split=split,
+            bars=[dict(symbol="A", session=day, available_time=day + "T23:00:00+00:00")],
+            features=[[0.0] * 7],
+            atr=[1.0],
+        )
+    return dict(
+        schema="daily-indicators-v1",
+        names=list(NAMES),
+        normalizer=dict(names=list(NAMES)),
+        manifest=dict(included_splits=["train", "validation"]),
+        episodes=episodes,
+    )
+
+
+def test_consumer_alignment_preserves_source_and_reports_missing_context():
+    from copy import deepcopy
+    from rl_stocks.data.generation.volatility_context import align_context
+
+    data = consumer_fixture()
+    before = deepcopy(data)
+    joined, counts, symbols = align_context(data, sample())
+    assert counts == dict(train=1, validation=1)
+    assert symbols == dict(train=["A"], validation=["A"])
+    assert joined[data["episodes"]["train"]["bars"][0]["session"]]["ready"]
+    assert not joined["2021-01-04"]["ready"]
+    assert data == before
+
+
+def test_consumer_rejects_split_or_row_misalignment():
+    from rl_stocks.data.generation.volatility_context import align_context
+
+    data = consumer_fixture()
+    data["episodes"]["train"]["bars"][0]["session"] = "2021-01-04"
+    with pytest.raises(ValueError):
+        align_context(data, sample())
+    data = consumer_fixture()
+    data["episodes"]["train"]["features"] = []
+    with pytest.raises(ValueError):
+        align_context(data, sample())

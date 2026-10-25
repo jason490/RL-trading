@@ -1,0 +1,35 @@
+{
+  "schema": "vix-expanded-consumer-audit-v1",
+  "source_audit": "results/vix-source-2026-10-25/summary.json",
+  "source_audit_sha256": "fb260702eeb231b0c3cac43c47328266cecf55bfd869c3f2ee71f4c4028cbb31",
+  "source_id": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "train_symbols": 111,
+  "development_symbols": 26,
+  "original_normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "coverage_gate": {
+    "minimum_overall_fraction": 0.995,
+    "minimum_era_fraction": 0.995,
+    "minimum_year_fraction": 0.99
+  },
+  "eras": {
+    "early_train": [
+      "2010-01-01",
+      "2014-12-31"
+    ],
+    "late_train": [
+      "2015-01-01",
+      "2020-12-31"
+    ],
+    "development": [
+      "2021-01-01",
+      "2023-12-31"
+    ]
+  },
+  "timeout_seconds": 180,
+  "provider_requests": 0,
+  "normalization_fitted": false,
+  "training_performed": false,
+  "model_inputs_enabled": false,
+  "interpretation": "Outcome-free consumer readiness on the accepted111-symbol retrospective Yahoo training dataset. Same current-vintage/publication assumptions as the retained source audit; no new source request, performance gate or point-in-time membership claim."
+}

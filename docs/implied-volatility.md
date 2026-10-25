@@ -81,3 +81,26 @@ inputs stay disabled. Next assess the retained source against the accepted
 111-symbol training dataset, then freeze a separate matched feature experiment
 with unchanged controls, initial tensors/RNG, absolute gates and prospective
 requirements. No performance inference, tuning extension or retired-test access.
+
+
+## Expanded-consumer coverage preflight
+
+`vix_consumer_audit.json` pins the accepted111-training-symbol/26-development
+source and original seven-feature preprocessing identity, plus the retained VIX
+source audit/snapshot. `scripts/audit_vix_consumer.py` makes no provider requests.
+The shared alignment helper checks original feature schema, UTC availability,
+split/symbol boundaries, aligned bars/features/ATR and finite baseline inputs;
+it does not change rows or fit preprocessing. Readiness uses the earliest actual
+decision timestamp across symbols on each session, so no later symbol timestamp
+can hide an unavailable early decision. Unique-date overall/era/year gates are
+unchanged; row-weighted counts and exact symbol counts are reported separately.
+
+Six offline tests pass, including immutable consumer alignment, missing context
+and split/row rejection. The worker uses a separate durable journal and180-second
+deadline; existing journals reject automatic restart. Actual consumer outcome
+is pending in `results/vix-source-2026-10-25/consumer.json`.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/audit_vix_consumer.py
+```
