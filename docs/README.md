@@ -104,3 +104,5 @@ audits and requirements for any optional, explicitly versioned input transform.
 
 - [Distributional critic research review](distributional-critics.md): candidate
   TQC rationale, missing calibration evidence and requirements before a new study.
+
+[Historical implied-volatility context](implied-volatility.md) covers the optional date-bounded VIX source, explicit lag assumptions, strict coverage gates and disabled model-input status.

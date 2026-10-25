@@ -1,0 +1,42 @@
+{
+  "schema": "vix-source-feasibility-v1",
+  "provider": "Yahoo index close via installed yfinance",
+  "symbol": "^VIX",
+  "start": "2009-01-01",
+  "end_exclusive": "2024-01-01",
+  "source_calls": 1,
+  "timeout_seconds": 180,
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "features": [
+    "vix_log_level",
+    "vix_log_change20"
+  ],
+  "latest_source_lag_xnys_sessions": 1,
+  "lookback_source_lag_xnys_sessions": 21,
+  "availability": "Assumed following XNYS session close plus15minutes; original publication timestamps/vintages not verified",
+  "stale_fill": false,
+  "coverage_gate": {
+    "minimum_overall_fraction": 0.995,
+    "minimum_era_fraction": 0.995,
+    "minimum_year_fraction": 0.99
+  },
+  "eras": {
+    "early_train": [
+      "2010-01-01",
+      "2014-12-31"
+    ],
+    "late_train": [
+      "2015-01-01",
+      "2020-12-31"
+    ],
+    "development": [
+      "2021-01-01",
+      "2023-12-31"
+    ]
+  },
+  "model_inputs_enabled": false,
+  "training_performed": false,
+  "returns_evaluated": false,
+  "retired_test_requested": false,
+  "interpretation": "Coverage/source feasibility under explicit current-vintage lag assumption, not exact point-in-time availability, predictive improvement or permission to reopen prior failed families. Separate matched experiment and prospective evidence still required."
+}
