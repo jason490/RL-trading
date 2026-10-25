@@ -1,0 +1,18 @@
+{
+  "independent_pandas_coordinates_verified": true,
+  "maximum_coordinate_error": 1.1102230246251565e-16,
+  "all_consumer_rows_ready": true,
+  "row_counts": {
+    "train": 298946,
+    "validation": 19058
+  },
+  "train_symbols": 111,
+  "development_symbols": 26,
+  "source_files_unchanged": true,
+  "consumer_sha256": "b7b3b551c17f647263d3dd1961511225d967c81fe18336323297bf5a73221461",
+  "provider_requested": false,
+  "normalization_fitted": false,
+  "training_performed": false,
+  "test_evaluated": false,
+  "colab_allocated": false
+}

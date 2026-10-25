@@ -1,0 +1,148 @@
+{
+  "protocol_sha256": "658d3ee5cfd20b8148c50175c23764a7ba470c294c3f9c65caa31461b8dc1484",
+  "source_id": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "train_symbols": 111,
+  "development_symbols": 26,
+  "row_counts": {
+    "train": 298946,
+    "validation": 19058
+  },
+  "ready_rows": {
+    "train": 298946,
+    "validation": 19058
+  },
+  "overall": {
+    "decisions": 3433,
+    "ready": 3433,
+    "fraction": 1.0,
+    "missing": []
+  },
+  "eras": {
+    "early_train": {
+      "decisions": 1209,
+      "ready": 1209,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "late_train": {
+      "decisions": 1491,
+      "ready": 1491,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "development": {
+      "decisions": 733,
+      "ready": 733,
+      "fraction": 1.0,
+      "missing": []
+    }
+  },
+  "years": {
+    "2010": {
+      "decisions": 203,
+      "ready": 203,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2011": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2012": {
+      "decisions": 250,
+      "ready": 250,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2013": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2014": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2015": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2016": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2017": {
+      "decisions": 251,
+      "ready": 251,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2018": {
+      "decisions": 251,
+      "ready": 251,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2019": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2020": {
+      "decisions": 233,
+      "ready": 233,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2021": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2022": {
+      "decisions": 251,
+      "ready": 251,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2023": {
+      "decisions": 230,
+      "ready": 230,
+      "fraction": 1.0,
+      "missing": []
+    }
+  },
+  "coverage_passed": true,
+  "source_files_sha256": {
+    "/home/vibe/projects/rl-stocks/configs/experiments/vix_consumer_audit.json": "dd7fbdfc69758f4876c4ed8faf5ad4d0bc8625ded03c97ca4d2a5e88a81444b4",
+    "/home/vibe/projects/rl-stocks/results/vix-source-2026-10-25/summary.json": "fb260702eeb231b0c3cac43c47328266cecf55bfd869c3f2ee71f4c4028cbb31",
+    "/home/vibe/projects/rl-stocks/data/context/vix/62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e/snapshot.json": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+    "/home/vibe/projects/rl-stocks/data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "/home/vibe/projects/rl-stocks/scripts/audit_vix_consumer.py": "5f0f3cf61d7b70113b700168da2cdbf82d1a4d0484ce1a01702ccc66ba6e2886",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/data/generation/volatility_context.py": "896e0f991cdebedaaed91ddc1f742c4a07e34e2461d230041c36a756acee138e"
+  },
+  "source_files_unchanged": true,
+  "provider_requested": false,
+  "training_performed": false,
+  "normalization_fitted": false,
+  "returns_evaluated": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "model_inputs_enabled": false,
+  "historical_publication_vintages_verified": false,
+  "duration_seconds": 10.163077231030911,
+  "interpretation": "Outcome-free consumer readiness on the accepted111-symbol retrospective Yahoo training dataset. Same current-vintage/publication assumptions as the retained source audit; no new source request, performance gate or point-in-time membership claim."
+}

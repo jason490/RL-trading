@@ -104,3 +104,22 @@ is pending in `results/vix-source-2026-10-25/consumer.json`.
 PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
 .venv/bin/python scripts/audit_vix_consumer.py
 ```
+
+
+## Expanded consumer passes; matched experiment fixed
+
+[Consumer evidence](../results/vix-source-2026-10-25/consumer.json) verifies all
+298,946 train/19,058 development rows (111/26symbols) ready on3,433 unique dates.
+Independent pandas coordinates and source/preprocessing hashes pass. No source
+request/fitting/Colab allocation; worker exited0, journal complete. Historical
+vintage/publication assumptions remain explicit.
+
+[Preregistered experiment](../results/vix-context-2026-10-25/README.md) fixes
+legacy21-input, masked/full23-input native RecurrentPPO controls,100k seed11/10k
+curves, two zero-initialized new LSTM columns, original common tensors/RNG,
+training-only extra preprocessing and unchanged both-control/absolute/risk gates.
+Legacy must reproduce fixed historical19.6245/18.4844% selected/final scores
+within0.01pp mean/0.05pp per-symbol. Only passing smokes can authorize screens;
+only passing screens can proceed to11/23/37/prospective.2-unit incremental
+allowance inside unchanged project/account/deadline limits. Nine focused tests
+pass; no new policy, dataset augmentation, training or performance result yet.

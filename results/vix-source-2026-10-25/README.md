@@ -66,3 +66,22 @@ new coordinates on training data, retain the publication-vintage limitation,
 fix initial tensors/RNG and run actual Colab smokes before a screen. No experiment
 is allocated or approved by this source result alone; existing failed families
 remain closed and prospective confirmation would still be required.
+
+
+## Expanded consumer verified
+
+[Consumer audit](consumer.json) passes for the accepted111-training-symbol and
+26-development-symbol dataset. All298,946 training and19,058 development rows
+are ready; all3,433 unique decision dates, eras and years have100% coverage.
+The original seven-field normalizer identity is exact.
+[Independent verification](consumer-verification.json) reproduces all coordinates
+with pandas calendar shifts to1.11e−16 maximum error, verifies every protected
+source hash and confirms no new request, fitting, training or Colab allocation.
+The consumer worker completed in10.16seconds and exited0; its journal is complete.
+This remains current-vintage lag-assumption feasibility, not historical
+publication/vintage verification, point-in-time membership or performance proof.
+
+A separate [feature preregistration](../../configs/experiments/vix_context_preregistration.json)
+is now fixed before constructing any new policy. Immutable augmented payloads,
+mapped initializers, frozen/runtime contracts and actual smokes are pending.
+No training or new model return has occurred.

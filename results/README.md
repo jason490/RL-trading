@@ -309,3 +309,16 @@ Historical publication vintages unverified; source values remain local and model
 inputs disabled. No training, new return or Colab units. Next audit the accepted
 111-symbol consumer and preregister a separate matched feature comparison only
 after coverage; failed families and retired-test isolation remain unchanged.
+
+
+[VIX information comparison preregistered](vix-context-2026-10-25/README.md) after expanded-consumer coverage
+passes all298,946train/19,058development rows (111/26symbols,100% unique-date/
+era/year readiness). Independent pandas/source/normalizer verification passes;
+consumer worker exited0, no requests or new units. Fixed legacy/masked/full
+21/23-input recurrent controls,100k seed11 steps, original common tensors/RNG
+and zero new LSTM columns, immutable seven-field preprocessing, fixed both-
+control/absolute/risk gates and historical reproduction. Only passing512smokes
+then screens permit11/23/37/prospective; study2units inside original budget.
+Nine tests pass; no new policy construction, training, performance score or
+Colab allocation. Payload/initializer/frozen/runtime implementation is next;
+historical vintage and retrospective universe limitations remain unverified.
