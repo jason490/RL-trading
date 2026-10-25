@@ -238,3 +238,8 @@ registered checkpoint and fixed0.01pp/0.05pp mean/per-symbol tolerances.58 focus
 reporting, restoration, jobs and prior critic/market regressions pass without
 optimization; new/updated reporting modules and script pass Ruff. Gates remain
 unchanged; a mismatch/failure cannot authorize retry, extension or confirmation.
+
+Release packaging now retains VIX initializer evidence and distinct arm labels
+while excluding private replay, credentials and raw report prices. Six focused
+VIX/prior-critic packaging checks pass. No release or duplicate deletion has occurred
+for this still-running study; those follow completed artifact/performance acceptance.

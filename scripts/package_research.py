@@ -61,13 +61,13 @@ def package(roots, output):
                 if any(p.name not in allowed or not p.is_file() for p in bundle.iterdir()):
                     raise ValueError('unexpected frozen asset; review before publication')
                 archive.add(bundle,arcname='frozen/'+bundle.name)
-                for name in ('metadata.json','best.zip','latest.zip','checkpoints.json','checkpoint-state.json','checkpoint-validation.json','training-sampling.json','training-execution.json','guard-initialization.npz','session-initialization.npz','capacity-initialization.npz','recency-initialization.npz','l2-initialization.npz','clipping-initialization.npz','squashed-initialization.npz','market-initialization.npz','critic-initialization.npz'):
+                for name in ('metadata.json','best.zip','latest.zip','checkpoints.json','checkpoint-state.json','checkpoint-validation.json','training-sampling.json','training-execution.json','guard-initialization.npz','session-initialization.npz','capacity-initialization.npz','recency-initialization.npz','l2-initialization.npz','clipping-initialization.npz','squashed-initialization.npz','market-initialization.npz','critic-initialization.npz','vix-initialization.npz'):
                     if (run/name).exists():archive.add(run/name,arcname='runs/'+run.name+'/'+name)
                 selected=run/'selected-validation.json'
                 if not selected.exists():selected=run/'selected-validation-cpu.json'
                 if not selected.exists():continue
                 results=json.loads(selected.read_text())
-                variant=metadata.get('critic_arm',metadata.get('research_variant',metadata.get('initialization',{}).get('arm','standard')))
+                variant=metadata.get('vix_arm',metadata.get('critic_arm',metadata.get('research_variant',metadata.get('initialization',{}).get('arm','standard'))))
                 label=(f"{metadata.get('algorithm','unknown')} / {variant} / dataset {metadata.get('dataset','unknown')[:12]} / "
                        f"seed {metadata.get('seed','unknown')} / {metadata.get('actual_steps','unknown')} steps / "
                        +('smoke' if metadata.get('smoke') else 'research'))

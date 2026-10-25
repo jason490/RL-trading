@@ -316,3 +316,10 @@ performance gates are exactly those in the original preregistration; no saved
 checkpoint is reselected by the reporter. A standalone interactive chart accompanies
 the immutable summary. Passing development gates still requires multi-seed and
 prospective confirmation; failure closes the fixed VIX family.
+
+VIX release packaging preserves `vix-initialization.npz` alongside selected/final
+weights and complete frozen bundles, and labels legacy/masked/full separately in
+model catalogs and derived equity reports. Private replay, `.env` and raw report
+prices remain outside the publication allowlist. Packaging checks do not establish
+model quality; final publication and scoped duplicate cleanup follow actual screen
+acceptance and server-side release hash verification.
