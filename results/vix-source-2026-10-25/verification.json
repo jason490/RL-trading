@@ -1,0 +1,14 @@
+{
+  "independent_pandas_shift_arithmetic_verified": true,
+  "decision_dates": 3433,
+  "maximum_coordinate_error": 1.1102230246251565e-16,
+  "all_source_dates_strictly_earlier": true,
+  "all_assumed_availability_within_decision_time": true,
+  "source_hash_verified": true,
+  "dataset_and_normalizer_unchanged": true,
+  "source_rows_after_2023": 0,
+  "model_inputs_enabled": false,
+  "training_performed": false,
+  "returns_evaluated": false,
+  "colab_allocated": false
+}

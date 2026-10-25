@@ -1,0 +1,139 @@
+{
+  "protocol_sha256": "a5fc356f4d16f4567e2fdb06c72ddab831533eecc1569ea058d5425d66b3c389",
+  "source_id": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "source_snapshot": "/home/vibe/projects/rl-stocks/data/context/vix/62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e/snapshot.json",
+  "source_sha256": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "source_observations": 3774,
+  "first_source_session": "2009-01-02",
+  "last_source_session": "2023-12-29",
+  "overall": {
+    "decisions": 3433,
+    "ready": 3433,
+    "fraction": 1.0,
+    "missing": []
+  },
+  "eras": {
+    "early_train": {
+      "decisions": 1209,
+      "ready": 1209,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "late_train": {
+      "decisions": 1491,
+      "ready": 1491,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "development": {
+      "decisions": 733,
+      "ready": 733,
+      "fraction": 1.0,
+      "missing": []
+    }
+  },
+  "years": {
+    "2010": {
+      "decisions": 203,
+      "ready": 203,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2011": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2012": {
+      "decisions": 250,
+      "ready": 250,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2013": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2014": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2015": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2016": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2017": {
+      "decisions": 251,
+      "ready": 251,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2018": {
+      "decisions": 251,
+      "ready": 251,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2019": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2020": {
+      "decisions": 233,
+      "ready": 233,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2021": {
+      "decisions": 252,
+      "ready": 252,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2022": {
+      "decisions": 251,
+      "ready": 251,
+      "fraction": 1.0,
+      "missing": []
+    },
+    "2023": {
+      "decisions": 230,
+      "ready": 230,
+      "fraction": 1.0,
+      "missing": []
+    }
+  },
+  "coverage_passed": true,
+  "availability_assumption": "Assumed following XNYS session close plus15minutes; original publication timestamps/vintages not verified",
+  "historical_publication_vintages_verified": false,
+  "context_features": [
+    "vix_log_level",
+    "vix_log_change20"
+  ],
+  "model_inputs_enabled": false,
+  "training_performed": false,
+  "normalization_fitted": false,
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "dataset_sha256": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "dataset_unchanged": true,
+  "returns_evaluated": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "duration_seconds": 4.712184850941412,
+  "interpretation": "Coverage/source feasibility under explicit current-vintage lag assumption, not exact point-in-time availability, predictive improvement or permission to reopen prior failed families. Separate matched experiment and prospective evidence still required."
+}

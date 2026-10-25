@@ -2107,3 +2107,14 @@ new Colab units or retired data. Current account348.89,0rate/assignments; projec
 source/availability audit of historical option-implied volatility, not another
 architecture/steps rescue; no new inputs or training authorized by feasibility
 evidence alone.
+
+
+[Implied-volatility source feasibility](results/vix-source-2026-10-25/README.md) passed: single date-bounded Yahoo
+request retained3,774 observations2009–2023; lagged level/change20 context covers
+all3,433 original-dataset decisions (100% overall/eras/years), with exact prior
+sessions and assumed availability no later than decisions. Four tests and
+independent pandas/source/dataset/normalizer verification pass; worker exited0.
+Historical publication vintages unverified; source values remain local and model
+inputs disabled. No training, new return or Colab units. Next audit the accepted
+111-symbol consumer and preregister a separate matched feature comparison only
+after coverage; failed families and retired-test isolation remain unchanged.

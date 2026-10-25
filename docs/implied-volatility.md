@@ -1,8 +1,9 @@
 # Historical implied-volatility context
 
 This optional information family is **disabled in model inputs**. The first
-source/coverage audit is prepared; no download, trained-model return or feature
-benefit is established by implementation tests. It is distinct from the failed
+source/coverage audit is complete:3,774 pre2024 observations and100% coverage of
+3,433 original-dataset decision dates. No trained-model return or feature benefit
+is established by coverage. It is distinct from the failed
 SPY realized-price market-context and SAC/TQC method studies.
 
 ## Source and method
@@ -67,3 +68,16 @@ The journal `.runtime/vix-source-progress.json` preserves complete/failure statu
 and source recovery identity. An existing journal requires review; no implicit
 retry or provider substitution. Actual audit evidence belongs in
 `results/vix-source-2026-10-25/`.
+
+
+## Actual coverage acceptance
+
+[Audit evidence](../results/vix-source-2026-10-25/README.md) records100% readiness
+over the original26-symbol source's3,433 unique train/development dates, all
+three eras and every assessed year. Independent pandas arithmetic/source hashes
+verify; dataset/preprocessing unchanged, worker exited0, no new Colab units.
+Current-vintage/availability assumptions remain unverified historically; model
+inputs stay disabled. Next assess the retained source against the accepted
+111-symbol training dataset, then freeze a separate matched feature experiment
+with unchanged controls, initial tensors/RNG, absolute gates and prospective
+requirements. No performance inference, tuning extension or retired-test access.
