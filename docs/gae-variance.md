@@ -43,4 +43,16 @@ Synthetic checks verify closed-form timeout/terminal/end-of-rollout identities,
 unchanged input arrays, one-step TD, null denominator handling and population
 variance aggregation. Protocol changes and running/incomplete sources reject
 before array access. Existing rollout and financial-gate regressions remain.
-No actual target-variance result has been read for this audit yet.
+Actual audit is now complete; see the accepted results below.
+
+
+## Actual result
+
+[Completed audit](../results/gae-variance-2026-10-25/README.md): median within-buffer
+advantage variance ratios4.408252 control/4.018140 candidate; return ratios2.779849/
+2.422366. Raw advantage variation rises in every buffer. Both arms have195 timeouts
+and no true terminations, retaining endpoint dependence. Independent matrix
+verification agrees within1.05e−17 variance/1.60e−14 ratio error across all200
+buffers. All221 protected source files/ledger unchanged; no new units or training.
+These raw-target results do not prove normalized gradient noise or a cause of
+poor return. The failed trace family remains closed.

@@ -371,3 +371,10 @@ GAE [release](https://github.com/jason490/RL-trading/releases/tag/gae-traces-202
 is published with14 server-verified assets. Nine exact duplicates removed
 (290,074,611 bytes),1,002 protected files unchanged; four differing snapshots retained.
 All owned sessions stopped. Fixed comparison failed; no candidate promotion.
+
+
+[Saved GAE target variability](gae-variance-2026-10-25/README.md):200 actual buffers,
+paired raw advantage variance ratios4.41× control/4.02× candidate; endpoint critic
+dependence persists. Independent matrix verification passes;221 protected files
+unchanged, no model/data replay, training or new Colab units. This does not prove
+gradient noise or a cause of poorer returns; failed trace family remains closed.

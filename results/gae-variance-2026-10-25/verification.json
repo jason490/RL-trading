@@ -1,0 +1,11 @@
+{
+  "independent_segmented_discount_matrices": true,
+  "buffers": 200,
+  "transitions": 200000,
+  "maximum_variance_error": 1.0408340855860843e-17,
+  "maximum_variance_ratio_and_block_median_error": 1.5987211554602254e-14,
+  "source_summary_sha256": "c785ba429b489175aa657b2225daa5e8e80593d11405c89db43edf59e7416c92",
+  "model_or_market_replay": false,
+  "optimizer_steps": 0,
+  "new_colab_units": 0
+}

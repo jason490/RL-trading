@@ -2561,3 +2561,16 @@ This does not reconstruct recurrent minibatch normalization or gradients and
 cannot diagnose return causally or reopen the failed trace family. No models,
 market replay, data requests, optimizer steps, Colab units or retired prices.
 [Specification](gae-variance.md) and pinned protocol precede actual audit.
+
+
+### Saved GAE variance audit complete
+
+All200 actual buffers revalidated read-only. Within-path lambda1/lambda0.95 median
+advantage variance ratios4.408252 control/4.018140 candidate; return variance
+ratios2.779849/2.422366. Endpoint critic dependence persists (195 timeouts, no true
+terminations per arm). Independent discount matrices agree within1.05e−17 variance
+and1.60e−14 ratio error. All221 protected source files/ledger unchanged; workers
+completed, no model/market replay, optimizer steps, new Colab units or retired data.
+Raw target variance does not establish normalized recurrent-minibatch gradient
+noise or causally explain returns. No trace/gamma/optimizer/model/reward grid or
+extension follows; the fixed family stays closed. [Evidence](../results/gae-variance-2026-10-25/README.md).
