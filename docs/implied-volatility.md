@@ -240,3 +240,36 @@ a checksummed initializer snapshot. Trained global RNG restoration is not claime
 See the [study evidence](../results/vix-context-2026-10-25/README.md) for current
 checks. Job/fleet/archive integration and actual Colab smoke acceptance remain;
 there are still no trained VIX performance results.
+
+### Colab task and retrieval contracts
+
+Version34 plans bind each legacy/masked/full dataset, initializer and fixed
+512-transition smoke or100k screen settings. Full plans require a checksummed,
+same-protocol actual smoke acceptance file and a conservative deadline projection.
+The projection uses twice the historical1055.604-second control duration times
+the slowest smoke-to-legacy ratio, with1200 seconds reserved, and rejects totals
+above7200 seconds. This is a heuristic; live deadline enforcement remains required.
+
+The central fleet automatically persists `.runtime/vix-study-budget.json` beside
+the resolved original usage ledger. Its original baseline survives smoke/screen
+controllers and retries; the allowance cannot exceed2 units. Project150/130 and
+account150/170 safeguards still apply. VIX tasks use a dedicated fleet so another
+study cannot replace that baseline. Source uploads include all bound initializer
+files. Preflight and the remote worker validate immutable payload identities.
+
+Retrieved archives require actual initial/selected/final model and Adam records,
+initializer bytes, checkpoint identities, execution/sampling sidecars, training-only
+year counts, all26 development symbols and frozen schema/normalization/source
+lineage. Complete selected weights must equal the frozen model. These checks do
+not replace physical learned-model restoration or report accounting acceptance.
+
+Prepare smoke tasks without provisioning:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_vix_jobs.py \
+  --smoke --output .runtime/vix-smoke-jobs.json
+```
+
+Actual learned-artifact acceptance is still pending; do not run screens until the
+three completed, owned-cleaned Colab smokes pass it. Inspect each actual default
+kernel Python before dependency synchronization. No VIX return is available yet.

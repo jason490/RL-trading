@@ -27,6 +27,11 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==34:
+        from rl_stocks.training.vix_context import validate_payload, initialization_spec
+        c=plan['vix_study']
+        initialization_spec(c['arm'],c['seed'],c['smoke'])
+        validate_payload(payload,c['arm'])
     if plan.get('version')==33:
         from rl_stocks.training.distributional_critics import validate_payload
         from rl_stocks.training.distributional_assets import initialization_spec

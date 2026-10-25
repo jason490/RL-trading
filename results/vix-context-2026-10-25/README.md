@@ -156,3 +156,21 @@ pass Ruff. Existing market, TQC and frozen recurrent regressions remain passing.
 Version34 job/fleet/archive integration, physical learned-artifact acceptance and
 bounded runtime projection remain before actual512-transition Colab smokes.
 No session was allocated or new trading return produced by this milestone.
+
+
+## Metered job and archive integration
+
+Version34 fixed CPU plans, preallocation/remote payload checks, original-ledger
+fleet wiring, a persistent two-unit VIX baseline and smoke-backed deadline
+projection are implemented. Archive validation checks complete model/Adam records,
+input initializer bytes, selected/final checkpoint identity, execution and
+training-year sampling sidecars, all26 development symbols and frozen weights,
+normalization/source lineage. Full plans require actual same-protocol accepted
+smokes; no screen is authorized by static fixtures.
+
+118 focused VIX runner/job/archive, existing critic/market archive and shared
+fleet/budget checks pass. They include retry-baseline preservation, projected
+study-overrun stop, payload packaging and semantic tampering rejection. New
+modules/scripts/tests pass Ruff. All fixtures are non-optimizing; no Colab
+allocation, new provider request or trading return occurred. Physical learned
+recurrent/optimizer/frozen restoration and actual smoke acceptance remain next.

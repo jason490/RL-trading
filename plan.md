@@ -2150,3 +2150,9 @@ Initial/selected/final tensor and Adam evidence plus a checksummed initializatio
 snapshot are retained.90 focused non-optimizing checks pass, including actual
 recurrent serialization; job/fleet/archive integration and actual Colab smokes
 remain. No new trading return, Colab allocation or promotion at this milestone.
+
+VIX version34 Colab plans, preallocation/remote payload validation, persistent
+shared two-unit study baseline, deadline projection and complete archive contracts
+are implemented.118 focused non-optimizing job/archive/runner/fleet regressions
+pass. Physical learned-artifact restoration and actual512-transition CPU smoke
+acceptance remain before100k screens. No allocation or performance result yet.
