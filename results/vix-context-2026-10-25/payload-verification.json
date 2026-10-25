@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "records": {
+    "masked": {
+      "original_episode_fields_and_seven_coordinates_exact": true,
+      "pandas_coordinate_error": 0.0,
+      "independent_numpy_mean_error": 0.0,
+      "independent_numpy_scale_error": 0.0
+    },
+    "full": {
+      "original_episode_fields_and_seven_coordinates_exact": true,
+      "pandas_coordinate_error": 1.1102230246251565e-16,
+      "independent_numpy_mean_error": 6.73683331342545e-13,
+      "independent_numpy_scale_error": 3.6415315207705135e-14
+    }
+  },
+  "source_files_unchanged": true,
+  "payload_evidence_sha256": "7962592be7ffdf0adcdf45f00036ce3b539ccb390b51fdbe82cae68ea183d012",
+  "policy_training_performed": false,
+  "provider_requested": false,
+  "colab_allocated": false,
+  "test_evaluated": false
+}

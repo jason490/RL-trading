@@ -1,0 +1,138 @@
+{
+  "preregistration_sha256": "c9972c2ce85d0d9bad54501f1634357919217e5aee8b4b964d197f8dd6ea6008",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "source_context": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "passed": true,
+  "records": {
+    "masked": {
+      "dataset": "5184823a388f4cc02197a111fe29cde7f80edae14aa451aa139f791891f903c2",
+      "schema": "daily-indicators-v1-vix-masked-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "vix_log_level",
+        "vix_log_change20"
+      ],
+      "normalizer": {
+        "means": [
+          0.0004990544866644428,
+          0.012735132296023969,
+          0.00469844447216914,
+          0.012019454990342297,
+          0.5389047390801802,
+          0.018389739889369705,
+          1.0153090843440746,
+          0.0,
+          0.0
+        ],
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20",
+          "vix_log_level",
+          "vix_log_change20"
+        ],
+        "scales": [
+          0.015313643928828525,
+          0.00786943611664361,
+          0.029180487735227603,
+          0.04507155802842066,
+          0.11677961862593828,
+          0.009077586213247573,
+          0.456061113252682,
+          1.0,
+          1.0
+        ]
+      },
+      "normalizer_sha256": "e21a298e3ed6c43d179e40446ad8812dddc78127bc4d36aa5892aff792b114bc",
+      "extra_normalizer_fit_rows": 0,
+      "maximum_abs_normalized_value": 80.73032154131965,
+      "finite_float32_inputs": true,
+      "original_rows_bars_atr_and_seven_features_exact": true
+    },
+    "full": {
+      "dataset": "b63683a2b78e5aaa7652069b75b5c95acc32748b8fdf2d4c8dcff825ef5d756a",
+      "schema": "daily-indicators-v1-vix-full-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "vix_log_level",
+        "vix_log_change20"
+      ],
+      "normalizer": {
+        "means": [
+          0.0004990544866644428,
+          0.012735132296023969,
+          0.00469844447216914,
+          0.012019454990342297,
+          0.5389047390801802,
+          0.018389739889369705,
+          1.0153090843440746,
+          2.820543337107576,
+          0.0015431584118456192
+        ],
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20",
+          "vix_log_level",
+          "vix_log_change20"
+        ],
+        "scales": [
+          0.015313643928828525,
+          0.00786943611664361,
+          0.029180487735227603,
+          0.04507155802842066,
+          0.11677961862593828,
+          0.009077586213247573,
+          0.456061113252682,
+          0.33741087060329333,
+          0.26036329350191506
+        ]
+      },
+      "normalizer_sha256": "c21b1a3e941f3642aeeef83e936abf876c1d6ff94b4b794fcf1cb12f14f23b9c",
+      "extra_normalizer_fit_rows": 298946,
+      "maximum_abs_normalized_value": 80.73032154131965,
+      "finite_float32_inputs": true,
+      "original_rows_bars_atr_and_seven_features_exact": true
+    }
+  },
+  "protected_sha256": {
+    "/home/vibe/projects/rl-stocks/results/vix-source-2026-10-25/consumer.json": "b7b3b551c17f647263d3dd1961511225d967c81fe18336323297bf5a73221461",
+    "/home/vibe/projects/rl-stocks/results/vix-source-2026-10-25/consumer-verification.json": "6c38bb54afc2ca1f96330928ac5d975d70250cc62a53b884a15cf35269e082bf",
+    "/home/vibe/projects/rl-stocks/data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "/home/vibe/projects/rl-stocks/data/context/vix/62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e/snapshot.json": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+    "/home/vibe/projects/rl-stocks/scripts/prepare_vix_payloads.py": "a94d8686e1fc71cb210a61db64010dfc4e9e4f1ade8e622a44dbf2b58cea8bdb",
+    "/home/vibe/projects/rl-stocks/configs/experiments/vix_context_preregistration.json": "db65858bfb042dab5750830061c945958f9ac8ae862335165d26a0c4d46bb6cc",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/data/generation/volatility_payload.py": "3a260d139da7841e8c776a2cc66d09053f0c6f74efebd3694ae5e15534d4f5f4"
+  },
+  "source_files_unchanged": true,
+  "training_rows": 298946,
+  "development_rows": 19058,
+  "extra_preprocessing_fitted_on_training_only": true,
+  "validation_used_for_fit": false,
+  "policy_training_performed": false,
+  "provider_requested": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "historical_publication_vintages_verified": false,
+  "duration_seconds": 70.03513364400715
+}

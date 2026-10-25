@@ -86,3 +86,26 @@ Next run the bounded local payload producer, retain generated data identities
 and verify all float32 inputs; then implement pinned zero-column mapped
 initializers and metered runtime acceptance before actual Colab smokes. These
 untrained serialization fixtures are not shared-initializer/learned acceptance.
+
+
+## Actual payload preparation
+
+[Payload evidence](payloads.json) verifies masked/full immutable data identities,
+original episode/bar/ATR/feature/statistic preservation, exact normalized masks
+and finite float32 values. Full's extra preprocessing uses298,946 training rows,
+masked's uses0; development never enters the fit. The worker completed70.04sec
+and exited0. Independent coordinate/statistics verification is recorded separately.
+No policy optimization, provider request or Colab unit occurred.
+
+Zero-column shared initializer code is implemented and passes11/23/37 owner,
+tensor, shape, seeded-stream and rejection checks. Actual immutable initializer
+production, binding and learned/runtime acceptance are still pending.
+
+
+[Independent payload verification](payload-verification.json) passes: all source
+episode fields and first seven coordinates are exact; pandas-derived extra
+coordinate maximum error1.11e−16, NumPy training mean/scale errors6.74e−13/3.64e−14
+within fixed1e−10 tolerance. All producer-protected source hashes remain exact.
+Five untrained mapping checks verify all three seeds, parameter ownership,
+seeded streams, rejection before mutation and initial prediction invariance
+to the zeroed context columns. Actual initializer generation remains next.

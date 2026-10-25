@@ -163,3 +163,40 @@ training-row preprocessing fit, no policy optimization, provider requests or
 Colab allocation. Actual generated identities belong in
 `results/vix-context-2026-10-25/payloads.json`; execution remains pending at this
 implementation milestone.
+
+
+## Zero-column untrained initializer implementation
+
+`training.vix_initialization` validates the pinned original full64 recurrent
+manifest and per-seed tensor/RNG archives, then embeds21 inputs into23: original
+market columns0:7 stay exact, account columns7:21 move to9:23, and new VIX
+columns7:9 are zero in both actor and critic LSTMs. Every other policy tensor
+and dtype stays exact. Parameter counts61,513/62,537 are checked. Mapping uses
+`load_state_dict` into existing Parameters, preserving optimizer ownership and
+empty state. Used, non-CPU or already mapped models and incompatible/nonfinite
+source tensors reject; complete validation precedes mutation.
+
+Five initializer tests verify11/23/37 mappings, owner/tensor identity, zero
+columns, unchanged Torch/NumPy/Python streams during mapping, malformed-shape
+rejection before mutation and refusal after timestep use/double application.
+The producer restores the pinned original CPU RNG before serialization and
+checks NumPy/Python seeded states, without reading a dataset or stepping an
+optimizer. Output must be a new portable `configs/initializations/` directory.
+Full/masked share the exact same per-seed archive; smoke11 reuses the full64
+seed11 architecture/assets, only collection settings differ.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/build_vix_initializations.py \
+  --output configs/initializations/vix_v1
+```
+
+Actual source-data payload generation completed separately: masked
+5184823a388f4cc02197a111fe29cde7f80edae14aa451aa139f791891f903c2 and full
+b63683a2b78e5aaa7652069b75b5c95acc32748b8fdf2d4c8dcff825ef5d756a.
+The70.04-second local producer reloaded/reconstructed both exactly, preserved
+all source hashes and original coordinates, verified finite float32 inputs and
+fitted only full's298,946 training rows. Independent pandas coordinates and NumPy training statistics pass in
+`payload-verification.json` (coordinate error1.11e-16, mean/scale errors below
+1e-10); every original episode field/seven-coordinate value remains exact. Initializer asset generation remains pending;
+no training, external data request or Colab allocation.
