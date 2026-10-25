@@ -2459,3 +2459,11 @@ reward/equity error0.0, covariance/discount/ratio error1.12e−15; source models
 prior traces, data and usage ledger unchanged. Eight focused tests pass; worker
 terminal0 in5.22s. No replay/optimization/Colab units/retired data. Fixed subtraction
 hypothesis closed; no economic improvement or coefficient search authorized.
+
+GAE implementation acceptance:61 focused original/shared initialization, full64
+seed11/23/37 ownership/RNG, lambda parameter, real serialization and actual SB3
+buffer-fixture checks pass. Standalone callback reconstructs timeout corrections,
+GAE and segmented lambda1 returns before updates, preserving model/state/RNG.
+New modules/tests pass Ruff; no `.learn`, optimizer step or Colab allocation.
+Runner/fleet/archive/physical learned acceptance remains pending. See
+results/gae-traces-2026-10-25/README.md; fixtures are not learned model evidence.

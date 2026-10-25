@@ -2226,3 +2226,10 @@ sampler/100k steps and fixed performance gates. Parameter equality and actual
 SB3 finite-buffer telescoping/timeout/boundary tests pass (12 focused checks with
 prior diagnostics). No new policy constructed or trained. Shared-start/runtime/
 actual-rollout/archive integration and512-transition Colab smokes are next.
+
+GAE shared original full64 starts/model records and standalone actual pre-update
+rollout checker implemented;61 focused non-optimizing initialization/buffer/
+serialization regressions pass. Timeout, boundary, GAE and lambda1 segmented
+return arithmetic validates with compact retained NPZ/JSONL evidence. Runner
+request/callback wiring, version35 budget/archive and learned acceptance remain
+before Colab smokes. No allocation, new return, source data or promotion.

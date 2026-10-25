@@ -75,3 +75,20 @@ Failure closes this fixed comparison without lambda/gamma/rollout/minibatch/epoc
 learning-rate/model/reward/feature/step grids, schedules, extension or confirmation.
 No new training, model construction, reward change or Colab allocation has occurred
 for this study. Runtime/shared-start/rollout/archive integration is next.
+
+## Shared-start and rollout-check implementation
+
+[Implementation evidence](../results/gae-traces-2026-10-25/README.md) records61
+focused passing checks. Original full64 shared tensors/RNG, empty coupled Adam
+and effective defaults are validated; both arms differ only in lambda. Invalid
+fresh settings reject before tensor replacement. Model/optimizer/RNG records and
+real save/load fixtures are covered without optimization.
+
+The standalone `GaeRolloutAudit` callback retains actual float32 buffers plus
+raw rewards/timeout values/done masks as compressed per-rollout NPZ files. It
+checks pre-update epoch/transition order, timeout correction, GAE reconstruction
+and independently segmented lambda1 returns, with fixed absolute2e−6/relative2e−5
+tolerances. It accepts continuation at rollout boundaries and rejects corrupt
+math/masks/dtypes. Fixture calls preserve model/Adam/state/RNG and forbid learning.
+The callback is not yet attached to the runner; these are not learned Colab results.
+Strict runner, job/fleet/archive and physical learned acceptance remain next.

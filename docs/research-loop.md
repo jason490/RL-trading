@@ -2100,3 +2100,12 @@ no trace/discount/optimizer/step grid after failure. Twelve focused parameter,
 SB3 segmented-return and prior diagnostic checks pass. No new model or training.
 See docs/gae-traces.md and configs/experiments/gae_trace_preregistration.json.
 Runtime/shared-start/actual-buffer/archive integration precedes Colab smokes.
+
+GAE shared-start/model records and standalone actual pre-update rollout auditing
+are implemented. Full64 original tensors/RNG for11/23/37, source proofs, empty
+coupled Adam and one-field lambda difference validate. Actual-buffer fixtures
+check raw/timeout-adjusted rewards, boundaries, float32 fields, GAE and independent
+segmented MC targets; compact hashed NPZ/JSONL evidence is retained.61 focused
+non-optimizing regressions/Ruff pass. Runner dispatch/callback attachment and
+version35 fleet/archive/learned acceptance remain before Colab smokes; no new
+session, model return, reward or data. See results/gae-traces-2026-10-25/README.md.
