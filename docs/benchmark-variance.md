@@ -48,3 +48,14 @@ The180-second worker validates complete trace/window alignment, preserves every
 source/data/ledger hash, writes a progress journal and refuses existing outputs.
 No training, replay, new provider request, development evaluation, retired-test
 access, Colab allocation or broker orders. All prior failed families remain closed.
+
+## Actual outcome — failed
+
+[Completed evidence](../results/benchmark-variance-2026-10-25/README.md) records
+only3/8 passing conditions. Selected stock/ETF reward ratios1.0159/1.4952 and
+final ETF reward ratio1.1792 fail. ETF target ratios1.4020 selected/1.1167 final
+also fail, despite stock target reductions. Independent cash/share accounting
+reproduces benchmark rewards/equity exactly; covariance/discount/ratio checks
+agree within1.12e−15. Worker exited0 in5.22s; all source/model/data/ledger hashes
+unchanged. No optimization/replay/new units. The fixed subtraction hypothesis
+is closed without a coefficient/benchmark/window/discount search or training.

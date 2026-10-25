@@ -2213,3 +2213,9 @@ gamma0.99 and unchanged windows. All eight phase/group/reward/target variance
 ratios must be<=0.9 using mean within-episode variances. No fitted coefficient,
 grid, replay, model update or Colab allocation. Eight focused covariance/linearity,
 corporate-action/bounds and recurrent-target tests pass; actual decomposition next.
+
+Fixed benchmark variance audit completed failed:3/8 conditions pass; ETF reward
+and target variation increase in both phases. Independent benchmark accounting
+exact, covariance/discount/ratio error1.12e−15, source model/data/ledger unchanged,
+worker terminal0 in5.22s. No replay/training/new units. Fixed coefficient-one
+subtraction hypothesis closed without grid or allocation; objective remains unmet.

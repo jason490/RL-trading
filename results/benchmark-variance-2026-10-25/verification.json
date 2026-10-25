@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "protocol_sha256": "509cce09ebc4c4360d6cdae83241f3d210eefd90ec6465a868cb68adf8a9c513",
+  "independent_benchmark_max_reward_error": 0.0,
+  "independent_benchmark_max_equity_error": 0.0,
+  "independent_discount_matrix_covariance_ratio_max_error": 1.1102230246251565e-15,
+  "independent_gate_pass_count": 3,
+  "gate_condition_count": 8,
+  "source_models_data_ledger_unchanged": true,
+  "worker_terminal_exit_code": 0,
+  "training_performed": false,
+  "model_replayed": false,
+  "optimizer_steps": 0,
+  "colab_allocated": false,
+  "test_evaluated": false
+}

@@ -353,3 +353,10 @@ allocation. Selected/final zero-tail descriptive EV0.029/−0.084 versus GAE
 or causal optimizer claims. Independent NumPy/SB3 arithmetic verifies all rows;
 source model/Adam/data/ledger unchanged, worker terminal0. Next fixed
 benchmark/noise decomposition before a distinct training hypothesis; no promotion.
+
+[Fixed benchmark subtraction](benchmark-variance-2026-10-25/README.md) failed
+feasibility: only3/8 variance conditions pass. ETF reward/target variation increases
+in both saved phases. Independent cash/share benchmark accounting matches exactly;
+NumPy discount/covariance ratios agree within1.12e−15. Worker terminal0 in5.22s,
+no replay/training/Colab units, source model/data/ledger unchanged. Fixed subtraction
+hypothesis closed without coefficient/benchmark/window/discount grid or training.

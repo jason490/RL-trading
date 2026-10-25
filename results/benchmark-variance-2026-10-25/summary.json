@@ -1,0 +1,1682 @@
+{
+  "protocol_sha256": "509cce09ebc4c4360d6cdae83241f3d210eefd90ec6465a868cb68adf8a9c513",
+  "cells": {
+    "selected": {
+      "groups": {
+        "all": {
+          "rewards": {
+            "episodes": 26,
+            "mean_policy_variance": 0.00023834121040794745,
+            "mean_benchmark_variance": 0.00043670951435471526,
+            "mean_residual_variance": 0.0002523011872112219,
+            "mean_covariance": 0.0002113747687757204,
+            "ratio_of_mean_within_episode_variances": 1.0585713934211394,
+            "pooled_descriptive": {
+              "count": 13312,
+              "policy_variance": 0.00023862675108436666,
+              "benchmark_variance": 0.00043707424660274335,
+              "residual_variance": 0.0002525249861279949,
+              "covariance": 0.00021158800577955752,
+              "policy_mean": 8.214614720587285e-05,
+              "benchmark_mean": 0.0006943376804625901,
+              "residual_mean": -0.0006121915332567173,
+              "residual_variance_ratio": 1.0582425691188098,
+              "correlation": 0.655169802893543
+            }
+          },
+          "discounted_targets": {
+            "episodes": 26,
+            "mean_policy_variance": 0.002847063476036699,
+            "mean_benchmark_variance": 0.0030398157163493028,
+            "mean_residual_variance": 0.0019409462176775162,
+            "mean_covariance": 0.001972966487354243,
+            "ratio_of_mean_within_episode_variances": 0.6817361938060622,
+            "pooled_descriptive": {
+              "count": 6656,
+              "policy_variance": 0.00549643451557685,
+              "benchmark_variance": 0.006725213929506592,
+              "residual_variance": 0.0036165825669309793,
+              "covariance": 0.004302532939076232,
+              "policy_mean": 0.0007671705676041013,
+              "benchmark_mean": 0.05955991334305588,
+              "residual_mean": -0.05879274277545178,
+              "residual_variance_ratio": 0.6579870198910974,
+              "correlation": 0.707669735630623
+            }
+          }
+        },
+        "stock": {
+          "rewards": {
+            "episodes": 22,
+            "mean_policy_variance": 0.00025658331415247547,
+            "mean_benchmark_variance": 0.0004599089339637723,
+            "mean_residual_variance": 0.00026065600781516654,
+            "mean_covariance": 0.00022791812015054058,
+            "ratio_of_mean_within_episode_variances": 1.0158727923370374,
+            "pooled_descriptive": {
+              "count": 11264,
+              "policy_variance": 0.00025689023078280293,
+              "benchmark_variance": 0.00046031879895067686,
+              "residual_variance": 0.00026085713321957044,
+              "covariance": 0.0002281759482569547,
+              "policy_mean": 2.2910737733008874e-05,
+              "benchmark_mean": 0.000688936538267949,
+              "residual_mean": -0.0006660258005349401,
+              "residual_variance_ratio": 1.015442013597323,
+              "correlation": 0.6635393971974529
+            }
+          },
+          "discounted_targets": {
+            "episodes": 22,
+            "mean_policy_variance": 0.003185531685420506,
+            "mean_benchmark_variance": 0.0033781748787952816,
+            "mean_residual_variance": 0.0020426278365717307,
+            "mean_covariance": 0.0022605393638220287,
+            "ratio_of_mean_within_episode_variances": 0.6412203796058282,
+            "pooled_descriptive": {
+              "count": 5632,
+              "policy_variance": 0.006178420677322305,
+              "benchmark_variance": 0.007501677975968385,
+              "residual_variance": 0.00347221751455828,
+              "covariance": 0.005103940569366205,
+              "policy_mean": -0.0035786667941444614,
+              "benchmark_mean": 0.06139910302727665,
+              "residual_mean": -0.06497776982142112,
+              "residual_variance_ratio": 0.5619911132472646,
+              "correlation": 0.7497002617965554
+            }
+          }
+        },
+        "etf": {
+          "rewards": {
+            "episodes": 4,
+            "mean_policy_variance": 0.00013800963981304337,
+            "mean_benchmark_variance": 0.000309112706504902,
+            "mean_residual_variance": 0.00020634967388952652,
+            "mean_covariance": 0.00012038633621420944,
+            "ratio_of_mean_within_episode_variances": 1.4951830478585475,
+            "pooled_descriptive": {
+              "count": 2048,
+              "policy_variance": 0.0001380521719369259,
+              "benchmark_variance": 0.0003092281657780607,
+              "residual_variance": 0.00020659456903641125,
+              "covariance": 0.00012034288433928768,
+              "policy_mean": 0.0004079408993066247,
+              "benchmark_mean": 0.0007240439625331163,
+              "residual_mean": -0.0003161030632264916,
+              "residual_variance_ratio": 1.4964963327835321,
+              "correlation": 0.5824508351081419
+            }
+          },
+          "discounted_targets": {
+            "episodes": 4,
+            "mean_policy_variance": 0.00098548832442576,
+            "mean_benchmark_variance": 0.0011788403228964225,
+            "mean_residual_variance": 0.001381697313759336,
+            "mean_covariance": 0.0003913156667814232,
+            "ratio_of_mean_within_episode_variances": 1.4020433114359274,
+            "pooled_descriptive": {
+              "count": 1024,
+              "policy_variance": 0.0010703253160788315,
+              "benchmark_variance": 0.0023337330556367844,
+              "residual_variance": 0.003042989850733268,
+              "covariance": 0.00018053426049117373,
+              "policy_mean": 0.02466927605722121,
+              "benchmark_mean": 0.049444370079841635,
+              "residual_mean": -0.02477509402262043,
+              "residual_variance_ratio": 2.8430513648704037,
+              "correlation": 0.11422893917402362
+            }
+          }
+        }
+      },
+      "per_symbol": {
+        "SPY": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00011558290154972255,
+            "benchmark_variance": 0.00025201107025057886,
+            "residual_variance": 0.00018461105689335155,
+            "covariance": 9.149145745347494e-05,
+            "policy_mean": 0.0001832049961096871,
+            "benchmark_mean": 0.0006890781957267222,
+            "residual_mean": -0.0005058731996170351,
+            "residual_variance_ratio": 1.5972177062360198,
+            "correlation": 0.5360730077426443
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0008053101662486352,
+            "benchmark_variance": 0.0008950018117742442,
+            "residual_variance": 0.00017955460232295698,
+            "covariance": 0.0007603786878499613,
+            "policy_mean": 0.018892047498823072,
+            "benchmark_mean": 0.05410218645273062,
+            "residual_mean": -0.035210138953907545,
+            "residual_variance_ratio": 0.222963287747097,
+            "correlation": 0.8956459939829634
+          }
+        },
+        "QQQ": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00014686743695767164,
+            "benchmark_variance": 0.0003189646746370494,
+            "residual_variance": 0.00020284729183123862,
+            "covariance": 0.0001314924098817412,
+            "policy_mean": 0.0002627360934024381,
+            "benchmark_mean": 0.0012895587215027149,
+            "residual_mean": -0.0010268226281002768,
+            "residual_variance_ratio": 1.3811590644813991,
+            "correlation": 0.6075284678197194
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0016675399492485183,
+            "benchmark_variance": 0.0012134332959530241,
+            "residual_variance": 0.0018399742137382164,
+            "covariance": 0.0005204995157316629,
+            "policy_mean": 0.014949524842273925,
+            "benchmark_mean": 0.1019580722333398,
+            "residual_mean": -0.0870085473910659,
+            "residual_variance_ratio": 1.1034063769011389,
+            "correlation": 0.36590997801410774
+          }
+        },
+        "IWM": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00015534667951926632,
+            "benchmark_variance": 0.00037517921638863987,
+            "residual_variance": 0.000260216679225445,
+            "covariance": 0.00013515460834123062,
+            "policy_mean": 0.0004702129051281645,
+            "benchmark_mean": 0.0004645326526997451,
+            "residual_mean": 5.680252428419408e-06,
+            "residual_variance_ratio": 1.6750707516292458,
+            "correlation": 0.5598355653459247
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0005154491740312761,
+            "benchmark_variance": 0.0015524676360816384,
+            "residual_variance": 0.0015425456632916384,
+            "covariance": 0.000262685573410638,
+            "policy_mean": 0.02565685468622652,
+            "benchmark_mean": 0.010712293789641137,
+            "residual_mean": 0.014944560896585381,
+            "residual_variance_ratio": 2.992624182957835,
+            "correlation": 0.2936513626596643
+          }
+        },
+        "DIA": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00013424154122551292,
+            "benchmark_variance": 0.0002902958647433399,
+            "residual_variance": 0.00017772366760807087,
+            "covariance": 0.00012340686918039097,
+            "policy_mean": 0.0007156096025862091,
+            "benchmark_mean": 0.00045300628020328304,
+            "residual_mean": 0.00026260332238292605,
+            "residual_variance_ratio": 1.3239096183312744,
+            "correlation": 0.6251373464447739
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0009536540081746099,
+            "benchmark_variance": 0.0010544585477767837,
+            "residual_variance": 0.0019647147756845324,
+            "covariance": 2.1698890133430704e-05,
+            "policy_mean": 0.039178677201561325,
+            "benchmark_mean": 0.031004927843654988,
+            "residual_mean": 0.008173749357906334,
+            "residual_variance_ratio": 2.060196631947466,
+            "correlation": 0.02163850966696841
+          }
+        },
+        "GOOGL": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00017076866020462495,
+            "benchmark_variance": 0.00042187593264291477,
+            "residual_variance": 0.00023660005965761392,
+            "covariance": 0.00017802226659496286,
+            "policy_mean": 0.0009953633176621457,
+            "benchmark_mean": 0.00115974633181537,
+            "residual_mean": -0.00016438301415322432,
+            "residual_variance_ratio": 1.3855004739986012,
+            "correlation": 0.663250926805435
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0017367911406006172,
+            "benchmark_variance": 0.0019744574067137987,
+            "residual_variance": 0.0034796069833181228,
+            "covariance": 0.00011582078199814676,
+            "policy_mean": 0.056387822424364326,
+            "benchmark_mean": 0.08190339318932066,
+            "residual_mean": -0.025515570764956343,
+            "residual_variance_ratio": 2.003468869673532,
+            "correlation": 0.06254445471905966
+          }
+        },
+        "DIS": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00032753306185920317,
+            "benchmark_variance": 0.0005130530611550148,
+            "residual_variance": 0.0002661658014799917,
+            "covariance": 0.00028721016076711315,
+            "policy_mean": -0.0005191732143288164,
+            "benchmark_mean": 0.0006230085308231992,
+            "residual_mean": -0.0011421817451520155,
+            "residual_variance_ratio": 0.812637966894495,
+            "correlation": 0.7006338019177023
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.015332012023937452,
+            "benchmark_variance": 0.006422168256636,
+            "residual_variance": 0.005498930055064719,
+            "covariance": 0.008127625112754364,
+            "policy_mean": -0.09055106912756516,
+            "benchmark_mean": 0.03399603233030199,
+            "residual_mean": -0.12454710145786717,
+            "residual_variance_ratio": 0.3586567794546071,
+            "correlation": 0.8190742034544857
+          }
+        },
+        "AMZN": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00023722956110332398,
+            "benchmark_variance": 0.00045252719740808287,
+            "residual_variance": 0.00023121689612448177,
+            "covariance": 0.0002292699311934625,
+            "policy_mean": 5.531426349358881e-05,
+            "benchmark_mean": 0.0015638599501883732,
+            "residual_mean": -0.0015085456866947844,
+            "residual_variance_ratio": 0.9746546553857871,
+            "correlation": 0.6997458879078091
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0019929310255576765,
+            "benchmark_variance": 0.00435402513075995,
+            "residual_variance": 0.0025349450593824007,
+            "covariance": 0.0019060055484676126,
+            "policy_mean": -0.013727603318807603,
+            "benchmark_mean": 0.09528242647733746,
+            "residual_mean": -0.10901002979614507,
+            "residual_variance_ratio": 1.271968285341463,
+            "correlation": 0.647042132254773
+          }
+        },
+        "HD": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00018891709429010094,
+            "benchmark_variance": 0.00043621313488725514,
+            "residual_variance": 0.00022717709441634156,
+            "covariance": 0.00019897656738050726,
+            "policy_mean": 0.00021888024095151337,
+            "benchmark_mean": 0.0010065010574322741,
+            "residual_mean": -0.0007876208164807608,
+            "residual_variance_ratio": 1.2025227006058468,
+            "correlation": 0.6931335753822258
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.003501305885516575,
+            "benchmark_variance": 0.0027739341259367433,
+            "residual_variance": 0.0009025305257467643,
+            "covariance": 0.0026863547428532773,
+            "policy_mean": 0.017606109163219273,
+            "benchmark_mean": 0.08236622780951218,
+            "residual_mean": -0.06476011864629291,
+            "residual_variance_ratio": 0.2577696880127361,
+            "correlation": 0.8619861020001397
+          }
+        },
+        "PG": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00016854994103530078,
+            "benchmark_variance": 0.0002540167587873092,
+            "residual_variance": 0.00012877570144227799,
+            "covariance": 0.000146895499190166,
+            "policy_mean": 0.00026375768847763936,
+            "benchmark_mean": 0.0008540753983368177,
+            "residual_mean": -0.0005903177098591783,
+            "residual_variance_ratio": 0.764021041189848,
+            "correlation": 0.7099258692049264
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.004439806296620942,
+            "benchmark_variance": 0.0021735323943320893,
+            "residual_variance": 0.0012226295162173825,
+            "covariance": 0.0026953545873678246,
+            "policy_mean": -0.003405389408180675,
+            "benchmark_mean": 0.08402485071330006,
+            "residual_mean": -0.08743024012148073,
+            "residual_variance_ratio": 0.2753790220865951,
+            "correlation": 0.8676625180032053
+          }
+        },
+        "KO": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0001451817837906734,
+            "benchmark_variance": 0.0002757076263206051,
+            "residual_variance": 0.00011523056561759251,
+            "covariance": 0.00015282942224684298,
+            "policy_mean": 6.69900646834698e-05,
+            "benchmark_mean": 0.00017988646641242667,
+            "residual_mean": -0.00011289640172895687,
+            "residual_variance_ratio": 0.7936985109904333,
+            "correlation": 0.7638824241470263
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0015795936181822838,
+            "benchmark_variance": 0.0021588055812587076,
+            "residual_variance": 0.00029120083267129436,
+            "covariance": 0.0017235991833848487,
+            "policy_mean": 0.033927091590590236,
+            "benchmark_mean": 0.032509924482701354,
+            "residual_mean": 0.0014171671078888823,
+            "residual_variance_ratio": 0.1843517404219406,
+            "correlation": 0.9333764270458624
+          }
+        },
+        "XOM": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003479771940139546,
+            "benchmark_variance": 0.0005049432867439773,
+            "residual_variance": 0.00041117374706421976,
+            "covariance": 0.00022087336684685602,
+            "policy_mean": -0.00141194768621844,
+            "benchmark_mean": -0.001005866360571872,
+            "residual_mean": -0.00040608132564656785,
+            "residual_variance_ratio": 1.1816111921625843,
+            "correlation": 0.5269223974280706
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.005816302046570847,
+            "benchmark_variance": 0.0059794886804559015,
+            "residual_variance": 0.0010894834774250208,
+            "covariance": 0.005353153624800864,
+            "policy_mean": -0.1495351619109232,
+            "benchmark_mean": -0.10649898087027673,
+            "residual_mean": -0.04303618104064645,
+            "residual_variance_ratio": 0.18731549164771358,
+            "correlation": 0.9077248125754951
+          }
+        },
+        "CVX": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003700889085429244,
+            "benchmark_variance": 0.000705965052610929,
+            "residual_variance": 0.0004161231651023104,
+            "covariance": 0.00032996539802577146,
+            "policy_mean": -0.0011146283281543434,
+            "benchmark_mean": -0.0003482004897534807,
+            "residual_mean": -0.0007664278384008627,
+            "residual_variance_ratio": 1.1243870202450197,
+            "correlation": 0.6455409003478463
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0073774814943811644,
+            "benchmark_variance": 0.004379772698060169,
+            "residual_variance": 0.0008702609170389555,
+            "covariance": 0.0054434966377011895,
+            "policy_mean": -0.10761296849272314,
+            "benchmark_mean": -0.04717080319628693,
+            "residual_mean": -0.060442165296436236,
+            "residual_variance_ratio": 0.1179617892232957,
+            "correlation": 0.9576308063643414
+          }
+        },
+        "JPM": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0002524571144491934,
+            "benchmark_variance": 0.0005962828785629908,
+            "residual_variance": 0.00034983715800763907,
+            "covariance": 0.00024945141750227253,
+            "policy_mean": 9.85466201157692e-05,
+            "benchmark_mean": 0.0003134075860060648,
+            "residual_mean": -0.00021486096589029557,
+            "residual_variance_ratio": 1.3857290525200996,
+            "correlation": 0.6429334174671316
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0008388066609687851,
+            "benchmark_variance": 0.0029881966453842194,
+            "residual_variance": 0.002658564388803228,
+            "covariance": 0.0005842194587748883,
+            "policy_mean": -0.0006133602326806806,
+            "benchmark_mean": 0.04114598419413693,
+            "residual_mean": -0.0417593444268176,
+            "residual_variance_ratio": 3.169460273160804,
+            "correlation": 0.36901200554504165
+          }
+        },
+        "BAC": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0004936149776748075,
+            "benchmark_variance": 0.0007303803909257068,
+            "residual_variance": 0.00036790020387354673,
+            "covariance": 0.0004280475823634838,
+            "policy_mean": -0.0004056989348864004,
+            "benchmark_mean": 0.00020151406471313749,
+            "residual_mean": -0.0006072129995995379,
+            "residual_variance_ratio": 0.7453181538505069,
+            "correlation": 0.7128913277130183
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0018069060018034663,
+            "benchmark_variance": 0.0041170456894361485,
+            "residual_variance": 0.0051082377373522355,
+            "covariance": 0.0004078569769436896,
+            "policy_mean": -0.052129633487991704,
+            "benchmark_mean": 0.019542695723649063,
+            "residual_mean": -0.07167232921164077,
+            "residual_variance_ratio": 2.8270633515267103,
+            "correlation": 0.1495365209573151
+          }
+        },
+        "JNJ": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00010640093786013639,
+            "benchmark_variance": 0.00024321835659899544,
+            "residual_variance": 0.0001434927674960132,
+            "covariance": 0.00010306326348155932,
+            "policy_mean": 0.00011172584764462812,
+            "benchmark_mean": 0.00011833080293399689,
+            "residual_mean": -6.604955289368775e-06,
+            "residual_variance_ratio": 1.3486043486255155,
+            "correlation": 0.640667933488644
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0007396702093935383,
+            "benchmark_variance": 0.002018101562967585,
+            "residual_variance": 0.0016870976884628486,
+            "covariance": 0.0005353370419491374,
+            "policy_mean": 0.01931333530467154,
+            "benchmark_mean": 0.03188676354933189,
+            "residual_mean": -0.012573428244660357,
+            "residual_variance_ratio": 2.2808782441652125,
+            "correlation": 0.43816402932492304
+          }
+        },
+        "UNH": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003067115704416598,
+            "benchmark_variance": 0.0005727251873838628,
+            "residual_variance": 0.000363926601534188,
+            "covariance": 0.0002577550781456673,
+            "policy_mean": 2.9575893996991454e-05,
+            "benchmark_mean": 0.0005719205456671261,
+            "residual_mean": -0.0005423446516701347,
+            "residual_variance_ratio": 1.1865434388736604,
+            "correlation": 0.6149913522079948
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0025262706991912532,
+            "benchmark_variance": 0.006178928107753905,
+            "residual_variance": 0.0056723818036525375,
+            "covariance": 0.0015164085016463103,
+            "policy_mean": -0.027809700859388338,
+            "benchmark_mean": 0.056386792866999345,
+            "residual_mean": -0.08419649372638768,
+            "residual_variance_ratio": 2.2453578729581367,
+            "correlation": 0.38381301461289014
+          }
+        },
+        "CAT": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00029124591871613174,
+            "benchmark_variance": 0.0005324581752355243,
+            "residual_variance": 0.0003241129557636425,
+            "covariance": 0.00024979556909400676,
+            "policy_mean": 0.0002934070672129252,
+            "benchmark_mean": 0.0007486280149748836,
+            "residual_mean": -0.00045522094776195843,
+            "residual_variance_ratio": 1.1128497772342871,
+            "correlation": 0.6343253338118089
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0029671000802120925,
+            "benchmark_variance": 0.0033763005308199904,
+            "residual_variance": 0.0022949134677070094,
+            "covariance": 0.002024243571662537,
+            "policy_mean": -0.02938488202793528,
+            "benchmark_mean": 0.025030407321524922,
+            "residual_mean": -0.0544152893494602,
+            "residual_variance_ratio": 0.7734533401862757,
+            "correlation": 0.6395523846583526
+          }
+        },
+        "HON": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00032805375444929543,
+            "benchmark_variance": 0.0004432323441361583,
+            "residual_variance": 0.0002847545361639496,
+            "covariance": 0.00024326578121075212,
+            "policy_mean": 2.952173908710165e-05,
+            "benchmark_mean": 0.0007591357335101634,
+            "residual_mean": -0.0007296139944230617,
+            "residual_variance_ratio": 0.8680118191055842,
+            "correlation": 0.6379590386290565
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.002293012067790039,
+            "benchmark_variance": 0.004634386078586957,
+            "residual_variance": 0.0013417845785417433,
+            "covariance": 0.0027928067839176262,
+            "policy_mean": -0.0057123403321507685,
+            "benchmark_mean": 0.036721609042116556,
+            "residual_mean": -0.042433949374267324,
+            "residual_variance_ratio": 0.5851624583183854,
+            "correlation": 0.856725345061878
+          }
+        },
+        "LIN": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00017327860438690832,
+            "benchmark_variance": 0.0003645144761386603,
+            "residual_variance": 0.00019755620791807283,
+            "covariance": 0.00017011843630374788,
+            "policy_mean": 8.314178868795707e-05,
+            "benchmark_mean": 0.0009714318877698247,
+            "residual_mean": -0.0008882900990818676,
+            "residual_variance_ratio": 1.1401073353346949,
+            "correlation": 0.6768953352698438
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0040193124220368175,
+            "benchmark_variance": 0.0023762878477617466,
+            "residual_variance": 0.000847723608384493,
+            "covariance": 0.002773938330707036,
+            "policy_mean": 0.008678338952463283,
+            "benchmark_mean": 0.07756069732090977,
+            "residual_mean": -0.06888235836844647,
+            "residual_variance_ratio": 0.21091259383984454,
+            "correlation": 0.8975763388759862
+          }
+        },
+        "APD": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00025092953526530343,
+            "benchmark_variance": 0.0004364708535411224,
+            "residual_variance": 0.0002231251415083184,
+            "covariance": 0.00023213762364905372,
+            "policy_mean": 0.00041560451018085587,
+            "benchmark_mean": 0.0011307200931298667,
+            "residual_mean": -0.0007151155829490108,
+            "residual_variance_ratio": 0.8891944157646172,
+            "correlation": 0.7014424083563483
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0035267793495828946,
+            "benchmark_variance": 0.005261950470392081,
+            "residual_variance": 0.0008284270381146323,
+            "covariance": 0.003980151390930171,
+            "policy_mean": 0.041319704701087076,
+            "benchmark_mean": 0.10975983182306655,
+            "residual_mean": -0.06844012712197947,
+            "residual_variance_ratio": 0.23489619168055093,
+            "correlation": 0.923925745199151
+          }
+        },
+        "AMT": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00021967369900849346,
+            "benchmark_variance": 0.00042940871741888655,
+            "residual_variance": 0.00026214223431272887,
+            "covariance": 0.00019347009105732555,
+            "policy_mean": 0.00023424021398188444,
+            "benchmark_mean": 0.0007031723776975696,
+            "residual_mean": -0.00046893216371568514,
+            "residual_variance_ratio": 1.1933255346266711,
+            "correlation": 0.6299257709156514
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.001346650115038357,
+            "benchmark_variance": 0.0033146061615637492,
+            "residual_variance": 0.0016507152743816561,
+            "covariance": 0.0015052705011102249,
+            "policy_mean": 0.04627196336763843,
+            "benchmark_mean": 0.09763020755290694,
+            "residual_mean": -0.051358244185268506,
+            "residual_variance_ratio": 1.225793735096988,
+            "correlation": 0.7124775721552138
+          }
+        },
+        "PLD": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0002865489845643667,
+            "benchmark_variance": 0.00047057071120905054,
+            "residual_variance": 0.0003213752417742238,
+            "covariance": 0.00021787222699959672,
+            "policy_mean": -0.0006697464885901394,
+            "benchmark_mean": 0.000798591840066365,
+            "residual_mean": -0.0014683383286565044,
+            "residual_variance_ratio": 1.121536836931398,
+            "correlation": 0.593321367913253
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0026581113292114666,
+            "benchmark_variance": 0.0028274917956905496,
+            "residual_variance": 0.002307190287110689,
+            "covariance": 0.0015892064188956635,
+            "policy_mean": -0.005831404505942498,
+            "benchmark_mean": 0.09989423413003626,
+            "residual_mean": -0.10572563863597874,
+            "residual_variance_ratio": 0.8679810592414582,
+            "correlation": 0.5796863186431332
+          }
+        },
+        "AAPL": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003333345016259324,
+            "benchmark_variance": 0.0005710246099730698,
+            "residual_variance": 0.000299811391146523,
+            "covariance": 0.00030227386022623967,
+            "policy_mean": 0.000254856492285252,
+            "benchmark_mean": 0.00200659888640331,
+            "residual_mean": -0.0017517423941180582,
+            "residual_variance_ratio": 0.8994310210437532,
+            "correlation": 0.6928401477385747
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.00261659445199077,
+            "benchmark_variance": 0.003973717596390192,
+            "residual_variance": 0.0025265601283761393,
+            "covariance": 0.0020318759600024116,
+            "policy_mean": 0.06073646428096076,
+            "benchmark_mean": 0.21329839752313395,
+            "residual_mean": -0.1525619332421732,
+            "residual_variance_ratio": 0.9655910286188483,
+            "correlation": 0.6301304753938508
+          }
+        },
+        "MSFT": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003060775922512564,
+            "benchmark_variance": 0.00047036338270251856,
+            "residual_variance": 0.0002253531232854367,
+            "covariance": 0.0002755439258341691,
+            "policy_mean": 0.0009227398765085937,
+            "benchmark_mean": 0.0014987219187858614,
+            "residual_mean": -0.0005759820422772677,
+            "residual_variance_ratio": 0.7362614219091422,
+            "correlation": 0.7262034722182017
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0015156125108311438,
+            "benchmark_variance": 0.001336634679013803,
+            "residual_variance": 0.0014806352217295758,
+            "covariance": 0.0006858059840576857,
+            "policy_mean": 0.04860906581850093,
+            "benchmark_mean": 0.15455337971432193,
+            "residual_mean": -0.10594431389582099,
+            "residual_variance_ratio": 0.9769220108361425,
+            "correlation": 0.4818377444027863
+          }
+        },
+        "NEE": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00020178183975229407,
+            "benchmark_variance": 0.00036058184486321477,
+            "residual_variance": 0.00018338714170535342,
+            "covariance": 0.0001894882714550777,
+            "policy_mean": 0.0005168294330850642,
+            "benchmark_mean": 0.0010260631957450528,
+            "residual_mean": -0.0005092337626599885,
+            "residual_variance_ratio": 0.9088386840484662,
+            "correlation": 0.7024887395828864
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.00029727177561166186,
+            "benchmark_variance": 0.0007281635815683772,
+            "residual_variance": 0.00040610148396335953,
+            "covariance": 0.0003096669366083398,
+            "policy_mean": 0.06548661805668038,
+            "benchmark_mean": 0.11273001474618408,
+            "residual_mean": -0.04724339668950368,
+            "residual_variance_ratio": 1.3660949921255434,
+            "correlation": 0.6655849942109481
+          }
+        },
+        "DUK": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00013847767606857536,
+            "benchmark_variance": 0.0003324625679571399,
+            "residual_variance": 0.00015519443653919847,
+            "covariance": 0.00015787290374325843,
+            "policy_mean": 3.473582424895483e-05,
+            "benchmark_mean": 0.00027535600980854724,
+            "residual_mean": -0.00024062018555959241,
+            "residual_variance_ratio": 1.1207180893355317,
+            "correlation": 0.735777217292229
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0011533758742212957,
+            "benchmark_variance": 0.0009718523120135199,
+            "residual_variance": 0.00023789233113327287,
+            "covariance": 0.0009436679275507714,
+            "policy_mean": 0.009246330572934601,
+            "benchmark_mean": 0.018226180155858196,
+            "residual_mean": -0.008979849582923596,
+            "residual_variance_ratio": 0.20625741915564724,
+            "correlation": 0.8913199504030686
+          }
+        }
+      }
+    },
+    "final": {
+      "groups": {
+        "all": {
+          "rewards": {
+            "episodes": 26,
+            "mean_policy_variance": 0.00024203276555945957,
+            "mean_benchmark_variance": 0.00043670951435471526,
+            "mean_residual_variance": 0.00021291880414922766,
+            "mean_covariance": 0.00023291173788247358,
+            "ratio_of_mean_within_episode_variances": 0.879710660897772,
+            "pooled_descriptive": {
+              "count": 13312,
+              "policy_variance": 0.00024232538266836235,
+              "benchmark_variance": 0.00043707424660274335,
+              "residual_variance": 0.0002132040955960004,
+              "covariance": 0.0002330977668375526,
+              "policy_mean": 7.725043028117914e-05,
+              "benchmark_mean": 0.0006943376804625901,
+              "residual_mean": -0.000617087250181411,
+              "residual_variance_ratio": 0.8798256841619588,
+              "correlation": 0.7162440882606652
+            }
+          },
+          "discounted_targets": {
+            "episodes": 26,
+            "mean_policy_variance": 0.0025125775685692028,
+            "mean_benchmark_variance": 0.0030398157163493028,
+            "mean_residual_variance": 0.0019700783835599257,
+            "mean_covariance": 0.0017911574506792904,
+            "ratio_of_mean_within_episode_variances": 0.7840865922725699,
+            "pooled_descriptive": {
+              "count": 6656,
+              "policy_variance": 0.005045614715096936,
+              "benchmark_variance": 0.006725213929506592,
+              "residual_variance": 0.004039723937640757,
+              "covariance": 0.003865552353481386,
+              "policy_mean": -0.003867543391307656,
+              "benchmark_mean": 0.05955991334305588,
+              "residual_mean": -0.06342745673436354,
+              "residual_variance_ratio": 0.8006405890551923,
+              "correlation": 0.6635924945337618
+            }
+          }
+        },
+        "stock": {
+          "rewards": {
+            "episodes": 22,
+            "mean_policy_variance": 0.0002581616909186489,
+            "mean_benchmark_variance": 0.0004599089339637723,
+            "mean_residual_variance": 0.00021876005222365273,
+            "mean_covariance": 0.0002496552863293842,
+            "ratio_of_mean_within_episode_variances": 0.8473761209310784,
+            "pooled_descriptive": {
+              "count": 11264,
+              "policy_variance": 0.0002584941412909445,
+              "benchmark_variance": 0.00046031879895067686,
+              "residual_variance": 0.00021906806724733639,
+              "covariance": 0.0002498724364971425,
+              "policy_mean": 6.883519329432189e-05,
+              "benchmark_mean": 0.000688936538267949,
+              "residual_mean": -0.0006201013449736271,
+              "residual_variance_ratio": 0.8474778815229215,
+              "correlation": 0.724375317621131
+            }
+          },
+          "discounted_targets": {
+            "episodes": 22,
+            "mean_policy_variance": 0.0027517772468896215,
+            "mean_benchmark_variance": 0.0033781748787952816,
+            "mean_residual_variance": 0.0020852473488367617,
+            "mean_covariance": 0.00202235238842407,
+            "ratio_of_mean_within_episode_variances": 0.757782030211112,
+            "pooled_descriptive": {
+              "count": 5632,
+              "policy_variance": 0.005706912813886642,
+              "benchmark_variance": 0.007501677975968385,
+              "residual_variance": 0.004254142704382281,
+              "covariance": 0.004477224042736373,
+              "policy_mean": -0.0052966579589372375,
+              "benchmark_mean": 0.06139910302727665,
+              "residual_mean": -0.0666957609862139,
+              "residual_variance_ratio": 0.7454367787134696,
+              "correlation": 0.6842723630921813
+            }
+          }
+        },
+        "etf": {
+          "rewards": {
+            "episodes": 4,
+            "mean_policy_variance": 0.00015332367608391836,
+            "mean_benchmark_variance": 0.000309112706504902,
+            "mean_residual_variance": 0.00018079193973988958,
+            "mean_covariance": 0.00014082222142446538,
+            "ratio_of_mean_within_episode_variances": 1.179152133300907,
+            "pooled_descriptive": {
+              "count": 2048,
+              "policy_variance": 0.00015339467856452619,
+              "benchmark_variance": 0.0003092281657780607,
+              "residual_variance": 0.00018095192673321718,
+              "covariance": 0.00014083545880468488,
+              "policy_mean": 0.00012353423370889405,
+              "benchmark_mean": 0.0007240439625331163,
+              "residual_mean": -0.0006005097288242223,
+              "residual_variance_ratio": 1.1796493100449956,
+              "correlation": 0.6466471143600092
+            }
+          },
+          "discounted_targets": {
+            "episodes": 4,
+            "mean_policy_variance": 0.0011969793378069043,
+            "mean_benchmark_variance": 0.0011788403228964225,
+            "mean_residual_variance": 0.001336649074537327,
+            "mean_covariance": 0.000519585293083,
+            "ratio_of_mean_within_episode_variances": 1.116685169341623,
+            "pooled_descriptive": {
+              "count": 1024,
+              "policy_variance": 0.0013354604997586098,
+              "benchmark_variance": 0.0023337330556367844,
+              "residual_variance": 0.002478545917157173,
+              "covariance": 0.0005953238191191106,
+              "policy_mean": 0.003992586730655023,
+              "benchmark_mean": 0.049444370079841635,
+              "residual_mean": -0.04545178334918661,
+              "residual_variance_ratio": 1.8559485043587443,
+              "correlation": 0.33721908590734284
+            }
+          }
+        }
+      },
+      "per_symbol": {
+        "SPY": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00012672842538035136,
+            "benchmark_variance": 0.00025201107025057886,
+            "residual_variance": 0.0001626054154275879,
+            "covariance": 0.00010806704010167115,
+            "policy_mean": -0.00016720171675288498,
+            "benchmark_mean": 0.0006890781957267222,
+            "residual_mean": -0.0008562799124796072,
+            "residual_variance_ratio": 1.28310136371977,
+            "correlation": 0.6047089936865144
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0007461933667458596,
+            "benchmark_variance": 0.0008950018117742442,
+            "residual_variance": 0.00023153776377888435,
+            "covariance": 0.0007048287073706097,
+            "policy_mean": -0.007166683275697419,
+            "benchmark_mean": 0.05410218645273062,
+            "residual_mean": -0.06126886972842804,
+            "residual_variance_ratio": 0.31029190836769,
+            "correlation": 0.8624738477692219
+          }
+        },
+        "QQQ": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00017026041440176755,
+            "benchmark_variance": 0.0003189646746370494,
+            "residual_variance": 0.00020151574320152006,
+            "covariance": 0.0001438546729186484,
+            "policy_mean": 0.00027187826635077794,
+            "benchmark_mean": 0.0012895587215027149,
+            "residual_mean": -0.001017680455151937,
+            "residual_variance_ratio": 1.1835736680752964,
+            "correlation": 0.6172993747379946
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0025017806345113934,
+            "benchmark_variance": 0.0012134332959530241,
+            "residual_variance": 0.002972290991720509,
+            "covariance": 0.00037146146937195413,
+            "policy_mean": 0.008826218257638331,
+            "benchmark_mean": 0.1019580722333398,
+            "residual_mean": -0.09313185397570146,
+            "residual_variance_ratio": 1.1880701891758818,
+            "correlation": 0.2131970569803319
+          }
+        },
+        "IWM": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00016440158050588346,
+            "benchmark_variance": 0.00037517921638863987,
+            "residual_variance": 0.00018277322514429015,
+            "covariance": 0.0001784037858751166,
+            "policy_mean": -9.452648266261576e-05,
+            "benchmark_mean": 0.0004645326526997451,
+            "residual_mean": -0.0005590591353623608,
+            "residual_variance_ratio": 1.1117485889239929,
+            "correlation": 0.7183427055169448
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0009501414418984967,
+            "benchmark_variance": 0.0015524676360816384,
+            "residual_variance": 0.0008764241416014354,
+            "covariance": 0.0008130924681893499,
+            "policy_mean": -0.006737478825620902,
+            "benchmark_mean": 0.010712293789641137,
+            "residual_mean": -0.017449772615262038,
+            "residual_variance_ratio": 0.9224143932194293,
+            "correlation": 0.6694752560370867
+          }
+        },
+        "DIA": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.000151904284047671,
+            "benchmark_variance": 0.0002902958647433399,
+            "residual_variance": 0.00017627337518616023,
+            "covariance": 0.00013296338680242534,
+            "policy_mean": 0.000483986867900299,
+            "benchmark_mean": 0.00045300628020328304,
+            "residual_mean": 3.098058769701595e-05,
+            "residual_variance_ratio": 1.160423988640384,
+            "correlation": 0.6331791901464853
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0005898019080718682,
+            "benchmark_variance": 0.0010544585477767837,
+            "residual_variance": 0.0012663434010484792,
+            "covariance": 0.00018895852740008625,
+            "policy_mean": 0.021048290766300083,
+            "benchmark_mean": 0.031004927843654988,
+            "residual_mean": -0.00995663707735491,
+            "residual_variance_ratio": 2.1470656227415486,
+            "correlation": 0.23960653196248838
+          }
+        },
+        "GOOGL": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00018924411110799046,
+            "benchmark_variance": 0.00042187593264291477,
+            "residual_variance": 0.000212304251004261,
+            "covariance": 0.0001994078963733221,
+            "policy_mean": 0.001294198736605523,
+            "benchmark_mean": 0.00115974633181537,
+            "residual_mean": 0.00013445240479015297,
+            "residual_variance_ratio": 1.1218539364911146,
+            "correlation": 0.7057303420851279
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0010319617991847072,
+            "benchmark_variance": 0.0019744574067137987,
+            "residual_variance": 0.0029259561259629033,
+            "covariance": 4.0231539967801376e-05,
+            "policy_mean": 0.07597778984785662,
+            "benchmark_mean": 0.08190339318932066,
+            "residual_mean": -0.0059256033414640495,
+            "residual_variance_ratio": 2.8353337577752686,
+            "correlation": 0.02818454066802599
+          }
+        },
+        "DIS": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00027087162092663005,
+            "benchmark_variance": 0.0005130530611550148,
+            "residual_variance": 0.00024350038220177374,
+            "covariance": 0.0002702121499399355,
+            "policy_mean": -0.00031136763316652605,
+            "benchmark_mean": 0.0006230085308231992,
+            "residual_mean": -0.0009343761639897252,
+            "residual_variance_ratio": 0.8989512499271002,
+            "correlation": 0.7248397101556683
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.010428030239973504,
+            "benchmark_variance": 0.006422168256636,
+            "residual_variance": 0.0036752487969945423,
+            "covariance": 0.00658747484980748,
+            "policy_mean": -0.058194926538556464,
+            "benchmark_mean": 0.03399603233030199,
+            "residual_mean": -0.09219095886885846,
+            "residual_variance_ratio": 0.3524394072915424,
+            "correlation": 0.8049649847931327
+          }
+        },
+        "AMZN": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0002568215529372486,
+            "benchmark_variance": 0.00045252719740808287,
+            "residual_variance": 0.00019987838142317255,
+            "covariance": 0.00025473518446107946,
+            "policy_mean": -0.0003337934779956697,
+            "benchmark_mean": 0.0015638599501883732,
+            "residual_mean": -0.001897653428184043,
+            "residual_variance_ratio": 0.7782772868444204,
+            "correlation": 0.7472240779137943
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0023863065139943683,
+            "benchmark_variance": 0.00435402513075995,
+            "residual_variance": 0.002716668972575415,
+            "covariance": 0.002011831336089452,
+            "policy_mean": -0.05477761775117894,
+            "benchmark_mean": 0.09528242647733746,
+            "residual_mean": -0.1500600442285164,
+            "residual_variance_ratio": 1.138440915550309,
+            "correlation": 0.6241413979054914
+          }
+        },
+        "HD": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00014711374685481935,
+            "benchmark_variance": 0.00043621313488725514,
+            "residual_variance": 0.0002981665894513957,
+            "covariance": 0.00014258014614533935,
+            "policy_mean": 0.0008836490362127414,
+            "benchmark_mean": 0.0010065010574322741,
+            "residual_mean": -0.00012285202121953276,
+            "residual_variance_ratio": 2.0267758508363216,
+            "correlation": 0.5628375422061488
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0010269433555627734,
+            "benchmark_variance": 0.0027739341259367433,
+            "residual_variance": 0.001097018592455075,
+            "covariance": 0.001351929444522221,
+            "policy_mean": 0.07271967362290072,
+            "benchmark_mean": 0.08236622780951218,
+            "residual_mean": -0.009646554186611481,
+            "residual_variance_ratio": 1.0682367109273516,
+            "correlation": 0.8010003586499603
+          }
+        },
+        "PG": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00016380046977119896,
+            "benchmark_variance": 0.0002540167587873092,
+            "residual_variance": 0.00011044718500567066,
+            "covariance": 0.00015368502177641875,
+            "policy_mean": 0.00014070528369813928,
+            "benchmark_mean": 0.0008540753983368177,
+            "residual_mean": -0.0007133701146386784,
+            "residual_variance_ratio": 0.6742788049383884,
+            "correlation": 0.7534297874957488
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0036881745667936678,
+            "benchmark_variance": 0.0021735323943320893,
+            "residual_variance": 0.0009713096743994603,
+            "covariance": 0.0024451986433631483,
+            "policy_mean": -0.008453136302403862,
+            "benchmark_mean": 0.08402485071330006,
+            "residual_mean": -0.09247798701570391,
+            "residual_variance_ratio": 0.2633578364605103,
+            "correlation": 0.8636252932847833
+          }
+        },
+        "KO": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00014088868325794302,
+            "benchmark_variance": 0.0002757076263206051,
+            "residual_variance": 0.0001204364783015117,
+            "covariance": 0.0001480799156385182,
+            "policy_mean": -5.539473866278399e-06,
+            "benchmark_mean": 0.00017988646641242667,
+            "residual_mean": -0.00018542594027870507,
+            "residual_variance_ratio": 0.8548342955339654,
+            "correlation": 0.7513351612477512
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0023858058192244066,
+            "benchmark_variance": 0.0021588055812587076,
+            "residual_variance": 0.00067576097541841,
+            "covariance": 0.0019344252125323522,
+            "policy_mean": 0.029325032654529404,
+            "benchmark_mean": 0.032509924482701354,
+            "residual_mean": -0.0031848918281719503,
+            "residual_variance_ratio": 0.2832422362177366,
+            "correlation": 0.8523689700372176
+          }
+        },
+        "XOM": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00034249209334822375,
+            "benchmark_variance": 0.0005049432867439773,
+            "residual_variance": 0.00026344670387798544,
+            "covariance": 0.0002919943381071078,
+            "policy_mean": -0.0009078161781008731,
+            "benchmark_mean": -0.001005866360571872,
+            "residual_mean": 9.805018247099895e-05,
+            "residual_variance_ratio": 0.7692052137686283,
+            "correlation": 0.7021466919669033
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.004535994705744157,
+            "benchmark_variance": 0.0059794886804559015,
+            "residual_variance": 0.0008520126376846471,
+            "covariance": 0.004831735374257707,
+            "policy_mean": -0.12144889750827258,
+            "benchmark_mean": -0.10649898087027673,
+            "residual_mean": -0.014949916637995834,
+            "residual_variance_ratio": 0.1878336931490905,
+            "correlation": 0.9277582974615356
+          }
+        },
+        "CVX": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00027746635959961026,
+            "benchmark_variance": 0.000705965052610929,
+            "residual_variance": 0.00038260797525916756,
+            "covariance": 0.0003004117184756858,
+            "policy_mean": -0.0006938948998822525,
+            "benchmark_mean": -0.0003482004897534807,
+            "residual_mean": -0.0003456944101287718,
+            "residual_variance_ratio": 1.3789346420635598,
+            "correlation": 0.6787660315805235
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.005572808010830837,
+            "benchmark_variance": 0.004379772698060169,
+            "residual_variance": 0.000669789778529449,
+            "covariance": 0.004641395465180779,
+            "policy_mean": -0.08873791564624635,
+            "benchmark_mean": -0.04717080319628693,
+            "residual_mean": -0.04156711244995944,
+            "residual_variance_ratio": 0.12018892041995746,
+            "correlation": 0.9394761229943503
+          }
+        },
+        "JPM": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003584940613552752,
+            "benchmark_variance": 0.0005962828785629908,
+            "residual_variance": 0.0002080452171663984,
+            "covariance": 0.00037336586137593376,
+            "policy_mean": -3.394139101065008e-05,
+            "benchmark_mean": 0.0003134075860060648,
+            "residual_mean": -0.00034734897701671485,
+            "residual_variance_ratio": 0.5803310001283988,
+            "correlation": 0.8075463402102251
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0011528084265916775,
+            "benchmark_variance": 0.0029881966453842194,
+            "residual_variance": 0.0010519448138507337,
+            "covariance": 0.0015445301290625817,
+            "policy_mean": -0.008060008206792778,
+            "benchmark_mean": 0.04114598419413693,
+            "residual_mean": -0.04920599240092971,
+            "residual_variance_ratio": 0.9125061801992973,
+            "correlation": 0.8321722439816785
+          }
+        },
+        "BAC": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0005332302876504422,
+            "benchmark_variance": 0.0007303803909257068,
+            "residual_variance": 0.0002864639569514374,
+            "covariance": 0.0004885733608123559,
+            "policy_mean": -0.0007919197937560352,
+            "benchmark_mean": 0.00020151406471313749,
+            "residual_mean": -0.0009934338584691726,
+            "residual_variance_ratio": 0.537223716630343,
+            "correlation": 0.7828847374191401
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.002177340252239108,
+            "benchmark_variance": 0.0041170456894361485,
+            "residual_variance": 0.004078368123930264,
+            "covariance": 0.001108008908872496,
+            "policy_mean": -0.10653104605087937,
+            "benchmark_mean": 0.019542695723649063,
+            "residual_mean": -0.12607374177452846,
+            "residual_variance_ratio": 1.8730963705540278,
+            "correlation": 0.37007287861401866
+          }
+        },
+        "JNJ": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00010642834587475385,
+            "benchmark_variance": 0.00024321835659899544,
+            "residual_variance": 0.00010463227880133851,
+            "covariance": 0.00012250721183620542,
+            "policy_mean": -7.979135076907617e-05,
+            "benchmark_mean": 0.00011833080293399689,
+            "residual_mean": -0.00019812215370307307,
+            "residual_variance_ratio": 0.983124166229841,
+            "correlation": 0.761438487508456
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0007608590282528738,
+            "benchmark_variance": 0.002018101562967585,
+            "residual_variance": 0.002174855633619,
+            "covariance": 0.00030205247880072924,
+            "policy_mean": -0.009494077510705815,
+            "benchmark_mean": 0.03188676354933189,
+            "residual_mean": -0.04138084106003771,
+            "residual_variance_ratio": 2.858421274980495,
+            "correlation": 0.24375795381574883
+          }
+        },
+        "UNH": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0002720921532315404,
+            "benchmark_variance": 0.0005727251873838628,
+            "residual_variance": 0.00033687170191598907,
+            "covariance": 0.00025397281934970705,
+            "policy_mean": -6.468476222387665e-05,
+            "benchmark_mean": 0.0005719205456671261,
+            "residual_mean": -0.0006366053078910028,
+            "residual_variance_ratio": 1.238079444464257,
+            "correlation": 0.643363013287206
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.002434860234054665,
+            "benchmark_variance": 0.006178928107753905,
+            "residual_variance": 0.0074783102797965385,
+            "covariance": 0.0005677390310060158,
+            "policy_mean": -0.03377901733408834,
+            "benchmark_mean": 0.056386792866999345,
+            "residual_mean": -0.09016581020108769,
+            "residual_variance_ratio": 3.071350944585119,
+            "correlation": 0.14637104136480406
+          }
+        },
+        "CAT": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003052316632513393,
+            "benchmark_variance": 0.0005324581752355243,
+            "residual_variance": 0.00023176989633461102,
+            "covariance": 0.00030295997107612625,
+            "policy_mean": 0.001105687908122377,
+            "benchmark_mean": 0.0007486280149748836,
+            "residual_mean": 0.0003570598931474933,
+            "residual_variance_ratio": 0.759324553245195,
+            "correlation": 0.7514977926769457
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.003902707671859922,
+            "benchmark_variance": 0.0033763005308199904,
+            "residual_variance": 0.003099162628721414,
+            "covariance": 0.0020899227869792493,
+            "policy_mean": 0.02549411581219522,
+            "benchmark_mean": 0.025030407321524922,
+            "residual_mean": 0.00046370849067029494,
+            "residual_variance_ratio": 0.7941057566436789,
+            "correlation": 0.5757403687775392
+          }
+        },
+        "HON": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00024473668242484597,
+            "benchmark_variance": 0.0004432323441361583,
+            "residual_variance": 0.00023015574241294523,
+            "covariance": 0.00022890664207402954,
+            "policy_mean": 3.173263869626908e-05,
+            "benchmark_mean": 0.0007591357335101634,
+            "residual_mean": -0.0007274030948138943,
+            "residual_variance_ratio": 0.9404219266706033,
+            "correlation": 0.6950133358778176
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.001149027349731467,
+            "benchmark_variance": 0.004634386078586957,
+            "residual_variance": 0.002295697436119286,
+            "covariance": 0.0017438579960995693,
+            "policy_mean": -0.01576846933229146,
+            "benchmark_mean": 0.036721609042116556,
+            "residual_mean": -0.05249007837440803,
+            "residual_variance_ratio": 1.9979484706397987,
+            "correlation": 0.7557007070415342
+          }
+        },
+        "LIN": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00021338436462528857,
+            "benchmark_variance": 0.0003645144761386603,
+            "residual_variance": 0.0001727876331308174,
+            "covariance": 0.00020255560381656572,
+            "policy_mean": -5.0988773163673784e-05,
+            "benchmark_mean": 0.0009714318877698247,
+            "residual_mean": -0.0010224206609334985,
+            "residual_variance_ratio": 0.8097483310655837,
+            "correlation": 0.7262824927376111
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.002597038316746022,
+            "benchmark_variance": 0.0023762878477617466,
+            "residual_variance": 0.0006372013234571853,
+            "covariance": 0.002168062420525292,
+            "policy_mean": -0.023900936777492644,
+            "benchmark_mean": 0.07756069732090977,
+            "residual_mean": -0.10146163409840239,
+            "residual_variance_ratio": 0.2453569203613335,
+            "correlation": 0.8727363794522085
+          }
+        },
+        "APD": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0002902375062360181,
+            "benchmark_variance": 0.0004364708535411224,
+            "residual_variance": 0.0001481704248228059,
+            "covariance": 0.00028926896747716725,
+            "policy_mean": -9.085423218380129e-05,
+            "benchmark_mean": 0.0011307200931298667,
+            "residual_mean": -0.001221574325313668,
+            "residual_variance_ratio": 0.5105143947257984,
+            "correlation": 0.8127321774200734
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.003832788807141426,
+            "benchmark_variance": 0.005261950470392081,
+            "residual_variance": 0.001271501931506541,
+            "covariance": 0.003911618673013483,
+            "policy_mean": -0.004944607388269767,
+            "benchmark_mean": 0.10975983182306655,
+            "residual_mean": -0.1147044392113363,
+            "residual_variance_ratio": 0.3317432802812983,
+            "correlation": 0.8710151078339838
+          }
+        },
+        "AMT": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0002850765438727143,
+            "benchmark_variance": 0.00042940871741888655,
+            "residual_variance": 0.0001799773044394738,
+            "covariance": 0.00026725397842606354,
+            "policy_mean": 0.00017481862353108113,
+            "benchmark_mean": 0.0007031723776975696,
+            "residual_mean": -0.0005283537541664884,
+            "residual_variance_ratio": 0.6313297544389799,
+            "correlation": 0.7638498682978598
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0011294764992236714,
+            "benchmark_variance": 0.0033146061615637492,
+            "residual_variance": 0.0016775060353310459,
+            "covariance": 0.0013832883127281874,
+            "policy_mean": 0.03830185654804993,
+            "benchmark_mean": 0.09763020755290694,
+            "residual_mean": -0.059328351004857026,
+            "residual_variance_ratio": 1.4852066744939396,
+            "correlation": 0.7149211436585967
+          }
+        },
+        "PLD": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00023212942502973097,
+            "benchmark_variance": 0.00047057071120905054,
+            "residual_variance": 0.000320684880842006,
+            "covariance": 0.00019100762769838774,
+            "policy_mean": -0.0005827694919180448,
+            "benchmark_mean": 0.000798591840066365,
+            "residual_mean": -0.0013813613319844098,
+            "residual_variance_ratio": 1.3814917294562414,
+            "correlation": 0.5779272420236538
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0030145127179338664,
+            "benchmark_variance": 0.0028274917956905496,
+            "residual_variance": 0.0024267340837387523,
+            "covariance": 0.001707635214942832,
+            "policy_mean": 0.012367451220869418,
+            "benchmark_mean": 0.09989423413003626,
+            "residual_mean": -0.08752678290916682,
+            "residual_variance_ratio": 0.8050170328695859,
+            "correlation": 0.5849057157145982
+          }
+        },
+        "AAPL": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00034333968138211004,
+            "benchmark_variance": 0.0005710246099730698,
+            "residual_variance": 0.00026699662262387377,
+            "covariance": 0.000323683834365653,
+            "policy_mean": 0.0004760228191038607,
+            "benchmark_mean": 0.00200659888640331,
+            "residual_mean": -0.0015305760672994495,
+            "residual_variance_ratio": 0.7776456876440319,
+            "correlation": 0.7310239359396487
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.00319446422632973,
+            "benchmark_variance": 0.003973717596390192,
+            "residual_variance": 0.002937509284030114,
+            "covariance": 0.0021153362693449042,
+            "policy_mean": 0.0576185552219553,
+            "benchmark_mean": 0.21329839752313395,
+            "residual_mean": -0.15567984230117868,
+            "residual_variance_ratio": 0.9195624292231178,
+            "correlation": 0.5937203046068842
+          }
+        },
+        "MSFT": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0003083183617390676,
+            "benchmark_variance": 0.00047036338270251856,
+            "residual_variance": 0.00017692229229022795,
+            "covariance": 0.00030087972607567917,
+            "policy_mean": 0.0008549561841721953,
+            "benchmark_mean": 0.0014987219187858614,
+            "residual_mean": -0.000643765734613666,
+            "residual_variance_ratio": 0.5738298922331416,
+            "correlation": 0.7900898410406966
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.0017374228842652946,
+            "benchmark_variance": 0.001336634679013803,
+            "residual_variance": 0.002068956694246878,
+            "covariance": 0.0005025504345161096,
+            "policy_mean": 0.05490018198559149,
+            "benchmark_mean": 0.15455337971432193,
+            "residual_mean": -0.09965319772873044,
+            "residual_variance_ratio": 1.190819295051348,
+            "correlation": 0.32977712061658515
+          }
+        },
+        "NEE": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.00021746532917659838,
+            "benchmark_variance": 0.00036058184486321477,
+            "residual_variance": 0.00015515550218135209,
+            "covariance": 0.00021144583592923056,
+            "policy_mean": 0.000476464979328739,
+            "benchmark_mean": 0.0010260631957450528,
+            "residual_mean": -0.0005495982164163138,
+            "residual_variance_ratio": 0.713472362554649,
+            "correlation": 0.7550960446879327
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.00034867189749647395,
+            "benchmark_variance": 0.0007281635815683772,
+            "residual_variance": 0.0003711301133038847,
+            "covariance": 0.0003528526828804832,
+            "policy_mean": 0.05032916464191127,
+            "benchmark_mean": 0.11273001474618408,
+            "residual_mean": -0.062400850104272806,
+            "residual_variance_ratio": 1.0644107425022342,
+            "correlation": 0.7002779861560098
+          }
+        },
+        "DUK": {
+          "rewards": {
+            "count": 512,
+            "policy_variance": 0.0001806941565568856,
+            "benchmark_variance": 0.0003324625679571399,
+            "residual_variance": 0.00016329974848214535,
+            "covariance": 0.00017492848801594013,
+            "policy_mean": 2.3499501040913362e-05,
+            "benchmark_mean": 0.00027535600980854724,
+            "residual_mean": -0.0002518565087676339,
+            "residual_variance_ratio": 0.9037356359154636,
+            "correlation": 0.7137023236542075
+          },
+          "discounted_targets": {
+            "count": 256,
+            "policy_variance": 0.00205109610839705,
+            "benchmark_variance": 0.0009718523120135199,
+            "residual_variance": 0.000722797738737222,
+            "covariance": 0.001150075340836674,
+            "policy_mean": 0.00053035969469983,
+            "benchmark_mean": 0.018226180155858196,
+            "residual_mean": -0.01769582046115837,
+            "residual_variance_ratio": 0.35239584131535157,
+            "correlation": 0.8145788885688827
+          }
+        }
+      }
+    }
+  },
+  "feasibility": {
+    "passed": false,
+    "checks": {
+      "selected:stock:rewards": {
+        "ratio": 1.0158727923370374,
+        "passed": false
+      },
+      "selected:stock:discounted_targets": {
+        "ratio": 0.6412203796058282,
+        "passed": true
+      },
+      "selected:etf:rewards": {
+        "ratio": 1.4951830478585475,
+        "passed": false
+      },
+      "selected:etf:discounted_targets": {
+        "ratio": 1.4020433114359274,
+        "passed": false
+      },
+      "final:stock:rewards": {
+        "ratio": 0.8473761209310784,
+        "passed": true
+      },
+      "final:stock:discounted_targets": {
+        "ratio": 0.757782030211112,
+        "passed": true
+      },
+      "final:etf:rewards": {
+        "ratio": 1.179152133300907,
+        "passed": false
+      },
+      "final:etf:discounted_targets": {
+        "ratio": 1.116685169341623,
+        "passed": false
+      }
+    },
+    "training_authorized": false,
+    "model_promoted": false,
+    "economic_improvement_established": false,
+    "coefficient_search_authorized": false,
+    "fixed_subtraction_hypothesis_closed": true
+  },
+  "coefficient": 1.0,
+  "source_sha256": {
+    "/home/vibe/projects/rl-stocks/results/recurrent-values-2026-10-25/summary.json": "25de5f54ded5793680ee76e9779808a50749b3f08861a5a7b0d9c51e24373365",
+    "/home/vibe/projects/rl-stocks/configs/experiments/recurrent_value_audit.json": "472071599a796d38483f6de9ad4ab4909f0994db0bb2c31a2893f70e9298ccea",
+    "/home/vibe/projects/rl-stocks/artifacts/recurrent-values-2026-10-25/selected-rows.jsonl": "bc3b8834f44e22d4656dd7588ed1a39e7537cdc6858eb6dc31735d7f5d1747f3",
+    "/home/vibe/projects/rl-stocks/artifacts/recurrent-values-2026-10-25/final-rows.jsonl": "a4068a765da031d5fb53d8a47717161bc26f3a047afdaad56eefc1e2fce9bc22",
+    "/home/vibe/projects/rl-stocks/data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "/home/vibe/projects/rl-stocks/.runtime/usage-ledger.json": "f7fd3c104e64cb7e68ab3fe178e25c3bb7e8033eb355fb6b1eae2bcf4a707bf8"
+  },
+  "benchmark_rows_sha256": "1e53f7a6c0e07883ede138fa6340b746914ddb5b9d62d58f336726c46ac0d932",
+  "source_files_unchanged": true,
+  "limitations": "Observed path variation is not irreducible noise, expected-value accuracy, gradient variance or economic improvement. Targets overlap; only one stochastic path per symbol/phase. Subtracting the same realized baseline from a prediction and target leaves their error unchanged. No true policy-invariance claim with action-dependent termination/bootstrapping.",
+  "duration_seconds": 5.2222694620722905,
+  "training_performed": false,
+  "model_replayed": false,
+  "optimizer_steps": 0,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "objective_achieved": false
+}

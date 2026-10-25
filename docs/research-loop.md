@@ -2082,3 +2082,11 @@ unchanged, worker terminal0, no new optimization/Colab units/retired data. These
 censored, correlated and partly self-predicted targets do not prove calibration
 or a cause of deterioration. Next separately fix a training-only benchmark/noise
 decomposition; no immediate reward/GAE grid or rescue of closed families.
+
+Fixed benchmark/noise decomposition completed and failed feasibility: only3/8
+conditions pass for coefficient exactly1. Both ETF phases have higher reward and
+discounted-target variation; no coefficient/benchmark/window/discount search or
+training follows. Independent cash/share accounting exact, covariance/discount
+ratio error<=1.12e−15, worker terminal0 in5.22s, no model replay/new units/source
+changes. See results/benchmark-variance-2026-10-25/README.md. Prior value-target
+consistency still does not establish a causal optimizer diagnosis or reward fix.

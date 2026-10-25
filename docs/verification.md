@@ -2452,3 +2452,10 @@ replays/26,624 rows, worker terminal0 in40.44s. Independent discount-matrix erro
 ledger unchanged.16 focused tests pass. No new training, development replay,
 retired-test access or Colab units. Descriptive target consistency is not unbiased
 calibration or causal diagnosis. See results/recurrent-values-2026-10-25/README.md.
+
+Benchmark subtraction audit completed failed:3/8 fixed conditions pass; both ETF
+phases worsen at reward and discounted-target levels. Independent benchmark
+reward/equity error0.0, covariance/discount/ratio error1.12e−15; source models,
+prior traces, data and usage ledger unchanged. Eight focused tests pass; worker
+terminal0 in5.22s. No replay/optimization/Colab units/retired data. Fixed subtraction
+hypothesis closed; no economic improvement or coefficient search authorized.
