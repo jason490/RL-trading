@@ -1,0 +1,16 @@
+{
+  "independent_report_aggregation": true,
+  "reports": 4,
+  "episodes": 104,
+  "maximum_return_group_and_drawdown_error": 0.0,
+  "protected_files_rehashed": 218,
+  "all_protected_files_unchanged": true,
+  "historical_checkpoint_and_symbol_discrepancy_pp": 0.0,
+  "full_frozen_predictions": 156,
+  "full_actual_rollout_arrays": 200,
+  "full_actual_transitions": 200000,
+  "source_summary_sha256": "1f7324c63c9ebd2733954d0350ed12c74bb2200e6ff91b70edd63a26b11b9cfc",
+  "cleanup_verified": true,
+  "training_performed": false,
+  "retired_test_read": false
+}

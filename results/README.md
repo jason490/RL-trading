@@ -370,3 +370,10 @@ sequence predictions and eight retained rollout checks; all owned sessions stopp
 Fixed100k screen jobs are prepared, not allocated; no performance benefit yet.
 Smoke training establishes operational acceptance only. Prior families and retired-test
 isolation remain unchanged.
+
+
+[GAE trace screen completed](gae-traces-2026-10-25/README.md): fixed lambda1 fails.
+Control selected/final19.62%/18.48%, candidate18.44%/12.68%, holding30.60%.
+Exact historical reproduction,156 full frozen predictions and200 rollout arrays
+verified; all owned sessions stopped. Conservative project39.351004 units,
+official account348.74 idle. No multi-seed confirmation or retired-test access.

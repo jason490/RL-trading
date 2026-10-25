@@ -3,8 +3,8 @@
 The [preregistration](../configs/experiments/gae_trace_preregistration.json) fixes
 one candidate: native RecurrentPPO with GAE lambda1 versus the original lambda0.95
 control. Runner request contracts, shared starts and pre-update rollout checks are
-implemented, including version35 Colab tasks and archive/budget checks. Both512-transition CPU smokes now pass actual learned/array/frozen acceptance.
-The fixed100k screen is prepared but unallocated; no performance benefit is established.
+implemented, including version35 Colab tasks and archive/budget checks. Both512-transition CPU smokes and the fixed100k screen are complete.
+The candidate failed the fixed performance gates; no model is promoted.
 
 ## Rationale and limits
 
@@ -214,3 +214,20 @@ The full screen was allocated after accepted smokes, using the unchanged clean
 progress only; full performance, restoration and cleanup remain unverified until
 its terminal state and report are inspected. The earlier unallocated statements
 above describe the smoke-acceptance milestone.
+
+
+### Completed GAE trace screen — 2026-10-25
+
+Both fixed100k CPU seed11 runs completed with verified retrieval and owned shutdown.
+Control selected/final19.624533%/18.484355%; lambda1 candidate18.442942%/12.675114%,
+matched holding30.601851%. Relative/absolute/median return gates fail; no promotion,
+confirmation, extension or trace/gamma/optimizer grid. Historical checkpoint and
+per-symbol reproduction is exact.156 full frozen predictions,200 actual rollout
+arrays and104 report episodes pass;218 protected files remain unchanged. Smokes
+add156 predictions/eight arrays. No retired-test access or broker orders.
+
+Conservative project39.351004 units; total GAE increment0.078547/2. Official account
+348.74, zero rate/assignments; all four owned smoke/screen sessions stopped.
+[Detailed results](../results/gae-traces-2026-10-25/README.md) include short-side
+limitations, fixed gates and evidence. Public release/duplicate cleanup remain
+next; the broader performance objective remains unmet.

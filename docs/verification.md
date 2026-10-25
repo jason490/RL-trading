@@ -2520,3 +2520,20 @@ files, symlinks, missing arrays and failure markers reject. Fixtures construct
 models/buffers without local learning; actual full-run publication remains pending.
 New evidence helper/tests pass Ruff. No release has been created for the running
 GAE screen yet.
+
+
+### Completed GAE trace screen — 2026-10-25
+
+Both fixed100k CPU seed11 runs completed with verified retrieval and owned shutdown.
+Control selected/final19.624533%/18.484355%; lambda1 candidate18.442942%/12.675114%,
+matched holding30.601851%. Relative/absolute/median return gates fail; no promotion,
+confirmation, extension or trace/gamma/optimizer grid. Historical checkpoint and
+per-symbol reproduction is exact.156 full frozen predictions,200 actual rollout
+arrays and104 report episodes pass;218 protected files remain unchanged. Smokes
+add156 predictions/eight arrays. No retired-test access or broker orders.
+
+Conservative project39.351004 units; total GAE increment0.078547/2. Official account
+348.74, zero rate/assignments; all four owned smoke/screen sessions stopped.
+[Detailed results](../results/gae-traces-2026-10-25/README.md) include short-side
+limitations, fixed gates and evidence. Public release/duplicate cleanup remain
+next; the broader performance objective remains unmet.

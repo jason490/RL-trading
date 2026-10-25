@@ -1,0 +1,29 @@
+{
+  "source_proof": {
+    "source_revision": "315614e6a8d8d470167f0d18d5ac9435c2bb46d5",
+    "source_hash": "e09754c3959202aec0e9aba0b3d0a0f7a710f6d1012edfdf0d375167fcd395d0",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/gae-source-v1"
+  },
+  "conservative_project_units": 39.35100446767939,
+  "conservative_screen_increment_units": 0.05854661474757705,
+  "shared_study_start_units": 39.27245785293177,
+  "conservative_study_increment_units": 0.0785466147476157,
+  "maximum_study_units": 2,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "remaining_project_units": 110.64899553232061,
+  "remaining_working_units": 90.64899553232061,
+  "official_post_cleanup_balance": 348.74,
+  "official_post_cleanup_rate": 0.0,
+  "official_post_cleanup_assignments": 0,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-aa182d96ba1a",
+    "rl-stocks-cpu-eda5699ab896"
+  ],
+  "artifacts_retrieved": true,
+  "budget_stopped": false,
+  "interpretation": "Conservative aggregate ledger includes setup, idle, downloads and shutdown; official balance is rounded/delayed. Original ledger and study baseline preserved."
+}

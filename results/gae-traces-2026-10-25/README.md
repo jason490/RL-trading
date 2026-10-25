@@ -1,156 +1,113 @@
-# Recurrent GAE trace comparison — smokes accepted, screen pending
+# Recurrent GAE trace comparison — failed screen
 
-**Both actual512-transition Colab CPU smokes pass.**156 exact frozen sequence
-predictions, learned Adam restoration and eight actual pre-update rollout arrays
-validate; both owned sessions are stopped. Fixed100k seed11 screen jobs are
-prepared but unallocated. No completed performance comparison or promoted model.
-Earlier sections retain implementation history; actual acceptance is below.
+The fixed lambda1 candidate did not improve native RecurrentPPO over lambda0.95.
+Both actual100k seed11 Colab CPU runs completed; artifacts were retrieved and
+both owned sessions were verified stopped. The family is closed: no extension,
+parameter grid or multi-seed confirmation is authorized by this failed screen.
+The broader research objective remains unmet; no model is promoted.
 
-[Fixed protocol](../../configs/experiments/gae_trace_preregistration.json) compares
-native lambda0.95 control and one lambda1 candidate. All data/reward/gamma/actions/
-architecture/sampling/steps/gates remain fixed. No new GAE training return exists;
-shared-start and actual-rollout checking code is implemented below.
+## Performance
 
-## Shared starts and model records
+Average cumulative net returns across26 separate symbol episodes during repeatedly
+used2021–2023 development validation; these are not annualized or independent test
+results. Checkpoints were selected exclusively on development data.
 
-The loader uses original full-size capacity-control archives for seeds11/23/37,
-including smoke seed11;61,513 parameters and21 inputs. It checks portable paths,
-manifest/Torch/tensor identity, empty owned Adam, seed and actual settings before
-loading tensors. Both arms restore the exact same original policy and CPU RNG;
-NumPy/Python seeded states agree. Initial records differ only in `gae_lambda`.
-No new initializer generation or dataset/provider access is required.
+| Model | Selected checkpoint | Selected return | Final100k return |
+| --- | ---: | ---: | ---: |
+| Control, lambda0.95 | 80k | 19.624533% | 18.484355% |
+| Candidate, lambda1 | 100k before final update | 18.442942% | 12.675114% |
+| Matched buy-and-hold | — | 30.601851% | 30.601851% |
 
-Actual model records include coupled-Adam semantics, optimizer and policy tensor
-fingerprints, effective defaults, seed/RNG and shared-source proof. Learned
-restoration checks are still pending; manually populated Adam fixtures establish
-serialization only. SB3 loading does not promise global RNG restoration.
+The candidate loses1.181592pp at selection and5.809241pp at final versus control.
+It fails the required2pp selected/final improvement and absolute holding gates.
+Final mean drawdown worsens1.370980pp, within the2pp risk limit; passing that limit
+does not offset failed return gates. Selected and final stock-median excesses
+are−15.562510pp and−28.185010pp, below the−2pp requirement.
 
-## Pre-update rollout evidence
+| Final group | Control | Candidate | Matched holding |
+| --- | ---: | ---: | ---: |
+| 22 stocks | 21.767430% | 14.366325% | 32.626547% |
+| Four ETFs | 0.427443% | 3.373453% | 19.466022% |
 
-`GaeRolloutAudit` reads a completed actual recurrent rollout buffer before any
-optimizer update. It preserves raw collector rewards and independently computes
-timeout critic values from the same new recurrent state. Stored rewards must
-match the timeout adjustment. It checks episode-start/done/timeout masks, original
-float32 fields, actual gamma/lambda and nominal pre-update epoch counts.
+The candidate's final average long/short contributions are+23.877780/−9.511455pp
+for stocks and+10.328397/−6.954944pp for ETFs. Two of three retrospectively declining
+stocks have both positive policy return and positive short P&L; the remaining one
+does not. These cohort labels are reporting-only and never inputs or selection
+criteria. Average short-side results do not establish robust profitable shorting.
+Saved-path diagnostics are descriptive, not a causal explanation for deterioration.
 
-Separate float64 GAE reconstruction checks actual returns/advantages; independently
-segmented discounted dot products check lambda1 returns. Full arrays are retained
-as small compressed NPZ files under `gae-rollouts/`, with hashes and compact
-`gae-rollouts.jsonl` records. Tolerances are fixed in implementation before any
-actual run: absolute2e−6 and relative2e−5. Buffer continuation across rollout
-boundaries is allowed; true terminal and timeout boundaries stay distinct.
-Callback checks do not modify model/Adam, recurrent caller state or sampling RNG.
+## Fixed experiment
 
-## Verification and remaining work
+[Preregistered protocol](../../configs/experiments/gae_trace_preregistration.json)
+SHA256:e8995cc951ffb4884b18d7b5e270f74b4ee987e54200be5494f7b00d40112a59.
+Only GAE lambda differs. Same61,513-parameter64-wide actor/critic LSTMs, original
+seed11 tensors and sampling RNG, seven market inputs/21 total observations, causal
+training-only frozen preprocessing, original107stock+fourETF training episodes,
+26-symbol development panel,512-session windows,100k transitions and10k evaluation.
+Training ends2020; development2021–2023. Retired2024–September2026 data remains isolated.
 
-61 focused shared-start, original initialization, parameter, actual-buffer-fixture,
-serialization and VIX regression checks pass. Wrong lambda/defaults reject before
-tensor mutation; malformed math/masks/dtypes and timeout corrections reject.
-Fixtures forbid `.learn` and `Adam.step`; no local optimizer step or policy
-training occurred. New modules/tests pass Ruff. Original initializers, dataset,
-ledger and `plan.html` remain unchanged.
+Native Gaussian training exposure and unit-magnitude evaluation are unchanged,
+as are gamma0.99, rollout1000, batch50, ten epochs, learning rate0.0003, net-log-equity
+reward, costs, whole shares,100% cap,20-session maximum hold and protective geometry.
+No new provider data, VIX inputs, reward shaping, broker orders or local learning.
 
-Strict GAE request dispatch, shared start, rollout callback and
-initial/selected/final records are now attached to the runner. Version35 jobs/fleet budget/archive
-acceptance is implemented; physical learned/frozen verification must precede actual512-step
-CPU Colab smokes. Reinspect default kernel Python before dependency sync, preserve
-original150/130 project and150/170 account limits, persistent two-unit study
-baseline, aggregate minute meter, inclusive deadlines and owned cleanup.
+All four runs use clean training source315614e6a8d8d470167f0d18d5ac9435c2bb46d5,
+source hash e09754c3959202aec0e9aba0b3d0a0f7a710f6d1012edfdf0d375167fcd395d0.
+Actual default Colab Python3.13.16 was inspected before dependency synchronization.
+CPU training/evaluation durations: control915.28s, candidate996.82s. These are
+training metadata durations, not complete allocation or billed durations.
 
-No new session, units, data requests, retired-test access, broker orders or
-performance improvement is claimed. Prior failed families remain closed.
+## Acceptance and integrity
 
-## Runner integration accepted; actual training still pending
+[Strict screen](summary.json) includes unchanged gates, complete10k learning curves,
+stock/ETF metrics, declining-stock diagnostics and saved execution/accounting paths.
+[Independent verification](screen-verification.json) recomputes four reports/104
+episodes with zero return/group/drawdown discrepancy and rehashes218 protected files.
 
-Strict registered GAE requests reject changes to data/preprocessing, algorithm,
-seed/phase, parameters, steps/cadence, CPU device, observation/reward/exposure/
-sampling and checkpoint settings before model/environment creation. The runner
-restores the shared start, snapshots initializer bytes and records actual
-initial/selected/final model/Adam evidence. The per-rollout checker is attached
-beside validation; final metadata requires its complete summary. Legacy study
-callback/dispatch behavior is preserved.
+Both arms' initial tensors, empty Adam and Torch/NumPy/Python sampling starts agree;
+only actual GAE lambda differs. Latest, selected and frozen learned Adam/model state
+restore exactly.156 full-run frozen sequence predictions match, including recurrent
+memory/reset/repeat behavior and immutable caller state/normalization. Schema/feed/
+nonfinite inputs reject. The two earlier512-step smokes add156 predictions:312 total.
 
-Malformed target arrays are retained with a hash and pre-update failure marker
-before raising, enabling diagnosis without repeating training.78 focused request,
-initialization, actual-buffer, failure-preservation, serializer and prior shared/
-VIX regressions pass; new code/tests pass Ruff. All fixtures remain non-optimizing.
-Version35 jobs/fleet/budget/archive and physical learned smoke acceptance remain
-next. No actual GAE policy training, new return or Colab session is claimed.
+Every actual pre-update buffer is retained and independently rechecked:200 full
+rollout arrays plus eight smoke arrays. Timeout corrections, terminal/reset masks,
+float32 schemas and GAE targets validate; lambda1 segmented MC identity validates.
+Largest full return-reconstruction errors:1.49e−7 control and4.50e−7 candidate, below
+unchanged absolute2e−6/relative2e−5 tolerances. No optimizer update bypassed checks.
 
-## Version35 runtime/archive integration ready
+Historical control reproduction is exact: all registered checkpoint means and both
+selected/final26-symbol panels have0.0pp discrepancy, within fixed0.01pp/0.05pp
+limits. Matched holding paths and actual training sampling agree between arms.
+The selected100k candidate is pre-final-update; final evaluation correctly uses
+the saved post-update model. No test-driven checkpoint selection occurred.
 
-Fixed two-arm CPU plans, local/remote payload preflight, original-ledger dedicated
-fleet and persistent two-unit GAE baseline are implemented. Full jobs require
-same-protocol actual smoke restoration, rollout-array/frozen acceptance, exact
-common starts, owned cleanup and conservative deadline projection. Baseline
-charges and original project/account safeguards survive controller retries.
+## Compute, artifacts and cleanup
 
-Archive validation rechecks every actual NPZ/JSONL rollout: complete exact file
-set, hashes, phase/step/pre-update counters, timeout correction, GAE and candidate
-segmented MC targets, plus exact summary. Even a recomputed checksum cannot hide
-wrong target math. Failure markers/extra arrays reject. Actual model/Adam records,
-source initializer, execution/sampling years/panel and frozen contracts also check.
-Typed lambda aliases reject. Physical learned restoration/report accounting remain.
+[Compute ledger summary](compute.json): cumulative conservative39.351004/150 units,
+90.648996 working units remain to130; shared GAE study increment0.078547/2 including
+smokes, setup, allocated idle time, retrieval and shutdown. Full-screen increment
+0.058547 units. Original project ledger and study baseline are preserved.
+Official post-cleanup account balance348.74, zero rate and zero active assignments;
+account floor150/teardown170 remains enforced. No budget or metering stop occurred.
 
-113 focused GAE task/archive/runner/model and prior VIX/fleet/budget regressions
-pass; five extra smoke-gate rejection cases pass. New modules/script/tests pass
-Ruff. Fixtures use manually populated buffers/metadata and never establish learned
-acceptance. No new policy optimization, Colab session, source data or return.
-Next physical saved-model/Adam/frozen/rollout acceptance, then actual CPU smokes.
+Full owned sessions `rl-stocks-cpu-aa182d96ba1a` and
+`rl-stocks-cpu-eda5699ab896` are verified stopped; earlier smoke sessions
+`rl-stocks-cpu-b33e0c990b01` and `rl-stocks-cpu-6b2b7ba4a483` are also stopped.
+No cleanup recovery command is needed. Complete retained artifacts remain under
+ignored `.runtime/gae-source-v1/artifacts/colab/`; the original ledger is
+`.runtime/usage-ledger.json`. Final public model/report assets are being prepared;
+duplicate removal remains pending server-side release hash/size verification.
+Models, source, original data, intermediate checkpoints, arrays and recovery records
+must remain retained. See [smoke acceptance](smokes.json), [smoke budget](smoke-budget.json)
+and [category guide](../../docs/gae-traces.md).
 
-## Physical acceptance tooling ready for actual Colab smokes
+## Decision and next work
 
-Actual latest/selected/frozen model/Adam/provenance restoration and all retained
-rollout-array rechecks are implemented. Each arm requires at least78 recurrent
-sequence predictions across the original26 development prefixes, with exact
-repeat/reset and caller-state checks. Normalization/data/model/files remain
-unchanged; invalid schema/feed/nonfinite inputs reject. Caller RNG restores on
-success/failure. Shared helpers retain prior VIX verifier behavior.
-
-The smoke acceptance script requires exact completed/owned-cleaned source tasks,
-archives, clean training source, report accounting, physical models/rollouts and
-common initial states before creating runtime-gating evidence. Only recomputed
-maximum-error diagnostic statistics tolerate CPU rounding (1e−12 absolute/1e−9
-relative); hashes/schema/counters, actual target tolerances and financial gates
-are unchanged.86 focused physical/archive/rollout/job/VIX regressions pass; new
-modules/script/tests pass Ruff. Manually populated optimizer fixtures are not
-actual learned smoke evidence. No session or new training return yet.
-
-Next inspect official account usage, export clean committed source with the original
-shared runtime directory/ledger, inspect actual default Colab Python before sync,
-and run the fixed two512-transition CPU smokes. All accepted artifacts must be
-retrieved and owned shutdown verified before acceptance or100k screens.
-
-## Actual Colab smoke acceptance complete
-
-[Actual acceptance](smokes.json) verifies two512-transition CPU runs from clean
-315614e source, each actual default kernel Python3.13.16 inspected before dependency
-sync. Initial policy/empty Adam and Torch/NumPy/Python starts match exactly except
-for lambda. Actual latest/selected/frozen learned state restores,156 frozen
-sequence predictions match exactly and complete development accounting validates.
-Data, preprocessing, model/optimizer source files and caller state remain unchanged.
-
-All eight actual pre-update rollout arrays revalidate: timeout-adjusted rewards,
-float32 schemas, masks/boundaries, GAE reconstruction and candidate segmented MC
-identity. Largest recorded return reconstruction errors are7.76e−8 control and
-1.12e−7 candidate, within unchanged predeclared tolerances. Candidate lambda1 is
-actual model configuration, not a metadata-only setting. No local optimizer steps.
-
-Training/evaluation durations: control145.64s, candidate128.06s. Fixed conservative
-screen projection3311.21s including1200s reserve fits7200s; it is a heuristic,
-not a runtime guarantee or return improvement. Two fixed100k seed11 CPU jobs are
-prepared after actual runtime acceptance; neither screen is allocated yet.
-
-[Budget/cleanup evidence](smoke-budget.json): conservative smoke increment0.020000
-units, cumulative project39.292458/150, working allowance90.707542 to130 and shared
-GAE allowance1.98/2. Official post-cleanup account348.78, zero rate/assignments;
-account floor150/teardown170 remains. Both owned sessions verified stopped,
-complete artifacts retrieved. Models, reports, source, checkpoints, array evidence
-and original ledger remain under ignored `.runtime/gae-source-v1/` artifacts.
-Duplicate cleanup waits for final study publication verification; no recovery needed.
-
-Next run the fixed100k comparison with10k curves and actual final post-update
-evaluation, verify historical control reproduction and unchanged performance/
-risk/short-side gates. Only a passing screen permits11/23/37 confirmation; failure
-closes the fixed trace comparison without grids or extension. Retired test stays
-isolated and no broker orders are authorized.
+Do not extend this trace study, alter its gamma/rollout/epochs/learning rate or
+promote a lucky intermediate checkpoint. Lambda1 did not solve the observed
+learning instability or holding gap. This comparison does not prove that critic
+bias caused prior failures or that all other algorithms fail. Publish and verify
+these unsuccessful artifacts, remove exact duplicates safely, then review a
+distinct evidence-backed hypothesis before any further bounded experiment.
+A future candidate still requires fixed multi-seed gates and prospective evaluation.
