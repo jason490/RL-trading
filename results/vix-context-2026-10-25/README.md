@@ -134,3 +134,25 @@ Then integrate task/archive/recurrent/report/runtime checks, inspect actual Cola
 Python, meter against the original shared ledger and only run the512-transition
 smokes before considering the fixed100k screen. No new source prices, retired
 rows or Colab units occurred in this milestone.
+
+
+## Training-runner contract integration
+
+The runner now requires explicit VIX protocol dispatch for augmented payloads,
+validates registered dataset/preprocessing and the complete fixed request before
+constructing an environment or model, restores the pinned shared initialization,
+and retains its checksummed archive with initial/selected/final model records.
+Records include actual policy and Adam-state fingerprints, coupled-Adam semantics,
+seed and descriptive global sampling-state hashes. Initial Torch/NumPy/Python
+states must match their pins; full/masked initial records match exactly. Loading
+a trained SB3 checkpoint does not promise global RNG restoration.
+
+90 focused checks pass, including wrong-protocol/request rejection before model
+construction, all-arm initial-state agreement, real recurrent save/load prediction
+parity and manually populated Adam serialization. Fixtures perform no learning or
+optimizer steps and do not establish learned Colab acceptance. New module/tests
+pass Ruff. Existing market, TQC and frozen recurrent regressions remain passing.
+
+Version34 job/fleet/archive integration, physical learned-artifact acceptance and
+bounded runtime projection remain before actual512-transition Colab smokes.
+No session was allocated or new trading return produced by this milestone.

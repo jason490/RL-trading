@@ -2143,3 +2143,10 @@ are pinned,70 focused tests pass, source workers exited0. No policy optimization
 or Colab units. Learned/runtime acceptance remains pending. Next explicit family
 dispatch plus task/archive/report/runtime integration and actual Colabsmokes;
 legacy-overlap must not change previous controls. No new performance result.
+
+VIX runner integration now enforces explicit family dispatch and fixed data,
+preprocessing, request and shared-start contracts before model construction.
+Initial/selected/final tensor and Adam evidence plus a checksummed initialization
+snapshot are retained.90 focused non-optimizing checks pass, including actual
+recurrent serialization; job/fleet/archive integration and actual Colab smokes
+remain. No new trading return, Colab allocation or promotion at this milestone.

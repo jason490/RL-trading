@@ -96,6 +96,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
     dataset=read_dataset(dataset_path)
+    from rl_stocks.training import vix_context
+    vix_study=vix_context.validate_dispatch(dataset,study_protocol_sha256)
+    if vix_study:
+        vix_arm=vix_context.validate_request(Path(dataset_path).name,algorithm,overrides,
+            seed=seed,smoke=smoke,steps=steps if steps is not None else 512,
+            every=evaluation_every if evaluation_every is not None else 256 if smoke else 10000,
+            initialization=initialization,policy_variant=policy_variant,observation_profile=observation_profile,
+            start_sampling=start_sampling,reward_kind=reward_kind,reward_scale=reward_scale,
+            training_exposure_mode=training_exposure_mode,evaluation_exposure_mode=evaluation_exposure_mode,
+            final_test=final_test,compact_checkpoints=compact_checkpoints,milestones=milestones)
+        vix_context.validate_payload(dataset,vix_arm)
     config=SimulationConfig()
     torch.set_num_threads(1)
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
@@ -106,6 +117,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     gym_check(env,skip_render_check=True);sb3_check(env)
     env.reset_sampling_statistics();env.reset_execution_statistics()
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
+    if vix_study:
+        vix_shared=vix_context.apply_initialization(model,vix_arm,seed,smoke)
     from rl_stocks.training.recurrent_guard import (PROTOCOL_SHA256 as GUARD_PROTOCOL,
         model_record as guard_record,apply_shared_initialization,initialization_path)
     shared_initialization=apply_shared_initialization(model,seed,smoke) if study_protocol_sha256==GUARD_PROTOCOL else None
@@ -201,6 +214,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm=='tqc':
         from rl_stocks.rl.tqc.geometry import model_spec as tqc_spec
         metadata['critic_geometry']=tqc_spec(model)
+    if vix_study:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'vix-initialization.npz'
+        shutil.copyfile(vix_context.ROOT/vix_shared['artifact_file'],snapshot)
+        if checksum(snapshot)!=vix_shared['artifact_sha256']:
+            raise ValueError('VIX initialization snapshot checksum mismatch')
+        metadata['vix_arm']=vix_arm
+        metadata['vix_binding_sha256']=vix_context.BINDING_SHA256
+        metadata['vix_shared_initialization']=vix_shared
+        metadata['vix_initialization']=vix_context.model_record(model)
+        vix_context.validate_record(metadata['vix_initialization'],vix_arm,smoke,initial=True,seed=seed)
     if study_protocol_sha256==CRITIC_PROTOCOL:
         from rl_stocks.training.distributional_records import model_record as critic_record,validate_record as validate_critic_record
         from rl_stocks.training.distributional_assets import initialization_entry as critic_entry
@@ -330,6 +354,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         metadata['sampling_diagnostics']=sampling_diagnostics
         metadata['training_execution']=env.execution_statistics()
+        if vix_study:
+            metadata['vix_final']=vix_context.model_record(model)
+            metadata['vix_selected']=vix_context.model_record(selected)
+            vix_context.validate_record(metadata['vix_final'],vix_arm,smoke,seed=seed)
+            vix_context.validate_record(metadata['vix_selected'],vix_arm,smoke,
+                selected_steps=metadata['selected_step'],seed=seed)
         if algorithm=='sac' and study_protocol_sha256==REG_PROTOCOL:
             metadata['regularization_final']=optimizer_record(model)
             metadata['regularization_selected']=optimizer_record(selected)

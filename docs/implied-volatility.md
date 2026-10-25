@@ -229,3 +229,14 @@ is explicit VIX-family training/task/archive/report integration and actual
 Colab smokes under the shared budget. Legacy parameters/data overlap older
 controls, so family dispatch must be explicit and preserve old behavior; do not
 route this study through the old market-context job contract.
+
+### VIX runner integration
+
+The explicit registered VIX protocol now gates runner requests before environment
+or policy construction. Data identities, frozen preprocessing, seeds, sampling,
+execution, reward, transitions and checkpoint cadence are fixed. Shared initial
+weights/RNG and initial/selected/final actual model/Adam records are retained with
+a checksummed initializer snapshot. Trained global RNG restoration is not claimed.
+See the [study evidence](../results/vix-context-2026-10-25/README.md) for current
+checks. Job/fleet/archive integration and actual Colab smoke acceptance remain;
+there are still no trained VIX performance results.
