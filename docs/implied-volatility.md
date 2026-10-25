@@ -200,3 +200,32 @@ fitted only full's298,946 training rows. Independent pandas coordinates and NumP
 `payload-verification.json` (coordinate error1.11e-16, mean/scale errors below
 1e-10); every original episode field/seven-coordinate value remains exact. Initializer asset generation remains pending;
 no training, external data request or Colab allocation.
+
+
+## Data and untrained initializer binding accepted
+
+[Actual initializer evidence](../results/vix-context-2026-10-25/initializers.json)
+verifies12 registered arm/seed/phase entries with3 new portable23-input NPZ
+archives plus the3 original legacy archives. Full/masked share each complete
+per-seed file; smoke11 reuses the full64 seed11 files. Every common tensor and
+original input/account column remains exact, new columns zero, CPU RNG identical
+to the original per-seed asset, and NumPy/Python seeded fingerprints verified.
+Original source assets remain unchanged. Generation began from clean3e01284
+source; it read only protocol/initializer assets, not datasets or providers.
+
+The binding `configs/experiments/vix_context_binding.json` pins preregistration,
+three dataset identities/contracts, payload evidence and initializer manifest.
+`training.vix_assets` pins its logical SHA256
+5ee939d3c96a100365ad5bf9f19bfa656be763bf432e9e0ba511f09bc0e37f85,
+checks generator implementation hashes, portable paths, actual tensor/RNG
+archives and all three seeds. Unknown phases/seeds, changed bindings, escaped
+paths and inconsistent proofs reject. No model is created by asset validation.
+
+70 focused mapping/asset/payload/frozen/source/protocol and previous-family
+regression checks pass. Actual local payloads and untrained initializers are
+accepted; **learned optimizer/runtime acceptance is not established**. No policy
+optimization, new provider request or Colab allocation occurred. The next work
+is explicit VIX-family training/task/archive/report integration and actual
+Colab smokes under the shared budget. Legacy parameters/data overlap older
+controls, so family dispatch must be explicit and preserve old behavior; do not
+route this study through the old market-context job contract.

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "preregistration_sha256": "c9972c2ce85d0d9bad54501f1634357919217e5aee8b4b964d197f8dd6ea6008",
+  "source_context": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "datasets": {
+    "legacy": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "masked": "5184823a388f4cc02197a111fe29cde7f80edae14aa451aa139f791891f903c2",
+    "full": "b63683a2b78e5aaa7652069b75b5c95acc32748b8fdf2d4c8dcff825ef5d756a"
+  },
+  "dataset_contracts": {
+    "masked": {
+      "schema": "daily-indicators-v1-vix-masked-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "vix_log_level",
+        "vix_log_change20"
+      ],
+      "normalizer_sha256": "e21a298e3ed6c43d179e40446ad8812dddc78127bc4d36aa5892aff792b114bc",
+      "extra_normalizer_fit_rows": 0
+    },
+    "full": {
+      "schema": "daily-indicators-v1-vix-full-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "vix_log_level",
+        "vix_log_change20"
+      ],
+      "normalizer_sha256": "c21b1a3e941f3642aeeef83e936abf876c1d6ff94b4b794fcf1cb12f14f23b9c",
+      "extra_normalizer_fit_rows": 298946
+    },
+    "legacy": {
+      "schema": "daily-indicators-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+      "extra_normalizer_fit_rows": 0
+    }
+  },
+  "initialization_manifest": "configs/initializations/vix_v1/manifest.json",
+  "initialization_manifest_sha256": "201e8e63f182d30e5e6fcd5f61667d4b7319e66c0c1a28cc1238ce4558f6c562",
+  "payload_evidence_sha256": "7962592be7ffdf0adcdf45f00036ce3b539ccb390b51fdbe82cae68ea183d012",
+  "payload_verification_sha256": "d224fc79196dfdffa6dbe523ec967d02b1623ce559eaa8bb13a47b587708d741"
+}

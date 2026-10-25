@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "artifact_entries": 12,
+  "full_masked_tensors_exact": true,
+  "original_common_tensors_and_cpu_rng_exact": true,
+  "new_columns_zero": true,
+  "seeded_numpy_python_verified": true,
+  "mapping_proofs": {
+    "11": {
+      "common_tensors_exact": true,
+      "original_market_and_account_columns_exact": true,
+      "new_vix_columns_zero": true,
+      "parameter_counts": {
+        "legacy": 61513,
+        "augmented": 62537
+      },
+      "zero_columns_sha256": "49397b301224db7a3b0fc814142f57273a6f3f63c58a75b1a291ad176d610a18"
+    },
+    "23": {
+      "common_tensors_exact": true,
+      "original_market_and_account_columns_exact": true,
+      "new_vix_columns_zero": true,
+      "parameter_counts": {
+        "legacy": 61513,
+        "augmented": 62537
+      },
+      "zero_columns_sha256": "49397b301224db7a3b0fc814142f57273a6f3f63c58a75b1a291ad176d610a18"
+    },
+    "37": {
+      "common_tensors_exact": true,
+      "original_market_and_account_columns_exact": true,
+      "new_vix_columns_zero": true,
+      "parameter_counts": {
+        "legacy": 61513,
+        "augmented": 62537
+      },
+      "zero_columns_sha256": "49397b301224db7a3b0fc814142f57273a6f3f63c58a75b1a291ad176d610a18"
+    }
+  },
+  "models_constructed": false,
+  "optimizer_steps": 0,
+  "preregistration_sha256": "c9972c2ce85d0d9bad54501f1634357919217e5aee8b4b964d197f8dd6ea6008",
+  "binding_sha256": "5ee939d3c96a100365ad5bf9f19bfa656be763bf432e9e0ba511f09bc0e37f85",
+  "manifest_sha256": "201e8e63f182d30e5e6fcd5f61667d4b7319e66c0c1a28cc1238ce4558f6c562",
+  "source_git_before_generation": {
+    "revision": "3e012845190d8b8e057faadfd79c272d75181137",
+    "dirty": ""
+  },
+  "unique_new_archives": 3,
+  "full_masked_archives_shared": true,
+  "source_initializer_files_unchanged": true,
+  "seeded_numpy_python": {
+    "11": {
+      "numpy": "76fb9bc9e74d043d1a299f0e01479ded07ee28d7f4d4d24e839ea635c68ca102",
+      "python": "ce2e075758e07803fc1aeed08637cd27cd291b66991455db44d4933f9eed7a09"
+    },
+    "23": {
+      "numpy": "201f7f5b71a055c5bc5a3d177c47e7f70ededf811bf1b6eb57cb99e6db515fb6",
+      "python": "7e077967cb32416520793d368faec465d19b339e9413e9743963a1e696d5b9ee"
+    },
+    "37": {
+      "numpy": "68944216c12c71696fa31de685fa66e910498eb4d1c3cff52e322a266ee70d30",
+      "python": "4b86dc64354bf9855f651fd49b5d2ed8a72c47a0feddd817e62fa476a0b78427"
+    }
+  },
+  "provider_requested": false,
+  "dataset_opened_by_generator": false,
+  "policy_training_performed": false,
+  "colab_allocated": false,
+  "test_evaluated": false
+}

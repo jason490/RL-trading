@@ -72,7 +72,7 @@ No Colab session is allocated, no original normalization is refit and no source
 contracts, task integration and actual smokes are next.
 
 
-## Payload/frozen-schema implementation complete; producer not yet run
+## Payload/frozen-schema implementation milestone
 
 Full/masked immutable builders, exact source/preprocessing reconstruction and
 explicit frozen VIX contracts are implemented.60 focused checks pass, including
@@ -109,3 +109,28 @@ within fixed1e−10 tolerance. All producer-protected source hashes remain exact
 Five untrained mapping checks verify all three seeds, parameter ownership,
 seeded streams, rejection before mutation and initial prediction invariance
 to the zeroed context columns. Actual initializer generation remains next.
+
+
+## Actual untrained initialization and binding accepted
+
+[Initializer verification](initializers.json) accepts all12 entries across
+legacy/masked/full, full11/23/37 and smoke11. Three new23-input zero-column
+archives and the original legacy archives are pinned in tracked configs;
+full/masked share exact complete files. Common tensors/account columns and
+original per-seed CPU RNG remain exact. NumPy/Python seeded fingerprints,
+empty-optimizer construction and61,513/62,537 geometry are verified. Generation
+used clean3e01284 source and no dataset/provider/optimizer steps.
+
+The [resolved binding](../../configs/experiments/vix_context_binding.json) pins
+these assets and all payload identities/preprocessing contracts. Its loader
+rejects modified data bindings, generator-code drift, unregistered seeds/phases
+and nonportable paths, then rechecks actual archives/proofs without constructing
+a model.70 focused regression checks pass.
+
+No learned optimizer validation, runtime integration, Colab smoke, new training
+return or promotion is claimed. Explicit family dispatch is next because the
+legacy data/parameters overlap older controls; preserve their original behavior.
+Then integrate task/archive/recurrent/report/runtime checks, inspect actual Colab
+Python, meter against the original shared ledger and only run the512-transition
+smokes before considering the fixed100k screen. No new source prices, retired
+rows or Colab units occurred in this milestone.

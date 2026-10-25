@@ -2052,3 +2052,15 @@ then screens permit11/23/37/prospective; study2units inside original budget.
 Nine tests pass; no new policy construction, training, performance score or
 Colab allocation. Payload/initializer/frozen/runtime implementation is next;
 historical vintage and retrospective universe limitations remain unverified.
+
+
+[VIX immutable payload/initialization acceptance](../results/vix-context-2026-10-25/README.md): full/masked payloads
+reloaded and exactly reconstructed; original bars/ATR/splits/seven fields and
+preprocessing unchanged. Only full's2 new fields fit298,946 training rows;
+independent pandas/NumPy verification passes.12 initializer entries/3new23-input
+archives retain exact original common tensors/CPU RNG and zero new actor/critic
+columns; seeded NumPy/Python fingerprints verified. Binding/portable artifacts
+are pinned,70 focused tests pass, source workers exited0. No policy optimization
+or Colab units. Learned/runtime acceptance remains pending. Next explicit family
+dispatch plus task/archive/report/runtime integration and actual Colabsmokes;
+legacy-overlap must not change previous controls. No new performance result.
