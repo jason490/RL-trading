@@ -2497,3 +2497,15 @@ reconstruction error1.12e−7; reports/data/normalization/files unchanged. Both 
 sessions stopped, artifacts retrieved. Project39.292458, smoke increment0.020000,
 official idle348.78 account/zero assignments. Runtime projection3311.21s fits7200s.
 Fixed100k jobs prepared, not allocated; no performance comparison/promotion yet.
+
+
+### Fixed GAE screen reporter
+
+A dedicated two-arm report now validates owned-cleaned tasks, actual archives,
+rollout targets, saved/frozen restoration and matched accounting before gates.
+Pinned historical checkpoint and per-symbol reproduction is mandatory. Twelve
+GAE/VIX gate regressions pass, including incomplete-fleet rejection before data
+access, nonfinite metrics, deterioration, absolute/risk failure and reproduction
+failure. The reporter does not fit or change preprocessing. Full Colab screens
+have been allocated from the original clean training export; results and owned
+cleanup remain pending, so no candidate promotion is claimed.

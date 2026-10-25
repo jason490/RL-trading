@@ -183,3 +183,34 @@ Conservative project39.292458 units; GAE increment0.020000/2. Official idle bala
 348.78, zero assignments. Projection3311.21s fits7200s. Fixed100k seed11 tasks are
 prepared after acceptance but unallocated. A smoke validates wiring, not performance;
 historical reproduction and full selected/final/absolute/risk gates remain required.
+
+
+## Full-screen reporting
+
+`scripts/report_gae_study.py` accepts only the exact two completed, owned-cleaned
+seed11 screen tasks. It revalidates archive contracts, all actual rollout arrays,
+physical selected/final models and learned Adam, frozen sequences and development
+accounting. Original dataset/preprocessing, source, simulation, sampling and
+matched holding paths must agree. Selected/final scores must match the recorded
+checkpoint schedule; reporting never reselects checkpoints.
+
+The pinned historical control must reproduce every checkpoint and selected/final
+symbol within the unchanged0.01pp mean/0.05pp symbol tolerances. A mismatch blocks
+interpretation and promotion even when performance gates pass. Fixed relative,
+absolute, stock-median and drawdown gates remain mandatory; a failed screen closes
+this comparison. The report exports compact checkpoint curves and standalone HTML.
+
+```bash
+PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python scripts/report_gae_study.py \
+  --state .runtime/gae-screen-state.json \
+  --source-proof .runtime/gae-source-proof.json \
+  --output results/gae-traces-2026-10-25/summary.json
+```
+
+The full screen was allocated after accepted smokes, using the unchanged clean
+315614e training export and original shared ledger. Controller fleet
+`rl-stocks-fleet-476cb8b71b99` owns CPU sessions `rl-stocks-cpu-aa182d96ba1a`
+(control) and `rl-stocks-cpu-eda5699ab896` (lambda1). This allocation is operational
+progress only; full performance, restoration and cleanup remain unverified until
+its terminal state and report are inspected. The earlier unallocated statements
+above describe the smoke-acceptance milestone.
