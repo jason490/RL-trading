@@ -365,5 +365,8 @@ hypothesis closed without coefficient/benchmark/window/discount grid or training
 comparison, shared original full64 weights/RNG and actual pre-update buffer checks
 implemented and attached to the runner. Version35 task/budget/archive checks
 are implemented;118 focused checks across these runs pass without optimization.
-Physical learned smoke acceptance remains before512-transition Colab runs. No new
-training or return. Prior families and retired-test isolation remain unchanged.
+Actual two-arm512-transition Colab smoke acceptance now passes156 frozen
+sequence predictions and eight retained rollout checks; all owned sessions stopped.
+Fixed100k screen jobs are prepared, not allocated; no performance benefit yet.
+Smoke training establishes operational acceptance only. Prior families and retired-test
+isolation remain unchanged.

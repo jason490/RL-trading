@@ -2132,3 +2132,11 @@ job/VIX regressions pass without optimization. Only diagnostic max-error values
 have tiny inter-host rounding tolerance; hashes/actual target/performance gates
 unchanged. No learned acceptance or return yet. Next official usage and clean
 source/kernel preflight, then two512-transition CPU smokes before100k screens.
+
+Actual GAE CPU smokes accepted:2×512 transitions from clean315614e, actual default
+Python3.13.16, common starts/RNG, learned Adam,156 frozen sequence matches, all8
+actual rollout arrays and development accounting verify. Both owned sessions
+stopped, retrieved files/preprocessing unchanged. Project39.292458, study0.020000/2,
+official348.78 idle/zero assignments. Projection3311.21s allows preparing fixed100k
+seed11 jobs; they are not allocated yet. Only unchanged screen/reproduction gates
+permit confirmation; no short-side or performance success is established.

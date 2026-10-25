@@ -1,4 +1,10 @@
-# Recurrent GAE trace comparison — implementation, not trained
+# Recurrent GAE trace comparison — smokes accepted, screen pending
+
+**Both actual512-transition Colab CPU smokes pass.**156 exact frozen sequence
+predictions, learned Adam restoration and eight actual pre-update rollout arrays
+validate; both owned sessions are stopped. Fixed100k seed11 screen jobs are
+prepared but unallocated. No completed performance comparison or promoted model.
+Earlier sections retain implementation history; actual acceptance is below.
 
 [Fixed protocol](../../configs/experiments/gae_trace_preregistration.json) compares
 native lambda0.95 control and one lambda1 candidate. All data/reward/gamma/actions/
@@ -114,3 +120,37 @@ Next inspect official account usage, export clean committed source with the orig
 shared runtime directory/ledger, inspect actual default Colab Python before sync,
 and run the fixed two512-transition CPU smokes. All accepted artifacts must be
 retrieved and owned shutdown verified before acceptance or100k screens.
+
+## Actual Colab smoke acceptance complete
+
+[Actual acceptance](smokes.json) verifies two512-transition CPU runs from clean
+315614e source, each actual default kernel Python3.13.16 inspected before dependency
+sync. Initial policy/empty Adam and Torch/NumPy/Python starts match exactly except
+for lambda. Actual latest/selected/frozen learned state restores,156 frozen
+sequence predictions match exactly and complete development accounting validates.
+Data, preprocessing, model/optimizer source files and caller state remain unchanged.
+
+All eight actual pre-update rollout arrays revalidate: timeout-adjusted rewards,
+float32 schemas, masks/boundaries, GAE reconstruction and candidate segmented MC
+identity. Largest recorded return reconstruction errors are7.76e−8 control and
+1.12e−7 candidate, within unchanged predeclared tolerances. Candidate lambda1 is
+actual model configuration, not a metadata-only setting. No local optimizer steps.
+
+Training/evaluation durations: control145.64s, candidate128.06s. Fixed conservative
+screen projection3311.21s including1200s reserve fits7200s; it is a heuristic,
+not a runtime guarantee or return improvement. Two fixed100k seed11 CPU jobs are
+prepared after actual runtime acceptance; neither screen is allocated yet.
+
+[Budget/cleanup evidence](smoke-budget.json): conservative smoke increment0.020000
+units, cumulative project39.292458/150, working allowance90.707542 to130 and shared
+GAE allowance1.98/2. Official post-cleanup account348.78, zero rate/assignments;
+account floor150/teardown170 remains. Both owned sessions verified stopped,
+complete artifacts retrieved. Models, reports, source, checkpoints, array evidence
+and original ledger remain under ignored `.runtime/gae-source-v1/` artifacts.
+Duplicate cleanup waits for final study publication verification; no recovery needed.
+
+Next run the fixed100k comparison with10k curves and actual final post-update
+evaluation, verify historical control reproduction and unchanged performance/
+risk/short-side gates. Only a passing screen permits11/23/37 confirmation; failure
+closes the fixed trace comparison without grids or extension. Retired test stays
+isolated and no broker orders are authorized.

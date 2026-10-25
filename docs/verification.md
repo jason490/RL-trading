@@ -2489,3 +2489,11 @@ arm, immutable data/files/state, failure RNG restoration and prior VIX behavior.
 Fixtures are non-optimizing and not learned smoke evidence. Diagnostic-statistic
 roundoff tolerance1e−12/1e−9 leaves actual target/financial gates and hashes exact.
 Clean-source account/kernel preflight and actual512-transition CPU smokes remain.
+
+Actual GAE Colab smoke acceptance complete:2×512 CPU transitions, each kernel
+3.13.16, actual shared-start/RNG/learned Adam restoration,156 exact frozen sequence
+predictions and8 actual pre-update array reconstructions pass. Largest return
+reconstruction error1.12e−7; reports/data/normalization/files unchanged. Both owned
+sessions stopped, artifacts retrieved. Project39.292458, smoke increment0.020000,
+official idle348.78 account/zero assignments. Runtime projection3311.21s fits7200s.
+Fixed100k jobs prepared, not allocated; no performance comparison/promotion yet.

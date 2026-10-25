@@ -115,4 +115,4 @@ read-only model/Adam/RNG preservation.
 reward decomposition, within-episode feasibility gate and limits on interpretation.
 
 [Recurrent GAE traces](gae-traces.md) specifies the fixed lambda0.95/1 comparison,
-finite-buffer return identities, unchanged controls and pending Colab acceptance.
+finite-buffer return identities, unchanged controls and accepted Colab smokes.

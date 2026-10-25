@@ -2252,3 +2252,10 @@ tooling implemented;86 focused non-optimizing physical/archive/job/VIX checks
 pass.78 sequence predictions per arm required, data/normalization/model/files/RNG
 preserved; diagnostic-only CPU roundoff tolerance leaves performance gates intact.
 Actual account/kernel preflight and two512-transition CPU Colab smokes are next.
+
+GAE actual2×512-transition Colab CPU smokes accepted from clean315614e: kernels
+3.13.16, shared initial/RNG, learned Adam,156 exact frozen predictions,8 actual
+pre-update arrays and report accounting validate. Both sessions stopped, artifacts
+retrieved. Project39.292458, study0.020000/2, account348.78 idle. Projection3311.21s
+fits7200s; fixed100k seed11 jobs prepared but unallocated. Full comparison and
+historical-control/selected/final gates remain; objective not achieved.

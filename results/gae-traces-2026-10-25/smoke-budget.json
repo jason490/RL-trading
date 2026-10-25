@@ -1,0 +1,28 @@
+{
+  "source_revision": "315614e6a8d8d470167f0d18d5ac9435c2bb46d5",
+  "smoke_acceptance_sha256": "1e2f0721e7353e702193de5aa088fa096606d06773b1045cdbb6369ad884caa7",
+  "conservative_project_units": 39.29245785293181,
+  "conservative_smoke_increment_units": 0.020000000000038654,
+  "shared_study_start_units": 39.27245785293177,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "remaining_project_units": 110.70754214706818,
+  "remaining_working_units": 90.70754214706818,
+  "remaining_gae_study_units": 1.9799999999999613,
+  "official_post_cleanup_balance": 348.78,
+  "official_post_cleanup_rate": 0.0,
+  "official_post_cleanup_assignments": 0,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "measured_smoke_balance_debit_units": 0.02,
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-b33e0c990b01",
+    "rl-stocks-cpu-6b2b7ba4a483"
+  ],
+  "artifacts_retrieved": true,
+  "interpretation": "Official balance is rounded/delayed; cumulative ledger conservatively combines balance debits and allocated rate/time including setup, idle, downloads and shutdown.",
+  "duplicate_cleanup_deferred_until_release_verification": true,
+  "full_screen_jobs_prepared": true,
+  "full_screen_allocated": false
+}

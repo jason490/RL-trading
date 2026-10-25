@@ -3,8 +3,8 @@
 The [preregistration](../configs/experiments/gae_trace_preregistration.json) fixes
 one candidate: native RecurrentPPO with GAE lambda1 versus the original lambda0.95
 control. Runner request contracts, shared starts and pre-update rollout checks are
-implemented, including version35 Colab tasks and archive/budget checks. Physical
-learned smoke acceptance remains pending; no study training result exists.
+implemented, including version35 Colab tasks and archive/budget checks. Both512-transition CPU smokes now pass actual learned/array/frozen acceptance.
+The fixed100k screen is prepared but unallocated; no performance benefit is established.
 
 ## Rationale and limits
 
@@ -169,3 +169,17 @@ unchanged. Corrupt target arrays still fail even with updated hashes.86 focused
 physical/archive/rollout/task and prior VIX/state regressions pass; serialization
 fixtures use manually populated Adam and do not establish learned acceptance.
 No actual GAE Colab run or return has occurred. Clean-source actual smokes are next.
+
+## Actual smoke acceptance
+
+[Accepted evidence](../results/gae-traces-2026-10-25/README.md) verifies both actual
+512-transition Colab CPU runs: Python3.13.16, exact common initial tensors/empty
+Adam/RNG apart from lambda, actual learned restoration,156 frozen sequence matches,
+eight pre-update array reconstructions and development accounting. Both sessions
+stopped, complete artifacts retrieved. Return arithmetic error<=1.12e−7, source
+files/preprocessing unchanged; no local optimizer steps or retired data.
+
+Conservative project39.292458 units; GAE increment0.020000/2. Official idle balance
+348.78, zero assignments. Projection3311.21s fits7200s. Fixed100k seed11 tasks are
+prepared after acceptance but unallocated. A smoke validates wiring, not performance;
+historical reproduction and full selected/final/absolute/risk gates remain required.
