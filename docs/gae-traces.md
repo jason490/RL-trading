@@ -144,3 +144,28 @@ and full report accounting remain additional acceptance requirements.
 rejection cases pass without training; new modules/scripts/tests pass Ruff.
 Static/archive fixtures are not learned Colab evidence. Physical learned/frozen
 restoration and smoke acceptance tooling remain next; no session allocated.
+
+### Physical restoration and smoke acceptance
+
+`training/gae_restoration.py` restores actual latest, selected and frozen models
+and compares policy/Adam/provenance records, excluding global sampling streams
+that SB3 loading does not restore. It rechecks every retained rollout array,
+requires exact source data/preprocessing and runs three causal prefix decisions
+for each26 development symbols (78 per arm). Repeated/reset sequence predictions,
+caller hidden state, normalizer/model/files and schema/feed/nonfinite rejection
+must validate. Caller Torch/NumPy/Python RNG is restored on success or failure.
+Shared recurrent comparison helpers preserve the prior VIX verifier behavior.
+
+After the owned smoke fleet completes and all sessions are stopped,
+`scripts/accept_gae_smokes.py` revalidates archives, exact clean source/task/session
+mapping, accounting against immutable episodes, physical models/Adam/rollouts and
+cross-arm shared starts. Its new-only output at `.runtime/gae-smoke-acceptance.json`
+is required for full-plan runtime gating. It never trains or allocates a session.
+
+Archive recomputation allows only tiny CPU-host roundoff in reported maximum-error
+statistics: absolute1e−12/relative1e−9. Hashes, file sets, types/counters/flags remain
+exact; actual return/advantage tolerances stay2e−6/2e−5 and performance gates are
+unchanged. Corrupt target arrays still fail even with updated hashes.86 focused
+physical/archive/rollout/task and prior VIX/state regressions pass; serialization
+fixtures use manually populated Adam and do not establish learned acceptance.
+No actual GAE Colab run or return has occurred. Clean-source actual smokes are next.

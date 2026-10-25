@@ -216,3 +216,25 @@ def test_tampered_npz_with_updated_checksum_still_rejects_target_math(tmp_path):
 
     with pytest.raises(RuntimeError):
         validate_archive(*archive(tmp_path, mutate=mutate))
+
+
+def test_only_recomputed_diagnostic_roundoff_has_tolerance():
+    from rl_stocks.runtime.colab.gae_rollout_artifacts import same_evidence
+
+    expected = dict(steps=128, before_optimizer_update=True, maximum_return_error=1e-7)
+    actual = dict(expected, maximum_return_error=1e-7 + 1e-13)
+    assert same_evidence(actual, expected)
+    assert not same_evidence(dict(expected, maximum_return_error=0.01), expected)
+    assert not same_evidence(dict(expected, maximum_return_error=-1e-13), expected)
+    assert not same_evidence(dict(expected, steps=128.0), expected)
+    assert not same_evidence(dict(expected, before_optimizer_update=1), expected)
+
+
+def test_cross_host_roundoff_in_mc_diagnostic_does_not_change_array_acceptance(tmp_path):
+    def mutate(m, f, run):
+        path = run / "gae-rollouts.jsonl"
+        records = [json.loads(r) for r in path.read_text().splitlines()]
+        records[0]["maximum_segmented_mc_return_error"] += 1e-13
+        path.write_text("".join(json.dumps(r) + "\n" for r in records))
+
+    assert len(validate_archive(*archive(tmp_path, mutate=mutate))) == 1

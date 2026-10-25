@@ -91,3 +91,26 @@ pass; five extra smoke-gate rejection cases pass. New modules/script/tests pass
 Ruff. Fixtures use manually populated buffers/metadata and never establish learned
 acceptance. No new policy optimization, Colab session, source data or return.
 Next physical saved-model/Adam/frozen/rollout acceptance, then actual CPU smokes.
+
+## Physical acceptance tooling ready for actual Colab smokes
+
+Actual latest/selected/frozen model/Adam/provenance restoration and all retained
+rollout-array rechecks are implemented. Each arm requires at least78 recurrent
+sequence predictions across the original26 development prefixes, with exact
+repeat/reset and caller-state checks. Normalization/data/model/files remain
+unchanged; invalid schema/feed/nonfinite inputs reject. Caller RNG restores on
+success/failure. Shared helpers retain prior VIX verifier behavior.
+
+The smoke acceptance script requires exact completed/owned-cleaned source tasks,
+archives, clean training source, report accounting, physical models/rollouts and
+common initial states before creating runtime-gating evidence. Only recomputed
+maximum-error diagnostic statistics tolerate CPU rounding (1e−12 absolute/1e−9
+relative); hashes/schema/counters, actual target tolerances and financial gates
+are unchanged.86 focused physical/archive/rollout/job/VIX regressions pass; new
+modules/script/tests pass Ruff. Manually populated optimizer fixtures are not
+actual learned smoke evidence. No session or new training return yet.
+
+Next inspect official account usage, export clean committed source with the original
+shared runtime directory/ledger, inspect actual default Colab Python before sync,
+and run the fixed two512-transition CPU smokes. All accepted artifacts must be
+retrieved and owned shutdown verified before acceptance or100k screens.

@@ -2482,3 +2482,10 @@ plans require actual smoke restoration/arrays/parity/cleanup and runtime project
 before full runs. Dedicated persistent two-unit baseline preserves original ledger
 and150/130 project/150/170 account safeguards. No training or session; physical
 learned acceptance remains pending. Static fixtures are not Colab results.
+
+GAE physical restoration/smoke acceptance tooling ready:86 focused tests verify
+actual serializer/model/Adam records, rollout arrays,78 sequence predictions per
+arm, immutable data/files/state, failure RNG restoration and prior VIX behavior.
+Fixtures are non-optimizing and not learned smoke evidence. Diagnostic-statistic
+roundoff tolerance1e−12/1e−9 leaves actual target/financial gates and hashes exact.
+Clean-source account/kernel preflight and actual512-transition CPU smokes remain.

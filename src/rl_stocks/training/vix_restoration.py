@@ -13,9 +13,12 @@ from rl_stocks.data.generation.datasets import normalizer_from
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.environment.trading.env import TradingEnv
 from rl_stocks.inference.bundle import FrozenPolicy, checksum
-from rl_stocks.risk.exposure import filter_exposure
 from rl_stocks.rl.registry.factory import CLASSES
 from rl_stocks.runtime.colab.distributional_artifacts import DEVELOPMENT_SYMBOLS
+from rl_stocks.training.recurrent_restore import (
+    same_restored as same_restored,
+    check_prediction as check_prediction,
+)
 from rl_stocks.training.vix_context import (
     PROTOCOL_SHA256,
     BINDING_SHA256,
@@ -24,39 +27,6 @@ from rl_stocks.training.vix_context import (
     validate_record,
     validate_payload,
 )
-
-
-def same_restored(actual, recorded):
-    """Loading SB3 restores learned tensors/moments, not global sampling streams."""
-    return canonical({k: v for k, v in actual.items() if k != "rng"}) == canonical(
-        {k: v for k, v in recorded.items() if k != "rng"}
-    )
-
-
-def check_prediction(selected, frozen, observation, expected_state, actual_state, episode_start):
-    previous = None if actual_state is None else tuple(s.copy() for s in actual_state)
-    expected, left = selected.predict(
-        observation,
-        state=expected_state,
-        episode_start=np.array([episode_start]),
-        deterministic=True,
-    )
-    expected = filter_exposure(expected, frozen.exposure_execution)
-    actual, right = frozen.predict_recurrent(
-        observation, state=actual_state, episode_start=episode_start
-    )
-    repeat, again = frozen.predict_recurrent(
-        observation, state=actual_state, episode_start=episode_start
-    )
-    np.testing.assert_array_equal(actual, expected)
-    np.testing.assert_array_equal(actual, repeat)
-    for a, b, c in zip(left, right, again, strict=True):
-        np.testing.assert_array_equal(a, b)
-        np.testing.assert_array_equal(b, c)
-    if previous is not None:
-        for old, current in zip(previous, actual_state, strict=True):
-            np.testing.assert_array_equal(old, current)
-    return actual, left, right
 
 
 def verify_owned_run(run_path, bundle_path, data, arm, smoke=False, seed=11):

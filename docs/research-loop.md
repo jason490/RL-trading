@@ -2125,3 +2125,10 @@ model/Adam/frozen/panel contracts.113 focused GAE/prior VIX/fleet regressions pl
 5 acceptance-boundary cases pass; no new optimization/session/data/return.
 Physical learned restoration and smoke-acceptance tooling remain before actual
 512-transition CPU runs. Previous families stay closed and retired test isolated.
+
+GAE physical latest/selected/frozen model/Adam/rollout verification and strict
+owned-cleaned smoke acceptance implemented;86 focused physical/archive/rollout/
+job/VIX regressions pass without optimization. Only diagnostic max-error values
+have tiny inter-host rounding tolerance; hashes/actual target/performance gates
+unchanged. No learned acceptance or return yet. Next official usage and clean
+source/kernel preflight, then two512-transition CPU smokes before100k screens.

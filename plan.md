@@ -2246,3 +2246,9 @@ fleet regressions plus5 smoke-acceptance boundaries pass without optimization.
 Full jobs require actual restored/owned-cleaned smokes and deadline projection.
 Physical learned-model/Adam/frozen/report acceptance remains next, before Colab
 512-transition smokes. No new session, data, return or promotion.
+
+GAE physical learned-state/rollout/frozen and owned-cleaned smoke acceptance
+tooling implemented;86 focused non-optimizing physical/archive/job/VIX checks
+pass.78 sequence predictions per arm required, data/normalization/model/files/RNG
+preserved; diagnostic-only CPU roundoff tolerance leaves performance gates intact.
+Actual account/kernel preflight and two512-transition CPU Colab smokes are next.

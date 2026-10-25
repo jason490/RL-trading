@@ -2,10 +2,38 @@
 
 import hashlib
 import json
+import math
 
 from rl_stocks.core.contracts import canonical
 from rl_stocks.training.gae_rollouts import read_arrays, validate_arrays
 from rl_stocks.training.gae_spec import parameters, PROTOCOL_SHA256
+
+
+DIAGNOSTIC_ATOL = 1e-12
+DIAGNOSTIC_RTOL = 1e-9
+ERROR_FIELDS = {
+    "maximum_timeout_reward_error",
+    "maximum_advantage_error",
+    "maximum_return_error",
+    "maximum_segmented_mc_return_error",
+}
+
+
+def same_evidence(actual, expected):
+    if not isinstance(actual, dict) or set(actual) != set(expected):
+        return False
+    errors = ERROR_FIELDS & set(expected)
+    if canonical({k: v for k, v in actual.items() if k not in errors}) != canonical(
+        {k: v for k, v in expected.items() if k not in errors}
+    ):
+        return False
+    return all(
+        type(actual[k]) is float
+        and actual[k] >= 0
+        and math.isfinite(actual[k])
+        and math.isclose(actual[k], expected[k], abs_tol=DIAGNOSTIC_ATOL, rel_tol=DIAGNOSTIC_RTOL)
+        for k in errors
+    )
 
 
 def validate_rollout_evidence(read, prefix, run, plan, names):
@@ -40,7 +68,7 @@ def validate_rollout_evidence(read, prefix, run, plan, names):
             before_optimizer_update=True,
             sb3_nominal_epoch_counter=i * params["n_epochs"],
         )
-        if canonical(record) != canonical(expected):
+        if not same_evidence(record, expected):
             raise RuntimeError("actual GAE array/step/math evidence mismatch")
     actual = {name for name in names if name.startswith(prefix + "gae-rollouts/")}
     if actual != expected_files:
@@ -56,7 +84,7 @@ def validate_rollout_evidence(read, prefix, run, plan, names):
         maximum_advantage_error=max(r["maximum_advantage_error"] for r in records),
         candidate_mc_identity_checked=arm == "mc_trace",
     )
-    if canonical(run.get("gae_rollouts")) != canonical(summary):
+    if not same_evidence(run.get("gae_rollouts"), summary):
         raise RuntimeError("actual GAE rollout summary mismatch")
     return dict(
         actual_rollout_arrays_verified=True,
