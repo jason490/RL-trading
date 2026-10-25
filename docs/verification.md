@@ -2474,3 +2474,11 @@ shared/VIX regressions. Registered runner now attaches shared starts, source NPZ
 model/Adam records and actual pre-update rollout checks. New modules/tests pass
 Ruff. No local optimization or Colab allocation; version35 task/budget/archive and
 actual learned smoke acceptance remain before study execution.
+
+GAE version35 runtime/archive integration passes113 focused GAE/VIX/fleet/budget
+regressions plus5 smoke-gate rejection cases. Exact rollout arrays/file set/math/
+counters are recomputed; changed checksums cannot hide corruption. Fixed CPU
+plans require actual smoke restoration/arrays/parity/cleanup and runtime projection
+before full runs. Dedicated persistent two-unit baseline preserves original ledger
+and150/130 project/150/170 account safeguards. No training or session; physical
+learned acceptance remains pending. Static fixtures are not Colab results.

@@ -3,8 +3,8 @@
 The [preregistration](../configs/experiments/gae_trace_preregistration.json) fixes
 one candidate: native RecurrentPPO with GAE lambda1 versus the original lambda0.95
 control. Runner request contracts, shared starts and pre-update rollout checks are
-implemented. Colab task/archive/learned acceptance remains pending; no study
-training result exists.
+implemented, including version35 Colab tasks and archive/budget checks. Physical
+learned smoke acceptance remains pending; no study training result exists.
 
 ## Rationale and limits
 
@@ -75,7 +75,7 @@ or integrity stops; never stop unrelated sessions.
 Failure closes this fixed comparison without lambda/gamma/rollout/minibatch/epoch/
 learning-rate/model/reward/feature/step grids, schedules, extension or confirmation.
 Untrained model construction and serialization fixtures are covered; no optimizer
-step, study training, reward change or Colab allocation has occurred. Runtime/shared-start/rollout/archive integration is next.
+step, study training, reward change or Colab allocation has occurred. Physical learned restoration and actual Colab smoke acceptance are next.
 
 ## Shared-start and rollout-check implementation
 
@@ -109,3 +109,38 @@ hash and pre-update failure marker before the exception propagates. This is fail
 evidence, not an accepted training artifact.78 focused initialization, request,
 actual-buffer, serialization and prior shared/VIX regressions pass without
 optimization; task/budget/archive and actual learned acceptance remain pending.
+
+### Version35 task, budget and archive integration
+
+Prepare two CPU smoke tasks without allocation:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_gae_jobs.py \
+  --smoke --output .runtime/gae-smoke-jobs.json
+```
+
+The fleet and remote worker validate exact payload/initializer contracts. A
+dedicated GAE fleet automatically preserves `.runtime/gae-study-budget.json`
+beside the resolved original usage ledger, retaining the same two-unit baseline
+across smokes/screens/retries. Original project150/130 and account150/170 limits
+still apply. Mixed-study fleets cannot override this baseline.
+
+Full plans require a checksummed `.runtime/gae-smoke-acceptance.json` with actual
+saved-model restoration, rollout-array verification, at least78 frozen predictions
+per arm, exact common starts and verified owned cleanup. Deadline projection uses
+twice the historical control duration times the slowest relative smoke duration,
+plus1200 seconds reserve; above7200 seconds rejects. Root preflight rechecks the
+actual acceptance file, not only its profile declaration.
+
+Retrieved archives reconstruct every actual rollout array, verify timeout and
+GAE/MC arithmetic, checksums, file set, counters, phase and complete summary.
+Missing/extra arrays, failure markers, altered summaries, changed typed lambda or
+corruption with updated checksums reject. Initial/selected/final model/Adam,
+initializer bytes, actual execution/training-year sampling,26-symbol development
+panel and frozen weights/preprocessing also validate. Physical model restoration
+and full report accounting remain additional acceptance requirements.
+
+113 focused task/archive/model/runner/VIX/fleet checks and five further smoke-gate
+rejection cases pass without training; new modules/scripts/tests pass Ruff.
+Static/archive fixtures are not learned Colab evidence. Physical learned/frozen
+restoration and smoke acceptance tooling remain next; no session allocated.

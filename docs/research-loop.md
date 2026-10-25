@@ -2117,3 +2117,11 @@ Failed target arrays are retained before raising; no retry is implied.78 focused
 non-optimizing request/buffer/initialization/serializer/shared/VIX checks pass.
 Version35 job/budget/archive and learned acceptance remain before Colab smokes;
 no new training, return or session. Previous failed families remain closed.
+
+GAE version35 task/fleet/budget/archive integration implemented: persistent shared
+two-unit baseline, actual-smoke/profile gate, original account/project safeguards,
+exact retained rollout arrays/hash/file-set/timeout/GAE/MC reconstruction and
+model/Adam/frozen/panel contracts.113 focused GAE/prior VIX/fleet regressions plus
+5 acceptance-boundary cases pass; no new optimization/session/data/return.
+Physical learned restoration and smoke-acceptance tooling remain before actual
+512-transition CPU runs. Previous families stay closed and retired test isolated.

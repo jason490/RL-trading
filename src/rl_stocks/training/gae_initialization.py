@@ -98,6 +98,18 @@ def model_record(model):
 
 def _base_validate(record, arm, smoke, proof, initial, selected_steps):
     spec = protocol()
+    params = parameters(arm, smoke)
+    for key in (
+        "n_steps",
+        "batch_size",
+        "n_epochs",
+        "gamma",
+        "gae_lambda",
+        "ent_coef",
+        "learning_rate",
+    ):
+        if canonical(record.get(key)) != canonical(params[key]):
+            raise ValueError("typed actual GAE algorithm parameters required")
     base_validate(
         record,
         parameters(arm, smoke),

@@ -11,8 +11,8 @@ from test_gae_initialization import model
 from rl_stocks.training.gae_rollouts import validate_arrays, read_arrays, GaeRolloutAudit
 
 
-def fixture(arm):
-    m = model(arm)
+def fixture(arm, smoke=True):
+    m = model(arm, smoke=smoke)
     b = m.rollout_buffer
     n = m.n_steps
     raw = np.sin(np.arange(n, dtype=np.float32) / 11).reshape(n, 1) * 0.01

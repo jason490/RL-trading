@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==34:
+    if plan.get('version')==35:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected=gae_plan(**plan['gae_study'],profile=plan.get('runtime_acceptance'))
+        except (KeyError,TypeError):
+            raise ValueError('malformed GAE-study plan') from None
+        if canonical(plan)!=canonical(expected):
+            raise ValueError('unsupported GAE-study plan')
+    elif plan.get('version')==34:
         from rl_stocks.core.contracts import canonical
         try:
             expected=vix_plan(**plan['vix_study'],profile=plan.get('runtime_acceptance'))
@@ -659,4 +667,34 @@ def vix_plan(arm, seed=11, smoke=False, profile=None):
         compact_checkpoints=job['compact_checkpoints'], milestones=job['milestones'])
     if not smoke:
         plan['runtime_acceptance'] = deepcopy(profile)
+    return plan
+
+
+def gae_plan(arm,seed=11,smoke=False,profile=None):
+    from copy import deepcopy
+    from rl_stocks.training.gae_spec import protocol,parameters,PROTOCOL_SHA256
+    from rl_stocks.training.gae_initialization import initialization_spec
+    from rl_stocks.training.gae_context import validate_request
+    from rl_stocks.training.gae_runtime import validate_runtime_profile
+    from rl_stocks.features.registry.assemble import NAMES
+    spec=protocol();params=parameters(arm,smoke);proof=initialization_spec(seed,smoke)
+    if smoke and profile is not None:raise ValueError('GAE smokes precede runtime acceptance')
+    if not smoke:validate_runtime_profile(profile)
+    plan=alignment_plan('posthoc_unit',seed,smoke);plan.pop('alignment_study')
+    plan.update(version=35,gae_study=dict(arm=arm,seed=seed,smoke=smoke),
+        protocol_sha256=PROTOCOL_SHA256,initialization_contract=proof)
+    plan['dataset_contract'].update(identity=spec['dataset'],market_features=7,
+        schema=spec['feature_schema'],names=list(NAMES),normalizer_sha256=spec['normalizer_sha256'])
+    job=plan['jobs'][0]
+    job.update(study_protocol_sha256=PROTOCOL_SHA256,overrides=params,
+        steps=spec['smoke_steps' if smoke else 'steps_per_cell'],
+        evaluation_every=spec['smoke_evaluation_every' if smoke else 'evaluation_every'])
+    job['milestones']=[job['steps']]
+    validate_request(spec['dataset'],job['algorithm'],params,seed=seed,smoke=smoke,
+        steps=job['steps'],every=job['evaluation_every'],initialization=job['initialization'],
+        policy_variant=job['policy_variant'],observation_profile=job['observation_profile'],
+        start_sampling=job['start_sampling'],reward_kind=job['reward_kind'],reward_scale=job['reward_scale'],
+        training_exposure_mode=job['training_exposure_mode'],evaluation_exposure_mode=job['evaluation_exposure_mode'],
+        final_test=False,compact_checkpoints=job['compact_checkpoints'],milestones=job['milestones'],device=job['device'])
+    if not smoke:plan['runtime_acceptance']=deepcopy(profile)
     return plan

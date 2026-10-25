@@ -46,7 +46,7 @@ ledger and `plan.html` remain unchanged.
 
 Strict GAE request dispatch, shared start, rollout callback and
 initial/selected/final records are now attached to the runner. Version35 jobs/fleet budget/archive
-acceptance and physical learned/frozen verification must precede actual512-step
+acceptance is implemented; physical learned/frozen verification must precede actual512-step
 CPU Colab smokes. Reinspect default kernel Python before dependency sync, preserve
 original150/130 project and150/170 account limits, persistent two-unit study
 baseline, aggregate minute meter, inclusive deadlines and owned cleanup.
@@ -70,3 +70,24 @@ initialization, actual-buffer, failure-preservation, serializer and prior shared
 VIX regressions pass; new code/tests pass Ruff. All fixtures remain non-optimizing.
 Version35 jobs/fleet/budget/archive and physical learned smoke acceptance remain
 next. No actual GAE policy training, new return or Colab session is claimed.
+
+## Version35 runtime/archive integration ready
+
+Fixed two-arm CPU plans, local/remote payload preflight, original-ledger dedicated
+fleet and persistent two-unit GAE baseline are implemented. Full jobs require
+same-protocol actual smoke restoration, rollout-array/frozen acceptance, exact
+common starts, owned cleanup and conservative deadline projection. Baseline
+charges and original project/account safeguards survive controller retries.
+
+Archive validation rechecks every actual NPZ/JSONL rollout: complete exact file
+set, hashes, phase/step/pre-update counters, timeout correction, GAE and candidate
+segmented MC targets, plus exact summary. Even a recomputed checksum cannot hide
+wrong target math. Failure markers/extra arrays reject. Actual model/Adam records,
+source initializer, execution/sampling years/panel and frozen contracts also check.
+Typed lambda aliases reject. Physical learned restoration/report accounting remain.
+
+113 focused GAE task/archive/runner/model and prior VIX/fleet/budget regressions
+pass; five extra smoke-gate rejection cases pass. New modules/script/tests pass
+Ruff. Fixtures use manually populated buffers/metadata and never establish learned
+acceptance. No new policy optimization, Colab session, source data or return.
+Next physical saved-model/Adam/frozen/rollout acceptance, then actual CPU smokes.
