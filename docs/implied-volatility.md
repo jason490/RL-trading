@@ -291,3 +291,10 @@ mapping, report accounting against each immutable dataset, actual saved models
 and cross-arm initial-state agreement. Its output belongs at
 `.runtime/vix-smoke-acceptance.json`; it is the input to full-job runtime gating.
 Serialization fixtures validate the checker, not actual learned acceptance.
+
+Actual three-arm Colab smoke acceptance now passes:512 transitions per arm,
+234 exact frozen sequence predictions and actual learned Adam restoration.
+All default kernels were3.13.16; all owned runtimes are stopped. The conservative
+3471.70-second screen projection fits the7200-second allocation deadline. See
+[accepted evidence and usage](../results/vix-context-2026-10-25/README.md).
+Only the fixed100k screen is next; no performance benefit is established.

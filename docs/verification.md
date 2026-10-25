@@ -2422,3 +2422,12 @@ stopped, zero assignments; no additional units or training. Fixed critic study
 failed and remains closed; next work is bounded saved-policy/execution sensitivity
 diagnosis, not extension or promotion. Release:
 https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24
+
+VIX actual Colab smoke acceptance (2026-10-25): all three fixed512-transition CPU
+runs pass shared-start, learned Adam/recurrent restoration,234 exact frozen
+sequence predictions, immutable preprocessing/files and development accounting.
+All kernels report3.13.16; all owned sessions are stopped. Cumulative conservative
+project39.182288 units; official post-cleanup348.88 balance, zero rate/assignments.
+Fixed conservative screen projection3471.70s fits7200s. See
+[retained evidence](../results/vix-context-2026-10-25/README.md). Fixed100k screens,
+historical legacy reproduction and performance gates remain; no VIX win claimed.

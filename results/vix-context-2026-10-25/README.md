@@ -191,3 +191,33 @@ Real model files with manually populated Adam fixtures establish serialization
 only; no optimizer step, actual learned smoke, new return or allocation is claimed.
 Next export the clean source, recheck official account usage, inspect each actual
 Colab kernel Python and run the three bounded512-transition CPU smokes.
+
+
+## Actual Colab smoke acceptance complete
+
+[Actual acceptance](smokes.json) verifies three512-transition CPU runs from clean
+33dbb56 source, each default Colab Python3.13.16 checked before dependency sync.
+All actual initial tensors/Torch/NumPy/Python starts match their pins; full/masked
+initial records are exact. Actual latest/selected/frozen recurrent and learned Adam
+state restore;234 frozen sequence predictions match exactly, with reset/repeat,
+caller-state, mask/schema, normalization/data/file and development accounting
+checks passing. No local optimizer step or retired-test row was used.
+
+Training/evaluation durations: legacy134.65s, masked144.89s, full127.00s. The fixed
+conservative full-screen projection is3471.70s, including1200s reserve, below7200s.
+This authorizes preparing the predefined100k seed11 screen, not confirmation,
+profitability or promotion. Runtime projection remains a heuristic.
+
+[Budget/cleanup evidence](smoke-budget.json): conservative smoke increment0.027909
+units, cumulative project39.182288/150, working allowance90.817712 to130. Shared
+VIX allowance remaining1.972091/2. Official post-cleanup account348.88, zero rate
+and assignments; all three owned sessions are verified stopped. Original ledger
+and baseline persist. Retrieved complete models, initializer snapshots, curves,
+reports and source export remain under ignored `.runtime/vix-source-v1/` artifacts;
+protected file hashes/paths are retained in acceptance evidence. Duplicate cleanup
+waits for final study release verification. No cleanup recovery is required.
+
+Next prepare the fixed100k three-arm CPU screen with10k curves and actual final
+post-update evaluation, independently verify legacy historical reproduction, then
+apply unchanged selected/final/stock/ETF/risk gates. A failure closes this fixed
+family without extension or tuning; only a pass permits11/23/37 confirmation.

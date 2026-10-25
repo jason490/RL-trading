@@ -2162,3 +2162,11 @@ acceptance are implemented: at least78 causal sequence checks per arm, immutable
 normalization/data/files and caller RNG/state preservation.93 combined regressions
 plus2 acceptance boundaries pass without optimization. Actual Colab512-transition
 CPU smokes remain next; serialization fixtures are not learned acceptance.
+
+VIX actual512-transition Colab CPU smokes all pass learned optimizer/recurrent
+restoration,234 exact frozen predictions, immutable normalization/data and matched
+development accounting. All actual default kernels3.13.16 and all three owned
+sessions stopped. Conservative cumulative project39.182288 units; official balance
+348.88, zero rate/assignments. Fixed screen projection3471.70s fits7200s; next
+predefined100k seed11 comparison and independent historical-control reproduction.
+No profitability, confirmation or promotion claimed; retired test stays isolated.

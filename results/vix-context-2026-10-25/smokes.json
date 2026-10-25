@@ -1,0 +1,453 @@
+{
+  "schema": "vix-smoke-acceptance-v1",
+  "passed": true,
+  "protocol_sha256": "c9972c2ce85d0d9bad54501f1634357919217e5aee8b4b964d197f8dd6ea6008",
+  "binding_sha256": "5ee939d3c96a100365ad5bf9f19bfa656be763bf432e9e0ba511f09bc0e37f85",
+  "source_proof": {
+    "source_revision": "33dbb56401263668cda14ff1f49f9ce6247a5d98",
+    "source_hash": "ac311bb933ee5854e935e86c30467cb7584554c4d30aef8d749f86426dfa00f5",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1"
+  },
+  "state_sha256": "3bb111ee7a0d57533fa9c198abb089a27085cc81c965e0ff89d5a697e1ce8888",
+  "cleanup_verified": true,
+  "initialization_checks": {
+    "full_masked_records_exact": true,
+    "sampling_rng_identical": true,
+    "common_columns_and_zero_embedding_verified": true
+  },
+  "records": {
+    "legacy": {
+      "session": "rl-stocks-cpu-30e5bb960f05",
+      "run": "20261025T151354-recurrent_ppo-11-a5b51953",
+      "bundle_id": "859eddefbf019a133a20ec3434ea77b67b1e09722e3bded6ee96f5a85346c2ff",
+      "duration_seconds": 134.6506296829998,
+      "initial": {
+        "algorithm": "RecurrentPPO",
+        "observation_size": 21,
+        "action_size": 4,
+        "num_timesteps": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.0,
+        "learning_rate": 0.0003,
+        "net_arch": [
+          64,
+          64
+        ],
+        "actor_lstm": {
+          "hidden_size": 64,
+          "num_layers": 1
+        },
+        "critic_lstm": true,
+        "shared_lstm": false,
+        "policy_tensor_sha256": "2e5e6ba89da038a0d207d2411e5197f0cf73cdf129afc10dfa1c53d4aee01798",
+        "target_kl": null,
+        "clip_range": 0.2,
+        "max_grad_norm": 0.5,
+        "policy_class": "RecurrentActorCriticPolicy",
+        "optimizer": {
+          "num_timesteps": 0,
+          "sb3_nominal_epoch_counter": 0,
+          "n_steps": 128,
+          "batch_size": 64,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 61513,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 0,
+          "adam_step_min": null,
+          "adam_step_max": null,
+          "per_parameter_adam_steps": {},
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.0,
+          "maximum_second_moment": 0.0,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0.0
+            }
+          ]
+        },
+        "shared_initialization": {
+          "version": 1,
+          "artifact_sha256": "a8eb8f95476b3705a2b618f5ffc501d78f02572be88124324b69aa3fc6bad9a9",
+          "policy_tensor_sha256": "2e5e6ba89da038a0d207d2411e5197f0cf73cdf129afc10dfa1c53d4aee01798",
+          "rng_sha256": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+          "torch_version": "2.8.0",
+          "generated_without_fitting": true,
+          "seed": 11,
+          "smoke": true,
+          "artifact_file": "configs/initializations/recurrent_guard_v2/screen-11.npz",
+          "binding_sha256": "5ee939d3c96a100365ad5bf9f19bfa656be763bf432e9e0ba511f09bc0e37f85"
+        },
+        "seed": 11,
+        "optimizer_sha256": "1674e06693f09e1fe0d1a475560c094ae6f4644fe7fb946b11f0c66bfd70513f",
+        "rng": {
+          "torch": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+          "numpy": "76fb9bc9e74d043d1a299f0e01479ded07ee28d7f4d4d24e839ea635c68ca102",
+          "python": "ce2e075758e07803fc1aeed08637cd27cd291b66991455db44d4933f9eed7a09"
+        },
+        "coupled_adam": {
+          "version": 1,
+          "optimizer_class": "Adam",
+          "defaults_decoupled_weight_decay": false,
+          "group_decoupled_weight_decay": [
+            false
+          ]
+        }
+      },
+      "metadata_sha256": "686e1e9b6a8f83379106f7c641c9a5915707ed5f88532b5322cb81882c1fdf1e",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true,
+      "latest_selected_and_frozen_optimizers_exact": true,
+      "frozen_predictions": 78,
+      "symbols_checked": [
+        "AAPL",
+        "AMT",
+        "AMZN",
+        "APD",
+        "BAC",
+        "CAT",
+        "CVX",
+        "DIA",
+        "DIS",
+        "DUK",
+        "GOOGL",
+        "HD",
+        "HON",
+        "IWM",
+        "JNJ",
+        "JPM",
+        "KO",
+        "LIN",
+        "MSFT",
+        "NEE",
+        "PG",
+        "PLD",
+        "QQQ",
+        "SPY",
+        "UNH",
+        "XOM"
+      ],
+      "recurrent_sequence_and_reset_parity": true,
+      "caller_state_unchanged": true,
+      "schema_feed_nonfinite_rejection": true,
+      "masked_observation_rejection": false,
+      "normalization_unchanged": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/runs/20261025T151354-recurrent_ppo-11-a5b51953/metadata.json": "686e1e9b6a8f83379106f7c641c9a5915707ed5f88532b5322cb81882c1fdf1e",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/runs/20261025T151354-recurrent_ppo-11-a5b51953/best.zip": "7819b140c1776e034a04a4c9fcdc87f816e0e5b8dd282c9a4b291036db5e06a1",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/runs/20261025T151354-recurrent_ppo-11-a5b51953/latest.zip": "fc8761fbbceb678b0f896cb8c3df3caabc665b4ce1850bad4723af9f24deb1a2",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/runs/20261025T151354-recurrent_ppo-11-a5b51953/vix-initialization.npz": "a8eb8f95476b3705a2b618f5ffc501d78f02572be88124324b69aa3fc6bad9a9",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/frozen/859eddefbf019a133a20ec3434ea77b67b1e09722e3bded6ee96f5a85346c2ff/manifest.json": "859eddefbf019a133a20ec3434ea77b67b1e09722e3bded6ee96f5a85346c2ff",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/frozen/859eddefbf019a133a20ec3434ea77b67b1e09722e3bded6ee96f5a85346c2ff/model.zip": "7819b140c1776e034a04a4c9fcdc87f816e0e5b8dd282c9a4b291036db5e06a1",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/frozen/859eddefbf019a133a20ec3434ea77b67b1e09722e3bded6ee96f5a85346c2ff/checksums.json": "96997c447aa818ef2e508ccc7b2505a5f93a22db3666169af399ba1c89f602d0",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-30e5bb960f05/retrieved/artifacts/frozen/859eddefbf019a133a20ec3434ea77b67b1e09722e3bded6ee96f5a85346c2ff/requirements.lock": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142"
+      },
+      "source_files_unchanged": true,
+      "optimizer_steps": 0
+    },
+    "masked": {
+      "session": "rl-stocks-cpu-726b02d2dd81",
+      "run": "20261025T151338-recurrent_ppo-11-867037ca",
+      "bundle_id": "0425b12278e17db79f5082a358e77e096877bdab282a052b1f9ac7f541055891",
+      "duration_seconds": 144.88666116299999,
+      "initial": {
+        "algorithm": "RecurrentPPO",
+        "observation_size": 23,
+        "action_size": 4,
+        "num_timesteps": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.0,
+        "learning_rate": 0.0003,
+        "net_arch": [
+          64,
+          64
+        ],
+        "actor_lstm": {
+          "hidden_size": 64,
+          "num_layers": 1
+        },
+        "critic_lstm": true,
+        "shared_lstm": false,
+        "policy_tensor_sha256": "7f5cea742e78c7063c8e9e8db3594f7fb149b28cd7f8d722cc3015a5d8bc80d8",
+        "target_kl": null,
+        "clip_range": 0.2,
+        "max_grad_norm": 0.5,
+        "policy_class": "RecurrentActorCriticPolicy",
+        "optimizer": {
+          "num_timesteps": 0,
+          "sb3_nominal_epoch_counter": 0,
+          "n_steps": 128,
+          "batch_size": 64,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 62537,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 0,
+          "adam_step_min": null,
+          "adam_step_max": null,
+          "per_parameter_adam_steps": {},
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.0,
+          "maximum_second_moment": 0.0,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0.0
+            }
+          ]
+        },
+        "shared_initialization": {
+          "version": 1,
+          "artifact_sha256": "575f8b8373994018c7b7ea871269c2e5656c5ff9a0f4f10e7d8773c8d0647435",
+          "policy_tensor_sha256": "7f5cea742e78c7063c8e9e8db3594f7fb149b28cd7f8d722cc3015a5d8bc80d8",
+          "rng_sha256": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+          "torch_version": "2.8.0",
+          "generated_without_fitting": true,
+          "seed": 11,
+          "smoke": true,
+          "artifact_file": "configs/initializations/vix_v1/vix23-seed11.npz",
+          "binding_sha256": "5ee939d3c96a100365ad5bf9f19bfa656be763bf432e9e0ba511f09bc0e37f85"
+        },
+        "seed": 11,
+        "optimizer_sha256": "1674e06693f09e1fe0d1a475560c094ae6f4644fe7fb946b11f0c66bfd70513f",
+        "rng": {
+          "torch": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+          "numpy": "76fb9bc9e74d043d1a299f0e01479ded07ee28d7f4d4d24e839ea635c68ca102",
+          "python": "ce2e075758e07803fc1aeed08637cd27cd291b66991455db44d4933f9eed7a09"
+        },
+        "coupled_adam": {
+          "version": 1,
+          "optimizer_class": "Adam",
+          "defaults_decoupled_weight_decay": false,
+          "group_decoupled_weight_decay": [
+            false
+          ]
+        }
+      },
+      "metadata_sha256": "59ec68a6f42878ba7b411a39814308eadc438a4efd01b3dc97ac241a63e67831",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true,
+      "latest_selected_and_frozen_optimizers_exact": true,
+      "frozen_predictions": 78,
+      "symbols_checked": [
+        "AAPL",
+        "AMT",
+        "AMZN",
+        "APD",
+        "BAC",
+        "CAT",
+        "CVX",
+        "DIA",
+        "DIS",
+        "DUK",
+        "GOOGL",
+        "HD",
+        "HON",
+        "IWM",
+        "JNJ",
+        "JPM",
+        "KO",
+        "LIN",
+        "MSFT",
+        "NEE",
+        "PG",
+        "PLD",
+        "QQQ",
+        "SPY",
+        "UNH",
+        "XOM"
+      ],
+      "recurrent_sequence_and_reset_parity": true,
+      "caller_state_unchanged": true,
+      "schema_feed_nonfinite_rejection": true,
+      "masked_observation_rejection": true,
+      "normalization_unchanged": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/runs/20261025T151338-recurrent_ppo-11-867037ca/metadata.json": "59ec68a6f42878ba7b411a39814308eadc438a4efd01b3dc97ac241a63e67831",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/runs/20261025T151338-recurrent_ppo-11-867037ca/best.zip": "5ed48248b72cd96f97f3da4dc1991201ec1491af7110719b388ff3262fdb93d9",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/runs/20261025T151338-recurrent_ppo-11-867037ca/latest.zip": "af735ac136ae987aa55bed9fec0d435be62f68c3e4a7dc0307a7702c1e937dea",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/runs/20261025T151338-recurrent_ppo-11-867037ca/vix-initialization.npz": "575f8b8373994018c7b7ea871269c2e5656c5ff9a0f4f10e7d8773c8d0647435",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/frozen/0425b12278e17db79f5082a358e77e096877bdab282a052b1f9ac7f541055891/manifest.json": "0425b12278e17db79f5082a358e77e096877bdab282a052b1f9ac7f541055891",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/frozen/0425b12278e17db79f5082a358e77e096877bdab282a052b1f9ac7f541055891/model.zip": "5ed48248b72cd96f97f3da4dc1991201ec1491af7110719b388ff3262fdb93d9",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/frozen/0425b12278e17db79f5082a358e77e096877bdab282a052b1f9ac7f541055891/checksums.json": "6b2b08c2a6457d557d6f544fd85c035f8e185af4d1fa89b5faa84d5a0fa0dfd7",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-726b02d2dd81/retrieved/artifacts/frozen/0425b12278e17db79f5082a358e77e096877bdab282a052b1f9ac7f541055891/requirements.lock": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142"
+      },
+      "source_files_unchanged": true,
+      "optimizer_steps": 0
+    },
+    "full": {
+      "session": "rl-stocks-cpu-f8dd5ac97b83",
+      "run": "20261025T151325-recurrent_ppo-11-c4e290cf",
+      "bundle_id": "ac183d89a6b26e6fbbaac4a3c4544c747dd03258610e8cbf9cdd6368ed2eda7d",
+      "duration_seconds": 127.00055531600003,
+      "initial": {
+        "algorithm": "RecurrentPPO",
+        "observation_size": 23,
+        "action_size": 4,
+        "num_timesteps": 0,
+        "n_steps": 128,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.0,
+        "learning_rate": 0.0003,
+        "net_arch": [
+          64,
+          64
+        ],
+        "actor_lstm": {
+          "hidden_size": 64,
+          "num_layers": 1
+        },
+        "critic_lstm": true,
+        "shared_lstm": false,
+        "policy_tensor_sha256": "7f5cea742e78c7063c8e9e8db3594f7fb149b28cd7f8d722cc3015a5d8bc80d8",
+        "target_kl": null,
+        "clip_range": 0.2,
+        "max_grad_norm": 0.5,
+        "policy_class": "RecurrentActorCriticPolicy",
+        "optimizer": {
+          "num_timesteps": 0,
+          "sb3_nominal_epoch_counter": 0,
+          "n_steps": 128,
+          "batch_size": 64,
+          "n_epochs": 10,
+          "target_kl": null,
+          "parameter_count": 62537,
+          "optimizer_parameter_count": 21,
+          "optimizer_state_count": 0,
+          "adam_step_min": null,
+          "adam_step_max": null,
+          "per_parameter_adam_steps": {},
+          "all_parameters_and_moments_finite": true,
+          "maximum_abs_first_moment": 0.0,
+          "maximum_second_moment": 0.0,
+          "parameter_groups": [
+            {
+              "lr": 0.0003,
+              "eps": 1e-05,
+              "betas": [
+                0.9,
+                0.999
+              ],
+              "weight_decay": 0.0
+            }
+          ]
+        },
+        "shared_initialization": {
+          "version": 1,
+          "artifact_sha256": "575f8b8373994018c7b7ea871269c2e5656c5ff9a0f4f10e7d8773c8d0647435",
+          "policy_tensor_sha256": "7f5cea742e78c7063c8e9e8db3594f7fb149b28cd7f8d722cc3015a5d8bc80d8",
+          "rng_sha256": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+          "torch_version": "2.8.0",
+          "generated_without_fitting": true,
+          "seed": 11,
+          "smoke": true,
+          "artifact_file": "configs/initializations/vix_v1/vix23-seed11.npz",
+          "binding_sha256": "5ee939d3c96a100365ad5bf9f19bfa656be763bf432e9e0ba511f09bc0e37f85"
+        },
+        "seed": 11,
+        "optimizer_sha256": "1674e06693f09e1fe0d1a475560c094ae6f4644fe7fb946b11f0c66bfd70513f",
+        "rng": {
+          "torch": "f1ac76776157c8eac1be61e4ac44bac1802f0b1d727a2cc5c726762d7b750bec",
+          "numpy": "76fb9bc9e74d043d1a299f0e01479ded07ee28d7f4d4d24e839ea635c68ca102",
+          "python": "ce2e075758e07803fc1aeed08637cd27cd291b66991455db44d4933f9eed7a09"
+        },
+        "coupled_adam": {
+          "version": 1,
+          "optimizer_class": "Adam",
+          "defaults_decoupled_weight_decay": false,
+          "group_decoupled_weight_decay": [
+            false
+          ]
+        }
+      },
+      "metadata_sha256": "ed8c79b8d4574b457f12bd734400765d0e667f56dea593941716ea49a8e85763",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true,
+      "latest_selected_and_frozen_optimizers_exact": true,
+      "frozen_predictions": 78,
+      "symbols_checked": [
+        "AAPL",
+        "AMT",
+        "AMZN",
+        "APD",
+        "BAC",
+        "CAT",
+        "CVX",
+        "DIA",
+        "DIS",
+        "DUK",
+        "GOOGL",
+        "HD",
+        "HON",
+        "IWM",
+        "JNJ",
+        "JPM",
+        "KO",
+        "LIN",
+        "MSFT",
+        "NEE",
+        "PG",
+        "PLD",
+        "QQQ",
+        "SPY",
+        "UNH",
+        "XOM"
+      ],
+      "recurrent_sequence_and_reset_parity": true,
+      "caller_state_unchanged": true,
+      "schema_feed_nonfinite_rejection": true,
+      "masked_observation_rejection": false,
+      "normalization_unchanged": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/runs/20261025T151325-recurrent_ppo-11-c4e290cf/metadata.json": "ed8c79b8d4574b457f12bd734400765d0e667f56dea593941716ea49a8e85763",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/runs/20261025T151325-recurrent_ppo-11-c4e290cf/best.zip": "78ccbdd313642be92f47777713da0bb1320e4cdc94f76d029a3ae3c38ffeadd3",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/runs/20261025T151325-recurrent_ppo-11-c4e290cf/latest.zip": "640f13f9352d33683bbba95c1143a4f1bf54bec657dbc45587aa9ce2dec73658",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/runs/20261025T151325-recurrent_ppo-11-c4e290cf/vix-initialization.npz": "575f8b8373994018c7b7ea871269c2e5656c5ff9a0f4f10e7d8773c8d0647435",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/frozen/ac183d89a6b26e6fbbaac4a3c4544c747dd03258610e8cbf9cdd6368ed2eda7d/manifest.json": "ac183d89a6b26e6fbbaac4a3c4544c747dd03258610e8cbf9cdd6368ed2eda7d",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/frozen/ac183d89a6b26e6fbbaac4a3c4544c747dd03258610e8cbf9cdd6368ed2eda7d/model.zip": "78ccbdd313642be92f47777713da0bb1320e4cdc94f76d029a3ae3c38ffeadd3",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/frozen/ac183d89a6b26e6fbbaac4a3c4544c747dd03258610e8cbf9cdd6368ed2eda7d/checksums.json": "bc3c89a8c9d27c5e445dd707c6835fcf2e71a0e98f9f4ae0182e7c8d22507898",
+        "/home/vibe/projects/rl-stocks/.runtime/vix-source-v1/artifacts/colab/rl-stocks-cpu-f8dd5ac97b83/retrieved/artifacts/frozen/ac183d89a6b26e6fbbaac4a3c4544c747dd03258610e8cbf9cdd6368ed2eda7d/requirements.lock": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142"
+      },
+      "source_files_unchanged": true,
+      "optimizer_steps": 0
+    }
+  },
+  "exact_frozen_predictions": 234,
+  "runtime_projection": {
+    "reference_control_seconds": 1055.6041111230002,
+    "reference_metadata_sha256": "aa746182d73a9abab671c05cac02ade1ede4c67dea8b68eb165fd57ec56e23cf",
+    "smoke_duration_ratio": 1.0760191876124032,
+    "safety_multiplier": 2.0,
+    "reserve_seconds": 1200,
+    "projected_seconds": 3471.7005561817673,
+    "allocation_deadline_seconds": 7200,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  },
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "test_evaluated": false,
+  "screen_allocated": false
+}

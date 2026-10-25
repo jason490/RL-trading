@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-10-25T15:20:03.493913+00:00",
+  "smoke_acceptance_sha256": "499fbf8009fea11904f4499eade5f38feb2ad6f52780848ca14bfbe47b4e70d2",
+  "ledger_sha256": "8e3b94f59a992e24c191b9936eae9cfcc80e6a83c718f7cfa1d2ebbcc77a419c",
+  "state_sha256": "3bb111ee7a0d57533fa9c198abb089a27085cc81c965e0ff89d5a697e1ce8888",
+  "source_revision": "33dbb56401263668cda14ff1f49f9ce6247a5d98",
+  "conservative_project_units": 39.182287806800296,
+  "study_start_units": 39.154379081176344,
+  "conservative_smoke_increment_units": 0.02790872562395208,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "remaining_project_units": 110.8177121931997,
+  "remaining_working_units": 90.8177121931997,
+  "remaining_study_units": 1.972091274376048,
+  "official_post_cleanup_balance": 348.88,
+  "official_post_cleanup_rate": 0.0,
+  "official_post_cleanup_assignments": 0,
+  "interpretation": "Official account balance changed0.01 units over the smoke fleet; conservative ledger additionally estimates rate/time between rounded readings. Includes setup, idle, downloads and shutdown.",
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-30e5bb960f05",
+    "rl-stocks-cpu-726b02d2dd81",
+    "rl-stocks-cpu-f8dd5ac97b83"
+  ],
+  "artifacts_retrieved": true,
+  "duplicate_cleanup_deferred_until_release_verification": true
+}
