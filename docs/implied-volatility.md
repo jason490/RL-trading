@@ -123,3 +123,43 @@ within0.01pp mean/0.05pp per-symbol. Only passing smokes can authorize screens;
 only passing screens can proceed to11/23/37/prospective.2-unit incremental
 allowance inside unchanged project/account/deadline limits. Nine focused tests
 pass; no new policy, dataset augmentation, training or performance result yet.
+
+
+## Immutable payload and frozen-schema implementation
+
+`data.generation.volatility_payload` builds full/masked9-field market datasets
+from the accepted original7-field consumer and retained index snapshot. Both
+require ready as-of context at every original decision. Deep copies preserve
+equity bars, ATR, row keys, splits and original features/statistics. Only full's
+two new coordinates are fitted on training rows; masked's fields/means are0
+and scales1. No original coordinate is refitted, clipped or replaced. A fresh
+exact reconstruction must match the complete persisted payload digest.
+
+Explicit lineage records source/context/episode/preprocessing hashes, provider,
+feed, bounded request and retrieval time,1-session lag/20-session change,
+training-only fit counts and unverified publication-vintage status. FrozenPolicy
+requires this contract for VIX schemas/names, rejects false declarations and
+rejects nonzero masked input coordinates7:9. Existing non-VIX contracts remain
+unchanged. Source VIX values remain local; no executable index is introduced.
+
+60 focused payload/source/protocol, prior-market, TQC and recurrent verifier
+checks pass. Tests cover immutable copies, development-value isolation, missing
+context, future-row rejection, normalizer/lineage/feed/bounds/vintage/schema
+rejection, exact masked normalization and untrained recurrent prediction/state
+parity with immutable caller state.23-input native construction has62,537
+parameters; no optimizer step is performed. These random untrained serialization
+fixtures do not establish the future shared mapped initializer or learned smoke
+acceptance.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+.venv/bin/python scripts/prepare_vix_payloads.py
+```
+
+The local producer has a600-second bound and durable per-mode progress journal,
+refuses an existing journal, revalidates reloaded immutable data, checks finite
+float32 inputs and preserves all source hashes. It performs only the declared
+training-row preprocessing fit, no policy optimization, provider requests or
+Colab allocation. Actual generated identities belong in
+`results/vix-context-2026-10-25/payloads.json`; execution remains pending at this
+implementation milestone.

@@ -65,7 +65,24 @@ metering, inclusive7200-second allocations and verified owned cleanup.
 Nine focused tests pass: source bounds/availability/lagging, immutable consumer
 alignment and changed-protocol rejection. Both full and smoke parameter
 dictionaries exactly equal the original native recurrent control's resolved
-contract. No policy has been constructed, optimized or scored for this family.
+contract. At preregistration no policy had been constructed. Untrained serialization
+fixtures are now covered below; no policy has been optimized or scored.
 No Colab session is allocated, no original normalization is refit and no source
 2024+ price is opened. Dataset augmentation, initializer generation, frozen
 contracts, task integration and actual smokes are next.
+
+
+## Payload/frozen-schema implementation complete; producer not yet run
+
+Full/masked immutable builders, exact source/preprocessing reconstruction and
+explicit frozen VIX contracts are implemented.60 focused checks pass, including
+actual untrained23-input62,537-parameter recurrent save/load/state parity and
+masked-observation rejection. Source rows/ATR/splits/seven original fields and
+statistics remain exact; only full's two new fields are training-fitted.
+False source/feed/bounds/vintage/mask declarations reject. No local optimizer
+step, provider request or Colab session.
+
+Next run the bounded local payload producer, retain generated data identities
+and verify all float32 inputs; then implement pinned zero-column mapped
+initializers and metered runtime acceptance before actual Colab smokes. These
+untrained serialization fixtures are not shared-initializer/learned acceptance.
