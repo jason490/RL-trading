@@ -292,3 +292,25 @@ whole VIX study0.118079 units; cumulative project39.272458/150, working allowanc
 teardown170 preserved. All six owned sessions are verified stopped, all artifacts
 retrieved. No cleanup recovery is needed. Models/curves/source/datasets remain;
 publication verification precedes scoped duplicate removal.
+
+
+## Publication and scoped cleanup complete
+
+[Verified GitHub release](https://github.com/jason490/RL-trading/releases/tag/vix-context-2026-10-25)
+contains14 assets; every server digest/size matches the
+[publication evidence](release-verification.json). Open `screen.html` for the
+interactive comparison, `learning-curves.tar.gz` for sparse percentage-gain/change
+curves, and `research-models.tar.gz` for six complete frozen bundles plus
+selected/final weights and initializer evidence. Extract `validation-reports.tar.gz`
+beside `validation.html` for individual derived equity reports. Raw prices,
+private replay, credentials and runtime logs are excluded.
+
+[Cleanup inventory](cleanup.json) records13 verified duplicates removed,
+440,329,736 logical bytes (419.93MiB), with489 retained files rehashed unchanged.
+All six checkpoint snapshots differed from final extractions and were preserved
+as potentially unique evidence. Models, full reports, source export, immutable
+datasets/context, initializer assets, shared ledger and owned recovery records
+remain. All six sessions are stopped; zero account assignments and no recovery
+command is needed. The fixed VIX family remains closed. Next research should
+inspect saved-policy evidence for a distinct hypothesis before another allocation;
+no robust or prospective winner is established.

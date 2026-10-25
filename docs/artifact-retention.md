@@ -215,3 +215,16 @@ stopped, zero assignments; no additional units or training. Fixed critic study
 failed and remains closed; next work is bounded saved-policy/execution sensitivity
 diagnosis, not extension or promotion. Release:
 https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24
+
+## VIX context cleanup — 2026-10-25
+
+After six owned shutdowns, actual learned/frozen/accounting acceptance and14
+server-verified release assets, cleanup removed13 exact duplicates totaling
+440,329,736 logical bytes (419.93MiB). Every transfer archive member was checked
+against retained source/data/extraction files before deletion. All six checkpoint
+snapshots differed from the completed extractions and were retained, preserving
+potentially unique weights/reports rather than assuming snapshots were duplicates.
+489 protected files rehashed unchanged, including models, reports, immutable
+context/datasets, source code, initializers, original ledger and recovery records.
+[Inventory](../results/vix-context-2026-10-25/cleanup.json) records exact paths,
+hashes, preserved snapshots and free-space observation. No recovery is required.

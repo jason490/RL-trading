@@ -13,6 +13,9 @@ holding30.60%. Candidate fails relative and stock/ETF/median targets. Historical
 legacy reproduces exactly;468 smoke/screen frozen sequence checks pass and all
 six sessions are stopped. Project39.272458/150, official account348.80 with zero
 rate/assignments. Family closed without extension, confirmation or promotion.
+[Release](https://github.com/jason490/RL-trading/releases/tag/vix-context-2026-10-25):
+14 assets verified;13 exact duplicates/419.93MiB removed,489 retained hashes unchanged.
+All six differing checkpoint snapshots preserved.
 
 
 [Fixed distributional critics](distributional-critics-2026-10-24/README.md) failed:

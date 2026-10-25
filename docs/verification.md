@@ -2439,3 +2439,9 @@ sequence checks pass, actual learned Adam state and report accounting validate;
 independent NumPy group error5.56e−17. All six owned sessions stopped. Cumulative
 project39.272458; official348.80 balance, zero rate/assignments. Fixed family
 closed without confirmation/extension/promotion; no retired-test access.
+
+VIX publication/cleanup verified:14 GitHub server asset hashes/sizes match;
+13 exact duplicates removed (419.93MiB),489 retained hashes unchanged. All six
+differing checkpoint snapshots preserved. Complete models/source/data/ledger and
+reports remain. All six sessions stopped; no cleanup recovery needed. Release:
+https://github.com/jason490/RL-trading/releases/tag/vix-context-2026-10-25

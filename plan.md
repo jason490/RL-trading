@@ -2184,3 +2184,9 @@ exactly at every checkpoint/per-symbol;468 actual frozen sequence checks and
 independent NumPy/accounting acceptance pass. All six sessions stopped; cumulative
 project39.272458, official account348.80 idle. Fixed family closed without tuning,
 extension, confirmation or promotion. Prospective/robust trading objective unmet.
+
+VIX publication/cleanup complete:14 server-verified release assets,13 exact
+duplicates/419.93MiB removed,489 retained hashes unchanged. Six differing snapshots
+preserved alongside all models/data/source/ledger/reports; all six sessions stopped.
+No recovery needed. Fixed family stays closed; distinct saved-evidence diagnosis
+must precede another hypothesis. Robust/prospective objective remains unmet.

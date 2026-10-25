@@ -189,3 +189,14 @@ stopped, zero assignments; no additional units or training. Fixed critic study
 failed and remains closed; next work is bounded saved-policy/execution sensitivity
 diagnosis, not extension or promotion. Release:
 https://github.com/jason490/RL-trading/releases/tag/distributional-critics-2026-10-24
+
+## VIX context publication
+
+[Verified release](https://github.com/jason490/RL-trading/releases/tag/vix-context-2026-10-25)
+publishes14 assets with all server sizes/digests checked. Six complete frozen
+bundles, selected/final weights, initializer evidence, sparse learning curves and
+interactive/derived reports are available. Raw prices, replay, credentials and
+private logs stay excluded. The fixed screen failed: full24.09/14.44% selected/final
+versus legacy19.62/18.48%, masked24.36/9.20% and holding30.60%. No promotion.
+Thirteen exact duplicates/419.93MiB removed with489 retained hashes unchanged;
+all six differing checkpoint snapshots preserved. All six owned sessions stopped.
