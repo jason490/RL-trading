@@ -1,0 +1,1446 @@
+{
+  "protocol_sha256": "0beb46986f3279047bd47ac3e245d1a9f3b749c72cae72b9ab3c45e840238161",
+  "source_id": "bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4",
+  "source_path": "/home/vibe/projects/rl-stocks/data/context/treasury/snapshots/bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4/snapshot.json",
+  "source_sha256": "bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4",
+  "alignment_path": "/home/vibe/projects/rl-stocks/data/context/treasury/snapshots/bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4/alignment.json",
+  "alignment_sha256": "3126f78e40ec90870cbb8d23eb57e1a4117b2d79b656fb90dd9a2896a6950c10",
+  "source_observations": 3753,
+  "first_source_date": "2009-01-02",
+  "last_source_date": "2023-12-29",
+  "requests_started": 15,
+  "annual_sources": [
+    {
+      "receipt_id": "12fa324bd991e4d96e7fa598266ec140bff27a301f3bdf3a47202483f249a013",
+      "year": 2009,
+      "bytes": 347673,
+      "raw_sha256": "ac811954be29824d3c3db2f7b27ae35aa2a87753c92b1047be378c4eaed6d53f"
+    },
+    {
+      "receipt_id": "f8823c71ad5bdc4add996ac9f4924b6a33cf8d291851f7715f79f89edfcca06c",
+      "year": 2010,
+      "bytes": 349887,
+      "raw_sha256": "39941e9fa17f69452829da4f104440e59c6002714fc07a7d9f6452c8ce925c6c"
+    },
+    {
+      "receipt_id": "ca57fb64169a966aeaa0f1d450c51603fb2b972c6a500483ddb9d87629e9ec29",
+      "year": 2011,
+      "bytes": 347673,
+      "raw_sha256": "70d75de814e25b4e59b1aebb6a932c0fdfebeb0e41c4872226a4e9342dbaa218"
+    },
+    {
+      "receipt_id": "b473ef4ee51b4fa2c314c4077f8782f3520562e8b446ef046a260ee367efce43",
+      "year": 2012,
+      "bytes": 347673,
+      "raw_sha256": "09be19d251cfef45f6003c369fd527668ce5312a2f99639fad2610334bb3ee41"
+    },
+    {
+      "receipt_id": "636e328b2a02d69d6802d0d1237346cb37cb0a7e5bcbaae06cb97afa754f8b9d",
+      "year": 2013,
+      "bytes": 347673,
+      "raw_sha256": "e86a46ef9c334445fea806ed39dc53ab94aa36a72e8022d38902501720095532"
+    },
+    {
+      "receipt_id": "aac866079c8bd65b033953ae2e82fa86f8ecbbbf3a60fd5b9ae0a87f08fddc39",
+      "year": 2014,
+      "bytes": 347673,
+      "raw_sha256": "f40e5abe796bd5595f39616037e166b7e5b0f39d9334e22005261b71d76f8637"
+    },
+    {
+      "receipt_id": "d96d3e4d2838f59e05a90b7d2da055ab85705aa26db90d4e2539e245bd736920",
+      "year": 2015,
+      "bytes": 349061,
+      "raw_sha256": "4b92e44aeb599cd2fa10154fb871dc0a9a6e3bc9b50f64112d18eca401055bbf"
+    },
+    {
+      "receipt_id": "c733c5c620f17beaa05b8a5e8ca2009791fe64dc047c54de21d0c9a592dc17cb",
+      "year": 2016,
+      "bytes": 347673,
+      "raw_sha256": "e98e36c311e24d718548a810d859df25979902c7bde3ba701655efe35f8488d6"
+    },
+    {
+      "receipt_id": "1954a473599598558526fa9c26fd02740577bae19573be803a97d083f5602eef",
+      "year": 2017,
+      "bytes": 347673,
+      "raw_sha256": "935533744b09b22b101fc2c7e392eb6eb994eb6d098438e226916f1dd9154727"
+    },
+    {
+      "receipt_id": "d1c1c915ebd250ca9d8d5e4ed02f788f91683192203f4ed100d820b72919f776",
+      "year": 2018,
+      "bytes": 348937,
+      "raw_sha256": "bfcd172d0e150b35ed9b1c3d73fb552835a9a3a1d627467f9302458bef73e40f"
+    },
+    {
+      "receipt_id": "1b997bc874390fcd147e5733341bbf31eed9e7f62208ccf96194d01cdd8797a6",
+      "year": 2019,
+      "bytes": 360673,
+      "raw_sha256": "793f6acb80fcdc172c69e449bb888c0ab56295be88ada15f0b2374f96fa7ca00"
+    },
+    {
+      "receipt_id": "4e7adeb93bb39339ab2d89cd745ac75f06444ae9205e51b7c7e9514daf5c2be2",
+      "year": 2020,
+      "bytes": 362113,
+      "raw_sha256": "999b97c04186ff2f1603e3495f33502c011a3f713776b08e0d52186574e7d61c"
+    },
+    {
+      "receipt_id": "30c1bc5a3567fce90659e97cdac6d85aa426489d24e432e425caea8a45ec7ba8",
+      "year": 2021,
+      "bytes": 362113,
+      "raw_sha256": "87d842b6aaaa5caa5c3b78009ea1518966b4c95f1d0290ba1e24f3af0a602baa"
+    },
+    {
+      "receipt_id": "8afa77b795a5cf5049a9896c3bed9c69026069ad28a47c2c61a9aa4bb7049dd4",
+      "year": 2022,
+      "bytes": 343983,
+      "raw_sha256": "3a1764e86584e3e5eb6e9236394887c903429079239241cfc6d800e62dbd8164"
+    },
+    {
+      "receipt_id": "c3946bc13459ff9d3e686215b9f4bdd776aed40b0c83e95a717b9898cb557915",
+      "year": 2023,
+      "bytes": 284423,
+      "raw_sha256": "295b0525fddc5fd0c1660da69ceadfeec574e6aedd0105240e469ffecd286cb9"
+    }
+  ],
+  "consumer_episodes": {
+    "train": 111,
+    "validation": 26
+  },
+  "coverage": {
+    "unique_dates": {
+      "overall": {
+        "decisions": 3433,
+        "ready": 3432,
+        "fraction": 0.9997087095834547,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "eras": {
+        "early_train": {
+          "decisions": 1209,
+          "ready": 1208,
+          "fraction": 0.9991728701406121,
+          "missing": [
+            "2010-10-13"
+          ]
+        },
+        "late_train": {
+          "decisions": 1491,
+          "ready": 1491,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "development": {
+          "decisions": 733,
+          "ready": 733,
+          "fraction": 1.0,
+          "missing": []
+        }
+      },
+      "years": {
+        "2010": {
+          "decisions": 203,
+          "ready": 202,
+          "fraction": 0.9950738916256158,
+          "missing": [
+            "2010-10-13"
+          ]
+        },
+        "2011": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2012": {
+          "decisions": 250,
+          "ready": 250,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2013": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2014": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2015": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2016": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2017": {
+          "decisions": 251,
+          "ready": 251,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2018": {
+          "decisions": 251,
+          "ready": 251,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2019": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2020": {
+          "decisions": 233,
+          "ready": 233,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2021": {
+          "decisions": 252,
+          "ready": 252,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2022": {
+          "decisions": 251,
+          "ready": 251,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2023": {
+          "decisions": 230,
+          "ready": 230,
+          "fraction": 1.0,
+          "missing": []
+        }
+      }
+    },
+    "consumer_rows": {
+      "overall": {
+        "decisions": 318004,
+        "ready": 317894,
+        "fraction": 0.9996540924013534,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "eras": {
+        "early_train": {
+          "decisions": 133445,
+          "ready": 133335,
+          "fraction": 0.9991756903593241,
+          "missing": [
+            "2010-10-13"
+          ]
+        },
+        "late_train": {
+          "decisions": 165501,
+          "ready": 165501,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "development": {
+          "decisions": 19058,
+          "ready": 19058,
+          "fraction": 1.0,
+          "missing": []
+        }
+      },
+      "years": {
+        "2010": {
+          "decisions": 22330,
+          "ready": 22220,
+          "fraction": 0.9950738916256158,
+          "missing": [
+            "2010-10-13"
+          ]
+        },
+        "2011": {
+          "decisions": 27720,
+          "ready": 27720,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2012": {
+          "decisions": 27500,
+          "ready": 27500,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2013": {
+          "decisions": 27923,
+          "ready": 27923,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2014": {
+          "decisions": 27972,
+          "ready": 27972,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2015": {
+          "decisions": 27972,
+          "ready": 27972,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2016": {
+          "decisions": 27972,
+          "ready": 27972,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2017": {
+          "decisions": 27861,
+          "ready": 27861,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2018": {
+          "decisions": 27861,
+          "ready": 27861,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2019": {
+          "decisions": 27972,
+          "ready": 27972,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2020": {
+          "decisions": 25863,
+          "ready": 25863,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2021": {
+          "decisions": 6552,
+          "ready": 6552,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2022": {
+          "decisions": 6526,
+          "ready": 6526,
+          "fraction": 1.0,
+          "missing": []
+        },
+        "2023": {
+          "decisions": 5980,
+          "ready": 5980,
+          "fraction": 1.0,
+          "missing": []
+        }
+      }
+    },
+    "coverage_passed": true,
+    "per_symbol_split": {
+      "AAPL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "AAPL/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "ABBV/train": {
+        "decisions": 1946,
+        "ready": 1946,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "ABT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "ADBE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "AEP/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "AMGN/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "AMT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "AMT/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "AMZN/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "AMZN/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "APA/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "APD/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "APD/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "AXP/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "BA/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "BAC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "BAC/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "BLK/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "BMY/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "C/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "CAT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "CAT/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "CL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "CMCSA/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "COP/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "COST/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "CSCO/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "CVX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "CVX/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "D/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "DE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "DIA/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "DIA/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "DIS/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "DIS/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "DUK/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "DUK/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "DVN/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "ECL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "ED/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "EOG/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "EQIX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "EXC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "F/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "FCX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "GD/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "GE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "GILD/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "GOOGL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "GOOGL/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "GS/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "HAL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "HD/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "HD/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "HON/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "HON/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "HSY/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "IBM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "INTC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "IWM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "IWM/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "JNJ/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "JNJ/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "JPM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "JPM/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "KMB/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "KO/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "KO/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "KR/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "LIN/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "LIN/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "LLY/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "LMT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "LOW/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MCD/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MDLZ/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MLM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MRK/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MS/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MSFT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "MSFT/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "NEE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "NEE/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "NEM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "NFLX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "NKE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "NUE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "NVDA/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "O/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "OMC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "ORCL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "OXY/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PEG/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PEP/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PFE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PG/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PG/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "PLD/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PLD/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "PNC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PPG/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "PSA/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "QCOM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "QQQ/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "QQQ/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "ROST/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "RTX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SBUX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SHW/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SLB/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SO/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SPG/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SPY/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "SPY/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "SRE/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "T/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "TGT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "TJX/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "TMUS/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "TTWO/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "TXN/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "UNH/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "UNH/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      },
+      "UNP/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "UPS/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "USB/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "VLO/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "VMC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "VTR/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "VZ/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "WELL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "WFC/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "WMT/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "XEL/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "XOM/train": {
+        "decisions": 2700,
+        "ready": 2699,
+        "fraction": 0.9996296296296296,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "XOM/validation": {
+        "decisions": 733,
+        "ready": 733,
+        "fraction": 1.0,
+        "missing": []
+      }
+    },
+    "methodology_eras": {
+      "before_change": {
+        "decisions": 2933,
+        "ready": 2932,
+        "fraction": 0.9996590521650187,
+        "missing": [
+          "2010-10-13"
+        ]
+      },
+      "after_change": {
+        "decisions": 500,
+        "ready": 500,
+        "fraction": 1.0,
+        "missing": []
+      }
+    },
+    "ready_age_xnys_counts": {
+      "2": 3407,
+      "3": 25
+    },
+    "ready_age_calendar_counts": {
+      "4": 1215,
+      "2": 1951,
+      "5": 223,
+      "3": 42,
+      "6": 1
+    },
+    "unavailable_reasons": {
+      "missing_maturity": 1
+    }
+  },
+  "coverage_passed": true,
+  "availability_assumption": "Research assumption: second XNYS session strictly after Treasury observation date, at that session close plus15minutes. Treasury usually publishes by18:00ET but warns of delays. Historical timestamps and revisions are unverified; never claim exact point-in-time fidelity.",
+  "historical_publication_vintages_verified": false,
+  "features": [
+    "treasury_2y_pct",
+    "treasury_10y_minus_2y_pp"
+  ],
+  "model_inputs_enabled": false,
+  "normalization_fitted": false,
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "protected_files_sha256": {
+    "/home/vibe/projects/rl-stocks/data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "/home/vibe/projects/rl-stocks/.runtime/usage-ledger.json": "b68abc36a571b70bdf57fdd2fa8dab3da4113b469b78bfad1e72ba5f8f2862d0"
+  },
+  "protected_files_unchanged": true,
+  "training_performed": false,
+  "returns_evaluated": false,
+  "retired_test_requested": false,
+  "colab_allocated": false,
+  "duration_seconds": 25.558738435036503,
+  "interpretation": "Current-vintage source/coverage feasibility under explicit lag and bounded-age assumptions only; no predictive or exact historical publication claim. Separate matched model preregistration required."
+}

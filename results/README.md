@@ -378,3 +378,12 @@ paired raw advantage variance ratios4.41× control/4.02× candidate; endpoint cr
 dependence persists. Independent matrix verification passes;221 protected files
 unchanged, no model/data replay, training or new Colab units. This does not prove
 gradient noise or a cause of poorer returns; failed trace family remains closed.
+
+
+[Treasury source feasibility](treasury-source-2026-10-25/README.md) passes:
+15 official annual requests/3753 observations. Readiness99.970871% by date and
+99.965409% by consumer row, all fixed era/year gates pass; one null source row
+leaves2010-10-13 unavailable, with no fallback. Independent original XML/as-of/
+calendar verification exact; source/data/normalizer/ledger retained unchanged,
+worker exited0, no new Colab units. Model inputs remain disabled pending matched
+readiness/payload acceptance and separate training preregistration.

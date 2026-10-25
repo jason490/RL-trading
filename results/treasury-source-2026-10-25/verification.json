@@ -1,0 +1,26 @@
+{
+  "independent_original_xml_rows": 3753,
+  "annual_receipts_verified": 15,
+  "raw_bytes_retained": 5194901,
+  "independent_pandas_asof_alignment": true,
+  "unique_decision_dates": 3433,
+  "consumer_rows": 318004,
+  "maximum_feature_value_error": 0.0,
+  "coverage_counts_exact": true,
+  "missing_dates": [
+    "2010-10-13"
+  ],
+  "dataset_normalizer_and_original_ledger_unchanged": true,
+  "source_summary_sha256": "cfaf63be9bf6d85e67398b9b30a436ae693ae57eb195536a7281c03f9f1f68b4",
+  "historical_publication_vintages_verified": false,
+  "normalization_fitted": false,
+  "model_inputs_enabled": false,
+  "training_performed": false,
+  "new_colab_units": 0,
+  "all_http_status_and_complete_flags_verified": true,
+  "all_annual_urls_and_years_verified": true,
+  "normalizer_identity_independently_verified": true,
+  "operation_lock_released": true,
+  "no_task_temporary_files": true,
+  "source_worker_terminal_exit_code": 0
+}

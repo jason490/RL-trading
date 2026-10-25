@@ -1,7 +1,7 @@
 # Lagged Treasury rate context
 
-Status: source-feasibility acquisition/alignment tooling implemented and tested offline. No actual yield
-history is acquired, no model input is enabled, and no return improvement is claimed.
+Status: actual fixed source/coverage audit passed with one unavailable training
+date. Model inputs remain disabled; no return improvement is claimed.
 The [fixed audit](../configs/experiments/treasury_source_audit.json) precedes source
 acquisition. It does not reopen failed VIX, compact-SPY-context or GAE families.
 
@@ -102,3 +102,17 @@ hashes must stay unchanged; model registry and preprocessing remain disabled.
 coverage and handled CLI failure. The latter verifies lock/alarm cleanup and
 restart rejection. These are fixtures, not live coverage or provider acceptance.
 Actual source acquisition is the next step after committing this implementation.
+
+
+## Actual source acceptance
+
+[Accepted evidence](../results/treasury-source-2026-10-25/README.md):15 official
+annual requests,3,753 observations/5,194,901 raw bytes,25.56s. Readiness3432/3433
+unique dates and317894/318004 consumer rows; thresholds pass for both denominators,
+every era and year. One null-maturity source row makes2010-10-13 unavailable for110
+training consumers; no fallback/imputation hides it. All19058 development rows ready.
+Independent original XML/pandas/calendar verification matches all values, timestamps
+and counts exactly; dataset, normalizer and original ledger unchanged. Worker exited0,
+lock released, no temporary files/new Colab units. Current-vintage/publication
+assumptions remain unverified. Readiness-matched payload acceptance and separate
+training preregistration remain before any input/model allocation.

@@ -1,8 +1,8 @@
 # Bounded autonomous research
 
 Current frontier (2026-10-25): [Treasury source feasibility](treasury-context.md),
-preregistered acquisition/alignment tooling verified offline; actual source
-acquisition and coverage remain.
+source audit accepted with one unavailable training date; matched payload
+readiness/segmentation and separate training preregistration remain.
 [GAE screen](../results/gae-traces-2026-10-25/README.md) and
 [target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
 failed trace family stays closed. No active Colab sessions or robust winner.
@@ -2226,3 +2226,17 @@ are explicit before observed data; per-symbol/year/era/methodology reports remai
 outcome-free.48 offline checks and targeted Ruff pass, including source failure
 cleanup/no-restart. No actual yield download, model input, fitted normalization,
 training or Colab session yet. [Guide](treasury-context.md).
+
+
+### Treasury source audit passed
+
+Actual15 annual requests retained3753 observations/5194901 raw bytes in25.56s.
+Coverage3432/3433 dates (99.970871%) and317894/318004 rows (99.965409%) passes all
+fixed overall/era/year gates; all19058 development rows ready.2010-10-13 remains
+unavailable for110 training rows because latest eligible source yields are null.
+No fallback/imputation or denominator change. Independent original XML and pandas/
+calendar verification matches all values/timestamps/counts exactly; all15 receipts
+and source/data/normalizer/ledger hashes verified. Worker exited0, lock released,
+no temporary files or new Colab units. Current-vintage/publication assumptions
+remain explicit; model inputs stay disabled. Next matched readiness/segmentation
+acceptance before a separate training protocol. [Evidence](../results/treasury-source-2026-10-25/README.md).
