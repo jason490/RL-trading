@@ -2190,3 +2190,11 @@ duplicates/419.93MiB removed,489 retained hashes unchanged. Six differing snapsh
 preserved alongside all models/data/source/ledger/reports; all six sessions stopped.
 No recovery needed. Fixed family stays closed; distinct saved-evidence diagnosis
 must precede another hypothesis. Robust/prospective objective remains unmet.
+
+Next distinct diagnostic is fixed before replay: saved legacy RecurrentPPO
+selected/final value-target consistency on26 original training windows ending
+2020-12-02,512 transitions each, native stochastic/unrestricted execution.
+Protocol pins source weights/data/seeds; no outcome selection, optimization or
+Colab allocation.16 focused target, collector, restoration and state tests pass.
+Censored/self-bootstrapped targets are not independent calibration proof; all
+failed families remain closed. Actual audit execution remains next.

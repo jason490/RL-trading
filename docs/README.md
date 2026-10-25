@@ -106,3 +106,7 @@ audits and requirements for any optional, explicitly versioned input transform.
   TQC rationale, missing calibration evidence and requirements before a new study.
 
 [Historical implied-volatility context](implied-volatility.md) covers the optional date-bounded VIX source, explicit lag assumptions, strict coverage gates and disabled model-input status.
+
+[Saved recurrent value targets](recurrent-values.md) describes fixed training-only
+stochastic replay, censoring/bootstrap limits, SB3-equivalent target checks and
+read-only model/Adam/RNG preservation.
