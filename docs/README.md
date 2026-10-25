@@ -110,3 +110,6 @@ audits and requirements for any optional, explicitly versioned input transform.
 [Saved recurrent value targets](recurrent-values.md) describes fixed training-only
 stochastic replay, censoring/bootstrap limits, SB3-equivalent target checks and
 read-only model/Adam/RNG preservation.
+
+[Fixed benchmark variance](benchmark-variance.md) covers the read-only coefficient-one
+reward decomposition, within-episode feasibility gate and limits on interpretation.

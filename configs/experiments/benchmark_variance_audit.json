@@ -1,0 +1,56 @@
+{
+  "schema": "benchmark-variance-audit-v1",
+  "purpose": "Read-only fixed-coefficient decomposition of already saved training rewards; no replay, fitting, model selection or training.",
+  "source_summary": "results/recurrent-values-2026-10-25/summary.json",
+  "source_summary_sha256": "25de5f54ded5793680ee76e9779808a50749b3f08861a5a7b0d9c51e24373365",
+  "source_protocol": "configs/experiments/recurrent_value_audit.json",
+  "source_protocol_sha256": "472071599a796d38483f6de9ad4ab4909f0994db0bb2c31a2893f70e9298ccea",
+  "source_traces": {
+    "selected": {
+      "file": "artifacts/recurrent-values-2026-10-25/selected-rows.jsonl",
+      "sha256": "bc3b8834f44e22d4656dd7588ed1a39e7537cdc6858eb6dc31735d7f5d1747f3"
+    },
+    "final": {
+      "file": "artifacts/recurrent-values-2026-10-25/final-rows.jsonl",
+      "sha256": "a4068a765da031d5fb53d8a47717161bc26f3a047afdaad56eefc1e2fce9bc22"
+    }
+  },
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "benchmark": "Existing next-open whole-share buy_hold baseline, raw split/dividend accounting, default initial capital/costs; no artificial end liquidation.",
+  "coefficient": 1.0,
+  "gamma": 0.99,
+  "primary_decisions": 256,
+  "windows": "Exactly the prior52 phase/symbol trajectories and26 fixed513-row training windows ending2020-12-02; no new path or source outcomes.",
+  "precision": "Float32 stored policy and benchmark log-equity rewards; diagnostic subtraction and discounted sums accumulated in float64.",
+  "metrics": "Per-episode population reward and primary zero-tail discounted-target variances/covariances; equal episode mean within stock/ETF groups, plus pooled descriptive metrics. Verify var(P-B)=var(P)+var(B)-2cov(P,B).",
+  "feasibility_gate": {
+    "maximum_mean_within_episode_residual_variance_ratio": 0.9,
+    "require_both_phases": [
+      "selected",
+      "final"
+    ],
+    "require_both_groups": [
+      "stock",
+      "etf"
+    ],
+    "require_both_levels": [
+      "rewards",
+      "discounted_targets"
+    ],
+    "zero_policy_variance": "Fail feasibility, not an undefined success",
+    "failure": "Close fixed coefficient-one subtraction hypothesis; no coefficient/benchmark/window/discount grid or automatic training.",
+    "success": "Only supports proposing a separate preregistered training experiment; no model performance or promotion claim."
+  },
+  "limitations": "Observed path variation is not irreducible noise, expected-value accuracy, gradient variance or economic improvement. Targets overlap; only one stochastic path per symbol/phase. Subtracting the same realized baseline from a prediction and target leaves their error unchanged. No true policy-invariance claim with action-dependent termination/bootstrapping.",
+  "implementation_sha256": {
+    "src/rl_stocks/evaluation/runner.py": "59c29ef7db47631d5c8e55fedd8682954256280dbf4b5d0698bf76f61204daa5",
+    "src/rl_stocks/environment/accounting/portfolio.py": "3e5d539d3d4360edd9d72502a1401682377f9cbcc17e11fe8b6ca0858cb6f5a9",
+    "src/rl_stocks/environment/rewards/equity.py": "1256d26f3616c57a93c50cfebdcfa864c053553e8730aeb5f26047eeb66fd950",
+    "src/rl_stocks/reporting/recurrent_values.py": "779cd6892d93b2143cf4dcb6ffbcaaf7b3fc28111fdb1ed70e8b95419f9f6f4f"
+  },
+  "maximum_seconds": 180,
+  "training_performed": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "closed_families_unchanged": true
+}

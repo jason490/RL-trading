@@ -2206,3 +2206,10 @@ EV0.029 selected/−0.084 final, versus self-bootstrapped GAE0.491/0.549; no unb
 calibration or causal performance claim. No new optimization/Colab units/retired
 rows. Next distinct training-only benchmark/noise decomposition before another
 hypothesis; robust/prospective objective remains unmet.
+
+Fixed benchmark/noise follow-up is preregistered before execution: reuse the52
+saved training traces, matched causal holding rewards, coefficient exactly1,
+gamma0.99 and unchanged windows. All eight phase/group/reward/target variance
+ratios must be<=0.9 using mean within-episode variances. No fitted coefficient,
+grid, replay, model update or Colab allocation. Eight focused covariance/linearity,
+corporate-action/bounds and recurrent-target tests pass; actual decomposition next.
