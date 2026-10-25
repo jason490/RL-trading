@@ -66,7 +66,11 @@ def compare_paths(before, after):
                 or not math.isfinite(row["previous_equity"])
                 or not math.isclose(row["previous_equity"], prior[i], abs_tol=1e-6, rel_tol=0)
                 or type(row["quantity"]) is not int
-                or type(row["approved_target_quantity"]) is not int
+                or (row["approved_target_quantity"] is None and not row.get("rejected"))
+                or (
+                    row["approved_target_quantity"] is not None
+                    and type(row["approved_target_quantity"]) is not int
+                )
                 or len(row["raw_action"]) != 4
                 or any(not math.isfinite(v) or abs(v) > 1 for v in row["raw_action"])
             ):

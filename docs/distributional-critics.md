@@ -438,3 +438,13 @@ PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
 .venv/bin/python scripts/diagnose_critic_paths.py \
   --output results/critic-paths-2026-10-24/summary.json
 ```
+
+
+The initial saved-path audit rejected a legitimate simulator schema case: a
+`gap_invalid_geometry` rejection records no approved target quantity. The failed
+journal/protocol remain preserved. Reviewed `critic_path_diagnostic_v2.json`
+pins that failure and allows a null approved request only with a recorded
+rejection; closing quantities must still be whole shares, with exact fill/equity
+chains. A tenth test covers this accepted case and rejects unexplained nulls.
+All26 source episodes, bridge definitions and interpretation remain unchanged.
+A separate v2 journal prevents automatic restart or loss of initial failure.

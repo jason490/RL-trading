@@ -15,11 +15,11 @@ from rl_stocks.reporting.action_execution import diagnose_episode
 from rl_stocks.reporting.path_divergence import compare_paths
 
 ROOT = Path(__file__).resolve().parents[1]
-PROTOCOL_SHA256 = "9b13dd7c2ac791c3052052fb47bf0f407f2afbe12173689448c12f39c1f7b5c4"
+PROTOCOL_SHA256 = "dcc6d33959ff58777f0ce88b1df0c58b9f7e5f00244eda769b1a3c61f653643c"
 
 
 def journal(value):
-    path = ROOT / ".runtime/critic-path-progress.json"
+    path = ROOT / ".runtime/critic-path-v2-progress.json"
     temporary = path.with_suffix(".tmp")
     temporary.write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
     temporary.replace(path)
@@ -27,10 +27,16 @@ def journal(value):
 
 def audit(output):
     started = time.monotonic()
-    config_path = ROOT / "configs/experiments/critic_path_diagnostic.json"
+    config_path = ROOT / "configs/experiments/critic_path_diagnostic_v2.json"
     spec = json.loads(config_path.read_text())
     if digest(spec) != PROTOCOL_SHA256 or output.exists():
         raise ValueError("fixed protocol and new output required")
+    failure_path = ROOT / spec["prior_failure"]
+    if (
+        checksum(failure_path) != spec["prior_failure_sha256"]
+        or json.loads(failure_path.read_text())["status"] != "failed"
+    ):
+        raise ValueError("reviewed initial failure must remain preserved")
     summary_path, state_path = ROOT / spec["source_summary"], ROOT / spec["state"]
     if checksum(summary_path) != spec["source_summary_sha256"]:
         raise ValueError("fixed accepted critic result required")
@@ -159,7 +165,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    progress = ROOT / ".runtime/critic-path-progress.json"
+    progress = ROOT / ".runtime/critic-path-v2-progress.json"
     if progress.exists():
         raise ValueError("existing journal requires review; no automatic restart")
     write_once(progress, b'{"status":"starting"}\n')

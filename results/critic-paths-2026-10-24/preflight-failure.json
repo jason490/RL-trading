@@ -1,0 +1,14 @@
+{
+  "status": "rejected_before_complete_episode",
+  "protocol_sha256": "9b13dd7c2ac791c3052052fb47bf0f407f2afbe12173689448c12f39c1f7b5c4",
+  "journal_sha256": "7c090ba6c91c9f07a44417543eb50a2a97868ad5b0ab326ed756ac5eb50f46f6",
+  "case": {
+    "symbol": "AAPL",
+    "session": "2021-02-23",
+    "approved_target_quantity": null,
+    "rejected": "gap_invalid_geometry"
+  },
+  "correction": "Allow null approved_target_quantity only with a recorded rejection; whole-share closing quantities and fill/equity chains remain mandatory. All26 episodes, measurements and interpretation unchanged.",
+  "training_performed": false,
+  "colab_allocated": false
+}

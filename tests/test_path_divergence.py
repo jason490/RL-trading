@@ -79,3 +79,16 @@ def test_bad_pair_rejected(mutation):
         after["rows"][0]["raw_action"][0] = float("nan")
     with pytest.raises(ValueError):
         compare_paths(before, after)
+
+
+def test_recorded_gap_rejection_allows_null_approved_request():
+    before = episode(quantities=(0, 0), reasons=("hold", "hold"))
+    after = deepcopy(before)
+    after["rows"][0]["approved_target_quantity"] = None
+    after["rows"][0]["rejected"] = "gap_invalid_geometry"
+    result = compare_paths(before, after)
+    assert result["difference_session_counts"]["approved_quantity"] == 1
+    assert result["final_minus_selected_pp"] == 0
+    del after["rows"][0]["rejected"]
+    with pytest.raises(ValueError):
+        compare_paths(before, after)
