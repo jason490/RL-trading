@@ -228,3 +228,15 @@ potentially unique weights/reports rather than assuming snapshots were duplicate
 context/datasets, source code, initializers, original ledger and recovery records.
 [Inventory](../results/vix-context-2026-10-25/cleanup.json) records exact paths,
 hashes, preserved snapshots and free-space observation. No recovery is required.
+
+
+### GAE trace publication and cleanup
+
+[Research release](https://github.com/jason490/RL-trading/releases/tag/gae-traces-2026-10-25):
+14 server asset hashes/sizes verified; four frozen bundles,208 actual rollout
+arrays and interactive curves retained. Exact-member cleanup removed nine
+confirmed duplicates (290,074,611 bytes/276.64MiB). All1,002 protected files remain
+unchanged; all four differing checkpoint snapshots, intermediate weights, source,
+data, arrays and original ledger remain. All four owned sessions stopped; no
+recovery needed. [Inventory](../results/gae-traces-2026-10-25/cleanup.json).
+Fixed trace family failed and remains closed; broader objective remains unmet.

@@ -1,0 +1,93 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/gae-traces-2026-10-25",
+  "tag": "gae-traces-2026-10-25",
+  "prerelease": true,
+  "asset_count": 14,
+  "all_server_digests_and_sizes_match": true,
+  "assets": [
+    {
+      "name": "README.md",
+      "bytes": 1743,
+      "sha256": "44ff8a9de775b26419d2f650f324f44aaba3fb04958599eff0a58bea5c64f332",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/README.md"
+    },
+    {
+      "name": "compute.json",
+      "bytes": 1209,
+      "sha256": "0bb9346ee07dafa780d9e1b8bfce6a23ad7e18e26969834b6bf1c635c7e72e7f",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/compute.json"
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "bytes": 5851454,
+      "sha256": "fcb392d829e85ca764158e7f24106993aefa1553d9f21ab9727eef033ed2906a",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/learning-curves.tar.gz"
+    },
+    {
+      "name": "model-catalog.json",
+      "bytes": 638006,
+      "sha256": "c5aa4901e2544c8c65c92b3cbb8d72b9a620f042d1baba6dc29ecc622311fb93",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/model-catalog.json"
+    },
+    {
+      "name": "protocol.json",
+      "bytes": 9968,
+      "sha256": "5dc8b3200473d809b2593325e85c791c40a3d2d2cc943f1ff536f5c64f3dda62",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/protocol.json"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "bytes": 35667270,
+      "sha256": "4394aeceeb3ed1d1e5dffd6d6b4c08517c7746b44a9f255fd625b30a83b2509f",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/research-models.tar.gz"
+    },
+    {
+      "name": "screen-verification.json",
+      "bytes": 556,
+      "sha256": "efb97d17107d8bb64924dfd461d944c9cae07960c95b885d068c60d43622d61a",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/screen-verification.json"
+    },
+    {
+      "name": "smoke-budget.json",
+      "bytes": 1242,
+      "sha256": "cb8d854ad739db68f4e2336a6d7e63673c6b41b25b14fd67afcef1bc86ec36b4",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/smoke-budget.json"
+    },
+    {
+      "name": "smokes.json",
+      "bytes": 17201,
+      "sha256": "1e2f0721e7353e702193de5aa088fa096606d06773b1045cdbb6369ad884caa7",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/smokes.json"
+    },
+    {
+      "name": "summary.html",
+      "bytes": 4773550,
+      "sha256": "a3b96c15dd35a57d3426f74c8b5e74c4fbc7eed834446cba1a04f1b95ba24159",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/summary.html"
+    },
+    {
+      "name": "summary.json",
+      "bytes": 431465,
+      "sha256": "1f7324c63c9ebd2733954d0350ed12c74bb2200e6ff91b70edd63a26b11b9cfc",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/summary.json"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "bytes": 3392254,
+      "sha256": "d6895ae4e3883518f96eef3eef62dc34bb668ee12e6e0e303631aa0bf2bb1d54",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/validation-reports.tar.gz"
+    },
+    {
+      "name": "validation.html",
+      "bytes": 1150,
+      "sha256": "21f60a88a6bbf28d5abe9e4a3dd44aadd3bc6e4ecf59074b8e72cc9f42482900",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/validation.html"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 1083,
+      "sha256": "d26efc64346e85fc6097aad10d5d1de0185f405b27fd4d283ac21ed6c95a6da8",
+      "url": "https://github.com/jason490/RL-trading/releases/download/gae-traces-2026-10-25/SHA256SUMS"
+    }
+  ]
+}

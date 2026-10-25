@@ -361,19 +361,13 @@ NumPy discount/covariance ratios agree within1.12e−15. Worker terminal0 in5.22
 no replay/training/Colab units, source model/data/ledger unchanged. Fixed subtraction
 hypothesis closed without coefficient/benchmark/window/discount grid or training.
 
-[Recurrent GAE trace implementation](gae-traces-2026-10-25/README.md): fixed0.95/1
-comparison, shared original full64 weights/RNG and actual pre-update buffer checks
-implemented and attached to the runner. Version35 task/budget/archive checks
-are implemented;118 focused checks across these runs pass without optimization.
-Actual two-arm512-transition Colab smoke acceptance now passes156 frozen
-sequence predictions and eight retained rollout checks; all owned sessions stopped.
-Fixed100k screen jobs are prepared, not allocated; no performance benefit yet.
-Smoke training establishes operational acceptance only. Prior families and retired-test
-isolation remain unchanged.
-
-
 [GAE trace screen completed](gae-traces-2026-10-25/README.md): fixed lambda1 fails.
 Control selected/final19.62%/18.48%, candidate18.44%/12.68%, holding30.60%.
 Exact historical reproduction,156 full frozen predictions and200 rollout arrays
 verified; all owned sessions stopped. Conservative project39.351004 units,
 official account348.74 idle. No multi-seed confirmation or retired-test access.
+
+GAE [release](https://github.com/jason490/RL-trading/releases/tag/gae-traces-2026-10-25)
+is published with14 server-verified assets. Nine exact duplicates removed
+(290,074,611 bytes),1,002 protected files unchanged; four differing snapshots retained.
+All owned sessions stopped. Fixed comparison failed; no candidate promotion.

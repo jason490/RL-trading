@@ -1,0 +1,10 @@
+{
+  "post_cleanup_strict_report_reproduces": true,
+  "canonical_summary_sha256": "94154cc155b75b8ba52dbd7fda3385a909429de0d48ddcf10b2be72f9ca9434e",
+  "exact_semantic_equality": true,
+  "protected_files_rehashed": 1002,
+  "all_protected_files_unchanged": true,
+  "removed_transport_archives_not_required": true,
+  "training_performed": false,
+  "additional_colab_units": 0.0
+}

@@ -96,8 +96,12 @@ Full owned sessions `rl-stocks-cpu-aa182d96ba1a` and
 `rl-stocks-cpu-b33e0c990b01` and `rl-stocks-cpu-6b2b7ba4a483` are also stopped.
 No cleanup recovery command is needed. Complete retained artifacts remain under
 ignored `.runtime/gae-source-v1/artifacts/colab/`; the original ledger is
-`.runtime/usage-ledger.json`. Final public model/report assets are being prepared;
-duplicate removal remains pending server-side release hash/size verification.
+`.runtime/usage-ledger.json`. [Research release](https://github.com/jason490/RL-trading/releases/tag/gae-traces-2026-10-25)
+contains14 server-verified assets, including four frozen bundles,208 actual arrays
+and interactive reports. [Release verification](release-verification.json) records
+exact sizes/hashes. [Cleanup](cleanup.json) removed nine exact duplicates totaling
+290,074,611 bytes (276.64MiB), retaining all four differing checkpoint snapshots.
+All1,002 protected files rehashed unchanged.
 Models, source, original data, intermediate checkpoints, arrays and recovery records
 must remain retained. See [smoke acceptance](smokes.json), [smoke budget](smoke-budget.json)
 and [category guide](../../docs/gae-traces.md).
@@ -107,7 +111,10 @@ and [category guide](../../docs/gae-traces.md).
 Do not extend this trace study, alter its gamma/rollout/epochs/learning rate or
 promote a lucky intermediate checkpoint. Lambda1 did not solve the observed
 learning instability or holding gap. This comparison does not prove that critic
-bias caused prior failures or that all other algorithms fail. Publish and verify
-these unsuccessful artifacts, remove exact duplicates safely, then review a
+bias caused prior failures or that all other algorithms fail. Publication and exact-duplicate cleanup are complete. Review a
 distinct evidence-backed hypothesis before any further bounded experiment.
 A future candidate still requires fixed multi-seed gates and prospective evaluation.
+
+[Post-cleanup reproduction](reproduction.json) confirms exact semantic equality
+of the strict screen summary from retained files after transfer deletion. All1,002
+protected files rehash unchanged; no training, new sessions or extra units.

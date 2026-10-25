@@ -215,3 +215,15 @@ bundle allowlists remain in force. Selected/final model weights and frozen bundl
 are included; intermediate checkpoint weights are retained locally but are not
 promised by this public archive. Server-side release hash/size verification still
 precedes deletion of any duplicate local transports.
+
+
+### GAE trace publication and cleanup
+
+[Research release](https://github.com/jason490/RL-trading/releases/tag/gae-traces-2026-10-25):
+14 server asset hashes/sizes verified; four frozen bundles,208 actual rollout
+arrays and interactive curves retained. Exact-member cleanup removed nine
+confirmed duplicates (290,074,611 bytes/276.64MiB). All1,002 protected files remain
+unchanged; all four differing checkpoint snapshots, intermediate weights, source,
+data, arrays and original ledger remain. All four owned sessions stopped; no
+recovery needed. [Inventory](../results/gae-traces-2026-10-25/cleanup.json).
+Fixed trace family failed and remains closed; broader objective remains unmet.
