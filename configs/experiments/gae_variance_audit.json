@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "purpose": "Read-only paired trace-target variance and endpoint bootstrap decomposition on retained actual training buffers; no training or rescue of the closed GAE family",
+  "source_protocol_sha256": "e8995cc951ffb4884b18d7b5e270f74b4ee987e54200be5494f7b00d40112a59",
+  "source_summary": "results/gae-traces-2026-10-25/summary.json",
+  "source_summary_sha256": "1f7324c63c9ebd2733954d0350ed12c74bb2200e6ff91b70edd63a26b11b9cfc",
+  "source_state": ".runtime/gae-screen-state.json",
+  "arms": [
+    "control",
+    "mc_trace"
+  ],
+  "seed": 11,
+  "rollouts_per_arm": 100,
+  "transitions_per_rollout": 1000,
+  "gamma": 0.99,
+  "paired_lambdas": [
+    0.95,
+    1.0
+  ],
+  "comparison": "Recompute both registered traces with the identical stored rewards, values, reset masks and endpoint for each buffer; different source policies are not paired counterfactual policy outcomes",
+  "blocks": {
+    "all": [
+      1,
+      100
+    ],
+    "first_half": [
+      1,
+      50
+    ],
+    "second_half": [
+      51,
+      100
+    ]
+  },
+  "primary": "Median within-buffer raw advantage population-variance ratio lambda1/lambda0.95 separately for each source arm; descriptive increase if above1, no promotion or statistical confidence claim",
+  "secondary": [
+    "within-buffer return variance ratio",
+    "mean raw reward variance",
+    "mean absolute endpoint critic contribution to lambda1 return",
+    "mean absolute raw-reward contribution to lambda1 return",
+    "timeout and terminal counts",
+    "mean absolute stored float32 reward-adjustment rounding contribution"
+  ],
+  "endpoint_definition": "Use raw rewards and terminal timeout value or last_values; true termination has zero tail. This is a finite-buffer identity, not an unbiased complete-return target. Include the separately measured discounted float32 reward-adjustment rounding residual so the identity is in float64 on stored values.",
+  "variance_ddof": 0,
+  "zero_denominator": "null ratio; report count, never replace or drop silently",
+  "arithmetic_tolerance": 1e-12,
+  "optimizer_steps": 0,
+  "new_colab_units": 0,
+  "data_or_model_replay": false,
+  "retired_test_access": false,
+  "limits": [
+    "No actual recurrent minibatch order or gradients are reconstructed",
+    "Raw trace variance does not establish normalized advantage variance or gradient noise",
+    "Different policies induce different reward/value paths",
+    "Bootstrap decomposition does not establish critic calibration",
+    "No lambda/gamma/optimizer/model/reward grid, extension, confirmation or checkpoint promotion follows from this audit"
+  ]
+}

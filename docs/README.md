@@ -116,3 +116,6 @@ reward decomposition, within-episode feasibility gate and limits on interpretati
 
 [Recurrent GAE traces](gae-traces.md) specifies the fixed lambda0.95/1 comparison,
 finite-buffer return identities, unchanged controls and the completed failed screen.
+
+[Saved GAE target variability](gae-variance.md) describes the fixed read-only
+within-buffer trace comparison, endpoint decomposition and gradient-noise limits.

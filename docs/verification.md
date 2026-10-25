@@ -2549,3 +2549,15 @@ unchanged; all four differing checkpoint snapshots, intermediate weights, source
 data, arrays and original ledger remain. All four owned sessions stopped; no
 recovery needed. [Inventory](../results/gae-traces-2026-10-25/cleanup.json).
 Fixed trace family failed and remains closed; broader objective remains unmet.
+
+
+### Saved GAE target variability audit preregistered
+
+Before any new training, compare the two original trace estimators on each of
+200 accepted actual training buffers, preserving identical rewards/values/masks
+within each pair. Fixed100/first50/last50 summaries, population variance ratios,
+explicit zero denominators and raw-reward/endpoint/float32-rounding decomposition.
+This does not reconstruct recurrent minibatch normalization or gradients and
+cannot diagnose return causally or reopen the failed trace family. No models,
+market replay, data requests, optimizer steps, Colab units or retired prices.
+[Specification](gae-variance.md) and pinned protocol precede actual audit.
