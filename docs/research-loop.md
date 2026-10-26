@@ -28,8 +28,11 @@ restored models/replay, owned cleanup, shared Linear/RNG evidence and observed
 actor/critic renorm. Fleet/worker preflight, shared allowance and account-floor routing now integrate
 version37. Strict archive semantics bind initial/selected/final state, selected
 normalization, observed checkpoint forwards, replay sidecars and frozen model
-bytes. Next: physical model/replay restoration and actual learned smokes before
-performance allocation.
+bytes. Physical restoration now verifies selected/final/frozen Adam/tensors, filled
+replay hashes/timeouts and128 exact predictions per run, preserves caller RNG,
+and rejects altered bytes. Smoke acceptor checks both owned-cleaned tasks and
+shared initial Linear/RNG records. Next: clean source export and actual Colab
+learned smokes; only accepted smokes can enable a performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.

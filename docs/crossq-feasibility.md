@@ -330,3 +330,38 @@ claim CrossQ normalization. Both model archives and final replay are mandatory.
 Manual serialization fixtures test these semantics without optimization. These
 checks do not deserialize model/replay bytes: independent physical restoration,
 frozen prediction parity and actual learned Colab smoke acceptance remain pending.
+
+
+## Physical restoration and learned-smoke acceptance
+
+`training/crossq_restoration.py` independently loads task-owned selected/final
+native model archives and compares actual actor/critic/entropy Adam moments,
+parameter steps, policy tensors and normalization buffers with recorded evidence.
+Selected phase and step identities remain explicit. Final replay restoration
+rehashes every filled observation/next-observation/action/reward/done/timeout
+prefix and compares both metadata and the replay sidecar; unused capacity is
+excluded. Selected archives are not claimed to contain a resumable replay.
+
+The frozen bundle is loaded separately.64 sampled final-replay observations each
+produce two exact selected-versus-frozen predictions. Repeated actions, immutable
+inputs and normalization/model state, invalid schema/feed rejection, unchanged
+source-file checksums and restored caller Python/NumPy/Torch RNG are required.
+Serialization fixtures manually populate Adam moments and normalization counters;
+they never call learning or optimizer steps and are not performance evidence.
+
+After two actual4096-transition Colab smokes finish, run:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/accept_crossq_smokes.py \
+  --state .runtime/crossq-smoke-state.json \
+  --source-proof .runtime/crossq-source/source-git.json \
+  --data-root data/datasets \
+  --output .runtime/crossq-smoke-acceptance.json
+```
+
+Use the actual source-export and state paths. The acceptor revalidates retained
+archives, strict26-symbol reports and physical restoration before writing a new
+acceptance file. It requires exact shared initial Linear/RNG records and two
+owned, verified-stopped sessions. The original shared ledger, account floor and
+persistent CrossQ study baseline remain unchanged. No actual learned CrossQ
+smoke or return result exists yet; clean export/allocation is the next step.

@@ -2546,3 +2546,15 @@ selected normalization, actual observed checkpoint audits, final replay sidecar
 and frozen model bytes. Temporary-ledger retry/stop tests and manual serialization
 fixtures require no learning or allocation. Physical model/replay restoration and
 actual learned smokes remain before performance allocation.
+
+
+### CrossQ physical restoration and smoke acceptor — 2026-10-26
+
+Independent native selected/final/frozen loads compare actual Adam/tensors and
+normalization; final replay filled-prefix hashes and timeout masks restore
+exactly.128 frozen prediction/repeat checks, input/normalization immutability,
+schema/feed rejection, source hashes and caller RNG restoration are tested with
+manual serialization fixtures, never fitting. Two-task smoke acceptor requires
+clean source, original dataset, reports, archive checks, physical restoration,
+shared initial Linear/RNG and verified owned cleanup. Next clean export and
+actual4096-transition Colab smokes before any50k allocation.
