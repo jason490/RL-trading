@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "generation_source_revision": "4e32ad713b8f77a68f2a9ff4db3f865de2654ffa",
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "binding_sha256": "84452236ccf86e66e6527660b89d98da8030864f8390f335e6b875f7d36f42bb",
+  "manifest_sha256": "cc37a8a67f44e51c6fc929bc10324acc0173e7cc0c7a31c1a415efe618478712",
+  "records": {
+    "11": {
+      "source_sac_archive_exact": true,
+      "common_rng_exact": true,
+      "common_archived_linear_tensors_exact": 20,
+      "native_normalization_counters": 9,
+      "native_normalization_zero_one_exact": true,
+      "archive_sha256": {
+        "sac": "423640f5c22891987cff9186a3b59d19dd16f1d5a59db330c1a617d51aca84cf",
+        "crossq": "3025a1cc87283c2d1ddcb2a3b60ca0273ff645ab4fd913d87b14b59241e307a6"
+      }
+    },
+    "23": {
+      "source_sac_archive_exact": true,
+      "common_rng_exact": true,
+      "common_archived_linear_tensors_exact": 20,
+      "native_normalization_counters": 9,
+      "native_normalization_zero_one_exact": true,
+      "archive_sha256": {
+        "sac": "a6060496d55d596f2ae31f7aeba42ab8f3392a82ab6cdc39eee45748ad91b05c",
+        "crossq": "20d8aa8bb3c00e5d166e5b947e81cd10fe39f3fbd9619e6ecc40a35117514588"
+      }
+    },
+    "37": {
+      "source_sac_archive_exact": true,
+      "common_rng_exact": true,
+      "common_archived_linear_tensors_exact": 20,
+      "native_normalization_counters": 9,
+      "native_normalization_zero_one_exact": true,
+      "archive_sha256": {
+        "sac": "34a5462225e66a3267d9fe162fc8c54027adb0f9d37e0df195f259adc4141644",
+        "crossq": "0c7dd0325da99a641800adf9918a76244e2141827f7146b39c35982c12c1f701"
+      }
+    }
+  },
+  "portable_source_snapshots_verified": 6,
+  "caller_rng_unchanged": true,
+  "ledger_unchanged": true,
+  "ledger_sha256": "18a9b3228155c91f595dd806e7fb1c3347eb72afc3eca037fa9a7cbfc84755a5",
+  "models_constructed": false,
+  "optimizer_steps": 0,
+  "training_performed": false,
+  "colab_units": 0,
+  "test_evaluated": false
+}

@@ -46,3 +46,17 @@ SAC linear starts are required; this is an algorithm-package comparison. Nine
 tests check phase-sensitive expected updates, immutable parameters and strict
 absolute/relative/reproduction gates. Learned models/counters/replay and runtime
 integration are still pending. No new model return or credit use is claimed.
+
+
+## Actual shared initialization assets accepted
+
+[Independent initialization proof](initializations.json) pins six untrained
+archives and six portable original-generation source snapshots from clean
+source4e32ad7. SAC bytes are original; all20 common weight/bias tensors and all
+Torch/NumPy/Python streams match for11/23/37. Native CrossQ scale/variance are1,
+means/bias/counters0. Full64 assets are reused by smokes. Independent NumPy reads
+construct no models and leave RNG/ledger unchanged.37 focused checks validate
+archives, path/phase rejection, unchanged ownership and provenance after a fake
+live-factory change. No new return, local optimization or Colab allocation.
+Next: factory/frozen/runtime and actual learned optimizer/replay/normalization
+acceptance, preserving this fixed protocol and existing usage ledger.

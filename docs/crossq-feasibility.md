@@ -171,3 +171,23 @@ weight/bias tensors and complete zero/one native states across nine normalizatio
 modules. The generator preserves caller RNG and never collects a transition,
 reads a market dataset or steps an optimizer.25 focused mapping/archive/spec
 checks pass. Actual committed-source generation is the next acceptance step.
+
+
+## Actual pinned assets and portable validation accepted
+
+[Initialization evidence](../results/crossq-feasibility-2026-10-26/initializations.json)
+and [binding](../configs/experiments/crossq_initialization_binding.json) pin six
+archives generated from clean source4e32ad7. Three original SAC archives remain
+byte-exact; three CrossQ archives contain copied common Linears and complete
+native normalization state. All source Torch/NumPy/Python streams are exact for
+11/23/37. Independent NumPy reopening creates no models, changes no caller RNG
+or ledger, and validates all six original-generation source snapshots.
+
+`training/crossq_assets.py` validates the bound manifest/archives, portable paths,
+all original source/sampling identities and snapshot hashes without constructing
+a model. It reuses full64 entries in both phases while recording requested smoke
+phase separately.37 focused checks include validation in a miniature asset tree
+with a deliberately different live factory: historical `.txt` snapshots, not the
+mutable registry, provide original provenance. No fitting/data/provider calls or
+Colab units. Actual training dispatch, frozen normalization, saved learned state/
+replay/counters and remote acceptance still remain before allocation.

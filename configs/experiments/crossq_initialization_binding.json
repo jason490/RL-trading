@@ -1,0 +1,10 @@
+{
+  "schema": "crossq-initialization-binding-v1",
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "manifest": "configs/initializations/crossq_v1/manifest.json",
+  "manifest_sha256": "cc37a8a67f44e51c6fc929bc10324acc0173e7cc0c7a31c1a415efe618478712",
+  "artifacts": 6,
+  "generated_without_fitting": true,
+  "no_dataset_or_provider_access": true,
+  "smoke_reuses_full64": true
+}

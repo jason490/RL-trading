@@ -2743,3 +2743,17 @@ unchanged, no failed-family rescue. Two-unit persistent study budget within orig
 allocation. Nine spec/gate tests pass; actual data/reference hashes verified with
 no models/optimization or ledger changes. Next shared starts and integration.
 [Protocol](../configs/experiments/crossq_comparison_preregistration.json).
+
+
+### SAC/CrossQ portable shared starts accepted — 2026-10-26
+
+Six unfitted archives generated from clean source4e32ad7: SAC byte-exact originals
+and mapped CrossQ full64 starts for11/23/37, also reused in smokes. Independent
+NumPy checks prove20 common weight/bias tensors, all original Torch/NumPy/Python
+streams and complete native normalization states. Six portable source snapshots
+preserve original-generation provenance across future registry edits. Model-free
+asset validator binds manifest/archive hashes and rejects unsafe paths/phases;
+37 focused checks pass, including changed-live-factory fixture. No dataset reads,
+optimization, Colab allocation or ledger mutation; project39.472562/150 unchanged.
+Next factory/frozen/runtime and actual learned-state/replay/counter acceptance.
+[Evidence](../results/crossq-feasibility-2026-10-26/initializations.json).

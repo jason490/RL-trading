@@ -15,8 +15,10 @@ prediction/save-load evidence recorded without training/units. Fixed SAC/CrossQ
 package differences explicit,1000-update renorm warmup and4096-step smokes.
 Shared Linear mapping now validates native geometry/optimizer ownership and
 normalization before mutation; nine guarded untrained tests pass across11/23/37.
-Next: actual pinned portable initialization archives, factory/frozen/runtime
-integration and Colab learned-smoke acceptance before performance allocation.
+Six pinned initialization archives and independent model-free array/RNG/source
+verification now pass; portable asset validation survives live-registry changes.
+Next: training dispatch, immutable frozen normalization, learned state/replay/
+counter contracts and Colab runtime acceptance before performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
