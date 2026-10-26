@@ -151,3 +151,23 @@ parameter ownership. Nine guarded tests cover seeds11/23/37 and reject trained,
 nonfinite, changed optimizer/delay/normalization and missing ownership before
 mutation. Fixtures are untrained; actual pinned source-archive mapping, portable
 initializer generation and runtime integration remain before allocation.
+
+
+## Portable initialization generation
+
+`scripts/build_crossq_initializations.py` requires a clean committed source and a
+new directory under `configs/initializations`. For each11/23/37 seed it reloads the
+original unfitted full64 SAC archive, maps common Linears into a fresh CrossQ
+scaffold, restores original Torch/NumPy/Python streams and writes a CrossQ archive.
+The SAC archive is copied byte-for-byte. Both phases later reuse these full64
+assets. A manifest written last records source bindings, mappings, tensor/RNG
+fingerprints and original generation-source snapshots. The generator refuses to
+overwrite partial or completed directories; retain and inspect failed output.
+
+All original SAC generation-source hashes are validated before snapshots are
+written. Portable `.txt` copies preserve that historical provenance when the
+live factory gains CrossQ support. Independent NumPy reads check all20 mapped
+weight/bias tensors and complete zero/one native states across nine normalization
+modules. The generator preserves caller RNG and never collects a transition,
+reads a market dataset or steps an optimizer.25 focused mapping/archive/spec
+checks pass. Actual committed-source generation is the next acceptance step.
