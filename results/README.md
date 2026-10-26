@@ -387,3 +387,10 @@ leaves2010-10-13 unavailable, with no fallback. Independent original XML/as-of/
 calendar verification exact; source/data/normalizer/ledger retained unchanged,
 worker exited0, no new Colab units. Model inputs remain disabled pending matched
 readiness/payload acceptance and separate training preregistration.
+
+
+[Model and technique research review](../docs/model-research.md),2026-10-26:
+primary papers support considering CrossQ and recurrent off-policy baselines as
+distinct hypotheses, with strict implementation/capacity/cost and evaluation
+caveats. [Machine-readable review](model-review-2026-10-26/review.json) records
+sources/status. No training or performance result; current Treasury work preserved.

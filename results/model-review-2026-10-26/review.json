@@ -1,0 +1,65 @@
+{
+  "reviewed_utc_date": "2026-10-26",
+  "status": "literature_review_only_not_training_preregistration",
+  "installed_versions": {
+    "python": "3.13.16",
+    "sb3_contrib": "2.7.0",
+    "stable_baselines3": "2.7.0",
+    "torch": "2.8.0"
+  },
+  "crossq_class_installed": true,
+  "crossq_enabled_in_project_registry": false,
+  "candidate_order": [
+    "crossq_feasibility_after_current_feature_study",
+    "recurrent_off_policy_implementation_feasibility",
+    "separately_motivated_signal_baseline"
+  ],
+  "sources": [
+    {
+      "topic": "CrossQ",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f381114cf5aba4e45552869863deaaa7-Paper-Conference.pdf"
+    },
+    {
+      "topic": "CrossQ2.7 runtime contract",
+      "url": "https://sb3-contrib.readthedocs.io/en/v2.7.0/modules/crossq.html"
+    },
+    {
+      "topic": "Recurrent off-policy POMDPs",
+      "url": "https://proceedings.mlr.press/v162/ni22a.html"
+    },
+    {
+      "topic": "Tree tabular benchmark",
+      "url": "https://arxiv.org/abs/2207.08815"
+    },
+    {
+      "topic": "Qlib",
+      "url": "https://arxiv.org/abs/2009.11189"
+    },
+    {
+      "topic": "Direct momentum objectives",
+      "url": "https://arxiv.org/abs/1904.04912"
+    },
+    {
+      "topic": "Few-run RL uncertainty",
+      "url": "https://arxiv.org/abs/2108.13264"
+    },
+    {
+      "topic": "Backtest overfitting",
+      "url": "https://carmamaths.org/jon/backtest2.pdf"
+    }
+  ],
+  "project_evidence": [
+    "results/gae-traces-2026-10-25/summary.json",
+    "results/gae-variance-2026-10-25/summary.json",
+    "results/forest-signal-2026-10-20/README.md",
+    "results/supervised-signal-2026-10-20/README.md"
+  ],
+  "no_stock_return_guarantee": true,
+  "treasury_payload_work_preserved": true,
+  "training_performed": false,
+  "model_initialized": false,
+  "dependencies_changed": false,
+  "colab_allocated": false,
+  "new_colab_units": 0,
+  "retired_test_access": false
+}

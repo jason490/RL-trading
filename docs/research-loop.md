@@ -2240,3 +2240,16 @@ and source/data/normalizer/ledger hashes verified. Worker exited0, lock released
 no temporary files or new Colab units. Current-vintage/publication assumptions
 remain explicit; model inputs stay disabled. Next matched readiness/segmentation
 acceptance before a separate training protocol. [Evidence](../results/treasury-source-2026-10-25/README.md).
+
+
+### Model/technique literature review — 2026-10-26
+
+[Primary-source review](model-research.md) covers CrossQ, recurrent SAC/TD3,
+boosted signal baselines, direct momentum objectives and evaluation uncertainty.
+CrossQ is present in installedSB3-Contrib2.7 but unregistered; default1024-wide
+critics require capacity/cost profiling, and frozen batch statistics need explicit
+acceptance. Recurrent off-policy replay is distinct from prior recurrent PPO but
+requires sequence/burn-in/reset tests. Prior failed MLP/forest/TQC/GAE gates stay
+closed; no paper establishes US-stock gains here. Finish current Treasury payload
+work separately before any new algorithm protocol. No installation, model
+construction, optimization, Colab allocation, new units or retired-test access.
