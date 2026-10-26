@@ -9,7 +9,10 @@ stopped; project39.472562/150, official account348.64/rate0/no assignments.
 Release published with14 verified asset hashes; cleanup removed13 exact
 duplicates/393.94MiB,938 protected files unchanged and strict post-cleanup report
 identical. Six differing snapshots and first failure retained. Next: separate
-CrossQ feasibility. Treasury/VIX/GAE and prior failed families stay closed.
+CrossQ untrained audit passes: native geometry/default differences and immutable
+prediction/save-load evidence recorded without training/units. Next: fix the
+matched SAC/CrossQ performance protocol before factory/runtime integration.
+Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
 

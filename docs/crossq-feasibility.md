@@ -68,3 +68,14 @@ Profile suitable Colab hardware before selecting it; do not infer speed from low
 update-to-data ratio. Fix transitions, seeds11/23/37, selected/final group/holding
 and drawdown gates plus a persistent study allowance before performance runs.
 No full training protocol or extra allocation is authorized by this audit artifact.
+
+
+## Recorded result
+
+[Actual audit](../results/crossq-feasibility-2026-10-26/audit.json) passes from clean
+sourceedf7018. Runtime Python3.13.16, exact native source hashes and all geometry/
+optimizer/buffer records are retained. Two original and two restored untrained
+models are constructed; zero environment transitions, optimizer steps or Colab
+units. Original ledger checksum/39.47256169564856 units stays unchanged. The
+performance protocol, factory/frozen integration and actual learned acceptance
+remain next; no new return is claimed.

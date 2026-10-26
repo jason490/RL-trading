@@ -1,0 +1,184 @@
+{
+  "protocol_sha256": "1e6311f784d511499a569c9308eb60fe85e01489fb578e27eede74f6c67e28c1",
+  "versions": {
+    "stable-baselines3": "2.7.0",
+    "sb3-contrib": "2.7.0",
+    "torch": "2.8.0"
+  },
+  "implementation_sha256": {
+    "algorithm": "2e685b62ea4d3e583262404b056c637d8fc9708d40d47ac087267323a04cf05b",
+    "policy": "859fa8e2d8da7f071a77bea82a8142c8ed056bf6ad04a105ad327b99f46a4274",
+    "normalization": "f69021d9e5d1acbcfbe0ccabbf3a813e5dca22bda5dd9d1dae868d6d2cf93885"
+  },
+  "crossq_defaults": {
+    "learning_rate": 0.001,
+    "policy_delay": 3,
+    "learning_starts": 100,
+    "buffer_size": 1000000
+  },
+  "records": {
+    "sac": {
+      "actor_parameters": 6088,
+      "critic_parameters": 11778,
+      "target_critic_present": true,
+      "target_critic_parameters": 11778,
+      "normalization": {},
+      "optimizers": {
+        "actor": {
+          "state_count": 0,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "learning_rate": 0.0003
+        },
+        "critic": {
+          "state_count": 0,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "learning_rate": 0.0003
+        },
+        "entropy": {
+          "state_count": 0,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "learning_rate": 0.0003
+        }
+      },
+      "num_timesteps": 0,
+      "updates": 0,
+      "policy_tensor_and_buffer_sha256": "2782faf15d5b36795c2f9803bdd4ad02b0a0dfe31a18c09e5826bfdb153556fc",
+      "exact_untrained_prediction_parity": true,
+      "normalization_and_weights_unchanged": true,
+      "empty_replay_restored": true
+    },
+    "crossq": {
+      "actor_parameters": 6386,
+      "critic_parameters": 12390,
+      "target_critic_present": false,
+      "target_critic_parameters": 0,
+      "normalization": {
+        "actor.latent_pi.0": {
+          "features": 21,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "actor.latent_pi.3": {
+          "features": 64,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "actor.latent_pi.6": {
+          "features": 64,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "critic.qf0.0": {
+          "features": 25,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "critic.qf0.3": {
+          "features": 64,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "critic.qf0.6": {
+          "features": 64,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "critic.qf1.0": {
+          "features": 25,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "critic.qf1.3": {
+          "features": 64,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        },
+        "critic.qf1.6": {
+          "features": 64,
+          "steps": 0,
+          "warmup_steps": 100000,
+          "eps": 0.001,
+          "momentum": 0.01
+        }
+      },
+      "optimizers": {
+        "actor": {
+          "state_count": 0,
+          "betas": [
+            0.5,
+            0.999
+          ],
+          "eps": 1e-08,
+          "learning_rate": 0.0003
+        },
+        "critic": {
+          "state_count": 0,
+          "betas": [
+            0.5,
+            0.999
+          ],
+          "eps": 1e-08,
+          "learning_rate": 0.0003
+        },
+        "entropy": {
+          "state_count": 0,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "learning_rate": 0.0003
+        }
+      },
+      "num_timesteps": 0,
+      "updates": 0,
+      "policy_tensor_and_buffer_sha256": "1f78f48d2c787ad554dae54cfca5c661482aeb0e15e65aae7062826fbaef774a",
+      "exact_untrained_prediction_parity": true,
+      "normalization_and_weights_unchanged": true,
+      "empty_replay_restored": true
+    }
+  },
+  "original_untrained_models": 2,
+  "restored_untrained_models": 2,
+  "transitions": 0,
+  "optimizer_steps": 0,
+  "actual_learned_acceptance": false,
+  "hardware_throughput_profile": false,
+  "provider_or_dataset_access": false,
+  "colab_units": 0,
+  "performance_protocol_registered": false,
+  "source_revision": "edf70184fef502332ff60bf3c68106d6e8fc23e7",
+  "source_hash": "b3555f8bbdf77b8a542f34e133c2daca7f9efa6068b065b44e6cdf9b78a0ab92",
+  "python": "3.13.16",
+  "ledger_unchanged": true,
+  "ledger_sha256": "18a9b3228155c91f595dd806e7fb1c3347eb72afc3eca037fa9a7cbfc84755a5",
+  "project_consumed": 39.47256169564856
+}

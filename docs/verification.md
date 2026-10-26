@@ -2712,3 +2712,18 @@ allocations including the retained first bookkeeping failure are stopped. Projec
 Models, source and raw data retained; release/hash verification and duplicate
 cleanup are next, followed by separate CrossQ feasibility. No retired test or
 prospective winner. [Results](../results/treasury-context-2026-10-26/README.md).
+
+
+### CrossQ untrained implementation audit — 2026-10-26
+
+Fixed synthetic21-input/four-action64×64 audit passes with two original/two restored
+untrained SAC/CrossQ models. CrossQ actor/live critics6386/12390 versus SAC6088/
+11778; SAC target critic11778, CrossQ none. Nine native BatchRenorm layers retain
+zero counters and immutable tensors during deterministic prediction. Optimizer
+beta1 defaults and policy-delay/warmup differences are explicit. Empty optimizer/
+replay serialization and prediction parity pass; no learn/train/Adam.step,
+provider/dataset reads or Colab allocation. Clean sourceedf7018/Python3.13.16;
+ledger39.47256169564856 unchanged. Not learned acceptance or throughput evidence.
+Next: explicit fixed SAC/CrossQ performance protocol, then dedicated factory/
+frozen/runtime acceptance. No failed-family revival or retired data.
+[Audit](../results/crossq-feasibility-2026-10-26/README.md).
