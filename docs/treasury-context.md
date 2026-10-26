@@ -271,3 +271,17 @@ smokes cannot accept one or expand to other seeds. Full/masked share their untra
 initializer but retain distinct dataset identities. All jobs stay CPU and preserve
 the common execution/reward contract. Fleet admission and archive restoration are
 still pending: validated plans alone do not authorize a smoke-acceptance claim.
+
+
+## Retrieved archive semantics
+
+Version36 archive validation now checks initial/selected/final optimizer and model
+records, the exact pinned initializer bytes, simulation and exposure contracts,
+measured training-year counters, execution/sampling sidecars, all26 development
+reports and selected frozen-model byte parity. Augmented manifests must satisfy
+the portable Treasury contract and fixed source, normalization-fit and eligibility
+hashes. Legacy bundles must have no Treasury lineage. Generic archive validation
+also applies native policy geometry using the correct7/9 market inputs, checkpoint
+state, reward and frozen metadata checks. Static fixtures exercise all three arms
+and semantic tampering; they do not claim that synthetic zip contents are learned
+models. Physical saved-model restoration and actual Colab acceptance remain.
