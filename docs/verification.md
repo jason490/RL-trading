@@ -2683,3 +2683,15 @@ Treasury contract verification:108 focused shared-start/request/frozen/payload
 and prior GAE/VIX regression checks pass; new modules/script/tests pass Ruff.
 Untrained models/manual Adam fixtures perform no optimizer steps and do not
 establish actual learned smoke acceptance.
+
+
+### Treasury actual untrained asset/data acceptance
+
+Read-only verification validates six tracked21/23-input initializer archives and
+all three actual datasets. Independent NumPy blocks verify copied columns, zero
+new columns,61,513/62,537 counts and identical original RNG bytes for11/23/37.
+Source hashes/caller Torch/NumPy/Python streams and original ledger unchanged;
+verification worker exited0, no models constructed, gradients/optimizer steps,
+provider requests or new Colab units.108 focused prior/new regressions pass.
+Actual learned smoke acceptance remains; runner/job/archive/budget integration is
+next and generic training stays blocked. [Evidence](../results/treasury-context-2026-10-26/contracts.json).

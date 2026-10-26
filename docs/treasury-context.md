@@ -223,3 +223,17 @@ phase budgets/cadences, seeds, CPU, reward/execution and single-milestone rules.
 They are not yet connected to the runner; the generic Treasury guard remains
 active. Runtime job/archive/budget/report and learned-smoke acceptance are next.
 No local optimizer steps, new provider requests, retired prices or Colab units.
+
+
+## Actual portable asset/data acceptance
+
+[Contract evidence](../results/treasury-context-2026-10-26/contracts.json) validates
+all six original/augmented untrained archives for seeds11/23/37, plus all three
+actual cached dataset contracts. Independent NumPy archive reads verify copied
+market/account columns, all zero new actor/critic columns,61,513/62,537 parameter
+counts and exact original RNG bytes. Every asset hash stays unchanged. Caller
+Torch/NumPy/Python streams and the original project ledger remain unchanged.
+The verification process constructs no models or optimizer state. This supplements
+untrained unit/save-load fixtures; actual learned Colab acceptance remains pending.
+Standalone contracts are ready, while runner/job/archive/budget integration remains
+before smoke allocation. All prior owned sessions stay stopped; no new units.

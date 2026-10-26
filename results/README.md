@@ -402,3 +402,7 @@ sources/status. No training or performance result; current Treasury work preserv
 original preprocessing and retained bars/ATR exact. Independent NumPy/decimal
 verification passes, no new units or model return. Generic training stays disabled
 until a separate matched protocol and actual Colab acceptance.
+
+Treasury portable contracts accepted: six untrained initializers and three actual
+datasets, independent column/RNG verification,108 focused tests. Runtime integration
+and actual learned smokes remain; no new training, return or Colab units.

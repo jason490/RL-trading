@@ -2417,3 +2417,15 @@ fixtures. Manual Adam serialization is not learned acceptance. Dedicated request
 data validators are standalone; generic trainer stays blocked pending runner/
 runtime/archive integration and actual Colab smokes. No local optimization, source
 requests, new units or retired data. [Guide](docs/treasury-context.md).
+
+
+### Treasury actual untrained asset/data acceptance
+
+Read-only verification validates six tracked21/23-input initializer archives and
+all three actual datasets. Independent NumPy blocks verify copied columns, zero
+new columns,61,513/62,537 counts and identical original RNG bytes for11/23/37.
+Source hashes/caller Torch/NumPy/Python streams and original ledger unchanged;
+verification worker exited0, no models constructed, gradients/optimizer steps,
+provider requests or new Colab units.108 focused prior/new regressions pass.
+Actual learned smoke acceptance remains; runner/job/archive/budget integration is
+next and generic training stays blocked. [Evidence](results/treasury-context-2026-10-26/contracts.json).

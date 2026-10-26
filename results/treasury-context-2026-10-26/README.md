@@ -105,3 +105,12 @@ and [binding](../../configs/experiments/treasury_context_binding.json) are now f
 Original/reusable zero-column initializers still need dedicated validation and
 runtime integration. This registration does not enable generic training or
 allocate Colab; no policy performance result exists.
+
+
+[Actual asset/data contracts](contracts.json) now pass: six untrained archives,
+three actual datasets, independent common/zero-column mapping and original RNG
+identity.108 focused checks cover request guards, frozen recurrence/masks, actual
+empty-Adam ownership and manual serialization with prior-study regressions.
+The read-only acceptance process creates no models and leaves RNG/ledger intact.
+Dedicated runner/runtime/archive integration and actual Colab learned smokes remain
+before performance screens; no new return or units are claimed.
