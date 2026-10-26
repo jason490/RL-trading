@@ -227,3 +227,14 @@ unchanged; all four differing checkpoint snapshots, intermediate weights, source
 data, arrays and original ledger remain. All four owned sessions stopped; no
 recovery needed. [Inventory](../results/gae-traces-2026-10-25/cleanup.json).
 Fixed trace family failed and remains closed; broader objective remains unmet.
+
+
+## Treasury study packaging support
+
+The public packager retains the exact `treasury-initialization.npz` beside each
+Treasury run's selected/latest weights and includes the dedicated legacy/masked/
+full arm in chart labels and catalog records. Frozen bundles remain complete;
+raw provider prices, replay files and private credentials are excluded. Static
+packaging checks cover all three arm labels and initializer bytes. This support
+is not a publication claim: actual screen reports and model restoration must pass,
+all owned sessions must stop, and release hashes must verify before cleanup.
