@@ -201,7 +201,8 @@ allocation deadlines, smoke-backed projection and minute aggregate metering.
 Unregistered Treasury training remains blocked. The dedicated runner now validates
 registered requests and payloads before constructing environments, restores the
 pinned shared initializer, and records initial/selected/final model proofs.
-Runtime jobs and archive acceptance remain pending. No new model, Colab session or return exists yet.
+Runtime plans and archive semantic checks are implemented; learned-model
+restoration and actual smoke acceptance remain pending. No new model, Colab session or return exists yet.
 
 
 ## Shared starts, request and frozen contracts
@@ -223,8 +224,7 @@ mechanics only; actual learned acceptance still requires Colab smokes.
 Standalone registered request/data checks fix dataset IDs, normalizers, both
 phase budgets/cadences, seeds, CPU, reward/execution and single-milestone rules.
 These checks are connected to the runner; missing protocol IDs and invalid
-requests reject before environment/model construction. Runtime job/archive/
-budget/report and learned-smoke acceptance are next.
+requests reject before environment/model construction. Physical model restoration, reporting and learned-smoke acceptance are next.
 No local optimizer steps, new provider requests, retired prices or Colab units.
 
 
@@ -238,8 +238,8 @@ counts and exact original RNG bytes. Every asset hash stays unchanged. Caller
 Torch/NumPy/Python streams and the original project ledger remain unchanged.
 The verification process constructs no models or optimizer state. This supplements
 untrained unit/save-load fixtures; actual learned Colab acceptance remains pending.
-Contracts and registered runner dispatch are ready; job/archive/budget integration
-remains before smoke allocation. All prior owned sessions stay stopped; no new units.
+Contracts and registered runner dispatch are ready; physical model restoration and actual learned-smoke tooling
+remain before smoke allocation. All prior owned sessions stay stopped; no new units.
 
 
 ## Runtime admission and persistent study allowance
@@ -256,9 +256,8 @@ and retrieval. An estimate above7200 seconds rejects admission. The persistent
 `treasury-study-budget.json` beside the original ledger fixes the first controller's
 consumption baseline across smoke/screen controllers and retries. Allowances above
 2 units, a reset baseline or exhausted allowance reject. Account floor150 remains
-recorded alongside the original project150/130 safeguards. These helpers are tested
-but not yet connected to fleet admission; archive/report integration and actual
-Colab smokes remain required before a screen. No allocation occurred in this step.
+recorded alongside the original project150/130 safeguards. These helpers are connected to fleet admission; physical restoration/report
+integration and actual Colab smokes remain required before a screen. No allocation occurred in this step.
 
 
 ## Fixed remote job plans
@@ -269,7 +268,7 @@ initializer, algorithm settings,512-transition seed11 smokes and100k-transition
 screens at10k cadence. Full plans require a same-protocol accepted runtime profile;
 smokes cannot accept one or expand to other seeds. Full/masked share their untrained
 initializer but retain distinct dataset identities. All jobs stay CPU and preserve
-the common execution/reward contract. Fleet admission and archive restoration are
+the common execution/reward contract. Physical archive restoration and learned acceptance are
 still pending: validated plans alone do not authorize a smoke-acceptance claim.
 
 
@@ -285,3 +284,18 @@ also applies native policy geometry using the correct7/9 market inputs, checkpoi
 state, reward and frozen metadata checks. Static fixtures exercise all three arms
 and semantic tampering; they do not claim that synthetic zip contents are learned
 models. Physical saved-model restoration and actual Colab acceptance remain.
+
+
+## Fleet and remote preflight
+
+The existing centralized controller now recognizes version36. Before allocation
+it validates pinned initializer assets and immutable payload identity/content;
+full screens additionally re-read and hash actual local smoke acceptance. Treasury
+tasks require their own fleet and automatically reuse the study's original
+persistent budget baseline, even across new controllers. Projected overrun sets
+the durable budget stop rather than resetting the allowance. Research allocations
+retain the170-account-unit teardown guard. Remote startup repeats asset/payload
+validation before entering the runner. Controller fixtures verify preserved
+charges, projected budget-stop persistence and wrong-path rejection without any
+allocation. Actual cleanup, Python discovery and learned smoke evidence are still
+required remotely; no session was provisioned by these implementation checks.

@@ -27,6 +27,10 @@ def main():
     from rl_stocks.training.runner import train
 
     payload = json.loads((root/'dataset.json').read_text())
+    if plan.get('version')==36:
+        from rl_stocks.training.treasury_context import validate_payload
+        from rl_stocks.training.treasury_initialization import validate_assets
+        validate_assets();validate_payload(payload,plan['treasury_study']['arm'])
     if plan.get('version')==35:
         from rl_stocks.training.gae_context import validate_payload
         from rl_stocks.training.gae_initialization import validate_assets
