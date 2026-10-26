@@ -421,7 +421,9 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.status \
 This command reads only local state and checkpoint-state JSON inside retained
 archives; it never extracts archives, changes the ledger, calls Colab or trains.
 Missing or partially replaced snapshots are reported without restarting anything.
-Checkpoint scores are provisional selected-development scores. Recorded running
+The `latest_score` is the provisional latest checkpoint development score.
+`selected_steps` identifies the best saved checkpoint; its score is not separately
+reported by this compact reader. These may refer to different checkpoints. Recorded running
 state does not prove liveness: poll the existing controller's actual process/tool
 handle separately. The central fleet remains responsible for minute metering,
 deadlines, durable retrieval and verified owned shutdown.

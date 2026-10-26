@@ -16,7 +16,7 @@ def checkpoint(path):
             return dict(status='retrieved', latest_steps=value['latest']['steps'],
                         latest_phase=value['latest']['phase'],
                         selected_steps=value['selected']['steps'],
-                        selected_score=value['score'], provisional=True)
+                        latest_score=value['score'], provisional=True)
     except FileNotFoundError:
         return dict(status='not_retrieved')
     except (OSError, tarfile.TarError, EOFError, ValueError, KeyError, TypeError):

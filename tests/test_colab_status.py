@@ -9,7 +9,7 @@ from rl_stocks.runtime.colab.status import checkpoint, summarize
 
 def test_only_retained_checkpoint_state_is_read_without_extraction(tmp_path):
     path = tmp_path / 'checkpoint.tar.gz'
-    record = dict(latest=dict(steps=10000, phase='on_step'), selected=dict(steps=10000), score=0.1)
+    record = dict(latest=dict(steps=20000, phase='on_step'), selected=dict(steps=10000), score=0.1)
     with tarfile.open(path, 'w:gz') as archive:
         for name, content in [('artifacts/runs/a/checkpoint-state.json', json.dumps(record).encode()),
                               ('../../outside', b'no extraction')]:
@@ -18,7 +18,8 @@ def test_only_retained_checkpoint_state_is_read_without_extraction(tmp_path):
             archive.addfile(info, io.BytesIO(content))
     before = path.read_bytes()
     result = checkpoint(path)
-    assert result['latest_steps'] == 10000 and result['selected_score'] == 0.1
+    assert result['latest_steps'] == 20000 and result['latest_score'] == 0.1
+    assert result['selected_steps'] == 10000 and 'selected_score' not in result
     assert result['provisional'] and before == path.read_bytes()
     assert not (tmp_path.parent / 'outside').exists()
     path.write_bytes(b'incomplete download')
