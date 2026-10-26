@@ -96,6 +96,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
     dataset=read_dataset(dataset_path)
+    from rl_stocks.training.treasury_guard import reject_unregistered_treasury
+    reject_unregistered_treasury(dataset)
     from rl_stocks.training import vix_context
     vix_study=vix_context.validate_dispatch(dataset,study_protocol_sha256)
     if vix_study:

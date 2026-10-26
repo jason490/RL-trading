@@ -2625,3 +2625,15 @@ requires sequence/burn-in/reset tests. Prior failed MLP/forest/TQC/GAE gates sta
 closed; no paper establishes US-stock gains here. Finish current Treasury payload
 work separately before any new algorithm protocol. No installation, model
 construction, optimization, Colab allocation, new units or retired-test access.
+
+
+### Treasury readiness payload implementation
+
+Fixed missing-row/preceding20-row purge, contiguous513-bar eligibility and one
+segment per symbol are implemented for matched masked/full datasets. Original
+seven-field preprocessing/retained prices/ATR and all validation rows stay exact;
+only new full fields fit retained training rows. Unregistered Treasury data rejects
+before generic trainer model/environment construction. Synthetic causality, mask,
+segmentation, sampler and prior GAE dispatch regressions pass; actual preparation
+and independent acceptance remain next. No model initialized, optimizer step,
+provider request, new Colab unit or retired data. [Guide](treasury-context.md).

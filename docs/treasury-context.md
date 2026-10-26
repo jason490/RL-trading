@@ -116,3 +116,38 @@ and counts exactly; dataset, normalizer and original ledger unchanged. Worker ex
 lock released, no temporary files/new Colab units. Current-vintage/publication
 assumptions remain unverified. Readiness-matched payload acceptance and separate
 training preregistration remain before any input/model allocation.
+
+
+## Fixed readiness-matched payload construction
+
+[Payload rules](../configs/experiments/treasury_payload_rules.json) are fixed before
+actual payload preprocessing. Masked and full arms share identical source readiness,
+20 preceding-row purge before each unready training date and contiguous segmentation.
+Discard segments shorter than513 bars; require exactly one remaining segment per
+original training symbol. Reject multiple eligible segments instead of selecting
+by return or silently dropping a symbol. Every original validation row must be
+ready and remain present. The original legacy dataset is preserved separately.
+
+Both arms append the same two column names; masked raw values/means are zero and
+scales one. Full extra means/scales fit retained training rows only. The original
+seven fields and names/means/scales remain exact, as do all retained bars/ATR,
+validation dates and episode keys. Metadata records exact original row bounds,
+missing/purged/short-segment counts and identical512-step eligible starts. Future
+sampling keeps all111 training symbols and unchanged stock/ETF group mass.
+
+Generic training explicitly rejects Treasury schemas, fields or manifests until a
+separate registered model experiment exists. Payload preprocessing cannot enable
+learning by itself. No model, optimizer, provider request or Colab runtime is used:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .venv/bin/python scripts/prepare_treasury_payloads.py
+```
+
+Source summary/verification/alignment and original preprocessing hashes are pinned.
+The600s local worker writes a durable progress journal and rejects automatic restart;
+immutable datasets are reloaded and exactly reconstructed before acceptance. Synthetic
+checks cover gap purging, exclusion accounting, multiple/short segment rejection,
+unchanged evaluation, identical sampler bounds, source immutability and validation-
+only perturbations that cannot change fitted statistics. Actual payload acceptance
+and independent verification remain pending; no performance benefit is claimed.
