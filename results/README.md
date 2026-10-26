@@ -394,3 +394,11 @@ primary papers support considering CrossQ and recurrent off-policy baselines as
 distinct hypotheses, with strict implementation/capacity/cost and evaluation
 caveats. [Machine-readable review](model-review-2026-10-26/review.json) records
 sources/status. No training or performance result; current Treasury work preserved.
+
+
+[Treasury matched payloads](treasury-context-2026-10-26/README.md) accepted:
+111 training symbols,282666 retained rows,19058 unchanged development rows,
+225834 identical eligible starts. Exclusions confined to2010 and explicit;
+original preprocessing and retained bars/ATR exact. Independent NumPy/decimal
+verification passes, no new units or model return. Generic training stays disabled
+until a separate matched protocol and actual Colab acceptance.

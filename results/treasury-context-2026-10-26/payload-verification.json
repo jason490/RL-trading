@@ -1,0 +1,50 @@
+{
+  "independent_prefix_sum_purge_and_segment_bounds": true,
+  "source_episodes_verified": 137,
+  "training_symbols": 111,
+  "training_rows": 282666,
+  "development_rows": 19058,
+  "validation_episodes_preserved": 26,
+  "exclusions": {
+    "unavailable": 110,
+    "purged": 2200,
+    "short_segment_rows": 13970
+  },
+  "eligible_starts": 225834,
+  "original_training_year_counts": {
+    "2010": 22330,
+    "2011": 27720,
+    "2012": 27500,
+    "2013": 27923,
+    "2014": 27972,
+    "2015": 27972,
+    "2016": 27972,
+    "2017": 27861,
+    "2018": 27861,
+    "2019": 27972,
+    "2020": 25863
+  },
+  "retained_training_year_counts": {
+    "2010": 6050,
+    "2011": 27720,
+    "2012": 27500,
+    "2013": 27923,
+    "2014": 27972,
+    "2015": 27972,
+    "2016": 27972,
+    "2017": 27861,
+    "2018": 27861,
+    "2019": 27972,
+    "2020": 25863
+  },
+  "maximum_extra_value_error": 0.0,
+  "maximum_numpy_training_normalizer_error": 1.9584334154387761e-13,
+  "matched_mask_and_full_preprocessing_and_rows": true,
+  "source_data_normalizer_and_ledger_unchanged": true,
+  "protected_files_verified": 9,
+  "no_temporary_progress_file": true,
+  "source_worker_exit_code": 0,
+  "training_performed": false,
+  "colab_allocated": false,
+  "additional_colab_units": 0
+}

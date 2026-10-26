@@ -149,5 +149,18 @@ The600s local worker writes a durable progress journal and rejects automatic res
 immutable datasets are reloaded and exactly reconstructed before acceptance. Synthetic
 checks cover gap purging, exclusion accounting, multiple/short segment rejection,
 unchanged evaluation, identical sampler bounds, source immutability and validation-
-only perturbations that cannot change fitted statistics. Actual payload acceptance
-and independent verification remain pending; no performance benefit is claimed.
+only perturbations that cannot change fitted statistics. Actual payload acceptance and independent verification are now complete below;
+no performance benefit is claimed.
+
+
+## Actual matched payload acceptance — 2026-10-26
+
+[Accepted payloads](../results/treasury-context-2026-10-26/README.md) retain111
+training symbols,282666 training rows and19058 unchanged development rows. Both
+arms have225834 eligible512-step starts. Exactly16280 training rows are excluded
+(110 unavailable,2200 purged,13970 short-segment rows), entirely in2010;2011–2020
+rows are unchanged. Independent prefix-sum segmentation and original-decimal
+feature checks agree exactly, NumPy fit statistics within1.96e−13; nine protected
+files/ledger remain unchanged. Worker exited0 in68.11s, no provider/Colab/model
+or optimizer activity. Generic training remains disabled pending a separate fixed
+study; original legacy and readiness-matched masked controls are both required.

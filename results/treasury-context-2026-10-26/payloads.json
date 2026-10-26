@@ -1,0 +1,1671 @@
+{
+  "payload_rules_sha256": "201005f50e266f8dbfb0a992dbd38a2839b85b04fa00947457d17f22fd0e9d12",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "source_context": "bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4",
+  "passed": true,
+  "records": {
+    "masked": {
+      "dataset": "dc6bb7c5cda99dd6fa19c6e8c0bb6e24b27cfc2e18f946ad63bd13c2c6f452ff",
+      "schema": "daily-indicators-v1-treasury-masked-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "treasury_2y_pct",
+        "treasury_10y_minus_2y_pp"
+      ],
+      "normalizer": {
+        "means": [
+          0.0004990544866644428,
+          0.012735132296023969,
+          0.00469844447216914,
+          0.012019454990342297,
+          0.5389047390801802,
+          0.018389739889369705,
+          1.0153090843440746,
+          0.0,
+          0.0
+        ],
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20",
+          "treasury_2y_pct",
+          "treasury_10y_minus_2y_pp"
+        ],
+        "scales": [
+          0.015313643928828525,
+          0.00786943611664361,
+          0.029180487735227603,
+          0.04507155802842066,
+          0.11677961862593828,
+          0.009077586213247573,
+          0.456061113252682,
+          1.0,
+          1.0
+        ]
+      },
+      "normalizer_sha256": "ffba992d56173041f2c6b9070d238ca38854921a0003aec2a89965f890336acc",
+      "eligibility_sha256": "f2370a0e9cc6071d5c187143d44495c6f63348f3dedc5a6133f944b34e810bd4",
+      "extra_normalizer_fit_rows": 0,
+      "training_rows": 282666,
+      "development_rows": 19058,
+      "exclusions": {
+        "unavailable": 110,
+        "purged": 2200,
+        "short_segment_rows": 13970
+      },
+      "eligible_starts": 225834,
+      "sampler_bounds_sha256": "44b2ef559bf3a4a64e269564cf00a9b1015e9c4fc08c0064726f1b3fbb476aa0",
+      "training_symbols_sha256": "351a77fc9852509bdbf3e0d1c3f649b1b7a4d4a675bd394db774d875625da856",
+      "finite_float32_inputs": true,
+      "maximum_abs_normalized_value": 54.2753017652278,
+      "validation_rows_preserved": true
+    },
+    "full": {
+      "dataset": "c6ca10068f8d0607224c3e8252568e4de965663fce5db30ce5d33198c2f5e5d3",
+      "schema": "daily-indicators-v1-treasury-full-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "treasury_2y_pct",
+        "treasury_10y_minus_2y_pp"
+      ],
+      "normalizer": {
+        "means": [
+          0.0004990544866644428,
+          0.012735132296023969,
+          0.00469844447216914,
+          0.012019454990342297,
+          0.5389047390801802,
+          0.018389739889369705,
+          1.0153090843440746,
+          0.927746881478494,
+          1.2705481380852313
+        ],
+        "names": [
+          "return_1",
+          "volatility_20",
+          "ema_20_ratio",
+          "ema_50_ratio",
+          "rsi_14",
+          "atr_14_ratio",
+          "relative_volume_20",
+          "treasury_2y_pct",
+          "treasury_10y_minus_2y_pp"
+        ],
+        "scales": [
+          0.015313643928828525,
+          0.00786943611664361,
+          0.029180487735227603,
+          0.04507155802842066,
+          0.11677961862593828,
+          0.009077586213247573,
+          0.456061113252682,
+          0.7718568191866375,
+          0.7756078729500339
+        ]
+      },
+      "normalizer_sha256": "570bcaaec92eefcf460f8afd84295597f982a579ff57657909f6deaf0485b50c",
+      "eligibility_sha256": "f2370a0e9cc6071d5c187143d44495c6f63348f3dedc5a6133f944b34e810bd4",
+      "extra_normalizer_fit_rows": 282666,
+      "training_rows": 282666,
+      "development_rows": 19058,
+      "exclusions": {
+        "unavailable": 110,
+        "purged": 2200,
+        "short_segment_rows": 13970
+      },
+      "eligible_starts": 225834,
+      "sampler_bounds_sha256": "44b2ef559bf3a4a64e269564cf00a9b1015e9c4fc08c0064726f1b3fbb476aa0",
+      "training_symbols_sha256": "351a77fc9852509bdbf3e0d1c3f649b1b7a4d4a675bd394db774d875625da856",
+      "finite_float32_inputs": true,
+      "maximum_abs_normalized_value": 54.2753017652278,
+      "validation_rows_preserved": true
+    }
+  },
+  "eligibility": {
+    "AAPL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "AAPL-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "ABBV-train-0": {
+      "purged": 0,
+      "retained": 1946,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        1946
+      ],
+      "source_rows": 1946,
+      "unavailable": 0
+    },
+    "ABT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "ADBE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "AEP-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "AMGN-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "AMT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "AMT-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "AMZN-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "AMZN-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "APA-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "APD-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "APD-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "AXP-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "BA-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "BAC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "BAC-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "BLK-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "BMY-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "C-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "CAT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "CAT-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "CL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "CMCSA-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "COP-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "COST-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "CSCO-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "CVX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "CVX-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "D-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "DE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "DIA-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "DIA-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "DIS-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "DIS-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "DUK-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "DUK-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "DVN-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "ECL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "ED-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "EOG-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "EQIX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "EXC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "F-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "FCX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "GD-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "GE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "GILD-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "GOOGL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "GOOGL-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "GS-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "HAL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "HD-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "HD-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "HON-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "HON-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "HSY-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "IBM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "INTC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "IWM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "IWM-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "JNJ-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "JNJ-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "JPM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "JPM-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "KMB-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "KO-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "KO-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "KR-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "LIN-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "LIN-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "LLY-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "LMT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "LOW-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MCD-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MDLZ-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MLM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MRK-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MS-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MSFT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "MSFT-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "NEE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "NEE-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "NEM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "NFLX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "NKE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "NUE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "NVDA-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "O-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "OMC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "ORCL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "OXY-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PEG-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PEP-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PFE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PG-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PG-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "PLD-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PLD-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "PNC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PPG-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "PSA-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "QCOM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "QQQ-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "QQQ-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "ROST-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "RTX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SBUX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SHW-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SLB-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SO-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SPG-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SPY-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "SPY-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "SRE-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "T-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "TGT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "TJX-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "TMUS-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "TTWO-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "TXN-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "UNH-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "UNH-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    },
+    "UNP-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "UPS-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "USB-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "VLO-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "VMC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "VTR-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "VZ-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "WELL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "WFC-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "WMT-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "XEL-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "XOM-train-0": {
+      "purged": 20,
+      "retained": 2552,
+      "short_segment_rows": 127,
+      "source_bounds": [
+        148,
+        2700
+      ],
+      "source_rows": 2700,
+      "unavailable": 1
+    },
+    "XOM-validation-0": {
+      "purged": 0,
+      "retained": 733,
+      "short_segment_rows": 0,
+      "source_bounds": [
+        0,
+        733
+      ],
+      "source_rows": 733,
+      "unavailable": 0
+    }
+  },
+  "protected_sha256": {
+    "/home/vibe/projects/rl-stocks/configs/experiments/treasury_payload_rules.json": "2d3546b9788e94140a2e9d4bfb171ac1d3a6f5427ae331d74c1c72dcbdae4037",
+    "/home/vibe/projects/rl-stocks/results/treasury-source-2026-10-25/summary.json": "cfaf63be9bf6d85e67398b9b30a436ae693ae57eb195536a7281c03f9f1f68b4",
+    "/home/vibe/projects/rl-stocks/results/treasury-source-2026-10-25/verification.json": "0d54186b411a350262ca73af22a960f4d188aba2a73e42c19fadee207ba5e49e",
+    "/home/vibe/projects/rl-stocks/data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "/home/vibe/projects/rl-stocks/data/context/treasury/snapshots/bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4/snapshot.json": "bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4",
+    "/home/vibe/projects/rl-stocks/data/context/treasury/snapshots/bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4/alignment.json": "3126f78e40ec90870cbb8d23eb57e1a4117b2d79b656fb90dd9a2896a6950c10",
+    "/home/vibe/projects/rl-stocks/.runtime/usage-ledger.json": "b68abc36a571b70bdf57fdd2fa8dab3da4113b469b78bfad1e72ba5f8f2862d0",
+    "/home/vibe/projects/rl-stocks/scripts/prepare_treasury_payloads.py": "4b2e3256d5fc1f0168c1f50a0e947bf2cfed990592eaf1ac506db0675a4ab486",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/data/generation/treasury_payload.py": "131774091bbd288ee0ac9b301eb95889657619df880ef584a80d938320853c29"
+  },
+  "source_files_unchanged": true,
+  "normalization_training_only": true,
+  "validation_used_for_fit": false,
+  "model_initialized": false,
+  "training_performed": false,
+  "training_enabled": false,
+  "provider_requested": false,
+  "colab_allocated": false,
+  "test_evaluated": false,
+  "historical_publication_vintages_verified": false,
+  "duration_seconds": 68.1118591990089
+}

@@ -2376,3 +2376,18 @@ before generic trainer model/environment construction. Synthetic causality, mask
 segmentation, sampler and prior GAE dispatch regressions pass; actual preparation
 and independent acceptance remain next. No model initialized, optimizer step,
 provider request, new Colab unit or retired data. [Guide](docs/treasury-context.md).
+
+
+### Treasury matched payload acceptance complete — 2026-10-26
+
+Actual masked/full immutable payloads reload and reconstruct exactly. All111
+training symbols,282666 retained training rows,19058 unchanged development rows
+and225834 eligible512-step starts agree.16280 training rows excluded entirely in
+2010 under fixed missing/purge/short-segment rules;2011–2020 unchanged. Independent
+NumPy segmentation/decimal inputs exact, training-only new statistics agree within
+1.96e−13; original seven statistics/bars/ATR and nine protected source/ledger files
+unchanged.46 focused checks/Ruff pass, worker exited0 in68.11s, no temp progress
+file, provider requests, model/optimizer/Colab activity or retired data. Generic
+Treasury training remains blocked until a separate registered comparison. Next
+fix legacy/masked/full model controls/shared starts and acceptance before any
+allocation. [Evidence](results/treasury-context-2026-10-26/README.md).
