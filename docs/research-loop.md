@@ -7,10 +7,13 @@ verified; runtime plans, fleet preflight and archive semantics implemented.
 Physical restoration, fixed performance reporting, observed-path hashes and
 learned-smoke admission complete. Corrected-source three-arm Colab smokes pass
 actual restoration,234 frozen predictions and paired exact paths; all sessions
-stopped. First failed bookkeeping attempt retained. Fixed100k screen is next.
+stopped. First failed bookkeeping attempt retained. Fixed three-arm100k seed11
+screen is running from corrected source55044a5; controller state is
+`.runtime/treasury-screen-state.json`, immutable export `.runtime/treasury-source-v2`.
 [GAE screen](../results/gae-traces-2026-10-25/README.md) and
 [target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
-failed trace family stays closed. No active Colab sessions or robust winner.
+failed trace family stays closed. No robust winner. Poll the existing screen
+controller handle and compact retained status; do not duplicate active jobs.
 Read this frontier and its compact protocol before the historical chronology below.
 
 The user authorized continuing research toward returns comparable to or better

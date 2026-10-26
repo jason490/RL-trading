@@ -404,3 +404,24 @@ cleanup. Use a new source freeze containing these guards for subsequent fleets;
 old exports do not implement the new account-floor rule. No additional package
 installation or CLI upgrade is required.
 [Actual reviewed resumption](../results/budget-review-2026-10-21/README.md).
+
+
+## Compact retained status
+
+For a quiet summary of controller state, retrieved checkpoint steps/phase and
+conservative project usage, run:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.status \
+  --state .runtime/STUDY-screen-state.json \
+  --artifact-root .runtime/STUDY-source/artifacts/colab \
+  --ledger .runtime/usage-ledger.json
+```
+
+This command reads only local state and checkpoint-state JSON inside retained
+archives; it never extracts archives, changes the ledger, calls Colab or trains.
+Missing or partially replaced snapshots are reported without restarting anything.
+Checkpoint scores are provisional selected-development scores. Recorded running
+state does not prove liveness: poll the existing controller's actual process/tool
+handle separately. The central fleet remains responsible for minute metering,
+deadlines, durable retrieval and verified owned shutdown.
