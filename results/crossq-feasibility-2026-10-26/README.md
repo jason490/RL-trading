@@ -71,3 +71,15 @@ updates are restored and rejected. Original SAC/TQC default weights/RNG regressi
 pass. Generic training is blocked before data/model construction pending dedicated
 shared-start and learned optimizer/replay/counter/runtime acceptance. No CrossQ
 trading return or further credit use is claimed.
+
+
+## Initializer and state contract implementation
+
+Pinned initialization now restores original tensors/global streams and validates
+all settings/ownership before mutation. Actual Adam moment/step and normalization
+records enforce checkpoint phase; final replay hashes preserve filled rows and
+correct timeout/terminal semantics.108 focused regressions pass. Native optimizer
+save/load fixtures are manually populated, with optimization forbidden; these
+are not learned acceptance. Generic training remains blocked pending observed
+forward evidence, registered runner and Colab runtime/archive integration. No
+new return or Colab charge is claimed.

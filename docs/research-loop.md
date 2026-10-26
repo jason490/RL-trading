@@ -18,9 +18,10 @@ normalization before mutation; nine guarded untrained tests pass across11/23/37.
 Six pinned initialization archives and independent model-free array/RNG/source
 verification now pass; portable asset validation survives live-registry changes.
 Restricted CrossQ factory and immutable frozen normalization now implemented;
-old SAC/TQC defaults remain unchanged. Generic training stays blocked. Next:
-registered shared-start dispatch, learned optimizer/replay/counter contracts and
-Colab runtime acceptance before performance allocation.
+old SAC/TQC defaults remain unchanged. Shared-start loader and actual Adam/
+normalization/replay contracts pass108 targeted checks using untrained/manual
+fixtures. Generic training stays blocked. Next: observed-forward audit, registered
+runner dispatch/metadata and Colab runtime/archive acceptance before allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.

@@ -216,3 +216,40 @@ or permission to bypass the fixed Colab study.
 
 86 targeted CrossQ/TQC/Treasury/recurrent regressions pass, including the final
 display-metadata isolation check. No local learning, provider reads, allocation or unit use.
+
+
+## Shared-start loader and actual-state contracts
+
+`training/crossq_initialization.py` validates complete native settings, typed seed,
+optimizer ownership/empty state, initial entropy and unfitted normalization before
+loading pinned archives into existing Parameters. It restores original SAC Torch/
+NumPy/Python streams, attaches the requested-phase proof and verifies the exact
+loaded tensor/RNG identity. Reapplication and altered settings reject before
+mutation. Full starts and smoke starts use the same archived full64 tensors.
+
+`training/crossq_state.py` records actual actor/critic/entropy Adam moments and
+per-parameter steps, effective defaults, policy/Linear tensor hashes, entropy,
+configuration and all nine normalization fingerprints/counters. It rejects missing
+optimizers, wrong ownership, malformed/nonfinite or negative second moments,
+wrong counters/cadence and unchanged learned Linear tensors. On-step checkpoints
+exclude the pending optimizer update; actual post-update state must match the fixed
+final budget. Native entropy Adam defaults remain distinct from actor/critic
+policy kwargs. Global sampling RNG is verified at initialization; native model
+loading does not by itself restore global RNG or exact environment continuation.
+
+`training/crossq_replay.py` separately validates final replay:100k single-env
+capacity,21-input/four-action float32 filled prefixes, normalized actions, finite
+rows and enabled timeout handling. It hashes observations, next observations,
+actions, rewards and done/timeout masks. Time limits count separately from true
+terminals. Unfilled capacity is intentionally ignored. Final replay restoration
+is distinct from frozen selected inference; no selected-checkpoint replay resume
+claim is made.
+
+108 targeted CrossQ/TQC/Treasury/recurrent checks pass, including actual pinned
+starts for11/23/37, negative pre-mutation tests and native save/load round-trips.
+Optimizer and positive normalization-state fixtures are explicitly populated by
+hand, without learn/train/Adam.step; replay fixtures are synthetic and never
+sampled for optimization. These are serialization/integrity checks, not actual
+learned acceptance. Next connect observed normalization-forward evidence,
+registered requests/runner metadata, Colab jobs/budgets/archive restoration and
+actual learned smokes. Generic CrossQ training stays blocked; no units consumed.

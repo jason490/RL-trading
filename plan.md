@@ -2503,3 +2503,14 @@ and source-archive provenance remain valid. Generic CrossQ training stays blocke
 before data/model construction until registered shared-start dispatch and actual
 learned optimizer/replay/counter/runtime acceptance are connected. No learning,
 provider access or Colab units. [Guide](docs/crossq-feasibility.md).
+
+
+### CrossQ shared-start/state/replay contracts implemented — 2026-10-26
+
+Pinned tensor/global-stream loading validates native settings/ownership before
+mutation. Actual actor/critic/entropy Adam moments/steps and phase-sensitive
+normalization counters are recorded; final replay filled-row hashes distinguish
+true terminals from time limits.108 targeted regressions pass using untrained/
+manual serialization fixtures, no local optimization or units. Observed-forward
+audit, registered runner and Colab runtime/archive acceptance remain before
+allocation; generic CrossQ training remains blocked. [Guide](docs/crossq-feasibility.md).
