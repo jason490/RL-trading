@@ -1,0 +1,31 @@
+{
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "train_symbols": 26,
+  "development_symbols": 26,
+  "exact_historical_metadata_and_report_hashes": true,
+  "expected_smoke_updates": {
+    "sac": {
+      "critic": 4032,
+      "actor": 4032,
+      "entropy": 4032
+    },
+    "crossq": {
+      "critic": 4032,
+      "actor": 1344,
+      "entropy": 1344,
+      "critic_normalization": 4032,
+      "actor_normalization": 1344,
+      "critic_renorm_forward_calls": 3031,
+      "actor_renorm_forward_calls": 343
+    }
+  },
+  "ledger_sha256": "18a9b3228155c91f595dd806e7fb1c3347eb72afc3eca037fa9a7cbfc84755a5",
+  "ledger_unchanged": true,
+  "new_models_constructed": false,
+  "optimizer_steps": 0,
+  "training_performed": false,
+  "allocation_performed": false,
+  "test_evaluated": false
+}

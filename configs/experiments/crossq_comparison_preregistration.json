@@ -1,0 +1,214 @@
+{
+  "schema": "crossq-comparison-preregistration-v1",
+  "status": "fixed_before_any_crossq_learning_or_performance",
+  "hypothesis": "Test a small-network native CrossQ package with a predeclared short renormalization warmup against reproduced SAC; not an isolated normalization causal claim or reproduction of published large-network benchmarks.",
+  "implementation_audit": "results/crossq-feasibility-2026-10-26/audit.json",
+  "implementation_audit_sha256": "f7c3651b8d55e2910cce437742f9385727bac1cdb36ca2281ad22033d4fa03bb",
+  "dataset": "672a21621091a56c1c7beb30557464e7edd8df38874494659bab2c83738e1bf9",
+  "feature_schema": "daily-indicators-v1",
+  "market_features": 7,
+  "observation_size": 21,
+  "observation_profile": "execution_full",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "data_scope": "Same original22-stock/four-ETF training and development panel as reproduced SAC, train through2020/development2021-2023; no expanded-universe or feature change in this method screen.",
+  "arms": [
+    "sac",
+    "crossq"
+  ],
+  "candidate": "crossq",
+  "controls": [
+    "sac"
+  ],
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 50000,
+  "evaluation_every": 10000,
+  "episode_steps": 512,
+  "smoke_steps": 4096,
+  "smoke_evaluation_every": 1024,
+  "smoke_episode_steps": 128,
+  "policy_variant": "native",
+  "initialization": "standard",
+  "start_sampling": "legacy_uniform",
+  "reward": {
+    "kind": "net_log_equity",
+    "scale": 1.0
+  },
+  "action_execution": {
+    "training_exposure_mode": "unrestricted",
+    "evaluation_exposure_mode": "unrestricted"
+  },
+  "simulation": {
+    "initial_equity": 100000.0,
+    "fee_bps": 1.0,
+    "impact_bps": 2.0,
+    "borrow_rate": 0.03,
+    "max_holding": 20,
+    "allow_short": true,
+    "exposure_cap": 1.0
+  },
+  "parameters": {
+    "buffer_size": 100000,
+    "batch_size": 256,
+    "learning_starts": 1000,
+    "train_freq": 1,
+    "gradient_steps": 1,
+    "ent_coef": "auto",
+    "target_entropy": "auto",
+    "n_steps": 1,
+    "use_sde": false,
+    "learning_rate": 0.0003,
+    "gamma": 0.99
+  },
+  "smoke_parameters": {
+    "batch_size": 64,
+    "learning_starts": 64
+  },
+  "policy_parameters": {
+    "net_arch": [
+      64,
+      64
+    ],
+    "n_critics": 2
+  },
+  "arm_parameters": {
+    "sac": {
+      "tau": 0.005,
+      "target_update_interval": 1
+    },
+    "crossq": {
+      "policy_delay": 3
+    }
+  },
+  "arm_policy_parameters": {
+    "sac": {
+      "optimizer_kwargs": {
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "amsgrad": false
+      }
+    },
+    "crossq": {
+      "batch_norm": true,
+      "batch_norm_momentum": 0.01,
+      "batch_norm_eps": 0.001,
+      "renorm_warmup_steps": 1000,
+      "optimizer_kwargs": {
+        "betas": [
+          0.5,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "amsgrad": false
+      }
+    }
+  },
+  "intrinsic_differences": "CrossQ joint current/next critic normalization, absent target critic, actor/entropy update every3critic updates, beta1=.5 and910 extra affine parameters. SAC actor everyupdate,beta1=.9,tau=.005 target. Common widths/lr/reward/data are fixed; not exactly equal parameter count or compute.",
+  "warmup_rationale": "Native100000-update warmup would leave50k screen entirely in BatchNorm phase. Fix1000before learning for this bounded hypothesis; same warmup in4096-step smokes and50k screens; no tuning after returns. Strict steps>warmup condition means first renorm forward occurs on layer call1002.",
+  "shared_initialization": {
+    "source_binding": "configs/experiments/distributional_initialization.json",
+    "source_binding_sha256": "09e1de58e99689d3807c05e8ba47504afb9aa323c224f69e4a3c1051e2a790f0",
+    "source_arm": "sac_native",
+    "source_phase": "screen",
+    "smoke_reuses_full64": true,
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "contract": "Reuse only original unfitted full64 SAC archives. Copy actor/Gaussian-head and ordered live-critic Linear weights/biases exactly into CrossQ; preserve native zero/one/zero normalization parameters/buffers and absent target critic. Restore original SAC post-initialization Torch/NumPy/Python RNG to both arms. Empty optimizer/alpha/replay; no learned TQC/SAC tensors. Freeze portable archive/generation provenance before registry changes."
+  },
+  "historical_control_reproduction": {
+    "source_state": ".runtime/critic-screen-state.json",
+    "source_task": "critic-sac_native-11",
+    "source_revision": "8c27af4cb146d9d3dcf4d2b9a12c6ffb1b63e7f5",
+    "selected_score": 0.07928143280991959,
+    "final_score": 0.07928143280991959,
+    "all_checkpoint_scores": [
+      {
+        "steps": 10000,
+        "phase": "on_step",
+        "score": -0.03016846883573478
+      },
+      {
+        "steps": 20000,
+        "phase": "on_step",
+        "score": -0.0674356650610938
+      },
+      {
+        "steps": 30000,
+        "phase": "on_step",
+        "score": -0.051851252312297196
+      },
+      {
+        "steps": 40000,
+        "phase": "on_step",
+        "score": 0.016883977940892685
+      },
+      {
+        "steps": 50000,
+        "phase": "on_step",
+        "score": 0.0737706481624583
+      },
+      {
+        "steps": 50000,
+        "phase": "post_update",
+        "score": 0.07928143280991959
+      }
+    ],
+    "maximum_checkpoint_mean_return_discrepancy_pp": 0.01,
+    "maximum_selected_and_final_per_symbol_return_discrepancy_pp": 0.05,
+    "final_network_bitwise_reproduction_across_hardware_required": false,
+    "failure": "Disable interpretation/promotion and report mismatch. Never widen tolerances or retry automatically.",
+    "metadata_sha256": "a9826bf6fb974cca1b8a630abf50ddb8edc48d9d0efdfa4bb57bc9d31bba7ddf",
+    "selected_report_sha256": "a63ca48aefdca6f54a7926dd2bd2b8ab6c68d3ba300c3a4eaf74680ce3ffee8f",
+    "final_report_sha256": "a63ca48aefdca6f54a7926dd2bd2b8ab6c68d3ba300c3a4eaf74680ce3ffee8f"
+  },
+  "selection_metric": "Existing equal-weight26-symbol development net return; all checkpoints retained, selected and actual final post-update weights reported separately.",
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "minimum_target_passing_seeds": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "prospective_evidence_required": true
+  },
+  "smoke_acceptance": "Gym/SB3 checkers, actual copied tensors/RNG, phase-sensitive Adam/BatchRenorm counts, actual renorm forwards after warmup for both actor and critics, finite running moments, saved actor/critic/entropy state and replay/timeout restoration, frozen prediction/schema parity and immutable running moments. Smokes do not select settings. Both use full64 geometry.",
+  "update_counts": "Post-update gradient count=max(0,steps-learning_starts); on-step checkpoint excludes current transition optimizer update. SAC actor/critic/entropy allupdate; CrossQ critic allupdate and actor/entropy floor(critic_updates/3). Measure actual per-parameter Adam and normalization counters; do not infer acceptance from nominal counters alone.",
+  "failure_policy": "Close fixed CrossQ family after failed50k screen: no widths/lr/beta/delay/warmup/batch/reward/feature/step grid, extension or confirmation. Integrity/historical reproduction failure disables interpretation, requires investigation, no automatic retry or tolerance widening.",
+  "isolation": "Treasury/VIX/GAE/TQC and prior failed families remain closed. No new data/provider/sector/rate features, no declined-stock future labels as inputs or selection, no retired2024+ data. Report true positive policy and short P&L separately.",
+  "execution": {
+    "training_location": "Google Colab only",
+    "preferred_hardware": "CPU",
+    "hardware_rule": "Match actual default kernel before sync; profile actual learned smoke throughput before full screen. GPU only after CPU evidence justifies suitable hardware/cost; no assumed A100 benefit.",
+    "maximum_incremental_study_units": 2.0,
+    "project_ceiling": 150,
+    "project_teardown": 130,
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "allocation_deadline_seconds": 7200,
+    "projection_safety_multiplier": 2.0,
+    "projection_reserve_seconds": 1200,
+    "reference_control_seconds": 992.418302906,
+    "reference_control_metadata_sha256": "a9826bf6fb974cca1b8a630abf50ddb8edc48d9d0efdfa4bb57bc9d31bba7ddf",
+    "concurrency": "Configurable centrally metered fleet; persistent original crossq-study budget baseline shared across smoke/screen/retries; original project ledger never reset.",
+    "cleanup": "Durable bounded retrieval and verified owned shutdown on success/failure/interruption; stop on unreliable metering; never stop unrelated sessions; no automatic restart after budget/integrity stop."
+  }
+}

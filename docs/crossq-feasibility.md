@@ -1,7 +1,8 @@
 # CrossQ implementation feasibility
 
-This is an untrained source/serialization audit, preceding any performance
-protocol. CrossQ is not registered in the training factory or frozen loader yet.
+The initial untrained source/serialization audit passes, and the separate fixed
+performance protocol below is now preregistered. CrossQ is not registered in the
+training factory or frozen loader yet.
 Treasury/VIX/GAE failures stay closed; no rate inputs or reward changes are mixed
 into this algorithm proposal. Existing project150/130 and account150/170 safeguards
 continue, with original usage39.472562 units after Treasury cleanup.
@@ -79,3 +80,59 @@ models are constructed; zero environment transitions, optimizer steps or Colab
 units. Original ledger checksum/39.47256169564856 units stays unchanged. The
 performance protocol, factory/frozen integration and actual learned acceptance
 remain next; no new return is claimed.
+
+
+## Fixed SAC/CrossQ performance protocol
+
+[Preregistration](../configs/experiments/crossq_comparison_preregistration.json)
+and [actual data/reference binding checks](../results/crossq-feasibility-2026-10-26/preregistration.json)
+fix two fresh50k seed11 arms, followed only on passing gates by seeds11/23/37
+confirmation and prospective evaluation. Data672a216… is the same22-stock/four-ETF
+train/development panel used by the historical SAC control, with seven fields and
+original frozen preprocessing. This method comparison preserves the historical
+control rather than adding the111-symbol panel or Treasury features simultaneously.
+
+Both arms use64×64 linear widths, gamma0.99, learning rate0.0003,100k replay,
+batch256,1000 warmup transitions and one critic update per collected transition.
+SAC keeps tau0.005, actor every update and Adam beta1=.9; CrossQ has no target,
+actor/entropy update every3critics, beta1=.5 and nine native normalization layers.
+Entropy begins at1, target entropy auto−4; entropy optimizer native beta1=.9.
+CrossQ batch-renorm momentum0.01/epsilon0.001 stay native; warmup is fixed1000
+updates before any learning. This short-warmup/small-network variant is not a
+replication of the paper's large networks or a normalization-only causal ablation.
+
+Both4096-transition smokes retain full64 geometry, same renorm warmup, batch64/
+learning-start64 and128-session episodes, evaluating every1024 steps. Expected
+post-update counts: SAC4032 actor/critic/entropy; CrossQ4032 critics and1344
+actor/entropy. Strict warmup comparison gives3031 critic/343 actor renorm forward
+calls per layer. Actual Adam and normalization counters must corroborate this;
+nominal counters alone are insufficient. On-step selected checkpoints exclude
+the current transition's optimizer update. Full screens evaluate every10k with
+512-session episodes and preserve sparse percentage-point-change curves.
+
+Shared starts reuse only unfitted original full64 SAC archives for11/23/37,
+also for smokes. Copy actor/head and ordered live-critic Linear tensors into
+CrossQ; preserve its native normalization zero/one states and absent target.
+Restore the original SAC post-initialization Torch/NumPy/Python streams in both.
+Portable initializer generation/provenance acceptance precedes factory changes.
+No learned SAC/TQC tensors are reused.
+
+Actions, unrestricted train/evaluation exposure, costs,100k equity/whole shares/
+cap1/20-session limit, net-log-equity reward, execution_full state and legacy
+uniform training starts match historical SAC. Historical control metadata and
+selected/final reports are hash-pinned; every checkpoint must reproduce within
+0.01pp mean/0.05pp symbol. Never widen tolerances or automatically retry a mismatch.
+
+Promotion requires selected **and** final mean gains≥2pp versus SAC, nonworse
+final stock/ETF groups,≤2pp additional drawdown, both phases' stock/ETF and median
+stock excess≥−2pp versus holding. Failure closes this fixed CrossQ family without
+a warmup/size/optimizer/delay/batch/reward/feature/step rescue grid. Historical
+mismatch disables interpretation and requires integrity investigation, rather than
+being mislabeled an algorithm-performance failure. Retired2024+ test stays isolated.
+
+A persistent2-unit study allowance shares the original150/130 project and150/170
+account guards,7200s inclusive allocation deadlines and central minute metering.
+CPU preference remains; actual Colab kernel and learned-smoke throughput must be
+verified before a screen. Profile any proposed GPU benefit/cost explicitly.
+Factory/frozen/runtime integration, shared starts and actual learned/replay/buffer
+acceptance remain before any allocation. This registration performs no training.

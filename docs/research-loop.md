@@ -10,8 +10,11 @@ Release published with14 verified asset hashes; cleanup removed13 exact
 duplicates/393.94MiB,938 protected files unchanged and strict post-cleanup report
 identical. Six differing snapshots and first failure retained. Next: separate
 CrossQ untrained audit passes: native geometry/default differences and immutable
-prediction/save-load evidence recorded without training/units. Next: fix the
-matched SAC/CrossQ performance protocol before factory/runtime integration.
+prediction/save-load evidence recorded without training/units. Fixed SAC/CrossQ
+50k protocol now preregistered: same26-symbol historical-control data, native
+package differences explicit,1000-update renorm warmup and4096-step smokes.
+Next: portable shared starts, factory/frozen/runtime integration and actual
+Colab learned-smoke acceptance before any performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.

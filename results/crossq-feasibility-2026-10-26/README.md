@@ -31,3 +31,18 @@ data/actions/reward, actual shared-start and replay/buffer acceptance, bounded
 Colab profiling/smokes and unchanged selected/final multi-seed/prospective gates.
 Treasury/VIX/GAE and prior failed families remain closed; retired test stays isolated.
 See [category guide](../../docs/crossq-feasibility.md) for source citations and limits.
+
+
+## Subsequent fixed performance registration
+
+The [separate protocol](../../configs/experiments/crossq_comparison_preregistration.json)
+now fixes a50k two-arm screen with4096-step learned smokes and a persistent2-unit
+allowance. [Binding checks](preregistration.json) validate original26-symbol data,
+preprocessing and historical SAC metadata/report hashes without model construction,
+optimization or allocation. CrossQ retains delay3/beta1=.5 versus SAC1/.9;
+renorm warmup1000 is fixed before learning and exercised by both smoke actor/
+critic paths. Same64 widths, original execution/reward and exact shared native
+SAC linear starts are required; this is an algorithm-package comparison. Nine
+tests check phase-sensitive expected updates, immutable parameters and strict
+absolute/relative/reproduction gates. Learned models/counters/replay and runtime
+integration are still pending. No new model return or credit use is claimed.

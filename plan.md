@@ -2461,3 +2461,19 @@ ledger39.47256169564856 unchanged. Not learned acceptance or throughput evidence
 Next: explicit fixed SAC/CrossQ performance protocol, then dedicated factory/
 frozen/runtime acceptance. No failed-family revival or retired data.
 [Audit](results/crossq-feasibility-2026-10-26/README.md).
+
+
+### SAC/CrossQ performance comparison preregistered — 2026-10-26
+
+Fixed two-arm50k seed11 comparison binds historical26-symbol data672a216… and
+original seven-field preprocessing. SAC historical source/reports hash-pinned;
+control reproduction required. Same64-wide Linear tensors/original SAC RNG, native
+normalization states, explicit CrossQ delay3/beta1=.5/no target versus SAC1/.9/
+tau.005. Fixed1000-update renorm warmup;4096-step smokes must exercise actual
+actor/critic renorm branches and saved optimizer/replay/counters. No feature/reward/
+execution change; selected/final relative and absolute holding/drawdown gates
+unchanged, no failed-family rescue. Two-unit persistent study budget within original
+150/130 and account150/170; kernel/CPU profiling, frozen/runtime acceptance before
+allocation. Nine spec/gate tests pass; actual data/reference hashes verified with
+no models/optimization or ledger changes. Next shared starts and integration.
+[Protocol](configs/experiments/crossq_comparison_preregistration.json).
