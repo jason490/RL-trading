@@ -320,3 +320,18 @@ proof. It revalidates archives, development reports, actual checkpoint/frozen
 restoration and shared initial records before writing acceptance. Full runtime
 profiles additionally enforce the fixed deadline projection. Actual Colab smokes
 and performance-report integration remain pending; no new allocation or return.
+
+
+## Fixed performance reporting
+
+`scripts/report_treasury_study.py` validates all three owned-cleaned full runs,
+source proofs, archive contents, restored checkpoints, unchanged matched holding
+paths and26-symbol reports. It applies the pinned historical legacy checkpoint/
+symbol reproduction tolerances and both-control selected/final promotion gates;
+it never reselects a checkpoint. Compact checkpoint curves feed a standalone
+interactive HTML report. Full/masked sampling counters must match exactly;
+legacy symbol/group deck coverage must match while its original2010 year/window
+locations may differ. Exact sampled-path hashing is an additional acceptance
+requirement being integrated before allocation; aggregate counters alone do not
+prove date/bound parity. No report contains new performance until actual Colab
+runs and learned acceptance complete.
