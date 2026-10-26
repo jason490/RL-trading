@@ -4,8 +4,8 @@ Current frontier (2026-10-26): [Treasury source feasibility](treasury-context.md
 source and matched payloads accepted with explicit2010 exclusions; three-arm
 model protocol, shared/frozen/request contracts and registered runner dispatch
 verified; runtime plans, fleet preflight and archive semantics implemented.
-Physical restoration and learned-smoke admission implemented; performance-report
-integration and actual Colab smoke acceptance remain.
+Physical restoration, fixed performance reporting, observed-path hashes and
+learned-smoke admission implemented; actual Colab smoke acceptance remains.
 [GAE screen](../results/gae-traces-2026-10-25/README.md) and
 [target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
 failed trace family stays closed. No active Colab sessions or robust winner.

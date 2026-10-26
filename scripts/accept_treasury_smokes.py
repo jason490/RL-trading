@@ -83,10 +83,13 @@ def accept(state_path, source_proof_path, data_root):
             bundle_id=m["bundle_id"],
             duration_seconds=m["duration_seconds"],
             initial=m["treasury_initialization"],
+            sampling_paths=m["treasury_sampling_paths"],
             metadata_sha256=checksum(paths[0]),
             python=m["python"],
             **restored,
         )
+    if records["full"]["sampling_paths"] != records["masked"]["sampling_paths"]:
+        raise ValueError("full/masked actual Treasury window/date paths must match")
     initial = validate_initial_records(
         {arm: r["initial"] for arm, r in records.items()}, smoke=True
     )

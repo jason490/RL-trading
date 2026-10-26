@@ -129,6 +129,7 @@ def report(state_path, source_path, root):
             restoration=restored,
             duration_seconds=m["duration_seconds"],
             sampling=m["sampling_diagnostics"],
+            sampling_paths=m["treasury_sampling_paths"],
             sampling_summary=validate_counts(
                 m["sampling_diagnostics"], "expanded", False, spec["steps_per_cell"]
             ),

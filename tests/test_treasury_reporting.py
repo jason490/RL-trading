@@ -129,7 +129,7 @@ def test_screen_report_refuses_running_fleet_before_reading_any_prices(tmp_path)
 def test_sampling_requires_filtered_pair_but_allows_original_year_locations():
     from rl_stocks.reporting.treasury_context import validate_sampling
 
-    values = {a: dict(sampling=dict(starts=4, history_groups={"A": 4}, year_counts={"2010": 4}))
+    values = {a: dict(sampling=dict(starts=4, history_groups={"A": 4}, year_counts={"2010": 4}), sampling_paths={"window": "same"})
               for a in protocol()["arms"]}
     values["legacy"]["sampling"]["year_counts"] = {"2011": 4}
     assert validate_sampling(values)["full_masked_counts_exact"]
@@ -139,4 +139,12 @@ def test_sampling_requires_filtered_pair_but_allows_original_year_locations():
     values["masked"] = copy.deepcopy(values["full"])
     values["legacy"]["sampling"]["history_groups"] = {"B": 4}
     with pytest.raises(ValueError, match="deck"):
+        validate_sampling(values)
+
+
+def test_same_year_counts_cannot_hide_changed_dates():
+    from rl_stocks.reporting.treasury_context import validate_sampling
+    values = {a: dict(sampling={}, sampling_paths={"window": a if a == "full" else "same"})
+              for a in protocol()["arms"]}
+    with pytest.raises(ValueError, match="window/date"):
         validate_sampling(values)

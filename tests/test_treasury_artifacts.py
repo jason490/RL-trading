@@ -45,6 +45,9 @@ def fixture(root, arm, monkeypatch, sources):
                study_protocol_sha256=checks.PROTOCOL_SHA256,
                treasury_shared_initialization=proof, treasury_initialization=initial,
                treasury_selected=deepcopy(final), treasury_final=final)
+    run["treasury_sampling_paths"] = dict(version=1, measured=True,
+        starts=run["sampling_diagnostics"]["starts"], transitions=512,
+        window_sha256="a" * 64, date_sha256="b" * 64)
     spec = deepcopy(checks.binding())
     run["dataset"] = spec["datasets"][arm]
     if arm != "legacy":

@@ -35,9 +35,11 @@ def validate_sampling(cells):
         raise ValueError("all three Treasury sampling records required")
     if canonical(cells["full"]["sampling"]) != canonical(cells["masked"]["sampling"]):
         raise ValueError("full/masked actual symbol/group/year sampling must match")
+    if canonical(cells["full"]["sampling_paths"]) != canonical(cells["masked"]["sampling_paths"]):
+        raise ValueError("full/masked actual window/date paths must match")
     common = [{k: v for k, v in cells[a]["sampling"].items() if k != "year_counts"}
               for a in preregistration()["arms"]]
     if any(canonical(row) != canonical(common[0]) for row in common[1:]):
         raise ValueError("fixed legacy/filtered symbol deck and group coverage required")
-    return dict(full_masked_counts_exact=True, legacy_symbol_group_coverage_exact=True,
+    return dict(full_masked_paths_exact=True, full_masked_counts_exact=True, legacy_symbol_group_coverage_exact=True,
                 legacy_year_locations_intentionally_different=True)

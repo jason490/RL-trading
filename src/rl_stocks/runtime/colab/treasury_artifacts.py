@@ -66,6 +66,8 @@ def validate_treasury_artifacts(read, prefix, folder, run, plan):
     if counts != json.loads(read(prefix + "training-execution.json")):
         raise RuntimeError("actual Treasury training execution sidecar mismatch")
     sampling = run["sampling_diagnostics"]
+    from rl_stocks.training.treasury_sampling import validate_paths
+    validate_paths(run["treasury_sampling_paths"], sampling, job["steps"])
     validate_counts(sampling, "expanded", smoke, job["steps"])
     years = validate_year_counts(sampling.get("year_counts", {}), sampling["starts"], job["steps"])
     if any(

@@ -331,7 +331,21 @@ symbol reproduction tolerances and both-control selected/final promotion gates;
 it never reselects a checkpoint. Compact checkpoint curves feed a standalone
 interactive HTML report. Full/masked sampling counters must match exactly;
 legacy symbol/group deck coverage must match while its original2010 year/window
-locations may differ. Exact sampled-path hashing is an additional acceptance
-requirement being integrated before allocation; aggregate counters alone do not
-prove date/bound parity. No report contains new performance until actual Colab
+locations may differ. Exact sampled-path hashes are also required by smoke acceptance and the full
+report; aggregate counters alone do not prove date/bound parity. No report contains new performance until actual Colab
 runs and learned acceptance complete.
+
+
+## Constant-space sampled-path evidence
+
+The dedicated Treasury runner attaches `SamplingPaths` after environment checkers
+and counter reset, before training. It observes successful reset/step calls once,
+without extra environment calls or random draws. A running SHA256 covers sampled
+symbol, episode/start index, eligible upper bound, original segment endpoints,
+start date and window length. Another covers every symbol/decision index and
+actual decision/execution date. Only two hashes and measured counts are retained.
+Archive validation binds counts to actual steps and sampling counters. Both smoke
+admission and the full report require exact full/masked path records; legacy path
+hashes intentionally need not match. These are observed training-path hashes,
+not future-return labels or policy inputs. Tests reject changed dates even when
+year counters agree. Actual Colab evidence is still pending.
