@@ -1,0 +1,93 @@
+{
+  "release": "https://github.com/jason490/RL-trading/releases/tag/treasury-context-2026-10-26",
+  "tag": "treasury-context-2026-10-26",
+  "prerelease": true,
+  "asset_count": 14,
+  "all_server_digests_and_sizes_match": true,
+  "assets": [
+    {
+      "name": "README.md",
+      "bytes": 1847,
+      "sha256": "d623e065fdca46a7b64cc04a9d148ea484d9d54fe18f0bebe3d7e902cb4421aa",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/README.md"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 1089,
+      "sha256": "cd39843c2631f39058b9b41a0b55c89e3b43fa0ab3d0c6daf03f4139bfb30ec6",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/SHA256SUMS"
+    },
+    {
+      "name": "compute.json",
+      "bytes": 580,
+      "sha256": "ffee60e751c11c2b94bba7e7cecdf43fc162de6e65a251d25418d7d59cf74162",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/compute.json"
+    },
+    {
+      "name": "learning-curves.tar.gz",
+      "bytes": 8778345,
+      "sha256": "ebbf15cdab698c2b68f16c616a43540e77b1c4001082c551ffdfdf4e2d6ce7b3",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/learning-curves.tar.gz"
+    },
+    {
+      "name": "model-catalog.json",
+      "bytes": 959672,
+      "sha256": "c1f8eee451273ae12cb9e9107e19511100c8b118fec680badc81b9ddbcb8b987",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/model-catalog.json"
+    },
+    {
+      "name": "protocol.json",
+      "bytes": 22246,
+      "sha256": "093533673d4014096956825875650e697f09bec8f3f91255803a52dd26f8ce2d",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/protocol.json"
+    },
+    {
+      "name": "research-models.tar.gz",
+      "bytes": 44723249,
+      "sha256": "e8ba4867e889529def48620f596f055dcba9cdcb9d17c3e8b7ddbae91267433b",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/research-models.tar.gz"
+    },
+    {
+      "name": "smoke-failure.json",
+      "bytes": 1281,
+      "sha256": "373f7df15c7ab2755cca0fc4b4e985b064818318e1d2f8aa29bbd27e39044b47",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/smoke-failure.json"
+    },
+    {
+      "name": "smokes.json",
+      "bytes": 6217,
+      "sha256": "26264fbe6e4f44e577bbeef372732ef7ebd4fbfb907d5d64924891655fd8c5c0",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/smokes.json"
+    },
+    {
+      "name": "summary.json",
+      "bytes": 562774,
+      "sha256": "2ae77ade7124e69d5851f6b79d1676b0a2bf065553c318166933776ebb5562f3",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/summary.json"
+    },
+    {
+      "name": "treasury-comparison.html",
+      "bytes": 4774017,
+      "sha256": "125f7d5d997d8679bcccd7ee78e9e8de874b205f8ef78cb31b35d8b6545bdb03",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/treasury-comparison.html"
+    },
+    {
+      "name": "validation-reports.tar.gz",
+      "bytes": 5090775,
+      "sha256": "31b040f0df5b4761ac1c55740c359d618db33e7a2e6f84368c074385aa000011",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/validation-reports.tar.gz"
+    },
+    {
+      "name": "validation.html",
+      "bytes": 1534,
+      "sha256": "89c645a02226d3067c9ef8b21a24d27b8e24a7f6948c8c88c1f781fcbc037daa",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/validation.html"
+    },
+    {
+      "name": "verification.json",
+      "bytes": 39202,
+      "sha256": "d806dd17c0ef43b1b2516fecc7cc341f4b43fa119a282fd323612850ec5f6463",
+      "url": "https://github.com/jason490/RL-trading/releases/download/treasury-context-2026-10-26/verification.json"
+    }
+  ]
+}

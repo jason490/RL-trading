@@ -44,7 +44,9 @@ account150/170 and two-unit study baseline remain intact.
 All raw/source/dataset and retrieved model evidence is retained. The standalone
 interactive comparison is prepared at
 `artifacts/public/treasury-context-2026-10-26/treasury-comparison.html`.
-Release publication/hash verification and duplicate cleanup remain pending.
+[Research prerelease](https://github.com/jason490/RL-trading/releases/tag/treasury-context-2026-10-26)
+is published; all14 asset sizes and server SHA256 digests match local copies.
+See [release verification](release-verification.json). Duplicate cleanup remains.
 The next distinct model proposal is CrossQ feasibility against a matched SAC
 control, separately preregistered; it has not been enabled or trained here.
 No robust/prospective winner or paper eligibility is claimed. Historical Treasury

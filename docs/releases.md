@@ -238,3 +238,16 @@ raw provider prices, replay files and private credentials are excluded. Static
 packaging checks cover all three arm labels and initializer bytes. This support
 is not a publication claim: actual screen reports and model restoration must pass,
 all owned sessions must stop, and release hashes must verify before cleanup.
+
+
+## Treasury context screen — 2026-10-26
+
+[Treasury research prerelease](https://github.com/jason490/RL-trading/releases/tag/treasury-context-2026-10-26)
+contains six accepted full/smoke frozen bundles, selected/final weights and exact
+Treasury initializer snapshots. All14 server digests and sizes match local files.
+Selected/final means: legacy19.62%/18.48%, masked22.75%/6.92%, full26.51%/−4.56%,
+holding30.60%. Fixed gates failed, no model promoted or paper eligible.
+`treasury-comparison.html` provides interactive curves/group comparisons;
+`learning-curves.tar.gz` preserves sparse JSONL/CSV/HTML progress. Raw bars/replay/
+credentials excluded. All seven allocations stopped;468 frozen predictions and
+historical reproduction pass. [Verified asset hashes](../results/treasury-context-2026-10-26/release-verification.json).
