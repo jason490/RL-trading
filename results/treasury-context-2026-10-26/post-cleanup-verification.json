@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "strict_report_revalidated": true,
+  "canonical_summary_sha256": "02c224ccf623da0d0e6689bd470fa4362d304b80733b21f022695153c50af016",
+  "summary_semantically_exact": true,
+  "protected_files_rehashed": 938,
+  "all_protected_files_unchanged": true,
+  "owned_cleanup_verified": true,
+  "historical_control_exact": true,
+  "full_masked_paths_exact": true,
+  "frozen_predictions": 234,
+  "temporary_validation_html_removed": true,
+  "new_training": false,
+  "optimizer_steps": 0,
+  "test_evaluated": false,
+  "objective_achieved": false,
+  "documentation_updates_after_integrity_check": [
+    {
+      "path": "results/treasury-context-2026-10-26/README.md",
+      "before_sha256": "2247e2625253714c869fc28903adc4178be43abc83d19e75d42534a18cbe3019",
+      "after_sha256": "7d1ec996ec929b6ad1f1caa6eead60ab325214367e4191c645fc466c4c2f7d41",
+      "purpose": "Replace pending-cleanup sentence with verified cleanup evidence links"
+    }
+  ]
+}

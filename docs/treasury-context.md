@@ -404,3 +404,14 @@ allocations including the retained first bookkeeping failure are stopped. Projec
 Models, source and raw data retained; release/hash verification and duplicate
 cleanup are next, followed by separate CrossQ feasibility. No retired test or
 prospective winner. [Results](../results/treasury-context-2026-10-26/README.md).
+
+
+## Publication and retention complete
+
+The research prerelease has14 verified server asset digests/sizes. Cleanup removes
+only13 proven duplicates/393.94MiB and keeps six differing snapshots plus the failed
+first attempt.938 protected files rehash unchanged. Strict post-cleanup report and
+actual-model restoration reproduce the canonical result exactly; published models,
+source/data, selected/final reports and ledger remain. See the linked results
+README and retention guide. No further Treasury training is scheduled; the next
+distinct research proposal is capacity-matched CrossQ feasibility.

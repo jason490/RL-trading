@@ -240,3 +240,23 @@ unchanged; all four differing checkpoint snapshots, intermediate weights, source
 data, arrays and original ledger remain. All four owned sessions stopped; no
 recovery needed. [Inventory](../results/gae-traces-2026-10-25/cleanup.json).
 Fixed trace family failed and remains closed; broader objective remains unmet.
+
+
+## Treasury context cleanup — 2026-10-26
+
+All seven owned CPU allocations were stopped before cleanup. Fourteen published
+asset sizes/server SHA256 digests match local files. Member-level retained-copy
+proofs permitted deletion of13 exact duplicates,413,070,892 logical bytes
+(393.94MiB); observed free space increased413,110,272 bytes.938 protected files
+rehash unchanged. Six differing checkpoint snapshots and the first failure archive
+remain. All selected/final weights, six frozen bundles, initializers, reports,
+source, raw Treasury data, datasets and original ledger stay retained.
+
+Strict report/archive/model restoration reruns after cleanup produce the identical
+canonical summary, including historical-control reproduction, full/masked paths
+and234 full-screen frozen predictions. A temporary rerender is removed while the
+verified public comparison HTML remains. The result README's subsequent cleanup
+link update is separately hashed as documentation, not a model/data mutation.
+[Inventory](../results/treasury-context-2026-10-26/cleanup.json),
+[post-cleanup verification](../results/treasury-context-2026-10-26/post-cleanup-verification.json),
+[research release](https://github.com/jason490/RL-trading/releases/tag/treasury-context-2026-10-26).

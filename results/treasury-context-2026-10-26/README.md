@@ -46,7 +46,11 @@ interactive comparison is prepared at
 `artifacts/public/treasury-context-2026-10-26/treasury-comparison.html`.
 [Research prerelease](https://github.com/jason490/RL-trading/releases/tag/treasury-context-2026-10-26)
 is published; all14 asset sizes and server SHA256 digests match local copies.
-See [release verification](release-verification.json). Duplicate cleanup remains.
+See [release verification](release-verification.json). Cleanup removed13 exact
+duplicates/393.94MiB while retaining six differing snapshots and the failed
+attempt. [Cleanup inventory](cleanup.json) rehashes938 protected files unchanged;
+[post-cleanup verification](post-cleanup-verification.json) reruns strict reports
+and restoration with an identical canonical summary.
 The next distinct model proposal is CrossQ feasibility against a matched SAC
 control, separately preregistered; it has not been enabled or trained here.
 No robust/prospective winner or paper eligibility is claimed. Historical Treasury

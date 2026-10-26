@@ -6,8 +6,10 @@ holding30.60%; legacy19.62%/18.48%, masked22.75%/6.92%. Historical control exact
 full/masked observed paths exact;468 frozen predictions across six accepted runs.
 First failed bookkeeping attempt retained and fixed. All seven owned allocations
 stopped; project39.472562/150, official account348.64/rate0/no assignments.
-Release published with14 verified asset hashes; duplicate cleanup remains, then
-separate CrossQ feasibility. Treasury/VIX/GAE and prior failed families stay closed.
+Release published with14 verified asset hashes; cleanup removed13 exact
+duplicates/393.94MiB,938 protected files unchanged and strict post-cleanup report
+identical. Six differing snapshots and first failure retained. Next: separate
+CrossQ feasibility. Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
 
