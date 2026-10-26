@@ -259,3 +259,15 @@ consumption baseline across smoke/screen controllers and retries. Allowances abo
 recorded alongside the original project150/130 safeguards. These helpers are tested
 but not yet connected to fleet admission; archive/report integration and actual
 Colab smokes remain required before a screen. No allocation occurred in this step.
+
+
+## Fixed remote job plans
+
+`runtime/colab/jobs.treasury_plan` creates version36 plans for exactly the three
+registered arms. Plan reconstruction validates dataset/schema/preprocessing,
+initializer, algorithm settings,512-transition seed11 smokes and100k-transition
+screens at10k cadence. Full plans require a same-protocol accepted runtime profile;
+smokes cannot accept one or expand to other seeds. Full/masked share their untrained
+initializer but retain distinct dataset identities. All jobs stay CPU and preserve
+the common execution/reward contract. Fleet admission and archive restoration are
+still pending: validated plans alone do not authorize a smoke-acceptance claim.

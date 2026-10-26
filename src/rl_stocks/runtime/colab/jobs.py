@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==35:
+    if plan.get('version')==36:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected=treasury_plan(**plan['treasury_study'],profile=plan.get('runtime_acceptance'))
+        except (KeyError,TypeError):
+            raise ValueError('malformed Treasury-study plan') from None
+        if canonical(plan)!=canonical(expected):
+            raise ValueError('unsupported Treasury-study plan')
+    elif plan.get('version')==35:
         from rl_stocks.core.contracts import canonical
         try:
             expected=gae_plan(**plan['gae_study'],profile=plan.get('runtime_acceptance'))
@@ -697,4 +705,43 @@ def gae_plan(arm,seed=11,smoke=False,profile=None):
         training_exposure_mode=job['training_exposure_mode'],evaluation_exposure_mode=job['evaluation_exposure_mode'],
         final_test=False,compact_checkpoints=job['compact_checkpoints'],milestones=job['milestones'],device=job['device'])
     if not smoke:plan['runtime_acceptance']=deepcopy(profile)
+    return plan
+
+
+def treasury_plan(arm, seed=11, smoke=False, profile=None):
+    from copy import deepcopy
+    from rl_stocks.training.treasury_context import validate_request, market_features
+    from rl_stocks.training.treasury_initialization import initialization_spec
+    from rl_stocks.training.treasury_spec import binding, BINDING_SHA256, PROTOCOL_SHA256
+    from rl_stocks.training.treasury_spec import parameters, protocol
+    from rl_stocks.training.treasury_runtime import validate_runtime_profile
+    spec = protocol()
+    proof = initialization_spec(arm, seed, smoke)
+    if smoke and profile is not None:
+        raise ValueError('Treasury smokes precede runtime acceptance')
+    if not smoke:
+        validate_runtime_profile(profile)
+    plan = alignment_plan('posthoc_unit', seed, smoke)
+    plan.pop('alignment_study')
+    plan.update(version=36, treasury_study=dict(arm=arm, seed=seed, smoke=smoke),
+                protocol_sha256=PROTOCOL_SHA256, binding_sha256=BINDING_SHA256,
+                initialization_contract=proof)
+    data = binding()
+    plan['dataset_contract'].update(identity=data['datasets'][arm],
+        market_features=market_features(arm), **data['dataset_contracts'][arm])
+    job = plan['jobs'][0]
+    job.update(study_protocol_sha256=PROTOCOL_SHA256, overrides=parameters(arm,smoke),
+               steps=spec['smoke_steps' if smoke else 'steps_per_cell'],
+               evaluation_every=spec['smoke_evaluation_every' if smoke else 'evaluation_every'])
+    job['milestones'] = [job['steps']]
+    validate_request(data['datasets'][arm], job['algorithm'], job['overrides'],
+        seed=seed, smoke=smoke, steps=job['steps'], every=job['evaluation_every'],
+        initialization=job['initialization'], policy_variant=job['policy_variant'],
+        observation_profile=job['observation_profile'], start_sampling=job['start_sampling'],
+        reward_kind=job.get('reward_kind','net_log_equity'), reward_scale=job['reward_scale'],
+        training_exposure_mode=job['training_exposure_mode'],
+        evaluation_exposure_mode=job['evaluation_exposure_mode'], final_test=False,
+        compact_checkpoints=job['compact_checkpoints'], milestones=job['milestones'], device=job['device'])
+    if not smoke:
+        plan['runtime_acceptance'] = deepcopy(profile)
     return plan
