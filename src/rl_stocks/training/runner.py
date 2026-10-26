@@ -398,6 +398,9 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         from rl_stocks.rl.registry.factory import CLASSES
         selected=CLASSES[algorithm].load(run/"best.zip",device=device)
         sampling_diagnostics=env.sampling_statistics()
+        if treasury_study:
+            from rl_stocks.training.treasury_sampling import validate_paths
+            treasury_sampling_snapshot=validate_paths(treasury_paths.snapshot(),sampling_diagnostics,model.num_timesteps)
         observation,_=env.reset(seed=seed)
         from rl_stocks.rl.registry.prediction import recurrent
         if recurrent(selected):
@@ -410,8 +413,7 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['sampling_diagnostics']=sampling_diagnostics
         metadata['training_execution']=env.execution_statistics()
         if treasury_study:
-            from rl_stocks.training.treasury_sampling import validate_paths
-            metadata['treasury_sampling_paths']=validate_paths(treasury_paths.snapshot(),sampling_diagnostics,model.num_timesteps)
+            metadata['treasury_sampling_paths']=treasury_sampling_snapshot
             metadata['treasury_final']=treasury_initialization.model_record(model)
             metadata['treasury_selected']=treasury_initialization.model_record(selected)
             treasury_initialization.validate_record(metadata['treasury_final'],treasury_arm,smoke,seed=seed)

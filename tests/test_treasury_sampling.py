@@ -50,3 +50,19 @@ def test_missing_or_forged_path_fields_reject(field):
     value.pop(field)
     with pytest.raises(ValueError):
         validate_paths(value, dict(starts=1, transitions=2), 2)
+
+
+def test_post_training_prediction_reset_does_not_contaminate_captured_paths():
+    env = Env()
+    audit = SamplingPaths(env)
+    env.reset(seed=11)
+    env.step(0.1)
+    env.step(-0.2)
+    counts = dict(starts=1, transitions=2)
+    captured = validate_paths(audit.snapshot(), counts, 2)
+    env.reset(seed=11)  # Runner's frozen-prediction probe, outside training.
+    assert captured['starts'] == 1 and captured['transitions'] == 2
+    assert audit.snapshot()['starts'] == 2
+    with pytest.raises(ValueError, match='counts'):
+        validate_paths(audit.snapshot(), counts, 2)
+    assert validate_paths(captured, counts, 2) == captured

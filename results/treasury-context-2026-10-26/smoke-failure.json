@@ -1,0 +1,31 @@
+{
+  "schema": "treasury-smoke-failure-v1",
+  "source_revision": "151f945c66561bf12ab71d5f059683685a620bed",
+  "fleet": "rl-stocks-fleet-c040ac1b4ff6",
+  "session": "rl-stocks-cpu-b5c9913919d4",
+  "task": "treasury-legacy-11-smoke",
+  "remote_python": "3.13.16",
+  "phase": "post_training_path_validation",
+  "error": "actual Treasury window/date counts required",
+  "cause": "Path audit sampled after frozen-prediction reset while training counters were captured before that reset",
+  "fix": "Capture both immutable counters and path snapshot before the inference-only reset",
+  "accepted": false,
+  "completed_cells": 0,
+  "cleanup_verified": true,
+  "active_assignments_after_cleanup": 0,
+  "project_consumed_before": 39.35100446767939,
+  "project_consumed_after": 39.36081681250267,
+  "incremental_estimated_units": 0.009812344823281194,
+  "official_balance_after": 348.74,
+  "official_rate_after": 0,
+  "study_baseline_preserved": true,
+  "archive": {
+    "path": ".runtime/treasury-source-v1/artifacts/colab/rl-stocks-cpu-b5c9913919d4/artifacts.tar.gz",
+    "bytes": 30133168,
+    "sha256": "8617c78ef4f0cb319f4b57eafe714a0777bf7c0e2cb9ac4a47b2fc9f376342ec"
+  },
+  "regression_tests": 40,
+  "test_evaluated": false,
+  "objective_achieved": false,
+  "retry_allocated": false
+}

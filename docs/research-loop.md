@@ -5,7 +5,9 @@ source and matched payloads accepted with explicit2010 exclusions; three-arm
 model protocol, shared/frozen/request contracts and registered runner dispatch
 verified; runtime plans, fleet preflight and archive semantics implemented.
 Physical restoration, fixed performance reporting, observed-path hashes and
-learned-smoke admission implemented; actual Colab smoke acceptance remains.
+learned-smoke admission implemented. First remote smoke failed post-training
+path bookkeeping; owned cleanup verified and regression fix tested. Reviewed
+corrected-source retry and actual smoke acceptance remain.
 [GAE screen](../results/gae-traces-2026-10-25/README.md) and
 [target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
 failed trace family stays closed. No active Colab sessions or robust winner.

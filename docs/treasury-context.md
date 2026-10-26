@@ -349,3 +349,23 @@ admission and the full report require exact full/masked path records; legacy pat
 hashes intentionally need not match. These are observed training-path hashes,
 not future-return labels or policy inputs. Tests reject changed dates even when
 year counters agree. Actual Colab evidence is still pending.
+
+
+## First remote smoke failure and reviewed fix
+
+The first legacy CPU smoke used Python3.13.16 and reached post-training model
+bookkeeping, then rejected path/count parity. The runner had captured aggregate
+training counters before its frozen-prediction probe reset, but read the path
+audit after that extra reset. No completed run or accepted result is claimed.
+The fix captures both snapshots at the same training boundary before the probe;
+a regression reproduces the extra reset and verifies immutable captured counts.
+Forty targeted sampling/request/archive tests pass.
+
+[Failure evidence](../results/treasury-context-2026-10-26/smoke-failure.json) pins
+the original source, retained30,133,168-byte archive and owned session. The controller
+verified shutdown; official balance348.74/rate0/no assignments afterward. Conservative
+project consumption39.36081681250267 includes approximately0.00981234482328 units
+for the failed attempt; the original2-unit study baseline stays39.35100446767939.
+The failed immutable source export and artifacts remain retained. A reviewed retry
+must use a fresh source export and state path, preserve the shared ledger/baseline,
+and run all three smokes from the corrected source. No automatic restart occurred.
