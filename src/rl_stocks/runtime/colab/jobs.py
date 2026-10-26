@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version')==36:
+    if plan.get('version') == 37:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected = crossq_plan(**plan['crossq_study'], profile=plan.get('runtime_acceptance'))
+        except (KeyError, TypeError):
+            raise ValueError('malformed CrossQ-study plan') from None
+        if canonical(plan) != canonical(expected):
+            raise ValueError('unsupported CrossQ-study plan')
+    elif plan.get('version')==36:
         from rl_stocks.core.contracts import canonical
         try:
             expected=treasury_plan(**plan['treasury_study'],profile=plan.get('runtime_acceptance'))
@@ -742,6 +750,35 @@ def treasury_plan(arm, seed=11, smoke=False, profile=None):
         training_exposure_mode=job['training_exposure_mode'],
         evaluation_exposure_mode=job['evaluation_exposure_mode'], final_test=False,
         compact_checkpoints=job['compact_checkpoints'], milestones=job['milestones'], device=job['device'])
+    if not smoke:
+        plan['runtime_acceptance'] = deepcopy(profile)
+    return plan
+
+
+def crossq_plan(arm, seed=11, smoke=False, profile=None):
+    """Fixed shared-start comparison; full allocation requires learned-smoke evidence."""
+    from copy import deepcopy
+    from rl_stocks.training.crossq_assets import BINDING_SHA256, initialization_spec
+    from rl_stocks.training.crossq_runtime import validate_runtime_profile
+    from rl_stocks.training.crossq_spec import PROTOCOL_SHA256, parameters, protocol
+
+    spec = protocol()
+    if (arm not in spec['arms'] or type(seed) is not int or seed not in (11, 23, 37)
+            or type(smoke) is not bool or smoke and seed != 11):
+        raise ValueError('fixed CrossQ arm/seed/phase required')
+    if smoke and profile is not None:
+        raise ValueError('CrossQ smokes precede runtime acceptance')
+    if not smoke:
+        validate_runtime_profile(profile)
+    steps = spec['smoke_steps' if smoke else 'steps_per_cell']
+    plan = sac_state_plan('execution_full', seed, smoke)
+    plan.pop('sac_state_study')
+    plan.update(version=37, crossq_study=dict(arm=arm, seed=seed, smoke=smoke),
+                protocol_sha256=PROTOCOL_SHA256, binding_sha256=BINDING_SHA256,
+                initialization_contract=initialization_spec(arm, seed, smoke))
+    plan['jobs'][0].update(algorithm=arm, steps=steps, milestones=[steps],
+                          evaluation_every=spec['smoke_evaluation_every' if smoke else 'evaluation_every'],
+                          study_protocol_sha256=PROTOCOL_SHA256, overrides=parameters(arm, smoke))
     if not smoke:
         plan['runtime_acceptance'] = deepcopy(profile)
     return plan

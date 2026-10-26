@@ -285,3 +285,27 @@ partial observer rows; finally removes hooks and closes the environment.
 no local learn/train/optimizer calls or Colab allocation occurred. Next fixed job/
 budget/fleet/archive/restoration and actual learned-smoke acceptance before any
 performance screen. Unregistered CrossQ training still rejects explicitly.
+
+
+## Colab job and runtime contracts
+
+Version37 fixes SAC/CrossQ to4096-step seed11 smokes with1024-step evaluation,
+then50000-step screens with10000-step evaluation. Both phases keep64×64 networks,
+legacy-uniform sampling, execution-state observations and the original26-symbol
+data contract. Exact reconstruction rejects added or changed job settings.
+
+Full plans require a checksummed smoke-acceptance profile. The actual acceptance
+file must establish restored selected/final models, final replay restoration, at
+least78 frozen predictions per arm, verified owned cleanup, shared Linear tensors
+and sampling RNG, and observed CrossQ actor/critic renorm calls. Runtime projection
+uses the historical SAC duration, the slower measured smoke ratio, a2× safety
+factor and1200 seconds for setup/retrieval within the7200-second deadline.
+
+The CrossQ study budget persists its original ledger baseline across controllers
+and retries, permits at most2 incremental units, and records the150-unit account
+floor. This supplements the original project/account guards; it does not reset
+them. Synthetic acceptance fixtures only test rejection logic and are not learned
+smoke evidence. Fleet enforcement, strict archive/physical restoration and actual
+Colab learned smoke acceptance remain pending; these contracts alone do not
+authorize a performance allocation.157 focused CrossQ/related job and runtime
+tests pass without local optimization or new compute.

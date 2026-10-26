@@ -2526,3 +2526,13 @@ curves retain audits; failures retain partial rows.185 focused regressions pass
 without local fitting or units. Next Colab jobs/budget/fleet, strict archives/
 restoration and actual learned smokes before full screens. Unregistered calls
 remain blocked. [Guide](docs/crossq-feasibility.md).
+
+
+### CrossQ fixed jobs and persistent study budget — 2026-10-26
+
+Version37 plans fix4096-step smokes and50000-step screens, full64 geometry and
+original SAC data/sampling. Smoke-backed runtime projection and persistent shared
+two-unit baseline reject missing restoration/replay/renorm/cleanup evidence and
+budget resets.157 focused regressions pass; no allocation or local fitting.
+Fleet integration and strict archive/physical restoration remain before actual
+learned smoke acceptance. [Guide](docs/crossq-feasibility.md).

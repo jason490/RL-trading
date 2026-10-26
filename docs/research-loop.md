@@ -22,8 +22,11 @@ old SAC/TQC defaults remain unchanged. Shared-start loader and actual Adam/
 normalization/replay contracts pass108 targeted checks using untrained/manual
 fixtures. Observed-forward audit and registered runner/metadata are now wired;
 185 targeted regressions pass without local fitting or new units. Unregistered
-CrossQ calls remain blocked. Next: fixed Colab jobs/budget/fleet, strict archive/
-restoration and actual learned smokes before performance allocation.
+CrossQ calls remain blocked. Fixed version37 jobs and persistent two-unit study-budget/runtime-profile
+contracts now pass157 focused regressions; smoke acceptance requires both actual
+restored models/replay, owned cleanup, shared Linear/RNG evidence and observed
+actor/critic renorm. Next: fleet integration, strict archive/restoration and
+actual learned smokes before performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
