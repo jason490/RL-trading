@@ -27,12 +27,13 @@ from rl_stocks.training.curves import curve_record,append_record,render_curve
 from rl_stocks.training.initialization import initialization_spec,initialize_policy
 
 class ValidationCheckpoint(BaseCallback):
-    def __init__(self,dataset,config,path,every,compact=False,target_steps=None,sampling_env=None,observation_profile="legacy",exposure_mode="unrestricted"):
+    def __init__(self,dataset,config,path,every,compact=False,target_steps=None,sampling_env=None,observation_profile="legacy",exposure_mode="unrestricted",normalization_audit=None,normalization_smoke=False):
         super().__init__();self.dataset=dataset;self.config=config;self.path=path
         self.every=every;self.best=-float("inf");self.history=[]
         self.best_step=None;self.best_phase=None;self.best_metrics={}
         self.compact=compact;self.target_steps=target_steps;self.started=time.monotonic()
         self.sampling_env=sampling_env;self.observation_profile=observation_profile;self.exposure_mode=exposure_mode
+        self.normalization_audit=normalization_audit;self.normalization_smoke=normalization_smoke
     def validate(self,phase='on_step'):
         if self.sampling_env is not None and self.sampling_env.start_sampler:
             (self.path/'training-sampling.json').write_text(json.dumps(self.sampling_env.sampling_statistics(),indent=2))
@@ -47,6 +48,12 @@ class ValidationCheckpoint(BaseCallback):
             value=self.model.logger.name_to_value.get(key)
             if value is not None and np.isfinite(float(value)):training[key]=float(value)
         item=curve_record(results,self.history,self.num_timesteps,phase,time.monotonic()-self.started,training)
+        if self.normalization_audit is not None:
+            from rl_stocks.training.crossq_forward_audit import validate_audit
+            from rl_stocks.rl.crossq.geometry import normalization_record
+            item['crossq_forward_audit']=validate_audit(self.normalization_audit.snapshot(),self.num_timesteps,phase,
+                self.normalization_smoke,normalization_record(self.model))
+            (self.path/'crossq-normalization-audit.json').write_text(json.dumps(item['crossq_forward_audit'],indent=2))
         self.history.append(item)
         append_record(self.path/'learning-curve.jsonl',item)
         render_curve(self.history,self.path/'learning-curve.html')
@@ -90,14 +97,23 @@ def git_state():
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
           evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native',reward_kind='net_log_equity',study_protocol_sha256=None,training_exposure_mode='unrestricted',evaluation_exposure_mode='unrestricted'):
-    if algorithm=='crossq':
-        raise ValueError('CrossQ training remains disabled until registered learned-state/runtime acceptance is connected')
+    from rl_stocks.training import crossq_context,crossq_initialization,crossq_state
+    crossq_study=crossq_context.validate_dispatch(algorithm,study_protocol_sha256)
     initialization_spec(initialization,algorithm)
     from rl_stocks.risk.exposure import execution_contract,filter_exposure
     action_execution=execution_contract(training_exposure_mode,evaluation_exposure_mode)
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
     dataset=read_dataset(dataset_path)
+    if crossq_study:
+        crossq_arm=crossq_context.validate_request(Path(dataset_path).name,algorithm,overrides,
+            seed=seed,smoke=smoke,steps=steps if steps is not None else 0,
+            every=evaluation_every if evaluation_every is not None else 0,
+            initialization=initialization,policy_variant=policy_variant,observation_profile=observation_profile,
+            start_sampling=start_sampling,reward_kind=reward_kind,reward_scale=reward_scale,
+            training_exposure_mode=training_exposure_mode,evaluation_exposure_mode=evaluation_exposure_mode,
+            final_test=final_test,compact_checkpoints=compact_checkpoints,milestones=milestones,device=device)
+        crossq_context.validate_payload(dataset)
     from rl_stocks.training import treasury_context,treasury_initialization
     treasury_study=treasury_context.validate_dispatch(dataset,study_protocol_sha256)
     if treasury_study:
@@ -144,6 +160,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         from rl_stocks.training.treasury_sampling import SamplingPaths
         treasury_paths=SamplingPaths(env)
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
+    if crossq_study:
+        crossq_shared=crossq_initialization.apply_initialization(model,crossq_arm,seed,smoke)
     if treasury_study:
         treasury_shared=treasury_initialization.apply_initialization(model,treasury_arm,seed,smoke)
     if vix_study:
@@ -245,6 +263,18 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm=='tqc':
         from rl_stocks.rl.tqc.geometry import model_spec as tqc_spec
         metadata['critic_geometry']=tqc_spec(model)
+    if crossq_study:
+        from rl_stocks.inference.bundle import checksum
+        from rl_stocks.training.crossq_assets import portable_path,BINDING_SHA256
+        snapshot=run/'crossq-initialization.npz'
+        shutil.copyfile(portable_path(crossq_shared['artifact_file']),snapshot)
+        if checksum(snapshot)!=crossq_shared['artifact_sha256']:
+            raise ValueError('CrossQ initialization snapshot checksum mismatch')
+        metadata['crossq_arm']=crossq_arm
+        metadata['crossq_binding_sha256']=BINDING_SHA256
+        metadata['crossq_shared_initialization']=crossq_shared
+        metadata['crossq_initialization']=crossq_state.model_record(model)
+        crossq_state.validate_record(metadata['crossq_initialization'],crossq_arm,smoke,initial=True)
     if treasury_study:
         from rl_stocks.inference.bundle import checksum
         snapshot=run/'treasury-initialization.npz'
@@ -379,13 +409,18 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata['history_augmentation']=dataset['manifest']['history_augmentation']
         metadata['history_protocol_sha256']=PROTOCOL_SHA256
     (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
-    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env,observation_profile=observation_profile,exposure_mode=evaluation_exposure_mode)
+    normalization_audit=None
+    start=time.monotonic();callback=ValidationCheckpoint(dataset,config,run,every,compact_checkpoints,steps,sampling_env=env,observation_profile=observation_profile,exposure_mode=evaluation_exposure_mode,normalization_smoke=smoke)
     callbacks=callback
     if gae_study:
         from rl_stocks.training.gae_rollouts import GaeRolloutAudit
         gae_audit=GaeRolloutAudit(run,gae_arm,smoke)
         callbacks=[callback,gae_audit]
     try:
+        if crossq_study and crossq_arm=='crossq':
+            from rl_stocks.training.crossq_forward_audit import NormalizationAudit
+            normalization_audit=NormalizationAudit(model)
+            callback.normalization_audit=normalization_audit
         previous=0
         for milestone in milestones:
             model.learn(total_timesteps=milestone-previous,callback=callbacks,reset_num_timesteps=previous==0)
@@ -414,6 +449,22 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         metadata['sampling_diagnostics']=sampling_diagnostics
         metadata['training_execution']=env.execution_statistics()
+        if crossq_study:
+            from rl_stocks.training.crossq_replay import replay_record
+            metadata['crossq_final']=crossq_state.model_record(model)
+            metadata['crossq_selected']=crossq_state.model_record(selected)
+            metadata['crossq_selected_phase']=callback.best_phase
+            crossq_state.validate_record(metadata['crossq_final'],crossq_arm,smoke)
+            crossq_state.validate_record(metadata['crossq_selected'],crossq_arm,smoke,phase=callback.best_phase)
+            metadata['crossq_replay']=replay_record(model.replay_buffer,model.num_timesteps)
+            (run/'crossq-replay-state.json').write_text(json.dumps(metadata['crossq_replay'],indent=2))
+            if normalization_audit is not None:
+                from rl_stocks.training.crossq_forward_audit import validate_audit
+                from rl_stocks.rl.crossq.geometry import model_spec,normalization_record
+                metadata['crossq_forward_audit']=validate_audit(normalization_audit.snapshot(),model.num_timesteps,
+                    'post_update',smoke,metadata['crossq_final']['normalization'])
+                metadata['crossq_geometry']=model_spec(selected)
+                metadata['crossq_normalization']=normalization_record(selected)
         if treasury_study:
             metadata['treasury_sampling_paths']=treasury_sampling_snapshot
             metadata['treasury_final']=treasury_initialization.model_record(model)
@@ -493,7 +544,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         return run,bundle
     except BaseException as exc:
         metadata.update(status="failed",failure_type=type(exc).__name__,actual_steps=model.num_timesteps,duration_seconds=time.monotonic()-start)
+        if normalization_audit is not None:
+            metadata['crossq_partial_forward_audit']=dict(failed=True,layers=normalization_audit.rows,
+                pending=list(normalization_audit.pending))
         (run/"metadata.json").write_text(json.dumps(metadata,indent=2))
         model.save(run/"interrupted")
         raise
-    finally:env.close()
+    finally:
+        if normalization_audit is not None:normalization_audit.close()
+        env.close()

@@ -2514,3 +2514,15 @@ true terminals from time limits.108 targeted regressions pass using untrained/
 manual serialization fixtures, no local optimization or units. Observed-forward
 audit, registered runner and Colab runtime/archive acceptance remain before
 allocation; generic CrossQ training remains blocked. [Guide](docs/crossq-feasibility.md).
+
+
+### CrossQ registered runner and observed-forward evidence wired — 2026-10-26
+
+Explicit request/data checks precede construction; pinned starts, phase-sensitive
+model/optimizer/replay evidence and selected frozen normalization are recorded.
+Native-source-pinned hooks observe train/eval/warmup-condition calls, reject any
+evaluation mutation or counter drift and remove handles on cleanup. Checkpoint
+curves retain audits; failures retain partial rows.185 focused regressions pass
+without local fitting or units. Next Colab jobs/budget/fleet, strict archives/
+restoration and actual learned smokes before full screens. Unregistered calls
+remain blocked. [Guide](docs/crossq-feasibility.md).

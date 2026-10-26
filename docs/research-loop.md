@@ -20,8 +20,10 @@ verification now pass; portable asset validation survives live-registry changes.
 Restricted CrossQ factory and immutable frozen normalization now implemented;
 old SAC/TQC defaults remain unchanged. Shared-start loader and actual Adam/
 normalization/replay contracts pass108 targeted checks using untrained/manual
-fixtures. Generic training stays blocked. Next: observed-forward audit, registered
-runner dispatch/metadata and Colab runtime/archive acceptance before allocation.
+fixtures. Observed-forward audit and registered runner/metadata are now wired;
+185 targeted regressions pass without local fitting or new units. Unregistered
+CrossQ calls remain blocked. Next: fixed Colab jobs/budget/fleet, strict archive/
+restoration and actual learned smokes before performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.

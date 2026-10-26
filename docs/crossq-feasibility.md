@@ -1,8 +1,9 @@
 # CrossQ implementation feasibility
 
 The initial untrained source/serialization audit passes, and the separate fixed
-performance protocol below is now preregistered. CrossQ now has restricted factory/frozen support. Generic training remains
-blocked until registered learned-state/runtime acceptance is connected.
+performance protocol below is now preregistered. CrossQ has restricted factory/frozen support and a registered runner path.
+Unregistered calls remain blocked; actual Colab runtime/archive acceptance is
+still required before performance allocation.
 Treasury/VIX/GAE failures stay closed; no rate inputs or reward changes are mixed
 into this algorithm proposal. Existing project150/130 and account150/170 safeguards
 continue, with original usage39.472562 units after Treasury cleanup.
@@ -253,3 +254,34 @@ sampled for optimization. These are serialization/integrity checks, not actual
 learned acceptance. Next connect observed normalization-forward evidence,
 registered requests/runner metadata, Colab jobs/budgets/archive restoration and
 actual learned smokes. Generic CrossQ training stays blocked; no units consumed.
+
+
+## Observed forwards and registered runner wired
+
+`training/crossq_forward_audit.py` pins the installed native normalization source
+hash and attaches read-only pre/post forward hooks before learning. It counts
+actual training/evaluation calls and calls whose live pre-forward counter satisfies
+the strict renorm condition. Every training call must increment its counter once;
+evaluation must preserve all normalization tensors. Replaced modules, changed
+forward implementation, counter drift and ignored evaluation mutation fail closed.
+The hooks neither draw RNG nor alter outputs, and are removed in runner cleanup.
+Native checkpoint save/load does not serialize observer hooks.
+
+The validator binds observed layer identities/counters to actual saved normalization
+and phase-sensitive expected Adam geometry. Local tests execute real evaluation
+forwards only; warmup-positive observer fixtures explicitly increment counters by
+hand and do not fit normalization. Actual learned forward/branch evidence remains
+mandatory in Colab smokes.
+
+`training/crossq_context.py` rejects wrong source, algorithm, seed/phase, settings,
+steps/cadence/milestone, reward, execution or initial CPU request before environment/
+model creation. The runner loads pinned starts, copies initializer bytes into the
+run and records initial/selected/final model/optimizer proofs with selected phase.
+CrossQ curves/checkpoints carry observed audits; final metadata includes replay
+hashes and actual selected normalization for frozen inference. Failure preserves
+partial observer rows; finally removes hooks and closes the environment.
+
+185 focused new/prior regressions pass. Registered runner code is connected, but
+no local learn/train/optimizer calls or Colab allocation occurred. Next fixed job/
+budget/fleet/archive/restoration and actual learned-smoke acceptance before any
+performance screen. Unregistered CrossQ training still rejects explicitly.

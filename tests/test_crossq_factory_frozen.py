@@ -110,7 +110,7 @@ def test_mutating_prediction_is_rejected_and_running_state_restored(tmp_path, mo
 def test_generic_training_stays_blocked_before_environment_or_model(monkeypatch):
     from rl_stocks.training import runner
     monkeypatch.setattr(runner, 'read_dataset', lambda *a: pytest.fail('read before guard'))
-    with pytest.raises(ValueError, match='remains disabled'):
+    with pytest.raises(ValueError, match='explicit registered'):
         runner.train('missing', 'crossq')
 
 

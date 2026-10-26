@@ -83,3 +83,15 @@ save/load fixtures are manually populated, with optimization forbidden; these
 are not learned acceptance. Generic training remains blocked pending observed
 forward evidence, registered runner and Colab runtime/archive integration. No
 new return or Colab charge is claimed.
+
+
+## Registered runner and observed-forward audit connected
+
+The request/data validator fixes all preregistered choices before construction;
+unregistered CrossQ dispatch rejects. The runner loads shared starts and retains
+initial/selected/final optimizer/normalization records, selected phase, initializer
+bytes, final replay hashes and observed forward audits in checkpoint curves.
+Evaluation mutation and counter/implementation drift fail closed; hooks close on
+success/failure.185 targeted checks pass, with real eval-only and manual counter
+fixtures; no local fitting, allocation or new returns. Next Colab job/budget/fleet,
+archive/restoration contracts and actual learned smoke acceptance.
