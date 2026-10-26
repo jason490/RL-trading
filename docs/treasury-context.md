@@ -387,3 +387,20 @@ assignments. The smoke-based screen projection passes the fixed7200-second
 allocation limit. These are pipeline acceptance runs, not performance evidence;
 no robust return or promotion is claimed. The next authorized operation is the
 fixed three-arm100k seed11 screen using the same immutable source and study budget.
+
+
+### Treasury screen complete — failed, 2026-10-26
+
+Three CPU100k seed11 arms complete after corrected-source learned smokes. Selected/
+final means: legacy19.624533%/18.484355%, masked22.752618%/6.920774%, Treasury
+full26.509251%/−4.558537%, versus holding30.601851%. Both-control and absolute
+selected/final gates fail; no Treasury confirmation, extension or rescue grid.
+Legacy's11 checkpoints and52 selected/final symbol returns reproduce exactly;
+full/masked actual sampled paths match. Six accepted runs pass468 frozen sequence
+predictions and actual saved Adam/model restoration. Independent156-report
+aggregates agree within5.56e−17;179 protected files unchanged. Seven owned
+allocations including the retained first bookkeeping failure are stopped. Project
+39.472562/150; study0.121557 units; official account348.64/rate0/no assignments.
+Models, source and raw data retained; release/hash verification and duplicate
+cleanup are next, followed by separate CrossQ feasibility. No retired test or
+prospective winner. [Results](../results/treasury-context-2026-10-26/README.md).

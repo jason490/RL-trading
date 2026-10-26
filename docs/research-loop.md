@@ -1,19 +1,14 @@
 # Bounded autonomous research
 
-Current frontier (2026-10-26): [Treasury source feasibility](treasury-context.md),
-source and matched payloads accepted with explicit2010 exclusions; three-arm
-model protocol, shared/frozen/request contracts and registered runner dispatch
-verified; runtime plans, fleet preflight and archive semantics implemented.
-Physical restoration, fixed performance reporting, observed-path hashes and
-learned-smoke admission complete. Corrected-source three-arm Colab smokes pass
-actual restoration,234 frozen predictions and paired exact paths; all sessions
-stopped. First failed bookkeeping attempt retained. Fixed three-arm100k seed11
-screen is running from corrected source55044a5; controller state is
-`.runtime/treasury-screen-state.json`, immutable export `.runtime/treasury-source-v2`.
-[GAE screen](../results/gae-traces-2026-10-25/README.md) and
-[target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
-failed trace family stays closed. No robust winner. Poll the existing screen
-controller handle and compact retained status; do not duplicate active jobs.
+Current frontier (2026-10-26): [Treasury screen](../results/treasury-context-2026-10-26/README.md)
+completed and failed its fixed gates. Full selected26.51%/final−4.56% versus
+holding30.60%; legacy19.62%/18.48%, masked22.75%/6.92%. Historical control exact,
+full/masked observed paths exact;468 frozen predictions across six accepted runs.
+First failed bookkeeping attempt retained and fixed. All seven owned allocations
+stopped; project39.472562/150, official account348.64/rate0/no assignments.
+Release publication/hash verification and duplicate cleanup remain next; then
+separate CrossQ feasibility. Treasury/VIX/GAE and prior failed families stay closed.
+No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
 
 The user authorized continuing research toward returns comparable to or better

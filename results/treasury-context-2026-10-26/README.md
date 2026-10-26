@@ -1,10 +1,56 @@
-# Treasury readiness-matched payloads — accepted, training disabled
+# Treasury context screen — failed
 
-Masked/full datasets are built, immutably stored, reloaded and exactly reconstructed.
-Independent row/normalizer verification passes. No model is constructed or trained;
-this is preprocessing/eligibility acceptance, not a return result. A separate
-fixed training experiment remains required. The generic trainer explicitly rejects
-Treasury inputs until that registration is implemented.
+The fixed seed11 three-arm100k RecurrentPPO screen completed in Colab CPU.
+Treasury inputs improved the selected checkpoint but deteriorated with further
+training and failed the preregistered selected/final gates. This closes the fixed
+Treasury feature family; no confirmation, extra steps or maturity/lag/model/reward
+rescue is authorized by this result. Reused2021–2023 development data is not an
+independent test; retired2024+ data stays unopened.
+
+| Arm | Selected return | Final return |
+| --- | ---: | ---: |
+| Original legacy | 19.62% | 18.48% |
+| Readiness-matched masked | 22.75% | 6.92% |
+| Treasury full | 26.51% | −4.56% |
+| Matched holding | 30.60% | 30.60% |
+
+Full selects10k; masked20k; legacy80k. Full's selected stock/ETF means are30.13%/
+6.58%, versus holding32.63%/19.47%. Final means fall to−3.72%/−9.19%. Final full
+lags legacy23.04pp and masked11.48pp, with worse mean drawdown. Two of three
+reporting-only declining stocks have both positive policy return and short P&L
+at selection; zero of three do at final weights. This is not robust shorting.
+
+## Verification and evidence
+
+- [Fixed summary](summary.json): all checkpoint curves, group/short-side metrics,
+  source identities, model restoration and exact gate decisions.
+- [Independent verification](verification.json):156 selected/final symbol reports
+  reaggregated with maximum error5.56e−17;179 protected files unchanged.
+- [Learned smokes](smokes.json): three512-transition runs;234 exact frozen
+  predictions. Full screens add234, totaling468 across six accepted runs.
+- Legacy reproduces all11 historical checkpoint scores and both26-symbol reports
+  exactly. Full/masked initial tensors/RNG, observed date/window paths, holding
+  prices, normalized contracts and execution assumptions pass.
+- [First failure](smoke-failure.json) is retained: post-training audit snapshot
+  included an inference reset; reviewed fix precedes all accepted runs.
+
+Clean training source55044a5; default Colab Python3.13.16 verified before setup.
+All seven owned allocations, including the first failure, are stopped. Conservative
+project usage39.47256169564856/150, remaining110.52743830435145; complete Treasury
+study0.12155722796917 units including setup, idle, downloads, failure and retry.
+Official account348.64, rate0, no active assignments. Original project150/130,
+account150/170 and two-unit study baseline remain intact.
+
+All raw/source/dataset and retrieved model evidence is retained. The standalone
+interactive comparison is prepared at
+`artifacts/public/treasury-context-2026-10-26/treasury-comparison.html`.
+Release publication/hash verification and duplicate cleanup remain pending.
+The next distinct model proposal is CrossQ feasibility against a matched SAC
+control, separately preregistered; it has not been enabled or trained here.
+No robust/prospective winner or paper eligibility is claimed. Historical Treasury
+publication vintages and historical universe/delisting coverage remain unverified.
+
+## Preprocessing evidence completed before training
 
 ## Why the training history changes
 
@@ -30,10 +76,10 @@ episodes with the same eligibility, episode keys and original symbol order.
 
 The exclusions total16,280 rows and affect2010 only:2010 rows decrease22,330→6,050.
 Every2011–2020 row remains. This history change must not be credited to Treasury
-information; a future comparison needs both an original legacy control and a
+information; the completed comparison therefore includes both an original legacy control and a
 readiness-matched masked control. Both Treasury payloads have225,834 eligible
 512-step starts, identical bounds and all four ETF instruments. Group sampling
-remains unchanged when a future experiment is registered.
+remains unchanged in the registered model experiment.
 
 ## Immutable datasets and preprocessing
 
@@ -79,38 +125,19 @@ alter training statistics, all-validation readiness, duplicate eligible segments
 source immutability and trainer rejection before model/environment construction.
 No local optimizer step or policy initialization occurs.
 
-## Runtime and retention
+## Preprocessing runtime and retention
 
 The local preprocessing worker completed in68.11seconds, within600s; its handle
 exited0 and terminal journal is `.runtime/treasury-payload-progress.json`.
 No temporary progress file remains. Source originals, receipts, original dataset,
 new datasets, rules and original project ledger are retained. Large datasets stay
 under ignored `data/datasets/`; provider responses stay under `data/context/treasury/`.
-No provider request, Colab runtime, broker order or retired-test access occurred.
-Cumulative project usage remains39.351004/150 units; no new model return exists.
-
-## Next acceptance boundary
-
-Register one legacy/masked/full Treasury information comparison with fixed
-algorithm/reward/actions/costs, shared original tensors/RNG and zero new input
-columns. Require original-control reproduction, exact masked/full sampling,
-actual Colab smoke restoration/frozen parity and budget-backed deadline projection
-before100k screens. Only passing selected/final stock/ETF/median/drawdown gates
-permit seeds11/23/37 and prospective confirmation. Model-research alternatives
-such as CrossQ stay separate; this preprocessing result does not register them.
+This preprocessing stage made no provider request, Colab allocation, broker order
+or retired-test access; subsequent model usage and results are recorded above.
 
 
-The [three-arm model protocol](../../configs/experiments/treasury_context_preregistration.json)
-and [binding](../../configs/experiments/treasury_context_binding.json) are now fixed.
-Original/reusable zero-column initializers still need dedicated validation and
-runtime integration. This registration does not enable generic training or
-allocate Colab; no policy performance result exists.
-
-
-[Actual asset/data contracts](contracts.json) now pass: six untrained archives,
-three actual datasets, independent common/zero-column mapping and original RNG
-identity.108 focused checks cover request guards, frozen recurrence/masks, actual
-empty-Adam ownership and manual serialization with prior-study regressions.
-The read-only acceptance process creates no models and leaves RNG/ledger intact.
-Dedicated runner/runtime/archive integration and actual Colab learned smokes remain
-before performance screens; no new return or units are claimed.
+[Asset/data contracts](contracts.json), [payload record](payloads.json) and
+[payload verification](payload-verification.json) preserve the independent
+preprocessing and untrained21/23-input initializer acceptance. Manual Adam
+serialization fixtures alone were not learned acceptance; actual Colab smokes
+and full saved-model verification above supply that evidence.
