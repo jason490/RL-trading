@@ -25,8 +25,11 @@ fixtures. Observed-forward audit and registered runner/metadata are now wired;
 CrossQ calls remain blocked. Fixed version37 jobs and persistent two-unit study-budget/runtime-profile
 contracts now pass157 focused regressions; smoke acceptance requires both actual
 restored models/replay, owned cleanup, shared Linear/RNG evidence and observed
-actor/critic renorm. Next: fleet integration, strict archive/restoration and
-actual learned smokes before performance allocation.
+actor/critic renorm. Fleet/worker preflight, shared allowance and account-floor routing now integrate
+version37. Strict archive semantics bind initial/selected/final state, selected
+normalization, observed checkpoint forwards, replay sidecars and frozen model
+bytes. Next: physical model/replay restoration and actual learned smokes before
+performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.

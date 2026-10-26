@@ -83,6 +83,17 @@ def validate_tasks(tasks,root):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
+        if plan.get('version') == 37:
+            from rl_stocks.data.generation.datasets import read_dataset
+            from rl_stocks.training.crossq_context import validate_payload
+            from rl_stocks.training.crossq_assets import validate_assets
+            from rl_stocks.training.crossq_runtime import validate_runtime_profile
+            if not plan['crossq_study']['smoke']:
+                validate_runtime_profile(plan['runtime_acceptance'], root)
+            validate_assets()
+            if dataset.name != plan['dataset_contract']['identity']:
+                raise ValueError('CrossQ dataset identity mismatch')
+            validate_payload(read_dataset(dataset))
         if plan.get('version')==36:
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.treasury_context import validate_payload
@@ -259,6 +270,11 @@ class Fleet:
         self.root=Path(root).resolve();self.cli=cli;self.tasks=validate_tasks(tasks,self.root)
         self.concurrency=concurrency;self.state_path=Path(state_path)
         self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json')
+        if any(t['plan'].get('version') == 37 for t in self.tasks):
+            if any(t['plan'].get('version') != 37 for t in self.tasks):
+                raise ValueError('CrossQ study requires its own shared-budget fleet')
+            from rl_stocks.training.crossq_runtime import shared_study_budget
+            study_limit, study_start = shared_study_budget(self.budget.ledger, study_limit, study_start)
         if any(t['plan'].get('version')==36 for t in self.tasks):
             if any(t['plan'].get('version')!=36 for t in self.tasks):
                 raise ValueError('Treasury study requires its own shared-budget fleet')
@@ -492,7 +508,7 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
                 raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
             if any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):

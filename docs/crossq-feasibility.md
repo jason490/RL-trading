@@ -309,3 +309,24 @@ smoke evidence. Fleet enforcement, strict archive/physical restoration and actua
 Colab learned smoke acceptance remain pending; these contracts alone do not
 authorize a performance allocation.157 focused CrossQ/related job and runtime
 tests pass without local optimization or new compute.
+
+
+## Fleet and archive enforcement
+
+The fleet and remote worker now validate pinned CrossQ assets and the original
+dataset before training. Full fleet preflight reopens the checksummed acceptance
+file; mixed study families cannot share the CrossQ allowance. Version37 uses the
+existing aggregate metering, account170 teardown guard and owned-session cleanup.
+Temporary-ledger tests verify that projected operation costs trigger a persistent
+budget stop across controller retries. No sessions are allocated by these tests.
+
+Archive validation now includes version37 in the common dataset, configuration,
+checkpoint, curve and frozen-checksum contracts. CrossQ-specific checks validate
+actual initial/selected/final state records, pinned initializer bytes, unrestricted
+execution counts, all26 development reports, exact selected/final phase identities,
+final replay sidecar presence, and observed forward audits. Selected normalization
+is bound to its saved state and its exact checkpoint audit; SAC controls cannot
+claim CrossQ normalization. Both model archives and final replay are mandatory.
+Manual serialization fixtures test these semantics without optimization. These
+checks do not deserialize model/replay bytes: independent physical restoration,
+frozen prediction parity and actual learned Colab smoke acceptance remain pending.

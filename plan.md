@@ -2536,3 +2536,13 @@ two-unit baseline reject missing restoration/replay/renorm/cleanup evidence and
 budget resets.157 focused regressions pass; no allocation or local fitting.
 Fleet integration and strict archive/physical restoration remain before actual
 learned smoke acceptance. [Guide](docs/crossq-feasibility.md).
+
+
+### CrossQ fleet and archive semantics connected — 2026-10-26
+
+Version37 routes through pinned data/assets, persistent shared study budget and
+account-floor checks. Archive validation binds initializer, phase-sensitive state,
+selected normalization, actual observed checkpoint audits, final replay sidecar
+and frozen model bytes. Temporary-ledger retry/stop tests and manual serialization
+fixtures require no learning or allocation. Physical model/replay restoration and
+actual learned smokes remain before performance allocation.
