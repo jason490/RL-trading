@@ -369,3 +369,21 @@ for the failed attempt; the original2-unit study baseline stays39.35100446767939
 The failed immutable source export and artifacts remain retained. A reviewed retry
 must use a fresh source export and state path, preserve the shared ledger/baseline,
 and run all three smokes from the corrected source. No automatic restart occurred.
+
+
+## Accepted corrected-source Colab smokes
+
+[Smoke evidence](../results/treasury-context-2026-10-26/smokes.json) records three
+CPU512-transition seed11 runs from clean source55044a5. Python3.13.16 was checked
+before dependency synchronization. Actual selected/latest/frozen weights and Adam
+states restored; all234 recurrent prefix predictions and resets match exactly.
+Shared initial records, original RNG and mapped zero columns pass. Full/masked
+observed window/date hashes match exactly; legacy intentionally differs.
+
+All three owned sessions are verified stopped and artifacts retained. Conservative
+project consumption39.39214599456191 includes the failed first attempt and about
+0.04114152688252 total Treasury-study units. Official account348.71/rate0/zero
+assignments. The smoke-based screen projection passes the fixed7200-second
+allocation limit. These are pipeline acceptance runs, not performance evidence;
+no robust return or promotion is claimed. The next authorized operation is the
+fixed three-arm100k seed11 screen using the same immutable source and study budget.
