@@ -3,10 +3,10 @@ import importlib
 import math
 import numpy as np
 from stable_baselines3 import PPO,SAC,TD3
-from sb3_contrib import RecurrentPPO,TQC
+from sb3_contrib import RecurrentPPO,TQC,CrossQ
 from stable_baselines3.common.noise import NormalActionNoise
 
-CLASSES={"ppo":PPO,"sac":SAC,"tqc":TQC,"td3":TD3,"recurrent_ppo":RecurrentPPO,"hybrid_recurrent_ppo":RecurrentPPO,"squashed_recurrent_ppo":RecurrentPPO}
+CLASSES={"crossq":CrossQ,"ppo":PPO,"sac":SAC,"tqc":TQC,"td3":TD3,"recurrent_ppo":RecurrentPPO,"hybrid_recurrent_ppo":RecurrentPPO,"squashed_recurrent_ppo":RecurrentPPO}
 ON_POLICY=('ppo','recurrent_ppo','hybrid_recurrent_ppo','squashed_recurrent_ppo')
 
 def resolved_parameters(algorithm,smoke=False,overrides=None,policy_variant="native",market_features=None):
@@ -16,12 +16,15 @@ def resolved_parameters(algorithm,smoke=False,overrides=None,policy_variant="nat
     if policy_variant!='native' and algorithm!='ppo':raise ValueError('branch architecture requires PPO')
     config_algorithm="recurrent_ppo" if algorithm in ("hybrid_recurrent_ppo","squashed_recurrent_ppo") else algorithm
     params=importlib.import_module(f"rl_stocks.rl.{config_algorithm}.config").parameters(smoke)
-    policy_defaults={**params.get("policy_kwargs",{}),"net_arch":[32,32] if smoke else [64,64]}
+    policy_defaults={**params.get("policy_kwargs",{}),"net_arch":[64,64] if algorithm=="crossq" else [32,32] if smoke else [64,64]}
     params.update(learning_rate=3e-4,gamma=.99,policy_kwargs=policy_defaults)
     if algorithm in ('recurrent_ppo','hybrid_recurrent_ppo','squashed_recurrent_ppo'):
         params['policy_kwargs'].update(lstm_hidden_size=32 if smoke else 64,n_lstm_layers=1,
                                       shared_lstm=False,enable_critic_lstm=True)
     params.update(deepcopy(overrides or {}))
+    if algorithm=="crossq":
+        from rl_stocks.rl.crossq.config import validate_parameters
+        validate_parameters(params,smoke)
     if algorithm=="tqc":
         params["policy_kwargs"]={**policy_defaults,**params["policy_kwargs"]}
         from rl_stocks.rl.tqc.config import validate_parameters

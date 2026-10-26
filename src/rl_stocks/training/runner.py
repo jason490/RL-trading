@@ -90,6 +90,8 @@ def git_state():
 
 def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=True,steps=None,final_test=False,overrides=None,
           evaluation_every=None,compact_checkpoints=False,milestones=None,reward_scale=1.,initialization='standard',start_sampling='legacy_uniform',observation_profile='legacy',policy_variant='native',reward_kind='net_log_equity',study_protocol_sha256=None,training_exposure_mode='unrestricted',evaluation_exposure_mode='unrestricted'):
+    if algorithm=='crossq':
+        raise ValueError('CrossQ training remains disabled until registered learned-state/runtime acceptance is connected')
     initialization_spec(initialization,algorithm)
     from rl_stocks.risk.exposure import execution_contract,filter_exposure
     action_execution=execution_contract(training_exposure_mode,evaluation_exposure_mode)

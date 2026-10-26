@@ -60,3 +60,14 @@ archives, path/phase rejection, unchanged ownership and provenance after a fake
 live-factory change. No new return, local optimization or Colab allocation.
 Next: factory/frozen/runtime and actual learned optimizer/replay/normalization
 acceptance, preserving this fixed protocol and existing usage ledger.
+
+
+## Restricted inference integration
+
+CrossQ factory/frozen support now checks the fixed full64 native geometry,
+squashed action contract and explicit saved normalization. Deterministic untrained
+save/load parity and manual running-state fixtures pass; injected normalization
+updates are restored and rejected. Original SAC/TQC default weights/RNG regressions
+pass. Generic training is blocked before data/model construction pending dedicated
+shared-start and learned optimizer/replay/counter/runtime acceptance. No CrossQ
+trading return or further credit use is claimed.

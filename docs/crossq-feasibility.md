@@ -1,8 +1,8 @@
 # CrossQ implementation feasibility
 
 The initial untrained source/serialization audit passes, and the separate fixed
-performance protocol below is now preregistered. CrossQ is not registered in the
-training factory or frozen loader yet.
+performance protocol below is now preregistered. CrossQ now has restricted factory/frozen support. Generic training remains
+blocked until registered learned-state/runtime acceptance is connected.
 Treasury/VIX/GAE failures stay closed; no rate inputs or reward changes are mixed
 into this algorithm proposal. Existing project150/130 and account150/170 safeguards
 continue, with original usage39.472562 units after Treasury cleanup.
@@ -191,3 +191,28 @@ with a deliberately different live factory: historical `.txt` snapshots, not the
 mutable registry, provide original provenance. No fitting/data/provider calls or
 Colab units. Actual training dispatch, frozen normalization, saved learned state/
 replay/counters and remote acceptance still remain before allocation.
+
+
+## Restricted factory and frozen inference support
+
+The factory now exposes only the fixed CrossQ parameter set and preserves full64
+geometry in smoke mode. Existing SAC/TQC defaults, tensors and RNG are unchanged.
+The saved action distribution is explicitly four-component squashed Gaussian.
+CrossQ frozen bundles require actual geometry and all nine normalization state
+fingerprints/counters; renamed or missing contracts reject even with valid new
+bundle hashes. Loading validates the expected configuration and finite running
+moments before prediction.
+
+Frozen prediction captures a separate expectation from mutable display metadata,
+requires evaluation mode, checks running state before each call and compares it
+afterward. Any injected update restores original normalization state and raises
+without returning an action. Caller observations are copied. Untrained/manual
+counter fixtures cover exact save/load parity, immutable weights/statistics/input,
+shape/nonfinite rejection, geometry/state tampering and post-prediction restoration.
+The generic training entry point rejects CrossQ before dataset/environment/model
+construction while the registered initializer, optimizer/replay/counter and runtime
+contracts remain unfinished. This is inference integration, not learned acceptance
+or permission to bypass the fixed Colab study.
+
+86 targeted CrossQ/TQC/Treasury/recurrent regressions pass, including the final
+display-metadata isolation check. No local learning, provider reads, allocation or unit use.

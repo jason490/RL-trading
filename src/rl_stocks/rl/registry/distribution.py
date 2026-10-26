@@ -15,7 +15,7 @@ def model_distribution(model):
     from rl_stocks.rl.recurrent_ppo.hybrid import HybridRecurrentPolicy,DirectionProtectionDistribution
     from stable_baselines3.common.distributions import DiagGaussianDistribution
     from stable_baselines3 import SAC,TD3
-    from sb3_contrib import TQC
+    from sb3_contrib import TQC,CrossQ
     policy=model.policy
     if isinstance(policy,HybridRecurrentPolicy):
         if (not isinstance(policy.action_dist,DirectionProtectionDistribution)
@@ -39,6 +39,14 @@ def model_distribution(model):
                 or actor.mu.out_features!=4 or actor.log_std.out_features!=4
                 or model.action_space.shape!=(4,)):
             raise ValueError('TQC four-component squashed Gaussian contract mismatch')
+        return {'version':1,'kind':'squashed_gaussian','components':4}
+    if isinstance(model,CrossQ):
+        from rl_stocks.rl.crossq.geometry import model_spec
+        model_spec(model)
+        actor=policy.actor
+        if (type(actor.action_dist) is not SquashedDiagGaussianDistribution
+                or actor.mu.out_features!=4 or actor.log_std.out_features!=4):
+            raise ValueError('CrossQ four-component squashed Gaussian required')
         return {'version':1,'kind':'squashed_gaussian','components':4}
     # SAC uses a squashed Gaussian; TD3 is deterministic with external exploration.
     if isinstance(model,SAC):return {'version':1,'kind':'squashed_gaussian','components':4}

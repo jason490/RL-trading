@@ -2491,3 +2491,15 @@ asset validator binds manifest/archive hashes and rejects unsafe paths/phases;
 optimization, Colab allocation or ledger mutation; project39.472562/150 unchanged.
 Next factory/frozen/runtime and actual learned-state/replay/counter acceptance.
 [Evidence](results/crossq-feasibility-2026-10-26/initializations.json).
+
+
+### CrossQ restricted factory/frozen contract accepted — 2026-10-26
+
+Fixed CrossQ factory settings/full64 smokes and explicit saved geometry/running-state
+contracts implemented. Frozen inference rejects/restores normalization mutation,
+preserves observations and separates verified expectations from mutable metadata.
+86 targeted CrossQ/TQC/Treasury/recurrent checks pass; original SAC/TQC defaults
+and source-archive provenance remain valid. Generic CrossQ training stays blocked
+before data/model construction until registered shared-start dispatch and actual
+learned optimizer/replay/counter/runtime acceptance are connected. No learning,
+provider access or Colab units. [Guide](docs/crossq-feasibility.md).

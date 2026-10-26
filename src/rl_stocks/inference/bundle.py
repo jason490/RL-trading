@@ -74,6 +74,11 @@ class FrozenPolicy:
         from rl_stocks.rl.registry.distribution import validate_model_distribution
         self.action_distribution=validate_model_distribution(self._model,
             self.manifest['metadata'].get('action_distribution'),algorithm)
+        from rl_stocks.rl.crossq.geometry import validate_loaded as validate_crossq
+        self.crossq_geometry=validate_crossq(self._model,
+            self.manifest['metadata'].get('crossq_geometry'),
+            self.manifest['metadata'].get('crossq_normalization'),algorithm)
+        self._crossq_normalization=json.loads(json.dumps(self.manifest['metadata'].get('crossq_normalization')))
         self._model.policy.set_training_mode(False)
     def _observation(self,observation):
         import numpy as np
@@ -91,7 +96,12 @@ class FrozenPolicy:
         from rl_stocks.rl.registry.prediction import recurrent
         if recurrent(self._model):raise ValueError('recurrent policy requires explicit state and episode_start')
         from rl_stocks.risk.exposure import filter_exposure
-        return filter_exposure(self._model.predict(self._observation(observation),deterministic=True)[0],self.exposure_execution)
+        observation=self._observation(observation)
+        if self.crossq_geometry is not None:
+            from rl_stocks.rl.crossq.geometry import frozen_predict
+            action=frozen_predict(self._model,observation,self._crossq_normalization)
+        else:action=self._model.predict(observation,deterministic=True)[0]
+        return filter_exposure(action,self.exposure_execution)
     def predict_recurrent(self,observation,*,state,episode_start):
         """Return action and new memory; callers own a separate state per stream."""
         import numpy as np
