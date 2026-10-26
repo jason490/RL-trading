@@ -1,0 +1,266 @@
+{
+  "algorithm": "recurrent_ppo",
+  "arms": [
+    "legacy",
+    "masked",
+    "full"
+  ],
+  "candidate": "full",
+  "controls": [
+    "legacy",
+    "masked"
+  ],
+  "screen_seed": 11,
+  "confirmation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "steps_per_cell": 100000,
+  "evaluation_every": 10000,
+  "episode_steps": 512,
+  "smoke_steps": 512,
+  "smoke_evaluation_every": 256,
+  "smoke_episode_steps": 128,
+  "parameters": {
+    "n_steps": 1000,
+    "batch_size": 50,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "net_arch": [
+      64,
+      64
+    ]
+  },
+  "recurrent_parameters": {
+    "lstm_hidden_size": 64,
+    "n_lstm_layers": 1,
+    "shared_lstm": false,
+    "enable_critic_lstm": true
+  },
+  "smoke_parameters": {
+    "n_steps": 128,
+    "batch_size": 64,
+    "n_epochs": 10
+  },
+  "policy_variant": "native",
+  "optimizer_kwargs": {
+    "eps": 1e-05,
+    "weight_decay": 0.0
+  },
+  "target_kl": null,
+  "observation_profile": "execution_masked",
+  "action_execution": {
+    "version": 1,
+    "training_exposure_mode": "unrestricted",
+    "evaluation_exposure_mode": "unit_magnitude"
+  },
+  "reward": {
+    "kind": "net_log_equity",
+    "scale": 1.0
+  },
+  "start_sampling": "stock_etf_cycle_windows",
+  "historical_control_reproduction": {
+    "source_state": ".runtime/market-screen-state.json",
+    "source_task": "market-legacy-11",
+    "metadata_sha256": "aa746182d73a9abab671c05cac02ade1ede4c67dea8b68eb165fd57ec56e23cf",
+    "source_revision": "88fb98c743702e4446a10a62dafed7da7c5fe6bf",
+    "selected_report_sha256": "3e0d55578e3390c70dc002b0712920f707b5251ed9baab49a39659c92f13a4be",
+    "final_report_sha256": "1fd7db1e21873b13e7dde853de4231495ae66258cc53bca8c59df5e2d9ac17f0",
+    "selected_score": 0.19624533127478427,
+    "final_score": 0.1848435476485193,
+    "all_checkpoint_scores": [
+      {
+        "steps": 10000,
+        "phase": "on_step",
+        "score": 0.17270778746676138
+      },
+      {
+        "steps": 20000,
+        "phase": "on_step",
+        "score": 0.07522139510921358
+      },
+      {
+        "steps": 30000,
+        "phase": "on_step",
+        "score": 0.013317981001550187
+      },
+      {
+        "steps": 40000,
+        "phase": "on_step",
+        "score": 0.12861318323969992
+      },
+      {
+        "steps": 50000,
+        "phase": "on_step",
+        "score": 0.12499570204474993
+      },
+      {
+        "steps": 60000,
+        "phase": "on_step",
+        "score": 0.08481856006891937
+      },
+      {
+        "steps": 70000,
+        "phase": "on_step",
+        "score": 0.08869130033113759
+      },
+      {
+        "steps": 80000,
+        "phase": "on_step",
+        "score": 0.19624533127478427
+      },
+      {
+        "steps": 90000,
+        "phase": "on_step",
+        "score": 0.19150491556828536
+      },
+      {
+        "steps": 100000,
+        "phase": "on_step",
+        "score": 0.15791128661002263
+      },
+      {
+        "steps": 100000,
+        "phase": "post_update",
+        "score": 0.1848435476485193
+      }
+    ],
+    "maximum_checkpoint_mean_return_discrepancy_pp": 0.01,
+    "maximum_selected_and_final_per_symbol_return_discrepancy_pp": 0.05,
+    "failure": "Invalidate interpretation and promotion without widened tolerances or automatic retry."
+  },
+  "screen_gate": {
+    "minimum_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0,
+    "maximum_final_mean_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "failure": "Close this fixed Treasury two-coordinate study; no maturity/lag/age/feed/normalization/model/reward/steps grid, extension, confirmation or promotion."
+  },
+  "confirmation_gate": {
+    "minimum_mean_selected_and_final_gain_pp_vs_each_control": 2.0,
+    "minimum_paired_positive_final_seeds_vs_each_control": 2,
+    "maximum_mean_final_drawdown_worsening_pp_vs_each_control": 2.0,
+    "minimum_selected_and_final_stock_and_etf_excess_pp": -2.0,
+    "minimum_selected_and_final_median_stock_excess_pp": -2.0,
+    "minimum_target_passing_seeds": 2,
+    "outperformance_requires_each_group_excess_pp": 0.0,
+    "interpretation": "Development gates only; a frozen prospective comparison remains required",
+    "minimum_final_stock_and_etf_gain_pp_vs_each_control": 0.0
+  },
+  "selection_metric": "Unchanged equal-weight mean26-symbol development net return, selected and actual final post-update independently. Final test cannot select checkpoints.",
+  "smoke_acceptance": "Inspect actual Colab Python before dependency sync; verify actual shared/mapped tensors and RNG, exact masks/recurrent-state/frozen prediction parity for at least78 predictions per arm, optimizer restoration, dataset/normalizer/execution/sampling/report identity, and smoke-backed deadline projection before screens.",
+  "short_side": "Report long/short net PnL and costs; future declining-stock labels reporting-only. Require both positive total and positive net short PnL for profitable-short claims.",
+  "execution": {
+    "training_location": "Google Colab only",
+    "preferred_hardware": "CPU",
+    "maximum_incremental_study_units": 2.0,
+    "project_ceiling": 150,
+    "project_teardown": 130,
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "allocation_deadline_seconds": 7200,
+    "projection_reserve_seconds": 1200,
+    "reference_control_metadata_sha256": "aa746182d73a9abab671c05cac02ade1ede4c67dea8b68eb165fd57ec56e23cf",
+    "reference_control_seconds": 1055.6041111230002,
+    "projection_safety_multiplier": 2.0,
+    "concurrency": "Configurable central fleet, aggregate minute metering; original project ledger/lock and persistent treasury-study baseline across smoke/screen/retries.",
+    "cleanup": "Retain/retrieve durably; verify every owned shutdown and release hash before duplicate cleanup; never stop unrelated sessions.",
+    "automatic_restart_after_budget_or_integrity_stop": false
+  },
+  "schema": "treasury-context-preregistration-v1",
+  "status": "fixed_before_any_Treasury_policy_construction_or_performance",
+  "name": "lagged-treasury-context-2026-10-26",
+  "hypothesis": "Lagged two-year nominal par yield and ten-minus-two-year term spread provide distinct interest-rate information. Test against both original legacy and identical-readiness masked controls; source feasibility is not trading evidence.",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "source_context": "bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4",
+  "features": [
+    "treasury_2y_pct",
+    "treasury_10y_minus_2y_pp"
+  ],
+  "availability": "Accepted second-following-XNYS-session close+15m assumption, maximum3XNYS/7calendar-day observation age; null latest source never imputed; historical publication/vintages unverified.",
+  "source_limitation": "Retrospective111-symbol survivor training panel, original26-symbol repeated2021-23 development; no point-in-time membership/delisting proof or independent prospective result.",
+  "payload_rules": "configs/experiments/treasury_payload_rules.json",
+  "payload_rules_sha256": "201005f50e266f8dbfb0a992dbd38a2839b85b04fa00947457d17f22fd0e9d12",
+  "payload_acceptance": "results/treasury-context-2026-10-26/payloads.json",
+  "payload_acceptance_sha256": "d09489accd89835f73c7134d85bfedfe1fbc3cac4785e483dee2fbb6f4abe460",
+  "payload_verification_sha256": "0aed2943233e4a797920ea2de1c309f2c0ff860af8a85c45c096e967a259d6ea",
+  "normalization": {
+    "original_seven_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+    "original_seven": "Preserve original seven statistics and every retained original feature/bar/ATR exactly; retained training rows differ from legacy only under fixed eligibility.",
+    "full": "Fit only two new coordinates on282666 retained training rows; no development fit.",
+    "masked": "Two raw fields/means zero, scales one, same eligibility as full."
+  },
+  "training_readiness": {
+    "source_rows": 298946,
+    "retained_rows": 282666,
+    "missing_rows": 110,
+    "purged_rows": 2200,
+    "short_segment_rows": 13970,
+    "retained_symbols": 111,
+    "validation_rows": 19058,
+    "validation_episodes": 26,
+    "eligible_starts": 225834,
+    "eligibility_sha256": "f2370a0e9cc6071d5c187143d44495c6f63348f3dedc5a6133f944b34e810bd4",
+    "rule": "Fixed20 preceding-row purge and contiguous513-bar minimum; exactly one eligible segment per symbol. Only2010 is trimmed;2011\u20132020 and all development unchanged.",
+    "sampling_equality": "Full/masked exact dates, bounds, symbol/group/year sampling; legacy must use original data and reproduce historical scores. Legacy year/window locations intentionally differ, but group probabilities and symbol deck coverage remain fixed."
+  },
+  "sampling": {
+    "group_rule": "Choose ETF with probability4/26 and stock with probability22/26, independent of history/outcomes; then sample each group from a seeded shuffled episode deck without replacement until exhausted; uniformly choose a full512-transition window",
+    "etf_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "DIA"
+    ],
+    "stock_probability_numerator": 22,
+    "denominator": 26,
+    "episode_cycle": "Shuffle each group again only after every member was drawn; no return/regime ranking",
+    "window_transitions": 512,
+    "smoke_window_transitions": 128,
+    "required_screen_all_symbols_started": true,
+    "actual_logging": "Per-symbol starts/transitions, group starts/transitions, dataset and normalization identities; report actual ETF mass, not just intended probability",
+    "budget_justification": "Legacy original111-symbol history; masked/full identical readiness-matched111-symbol history, unchanged group mass/decks and100k steps. Original21-input legacy controls both history/dimension differences;23-input masked isolates Treasury information."
+  },
+  "shared_initialization": {
+    "source_manifest": "configs/initializations/recurrent_capacity_v1/manifest.json",
+    "source_manifest_sha256": "f52409d726b55d46c8da556b8b56750ecf1773e367478f6dcb92d5515f47e2c3",
+    "source_entry_arm": "control",
+    "legacy": "Exact pinned original full64 untrained tensors and original per-seed CPU sampling RNG, also for smoke",
+    "augmented": "23inputs. Copy all common tensors; LSTM input columns0:7 unchanged, original7:21 into9:23; set new columns7:9 to exact zero in actor and critic. Full/masked entire policies/empty optimizers identical. Restore original CPU RNG, verify NumPy/Python seeded states equal before learning.",
+    "parameter_counts": {
+      "legacy": 61513,
+      "augmented": 62537
+    },
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "generation": "No dataset/provider or optimizer steps; immutable checksummed NPZ/manifest in tracked configs before upload.",
+    "limitation": "No bitwise21-versus23 floating-point trajectory promise; historical legacy reproduction is independently required.",
+    "augmented_manifest": "configs/initializations/vix_v1/manifest.json",
+    "augmented_manifest_sha256": "201e8e63f182d30e5e6fcd5f61667d4b7319e66c0c1a28cc1238ce4558f6c562",
+    "reuse": "Reuse only existing unfitted23-input zero-column NPZ tensors and original RNG, originally generated for VIX geometry; never load learned VIX weights or inputs. Reverify common-column mapping, all zero new columns,61513/62537 counts and empty Adam before learning. Smoke uses same full64 initializers.",
+    "augmented_entry": "full-screen-{seed} for both masked and full, including smoke seed11; metadata remains explicit about untrained source provenance."
+  },
+  "constraints": "Optional Treasury family only. No source2024+ prices, retired-test reuse, outcome-selected readiness, broker orders, reward/cost/holding/action changes or reopening failed families. Do not mix CrossQ or other algorithm changes into this feature comparison. Payload ledger hashes describe unchanged preprocessing only; future runtime preserves original ledger charges/semantics rather than demanding a stale byte hash.",
+  "effective_defaults": {
+    "normalize_advantage": true,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "clip_range_vf": null,
+    "use_sde": false,
+    "optimizer": "coupled Adam",
+    "optimizer_betas": [
+      0.9,
+      0.999
+    ],
+    "optimizer_amsgrad": false
+  }
+}

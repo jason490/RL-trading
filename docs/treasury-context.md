@@ -164,3 +164,39 @@ feature checks agree exactly, NumPy fit statistics within1.96e−13; nine protec
 files/ledger remain unchanged. Worker exited0 in68.11s, no provider/Colab/model
 or optimizer activity. Generic training remains disabled pending a separate fixed
 study; original legacy and readiness-matched masked controls are both required.
+
+
+## Fixed model comparison preregistered
+
+[Model protocol](../configs/experiments/treasury_context_preregistration.json) and
+[dataset binding](../configs/experiments/treasury_context_binding.json) now fix one
+full-rate candidate against both original legacy and readiness-matched masked
+controls. All use native RecurrentPPO,64-wide separate actor/critic LSTMs, lambda0.95,
+gamma0.99, net-log-equity rewards and unchanged actions/costs/holding limits.
+Seed11 screen:100k transitions/10k evaluation per arm,512-step episodes. Actual
+512-transition smokes and restored/frozen acceptance precede any screen.
+
+Both selected and final candidate returns must improve by2pp versus each control;
+final stock/ETF groups cannot worsen, drawdown can worsen at most2pp, and both
+phases' stock/ETF and median-stock excess returns must be at least−2pp versus
+matched holding. Original legacy reproduction tolerances remain0.01pp checkpoint
+mean/0.05pp symbol. A failed screen closes this fixed Treasury family without a
+maturity/lag/age/feed/normalization/model/reward/step grid or extension. Only a
+passing screen permits fixed11/23/37 confirmation and prospective evaluation.
+
+Shared starts use original unfitted64-wide legacy tensors/RNG and existing
+unfitted23-input zero-column archives. Those archives were generated for VIX
+input geometry, but contain no learned weights or source-data signal: all common
+input columns map exactly, the two new actor/critic columns are zero, and original
+sampling RNG is restored. No VIX inputs/model replay are used. The dedicated
+loader must independently verify mapping,62537/61513 parameter counts, empty Adam,
+original manifests and per-seed RNG before constructing training acceptance.
+
+Masked/full must have exact date/bound/symbol/year sampling parity. Legacy has
+intentionally different2010 window locations, so its old scores and unchanged
+group/deck contract must reproduce; its year counters must not be falsely asserted
+equal to filtered data. Budget: persistent2-unit study allowance within the original
+150/130 project and150/170 account safeguards, CPU preference, inclusive7200s
+allocation deadlines, smoke-backed projection and minute aggregate metering.
+Generic training remains blocked while dedicated runtime/archive/initializer
+integration is pending. No new model, Colab session or return exists yet.

@@ -98,3 +98,10 @@ actual Colab smoke restoration/frozen parity and budget-backed deadline projecti
 before100k screens. Only passing selected/final stock/ETF/median/drawdown gates
 permit seeds11/23/37 and prospective confirmation. Model-research alternatives
 such as CrossQ stay separate; this preprocessing result does not register them.
+
+
+The [three-arm model protocol](../../configs/experiments/treasury_context_preregistration.json)
+and [binding](../../configs/experiments/treasury_context_binding.json) are now fixed.
+Original/reusable zero-column initializers still need dedicated validation and
+runtime integration. This registration does not enable generic training or
+allocate Colab; no policy performance result exists.

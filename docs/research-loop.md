@@ -1,8 +1,8 @@
 # Bounded autonomous research
 
 Current frontier (2026-10-26): [Treasury source feasibility](treasury-context.md),
-source and matched payloads accepted with explicit2010 exclusions; separate
-legacy/masked/full training preregistration and runtime acceptance remain.
+source and matched payloads accepted with explicit2010 exclusions; three-arm
+model protocol registered, dedicated initializer/runtime/acceptance remains.
 [GAE screen](../results/gae-traces-2026-10-25/README.md) and
 [target-variance audit](../results/gae-variance-2026-10-25/README.md) are complete;
 failed trace family stays closed. No active Colab sessions or robust winner.
@@ -2280,3 +2280,16 @@ file, provider requests, model/optimizer/Colab activity or retired data. Generic
 Treasury training remains blocked until a separate registered comparison. Next
 fix legacy/masked/full model controls/shared starts and acceptance before any
 allocation. [Evidence](../results/treasury-context-2026-10-26/README.md).
+
+
+### Treasury information model comparison preregistered
+
+After matched payload acceptance, fix three arms legacy/masked/full, native64-wide
+RecurrentPPO and unchanged optimizer/reward/actions/costs. Seed11 screens100k/10k,
+512-step episodes, actual512 smokes/restoration before allocation. Original common
+weights/RNG plus reusable unfitted23-input zero-column archives, no learned VIX
+signal or model initialization yet. Same both-control/absolute/median/risk gates,
+historical legacy reproduction and fixed11/23/37/prospective requirement; failure
+closes the family without grids. Dedicated initializer/dispatch/runtime/archive
+integration remains; generic Treasury training stays disabled. No new units or
+retired-test access. [Protocol guide](treasury-context.md).

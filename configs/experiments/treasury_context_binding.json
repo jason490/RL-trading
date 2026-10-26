@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "preregistration_sha256": "b47335deed48fc2880ea3d0c0b2f80b6c4328c6a25808c95d0f96a379734a468",
+  "source_context": "bc52edefc6baccafdb283e054c5d8f24c6593fcdf962e0bd15ec6dcf0e6a0bd4",
+  "payload_acceptance_sha256": "d09489accd89835f73c7134d85bfedfe1fbc3cac4785e483dee2fbb6f4abe460",
+  "datasets": {
+    "legacy": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "masked": "dc6bb7c5cda99dd6fa19c6e8c0bb6e24b27cfc2e18f946ad63bd13c2c6f452ff",
+    "full": "c6ca10068f8d0607224c3e8252568e4de965663fce5db30ce5d33198c2f5e5d3"
+  },
+  "dataset_contracts": {
+    "masked": {
+      "schema": "daily-indicators-v1-treasury-masked-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "treasury_2y_pct",
+        "treasury_10y_minus_2y_pp"
+      ],
+      "normalizer_sha256": "ffba992d56173041f2c6b9070d238ca38854921a0003aec2a89965f890336acc",
+      "extra_normalizer_fit_rows": 0,
+      "training_rows": 282666,
+      "development_rows": 19058,
+      "eligibility_sha256": "f2370a0e9cc6071d5c187143d44495c6f63348f3dedc5a6133f944b34e810bd4",
+      "eligible_starts": 225834,
+      "sampler_bounds_sha256": "44b2ef559bf3a4a64e269564cf00a9b1015e9c4fc08c0064726f1b3fbb476aa0"
+    },
+    "full": {
+      "schema": "daily-indicators-v1-treasury-full-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20",
+        "treasury_2y_pct",
+        "treasury_10y_minus_2y_pp"
+      ],
+      "normalizer_sha256": "570bcaaec92eefcf460f8afd84295597f982a579ff57657909f6deaf0485b50c",
+      "extra_normalizer_fit_rows": 282666,
+      "training_rows": 282666,
+      "development_rows": 19058,
+      "eligibility_sha256": "f2370a0e9cc6071d5c187143d44495c6f63348f3dedc5a6133f944b34e810bd4",
+      "eligible_starts": 225834,
+      "sampler_bounds_sha256": "44b2ef559bf3a4a64e269564cf00a9b1015e9c4fc08c0064726f1b3fbb476aa0"
+    },
+    "legacy": {
+      "schema": "daily-indicators-v1",
+      "names": [
+        "return_1",
+        "volatility_20",
+        "ema_20_ratio",
+        "ema_50_ratio",
+        "rsi_14",
+        "atr_14_ratio",
+        "relative_volume_20"
+      ],
+      "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+      "extra_normalizer_fit_rows": 0
+    }
+  },
+  "initialization_manifest": "configs/initializations/vix_v1/manifest.json",
+  "initialization_manifest_sha256": "201e8e63f182d30e5e6fcd5f61667d4b7319e66c0c1a28cc1238ce4558f6c562"
+}
