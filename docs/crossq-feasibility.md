@@ -136,3 +136,18 @@ CPU preference remains; actual Colab kernel and learned-smoke throughput must be
 verified before a screen. Profile any proposed GPU benefit/cost explicitly.
 Factory/frozen/runtime integration, shared starts and actual learned/replay/buffer
 acceptance remain before any allocation. This registration performs no training.
+
+
+## Shared Linear mapping implemented
+
+`training/crossq_mapping.py` validates native untrained SAC/CrossQ types, seeded
+21-input/four-action/full64 geometry, actual actor/critic counts, exact optimizer
+ownership/defaults, empty state, initial alpha and source SAC target equality
+before any target mutation. It copies ten ordered actor/head/twin-critic Linear
+modules' weights and biases into existing CrossQ Parameters. All nine native
+normalization layers retain zero means/bias/counters, unit variance/scale and the
+fixed1000-update warmup. Mapping takes no random draws and preserves optimizer
+parameter ownership. Nine guarded tests cover seeds11/23/37 and reject trained,
+nonfinite, changed optimizer/delay/normalization and missing ownership before
+mutation. Fixtures are untrained; actual pinned source-archive mapping, portable
+initializer generation and runtime integration remain before allocation.

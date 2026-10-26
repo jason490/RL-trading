@@ -13,8 +13,10 @@ CrossQ untrained audit passes: native geometry/default differences and immutable
 prediction/save-load evidence recorded without training/units. Fixed SAC/CrossQ
 50k protocol now preregistered: same26-symbol historical-control data, native
 package differences explicit,1000-update renorm warmup and4096-step smokes.
-Next: portable shared starts, factory/frozen/runtime integration and actual
-Colab learned-smoke acceptance before any performance allocation.
+Shared Linear mapping now validates native geometry/optimizer ownership and
+normalization before mutation; nine guarded untrained tests pass across11/23/37.
+Next: actual pinned portable initialization archives, factory/frozen/runtime
+integration and Colab learned-smoke acceptance before performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
