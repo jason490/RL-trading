@@ -198,8 +198,10 @@ group/deck contract must reproduce; its year counters must not be falsely assert
 equal to filtered data. Budget: persistent2-unit study allowance within the original
 150/130 project and150/170 account safeguards, CPU preference, inclusive7200s
 allocation deadlines, smoke-backed projection and minute aggregate metering.
-Generic training remains blocked while dedicated runtime/archive/initializer
-integration is pending. No new model, Colab session or return exists yet.
+Unregistered Treasury training remains blocked. The dedicated runner now validates
+registered requests and payloads before constructing environments, restores the
+pinned shared initializer, and records initial/selected/final model proofs.
+Runtime jobs and archive acceptance remain pending. No new model, Colab session or return exists yet.
 
 
 ## Shared starts, request and frozen contracts
@@ -220,8 +222,9 @@ mechanics only; actual learned acceptance still requires Colab smokes.
 
 Standalone registered request/data checks fix dataset IDs, normalizers, both
 phase budgets/cadences, seeds, CPU, reward/execution and single-milestone rules.
-They are not yet connected to the runner; the generic Treasury guard remains
-active. Runtime job/archive/budget/report and learned-smoke acceptance are next.
+These checks are connected to the runner; missing protocol IDs and invalid
+requests reject before environment/model construction. Runtime job/archive/
+budget/report and learned-smoke acceptance are next.
 No local optimizer steps, new provider requests, retired prices or Colab units.
 
 
@@ -235,5 +238,5 @@ counts and exact original RNG bytes. Every asset hash stays unchanged. Caller
 Torch/NumPy/Python streams and the original project ledger remain unchanged.
 The verification process constructs no models or optimizer state. This supplements
 untrained unit/save-load fixtures; actual learned Colab acceptance remains pending.
-Standalone contracts are ready, while runner/job/archive/budget integration remains
-before smoke allocation. All prior owned sessions stay stopped; no new units.
+Contracts and registered runner dispatch are ready; job/archive/budget integration
+remains before smoke allocation. All prior owned sessions stay stopped; no new units.

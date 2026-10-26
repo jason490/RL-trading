@@ -40,5 +40,5 @@ def test_runner_guard_precedes_construction(monkeypatch):
 
     monkeypatch.setattr(runner, "create", forbidden)
     monkeypatch.setattr(runner, "TradingEnv", forbidden)
-    with pytest.raises(ValueError, match="currently disabled"):
+    with pytest.raises(ValueError, match="explicit"):
         runner.train("ignored", "recurrent_ppo")

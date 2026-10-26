@@ -96,8 +96,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     from rl_stocks.training.dependencies import verify_environment
     versions=verify_environment()
     dataset=read_dataset(dataset_path)
-    from rl_stocks.training.treasury_guard import reject_unregistered_treasury
-    reject_unregistered_treasury(dataset)
+    from rl_stocks.training import treasury_context,treasury_initialization
+    treasury_study=treasury_context.validate_dispatch(dataset,study_protocol_sha256)
+    if treasury_study:
+        treasury_arm=treasury_context.validate_request(Path(dataset_path).name,algorithm,overrides,
+            seed=seed,smoke=smoke,steps=steps if steps is not None else 512,
+            every=evaluation_every if evaluation_every is not None else 256 if smoke else 10000,
+            initialization=initialization,policy_variant=policy_variant,observation_profile=observation_profile,
+            start_sampling=start_sampling,reward_kind=reward_kind,reward_scale=reward_scale,
+            training_exposure_mode=training_exposure_mode,evaluation_exposure_mode=evaluation_exposure_mode,
+            final_test=final_test,compact_checkpoints=compact_checkpoints,milestones=milestones,device=device)
+        treasury_context.validate_payload(dataset,treasury_arm)
     from rl_stocks.training import vix_context
     vix_study=vix_context.validate_dispatch(dataset,study_protocol_sha256)
     if vix_study:
@@ -130,6 +139,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     gym_check(env,skip_render_check=True);sb3_check(env)
     env.reset_sampling_statistics();env.reset_execution_statistics()
     model=create(algorithm,env,seed,device,smoke,overrides,policy_variant)
+    if treasury_study:
+        treasury_shared=treasury_initialization.apply_initialization(model,treasury_arm,seed,smoke)
     if vix_study:
         vix_shared=vix_context.apply_initialization(model,vix_arm,seed,smoke)
     if gae_study:
@@ -229,6 +240,17 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     if algorithm=='tqc':
         from rl_stocks.rl.tqc.geometry import model_spec as tqc_spec
         metadata['critic_geometry']=tqc_spec(model)
+    if treasury_study:
+        from rl_stocks.inference.bundle import checksum
+        snapshot=run/'treasury-initialization.npz'
+        shutil.copyfile(treasury_initialization.portable_path(treasury_shared['artifact_file']),snapshot)
+        if checksum(snapshot)!=treasury_shared['artifact_sha256']:
+            raise ValueError('Treasury initialization snapshot checksum mismatch')
+        metadata['treasury_arm']=treasury_arm
+        metadata['treasury_binding_sha256']=treasury_initialization.BINDING_SHA256
+        metadata['treasury_shared_initialization']=treasury_shared
+        metadata['treasury_initialization']=treasury_initialization.model_record(model)
+        treasury_initialization.validate_record(metadata['treasury_initialization'],treasury_arm,smoke,initial=True,seed=seed)
     if gae_study:
         from rl_stocks.inference.bundle import checksum
         snapshot=run/'gae-initialization.npz'
@@ -384,6 +406,12 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
         metadata.update(selected_step=callback.best_step,selected_metrics=callback.best_metrics)
         metadata['sampling_diagnostics']=sampling_diagnostics
         metadata['training_execution']=env.execution_statistics()
+        if treasury_study:
+            metadata['treasury_final']=treasury_initialization.model_record(model)
+            metadata['treasury_selected']=treasury_initialization.model_record(selected)
+            treasury_initialization.validate_record(metadata['treasury_final'],treasury_arm,smoke,seed=seed)
+            treasury_initialization.validate_record(metadata['treasury_selected'],treasury_arm,smoke,
+                selected_steps=metadata['selected_step'],seed=seed)
         if gae_study:
             metadata['gae_rollouts']=gae_audit.summary()
             metadata['gae_final']=gae_initialization.model_record(model)

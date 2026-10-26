@@ -1,6 +1,5 @@
 """Strict Treasury request contracts reject changes before construction."""
 
-
 import pytest
 
 from rl_stocks.training import treasury_context as study
@@ -81,3 +80,27 @@ def test_typed_parameter_alias_and_dispatch_bypass_reject():
     )
     with pytest.raises(ValueError):
         study.validate_payload(dict(schema="bad"), "full")
+
+
+@pytest.mark.parametrize("registered", [True, False])
+def test_runner_rejects_bad_request_before_environment_or_policy(monkeypatch, registered):
+    from rl_stocks.training import runner, dependencies
+
+    args = request()
+    dataset = args.pop("dataset_id")
+    args["evaluation_every"] = args.pop("every")
+    args["steps"] = 1024
+    data = dict(
+        schema="daily-indicators-v1-treasury-full-v1", names=["treasury_2y_pct"], manifest={}
+    )
+    monkeypatch.setattr(runner, "read_dataset", lambda p: data)
+    monkeypatch.setattr(dependencies, "verify_environment", lambda: {})
+
+    def forbidden(*a, **k):
+        pytest.fail("model/environment created before request acceptance")
+
+    monkeypatch.setattr(runner, "create", forbidden)
+    monkeypatch.setattr(runner, "TradingEnv", forbidden)
+    args["study_protocol_sha256"] = study.PROTOCOL_SHA256 if registered else None
+    with pytest.raises(ValueError, match="transitions|explicit"):
+        runner.train(dataset, **args)
