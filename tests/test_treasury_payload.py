@@ -17,8 +17,7 @@ from rl_stocks.features.registry.assemble import NAMES
 from rl_stocks.environment.sampling.windows import StockEtfCycles
 
 
-@pytest.fixture(scope="module")
-def sources():
+def synthetic_sources():
     calendar = xc.get_calendar("XNYS", start="2009-01-01", end="2023-12-31")
     dates = [str(d.date()) for d in calendar.sessions]
     train = [d for d in dates if d >= "2010-01-04"][:1000]
@@ -69,6 +68,11 @@ def sources():
         historical_publication_vintages_verified=False,
     )
     return baseline, treasury
+
+
+@pytest.fixture(scope="module")
+def sources():
+    return synthetic_sources()
 
 
 def test_fixed_purge_short_segments_and_no_outcome_selection():

@@ -55,6 +55,8 @@ class FrozenPolicy:
         self.market_context_mode=validate_frozen_contract(self.manifest)
         from rl_stocks.data.generation.volatility_payload import validate_frozen_contract as validate_vix_contract
         self.vix_context_mode=validate_vix_contract(self.manifest)
+        from rl_stocks.data.generation.treasury_contract import validate_frozen_contract as validate_treasury_contract
+        self.treasury_context_mode=validate_treasury_contract(self.manifest)
         self.normalizer=normalizer_from(self.manifest["normalizer"])
         from rl_stocks.risk.exposure import execution_contract,validate_execution_contract
         self.action_execution=validate_execution_contract(self.manifest['metadata'].get('action_execution',execution_contract()))
@@ -82,6 +84,8 @@ class FrozenPolicy:
             raise ValueError('masked market context channels must remain zero')
         if self.vix_context_mode=="masked" and bool((observation[7:9]!=0).any()):
             raise ValueError("masked VIX context channels must remain zero")
+        if self.treasury_context_mode=="masked" and bool((observation[7:9]!=0).any()):
+            raise ValueError("masked Treasury context channels must remain zero")
         return observation
     def predict(self,observation):
         from rl_stocks.rl.registry.prediction import recurrent

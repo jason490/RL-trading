@@ -200,3 +200,26 @@ equal to filtered data. Budget: persistent2-unit study allowance within the orig
 allocation deadlines, smoke-backed projection and minute aggregate metering.
 Generic training remains blocked while dedicated runtime/archive/initializer
 integration is pending. No new model, Colab session or return exists yet.
+
+
+## Shared starts, request and frozen contracts
+
+Dedicated Treasury helpers now read the pinned original21-input and reusable
+unfitted23-input archives, verify original generation-source hashes, copied
+market/account columns, zero new columns, common CPU RNG and all11/23/37 seeds.
+The actual model record validates61,513/62,537 parameters, typed optimizer/default
+settings, original NumPy/Python states, coupled Adam and exact empty ownership
+before loading weights. Reinitialization or wrong settings reject before mutation.
+
+Portable frozen validation checks nine-field names, original preprocessing hash,
+source/receipt/availability and complete row-bound/exclusion accounting without
+requiring a local raw-data cache. Masked frozen inference rejects nonzero rate
+channels. Untrained recurrent fixtures preserve carried/reset memory, caller
+state and normalization. Manually populated Adam serialization verifies restoration
+mechanics only; actual learned acceptance still requires Colab smokes.
+
+Standalone registered request/data checks fix dataset IDs, normalizers, both
+phase budgets/cadences, seeds, CPU, reward/execution and single-milestone rules.
+They are not yet connected to the runner; the generic Treasury guard remains
+active. Runtime job/archive/budget/report and learned-smoke acceptance are next.
+No local optimizer steps, new provider requests, retired prices or Colab units.

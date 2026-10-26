@@ -2665,3 +2665,21 @@ historical legacy reproduction and fixed11/23/37/prospective requirement; failur
 closes the family without grids. Dedicated initializer/dispatch/runtime/archive
 integration remains; generic Treasury training stays disabled. No new units or
 retired-test access. [Protocol guide](treasury-context.md).
+
+
+### Treasury shared-start and frozen/request contracts
+
+Pinned original/reusable unfitted21/23-input tensors, zero-column mapping, actual
+61,513/62,537 geometry, original RNG, coupled Adam/defaults and seed checks are
+implemented. Pre-mutation validation and exact empty ownership guard source loads.
+Portable frozen lineage/lag/age/readiness/normalizer checks and masked-channel
+rejection preserve recurrent carried/reset state and caller inputs in untrained
+fixtures. Manual Adam serialization is not learned acceptance. Dedicated request/
+data validators are standalone; generic trainer stays blocked pending runner/
+runtime/archive integration and actual Colab smokes. No local optimization, source
+requests, new units or retired data. [Guide](treasury-context.md).
+
+Treasury contract verification:108 focused shared-start/request/frozen/payload
+and prior GAE/VIX regression checks pass; new modules/script/tests pass Ruff.
+Untrained models/manual Adam fixtures perform no optimizer steps and do not
+establish actual learned smoke acceptance.
