@@ -5,9 +5,9 @@ from rl_stocks.training.crossq_assets import (
     initialization_entry, initialization_spec, portable_path, validate_assets,
 )
 from rl_stocks.training.crossq_mapping import _native_normalization
-from rl_stocks.training.crossq_state import model_record, _validate, validate_record
+from rl_stocks.training.crossq_state import model_record, _validate, validate_record, _linear_arrays
 from rl_stocks.training.distributional_critics import parsed_global_rng, restore_global_rng
-from rl_stocks.training.shared_initialization import _untrained, load_initialization
+from rl_stocks.training.shared_initialization import _untrained, load_initialization, read_initialization, tensor_fingerprint
 
 
 def apply_initialization(model, arm, seed=11, smoke=False):
@@ -31,3 +31,20 @@ def apply_initialization(model, arm, seed=11, smoke=False):
     if canonical(model._research_initialization) != canonical(proof):
         raise ValueError('shared initialization changed')
     return proof
+
+
+def validate_initial_comparison(records, smoke=False):
+    """Bound both observed starts to pinned archives before comparing shared fields."""
+    if set(records) != {'sac', 'crossq'}:
+        raise ValueError('both fixed SAC/CrossQ initial records required')
+    validate_assets()  # Exact ten-module mapping; native parameter names differ across algorithms.
+    for arm, record in records.items():
+        validate_record(record, arm, smoke, initial=True)
+        entry, _ = initialization_entry(arm, record['seed'], smoke)
+        arrays, _ = read_initialization(portable_path(entry['file']).read_bytes(), entry)
+        if record['linear_tensor_sha256'] != tensor_fingerprint(_linear_arrays(arrays)):
+            raise ValueError('actual per-arm Linear identity must match pinned mapped archive')
+    if (records['sac']['seed'] != records['crossq']['seed']
+            or canonical(records['sac']['rng']) != canonical(records['crossq']['rng'])):
+        raise ValueError('actual shared CrossQ seed/Linear tensors/original sampling RNG must match')
+    return dict(shared_linear_tensors_verified=True, sampling_rng_identical=True)

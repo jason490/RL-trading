@@ -20,7 +20,7 @@ from rl_stocks.training.crossq_context import (
 )
 from rl_stocks.training.crossq_restoration import verify_owned_run
 from rl_stocks.training.crossq_runtime import projection
-from rl_stocks.core.contracts import canonical
+from rl_stocks.training.crossq_initialization import validate_initial_comparison
 
 
 def accept(state_path, source_proof_path, data_root):
@@ -91,11 +91,9 @@ def accept(state_path, source_proof_path, data_root):
             python=m["python"],
             **restored,
         )
-    initial = {arm: r['initial'] for arm, r in records.items()}
-    if (initial['sac']['linear_tensor_sha256'] != initial['crossq']['linear_tensor_sha256']
-            or canonical(initial['sac']['rng']) != canonical(initial['crossq']['rng'])):
-        raise ValueError('actual shared CrossQ Linear tensors and original sampling RNG must match')
-    initialization_checks = dict(shared_linear_tensors_verified=True, sampling_rng_identical=True)
+    initialization_checks = validate_initial_comparison(
+        {arm: r['initial'] for arm, r in records.items()}, smoke=True
+    )
     return dict(
         schema="crossq-smoke-acceptance-v1",
         passed=True,

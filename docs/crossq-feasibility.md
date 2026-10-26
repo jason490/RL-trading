@@ -365,3 +365,29 @@ acceptance file. It requires exact shared initial Linear/RNG records and two
 owned, verified-stopped sessions. The original shared ledger, account floor and
 persistent CrossQ study baseline remain unchanged. No actual learned CrossQ
 smoke or return result exists yet; clean export/allocation is the next step.
+
+
+## Fixed screen tooling
+
+`scripts/build_crossq_jobs.py --smoke --output PATH` prepares the exact two smoke
+tasks without allocation. Full jobs require accepted smoke evidence; seeds23/37
+also require a passing same-protocol screen. `scripts/report_crossq_study.py`
+requires both completed owned-cleaned seed11 screen tasks, checksummed source,
+original dataset, archive semantics, physical model/replay restoration and exact
+matched buy-and-hold paths before evaluating the preregistered gates. Historical
+SAC metadata and both symbol reports are pinned separately. It creates JSON and
+interactive HTML and never fits or selects a new checkpoint.
+
+Shared-start comparison validates each observed initial policy against its own
+pinned archive and verifies the ten-module cross-algorithm array mapping. Raw
+name-keyed Linear fingerprints differ between native SAC and CrossQ because
+normalization changes module indices; requiring those hashes to equal would
+reject correctly copied tensors. Per-arm Linear fingerprints, complete policy
+fingerprints and original Torch/NumPy/Python RNG remain exact.
+
+Two actual Colab CPU smokes started from clean1a359c7, Python3.13.16, using the
+original dataset and ledger. Fleet state `.runtime/crossq-smoke-state-v1.json`
+and source proof `.runtime/crossq-source-proof-v1.json` identify this attempt.
+Training export remains immutable; post-run verifier/report changes do not alter
+its training source. Acceptance and cleanup must be checked from terminal state;
+this note is not completion or performance evidence.

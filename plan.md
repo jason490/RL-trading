@@ -2558,3 +2558,13 @@ manual serialization fixtures, never fitting. Two-task smoke acceptor requires
 clean source, original dataset, reports, archive checks, physical restoration,
 shared initial Linear/RNG and verified owned cleanup. Next clean export and
 actual4096-transition Colab smokes before any50k allocation.
+
+
+### CrossQ fixed screen tooling and mapped-start verification — 2026-10-26
+
+Added two-arm job builder and strict seed11 screen report with matched holding,
+historical SAC metadata/report pins and physical restoration. Shared-start
+comparison uses exact mapped archive tensors, not equal name-keyed hashes across
+different module indices; raw per-arm identities and all RNG streams stay exact.
+Two actual4096 CPU smokes from clean1a359c7/Python3.13.16 are in progress;
+acceptance/owned cleanup remain before the fixed50k screen.

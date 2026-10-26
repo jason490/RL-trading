@@ -31,8 +31,12 @@ normalization, observed checkpoint forwards, replay sidecars and frozen model
 bytes. Physical restoration now verifies selected/final/frozen Adam/tensors, filled
 replay hashes/timeouts and128 exact predictions per run, preserves caller RNG,
 and rejects altered bytes. Smoke acceptor checks both owned-cleaned tasks and
-shared initial Linear/RNG records. Next: clean source export and actual Colab
-learned smokes; only accepted smokes can enable a performance allocation.
+shared initial Linear/RNG records. Two CPU4096 smokes now run from clean1a359c7/Python3.13.16 using original
+ledger/budget; exact paths in CrossQ guide. Screen builder/report tooling now
+preserves matched holding, pinned historical SAC reports and fixed gates.
+Shared-start verifier correctly uses mapped archive tensors rather than comparing
+name-keyed hashes across different native module names. Next accept actual smoke
+restoration and verified cleanup before any performance allocation.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.
