@@ -240,3 +240,22 @@ The verification process constructs no models or optimizer state. This supplemen
 untrained unit/save-load fixtures; actual learned Colab acceptance remains pending.
 Contracts and registered runner dispatch are ready; job/archive/budget integration
 remains before smoke allocation. All prior owned sessions stay stopped; no new units.
+
+
+## Runtime admission and persistent study allowance
+
+`training/treasury_runtime.py` validates same-protocol learned-smoke evidence for
+all three arms: actual saved-model restoration, at least78 frozen predictions per
+arm, verified owned cleanup, identical full/masked initial records, common sampling
+RNG and verified common-column/zero-input embedding. Missing evidence rejects a
+screen profile; unit-test fixture records are not actual smoke acceptance.
+
+The deadline estimate uses twice the historical1055.604-second control duration,
+scaled by the slowest actual smoke relative to legacy, plus1200 seconds for setup
+and retrieval. An estimate above7200 seconds rejects admission. The persistent
+`treasury-study-budget.json` beside the original ledger fixes the first controller's
+consumption baseline across smoke/screen controllers and retries. Allowances above
+2 units, a reset baseline or exhausted allowance reject. Account floor150 remains
+recorded alongside the original project150/130 safeguards. These helpers are tested
+but not yet connected to fleet admission; archive/report integration and actual
+Colab smokes remain required before a screen. No allocation occurred in this step.
