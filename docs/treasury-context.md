@@ -299,3 +299,24 @@ validation before entering the runner. Controller fixtures verify preserved
 charges, projected budget-stop persistence and wrong-path rejection without any
 allocation. Actual cleanup, Python discovery and learned smoke evidence are still
 required remotely; no session was provisioned by these implementation checks.
+
+
+## Physical restoration and learned-smoke admission
+
+`training/treasury_restoration.py` loads owned selected/latest checkpoints and the
+frozen selected model on CPU, comparing actual tensor/Adam/provenance records.
+For each of26 development symbols it checks three carried-memory predictions and
+an independent episode reset, exact action/state parity, immutable caller memory,
+normalization/data/files and schema/feed/nonfinite rejection. Masked observations
+with nonzero rate channels reject. Caller Torch/NumPy/Python RNG is restored on
+success and failure. Local serialization fixtures manually populate Adam moments
+and change one tensor; they perform no learning or optimizer steps and do not
+constitute learned-smoke acceptance.
+
+`scripts/build_treasury_jobs.py` writes the fixed three-arm CPU task list without
+allocating. `scripts/accept_treasury_smokes.py` requires exactly three completed,
+retrieved, owned-cleaned512-transition seed11 runs from a single clean source
+proof. It revalidates archives, development reports, actual checkpoint/frozen
+restoration and shared initial records before writing acceptance. Full runtime
+profiles additionally enforce the fixed deadline projection. Actual Colab smokes
+and performance-report integration remain pending; no new allocation or return.
