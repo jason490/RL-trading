@@ -2979,3 +2979,13 @@ Atomic JSON/HTML publication cleans failed render staging. Dashboard shows
 selected/final stock/ETF means,10k curves and individual-stock excess versus
 holding. Orchestration/HTML/corruption fixtures pass; no actual100k result or
 new Colab allocation. Corrected-profile approval remains pending; ledger stopped.
+
+### Opt-in long-duration budget foundation — 2026-10-27
+
+Optional six-hour ceiling requires explicit per-task durations and persisted
+account150/170 protection; legacy plans remain capped at two hours. Campaign
+deadline sums declared allocations, child working reserves stay enforced, and
+completed slots cannot be reused as retries. CLI execution follows a declared
+long duration instead of the legacy90-minute preference. Aggregate billing and
+original150/130 project limits unchanged. No task plan opts in, no ledger stop
+cleared, no allocation. Corrected-profile approval remains pending.

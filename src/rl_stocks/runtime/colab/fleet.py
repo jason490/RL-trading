@@ -418,6 +418,8 @@ class Fleet:
         child=self.budget.active['children'][a.session]
         long=any(j['steps']>=50000 for j in a.task['plan']['jobs'])
         preferred=6600 if any(j['steps']==250000 for j in a.task['plan']['jobs']) else 5400 if long else 1800
+        if self.budget.active.get('allocation_plan_seconds') is not None and child.get('allocation_seconds',0)>7200:
+            preferred=child['allocation_seconds']
         timeout=execution_window(child['deadline']-time.time(),preferred,600 if long else 300)
         if preserve_deadline:
             timeout=min(timeout,a.exec_deadline-time.monotonic())

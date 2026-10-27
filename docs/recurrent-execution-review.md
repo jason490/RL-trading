@@ -95,3 +95,13 @@ blocks the existing performance plan. A separately reviewed execution proposal
 would still need accepted physical profiling, current rates and unchanged
 performance gates before any full training. All unsuccessful attempts remain
 part of the shared project charge.
+
+## Independent longer-runtime foundation
+
+While approval remains pending, opt-in budget/controller support for the later
+6/3/2-hour CPU proposal is implemented and tested. Existing plans keep the
+original two-hour default. The longer API requires explicit per-task duration
+slots and persisted account protection; completed slots cannot become automatic
+retries. No registered task opts into that API yet. This work does not broaden
+this review's20-minute profile scope, modify the original study envelope, clear
+the stop or authorize any performance training.

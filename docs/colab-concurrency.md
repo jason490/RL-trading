@@ -170,3 +170,37 @@ The future-controller fix passes16 lifecycle/budget/deferred-retry checks with
 fake processes, including unknown→absence, no second retry, success exclusion
 and deadline preservation. It never treats observation timeout alone as proof
 that training stopped.
+
+## Opt-in longer allocation foundation
+
+The budget primitive now supports a separately declared ceiling up to21,600
+seconds (six hours). `FleetBudget` still defaults to7,200 seconds; existing task
+plans1–42 retain that ceiling. No current task plan opts into the longer mode,
+and it does not clear a ledger stop, provision hardware or authorize a study.
+
+A future admitted long study must explicitly construct the budget with
+`allocation_limit_seconds=21600` and pass one `allocation_plan_seconds` entry per
+registered task to `start`. For the costed recurrent comparison, the proposed
+entries are21,600/10,800/7,200 seconds. The complete sum bounds a campaign with
+successive waves; each child retains its own deadline and teardown reserve.
+Missing, oversized, noninteger or incomplete plans reject before ledger mutation.
+Longer mode also requires persisted account protection of at least150 units.
+
+Each declared duration slot can be claimed only once, including after its child
+stops. Additional sessions cannot silently reuse completed slots as retries.
+Legacy plans that do not declare durations retain their existing behavior. This
+slot accounting limits registered tasks, not configurable global concurrency.
+
+The controller's CLI execution preference follows a declared long child duration,
+while preserving the retrieval reserve and any existing observation deadline.
+It is no longer limited to a90-minute preference in that opt-in case. Legacy
+execution preferences remain unchanged. Metering/ownership checks, single
+aggregate account charging, project150/130 limits, account150/170 protection,
+working-deadline teardown and verified cleanup are unchanged.
+
+This is infrastructure support only. A long performance task still needs a
+registered execution plan, accepted physical profiling, cost admission and
+role/seed claims. The corrected20-minute profile is awaiting explicit user
+approval under the [review process](recurrent-execution-review.md); it neither
+uses longer mode nor admits100k training. No new session was allocated while
+implementing this foundation.

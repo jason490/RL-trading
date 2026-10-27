@@ -393,3 +393,12 @@ receipt/artifacts before confirmation, fixed gates and prospective requirements.
 Selected/final stock/ETF means, incremental curves and individual-stock excess
 are retained without duplicating full paths. See [results guide](recurrent-comparison-results.md).
 No actual100k matrix exists; the corrected profile still awaits explicit approval.
+
+## Longer-runtime budget foundation
+
+The optional per-task duration budget and corresponding CLI execution window
+support the costed6/3/2-hour CPU proposal. Default plans stay capped at two hours;
+longer mode requires a complete duration plan and the original account/project
+protections. Completed duration slots cannot be reused as retries. No long-run
+task plan or allocation is enabled. Physical profile acceptance and separate
+execution admission remain required; corrected-profile approval is still pending.
