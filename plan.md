@@ -2629,3 +2629,14 @@ environment/seed calls match AST; both sources explicitly set intra-op threads1.
 Scope limitations and added modules retained; no full semantic/backend equivalence
 or root cause claimed. No retry/allocation.
 [Evidence](results/crossq-integrity-2026-10-27/source-comparison.json).
+
+
+### Separate SAC first-update diagnostic registration — 2026-10-27
+
+Fixed original/explicit-default SAC conditions, one gradient update each on the
+same CPU; no rollout, performance evaluation, CrossQ learner or restart.
+0.1-unit/900-second total diagnostic limits supplement unchanged original
+project/account guards. Immutable1001-row common training replay input verified
+bitwise; all protected source hashes unchanged.11 pure-input tests pass.
+Colab-only worker/controller/artifact acceptance remains before allocation.
+[Guide](docs/sac-first-update.md).

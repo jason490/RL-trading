@@ -1,0 +1,47 @@
+{
+  "protocol_sha256": "aad6c99abe62bd7b9b2659b23b9763f9e4c25a70f8532d88f95d32eca6ecc9a2",
+  "input_identity": "7f50968c0272bda3d5b5a75861e5ea25d2f4e7d328a1b014af7de219a0d5a8a7",
+  "rows": 1001,
+  "filled_field_sha256": {
+    "observations": "f5df364236f2e3d68f43f54b745977a090bb016d44fead20eba686e3ba3540e2",
+    "next_observations": "ea4b3ed05793ee04c9d3a498c3928d44db895056a521bf0172532ca6ef264d6e",
+    "actions": "688c92792acd6f6615f68ec3a15de5b359d8ab8e217b8c0c97d6a7b6cabb2601",
+    "rewards": "3d7aacd2176f3158eef771ca2ba29b64d6163b73d673b5294ccbbcac007a3370",
+    "dones": "6ece0c953132814f7d50cae630f5768b37dca12865278d8018956f8f2dc34606",
+    "timeouts": "6ece0c953132814f7d50cae630f5768b37dca12865278d8018956f8f2dc34606"
+  },
+  "protected_source_sha256": {
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-947ab1c90cd0/retrieved/artifacts/runs/20261024T150318-sac-11-f23aec9e/metadata.json": "a9826bf6fb974cca1b8a630abf50ddb8edc48d9d0efdfa4bb57bc9d31bba7ddf",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-947ab1c90cd0/retrieved/artifacts/runs/20261024T150318-sac-11-f23aec9e/replay.pkl": "c0584051a9eb21b316fe3a7523b6e622cd125362aeada7b4c3cb7e011a9d02a7",
+    "/home/vibe/projects/rl-stocks/.runtime/crossq-integrity-sac-first-checkpoint.tar.gz": "bf10a22fa7f031aeba68f69fd972f78e1062fda2f7eb7671f832e14ae5eb8bbb"
+  },
+  "source_files_unchanged": true,
+  "shared_initialization": {
+    "version": 1,
+    "artifact_file": "configs/initializations/crossq_v1/sac-seed11.npz",
+    "artifact_sha256": "423640f5c22891987cff9186a3b59d19dd16f1d5a59db330c1a617d51aca84cf",
+    "policy_tensor_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+    "rng_sha256": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+    "global_rng_sha256": {
+      "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+      "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+      "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+    },
+    "torch_version": "2.8.0",
+    "generated_without_fitting": true,
+    "arm": "sac",
+    "seed": 11,
+    "smoke": false,
+    "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+    "binding_sha256": "84452236ccf86e66e6527660b89d98da8030864f8390f335e6b875f7d36f42bb"
+  },
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "allocation_performed": false,
+  "performance_evaluation": false,
+  "original_integrity_stop_cleared": false,
+  "implementation_sha256": {
+    "scripts/build_sac_update_inputs.py": "2fdc3d8d3ea73e2f9b02f29a0a66e75c3c1327ddfcd0ef3dbe61387e1d6dcb6a",
+    "src/rl_stocks/training/sac_update_input.py": "63ca6d8edea2a472c8940078334ccc0a892504d15f1a4dfbdc955b3327c90348"
+  }
+}
