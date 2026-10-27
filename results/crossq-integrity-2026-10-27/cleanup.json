@@ -1,0 +1,67 @@
+{
+  "schema": "crossq-integrity-cleanup-v1",
+  "fleet": "rl-stocks-fleet-6816df39918e",
+  "status": "failed",
+  "reason": "Historical control exceeded preregistered checkpoint tolerance; deliberate graceful interruption",
+  "cleanup_verified": true,
+  "project_conservative_units": 39.518547649665,
+  "project_remaining_units": 110.48145235033499,
+  "screen_conservative_increment": 0.020729828523265326,
+  "study_budget": {
+    "start_units": 39.47256169564856,
+    "limit_units": 2.0
+  },
+  "study_conservative_units": 0.04598595401644445,
+  "minimum_account_balance": 150.0,
+  "official_account_balance": 348.6,
+  "official_rate": 0,
+  "official_active_assignments": 0,
+  "source_proof": {
+    "source_revision": "36e4dd40f001ebbda58ca1421d30665fe7bd8233",
+    "source_hash": "74fe4bf49317f19b23dfd5b2b8767d4b288c169a37f7a0a701b3ece95248f495",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/crossq-screen-source-v1",
+    "prior_charges_preserved": 39.49781782114174
+  },
+  "automatic_retry_allowed": false,
+  "sessions": {
+    "rl-stocks-cpu-5c83b5c3f930": {
+      "status": "stopped",
+      "retrieved": [
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-screen-source-v1/artifacts/colab/rl-stocks-cpu-5c83b5c3f930/checkpoint.tar.gz",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-screen-source-v1/artifacts/colab/rl-stocks-cpu-5c83b5c3f930/checkpoint.tar.gz"
+      ],
+      "retained_operation_logs": {
+        ".runtime/rl-stocks-cpu-5c83b5c3f930/salvage-6-output.txt": {
+          "sha256": "b7aa1578e71414797f6cf10112489a60532cabe1407e96aaa44385193aff0e02",
+          "text": "\n[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[colab] Downloaded '/content/research-checkpoint.tar.gz' to '/home/vibe/projects/rl-stocks/.runtime/crossq-screen-source-v1/artifacts/colab/rl-stocks-cpu-5c83b5c3f930/checkpoint.tar.gz'\n"
+        },
+        ".runtime/rl-stocks-cpu-5c83b5c3f930/stop-7-output.txt": {
+          "sha256": "f3ce2d09b9f8f99f8752b28aa4ba0f77b190f9b6d8df559d7ea57cd804e09376",
+          "text": "\n[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[colab] Stopping session 'rl-stocks-cpu-5c83b5c3f930'...\n[colab] Session terminated.\n"
+        },
+        ".runtime/rl-stocks-cpu-5c83b5c3f930/verify-8-output.txt": {
+          "sha256": "7711f782debfdae80020d5413ce347c70c7c66d3cfc67574f506a23294b5b1c5",
+          "text": "\n[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[colab] No active sessions found on server.\n"
+        }
+      }
+    },
+    "rl-stocks-cpu-b3772035f64d": {
+      "status": "stopped",
+      "retrieved": [],
+      "retained_operation_logs": {
+        ".runtime/rl-stocks-cpu-b3772035f64d/salvage-6-output.txt": {
+          "sha256": "dfb60c8ad4697373db100e27fa954d8b0835938ecb76fcb2e023d959a4a18ecb",
+          "text": "\n[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[colab] Download failed: binary download HTTP 404\n"
+        },
+        ".runtime/rl-stocks-cpu-b3772035f64d/stop-7-output.txt": {
+          "sha256": "93afb4ff0d8190a96da65ee0b557c973aefadc0470c8b911078ab0ef04a5de81",
+          "text": "\n[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[colab] Stopping session 'rl-stocks-cpu-b3772035f64d'...\n[colab] Session terminated.\n"
+        },
+        ".runtime/rl-stocks-cpu-b3772035f64d/verify-8-output.txt": {
+          "sha256": "91b240a2d5f4d94e083de6e5a695a8c940eab85bd2aa64bedf39da52e340de45",
+          "text": "\n[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[rl-stocks-cpu-5c83b5c3f930] m-s-use5a0-2p6kbpmuq19xv | Hardware: CPU | Shape: Standard | Variant: DEFAULT\n"
+        }
+      }
+    }
+  }
+}

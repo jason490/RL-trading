@@ -2588,3 +2588,22 @@ normalization sidecars with arm labels; malformed/missing evidence rejects.
 Raw replay/credentials excluded.22 relevant publication tests and read-only
 checks of actual accepted smoke evidence pass. Fixed50k screen from immutable
 36e4dd4 remains live; no full result/publication or duplicate deletion yet.
+
+
+### CrossQ historical-control integrity stop — 2026-10-27
+
+First SAC checkpoint differs0.121578pp from historical control versus fixed0.01pp
+gate. Stopped owned screen gracefully; both sessions verified terminated.
+Initial policy/RNG/contracts match; first1001 actions exact, then four-ULP action
+divergence after learning. Read-only diagnosis preserves hashes/root-cause
+uncertainty. SAC20k snapshot retained; no available CrossQ screen checkpoint
+(salvage404, logs retained). Project39.518548/150, official348.60/idle. No
+performance conclusion, promotion, tolerance change or automatic retry.
+[Evidence](results/crossq-integrity-2026-10-27/README.md).
+
+
+Persistent CrossQ integrity-stop enforcement now rejects new shared-budget
+controllers and root-validated runtime profiles after this failure; malformed
+markers fail closed. Original budget baseline and earlier accepted evidence
+remain untouched. Synthetic ULP/prefix and stop/retry regression checks require
+no training or allocation.

@@ -123,3 +123,11 @@ original two-unit CrossQ baseline39.47256169564856 and150 account floor retained
 All retrieved artifacts remain; duplicate cleanup follows verified study retention.
 This is operational acceptance, not return evidence. Next fixed50k seed11 SAC/
 CrossQ screen; retired2024+ remains unopened and no broker orders were submitted.
+
+
+## Subsequent screen integrity stop
+
+The separately allocated50k screen stopped after historical SAC reproduction
+failed its fixed first-checkpoint tolerance. Both owned sessions are stopped;
+no candidate performance interpretation or automatic retry. Operational smoke
+acceptance above remains valid. See [diagnosis and cleanup](../crossq-integrity-2026-10-27/README.md).

@@ -18,6 +18,11 @@ SAFETY_MULTIPLIER = protocol()["execution"]["projection_safety_multiplier"]
 ACCEPTANCE_FILE = ".runtime/crossq-smoke-acceptance.json"
 
 
+def _integrity_guard(runtime_directory):
+    if (Path(runtime_directory) / 'crossq-integrity-stop.json').exists():
+        raise RuntimeError('CrossQ integrity stop requires protocol review; no automatic restart')
+
+
 def projection(durations):
     arms = set(protocol()["arms"])
     if (
@@ -87,6 +92,8 @@ def make_runtime_profile(root):
 
 
 def validate_runtime_profile(profile, root=None):
+    if root is not None:
+        _integrity_guard(Path(root) / ".runtime")
     if (
         not isinstance(profile, dict)
         or type(profile.get("version")) is not int
@@ -117,6 +124,7 @@ def shared_study_budget(ledger, requested_limit=None, requested_start=None):
     from rl_stocks.core.files import write_once
     from rl_stocks.runtime.colab.budget import BudgetStop
 
+    _integrity_guard(ledger.path.resolve().parent)
     maximum = protocol()["execution"]["maximum_incremental_study_units"]
     limit = maximum if requested_limit is None else requested_limit
     if type(limit) not in (int, float) or not math.isfinite(limit) or not 0 < limit <= maximum:

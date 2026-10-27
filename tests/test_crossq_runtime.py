@@ -102,3 +102,21 @@ def test_crossq_actual_learning_evidence_required(tmp_path, field):
     path.write_text(json.dumps(value))
     with pytest.raises(ValueError):
         make_runtime_profile(tmp_path)
+
+
+def test_persisted_integrity_stop_blocks_profiles_and_new_controllers(tmp_path):
+    profile = accepted_profile(tmp_path)
+    ledger = SimpleNamespace(path=tmp_path / '.runtime/usage-ledger.json', value={'consumed': 39.0})
+    assert shared_study_budget(ledger) == (2.0, 39.0)
+    baseline = (tmp_path / '.runtime/crossq-study-budget.json').read_bytes()
+    # Even a malformed/empty stop record must fail closed, never erase history.
+    stop = tmp_path / '.runtime/crossq-integrity-stop.json'
+    stop.write_text('{}')
+    with pytest.raises(RuntimeError, match='no automatic restart'):
+        validate_runtime_profile(profile, tmp_path)
+    with pytest.raises(RuntimeError, match='no automatic restart'):
+        make_runtime_profile(tmp_path)
+    with pytest.raises(RuntimeError, match='no automatic restart'):
+        shared_study_budget(ledger)
+    assert stop.read_text() == '{}'
+    assert (tmp_path / '.runtime/crossq-study-budget.json').read_bytes() == baseline

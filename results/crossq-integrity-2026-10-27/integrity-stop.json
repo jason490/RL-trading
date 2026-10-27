@@ -1,0 +1,9 @@
+{
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "fleet": "rl-stocks-fleet-6816df39918e",
+  "reason": "historical_sac_checkpoint_tolerance_exceeded",
+  "review_required": true,
+  "automatic_retry_allowed": false,
+  "diagnosis_sha256": "607d32560cbee0ebef8ad1d30a17a5dcd26e8fb6583c0266c77aad8668fdbcd0",
+  "cleanup_verified": true
+}

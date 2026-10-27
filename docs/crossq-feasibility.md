@@ -432,3 +432,26 @@ runs pass. Packaging is not publication or permission to delete retained source
 evidence; full screen reporting and remote asset hash verification precede
 duplicate cleanup. The current50k screen uses immutable source36e4dd4, separate
 from these post-export packaging changes.
+
+
+## Screen integrity stop
+
+The50k screen was stopped after the first historical SAC checkpoint discrepancy
+exceeded its fixed0.01pp gate (observed0.121578pp). Both sessions are stopped;
+SAC20k snapshot, pinned diagnostic transport and operation logs are retained.
+CrossQ had no durable full-screen checkpoint before bounded salvage returned404.
+See [diagnosis and cleanup](../results/crossq-integrity-2026-10-27/README.md).
+Initial policy/RNG/data/contracts match; first1001 actions agree, then a four-ULP
+near-target action difference appears immediately after learning. Root cause is
+unproven. No performance interpretation, promotion, tolerance widening or
+automatic retry. Earlier smoke acceptance remains valid operational evidence.
+Next read-only backend/implementation investigation; this stop must remain
+recorded in any separately reviewed future protocol.
+
+
+The persistent `.runtime/crossq-integrity-stop.json` now blocks new CrossQ
+shared-budget controllers and root-validated runtime profiles, including those
+using earlier accepted smoke evidence. Even an empty/malformed marker fails
+closed. It does not reset the original ledger or study allowance, or mark an
+account/project budget failure. The marker and failed attempt must remain
+preserved through any separately reviewed future protocol.

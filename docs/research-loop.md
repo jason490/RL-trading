@@ -21,13 +21,18 @@ weights, Adam and normalization restore bitwise; only derived float32 exp permit
 one-ULP CPU rounding. Canonical JSON preserves tuple/list parameter semantics.
 Projection3732.56s fits7200; original study baseline39.47256169564856/2 persists.
 
-The fixed50k seed11 screen is now running from clean36e4dd4 in
-`.runtime/crossq-screen-source-v1`; controller state
-`.runtime/crossq-screen-state-v1.json`, proof
-`.runtime/crossq-screen-source-proof-v1.json`. Two centrally metered CPU sessions;
-no screen result yet. Poll the live controller, not state files alone. Retain
-artifacts and verify shutdown before strict screen reporting. No extension or
-rescue grid after failed gates; confirmation11/23/37 only after a passing screen.
+The fixed50k seed11 screen from clean36e4dd4 was deliberately stopped after
+[historical SAC integrity failure](../results/crossq-integrity-2026-10-27/README.md):
+10k discrepancy0.121578pp>0.01pp. Initial tensors/RNG/contracts match, first1001
+actions bitwise equal; first divergence after learning is5.96e−8/four ULPs.
+Root cause unproven. No candidate interpretation/promotion, tolerance change or
+automatic retry. SAC20k snapshot retained; no available CrossQ screen checkpoint
+before interruption (salvage404, logs retained). Both owned sessions stopped.
+Project39.518548/150, official account348.60/rate0/no assignments. Original
+CrossQ baseline39.47256169564856/2 unchanged. Next read-only backend/implementation
+diagnosis; any new protocol must preserve this failed attempt and require review.
+Persistent `.runtime/crossq-integrity-stop.json` blocks new study controllers and
+root-validated profiles even with prior smoke acceptance; no ledger reset.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
 sidecars, includes arm labels, excludes raw replay/credentials.22 publication
