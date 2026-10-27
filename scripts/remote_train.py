@@ -23,6 +23,17 @@ def main():
     if (plan['accelerator']=='CPU' and cuda or
         plan['accelerator']!='CPU' and (not cuda or plan['accelerator'] not in gpu)):
         raise RuntimeError('requested runtime hardware not verified')
+    if plan.get('version')==40:
+        from rl_stocks.core.provenance import source_identity,repository_state
+        from rl_stocks.core.contracts import digest
+        from rl_stocks.training.recurrent_environment_worker import execute_colab
+        payload=json.loads((root/'dataset.json').read_text())
+        if digest(payload)!=plan['dataset_contract']['identity']:
+            raise ValueError('bound recurrent environment smoke view required')
+        execute_colab(payload,root/'artifacts/recurrent-loop')
+        (root/'artifacts/completion.json').write_text(json.dumps(dict(plan=plan,dataset=digest(payload),
+            python=list(sys.version_info[:3]),gpu=gpu,source_git=repository_state(root),source_hash=source_identity()),indent=2))
+        return
     if plan.get('version')==39:
         from rl_stocks.core.provenance import source_identity,repository_state
         from rl_stocks.core.contracts import digest

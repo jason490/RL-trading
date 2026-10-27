@@ -90,8 +90,11 @@ checks); no local optimizer or new allocation. Fresh environment smoke now regis
 128 transitions/4 updates,0.1unit/900s/no retry on a fixed six-symbol cached prefix.
 Actual12-episode/1,164-row view, unchanged original normalization, Gymnasium/SB3
 checkers and initial tensors pass;52 related tests pass. Worker guarded, no
-allocation. Next dedicated budget/claim/fleet/physical-loop verifier, then execute
-smoke; complete frozen bundles/matched performance protocol remain. Exact
+allocation. Version40 dedicated budget/claim/fleet and64MiB physical verifier now
+pass70 focused tests, including recorded-action economic replay, checkpoint/curve/
+selection identity and local frozen parity. Prior stopped attempt settled;
+account348.59/idle and project39.53232284029461 unchanged. Next clean-source
+single environment-smoke allocation; frozen bundles/matched protocol remain. Exact
 interruption continuation is unsupported until full replay/environment state
 is saved; no new market-performance result or allocation;
 no candidate protocol, dependency change or further allocation is registered.

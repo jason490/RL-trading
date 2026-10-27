@@ -2848,3 +2848,16 @@ ledger and prior stop/claim unchanged.52 related tests/Ruff pass without local
 optimization, provider calls or allocation. Guarded worker implemented; dedicated
 metered job/sole claim and independent loop-archive verifier remain before the
 single0.1unit/900s allocation. Short smoke returns cannot promote a model family.
+
+
+### Recurrent environment-smoke runtime/physical verifier — 2026-10-27
+
+Version40 exact CPU task, dedicated persistent budget/sole claim,900s/420s reserve,
+no exec retries and explicit dispatch integrated into original aggregate fleet.
+64MiB allowlisted verifier checks physical initial/warmup/final snapshots/Adam,
+collection counters, both full checkpoint reports, recorded-action economics,
+local frozen parity, selection/final pointers and compact curve identities.
+70 focused tests/Ruff pass without local differentiation. Prior stopped attempt
+settled;348.59/idle, original conservative39.53232284029461 units unchanged.
+Next clean immutable export and single registered actual environment smoke;
+no longer performance experiment, promotion or retired-test access is implied.

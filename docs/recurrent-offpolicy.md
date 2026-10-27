@@ -688,3 +688,33 @@ OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=src \
   MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
   scripts/check_recurrent_environment_view.py --proof /tmp/environment-check-new.json
 ```
+
+
+## Environment-smoke metered runtime and independent verifier
+
+Version40 now fixes one CPU job for the exact accepted923,149-byte view. Its
+persistent `recurrent-environment-smoke-budget.json` and sole allocation claim
+share the original whole-runtime ledger. It enforces0.1 incremental units,
+900 seconds including420 seconds retrieval/cleanup reserve, original150/130
+project and150/170 account guards, no worker restart, bounded transport and
+verified owned teardown. The prior stopped replay-smoke attempt is settled before
+new allocation; preflight remains348.59/rate0/no assignments and39.53232284029461
+conservative project units. No previous claim, charge or CrossQ stop is reset.
+
+The worker reopens both saved checkpoints and re-evaluates them in the same
+runtime, requiring exact score reproduction before retaining their full reports.
+Independent archive verification checks a64MiB exact allowlist, clean source,
+actual kernel/hardware, physical initial/warmup/final tensors and native Adam
+counters, actual collection/sampling counts, selected/final pointers, tie handling
+and JSONL/CSV curve arithmetic. It replays recorded actions against immutable
+bars to verify costs, fills and equity, and checks copied frozen versus live
+carried/reset predictions locally. Cross-host actor arithmetic is not treated as
+an economic-replay requirement or a relaxed historical return tolerance.
+
+70 focused tests/Ruff pass, including manual native-Adam snapshots and real
+synthetic simulator paths, corrupt economics/counters/curves/pointers rejection,
+remote dispatch without optimization and budget/cleanup regressions. Native
+backward/optimizer/training calls are forbidden in these fixtures. This is local
+implementation acceptance; actual128-transition Colab acceptance is still pending.
+Next clean immutable export, fresh default-kernel/usage preflight and the single
+registered allocation. Scientific outputs must be retrieved before verified stop.
