@@ -20,7 +20,7 @@ from rl_stocks.training.checkpoint_export import export_artifacts
 from rl_stocks.training.recurrent_collector import RecurrentCollector
 from rl_stocks.training.recurrent_payload import RecurrentPayloadStore
 from rl_stocks.training.recurrent_replay import _integer
-from rl_stocks.training.recurrent_sac_checkpoint import save_checkpoint
+from rl_stocks.training.recurrent_sac_checkpoint import save_checkpoint,validate_learner
 from rl_stocks.training.recurrent_sac_learner import RecurrentSACLearner, require_colab_cpu
 
 
@@ -172,10 +172,24 @@ def validate_dataset(dataset, expected_identity):
     return normalizer, training
 
 
-def run_colab_training(dataset, output, config: LoopConfig, *, exposure_mode: str, lineage: dict):
+def validate_initial_learner(learner,config):
+    if type(learner) is not RecurrentSACLearner:
+        raise ValueError('native unfitted recurrent SAC learner required')
+    validate_learner(learner)
+    if (learner.updates!=0 or learner.max_updates!=config.maximum_updates
+            or learner.networks.observation_size!=21 or learner.networks.hidden_size!=config.hidden_size
+            or learner.learning_rate!=.0003 or learner.gamma!=.99 or learner.tau!=.005
+            or learner.log_alpha.item()!=0):
+        raise ValueError('fresh matching portable recurrent initialization required')
+
+
+def run_colab_training(dataset, output, config: LoopConfig, *, exposure_mode: str, lineage: dict,
+                       initial_learner=None):
     require_colab_cpu()  # before dataset construction, output, RNG or updates
     if type(config) is not LoopConfig:
         raise ValueError('validated LoopConfig required')
+    if initial_learner is not None:
+        validate_initial_learner(initial_learner,config)
     normalizer, training = validate_dataset(dataset, lineage['dataset'])
     from rl_stocks.evaluation.exposure import EXPOSURE_MODES
     if exposure_mode not in EXPOSURE_MODES:
@@ -188,12 +202,16 @@ def run_colab_training(dataset, output, config: LoopConfig, *, exposure_mode: st
     output.mkdir(parents=True)
     env = learner = engine = None
     try:
-        random.seed(config.seed)
-        np.random.seed(config.seed)
-        torch.manual_seed(config.seed)
         torch.set_num_threads(1)
-        networks = RecurrentSACNetworks(21, config.hidden_size)
-        learner = RecurrentSACLearner(networks, max_updates=config.maximum_updates)
+        if initial_learner is None:
+            random.seed(config.seed)
+            np.random.seed(config.seed)
+            torch.manual_seed(config.seed)
+            networks = RecurrentSACNetworks(21, config.hidden_size)
+            learner = RecurrentSACLearner(networks, max_updates=config.maximum_updates)
+        else:
+            learner=initial_learner
+            networks=learner.networks
         env = TradingEnv(training, normalizer, dataset['names'], random_start=True,
                          episode_steps=config.episode_steps, start_sampling=config.start_sampling,
                          observation_profile='execution_full')
@@ -213,6 +231,7 @@ def run_colab_training(dataset, output, config: LoopConfig, *, exposure_mode: st
                 step = collector.transitions
                 name = f'checkpoint-{step}'
                 save_checkpoint(learner, output/name, lineage=lineage)
+                export_artifacts(output.parent)  # publish learned state before expensive validation
                 results = evaluate_recurrent_sac(networks, dataset, exposure_mode=exposure_mode, config=env.config)
                 validate_development_report(results, dataset, env.config)
                 history.record(results, steps=step, updates=learner.updates,

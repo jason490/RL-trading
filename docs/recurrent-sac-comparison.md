@@ -277,3 +277,48 @@ by the current evidence.
 
 Evidence: [compression benchmark](../results/recurrent-offpolicy-2026-10-27/archive-compression-benchmark.json)
 and [cost review](../results/recurrent-offpolicy-2026-10-27/execution-cost-review.json).
+
+## Full-development worker implementation
+
+`training.recurrent_comparison_worker.execute_colab` implements the fixed100k
+cells without provisioning sessions. Actual Colab CPU/default-Python verification
+runs before data, model, RNG or output work. Exact panels, immutable data identity,
+registered architecture/seed and fresh output checks precede learning. Dedicated
+fleet admission, confirmation-seed gate evidence and full physical result
+verification remain required before this worker can be dispatched. No runtime
+plan currently exposes it, so this implementation does not unblock allocation.
+
+Native SAC and RecurrentPPO load the portable unfitted weights and RNG streams
+into the fixed training environment. The GRU loop now accepts only a fresh
+matching learner with zero updates, empty optimizer state, fixed learning
+rate/gamma/tau/alpha and matching maximum updates/geometry. This path preserves
+the restored initialization streams rather than reseeding after loading. Existing
+smoke calls retain the original seeded-construction path.
+
+Native optimizer hooks bound actual steps and reject missing/nonfinite gradients
+or nonfinite updated weights. At post-update checkpoints, physical Adam counters
+and finite moments must match the actual environment transitions and library
+update counters. At100k, SAC requires99,000 actor/critic/entropy steps each; PPO
+requires20,000 policy Adam steps, with the separate library epoch counter1,000.
+PPO's epoch counter is explicitly labelled in curve diagnostics, never described
+as an Adam-step count.
+
+Initial and every10k learned snapshots are exported before full development
+evaluation. Native save closures are removed by the post-update wrapper during
+serialization. Both paths retain checksummed model states, strict earliest-tie
+selected pointers, final pointers, separate selected/final JSON/HTML reports,
+training sampling/execution diagnostics and compact JSONL/CSV/HTML return-change
+curves. Evaluation uses the exact development panel and unit-magnitude execution;
+training retains adaptive exposure and the unchanged net-equity objective.
+
+The native worker preserves RNG across evaluation; each checkpoint's completed
+state exists before curve/pointer publication. Failures retain a failure record,
+preserve earlier checkpoints, remove optimizer hooks, close the training environment
+and attempt owned artifact export. Snapshots do not promise exact interrupted
+replay/environment continuation; automatic retry/resume remains unsupported.
+
+Offline tests use actual untrained native constructors and save/load parity with
+learning/update/Adam methods forbidden. They verify local guard ordering, counter
+contracts, mismatched-initializer rejection and zero-update snapshot restoration.
+They do not establish a successful100k execution, portfolio performance, prospective
+acceptance or a portable deployment bundle.

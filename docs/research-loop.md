@@ -2486,3 +2486,14 @@ GRU still projects4.89h with evaluation/I/O entirely removed; I/O cannot rescue
 the two-hour plan. Longer CPU6/3/2h option is a costed proposal only: observed
 rate0.08 implies0.88 units for seed11/2.64 for all three seeds' ceilings.
 Original two-unit study cap, ledger stop, claim and performance gates unchanged.
+
+### Full100k recurrent comparison worker implemented — 2026-10-27
+
+Actual-Colab-only native SAC/RecurrentPPO and portable-initialized GRU paths
+implemented, retaining100k transitions/10k post-update checkpoints and all fixed
+research gates. Native actual gradient/weight/Adam counters are bounded and
+checked; epoch-versus-Adam distinction explicit. Checkpoints export before
+evaluation; selected/final reports, compact return-change curves and failure
+cleanup retained. Offline untrained save/load and guard/counter checks pass with
+optimization forbidden. No allocation or actual100k result; reviewed execution
+admission, confirmation gates and physical performance acceptance remain.
