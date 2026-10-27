@@ -83,6 +83,15 @@ def validate_tasks(tasks,root):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
+        if plan.get('version') == 38:
+            from rl_stocks.training.sac_update_input import validate_payload
+            from rl_stocks.training.crossq_assets import validate_assets
+            from rl_stocks.core.contracts import digest
+            payload=json.loads((dataset/'dataset.json').read_text())
+            validate_payload(payload)
+            validate_assets()
+            if dataset.name!=plan['dataset_contract']['identity'] or digest(payload)!=dataset.name:
+                raise ValueError('fixed numerical diagnostic input identity required')
         if plan.get('version') == 37:
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.crossq_context import validate_payload
@@ -270,6 +279,11 @@ class Fleet:
         self.root=Path(root).resolve();self.cli=cli;self.tasks=validate_tasks(tasks,self.root)
         self.concurrency=concurrency;self.state_path=Path(state_path)
         self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json')
+        if any(t['plan'].get('version') == 38 for t in self.tasks):
+            if len(self.tasks)!=1 or concurrency!=1 or self.tasks[0]['plan'].get('version')!=38:
+                raise ValueError('numerical diagnostic requires exactly one dedicated CPU allocation')
+            from rl_stocks.training.sac_update_runtime import shared_budget
+            study_limit,study_start=shared_budget(self.budget.ledger,study_limit,study_start)
         if any(t['plan'].get('version') == 37 for t in self.tasks):
             if any(t['plan'].get('version') != 37 for t in self.tasks):
                 raise ValueError('CrossQ study requires its own shared-budget fleet')
@@ -435,7 +449,7 @@ class Fleet:
         elif phase=='exec':
             if code:
                 child['exec_cli_failed']=True
-                if not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version')!=38 and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
             a.phase='await_export';a.probe_due=0.;child['phase']=a.phase;self.budget.ledger.save();self.save()
         elif phase=='ready':
@@ -484,7 +498,7 @@ class Fleet:
             if time.monotonic()+20>=a.exec_deadline:raise TimeoutError('remote export deadline')
             if time.monotonic()>=a.probe_due:
                 child=self.budget.active['children'][a.session]
-                if child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version')!=38 and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
                 self.download(a,'ready','/content/research-artifacts.ready','export.ready',20)
             return
@@ -508,7 +522,7 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
                 raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
             if any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):
@@ -537,7 +551,11 @@ class Fleet:
                                 if a.phase not in ('stop','verify'):self.budget.guard(a.session,60)
                             pending=next((a for a in self.actors if a.phase=='pending'),None)
                             if pending and len(active)<self.concurrency and not any(a.phase in ('new','status') for a in active):
-                                self.budget.admit(pending.session,pending.task['plan']['accelerator'])
+                                if pending.task['plan'].get('version')==38:
+                                    from rl_stocks.training.sac_update_runtime import claim_allocation
+                                    claim_allocation(self.budget.ledger,pending.session)
+                                    self.budget.admit(pending.session,'CPU',allocation_seconds=900,teardown_reserve_seconds=420)
+                                else:self.budget.admit(pending.session,pending.task['plan']['accelerator'])
                                 pending.phase='admitted'
                                 args=['new','-s',pending.session]
                                 if pending.task['plan']['accelerator']!='CPU':args+=['--gpu',pending.task['plan']['accelerator']]

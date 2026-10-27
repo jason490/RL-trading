@@ -73,3 +73,13 @@ against retained immutable source directories; duplicate comparison output
 matched the committed report.3,342 protected files rehashed unchanged. No
 scientific model/replay/dataset/checkpoint evidence deleted. Original ledger
 and CrossQ stop preserved; all owned sessions stopped.
+
+
+## Runtime integration ready
+
+The fixed version38 CPU job now includes preflight input/assets, clean-source
+provenance, one persistent allocation claim,0.1-unit shared diagnostic allowance,
+900-second deadline with420-second teardown reserve and physical artifact
+verification.58 related tests pass using manual fixtures/no local optimization.
+Next clean source/account preflight and actual native Colab updates; no prior
+performance study is resumed automatically.

@@ -2663,3 +2663,13 @@ raw entropy/all Adam tensors; verifies local prediction repeat and unchanged
 source/caller RNG. Directory comparison recomputed; both legitimate numerical
 outcomes accepted without promotion/stop clearing.14 manual-fixture tests pass,
 no fitting or allocation. Budget/runtime integration remains before Colab.
+
+
+### SAC numerical runtime integration — 2026-10-27
+
+Version38 routes one CPU diagnostic through exact input/assets, clean source and
+physical artifact verification. Persistent0.1-unit baseline/sole-allocation claim
+prevents automatic retry;900s deadline includes420s teardown reserve. Original
+project/account limits retained; CrossQ stop unchanged. Native checkpoints
+exported between conditions.58 related regressions pass; native updates remain
+Colab-only. Next clean export, usage preflight and single diagnostic allocation.

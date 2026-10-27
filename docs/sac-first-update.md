@@ -136,3 +136,37 @@ files are rehashed unchanged.14 manual-fixture tests pass; these use forward
 calls and manually populated Adam state, never fitting. Actual Colab native
 update acceptance remains pending budget/runtime integration. Earlier preparation
 evidence remains versioned to its original worker hash.
+
+
+## Budget-controlled Colab dispatch
+
+Version38 is a separate numerical job route, never a generic trading learner.
+It validates the exact input and portable initial assets before allocation, runs
+only the guarded diagnostic, and writes clean-source/kernel/hardware provenance.
+The final archive is allowlisted and bounded to64MiB; physical verification
+reconstructs both models, batches and RNG before the controller accepts success.
+Native per-condition checkpoints are exported between the two updates.
+
+One dedicated CPU allocation is enforced, with a persistent0.1-unit baseline
+and immutable `sac-update-allocation.json` claim. Any later controller refuses
+another allocation, including after failure. The original CrossQ stop remains
+independent and unchanged. Original project150/130 and account150/170 guards
+apply. The900-second inclusive child deadline reserves420 seconds for bounded
+retrieval/cleanup, so normal work must yield by480 seconds; no unstarted-worker
+execution retry is allowed for this route. Other studies retain their existing
+concurrency and deadline defaults.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_sac_update_jobs.py \
+  --output .runtime/sac-update-jobs-v1.json
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.fleet \
+  --jobs .runtime/sac-update-jobs-v1.json --concurrency 1 \
+  --cli-python /path/to/existing-colab-cli/python \
+  --state-output .runtime/sac-update-state-v1.json
+```
+
+Use a clean immutable source export with the original whole-runtime ledger
+symlink and exact dataset directory. Read account usage before allocation and
+verify terminal cleanup afterward.58 integration/related regressions pass with
+manual serialization fixtures and remote execution stubbed; actual native
+Colab update evidence is still pending.

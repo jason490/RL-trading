@@ -17,12 +17,16 @@ class FleetBudget:
             deadline=record['start']+7200*task_count)
         self.ledger.save()
 
-    def admit(self,session,accelerator):
+    def admit(self,session,accelerator,allocation_seconds=7200,teardown_reserve_seconds=0):
+        if (type(allocation_seconds) is not int or not 1 <= allocation_seconds <= 7200
+                or type(teardown_reserve_seconds) is not int or not 0 <= teardown_reserve_seconds < allocation_seconds):
+            raise ValueError('bounded allocation deadline and teardown reserve required')
         self.ledger.guard(360)
         if session in self.active['children']:raise ValueError('duplicate owned session')
         now=self.ledger.clock()
-        record={'session':session,'accelerator':accelerator,'start':now,'deadline':now+7200,
+        record={'session':session,'accelerator':accelerator,'start':now,'deadline':now+allocation_seconds,
             'status':'allocating','phase':'new','retrieved':[],'training_verified':False}
+        if teardown_reserve_seconds:record['teardown_reserve_seconds']=teardown_reserve_seconds
         self.active['children'][session]=record;self.ledger.save()
         return record
 
@@ -45,7 +49,7 @@ class FleetBudget:
         # A large pool must begin teardown early enough to cover its aggregate
         # rate throughout the coordinator's bounded cleanup window.
         self.ledger.guard(max(360,projected_seconds))
-        if self.ledger.clock()+projected_seconds>=self.active['children'][session]['deadline']:
+        if self.ledger.clock()+max(projected_seconds,self.active['children'][session].get('teardown_reserve_seconds',0))>=self.active['children'][session]['deadline']:
             self.ledger.value['budget_stopped']=True;self.ledger.save()
             raise BudgetStop('owned allocation deadline reached; stop fleet')
 

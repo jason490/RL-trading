@@ -4,6 +4,7 @@ from copy import deepcopy
 import os
 from pathlib import Path
 import sys
+import tarfile
 
 import numpy as np
 from stable_baselines3 import SAC
@@ -169,6 +170,7 @@ def execute_colab(payload, output):
     spec = protocol()
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
+    (output/'input.json').write_bytes(canonical(payload))
     records, states = {}, {}
     with preserved_rng():
         torch.set_num_threads(1)  # Same explicit intra-op setting in both historical runners.
@@ -223,6 +225,13 @@ def execute_colab(payload, output):
                     audit.close()
                 model.save(folder / 'post-update.zip')
                 (folder / 'record.json').write_bytes(canonical(record))
+                checkpoint=os.environ.get('RL_CHECKPOINT_ARCHIVE')
+                if checkpoint:
+                    checkpoint=Path(checkpoint)
+                    temporary=checkpoint.with_suffix('.tmp')
+                    with tarfile.open(temporary,'w:gz') as archive:
+                        archive.add(output.parent,arcname='artifacts')
+                    temporary.replace(checkpoint)
             finally:
                 model.env.close()
         a, b = spec['arms']

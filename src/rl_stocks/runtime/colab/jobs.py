@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 37:
+    if plan.get('version') == 38:
+        from rl_stocks.core.contracts import canonical
+        if canonical(plan) != canonical(sac_update_plan()):
+            raise ValueError('fixed two-update numerical diagnostic plan required')
+    elif plan.get('version') == 37:
         from rl_stocks.core.contracts import canonical
         try:
             expected = crossq_plan(**plan['crossq_study'], profile=plan.get('runtime_acceptance'))
@@ -782,3 +786,11 @@ def crossq_plan(arm, seed=11, smoke=False, profile=None):
     if not smoke:
         plan['runtime_acceptance'] = deepcopy(profile)
     return plan
+
+
+def sac_update_plan():
+    from rl_stocks.training.sac_update_input import PROTOCOL_SHA256
+    from rl_stocks.training.sac_update_worker import INPUT_ID
+    return dict(version=38, accelerator='CPU', protocol_sha256=PROTOCOL_SHA256,
+        dataset_contract=dict(identity=INPUT_ID), allocation_deadline_seconds=900,
+        jobs=[dict(algorithm='sac_update_probe', device='cpu', smoke=False, seed=11, steps=2)])

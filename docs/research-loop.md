@@ -52,6 +52,12 @@ Independent physical state/batch/RNG verification is now implemented with14
 manual-fixture tests, including equal/different outcomes and tamper rejection.
 No local fitting or new allocation; budget/runtime integration remains. Numerical findings cannot automatically authorize the old screen.
 
+Version38 runtime now integrates the numerical diagnostic: one CPU allocation,
+persistent0.1-unit baseline/immutable claim,900s deadline with420s teardown reserve,
+no execution restart, preflight input/assets and allowlisted physical artifacts.
+58 related tests pass without native local updates. Next clean source/account
+preflight and the single actual Colab numerical allocation.
+
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
 sidecars, includes arm labels, excludes raw replay/credentials.22 publication
 regressions and actual retained smoke evidence pass. Nothing new published yet.

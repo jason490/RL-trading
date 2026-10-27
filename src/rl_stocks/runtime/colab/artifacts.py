@@ -12,6 +12,9 @@ from rl_stocks.core.contracts import digest, canonical
 
 
 def validate_archive(path, plan, dataset_id):
+    if plan.get('version') == 38:
+        from rl_stocks.runtime.colab.sac_update_artifacts import validate_sac_update_archive
+        return validate_sac_update_archive(path, plan, dataset_id)
     with tarfile.open(path) as archive:
         names = {member.name for member in archive.getmembers() if member.isfile()}
         if 'artifacts/failure.txt' in names:
