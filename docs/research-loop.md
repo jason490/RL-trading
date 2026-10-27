@@ -61,8 +61,10 @@ GRU history helpers now pass22 native untrained-forward checks: detached burn-in
 one-pass t/t+1 alignment, target graph exclusion and fresh episode states.
 Incremental sampling now matches the reference after interleaved overwrite and
 all93,800 valid starts at100k capacity; local256-window draw median1.873ms
-(metadata only).59 combined checks pass. Next audit/integrate a pinned learner
-loss path and register matched controls before Colab optimization;
+(metadata only). Independent recurrent networks and separate SAC objectives now
+pass10 further analytic/forward checks (69 total), with installed SB3 train/density
+source hashes pinned. No local differentiation; next Colab-only update driver,
+learned serialization/frozen inference and registered matched smoke before optimization;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm

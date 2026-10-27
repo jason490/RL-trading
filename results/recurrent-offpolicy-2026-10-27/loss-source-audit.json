@@ -1,0 +1,24 @@
+{
+  "schema": "recurrent-sac-loss-source-v1",
+  "sb3_version": "2.7.0",
+  "native_sac_train_sha256": "0ac7abe1c18ba7fe1b8a5bbf2b301b6fff4f4573aa02c4342187a953600ce50c",
+  "native_squashed_distribution_sha256": "5622cf48a18599ad48838659bdb9ec6387835ab256dcc0581b5c41c8bc2d5f16",
+  "equation_scope": [
+    "one-step target with terminal-only mask",
+    "half sum twin mean squared errors",
+    "detached alpha actor entropy term",
+    "detached log probability temperature loss"
+  ],
+  "native_order": [
+    "temperature",
+    "critic",
+    "recompute actor Q after critic update",
+    "actor",
+    "Polyak targets"
+  ],
+  "recurrent_path": "custom observation-only independent GRUs; native SB3 squashed density",
+  "optimizer_steps": 0,
+  "backward_calls": 0,
+  "colab_allocations": 0,
+  "performance_claim": false
+}

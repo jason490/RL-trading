@@ -2732,3 +2732,14 @@ matches93,800 reference starts;256-window draw median1.873ms, pool build25.481ms
 Compact checksummed-source evidence retained; no model, training, provider call,
 Colab allocation or bulk artifacts. Pinned learner/loss integration and registered
 matched control/candidate smoke/performance protocol remain next.
+
+
+### Recurrent SAC networks/loss forward acceptance — 2026-10-27
+
+Added unregistered independent observation-GRU actor/twin critics/targets using
+native SB3 squashed density and separate validated recurrent SAC target, critic,
+actor and temperature objectives. Installed SB3 2.7 train/distribution source
+hashes pinned; native phase ordering documented.69 combined forward/analytic tests
+and Ruff pass without backward/optimizer/Colab activity. Actual differentiation,
+update ordering/Polyak, learned restoration/frozen inference and a registered
+matched Colab smoke remain; no performance result or old-study retry follows.

@@ -263,3 +263,54 @@ No model/data-provider/Colab activity occurs. The benchmark uses fixed synthetic
 symbol names and stores only compact timing/provenance JSON; no bulk output needs
 cleanup. Next audit and integrate the pinned learner loss, then register the
 matched candidate/control smoke and performance protocol before optimization.
+
+
+## Recurrent networks and SAC objectives
+
+`rl/recurrent_sac/networks.py` implements a prospective, unregistered network
+package: independent observation-only GRUs, actor hidden/ReLU plus four mean and
+log-standard-deviation outputs, and twin critic heads consuming recurrent features
+plus four actions. Target critics are independent deep copies initialized to
+online weights with gradients disabled. Hidden width defaults64 but has not been
+selected through a performance experiment. No generic algorithm factory route
+or optimizer is added by this feature.
+
+The actor clamps log standard deviation to[-20,2] and uses installed SB3's
+SquashedDiagGaussianDistribution for its tanh action density, flattening batch/time
+before that API's action-dimension reduction. Optional explicit standard-normal
+noise supports deterministic equation fixtures. The distribution is local to the
+call, so no mutable action cache is retained in the network.
+
+`training/recurrent_sac_losses.py` validates unpadded copied replay tensors and
+computes separate critic and actor objectives. Only transitions after burn-in
+enter reductions. Targets use next actor actions and minimum twin target Q minus
+entropy, discounted with a terminal-only bootstrap mask. Critic loss is half the
+sum of two mean squared errors. Actor loss is mean(alpha*log_probability-minQ).
+Temperature loss uses detached log probabilities and target entropy-4 by default.
+Alpha is detached from actor/critic objectives; targets are no-grad. During actor
+Q computation critic parameters are temporarily frozen, preserving derivatives
+through sampled actions, and original requires-grad flags restore on error.
+
+[Source audit](../results/recurrent-offpolicy-2026-10-27/loss-source-audit.json)
+pins installed SB3 2.7.0 train-method and squashed-distribution hashes. Its native
+update order is temperature, critic, actor Q recomputation, actor, target update.
+The objectives are deliberately separate so a future Colab update driver can
+recompute actor Q after the critic step instead of reusing a stale pre-update
+loss graph. This is custom recurrent sequencing around the audited SAC equations;
+it is not an unchanged native SB3 learner or a skrl learner acceptance claim.
+[Native source](https://github.com/DLR-RM/stable-baselines3/blob/v2.7.0/stable_baselines3/sac/sac.py).
+
+10 additional forward/analytic checks bring focused acceptance to69. Independent
+NumPy targets distinguish true termination from time-limit truncation; native
+SB3 density comparison verifies batch/time flattening. Separate full-episode GRU
+forwards verify target, critic and actor reductions against the chunked replay
+path. Tests check unchanged weights/RNG/gradients, graph flags without local
+backward, restored critic flags on exceptions and corrupted replay rejection.
+These checks do not establish actual gradients, optimizer steps, Polyak behavior,
+learned restoration or profitability. Local fixtures perform no differentiation.
+
+Next implement a bounded Colab-only update driver, durable learned serialization
+and frozen recurrent prediction. Register a candidate/control smoke with fixed
+counts, source/data/initialization identities and shared budget guards before
+any optimizer call. Only after actual learned smoke acceptance should a matched
+performance comparison be scheduled. The historical CrossQ stop stays intact.
