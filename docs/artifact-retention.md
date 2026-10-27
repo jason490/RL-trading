@@ -260,3 +260,19 @@ link update is separately hashed as documentation, not a model/data mutation.
 [Inventory](../results/treasury-context-2026-10-26/cleanup.json),
 [post-cleanup verification](../results/treasury-context-2026-10-26/post-cleanup-verification.json),
 [research release](https://github.com/jason490/RL-trading/releases/tag/treasury-context-2026-10-26).
+
+
+## Numerical diagnostic staging cleanup — 2026-10-27
+
+Removed three task-owned staging duplicates totaling88,340,415 logical bytes
+(84.25MiB): two Git-export tar files and a duplicate source-comparison output.
+Every source-archive regular file was verified byte-identical to its retained
+immutable source directory, with matching captured Git revision. The temporary
+comparison was semantically identical to the committed result. This cleanup
+removes staging copies rather than research model/data evidence.
+
+3,342 protected retained files were rehashed unchanged, including the original
+ledger, stop marker, diagnostic checkpoint, accepted smoke models/replays and
+immutable diagnostic input. No model, replay, dataset or research checkpoint
+was deleted. Both source directories remain, all owned sessions are stopped,
+and budget history is intact. [Inventory](../results/sac-first-update-2026-10-27/temporary-cleanup.json).

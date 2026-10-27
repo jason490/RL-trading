@@ -2653,3 +2653,13 @@ observer/env cleanup and caller RNG restoration included. Actual untrained
 real-input action/sample parity and immutable tensors/input pass with fitting
 forbidden.35 related tests pass. Bounded controller and independent physical
 artifact restoration remain before allocation. No credit use or CrossQ restart.
+
+
+### SAC numerical physical state/batch/RNG verifier — 2026-10-27
+
+Worker records four raw Torch RNG snapshots. Independent verifier reconstructs
+replay sample and forward-only RNG advancement; restores native policy/target/
+raw entropy/all Adam tensors; verifies local prediction repeat and unchanged
+source/caller RNG. Directory comparison recomputed; both legitimate numerical
+outcomes accepted without promotion/stop clearing.14 manual-fixture tests pass,
+no fitting or allocation. Budget/runtime integration remains before Colab.

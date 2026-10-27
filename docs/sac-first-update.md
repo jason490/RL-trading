@@ -58,7 +58,8 @@ allocation. These checks are not native-update or learned-state acceptance.
 ## Colab-only execution still pending
 
 The guarded worker core is implemented; budget-controlled runtime dispatch and
-independent saved-artifact restoration remain before allocation. Local learning/optimizer steps remain prohibited. Use one
+independent saved-artifact restoration is implemented and tested; runtime dispatch
+and budget/deadline integration remain before allocation. Local learning/optimizer steps remain prohibited. Use one
 owned CPU session, at most0.1 incremental units and900 seconds including setup,
 allocated idle, execution, retrieval and cleanup. Preserve a diagnostic baseline
 across failures and the original project ledger;150/130 project and150/170
@@ -104,3 +105,34 @@ original RNG, correct tuple/list representations and removed observers while
 learn/train/Adam.step are forbidden. These local checks are not actual native
 update acceptance.35 related tests pass. Budget/controller and independent
 physical artifact checks remain before any Colab allocation.
+
+
+## Independent saved-artifact verification
+
+The worker now retains four raw CPU Torch snapshots in `torch-rng.npz`: initial,
+before update, after update and after follow-up action. Each must match its
+recorded RNG hash and valid native CPU generator geometry.
+
+`training/sac_update_verify.py` restores original inputs/states, reconstructs the
+actual replay batch, and advances Torch RNG through the two native stochastic
+actor forwards under `no_grad`. No backward pass, optimizer step or learner call
+is used by verification. It independently loads the saved native SAC archive
+and compares policy/target/raw-entropy/Adam tensors with the complete NPZ state.
+Actual saved step counters must be1 for every optimizer parameter; sample and
+attempt/completion counts must agree.
+
+Action records require exact four-component float32 hashes. The verifier replays
+saved stochastic RNG states and checks exact repeatability on the verifier host,
+with unchanged numerical tensors and restored caller RNG. Remote action
+recomputation equality is reported separately: different CPU arithmetic may
+change its value, and that observation neither changes a return tolerance nor
+authorizes another fit. Raw tensors/moments/entropy and stored RNG remain exact.
+
+The directory verifier recomputes the reported comparison from both physical
+condition artifacts. It accepts either equal or different numerical outcomes
+with valid matched inputs; it rejects altered counts, extra transitions,
+promotion/root-cause claims and any clearing of the CrossQ stop. All source
+files are rehashed unchanged.14 manual-fixture tests pass; these use forward
+calls and manually populated Adam state, never fitting. Actual Colab native
+update acceptance remains pending budget/runtime integration. Earlier preparation
+evidence remains versioned to its original worker hash.

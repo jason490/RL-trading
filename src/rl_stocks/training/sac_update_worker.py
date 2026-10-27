@@ -178,8 +178,10 @@ def execute_colab(payload, output):
             folder.mkdir()
             model, initial = prepare(payload, arm)
             try:
+                torch_states = dict(initial=torch.get_rng_state().numpy().copy())
                 before_action = stochastic_action(model, payload['arrays']['observations']['values'][1000][0])
                 before_rng = rng_record()
+                torch_states['before_update'] = torch.get_rng_state().numpy().copy()
                 reference = records.get(spec['arms'][0])
                 if reference is not None and (
                         reference['initial']['policy_tensor_sha256'] != initial['policy_tensor_sha256']
@@ -190,6 +192,7 @@ def execute_colab(payload, output):
                 try:
                     model.train(gradient_steps=1, batch_size=256)  # Only reachable after require_colab.
                     after_update_rng = rng_record()
+                    torch_states['after_update'] = torch.get_rng_state().numpy().copy()
                     final = model_record(model)
                     evidence = audit.record()
                     if (model._n_updates != 1 or evidence['replay_batches'] != 1
@@ -199,6 +202,7 @@ def execute_colab(payload, output):
                                    or o['state_count'] != o['parameter_tensors'] for o in final['optimizers'].values())):
                         raise ValueError('one actual update and all three actual Adam steps required')
                     after_action = stochastic_action(model, payload['postupdate_observation'])
+                    torch_states['after_action'] = torch.get_rng_state().numpy().copy()
                     arrays = state_arrays(model)
                     states[arm] = arrays
                     record = dict(initial=initial, final=final, audit=evidence,
@@ -207,6 +211,7 @@ def execute_colab(payload, output):
                         after_action_sha256=fingerprint(after_action), after_rng=rng_record(),
                         state_sha256=tensor_fingerprint(arrays))
                     records[arm] = record
+                    np.savez_compressed(folder / 'torch-rng.npz', **torch_states)
                     np.savez_compressed(folder / 'numerical-state.npz', **arrays)
                     np.savez_compressed(folder / 'sampled-batch.npz', **audit.batch)
                 except BaseException as error:

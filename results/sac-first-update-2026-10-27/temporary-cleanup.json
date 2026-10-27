@@ -1,0 +1,42 @@
+{
+  "schema": "task-owned-staging-cleanup-v1",
+  "removed": [
+    {
+      "path": ".runtime/crossq-source-v1.tar",
+      "bytes": 44134400,
+      "sha256": "da54d4e727329b3c62c7b8ca3d50906db9e8fd4b2b5967ed979b824a507b66f9",
+      "reason": "Git-export staging archive; every regular file has a byte-identical retained immutable source replacement",
+      "retained_root": ".runtime/crossq-source-v1",
+      "revision": "1a359c7ec7eba25ddc2454cfe88f02d85a72e1c3",
+      "verified_files": 1662,
+      "member_manifest_sha256": "0eb2c5f88491398a6163f4fb53dcfd7827a631150d7a0510c1b82a8c40e68dfe"
+    },
+    {
+      "path": ".runtime/crossq-screen-source-v1.tar",
+      "bytes": 44185600,
+      "sha256": "9bca13dacdab690ae51ceba14d5d86a4192f7a5ecdaf80e017c764a36609fe8b",
+      "reason": "Git-export staging archive; every regular file has a byte-identical retained immutable source replacement",
+      "retained_root": ".runtime/crossq-screen-source-v1",
+      "revision": "36e4dd40f001ebbda58ca1421d30665fe7bd8233",
+      "verified_files": 1667,
+      "member_manifest_sha256": "a33a8ef6ea11eb46ec61f804dce01e443d5504e36686c03385ee26fc6d7a36d2"
+    },
+    {
+      "path": ".runtime/crossq-source-comparison-counts.json",
+      "bytes": 20415,
+      "sha256": "5e2f15f616a7d09cef6429d0588ff3cbde14312fb2e17ee87fbee9acdf02d7db",
+      "reason": "Exact semantic duplicate of committed source comparison",
+      "retained_replacement": "results/crossq-integrity-2026-10-27/source-comparison.json"
+    }
+  ],
+  "removed_files": 3,
+  "removed_logical_bytes": 88340415,
+  "protected_file_count": 3342,
+  "protected_manifest_sha256": "2ac0241254d08ce6dd29168a93b87b2a7a6b5798994489a41a1958173f2fdfea",
+  "protected_files_unchanged": true,
+  "research_model_replay_dataset_or_checkpoint_deleted": false,
+  "all_owned_sessions_stopped": true,
+  "project_units": 39.518547649665,
+  "ledger_unchanged": true,
+  "crossq_stop_preserved": true
+}

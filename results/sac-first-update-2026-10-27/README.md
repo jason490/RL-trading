@@ -43,5 +43,33 @@ updates remain guarded for Colab CPU only.35 related tests pass, including
 manual-state serialization and local-execution rejection. These fixtures never
 fit and do not establish learned-state/native-update acceptance.
 
-Next implement bounded controller and independent saved-state/sample restoration
-checks before allocation. CrossQ stop and all original budget history stay intact.
+Independent saved-state/sample/RNG restoration is now implemented; next integrate
+the bounded controller before allocation. CrossQ stop and all original budget history stay intact.
+
+
+## Physical verifier implementation
+
+Four raw Torch RNG snapshots now accompany each condition. Independent read-only
+verification reconstructs native replay sampling and two actor forwards, restores
+saved model/target/raw-entropy/Adam tensors exactly, replays action RNG, checks
+local repeatability and recomputes the two-condition comparison. Equal and
+different valid outcomes are accepted as diagnostic evidence; neither grants
+promotion, proves the historical cause or clears the old stop. Remote action
+arithmetic equality is reported separately from exact saved-state restoration.
+
+14 tests cover manual native serialization fixtures, corrupted batch/state/RNG/
+action/count/moment evidence, differing valid numerical outcomes and forbidden
+summary claims. No native gradient update or Colab allocation has occurred.
+Budget/deadline/controller integration remains before actual execution. The
+earlier preparation proof retains its original source hash; RNG artifact
+recording was added before any actual numerical update.
+
+
+## Verified temporary cleanup
+
+[Cleanup inventory](temporary-cleanup.json) records three removed staging
+duplicates/88,340,415 logical bytes (84.25MiB). Two source tar files were checked
+against retained immutable source directories; duplicate comparison output
+matched the committed report.3,342 protected files rehashed unchanged. No
+scientific model/replay/dataset/checkpoint evidence deleted. Original ledger
+and CrossQ stop preserved; all owned sessions stopped.

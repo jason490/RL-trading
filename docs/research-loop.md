@@ -48,7 +48,9 @@ clearing.11 input tests pass; no new learning/allocation. Next implement the
 bounded controller and physical artifact checks before allocation. Worker core
 now guards Colab-only native updates and one sample/step per optimizer; actual
 untrained real-input action/sample parity, immutable input/RNG and cleanup pass.
-35 related tests pass without fitting or allocation. Numerical findings cannot automatically authorize the old screen.
+Independent physical state/batch/RNG verification is now implemented with14
+manual-fixture tests, including equal/different outcomes and tamper rejection.
+No local fitting or new allocation; budget/runtime integration remains. Numerical findings cannot automatically authorize the old screen.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
 sidecars, includes arm labels, excludes raw replay/credentials.22 publication
