@@ -63,8 +63,11 @@ Incremental sampling now matches the reference after interleaved overwrite and
 all93,800 valid starts at100k capacity; local256-window draw median1.873ms
 (metadata only). Independent recurrent networks and separate SAC objectives now
 pass10 further analytic/forward checks (69 total), with installed SB3 train/density
-source hashes pinned. No local differentiation; next Colab-only update driver,
-learned serialization/frozen inference and registered matched smoke before optimization;
+source hashes pinned. Colab-only bounded update driver, checksummed learner
+snapshots and private deterministic carried-state actor now pass8 additional
+offline/manual-state checks (77 total), with no local backward or optimizer call.
+Next register/integrate the matched training-only Colab smoke and verify actual
+gradients/phase order/Polyak/learned restoration before performance optimization;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm

@@ -2743,3 +2743,15 @@ hashes pinned; native phase ordering documented.69 combined forward/analytic tes
 and Ruff pass without backward/optimizer/Colab activity. Actual differentiation,
 update ordering/Polyak, learned restoration/frozen inference and a registered
 matched Colab smoke remain; no performance result or old-study retry follows.
+
+
+### Recurrent SAC bounded driver/checkpoint fixtures — 2026-10-27
+
+Added explicit Colab-CPU-only update driver with lifetime counts, native phase
+ordering, finite-gradient/parameter checks and partial-failure no-retry state.
+Checksummed learner snapshots retain native Adam/entropy/tensors/Torch RNG;
+private copied deterministic actor handles explicit schema/carried state/reset.
+77 focused checks/Ruff pass using untrained/manual optimizer fixtures only.
+No local backward/optimizer step, allocation or performance claim. Actual learned
+acceptance, exact replay/environment resume and complete frozen bundles remain;
+next register and integrate a bounded matched training-only Colab smoke.

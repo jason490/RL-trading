@@ -314,3 +314,58 @@ and frozen recurrent prediction. Register a candidate/control smoke with fixed
 counts, source/data/initialization identities and shared budget guards before
 any optimizer call. Only after actual learned smoke acceptance should a matched
 performance comparison be scheduled. The historical CrossQ stop stays intact.
+
+
+## Bounded learner driver, snapshots and frozen actor
+
+`training/recurrent_sac_learner.py` adds an explicit lifetime update allowance.
+`update` rejects outside default Python3.13, Colab release context, the owned
+`/content/rl-stocks` workspace and CPU hardware before conversion, RNG, counters or
+backward. The existing runtime controller must still establish ownership, actual
+Python version, shared metering and cleanup; environment markers alone are not
+an ownership or budget controller. No generic training route is enabled.
+
+Each allowed update validates replay, increments attempts and draws one current
+actor noise tensor. It caches pre-temperature alpha, applies temperature then
+critic Adam, recomputes actor/online-critic histories after that critic step with
+the same current-action noise, applies actor Adam, then Polyak-updates targets.
+All optimized parameters require present finite gradients and finite post-step
+values. Per-role completed counters and phase order are retained. A partial
+failure marks the learner failed, clears gradients and prevents update retry or
+normal checkpointing; the worker must preserve prior completed checkpoints and
+failure diagnostics. Max updates survives checkpoint restoration.
+
+`training/recurrent_sac_checkpoint.py` stages immutable checkpoints containing
+network/target tensors, raw log-alpha, three native Adam states and raw Torch RNG.
+JSON manifests bind geometry, optimizer settings, counters, source/data/observation
+schema lineage and SHA256. Loading validates checksum/size, strict model shapes,
+optimizer configuration and every native Adam counter/moment geometry; partial
+or failed state rejects. Loading uses tensor-only PyTorch deserialization and
+preserves caller RNG unless explicit Torch RNG restoration is requested. These
+checks provide integrity, not cryptographic publisher authentication.
+
+The checkpoint is a learner snapshot, not an exact environment/replay resume or
+a deployable inference bundle. Replay payloads, sampler NumPy/Python streams,
+current observation and episode state are not included yet. A worker must not
+claim exact continuation from this file alone. Preprocessing/normalizer and
+full feature/action/provider manifests still belong in a future frozen bundle.
+
+`rl/recurrent_sac/prediction.py` copies a private eval/no-grad actor and accepts
+already-normalized observations with a required matching schema. Deterministic
+actions are tanh(mean); returned single-lane state is copied and reset explicitly
+at episode starts. It does not fetch data, transform/update normalization or send
+orders. Modifying the original learner after freezing cannot change its actor.
+
+Eight additional offline checks bring acceptance to77. Tests verify local update
+rejection before mutation; bitwise tensor/raw-entropy/Adam restoration; carried
+prediction parity; private-copy/reset/schema behavior; corruption/native-counter
+rejection and immutable save destinations. Adam fixtures are manually populated
+without gradients or optimizer calls. No test bypasses the local update guard.
+Actual gradients, phase ordering, Polyak math during learning and learned-model
+restoration remain unproven until a registered Colab smoke observes them.
+
+Next register a bounded smoke on training-only data with explicit transition and
+update counts, native feedforward control, shared ledger/account floors, durable
+failure artifacts and owned cleanup. Integrate its runner/archive verification
+before allocation. No performance run, paper eligibility or old CrossQ retry is
+authorized by these offline fixture results.
