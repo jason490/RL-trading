@@ -7,6 +7,7 @@ import tarfile
 import tempfile
 
 from rl_stocks.core.files import write_once
+from rl_stocks.core.contracts import canonical
 from rl_stocks.data.generation.datasets import read_dataset
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.evaluation.report_contract import validate_development_report
@@ -62,7 +63,7 @@ def accept(state_path, source_proof_path, data_root):
         ):
             raise ValueError("actual clean fixed CrossQ smoke source/steps required")
         plan = crossq_plan(arm, smoke=True)
-        if json.loads((root / "completion.json").read_text())["plan"] != plan:
+        if canonical(json.loads((root / "completion.json").read_text())["plan"]) != canonical(plan):
             raise ValueError("actual CrossQ smoke completion plan mismatch")
         # Revalidate the retained extraction; duplicate transport archives need not
         # survive cleanup. Temporary repack is scoped and always removed.

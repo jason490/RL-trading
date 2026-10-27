@@ -1,0 +1,430 @@
+{
+  "schema": "crossq-smoke-acceptance-v1",
+  "passed": true,
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "binding_sha256": "84452236ccf86e66e6527660b89d98da8030864f8390f335e6b875f7d36f42bb",
+  "source_proof": {
+    "source_revision": "1a359c7ec7eba25ddc2454cfe88f02d85a72e1c3",
+    "source_hash": "b4bbe7fa8dc11530a82ac3ae7b5e4cf70b9fd19987795c709912e91701a465fb",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1",
+    "prior_charges_preserved": 39.47256169564856
+  },
+  "state_sha256": "27ba6f8a4630f333cb24a2e6e00bc70878fcc1f0bfba5f64ea604862cbffb880",
+  "cleanup_verified": true,
+  "initialization_checks": {
+    "shared_linear_tensors_verified": true,
+    "sampling_rng_identical": true
+  },
+  "records": {
+    "sac": {
+      "session": "rl-stocks-cpu-9a63a7b85fda",
+      "run": "20261026T235014-sac-11-6577a099",
+      "bundle_id": "cbca3787ab7cdf509517a25ba0840154e48309bff4ad827d01442a9e6da2d2a2",
+      "duration_seconds": 251.08552342299993,
+      "initial": {
+        "algorithm": "sac",
+        "seed": 11,
+        "num_timesteps": 0,
+        "updates": 0,
+        "settings": {
+          "buffer_size": 100000,
+          "batch_size": 64,
+          "learning_starts": 64,
+          "gradient_steps": 1,
+          "ent_coef": "auto",
+          "n_steps": 1,
+          "use_sde": false,
+          "learning_rate": 0.0003,
+          "gamma": 0.99,
+          "target_entropy": -4.0,
+          "train_freq": 1,
+          "train_freq_unit": "step",
+          "tau": 0.005,
+          "target_update_interval": 1
+        },
+        "optimizers": {
+          "actor": {
+            "kind": "torch.optim.adam.Adam",
+            "groups": [
+              {
+                "lr": 0.0003,
+                "eps": 1e-08,
+                "betas": [
+                  0.9,
+                  0.999
+                ],
+                "weight_decay": 0.0,
+                "amsgrad": false,
+                "maximize": false,
+                "decoupled_weight_decay": false
+              }
+            ],
+            "parameter_count": 6088,
+            "parameter_tensors": 8,
+            "state_count": 0,
+            "per_parameter_steps": {},
+            "state_sha256": "84becba4d86a0c3cdc408234cd9435a2302991571e412f005e8460d0b05af69b"
+          },
+          "critic": {
+            "kind": "torch.optim.adam.Adam",
+            "groups": [
+              {
+                "lr": 0.0003,
+                "eps": 1e-08,
+                "betas": [
+                  0.9,
+                  0.999
+                ],
+                "weight_decay": 0.0,
+                "amsgrad": false,
+                "maximize": false,
+                "decoupled_weight_decay": false
+              }
+            ],
+            "parameter_count": 11778,
+            "parameter_tensors": 12,
+            "state_count": 0,
+            "per_parameter_steps": {},
+            "state_sha256": "9a6d30e86e655cb8695aa6842d754a33bc0f4d169bab1ce22377f78b484d4a72"
+          },
+          "entropy": {
+            "kind": "torch.optim.adam.Adam",
+            "groups": [
+              {
+                "lr": 0.0003,
+                "eps": 1e-08,
+                "betas": [
+                  0.9,
+                  0.999
+                ],
+                "weight_decay": 0,
+                "amsgrad": false,
+                "maximize": false,
+                "decoupled_weight_decay": false
+              }
+            ],
+            "parameter_count": 1,
+            "parameter_tensors": 1,
+            "state_count": 0,
+            "per_parameter_steps": {},
+            "state_sha256": "4339ee98fce1c461485f1be126d88207913b73a75f0c7eef4eaee01f21336375"
+          }
+        },
+        "alpha": 1.0,
+        "policy_tensor_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+        "linear_tensor_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+        "normalization": {},
+        "geometry": null,
+        "rng": {
+          "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+          "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+          "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+        },
+        "shared_initialization": {
+          "version": 1,
+          "artifact_file": "configs/initializations/crossq_v1/sac-seed11.npz",
+          "artifact_sha256": "423640f5c22891987cff9186a3b59d19dd16f1d5a59db330c1a617d51aca84cf",
+          "policy_tensor_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+          "rng_sha256": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+          "global_rng_sha256": {
+            "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "torch_version": "2.8.0",
+          "generated_without_fitting": true,
+          "arm": "sac",
+          "seed": 11,
+          "smoke": true,
+          "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+          "binding_sha256": "84452236ccf86e66e6527660b89d98da8030864f8390f335e6b875f7d36f42bb"
+        }
+      },
+      "steps": 4096,
+      "cleanup_verified": true,
+      "observed_actor_and_critic_renorm_verified": false,
+      "metadata_sha256": "d6654e774f63ef1ccc6b20e791fc40d3844ba175be949171b5fe8896aa61a73f",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true,
+      "latest_selected_and_frozen_optimizers_exact": true,
+      "raw_log_entropy_restored_bitwise": true,
+      "entropy_restoration": {
+        "latest": {
+          "raw_log_entropy_sha256": "b154312e5e321e161a3557dc0380353ca0dd8fcbf193dbc017d4bf4334c809b3",
+          "derived_alpha_recorded": 0.2982158660888672,
+          "derived_alpha_restored": 0.2982158660888672
+        },
+        "selected": {
+          "raw_log_entropy_sha256": "bda6a78cb9a45ae962eaaf2801d370ede5018bb6cb96f3225658122a6659545f",
+          "derived_alpha_recorded": 0.4056371748447418,
+          "derived_alpha_restored": 0.4056371748447418
+        }
+      },
+      "derived_alpha_maximum_float32_ulp": 1,
+      "replay_verified": true,
+      "final_replay_restored": true,
+      "replay_rows": 4096,
+      "exact_frozen_predictions": 128,
+      "frozen_predictions": 128,
+      "schema_and_feed_rejected": true,
+      "deterministic_repeat_and_input_immutability": true,
+      "normalization_unchanged": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/runs/20261026T235014-sac-11-6577a099/metadata.json": "d6654e774f63ef1ccc6b20e791fc40d3844ba175be949171b5fe8896aa61a73f",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/runs/20261026T235014-sac-11-6577a099/latest.zip": "e7f5df8681e2d758705baeed3a52024a5e7765bfb35f4a606def1e94e54e43c7",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/runs/20261026T235014-sac-11-6577a099/best.zip": "bc574dad476174938b06936befffd9d26ce614d40439efdf6ec184e53169ca39",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/runs/20261026T235014-sac-11-6577a099/replay.pkl": "5dc6c0641db1985a6260a5e853a9feb824284ad50f99d3c0fccb535a3080c292",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/runs/20261026T235014-sac-11-6577a099/crossq-replay-state.json": "8b78e32d220d7d8d0acbde52237a0feef2398a87b93c11167d41c132ee74341a",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/frozen/cbca3787ab7cdf509517a25ba0840154e48309bff4ad827d01442a9e6da2d2a2/manifest.json": "cbca3787ab7cdf509517a25ba0840154e48309bff4ad827d01442a9e6da2d2a2",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/frozen/cbca3787ab7cdf509517a25ba0840154e48309bff4ad827d01442a9e6da2d2a2/model.zip": "bc574dad476174938b06936befffd9d26ce614d40439efdf6ec184e53169ca39",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/frozen/cbca3787ab7cdf509517a25ba0840154e48309bff4ad827d01442a9e6da2d2a2/checksums.json": "d3ab588e0b140eba5a068eb3039866a6175393e129dda480e9bfdf762e22d508",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts/frozen/cbca3787ab7cdf509517a25ba0840154e48309bff4ad827d01442a9e6da2d2a2/requirements.lock": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142"
+      },
+      "optimizer_steps": 0,
+      "source_files_unchanged": true
+    },
+    "crossq": {
+      "session": "rl-stocks-cpu-311e61b7c0a4",
+      "run": "20261026T234929-crossq-11-7e018645",
+      "bundle_id": "80302450b556773744c09b8fb6ca8f442b08eccde6faadfdcd0df632a40a1ea9",
+      "duration_seconds": 320.373794234,
+      "initial": {
+        "algorithm": "crossq",
+        "seed": 11,
+        "num_timesteps": 0,
+        "updates": 0,
+        "settings": {
+          "buffer_size": 100000,
+          "batch_size": 64,
+          "learning_starts": 64,
+          "gradient_steps": 1,
+          "ent_coef": "auto",
+          "n_steps": 1,
+          "use_sde": false,
+          "learning_rate": 0.0003,
+          "gamma": 0.99,
+          "target_entropy": -4.0,
+          "train_freq": 1,
+          "train_freq_unit": "step",
+          "policy_delay": 3
+        },
+        "optimizers": {
+          "actor": {
+            "kind": "torch.optim.adam.Adam",
+            "groups": [
+              {
+                "lr": 0.0003,
+                "eps": 1e-08,
+                "betas": [
+                  0.5,
+                  0.999
+                ],
+                "weight_decay": 0.0,
+                "amsgrad": false,
+                "maximize": false,
+                "decoupled_weight_decay": false
+              }
+            ],
+            "parameter_count": 6386,
+            "parameter_tensors": 14,
+            "state_count": 0,
+            "per_parameter_steps": {},
+            "state_sha256": "3965da0a38eef97f2b75b3efa7b0c43c188e2e9386ab09c7b358774fd3179f51"
+          },
+          "critic": {
+            "kind": "torch.optim.adam.Adam",
+            "groups": [
+              {
+                "lr": 0.0003,
+                "eps": 1e-08,
+                "betas": [
+                  0.5,
+                  0.999
+                ],
+                "weight_decay": 0.0,
+                "amsgrad": false,
+                "maximize": false,
+                "decoupled_weight_decay": false
+              }
+            ],
+            "parameter_count": 12390,
+            "parameter_tensors": 24,
+            "state_count": 0,
+            "per_parameter_steps": {},
+            "state_sha256": "8bb75ae847b8a2756515cce8d755f0e3ebef75226c0c7dff7031e40bad5bc68c"
+          },
+          "entropy": {
+            "kind": "torch.optim.adam.Adam",
+            "groups": [
+              {
+                "lr": 0.0003,
+                "eps": 1e-08,
+                "betas": [
+                  0.9,
+                  0.999
+                ],
+                "weight_decay": 0,
+                "amsgrad": false,
+                "maximize": false,
+                "decoupled_weight_decay": false
+              }
+            ],
+            "parameter_count": 1,
+            "parameter_tensors": 1,
+            "state_count": 0,
+            "per_parameter_steps": {},
+            "state_sha256": "4339ee98fce1c461485f1be126d88207913b73a75f0c7eef4eaee01f21336375"
+          }
+        },
+        "alpha": 1.0,
+        "policy_tensor_sha256": "5875a51d15577106151c67389c6f676d022ddee70a17293dd36d31b776bbb0dc",
+        "linear_tensor_sha256": "71c6dbeacb81a8e711d96215ffa3a29d5ac21e690c4d983e1f4786e8f9252526",
+        "normalization": {
+          "actor.latent_pi.0": {
+            "features": 21,
+            "steps": 0,
+            "state_sha256": "27d0702100d9d8e57193f34b73a6cb7623be20de04c52ab886f49ec40978e8e4"
+          },
+          "actor.latent_pi.3": {
+            "features": 64,
+            "steps": 0,
+            "state_sha256": "8f0d069da09a9b15c470d852969161dc5aec30711fdb5c30122bb1a62063104f"
+          },
+          "actor.latent_pi.6": {
+            "features": 64,
+            "steps": 0,
+            "state_sha256": "8f0d069da09a9b15c470d852969161dc5aec30711fdb5c30122bb1a62063104f"
+          },
+          "critic.qf0.0": {
+            "features": 25,
+            "steps": 0,
+            "state_sha256": "e334ec5b20e15dee794d4aab333250336a6d1dd037fbf637724f2537e1fb10c5"
+          },
+          "critic.qf0.3": {
+            "features": 64,
+            "steps": 0,
+            "state_sha256": "8f0d069da09a9b15c470d852969161dc5aec30711fdb5c30122bb1a62063104f"
+          },
+          "critic.qf0.6": {
+            "features": 64,
+            "steps": 0,
+            "state_sha256": "8f0d069da09a9b15c470d852969161dc5aec30711fdb5c30122bb1a62063104f"
+          },
+          "critic.qf1.0": {
+            "features": 25,
+            "steps": 0,
+            "state_sha256": "e334ec5b20e15dee794d4aab333250336a6d1dd037fbf637724f2537e1fb10c5"
+          },
+          "critic.qf1.3": {
+            "features": 64,
+            "steps": 0,
+            "state_sha256": "8f0d069da09a9b15c470d852969161dc5aec30711fdb5c30122bb1a62063104f"
+          },
+          "critic.qf1.6": {
+            "features": 64,
+            "steps": 0,
+            "state_sha256": "8f0d069da09a9b15c470d852969161dc5aec30711fdb5c30122bb1a62063104f"
+          }
+        },
+        "geometry": {
+          "version": 1,
+          "kind": "crossq_batch_normalized_twin_critics",
+          "actor_parameters": 6386,
+          "critic_parameters": 12390,
+          "target_critic_present": false,
+          "linear_widths": [
+            64,
+            64
+          ],
+          "normalization_layers": 9,
+          "renorm_warmup_steps": 1000,
+          "normalization_eps": 0.001,
+          "normalization_momentum": 0.01,
+          "policy_delay": 3
+        },
+        "rng": {
+          "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+          "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+          "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+        },
+        "shared_initialization": {
+          "version": 1,
+          "artifact_file": "configs/initializations/crossq_v1/crossq-seed11.npz",
+          "artifact_sha256": "3025a1cc87283c2d1ddcb2a3b60ca0273ff645ab4fd913d87b14b59241e307a6",
+          "policy_tensor_sha256": "5875a51d15577106151c67389c6f676d022ddee70a17293dd36d31b776bbb0dc",
+          "rng_sha256": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+          "global_rng_sha256": {
+            "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+            "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+            "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+          },
+          "torch_version": "2.8.0",
+          "generated_without_fitting": true,
+          "arm": "crossq",
+          "seed": 11,
+          "smoke": true,
+          "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+          "binding_sha256": "84452236ccf86e66e6527660b89d98da8030864f8390f335e6b875f7d36f42bb"
+        }
+      },
+      "steps": 4096,
+      "cleanup_verified": true,
+      "observed_actor_and_critic_renorm_verified": true,
+      "metadata_sha256": "a9961a203828d1038489ff4d82919062d2a9302dae815dcceb269c836574d2ec",
+      "python": "3.13.16",
+      "actual_saved_models_restored": true,
+      "latest_selected_and_frozen_optimizers_exact": true,
+      "raw_log_entropy_restored_bitwise": true,
+      "entropy_restoration": {
+        "latest": {
+          "raw_log_entropy_sha256": "d20129a21b9f08fcd6d1da15c0e940d0242e1eebbfde0beeb9221f8011b8f9c5",
+          "derived_alpha_recorded": 0.6641520261764526,
+          "derived_alpha_restored": 0.6641520857810974
+        },
+        "selected": {
+          "raw_log_entropy_sha256": "df534022ba1662c1dd42927c8a442f4f99226a6ad586daec5c9334f29875e835",
+          "derived_alpha_recorded": 0.6643518209457397,
+          "derived_alpha_restored": 0.6643518209457397
+        }
+      },
+      "derived_alpha_maximum_float32_ulp": 1,
+      "replay_verified": true,
+      "final_replay_restored": true,
+      "replay_rows": 4096,
+      "exact_frozen_predictions": 128,
+      "frozen_predictions": 128,
+      "schema_and_feed_rejected": true,
+      "deterministic_repeat_and_input_immutability": true,
+      "normalization_unchanged": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/runs/20261026T234929-crossq-11-7e018645/metadata.json": "a9961a203828d1038489ff4d82919062d2a9302dae815dcceb269c836574d2ec",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/runs/20261026T234929-crossq-11-7e018645/latest.zip": "514c3fdcb86fda95eaf19b85d34b9495febd7432abf69b1252e4b9578a3c2f40",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/runs/20261026T234929-crossq-11-7e018645/best.zip": "7e11897c8f90ed0adf7ed52fbc0cef30462b80da8e991007d0c4a4bb940ceaf2",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/runs/20261026T234929-crossq-11-7e018645/replay.pkl": "665a9ce7ef424fdd35e9bef0c8b6495614ea426963087b55ae16b2923f300dc3",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/runs/20261026T234929-crossq-11-7e018645/crossq-replay-state.json": "b4174ae4f06ece4ab20ce6ff557f6a50bda1769d9ec0b875ac1cb1cf8d433a00",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/frozen/80302450b556773744c09b8fb6ca8f442b08eccde6faadfdcd0df632a40a1ea9/manifest.json": "80302450b556773744c09b8fb6ca8f442b08eccde6faadfdcd0df632a40a1ea9",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/frozen/80302450b556773744c09b8fb6ca8f442b08eccde6faadfdcd0df632a40a1ea9/model.zip": "7e11897c8f90ed0adf7ed52fbc0cef30462b80da8e991007d0c4a4bb940ceaf2",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/frozen/80302450b556773744c09b8fb6ca8f442b08eccde6faadfdcd0df632a40a1ea9/checksums.json": "086473876067adfb34eeba1927d6530f908197739d6ff9d8fead94fc35727777",
+        "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts/frozen/80302450b556773744c09b8fb6ca8f442b08eccde6faadfdcd0df632a40a1ea9/requirements.lock": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142"
+      },
+      "optimizer_steps": 0,
+      "source_files_unchanged": true
+    }
+  },
+  "exact_frozen_predictions": 256,
+  "runtime_projection": {
+    "reference_control_seconds": 992.418302906,
+    "reference_metadata_sha256": "a9826bf6fb974cca1b8a630abf50ddb8edc48d9d0efdfa4bb57bc9d31bba7ddf",
+    "smoke_duration_ratio": 1.2759548613811207,
+    "safety_multiplier": 2.0,
+    "reserve_seconds": 1200,
+    "projected_seconds": 3732.5619162330245,
+    "allocation_deadline_seconds": 7200,
+    "screen_allocation_allowed": true,
+    "heuristic_not_guarantee": true
+  },
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "test_evaluated": false,
+  "screen_allocated": false
+}

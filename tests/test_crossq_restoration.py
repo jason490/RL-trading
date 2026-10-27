@@ -90,3 +90,16 @@ def test_physical_changes_cannot_hide_behind_nominal_metadata(tmp_path, change):
     with pytest.raises(ValueError):
         verify_owned_run(run, bundle, 'crossq', smoke=True)
     assert canonical(rng_record()) == before
+
+
+def test_only_derived_exp_may_differ_by_one_float32_ulp():
+    from rl_stocks.training.crossq_restoration import _same_restored
+
+    value = float(np.float32(0.66))
+    adjacent = float(np.nextafter(np.float32(value), np.float32(np.inf)))
+    further = float(np.nextafter(np.float32(adjacent), np.float32(np.inf)))
+    record = dict(alpha=value, exact_tensor_sha256='same', rng={})
+    assert _same_restored(dict(record, alpha=adjacent), record)
+    assert not _same_restored(dict(record, alpha=further), record)
+    assert not _same_restored(dict(record, alpha=adjacent, exact_tensor_sha256='changed'), record)
+    assert not _same_restored(dict(record, alpha=float('nan')), record)

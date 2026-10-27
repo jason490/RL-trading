@@ -95,3 +95,31 @@ Evaluation mutation and counter/implementation drift fail closed; hooks close on
 success/failure.185 targeted checks pass, with real eval-only and manual counter
 fixtures; no local fitting, allocation or new returns. Next Colab job/budget/fleet,
 archive/restoration contracts and actual learned smoke acceptance.
+
+
+## Actual learned Colab smokes accepted
+
+Two4096-transition CPU runs from clean1a359c7, actual default Python3.13.16,
+completed with durable retrieval and verified owned shutdown. [Acceptance](smokes.json)
+records256 exact frozen/repeated predictions, initial mapped tensors and all RNG
+streams, phase-sensitive actual Adam and normalization counts, source-pinned
+observed actor/critic renorm, filled replay/timeout hashes and unchanged inputs/
+normalization/source files. Runtime durations: SAC251.09s, CrossQ320.37s. The
+fixed safety projection is3732.56s including1200s reserve, below7200s.
+
+Two verifier representation issues were corrected without retraining: canonical
+JSON equality preserves optimizer beta tuples through list serialization; mapped
+archive equality handles different native Linear module names. One final CrossQ
+derived exp(log-alpha) differs by one float32 ULP across runtime hosts. Raw saved
+log-alpha is independently extracted and required bitwise exact, as are weights,
+Adam moments and normalization. Only that derived float32 exponential permits a
+single ULP; larger drift or any other state change fails. Full discrepancy values
+and raw hashes are retained in acceptance. Performance gates remain unchanged.
+
+[Compute and cleanup](smoke-compute.json): project39.49781782114174/150,
+remaining110.50218217885826; smoke conservative increment0.02525612549318.
+Reported account348.64→348.62, then0rate/0assignments. Both owned sessions stopped;
+original two-unit CrossQ baseline39.47256169564856 and150 account floor retained.
+All retrieved artifacts remain; duplicate cleanup follows verified study retention.
+This is operational acceptance, not return evidence. Next fixed50k seed11 SAC/
+CrossQ screen; retired2024+ remains unopened and no broker orders were submitted.

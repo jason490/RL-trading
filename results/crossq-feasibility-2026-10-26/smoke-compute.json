@@ -1,0 +1,36 @@
+{
+  "project_conservative_units": 39.49781782114174,
+  "project_remaining_units": 110.50218217885826,
+  "smoke_conservative_increment": 0.025256125493179127,
+  "account_balance_before": 348.64,
+  "account_balance_after": 348.62,
+  "reported_account_debit": 0.02,
+  "account_rate_after": 0,
+  "active_assignments_after": 0,
+  "cleanup_verified": true,
+  "owned_sessions": [
+    "rl-stocks-cpu-9a63a7b85fda",
+    "rl-stocks-cpu-311e61b7c0a4"
+  ],
+  "study_budget": {
+    "start_units": 39.47256169564856,
+    "limit_units": 2.0
+  },
+  "minimum_account_balance": 150,
+  "source_proof": {
+    "source_revision": "1a359c7ec7eba25ddc2454cfe88f02d85a72e1c3",
+    "source_hash": "b4bbe7fa8dc11530a82ac3ae7b5e4cf70b9fd19987795c709912e91701a465fb",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1",
+    "prior_charges_preserved": 39.47256169564856
+  },
+  "artifacts": {
+    "sac": {
+      "root": "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-9a63a7b85fda/retrieved/artifacts",
+      "metadata_sha256": "d6654e774f63ef1ccc6b20e791fc40d3844ba175be949171b5fe8896aa61a73f"
+    },
+    "crossq": {
+      "root": "/home/vibe/projects/rl-stocks/.runtime/crossq-source-v1/artifacts/colab/rl-stocks-cpu-311e61b7c0a4/retrieved/artifacts",
+      "metadata_sha256": "a9961a203828d1038489ff4d82919062d2a9302dae815dcceb269c836574d2ec"
+    }
+  }
+}

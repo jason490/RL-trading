@@ -391,3 +391,25 @@ and source proof `.runtime/crossq-source-proof-v1.json` identify this attempt.
 Training export remains immutable; post-run verifier/report changes do not alter
 its training source. Acceptance and cleanup must be checked from terminal state;
 this note is not completion or performance evidence.
+
+
+## Learned smoke acceptance and serialization precision
+
+The two4096 Colab CPU smokes now pass: see
+[accepted evidence](../results/crossq-feasibility-2026-10-26/smokes.json). Both
+owned sessions are stopped;256 exact frozen predictions and actual actor/critic
+renorm calls pass. All saved weights, Adam moments, normalization and raw
+serialized log-entropy tensors restore exactly. One final derived exponential
+differs by one float32 ULP between CPU hosts. The verifier independently extracts
+`log_ent_coef` from the owned native archive and requires its bitwise equality,
+then allows at most one ULP only for the derived float32 alpha. Non-float32
+values, larger differences and all other state changes fail. This is numerical
+representation handling, not a change to return/reproduction gates.
+
+Completion plans and resolved parameters compare canonical JSON so native Python
+optimizer-beta tuples survive JSON lists without weakening exact values or
+boolean rejection. Raw per-arm tensor identities and the fixed cross-algorithm
+archive mapping remain exact. These post-run verifier fixes do not alter clean
+training export1a359c7 or require retraining. The measured smoke duration ratio
+1.276 yields3732.56s projection with fixed2× safety and1200s reserve. The fixed
+50k seed11 screen is eligible once these fixes and evidence are committed.

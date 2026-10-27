@@ -8,7 +8,7 @@ from io import StringIO
 from pathlib import PurePosixPath
 import tarfile
 
-from rl_stocks.core.contracts import digest
+from rl_stocks.core.contracts import digest, canonical
 
 
 def validate_archive(path, plan, dataset_id):
@@ -27,7 +27,7 @@ def validate_archive(path, plan, dataset_id):
             completion = json.loads(read('artifacts/completion.json'))
             hardware_ok = (completion['gpu'] is None if plan['accelerator']=='CPU'
                            else plan['accelerator'] in (completion['gpu'] or ''))
-            if (completion['plan'] != plan or completion['dataset'] != dataset_id
+            if (canonical(completion['plan']) != canonical(plan) or completion['dataset'] != dataset_id
                     or completion['python'][:2] != [3, 13] or not hardware_ok):
                 raise RuntimeError('remote completion manifest mismatch')
             runs = [json.loads(read(name)) for name in sorted(names)
@@ -54,8 +54,8 @@ def validate_archive(path, plan, dataset_id):
                         from rl_stocks.rl.ppo.architecture import architecture_spec
                         from rl_stocks.rl.registry.factory import resolved_parameters
                         if (run.get('policy_architecture')!=architecture_spec(job['policy_variant'],plan['dataset_contract']['market_features'] if plan.get('version') in (26,34,36) else 7)
-                                or run.get('resolved_parameters')!=resolved_parameters(job['algorithm'],job['smoke'],
-                                    job.get('overrides') if 'overrides' in job or job['smoke'] or job['algorithm'] not in ('ppo','recurrent_ppo') else {'n_steps':1000,'batch_size':50},job['policy_variant'],plan['dataset_contract']['market_features'] if plan.get('version') in (26,34,36) else 7)):
+                                or canonical(run.get('resolved_parameters'))!=canonical(resolved_parameters(job['algorithm'],job['smoke'],
+                                    job.get('overrides') if 'overrides' in job or job['smoke'] or job['algorithm'] not in ('ppo','recurrent_ppo') else {'n_steps':1000,'batch_size':50},job['policy_variant'],plan['dataset_contract']['market_features'] if plan.get('version') in (26,34,36) else 7))):
                             raise RuntimeError('policy-architecture configuration mismatch')
                     if plan.get('version')==8:
                         if run.get('start_sampling',{}).get('mode')!=job['start_sampling']:

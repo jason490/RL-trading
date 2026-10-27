@@ -31,12 +31,16 @@ normalization, observed checkpoint forwards, replay sidecars and frozen model
 bytes. Physical restoration now verifies selected/final/frozen Adam/tensors, filled
 replay hashes/timeouts and128 exact predictions per run, preserves caller RNG,
 and rejects altered bytes. Smoke acceptor checks both owned-cleaned tasks and
-shared initial Linear/RNG records. Two CPU4096 smokes now run from clean1a359c7/Python3.13.16 using original
-ledger/budget; exact paths in CrossQ guide. Screen builder/report tooling now
+shared initial Linear/RNG records. Two CPU4096 smokes from clean1a359c7/Python3.13.16 now accepted:256 frozen
+predictions, actual actor/critic renorm, saved replay/timeout restoration and both
+owned sessions stopped. Project39.497818, official account348.62/idle.
+Canonical JSON and mapped-name verifier fixes preserve exact raw states; only
+derived exp(log-alpha) permits observed one-float32-ULP CPU rounding, with raw
+log-alpha independently restored bitwise. Projection3732.56s<7200. Screen builder/report tooling now
 preserves matched holding, pinned historical SAC reports and fixed gates.
 Shared-start verifier correctly uses mapped archive tensors rather than comparing
-name-keyed hashes across different native module names. Next accept actual smoke
-restoration and verified cleanup before any performance allocation.
+name-keyed hashes across different native module names. Next fixed50k seed11 screen from a fresh clean export under the same original
+ledger and persistent CrossQ baseline.
 Treasury/VIX/GAE and prior failed families stay closed.
 No robust/prospective winner; retired2024+ test stays unopened.
 Read this frontier and its compact protocol before the historical chronology below.

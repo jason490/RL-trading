@@ -2568,3 +2568,14 @@ comparison uses exact mapped archive tensors, not equal name-keyed hashes across
 different module indices; raw per-arm identities and all RNG streams stay exact.
 Two actual4096 CPU smokes from clean1a359c7/Python3.13.16 are in progress;
 acceptance/owned cleanup remain before the fixed50k screen.
+
+
+### CrossQ actual learned smoke acceptance — 2026-10-27
+
+Two4096 Colab CPU smokes from1a359c7/Python3.13.16 completed and stopped.256
+exact frozen predictions, raw entropy/tensors/Adam/normalization restoration,
+actual actor/critic renorm and filled replay/timeout hashes pass. Canonical JSON
+and mapped-name verifier fixes preserve exact semantics; only derived float32
+exp(log-alpha) allows observed one-ULP rounding with independently exact raw
+log-alpha. Project39.497818/150; official348.62/idle. Projection3732.56s fits7200.
+Next fixed50k seed11 screen under original ledger and unchanged study baseline.

@@ -133,3 +133,13 @@ def test_mandatory_complete_critic_evidence_cannot_be_omitted(tmp_path, monkeypa
         output.add(tmp_path / 'artifacts', arcname='artifacts')
     with pytest.raises(RuntimeError):
         validate_archive(packed, plan, dataset)
+
+
+def test_archive_configuration_uses_exact_json_semantics_for_tuple_parameters(tmp_path, monkeypatch):
+    packed, plan, dataset, _, _ = archive(tmp_path, monkeypatch, 'sac_native')
+    kwargs = plan['jobs'][0]['overrides']['policy_kwargs']
+    kwargs['net_arch'] = tuple(kwargs['net_arch'])
+    assert len(validate_archive(packed, plan, dataset)) == 1
+    kwargs['net_arch'] = (999, 999)
+    with pytest.raises(RuntimeError, match='completion manifest mismatch'):
+        validate_archive(packed, plan, dataset)
