@@ -2607,3 +2607,14 @@ controllers and root-validated runtime profiles after this failure; malformed
 markers fail closed. Original budget baseline and earlier accepted evidence
 remain untouched. Synthetic ULP/prefix and stop/retry regression checks require
 no training or allocation.
+
+
+### Numerical execution provenance and expanded integrity audit — 2026-10-27
+
+Saved original/current actor/critic/entropy Adam groups agree in effective
+numerical values; tuple/list and int/float defaults are recorded separately.
+Original CPU/thread/backend settings were not retained, so root cause remains
+unproven. New runner metadata captures actual selected-device numerical backend
+settings read-only, preserving RNG/flags and excluding arbitrary environment
+values. Earlier artifacts and CrossQ stop remain unchanged; no training retry.
+[Guide](docs/execution-provenance.md).

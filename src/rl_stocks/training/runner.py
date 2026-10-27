@@ -245,7 +245,8 @@ def train(dataset_path,algorithm,output="artifacts",seed=11,device="cpu",smoke=T
     run=Path(output)/"runs"/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")+f"-{algorithm}-{seed}-"+uuid.uuid4().hex[:8])
     run.mkdir(parents=True,exist_ok=False)
     from rl_stocks.rl.ppo.architecture import architecture_spec
-    metadata={"algorithm":algorithm,"seed":seed,"device":device,"requested_steps":steps,"smoke":smoke,
+    from rl_stocks.core.execution_provenance import execution_backend
+    metadata={"execution_backend":execution_backend(model.device),"algorithm":algorithm,"seed":seed,"device":device,"requested_steps":steps,"smoke":smoke,
         "python":sys.version.split()[0],
         "resolved_parameters":resolved_parameters(algorithm,smoke,overrides,policy_variant,len(dataset["names"])),"simulation":asdict(config),
         "dataset":Path(dataset_path).name,"git":git_state(),"source_hash":source_identity(),

@@ -1,0 +1,370 @@
+{
+  "schema": "crossq-reproduction-diagnosis-v1",
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "first_checkpoint": {
+    "steps": 10000,
+    "phase": "on_step",
+    "actual_score": -0.03138424424210006,
+    "historical_score": -0.03016846883573478,
+    "absolute_discrepancy_pp": 0.12157754063652805,
+    "maximum_allowed_pp": 0.01,
+    "passed": false
+  },
+  "initial_and_contract_checks": {
+    "policy_tensors_exact": true,
+    "original_rng_streams_exact": true,
+    "dataset_exact": true,
+    "simulation_exact": true,
+    "reward_config_exact": true,
+    "observation_exact": true,
+    "start_sampling_exact": true,
+    "action_execution_exact": true,
+    "versions_exact": true
+  },
+  "replay_comparison": {
+    "observations": {
+      "compared_rows": 19999,
+      "differing_rows": 18517,
+      "first_different_zero_based_row": 1002,
+      "common_leading_rows": 1002,
+      "first_row_maximum_absolute_difference": 5.960464477539063e-08,
+      "first_row_maximum_float32_ulp": 4,
+      "first_row_different_components": [
+        14,
+        18
+      ]
+    },
+    "next_observations": {
+      "compared_rows": 19999,
+      "differing_rows": 18558,
+      "first_different_zero_based_row": 1001,
+      "common_leading_rows": 1001,
+      "first_row_maximum_absolute_difference": 5.960464477539063e-08,
+      "first_row_maximum_float32_ulp": 4,
+      "first_row_different_components": [
+        14,
+        18
+      ]
+    },
+    "actions": {
+      "compared_rows": 19999,
+      "differing_rows": 18306,
+      "first_different_zero_based_row": 1001,
+      "common_leading_rows": 1001,
+      "first_row_maximum_absolute_difference": 5.960464477539063e-08,
+      "first_row_maximum_float32_ulp": 4,
+      "first_row_different_components": [
+        2
+      ]
+    },
+    "rewards": {
+      "compared_rows": 19999,
+      "differing_rows": 17934,
+      "first_different_zero_based_row": 1090,
+      "common_leading_rows": 1090,
+      "first_row_maximum_absolute_difference": 3.725290298461914e-09,
+      "first_row_maximum_float32_ulp": 2,
+      "first_row_different_components": [
+        0
+      ]
+    },
+    "dones": {
+      "compared_rows": 19999,
+      "differing_rows": 0,
+      "first_different_zero_based_row": null,
+      "common_leading_rows": 19999
+    },
+    "timeouts": {
+      "compared_rows": 19999,
+      "differing_rows": 0,
+      "first_different_zero_based_row": null,
+      "common_leading_rows": 19999
+    }
+  },
+  "saved_optimizer_group_comparison": {
+    "actor.optimizer.pth": {
+      "serialized_python_container_equality": false,
+      "effective_json_values_equal": true,
+      "original_groups": [
+        {
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "params": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "current_groups": [
+        {
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "params": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "original_value_types": [
+        {
+          "lr": "float",
+          "betas": "tuple",
+          "eps": "float",
+          "weight_decay": "int",
+          "amsgrad": "bool",
+          "maximize": "bool",
+          "foreach": "NoneType",
+          "capturable": "bool",
+          "differentiable": "bool",
+          "fused": "NoneType",
+          "decoupled_weight_decay": "bool",
+          "params": "list"
+        }
+      ],
+      "current_value_types": [
+        {
+          "lr": "float",
+          "betas": "list",
+          "eps": "float",
+          "weight_decay": "float",
+          "amsgrad": "bool",
+          "maximize": "bool",
+          "foreach": "NoneType",
+          "capturable": "bool",
+          "differentiable": "bool",
+          "fused": "NoneType",
+          "decoupled_weight_decay": "bool",
+          "params": "list"
+        }
+      ]
+    },
+    "critic.optimizer.pth": {
+      "serialized_python_container_equality": false,
+      "effective_json_values_equal": true,
+      "original_groups": [
+        {
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "params": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "current_groups": [
+        {
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "params": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "original_value_types": [
+        {
+          "lr": "float",
+          "betas": "tuple",
+          "eps": "float",
+          "weight_decay": "int",
+          "amsgrad": "bool",
+          "maximize": "bool",
+          "foreach": "NoneType",
+          "capturable": "bool",
+          "differentiable": "bool",
+          "fused": "NoneType",
+          "decoupled_weight_decay": "bool",
+          "params": "list"
+        }
+      ],
+      "current_value_types": [
+        {
+          "lr": "float",
+          "betas": "list",
+          "eps": "float",
+          "weight_decay": "float",
+          "amsgrad": "bool",
+          "maximize": "bool",
+          "foreach": "NoneType",
+          "capturable": "bool",
+          "differentiable": "bool",
+          "fused": "NoneType",
+          "decoupled_weight_decay": "bool",
+          "params": "list"
+        }
+      ]
+    },
+    "ent_coef_optimizer.pth": {
+      "serialized_python_container_equality": true,
+      "effective_json_values_equal": true,
+      "original_groups": [
+        {
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "params": [
+            0
+          ]
+        }
+      ],
+      "current_groups": [
+        {
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": false,
+          "params": [
+            0
+          ]
+        }
+      ],
+      "original_value_types": [
+        {
+          "lr": "float",
+          "betas": "tuple",
+          "eps": "float",
+          "weight_decay": "int",
+          "amsgrad": "bool",
+          "maximize": "bool",
+          "foreach": "NoneType",
+          "capturable": "bool",
+          "differentiable": "bool",
+          "fused": "NoneType",
+          "decoupled_weight_decay": "bool",
+          "params": "list"
+        }
+      ],
+      "current_value_types": [
+        {
+          "lr": "float",
+          "betas": "tuple",
+          "eps": "float",
+          "weight_decay": "int",
+          "amsgrad": "bool",
+          "maximize": "bool",
+          "foreach": "NoneType",
+          "capturable": "bool",
+          "differentiable": "bool",
+          "fused": "NoneType",
+          "decoupled_weight_decay": "bool",
+          "params": "list"
+        }
+      ]
+    }
+  },
+  "current_checkpoint_replay_sha256": "58083eedf9f56d72273c1f7758445e2b56f747a88bc49821c534ce1794a9ff2b",
+  "protected_source_sha256": {
+    ".runtime/crossq-integrity-sac-first-checkpoint.tar.gz": "bf10a22fa7f031aeba68f69fd972f78e1062fda2f7eb7671f832e14ae5eb8bbb",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-947ab1c90cd0/retrieved/artifacts/runs/20261024T150318-sac-11-f23aec9e/metadata.json": "a9826bf6fb974cca1b8a630abf50ddb8edc48d9d0efdfa4bb57bc9d31bba7ddf",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-947ab1c90cd0/retrieved/artifacts/runs/20261024T150318-sac-11-f23aec9e/replay.pkl": "c0584051a9eb21b316fe3a7523b6e622cd125362aeada7b4c3cb7e011a9d02a7",
+    "/home/vibe/projects/rl-stocks/.runtime/distributional-source-v1/artifacts/colab/rl-stocks-cpu-947ab1c90cd0/retrieved/artifacts/runs/20261024T150318-sac-11-f23aec9e/latest.zip": "5042683343391dc55e75534f40f237c4e4f5f7fd5071d0ee491650560344d767"
+  },
+  "source_files_unchanged": true,
+  "root_cause_established": false,
+  "candidate_performance_evaluated": false,
+  "interpretation_valid": false,
+  "automatic_retry_allowed": false,
+  "training_performed": false,
+  "optimizer_steps": 0
+}

@@ -33,6 +33,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | Supervised signal feasibility | [supervised-signal.md](supervised-signal.md) | Completed training-only targets, internal chronological probe, frozen preprocessing and gated warm-start research |
 | Recurrent policy-update safeguard | [recurrent-update-guard.md](recurrent-update-guard.md) | Fixed KL guard versus strongest Gaussian control, actual Adam steps and gated Colab acceptance |
 | Saved optimizer diagnostics | [optimizer-diagnostics.md](optimizer-diagnostics.md) | Actual Adam steps, nominal PPO epochs, finite moments and sparse KL/clipping interpretation |
+| Numerical execution provenance | [execution-provenance.md](execution-provenance.md) | Read-only CPU/thread/precision metadata, saved optimizer-group comparison and reproducibility limits |
 | Numerical performance | [numerical-performance.md](numerical-performance.md) | Saved-weight subnormal counts and isolated forward timing without fitting |
 | Recurrent cash availability | [recurrent-cash-choice.md](recurrent-cash-choice.md) | Fixed cash/binary/Gaussian controls, joint action likelihood and Colab acceptance gates |
 | Recurrent sizing alignment | [recurrent-sizing-alignment.md](recurrent-sizing-alignment.md) | Fresh adaptive/posthoc/aligned execution controls, shared action contracts and frozen prediction |

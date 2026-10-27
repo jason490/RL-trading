@@ -47,3 +47,20 @@ using earlier accepted smoke evidence. Even an empty/malformed marker fails
 closed. It does not reset the original ledger or study allowance, or mark an
 account/project budget failure. The marker and failed attempt must remain
 preserved through any separately reviewed future protocol.
+
+
+## Expanded optimizer/backend investigation
+
+[Version2 diagnosis](diagnosis-v2.json) adds a direct read of original and
+checkpoint actor/critic/entropy optimizer archives. Effective parameter-group
+values agree in all three. Raw Python equality differs for actor/critic because
+betas are tuple/list and zero weight decay int/float; those container types are
+recorded separately. This confirms equal displayed numerical settings, not
+identical numerical execution. The original diagnosis and stop marker remain
+unchanged.
+
+Original Colab CPU capability/thread/precision metadata is unavailable; root
+cause remains unproven. Future runs now record read-only execution provenance
+without changing settings or RNG. See [guide](../../docs/execution-provenance.md)
+and primary PyTorch references. No sessions were allocated, no learning was
+performed and no restart/tolerance change is authorized by this audit.

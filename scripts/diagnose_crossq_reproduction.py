@@ -2,6 +2,8 @@
 import argparse
 import hashlib
 import json
+import io
+import zipfile
 from pathlib import Path
 import pickle
 import tarfile
@@ -35,6 +37,32 @@ def field_difference(left, right):
     return result
 
 
+def optimizer_group_comparison(original_model, current_model):
+    import torch
+
+    result = {}
+    with zipfile.ZipFile(io.BytesIO(original_model)) as original, zipfile.ZipFile(io.BytesIO(current_model)) as current:
+        for name in ('actor.optimizer.pth', 'critic.optimizer.pth', 'ent_coef_optimizer.pth'):
+            left = torch.load(io.BytesIO(original.read(name)), map_location='cpu', weights_only=True)['param_groups']
+            right = torch.load(io.BytesIO(current.read(name)), map_location='cpu', weights_only=True)['param_groups']
+            normalized = []
+            for groups in (left, right):
+                value = json.loads(json.dumps(groups))
+                for group in value:
+                    if type(group['weight_decay']) not in (int, float):
+                        raise ValueError('native real-valued Adam weight decay required')
+                    group['weight_decay'] = float(group['weight_decay'])
+                normalized.append(value)
+            result[name] = dict(
+                serialized_python_container_equality=left == right,
+                effective_json_values_equal=canonical(normalized[0]) == canonical(normalized[1]),
+                original_groups=left, current_groups=right,
+                original_value_types=[{k:type(v).__name__ for k,v in g.items()} for g in left],
+                current_value_types=[{k:type(v).__name__ for k,v in g.items()} for g in right],
+            )
+    return result
+
+
 def diagnose(checkpoint, root):
     root, checkpoint = Path(root), Path(checkpoint)
     spec = protocol()
@@ -46,7 +74,8 @@ def diagnose(checkpoint, root):
         raise ValueError('pinned original SAC metadata required')
     original = json.loads(paths[0].read_text())
     old_replay = paths[0].parent / 'replay.pkl'
-    protected = {str(p): checksum(p) for p in (checkpoint, paths[0], old_replay)}
+    old_model = paths[0].parent / 'latest.zip'
+    protected = {str(p): checksum(p) for p in (checkpoint, paths[0], old_replay, old_model)}
     with tarfile.open(checkpoint) as archive:
         names = archive.getnames()
         records = [n for n in names if n.endswith('/metadata.json')]
@@ -56,10 +85,12 @@ def diagnose(checkpoint, root):
         prefix = records[0].rsplit('/', 1)[0] + '/'
         curve = [json.loads(line) for line in archive.extractfile(prefix + 'learning-curve.jsonl').read().splitlines()]
         raw = archive.extractfile(prefix + 'checkpoint-replay.pkl').read()
+        current_model = archive.extractfile(prefix + 'latest-checkpoint.zip').read()
         replay = pickle.loads(raw)  # Only previously retrieved task-owned transport.
     if (current['crossq_arm'] != 'sac' or current['seed'] != 11 or current['smoke'] is not False
             or current['study_protocol_sha256'] != PROTOCOL_SHA256):
         raise ValueError('registered seed11 full SAC checkpoint required')
+    optimizer_groups = optimizer_group_comparison(old_model.read_bytes(), current_model)
     initial = current['crossq_initialization']
     original_initial = original['critic_initialization']
     checks = dict(policy_tensors_exact=initial['policy_tensor_sha256'] == original_initial['policy_tensor_sha256'],
@@ -86,6 +117,7 @@ def diagnose(checkpoint, root):
                     maximum_allowed_pp=history['maximum_checkpoint_mean_return_discrepancy_pp'],
                     passed=discrepancy <= history['maximum_checkpoint_mean_return_discrepancy_pp']),
                 initial_and_contract_checks=checks, replay_comparison=fields,
+                saved_optimizer_group_comparison=optimizer_groups,
                 current_checkpoint_replay_sha256=hashlib.sha256(raw).hexdigest(),
                 protected_source_sha256=protected, source_files_unchanged=True,
                 root_cause_established=False, candidate_performance_evaluated=False,

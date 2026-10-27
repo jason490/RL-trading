@@ -36,3 +36,29 @@ def test_invalid_prefixes_reject(change):
         a, b = a[:0], b[:0]
     with pytest.raises(ValueError):
         module.field_difference(a, b)
+
+
+def optimizer_archive(betas, weight_decay):
+    import io
+    import zipfile
+    import torch
+
+    content = io.BytesIO()
+    with zipfile.ZipFile(content, 'w') as archive:
+        for name in ('actor.optimizer.pth', 'critic.optimizer.pth', 'ent_coef_optimizer.pth'):
+            value = io.BytesIO()
+            torch.save(dict(param_groups=[dict(betas=betas, weight_decay=weight_decay, lr=0.0003, params=[0])]), value)
+            archive.writestr(name, value.getvalue())
+    return content.getvalue()
+
+
+def test_effective_optimizer_values_separate_from_container_representation():
+    original = optimizer_archive((0.9, 0.999), 0)
+    current = optimizer_archive([0.9, 0.999], 0.0)
+    proof = module.optimizer_group_comparison(original, current)
+    assert all(p['effective_json_values_equal'] for p in proof.values())
+    assert not any(p['serialized_python_container_equality'] for p in proof.values())
+    changed = module.optimizer_group_comparison(original, optimizer_archive([0.8, 0.999], 0.0))
+    assert not any(p['effective_json_values_equal'] for p in changed.values())
+    with pytest.raises(ValueError):
+        module.optimizer_group_comparison(original, optimizer_archive([0.9, 0.999], False))

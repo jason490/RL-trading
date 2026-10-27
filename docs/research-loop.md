@@ -31,6 +31,11 @@ before interruption (salvage404, logs retained). Both owned sessions stopped.
 Project39.518548/150, official account348.60/rate0/no assignments. Original
 CrossQ baseline39.47256169564856/2 unchanged. Next read-only backend/implementation
 diagnosis; any new protocol must preserve this failed attempt and require review.
+Saved actor/critic/entropy optimizer groups now independently agree in effective
+numerical values; container/default representations differ. Original backend
+metadata is unavailable, so cause remains unproven. Future runner metadata now
+captures actual CPU/thread/precision/determinism settings read-only; no retry
+or tolerance change follows. [Guide](execution-provenance.md).
 Persistent `.runtime/crossq-integrity-stop.json` blocks new study controllers and
 root-validated profiles even with prior smoke acceptance; no ledger reset.
 
