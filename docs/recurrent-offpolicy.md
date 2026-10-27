@@ -369,3 +369,67 @@ update counts, native feedforward control, shared ledger/account floors, durable
 failure artifacts and owned cleanup. Integrate its runner/archive verification
 before allocation. No performance run, paper eligibility or old CrossQ retry is
 authorized by these offline fixture results.
+
+
+## Registered learned smoke and worker preparation
+
+[Fixed protocol](../configs/experiments/recurrent_sac_smoke.json), canonical hash
+`a530831e6f8a1c28b6e629ef8143fce43d91e93aaa8826ed39ea6e4ba38fea12`,
+registers four native gradient updates each for recurrent and feedforward SAC:
+eight model updates/24 Adam steps total. No environment rollout, evaluation,
+selection or parameter grid is allowed. One CPU allocation,0.1 units,900 seconds
+including420 seconds teardown reserve, original150/130 project and150/170 account
+guards, persistent baseline and no automatic retry are fixed. This smoke does
+not clear the CrossQ stop or establish performance comparability.
+
+Both arms use the previously verified1001-row training replay prefix, immutable
+identity7f50968c0272bda3d5b5a75861e5ea25d2f4e7d328a1b014af7de219a0d5a8a7.
+A private NumPy11 generator precomputes four batches of eight32-row windows:
+16 burn-in plus16 learning rows. The native control consumes exactly the same
+128 loss-bearing rows per update, flattened. Their initial weights differ by
+architecture; this is an operational control, not an isolated memory ablation.
+Recurrent initialization is fresh seeded PyTorch; native initialization reuses
+the original pinned full64 untrained asset. No weights are fitted during preparation.
+
+Replay dones identify a timeout at row511, yielding two contiguous segments and
+939 complete windows. Native replay lacks source-symbol metadata, so labels are
+explicit replay-segment ordinals used only for indexing; no real-symbol attribution
+is inferred. Ongoing next/current observations agree exactly. The original input
+and its old numerical-diagnostic protocol remain immutable and referenced as
+provenance, not rewritten for the new study.
+
+[Actual preparation](../results/recurrent-offpolicy-2026-10-27/smoke-preparation.json)
+verifies all matched fields, empty native/recurrent optimizers, exact initial
+targets and initial recurrent tensor hash6832b68b7141e304ecf582cf80dae567cb5318dee8df651de535b36dae438649.
+Parameter counts: actor21,384, online twin critics42,370, target critics42,370
+(nontrainable), plus one learned entropy scalar. Protected input/ledger/CrossQ
+stop/initializer files rehash unchanged; caller Torch RNG restores. No backward,
+optimizer step, allocation, provider call or retired-test access occurred.
+
+`training/recurrent_sac_smoke_worker.py` rejects local execution before output or
+construction. In Colab it observes native optimizer pre/post hooks, finite actual
+gradients and recurrent-memory gradients, exact phase counts and actor/critic
+ownership. It checks each actual recurrent target update against retained
+pre-update targets and post-update critics. Initial/final snapshots, compact
+progress, actual hook evidence, matched row IDs and carried/reset predictions
+are retained. Both restored recurrent tensors/raw entropy/Adam and native
+checkpoint tensors/moments are compared physically; prediction parity is checked
+within the runtime. Failure records preserve attempted/completed counts. Bounded
+checkpoint archives export after initial and completed stages and on handled
+failure; the controller still owns transport bounds and verified teardown.
+
+82 focused checks/Ruff pass (local forward/manual-state fixtures only). New checks
+cover the fixed protocol, replay segmentation/matched native rows, timeout versus
+terminal masks, unflagged reset rejection, pre-output local-worker rejection and
+native hook rejection without optimizer calls. Actual learned acceptance remains
+unexecuted. Next integrate a dedicated persistent budget/allocation claim, exact
+job validation, worker dispatch and independent bounded archive verifier into the
+existing metered fleet, then run the registered smoke from a clean source export.
+
+Preparation command (use a new evidence path; does not allocate):
+
+```bash
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
+  PYTHONPATH=src .venv/bin/python scripts/prepare_recurrent_sac_smoke.py \
+  --output /tmp/recurrent-sac-smoke-preparation-new.json
+```

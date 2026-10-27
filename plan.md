@@ -2755,3 +2755,16 @@ private copied deterministic actor handles explicit schema/carried state/reset.
 No local backward/optimizer step, allocation or performance claim. Actual learned
 acceptance, exact replay/environment resume and complete frozen bundles remain;
 next register and integrate a bounded matched training-only Colab smoke.
+
+
+### Recurrent SAC learned-smoke protocol/preparation/worker — 2026-10-27
+
+Registered training-only recurrent/native SAC comparison,4 updates each/24 Adam
+steps, matched128 loss rows per update with16-step recurrent burn-in, no returns
+or checkpoint selection, CPU0.1unit/900s/420s teardown reserve/no automatic retry.
+Actual retained1001-row preparation verifies939 valid windows, exact matched
+fields/initial targets/empty optimizers and bound initializer hashes; ledger,
+CrossQ stop and source assets unchanged. Guarded worker implements observed
+optimizer/gradient/Polyak/learned restoration and bounded-stage export evidence.
+82 offline checks/Ruff pass; no optimizer call or allocation. Dedicated budget
+claim/fleet dispatch/archive verification remains before actual Colab execution.
