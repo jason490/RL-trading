@@ -6,6 +6,25 @@ registered training experiment or evidence that any candidate beats holding.
 The existing Treasury payload work continues separately. No dependency change,
 local optimization, new Colab allocation or retired-test evaluation occurred.
 
+## Reported paper outcomes and project status — 2026-10-27
+
+| Paper | Reported result | Transfer limit |
+| --- | --- | --- |
+| [CrossQ, ICLR2024](https://proceedings.iclr.cc/paper_files/paper/2024/file/f381114cf5aba4e45552869863deaaa7-Paper-Conference.pdf) | Matched or exceeded strong continuous-control methods' sample efficiency with one critic update per interaction; reported wall-clock gains up to4× over comparison methods including REDQ/DroQ. | Benchmark control tasks and larger networks; no evidence of stock returns or4× speedup over our small SAC baseline. |
+| [Recurrent model-free RL, ICML2022](https://proceedings.mlr.press/v162/ni22a.html) | Carefully configured recurrent off-policy baselines beat specialized methods in sample efficiency and asymptotic performance on18/21 environments. | Partially observed benchmark tasks; recurrent SAC remains a distinct, untested project candidate. |
+| [Deep Momentum Networks](https://arxiv.org/html/1904.04912v3) | On88 continuous futures contracts, the Sharpe-trained LSTM exceeded the best traditional signal's cost-free Sharpe by over2× and retained an advantage through2–3bps costs. | Volatility-scaled futures portfolio and risk-adjusted objective; not twice the stock profit, or validation under our exposure/holding/execution constraints. |
+| [Tabular trees, NeurIPS2022](https://arxiv.org/abs/2207.08815) | Across45 datasets, tree-based models remained strong on medium-sized tabular problems around10k samples. | General tabular evidence; does not establish financial predictability or rescue our failed forest feasibility study. |
+
+These are authors' reported outcomes, not independently reproduced project
+results. Our small CrossQ implementation passed two4096-transition Colab smokes;
+the subsequent screen stopped at a mandatory historical-SAC reproduction failure.
+No valid CrossQ trading comparison or promotion follows. Recurrent SAC and direct
+cost-aware momentum remain proposals. The separate bounded SAC numerical probe
+addresses the reproduction investigation, not returns. See
+[CrossQ failure](../results/crossq-integrity-2026-10-27/README.md) and
+[numerical diagnostic](sac-first-update.md). Earlier sections below retain the
+original2026-10-26 proposal snapshot; their implementation status is historical.
+
 ## What the project evidence requires
 
 The latest fixed recurrent control returns19.62% selected/18.48% final versus
