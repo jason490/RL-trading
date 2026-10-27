@@ -413,3 +413,22 @@ archive mapping remain exact. These post-run verifier fixes do not alter clean
 training export1a359c7 or require retraining. The measured smoke duration ratio
 1.276 yields3732.56s projection with fixed2× safety and1200s reserve. The fixed
 50k seed11 screen is eligible once these fixes and evidence are committed.
+
+
+## Public artifact retention
+
+The shared research packager recognizes `crossq_arm` in report labels and calls
+`reporting/crossq_public.py` before including study evidence. Both arms must
+preserve the exact pinned `crossq-initialization.npz` and final
+`crossq-replay-state.json`; CrossQ additionally requires
+`crossq-normalization-audit.json` with source-pinned actual forward counts bound
+to final normalization. Selected normalization and phase-sensitive model records
+remain checked. Missing, altered or inconsistent files fail packaging. This
+retains replay hashes/counters, not raw replay contents. Model bundles retain
+their complete checksummed file sets. Raw replay and credentials stay excluded.
+
+All22 relevant publication tests and read-only checks against both actual smoke
+runs pass. Packaging is not publication or permission to delete retained source
+evidence; full screen reporting and remote asset hash verification precede
+duplicate cleanup. The current50k screen uses immutable source36e4dd4, separate
+from these post-export packaging changes.

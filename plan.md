@@ -2579,3 +2579,12 @@ and mapped-name verifier fixes preserve exact semantics; only derived float32
 exp(log-alpha) allows observed one-ULP rounding with independently exact raw
 log-alpha. Project39.497818/150; official348.62/idle. Projection3732.56s fits7200.
 Next fixed50k seed11 screen under original ledger and unchanged study baseline.
+
+
+### CrossQ public provenance retention — 2026-10-27
+
+Shared packager retains exact pinned initialization, replay-hash and observed
+normalization sidecars with arm labels; malformed/missing evidence rejects.
+Raw replay/credentials excluded.22 relevant publication tests and read-only
+checks of actual accepted smoke evidence pass. Fixed50k screen from immutable
+36e4dd4 remains live; no full result/publication or duplicate deletion yet.

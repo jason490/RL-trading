@@ -1,48 +1,38 @@
 # Bounded autonomous research
 
-Current frontier (2026-10-26): [Treasury screen](../results/treasury-context-2026-10-26/README.md)
-completed and failed its fixed gates. Full selected26.51%/final−4.56% versus
-holding30.60%; legacy19.62%/18.48%, masked22.75%/6.92%. Historical control exact,
-full/masked observed paths exact;468 frozen predictions across six accepted runs.
-First failed bookkeeping attempt retained and fixed. All seven owned allocations
-stopped; project39.472562/150, official account348.64/rate0/no assignments.
-Release published with14 verified asset hashes; cleanup removed13 exact
-duplicates/393.94MiB,938 protected files unchanged and strict post-cleanup report
-identical. Six differing snapshots and first failure retained. Next: separate
-CrossQ untrained audit passes: native geometry/default differences and immutable
-prediction/save-load evidence recorded without training/units. Fixed SAC/CrossQ
-50k protocol now preregistered: same26-symbol historical-control data, native
-package differences explicit,1000-update renorm warmup and4096-step smokes.
-Shared Linear mapping now validates native geometry/optimizer ownership and
-normalization before mutation; nine guarded untrained tests pass across11/23/37.
-Six pinned initialization archives and independent model-free array/RNG/source
-verification now pass; portable asset validation survives live-registry changes.
-Restricted CrossQ factory and immutable frozen normalization now implemented;
-old SAC/TQC defaults remain unchanged. Shared-start loader and actual Adam/
-normalization/replay contracts pass108 targeted checks using untrained/manual
-fixtures. Observed-forward audit and registered runner/metadata are now wired;
-185 targeted regressions pass without local fitting or new units. Unregistered
-CrossQ calls remain blocked. Fixed version37 jobs and persistent two-unit study-budget/runtime-profile
-contracts now pass157 focused regressions; smoke acceptance requires both actual
-restored models/replay, owned cleanup, shared Linear/RNG evidence and observed
-actor/critic renorm. Fleet/worker preflight, shared allowance and account-floor routing now integrate
-version37. Strict archive semantics bind initial/selected/final state, selected
-normalization, observed checkpoint forwards, replay sidecars and frozen model
-bytes. Physical restoration now verifies selected/final/frozen Adam/tensors, filled
-replay hashes/timeouts and128 exact predictions per run, preserves caller RNG,
-and rejects altered bytes. Smoke acceptor checks both owned-cleaned tasks and
-shared initial Linear/RNG records. Two CPU4096 smokes from clean1a359c7/Python3.13.16 now accepted:256 frozen
-predictions, actual actor/critic renorm, saved replay/timeout restoration and both
-owned sessions stopped. Project39.497818, official account348.62/idle.
-Canonical JSON and mapped-name verifier fixes preserve exact raw states; only
-derived exp(log-alpha) permits observed one-float32-ULP CPU rounding, with raw
-log-alpha independently restored bitwise. Projection3732.56s<7200. Screen builder/report tooling now
-preserves matched holding, pinned historical SAC reports and fixed gates.
-Shared-start verifier correctly uses mapped archive tensors rather than comparing
-name-keyed hashes across different native module names. Next fixed50k seed11 screen from a fresh clean export under the same original
-ledger and persistent CrossQ baseline.
-Treasury/VIX/GAE and prior failed families stay closed.
-No robust/prospective winner; retired2024+ test stays unopened.
+Current frontier (2026-10-27): no robust/prospective winner. The recent matched
+RecurrentPPO baseline returns19.62% selected/18.48% final, policy-update guard
+28.07%/24.44%, versus holding30.60% on reused2021–2023 development data.
+Treasury26.51%/−4.56%, VIX, GAE and prior failed families remain closed; retired
+2024+ test data stays unopened. See the compact result directories for evidence.
+
+CrossQ [fixed protocol](../configs/experiments/crossq_comparison_preregistration.json)
+compares native small64×64 SAC/CrossQ packages on original26-symbol data. Delay,
+Adam beta and1000-update renorm warmup differences are fixed, not an isolated
+normalization ablation or paper-size replication. Shared untrained tensors/RNG
+and portable provenance are pinned. Native geometry, phase-sensitive actual
+Adam/normalization/replay, observed forwards and immutable frozen inference pass.
+
+[Two actual4096 CPU smokes](../results/crossq-feasibility-2026-10-26/README.md)
+from clean1a359c7/Python3.13.16 are accepted:256 exact predictions, actor/critic
+renorm, replay/timeout restoration and both owned sessions stopped. Project
+39.497818/150 at smoke cleanup, official account348.62/idle then. Raw log-alpha,
+weights, Adam and normalization restore bitwise; only derived float32 exp permits
+one-ULP CPU rounding. Canonical JSON preserves tuple/list parameter semantics.
+Projection3732.56s fits7200; original study baseline39.47256169564856/2 persists.
+
+The fixed50k seed11 screen is now running from clean36e4dd4 in
+`.runtime/crossq-screen-source-v1`; controller state
+`.runtime/crossq-screen-state-v1.json`, proof
+`.runtime/crossq-screen-source-proof-v1.json`. Two centrally metered CPU sessions;
+no screen result yet. Poll the live controller, not state files alone. Retain
+artifacts and verify shutdown before strict screen reporting. No extension or
+rescue grid after failed gates; confirmation11/23/37 only after a passing screen.
+
+CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
+sidecars, includes arm labels, excludes raw replay/credentials.22 publication
+regressions and actual retained smoke evidence pass. Nothing new published yet.
+
 Read this frontier and its compact protocol before the historical chronology below.
 
 The user authorized continuing research toward returns comparable to or better

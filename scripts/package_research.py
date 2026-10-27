@@ -63,6 +63,10 @@ def package(roots, output):
                 archive.add(bundle,arcname='frozen/'+bundle.name)
                 for name in ('metadata.json','best.zip','latest.zip','checkpoints.json','checkpoint-state.json','checkpoint-validation.json','training-sampling.json','training-execution.json','guard-initialization.npz','session-initialization.npz','capacity-initialization.npz','recency-initialization.npz','l2-initialization.npz','clipping-initialization.npz','squashed-initialization.npz','market-initialization.npz','critic-initialization.npz','vix-initialization.npz','treasury-initialization.npz'):
                     if (run/name).exists():archive.add(run/name,arcname='runs/'+run.name+'/'+name)
+                if 'crossq_arm' in metadata:
+                    from rl_stocks.reporting.crossq_public import public_evidence
+                    for path in public_evidence(run, metadata):
+                        archive.add(path, arcname='runs/'+run.name+'/'+str(path.relative_to(run)))
                 if 'gae_arm' in metadata:
                     from rl_stocks.reporting.gae_public import public_evidence
                     for path in public_evidence(run, metadata):
@@ -71,7 +75,7 @@ def package(roots, output):
                 if not selected.exists():selected=run/'selected-validation-cpu.json'
                 if not selected.exists():continue
                 results=json.loads(selected.read_text())
-                variant=next((metadata[k] for k in ('treasury_arm','gae_arm','vix_arm','critic_arm','research_variant') if k in metadata), metadata.get('initialization',{}).get('arm','standard'))
+                variant=next((metadata[k] for k in ('crossq_arm','treasury_arm','gae_arm','vix_arm','critic_arm','research_variant') if k in metadata), metadata.get('initialization',{}).get('arm','standard'))
                 label=(f"{metadata.get('algorithm','unknown')} / {variant} / dataset {metadata.get('dataset','unknown')[:12]} / "
                        f"seed {metadata.get('seed','unknown')} / {metadata.get('actual_steps','unknown')} steps / "
                        +('smoke' if metadata.get('smoke') else 'research'))
