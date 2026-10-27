@@ -73,9 +73,11 @@ Source proof:`.runtime/recurrent-sac-smoke-source-proof-v1.json`.
 
 ## Remaining work
 
-Implement and verify environment collection, checkpoint/evaluation curves,
-preprocessing/frozen bundle integration and interrupted replay/environment state
-before a longer run. Register a bounded matched development comparison with
+Training-only collection and common development evaluation adapters now pass
+synthetic/untrained acceptance; see the category guide. Checkpoint/evaluation
+curves, preprocessing/frozen bundles, a bounded training driver and registered
+actual environment-training smoke remain before a fresh performance run. Exact
+interruption continuation is not supported by the current learner snapshot. Register a bounded matched development comparison with
 contemporaneous controls, fixed final/multi-seed gates and prospective confirmation.
 Retired2024+ data remains unopened. No robust winner has been established.
 [Category guide](../../docs/recurrent-offpolicy.md).

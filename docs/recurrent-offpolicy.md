@@ -531,3 +531,43 @@ and frozen seven-field normalization. The old native SAC benchmark used a differ
 training universe. A future performance protocol must fix the panel, sampling and
 evaluation exposure mode and run contemporaneous controls; the completed replay
 smoke is not evidence that those published returns are directly comparable.
+
+
+## Common development evaluation adapter
+
+`evaluation/recurrent_sac.py` freezes a private actor snapshot and delegates to the
+existing evaluation runner with execution-full21 observations. An explicit
+exposure mode is mandatory. The common simulator, costs, unit-exposure filter,
+trade events, matched buy-and-hold/cash baselines, metrics and directional/short
+attribution are reused; no parallel return formula is introduced.
+
+`PredictionStream` recognizes this explicit frozen actor type and carries its
+single-lane GRU state within an episode, starting a fresh stream for each symbol.
+Existing SB3 LSTM and stateless prediction paths are unchanged. This is an
+adapter for development evaluation, not generic algorithm registration or a
+complete inference-bundle implementation.
+
+The adapter requires the seven-field baseline schema and matching frozen
+normalizer order, accepts train/validation-only research payloads, and validates
+strict chronological2021–2023 development dates. It rejects test/retired entries
+before policy forward. The common public evaluator also rejects a test request
+for FrozenRecurrentActor, so calling that entry point directly cannot silently
+open the retired interval. Future prospective evaluation needs its own declared
+untouched-data contract; this development wrapper does not authorize it.
+
+11 new synthetic evaluation checks pass;44 with existing stream/recurrent-state/
+crossover/directional/report-contract regressions. A separate direct frozen
+actor/TradingEnv replay verifies action-by-action carried-state parity, unchanged
+weights/RNG/normalizer and identical baseline/event/equity calculations. Unit
+exposure retains the other three action components. Invalid schema, order, dates,
+splits and exposure mode reject before policy execution. No real-market return
+measurement, backward, optimizer, provider request or Colab allocation occurs.
+
+Next: integrate the bounded training/evaluation loop, incremental checkpoint
+return curves and versioned preprocessing/frozen bundles; register matched
+contemporaneous controls and verify an actual environment-training Colab smoke
+before a fresh performance run. Exact interruption continuation remains
+unsupported until replay, environment and collection RNG/state are saved; a
+failed fresh run must retain completed checkpoints and stop rather than silently
+resume an incomplete state. Require fixed multi-seed/final gates before
+prospective confirmation.

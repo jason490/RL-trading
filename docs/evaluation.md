@@ -54,3 +54,12 @@ sufficient. Historical, SAC-state and temperature screen reporters use this
 check before scoring. Tests reject mislabeled future dates, altered prices,
 metrics/benchmarks/side P&L and unexplained truncations. No policy training or
 checkpoint reselection occurs during acceptance.
+
+
+Recurrent SAC development uses `evaluate_recurrent_sac` in
+`evaluation/recurrent_sac.py`, with an explicit exposure mode and a copied frozen
+actor. It delegates to the common simulator and matched holding/short-side
+reports while carrying GRU state only within each symbol episode. The new family
+permits2021–2023 validation only; retired/test routes reject. See
+[contracts, acceptance and remaining work](recurrent-offpolicy.md). Synthetic
+adapter parity does not establish new real-market returns.

@@ -16,6 +16,10 @@ class FrozenRecurrentActor:
         self._hidden_size = networks.hidden_size
         self._schema = observation_schema
 
+    @property
+    def observation_schema(self):
+        return self._schema
+
     def predict(self, observation, *, observation_schema: str, state=None, episode_start=False):
         if observation_schema != self._schema or type(episode_start) is not bool:
             raise ValueError('observation schema or reset flag mismatch')

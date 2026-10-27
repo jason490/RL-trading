@@ -80,8 +80,13 @@ remote actions differ and are reported separately.149.784s inclusive, estimated
 account348.59/idle. Session stopped/verified,8.14MiB duplicate upload removed,
 1,851 retained files unchanged. No performance result/promotion. Raw training-only
 collector with full-prefix actor-history refresh after updates now passes13 new
-untrained checks (90 focused collection/replay/learner fixtures total). Next
-evaluation/frozen-bundle/resume integration and fixed matched performance gates;
+untrained checks (90 focused collection/replay/learner fixtures total). Development evaluation now reuses the common simulator/baselines/short attribution,
+with private per-episode frozen GRU state and explicit exposure mode.11 new
+synthetic checks/44 shared regressions pass; public test-route guard remains.
+Next bounded training/evaluation loop, curves/frozen bundles and fixed matched
+performance protocol with actual environment-training Colab acceptance. Exact
+interruption continuation is unsupported until full replay/environment state
+is saved; no new market-performance result or allocation;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm

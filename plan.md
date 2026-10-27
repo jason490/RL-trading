@@ -2806,3 +2806,18 @@ after weight revisions, resets between episodes and enforces a history cap.
 or Colab activity. Current111-training/26-validation baseline differs from old
 SAC26 panel; future performance comparison needs fixed contemporaneous controls.
 Evaluation, exact interruption resume and complete frozen bundles remain.
+
+
+### Recurrent SAC common development evaluation — 2026-10-27
+
+Added a private frozen-GRU PredictionStream adapter and development-only evaluator
+using the existing simulator/costs/exposure filters/holding and directional
+reports. Enforces baseline feature/normalizer order, chronological2021–2023
+validation and retired/test exclusion; common public test route also rejects the
+new actor type.11 new synthetic checks and44 shared regressions/Ruff pass,
+including direct action/state/event/equity parity and unchanged weights/RNG/data.
+No market-performance measurement, training or allocation. Bounded training-loop/
+frozen-bundle/curve integration, preregistered contemporaneous controls and an
+actual environment-training smoke remain before a fresh performance run. Exact
+interruption continuation remains unsupported until full replay/environment
+state is persisted; failures retain completed checkpoints and stop.

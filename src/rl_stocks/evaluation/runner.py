@@ -10,6 +10,9 @@ from rl_stocks.rl.registry.prediction import PredictionStream
 def evaluate(model,dataset,split="validation",config=SimulationConfig(),observation_profile="legacy",exposure_mode="unrestricted"):
     from rl_stocks.environment.trading.env import TradingEnv
     if split not in ("validation","test"):raise ValueError("evaluation split required")
+    from rl_stocks.rl.recurrent_sac.prediction import FrozenRecurrentActor
+    if isinstance(model,FrozenRecurrentActor) and split!="validation":
+        raise ValueError("recurrent SAC research permits development validation only")
     return _evaluate(model,dataset,split,config,observation_profile,exposure_mode)
 
 
