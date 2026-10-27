@@ -87,7 +87,7 @@ def build(destination):
 
 
 def accept(directory):
-    """Restore every asset exactly; never collect, learn or update an optimizer."""
+    """Restore saved tensors exactly, independently of host initialization arithmetic."""
     directory=Path(directory)
     manifest=json.loads((directory/'manifest.json').read_text())
     expected={f'{arm}-{seed}' for arm in protocol()['arms'] for seed in protocol()['confirmation_seeds']}
@@ -113,17 +113,11 @@ def accept(directory):
             if entry['arm']=='gru_sac':
                 restored,_=load_checkpoint(directory/name,expected_lineage=lineage(),restore_torch_rng=True)
                 validate_learner(restored)
-                for key,value in model.networks.state_dict().items():
-                    if not torch.equal(value,restored.networks.state_dict()[key]):
-                        raise ValueError('seeded GRU tensor identity mismatch')
                 if restored.updates!=0 or restored.log_alpha.item()!=0:
                     raise ValueError('unfitted GRU start required')
             else:
-                original={k:v.clone() for k,v in model.policy.state_dict().items()}
                 load_initialization(model,directory/asset['file'],asset['tensors'])
                 _untrained(model)
-                if any(not torch.equal(v,model.policy.state_dict()[k]) for k,v in original.items()):
-                    raise ValueError('seeded native tensor identity mismatch')
             # Verify the saved global states describe the constructor's actual streams,
             # before accepting restoration of those streams.
             if capture_global_rng()!=entry['global_rng'] or rng_record()!=entry['rng_hashes']:

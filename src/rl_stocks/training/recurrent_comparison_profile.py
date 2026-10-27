@@ -182,9 +182,13 @@ def execute_colab(dataset,starts,output):
             performance_interpretation_allowed=False,prospective_confirmation_required=True)))
         return timings
     finally:
-        (output/'partial-profile.json').write_bytes(canonical(timings))
-        for counter in counters:
-            counter.close()
-        for env in envs:
-            env.close()
-        export_artifacts(output.parent)
+        try:
+            (output/'partial-profile.json').write_bytes(canonical(timings))
+        finally:
+            try:
+                for counter in counters:
+                    counter.close()
+                for env in envs:
+                    env.close()
+            finally:
+                export_artifacts(output.parent)

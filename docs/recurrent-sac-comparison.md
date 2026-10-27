@@ -13,8 +13,8 @@ Its canonical digest is
 `58351c3c62f4e65fb59c49e29ab87edb3226ca17445b155d8268a885a6b9c3eb`.
 The protocol validator, timing projections, post-update checkpoint helper and
 synthetic gate tests are implemented. Portable initialization assets now pass actual local construction/restoration
-acceptance; a guarded Colab profiling worker is implemented, while fleet integration and
-physical artifact acceptance remain
+acceptance; a guarded Colab profiling worker is implemented, with dedicated fleet admission and downloaded-artifact verification implemented;
+physical Colab acceptance remains
 required before performance allocation. No full comparison has run yet.
 
 ## Fixed data and controls
@@ -125,7 +125,7 @@ attempts and uncertainty; do not reopen the retired interval for selection.
 GRU learner without collection or fitting. The builder publishes all nine cells
 atomically with a checksummed file inventory, native tensor archives/GRU
 checkpoints and full Python/NumPy/Torch RNG records. The acceptor independently
-reconstructs each seed, checks exact saved tensors, empty optimizer states and
+reconstructs each seed, restores exact saved tensors, checks empty optimizer states and
 constructor RNG streams, and preserves caller streams even on rejection.
 
 Actual assets are retained at `.runtime/recurrent-comparison-starts-v1`; they are
@@ -165,3 +165,38 @@ monitoring, retrieval and verified session termination.
 This implementation has offline guard/restoration acceptance only. No actual
 profile has executed. Dedicated runtime admission, archive verification and
 physical Colab acceptance remain before any100k performance task.
+
+## Dedicated runtime integration
+
+Plan version41 admits exactly one CPU profiling task and packages the accepted
+initialization matrix explicitly. It dispatches directly to the profile worker,
+never the generic trainer. The shared original-ledger baseline records the full
+two-unit study allowance; profile admission uses its0.1-unit suballowance and a
+persistent single-allocation claim. Failure or budget stop cannot trigger a
+worker retry. The standard fleet enforces aggregate metering, the account floor,
+900-second deadline,420-second teardown reserve, bounded downloads and verified
+owned-session termination. The CrossQ stop is preserved.
+
+The downloaded archive uses a strict128MiB file allowlist and rejects duplicate
+paths, links, traversal and incomplete completion evidence before loading models.
+Physical acceptance restores all learned models, validates actual Adam moments
+and64/64/600 optimizer counts, native hyperparameters, replay shapes, update
+schedule, source/start identities and full-panel report/baseline accounting.
+A projection failure can still be a valid completed profile; it blocks subsequent
+performance allocation. No performance tasks are implemented by this profile plan.
+
+Prepare the task without allocating:
+
+```bash
+MPLCONFIGDIR="$PWD/.runtime/matplotlib" PYTHONPATH=src \
+  .venv/bin/python scripts/build_recurrent_comparison_profile_jobs.py \
+  --output .runtime/recurrent-comparison-profile-jobs-v1.json
+```
+
+Actual Colab execution and physical retrieved-file acceptance remain pending.
+
+Portable acceptance compares loaded weights with the saved checksummed assets.
+It does not require freshly regenerated orthogonal weights to be bitwise equal
+across CPU backends. Constructor stream consumption remains checked, and native
+tensor loading checks exact archive-to-model restoration. No learned prediction
+tolerance or historical integrity-stop rule is changed.

@@ -12,6 +12,9 @@ from rl_stocks.core.contracts import digest, canonical
 
 
 def validate_archive(path, plan, dataset_id):
+    if plan.get('version') == 41:
+        from rl_stocks.runtime.colab.recurrent_comparison_artifacts import validate_profile_archive
+        return validate_profile_archive(path,plan,dataset_id)
     if plan.get('version') == 40:
         from rl_stocks.runtime.colab.recurrent_environment_artifacts import validate_environment_archive
         return validate_environment_archive(path, plan, dataset_id)

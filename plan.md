@@ -2904,3 +2904,12 @@ transitions with observed optimizer counts. Saves replay, checkpoints, reports,
 timings and provenance; failure preserves partial evidence and closes environments
 and hooks.32 focused offline tests/Ruff pass. No local fitting or new allocation.
 Dedicated fleet/archive physical acceptance remains before actual profile/performance.
+
+### Dedicated recurrent comparison profile runtime — 2026-10-27
+
+Fixed version41 CPU task, explicit portable-start upload, direct remote dispatch,
+original-ledger two-unit study baseline/0.1-unit profile admission and single
+claim implemented.900-second allocation/420-second teardown reserve, no retries,
+account floor and aggregate metering retained. Strict128MiB archive allowlist plus
+physical checkpoint/Adam/count/config/replay/report/source verification implemented.
+Actual Colab profile remains pending; no performance task or new allocation yet.
