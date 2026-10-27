@@ -11,7 +11,7 @@ from sb3_contrib import RecurrentPPO
 from stable_baselines3 import SAC
 import torch
 
-from rl_stocks.core.contracts import canonical
+from rl_stocks.core.contracts import canonical,digest
 from rl_stocks.evaluation.recorded_economics import verify_report
 from rl_stocks.evaluation.runner import selection_score
 from rl_stocks.reporting.recurrent_sac_comparison import phase_summary
@@ -212,6 +212,8 @@ def verify_cell(folder,dataset,starts,*,expected_arm,expected_seed,expected_sour
     for name in ('training-sampling.json','training-execution.json'):
         if read(name)['transitions']!=100000:
             raise ValueError('actual full training sampling/execution counts required')
-    return dict(arm=arm,seed=seed,saved_artifacts_verified=True,selected=phases['selected'],final=phases['final'],
+    inventory={str(p.relative_to(folder)):hashlib.sha256(p.read_bytes()).hexdigest() for p in entries if p.is_file()}
+    curve=[{key:row[key] for key in ('steps','return_pct','change_pp','excess_return_pp','mean_max_drawdown_pct','buy_hold_return_pct')} for row in history]
+    return dict(arm=arm,seed=seed,saved_artifacts_verified=True,artifact_inventory_sha256=digest(inventory),curve=curve,selected=phases['selected'],final=phases['final'],
                 source_hash=expected_source_hash,source_revision=expected_git_revision,
                 prospective_confirmation_required=True,objective_achieved=False)

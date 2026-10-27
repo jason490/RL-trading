@@ -384,3 +384,12 @@ baseline, claim, stop and two-unit study cap; it admits no100k task. Actual inpu
 preflight passes while the original ledger remains byte-for-byte unchanged and
 stopped. User authorization is pending; no new session has been provisioned.
 See [execution review](recurrent-execution-review.md) for scope and commands.
+
+## Offline matrix acceptance command
+
+The complete-cell acceptance command and standalone comparison dashboard are
+implemented. They require physical cell verification, unchanged passing seed11
+receipt/artifacts before confirmation, fixed gates and prospective requirements.
+Selected/final stock/ETF means, incremental curves and individual-stock excess
+are retained without duplicating full paths. See [results guide](recurrent-comparison-results.md).
+No actual100k matrix exists; the corrected profile still awaits explicit approval.

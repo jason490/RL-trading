@@ -2527,3 +2527,13 @@ precedes ledger review; failure leaves the original budget stopped. Dataset/star
 passes; actual ledger hash unchanged and stopped. No authorization or allocation.
 Native profile now measures the performance worker's finite-gradient/weight hooks
 at unchanged64/600 limits.100k and longer-CPU proposal remain unadmitted.
+
+### Offline recurrent matrix acceptance and dashboard — 2026-10-27
+
+Complete3/9-cell matrix command verifies physical artifacts before fixed gates.
+Confirmation requires unchanged passing original seed11 receipt and complete
+artifact inventory; changed/failed evidence rejects before other-seed reads.
+Atomic JSON/HTML publication cleans failed render staging. Dashboard shows
+selected/final stock/ETF means,10k curves and individual-stock excess versus
+holding. Orchestration/HTML/corruption fixtures pass; no actual100k result or
+new Colab allocation. Corrected-profile approval remains pending; ledger stopped.
