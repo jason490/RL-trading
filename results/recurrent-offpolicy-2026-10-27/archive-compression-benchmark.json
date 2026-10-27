@@ -1,0 +1,37 @@
+{
+  "schema": "archive-compression-benchmark-v1",
+  "raw_bytes": 184189350,
+  "files": 13,
+  "python": "3.13.16",
+  "machine": "x86_64",
+  "samples": [
+    {
+      "compresslevel": 6,
+      "seconds": 2.8981455869507045,
+      "bytes": 29855658,
+      "exact_member_content_verified": true
+    },
+    {
+      "compresslevel": 1,
+      "seconds": 1.3021317101083696,
+      "bytes": 37412741,
+      "exact_member_content_verified": true
+    },
+    {
+      "compresslevel": 1,
+      "seconds": 1.0948695840779692,
+      "bytes": 37412741,
+      "exact_member_content_verified": true
+    },
+    {
+      "compresslevel": 6,
+      "seconds": 2.8892725468613207,
+      "bytes": 29855658,
+      "exact_member_content_verified": true
+    }
+  ],
+  "retained_files_unchanged": true,
+  "temporary_archives_removed": true,
+  "training_performed": false,
+  "colab_allocation": false
+}

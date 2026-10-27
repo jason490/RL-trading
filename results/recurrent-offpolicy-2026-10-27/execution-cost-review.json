@@ -1,0 +1,61 @@
+{
+  "status": "read_only_cost_review_no_allocation",
+  "basis": "incomplete original profile; estimates are not accepted admission evidence",
+  "original_projection": {
+    "profile_projection_passed": false,
+    "arm_passes": {
+      "gru_sac": false,
+      "native_sac": false,
+      "recurrent_ppo_reference": true
+    },
+    "projected_work_seconds": {
+      "gru_sac": 17784.80258671334,
+      "native_sac": 6683.469337207952,
+      "recurrent_ppo_reference": 3143.100036618011
+    },
+    "required_allocation_seconds": {
+      "gru_sac": 18744.80258671334,
+      "native_sac": 7643.469337207952,
+      "recurrent_ppo_reference": 4103.100036618011
+    },
+    "performance_interpretation_allowed": false,
+    "physical_profile_acceptance_still_required": true,
+    "original_project_ceiling": 150,
+    "minimum_account_balance": 150
+  },
+  "candidate_unmultiplied_work_seconds": {
+    "collection": 1539.8464999975658,
+    "full_prefix_refresh": 3628.7743000002592,
+    "replay_updates": 5524.90973099907,
+    "validation": 402.8677716799996,
+    "checkpoint_io": 360.13675513199814
+  },
+  "candidate_required_seconds_even_with_zero_evaluation_and_io": 17600.295796495342,
+  "compression_mean_seconds": {
+    "1": 1.1985006470931694,
+    "6": 2.8937090669060126
+  },
+  "local_compression_speedup": 2.414440971662705,
+  "compression_size_ratio": 1.2531206312719687,
+  "longer_cpu_option": {
+    "status": "proposal_only_not_allocatable",
+    "role_deadline_hours": {
+      "gru_sac": 6,
+      "native_sac": 3,
+      "recurrent_ppo_reference": 2
+    },
+    "observed_cpu_units_per_hour": 0.08,
+    "screen_maximum_cpu_allocation_hours": 11,
+    "screen_units_at_observed_rate": 0.88,
+    "all_three_seed_maximum_allocation_hours": 33,
+    "all_three_seed_units_at_observed_rate": 2.64,
+    "possible_study_cap_units": 4,
+    "rate_is_not_guaranteed": true,
+    "original_study_cap_still": 2,
+    "original_project_cap": 150,
+    "original_stop_and_claim_preserved": true,
+    "new_profile_acceptance_required": true,
+    "no_extra_steps_or_model_changes": true
+  },
+  "next": "Finish checkpoint-first/lossless I/O checks; review separate execution protocol before any allocation. No automatic retry."
+}

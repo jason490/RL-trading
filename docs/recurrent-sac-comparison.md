@@ -236,3 +236,44 @@ This attempt charged0.01209140 estimated units against a rounded measured debit
 of0.01. Account348.58, rate0, assignments0. All scientific artifacts remain; only
 verified duplicate staging data is removed. See the compact evidence in
 [results](../results/recurrent-offpolicy-2026-10-27/comparison-profile-run.json).
+
+## Cost review and recovery publication improvements
+
+A read-only four-sample local benchmark of the actual retained184,189,350-byte
+tree compares gzip6/1/1/6. Mean level6 takes2.894 seconds; level1 takes1.199
+seconds (2.41× faster) and produces37.41MB versus29.86MB (25.3% larger). All13
+member file hashes match at both levels, original files remain unchanged, and
+temporary archives are removed. This is local CPU I/O evidence, not measured
+Colab speed or a new training result.
+
+The shared checkpoint exporter and final Colab bootstrap archive now default to
+level1; the exporter permits an explicit level1–9 override. Atomic replacement
+preserves a previous completed archive on failure and removes incomplete temporary
+archives. Scientific file content, model weights and checkpoint checksums are
+unchanged by the transport compression choice.
+
+The profiling worker now saves and publishes each learned checkpoint immediately
+after its bounded optimizer work, before the next model, prefix benchmark or full
+evaluation. It publishes partial timings alongside the model. Later checkpoint
+I/O timing includes both this early save/export and report/archive work, so the
+extra recovery work is counted. On failure a previous published snapshot remains
+available. These changes have offline checks; they do not authorize replaying the
+stopped allocation or accept missing completion evidence.
+
+The GRU timing projection still needs about4.89 hours even if evaluation and
+archive costs were zero. Faster compression alone cannot justify a two-hour
+allocation. A separate longer-CPU execution option would budget6/3/2 hours for
+GRU-SAC/SAC/PPO, keeping100k transitions and all performance gates. At the observed
+0.08 units/hour this is0.88 units for the three-cell screen or2.64 units for all
+three seeds' allocation ceilings. A possible four-unit study envelope would need
+a separate registered review; the current two-unit envelope, stop and claim remain
+unchanged. No such option is allocatable yet, and rates must be checked afresh.
+
+[Colab's FAQ](https://research.google.com/colaboratory/faq.html) describes variable
+resource availability and typically at most12-hour runtimes; a six-hour deadline
+is therefore an execution proposal, not a guaranteed session lifetime. Durable
+retrieval and verified cleanup remain required. No GPU allocation is justified
+by the current evidence.
+
+Evidence: [compression benchmark](../results/recurrent-offpolicy-2026-10-27/archive-compression-benchmark.json)
+and [cost review](../results/recurrent-offpolicy-2026-10-27/execution-cost-review.json).

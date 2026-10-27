@@ -4,7 +4,9 @@ from pathlib import Path
 import tarfile
 
 
-def export_artifacts(artifact_root):
+def export_artifacts(artifact_root, *, compresslevel=1):
+    if type(compresslevel) is not int or not 1 <= compresslevel <= 9:
+        raise ValueError('gzip compression level1 through9 required')
     destination = os.environ.get('RL_CHECKPOINT_ARCHIVE')
     if not destination:
         return
@@ -14,7 +16,7 @@ def export_artifacts(artifact_root):
         raise ValueError('owned artifacts root and external checkpoint destination required')
     temporary = target.with_name(target.name+'.tmp')
     try:
-        with tarfile.open(temporary, 'w:gz') as archive:
+        with tarfile.open(temporary, 'w:gz', compresslevel=compresslevel) as archive:
             archive.add(root, arcname='artifacts')
         temporary.replace(target)
     finally:

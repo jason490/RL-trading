@@ -18,7 +18,7 @@ from rl_stocks.training.checkpoint_export import export_artifacts
 from rl_stocks.training.recurrent_collector import RecurrentCollector
 from rl_stocks.training.recurrent_comparison import protocol,PROTOCOL_SHA256,profile_admission
 from rl_stocks.training.recurrent_comparison_starts import load_start,lineage
-from rl_stocks.training.recurrent_loop import validate_dataset
+from rl_stocks.training.recurrent_loop import validate_dataset,_atomic_json
 from rl_stocks.training.recurrent_payload import RecurrentPayloadStore
 from rl_stocks.training.recurrent_sac_checkpoint import save_checkpoint
 from rl_stocks.training.recurrent_sac_learner import require_colab_cpu
@@ -46,6 +46,19 @@ class StepCounter:
     def close(self):
         for handle in self.handles:
             handle.remove()
+
+
+def publish_profile_checkpoint(arm,model,output,timings):
+    """Publish learned state before later profiling/evaluation can fail."""
+    if arm not in protocol()['arms']:
+        raise ValueError('registered profile arm required')
+    output=Path(output)
+    if arm=='gru_sac':
+        save_checkpoint(model,output/arm,lineage=lineage())
+    else:
+        model.save(output/(arm+'.zip'))
+    _atomic_json(output/'partial-profile.json',timings)
+    export_artifacts(output.parent)
 
 
 def execute_colab(dataset,starts,output):
@@ -105,6 +118,8 @@ def execute_colab(dataset,starts,output):
             terminated=np.array([row.terminated for row in rows]),
             truncated=np.array([row.truncated for row in rows]))
         (output/'candidate-updates.json').write_bytes(canonical(update_records))
+        state_io={}
+        _,state_io['gru_sac']=measured(lambda:publish_profile_checkpoint('gru_sac',candidate,output,timings))
         # Time the exact full-prefix refresh work, including conversion, without gradients.
         observations=np.stack([row.observation for row in rows])
         for _ in range(64):
@@ -130,6 +145,7 @@ def execute_colab(dataset,starts,output):
             raise ValueError('actual native SAC profile optimizer counts mismatch')
         timings['native_sac_updates']=native._n_updates
         models['native_sac']=native
+        _,state_io['native_sac']=measured(lambda:publish_profile_checkpoint('native_sac',native,output,timings))
         ppo=load_start(starts,'recurrent_ppo_reference',11,env=training_env('execution_masked'))
         ppo_audit=StepCounter(dict(policy=ppo.policy.optimizer))
         counters.append(ppo_audit)
@@ -152,6 +168,7 @@ def execute_colab(dataset,starts,output):
         timings['recurrent_ppo_transitions']=ppo.num_timesteps
         timings['recurrent_ppo_adam_steps']=ppo_audit.counts['policy']
         models['recurrent_ppo_reference']=ppo
+        _,state_io['recurrent_ppo_reference']=measured(lambda:publish_profile_checkpoint('recurrent_ppo_reference',ppo,output,timings))
         # Common order for evaluation and complete checkpoint/report/archive timings.
         for arm in protocol()['arms']:
             model=models[arm]
@@ -163,15 +180,11 @@ def execute_colab(dataset,starts,output):
                 results,elapsed=measured(operation)
             timings['validation_seconds'].append(elapsed)
             def write_artifacts():
-                if arm=='gru_sac':
-                    save_checkpoint(model,output/arm,lineage=lineage())
-                else:
-                    model.save(output/(arm+'.zip'))
                 (output/(arm+'-validation.json')).write_bytes(canonical(results))
                 report(results,output/(arm+'-validation.html'),'Profiling only; no performance selection')
                 export_artifacts(output.parent)
             _,elapsed=measured(write_artifacts)
-            timings['checkpoint_io_seconds'].append(elapsed)
+            timings['checkpoint_io_seconds'].append(state_io[arm]+elapsed)
         (output/'profile.json').write_bytes(canonical(timings))
         projection=profile_admission(timings)
         (output/'projection.json').write_bytes(canonical(projection))

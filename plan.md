@@ -2926,3 +2926,15 @@ account348.58 idle;0.01209140 estimated versus0.01 rounded measured units.
 43.8MiB duplicate staging removed, scientific artifacts retained. Observed184MB
 archive corrects validator bound to256MiB without accepting the incomplete run.
 Next review costs/durable checkpoint publication and separate execution proposal.
+
+### Lossless I/O and cost review after profile stop — 2026-10-27
+
+Actual retained184MB tree benchmark: gzip1 mean1.199s vs gzip6 mean2.894s locally,
+all13 member hashes exact, temporary archives removed. Shared/final transport
+archives use level1; failure preserves previous complete publication. Profiling
+now publishes learned model/partial evidence before subsequent work/evaluation,
+counting early export in I/O totals. No new allocation or optimizer work.
+GRU still projects4.89h with evaluation/I/O entirely removed; I/O cannot rescue
+the two-hour plan. Longer CPU6/3/2h option is a costed proposal only: observed
+rate0.08 implies0.88 units for seed11/2.64 for all three seeds' ceilings.
+Original two-unit study cap, ledger stop, claim and performance gates unchanged.
