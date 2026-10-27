@@ -1,0 +1,397 @@
+{
+  "schema": "crossq-scoped-source-audit-v1",
+  "protocol_sha256": "0d92529f39a9e18001add858e44b849db16d58174e71f86ee273dd0b21ffe61c",
+  "historical_revision": "8c27af4cb146d9d3dcf4d2b9a12c6ffb1b63e7f5",
+  "screen_revision": "36e4dd40f001ebbda58ca1421d30665fe7bd8233",
+  "scopes": [
+    "src/rl_stocks/core",
+    "src/rl_stocks/environment",
+    "src/rl_stocks/features",
+    "src/rl_stocks/risk",
+    "src/rl_stocks/evaluation",
+    "src/rl_stocks/rl/sac",
+    "src/rl_stocks/data/generation/datasets.py",
+    "src/rl_stocks/rl/registry",
+    "src/rl_stocks/training/runner.py",
+    "src/rl_stocks/training/curves.py",
+    "src/rl_stocks/training/checkpoint_state.py",
+    "requirements.lock"
+  ],
+  "common_files": {
+    "requirements.lock": {
+      "historical_sha256": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142",
+      "current_sha256": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/core/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/core/contracts.py": {
+      "historical_sha256": "d05b409d6cff52d865356fced078fb87e829fc4906fed1605e786c220fcfe202",
+      "current_sha256": "d05b409d6cff52d865356fced078fb87e829fc4906fed1605e786c220fcfe202",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/core/files.py": {
+      "historical_sha256": "8cd3138015b4a0fa135147bd89b64a078af742b7a92ae5189e0c7eda4d5e1285",
+      "current_sha256": "8cd3138015b4a0fa135147bd89b64a078af742b7a92ae5189e0c7eda4d5e1285",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/core/provenance.py": {
+      "historical_sha256": "3ab4293756736a7fc88596fc2bd6a2f136255c4a25de05e8eee7c10afd4f1e7f",
+      "current_sha256": "3ab4293756736a7fc88596fc2bd6a2f136255c4a25de05e8eee7c10afd4f1e7f",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/data/generation/datasets.py": {
+      "historical_sha256": "77bc38e996b42c0e685acfdd01c3abea659537be11e43ea5dd9bfdc39e9cb8eb",
+      "current_sha256": "77bc38e996b42c0e685acfdd01c3abea659537be11e43ea5dd9bfdc39e9cb8eb",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/accounting/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/accounting/portfolio.py": {
+      "historical_sha256": "3e5d539d3d4360edd9d72502a1401682377f9cbcc17e11fe8b6ca0858cb6f5a9",
+      "current_sha256": "3e5d539d3d4360edd9d72502a1401682377f9cbcc17e11fe8b6ca0858cb6f5a9",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/execution/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/execution/simulator.py": {
+      "historical_sha256": "d9cf6d41d6ae9e829da0b63c63d112daeecad3bd27e4ca431bc98772b6a8a536",
+      "current_sha256": "d9cf6d41d6ae9e829da0b63c63d112daeecad3bd27e4ca431bc98772b6a8a536",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/observations/state.py": {
+      "historical_sha256": "6bff469a519d3b681e6bccd40812caf398b20b25c52a85f1d20938d94e835085",
+      "current_sha256": "6bff469a519d3b681e6bccd40812caf398b20b25c52a85f1d20938d94e835085",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/rewards/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/rewards/equity.py": {
+      "historical_sha256": "1256d26f3616c57a93c50cfebdcfa864c053553e8730aeb5f26047eeb66fd950",
+      "current_sha256": "1256d26f3616c57a93c50cfebdcfa864c053553e8730aeb5f26047eeb66fd950",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/sampling/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/sampling/regimes.py": {
+      "historical_sha256": "fccc65687ffded0db221d21fd74a75ceb550c6597359de52636eada23446c7ec",
+      "current_sha256": "fccc65687ffded0db221d21fd74a75ceb550c6597359de52636eada23446c7ec",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/sampling/windows.py": {
+      "historical_sha256": "314a0fbee1589d02f47ee11de6a199444b0c69dbba84cef9426d8c46292919b2",
+      "current_sha256": "314a0fbee1589d02f47ee11de6a199444b0c69dbba84cef9426d8c46292919b2",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/sampling/years.py": {
+      "historical_sha256": "96daf333a46582c0ea1c5458aba6f49897dc5f5df60285b6b80ab0da6b275a0f",
+      "current_sha256": "96daf333a46582c0ea1c5458aba6f49897dc5f5df60285b6b80ab0da6b275a0f",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/trading/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/environment/trading/env.py": {
+      "historical_sha256": "c4821e8530f7ed4f7464ccba60cbd53ca03321f2f4824f480edf617202a044e4",
+      "current_sha256": "c4821e8530f7ed4f7464ccba60cbd53ca03321f2f4824f480edf617202a044e4",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/behavior.py": {
+      "historical_sha256": "706b6cf1f34d8486d6bc18a3ce8559e360c532b0701fd5ee6ac408ef06fe1238",
+      "current_sha256": "706b6cf1f34d8486d6bc18a3ce8559e360c532b0701fd5ee6ac408ef06fe1238",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/direction.py": {
+      "historical_sha256": "bc74eded40f53a1f81c0594100a8d0a48d35dc5244d1eb593ac4b637899a6db8",
+      "current_sha256": "bc74eded40f53a1f81c0594100a8d0a48d35dc5244d1eb593ac4b637899a6db8",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/exposure.py": {
+      "historical_sha256": "954f3dcd90b779d7a0ac5298b75c01ac0c02f5ad71266b98419e3637a6429e25",
+      "current_sha256": "954f3dcd90b779d7a0ac5298b75c01ac0c02f5ad71266b98419e3637a6429e25",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/metrics.py": {
+      "historical_sha256": "440e82d08f5785167cd9a1a0fab011b320b8b31712fe988fa810faed1c9de68e",
+      "current_sha256": "440e82d08f5785167cd9a1a0fab011b320b8b31712fe988fa810faed1c9de68e",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/report_contract.py": {
+      "historical_sha256": "5001277cdf5559be4b42dce604b032c6332c7f17bfaf659c0fd374eefc38b060",
+      "current_sha256": "5001277cdf5559be4b42dce604b032c6332c7f17bfaf659c0fd374eefc38b060",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/rules.py": {
+      "historical_sha256": "938baa37007a35f751d38f8c43b3adc506cf2a84f0c932c815cd64eceff9a177",
+      "current_sha256": "938baa37007a35f751d38f8c43b3adc506cf2a84f0c932c815cd64eceff9a177",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/runner.py": {
+      "historical_sha256": "59c29ef7db47631d5c8e55fedd8682954256280dbf4b5d0698bf76f61204daa5",
+      "current_sha256": "59c29ef7db47631d5c8e55fedd8682954256280dbf4b5d0698bf76f61204daa5",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/soft_consistency.py": {
+      "historical_sha256": "88c42d8cb1b7838ce06aa4715a81fc84dcd140d79861b55a1442b7c1fd55d4fc",
+      "current_sha256": "88c42d8cb1b7838ce06aa4715a81fc84dcd140d79861b55a1442b7c1fd55d4fc",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/evaluation/training_fit.py": {
+      "historical_sha256": "d9a3d0ddf78a222e8919d9c3a6e48bc7b07dfb8f42137791e3a8e6aad790affe",
+      "current_sha256": "d9a3d0ddf78a222e8919d9c3a6e48bc7b07dfb8f42137791e3a8e6aad790affe",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/fundamentals/__init__.py": {
+      "historical_sha256": "56c4bd702205e11af9637ce2fec37582e56c3cb6353d32da48fa8c4a1fdc816a",
+      "current_sha256": "56c4bd702205e11af9637ce2fec37582e56c3cb6353d32da48fa8c4a1fdc816a",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/fundamentals/balance.py": {
+      "historical_sha256": "567de553a149a32261e6f61dfbdc764cc997341e7728fbe62f5e0eddc262cffd",
+      "current_sha256": "567de553a149a32261e6f61dfbdc764cc997341e7728fbe62f5e0eddc262cffd",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/fundamentals/history.py": {
+      "historical_sha256": "701bf205b5d58af3073f50ee7ffe34fa62ea542c5e091447a686f7aa6a8974a5",
+      "current_sha256": "701bf205b5d58af3073f50ee7ffe34fa62ea542c5e091447a686f7aa6a8974a5",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/fundamentals/snapshot.py": {
+      "historical_sha256": "8a848c405058b1a2213c95da27cee24bfb1d5b55d35e8e3271b4b7052c200891",
+      "current_sha256": "8a848c405058b1a2213c95da27cee24bfb1d5b55d35e8e3271b4b7052c200891",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/market/__init__.py": {
+      "historical_sha256": "71899215635a0dee31a55a1600b4ad40cf09603d53c14e72bd34a0abb9f80b7b",
+      "current_sha256": "71899215635a0dee31a55a1600b4ad40cf09603d53c14e72bd34a0abb9f80b7b",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/market/context.py": {
+      "historical_sha256": "531d18ff05b7fcda27b76d099a9d0a60880d88677c5796353136a1a766449b14",
+      "current_sha256": "531d18ff05b7fcda27b76d099a9d0a60880d88677c5796353136a1a766449b14",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/market_structure/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/market_structure/supply_demand.py": {
+      "historical_sha256": "1b2233659a92f41e357cbee308e64a6f95bc920dbaec975375290643c013d579",
+      "current_sha256": "1b2233659a92f41e357cbee308e64a6f95bc920dbaec975375290643c013d579",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/momentum/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/momentum/rsi.py": {
+      "historical_sha256": "bedb5754ab159df00e426719dd13363e29841325269e0498434458054c17af56",
+      "current_sha256": "bedb5754ab159df00e426719dd13363e29841325269e0498434458054c17af56",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/price/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/price/indicators.py": {
+      "historical_sha256": "3b2c20cf63a8980791ad5565d83af666d6b5de8561de375d01f30a611bdf85ca",
+      "current_sha256": "3b2c20cf63a8980791ad5565d83af666d6b5de8561de375d01f30a611bdf85ca",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/price/sessions.py": {
+      "historical_sha256": "6318d7a90d178915759f103302540ad73ab84d33a087fd7ebaae50b1a05f1ad2",
+      "current_sha256": "6318d7a90d178915759f103302540ad73ab84d33a087fd7ebaae50b1a05f1ad2",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/registry/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/registry/assemble.py": {
+      "historical_sha256": "f5d950b2f0bbc11a07c5d9e8236a4eac666747442ea560a3e841495ff346a555",
+      "current_sha256": "f5d950b2f0bbc11a07c5d9e8236a4eac666747442ea560a3e841495ff346a555",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/sectors/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/sectors/rotation.py": {
+      "historical_sha256": "1f8f9408b71300326acbfe9dcfd762703540a7e99f08b85bbd1f33ad397d0e2d",
+      "current_sha256": "1f8f9408b71300326acbfe9dcfd762703540a7e99f08b85bbd1f33ad397d0e2d",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/timeframes/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/timeframes/aggregation.py": {
+      "historical_sha256": "780f274a0390d7b93129fa2df300dfcf03107c0fc24f2ca562c3e9d225989e0d",
+      "current_sha256": "780f274a0390d7b93129fa2df300dfcf03107c0fc24f2ca562c3e9d225989e0d",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/timeframes/weekly.py": {
+      "historical_sha256": "cf4bc1546e39c9461046201fe22f7604e5a98c097cd8ec07ff5982befe6b0dfe",
+      "current_sha256": "cf4bc1546e39c9461046201fe22f7604e5a98c097cd8ec07ff5982befe6b0dfe",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/trend/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/trend/context.py": {
+      "historical_sha256": "4223d735f0abffb257b1e887e47c3765ae7043c502a82ef7d542ee0beb996fb4",
+      "current_sha256": "4223d735f0abffb257b1e887e47c3765ae7043c502a82ef7d542ee0beb996fb4",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/trend/ema.py": {
+      "historical_sha256": "b478b4234c10548ebc056a278e1e818a1e9956e4c60260ae9ec9a3c5ee5594a7",
+      "current_sha256": "b478b4234c10548ebc056a278e1e818a1e9956e4c60260ae9ec9a3c5ee5594a7",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/volume/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/features/volume/relative.py": {
+      "historical_sha256": "3662f9ec5f9c3e023203a0b50c55d4127dde7384637903a00c077fbf4db3db06",
+      "current_sha256": "3662f9ec5f9c3e023203a0b50c55d4127dde7384637903a00c077fbf4db3db06",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/risk/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/risk/decisions.py": {
+      "historical_sha256": "cbed14aaf510eb0c6e3c064862991b3e46abdd62be1d897e11554bb46d991b09",
+      "current_sha256": "cbed14aaf510eb0c6e3c064862991b3e46abdd62be1d897e11554bb46d991b09",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/risk/exposure.py": {
+      "historical_sha256": "a551f29620d94fc8182ebc225fef77800e6a2bdddfea9161c678f4b4b56168aa",
+      "current_sha256": "a551f29620d94fc8182ebc225fef77800e6a2bdddfea9161c678f4b4b56168aa",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/rl/registry/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/rl/registry/distribution.py": {
+      "historical_sha256": "227710940884a3a4d32a049a67730b4aa683dfa7f45483cb12e2c81fc2272de7",
+      "current_sha256": "c4ea47343c293377fb34a872f3ebdbe1acbaff281072a64ea501365c13af8bd1",
+      "bytes_equal": false
+    },
+    "src/rl_stocks/rl/registry/factory.py": {
+      "historical_sha256": "e96e11cc8f1ac8409780222bd695895307409ed1a9519cecdac43fab2ab53a66",
+      "current_sha256": "728e149c3a522cc492a087137d8129dfac920c8de1ccfc0516db81d481856393",
+      "bytes_equal": false
+    },
+    "src/rl_stocks/rl/registry/prediction.py": {
+      "historical_sha256": "25c12f58fd09a2cfc9104421b4b742410e515751b8ecc57061a944201055ab38",
+      "current_sha256": "25c12f58fd09a2cfc9104421b4b742410e515751b8ecc57061a944201055ab38",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/rl/sac/__init__.py": {
+      "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/rl/sac/config.py": {
+      "historical_sha256": "a4632964e06b18330443ef9e3f2feec6e3339a71437baff50ee4a8702fac4e00",
+      "current_sha256": "a4632964e06b18330443ef9e3f2feec6e3339a71437baff50ee4a8702fac4e00",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/training/checkpoint_state.py": {
+      "historical_sha256": "641d2c8b34f715eb0521d9b76eba395a1f42d18f2d630285e4c4f7197a268fe0",
+      "current_sha256": "641d2c8b34f715eb0521d9b76eba395a1f42d18f2d630285e4c4f7197a268fe0",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/training/curves.py": {
+      "historical_sha256": "7f176cab8e9a35534c3aa06fe26759df643173b52f3a3236f890ad1776bbf364",
+      "current_sha256": "7f176cab8e9a35534c3aa06fe26759df643173b52f3a3236f890ad1776bbf364",
+      "bytes_equal": true
+    },
+    "src/rl_stocks/training/runner.py": {
+      "historical_sha256": "a8e20707a1c873bb17910ce6776d316754257c6e1595d6babbe4609ccf1957d5",
+      "current_sha256": "9ee516210cffb1d6d60e7616f07dfbf9503168bc348b09f353ab62f41340e6e3",
+      "bytes_equal": false
+    }
+  },
+  "added_files": [
+    "src/rl_stocks/evaluation/critic_sensitivity.py",
+    "src/rl_stocks/features/treasury_context.py",
+    "src/rl_stocks/features/volatility_context.py"
+  ],
+  "removed_files": [],
+  "changed_common_files": [
+    "src/rl_stocks/rl/registry/distribution.py",
+    "src/rl_stocks/rl/registry/factory.py",
+    "src/rl_stocks/training/runner.py"
+  ],
+  "unchanged_common_file_count": 65,
+  "static_call_evidence": {
+    "factory_create_ast_equal": true,
+    "callback_on_step_ast_equal": true,
+    "environment_constructor_calls_equal": true,
+    "intraop_thread_calls_equal": true,
+    "historical_intraop_thread_calls": [
+      "Call(func=Attribute(value=Name(id='torch', ctx=Load()), attr='set_num_threads', ctx=Load()), args=[Constant(value=1)])"
+    ],
+    "current_intraop_thread_calls": [
+      "Call(func=Attribute(value=Name(id='torch', ctx=Load()), attr='set_num_threads', ctx=Load()), args=[Constant(value=1)])"
+    ],
+    "seed_calls_equal": true,
+    "environment_constructor_call_counts": [
+      1,
+      1
+    ]
+  },
+  "limits": "Scoped byte/AST comparison only; runner/registry changes remain. Does not prove runtime/backend or full semantic equivalence.",
+  "root_cause_established": false,
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "allocation_performed": false,
+  "retry_authorized": false
+}

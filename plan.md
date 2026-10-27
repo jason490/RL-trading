@@ -2618,3 +2618,14 @@ unproven. New runner metadata captures actual selected-device numerical backend
 settings read-only, preserving RNG/flags and excluding arbitrary environment
 values. Earlier artifacts and CrossQ stop remain unchanged; no training retry.
 [Guide](docs/execution-provenance.md).
+
+
+### Scoped historical source audit — 2026-10-27
+
+Compared immutable historical8c27af4 and screen36e4dd4 without importing or
+training either:65 common scoped files byte-identical, lock unchanged, only
+runner/registry common files changed. Factory create/on-step callback and
+environment/seed calls match AST; both sources explicitly set intra-op threads1.
+Scope limitations and added modules retained; no full semantic/backend equivalence
+or root cause claimed. No retry/allocation.
+[Evidence](results/crossq-integrity-2026-10-27/source-comparison.json).

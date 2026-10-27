@@ -66,3 +66,23 @@ thread/determinism setters and CPU GPU-name queries, check safe environment
 filtering, distinguish numerical settings from containers, reject changed beta
 values, and verify exact-prefix/four-ULP replay diagnosis. No fitting or remote
 allocation is involved.
+
+
+## Scoped historical-source audit
+
+[Immutable-commit comparison](../results/crossq-integrity-2026-10-27/source-comparison.json) finds65 byte-identical common files
+in the selected core/environment/features/risk/evaluation/SAC/dataset/checkpoint
+scope. The dependency lock is unchanged. Only registry distribution/factory and
+training runner change among common scoped files; added optional modules are
+listed separately. Factory `create`, callback `_on_step`, seed calls and the
+single environment-construction call are structurally identical. Both sources
+explicitly call `torch.set_num_threads(1)`.
+
+This narrows the investigation: different configured intra-op counts are not
+established by missing runtime metadata. Actual inter-op settings, processor
+capability and numerical kernel execution remain unrecorded historically.
+Runner/registry additions, initialization/provenance paths and installed backend
+execution are not proven semantically identical by a scoped byte/AST audit.
+Root cause stays unproven; no tolerance change or training retry is authorized.
+The audit imports/trains neither source, changes no retained model/data artifact
+and allocates no runtime.

@@ -64,3 +64,23 @@ cause remains unproven. Future runs now record read-only execution provenance
 without changing settings or RNG. See [guide](../../docs/execution-provenance.md)
 and primary PyTorch references. No sessions were allocated, no learning was
 performed and no restart/tolerance change is authorized by this audit.
+
+
+## Scoped source comparison
+
+[Immutable-commit comparison](source-comparison.json) finds65 byte-identical common files
+in the selected core/environment/features/risk/evaluation/SAC/dataset/checkpoint
+scope. The dependency lock is unchanged. Only registry distribution/factory and
+training runner change among common scoped files; added optional modules are
+listed separately. Factory `create`, callback `_on_step`, seed calls and the
+single environment-construction call are structurally identical. Both sources
+explicitly call `torch.set_num_threads(1)`.
+
+This narrows the investigation: different configured intra-op counts are not
+established by missing runtime metadata. Actual inter-op settings, processor
+capability and numerical kernel execution remain unrecorded historically.
+Runner/registry additions, initialization/provenance paths and installed backend
+execution are not proven semantically identical by a scoped byte/AST audit.
+Root cause stays unproven; no tolerance change or training retry is authorized.
+The audit imports/trains neither source, changes no retained model/data artifact
+and allocates no runtime.
