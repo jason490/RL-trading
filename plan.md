@@ -2861,3 +2861,19 @@ local frozen parity, selection/final pointers and compact curve identities.
 settled;348.59/idle, original conservative39.53232284029461 units unchanged.
 Next clean immutable export and single registered actual environment smoke;
 no longer performance experiment, promotion or retired-test access is implied.
+
+
+### Actual fresh-environment recurrent smoke accepted — 2026-10-27
+
+Clean2fe079a, actual Colab default Python3.13.18/CPU.128 collected transitions,
+four gradient updates/twelve Adam steps, initial/warmup/learned checkpoints,
+full selected/final reports, physical economic replay and compact curves pass
+independent retained-file verification. Selected warmup has0 updates; prefix
+policy6.8173% then final2.3990% vs9.7706% holding, explicitly not promotion
+or a full-development performance comparison. No retired-test access.
+151.151s inclusive; estimated0.003813113/measured rounded debit0 so far;
+project39.53613595309791/150, account348.59idle. Owned session stopped/verified;
+7.97MiB duplicate upload removed,1,908 protected files unchanged; all scientific
+artifacts retained. Setup notes updated to actual3.13.18. Next bounded matched
+full-development controls/profiling protocol; portable bundles before promotion.
+[Evidence](results/recurrent-offpolicy-2026-10-27/README.md).

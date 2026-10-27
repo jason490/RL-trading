@@ -1,6 +1,6 @@
 # Installation and dependency management
 
-Use Python **3.13**, matching Colab's current interpreter family (3.13.15/3.13.16 across inspected images). The package declares `>=3.13,<3.14`. The CLI's separate Python environment can differ; the research environment must match Colab.
+Use Python **3.13**, matching Colab's current interpreter family. The latest verified CPU kernel is **3.13.18** (2026-10-27). The package declares `>=3.13,<3.14`. The CLI's separate Python environment can differ; the research environment must match Colab.
 
 ## Check Python before installing or training
 
@@ -16,12 +16,17 @@ python3.13 --version
 
 The research environment must be Python 3.13 for the current reviewed lock and
 acceptance results. The official Colab CLI can use its own interpreter. Colab's
-inspected kernels report Python 3.13.16 (CPU) or 3.13.15 (A100); the launcher creates a dependency
-environment using that same kernel interpreter. See
+latest inspected CPU kernel reports Python3.13.18; earlier CPU3.13.16 and
+A1003.13.15 observations are historical. The launcher creates its dependency
+environment using the actual default kernel interpreter, including its patch version. See
 [Colab version preflight](colab.md#python-version-preflight).
-Whenever Colab changes Python, update the package constraint, dependency-lock
-target, local environment, version gate, scripts and documentation together.
-Run full checker/train/save/load acceptance before training with the new version.
+Always query the default kernel before installation/training. Keep the package
+constraint, lock target, local validation environment, version gates and docs
+aligned with that interpreter family; a family change requires updating them
+together. Patch versions are not forced backward: the launcher uses the newly
+observed kernel directly. Actual checker/train/save/load acceptance now passes
+on3.13.18; report older local checks separately rather than presenting them as
+new-kernel acceptance.
 Do not download an older interpreter to bypass the mismatch.
 
 ## Direct pins

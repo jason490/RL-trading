@@ -718,3 +718,29 @@ backward/optimizer/training calls are forbidden in these fixtures. This is local
 implementation acceptance; actual128-transition Colab acceptance is still pending.
 Next clean immutable export, fresh default-kernel/usage preflight and the single
 registered allocation. Scientific outputs must be retrieved before verified stop.
+
+
+## Actual fresh-environment smoke accepted — 2026-10-27
+
+[Evidence and visual-report paths](../results/recurrent-offpolicy-2026-10-27/README.md)
+record actual128-transition/four-update/twelve-Adam execution from clean2fe079a,
+Colab default Python3.13.18/CPU. Independent retained checkpoint/report/curve/
+recorded-action economic/frozen parity verification passes. Selected64-step
+checkpoint has zero updates; final128-step checkpoint has four. Prefix returns
+6.8173%/2.3990% versus9.7706% holding are explicitly not promotion evidence. No
+real performance-family comparison, full training-panel coverage or retired-test
+access occurred. The source and all prior stop/claim/budget histories remain.
+
+Inclusive151.151s, estimated0.003813113 units/measured rounded debit0 so far;
+project39.53613595309791/150 and account348.59/idle. Owned session stopped and
+verified. Removed7.97MiB upload duplicate after member checks;1,908 retained
+files unchanged. Full models, moments, input, checkpoint reports and visual curves
+remain. Current setup notes now record actual3.13.18; no older interpreter was
+installed or forced into Colab.
+
+Next bounded full-development protocol with contemporaneous111-panel controls,
+fixed multi-seed/selected/final/holding gates and cost profiling. Existing native
+PPO/SAC training/reporting acceptance is reusable as controls; source/data/settings
+must be declared explicitly. Portable recurrent inference packaging must pass
+before promotion/prospective use. Exact interrupted continuation stays unsupported;
+failures retain completed checkpoints and stop. Do not reuse either smoke claim.

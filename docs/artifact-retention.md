@@ -292,3 +292,11 @@ loss-row identities, prediction records and final transport. Verified duplicate
 upload cleanup removed8,531,570 bytes;1,851 protected files unchanged. Owned
 sessionrl-stocks-cpu-349d406bc473 stopped/verified. See
 [actual evidence](../results/recurrent-offpolicy-2026-10-27/README.md).
+
+
+Actual recurrent environment smoke (2026-10-27): initial/warmup/final model and
+Adam checkpoints, immutable cached view, both full checkpoint reports, selected/
+final visual reports and JSONL/CSV/HTML curves retained. Verified8,352,207-byte
+upload duplicate removed with1,908 protected files unchanged. Owned session
+rl-stocks-cpu-7100dc6978f6 stopped/verified; original stop/claims preserved.
+[Evidence](../results/recurrent-offpolicy-2026-10-27/README.md).

@@ -94,7 +94,14 @@ allocation. Version40 dedicated budget/claim/fleet and64MiB physical verifier no
 pass70 focused tests, including recorded-action economic replay, checkpoint/curve/
 selection identity and local frozen parity. Prior stopped attempt settled;
 account348.59/idle and project39.53232284029461 unchanged. Next clean-source
-single environment-smoke allocation; frozen bundles/matched protocol remain. Exact
+environment smoke completed from clean2fe079a on actual Colab Python3.13.18 CPU:
+128 transitions/4 updates/12 Adam steps, checkpoint/report/economic replay/curve/
+frozen parity verified. Selected warmup0-update prefix6.8173%, final4-update2.3990%
+vs9.7706% holding: integration only, no promotion.151.151s inclusive, estimate
+0.003813113/measured rounded debit0; project39.53613595309791/150, account348.59
+idle. Session stopped/verified;7.97MiB duplicate removed,1,908 files unchanged.
+Next bounded matched111-panel development protocol with contemporaneous controls
+and cost profiling; portable bundles before promotion. Exact
 interruption continuation is unsupported until full replay/environment state
 is saved; no new market-performance result or allocation;
 no candidate protocol, dependency change or further allocation is registered.

@@ -1,0 +1,146 @@
+[
+  {
+    "steps": 64,
+    "phase": "post_update",
+    "score": 0.06817313231315648,
+    "return_pct": 6.817313231315649,
+    "change_pp": null,
+    "equity_change_pct_from_previous": null,
+    "gain_since_50k_pp": null,
+    "best_return_pct": 6.817313231315649,
+    "buy_hold_return_pct": 9.770645721083786,
+    "excess_return_pp": -2.9533324897681386,
+    "mean_max_drawdown_pct": -9.935094622683028,
+    "mean_costs": 401.06600453437756,
+    "mean_turnover": 12.475829779866537,
+    "elapsed_seconds": 0.7631583770000248,
+    "symbols": {
+      "AAPL-validation-0": {
+        "net_return": -0.02541837011057224,
+        "max_drawdown": -0.16364260712192213,
+        "sharpe": -0.1736172736998646,
+        "costs": 503.4219979347045,
+        "turnover": 14.803631044616699
+      },
+      "DIA-validation-0": {
+        "net_return": 0.10953143510683883,
+        "max_drawdown": -0.03864473945207447,
+        "sharpe": 3.1610070324468764,
+        "costs": 219.23362237274043,
+        "turnover": 7.30772076751709
+      },
+      "IWM-validation-0": {
+        "net_return": 0.08735981019468686,
+        "max_drawdown": -0.10998876202419716,
+        "sharpe": 1.2894453119190463,
+        "costs": 622.1996743789987,
+        "turnover": 18.97049105194092
+      },
+      "MSFT-validation-0": {
+        "net_return": 0.12837039196265754,
+        "max_drawdown": -0.08661148561238363,
+        "sharpe": 2.111158665979506,
+        "costs": 301.22089162482564,
+        "turnover": 9.604487789001466
+      },
+      "QQQ-validation-0": {
+        "net_return": 0.011292080758496192,
+        "max_drawdown": -0.15666035595690053,
+        "sharpe": 0.30399221118108,
+        "costs": 541.8897464160408,
+        "turnover": 16.887711349487304
+      },
+      "SPY-validation-0": {
+        "net_return": 0.09790344596683176,
+        "max_drawdown": -0.0405577271935037,
+        "sharpe": 2.486948424460339,
+        "costs": 218.43009447895514,
+        "turnover": 7.280936676635743
+      }
+    },
+    "training": {},
+    "learner_updates": 0,
+    "checkpoint": "checkpoint-64"
+  },
+  {
+    "steps": 128,
+    "phase": "post_update",
+    "score": 0.02399046689256884,
+    "return_pct": 2.399046689256884,
+    "change_pp": -4.418266542058764,
+    "equity_change_pct_from_previous": -4.136283162721854,
+    "gain_since_50k_pp": null,
+    "best_return_pct": 6.817313231315649,
+    "buy_hold_return_pct": 9.770645721083786,
+    "excess_return_pp": -7.371599031826904,
+    "mean_max_drawdown_pct": -12.496573453662553,
+    "mean_costs": 488.08741473682596,
+    "mean_turnover": 14.978513610699972,
+    "elapsed_seconds": 2.6083671829999844,
+    "symbols": {
+      "AAPL-validation-0": {
+        "net_return": -0.17856429086100267,
+        "max_drawdown": -0.25999668733426606,
+        "sharpe": -2.593957184712511,
+        "costs": 765.1949915568335,
+        "turnover": 22.6356847190094
+      },
+      "DIA-validation-0": {
+        "net_return": 0.10953143510683883,
+        "max_drawdown": -0.03864473945207447,
+        "sharpe": 3.1610070324468764,
+        "costs": 219.23362237274043,
+        "turnover": 7.30772076751709
+      },
+      "IWM-validation-0": {
+        "net_return": 0.04432510036119797,
+        "max_drawdown": -0.14079230325454772,
+        "sharpe": 0.7441562391638644,
+        "costs": 685.8444436164854,
+        "turnover": 20.714299440307617
+      },
+      "MSFT-validation-0": {
+        "net_return": 0.12837039196265754,
+        "max_drawdown": -0.08661148561238363,
+        "sharpe": 2.111158665979506,
+        "costs": 301.22089162482564,
+        "turnover": 9.604487789001466
+      },
+      "QQQ-validation-0": {
+        "net_return": -0.057623281181110375,
+        "max_drawdown": -0.1831914643729775,
+        "sharpe": -0.9087890929213608,
+        "costs": 738.6004447711158,
+        "turnover": 22.327952271728517
+      },
+      "SPY-validation-0": {
+        "net_return": 0.09790344596683176,
+        "max_drawdown": -0.0405577271935037,
+        "sharpe": 2.486948424460339,
+        "costs": 218.43009447895514,
+        "turnover": 7.280936676635743
+      }
+    },
+    "training": {
+      "update": 4,
+      "actor_loss": -2.6461081504821777,
+      "critic_loss": 6.566716194152832,
+      "entropy_loss": -0.005960502196103334,
+      "alpha_before": 0.9991005063056946,
+      "alpha_after": 0.9988009333610535,
+      "completed_steps": {
+        "entropy": 4,
+        "critic": 4,
+        "actor": 4
+      },
+      "order": [
+        "entropy",
+        "critic",
+        "actor",
+        "targets"
+      ]
+    },
+    "learner_updates": 4,
+    "checkpoint": "checkpoint-128"
+  }
+]
