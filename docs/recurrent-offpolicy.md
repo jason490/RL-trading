@@ -571,3 +571,63 @@ unsupported until replay, environment and collection RNG/state are saved; a
 failed fresh run must retain completed checkpoints and stop rather than silently
 resume an incomplete state. Require fixed multi-seed/final gates before
 prospective confirmation.
+
+
+## Bounded fresh-run loop and checkpoint curves
+
+`training/recurrent_loop.py` now connects collector, validated replay, the guarded
+learner and common development evaluation. LoopConfig fixes transition/warmup
+counts, collection frequency, gradient steps, window geometry, replay capacity,
+episode length, evaluation cadence, seed and sampling mode before construction.
+Expected updates equal floor((transitions-warmup)/train_every)*gradient_steps.
+The private engine collects first, updates only at declared boundaries after
+warmup, and exposes evaluation only after those scheduled updates. Empty or
+invalid sequence readiness fails rather than silently changing the update budget.
+A sticky failure prevents another collection/update call after partial failure.
+
+The public loop rejects local execution before output/RNG/model changes. It
+requires the exact supplied dataset identity, baseline seven-field order,
+train2010–2020/validation2021–2023 chronological bars and no retired/test entries.
+It builds an execution-full/unrestricted/net-log-equity training environment,
+uses a separate replay RNG and passes actual learner revisions into collection.
+Default learner optimizer/gamma/tau remain the already smoke-accepted defaults;
+new schedules still require their own registered experiment before allocation.
+This helper does not allocate a runtime or override the shared controller budget.
+
+At each declared evaluation count, and always at the final transition even off
+the regular cadence, it saves an immutable checkpoint before recording selection
+metadata. Only common validation mean net return selects; exact ties retain the
+earlier checkpoint. All records are marked post_update (after the step's due
+updates), with actual learner_updates recorded explicitly even during warmup.
+Selected and final pointers/reports remain separate when learning deteriorates.
+
+The existing compact learning-curve JSONL, CSV and interactive HTML retain current
+return, best return, matched holding, percentage-point change since the previous
+checkpoint, relative equity change, drawdown, costs, turnover, per-symbol compact
+metrics, elapsed time and actual update counts. These are validation checkpoint
+curves, not training equity or prospective returns. Full selected/final reports
+reuse the common price/stop/target-zone/fill/exposure charts and holding baseline;
+full trade paths are not duplicated at every checkpoint. Completed learner
+snapshots remain immutable at their transition count.
+
+`training/checkpoint_export.py` exports only an explicitly owned artifacts tree to
+the existing controller's external checkpoint archive. The loop exports initial,
+completed checkpoint and final/failure stages. Atomic JSON publication and archive
+replacement clear temporary files; recursive destinations reject. The caller owns
+metering/transport/teardown. Exact interrupted continuation remains unsupported:
+completed weights/moments are retained, but replay/environment/collection state
+is not silently reconstructed or resumed after failure.
+
+17 new loop/export/report checks pass;51 with collector, development evaluator,
+checkpoint and curve regressions. Update spies only count calls and never change
+model tensors or invoke an optimizer. Tests cover cadence, multiple updates,
+final off-grid evaluation, sticky failure, declared allowance exhaustion,
+compact incremental arithmetic, tie selection, missing-checkpoint rejection,
+selected/final HTML rendering, dataset date/identity guards, local update-loop
+rejection and owned archive contents. No real-market evaluation, backward,
+optimizer step, provider request or Colab allocation occurred.
+
+Next register a bounded actual environment-training smoke with a fixed cached-data
+view, source identities and output verifier, then integrate complete frozen
+preprocessing bundles and the contemporaneous matched performance protocol.
+The already consumed replay-only smoke is retained; it is not restarted.

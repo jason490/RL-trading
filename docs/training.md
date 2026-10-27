@@ -127,3 +127,12 @@ replay/counter/seed checks and exact restoration without Parameter replacement.
 61 focused checks pass. The [study guide](distributional-critics.md) distinguishes
 this from the still-pending actual learned optimizer, runtime and Colab smoke
 acceptance. No model has been trained in this stage.
+
+
+The prospective recurrent SAC family has a Colab-only fresh-run driver in
+`training/recurrent_loop.py`. Its fixed schedule records actual update counts,
+separate selected/final snapshots and compact percentage-point checkpoint curves;
+reports reuse common simulation and holding metrics. It is not enabled in the
+generic algorithm factory. Registered real-environment smoke acceptance and the
+matched performance protocol remain before longer execution. Exact interrupted
+continuation is unsupported. [Details](recurrent-offpolicy.md).

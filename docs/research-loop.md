@@ -83,8 +83,11 @@ collector with full-prefix actor-history refresh after updates now passes13 new
 untrained checks (90 focused collection/replay/learner fixtures total). Development evaluation now reuses the common simulator/baselines/short attribution,
 with private per-episode frozen GRU state and explicit exposure mode.11 new
 synthetic checks/44 shared regressions pass; public test-route guard remains.
-Next bounded training/evaluation loop, curves/frozen bundles and fixed matched
-performance protocol with actual environment-training Colab acceptance. Exact
+Bounded fresh-run loop now integrates scheduled collection/replay updates, immutable
+checkpoint selection/final pointers, compact percentage-change curves and shared
+selected/final visual reports.17 new scheduling/spy/export checks pass (51 related
+checks); no local optimizer or new allocation. Next register actual environment-
+training smoke and integrate complete frozen bundles/matched performance protocol. Exact
 interruption continuation is unsupported until full replay/environment state
 is saved; no new market-performance result or allocation;
 no candidate protocol, dependency change or further allocation is registered.

@@ -2821,3 +2821,17 @@ frozen-bundle/curve integration, preregistered contemporaneous controls and an
 actual environment-training smoke remain before a fresh performance run. Exact
 interruption continuation remains unsupported until full replay/environment
 state is persisted; failures retain completed checkpoints and stop.
+
+
+### Recurrent SAC bounded loop/curve/report foundation — 2026-10-27
+
+Connected scheduled training-only collection, replay/learner update allowance and
+post-scheduled-update development evaluation with immutable snapshots, earliest
+strict-score selection and distinct final state. Existing compact JSONL/CSV/HTML
+percentage-change curves and selected/final trade reports are reused.17 new
+spy/synthetic/export tests,51 related checks/Ruff pass without local optimization,
+market evaluation or allocation. Initial/completed/failure stage exports preserve
+completed evidence; exact interrupted replay/environment resume unsupported.
+Next registered cached-data environment-training Colab smoke, complete frozen
+bundles and contemporaneous matched performance protocol; original stops/budgets
+and retired-test isolation remain.
