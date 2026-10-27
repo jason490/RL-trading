@@ -2794,3 +2794,15 @@ Owned session stopped/verified;8.14MiB upload duplicate removed,1,851 protected
 files unchanged. Models/moments/input/target evidence retained. Next collector,
 evaluation/resume/frozen-bundle integration and registered matched performance
 study. [Evidence](results/recurrent-offpolicy-2026-10-27/README.md).
+
+
+### Recurrent SAC training collection foundation — 2026-10-27
+
+Implemented raw training-only TradingEnv collection with copied action/true-next
+payloads, private warmup RNG, explicit symbol/episode counters and poisoned
+failure handling. Online actor reconstructs complete observed episode history
+after weight revisions, resets between episodes and enforces a history cap.
+13 new synthetic/untrained checks,90 focused checks/Ruff pass without optimizer
+or Colab activity. Current111-training/26-validation baseline differs from old
+SAC26 panel; future performance comparison needs fixed contemporaneous controls.
+Evaluation, exact interruption resume and complete frozen bundles remain.

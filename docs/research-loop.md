@@ -78,7 +78,9 @@ matched rows and learned restoration. Local frozen parity passes; cross-host
 remote actions differ and are reported separately.149.784s inclusive, estimated
 0.003775191/rounded measured debit0 so far; project39.53232284029461/150,
 account348.59/idle. Session stopped/verified,8.14MiB duplicate upload removed,
-1,851 retained files unchanged. No performance result/promotion. Next collector,
+1,851 retained files unchanged. No performance result/promotion. Raw training-only
+collector with full-prefix actor-history refresh after updates now passes13 new
+untrained checks (90 focused collection/replay/learner fixtures total). Next
 evaluation/frozen-bundle/resume integration and fixed matched performance gates;
 no candidate protocol, dependency change or further allocation is registered.
 

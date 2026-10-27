@@ -492,3 +492,42 @@ session stopped/verified. Removed8.14MiB duplicate upload with1,851 retained fil
 unchanged. Scientific model/input/moment/target/prediction evidence retained.
 Next environment collection/evaluation/resume integration and registered matched
 performance gates; do not rerun the consumed smoke or reopen retired test data.
+
+
+## Training environment collection
+
+`training/recurrent_collector.py` now collects from one raw training-only
+TradingEnv into the validated payload store. It requires execution-full inputs,
+unrestricted training exposure, unit-scale net-log-equity rewards and a bounded
+episode length. Training/validation mixing and incompatible contracts reject
+before reset. Actual symbol identity comes from reset metadata; episode ordinals
+and steps stay explicit. Actions and true next observations are copied into
+replay before any reset; a truncated episode's reset occurs only on the next call.
+Any failure after collection begins poisons the collector, because the simulator
+may already have advanced and a silent retry would break transition lineage.
+
+`rl/recurrent_sac/collection.py` references the online actor rather than a frozen
+copy. It advances observation memory during random warmup without drawing actor
+noise. Warmup actions use a private NumPy generator. Subsequent actions use the
+native squashed distribution. The caller supplies a monotone learner revision;
+after actor weights change, memory is reconstructed from the entire observed
+episode prefix with current weights. Unchanged revisions advance cached state
+once. Histories reset at episode boundaries and reject beyond the declared cap.
+This avoids silently mixing old-weight hidden state with updated policy weights.
+The owner must increment revision for every actor change and stop on learner failure.
+
+13 synthetic/untrained collection checks pass,90 with replay/history/loss/snapshot
+checks. Actual TradingEnv fixtures cover action/payload identity, warmup RNG,
+true final observations, episode resets, copied outputs, unchanged preprocessing/
+weights, stochastic reproducibility, full-prefix refresh after a manual tensor
+perturbation, rejected nontraining contracts and poisoned failure handling.
+No backward, optimizer, provider, Colab allocation or retired-test access occurs.
+Collection does not yet serialize simulator/replay/RNG state for exact interruption
+resume and does not itself train or select checkpoints.
+
+The contemporary RecurrentPPO baseline uses expanded111 training/original26
+validation datasetcdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b
+and frozen seven-field normalization. The old native SAC benchmark used a different
+training universe. A future performance protocol must fix the panel, sampling and
+evaluation exposure mode and run contemporaneous controls; the completed replay
+smoke is not evidence that those published returns are directly comparable.
