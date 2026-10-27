@@ -3,8 +3,9 @@
 ## Decision and scientific scope
 
 Recurrent SAC remains an independent candidate, not an accepted replacement for
-RecurrentPPO. No dependency, algorithm registration, training allocation or return
-comparison is added by this review. The stopped CrossQ study remains stopped.
+RecurrentPPO. A separate four-update-per-arm Colab learned smoke has now passed;
+no trading-return comparison or generic algorithm registration follows. The
+stopped CrossQ study remains stopped.
 Existing failed indicator/reward families and retired-test isolation remain intact.
 
 Memory with replay could improve sample reuse when the current observation hides
@@ -421,8 +422,8 @@ failure; the controller still owns transport bounds and verified teardown.
 82 focused checks/Ruff pass (local forward/manual-state fixtures only). New checks
 cover the fixed protocol, replay segmentation/matched native rows, timeout versus
 terminal masks, unflagged reset rejection, pre-output local-worker rejection and
-native hook rejection without optimizer calls. Actual learned acceptance remains
-unexecuted. Next integrate a dedicated persistent budget/allocation claim, exact
+native hook rejection without optimizer calls. At that preparation stage actual learned acceptance remained
+unexecuted. Subsequently integrate a dedicated persistent budget/allocation claim, exact
 job validation, worker dispatch and independent bounded archive verifier into the
 existing metered fleet, then run the registered smoke from a clean source export.
 
@@ -472,3 +473,22 @@ PYTHONPATH=src .venv/bin/python scripts/build_recurrent_sac_smoke_jobs.py \
 Actual allocation requires a clean immutable source export, original whole-runtime
 ledger symlink and bound input, then the existing fleet controller. Preserve that
 export and every owned ID for recovery. The original CrossQ stop remains blocked.
+
+
+## Actual learned smoke accepted — 2026-10-27
+
+[Results and artifact index](../results/recurrent-offpolicy-2026-10-27/README.md)
+records the single Colab CPU allocation from cleanfc57359/default Python3.13.16.
+Both arms completed four actual updates,24 Adam steps total; finite observed
+parameter/memory gradients, optimizer order, all four physical Polyak chains,
+matched rows, actual counters and learned snapshot restoration pass. Independent
+local frozen carried/reset parity passes. Remote AVX2 versus local AVX512 actions
+are not bitwise equal; exact saved-state restoration is verified separately.
+No return evaluation, promotion or historical-stop clearing occurred.
+
+Inclusive149.784s; estimated charge0.003775191, measured rounded debit0 so far.
+Original ledger conservatively39.53232284029461/150, account348.59/idle; sole
+session stopped/verified. Removed8.14MiB duplicate upload with1,851 retained files
+unchanged. Scientific model/input/moment/target/prediction evidence retained.
+Next environment collection/evaluation/resume integration and registered matched
+performance gates; do not rerun the consumed smoke or reopen retired test data.

@@ -1,0 +1,35 @@
+{
+  "schema": "recurrent-sac-smoke-compute-v1",
+  "fleet": "rl-stocks-fleet-87f0178db27e",
+  "session": "rl-stocks-cpu-349d406bc473",
+  "source": {
+    "source_revision": "fc573595d065e6433767f6a907e704cdd51b3611",
+    "source_hash": "fbbba6a731f9577e0fc9408b8bbed37faca7f4c8475cfb0be2557d11e8cf2d55",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/recurrent-sac-smoke-source-v1",
+    "prior_charges_preserved": 39.52854764966505,
+    "crossq_stop_sha256": "22103a286096312455be6f01f3c42ff13aae20a89be5b400a3ad9e997acdd718"
+  },
+  "actual_python": [
+    3,
+    13,
+    16
+  ],
+  "cleanup_verified": true,
+  "allocation_inclusive_seconds": 149.78448700904846,
+  "study_start_units": 39.52854764966505,
+  "study_allowance": 0.1,
+  "estimated_allocated_units": 0.003775190629561742,
+  "measured_units": 0.0,
+  "charged_units": 0.003775190629561742,
+  "settlement_added_units": 0.0,
+  "project_before_settlement": 39.53232284029461,
+  "project_units": 39.53232284029461,
+  "project_remaining_units": 110.46767715970539,
+  "official_balance": 348.59,
+  "official_rate": 0.0,
+  "official_assignments": 0,
+  "account_minimum_balance": 150.0,
+  "crossq_stop_preserved": true,
+  "no_automatic_retry": true,
+  "retained_root": "/home/vibe/projects/rl-stocks/.runtime/recurrent-sac-smoke-source-v1/artifacts/colab/rl-stocks-cpu-349d406bc473/retrieved/artifacts"
+}

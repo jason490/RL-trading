@@ -1,0 +1,18 @@
+{
+  "schema": "recurrent-sac-smoke-staging-cleanup-v1",
+  "session": "rl-stocks-cpu-349d406bc473",
+  "removed": [
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-349d406bc473/research-upload.tar.gz",
+      "bytes": 8531570,
+      "sha256": "f1ed34e841a7c07525d52009e00c008fe417aba835eaf0b6ff6af8f23652b829",
+      "reason": "Every regular upload member matched retained source/input/staged metadata"
+    }
+  ],
+  "protected_file_count": 1851,
+  "protected_manifest_sha256": "fa0e1868cd50882b4722c275c9ee467531f100c3cc36d7570ccd0c5f8840d05d",
+  "protected_files_unchanged": true,
+  "scientific_artifacts_deleted": false,
+  "retained_transport_sha256": "88819ed391643b285931757b0dbeb8a2af36acf72388c04142b2f26dac543ba0",
+  "retained_root": "/home/vibe/projects/rl-stocks/.runtime/recurrent-sac-smoke-source-v1/artifacts/colab/rl-stocks-cpu-349d406bc473/retrieved/artifacts"
+}

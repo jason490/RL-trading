@@ -2779,3 +2779,18 @@ NPZ evidence supports initial-to-final Polyak lineage checks.160 focused tests
 pass without local optimization; account preflight348.59/rate0/no assignments.
 Next clean source export and single registered Colab smoke; actual learned
 acceptance still pending. Original stops, baselines and retired data preserved.
+
+
+### Actual recurrent/native SAC learned smoke accepted — 2026-10-27
+
+Cleanfc57359, actual Colab CPU/default Python3.13.16:4 updates per arm,24 actual
+Adam steps, observed finite/nonzero memory gradients, exact phase counts/order,
+four saved Polyak equation chains, matched loss rows and learned checkpoints pass
+independent physical verification. Frozen carried/reset parity passes locally;
+remote AVX2/local AVX512 action arithmetic differs, separately reported. No return
+comparison or retired-test access.149.784s inclusive; estimated0.003775191 units,
+rounded measured debit0 so far; project39.53232284029461/150/account348.59idle.
+Owned session stopped/verified;8.14MiB upload duplicate removed,1,851 protected
+files unchanged. Models/moments/input/target evidence retained. Next collector,
+evaluation/resume/frozen-bundle integration and registered matched performance
+study. [Evidence](results/recurrent-offpolicy-2026-10-27/README.md).

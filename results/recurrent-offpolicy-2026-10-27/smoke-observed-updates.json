@@ -1,0 +1,173 @@
+{
+  "schema": "recurrent-sac-smoke-observed-updates-v1",
+  "recurrent_optimizer_steps": {
+    "actor": 4,
+    "critic": 4,
+    "entropy": 4
+  },
+  "native_optimizer_steps": {
+    "actor": 4,
+    "critic": 4,
+    "entropy": 4
+  },
+  "recurrent_phase_order": [
+    "entropy",
+    "critic",
+    "actor",
+    "entropy",
+    "critic",
+    "actor",
+    "entropy",
+    "critic",
+    "actor",
+    "entropy",
+    "critic",
+    "actor"
+  ],
+  "native_phase_order": [
+    "entropy",
+    "critic",
+    "actor",
+    "entropy",
+    "critic",
+    "actor",
+    "entropy",
+    "critic",
+    "actor",
+    "entropy",
+    "critic",
+    "actor"
+  ],
+  "recurrent_memory_gradient_observations": [
+    [],
+    [
+      true,
+      true
+    ],
+    [
+      true
+    ],
+    [],
+    [
+      true,
+      true
+    ],
+    [
+      true
+    ],
+    [],
+    [
+      true,
+      true
+    ],
+    [
+      true
+    ],
+    [],
+    [
+      true,
+      true
+    ],
+    [
+      true
+    ]
+  ],
+  "all_observed_gradients_finite": true,
+  "all_four_polyak_checks_exact": true,
+  "recurrent_progress": [
+    {
+      "actor_loss": -2.7330269813537598,
+      "alpha_after": 0.9997000694274902,
+      "alpha_before": 1.0,
+      "completed_steps": {
+        "actor": 1,
+        "critic": 1,
+        "entropy": 1
+      },
+      "critic_loss": 6.860318183898926,
+      "entropy_loss": -0.0,
+      "order": [
+        "entropy",
+        "critic",
+        "actor",
+        "targets"
+      ],
+      "polyak_exact": true,
+      "update": 1
+    },
+    {
+      "actor_loss": -2.6960887908935547,
+      "alpha_after": 0.9994001984596252,
+      "alpha_before": 0.9997000694274902,
+      "completed_steps": {
+        "actor": 2,
+        "critic": 2,
+        "entropy": 2
+      },
+      "critic_loss": 6.633408069610596,
+      "entropy_loss": -0.002005240647122264,
+      "order": [
+        "entropy",
+        "critic",
+        "actor",
+        "targets"
+      ],
+      "polyak_exact": true,
+      "update": 2
+    },
+    {
+      "actor_loss": -2.743992328643799,
+      "alpha_after": 0.9991004467010498,
+      "alpha_before": 0.9994001984596252,
+      "completed_steps": {
+        "actor": 3,
+        "critic": 3,
+        "entropy": 3
+      },
+      "critic_loss": 7.035650253295898,
+      "entropy_loss": -0.004029724281281233,
+      "order": [
+        "entropy",
+        "critic",
+        "actor",
+        "targets"
+      ],
+      "polyak_exact": true,
+      "update": 3
+    },
+    {
+      "actor_loss": -2.6214520931243896,
+      "alpha_after": 0.9988009929656982,
+      "alpha_before": 0.9991004467010498,
+      "completed_steps": {
+        "actor": 4,
+        "critic": 4,
+        "entropy": 4
+      },
+      "critic_loss": 6.821980953216553,
+      "entropy_loss": -0.00592651404440403,
+      "order": [
+        "entropy",
+        "critic",
+        "actor",
+        "targets"
+      ],
+      "polyak_exact": true,
+      "update": 4
+    }
+  ],
+  "native_final_policy_sha256": "44a53186c8cc560609600c9ee361748d05e4bcd5328becf9c502307c1559d61f",
+  "native_actual_per_parameter_steps": {
+    "actor": [
+      4
+    ],
+    "critic": [
+      4
+    ],
+    "entropy": [
+      4
+    ]
+  },
+  "native_recorded_predictions": 9,
+  "performance_evaluation": false
+}

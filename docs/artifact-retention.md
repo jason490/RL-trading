@@ -284,3 +284,11 @@ source/config/input copies.702 retained files, original ledger/stop/claim and
 actual diagnostic artifacts were rehashed unchanged. The final result transport
 and all model/state/batch/RNG evidence remain. See
 [completion cleanup](../results/sac-first-update-2026-10-27/cleanup.json).
+
+
+Recurrent SAC learned smoke (2026-10-27): retained initial/final recurrent/native
+checkpoints, native moments, training input, all four target-equation NPZ files,
+loss-row identities, prediction records and final transport. Verified duplicate
+upload cleanup removed8,531,570 bytes;1,851 protected files unchanged. Owned
+sessionrl-stocks-cpu-349d406bc473 stopped/verified. See
+[actual evidence](../results/recurrent-offpolicy-2026-10-27/README.md).

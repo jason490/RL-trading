@@ -468,3 +468,9 @@ asset validator binds manifest/archive hashes and rejects unsafe paths/phases;
 optimization, Colab allocation or ledger mutation; project39.472562/150 unchanged.
 Next factory/frozen/runtime and actual learned-state/replay/counter acceptance.
 [Evidence](crossq-feasibility-2026-10-26/initializations.json).
+
+
+[Recurrent off-policy learned smoke](recurrent-offpolicy-2026-10-27/README.md):
+actual four-update recurrent/native SAC integration acceptance, physical target/
+Adam restoration, retained artifacts, shared-budget charge and verified cleanup.
+No trading-return comparison or model promotion.

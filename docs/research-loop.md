@@ -72,8 +72,14 @@ initializer preparation passes with source/ledger/stop unchanged. Guarded worker
 implemented. Version39 dedicated budget/claim/fleet dispatch and64MiB allowlisted
 physical archive restoration now pass160 focused checks, including four-step
 physical target-equation chains/manual Adam fixtures. Account348.59/idle preflight.
-Next clean-source single allocation. Actual learned
-gradients/phase order/Polyak/restoration remain unproven;
+Actual single Colab CPU smoke from cleanfc57359/Python3.13.16 passed:4 updates
+per arm/24 Adam steps, observed gradients/order, all physical target equations,
+matched rows and learned restoration. Local frozen parity passes; cross-host
+remote actions differ and are reported separately.149.784s inclusive, estimated
+0.003775191/rounded measured debit0 so far; project39.53232284029461/150,
+account348.59/idle. Session stopped/verified,8.14MiB duplicate upload removed,
+1,851 retained files unchanged. No performance result/promotion. Next collector,
+evaluation/frozen-bundle/resume integration and fixed matched performance gates;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
