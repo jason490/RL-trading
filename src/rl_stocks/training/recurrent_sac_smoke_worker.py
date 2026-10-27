@@ -144,11 +144,15 @@ def execute_colab(payload, output):
             for batch in prepared.batches:
                 old_targets = [p.detach().clone() for p in learner.networks.targets.parameters()]
                 record = learner.update(batch)
-                for old, current, actual in zip(old_targets, learner.networks.critics.parameters(),
-                                                 learner.networks.targets.parameters(), strict=True):
+                polyak = {}
+                for (name, current), old, actual in zip(learner.networks.critics.named_parameters(),
+                        old_targets, learner.networks.targets.parameters(), strict=True):
                     expected = old.mul(1 - learner.tau).add(current.detach(), alpha=learner.tau)
                     if not torch.equal(expected, actual):
                         raise ValueError('actual target Polyak arithmetic mismatch')
+                    for prefix, tensor in [('old', old), ('source', current), ('actual', actual)]:
+                        polyak[prefix+'/'+name] = tensor.detach().numpy().copy()
+                np.savez_compressed(output/f'polyak-{learner.updates}.npz', **polyak)
                 record['polyak_exact'] = True
                 recurrent_records.append(record)
                 write(output/'recurrent-progress.json', recurrent_records)

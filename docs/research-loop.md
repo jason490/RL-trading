@@ -69,8 +69,10 @@ offline/manual-state checks (77 total), with no local backward or optimizer call
 A separate fixed training-prefix smoke now registers4 updates per recurrent/native
 arm (24 Adam steps),0.1units/900s/no retry. Actual untrained matched-batch and
 initializer preparation passes with source/ledger/stop unchanged. Guarded worker
-implemented;82 offline checks pass. Next dedicated fleet budget/claim, dispatch
-and physical archive verification before clean-source allocation. Actual learned
+implemented. Version39 dedicated budget/claim/fleet dispatch and64MiB allowlisted
+physical archive restoration now pass160 focused checks, including four-step
+physical target-equation chains/manual Adam fixtures. Account348.59/idle preflight.
+Next clean-source single allocation. Actual learned
 gradients/phase order/Polyak/restoration remain unproven;
 no candidate protocol, dependency change or further allocation is registered.
 

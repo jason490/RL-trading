@@ -2768,3 +2768,14 @@ CrossQ stop and source assets unchanged. Guarded worker implements observed
 optimizer/gradient/Polyak/learned restoration and bounded-stage export evidence.
 82 offline checks/Ruff pass; no optimizer call or allocation. Dedicated budget
 claim/fleet dispatch/archive verification remains before actual Colab execution.
+
+
+### Recurrent SAC smoke metered runtime/physical verifier — 2026-10-27
+
+Version39 exact CPU job, original-ledger dedicated0.1unit budget/sole claim,
+900s allocation/420s teardown reserve, no exec retries, explicit remote dispatch
+and64MiB allowlisted independent physical verifier implemented. Per-update target
+NPZ evidence supports initial-to-final Polyak lineage checks.160 focused tests
+pass without local optimization; account preflight348.59/rate0/no assignments.
+Next clean source export and single registered Colab smoke; actual learned
+acceptance still pending. Original stops, baselines and retired data preserved.

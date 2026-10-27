@@ -433,3 +433,42 @@ OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR="$PWD/.runtime/matplotlib" \
   PYTHONPATH=src .venv/bin/python scripts/prepare_recurrent_sac_smoke.py \
   --output /tmp/recurrent-sac-smoke-preparation-new.json
 ```
+
+
+## Metered runtime and physical archive integration
+
+Version39 job validation now fixes the sole CPU probe and exact training input.
+The existing fleet uses a dedicated `recurrent-sac-smoke-budget.json` baseline
+and immutable `recurrent-sac-smoke-allocation.json` claim in the original shared
+runtime directory. Fresh filenames cannot bypass a consumed claim. It inherits
+original charges, floor150/teardown170,0.1 incremental allowance and900-second
+allocation with420 seconds reserved for retrieval/cleanup. Worker execution
+retries are disabled. Other study versions and their historical stops stay intact.
+
+The worker saves four compact NPZ target-equation snapshots (old targets,
+post-critic source tensors and actual targets). Independent forward-only
+verification chains every update from initial through final target tensors,
+recomputes Polyak arithmetic, reloads native/recurrent Adam states and checks
+loss-row identities, phase/gradient records, counts and schema claims. Local
+frozen action parity is checked; remote cross-host action recomputation is
+reported separately because backend arithmetic need not be bitwise identical.
+No return tolerance or performance gate is changed.
+
+The archive is limited to64MiB and an exact completed-artifact allowlist, rejecting
+extra files, duplicate members and nonregular entries before physical extraction.
+Remote completion must identify clean source, CPU and actual default Python3.13.
+Manual physical fixtures and corruption tests never run backward/optimizer steps.
+160 focused recurrent/numerical/budget checks pass. Broader fleet regressions are
+recorded separately; this is implementation acceptance, not actual learned smoke
+acceptance. Account preflight348.59/rate0/no active assignments on2026-10-27.
+
+Build the fixed task without allocation:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_recurrent_sac_smoke_jobs.py \
+  --output .runtime/recurrent-sac-smoke-jobs-v1.json
+```
+
+Actual allocation requires a clean immutable source export, original whole-runtime
+ledger symlink and bound input, then the existing fleet controller. Preserve that
+export and every owned ID for recovery. The original CrossQ stop remains blocked.

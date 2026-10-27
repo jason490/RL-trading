@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 38:
+    if plan.get('version') == 39:
+        from rl_stocks.core.contracts import canonical
+        if canonical(plan) != canonical(recurrent_sac_smoke_plan()):
+            raise ValueError('fixed recurrent SAC learned-smoke plan required')
+    elif plan.get('version') == 38:
         from rl_stocks.core.contracts import canonical
         if canonical(plan) != canonical(sac_update_plan()):
             raise ValueError('fixed two-update numerical diagnostic plan required')
@@ -794,3 +798,10 @@ def sac_update_plan():
     return dict(version=38, accelerator='CPU', protocol_sha256=PROTOCOL_SHA256,
         dataset_contract=dict(identity=INPUT_ID), allocation_deadline_seconds=900,
         jobs=[dict(algorithm='sac_update_probe', device='cpu', smoke=False, seed=11, steps=2)])
+
+
+def recurrent_sac_smoke_plan():
+    from rl_stocks.training.recurrent_sac_smoke import PROTOCOL_SHA256, protocol
+    return dict(version=39, accelerator='CPU', protocol_sha256=PROTOCOL_SHA256,
+        dataset_contract=dict(identity=protocol()['input_identity']), allocation_deadline_seconds=900,
+        jobs=[dict(algorithm='recurrent_sac_probe', device='cpu', smoke=False, seed=11, steps=8)])
