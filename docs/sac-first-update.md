@@ -57,8 +57,8 @@ allocation. These checks are not native-update or learned-state acceptance.
 
 ## Colab-only execution still pending
 
-The worker and budget-controlled runtime/artifact acceptance must be implemented
-before allocation. Local learning/optimizer steps remain prohibited. Use one
+The guarded worker core is implemented; budget-controlled runtime dispatch and
+independent saved-artifact restoration remain before allocation. Local learning/optimizer steps remain prohibited. Use one
 owned CPU session, at most0.1 incremental units and900 seconds including setup,
 allocated idle, execution, retrieval and cleanup. Preserve a diagnostic baseline
 across failures and the original project ledger;150/130 project and150/170
@@ -69,3 +69,38 @@ retry after failure. The original CrossQ integrity-stop record stays untouched.
 
 This diagnostic can inform a later reviewed research decision. It does not
 authorize returning to the failed performance protocol automatically.
+
+
+## Worker preparation and update guards
+
+`training/sac_update_worker.py` constructs the two native SAC conditions with
+separate copies of nested configuration. SB3 mutates its policy kwargs during
+setup, so passing shared input dictionaries would invalidate the second
+condition. A regression test reuses one input object and verifies immutability.
+
+Preparation loads pinned full64 initial tensors and original streams, fills
+exactly1001 replay rows, and sets original first-update progress without an
+environment reset or rollout. The worker uses the historical source's explicit
+single intra-op thread setting. Native updates require default-kernel Python3.13,
+Colab release context, `/content/rl-stocks` working directory and CPU hardware.
+The local-execution guard runs before model/output construction.
+
+The observer wraps one native replay sample and attaches optimizer pre/post
+hooks. A second sample or second optimizer attempt is rejected before extra
+updates. Attempted and completed Adam steps are recorded separately; an
+exception after a pre-hook is not counted as a completed step. Native one-step
+replay must supply `discounts=None` and the five finite float32 sample fields.
+All hook handles and the sample override are removed, including failure paths.
+
+Successful execution must prove one native update and one completed step of
+each actor/critic/entropy optimizer per condition, with actual per-parameter
+Adam counters. It retains post-update native archives, numerical tensor/moment
+NPZs, sampled batch NPZs and action/RNG records. Partial failures retain observer
+evidence; caller RNG is restored. There is no trading performance evaluation.
+
+[Actual untrained preparation](../results/sac-first-update-2026-10-27/preparation.json)
+verifies real-input pre-update action/sample parity, immutable tensors/input,
+original RNG, correct tuple/list representations and removed observers while
+learn/train/Adam.step are forbidden. These local checks are not actual native
+update acceptance.35 related tests pass. Budget/controller and independent
+physical artifact checks remain before any Colab allocation.

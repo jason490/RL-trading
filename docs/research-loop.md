@@ -45,8 +45,10 @@ A separate [SAC first-update diagnostic](sac-first-update.md) now has a fixed
 two-update/0.1-unit/900-second protocol and verified immutable1001-row common
 training replay input. No CrossQ learner, rollout, return evaluation or stop
 clearing.11 input tests pass; no new learning/allocation. Next implement the
-Colab-only worker, bounded controller and physical artifact checks before
-allocation. Numerical findings cannot automatically authorize the old screen.
+bounded controller and physical artifact checks before allocation. Worker core
+now guards Colab-only native updates and one sample/step per optimizer; actual
+untrained real-input action/sample parity, immutable input/RNG and cleanup pass.
+35 related tests pass without fitting or allocation. Numerical findings cannot automatically authorize the old screen.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
 sidecars, includes arm labels, excludes raw replay/credentials.22 publication

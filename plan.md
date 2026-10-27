@@ -2640,3 +2640,16 @@ project/account guards. Immutable1001-row common training replay input verified
 bitwise; all protected source hashes unchanged.11 pure-input tests pass.
 Colab-only worker/controller/artifact acceptance remains before allocation.
 [Guide](docs/sac-first-update.md).
+
+
+### SAC first-update worker preparation and guards — 2026-10-27
+
+Guarded Colab CPU worker core prepares native old/explicit-default SAC with
+pinned starts,1001-row replay and no rollout. Deep-copied kwargs prevent native
+SB3 mutation of shared input. One-sample and pre/post optimizer hooks bound
+attempted/completed steps; successful execution requires actual Adam counters.
+Native one-step discounts=None handled without object NPZs; failure evidence,
+observer/env cleanup and caller RNG restoration included. Actual untrained
+real-input action/sample parity and immutable tensors/input pass with fitting
+forbidden.35 related tests pass. Bounded controller and independent physical
+artifact restoration remain before allocation. No credit use or CrossQ restart.

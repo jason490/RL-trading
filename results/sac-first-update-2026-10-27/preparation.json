@@ -1,0 +1,64 @@
+{
+  "protocol_sha256": "aad6c99abe62bd7b9b2659b23b9763f9e4c25a70f8532d88f95d32eca6ecc9a2",
+  "input_identity": "7f50968c0272bda3d5b5a75861e5ea25d2f4e7d328a1b014af7de219a0d5a8a7",
+  "records": {
+    "original_defaults": {
+      "initial_policy_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+      "initial_rng": {
+        "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+        "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+        "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+      },
+      "preupdate_action": [
+        -0.06661391258239746,
+        -0.09804874658584595,
+        -0.7412924766540527,
+        0.2814677953720093
+      ],
+      "sampled_field_sha256": {
+        "observations": "b2663f12a3d45e6cabd33eaf2f89e08df781c5e7051fd6bbff8463306f1df99c",
+        "next_observations": "60f486faaf80fb2bbac209a54fbc97cd2f3726294aa291b8e848dd55453523d6",
+        "actions": "7ed3dcff4cadce57914d8a98d6d11018544715d10c15fd886244b30e27a8a005",
+        "rewards": "9ae786e19279ca7616c68ca4ed1946fb1798c617b84edfffc2c7e0ce25d4f7b8",
+        "dones": "f90eb90e12eb875625066be761e6622abf3f1f58576614f895c9766a2008a8cd"
+      },
+      "beta_container": "tuple",
+      "native_updates": 0,
+      "state_unchanged": true,
+      "observer_handles_removed": true
+    },
+    "explicit_serialized_defaults": {
+      "initial_policy_sha256": "b266e680883cef5f27162387e7a26979681aac53ba13de4a0345ed0281163e4e",
+      "initial_rng": {
+        "torch": "aa02efbf157d5113b542bb0ac358065102070213703cb490d39378e1b6b4072c",
+        "numpy": "45cd8b5803837dfdd021c1c6d876dff05dc329f20aea561f222e006895c1ee1c",
+        "python": "42826a1a3114a416d66b53190c84047ca0605eaf9ba2748589e25355a0772dd8"
+      },
+      "preupdate_action": [
+        -0.06661391258239746,
+        -0.09804874658584595,
+        -0.7412924766540527,
+        0.2814677953720093
+      ],
+      "sampled_field_sha256": {
+        "observations": "b2663f12a3d45e6cabd33eaf2f89e08df781c5e7051fd6bbff8463306f1df99c",
+        "next_observations": "60f486faaf80fb2bbac209a54fbc97cd2f3726294aa291b8e848dd55453523d6",
+        "actions": "7ed3dcff4cadce57914d8a98d6d11018544715d10c15fd886244b30e27a8a005",
+        "rewards": "9ae786e19279ca7616c68ca4ed1946fb1798c617b84edfffc2c7e0ce25d4f7b8",
+        "dones": "f90eb90e12eb875625066be761e6622abf3f1f58576614f895c9766a2008a8cd"
+      },
+      "beta_container": "list",
+      "native_updates": 0,
+      "state_unchanged": true,
+      "observer_handles_removed": true
+    }
+  },
+  "caller_rng_preserved": true,
+  "input_unchanged": true,
+  "worker_sha256": "52a2f02d723ad6564c205afd651dd5aaaf5e3bd2f22bf7d296a7ed6fae615954",
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "native_update_acceptance": false,
+  "colab_allocated": false,
+  "crossq_stop_cleared": false
+}
