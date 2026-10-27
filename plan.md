@@ -2673,3 +2673,15 @@ prevents automatic retry;900s deadline includes420s teardown reserve. Original
 project/account limits retained; CrossQ stop unchanged. Native checkpoints
 exported between conditions.58 related regressions pass; native updates remain
 Colab-only. Next clean export, usage preflight and single diagnostic allocation.
+
+
+### Actual SAC first-update diagnosis completed — 2026-10-27
+
+One Colab AVX2 CPU, clean7eb2588/default Python3.13.16. Two native updates/six
+Adam steps produce identical old/explicit-default states/actions/RNG/batch.
+Physical restoration passes; local AVX512 replay differs2 ULPs despite exact
+state/input/RNG. Historical cause unproven; old CrossQ stop unchanged.
+Session stopped; delayed0.01-unit debit settled without unallocated idle charges
+or history reset. Project39.528548/150, official348.59/idle. Verified duplicate
+upload removed8.08MiB with702 protected files unchanged.
+[Evidence](results/sac-first-update-2026-10-27/README.md).

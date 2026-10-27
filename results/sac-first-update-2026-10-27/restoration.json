@@ -1,0 +1,60 @@
+{
+  "conditions": {
+    "original_defaults": {
+      "actual_saved_model_and_adam_restored": true,
+      "numerical_npz_exact": true,
+      "sampled_batch_reconstructed": true,
+      "forward_only_rng_replay": true,
+      "local_prediction_repeat_exact": true,
+      "source_files_unchanged": true,
+      "remote_preupdate_action_recomputed_exact": true,
+      "remote_postupdate_action_recomputed_exact": false,
+      "raw_log_entropy_exact": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/original_defaults/record.json": "3511161b20634d7fcfc3c1314f519a5338013613468688eb14aa21495348c44c",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/original_defaults/post-update.zip": "70b63137ff3d8dfed9cac77c7c1993329ac7077d3e0bb62c81d574a50fd45589",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/original_defaults/numerical-state.npz": "bcde44865cc6257baf1f85cac2f2ce4a255d8f10e75392d65ca621f78f055898",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/original_defaults/sampled-batch.npz": "3b1e00f8e0d5e4e53f443b889dbf83d27248893fa59f51a191b384d52235aa8d",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/original_defaults/torch-rng.npz": "720ea165a9b728350929fb2c1a394d34ca89ca4cc07066a8a2a380dfdf0ede75"
+      },
+      "training_performed": false,
+      "optimizer_steps": 0
+    },
+    "explicit_serialized_defaults": {
+      "actual_saved_model_and_adam_restored": true,
+      "numerical_npz_exact": true,
+      "sampled_batch_reconstructed": true,
+      "forward_only_rng_replay": true,
+      "local_prediction_repeat_exact": true,
+      "source_files_unchanged": true,
+      "remote_preupdate_action_recomputed_exact": true,
+      "remote_postupdate_action_recomputed_exact": false,
+      "raw_log_entropy_exact": true,
+      "protected_source_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/explicit_serialized_defaults/record.json": "b68bf0e0c18717d032395d90a5539432083106a54fb12b33bb71c47dfbc74974",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/explicit_serialized_defaults/post-update.zip": "f948be264bc048386b16f804b237f1623c7b1964ee66936ff930656b6f835e78",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/explicit_serialized_defaults/numerical-state.npz": "bcde44865cc6257baf1f85cac2f2ce4a255d8f10e75392d65ca621f78f055898",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/explicit_serialized_defaults/sampled-batch.npz": "3b1e00f8e0d5e4e53f443b889dbf83d27248893fa59f51a191b384d52235aa8d",
+        "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts/sac-update/explicit_serialized_defaults/torch-rng.npz": "720ea165a9b728350929fb2c1a394d34ca89ca4cc07066a8a2a380dfdf0ede75"
+      },
+      "training_performed": false,
+      "optimizer_steps": 0
+    }
+  },
+  "comparison": {
+    "initial_policy_exact": true,
+    "preupdate_action_exact": true,
+    "preupdate_rng_exact": true,
+    "sampled_batch_exact": true,
+    "postupdate_different_fields": [],
+    "postupdate_tensor_state_exact": true,
+    "postupdate_rng_exact": true,
+    "postupdate_action_exact": true
+  },
+  "saved_artifacts_verified": true,
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "performance_evaluated": false,
+  "crossq_stop_cleared": false,
+  "root_cause_established": false
+}

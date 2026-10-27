@@ -1,0 +1,43 @@
+{
+  "schema": "sac-update-compute-cleanup-v1",
+  "source": {
+    "source_revision": "7eb258868379a0898bc6648f389f11202088bbe3",
+    "source_hash": "5330a735923f47b27a7650deb23f93d7f0cf58f3a9c9f4110dedd99df98ae523",
+    "source_root": "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1",
+    "prior_charges_preserved": 39.518547649665,
+    "crossq_stop_preserved": true
+  },
+  "session": "rl-stocks-cpu-fc75b6b51f3c",
+  "fleet": "rl-stocks-fleet-ad5188a175a2",
+  "cleanup_verified": true,
+  "official_balance": 348.59,
+  "official_rate": 0,
+  "official_assignments": 0,
+  "project_conservative_units": 39.52854764966505,
+  "project_remaining_units": 110.47145235033494,
+  "diagnostic_charged_units": 0.010000000000047748,
+  "diagnostic_estimated_units": 0.003961783947547277,
+  "study_budget": {
+    "start_units": 39.518547649665,
+    "limit_units": 0.1
+  },
+  "sole_allocation_claim_preserved": true,
+  "removed": [
+    {
+      "path": ".runtime/payloads/rl-stocks-cpu-fc75b6b51f3c/research-upload.tar.gz",
+      "bytes": 8476321,
+      "sha256": "9544cffc55904818025ed543c23a52f0209fe22fb57ded6053cec0b1c14e778e",
+      "reason": "Owned upload staging archive with every regular member verified against retained source/config/input copies"
+    }
+  ],
+  "removed_files": 1,
+  "removed_logical_bytes": 8476321,
+  "protected_file_count": 702,
+  "protected_manifest_sha256": "65f87670750f8cef88876c9959ee5c5c550aa19d7411ada01aa2ea395e8f27f0",
+  "protected_files_unchanged": true,
+  "model_dataset_replay_or_checkpoint_deleted": false,
+  "crossq_stop_preserved": true,
+  "retained_artifact_root": "/home/vibe/projects/rl-stocks/.runtime/sac-update-source-v1/artifacts/colab/rl-stocks-cpu-fc75b6b51f3c/retrieved/artifacts",
+  "retained_transport_sha256": "775ec11499880cd9a4c2ee39d5d3e5eabac5e7a12c27c19be0964c7a3eb33569",
+  "allocation_inclusive_seconds": 157.10898351669312
+}

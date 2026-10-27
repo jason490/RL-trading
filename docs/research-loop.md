@@ -41,22 +41,18 @@ or tolerance change follows. [Guide](execution-provenance.md).
 Persistent `.runtime/crossq-integrity-stop.json` blocks new study controllers and
 root-validated profiles even with prior smoke acceptance; no ledger reset.
 
-A separate [SAC first-update diagnostic](sac-first-update.md) now has a fixed
-two-update/0.1-unit/900-second protocol and verified immutable1001-row common
-training replay input. No CrossQ learner, rollout, return evaluation or stop
-clearing.11 input tests pass; no new learning/allocation. Next implement the
-bounded controller and physical artifact checks before allocation. Worker core
-now guards Colab-only native updates and one sample/step per optimizer; actual
-untrained real-input action/sample parity, immutable input/RNG and cleanup pass.
-Independent physical state/batch/RNG verification is now implemented with14
-manual-fixture tests, including equal/different outcomes and tamper rejection.
-No local fitting or new allocation; budget/runtime integration remains. Numerical findings cannot automatically authorize the old screen.
-
-Version38 runtime now integrates the numerical diagnostic: one CPU allocation,
-persistent0.1-unit baseline/immutable claim,900s deadline with420s teardown reserve,
-no execution restart, preflight input/assets and allowlisted physical artifacts.
-58 related tests pass without native local updates. Next clean source/account
-preflight and the single actual Colab numerical allocation.
+The separate [SAC first-update diagnostic](sac-first-update.md) completed on one
+Colab AVX2 CPU from clean7eb2588/Python3.13.16: two actual native updates/six
+Adam steps; original/explicit defaults give identical tensors/actions/batch/RNG.
+Both saved models, moments and raw RNG restore exactly. Local AVX512 action
+replay differs2 ULPs with identical state/input/RNG; context also differs in
+interop/affinity, so the old historical cause remains unproven. No performance
+conclusion or CrossQ retry follows. Sole diagnostic session stopped/claim kept.
+Delayed idle metering settled measured0.01 units conservatively: project
+39.528548/150, official348.59/rate0/no assignments. Original baselines intact.
+Verified duplicate upload cleanup removed8.08MiB,702 retained files unchanged.
+Next independent recurrent-off-policy feasibility review; no candidate protocol,
+dependency change or further training allocation is registered yet.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
 sidecars, includes arm labels, excludes raw replay/credentials.22 publication

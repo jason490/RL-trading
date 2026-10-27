@@ -276,3 +276,11 @@ ledger, stop marker, diagnostic checkpoint, accepted smoke models/replays and
 immutable diagnostic input. No model, replay, dataset or research checkpoint
 was deleted. Both source directories remain, all owned sessions are stopped,
 and budget history is intact. [Inventory](../results/sac-first-update-2026-10-27/temporary-cleanup.json).
+
+
+Numerical diagnostic completion cleanup also removed its8,476,321-byte owned
+upload staging payload after verifying all members against retained immutable
+source/config/input copies.702 retained files, original ledger/stop/claim and
+actual diagnostic artifacts were rehashed unchanged. The final result transport
+and all model/state/batch/RNG evidence remain. See
+[completion cleanup](../results/sac-first-update-2026-10-27/cleanup.json).

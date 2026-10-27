@@ -1,0 +1,15 @@
+{
+  "fleet": "rl-stocks-fleet-ad5188a175a2",
+  "project_before": 39.52250943361255,
+  "project_after": 39.52854764966505,
+  "additional_recorded_units": 0.006038216052502321,
+  "official_balance": 348.59,
+  "official_rate": 0.0,
+  "official_assignments": 0,
+  "estimated_allocated_units": 0.003961783947547277,
+  "measured_units": 0.010000000000047748,
+  "charged_units": 0.010000000000047748,
+  "cleanup_status": "stopped",
+  "original_baselines_preserved": true,
+  "unallocated_time_added": false
+}

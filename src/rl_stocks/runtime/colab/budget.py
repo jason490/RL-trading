@@ -105,6 +105,29 @@ class Ledger:
         self.value["consumed"]=a["base_consumed"]+a["charged"]
         a["meter_readings"].append({"time":now,"balance":usage.balance,"rate":usage.rate,"assignments":usage.assignments})
         self.save()
+    def settle_stopped(self,session,usage):
+        """Record delayed idle-account debits without charging unallocated time."""
+        if (not self.value['attempts'] or self.active['session']!=session
+                or any(a['status']!='stopped' for a in self.value['attempts'])
+                or type(usage.assignments) is not int or usage.assignments!=0
+                or type(usage.rate) not in (int,float) or usage.rate!=0
+                or type(usage.balance) not in (int,float) or not math.isfinite(usage.balance) or usage.balance<0):
+            raise BudgetStop('exact latest stopped attempt and reliable idle account reading required')
+        account_teardown=self.account_teardown_balance
+        a=self.active
+        previous=self.value['consumed']
+        a['measured']=max(a['measured'],a['initial_balance']-usage.balance)
+        a['charged']=max(a['charged'],a['estimated'],a['measured'])
+        self.value['consumed']=max(previous,a['base_consumed']+a['charged'])
+        a.setdefault('settlement_readings',[]).append(dict(time=self.clock(),balance=usage.balance,
+            rate=usage.rate,assignments=usage.assignments,project_before=previous,
+            project_after=self.value['consumed']))
+        a['settled_balance']=usage.balance
+        if self.value['consumed']>=130 or usage.balance<=account_teardown:
+            self.value['budget_stopped']=True
+        self.save()
+        return self.value['consumed']-previous
+
     def guard(self,projected_seconds=60):
         if self.value["budget_stopped"]:
             raise BudgetStop("project halted; teardown or manual recovery required")

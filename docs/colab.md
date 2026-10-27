@@ -427,3 +427,16 @@ reported by this compact reader. These may refer to different checkpoints. Recor
 state does not prove liveness: poll the existing controller's actual process/tool
 handle separately. The central fleet remains responsible for minute metering,
 deadlines, durable retrieval and verified owned shutdown.
+
+
+### Delayed debit after verified teardown
+
+`Ledger.settle_stopped(session, usage)` can settle a later official idle-account
+reading for the exact latest fully stopped owned attempt. It increases the
+measured charge conservatively, preserving allocated-time estimates, original
+timestamps, baselines and existing stop flags. It does not charge unallocated
+wall time, reduce charges after credit changes or double-count repeated readings.
+Active/unowned/invalid readings reject before mutation; account/project teardown
+thresholds still block future work. Take the allocation lock and confirm zero
+rate/assignments. The SAC numerical diagnostic's0.01-unit delayed debit was
+settled this way; see its tracked settlement record.

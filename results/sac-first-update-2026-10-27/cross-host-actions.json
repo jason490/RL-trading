@@ -1,0 +1,117 @@
+{
+  "local_backend": {
+    "schema": "numerical-execution-v1",
+    "selected_device": "cpu",
+    "machine": "x86_64",
+    "torch_version": "2.8.0+cu128",
+    "cpu_capability": "AVX512",
+    "visible_logical_cpus": 8,
+    "affinity_cpus": 8,
+    "torch_intraop_threads": 1,
+    "torch_interop_threads": 4,
+    "thread_environment": {
+      "OMP_NUM_THREADS": 1,
+      "MKL_NUM_THREADS": 1,
+      "OPENBLAS_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "default_dtype": "torch.float32",
+    "float32_matmul_precision": "highest",
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "mkldnn_enabled": true,
+    "mkldnn_deterministic": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_enabled": true,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "cudnn_allow_tf32": true,
+    "gpu_name": null
+  },
+  "remote_backend": {
+    "affinity_cpus": 2,
+    "cpu_capability": "AVX2",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_enabled": true,
+    "default_dtype": "torch.float32",
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "float32_matmul_precision": "highest",
+    "gpu_name": null,
+    "machine": "x86_64",
+    "mkldnn_deterministic": false,
+    "mkldnn_enabled": true,
+    "schema": "numerical-execution-v1",
+    "selected_device": "cpu",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null
+    },
+    "torch_interop_threads": 1,
+    "torch_intraop_threads": 1,
+    "torch_version": "2.8.0+cu128",
+    "visible_logical_cpus": 2
+  },
+  "conditions": {
+    "original_defaults": {
+      "remote_action": [
+        -0.6026875972747803,
+        -0.36016058921813965,
+        -0.1950361132621765,
+        0.8560729026794434
+      ],
+      "verifier_action": [
+        -0.6026875972747803,
+        -0.3601606488227844,
+        -0.1950361132621765,
+        0.8560729026794434
+      ],
+      "difference": {
+        "compared_rows": 1,
+        "differing_rows": 1,
+        "first_different_zero_based_row": 0,
+        "common_leading_rows": 0,
+        "first_row_maximum_absolute_difference": 5.960464477539063e-08,
+        "first_row_maximum_float32_ulp": 2,
+        "first_row_different_components": [
+          1
+        ]
+      },
+      "model_sha256": "70b63137ff3d8dfed9cac77c7c1993329ac7077d3e0bb62c81d574a50fd45589"
+    },
+    "explicit_serialized_defaults": {
+      "remote_action": [
+        -0.6026875972747803,
+        -0.36016058921813965,
+        -0.1950361132621765,
+        0.8560729026794434
+      ],
+      "verifier_action": [
+        -0.6026875972747803,
+        -0.3601606488227844,
+        -0.1950361132621765,
+        0.8560729026794434
+      ],
+      "difference": {
+        "compared_rows": 1,
+        "differing_rows": 1,
+        "first_different_zero_based_row": 0,
+        "common_leading_rows": 0,
+        "first_row_maximum_absolute_difference": 5.960464477539063e-08,
+        "first_row_maximum_float32_ulp": 2,
+        "first_row_different_components": [
+          1
+        ]
+      },
+      "model_sha256": "f948be264bc048386b16f804b237f1623c7b1964ee66936ff930656b6f835e78"
+    }
+  },
+  "root_cause_of_historical_run_established": false,
+  "training_performed": false,
+  "optimizer_steps": 0
+}
