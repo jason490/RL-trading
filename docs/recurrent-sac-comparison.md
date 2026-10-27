@@ -374,3 +374,13 @@ Tests cover untrained restoration and independent synthetic corruption cases;
 they are not learned full-run acceptance or performance evidence. Dedicated
 archive/fleet integration, reviewed execution admission and actual physical
 full-run verification remain before any research promotion.
+
+## Corrected engineering-profile review prepared
+
+A separate version42 task and explicit-review path are implemented. The sole
+corrected CPU profile gets20 minutes including420 seconds teardown reserve,
+sharing the original0.1-unit profiling allowance. It preserves the original
+baseline, claim, stop and two-unit study cap; it admits no100k task. Actual input
+preflight passes while the original ledger remains byte-for-byte unchanged and
+stopped. User authorization is pending; no new session has been provisioned.
+See [execution review](recurrent-execution-review.md) for scope and commands.

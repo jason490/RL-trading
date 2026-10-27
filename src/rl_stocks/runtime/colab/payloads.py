@@ -13,7 +13,7 @@ def prepare_payload(root,dataset,plan,session):
     with tarfile.open(archive,'w:gz') as tar:
         for name in ('src','scripts','pyproject.toml','requirements.txt','requirements.lock','configs'):
             tar.add(root/name,arcname=name)
-        if plan.get('version')==41:
+        if plan.get('version') in (41,42):
             tar.add(root/'.runtime/recurrent-comparison-starts-v1',arcname='comparison-starts')
         tar.add(Path(dataset)/'dataset.json',arcname='dataset.json')
         tar.add(job,arcname='job-plan.json');tar.add(source,arcname='source-git.json')

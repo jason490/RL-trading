@@ -10,7 +10,8 @@ Current execution frontier: the first recurrent-SAC full-panel CPU profile was
 deadline-stopped; owned cleanup verified, original claim/stop retained. Last
 settled project39.54822735/150, account348.58idle. No accepted full profile or
 100k comparison exists. Full-cell training/verification are implemented offline;
-longer CPU execution remains under review. Read the compact
+longer CPU execution remains under review. The prepared corrected CPU profile
+requires explicit user authorization; no authorization or allocation exists. Read the compact
 [comparison guide](recurrent-sac-comparison.md) and
 [profile record](../results/recurrent-offpolicy-2026-10-27/comparison-profile-run.json)
 before traversing historical entries. No retired interval or failed family reopened.
@@ -2516,3 +2517,13 @@ decliner short P&L. Native default/schedule representation bug corrected; actual
 salvaged SAC/PPO recipes/moments pass, files unchanged.83 focused tests pass.
 No actual100k/full-profile acceptance, new allocation or promotion; existing
 missing completion evidence and stops remain.
+
+### Corrected CPU profile prepared; explicit review pending — 2026-10-27
+
+Separate version42 task, one1,200-second CPU allocation/420-second teardown
+reserve, same0.1-unit allowance including original attempt. Original baseline,
+claims, CrossQ stop and two-unit study cap preserved. Authorization publication
+precedes ledger review; failure leaves the original budget stopped. Dataset/starts/original-record preflight
+passes; actual ledger hash unchanged and stopped. No authorization or allocation.
+Native profile now measures the performance worker's finite-gradient/weight hooks
+at unchanged64/600 limits.100k and longer-CPU proposal remain unadmitted.

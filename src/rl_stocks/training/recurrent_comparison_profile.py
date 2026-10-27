@@ -35,19 +35,6 @@ def validate_panel(dataset):
     return normalizer,training
 
 
-class StepCounter:
-    """Observe actual optimizer completion, without replacing native steps."""
-    def __init__(self,optimizers):
-        self.counts=dict.fromkeys(optimizers,0)
-        self.handles=[opt.register_step_post_hook(
-            lambda opt,args,kwargs,role=role:self.completed(role)) for role,opt in optimizers.items()]
-    def completed(self,role):
-        self.counts[role]+=1
-    def close(self):
-        for handle in self.handles:
-            handle.remove()
-
-
 def publish_profile_checkpoint(arm,model,output,timings):
     """Publish learned state before later profiling/evaluation can fail."""
     if arm not in protocol()['arms']:
@@ -63,6 +50,7 @@ def publish_profile_checkpoint(arm,model,output,timings):
 
 def execute_colab(dataset,starts,output):
     require_colab_cpu()  # before model construction, output or any optimizer call
+    from rl_stocks.training.recurrent_comparison_worker import NativeAudit
     normalizer,training=validate_panel(dataset)
     output=Path(output)
     if output.parent.name!='artifacts' or output.exists():
@@ -135,8 +123,8 @@ def execute_colab(dataset,starts,output):
             native.replay_buffer.add(row.observation[None],row.next_observation[None],row.action[None],
                 np.array([row.reward]),np.array([row.terminated or row.truncated]),
                 [dict(**{'TimeLimit.truncated':row.truncated and not row.terminated})])
-        native_audit=StepCounter(dict(actor=native.actor.optimizer,critic=native.critic.optimizer,
-                                     entropy=native.ent_coef_optimizer))
+        native_audit=NativeAudit(native,'native_sac')
+        native_audit.maximum=dict.fromkeys(native_audit.maximum,64)
         counters.append(native_audit)
         for _ in range(64):
             _,elapsed=measured(lambda:native.train(gradient_steps=1,batch_size=256))
@@ -147,7 +135,8 @@ def execute_colab(dataset,starts,output):
         models['native_sac']=native
         _,state_io['native_sac']=measured(lambda:publish_profile_checkpoint('native_sac',native,output,timings))
         ppo=load_start(starts,'recurrent_ppo_reference',11,env=training_env('execution_masked'))
-        ppo_audit=StepCounter(dict(policy=ppo.policy.optimizer))
+        ppo_audit=NativeAudit(ppo,'recurrent_ppo_reference')
+        ppo_audit.maximum=dict(policy=600)
         counters.append(ppo_audit)
         collect_rollouts,train=ppo.collect_rollouts,ppo.train
         def timed_rollout(*args,**kwargs):

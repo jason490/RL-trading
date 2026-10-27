@@ -1,0 +1,17 @@
+{
+  "status": "prepared_not_authorized",
+  "review_sha256": "fc4ff33df54fc28641056231822b0026381f3d281a5077060a7c80ab192de491",
+  "source_package_hash": "6ffcd066c1b2d18c22efeb616d4c7b4ddcacfafd99426e18c0db607269b3f690",
+  "dataset_and_portable_starts_preflight": true,
+  "original_records_verified": true,
+  "budget_stop_preserved": true,
+  "ledger_sha256": "716e2eebd0a4242e994e59b4a6d8dfe088bfbcaf29b2fbfd285ca0933e737215",
+  "project_units": 39.54822734983501,
+  "allocation_started": false,
+  "profile_deadline_seconds": 1200,
+  "profile_teardown_reserve_seconds": 420,
+  "shared_profile_units_including_first_attempt": 0.1,
+  "user_authorization_required": true,
+  "no_performance_tasks": true,
+  "focused_tests_passed": 81
+}

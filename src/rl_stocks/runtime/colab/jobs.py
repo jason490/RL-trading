@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 41:
+    if plan.get('version') == 42:
+        from rl_stocks.core.contracts import canonical
+        if canonical(plan) != canonical(recurrent_reviewed_profile_plan()):
+            raise ValueError('fixed reviewed corrected profile plan required')
+    elif plan.get('version') == 41:
         from rl_stocks.core.contracts import canonical
         if canonical(plan) != canonical(recurrent_comparison_profile_plan()):
             raise ValueError('fixed recurrent comparison profile plan required')
@@ -828,3 +832,11 @@ def recurrent_comparison_profile_plan():
     return dict(version=41,accelerator='CPU',protocol_sha256=PROTOCOL_SHA256,
         dataset_contract=dict(identity=protocol()['dataset']),allocation_deadline_seconds=900,
         jobs=[dict(algorithm='recurrent_comparison_profile',device='cpu',smoke=False,seed=11,steps=512)])
+
+
+def recurrent_reviewed_profile_plan():
+    from rl_stocks.training.recurrent_execution_review import REVIEW_SHA256,review_spec
+    review_spec()
+    plan=recurrent_comparison_profile_plan()
+    plan.update(version=42,execution_review_sha256=REVIEW_SHA256,allocation_deadline_seconds=1200)
+    return plan

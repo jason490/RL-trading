@@ -2959,3 +2959,13 @@ Corrected native schedule/default representation checks also accept actual
 salvaged SAC/PPO checkpoints without modifying them.83 focused offline tests pass;
 no100k result, full-profile acceptance or new allocation. Execution review and
 physical learned full-run acceptance remain.
+
+### Corrected CPU profile prepared; explicit review pending — 2026-10-27
+
+Separate version42 task, one1,200-second CPU allocation/420-second teardown
+reserve, same0.1-unit allowance including original attempt. Original baseline,
+claims, CrossQ stop and two-unit study cap preserved. Authorization publication
+precedes ledger review; failure leaves the original budget stopped. Dataset/starts/original-record preflight
+passes; actual ledger hash unchanged and stopped. No authorization or allocation.
+Native profile now measures the performance worker's finite-gradient/weight hooks
+at unchanged64/600 limits.100k and longer-CPU proposal remain unadmitted.

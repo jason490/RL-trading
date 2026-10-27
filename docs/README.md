@@ -47,6 +47,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 | TD3 execution-state research | [td3-execution-state.md](td3-execution-state.md) | Saved deterministic off-policy audit, fixed legacy/masked/full controls and strict gates |
 | SAC initial-temperature research | [sac-temperature.md](sac-temperature.md) | Saved reward/Q/entropy diagnosis and fixed startup-temperature comparison |
 | SAC execution-state research | [sac-execution-state.md](sac-execution-state.md) | Saved SAC input/participation audit and fixed legacy/masked/full off-policy comparison |
+| Recurrent execution review | [recurrent-execution-review.md](recurrent-execution-review.md) | Scoped manual continuation after a deadline stop, shared credits and original-record preservation |
 | Recurrent SAC development comparison | [recurrent-sac-comparison.md](recurrent-sac-comparison.md) | Fixed full-panel controls, post-update checkpoints, runtime profiling and multi-seed gates |
 | RL training and checkpoints | [training.md](training.md) | PPO/SAC/TD3 settings, seeds, selection and continuation |
 | Matched research experiments | [experiments.md](experiments.md) | Four datasets, three algorithms/seeds, declared selection, held-out protocol and GitHub assets |

@@ -1,0 +1,32 @@
+{
+  "schema": "recurrent-comparison-execution-review-v1",
+  "status": "explicit_review_required",
+  "research_protocol_sha256": "58351c3c62f4e65fb59c49e29ab87edb3226ca17445b155d8268a885a6b9c3eb",
+  "original_stopped_fleet": "rl-stocks-fleet-7f802d05e513",
+  "original_child_session": "rl-stocks-cpu-c5d2ec2da580",
+  "original_claim_sha256": "101a9f386f030f22a7a76e3fcd15c1ea21d6e4a465b5c088ea68192426cbd958",
+  "original_study_start_units": 39.53613595309791,
+  "original_study_maximum_units": 2,
+  "original_crossq_stop_sha256": "22103a286096312455be6f01f3c42ff13aae20a89be5b400a3ad9e997acdd718",
+  "corrected_profile": {
+    "maximum_shared_profile_units": 0.1,
+    "allocation_deadline_seconds": 1200,
+    "teardown_reserve_seconds": 420,
+    "concurrency": 1,
+    "accelerator": "CPU",
+    "attempts": 1,
+    "automatic_retry_allowed": false,
+    "performance_selection_allowed": false
+  },
+  "changes": [
+    "lossless gzip1 archives",
+    "checkpoint-first publication",
+    "256MiB exact archive allowlist",
+    "effective native defaults and constant schedules checked",
+    "same native gradient/weight audit as performance cells"
+  ],
+  "research_changes": false,
+  "transitions_per_performance_cell": 100000,
+  "scope": "One corrected engineering profile only. No100k allocation, confirmation run, CrossQ retry or change to model/data/reward/gates.",
+  "resumption": "Requires explicit reviewed authorization for the exact stopped attempt; preserve all original charges, claims and stop records."
+}

@@ -5,13 +5,15 @@ import os
 from pathlib import Path
 
 import torch
+import pytest
 
 from rl_stocks.core.contracts import digest
-from rl_stocks.runtime.colab.jobs import recurrent_comparison_profile_plan
+from rl_stocks.runtime.colab.jobs import recurrent_comparison_profile_plan,recurrent_reviewed_profile_plan
 from rl_stocks.training import recurrent_comparison_profile as worker
 
 
-def test_remote_profile_dispatch_preserves_integrity_stop(tmp_path,monkeypatch):
+@pytest.mark.parametrize('version',[41,42])
+def test_remote_profile_dispatch_preserves_integrity_stop(tmp_path,monkeypatch,version):
     spec=importlib.util.spec_from_file_location('remote_profile',Path(__file__).parents[1]/'scripts/remote_train.py')
     module=importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -20,7 +22,7 @@ def test_remote_profile_dispatch_preserves_integrity_stop(tmp_path,monkeypatch):
     for key in ('UV_CACHE_DIR','MPLCONFIGDIR','MPLBACKEND','PYTHONPATH','RL_CHECKPOINT_ARCHIVE'):
         monkeypatch.setenv(key,os.environ.get(key,''))
     payload={'fixture':'read-only dispatch; no market data'}
-    plan=recurrent_comparison_profile_plan()
+    plan=recurrent_comparison_profile_plan() if version==41 else recurrent_reviewed_profile_plan()
     plan['dataset_contract']['identity']=digest(payload)
     import rl_stocks.runtime.colab.jobs as jobs
     monkeypatch.setattr(jobs,'validate_plan',lambda plan:None)  # fixed-plan validation tested separately
