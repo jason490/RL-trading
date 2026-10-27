@@ -51,8 +51,10 @@ conclusion or CrossQ retry follows. Sole diagnostic session stopped/claim kept.
 Delayed idle metering settled measured0.01 units conservatively: project
 39.528548/150, official348.59/rate0/no assignments. Original baselines intact.
 Verified duplicate upload cleanup removed8.08MiB,702 retained files unchanged.
-Next independent recurrent-off-policy feasibility review; no candidate protocol,
-dependency change or further training allocation is registered yet.
+Independent [recurrent-off-policy review](recurrent-offpolicy.md) found a concrete
+ring-buffer sequence risk in tagged skrl2.1.1 using source/index arithmetic.
+Next implement chronological sequence/boundary acceptance before learner adoption;
+no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
 sidecars, includes arm labels, excludes raw replay/credentials.22 publication

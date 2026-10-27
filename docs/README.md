@@ -139,3 +139,7 @@ requires sequence/burn-in/reset tests. Prior failed MLP/forest/TQC/GAE gates sta
 closed; no paper establishes US-stock gains here. Finish current Treasury payload
 work separately before any new algorithm protocol. No installation, model
 construction, optimization, Colab allocation, new units or retired-test access.
+
+[Recurrent off-policy feasibility](recurrent-offpolicy.md) records the tagged
+SAC_RNN replay audit, circular-buffer counterexample and required sequence,
+burn-in, reset and bootstrap acceptance before a new learner comparison.

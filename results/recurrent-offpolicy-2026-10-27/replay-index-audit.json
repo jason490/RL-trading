@@ -1,0 +1,109 @@
+{
+  "schema": "recurrent-replay-index-audit-v1",
+  "source_tag": "2.1.1",
+  "source_sha256": {
+    "skrl/agents/torch/sac/sac_rnn.py": "97c5d7735a2f440b03bb5bd2ce9f45f26f95923defc5fd4ab26dd7959a5efee7",
+    "skrl/memories/torch/random.py": "4138b588e1ce6a1c913d00caa6b620edd57f4451ccffc0461f7abbcb399cced6",
+    "skrl/memories/torch/base.py": "2567be82240f25d9fd130cfbb98641bea970a92c1f4fa5e9d9d4b5e13c38b833"
+  },
+  "method": "Independent arithmetic reproduction, not execution of installed skrl",
+  "capacity": 8,
+  "num_envs": 1,
+  "sequence_length": 3,
+  "next_write_slot": 3,
+  "physical_slot_insertion_times": [
+    8,
+    9,
+    10,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "possible_sequences": [
+    {
+      "indices": [
+        0,
+        1,
+        2
+      ],
+      "insertion_times": [
+        8,
+        9,
+        10
+      ],
+      "contiguous": true
+    },
+    {
+      "indices": [
+        1,
+        2,
+        3
+      ],
+      "insertion_times": [
+        9,
+        10,
+        3
+      ],
+      "contiguous": false
+    },
+    {
+      "indices": [
+        2,
+        3,
+        4
+      ],
+      "insertion_times": [
+        10,
+        3,
+        4
+      ],
+      "contiguous": false
+    },
+    {
+      "indices": [
+        3,
+        4,
+        5
+      ],
+      "insertion_times": [
+        3,
+        4,
+        5
+      ],
+      "contiguous": true
+    },
+    {
+      "indices": [
+        4,
+        5,
+        6
+      ],
+      "insertion_times": [
+        4,
+        5,
+        6
+      ],
+      "contiguous": true
+    },
+    {
+      "indices": [
+        5,
+        6,
+        7
+      ],
+      "insertion_times": [
+        5,
+        6,
+        7
+      ],
+      "contiguous": true
+    }
+  ],
+  "invalid_sequence_count": 2,
+  "upstream_runtime_tested": false,
+  "model_constructed": false,
+  "optimizer_steps": 0,
+  "colab_allocations": 0
+}

@@ -170,3 +170,12 @@ This order is a project judgment based on implementation fit and existing negati
 results. None of the cited papers proves these choices will beat holding, fix the
 short side, or supply the missing independent market evidence. The shared budget,
 account floor, Colab-only training and closed-family rules remain unchanged.
+
+### Recurrent implementation feasibility — 2026-10-27
+
+The [tagged recurrent SAC review](recurrent-offpolicy.md) identifies a concrete
+physical-slot versus chronological-sequence risk after replay overwrite.
+Independent index arithmetic finds two invalid starts among six in a small
+example. Actor/critic history alignment and burn-in need explicit acceptance.
+No dependency installed or performance study registered; next implement and test
+the sequence contract before learner integration.
