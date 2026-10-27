@@ -165,3 +165,52 @@ Next: verify independent actor/critic/target recurrent histories and causal
 burn-in/one-step target alignment using forward-only fixtures, then replace or
 profile the reference enumerator before any registered learner smoke. The
 payload store alone does not implement SAC, sequence loss masking or bootstrapping.
+
+
+## Implemented causal GRU history alignment
+
+`training/recurrent_history.py` provides forward-only observation-history helpers
+for the prospective adapter. It is not a SAC learner or an adoption of skrl's
+recurrent implementation. The current candidate design uses separate
+unidirectional, batch-first, zero-dropout PyTorch GRUs for actor, critic1/2 and
+target critic1/2. Actions would enter downstream Q heads; previous actions/rewards
+are not separate recurrent inputs in this design. Those architecture decisions
+must be fixed in the eventual experiment protocol, not presented as a paper
+replication or an empirically chosen improvement.
+
+`encode_history` starts from fresh zero state on each sequence call, runs the
+burn-in prefix under no-grad, detaches that state and the replay inputs, then
+processes the remaining observations once. Current features are suffix outputs
+excluding the final element; next features are the same outputs shifted by one.
+This includes the true final observation already retained by the payload store.
+Starting a separate next-observation pass from the unadvanced prefix state would
+misalign the history and is covered by a negative test.
+
+`sac_histories` requires five named encoders and rejects shared parameter storage.
+Every network reconstructs its own prefix with its own parameters; no actor state
+is reused as a critic/target state. Targets always disable gradient tracking.
+Optional online suffix graph construction is explicit and respects an enclosing
+no-grad context. The helpers never call backward or an optimizer, change model
+mode, update normalization or retain a collection-state cache.
+
+22 native untrained-forward checks pass alongside31 replay/payload checks.
+Evidence covers full versus chunked forward agreement, current/next alignment,
+future-input causality, independent batch lanes and networks, fresh episode
+starts, unchanged weights/RNG/parameter gradients, detached burn-in, target graph
+exclusion and invalid geometry/dtype/recurrent semantics. An integration fixture
+passes actual copied two-episode payload batches through all five encoders and
+compares against separate full-history forwards. No local differentiation or
+training occurs; graph flags are inspected without running backward.
+
+Exact full-history equivalence is tested when the supplied sequence includes the
+episode start. At later sampled starts, finite burn-in remains an explicit
+approximation. Untrained forward acceptance does not prove correct SAC losses,
+update schedules, target updates, learned serialization or profitable returns.
+Before learner integration, address scalable valid-window sampling and select a
+maintained implementation/adapter with a pinned, audited loss path. Actual
+optimizer/save-load smoke acceptance belongs in Colab under a registered budget.
+
+```bash
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q \
+  tests/test_recurrent_history.py tests/test_recurrent_payload.py tests/test_recurrent_replay.py
+```

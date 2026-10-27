@@ -2709,3 +2709,14 @@ retained instead of reset feature0, with truncation bootstrap preserved. No mode
 optimizer, provider access, dependency change or Colab allocation. Hidden-state/
 learner/throughput acceptance and registered matched study remain; stop markers,
 ledger and retired-test isolation unchanged.
+
+
+### Recurrent history forward acceptance — 2026-10-27
+
+Added standalone observation-only native GRU histories with independent actor,
+twin-critic and target encoders, detached no-grad burn-in, one-pass t/t+1 alignment
+and target graph exclusion.53 combined checks/Ruff pass, including copied replay
+payload integration and separate episode-start/full-forward parity. No backward,
+optimizer, library/dependency changes, Colab allocation or performance claim.
+Finite burn-in after nonzero episode starts remains approximate; scalable sampling,
+pinned learner/loss audit and registered Colab learned acceptance remain next.

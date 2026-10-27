@@ -56,8 +56,10 @@ ring-buffer sequence risk in tagged skrl2.1.1 using source/index arithmetic.
 Chronological metadata indexing now passes19 offline checks, including independent
 interleaved-history/overwrite oracles. Copied payload gathering and an explicit
 SB3 final-observation adapter now pass12 additional checks, including actual
-TradingEnv/DummyVecEnv time-limit auto-reset. Next verify hidden-state alignment
-and scalable sampling before learner adoption;
+TradingEnv/DummyVecEnv time-limit auto-reset. Independent five-role observation-only
+GRU history helpers now pass22 native untrained-forward checks: detached burn-in,
+one-pass t/t+1 alignment, target graph exclusion and fresh episode states.
+Next address scalable sampling and audit a pinned learner loss path;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm
