@@ -2835,3 +2835,16 @@ completed evidence; exact interrupted replay/environment resume unsupported.
 Next registered cached-data environment-training Colab smoke, complete frozen
 bundles and contemporaneous matched performance protocol; original stops/budgets
 and retired-test isolation remain.
+
+
+### Recurrent environment smoke registration/actual view acceptance — 2026-10-27
+
+Fixed128 fresh transitions/4 updates/12 Adam steps,64 warmup,64/128 checkpoint
+curve exercise, six declared symbols and unchanged baseline preprocessing.
+Actual cached129-train/65-validation row prefixes yield12 episodes/1,164 rows,
+923,149-byte immutable view1e25385c771013865a2c05ec9b31af9b1e7399aadaa482562ac0535478a92906.
+Actual Gymnasium/SB3 checkers and pinned unfitted64-GRU tensors pass; source,
+ledger and prior stop/claim unchanged.52 related tests/Ruff pass without local
+optimization, provider calls or allocation. Guarded worker implemented; dedicated
+metered job/sole claim and independent loop-archive verifier remain before the
+single0.1unit/900s allocation. Short smoke returns cannot promote a model family.

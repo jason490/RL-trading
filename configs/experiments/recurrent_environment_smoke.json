@@ -1,0 +1,18 @@
+{
+  "schema": "recurrent-sac-environment-smoke-v1",
+  "purpose": "Verify fresh collection/update/evaluation/curve/report/checkpoint integration; smoke returns are not performance evidence",
+  "source_dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "symbols": ["AAPL", "DIA", "IWM", "MSFT", "QQQ", "SPY"],
+  "view": {"train_prefix_rows": 129, "validation_prefix_rows": 65, "normalization": "Copy original training-only preprocessing exactly; no refit", "source_limitations": "Retrospective survivor panel; source revisions and historical membership limits remain; no delisting claims"},
+  "loop": {"transitions": 128, "warmup_steps": 64, "train_every": 16, "gradient_steps": 1, "burn_in": 16, "unroll": 16, "windows_per_batch": 8, "replay_capacity": 256, "episode_steps": 64, "evaluate_every": 64, "seed": 11, "hidden_size": 64, "start_sampling": "stock_etf_cycle_windows"},
+  "exposure_mode": "unit_magnitude",
+  "expected_updates": 4,
+  "maximum_adam_steps": 12,
+  "expected_checkpoints": [{"transitions": 64, "updates": 0}, {"transitions": 128, "updates": 4}],
+  "selection": "Exercise validation-only strict mean-net-return selection and earliest ties; keep distinct final; no promotion from smoke scores",
+  "acceptance": ["128 actual collection transitions", "four actual recurrent updates/twelve native Adam steps", "initial and zero-update checkpoint weights exact", "physical learned checkpoint counters/moments", "exact validation input/holding/cost/directional report identity", "separate selected/final pointers", "incremental JSONL/CSV/HTML curve parity", "frozen carried/reset prediction parity", "actual sampling/execution counters", "retrieved source/checksum evidence", "verified owned shutdown"],
+  "forbidden": ["provider requests", "retired/test access", "performance promotion", "hyperparameter grid", "extra transitions or updates", "automatic retry", "resuming the stopped CrossQ study", "broker orders"],
+  "execution": {"training_location": "Google Colab only", "hardware": "CPU", "concurrency": 1, "maximum_incremental_study_units": 0.1, "allocation_deadline_seconds": 900, "teardown_reserve_seconds": 420, "project_ceiling": 150, "project_teardown": 130, "minimum_account_balance": 150, "account_teardown_balance": 170, "failure_policy": "Single persistent claimed allocation; preserve original ledger and study baseline; aggregate monitoring each minute; bounded retrieval and verified owned cleanup on every outcome; no automatic restart"},
+  "status_at_registration": "No allocation; actual source-view preparation and worker/fleet/archive acceptance required before execution"
+}

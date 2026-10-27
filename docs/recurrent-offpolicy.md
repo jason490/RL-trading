@@ -631,3 +631,60 @@ Next register a bounded actual environment-training smoke with a fixed cached-da
 view, source identities and output verifier, then integrate complete frozen
 preprocessing bundles and the contemporaneous matched performance protocol.
 The already consumed replay-only smoke is retained; it is not restarted.
+
+
+## Registered fresh-environment smoke and accepted cached view
+
+[Environment-smoke protocol](../configs/experiments/recurrent_environment_smoke.json),
+canonical SHA9f376211f2f9578cbe0e0757fdaf8f7c0da6295e73c6575a7d4094d69843e995,
+fixes one recurrent SAC CPU run:128 collected transitions,64 random warmup,
+one update every16 subsequent transitions, four actual updates/twelve Adam steps,
+16 burn-in plus16 unroll, eight windows per batch,64-step episodes and checkpoints
+at64/128. The first checkpoint has zero updates; final has four. Both checkpoint
+selection and curves are exercised strictly as integration machinery. These
+short-prefix smoke returns cannot select a model family or establish improvement.
+
+Six symbols are fixed before evaluation: AAPL,DIA,IWM,MSFT,QQQ,SPY. The source is
+the previously approved111-training/26-development immutable baseline. Each
+symbol contributes its first129 training and65 validation rows, copied exactly
+along with source features/ATR and original frozen training-only statistics.
+No indicator/preprocessing refit, provider request, future-outcome stock ranking
+or retired interval is used. The view remains a retrospective survivor sample,
+not historical-membership/delisting coverage or a performance universe.
+
+[Actual preparation](../results/recurrent-offpolicy-2026-10-27/environment-view-preparation.json)
+binds view1e25385c771013865a2c05ec9b31af9b1e7399aadaa482562ac0535478a92906:
+923,149 bytes,12 episodes/1,164 rows, training2010-03-16 through2010-09-16,
+validation2021-01-04 through2021-04-07. NormalizerSHA remains
+b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f.
+The original207,702,723-byte dataset, original ledger, CrossQ stop and consumed
+prior smoke claim rehash unchanged. Raw source/view data stays in ignored storage.
+
+[Actual untrained acceptance](../results/recurrent-offpolicy-2026-10-27/environment-untrained-acceptance.json)
+passes Gymnasium and SB3 checkers on the actual six-symbol training view and
+reproduces the accepted untrained recurrent tensor hash. Checkers emit the existing
+nonfatal unbounded-Box/no-render-spec notices. No gradient/backward/optimizer,
+provider, Colab allocation or performance evaluation occurred. An
+[earlier checker record](../results/recurrent-offpolicy-2026-10-27/environment-checker-initial.json)
+is retained from before unused-import/lineage cleanup; the current acceptance
+pins the final checker/worker source hashes.
+
+The guarded `recurrent_environment_worker` validates the exact accepted view and
+calls the bounded fresh-run loop with unit-magnitude evaluation. It preserves
+that view in the final owned artifact tree.52 relevant offline checks/Ruff pass,
+including11 new protocol/prefix/schema/retired-data/local-rejection checks.
+The run is not allocated: dedicated persistent budget/claim, exact fleet job
+routing and independent loop-archive verification must be integrated first.
+Its fixed allowance remains0.1unit/900s including420s teardown reserve, original
+150/130 project and150/170 account guards, one claim and no automatic retry.
+The prior replay-only smoke and stopped CrossQ study remain closed to retries.
+
+Reproduce preparation/checker evidence only with new proof paths:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+  scripts/build_recurrent_environment_view.py --proof /tmp/environment-view-new.json
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=src \
+  MPLCONFIGDIR="$PWD/.runtime/matplotlib" .venv/bin/python \
+  scripts/check_recurrent_environment_view.py --proof /tmp/environment-check-new.json
+```

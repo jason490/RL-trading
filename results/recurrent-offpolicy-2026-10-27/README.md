@@ -81,3 +81,15 @@ interruption continuation is not supported by the current learner snapshot. Regi
 contemporaneous controls, fixed final/multi-seed gates and prospective confirmation.
 Retired2024+ data remains unopened. No robust winner has been established.
 [Category guide](../../docs/recurrent-offpolicy.md).
+
+
+## Fresh-environment smoke preparation — not allocated
+
+The separate fixed128-transition/four-update protocol now has an
+[accepted cached view](environment-view-preparation.json) and
+[actual untrained environment/tensor checks](environment-untrained-acceptance.json).
+Six symbols,12 episodes, original preprocessing; no providers or retired data.
+[Earlier checker evidence](environment-checker-initial.json) is retained separately.
+52 relevant checks pass; guarded worker exists. Fleet budget/claim/routing and
+physical curve/report/checkpoint archive acceptance remain before allocation.
+The completed replay-only smoke above is not rerun or reinterpreted as returns.

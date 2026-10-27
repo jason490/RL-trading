@@ -86,8 +86,12 @@ synthetic checks/44 shared regressions pass; public test-route guard remains.
 Bounded fresh-run loop now integrates scheduled collection/replay updates, immutable
 checkpoint selection/final pointers, compact percentage-change curves and shared
 selected/final visual reports.17 new scheduling/spy/export checks pass (51 related
-checks); no local optimizer or new allocation. Next register actual environment-
-training smoke and integrate complete frozen bundles/matched performance protocol. Exact
+checks); no local optimizer or new allocation. Fresh environment smoke now registers
+128 transitions/4 updates,0.1unit/900s/no retry on a fixed six-symbol cached prefix.
+Actual12-episode/1,164-row view, unchanged original normalization, Gymnasium/SB3
+checkers and initial tensors pass;52 related tests pass. Worker guarded, no
+allocation. Next dedicated budget/claim/fleet/physical-loop verifier, then execute
+smoke; complete frozen bundles/matched performance protocol remain. Exact
 interruption continuation is unsupported until full replay/environment state
 is saved; no new market-performance result or allocation;
 no candidate protocol, dependency change or further allocation is registered.
