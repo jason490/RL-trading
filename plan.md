@@ -2877,3 +2877,12 @@ project39.53613595309791/150, account348.59idle. Owned session stopped/verified;
 artifacts retained. Setup notes updated to actual3.13.18. Next bounded matched
 full-development controls/profiling protocol; portable bundles before promotion.
 [Evidence](results/recurrent-offpolicy-2026-10-27/README.md).
+
+### Full-panel recurrent SAC comparison protocol — 2026-10-27
+
+Fixed100k three-arm seed11 screen and conditional11/23/37 confirmation registered.
+Post-update native checkpoint helper, conservative timing projection and paired
+selected/final gates implemented with offline checks. Portable starts, actual
+Colab profile and worker/fleet/physical artifact acceptance remain before training.
+No performance finding, new allocation or retired data access. See
+[comparison guide](docs/recurrent-sac-comparison.md).

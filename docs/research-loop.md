@@ -2422,3 +2422,15 @@ verification worker exited0, no models constructed, gradients/optimizer steps,
 provider requests or new Colab units.108 focused prior/new regressions pass.
 Actual learned smoke acceptance remains; runner/job/archive/budget integration is
 next and generic training stays blocked. [Evidence](../results/treasury-context-2026-10-26/contracts.json).
+
+### Full-panel recurrent SAC comparison registered — 2026-10-27
+
+Fixed111-training/26-development GRU-SAC versus full-input native SAC and masked
+RecurrentPPO package reference:100k per cell, post-update10k checkpoints, seed11
+screen and conditional23/37 confirmation. Both selected/final paired improvements,
+absolute stock/ETF/median gates and risk limits are fixed; no rescue grids.
+Pure timing admission and synthetic multi-seed gate checks are implemented;
+portable starts, actual Colab profiling and worker/fleet/physical acceptance remain
+before performance allocation. Different information/capacity/batches are explicit.
+Original budget, CrossQ stop and retired isolation persist; no new allocation.
+[Protocol and acceptance](recurrent-sac-comparison.md).
