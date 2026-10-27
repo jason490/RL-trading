@@ -2895,3 +2895,12 @@ identities pass; actual assets retained under `.runtime/recurrent-comparison-sta
 Tests forbid local native training, learner updates and Adam steps. No new Colab
 allocation or performance finding. Next actual profiling worker/runtime acceptance;
 [guide](docs/recurrent-sac-comparison.md).
+
+### Fixed recurrent comparison profiling worker implemented — 2026-10-27
+
+Guarded actual-Colab-only profile loads accepted starts and fixed full panels;
+512 candidate transitions/64 updates,64 native SAC updates and3,000 PPO
+transitions with observed optimizer counts. Saves replay, checkpoints, reports,
+timings and provenance; failure preserves partial evidence and closes environments
+and hooks.32 focused offline tests/Ruff pass. No local fitting or new allocation.
+Dedicated fleet/archive physical acceptance remains before actual profile/performance.

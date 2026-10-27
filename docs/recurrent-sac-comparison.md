@@ -13,8 +13,8 @@ Its canonical digest is
 `58351c3c62f4e65fb59c49e29ab87edb3226ca17445b155d8268a885a6b9c3eb`.
 The protocol validator, timing projections, post-update checkpoint helper and
 synthetic gate tests are implemented. Portable initialization assets now pass actual local construction/restoration
-acceptance; an actual Colab profiling worker, fleet integration and physical
-artifact acceptance remain
+acceptance; a guarded Colab profiling worker is implemented, while fleet integration and
+physical artifact acceptance remain
 required before performance allocation. No full comparison has run yet.
 
 ## Fixed data and controls
@@ -142,3 +142,26 @@ MPLCONFIGDIR="$PWD/.runtime/matplotlib" PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM
 Omit `--accept-only` only for a fresh immutable destination. Existing outputs
 reject; never regenerate the registered assets to select more favorable weights.
 The profile worker must use these exact accepted assets, not fresh runtime draws.
+
+## Profiling worker implementation
+
+`training.recurrent_comparison_profile.execute_colab` rejects local execution
+before dataset access, output creation or model construction. It loads accepted
+portable starts, checks the exact111/26 panel and immutable dataset identity,
+and enforces CPU/default Python before updates. It performs the fixed512-step
+candidate schedule with64 updates,64 native SAC updates on the same collected
+training replay, and3,000 PPO transitions. Native optimizer post-hooks record
+completed steps rather than infer them from nominal epochs.
+
+It retains collected replay arrays, candidate update diagnostics, learned
+checkpoints, full development reports, timing arrays and backend provenance.
+Native PPO rollout timings include both collection and optimization. Full actor
+refresh timing includes a512-observation tensor conversion and no-grad GRU pass.
+Evaluation preserves RNG streams. Partial timing evidence and bounded owned
+artifact export are attempted on failure, and environment/hook cleanup runs in
+`finally`. The external fleet controller remains responsible for credit/deadline
+monitoring, retrieval and verified session termination.
+
+This implementation has offline guard/restoration acceptance only. No actual
+profile has executed. Dedicated runtime admission, archive verification and
+physical Colab acceptance remain before any100k performance task.

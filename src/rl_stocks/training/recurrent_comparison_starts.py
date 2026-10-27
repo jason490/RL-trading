@@ -131,3 +131,19 @@ def accept(directory):
             restore_global_rng(entry['global_rng'])
     return dict(accepted=True,cells=len(expected),protocol_sha256=PROTOCOL_SHA256,
                 training_performed=False,performance_interpretation_allowed=False)
+
+
+def load_start(directory,arm,seed,*,env=None):
+    """Load one already accepted matrix cell, restoring its registered streams."""
+    accept(directory)  # all validation before the returned learner can be used
+    directory=Path(directory)
+    manifest=json.loads((directory/'manifest.json').read_text())
+    model=construct(arm,seed,env=env)
+    entry=manifest['entries'][f'{arm}-{seed}']
+    if arm=='gru_sac':
+        model,_=load_checkpoint(directory/entry['asset']['file'],expected_lineage=lineage(),
+                                restore_torch_rng=True)
+    else:
+        load_initialization(model,directory/entry['asset']['file'],entry['asset']['tensors'])
+    restore_global_rng(entry['global_rng'])
+    return model
