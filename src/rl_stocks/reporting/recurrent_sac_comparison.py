@@ -46,3 +46,19 @@ def confirmation_gate(seed_cells):
                 development_outperformance=passed and positive_mean and outperformance_seeds>=2,
                 eligible_for_prospective=passed,objective_achieved=False,
                 prospective_confirmation_required=True)
+
+
+def phase_summary(results):
+    """Compact exact-panel metrics; future decliners remain reporting-only."""
+    from rl_stocks.reporting.initialization import group_metrics
+    from rl_stocks.evaluation.direction import declining_stock_summary
+    from rl_stocks.evaluation.runner import selection_score
+    spec=protocol()
+    if (len(results)!=len(spec['validation_symbols'])
+            or sorted(row['symbol'] for row in results.values())!=sorted(spec['validation_symbols'])):
+        raise ValueError('exact one-episode-per-symbol development panel required')
+    stocks=set(spec['validation_symbols'])-set(spec['etf_symbols'])
+    summary=group_metrics(results,stocks)
+    summary['score']=selection_score(results)
+    summary['declining_stocks_reporting_only']=declining_stock_summary(results,stocks)
+    return summary

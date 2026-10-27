@@ -3,7 +3,7 @@ import json
 import math
 from pathlib import Path
 
-from rl_stocks.core.contracts import digest
+from rl_stocks.core.contracts import digest,canonical
 from rl_stocks.training.recurrent_loop import LoopConfig
 
 PROTOCOL_SHA256 = '58351c3c62f4e65fb59c49e29ab87edb3226ca17445b155d8268a885a6b9c3eb'
@@ -69,3 +69,40 @@ def profile_admission(profile):
                 projected_work_seconds=projected,required_allocation_seconds=required,
                 performance_interpretation_allowed=False,physical_profile_acceptance_still_required=True,
                 original_project_ceiling=150,minimum_account_balance=150)
+
+
+def validate_native_parameters(model,arm):
+    """Check effective native settings, including SB3's explicit default/schedules."""
+    from copy import deepcopy
+    from stable_baselines3.common.utils import FloatSchedule,ConstantSchedule
+    if arm not in ('native_sac','recurrent_ppo_reference'):
+        raise ValueError('registered native comparison role required')
+    expected=protocol()['arm_contracts'][arm]
+    def constant(schedule,value):
+        if (type(schedule) is not FloatSchedule or type(schedule.value_schedule) is not ConstantSchedule
+                or schedule.value_schedule.val!=value):
+            raise ValueError('fixed native constant schedule required')
+    constant(model.lr_schedule,expected['learning_rate'])
+    for key,value in expected.items():
+        if key in ('algorithm','observation_profile') or key.startswith('expected_'):
+            continue
+        actual=getattr(model,key)
+        if key=='clip_range':
+            constant(actual,value)
+            continue
+        if key=='train_freq':
+            if actual.unit.value!='step':
+                raise ValueError('native transition-based collection frequency required')
+            actual=actual.frequency
+        if key=='policy_kwargs' and arm=='native_sac':
+            value=deepcopy(value)
+            value['use_sde']=False  # native SAC makes this default explicit during setup
+        if type(value) in (int,float):
+            if type(actual) not in (int,float) or not math.isfinite(actual) or actual!=value:
+                raise ValueError('actual native numeric parameter mismatch: '+key)
+        elif canonical(actual)!=canonical(value):
+            raise ValueError('actual native parameter mismatch: '+key)
+    optimizers=([model.actor.optimizer,model.critic.optimizer,model.ent_coef_optimizer]
+                if arm=='native_sac' else [model.policy.optimizer])
+    if any(group['lr']!=expected['learning_rate'] for opt in optimizers for group in opt.param_groups):
+        raise ValueError('actual constant native optimizer learning rate required')

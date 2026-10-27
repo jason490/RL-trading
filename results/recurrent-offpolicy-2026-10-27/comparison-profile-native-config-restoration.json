@@ -1,0 +1,27 @@
+{
+  "status": "read_only_learned_checkpoint_config_acceptance",
+  "models": {
+    "native_sac": {
+      "sha256": "0d9c0a91e80b78a4ad470f0eb51b16b6e07452ce5b2df7a6d13e55d929e8cab8",
+      "actual_library_counter": 64,
+      "adam_steps_per_optimizer": 64,
+      "effective_parameters_verified": true,
+      "finite_moments_verified": true,
+      "checkpoint_unchanged": true
+    },
+    "recurrent_ppo_reference": {
+      "sha256": "dddd9ec989452c212d986235b79e6cc89cf3d7d4537009b081613b72eca054a3",
+      "actual_library_counter": 30,
+      "adam_steps_per_optimizer": 600,
+      "effective_parameters_verified": true,
+      "finite_moments_verified": true,
+      "checkpoint_unchanged": true
+    }
+  },
+  "validator_package_hash": "480e9d32a04044dc79d0d1b021f97448246965867070612b9a2d84af78420b2f",
+  "original_source_revision": "c19f6d73ff657bd890c1a08d1a229e2e16142df0",
+  "physical_profile_accepted": false,
+  "missing_completion_not_fabricated": true,
+  "performance_interpretation_allowed": false,
+  "new_training_or_colab_allocation": false
+}

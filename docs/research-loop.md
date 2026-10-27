@@ -6,6 +6,15 @@ RecurrentPPO baseline returns19.62% selected/18.48% final, policy-update guard
 Treasury26.51%/−4.56%, VIX, GAE and prior failed families remain closed; retired
 2024+ test data stays unopened. See the compact result directories for evidence.
 
+Current execution frontier: the first recurrent-SAC full-panel CPU profile was
+deadline-stopped; owned cleanup verified, original claim/stop retained. Last
+settled project39.54822735/150, account348.58idle. No accepted full profile or
+100k comparison exists. Full-cell training/verification are implemented offline;
+longer CPU execution remains under review. Read the compact
+[comparison guide](recurrent-sac-comparison.md) and
+[profile record](../results/recurrent-offpolicy-2026-10-27/comparison-profile-run.json)
+before traversing historical entries. No retired interval or failed family reopened.
+
 CrossQ [fixed protocol](../configs/experiments/crossq_comparison_preregistration.json)
 compares native small64×64 SAC/CrossQ packages on original26-symbol data. Delay,
 Adam beta and1000-update renorm warmup differences are fixed, not an isolated
@@ -2497,3 +2506,13 @@ evaluation; selected/final reports, compact return-change curves and failure
 cleanup retained. Offline untrained save/load and guard/counter checks pass with
 optimization forbidden. No allocation or actual100k result; reviewed execution
 admission, confirmation gates and physical performance acceptance remain.
+
+### Full-cell verifier and effective native settings — 2026-10-27
+
+Externally bound source/role/seed, eleven physical snapshots, optimizer moments,
+strict selected/final pointers, compact curve/CSV consistency and full recorded
+economic replay implemented. Stock/ETF/median summaries include reporting-only
+decliner short P&L. Native default/schedule representation bug corrected; actual
+salvaged SAC/PPO recipes/moments pass, files unchanged.83 focused tests pass.
+No actual100k/full-profile acceptance, new allocation or promotion; existing
+missing completion evidence and stops remain.

@@ -2949,3 +2949,13 @@ evaluation; selected/final reports, compact return-change curves and failure
 cleanup retained. Offline untrained save/load and guard/counter checks pass with
 optimization forbidden. No allocation or actual100k result; reviewed execution
 admission, confirmation gates and physical performance acceptance remain.
+
+### Recurrent full-cell result verification implemented — 2026-10-27
+
+External identity, complete eleven-snapshot counts/moments, initial weights,
+selected/final/curve/CSV checks and recorded-action economic replay implemented.
+Compact stock/ETF/median and reporting-only short-side summaries retained.
+Corrected native schedule/default representation checks also accept actual
+salvaged SAC/PPO checkpoints without modifying them.83 focused offline tests pass;
+no100k result, full-profile acceptance or new allocation. Execution review and
+physical learned full-run acceptance remain.

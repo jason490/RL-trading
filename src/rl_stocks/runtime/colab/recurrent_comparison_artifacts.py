@@ -14,7 +14,7 @@ from rl_stocks.core.contracts import canonical,digest
 from rl_stocks.environment.execution.simulator import SimulationConfig
 from rl_stocks.evaluation.report_contract import validate_development_report
 from rl_stocks.runtime.colab.jobs import validate_plan
-from rl_stocks.training.recurrent_comparison import protocol,profile_admission
+from rl_stocks.training.recurrent_comparison import protocol,profile_admission,validate_native_parameters
 from rl_stocks.training.recurrent_comparison_profile import validate_panel
 from rl_stocks.training.recurrent_comparison_starts import lineage
 from rl_stocks.training.recurrent_sac_checkpoint import load_checkpoint
@@ -80,15 +80,7 @@ def verify_directory(folder,completion,*,dataset,starts):
             optimizer_steps(optimizer,64)
         optimizer_steps(ppo.policy.optimizer,600)
         for arm,model in (('native_sac',native),('recurrent_ppo_reference',ppo)):
-            expected=protocol()['arm_contracts'][arm]
-            for key,value in expected.items():
-                if key in ('algorithm','observation_profile') or key.startswith('expected_'):
-                    continue
-                actual=getattr(model,key)
-                if key=='train_freq':
-                    actual=actual.frequency
-                if canonical(actual)!=canonical(value):
-                    raise ValueError('saved native profile configuration mismatch')
+            validate_native_parameters(model,arm)
             if model.observation_space.shape!=(21,) or model.action_space.shape!=(4,) or any(
                     not bool(torch.isfinite(p).all()) for p in model.policy.parameters()):
                 raise ValueError('finite actual native geometry required')

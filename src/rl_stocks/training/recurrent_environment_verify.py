@@ -3,15 +3,10 @@ import csv
 import json
 from pathlib import Path
 
-import numpy as np
-import torch
 
-from rl_stocks.rl.recurrent_sac.prediction import FrozenRecurrentActor
 
 from rl_stocks.core.contracts import canonical, digest
-from rl_stocks.data.generation.datasets import normalizer_from
-from rl_stocks.environment.trading.env import TradingEnv
-from rl_stocks.evaluation.report_contract import validate_development_report
+from rl_stocks.evaluation.recorded_economics import verify_report
 from rl_stocks.training.curves import curve_record
 from rl_stocks.training.recurrent_environment_spec import protocol, validate_view, PROTOCOL_SHA256
 from rl_stocks.training import recurrent_environment_worker as worker
@@ -30,42 +25,6 @@ FILES |= {f'{folder}/{name}' for folder in ('initial', 'checkpoint-64', 'checkpo
 def _json(root, name):
     return json.loads((root/name).read_text())
 
-
-def verify_report(results, dataset, networks):
-    """Replay recorded actions, keeping CPU actor arithmetic separate from economics."""
-    from rl_stocks.environment.execution.simulator import SimulationConfig
-    validate_development_report(results, dataset, SimulationConfig())
-    normalizer = normalizer_from(dataset['normalizer'])
-    for key, result in results.items():
-        episode = dataset['episodes'][key]
-        env = TradingEnv([episode], normalizer, dataset['names'], observation_profile='execution_full')
-        try:
-            obs, _ = env.reset(seed=11, options={'episode': 0})
-            frozen = FrozenRecurrentActor(networks, observation_schema='execution-full-v1-normalized21')
-            hidden = state = None
-            for i, row in enumerate(result['rows']):
-                with torch.no_grad():
-                    features, hidden = networks.actor.memory(torch.tensor(obs).reshape(1,1,-1), hidden)
-                    direct = networks.actor.mean(networks.actor.head(features)).tanh().reshape(4).numpy()
-                inferred, state = frozen.predict(obs, observation_schema=frozen.observation_schema,
-                                                 state=state, episode_start=i == 0)
-                if not np.array_equal(direct, inferred):
-                    raise ValueError('local frozen carried/reset prediction parity failed')
-                action = np.asarray(row['raw_action'], dtype=np.float32)
-                if (action.shape != (4,) or not np.isfinite(action).all() or (np.abs(action)>1).any()
-                        or abs(float(action[0])) not in (0, 1) or row.get('exposure_mode') != 'unit_magnitude'
-                        or np.sign(row['policy_action'][0]) != action[0]
-                        or tuple(row['policy_action'][1:]) != tuple(row['raw_action'][1:])):
-                    raise ValueError('recorded exposure/protective action contract mismatch')
-                obs, _, _, _, actual = env.step(action)
-                for name in ('equity','cash','quantity','costs','turnover','price','session','age',
-                             'borrow_cost','raw_return','previous_equity'):
-                    if canonical(actual[name]) != canonical(row[name]):
-                        raise ValueError('saved development economics differ from recorded-action replay')
-            if canonical(env.sim.portfolio.events) != canonical(result['events']):
-                raise ValueError('saved fills differ from recorded-action replay')
-        finally:
-            env.close()
 
 
 def verify_directory(folder):

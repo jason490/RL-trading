@@ -7,6 +7,11 @@ restoration and reporting mechanics; they do not establish trading quality.
 The next performance hypothesis is that independent observation memory plus
 SAC replay improves both checkpoint selection and end-of-run performance.
 
+The fixed100k training worker and full-cell verifier are implemented with offline
+untrained/contract checks. No actual100k result exists. The first Colab profile
+was deadline-stopped and remains incomplete; allocation is still gated on a
+reviewed execution plan and physical acceptance.
+
 The fixed source of truth is
 [recurrent_sac_comparison.json](../configs/experiments/recurrent_sac_comparison.json).
 Its canonical digest is
@@ -322,3 +327,50 @@ learning/update/Adam methods forbidden. They verify local guard ordering, counte
 contracts, mismatched-initializer rejection and zero-update snapshot restoration.
 They do not establish a successful100k execution, portfolio performance, prospective
 acceptance or a portable deployment bundle.
+
+## Full-cell result verification implementation
+
+`training.recurrent_comparison_verify.verify_cell` requires externally supplied
+role, seed, source-package hash and Git revision. It validates the full immutable
+panel and portable initializer matrix, exact metadata and complete bounded file
+inventory. It restores all eleven checkpoints, checks initial weights against
+portable starts, actual model counters/Adam moments and fixed native or GRU
+settings. Native ZIP loading uses the exact bytes whose checksum was checked;
+caller RNG is preserved during restoration.
+
+The verifier requires ten10k post-update curve points, strict earliest-best
+selection and an independent final pointer. It checks completed-run identities,
+selected/final reports and100k sampling/execution counts. Curve aggregates and
+changes recompute from per-symbol compact records; CSV must match the full
+required column set and JSONL values. These checks do not rerun all intermediate
+checkpoint policies or claim cross-CPU bitwise learned action reproduction.
+
+A shared `evaluation.recorded_economics.verify_report` checks each reported
+selected/final path against recorded-action simulator replay, including cash,
+positions, equity, costs, turnover, age, borrow and actual fills. Unit-exposure
+and unchanged protective components are required. GRU results additionally check
+local direct-versus-frozen carried/reset prediction parity. This separates
+recorded economics from cross-backend actor arithmetic without changing an
+existing historical tolerance. The prior environment-smoke verifier reuses this
+same path; its original frozen checks remain enabled.
+
+Compact summaries enforce one episode per each original26 symbols, with separate
+22-stock/four-ETF matched means, median stock excess and drawdown. Declining-stock
+short P&L is a separate reporting field and requires positive total policy return
+and positive marked short P&L before counting success. It cannot change scores,
+groups, checkpoint selection or the predefined reducer gates.
+
+Untrained snapshot tests exposed an effective-parameter representation bug in
+the earlier profile verifier: SAC adds `use_sde=False` to policy kwargs and
+converts target entropy−4 to−4.0; PPO wraps fixed clipping in a native
+`FloatSchedule(ConstantSchedule(...))`. Shared validation now accepts those exact
+installed-library defaults and numeric values, while rejecting changed entropy,
+SDE, optimizer learning rates and nonconstant schedules. Actual saved SAC64/PPO600
+Adam-state snapshots pass this corrected read-only check; original files remain
+unchanged. This does not fill the stopped profile's missing completion/provenance.
+
+The full-cell verifier is implemented but has no actual100k result to accept yet.
+Tests cover untrained restoration and independent synthetic corruption cases;
+they are not learned full-run acceptance or performance evidence. Dedicated
+archive/fleet integration, reviewed execution admission and actual physical
+full-run verification remain before any research promotion.
