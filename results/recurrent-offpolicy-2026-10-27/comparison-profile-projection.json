@@ -1,0 +1,22 @@
+{
+  "profile_projection_passed": false,
+  "arm_passes": {
+    "gru_sac": false,
+    "native_sac": false,
+    "recurrent_ppo_reference": true
+  },
+  "projected_work_seconds": {
+    "gru_sac": 17784.80258671334,
+    "native_sac": 6683.469337207952,
+    "recurrent_ppo_reference": 3143.100036618011
+  },
+  "required_allocation_seconds": {
+    "gru_sac": 18744.80258671334,
+    "native_sac": 7643.469337207952,
+    "recurrent_ppo_reference": 4103.100036618011
+  },
+  "performance_interpretation_allowed": false,
+  "physical_profile_acceptance_still_required": true,
+  "original_project_ceiling": 150,
+  "minimum_account_balance": 150
+}

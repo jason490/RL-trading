@@ -2461,3 +2461,16 @@ claim implemented.900-second allocation/420-second teardown reserve, no retries,
 account floor and aggregate metering retained. Strict128MiB archive allowlist plus
 physical checkpoint/Adam/count/config/replay/report/source verification implemented.
 Actual Colab profile remains pending; no performance task or new allocation yet.
+
+### Actual CPU comparison profile deadline stop — 2026-10-27
+
+Clean c19f6d7/defaultPython3.13.18; original CPU allocation stopped by working
+deadline, cleanup verified and claim/budget-stop preserved. Salvaged GRU64/SAC64
+updates and PPO3,000 transitions/600 Adam steps restore; full completion/provenance
+missing, so profile acceptance remains incomplete. Retrieved preliminary projection
+requires18,744.80s GRU/7,643.47s SAC/4,103.10s PPO; both SAC arms fail7,200s.
+No100k allocation/retry/performance interpretation. Project39.54822735/150,
+account348.58 idle;0.01209140 estimated versus0.01 rounded measured units.
+43.8MiB duplicate staging removed, scientific artifacts retained. Observed184MB
+archive corrects validator bound to256MiB without accepting the incomplete run.
+Next review costs/durable checkpoint publication and separate execution proposal.

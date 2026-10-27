@@ -1,0 +1,42 @@
+{
+  "status": "deadline_stopped_incomplete_profile",
+  "session": "rl-stocks-cpu-c5d2ec2da580",
+  "fleet": "rl-stocks-fleet-7f802d05e513",
+  "source_revision": "c19f6d73ff657bd890c1a08d1a229e2e16142df0",
+  "python": [
+    3,
+    13,
+    18
+  ],
+  "physical_profile_accepted": false,
+  "performance_interpretation_allowed": false,
+  "automatic_retry_allowed": false,
+  "cleanup_verified": true,
+  "account_balance": 348.58,
+  "usage_rate": 0,
+  "active_assignments": 0,
+  "project_units": 39.54822734983501,
+  "remaining_project_units": 110.451772650165,
+  "attempt_estimated_units": 0.012091396737098694,
+  "attempt_measured_units": 0.009999999999990905,
+  "attempt_charged_units": 0.012091396737098694,
+  "elapsed_seconds": 483.671950340271,
+  "budget_stop_preserved": true,
+  "restored_checkpoint_counts": {
+    "gru_sac_updates": 64,
+    "native_sac_adam_steps_per_optimizer": 64,
+    "ppo_transitions": 3000,
+    "ppo_adam_steps": 600
+  },
+  "retrieved_archive": ".runtime/recurrent-comparison-profile-source-v1/artifacts/colab/rl-stocks-cpu-c5d2ec2da580/checkpoint.tar.gz",
+  "archive_sha256": "7c135881536c72f1a7dd9d2fb762c8e104130ef30b20b937a65dead7446dff30",
+  "expanded_archive_bytes": 184189350,
+  "missing_acceptance_files": [
+    "completion.json",
+    "provenance.json",
+    "partial-profile.json"
+  ],
+  "timing_file": ".runtime/recurrent-comparison-profile-timing-v1.json",
+  "original_crossq_stop_sha256": "22103a286096312455be6f01f3c42ff13aae20a89be5b400a3ad9e997acdd718",
+  "next": "Review costs/checkpoint-first publication and separately registered execution proposal; no restart or performance task"
+}

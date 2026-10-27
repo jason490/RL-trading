@@ -15,7 +15,7 @@ The protocol validator, timing projections, post-update checkpoint helper and
 synthetic gate tests are implemented. Portable initialization assets now pass actual local construction/restoration
 acceptance; a guarded Colab profiling worker is implemented, with dedicated fleet admission and downloaded-artifact verification implemented;
 physical Colab acceptance remains
-required before performance allocation. No full comparison has run yet.
+required before performance allocation. No full comparison has run yet. The first actual CPU profile was deadline-stopped; see the final section for evidence and current allocation block.
 
 ## Fixed data and controls
 
@@ -177,7 +177,7 @@ worker retry. The standard fleet enforces aggregate metering, the account floor,
 900-second deadline,420-second teardown reserve, bounded downloads and verified
 owned-session termination. The CrossQ stop is preserved.
 
-The downloaded archive uses a strict128MiB file allowlist and rejects duplicate
+The downloaded archive uses a strict256MiB file allowlist and rejects duplicate
 paths, links, traversal and incomplete completion evidence before loading models.
 Physical acceptance restores all learned models, validates actual Adam moments
 and64/64/600 optimizer counts, native hyperparameters, replay shapes, update
@@ -193,10 +193,46 @@ MPLCONFIGDIR="$PWD/.runtime/matplotlib" PYTHONPATH=src \
   --output .runtime/recurrent-comparison-profile-jobs-v1.json
 ```
 
-Actual Colab execution and physical retrieved-file acceptance remain pending.
+The first actual execution is recorded below; full physical acceptance remains incomplete.
 
 Portable acceptance compares loaded weights with the saved checksummed assets.
 It does not require freshly regenerated orthogonal weights to be bitwise equal
 across CPU backends. Constructor stream consumption remains checked, and native
 tensor loading checks exact archive-to-model restoration. No learned prediction
 tolerance or historical integrity-stop rule is changed.
+
+## First actual profile: stopped, no automatic retry
+
+CPU session `rl-stocks-cpu-c5d2ec2da580` ran from clean `c19f6d7` on Colab
+Python3.13.18. The900-second allocation began teardown at its480-second working
+threshold. Owned shutdown is verified; the persistent claim and budget-stop flag
+remain. Installation alone prepared84 packages in133 seconds.
+
+All learned checkpoints, three full development reports and512 replay rows were
+salvaged. Independent restoration validates GRU64 updates, native SAC64 updates
+per optimizer, and PPO3,000 transitions/600 Adam steps. Timing JSON was retrieved
+separately before teardown. Completion/provenance/final partial-profile evidence
+is missing, so the full physical profile is **not accepted**. No missing evidence
+is fabricated or inferred from checkpoints. These short policies are not a
+performance comparison.
+
+The separately retrieved timings imply required allocation seconds of18,744.80
+for GRU-SAC,7,643.47 for SAC and4,103.10 for PPO, including fixed reserves. Both
+SAC arms fail7,200 seconds;100k training remains blocked. The candidate p95
+sample/update is55.81ms and full512 refresh36.29ms. These are preliminary timing
+findings with the incomplete-acceptance limitation above. No automatic restart,
+shortened100k run or model/reward rescue follows. Next review implementation/I/O
+costs and a separately justified execution proposal without changing performance
+gates or erasing this attempt.
+
+The retained snapshot expands to184,189,350 bytes, exceeding the initial128MiB
+validator cap. The infrastructure cap is corrected to256MiB while preserving the
+exact allowlist and incomplete-run rejection. Repeated full-report archive work
+also consumed meaningful time (16.22/20.06/32.74 seconds); durable checkpoint-first
+publication and cheaper archive handling need review before another proposal.
+
+At verified cleanup, project charge is39.54822735/150 (110.45177265 remaining).
+This attempt charged0.01209140 estimated units against a rounded measured debit
+of0.01. Account348.58, rate0, assignments0. All scientific artifacts remain; only
+verified duplicate staging data is removed. See the compact evidence in
+[results](../results/recurrent-offpolicy-2026-10-27/comparison-profile-run.json).

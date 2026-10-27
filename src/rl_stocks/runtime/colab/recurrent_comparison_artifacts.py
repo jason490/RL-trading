@@ -110,7 +110,7 @@ def validate_profile_archive(path,plan,dataset_id):
         if (len({m.name for m in members})!=len(members) or not required<=files
                 or files-required-{'artifacts/bootstrap-log.txt'}
                 or any(not m.isfile() and (not m.isdir() or m.name not in directories) for m in members)
-                or sum(m.size for m in members)>128*1024*1024):
+                or sum(m.size for m in members)>256*1024*1024):
             raise RuntimeError('complete bounded allowlisted profile archive required')
         with tempfile.TemporaryDirectory(prefix='comparison-profile-verify-') as temporary:
             archive.extractall(temporary,filter='data')
