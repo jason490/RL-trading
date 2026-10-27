@@ -122,3 +122,46 @@ Ruff passes. Run:
 .venv/bin/python -m pytest -q tests/test_recurrent_replay.py
 .venv/bin/ruff check src/rl_stocks/training/recurrent_replay.py tests/test_recurrent_replay.py
 ```
+
+
+## Implemented payload and final-observation path
+
+`training/recurrent_payload.py` owns copied finite float32 observations, four
+bounded action components, rewards and next observations. `append_raw` requires
+the unreset Gymnasium next observation. `append_sb3` accepts one explicitly
+identified lane of SB3 VecEnv output: an ended transition requires its
+`terminal_observation`; `TimeLimit.truncated` distinguishes bootstrap from true
+termination. It rejects missing terminal observations instead of substituting the
+returned reset observation. Other autoreset APIs need their own explicit adapter.
+
+Ongoing transitions must continue the previous stored next observation exactly
+after float32 conversion. Symbols, environment/episode IDs and step continuity
+are checked by the metadata index. Validation failures occur before insertion.
+The collector still owns reset/episode counters; IDs must not be inferred from
+symbols because repeated episodes can use the same symbol.
+
+`gather` revalidates every sequence and produces copied, initially read-only
+arrays: observations `[B,T+1,D]`, actions `[B,T,4]`, rewards/masks/IDs `[B,T]`.
+For transition t the current input is observation t and its next input is t+1;
+the last observation is the true final observation when the window ends at a
+boundary. Batch geometry and burn-in must agree. Re-enabling a batch copy's
+write flag cannot change the stored payload. Writes/gathers require owner
+synchronization; the exposed index must not be independently mutated by callers.
+
+12 new payload checks plus19 index checks pass. One executes the actual project
+TradingEnv through installed SB3 DummyVecEnv with a two-step synthetic episode:
+returned reset feature0 differs from terminal feature2; replay retains feature2
+and allows truncation bootstrapping. Other fixtures verify true-termination
+masking, missing-terminal rejection, float32 finiteness, observation continuity,
+copy isolation, mixed geometry and overwritten snapshots. These tests construct
+no policy and run no optimizer, provider request or Colab allocation.
+
+```bash
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q \
+  tests/test_recurrent_payload.py tests/test_recurrent_replay.py
+```
+
+Next: verify independent actor/critic/target recurrent histories and causal
+burn-in/one-step target alignment using forward-only fixtures, then replace or
+profile the reference enumerator before any registered learner smoke. The
+payload store alone does not implement SAC, sequence loss masking or bootstrapping.

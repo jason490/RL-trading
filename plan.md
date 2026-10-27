@@ -2697,3 +2697,15 @@ No learner integration, dependency changes, optimization, data requests or Colab
 allocation. Actual final-observation/hidden-state alignment, throughput acceptance
 and registered matched performance study remain. CrossQ stop and retired-test
 isolation unchanged. See [guide](docs/recurrent-offpolicy.md).
+
+
+### Recurrent replay payload/final-observation acceptance — 2026-10-27
+
+Added copied finite float32 payloads, action/reward validation, ongoing observation
+continuity, explicit raw Gymnasium versus SB3 terminal-observation adapters and
+stale-validated `[B,T+1,D]` sequence gathering.31 combined index/payload tests pass,
+including actual synthetic TradingEnv/DummyVecEnv auto-reset: true final feature2
+retained instead of reset feature0, with truncation bootstrap preserved. No model,
+optimizer, provider access, dependency change or Colab allocation. Hidden-state/
+learner/throughput acceptance and registered matched study remain; stop markers,
+ledger and retired-test isolation unchanged.
