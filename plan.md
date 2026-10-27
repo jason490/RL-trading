@@ -2720,3 +2720,15 @@ payload integration and separate episode-start/full-forward parity. No backward,
 optimizer, library/dependency changes, Colab allocation or performance claim.
 Finite burn-in after nonzero episode starts remains approximate; scalable sampling,
 pinned learner/loss audit and registered Colab learned acceptance remain next.
+
+
+### Incremental recurrent replay sampling — 2026-10-27
+
+Replaced per-draw full enumeration with FIFO-safe incremental dense valid-start
+tracking, one-time geometry initialization and selected-window materialization.
+59 combined checks/Ruff pass. Actual local synthetic100k-capacity benchmark
+matches93,800 reference starts;256-window draw median1.873ms, pool build25.481ms,
+10k cached-maintenance writes22.052ms. Timings exclude payload/model/Colab work.
+Compact checksummed-source evidence retained; no model, training, provider call,
+Colab allocation or bulk artifacts. Pinned learner/loss integration and registered
+matched control/candidate smoke/performance protocol remain next.

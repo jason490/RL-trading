@@ -59,7 +59,10 @@ SB3 final-observation adapter now pass12 additional checks, including actual
 TradingEnv/DummyVecEnv time-limit auto-reset. Independent five-role observation-only
 GRU history helpers now pass22 native untrained-forward checks: detached burn-in,
 one-pass t/t+1 alignment, target graph exclusion and fresh episode states.
-Next address scalable sampling and audit a pinned learner loss path;
+Incremental sampling now matches the reference after interleaved overwrite and
+all93,800 valid starts at100k capacity; local256-window draw median1.873ms
+(metadata only).59 combined checks pass. Next audit/integrate a pinned learner
+loss path and register matched controls before Colab optimization;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm

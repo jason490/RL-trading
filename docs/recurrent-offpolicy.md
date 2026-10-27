@@ -107,10 +107,9 @@ A window starting after episode step zero has a finite burn-in prefix, not a
 proof of exact full-history state reconstruction. That approximation must be
 specified and tested in the eventual learner protocol.
 
-The initial enumerator sorts retained metadata and materializes all complete
-windows. Profile or replace that path with incremental valid-start indexing
-before production-size per-update sampling; it is a correctness reference, not
-an accepted training throughput result. No learner currently calls it.
+`windows` retains the initial full enumerator as a correctness reference.
+`sample` now uses the incremental pool described below. No learner currently
+calls either path; learner/Colab throughput remains unmeasured.
 
 19 offline checks cover an independent history-based oracle over120 interleaved
 writes/overwrites, the audited ring counterexample, valid physical wrap, symbol/
@@ -214,3 +213,53 @@ optimizer/save-load smoke acceptance belongs in Colab under a registered budget.
 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q \
   tests/test_recurrent_history.py tests/test_recurrent_payload.py tests/test_recurrent_replay.py
 ```
+
+
+## Incremental valid-window sampling
+
+`sample` now caches one complete-window start pool for the requested total
+burn-in plus unroll length. A retained `(environment,episode,step)` lookup and a
+dense start list support uniform sampling with replacement. Pool initialization
+is linear in retained transitions; changing total length rebuilds once. Changing
+only the burn-in/unroll split with the same total length reuses the pool.
+
+On append, the fixed global FIFO ring evicts its oldest reference. Any containing
+window that started earlier was already invalidated when its own start was
+evicted. Therefore only a window starting at this evicted ID remains to remove;
+swap-removal updates its dense position in constant time. A new valid start is
+added when a complete same-episode window ends at the inserted transition.
+Start/end retention implies intermediate retention under FIFO ordering. Sampling
+materializes only the selected windows, proportional to batch size times length.
+The owner still synchronizes writes and resolves snapshots before gathering.
+
+Six additional tests compare the incremental pool to the independent reference
+after every interleaved append/overwrite, including length1, multiple episodes,
+geometry changes, failed writes and an assertion that repeated sampling does not
+call full enumeration.59 combined replay/payload/history checks and Ruff pass.
+Pool maintenance changes sampling order, so this is a versioned prospective path,
+not a way to reproduce or restart an earlier stopped learner study.
+
+[Benchmark evidence](../results/recurrent-offpolicy-2026-10-27/replay-benchmark.json)
+uses local Python3.13.16,100,000 capacity,110,000 initial synthetic writes,
+eight environments,512-step episodes,16 burn-in plus16 unroll,256-window batches
+and30 draws. All93,800 valid starts equal the reference; every sampled sequence
+resolves. Median cached draw1.873ms, maximum2.001ms; one reference enumeration
+1.468s and initial pool build25.481ms. An additional10,000 writes with active
+pool maintenance took22.052ms. Timings exclude payload gathering, model forwards,
+backward, final reference resolution and Colab setup. This is neither an
+end-to-end speedup claim nor a hardware allocation projection.
+
+Reproduce with a new output path (existing evidence is never overwritten):
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/benchmark_recurrent_replay.py \
+  --output /tmp/recurrent-replay-benchmark-new.json
+```
+
+A [prior trial](../results/recurrent-offpolicy-2026-10-27/replay-benchmark-before-format.json)
+is retained from before removal of one trailing blank line. Its source hash equals
+the current module plus one newline; both trials agree on all validity counts.
+No model/data-provider/Colab activity occurs. The benchmark uses fixed synthetic
+symbol names and stores only compact timing/provenance JSON; no bulk output needs
+cleanup. Next audit and integrate the pinned learner loss, then register the
+matched candidate/control smoke and performance protocol before optimization.

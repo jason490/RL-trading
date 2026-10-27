@@ -62,6 +62,8 @@ class RecurrentReplayIndex:
         self._slots: list[TransitionRef | None] = [None] * capacity
         self._last: dict[int, TransitionRef] = {}
         self._next = 0
+        self._lookup: dict[tuple[int, int, int], TransitionRef] = {}
+        self._pool: _WindowPool | None = None
 
     def append(self, *, environment: int, episode: int, step: int, symbol: str,
                terminated: bool = False, truncated: bool = False) -> TransitionRef:
@@ -79,7 +81,15 @@ class RecurrentReplayIndex:
               or symbol != previous.symbol):
             raise ValueError('ongoing episode requires contiguous steps and unchanged symbol')
         ref = TransitionRef(self._next, environment, episode, step, symbol, terminated, truncated)
+        old = self._slots[self._next % self.capacity]
+        if old is not None:
+            del self._lookup[(old.environment, old.episode, old.step)]
+            if self._pool is not None:
+                self._pool.remove(old.insertion_id)
         self._slots[self._next % self.capacity] = ref
+        self._lookup[(environment, episode, step)] = ref
+        if self._pool is not None:
+            self._pool.add_ending_at(ref, self._lookup)
         self._last[environment] = ref
         self._next += 1
         return ref
@@ -133,7 +143,59 @@ class RecurrentReplayIndex:
         _integer('batch_size', batch_size, 1)
         if not isinstance(rng, np.random.Generator):
             raise ValueError('caller-owned NumPy Generator required')
-        windows = self.windows(burn_in=burn_in, unroll=unroll)
-        if not windows:
+        pool = self._window_pool(burn_in, unroll)
+        if not pool.starts:
             raise ValueError('no complete recurrent windows available')
-        return tuple(windows[int(i)] for i in rng.integers(len(windows), size=batch_size))
+        result = []
+        for i in rng.integers(len(pool.starts), size=batch_size):
+            first = pool.starts[int(i)]
+            refs = tuple(self._lookup[(first.environment, first.episode, first.step + k)]
+                         for k in range(pool.length))
+            result.append(SequenceRef(refs, burn_in))
+        return tuple(result)
+
+    def _window_pool(self, burn_in: int, unroll: int):
+        _integer('burn_in', burn_in)
+        _integer('unroll', unroll, 1)
+        length = burn_in + unroll
+        if length > self.capacity:
+            raise ValueError('window exceeds total replay capacity')
+        if self._pool is None or self._pool.length != length:
+            pool = _WindowPool(length)
+            for ref in self._lookup.values():
+                pool.add_ending_at(ref, self._lookup)
+            self._pool = pool
+        return self._pool
+
+    def valid_window_count(self, *, burn_in: int, unroll: int) -> int:
+        """Cached complete-window count; changing total length rebuilds once."""
+        return len(self._window_pool(burn_in, unroll).starts)
+
+
+class _WindowPool:
+    """Dense uniform-sampling start set, with O(1) swap-removal on FIFO eviction.
+
+    When the globally oldest transition is evicted, any containing window that
+    starts earlier was already invalidated on its own first-transition eviction.
+    Thus only a window STARTING at the evicted ID can remain to remove. Existence
+    of start/end in one episode implies every intermediate step remains retained.
+    """
+
+    def __init__(self, length):
+        self.length = length
+        self.starts: list[TransitionRef] = []
+        self.positions: dict[int, int] = {}
+
+    def add_ending_at(self, ref, lookup):
+        first = lookup.get((ref.environment, ref.episode, ref.step - self.length + 1))
+        if first is not None:
+            self.positions[first.insertion_id] = len(self.starts)
+            self.starts.append(first)
+
+    def remove(self, insertion_id):
+        position = self.positions.pop(insertion_id, None)
+        if position is not None:
+            last = self.starts.pop()
+            if position < len(self.starts):
+                self.starts[position] = last
+                self.positions[last.insertion_id] = position

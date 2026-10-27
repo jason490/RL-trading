@@ -141,3 +141,56 @@ def test_invalid_capacity(capacity):
 def test_invalid_window_geometry(kwargs):
     with pytest.raises(ValueError):
         RecurrentReplayIndex(4).windows(**kwargs)
+
+
+@pytest.mark.parametrize('length', [1, 2, 5, 9])
+def test_incremental_pool_matches_oracle_after_every_interleaved_write(length):
+    index = RecurrentReplayIndex(19)
+    steps = [0]*4
+    episodes = [0]*4
+    rng = np.random.default_rng(44)
+    index.valid_window_count(burn_in=0, unroll=length)  # exercise empty initialization
+    for _ in range(300):
+        env = int(rng.integers(4))
+        ended = steps[env] == 7
+        add(index, steps[env], environment=env, episode=episodes[env], terminated=ended)
+        steps[env] = 0 if ended else steps[env] + 1
+        episodes[env] += int(ended)
+        expected = index.windows(burn_in=0, unroll=length)
+        assert index.valid_window_count(burn_in=0, unroll=length) == len(expected)
+        pool = index._pool
+        assert {t.insertion_id for t in pool.starts} == {w.transitions[0].insertion_id
+                                                       for w in expected}
+        assert len(pool.positions) == len(pool.starts)
+        if expected:
+            draws = index.sample(batch_size=3, burn_in=0, unroll=length, rng=rng)
+            for draw in draws:
+                index.resolve(draw)
+                assert draw in expected
+
+
+def test_sampling_does_not_reenumerate_and_rebuilds_only_on_length_change(monkeypatch):
+    index = RecurrentReplayIndex(12)
+    for step in range(18):
+        add(index, step)
+    assert index.valid_window_count(burn_in=1, unroll=3) == 9
+    original_pool = index._pool
+    monkeypatch.setattr(index, 'windows', lambda **kw: pytest.fail('full enumeration called'))
+    for step in range(18, 30):
+        add(index, step)
+        index.sample(batch_size=2, burn_in=2, unroll=2, rng=np.random.default_rng(step))
+        assert index._pool is original_pool
+    assert index.valid_window_count(burn_in=0, unroll=2) == 11
+    assert index._pool is not original_pool
+
+
+def test_failed_append_does_not_change_incremental_pool():
+    index = RecurrentReplayIndex(3)
+    for step in range(3):
+        add(index, step)
+    assert index.valid_window_count(burn_in=0, unroll=2) == 2
+    before = list(index._pool.starts)
+    with pytest.raises(ValueError):
+        add(index, 5)
+    assert index._pool.starts == before
+    assert index.valid_window_count(burn_in=0, unroll=2) == 2
