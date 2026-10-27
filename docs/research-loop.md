@@ -53,7 +53,9 @@ Delayed idle metering settled measured0.01 units conservatively: project
 Verified duplicate upload cleanup removed8.08MiB,702 retained files unchanged.
 Independent [recurrent-off-policy review](recurrent-offpolicy.md) found a concrete
 ring-buffer sequence risk in tagged skrl2.1.1 using source/index arithmetic.
-Next implement chronological sequence/boundary acceptance before learner adoption;
+Chronological metadata indexing now passes19 offline checks, including independent
+interleaved-history/overwrite oracles. Next verify actual observation/hidden-state
+alignment and scalable sampling before learner adoption;
 no candidate protocol, dependency change or further allocation is registered.
 
 CrossQ packaging now requires exact initializer, replay-hash and observed-renorm

@@ -2685,3 +2685,15 @@ Session stopped; delayed0.01-unit debit settled without unallocated idle charges
 or history reset. Project39.528548/150, official348.59/idle. Verified duplicate
 upload removed8.08MiB with702 protected files unchanged.
 [Evidence](results/sac-first-update-2026-10-27/README.md).
+
+
+### Recurrent off-policy sequence foundation — 2026-10-27
+
+Implemented standalone chronological replay metadata indexing with explicit
+per-environment/episode/symbol lineage, finite burn-in/loss masks, terminal versus
+truncation masks and stale-reference rejection.19 offline tests/Ruff pass,
+including independent interleaved-ring oracle and audited overwrite counterexample.
+No learner integration, dependency changes, optimization, data requests or Colab
+allocation. Actual final-observation/hidden-state alignment, throughput acceptance
+and registered matched performance study remain. CrossQ stop and retired-test
+isolation unchanged. See [guide](docs/recurrent-offpolicy.md).

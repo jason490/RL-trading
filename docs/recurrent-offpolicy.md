@@ -69,8 +69,8 @@ pass run, provider contacted, Colab allocated or retired-test data opened.
 
 ## Next bounded implementation
 
-Build and test the sequence-index contract without optimization or market-data
-access first. Then audit the supplied recurrent model and wrapper against it.
+The sequence-index contract below is implemented without optimization or market-data
+access. Next audit recurrent model and wrapper state/observation handling against it.
 Only adopt a library after actual default-Colab-Python dependency acceptance;
 metadata compatibility alone is insufficient. Keep preprocessing frozen and the
 existing four-action execution/reward/cost contracts unchanged.
@@ -83,3 +83,42 @@ Compare against the retained RecurrentPPO control on matched development rows.
 Screen once, confirm promising results across11/23/37, and retain negative runs.
 Neither this review nor a passing smoke clears the historical CrossQ stop or
 establishes profitable trading.
+
+## Implemented sequence indexing
+
+`training/recurrent_replay.py` adds a dependency-light metadata ring. The owning
+replay store must associate each returned insertion ID with an immutable payload.
+Each append validates environment, increasing episode identity after an end,
+contiguous within-episode steps and unchanged symbol before mutation. Capacity is
+shared across environments. A valid sequence may wrap physical slot zero, but
+its insertion IDs and episode steps must remain chronological.
+
+`windows(burn_in=..., unroll=...)` enumerates complete, unpadded windows confined
+to one environment/episode. `sample` selects uniformly with replacement using a
+caller-owned NumPy generator. `resolve` revalidates retained metadata immediately
+before payload gathering, rejecting snapshots invalidated by overwrite. Concurrent
+writes require owner synchronization; this object does not provide thread safety.
+
+The loss mask excludes burn-in; bootstrap masks exclude termination only, while
+reset-after flags include termination and truncation. These masks specify a
+contract: this module does not calculate a loss, enforce learner masking, store
+observations, recover final observations or reconstruct neural hidden state.
+A window starting after episode step zero has a finite burn-in prefix, not a
+proof of exact full-history state reconstruction. That approximation must be
+specified and tested in the eventual learner protocol.
+
+The initial enumerator sorts retained metadata and materializes all complete
+windows. Profile or replace that path with incremental valid-start indexing
+before production-size per-update sampling; it is a correctness reference, not
+an accepted training throughput result. No learner currently calls it.
+
+19 offline checks cover an independent history-based oracle over120 interleaved
+writes/overwrites, the audited ring counterexample, valid physical wrap, symbol/
+episode isolation, stale/altered references, terminal/truncated masks, burn-in,
+incomplete windows, atomic bad-append rejection and private-RNG repeatability.
+Ruff passes. Run:
+
+```bash
+.venv/bin/python -m pytest -q tests/test_recurrent_replay.py
+.venv/bin/ruff check src/rl_stocks/training/recurrent_replay.py tests/test_recurrent_replay.py
+```
