@@ -12,8 +12,9 @@ The fixed source of truth is
 Its canonical digest is
 `58351c3c62f4e65fb59c49e29ab87edb3226ca17445b155d8268a885a6b9c3eb`.
 The protocol validator, timing projections, post-update checkpoint helper and
-synthetic gate tests are implemented. Portable initialization assets, an actual
-Colab profiling worker, fleet integration and physical artifact acceptance remain
+synthetic gate tests are implemented. Portable initialization assets now pass actual local construction/restoration
+acceptance; an actual Colab profiling worker, fleet integration and physical
+artifact acceptance remain
 required before performance allocation. No full comparison has run yet.
 
 ## Fixed data and controls
@@ -117,3 +118,27 @@ No development pass completes the project goal. Before promotion, require a
 checksummed portable preprocessing/model bundle, deterministic inference acceptance
 and an independently frozen prospective comparison. Continue documenting failed
 attempts and uncertainty; do not reopen the retired interval for selection.
+
+## Portable-start preparation acceptance
+
+`training.recurrent_comparison_starts` constructs the registered native models and
+GRU learner without collection or fitting. The builder publishes all nine cells
+atomically with a checksummed file inventory, native tensor archives/GRU
+checkpoints and full Python/NumPy/Torch RNG records. The acceptor independently
+reconstructs each seed, checks exact saved tensors, empty optimizer states and
+constructor RNG streams, and preserves caller streams even on rejection.
+
+Actual assets are retained at `.runtime/recurrent-comparison-starts-v1`; they are
+not committed model binaries. Local Python3.13.16/Torch2.8.0 preparation and a
+second separate-process acceptance both passed. This does not replace actual
+Colab default-kernel and portable-start checks before gradients.
+
+```bash
+MPLCONFIGDIR="$PWD/.runtime/matplotlib" PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .venv/bin/python scripts/build_recurrent_comparison_starts.py \
+  .runtime/recurrent-comparison-starts-v1 --accept-only
+```
+
+Omit `--accept-only` only for a fresh immutable destination. Existing outputs
+reject; never regenerate the registered assets to select more favorable weights.
+The profile worker must use these exact accepted assets, not fresh runtime draws.

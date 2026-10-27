@@ -1,0 +1,27 @@
+{
+  "status": "accepted_untrained_only",
+  "cells": 9,
+  "training_performed": false,
+  "colab_allocation": false,
+  "performance_interpretation_allowed": false,
+  "protocol_sha256": "58351c3c62f4e65fb59c49e29ab87edb3226ca17445b155d8268a885a6b9c3eb",
+  "manifest_sha256": "a27b945439fb1f941c60358fb901e0f65273eac1b731f59345bcd5305be771bf",
+  "torch_version": "2.8.0",
+  "local_python": "3.13.16",
+  "artifact_directory": ".runtime/recurrent-comparison-starts-v1",
+  "file_sha256": {
+    "gru_sac-11/manifest.json": "282885257e129dcee2b65c2fe856b4dee2f50f77748796fbcfb008e1d458ea58",
+    "gru_sac-11/state.pt": "9566c87fd2be73554df7aada223554e4d4645aa69c00a78ac8b9c9189f9a2794",
+    "gru_sac-23/manifest.json": "49ff645b922108022f04188b9b7386fc7888f3c91260929449b31b4fb27b2294",
+    "gru_sac-23/state.pt": "6047125bfbadaeb533c8fa0b2e14420795c7f7e085384eb7876ea7aab8a77878",
+    "gru_sac-37/manifest.json": "13487f48962a9cb62ac3fbbdd36315eb1dced1339ca38e364f57c9a0b8b483e1",
+    "gru_sac-37/state.pt": "bcfe3b54ad39506d258fde9f571a5f10f9213252e130d8cd40580cb383726cf6",
+    "native_sac-11.npz": "423640f5c22891987cff9186a3b59d19dd16f1d5a59db330c1a617d51aca84cf",
+    "native_sac-23.npz": "a6060496d55d596f2ae31f7aeba42ab8f3392a82ab6cdc39eee45748ad91b05c",
+    "native_sac-37.npz": "34a5462225e66a3267d9fe162fc8c54027adb0f9d37e0df195f259adc4141644",
+    "recurrent_ppo_reference-11.npz": "a8eb8f95476b3705a2b618f5ffc501d78f02572be88124324b69aa3fc6bad9a9",
+    "recurrent_ppo_reference-23.npz": "4cbed5a8130652f1d8d55fa92b4e97d8620b9f600b3781f1d3f8af676c4722dd",
+    "recurrent_ppo_reference-37.npz": "9b6b1bfc6d81973c7f540463f1e705ce9bf1573ced896fd7f0d7025e963bb8d6"
+  },
+  "acceptance": "builder and separate accept-only process both exited0; exact seeded tensors, empty optimizer state and RNG identities checked"
+}

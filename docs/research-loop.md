@@ -2434,3 +2434,12 @@ portable starts, actual Colab profiling and worker/fleet/physical acceptance rem
 before performance allocation. Different information/capacity/batches are explicit.
 Original budget, CrossQ stop and retired isolation persist; no new allocation.
 [Protocol and acceptance](recurrent-sac-comparison.md).
+
+### Portable recurrent comparison starts accepted — 2026-10-27
+
+All nine fixed architecture/seed starts generated without fitting and independently
+restored in a second process. Exact tensors, empty optimizer state and full RNG
+identities pass; actual assets retained under `.runtime/recurrent-comparison-starts-v1`.
+Tests forbid local native training, learner updates and Adam steps. No new Colab
+allocation or performance finding. Next actual profiling worker/runtime acceptance;
+[guide](../docs/recurrent-sac-comparison.md).

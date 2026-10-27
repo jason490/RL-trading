@@ -2886,3 +2886,12 @@ selected/final gates implemented with offline checks. Portable starts, actual
 Colab profile and worker/fleet/physical artifact acceptance remain before training.
 No performance finding, new allocation or retired data access. See
 [comparison guide](docs/recurrent-sac-comparison.md).
+
+### Portable recurrent comparison starts accepted — 2026-10-27
+
+All nine fixed architecture/seed starts generated without fitting and independently
+restored in a second process. Exact tensors, empty optimizer state and full RNG
+identities pass; actual assets retained under `.runtime/recurrent-comparison-starts-v1`.
+Tests forbid local native training, learner updates and Adam steps. No new Colab
+allocation or performance finding. Next actual profiling worker/runtime acceptance;
+[guide](docs/recurrent-sac-comparison.md).
