@@ -65,3 +65,17 @@ def test_duplicate_members_rejected(tmp_path):
             archive.addfile(member, io.BytesIO(b'{}'))
     with pytest.raises(ValueError, match='unique'):
         snapshot(path)
+
+
+def test_final_export_supersedes_stale_periodic_snapshot(tmp_path):
+    state, path = fixture(tmp_path)
+    for archive_path, steps in [(path, 90000), (path.with_name('artifacts.tar.gz'), 100000)]:
+        with tarfile.open(archive_path, 'w:gz') as archive:
+            value = json.dumps(dict(steps=steps, return_pct=3., excess_return_pp=-2.)).encode()
+            member = tarfile.TarInfo('artifacts/comparison-cell/learning-curve.jsonl')
+            member.size = len(value)
+            archive.addfile(member, io.BytesIO(value))
+    result = observe(tmp_path, state)
+    assert result['sessions'][0]['provisional_curve'][0]['steps'] == 100000
+    assert result['sessions'][0]['archive_kind'] == 'final_export'
+    assert not result['full_artifact_acceptance']

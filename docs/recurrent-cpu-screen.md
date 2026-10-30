@@ -39,8 +39,9 @@ training source and its artifacts. Add `--charts artifacts/recurrent-screen-prog
 only when you want refreshed copies of the existing partial HTML curves.
 The default is read-only. It reports meter age, shared project usage, recorded
 phases, selected checkpoints and sparse provisional returns. Missing or incomplete
-downloads remain labelled observations. Progress members are bounded and regular;
-duplicates, oversized members and chart symlink destinations are rejected.
+downloads remain labelled observations. Progress members are bounded and regular.
+The final export takes precedence over an older periodic snapshot when present.
+Duplicates, oversized members and chart symlink destinations are rejected.
 The command never establishes process liveness or full scientific acceptance.
 Poll the existing controller process/job handle independently; a saved `running`
 state alone is insufficient. During waits, reuse this summary and the same live

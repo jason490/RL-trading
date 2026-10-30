@@ -52,9 +52,16 @@ def observe(root, state_path, *, charts=None, now=None):
     for session, cell in state['sessions'].items():
         if not session.startswith('rl-stocks-cpu-') or Path(session).name != session:
             raise ValueError('owned CPU session name required')
-        files, status = snapshot(root/'artifacts/colab'/session/'checkpoint.tar.gz')
+        folder = root/'artifacts/colab'/session
+        archive = folder/'artifacts.tar.gz'
+        kind = 'final_export'
+        if not archive.exists():
+            archive = folder/'checkpoint.tar.gz'
+            kind = 'checkpoint_snapshot'
+        files, status = snapshot(archive)
         curve = [json.loads(line) for line in files.get('learning-curve.jsonl', b'').splitlines()]
         row = dict(session=session, task=cell['task'], phase=cell['phase'], snapshot=status,
+                   archive_kind=kind,
                    provisional_curve=[{k:point[k] for k in ('steps', 'return_pct', 'excess_return_pp')}
                                       for point in curve],
                    selected=None if 'selected.json' not in files else json.loads(files['selected.json']))
