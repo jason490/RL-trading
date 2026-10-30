@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 42:
+    if plan.get('version') == 43:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected=recurrent_screen_plan(**plan['comparison_screen'])
+        except (KeyError,TypeError):
+            raise ValueError('malformed fixed CPU screen plan') from None
+        if canonical(plan)!=canonical(expected):
+            raise ValueError('fixed100k CPU screen role/seed plan required')
+    elif plan.get('version') == 42:
         from rl_stocks.core.contracts import canonical
         if canonical(plan) != canonical(recurrent_reviewed_profile_plan()):
             raise ValueError('fixed reviewed corrected profile plan required')
@@ -840,3 +848,16 @@ def recurrent_reviewed_profile_plan():
     plan=recurrent_comparison_profile_plan()
     plan.update(version=42,execution_review_sha256=REVIEW_SHA256,allocation_deadline_seconds=1200)
     return plan
+
+
+def recurrent_screen_plan(arm,seed=11):
+    from rl_stocks.training.recurrent_comparison import protocol,PROTOCOL_SHA256
+    from rl_stocks.training.recurrent_screen_spec import specification,EXECUTION_SHA256
+    spec=specification()
+    if arm not in protocol()['arms'] or type(seed) is not int or seed!=11:
+        raise ValueError('screen exposes only registered seed11 roles')
+    return dict(version=43,accelerator='CPU',protocol_sha256=PROTOCOL_SHA256,
+        execution_sha256=EXECUTION_SHA256,comparison_screen=dict(arm=arm,seed=seed),
+        dataset_contract=dict(identity=protocol()['dataset']),
+        allocation_deadline_seconds=spec['allocation_seconds'][arm],teardown_reserve_seconds=360,
+        jobs=[dict(algorithm=arm,device='cpu',smoke=False,seed=seed,steps=100000)])

@@ -6,6 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
+| Measured recurrent CPU execution | [recurrent-cpu-screen.md](recurrent-cpu-screen.md) | Accepted profile, fixed100k seed11 roles, measured deadlines, shared allowance and asynchronous artifact verification |
 | CrossQ implementation feasibility | [crossq-feasibility.md](crossq-feasibility.md) | Untrained installed-source, geometry, normalization, optimizer/replay and serialization audit before fixed algorithm research |
 | Project operating guidance | [project-guidance.md](project-guidance.md) | Research requirements, agent workflow, runtime policies and primary references |
 | System architecture | [architecture.md](architecture.md) | Ownership, data flow, boundaries and extension rules |

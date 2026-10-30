@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import signal
 import subprocess
+import sys
 import tarfile
 import time
 import uuid
@@ -83,7 +84,7 @@ def validate_tasks(tasks,root):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
-        if plan.get('version') in (41,42):
+        if plan.get('version') in (41,42,43):
             from rl_stocks.training.recurrent_comparison_profile import validate_panel
             from rl_stocks.training.recurrent_comparison_starts import accept
             payload=json.loads((dataset/'dataset.json').read_text())
@@ -303,6 +304,18 @@ class Fleet:
         self.root=Path(root).resolve();self.cli=cli;self.tasks=validate_tasks(tasks,self.root)
         self.concurrency=concurrency;self.state_path=Path(state_path)
         self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json')
+        self.allocation_plan_seconds=None
+        if any(t['plan'].get('version')==43 for t in self.tasks):
+            from rl_stocks.training.recurrent_comparison import protocol
+            from rl_stocks.training.recurrent_screen_spec import verify_profile,specification
+            from rl_stocks.training.recurrent_screen_runtime import shared_screen_budget
+            if (len(self.tasks)!=3 or any(t['plan'].get('version')!=43 for t in self.tasks)
+                    or {t['plan']['comparison_screen']['arm'] for t in self.tasks}!=set(protocol()['arms'])):
+                raise ValueError('screen requires exactly the three fixed seed11 roles')
+            self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json',allocation_limit_seconds=21600)
+            study_limit,study_start=shared_screen_budget(self.budget.ledger,study_limit,study_start)
+            self.screen_profile_acceptance=verify_profile(self.root)
+            self.allocation_plan_seconds=[specification()['allocation_seconds'][t['plan']['comparison_screen']['arm']] for t in self.tasks]
         if any(t['plan'].get('version') == 42 for t in self.tasks):
             if len(self.tasks)!=1 or concurrency!=1 or self.tasks[0]['plan'].get('version')!=42:
                 raise ValueError('reviewed profile requires exactly one dedicated CPU allocation')
@@ -495,7 +508,7 @@ class Fleet:
         elif phase=='exec':
             if code:
                 child['exec_cli_failed']=True
-                if a.task['plan'].get('version') not in (38,39,40,41,42) and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') not in (38,39,40,41,42,43) and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
             a.phase='await_export';a.probe_due=0.;child['phase']=a.phase;self.budget.ledger.save();self.save()
         elif phase=='ready':
@@ -513,13 +526,17 @@ class Fleet:
             if code:
                 if a.download_attempts>=3:raise RuntimeError('final download retries exhausted')
                 a.download_attempts+=1;self.download(a,'download','/content/research-artifacts.tar.gz','artifacts.tar.gz');return
-            output=self.root/'artifacts/colab'/a.session;archive=output/'artifacts.tar.gz'
-            runs=validate_archive(archive,a.task['plan'],Path(a.task['dataset']).name)
-            with tarfile.open(archive) as tar:tar.extractall(output/'retrieved',filter='data')
-            child['training_verified']=True;child['retrieved'].append(str(archive))
-            self.state['completed'][a.task['id']]={'session':a.session,'root':str(output/'retrieved/artifacts'),
-                'runs':[{k:r[k] for k in ('algorithm','seed','actual_steps','bundle_id')} for r in runs]}
-            self.save();self.stop(a)
+            if a.task['plan'].get('version')==43:
+                a.phase='await_validation';child['phase']=a.phase;self.budget.ledger.save();self.save()
+            else:
+                output=self.root/'artifacts/colab'/a.session;archive=output/'artifacts.tar.gz'
+                runs=validate_archive(archive,a.task['plan'],Path(a.task['dataset']).name)
+                self.accept_verified_export(a,runs,archive,already_extracted=False)
+        elif phase=='validate':
+            if code:raise RuntimeError('full saved-artifact verification failed; inspect local validation output')
+            output=self.root/'artifacts/colab'/a.session
+            runs=json.loads((output/'verification.json').read_text())
+            self.accept_verified_export(a,runs,output/'artifacts.tar.gz',already_extracted=True)
         elif phase=='salvage':
             if code==0:child['retrieved'].append(str(self.root/'artifacts/colab'/a.session/'checkpoint.tar.gz'))
             self.stop(a)
@@ -537,14 +554,40 @@ class Fleet:
                 self.budget.finish_child(a.session,False);a.phase='done';self.save()
                 raise RuntimeError('owned runtime cleanup not verified')
 
+    def accept_verified_export(self,a,runs,archive,*,already_extracted):
+        output=self.root/'artifacts/colab'/a.session
+        if not already_extracted:
+            with tarfile.open(archive) as tar:tar.extractall(output/'retrieved',filter='data')
+        child=self.budget.active['children'][a.session]
+        child['training_verified']=True;child['retrieved'].append(str(archive))
+        self.state['completed'][a.task['id']]={'session':a.session,'root':str(output/'retrieved/artifacts'),
+            'runs':[{k:r[k] for k in ('algorithm','seed','actual_steps','bundle_id')} for r in runs]}
+        self.save();self.stop(a)
+
+    def start_local_validation(self,a):
+        self.guard_study(300);self.budget.guard(a.session,300)
+        a.phase='validate';a.sequence+=1
+        folder=self.root/'artifacts/colab'/a.session
+        args=['-m','rl_stocks.runtime.colab.verify_screen_export','--archive',str(folder/'artifacts.tar.gz'),
+              '--plan',str(self.root/'.runtime/payloads'/a.session/'job-plan.json'),
+              '--dataset-id',Path(a.task['dataset']).name,'--output',str(folder/'verification.json'),
+              '--retrieved',str(folder/'retrieved')]
+        path=self.root/'.runtime'/a.session/f'validate-{a.sequence}-output.txt'
+        a.command=Command([sys.executable],args,self.root,path,300)
+        self.budget.active['children'][a.session]['phase']=a.phase
+        self.budget.ledger.save();self.save()
+
     def step(self,a):
         if a.phase in ('pending','done'):return
         if not self.fatal:self.snapshot(a)
+        if a.phase=='await_validation':
+            if any(other.phase=='validate' for other in self.actors):return
+            self.start_local_validation(a);return
         if a.phase=='await_export':
             if time.monotonic()+20>=a.exec_deadline:raise TimeoutError('remote export deadline')
             if time.monotonic()>=a.probe_due:
                 child=self.budget.active['children'][a.session]
-                if a.task['plan'].get('version') not in (38,39,40,41,42) and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') not in (38,39,40,41,42,43) and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
                 self.download(a,'ready','/content/research-artifacts.ready','export.ready',20)
             return
@@ -568,7 +611,7 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
                 raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
             if any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):
@@ -577,7 +620,8 @@ class Fleet:
             self.cli.short(['version'])
             for cmd in ('usage','new','status','install','exec','upload','download','stop','sessions'):self.cli.short([cmd,'--help'])
             for a in self.actors:a.payload=prepare_payload(self.root,a.task['dataset'],a.task['plan'],a.session)
-            usage=parse_usage(self.cli.short(['usage']));self.budget.start(self.name,usage,len(self.tasks))
+            usage=parse_usage(self.cli.short(['usage']))
+            self.budget.start(self.name,usage,len(self.tasks),**({} if self.allocation_plan_seconds is None else {'allocation_plan_seconds':self.allocation_plan_seconds}))
             self.last_meter=time.monotonic();self.state['status']='running';self.save()
             previous={s:signal.signal(s,lambda *_:setattr(self,'interrupted',True)) for s in (signal.SIGINT,signal.SIGTERM)}
             cleanup_deadline=None
@@ -597,7 +641,12 @@ class Fleet:
                                 if a.phase not in ('stop','verify'):self.budget.guard(a.session,60)
                             pending=next((a for a in self.actors if a.phase=='pending'),None)
                             if pending and len(active)<self.concurrency and not any(a.phase in ('new','status') for a in active):
-                                if pending.task['plan'].get('version')==42:
+                                if pending.task['plan'].get('version')==43:
+                                    from rl_stocks.training.recurrent_screen_runtime import claim_screen_cell
+                                    arm=pending.task['plan']['comparison_screen']['arm']
+                                    claim_screen_cell(self.budget.ledger,pending.session,arm)
+                                    self.budget.admit(pending.session,'CPU',allocation_seconds=pending.task['plan']['allocation_deadline_seconds'],teardown_reserve_seconds=360)
+                                elif pending.task['plan'].get('version')==42:
                                     from rl_stocks.training.recurrent_execution_review import claim_corrected_profile
                                     claim_corrected_profile(self.budget.ledger,pending.session)
                                     self.budget.admit(pending.session,'CPU',allocation_seconds=1200,teardown_reserve_seconds=420)

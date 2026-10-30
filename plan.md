@@ -3001,3 +3001,13 @@ comparison blocked for GRU; future6/3/2h execution remains unadmitted. No model
 performance finding or retired data access. All science retained;45.8MB duplicate
 upload removed with805 matching members/53 protected files unchanged. See
 [dated results](results/recurrent-offpolicy-2026-10-30/README.md) for exact credits.
+
+### Measured CPU seed11 screen runner — 2026-10-30
+
+Version43 connects the accepted profile to fixed100k GRU-SAC/nativeSAC/
+RecurrentPPO cells with6/3/2h allocation ceilings and360s teardown reserves.
+Original research settings, two-unit study baseline,150/130 project and150/170
+account protections remain unchanged. Per-role claims prohibit automatic retry;
+bounded local inference-only verification keeps aggregate metering responsive.
+Confirmation seeds remain gated and unavailable here. No allocation or100k
+performance finding from this implementation. See [guide](docs/recurrent-cpu-screen.md).
