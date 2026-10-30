@@ -67,7 +67,8 @@ is **0.02578125/0.1** units. Project usage is
 The latest idle reading is **348.58 units**, rate0, assignments0.
 The original ledger/charges and explicit review are preserved. Settle delayed
 readings conservatively before another allocation.
-# Provisional performance observation
+
+## Provisional performance observation
 
 The running seed11 screen produced a nativeSAC10k snapshot. Its recorded
 economics replay passes on the fixed reused2021–2023 development panel.
@@ -78,4 +79,3 @@ and per-symbol metrics. Snapshot metadata records9,000 actor/critic/entropy
 updates after1,000-step warmup. Full saved-artifact acceptance remains pending;
 this partial checkpoint does not evaluate the three-role promotion gate and
 does not establish a winner. Both current workers continue; retired data closed.
-
