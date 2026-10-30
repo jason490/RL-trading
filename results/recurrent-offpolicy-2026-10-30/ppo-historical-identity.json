@@ -1,0 +1,97 @@
+{
+  "current_model": ".runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-a34e2ec70439/retrieved/artifacts/comparison-cell/checkpoint-100000/model.zip",
+  "historical_model": "artifacts/colab/rl-stocks-cpu-da217f2b9fde/retrieved/artifacts/runs/20261023T042259-recurrent_ppo-11-01ba4935/latest.zip",
+  "model_files_sha256": {
+    ".runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-a34e2ec70439/retrieved/artifacts/comparison-cell/checkpoint-100000/model.zip": "70191f4ba0610779b404432bb5028caa970f3fd4080900b56247ea36053b5e19",
+    "artifacts/colab/rl-stocks-cpu-da217f2b9fde/retrieved/artifacts/runs/20261023T042259-recurrent_ppo-11-01ba4935/latest.zip": "5491020168f3156235c9adc2fa78080059ee43ce4596cf8c55d94e7b74554d1a"
+  },
+  "policy_tensors_equal": true,
+  "optimizer_fingerprints_equal": true,
+  "current_policy_tensor_sha256": "e759593ba1ea72135b07a5ef011c8692010e6aa30a4403ca255dfdc2acc47cb7",
+  "historical_policy_tensor_sha256": "e759593ba1ea72135b07a5ef011c8692010e6aa30a4403ca255dfdc2acc47cb7",
+  "current_optimizer_sha256": "15724fa423dafbad3fac3b0e265ab9a0f6679a7daa6179e300941bb0e434c2ff",
+  "historical_optimizer_sha256": "15724fa423dafbad3fac3b0e265ab9a0f6679a7daa6179e300941bb0e434c2ff",
+  "historical_identity_revalidated": true,
+  "source_files_unchanged": true,
+  "training_performed": false,
+  "new_inference_replay": false,
+  "independent_confirmation": false,
+  "retired_test_access": false,
+  "historical_fit_receipt_sha256": "1e45263e7cba7391ff2ba690d463e82c458382555b948cf185fadc7c0904df04",
+  "current_acceptance_receipt_sha256": "3f61b05b1a6a8acadf3aa2137aed8136751e5d0e2d8ef31a181489db782f5b4c",
+  "dataset_file_sha256": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "dataset_identity": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalization_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "historical_final_training": {
+    "score": 0.3375565578983686,
+    "mean_max_drawdown": -0.40754554325241016,
+    "groups": {
+      "stock": {
+        "count": 22,
+        "net_return": 0.33324409205617006,
+        "buy_hold_return": 0.5814593877458677,
+        "excess_return": -0.2482152956896976,
+        "median_excess_return": -0.271671910304545,
+        "buy_hold_max_drawdown": -0.3640432336062538,
+        "max_drawdown": -0.4121960731006759
+      },
+      "etf": {
+        "count": 4,
+        "net_return": 0.36127512003046053,
+        "buy_hold_return": 0.4714601263306348,
+        "excess_return": -0.11018500630017425,
+        "median_excess_return": -0.05968136944343905,
+        "buy_hold_max_drawdown": -0.34073494920756275,
+        "max_drawdown": -0.3819676290869485
+      }
+    },
+    "stock_excess_by_symbol": {
+      "AAPL": -1.774386200097879,
+      "AMT": -0.05829831420554288,
+      "AMZN": -1.0597880307639305,
+      "APD": -0.6163456787094332,
+      "BAC": -0.14449874356410375,
+      "CAT": -0.3426659033709024,
+      "CVX": -0.26584939999897195,
+      "DIS": -0.3782639820674474,
+      "DUK": 0.08982148247817268,
+      "GOOGL": 1.0086346665852137,
+      "HD": 0.5440920364150568,
+      "HON": -0.41079090782677863,
+      "JNJ": -0.030804611328120846,
+      "JPM": -0.2704641010011898,
+      "KO": -0.43814486418782983,
+      "LIN": -0.41737218185130454,
+      "MSFT": 0.18537756860520016,
+      "NEE": -0.43768835757054636,
+      "PG": -0.27287971960790025,
+      "PLD": 0.013296464054256107,
+      "UNH": -0.4410812844951113,
+      "XOM": 0.057363557335745496
+    }
+  },
+  "historical_final_training_comparability_flag": false,
+  "current_selected_checkpoint_equivalence_established": false,
+  "interpretation": "Same final tensors, complete Adam state and immutable dataset as the prior accepted full-history control. Prior fitted replay is historical evidence, not a fresh replay or an independent seed. This identity audit cannot promote either family.",
+  "training_window_implementation_unchanged": true,
+  "shared_simulation_evaluator_function_ast_unchanged": true,
+  "runner_file_changed": true,
+  "runner_change": "ce17403 adds only a FrozenRecurrentActor validation-only guard to public evaluate; shared _evaluate and training-window helper are unchanged",
+  "selected_comparison": {
+    "historical": {
+      "steps": 80000,
+      "nominal_epochs": 790,
+      "actual_adam_steps": 15800,
+      "return_pct": 19.62453312747843,
+      "phase": "on_step_before_current_rollout_update"
+    },
+    "current": {
+      "steps": 40000,
+      "nominal_epochs": 400,
+      "actual_adam_steps": 8000,
+      "return_pct": 21.81116761451972,
+      "phase": "post_update"
+    },
+    "interpretation": "Selected weights differ under pre-update versus post-update evaluation timing; the100k policy and complete Adam state remain bitwise identical. No new final learning improvement or independent seed."
+  }
+}

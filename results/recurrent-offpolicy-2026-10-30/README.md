@@ -167,3 +167,27 @@ the running GRU upload remains. The shared ledger was not reset and its charges
 remain monotonic. [Compact receipt](completed-control-cleanup.json) links the
 durable per-member local audit. Scientific checkpoints, final exports and both
 accepted result receipts remain retained. GRU cleanup remains pending its run.
+
+## Reusing historical fitted evidence without another replay
+
+The new RecurrentPPO100k final policy tensors are bitwise equal to the earlier
+accepted full-history control, and complete Adam fingerprints also match.
+Both retain the identical immutable cdb93a33 dataset and normalization. Both
+serialized model files remain unchanged. The fixed training-window helper and
+shared simulator-evaluator function are unchanged; the public evaluator's later
+change adds only a GRU-specific retired-test guard. See
+[identity audit](ppo-historical-identity.json).
+
+The earlier [fitted-period replay](../history-fit-2026-10-23/README.md) remains
+relevant historical evidence: the same final policy returned33.32% on fitted
+stocks versus58.15% holding, and36.13% on fitted ETFs versus47.15%. Those failed
+descriptive flags do not establish a sole capacity/optimizer/generalization
+cause. No duplicate inference replay, fitting or new Colab allocation occurred.
+This is neither an independent seed nor prospective confirmation, and does not
+reopen the closed history family.
+
+Selected checkpoints differ: older80k has790 nominal epochs/15,800 Adam steps,
+evaluated before its rollout update; current40k has400 epochs/8,000 actual Adam
+steps, evaluated after its update. Current selected21.81% versus older19.62%
+does not represent improved100k weights. No fitted-period equivalence is claimed
+for the new selected checkpoint or nativeSAC. GRU remains active.

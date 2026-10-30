@@ -1,5 +1,16 @@
 # Fitted-period policy diagnosis
 
+Latest reuse audit (2026-10-30): the new100k RecurrentPPO reference exactly
+matches the retained full-history final policy tensors and complete Adam state
+from the2026-10-23 study, on the same immutable dataset/normalization. The
+training-window helper and shared evaluator body remain unchanged. Its earlier
+fitted-period failure is relevant historical evidence; no duplicate replay or
+independent confirmation is claimed. The new post-update selected40k differs
+from the old pre-update selected80k, so the old selected fitted result cannot
+be substituted for it. No such equivalence is claimed for nativeSAC. See the
+[bounded identity audit](../results/recurrent-offpolicy-2026-10-30/ppo-historical-identity.json).
+This retains the closed family's status and never changes the active GRU run.
+
 The fixed TD3 state screen failed alongside earlier PPO/SAC state experiments.
 Before another model change, distinguish a failure to approach holding on fitted
 history from a training/development contrast. Neither observation alone proves

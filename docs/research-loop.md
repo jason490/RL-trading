@@ -28,6 +28,11 @@ identities do not establish an optimizer cause or authorize a family rescue.
 Completed-control duplicate uploads were removed after1,628 member matches and
 96 protected-file checks;91.6MB reclaimed. Scientific artifacts and the active
 GRU upload remain; [cleanup receipt](../results/recurrent-offpolicy-2026-10-30/completed-control-cleanup.json).
+[Read-only identity audit](../results/recurrent-offpolicy-2026-10-30/ppo-historical-identity.json)
+matches new RecurrentPPO final tensors and complete Adam state to old full-history
+control on the same dataset. Reuse that final fitted-period evidence; no new
+seed/replay/confirmation. New selected40k post-update differs from old selected80k
+pre-update, so higher selected return is not improved100k learning.
 See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
 [execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
 claim and integrity stops remain; no outstanding approval is needed for the
