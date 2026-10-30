@@ -3022,3 +3022,14 @@ session025e19b898e4 stopped and cleanup verified. Selected10k32.31%/final30.01%
 versus matched holding30.60%; final stocks32.70% versus32.63%, ETFs15.25%
 versus19.47%. No robust winner; GRU and RecurrentPPO remain active and the full
 matrix gate is pending. Retired test closed. See [accepted receipt](results/recurrent-offpolicy-2026-10-30/native-sac-100k.json).
+
+### RecurrentPPO100k matched control accepted — 2026-10-30
+
+The masked-observation reference completes100k transitions,20k actual policy
+Adam steps and1,000 nominal PPO epochs. Full saved checkpoints, native settings,
+source/data, initialization, selected/final economics and curves pass physical
+acceptance. Same-worker export recovered without restart; sessiona34e2ec70439
+stopped and cleanup verified. Selected40k21.81%/final18.48% versus holding30.60%;
+final stocks21.77% versus32.63%, ETFs0.43% versus19.47%. GRU remains active; full
+matrix gate pending, no confirmation allocation or retired-test access. See
+[accepted receipt](results/recurrent-offpolicy-2026-10-30/recurrent-ppo-100k.json).

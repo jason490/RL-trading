@@ -118,3 +118,27 @@ GRU-SAC continues; RecurrentPPO has started in the released CPU slot. The
 three-role matrix gate and any confirmation seeds remain pending. No retired
 test access or prospective-performance claim. Project usage was39.70 units
 around this control's cleanup; the shared live ledger remains authoritative.
+
+## RecurrentPPO100k control accepted
+
+The second complete cell passes full physical acceptance, with100k transitions,
+20,000 actual policy Adam steps and1,000 nominal PPO epochs. All checkpoints,
+effective native settings, source/data/normalizer identity, portable starts,
+selected/final economics and sparse curve pass. The same worker's final export
+was recovered after a failed CLI return; no restart. Owned session
+`rl-stocks-cpu-a34e2ec70439` is stopped with cleanup verified.
+See [accepted control receipt](recurrent-ppo-100k.json).
+
+| Reused2021–2023 panel | Selected40k | Final100k | Holding |
+| --- | ---: | ---: | ---: |
+| All26 symbols | 21.81% | 18.48% | 30.60% |
+| Stocks22 | 23.08% | 21.77% | 32.63% |
+| ETFs4 | 14.81% | 0.43% | 19.47% |
+
+Final mean maximum drawdown is−35.10%; median individual-stock excess is−5.24pp.
+This masked-observation RecurrentPPO package trails holding and the native SAC
+control. The result is not an isolated test of memory: package information,
+architecture and update contracts differ. GRU-SAC remains active; the full matrix
+gate is still pending, confirmation seeds unallocated, retired data closed.
+Shared project usage was39.79/150 around cleanup; the remaining CPU reports0.08
+units/hour. All large scientific artifacts remain durably retrieved.

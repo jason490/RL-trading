@@ -17,8 +17,10 @@ original-ledger admission. The fixed seed11 screen is now running under fleet
 actual defaultPython3.13.18. NativeSAC100k is physically accepted, session stopped
 and cleanup verified:32.31% selected10k/30.01% final versus holding30.60%.
 Final stocks32.70% versus32.63%, ETFs15.25% versus19.47%; no robust winner.
-GRU continues, RecurrentPPO has started in the released slot. Their acceptance,
-remaining cleanup and the fixed matrix gate are pending; no confirmation seeds.
+RecurrentPPO100k is also physically accepted and stopped with cleanup verified:
+21.81% selected40k/18.48% final; final stocks21.77%, ETFs0.43%, both below holding.
+GRU continues alone; its acceptance, cleanup and the fixed matrix gate remain
+pending. Project usage around39.79/150; remaining CPU rate0.08. No confirmation seeds.
 See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
 [execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
 claim and integrity stops remain; no outstanding approval is needed for the

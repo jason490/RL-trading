@@ -1,0 +1,354 @@
+{
+  "observed_at": "2026-10-30T18:04:53.644778+00:00",
+  "session": "rl-stocks-cpu-a34e2ec70439",
+  "fleet": "rl-stocks-fleet-ab359d85d517",
+  "archive_sha256": "9262f089264ac6804d7cd7151aa1e4b158bb5570c4ee63ea4208727a5a1c5331",
+  "verification": {
+    "actual_steps": 100000,
+    "algorithm": "recurrent_ppo_reference",
+    "bundle_id": "664dcdaa9e44e64c4711a403a3a54977281338c88c8c12bdd07b41e7104c998a",
+    "cell": {
+      "arm": "recurrent_ppo_reference",
+      "artifact_inventory_sha256": "664dcdaa9e44e64c4711a403a3a54977281338c88c8c12bdd07b41e7104c998a",
+      "curve": [
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": null,
+          "excess_return_pp": -8.873651082271222,
+          "mean_max_drawdown_pct": -34.33863949925613,
+          "return_pct": 21.72819966188861,
+          "steps": 10000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": -18.311702689501125,
+          "excess_return_pp": -27.18535377177235,
+          "mean_max_drawdown_pct": -40.420430342330036,
+          "return_pct": 3.4164969723874825,
+          "steps": 20000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": -7.172733531374114,
+          "excess_return_pp": -34.35808730314646,
+          "mean_max_drawdown_pct": -46.2335101567996,
+          "return_pct": -3.7562365589866307,
+          "steps": 30000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": 25.567404173506354,
+          "excess_return_pp": -8.790683129640108,
+          "mean_max_drawdown_pct": -34.585228952712555,
+          "return_pct": 21.81116761451972,
+          "steps": 40000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": -9.506598171703153,
+          "excess_return_pp": -18.29728130134326,
+          "mean_max_drawdown_pct": -37.32035653740353,
+          "return_pct": 12.304569442816568,
+          "steps": 50000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": -7.318484909296139,
+          "excess_return_pp": -25.6157662106394,
+          "mean_max_drawdown_pct": -36.66889354070341,
+          "return_pct": 4.98608453352043,
+          "steps": 60000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": 4.554738456107335,
+          "excess_return_pp": -21.061027754532066,
+          "mean_max_drawdown_pct": -36.34162078125792,
+          "return_pct": 9.540822989627765,
+          "steps": 70000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": 9.015574329292805,
+          "excess_return_pp": -12.04545342523926,
+          "mean_max_drawdown_pct": -33.31136524801318,
+          "return_pct": 18.55639731892057,
+          "steps": 80000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": -1.0483291991933736,
+          "excess_return_pp": -13.093782624432635,
+          "mean_max_drawdown_pct": -34.67507306184704,
+          "return_pct": 17.508068119727195,
+          "steps": 90000
+        },
+        {
+          "buy_hold_return_pct": 30.60185074415983,
+          "change_pp": 0.9762866451247326,
+          "excess_return_pp": -12.117495979307902,
+          "mean_max_drawdown_pct": -35.102847421543224,
+          "return_pct": 18.48435476485193,
+          "steps": 100000
+        }
+      ],
+      "final": {
+        "declining_stocks_reporting_only": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 0,
+          "records": [
+            {
+              "buy_hold_return": -0.0773480025386506,
+              "episode": "AMZN-validation-0",
+              "includes_open_position_mark": true,
+              "long_active_sessions": 690,
+              "long_costs": 3607.796265346338,
+              "long_net_pnl": -21993.98524727163,
+              "long_return_contribution": -0.2199398524727163,
+              "max_equity_reconciliation_error": 5.820766091346741e-11,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "policy_return": -0.21816739710559985,
+              "positive_policy_and_short_pnl": false,
+              "sessions": 732,
+              "short_active_sessions": 78,
+              "short_costs": 1414.5211224140448,
+              "short_net_pnl": 177.24553671161993,
+              "short_return_contribution": 0.0017724553671161992,
+              "symbol": "AMZN"
+            },
+            {
+              "buy_hold_return": -0.4738014050296483,
+              "episode": "DIS-validation-0",
+              "includes_open_position_mark": true,
+              "long_active_sessions": 677,
+              "long_costs": 2617.302686161225,
+              "long_net_pnl": -56786.8530598925,
+              "long_return_contribution": -0.567868530598925,
+              "max_equity_reconciliation_error": 5.820766091346741e-11,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "policy_return": -0.7366747974240418,
+              "positive_policy_and_short_pnl": false,
+              "sessions": 732,
+              "short_active_sessions": 71,
+              "short_costs": 736.989490739121,
+              "short_net_pnl": -16880.62668251166,
+              "short_return_contribution": -0.16880626682511662,
+              "symbol": "DIS"
+            },
+            {
+              "buy_hold_return": -0.14630790487726686,
+              "episode": "NEE-validation-0",
+              "includes_open_position_mark": true,
+              "long_active_sessions": 687,
+              "long_costs": 3959.1732053084943,
+              "long_net_pnl": -17155.259141943592,
+              "long_return_contribution": -0.17155259141943593,
+              "max_equity_reconciliation_error": 5.820766091346741e-11,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "policy_return": -0.14913092375745418,
+              "positive_policy_and_short_pnl": false,
+              "sessions": 732,
+              "short_active_sessions": 65,
+              "short_costs": 1431.658688513699,
+              "short_net_pnl": 2242.1667661981337,
+              "short_return_contribution": 0.022421667661981337,
+              "symbol": "NEE"
+            }
+          ]
+        },
+        "groups": {
+          "etf": {
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "buy_hold_return": 0.19466021642377884,
+            "count": 4,
+            "excess_return": -0.1903857829811795,
+            "max_drawdown": -0.32450038403650283,
+            "median_excess_return": -0.196373168609352,
+            "net_return": 0.00427443344259934
+          },
+          "stock": {
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "buy_hold_return": 0.32626546944483825,
+            "count": 22,
+            "excess_return": -0.10859117375887894,
+            "max_drawdown": -0.35585176333887397,
+            "median_excess_return": -0.05238370380055274,
+            "net_return": 0.21767429568595928
+          }
+        },
+        "mean_max_drawdown": -0.35102847421543226,
+        "score": 0.1848435476485193,
+        "stock_excess_by_symbol": {
+          "AAPL": -0.387173502569079,
+          "AMT": 0.2967756303324356,
+          "AMZN": -0.14081939456694925,
+          "APD": 0.017250151652820955,
+          "BAC": -0.11060617816973894,
+          "CAT": -0.44408054444162715,
+          "CVX": -0.7972698588456641,
+          "DIS": -0.26287339239439356,
+          "DUK": 0.2009664783697782,
+          "GOOGL": -0.04758249292626471,
+          "HD": -0.00141102106904345,
+          "HON": -0.05718491467484077,
+          "JNJ": 0.13153771419670424,
+          "JPM": 0.1318616111943498,
+          "KO": -0.08691846933214475,
+          "LIN": -0.28499120387687693,
+          "MSFT": -0.3609306093180418,
+          "NEE": -0.0028230188801873224,
+          "PG": -0.03826321427166324,
+          "PLD": 0.1229137219251899,
+          "UNH": -0.35539551604680786,
+          "XOM": 0.08801220101670726
+        }
+      },
+      "objective_achieved": false,
+      "prospective_confirmation_required": true,
+      "saved_artifacts_verified": true,
+      "seed": 11,
+      "selected": {
+        "declining_stocks_reporting_only": {
+          "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+          "count": 3,
+          "positive_policy_and_short_pnl_count": 1,
+          "records": [
+            {
+              "buy_hold_return": -0.0773480025386506,
+              "episode": "AMZN-validation-0",
+              "includes_open_position_mark": true,
+              "long_active_sessions": 672,
+              "long_costs": 2894.522906387941,
+              "long_net_pnl": 2232.9697133908776,
+              "long_return_contribution": 0.022329697133908775,
+              "max_equity_reconciliation_error": 1.7462298274040222e-10,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "policy_return": 0.057492642993871135,
+              "positive_policy_and_short_pnl": true,
+              "sessions": 732,
+              "short_active_sessions": 109,
+              "short_costs": 1903.0096818870143,
+              "short_net_pnl": 3516.2945859962783,
+              "short_return_contribution": 0.03516294585996278,
+              "symbol": "AMZN"
+            },
+            {
+              "buy_hold_return": -0.4738014050296483,
+              "episode": "DIS-validation-0",
+              "includes_open_position_mark": true,
+              "long_active_sessions": 699,
+              "long_costs": 2568.311436073269,
+              "long_net_pnl": -47946.59642900071,
+              "long_return_contribution": -0.4794659642900071,
+              "max_equity_reconciliation_error": 6.548361852765083e-11,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "policy_return": -0.46212713685945495,
+              "positive_policy_and_short_pnl": false,
+              "sessions": 732,
+              "short_active_sessions": 68,
+              "short_costs": 1220.5606926137632,
+              "short_net_pnl": 1733.882743055161,
+              "short_return_contribution": 0.01733882743055161,
+              "symbol": "DIS"
+            },
+            {
+              "buy_hold_return": -0.14630790487726686,
+              "episode": "NEE-validation-0",
+              "includes_open_position_mark": true,
+              "long_active_sessions": 715,
+              "long_costs": 2523.952465669956,
+              "long_net_pnl": -28233.477839835337,
+              "long_return_contribution": -0.28233477839835336,
+              "max_equity_reconciliation_error": 1.4551915228366852e-10,
+              "method": "signed-cash-flows-plus-final-mark-v1",
+              "policy_return": -0.4425013532030798,
+              "positive_policy_and_short_pnl": false,
+              "sessions": 732,
+              "short_active_sessions": 41,
+              "short_costs": 881.8982084696064,
+              "short_net_pnl": -16016.657480472793,
+              "short_return_contribution": -0.16016657480472793,
+              "symbol": "NEE"
+            }
+          ]
+        },
+        "groups": {
+          "etf": {
+            "buy_hold_max_drawdown": -0.2771255753468467,
+            "buy_hold_return": 0.19466021642377884,
+            "count": 4,
+            "excess_return": -0.0465792143262036,
+            "max_drawdown": -0.3049967773182238,
+            "median_excess_return": -0.07671522279661025,
+            "net_return": 0.14808100209757524
+          },
+          "stock": {
+            "buy_hold_max_drawdown": -0.32913998204866823,
+            "buy_hold_return": 0.32626546944483825,
+            "count": 22,
+            "excess_return": -0.09542094347280065,
+            "max_drawdown": -0.3532805644741986,
+            "median_excess_return": -0.08990009982081132,
+            "net_return": 0.23084452597203758
+          }
+        },
+        "mean_max_drawdown": -0.34585228952712554,
+        "score": 0.21811167614519722,
+        "stock_excess_by_symbol": {
+          "AAPL": 0.2247777769052861,
+          "AMT": -0.39794081337382736,
+          "AMZN": 0.13484064553252173,
+          "APD": -0.09677937097352196,
+          "BAC": 0.18116382155123478,
+          "CAT": -0.06978446447022613,
+          "CVX": -0.4408487646562087,
+          "DIS": 0.011674268170193347,
+          "DUK": -0.08302082866810068,
+          "GOOGL": -0.4953080905149956,
+          "HD": 0.5419076339188633,
+          "HON": -0.027058771875662524,
+          "JNJ": 0.06450931213681788,
+          "JPM": -0.27214009139555184,
+          "KO": -0.09750129685636155,
+          "LIN": -0.17052341296679074,
+          "MSFT": -0.1933088273184287,
+          "NEE": -0.29619344832581296,
+          "PG": 0.03900181662178204,
+          "PLD": -0.2997577047247738,
+          "UNH": -0.06691871633749402,
+          "XOM": -0.2900514287805569
+        }
+      },
+      "source_hash": "c61990aae25a4062635343e71afb8c3a85de695b3233c68d78273475bb0742a6",
+      "source_revision": "4a85618111350178ac4018a66d701ae6556d9d34"
+    },
+    "seed": 11,
+    "status": "complete"
+  },
+  "final_checkpoint": {
+    "arm": "recurrent_ppo_reference",
+    "library_updates": 1000,
+    "lineage": {
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "observation_schema": "execution-masked-v1-normalized21",
+      "source": "c61990aae25a4062635343e71afb8c3a85de695b3233c68d78273475bb0742a6"
+    },
+    "optimizer_steps": {
+      "policy": 20000
+    },
+    "schema": "recurrent-comparison-native-checkpoint-v1",
+    "seed": 11,
+    "sha256": "70191f4ba0610779b404432bb5028caa970f3fd4080900b56247ea36053b5e19",
+    "transitions": 100000
+  },
+  "cleanup_verified": true,
+  "cli_return_failed_but_same_worker_export_recovered": true,
+  "automatic_worker_restart": false,
+  "project_units_at_observation": 39.7861878813989,
+  "matrix_gate_evaluated": false,
+  "retired_test_access": false,
+  "remaining_roles": [
+    "gru_sac"
+  ]
+}
