@@ -3011,3 +3011,14 @@ account protections remain unchanged. Per-role claims prohibit automatic retry;
 bounded local inference-only verification keeps aggregate metering responsive.
 Confirmation seeds remain gated and unavailable here. No allocation or100k
 performance finding from this implementation. See [guide](docs/recurrent-cpu-screen.md).
+
+### Native SAC100k matched control accepted — 2026-10-30
+
+Clean4a85618/defaultPython3.13.18/CPU completes100k transitions and99k actual
+actor/critic/entropy Adam steps. Full checkpoints, fixed configuration, portable
+starts, source/data, learning curve and selected/final economics pass physical
+acceptance. Same-worker export recovered after a failed CLI return; owned
+session025e19b898e4 stopped and cleanup verified. Selected10k32.31%/final30.01%
+versus matched holding30.60%; final stocks32.70% versus32.63%, ETFs15.25%
+versus19.47%. No robust winner; GRU and RecurrentPPO remain active and the full
+matrix gate is pending. Retired test closed. See [accepted receipt](results/recurrent-offpolicy-2026-10-30/native-sac-100k.json).

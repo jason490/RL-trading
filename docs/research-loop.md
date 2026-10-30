@@ -7,15 +7,18 @@ Treasury26.51%/−4.56%, VIX, GAE and prior failed families remain closed; retir
 2024+ test data stays unopened. See the compact result directories for evidence.
 
 Current execution frontier (2026-10-30): the explicitly approved corrected CPU
-profile is physically accepted; owned shutdown verified, account idle. Last
-settled project39.56191720/150, account348.58. No100k comparison
-exists. GRU-SAC requires4.67h under the accepted projection, SAC1.95h/PPO1.21h;
+profile is physically accepted; that owned session was stopped and verified.
+Project usage is about39.70/150 during the active screen. No complete three-role
+100k comparison exists. GRU-SAC requires4.67h under the accepted projection, SAC1.95h/PPO1.21h;
 the original two-hour three-arm plan remains blocked on GRU runtime. Longer
 CPU6/3/2h execution now has a fixed, tested runner with physical-profile and
 original-ledger admission. The fixed seed11 screen is now running under fleet
 `rl-stocks-fleet-ab359d85d517`, source4a85618, two concurrent CPU slots and
-actual defaultPython3.13.18. GRU/SAC start first; PPO is queued. This launch is
-not a performance result; complete artifact acceptance and cleanup are pending.
+actual defaultPython3.13.18. NativeSAC100k is physically accepted, session stopped
+and cleanup verified:32.31% selected10k/30.01% final versus holding30.60%.
+Final stocks32.70% versus32.63%, ETFs15.25% versus19.47%; no robust winner.
+GRU continues, RecurrentPPO has started in the released slot. Their acceptance,
+remaining cleanup and the fixed matrix gate are pending; no confirmation seeds.
 See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
 [execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
 claim and integrity stops remain; no outstanding approval is needed for the

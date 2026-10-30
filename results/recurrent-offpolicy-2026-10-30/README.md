@@ -89,3 +89,32 @@ outperformance. SAC's subsequent provisional20k/30k/40k returns are3.88%/
 in the running worker's downloaded archives and will be accepted with the full
 cell. Locally retrieved partial charts are under
 `artifacts/recurrent-screen-progress/`; they are generated files, excluded from Git.
+
+## Native SAC100k control accepted
+
+The first complete performance cell passes full saved-artifact verification:
+all ten post-update checkpoints, exact99,000 actor/critic/entropy Adam steps,
+portable initialization, effective settings, source/data/normalizer identity,
+selected/final economic replay and complete learning curve. The same worker's
+export was recovered after a failed CLI return, with no restart. Its owned
+session `rl-stocks-cpu-025e19b898e4` is stopped with cleanup verified.
+See [accepted control receipt](native-sac-100k.json); large archives, weights,
+reports and checksums remain in the captured source's `artifacts/colab` folder.
+
+| Reused2021–2023 panel | Selected10k | Final100k | Holding |
+| --- | ---: | ---: | ---: |
+| All26 symbols | 32.31% | 30.01% | 30.60% |
+| Stocks22 | 35.44% | 32.70% | 32.63% |
+| ETFs4 | 15.13% | 15.25% | 19.47% |
+
+Final mean maximum drawdown is−33.87%; median individual-stock excess is−2.70pp.
+The reporting-only declining-stock cohort has one of three positive policy
+returns with positive short P&L: AMZN+6.94% versus holding−7.73%. DIS−48.91%
+versus−47.38%, NEE−19.86% versus−14.63% remain losses. These labels never enter
+training or checkpoint selection. The selected checkpoint and100k endpoint
+remain distinct; this control does not establish robust ETF outperformance.
+
+GRU-SAC continues; RecurrentPPO has started in the released CPU slot. The
+three-role matrix gate and any confirmation seeds remain pending. No retired
+test access or prospective-performance claim. Project usage was39.70 units
+around this control's cleanup; the shared live ledger remains authoritative.
