@@ -1,0 +1,243 @@
+{
+  "observed_at": "2026-10-30T16:54:57.320957+00:00",
+  "arm": "native_sac",
+  "seed": 11,
+  "steps": 10000,
+  "session": "rl-stocks-cpu-025e19b898e4",
+  "source_revision": "4a85618111350178ac4018a66d701ae6556d9d34",
+  "snapshot_sha256": "644f13517288b6c5633be6c58eb4be18e7b4165e369e66309959a9c6eae4e78f",
+  "partial": true,
+  "full_artifact_acceptance": false,
+  "recorded_economics_verified": true,
+  "return_pct": 32.312511362980345,
+  "buy_hold_return_pct": 30.60185074415983,
+  "excess_pp": 1.7106606188205142,
+  "mean_max_drawdown_pct": -32.54395579475444,
+  "groups": {
+    "stocks": {
+      "count": 22,
+      "return_pct": 35.43706483504804,
+      "buy_hold_return_pct": 32.62654694448383,
+      "excess_pp": 2.8105178905642134
+    },
+    "etfs": {
+      "count": 4,
+      "return_pct": 15.127467266608056,
+      "buy_hold_return_pct": 19.466021642377886,
+      "excess_pp": -4.33855437576983
+    }
+  },
+  "curve": {
+    "steps": 10000,
+    "phase": "post_update",
+    "score": 0.32312511362980345,
+    "return_pct": 32.312511362980345,
+    "change_pp": null,
+    "equity_change_pct_from_previous": null,
+    "gain_since_50k_pp": null,
+    "best_return_pct": 32.312511362980345,
+    "buy_hold_return_pct": 30.60185074415983,
+    "excess_return_pp": 1.7106606188205142,
+    "mean_max_drawdown_pct": -32.54395579475444,
+    "mean_costs": 4333.842495991217,
+    "mean_turnover": 121.29199548296289,
+    "elapsed_seconds": 259.222834229,
+    "symbols": {
+      "AAPL-validation-0": {
+        "net_return": 0.3417102534576375,
+        "max_drawdown": -0.32928694440565753,
+        "sharpe": 0.5009639735426223,
+        "costs": 3765.3662947934363,
+        "turnover": 105.47368041080145
+      },
+      "AMT-validation-0": {
+        "net_return": -0.031405404378110124,
+        "max_drawdown": -0.4514449065987758,
+        "sharpe": 0.09139759902753226,
+        "costs": 2911.42956997402,
+        "turnover": 90.27554174715658
+      },
+      "AMZN-validation-0": {
+        "net_return": -0.1034269571610259,
+        "max_drawdown": -0.5858031729572146,
+        "sharpe": 0.08954464238620569,
+        "costs": 2836.715210005562,
+        "turnover": 80.8203436959156
+      },
+      "APD-validation-0": {
+        "net_return": 0.4065331653549402,
+        "max_drawdown": -0.2735593437716921,
+        "sharpe": 0.6112247928600337,
+        "costs": 4117.948421486962,
+        "turnover": 116.27931588849427
+      },
+      "BAC-validation-0": {
+        "net_return": 0.20347439642787468,
+        "max_drawdown": -0.40856757821397005,
+        "sharpe": 0.365964192969592,
+        "costs": 3654.750269170043,
+        "turnover": 115.63702396148531
+      },
+      "CAT-validation-0": {
+        "net_return": 0.25906641942348707,
+        "max_drawdown": -0.28167598415450124,
+        "sharpe": 0.4165192511628072,
+        "costs": 3889.224469898135,
+        "turnover": 119.2961477673085
+      },
+      "CVX-validation-0": {
+        "net_return": 1.0211380848749747,
+        "max_drawdown": -0.26679289667783757,
+        "sharpe": 1.0250039767416377,
+        "costs": 5831.948571779066,
+        "turnover": 166.352209657104
+      },
+      "DIA-validation-0": {
+        "net_return": 0.17170466419870611,
+        "max_drawdown": -0.2114176711195066,
+        "sharpe": 0.4420288203199148,
+        "costs": 6702.838854707014,
+        "turnover": 138.19635849314616
+      },
+      "DIS-validation-0": {
+        "net_return": -0.4549288875985049,
+        "max_drawdown": -0.5766117618124618,
+        "sharpe": -0.5627866982447716,
+        "costs": 2383.817741963187,
+        "turnover": 73.03128449230526
+      },
+      "DUK-validation-0": {
+        "net_return": 0.45453886376205066,
+        "max_drawdown": -0.23355977084920687,
+        "sharpe": 0.7797167883559674,
+        "costs": 5292.207058106405,
+        "turnover": 145.91386089735582
+      },
+      "GOOGL-validation-0": {
+        "net_return": 0.4757832224751941,
+        "max_drawdown": -0.4900429618161224,
+        "sharpe": 0.5819811207958303,
+        "costs": 3896.641763886027,
+        "turnover": 124.11441498901844
+      },
+      "HD-validation-0": {
+        "net_return": 0.2748854526984503,
+        "max_drawdown": -0.3389611091542726,
+        "sharpe": 0.4647558572576092,
+        "costs": 3819.599728503209,
+        "turnover": 111.91196007798642
+      },
+      "HON-validation-0": {
+        "net_return": 0.1986599088209129,
+        "max_drawdown": -0.26821877139385397,
+        "sharpe": 0.4057766753234675,
+        "costs": 4333.1745545196,
+        "turnover": 116.08809407716967
+      },
+      "IWM-validation-0": {
+        "net_return": -0.003510597550458905,
+        "max_drawdown": -0.3347964575803092,
+        "sharpe": 0.11319909869124528,
+        "costs": 3778.7880689545987,
+        "turnover": 105.41235510617726
+      },
+      "JNJ-validation-0": {
+        "net_return": 0.13764897072668947,
+        "max_drawdown": -0.24072013609695808,
+        "sharpe": 0.3503469228639743,
+        "costs": 5466.02196457532,
+        "turnover": 136.4764492498573
+      },
+      "JPM-validation-0": {
+        "net_return": 0.6012294532247164,
+        "max_drawdown": -0.35880495550076286,
+        "sharpe": 0.7892485539988817,
+        "costs": 3557.474513420005,
+        "turnover": 113.68356612545243
+      },
+      "KO-validation-0": {
+        "net_return": 0.06116430945866114,
+        "max_drawdown": -0.1716474808993801,
+        "sharpe": 0.20820076296949283,
+        "costs": 5125.432466762726,
+        "turnover": 132.38376080696105
+      },
+      "LIN-validation-0": {
+        "net_return": 0.28856987981812354,
+        "max_drawdown": -0.24408786186867637,
+        "sharpe": 0.4916258060440744,
+        "costs": 4559.751561251491,
+        "turnover": 125.35740165396336
+      },
+      "MSFT-validation-0": {
+        "net_return": 0.9651447028621702,
+        "max_drawdown": -0.35106197203632117,
+        "sharpe": 0.9761772624816826,
+        "costs": 4046.540133094472,
+        "turnover": 122.83753569015504
+      },
+      "NEE-validation-0": {
+        "net_return": -0.12908203594308554,
+        "max_drawdown": -0.3664444706301071,
+        "sharpe": -0.048398277265080517,
+        "costs": 3100.4469375250287,
+        "turnover": 94.27229855751378
+      },
+      "PG-validation-0": {
+        "net_return": 0.1966004683562197,
+        "max_drawdown": -0.21456291002848826,
+        "sharpe": 0.4430852543920228,
+        "costs": 4549.867270044395,
+        "turnover": 117.07064864574852
+      },
+      "PLD-validation-0": {
+        "net_return": 0.4314661762713381,
+        "max_drawdown": -0.335428177261865,
+        "sharpe": 0.5944722882495227,
+        "costs": 4283.844644901834,
+        "turnover": 124.95238009697877
+      },
+      "QQQ-validation-0": {
+        "net_return": 0.3113333316848197,
+        "max_drawdown": -0.33145785834375296,
+        "sharpe": 0.5116081365999676,
+        "costs": 4317.894451443297,
+        "turnover": 117.14237416647512
+      },
+      "SPY-validation-0": {
+        "net_return": 0.1255712923312553,
+        "max_drawdown": -0.29152979410810376,
+        "sharpe": 0.3184967720900303,
+        "costs": 5574.67755824066,
+        "turnover": 138.83702801087753
+      },
+      "UNH-validation-0": {
+        "net_return": 0.4397319201435157,
+        "max_drawdown": -0.30256384591608454,
+        "sharpe": 0.6798400782494503,
+        "costs": 4717.6669985971075,
+        "turnover": 137.00093388519784
+      },
+      "XOM-validation-0": {
+        "net_return": 1.7576519006343378,
+        "max_drawdown": -0.20237971344027106,
+        "sharpe": 1.3127007856639425,
+        "costs": 6165.835818168039,
+        "turnover": 184.77491440642953
+      }
+    },
+    "training": {
+      "native_library_counter": 9000,
+      "optimizer_steps": {
+        "actor": 9000,
+        "critic": 9000,
+        "entropy": 9000
+      },
+      "counter_kind": "gradient_updates"
+    },
+    "learner_updates": 9000,
+    "checkpoint": "checkpoint-10000"
+  },
+  "gate_evaluated": false,
+  "retired_test_access": false
+}
