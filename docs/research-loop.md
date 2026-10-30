@@ -12,7 +12,11 @@ settled project39.56191720/150, account348.58. No100k comparison
 exists. GRU-SAC requires4.67h under the accepted projection, SAC1.95h/PPO1.21h;
 the original two-hour three-arm plan remains blocked on GRU runtime. Longer
 CPU6/3/2h execution now has a fixed, tested runner with physical-profile and
-original-ledger admission; no new performance allocation has started. See the
+original-ledger admission. The fixed seed11 screen is now running under fleet
+`rl-stocks-fleet-ab359d85d517`, source4a85618, two concurrent CPU slots and
+actual defaultPython3.13.18. GRU/SAC start first; PPO is queued. This launch is
+not a performance result; complete artifact acceptance and cleanup are pending.
+See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
 [execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
 claim and integrity stops remain; no outstanding approval is needed for the
 already completed profile. Read the compact [guide](recurrent-sac-comparison.md)

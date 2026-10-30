@@ -1,0 +1,27 @@
+{
+  "status": "running",
+  "observed_at": "2026-10-30T16:45:31.463406+00:00",
+  "fleet": "rl-stocks-fleet-ab359d85d517",
+  "source_revision": "4a85618111350178ac4018a66d701ae6556d9d34",
+  "state_file": ".runtime/recurrent-screen-state-v1.json",
+  "controller_handle": 68523,
+  "concurrency": 2,
+  "session_phases": {
+    "rl-stocks-cpu-708d90e39b64": {
+      "task": "recurrent-screen-gru_sac-11",
+      "phase": "exec"
+    },
+    "rl-stocks-cpu-025e19b898e4": {
+      "task": "recurrent-screen-native_sac-11",
+      "phase": "exec"
+    }
+  },
+  "actual_default_python": "3.13.18",
+  "project_units_at_observation": 39.56239037835271,
+  "aggregate_rate": 0.16,
+  "study_start_units": 39.53613595309791,
+  "study_unit_cap": 2,
+  "performance_results_available": false,
+  "cleanup_pending": true,
+  "retired_test_opened": false
+}
