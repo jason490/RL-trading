@@ -79,3 +79,13 @@ and per-symbol metrics. Snapshot metadata records9,000 actor/critic/entropy
 updates after1,000-step warmup. Full saved-artifact acceptance remains pending;
 this partial checkpoint does not evaluate the three-role promotion gate and
 does not establish a winner. Both current workers continue; retired data closed.
+
+GRU-SAC's first10k observation returns31.28% overall versus30.60% holding;
+stocks34.28% versus32.63%, ETFs14.81% versus19.47%. Its independent recorded
+economics replay also passes; [compact observation](gru-10k-progress.json)
+retains the per-symbol curve point. Neither first checkpoint establishes ETF
+outperformance. SAC's subsequent provisional20k/30k/40k returns are3.88%/
+7.91%/4.71%; its selected checkpoint remains10k. These later curve points remain
+in the running worker's downloaded archives and will be accepted with the full
+cell. Locally retrieved partial charts are under
+`artifacts/recurrent-screen-progress/`; they are generated files, excluded from Git.
