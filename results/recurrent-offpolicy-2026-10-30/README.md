@@ -156,3 +156,14 @@ impact are only0.0074/0.0245pp. These identities do not establish why optimizati
 learned these policies or estimate a cost-free counterfactual. See the
 [category guide](../../docs/participation-diagnostics.md) for definitions and limits.
 No new selection, training, reward or execution changes; GRU remains active.
+
+## Completed-control upload cleanup
+
+Removed91,633,537 bytes of duplicate upload archives for the stopped nativeSAC
+and RecurrentPPO sessions. All1,628 regular members matched retained source,
+dataset, portable starts or per-session job/provenance metadata before removal.
+All96 protected models/reports/archives/inputs/claims stayed byte-identical;
+the running GRU upload remains. The shared ledger was not reset and its charges
+remain monotonic. [Compact receipt](completed-control-cleanup.json) links the
+durable per-member local audit. Scientific checkpoints, final exports and both
+accepted result receipts remain retained. GRU cleanup remains pending its run.

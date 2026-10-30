@@ -1,0 +1,13 @@
+{
+  "removed_bytes": 91633537,
+  "duplicate_upload_members_verified": 1628,
+  "protected_files_unchanged": 96,
+  "completed_owned_sessions": [
+    "rl-stocks-cpu-025e19b898e4",
+    "rl-stocks-cpu-a34e2ec70439"
+  ],
+  "scientific_models_reports_inputs_archives_retained": true,
+  "ongoing_gru_upload_retained": true,
+  "shared_ledger_not_reset": true,
+  "per_member_audit": ".runtime/recurrent-completed-control-upload-cleanup-v1.json"
+}

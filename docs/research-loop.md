@@ -25,6 +25,9 @@ pending. Project usage around39.79/150; remaining CPU rate0.08. No confirmation 
 reconciles all four phases: SAC's selected-to-final drop accompanies lower costs;
 RecurrentPPO worsens in both cost drag and non-cost excess. These descriptive
 identities do not establish an optimizer cause or authorize a family rescue.
+Completed-control duplicate uploads were removed after1,628 member matches and
+96 protected-file checks;91.6MB reclaimed. Scientific artifacts and the active
+GRU upload remain; [cleanup receipt](../results/recurrent-offpolicy-2026-10-30/completed-control-cleanup.json).
 See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
 [execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
 claim and integrity stops remain; no outstanding approval is needed for the
