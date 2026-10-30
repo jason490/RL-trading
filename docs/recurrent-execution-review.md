@@ -4,9 +4,13 @@
 
 The original CPU profile stopped at its working deadline. Its claim is consumed,
 owned shutdown is verified, and the original project ledger remains stopped.
-The corrected profile is prepared **without authorization or allocation**.
+The user explicitly approved the corrected profile on2026-10-30. It completed,
+passed physical verification and ended with verified owned-session cleanup.
+No100k training was included.
 [Readiness evidence](../results/recurrent-offpolicy-2026-10-27/corrected-profile-readiness.json)
-records exact input/start acceptance and an unchanged ledger hash.
+records the earlier prepared-state input/start acceptance.
+[Completed-run evidence](../results/recurrent-offpolicy-2026-10-30/run.json) records
+the approved execution; the old stopped attempt and claim remain preserved.
 
 The user-supplied operating rule prohibits automatic restart after a budget stop.
 [Colab operations](colab.md) says: “It never automatically restarts after a budget
@@ -74,7 +78,8 @@ its matching persisted ledger review; either record alone is insufficient.
 
 The agent must not invent approval text or execute this authorization command
 solely because the prepared task exists. The configured review is a proposal,
-not evidence that the user approved it. No authorization command has run yet.
+not evidence that the user approved it. The authorization command ran only after the user explicitly said “approve the
+profile.” Its persisted review preserves the original charges and stopped attempt.
 
 ## Allocation, acceptance and failure
 
@@ -98,10 +103,29 @@ part of the shared project charge.
 
 ## Independent longer-runtime foundation
 
-While approval remains pending, opt-in budget/controller support for the later
-6/3/2-hour CPU proposal is implemented and tested. Existing plans keep the
+Opt-in budget/controller support for the later
+6/3/2-hour CPU proposal was implemented and tested before the corrected profile. Existing plans keep the
 original two-hour default. The longer API requires explicit per-task duration
 slots and persisted account protection; completed slots cannot become automatic
 retries. No registered task opts into that API yet. This work does not broaden
 this review's20-minute profile scope, modify the original study envelope, clear
 the stop or authorize any performance training.
+
+## Accepted corrected-profile result — 2026-10-30
+
+Session `rl-stocks-cpu-1b35c54f7de7`, clean738a573, actual default Python3.13.18,
+CPU AVX2. The complete engineering task finished in548.72 seconds including
+setup, retrieval and verified shutdown. Native finite-gradient/weight audits and
+physical restoration validate64 GRU-SAC updates,64 SAC updates and3,000 PPO
+transitions/600 Adam steps. Full CPU/source/data/report completion evidence passes.
+A CLI reply timeout was recovered by retrieval/probing the same worker; no restart.
+
+Required allocation projections, including reserves, are4.67h GRU-SAC,1.95h SAC
+and1.21h RecurrentPPO. The original two-hour three-arm performance plan still
+fails because of GRU-SAC. A separately admitted longer-CPU execution plan is
+required; the approved engineering profile does not itself authorize it.
+
+All scientific models/reports/inputs and both attempts remain retained. Verified
+duplicate staging cleanup removed45,795,864 bytes;53 protected files are unchanged.
+See the dated [result directory](../results/recurrent-offpolicy-2026-10-30/README.md)
+for measured/estimated charging, exact timings and cleanup evidence.

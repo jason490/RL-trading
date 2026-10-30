@@ -1,0 +1,20 @@
+{
+  "physical_profile_accepted": true,
+  "verification": [
+    {
+      "algorithm": "recurrent_comparison_profile",
+      "seed": 11,
+      "actual_steps": 512,
+      "bundle_id": "e58c9e16ccc7e2e8d8d04fe1be94620f0f862f360dfdb6fbd7e0a3e7673a8741",
+      "status": "complete",
+      "saved_artifacts_verified": true,
+      "profile_projection_passed": false,
+      "performance_interpretation_allowed": false
+    }
+  ],
+  "artifact_sha256": "070f787b6c7b11e0925d6e5adf2a3b3cd181843588229f8240db21ddb73f50fd",
+  "session": "rl-stocks-cpu-1b35c54f7de7",
+  "source_revision": "738a573a08d7474c5664af160201ae4d21185835",
+  "no_100k_training": true,
+  "retired_test_access": false
+}

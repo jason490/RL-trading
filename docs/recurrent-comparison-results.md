@@ -10,9 +10,9 @@ exists yet; implementation tests use labelled synthetic orchestration fixtures
 and separately tested physical checkpoint verification.
 
 The [research protocol](recurrent-sac-comparison.md) owns model/data/gate settings.
-The [execution review](recurrent-execution-review.md) owns the pending permission
-for a corrected engineering profile. This reporting command does not bypass that
-permission or admit performance training.
+The [execution review](recurrent-execution-review.md) owns the explicit approval and completed
+corrected engineering profile. This reporting command does not admit performance
+training or alter its budget.
 
 ## Input manifest
 

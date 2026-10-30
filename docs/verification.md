@@ -1,10 +1,26 @@
-# Verification and milestone status — 2026-10-19
+# Verification and milestone status
 
 The project targets **Python 3.13**, matching Colab's current interpreter family.
-The local acceptance environment is **3.13.16**. The verified A100 image
+The local acceptance environment is **3.13.16**. The previously verified A100 image
 reported **3.13.15**; its research environment uses that same interpreter. Patch
 versions can vary by runtime image and are recorded in artifacts. No broker
 orders have been submitted. `plan.html` is preserved.
+
+## Current recurrent-profile evidence — 2026-10-30
+
+The user-approved corrected CPU engineering profile from clean738a573 ran on
+Colab Python3.13.18.64 GRU-SAC updates,64 native SAC updates and3,000 PPO
+transitions/600 Adam steps pass full retained-archive verification. Owned shutdown
+is verified, with complete models/reports/replay retained. The CLI reply timeout
+was recovered without restarting the worker. The first failed attempt remains
+unaccepted and preserved; the corrected profile supplies separate complete evidence.
+
+This does not establish model quality. The original two-hour100k comparison
+projection still fails for GRU-SAC (4.67h; SAC1.95h/PPO1.21h). No100k comparison,
+confirmation or prospective result exists. See
+[accepted profile evidence](../results/recurrent-offpolicy-2026-10-30/README.md)
+for exact charging, identities, checksums, cleanup and limitations. Earlier
+verification snapshots below retain their original dates and scope.
 
 ## Checks actually performed
 

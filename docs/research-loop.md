@@ -6,15 +6,16 @@ RecurrentPPO baseline returns19.62% selected/18.48% final, policy-update guard
 Treasury26.51%/−4.56%, VIX, GAE and prior failed families remain closed; retired
 2024+ test data stays unopened. See the compact result directories for evidence.
 
-Current execution frontier: the first recurrent-SAC full-panel CPU profile was
-deadline-stopped; owned cleanup verified, original claim/stop retained. Last
-settled project39.54822735/150, account348.58idle. No accepted full profile or
-100k comparison exists. Full-cell training/verification are implemented offline;
-longer CPU execution remains under review. The prepared corrected CPU profile
-requires explicit user authorization; no authorization or allocation exists. Read the compact
-[comparison guide](recurrent-sac-comparison.md) and
-[profile record](../results/recurrent-offpolicy-2026-10-27/comparison-profile-run.json)
-before traversing historical entries. No retired interval or failed family reopened.
+Current execution frontier (2026-10-30): the explicitly approved corrected CPU
+profile is physically accepted; owned shutdown verified, account idle. Last
+settled project39.56191720/150, account348.58. No100k comparison
+exists. GRU-SAC requires4.67h under the accepted projection, SAC1.95h/PPO1.21h;
+the original two-hour three-arm plan remains blocked on GRU runtime. Longer
+CPU6/3/2h planning is not yet admitted. The original deadline-stopped attempt,
+claim and integrity stops remain; no outstanding approval is needed for the
+already completed profile. Read the compact [guide](recurrent-sac-comparison.md)
+and [accepted profile](../results/recurrent-offpolicy-2026-10-30/README.md) before
+historical entries. Retired data and failed performance families remain closed.
 
 CrossQ [fixed protocol](../configs/experiments/crossq_comparison_preregistration.json)
 compares native small64×64 SAC/CrossQ packages on original26-symbol data. Delay,
@@ -2547,3 +2548,13 @@ completed slots cannot be reused as retries. CLI execution follows a declared
 long duration instead of the legacy90-minute preference. Aggregate billing and
 original150/130 project limits unchanged. No task plan opts in, no ledger stop
 cleared, no allocation. Corrected-profile approval remains pending.
+
+### Approved corrected CPU profile accepted — 2026-10-30
+
+Clean738a573/defaultPython3.13.18/CPU AVX2;548.72s inclusive,64 GRU/SAC updates
+and PPO3,000 transitions/600 Adam steps physically restored. Completion/source/
+data/replay/report/timing verification passes. CLI reply timeout recovered on
+same worker; no restart. Owned cleanup verified.45.8MB duplicate staging removed,
+53 scientific/input/old-attempt files unchanged. Accepted projections4.67/1.95/1.21h
+require later long-CPU admission; no100k/performance finding. Explicit review and
+old charges/claims/stops retained. See dated accepted-profile results for credits.

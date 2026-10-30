@@ -200,7 +200,7 @@ working-deadline teardown and verified cleanup are unchanged.
 
 This is infrastructure support only. A long performance task still needs a
 registered execution plan, accepted physical profiling, cost admission and
-role/seed claims. The corrected20-minute profile is awaiting explicit user
+role/seed claims. The corrected20-minute profile subsequently completed after explicit user
 approval under the [review process](recurrent-execution-review.md); it neither
-uses longer mode nor admits100k training. No new session was allocated while
+used longer mode nor admitted100k training. No session was allocated while
 implementing this foundation.

@@ -2989,3 +2989,15 @@ completed slots cannot be reused as retries. CLI execution follows a declared
 long duration instead of the legacy90-minute preference. Aggregate billing and
 original150/130 project limits unchanged. No task plan opts in, no ledger stop
 cleared, no allocation. Corrected-profile approval remains pending.
+
+### User-approved corrected profile physically accepted — 2026-10-30
+
+Explicit approval recorded; clean738a573/defaultPython3.13.18/CPU AVX2 completed
+in548.72s including setup/retrieval/verified shutdown.64 GRU/SAC updates and
+3,000 PPO transitions/600 Adam steps restore with complete kernel/source/data/
+report/timing acceptance. CLI reply timeout recovered without worker restart.
+Accepted100k projections4.67h GRU/1.95h SAC/1.21h PPO leave the original two-hour
+comparison blocked for GRU; future6/3/2h execution remains unadmitted. No model
+performance finding or retired data access. All science retained;45.8MB duplicate
+upload removed with805 matching members/53 protected files unchanged. See
+[dated results](results/recurrent-offpolicy-2026-10-30/README.md) for exact credits.

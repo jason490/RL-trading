@@ -9,8 +9,10 @@ SAC replay improves both checkpoint selection and end-of-run performance.
 
 The fixed100k training worker and full-cell verifier are implemented with offline
 untrained/contract checks. No actual100k result exists. The first Colab profile
-was deadline-stopped and remains incomplete; allocation is still gated on a
-reviewed execution plan and physical acceptance.
+was deadline-stopped and remains incomplete. The user-approved corrected profile
+is physically accepted with owned shutdown verified. Full100k allocation still
+requires a separate longer-CPU execution plan; the original two-hour plan fails
+for GRU-SAC.
 
 The fixed source of truth is
 [recurrent_sac_comparison.json](../configs/experiments/recurrent_sac_comparison.json).
@@ -20,7 +22,7 @@ The protocol validator, timing projections, post-update checkpoint helper and
 synthetic gate tests are implemented. Portable initialization assets now pass actual local construction/restoration
 acceptance; a guarded Colab profiling worker is implemented, with dedicated fleet admission and downloaded-artifact verification implemented;
 physical Colab acceptance remains
-required before performance allocation. No full comparison has run yet. The first actual CPU profile was deadline-stopped; see the final section for evidence and current allocation block.
+required before performance allocation. No full comparison has run yet. The first actual CPU profile was deadline-stopped; the corrected profile is accepted. See the latest sections for evidence and current performance-allocation limits.
 
 ## Fixed data and controls
 
@@ -382,7 +384,8 @@ corrected CPU profile gets20 minutes including420 seconds teardown reserve,
 sharing the original0.1-unit profiling allowance. It preserves the original
 baseline, claim, stop and two-unit study cap; it admits no100k task. Actual input
 preflight passes while the original ledger remains byte-for-byte unchanged and
-stopped. User authorization is pending; no new session has been provisioned.
+stopped. The user approved this scoped profile on2026-10-30; it completed with physical
+acceptance and verified cleanup. No100k task was included.
 See [execution review](recurrent-execution-review.md) for scope and commands.
 
 ## Offline matrix acceptance command
@@ -392,7 +395,7 @@ implemented. They require physical cell verification, unchanged passing seed11
 receipt/artifacts before confirmation, fixed gates and prospective requirements.
 Selected/final stock/ETF means, incremental curves and individual-stock excess
 are retained without duplicating full paths. See [results guide](recurrent-comparison-results.md).
-No actual100k matrix exists; the corrected profile still awaits explicit approval.
+No actual100k matrix exists; the corrected profile is now accepted; full execution admission remains pending.
 
 ## Longer-runtime budget foundation
 
@@ -401,4 +404,25 @@ support the costed6/3/2-hour CPU proposal. Default plans stay capped at two hour
 longer mode requires a complete duration plan and the original account/project
 protections. Completed duration slots cannot be reused as retries. No long-run
 task plan or allocation is enabled. Physical profile acceptance and separate
-execution admission remain required; corrected-profile approval is still pending.
+execution admission remain required; corrected-profile approval and physical acceptance are complete. Full execution
+admission remains pending.
+
+## Corrected profile physically accepted — 2026-10-30
+
+The approved corrected CPU profile from clean738a573/defaultPython3.13.18
+completed in548.72s inclusive.64 GRU-SAC updates,64 native SAC updates and
+3,000 PPO transitions/600 Adam steps restore with actual finite moments and
+fixed effective settings. Full reports, replay, source/start/data/kernel evidence
+and timing/projection identities pass independent retained-archive verification.
+Owned session1b35c54f7de7 stopped; the CLI reply timeout did not restart training.
+
+Accepted100k required allocations: GRU-SAC4.67h, SAC1.95h and RecurrentPPO1.21h.
+The original two-hour gate remains false for the complete comparison; no100k
+training or performance selection occurred. Costed6/3/2h CPU planning remains
+separate. Latest report/archive I/O maxima improve to15.26s from32.74s in the
+incomplete first profile, while counting early recovery publication. This is
+execution evidence, not improved trading returns.
+
+Scientific artifacts and old stops/claims remain.45.8MB duplicate upload removed
+after805 member comparisons;53 protected files unchanged. See
+[dated results](../results/recurrent-offpolicy-2026-10-30/README.md).

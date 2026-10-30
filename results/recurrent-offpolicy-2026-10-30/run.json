@@ -1,0 +1,54 @@
+{
+  "status": "complete_physically_verified",
+  "session": "rl-stocks-cpu-1b35c54f7de7",
+  "fleet": "rl-stocks-fleet-87f03a0fa24b",
+  "source_revision": "738a573a08d7474c5664af160201ae4d21185835",
+  "python": [
+    3,
+    13,
+    18
+  ],
+  "hardware": "CPU",
+  "started_utc": "2026-10-30T16:09:53.732782+00:00",
+  "ended_utc": "2026-10-30T16:19:02.449877+00:00",
+  "inclusive_seconds": 548.7170946598053,
+  "physical_profile_accepted": true,
+  "original_two_hour_projection_passed": false,
+  "required_allocation_hours": {
+    "gru_sac": 4.668635226012015,
+    "native_sac": 1.9542471955989533,
+    "recurrent_ppo_reference": 1.2054611888916713
+  },
+  "actual_counts": {
+    "candidate_updates": 64,
+    "native_sac_updates": 64,
+    "recurrent_ppo_transitions": 3000,
+    "recurrent_ppo_adam_steps": 600
+  },
+  "project_units": 39.5619171984759,
+  "remaining_project_units": 110.4380828015241,
+  "measured_rounded_debit": 0.0,
+  "estimated_units": 0.01368984864089224,
+  "charged_units": 0.01368984864089224,
+  "shared_profile_consumption": 0.02578124537799198,
+  "shared_profile_cap": 0.1,
+  "account_balance": 348.58,
+  "account_usage_rate": 0.0,
+  "active_assignments": 0,
+  "cleanup_verified": true,
+  "budget_stopped": false,
+  "no_100k_training": true,
+  "performance_interpretation_allowed": false,
+  "cli_reply_timeout_recovered": true,
+  "worker_restarted": false,
+  "artifacts": ".runtime/recurrent-corrected-profile-source-v1/artifacts/colab/rl-stocks-cpu-1b35c54f7de7/retrieved/artifacts",
+  "archive_sha256": "070f787b6c7b11e0925d6e5adf2a3b3cd181843588229f8240db21ddb73f50fd",
+  "old_attempt_claim_preserved": true,
+  "original_crossq_stop_sha256": "22103a286096312455be6f01f3c42ff13aae20a89be5b400a3ad9e997acdd718",
+  "proposed_later_cpu_deadline_hours": {
+    "gru_sac": 6,
+    "native_sac": 3,
+    "recurrent_ppo_reference": 2
+  },
+  "later_execution_admitted": false
+}
