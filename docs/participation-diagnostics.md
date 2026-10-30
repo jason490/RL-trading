@@ -1,5 +1,44 @@
 # Saved-path participation and cost diagnosis
 
+Latest completed-control evidence (2026-10-30): see the
+[SAC/RecurrentPPO saved-path audit](../results/recurrent-offpolicy-2026-10-30/control-path-diagnostics.json).
+Both100k controls passed physical artifact acceptance and verified owned shutdown;
+GRU remains active and the full three-role gate is pending. The older studies
+below remain historical evidence, not new matched controls.
+
+| Control and phase | Net excess vs holding | Incremental cost drag | Saved-path non-cost excess |
+| --- | ---: | ---: | ---: |
+| SAC selected10k | +1.71pp | 4.30pp | +6.01pp |
+| SAC final100k | −0.59pp | 3.20pp | +2.61pp |
+| RecurrentPPO selected40k | −8.79pp | 4.68pp | −4.11pp |
+| RecurrentPPO final100k | −12.12pp | 5.93pp | −6.19pp |
+
+SAC's2.30pp selected-to-final decline occurs despite1.10pp lower incremental
+cost drag. Its saved-path non-cost excess falls3.40pp. RecurrentPPO's3.33pp
+decline combines1.24pp higher cost drag with2.08pp worse non-cost excess.
+These are accounting identities on different saved trajectories, not causal
+explanations of learning dynamics or predictions of a cost-free strategy.
+
+At session end, SAC final positions are long94.33%/short0.90%/flat4.78%;
+RecurrentPPO89.11%/5.97%/4.91%, averaged equally across the26 episodes. Final
+long/short return contributions are28.64/+1.37pp for SAC and21.03/−2.55pp for
+RecurrentPPO. These contributions already include costs; do not subtract those
+costs again. End-of-session fractions differ from intraday touched fractions.
+
+Observed final sub5%-equity resize fees/impact average only0.0074pp for SAC and
+0.0245pp for RecurrentPPO. This does not support treating a small resize deadband
+as sufficient to close the observed gaps. Protecting positions and honoring the
+20-session holding limit remain required. No reward, fill rule, checkpoint or
+model changes follow automatically from this descriptive audit.
+
+The audit reuses `reporting.participation.diagnose_groups` on each accepted
+`selected-validation.json` and `final-validation.json`, with stocks equal to
+their symbol set minus SPY/QQQ/IWM/DIA. It verifies all26 complete2021–2023
+paths, matched baselines, cost categories and long+short/equity reconciliation.
+The retained JSON binds report SHA256s and accepted artifact inventory IDs,
+keeps stock/ETF group means and labels the add-back interpretation explicitly.
+It opens no provider, model, optimizer, retired-test data or training process.
+
 Inspect already completed development reports before another training change.
 `reporting/participation.py` reuses the existing behavior summary and reconciles
 reported costs against fees, adverse impact, borrow and side-specific costs.

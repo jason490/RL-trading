@@ -142,3 +142,17 @@ architecture and update contracts differ. GRU-SAC remains active; the full matri
 gate is still pending, confirmation seeds unallocated, retired data closed.
 Shared project usage was39.79/150 around cleanup; the remaining CPU reports0.08
 units/hour. All large scientific artifacts remain durably retrieved.
+
+## Completed-control behavior diagnosis
+
+[Saved-path diagnostics](control-path-diagnostics.json) reconcile all26 reports
+for both phases of both accepted controls; report hashes and accepted inventory
+IDs are retained. SAC's2.30pp selected-to-final decline occurs while incremental
+cost drag falls1.10pp, so higher costs do not explain that decline. RecurrentPPO's
+3.33pp decline combines1.24pp higher cost drag and2.08pp worse saved-path non-cost
+excess. Final session-end inventories remain predominantly long; short net return
+contributes+1.37pp for SAC and−2.55pp for RecurrentPPO. Sub5%-equity resize fees/
+impact are only0.0074/0.0245pp. These identities do not establish why optimization
+learned these policies or estimate a cost-free counterfactual. See the
+[category guide](../../docs/participation-diagnostics.md) for definitions and limits.
+No new selection, training, reward or execution changes; GRU remains active.

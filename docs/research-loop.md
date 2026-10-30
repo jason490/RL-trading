@@ -21,6 +21,10 @@ RecurrentPPO100k is also physically accepted and stopped with cleanup verified:
 21.81% selected40k/18.48% final; final stocks21.77%, ETFs0.43%, both below holding.
 GRU continues alone; its acceptance, cleanup and the fixed matrix gate remain
 pending. Project usage around39.79/150; remaining CPU rate0.08. No confirmation seeds.
+[Completed-control path diagnosis](../results/recurrent-offpolicy-2026-10-30/control-path-diagnostics.json)
+reconciles all four phases: SAC's selected-to-final drop accompanies lower costs;
+RecurrentPPO worsens in both cost drag and non-cost excess. These descriptive
+identities do not establish an optimizer cause or authorize a family rescue.
 See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
 [execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
 claim and integrity stops remain; no outstanding approval is needed for the
