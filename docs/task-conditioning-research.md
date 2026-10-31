@@ -128,3 +128,32 @@ Implement and test the versioned type/routing contract and machine-readable
 protocol, then integrate it with existing metered Colab workers. No dependency
 change, new source data, profile approval, ledger reset or runtime is required
 for that engineering work. The overall performance goal remains unachieved.
+
+## Implemented policy and observation foundation
+
+`rl/sac/task_policy.py` now provides `TaskSACPolicy(task_role=...)` for the three
+roles. Routing occurs only in the actor mean/log-standard-deviation linear heads
+and the final scalar head of each critic; both64-layer trunks still see the tag.
+Each second head is a deepcopy without RNG consumption. SB3 creates the actor
+and critic optimizers after those heads exist and copies both critic groups into
+the target. Distribution/log-probability, losses, target updates and automatic
+entropy remain SB3 responsibilities. This class is opt-in; the ordinary factory
+and previous saved policies are unchanged.
+
+`environment/observations/task.py` provides `InstrumentTypeObservation`. It
+appends the tag after the underlying21-value observation, using copied immutable
+records with symbol, stock/ETF kind, source and known-from date. Every episode
+must have classification available by its first session. Unknown/duplicate
+symbols, missing provenance, malformed input and within-episode symbol changes
+reject. A provided source string is an evidence reference, not independent proof:
+production provenance still requires an audited classification manifest. The
+wrapper never fetches classifications or silently infers missing types.
+
+No-grad tests cover shared/routed initial outputs, identical RNG continuation,
+masked/tagged initial tensors, both target critics, mixed-batch actor/critic
+routing, bad replay tags, optimizer parameter ownership, standalone policy
+save/load and wrapper provenance/immutability. These are engineering checks,
+not actual replay-collection, gradient-update or frozen-bundle acceptance.
+Production manifest, machine-readable protocol, factory/frozen-bundle integration,
+Colab workers and actual optimizer smoke remain pending. Do not train this
+foundation by bypassing those gates.
