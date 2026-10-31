@@ -3164,3 +3164,13 @@ index/primary operations; original/master dates and fund-type anchors verified.
 QQQQ alias and IWM bank-source/issuer distinction retained.33 cached exact stock
 hints and these dated observations do not yet admit the complete111-symbol
 historical metadata. No Colab credits/training/test access; source hashes retained.
+
+### Deterministic stock source sequence and preserved stop — 2026-10-31
+
+Master audit finds105/107 eligible filing candidates,69 needing selected primary
+HTML. Batches0–3 completed32 primary files; stopped batch4 retained three more
+before NEE joint-filer URL rejection.90,366,834 source bytes retained; no primary
+request for rejected NEE, no later batch or retry. Official master confirms both
+registrants share the accession; explicit joint-filer resolution/reviewed resume
+remains next. All declared protected inputs/ledger unchanged; no training/credits.
+ABBV/DIS event/predecessor candidates located but not admitted.

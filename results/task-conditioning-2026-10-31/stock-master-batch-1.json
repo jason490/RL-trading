@@ -1,0 +1,521 @@
+{
+  "schema": "task-stock-master-batch-v1",
+  "batch": 1,
+  "cases": [
+    {
+      "symbol": "CVX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "93410"
+      ],
+      "eligible_ciks": [
+        "93410"
+      ],
+      "master_record": {
+        "cik": "93410",
+        "company_name": "CHEVRON CORP",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-016846",
+        "filing_directory_cik": "93410",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/93410/0000950123-10-016846.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000095012310016846/0000950123-10-016846-index.htm",
+          "sha256": "2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21",
+          "bytes": 27466,
+          "retrieved_utc": "2026-10-31T18:20:52.284525+00:00",
+          "accession": "0000950123-10-016846",
+          "cik": "93410",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 12:56:14",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000095012310016846/f54086e10vk.htm",
+          "sha256": "5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367",
+          "bytes": 2130992,
+          "retrieved_utc": "2026-10-31T18:20:55.368873+00:00",
+          "accession": "0000950123-10-016846",
+          "cik": "93410",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "DE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "315189"
+      ],
+      "eligible_ciks": [
+        "315189"
+      ],
+      "master_record": {
+        "cik": "315189",
+        "company_name": "DEERE & CO",
+        "form": "10-K",
+        "filed": "2009-12-17",
+        "accession": "0001104659-09-070344",
+        "filing_directory_cik": "315189",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/315189/0001104659-09-070344.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909070344/0001104659-09-070344-index.htm",
+          "sha256": "70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d",
+          "bytes": 12133,
+          "retrieved_utc": "2026-10-31T18:20:57.533045+00:00",
+          "accession": "0001104659-09-070344",
+          "cik": "315189",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2009-12-17",
+        "accepted_source": "2009-12-17 10:42:28",
+        "availability": {
+          "available_time": "2009-12-21T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909070344/a09-32005_110k.htm",
+          "sha256": "06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04",
+          "bytes": 3728702,
+          "retrieved_utc": "2026-10-31T18:21:01.141299+00:00",
+          "accession": "0001104659-09-070344",
+          "cik": "315189",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "DVN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1090012"
+      ],
+      "eligible_ciks": [
+        "1090012"
+      ],
+      "master_record": {
+        "cik": "1090012",
+        "company_name": "DEVON ENERGY CORP/DE",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-017093",
+        "filing_directory_cik": "1090012",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1090012/0000950123-10-017093.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012310017093/0000950123-10-017093-index.htm",
+          "sha256": "40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d",
+          "bytes": 17889,
+          "retrieved_utc": "2026-10-31T18:21:03.287700+00:00",
+          "accession": "0000950123-10-017093",
+          "cik": "1090012",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 16:31:44",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012310017093/d71091e10vk.htm",
+          "sha256": "82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f",
+          "bytes": 2793184,
+          "retrieved_utc": "2026-10-31T18:21:05.769404+00:00",
+          "accession": "0000950123-10-017093",
+          "cik": "1090012",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "ECL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "31462"
+      ],
+      "eligible_ciks": [
+        "31462"
+      ],
+      "master_record": {
+        "cik": "31462",
+        "company_name": "ECOLAB INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001104659-10-010302",
+        "filing_directory_cik": "31462",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/31462/0001104659-10-010302.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/31462/000110465910010302/0001104659-10-010302-index.htm",
+          "sha256": "8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099",
+          "bytes": 16189,
+          "retrieved_utc": "2026-10-31T18:21:07.933350+00:00",
+          "accession": "0001104659-10-010302",
+          "cik": "31462",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 16:38:17",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/31462/000110465910010302/a09-36096_110k.htm",
+          "sha256": "66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264",
+          "bytes": 798686,
+          "retrieved_utc": "2026-10-31T18:21:10.766803+00:00",
+          "accession": "0001104659-10-010302",
+          "cik": "31462",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "EOG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "821189"
+      ],
+      "eligible_ciks": [
+        "821189"
+      ],
+      "master_record": {
+        "cik": "821189",
+        "company_name": "EOG RESOURCES INC",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000821189-10-000011",
+        "filing_directory_cik": "821189",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/821189/0000821189-10-000011.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/821189/000082118910000011/0000821189-10-000011-index.htm",
+          "sha256": "0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4",
+          "bytes": 14016,
+          "retrieved_utc": "2026-10-31T18:21:12.895786+00:00",
+          "accession": "0000821189-10-000011",
+          "cik": "821189",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 17:10:39",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/821189/000082118910000011/form10-k.htm",
+          "sha256": "1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe",
+          "bytes": 1328264,
+          "retrieved_utc": "2026-10-31T18:21:17.519212+00:00",
+          "accession": "0000821189-10-000011",
+          "cik": "821189",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "EQIX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1101239"
+      ],
+      "eligible_ciks": [
+        "1101239"
+      ],
+      "master_record": {
+        "cik": "1101239",
+        "company_name": "EQUINIX INC",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0001193125-10-036420",
+        "filing_directory_cik": "1101239",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1101239/0001193125-10-036420.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000119312510036420/0001193125-10-036420-index.htm",
+          "sha256": "1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1",
+          "bytes": 9023,
+          "retrieved_utc": "2026-10-31T18:21:19.861484+00:00",
+          "accession": "0001193125-10-036420",
+          "cik": "1101239",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-22",
+        "accepted_source": "2010-02-22 16:35:52",
+        "availability": {
+          "available_time": "2010-02-24T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000119312510036420/d10k.htm",
+          "sha256": "4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a",
+          "bytes": 2100076,
+          "retrieved_utc": "2026-10-31T18:21:22.446172+00:00",
+          "accession": "0001193125-10-036420",
+          "cik": "1101239",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "FCX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "831259"
+      ],
+      "eligible_ciks": [
+        "831259"
+      ],
+      "master_record": {
+        "cik": "831259",
+        "company_name": "FREEPORT MCMORAN COPPER & GOLD INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000831259-10-000010",
+        "filing_directory_cik": "831259",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/831259/0000831259-10-000010.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/831259/000083125910000010/0000831259-10-000010-index.htm",
+          "sha256": "1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936",
+          "bytes": 21694,
+          "retrieved_utc": "2026-10-31T18:21:24.646185+00:00",
+          "accession": "0000831259-10-000010",
+          "cik": "831259",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 15:12:35",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/831259/000083125910000010/fcx123109-10k.htm",
+          "sha256": "7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f",
+          "bytes": 9419778,
+          "retrieved_utc": "2026-10-31T18:21:28.974058+00:00",
+          "accession": "0000831259-10-000010",
+          "cik": "831259",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "GE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "40545"
+      ],
+      "eligible_ciks": [
+        "40545"
+      ],
+      "master_record": {
+        "cik": "40545",
+        "company_name": "GENERAL ELECTRIC CO",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0000040545-10-000010",
+        "filing_directory_cik": "40545",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/40545/0000040545-10-000010.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054510000010/0000040545-10-000010-index.htm",
+          "sha256": "00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200",
+          "bytes": 14367,
+          "retrieved_utc": "2026-10-31T18:21:31.199018+00:00",
+          "accession": "0000040545-10-000010",
+          "cik": "40545",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-19",
+        "accepted_source": "2010-02-19 17:16:21",
+        "availability": {
+          "available_time": "2010-02-23T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054510000010/frm10k.htm",
+          "sha256": "0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9",
+          "bytes": 10337969,
+          "retrieved_utc": "2026-10-31T18:21:35.549589+00:00",
+          "accession": "0000040545-10-000010",
+          "cik": "40545",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    }
+  ],
+  "selection_sha256": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/stock-master-selection.json": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+    "/home/vibe/projects/rl-stocks/scripts/collect_task_stock_batch.py": "6f8617092f3cbbb023114616e6eca242bfb127a41e0e2f4f2000e50ccb3c5d19",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "src/rl_stocks/data/providers/sec/html_source.py": "0cf10b6c4f7a9403fbacaba6535c482ec03d6ad25a883a4a273b63fea6127ba9",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "8eca64069bfed8068bba6ca9da0d77bf43f3a4666776949d3eba28df15b2144a",
+    "src/rl_stocks/data/providers/sec/lineage.py": "0bb12384d7cc7a95b4784860b8f96e5ba5c7621bfc8d5617811b9a3aff1bd74d",
+    "scripts/review_task_type_covers.py": "c99c94dd7b5cc1dd714a30807752df88d1159b7b9c6eb8f462cc65843bd14999"
+  },
+  "maximum_acquisition_operations": 16,
+  "acquisition_operations_attempted": 16,
+  "automatic_retry": false,
+  "historical_metadata_admitted": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "model_inputs_enabled": false,
+  "status": "complete",
+  "protected_sources_unchanged": true
+}

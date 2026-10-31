@@ -1,0 +1,36 @@
+{
+  "schema": "task-missing-stock-source-discovery-v1",
+  "records": [
+    {
+      "symbol": "ABBV",
+      "candidate_cik": "1551152",
+      "form": "8-K",
+      "filed": "2013-01-02",
+      "accession": "0001047469-13-000017",
+      "submission_path": "edgar/data/1551152/0001047469-13-000017.txt",
+      "source_quarter": "2013q1",
+      "reason": "First public-company/spinoff event candidate predates first training session2013-03-14"
+    },
+    {
+      "symbol": "DIS",
+      "candidate_cik": "1001039",
+      "form": "10-K",
+      "filed": "2009-12-02",
+      "accession": "0001193125-09-245848",
+      "submission_path": "edgar/data/1001039/0001193125-09-245848.txt",
+      "source_quarter": "2009q4",
+      "reason": "Historical Walt Disney registrant; current-CIK discovery1744489 did not cover this earlier issuer"
+    }
+  ],
+  "master_archive_sha256": {
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/archive.zip": "446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/archive.zip": "e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+  },
+  "historical_identity_verified": false,
+  "historical_metadata_admitted": false,
+  "network_requests": 0,
+  "training_performed": false,
+  "colab_allocated": false,
+  "selection_only": true
+}

@@ -102,3 +102,26 @@ availability2010-01-29/2010-01-28/2010-03-02/2009-11-02. QQQ's source ticker is
 QQQQ. IWM's source is a bank424B2, so source registrant19617 is not an IWM issuer
 mapping. All original/master/code/ledger hashes remain unchanged. No historical
 interval admission, fitting, new Colab credits or retired-test access.
+
+## Master-source sequence stopped with evidence retained
+
+The deterministic master selector finds105/107 earlier financial-filing candidates:
+36 already have relevant document observations,69 need selected primary HTML,
+and ABBV/DIS need the separately located event/predecessor candidates.
+[Source plan](stock-master-selection.json) remains unchanged.
+
+Batches0–3 completed32 primaries; batch4 retained MLM/MRK/MSFT then stopped on
+NEE's cross-directory joint-filer link before its primary request. Batches5–8
+never started. Original global stop and per-batch claims remain; no retry or
+Colab allocation. Attempts retained90,366,834 bytes; complete32-document
+[hints](stock-master-complete-batch-hints.json) contain28 cover/13 ticker hints,
+and the stopped batch has separately labeled [partial hints](stock-master-batch-4-retained-hints.json).
+
+[NEE source inspection](nee-joint-filer-inspection.json) confirms official master
+records for both FPL Group753308 and Florida Power & Light37634 under the same
+accession; the original index points its primary to37634. Strict endpoint binding
+rejected this legitimate joint-filer case. It remains a recorded failed attempt,
+pending an explicit verified joint-filer resolution and reviewed resume, not a
+license for arbitrary cross-CIK links. All declared protected files/ledger remain
+unchanged; project usage39.92585919/150. Model results and metadata admission are
+unchanged.

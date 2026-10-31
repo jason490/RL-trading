@@ -67,7 +67,12 @@ ticker clause; ABT/AEP remain partial. AEP's original EX-13 adds a NYSE
 common-stock statement. Four fund sources now provide dated type observations,
 retaining QQQQ alias and IWM bank-source limits. All classifications remain
 unadmitted until
-[historical source review](instrument-type-evidence.md) is complete. No performance allocation yet. Primary-source
+[historical source review](instrument-type-evidence.md) is complete. The fixed
+master sequence completed32 primary documents plus three partial-batch documents,
+then stopped on NEE's joint-filer primary directory. Both official registrants
+share the accession; strict URL authority rejected before the primary request.
+Original stop/claims persist, no retry or later batches. Next verify an explicit
+joint-filer resolution before any separately recorded reviewed resume. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
 interference and reward-scale causes remain unproven. This is design admission,
 not an executable profile or permission to reopen the closed recurrent family.

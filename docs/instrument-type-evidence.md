@@ -243,3 +243,33 @@ explicit complete batches sharing the original selection digest. It rejects
 repeated symbols, partial source records or changed hashes. Review against the
 original document is still required. Remaining batches1–8 follow the original
 fixed69-source plan; any failed batch stops the sequence without automatic retry.
+
+## Stopped master-source sequence and joint-filer cause
+
+Batches0–3 completed32 primary documents; batch4 retained MLM/MRK/MSFT before
+stopping at NEE's index resolution. No batch5–8 started, no operation was retried,
+and the global stop/individual claims remain.35 complete index/primary pairs plus
+the failed case's index retain90,366,834 bytes across these attempts. All declared
+protected source and cumulative usage-ledger hashes remain unchanged.
+
+[Complete-batch hints](../results/task-conditioning-2026-10-31/stock-master-complete-batch-hints.json)
+find28 cover hints and13 literal ticker hints across32 documents.
+[Partial-batch hints](../results/task-conditioning-2026-10-31/stock-master-batch-4-retained-hints.json)
+cover only the three retrieved documents, explicitly retaining the stopped/partial
+status; they do not accept the batch. No classification was admitted.
+
+[Joint-filer inspection](../results/task-conditioning-2026-10-31/nee-joint-filer-inspection.json)
+identifies a deterministic endpoint-authority mismatch, not an access rejection.
+The retained original NEE index was requested under FPL Group CIK753308, but its
+sequence1 primary link uses Florida Power & Light CIK37634. Both appear under the
+same10-K accession in the official master. The strict resolver rejected the link
+before issuing the primary request. A future explicit joint-filer resolver must
+verify both records against immutable master bytes, preserve the failed attempt
+and use a separately recorded reviewed resume. Do not loosen arbitrary-CIK URL
+checks or clear the existing stop to repeat the old batch automatically.
+
+The [two missing-source candidates](../results/task-conditioning-2026-10-31/missing-stock-source-candidates.json)
+are now located in cached masters: ABBV's January2,2013 spinoff8-K and an older
+Disney CIK1001039 annual filing from December2,2009. These are source selections,
+not verified historical identity links; neither original primary has been
+collected or substituted into the111-symbol metadata manifest by this discovery.

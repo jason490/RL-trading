@@ -1,0 +1,102 @@
+{
+  "schema": "task-stopped-batch-retained-hints-v1",
+  "failed_collection_sha256": "5484ceaf0e0e0cc155d1c072e4bf315284aa93ba1b955593c464f004451cda0a",
+  "collection_status": "stopped",
+  "source_stop_preserved": true,
+  "records": [
+    {
+      "symbol": "MLM",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310018035/g22182e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 15:16:41",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+        "expected_symbol": "MLM",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "Symbol: MLM",
+          "position": 102156,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange (\u201cNYSE\u201d) (Symbol: MLM). Information concerning stock prices and dividends paid is included"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "MRK",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/y81622e10vk.htm",
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-03-01 07:33:21",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+        "expected_symbol": "MRK",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509158735/d10k.htm",
+      "publication": {
+        "filed": "2009-07-30",
+        "accepted_source": "2009-07-30 06:05:07",
+        "availability": {
+          "available_time": "2009-08-03T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+        "expected_symbol": "MSFT",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol MSFT",
+          "position": 82449,
+          "nearby_common_equity": true,
+          "review_excerpt": "traded on the NASDAQ Stock Market under the symbol MSFT. On July 27, 2009, there were 142,468 registered"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    }
+  ],
+  "partial": true,
+  "complete_batch_acceptance": false,
+  "historical_metadata_admitted": false,
+  "network_requests": 0,
+  "training_performed": false,
+  "colab_allocated": false
+}

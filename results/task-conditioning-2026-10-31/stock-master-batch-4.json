@@ -1,0 +1,357 @@
+{
+  "schema": "task-stock-master-batch-v1",
+  "batch": 4,
+  "cases": [
+    {
+      "symbol": "MLM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "916076"
+      ],
+      "eligible_ciks": [
+        "916076"
+      ],
+      "master_record": {
+        "cik": "916076",
+        "company_name": "MARTIN MARIETTA MATERIALS INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018035",
+        "filing_directory_cik": "916076",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/916076/0000950123-10-018035.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310018035/0000950123-10-018035-index.htm",
+          "sha256": "9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0",
+          "bytes": 14246,
+          "retrieved_utc": "2026-10-31T18:22:59.966747+00:00",
+          "accession": "0000950123-10-018035",
+          "cik": "916076",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 15:16:41",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310018035/g22182e10vk.htm",
+          "sha256": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+          "bytes": 384488,
+          "retrieved_utc": "2026-10-31T18:23:02.279432+00:00",
+          "accession": "0000950123-10-018035",
+          "cik": "916076",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "MRK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "310158"
+      ],
+      "eligible_ciks": [
+        "310158"
+      ],
+      "master_record": {
+        "cik": "310158",
+        "company_name": "Merck & Co. Inc.",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0000950123-10-018679",
+        "filing_directory_cik": "310158",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/310158/0000950123-10-018679.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/0000950123-10-018679-index.htm",
+          "sha256": "593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7",
+          "bytes": 16608,
+          "retrieved_utc": "2026-10-31T18:23:04.375289+00:00",
+          "accession": "0000950123-10-018679",
+          "cik": "310158",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-03-01 07:33:21",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/y81622e10vk.htm",
+          "sha256": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+          "bytes": 2805954,
+          "retrieved_utc": "2026-10-31T18:23:06.944602+00:00",
+          "accession": "0000950123-10-018679",
+          "cik": "310158",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "789019"
+      ],
+      "eligible_ciks": [
+        "789019"
+      ],
+      "master_record": {
+        "cik": "789019",
+        "company_name": "MICROSOFT CORP",
+        "form": "10-K",
+        "filed": "2009-07-30",
+        "accession": "0001193125-09-158735",
+        "filing_directory_cik": "789019",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/789019/0001193125-09-158735.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509158735/0001193125-09-158735-index.htm",
+          "sha256": "aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f",
+          "bytes": 9361,
+          "retrieved_utc": "2026-10-31T18:23:09.046986+00:00",
+          "accession": "0001193125-09-158735",
+          "cik": "789019",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2009-07-30",
+        "accepted_source": "2009-07-30 06:05:07",
+        "availability": {
+          "available_time": "2009-08-03T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509158735/d10k.htm",
+          "sha256": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+          "bytes": 1301404,
+          "retrieved_utc": "2026-10-31T18:23:11.669663+00:00",
+          "accession": "0001193125-09-158735",
+          "cik": "789019",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "NEE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "753308"
+      ],
+      "eligible_ciks": [
+        "753308"
+      ],
+      "master_record": {
+        "cik": "753308",
+        "company_name": "FPL GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000753308-10-000025",
+        "filing_directory_cik": "753308",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/753308/0000753308-10-000025.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "index_started",
+      "index": {
+        "path": "data/raw/sec-filings/eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330810000025/0000753308-10-000025-index.htm",
+          "sha256": "eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5",
+          "bytes": 19460,
+          "retrieved_utc": "2026-10-31T18:23:13.910853+00:00",
+          "accession": "0000753308-10-000025",
+          "cik": "753308",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 14:59:17",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      }
+    },
+    {
+      "symbol": "NEM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1164727"
+      ],
+      "eligible_ciks": [
+        "1164727"
+      ],
+      "master_record": {
+        "cik": "1164727",
+        "company_name": "NEWMONT MINING CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-016613",
+        "filing_directory_cik": "1164727",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1164727/0000950123-10-016613.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "not_attempted"
+    },
+    {
+      "symbol": "NKE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "320187"
+      ],
+      "eligible_ciks": [
+        "320187"
+      ],
+      "master_record": {
+        "cik": "320187",
+        "company_name": "NIKE INC",
+        "form": "10-K",
+        "filed": "2009-07-27",
+        "accession": "0001193125-09-155951",
+        "filing_directory_cik": "320187",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/320187/0001193125-09-155951.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "not_attempted"
+    },
+    {
+      "symbol": "NVDA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045810"
+      ],
+      "eligible_ciks": [
+        "1045810"
+      ],
+      "master_record": {
+        "cik": "1045810",
+        "company_name": "NVIDIA CORP",
+        "form": "10-Q",
+        "filed": "2009-11-19",
+        "accession": "0001045810-09-000036",
+        "filing_directory_cik": "1045810",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1045810/0001045810-09-000036.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "not_attempted"
+    },
+    {
+      "symbol": "O",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "726728"
+      ],
+      "eligible_ciks": [
+        "726728"
+      ],
+      "master_record": {
+        "cik": "726728",
+        "company_name": "REALTY INCOME CORP",
+        "form": "10-K",
+        "filed": "2010-02-11",
+        "accession": "0000726728-10-000017",
+        "filing_directory_cik": "726728",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/726728/0000726728-10-000017.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "status": "not_attempted"
+    }
+  ],
+  "selection_sha256": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/stock-master-selection.json": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+    "/home/vibe/projects/rl-stocks/scripts/collect_task_stock_batch.py": "6f8617092f3cbbb023114616e6eca242bfb127a41e0e2f4f2000e50ccb3c5d19",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "src/rl_stocks/data/providers/sec/html_source.py": "0cf10b6c4f7a9403fbacaba6535c482ec03d6ad25a883a4a273b63fea6127ba9",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "8eca64069bfed8068bba6ca9da0d77bf43f3a4666776949d3eba28df15b2144a",
+    "src/rl_stocks/data/providers/sec/lineage.py": "0bb12384d7cc7a95b4784860b8f96e5ba5c7621bfc8d5617811b9a3aff1bd74d",
+    "scripts/review_task_type_covers.py": "c99c94dd7b5cc1dd714a30807752df88d1159b7b9c6eb8f462cc65843bd14999"
+  },
+  "maximum_acquisition_operations": 16,
+  "acquisition_operations_attempted": 7,
+  "automatic_retry": false,
+  "historical_metadata_admitted": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "model_inputs_enabled": false,
+  "status": "stopped",
+  "error_type": "ValueError",
+  "error": "filing endpoint differs from declared identity",
+  "protected_sources_unchanged": true
+}
