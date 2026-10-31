@@ -48,3 +48,15 @@ def test_wrong_member_and_corrupt_bytes_reject(tmp_path):
     path,sha=archive(tmp_path,[])
     with pytest.raises(ValueError,match='checksum'):
         read_master(path,'0'*64,{'1'})
+
+
+def test_fund_forms_require_explicit_scope_and_preserve_stock_default(tmp_path):
+    rows = ['1|Fund|485BPOS|2010-01-20|edgar/data/1/0000000001-10-000001.txt',
+            '1|Fund|485BPOS|2024-01-20|edgar/data/1/0000000001-24-000001.txt']
+    path, sha = archive(tmp_path, rows)
+    assert not read_master(path, sha, {'1'})['records']
+    explicit = read_master(path, sha, {'1'}, forms={'485BPOS'})
+    assert len(explicit['records']) == 1
+    assert explicit['retired_selected_rows_excluded'] == 1
+    with pytest.raises(ValueError, match='scope'):
+        read_master(path, sha, {'1'}, forms={'UNKNOWN'})

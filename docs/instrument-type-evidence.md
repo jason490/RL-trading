@@ -149,3 +149,18 @@ Next review original incorporated market sections/exhibits for ABT/AEP and other
 unresolved records, using a separately bounded source selection. Do not treat a
 company abbreviation or a compound/drug name containing a ticker as a market
 symbol statement. Preserve failed/partial evidence and earlier collection claims.
+
+## Historical fund source scope
+
+The master-index reader now accepts an explicit restricted fund/424B2 form scope;
+its default10-K/10-Q behavior is unchanged. Retired metadata exclusions, safe
+paths, joint-filer identity and source hashes remain enforced. This does not add
+fund reports to any existing financial feature ledger.
+
+`collect_task_fund_sources.py` fixes four pre-training accessions against retained
+2009q4/2010q1 master bytes: SPY/QQQ/DIA fund485BPOS registrations and a2009 bank
+424B2 describing IWM. The IWM source is a bank's dated derivative filing, not an
+iShares registrant filing; its issuer must never be assigned to IWM. Both the
+original index and explicitly typed primary HTML are collected, at most eight
+operations, with one durable claim and stop-on-failure/no-retry behavior. Source
+selection/collection alone does not verify the fund statements or admit metadata.

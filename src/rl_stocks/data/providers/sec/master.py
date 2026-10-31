@@ -6,10 +6,14 @@ from datetime import date
 from pathlib import Path
 from zipfile import ZipFile
 
-FORMS = {'10-K', '10-Q', '10-K/A', '10-Q/A'}
+FORMS = frozenset({'10-K', '10-Q', '10-K/A', '10-Q/A'})
+TYPE_EVIDENCE_FORMS = frozenset({'485BPOS', '497', 'N-CSR', 'N-CSRS', '424B2'})
 
 
-def read_master(path, expected_sha256, candidate_ciks):
+def read_master(path, expected_sha256, candidate_ciks, *, forms=None):
+    selected_forms = FORMS if forms is None else frozenset(forms)
+    if not selected_forms or not selected_forms <= FORMS | TYPE_EVIDENCE_FORMS:
+        raise ValueError('explicit supported master form scope required')
     path = Path(path)
     if path.stat().st_size > 10_000_000:
         raise ValueError('compressed master limit exceeded')
@@ -35,7 +39,7 @@ def read_master(path, expected_sha256, candidate_ciks):
                     raise ValueError('malformed master row')
                 source_rows += 1
                 cik, name, form, filed, filename = (f.strip() for f in fields)
-                if cik not in candidate_ciks or form not in FORMS:
+                if cik not in candidate_ciks or form not in selected_forms:
                     continue
                 if not re.fullmatch(r'[1-9][0-9]{0,9}', cik):
                     raise ValueError('valid registrant CIK required')
