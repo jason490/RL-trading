@@ -139,3 +139,36 @@ def test_actual_actor_and_both_critics_route_and_reject_bad_replay_tags():
         invalid[1, -1] = float('nan')
         with pytest.raises(ValueError, match='nonfinite'):
             model.actor(invalid)
+
+
+def test_task_factory_model_save_and_replay_tags(tmp_path, monkeypatch):
+    import gymnasium as gym
+    from stable_baselines3 import SAC
+    from rl_stocks.rl.sac.task_factory import create_task_sac
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError('local optimization prohibited')
+
+    monkeypatch.setattr(SAC, 'learn', forbidden)
+    monkeypatch.setattr(SAC, 'train', forbidden)
+    monkeypatch.setattr(torch.optim.Adam, 'step', forbidden)
+
+    class Fixture(gym.Env):
+        observation_space = spaces.Box(-np.inf, np.inf, (22,), dtype=np.float32)
+        action_space = spaces.Box(-1, 1, (4,), dtype=np.float32)
+        task_role = 'tagged_routed'
+
+    model = create_task_sac(Fixture(), task_role='tagged_routed', smoke=True)
+    x = observations().numpy()
+    action, _ = model.predict(x, deterministic=True)
+    for i in range(4):
+        model.replay_buffer.add(x[i:i+1], x[i:i+1], action[i:i+1],
+                                np.array([0.]), np.array([False]), [{}])
+    assert np.array_equal(model.replay_buffer.observations[:4, 0, -1], x[:, -1])
+    path = tmp_path / 'model.zip'
+    model.save(path)
+    restored = SAC.load(path)
+    assert restored.policy.task_role == 'tagged_routed'
+    assert np.array_equal(action, restored.predict(x, deterministic=True)[0])
+    with pytest.raises(ValueError, match='role mismatch'):
+        create_task_sac(Fixture(), task_role='masked_shared')

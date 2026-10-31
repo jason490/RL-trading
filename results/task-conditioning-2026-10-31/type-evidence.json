@@ -1,0 +1,688 @@
+{
+  "schema": "task-type-evidence-audit-v1",
+  "dataset_identity": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "universe_sha256": "90b35be646ee45bd9315913bd7957085c039caf5e1a60f4d86f5a73ce01f5da1",
+  "records": [
+    {
+      "symbol": "AAPL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ABBV",
+      "kind": "stock",
+      "first_training_session": "2013-03-14",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ABT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ADBE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "AEP",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "AMGN",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "AMT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "AMZN",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "APA",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "APD",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "AXP",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "BA",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "BAC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "BLK",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "BMY",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "C",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "CAT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "CL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "CMCSA",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "COP",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "COST",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "CSCO",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "CVX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "D",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "DE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "DIA",
+      "kind": "etf",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "DIS",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "DUK",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "DVN",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ECL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ED",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "EOG",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "EQIX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "EXC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "F",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "FCX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "GD",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "GE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "GILD",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "GOOGL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "GS",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "HAL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "HD",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "HON",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "HSY",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "IBM",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "INTC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "IWM",
+      "kind": "etf",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "JNJ",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "JPM",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "KMB",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "KO",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "KR",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "LIN",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "LLY",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "LMT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "LOW",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "MCD",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "MDLZ",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "MLM",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "MRK",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "MS",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "MSFT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "NEE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "NEM",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "NFLX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "NKE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "NUE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "NVDA",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "O",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "OMC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ORCL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "OXY",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PEG",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PEP",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PFE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PG",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PLD",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PNC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PPG",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "PSA",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "QCOM",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "QQQ",
+      "kind": "etf",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "ROST",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "RTX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SBUX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SHW",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SLB",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SO",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SPG",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SPY",
+      "kind": "etf",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "SRE",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "T",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "TGT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "TJX",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "TMUS",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "TTWO",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "TXN",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "UNH",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "UNP",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "UPS",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "USB",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "VLO",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "VMC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "VTR",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "VZ",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "WELL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "WFC",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "WMT",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "XEL",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    },
+    {
+      "symbol": "XOM",
+      "kind": "stock",
+      "first_training_session": "2010-03-16",
+      "historical_evidence_verified": false
+    }
+  ],
+  "stocks": 107,
+  "etfs": 4,
+  "historical_metadata_admitted": false,
+  "reason": "Snapshot universe kind lacks per-symbol historical availability evidence; no known_from date inferred",
+  "training_performed": false,
+  "development_evaluated": false,
+  "test_evaluated": false,
+  "colab_allocated": false,
+  "protected_sha256": {
+    "data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "configs/experiments/task_conditioning.json": "346768087d99ed115405ebace58c55766a7ebd66c4e5013c3a7d64650c7643bb",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6"
+  },
+  "protected_sources_unchanged": true
+}

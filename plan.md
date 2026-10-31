@@ -3100,3 +3100,13 @@ masked/tagged/routed SAC comparison requires versioned type provenance, matched
 initialization and training-only admission before development. Implementation,
 actual Colab smoke/profile and all performance evidence remain pending; no
 allocation or ledger change. Closed families and retired tests remain closed.
+
+### Task-conditioning protocol and metadata audit — 2026-10-31
+
+Pinned masked/tagged/routed SAC protocol and opt-in factory implemented. Untrained
+full-model save/load and replay-tag tests pass without local optimizer calls.
+Actual cached audit confirms107 stocks/four ETFs, exact source identities and
+unchanged ledger. Historical classification evidence remains unadmitted; no
+dates invented from retrospective metadata. Frozen/runtime integration and actual
+Colab smoke/profile/screens remain pending. See
+[preflight evidence](results/task-conditioning-2026-10-31/README.md).

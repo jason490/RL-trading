@@ -157,3 +157,29 @@ not actual replay-collection, gradient-update or frozen-bundle acceptance.
 Production manifest, machine-readable protocol, factory/frozen-bundle integration,
 Colab workers and actual optimizer smoke remain pending. Do not train this
 foundation by bypassing those gates.
+
+## Fixed protocol, factory and cached audit
+
+The [machine-readable protocol](../configs/experiments/task_conditioning.json)
+is now pinned by canonical SHA256
+`4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8`.
+It fixes checkpoint selection to the earliest strict maximum on the original26
+training-window return curve, evaluated every10k; selected/final development
+scores are read only after the final training gate passes. This avoids introducing
+another checkpoint search on repeatedly inspected development years. Smokes retain
+64x64 geometry and use batch64/warmup64; screens use batch256/warmup1000.
+
+`rl/sac/task_factory.py:create_task_sac` is opt-in and validates wrapper/policy
+role agreement. Ordinary algorithm construction remains unchanged. Full untrained
+SAC model save/load and explicit replay-tag retention pass without optimizer calls.
+`training/task_conditioning.py` pins protocol bytes and rejects unreviewed,
+wrong-universe, snapshot-only or late historical type evidence at admission.
+A source reference and reviewed flag require actual review; structural validation
+cannot independently establish the truth of an external historical document.
+
+The [cached audit](../results/task-conditioning-2026-10-31/README.md) confirms
+107 stocks/four ETFs and immutable data/normalizer/ledger bytes, but historical
+metadata is **not admitted**. Do not turn first observed training dates into
+classification availability dates. Complete primary-source historical evidence,
+frozen-bundle/worker integration and actual Colab optimizer/profile acceptance
+before any performance screen. No new credits were used by this audit.
