@@ -6,6 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
+| Completed recurrent off-policy screen | [final result](../results/recurrent-offpolicy-2026-10-31/README.md) | Accepted100k artifacts, failed fixed performance gate, retained dashboard, shared charges and verified cleanup |
 | Measured recurrent CPU execution | [recurrent-cpu-screen.md](recurrent-cpu-screen.md) | Accepted profile, fixed100k seed11 roles, measured deadlines, shared allowance and asynchronous artifact verification |
 | CrossQ implementation feasibility | [crossq-feasibility.md](crossq-feasibility.md) | Untrained installed-source, geometry, normalization, optimizer/replay and serialization audit before fixed algorithm research |
 | Project operating guidance | [project-guidance.md](project-guidance.md) | Research requirements, agent workflow, runtime policies and primary references |

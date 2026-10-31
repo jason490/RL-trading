@@ -1,44 +1,49 @@
 # Bounded autonomous research
 
-Current frontier (2026-10-27): no robust/prospective winner. The recent matched
-RecurrentPPO baseline returns19.62% selected/18.48% final, policy-update guard
-28.07%/24.44%, versus holding30.60% on reused2021–2023 development data.
-Treasury26.51%/−4.56%, VIX, GAE and prior failed families remain closed; retired
-2024+ test data stays unopened. See the compact result directories for evidence.
+Current frontier (2026-10-31): no robust/prospective winner. The fixed100k
+seed11 GRU-SAC/SAC/RecurrentPPO matrix is physically accepted, its performance
+gate failed, and this family is closed. No confirmation seeds23/37, extra steps,
+indicator/reward/width rescue grid or checkpoint reselection. Retired2024+ stays
+closed. Read the [complete result](../results/recurrent-offpolicy-2026-10-31/README.md)
+and [fixed gate receipt](../results/recurrent-offpolicy-2026-10-31/acceptance.json)
+before historical entries.
 
-Current execution frontier (2026-10-30): the explicitly approved corrected CPU
-profile is physically accepted; that owned session was stopped and verified.
-Project usage is about39.70/150 during the active screen. No complete three-role
-100k comparison exists. GRU-SAC requires4.67h under the accepted projection, SAC1.95h/PPO1.21h;
-the original two-hour three-arm plan remains blocked on GRU runtime. Longer
-CPU6/3/2h execution now has a fixed, tested runner with physical-profile and
-original-ledger admission. The fixed seed11 screen is now running under fleet
-`rl-stocks-fleet-ab359d85d517`, source4a85618, two concurrent CPU slots and
-actual defaultPython3.13.18. NativeSAC100k is physically accepted, session stopped
-and cleanup verified:32.31% selected10k/30.01% final versus holding30.60%.
-Final stocks32.70% versus32.63%, ETFs15.25% versus19.47%; no robust winner.
-RecurrentPPO100k is also physically accepted and stopped with cleanup verified:
-21.81% selected40k/18.48% final; final stocks21.77%, ETFs0.43%, both below holding.
-GRU continues alone; its acceptance, cleanup and the fixed matrix gate remain
-pending. Project usage around39.79/150; remaining CPU rate0.08. No confirmation seeds.
+| Package | Selected development | Final100k development |
+| --- | ---: | ---: |
+| GRU-SAC |31.28% (10k)|12.92%|
+| SAC |32.31% (10k)|30.01%|
+| RecurrentPPO |21.81% (40k)|18.48%|
+| Matched holding |30.60%|30.60%|
+
+These are mean net total returns on reused2021–2023 separate-symbol episodes,
+not annualized/portfolio/prospective results. Native SAC is strongest here but
+still misses ETF/median-stock comparability. Earlier guard28.07%/24.44%, Treasury,
+VIX, GAE and other failed families remain closed; no control is automatically
+promoted from this failed screen.
+
+All three owned sessions under `rl-stocks-fleet-ab359d85d517` are stopped and
+verified; actual source4a85618/defaultPython3.13.18/CPU. Account348.27, rate0,
+assignments0; project39.92585919/150, remaining110.07414081. Conservative screen
+charge0.36394199 versus measured0.31; original study including both profiles
+0.38972324/2, baseline preserved.137.45MB duplicate uploads removed with scientific
+artifacts retained. See [run](../results/recurrent-offpolicy-2026-10-31/run.json)
+and [cleanup](../results/recurrent-offpolicy-2026-10-31/cleanup.json).
+
 [Completed-control path diagnosis](../results/recurrent-offpolicy-2026-10-30/control-path-diagnostics.json)
-reconciles all four phases: SAC's selected-to-final drop accompanies lower costs;
-RecurrentPPO worsens in both cost drag and non-cost excess. These descriptive
-identities do not establish an optimizer cause or authorize a family rescue.
-Completed-control duplicate uploads were removed after1,628 member matches and
-96 protected-file checks;91.6MB reclaimed. Scientific artifacts and the active
-GRU upload remain; [cleanup receipt](../results/recurrent-offpolicy-2026-10-30/completed-control-cleanup.json).
-[Read-only identity audit](../results/recurrent-offpolicy-2026-10-30/ppo-historical-identity.json)
-matches new RecurrentPPO final tensors and complete Adam state to old full-history
-control on the same dataset. Reuse that final fitted-period evidence; no new
-seed/replay/confirmation. New selected40k post-update differs from old selected80k
-pre-update, so higher selected return is not improved100k learning.
-See [launch record](../results/recurrent-offpolicy-2026-10-30/screen-launch.json) and the
-[execution guide](recurrent-cpu-screen.md). The original deadline-stopped attempt,
-claim and integrity stops remain; no outstanding approval is needed for the
-already completed profile. Read the compact [guide](recurrent-sac-comparison.md)
-and [accepted profile](../results/recurrent-offpolicy-2026-10-30/README.md) before
-historical entries. Retired data and failed performance families remain closed.
+shows SAC's selected-to-final drop despite lower cost drag; RecurrentPPO worsens
+in both cost drag and saved-path non-cost excess. These identities do not prove
+an optimizer cause. The [identity audit](../results/recurrent-offpolicy-2026-10-30/ppo-historical-identity.json)
+matches new RecurrentPPO final tensors/complete Adam state to the old full-history
+control on the same dataset: reuse that final fitted-period evidence, without
+counting a new seed/replay/confirmation. New selected40k post-update differs from
+old selected80k pre-update. Higher selected return is not improved100k learning.
+
+Next bounded research: a separately fixed inference-only fitted-period diagnosis
+for new GRU/SAC selected/final states, then require training-only justification
+before any different performance hypothesis. Do not repeat identical PPO-final
+inference. Do not reopen this family or retired test. The broader improvement
+goal remains active; no new allocation is currently owned. Original profile
+attempts, claims and CrossQ integrity stop remain preserved.
 
 CrossQ [fixed protocol](../configs/experiments/crossq_comparison_preregistration.json)
 compares native small64×64 SAC/CrossQ packages on original26-symbol data. Delay,

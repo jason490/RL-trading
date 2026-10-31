@@ -1,6 +1,12 @@
 # Measured CPU comparison execution
 
-The corrected Colab profile is accepted; see the [dated evidence](../results/recurrent-offpolicy-2026-10-30/README.md). Version43 prepares the fixed seed11 comparison of GRU-SAC, native SAC and RecurrentPPO. Implementation is available; no100k performance result has been produced by this change.
+Version43 completed the fixed seed11 GRU-SAC/SAC/RecurrentPPO comparison. All100k
+cells passed physical artifact acceptance and verified owned shutdown, but the
+performance gate failed. The family is closed without confirmation allocation.
+See the [final result](../results/recurrent-offpolicy-2026-10-31/README.md).
+The procedures below document the completed execution; retained role claims and
+closure must not be removed to rerun it. The accepted
+[engineering profile](../results/recurrent-offpolicy-2026-10-30/README.md) remains preserved.
 
 ## Admission and duration
 
@@ -55,7 +61,7 @@ Final archives use an exact bounded allowlist before model loading. Full checkpo
 
 ## Verification recorded with implementation
 
-The focused recurrent comparison, remote dispatch, acceptance, artifact, job-plan and fleet suites passed100 tests. New checks cover immutable role/seed settings, original budget preservation, per-role claims, hostile/incomplete transport rejection before loading, and deferred serialized verification. A separate read-only physical recheck of the actual accepted profile archive passed for all three new deadlines; it still reports the original two-hour projection as failing. New modules pass Ruff; `plan.html` remains unchanged. Full100k saved-cell acceptance awaits actual Colab runs.
+The focused recurrent comparison, remote dispatch, acceptance, artifact, job-plan and fleet suites passed100 tests. New checks cover immutable role/seed settings, original budget preservation, per-role claims, hostile/incomplete transport rejection before loading, and deferred serialized verification. A separate read-only physical recheck of the actual accepted profile archive passed for all three new deadlines; it still reports the original two-hour projection as failing. New modules pass Ruff; `plan.html` remains unchanged. Actual100k physical cell and complete matrix acceptance now pass; the predefined performance gate fails.
 
 The later compact-status feature passed20 status/screen/fleet/budget tests and
 Ruff, and was exercised against the running screen's downloaded snapshots.

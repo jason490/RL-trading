@@ -1,0 +1,61 @@
+{
+  "actual_python": "3.13.18",
+  "all_owned_cleanup_verified": true,
+  "cells": {
+    "gru_sac": {
+      "archive": "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-708d90e39b64/artifacts.tar.gz",
+      "archive_sha256": "e7983b5e2bc8c3d6c11cd7b86b3f447cdafceeed3e3c9b8462dc2f6096a9dc7a",
+      "artifact_inventory_sha256": "38657d545ace559c56d14e43e1a0daffa343f39c7663d88ae0265f5de3314692",
+      "cleanup_verified": true,
+      "duration_seconds": 10337.145780563354,
+      "session": "rl-stocks-cpu-708d90e39b64"
+    },
+    "native_sac": {
+      "archive": "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/artifacts.tar.gz",
+      "archive_sha256": "fd681652552dab2814d8596bbb1a691655cf5c1889c6a6c15e40494511629bb1",
+      "artifact_inventory_sha256": "cdb333228c94a6fbc5e8d7439756e0dd2b0da9cd9096fb8489444a70ca232afd",
+      "cleanup_verified": true,
+      "duration_seconds": 2931.6966876983643,
+      "session": "rl-stocks-cpu-025e19b898e4"
+    },
+    "recurrent_ppo_reference": {
+      "archive": "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-a34e2ec70439/artifacts.tar.gz",
+      "archive_sha256": "9262f089264ac6804d7cd7151aa1e4b158bb5570c4ee63ea4208727a5a1c5331",
+      "artifact_inventory_sha256": "664dcdaa9e44e64c4711a403a3a54977281338c88c8c12bdd07b41e7104c998a",
+      "cleanup_verified": true,
+      "duration_seconds": 1765.2121558189392,
+      "session": "rl-stocks-cpu-a34e2ec70439"
+    }
+  },
+  "confirmation_allocated": false,
+  "fleet": "rl-stocks-fleet-ab359d85d517",
+  "hardware": "CPU",
+  "last_idle_account_balance": 348.27,
+  "minimum_account_balance": 150,
+  "objective_achieved": false,
+  "observed_at": "2026-10-31T17:02:39.883797+00:00",
+  "original_study_cap": 2,
+  "original_study_start_units": 39.53613595309791,
+  "project_remaining_units": 110.07414080872928,
+  "project_units": 39.92585919127071,
+  "screen_charged_units": 0.3639419927948051,
+  "screen_estimated_units": 0.3639419927948051,
+  "screen_measured_units": 0.3100000000000023,
+  "source_hash": "c61990aae25a4062635343e71afb8c3a85de695b3233c68d78273475bb0742a6",
+  "source_revision": "4a85618111350178ac4018a66d701ae6556d9d34",
+  "total_study_units": 0.38972323817279886,
+  "project_unit_ceiling": 150,
+  "project_teardown_threshold": 130,
+  "account_teardown_balance": 170,
+  "last_idle_usage_rate": 0.0,
+  "last_idle_assignments": 0,
+  "dashboard": {
+    "path": "artifacts/recurrent-screen-acceptance-v1/comparison.html",
+    "sha256": "a4955d092353bcd7866d6140af6a975bb9e69f04cfeb069891da38c858efd755",
+    "bytes": 4780176
+  },
+  "scientific_status": "complete physical acceptance; failed performance gate; family closed",
+  "execution_started_at": "2026-10-30T16:44:54.116225+00:00",
+  "execution_stopped_at": "2026-10-30T19:37:12.639326+00:00",
+  "inclusive_fleet_seconds": 10338.523101091385
+}

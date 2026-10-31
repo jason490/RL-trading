@@ -1,0 +1,10 @@
+{
+  "removed_gru_upload_bytes": 45816761,
+  "gru_duplicate_members_verified": 814,
+  "protected_files_unchanged": 139,
+  "total_screen_upload_bytes_removed": 137450298,
+  "all_scientific_models_reports_inputs_archives_retained": true,
+  "shared_ledger_and_original_claims_unchanged": true,
+  "all_owned_sessions_stopped_verified": true,
+  "per_member_audit": ".runtime/recurrent-gru-upload-cleanup-v1.json"
+}

@@ -3033,3 +3033,16 @@ stopped and cleanup verified. Selected40k21.81%/final18.48% versus holding30.60%
 final stocks21.77% versus32.63%, ETFs0.43% versus19.47%. GRU remains active; full
 matrix gate pending, no confirmation allocation or retired-test access. See
 [accepted receipt](results/recurrent-offpolicy-2026-10-30/recurrent-ppo-100k.json).
+
+### Full recurrent off-policy screen accepted; performance gate failed — 2026-10-31
+
+All three100k cells and the complete matrix pass physical acceptance. GRU-SAC
+selected31.28%/final12.92%, SAC32.31%/30.01%, RecurrentPPO21.81%/18.48%, holding
+30.60%. Candidate control/absolute/median gates fail; family closed without
+confirmation seeds, extensions or rescue grids. All owned sessions stopped and
+verified; account348.27/rate0/assignments0. Conservative screen charge0.36394199,
+project39.92585919/150; original study including profiles0.38972324/2 retained.
+137.45MB duplicate uploads removed; science, dataset, starts, claims and shared
+ledger retained. Standalone dashboard generated, retired test unopened. No
+robust/prospective winner; broader research remains active. See
+[complete evidence](results/recurrent-offpolicy-2026-10-31/README.md).

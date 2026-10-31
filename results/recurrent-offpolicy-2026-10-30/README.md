@@ -1,5 +1,10 @@
 # Accepted corrected recurrent-SAC engineering profile — 2026-10-30
 
+Latest outcome: the complete100k screen is accepted physically but fails its
+performance gate; all owned sessions are stopped and verified. See the
+[final comparison and dashboard location](../recurrent-offpolicy-2026-10-31/README.md).
+The profile and intermediate observations below preserve the execution history.
+
 The explicitly approved CPU profile completed and its full retrieved archive
 passes physical verification. It does not establish trading performance or
 complete the100k comparison.

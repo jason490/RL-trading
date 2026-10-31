@@ -2,17 +2,19 @@
 
 ## Status and purpose
 
-The replay-only and fresh-environment Colab smokes passed. They validate learning,
-restoration and reporting mechanics; they do not establish trading quality.
-The next performance hypothesis is that independent observation memory plus
-SAC replay improves both checkpoint selection and end-of-run performance.
+The fixed100k seed11 comparison completed and passed physical artifact acceptance,
+but failed its predefined performance gate. GRU-SAC returns31.28% selected/12.92%
+final; SAC32.31%/30.01%; RecurrentPPO21.81%/18.48%, versus holding30.60% on reused
+2021–2023 development episodes. No candidate is promoted. This fixed family is
+closed without confirmation seeds, extra steps or rescue grids. All owned
+sessions were stopped and shutdown verified. See the
+[complete result and dashboard location](../results/recurrent-offpolicy-2026-10-31/README.md).
 
-The fixed100k training worker and full-cell verifier are implemented with offline
-untrained/contract checks. No actual100k result exists. The first Colab profile
-was deadline-stopped and remains incomplete. The user-approved corrected profile
-is physically accepted with owned shutdown verified. Full100k allocation still
-requires a separate longer-CPU execution plan; the original two-hour plan fails
-for GRU-SAC.
+The replay/environment smokes and corrected profile remain engineering evidence.
+The original deadline-stopped profile stays preserved. Subsequent measured CPU
+6/3/2h ceilings admitted the completed screen; the original two-hour GRU runtime
+failure was not rewritten. The remaining sections preserve implementation
+history and the unchanged scientific contract.
 
 The fixed source of truth is
 [recurrent_sac_comparison.json](../configs/experiments/recurrent_sac_comparison.json).
@@ -21,8 +23,9 @@ Its canonical digest is
 The protocol validator, timing projections, post-update checkpoint helper and
 synthetic gate tests are implemented. Portable initialization assets now pass actual local construction/restoration
 acceptance; a guarded Colab profiling worker is implemented, with dedicated fleet admission and downloaded-artifact verification implemented;
-physical Colab acceptance remains
-required before performance allocation. No full comparison has run yet. The first actual CPU profile was deadline-stopped; the corrected profile is accepted. See the latest sections for evidence and current performance-allocation limits.
+physical Colab acceptance has now completed for the profile and all three100k
+cells. The performance gate remains failed; engineering acceptance does not
+authorize promotion or another allocation for this closed family.
 
 ## Fixed data and controls
 
