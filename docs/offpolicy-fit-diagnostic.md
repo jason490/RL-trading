@@ -65,7 +65,19 @@ MPLCONFIGDIR="$PWD/.runtime/matplotlib" PYTHONPATH=src \
 ```
 
 Implementation checks passed34 focused tests and Ruff before actual replay.
-No model fitting occurred in those checks. Actual saved-policy replay is pending
-at this implementation milestone. Project usage remains39.92585919/150; all owned
+No model fitting occurred in those checks. Actual saved-policy replay is complete
+as recorded below. Project usage remains39.92585919/150; all owned
 Colab sessions are stopped. See [fitted-period methodology](training-fit-diagnostic.md)
 and [saved-path diagnosis](participation-diagnostics.md) for definitions.
+
+## Actual replay completed
+
+The four accepted states each complete26 episodes/19,136 rows. All80 protected
+source files and four complete policy/optimizer/alpha/counter fingerprints,
+frozen actors and normalization remain unchanged; holding paths match exactly.
+No fitting, provider, test access or Colab allocation. All four descriptive flags
+fail. GRU selected/final fitted means42.66/44.86%, SAC28.59/57.64%, holding56.45%.
+GRU final ETFs61.28% beat47.15% holding, while stocks41.88% trail58.15%; SAC final
+stocks62.78% beat58.15%, while ETFs29.35% trail47.15%. Median stock excess remains
+below−2pp for every state. Fitted gains alongside development declines are not a
+sole-cause diagnosis. Read the [complete evidence](../results/recurrent-offpolicy-fit-2026-10-31/README.md).

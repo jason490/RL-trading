@@ -38,13 +38,21 @@ control on the same dataset: reuse that final fitted-period evidence, without
 counting a new seed/replay/confirmation. New selected40k post-update differs from
 old selected80k pre-update. Higher selected return is not improved100k learning.
 
-Next bounded research: the [fixed inference-only fitted-period diagnosis](offpolicy-fit-diagnostic.md)
-for new GRU/SAC selected/final states is implemented with34 focused checks and
-no-optimization guards; actual replay follows committed protocol/source. Then require training-only justification
-before any different performance hypothesis. Do not repeat identical PPO-final
-inference. Do not reopen this family or retired test. The broader improvement
-goal remains active; no new allocation is currently owned. Original profile
-attempts, claims and CrossQ integrity stop remain preserved.
+The [fixed fitted replay](../results/recurrent-offpolicy-fit-2026-10-31/README.md)
+is complete:104 episodes/76,544 rows, all four descriptive flags fail;80 source
+hashes and all weight/optimizer/alpha/counter/normalizer fingerprints unchanged.
+GRU selected/final fitted means42.66/44.86%, SAC28.59/57.64%, holding56.45%.
+GRU final ETFs outperform fitted holding but stocks lag; SAC final stocks beat
+holding while ETFs and median stocks fail. Fitted improvements with development
+declines do not prove a sole optimizer cause. No new Colab charge or model fitting.
+
+Next bounded research: characterize fixed training-only feasible reference
+policies under unchanged four-action/cost/protection/holding constraints before
+another learned hypothesis. Commit a separate bounded diagnostic; no future-label
+direction choice, development tuning or simulation-rule change. Do not repeat
+identical PPO-final inference, reopen this family or access retired test. The
+broader goal remains active; no allocation is owned. Original profile attempts,
+claims and CrossQ integrity stop remain preserved.
 
 CrossQ [fixed protocol](../configs/experiments/crossq_comparison_preregistration.json)
 compares native small64×64 SAC/CrossQ packages on original26-symbol data. Delay,

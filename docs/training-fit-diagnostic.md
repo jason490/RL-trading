@@ -1,5 +1,12 @@
 # Fitted-period policy diagnosis
 
+Latest actual replay (2026-10-31): all four new GRU/SAC selected/final states
+complete the original26-symbol window without fitting or state/source changes.
+All four descriptive comparability flags fail despite fitted mean gains from
+selected to final. See [off-policy evidence](../results/recurrent-offpolicy-fit-2026-10-31/README.md)
+and [method](offpolicy-fit-diagnostic.md). This does not reopen the failed family
+or establish a single optimizer/capacity/generalization cause.
+
 Latest reuse audit (2026-10-30): the new100k RecurrentPPO reference exactly
 matches the retained full-history final policy tensors and complete Adam state
 from the2026-10-23 study, on the same immutable dataset/normalization. The

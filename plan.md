@@ -3057,3 +3057,15 @@ counter and source/normalization immutability checks required.34 focused tests
 and Ruff pass; actual replay follows committed source, no allocation or new
 training. Failed family/retired test remain closed. See
 [method and command](docs/offpolicy-fit-diagnostic.md).
+
+### Off-policy fitted replay completed — 2026-10-31
+
+Four saved states complete104 episodes/76,544 execution rows, preserving80 source
+hashes and full policy/target/optimizer/alpha/counter/normalization fingerprints.
+All descriptive fitted comparability flags fail: GRU42.66% selected/44.86% final,
+SAC28.59%/57.64%, holding56.45%. GRU final ETF gains accompany weak stocks; SAC
+final stocks beat holding but ETFs/median-stock requirements fail. Fitted gains
+with development declines do not establish a sole cause. No fitting, new model
+selection, provider/Colab/test access or ledger change; family remains closed.
+Full paths/charts retained, weights not duplicated. See
+[actual evidence](results/recurrent-offpolicy-fit-2026-10-31/README.md).
