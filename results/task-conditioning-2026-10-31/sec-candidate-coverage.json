@@ -1,0 +1,1732 @@
+{
+  "schema": "task-type-sec-candidate-coverage-v1",
+  "source_sha256": {
+    "results/task-conditioning-2026-10-31/type-evidence.json": "30be01794b8911e01de3ae46b53a7e7264442b092b3805ed4e8db649f6fd57c6",
+    "artifacts/filings/original-candidate-ledger.json": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6"
+  },
+  "records": [
+    {
+      "symbol": "AAPL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "320193"
+      ],
+      "filings_before_first_training_day": 4,
+      "earliest_candidate": {
+        "accession": "0001193125-09-153165",
+        "cik": "320193",
+        "archive_accepted": "2009-07-22 16:42:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000119312509153165/aapl-20090627.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ABBV",
+      "first_training_session": "2013-03-14",
+      "candidate_ciks": [
+        "1551152"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0001104659-13-038917",
+        "cik": "1551152",
+        "archive_accepted": "2013-05-08 16:53:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1551152/000110465913038917/abbv-20130331.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ABT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1800"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-048013",
+        "cik": "1800",
+        "archive_accepted": "2009-08-07 09:27:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000110465909048013/abt-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ADBE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "796343"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000796343-09-000026",
+        "cik": "796343",
+        "archive_accepted": "2009-06-25 21:17:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634309000026/adbe-20090529.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "AEP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "4904"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000004904-09-000117",
+        "cik": "4904",
+        "archive_accepted": "2009-08-04 13:32:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490409000117/aep-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "AMGN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "318154"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-169378",
+        "cik": "318154",
+        "archive_accepted": "2009-08-07 19:10:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000119312509169378/amgn-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "AMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1053507"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-167155",
+        "cik": "1053507",
+        "archive_accepted": "2009-08-06 16:06:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1053507/000119312509167155/amt-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "AMZN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1018724"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-154174",
+        "cik": "1018724",
+        "archive_accepted": "2009-07-23 18:14:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312509154174/amzn-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "APA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1841666",
+        "6769"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-032262",
+        "cik": "6769",
+        "archive_accepted": "2009-08-07 17:26:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/6769/000095012309032262/apa-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "APD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "2969"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-025125",
+        "cik": "2969",
+        "archive_accepted": "2009-07-24 11:16:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/2969/000095012309025125/apd-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "AXP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "4962"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-186163",
+        "cik": "4962",
+        "archive_accepted": "2009-09-02 16:00:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/4962/000119312509186163/axp-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "BA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "12927"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-152905",
+        "cik": "12927",
+        "archive_accepted": "2009-07-22 12:33:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000119312509152905/ba-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "BAC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "70858"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-168935",
+        "cik": "70858",
+        "archive_accepted": "2009-08-07 14:56:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000119312509168935/bac-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "BLK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1364742"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-168969",
+        "cik": "1364742",
+        "archive_accepted": "2009-08-07 15:14:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312509168969/blk-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "BMY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "14272"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-153889",
+        "cik": "14272",
+        "archive_accepted": "2009-07-23 14:02:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/14272/000119312509153889/bmy-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "C",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "831001"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001047469-09-007400",
+        "cik": "831001",
+        "archive_accepted": "2009-08-07 16:49:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/831001/000104746909007400/c-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "CAT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "18230"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000018230-09-000331",
+        "cik": "18230",
+        "archive_accepted": "2009-08-12 12:23:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823009000331/cat-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "CL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "21665"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001140361-09-017288",
+        "cik": "21665",
+        "archive_accepted": "2009-07-30 15:04:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/21665/000114036109017288/cl-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "CMCSA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1166691"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-166759",
+        "cik": "1166691",
+        "archive_accepted": "2009-08-06 12:18:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1166691/000119312509166759/cmcsa-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "COP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1163165"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-029713",
+        "cik": "1163165",
+        "archive_accepted": "2009-08-04 17:31:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1163165/000095012309029713/cop-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "COST",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "909832"
+      ],
+      "filings_before_first_training_day": 1,
+      "earliest_candidate": {
+        "accession": "0001193125-09-255610",
+        "cik": "909832",
+        "archive_accepted": "2009-12-18 12:50:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/909832/000119312509255610/cost-20091122.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "CSCO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "858877"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-237055",
+        "cik": "858877",
+        "archive_accepted": "2009-11-18 06:04:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000119312509237055/csco-20091024.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "CVX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "93410"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-030860",
+        "cik": "93410",
+        "archive_accepted": "2009-08-06 11:28:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000095012309030860/cvx-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "D",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "715957"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-160797",
+        "cik": "715957",
+        "archive_accepted": "2009-07-31 16:03:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/715957/000119312509160797/d-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "DE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "315189"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-052248",
+        "cik": "315189",
+        "archive_accepted": "2009-08-28 09:51:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909052248/de-20090731.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "DIS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1744489"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0001744489-19-000100",
+        "cik": "1744489",
+        "archive_accepted": "2019-05-08 17:32:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448919000100/fy2019q210qdoc_htm.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "DUK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1326160"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-168607",
+        "cik": "1326160",
+        "archive_accepted": "2009-08-07 11:59:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326160/000119312509168607/duk-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "DVN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1090012"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-030946",
+        "cik": "1090012",
+        "archive_accepted": "2009-08-06 12:55:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012309030946/dvn-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ECL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "31462"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-047977",
+        "cik": "31462",
+        "archive_accepted": "2009-08-07 08:12:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/31462/000110465909047977/ecl-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ED",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1047862"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-219909",
+        "cik": "1047862",
+        "archive_accepted": "2009-11-02 10:44:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1047862/000119312509219909/ed-20090930.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "EOG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "821189"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000821189-09-000047",
+        "cik": "821189",
+        "archive_accepted": "2009-08-06 17:09:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/821189/000082118909000047/eog-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "EQIX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1101239"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0001193125-10-176872",
+        "cik": "1101239",
+        "archive_accepted": "2010-08-04 14:00:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000119312510176872/eqix-20100630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "EXC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1109357"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-154888",
+        "cik": "1109357",
+        "archive_accepted": "2009-07-24 15:32:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1109357/000119312509154888/exc-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "F",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "37996"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001140361-09-017928",
+        "cik": "37996",
+        "archive_accepted": "2009-08-05 12:01:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000114036109017928/f-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "FCX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "831259"
+      ],
+      "filings_before_first_training_day": 4,
+      "earliest_candidate": {
+        "accession": "0000831259-09-000047",
+        "cik": "831259",
+        "archive_accepted": "2009-05-11 13:38:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/831259/000083125909000047/fcx-20090331.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "GD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "40533"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-163762",
+        "cik": "40533",
+        "archive_accepted": "2009-08-04 16:13:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/40533/000119312509163762/gd-20090705.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "GE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "40545"
+      ],
+      "filings_before_first_training_day": 4,
+      "earliest_candidate": {
+        "accession": "0000040545-09-000049",
+        "cik": "40545",
+        "archive_accepted": "2009-08-03 09:58:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054509000049/ge-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "GILD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "882095"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-165506",
+        "cik": "882095",
+        "archive_accepted": "2009-08-05 16:45:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/882095/000119312509165506/gild-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "GOOGL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1288776",
+        "1652044"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-163845",
+        "cik": "1288776",
+        "archive_accepted": "2009-08-04 16:51:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1288776/000119312509163845/goog-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "GS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "886982"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-029919",
+        "cik": "886982",
+        "archive_accepted": "2009-08-05 06:10:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000095012309029919/gs-20090626.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "HAL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "45012"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000045012-09-000273",
+        "cik": "45012",
+        "archive_accepted": "2009-07-30 11:18:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/45012/000004501209000273/hal-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "HD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "354950"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0000950123-09-040859",
+        "cik": "354950",
+        "archive_accepted": "2009-09-03 16:25:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/354950/000095012309040859/hd-20090802.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "HON",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "773840"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000930413-09-003987",
+        "cik": "773840",
+        "archive_accepted": "2009-08-03 15:24:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/773840/000093041309003987/hon-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "HSY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "47111"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000047111-09-000038",
+        "cik": "47111",
+        "archive_accepted": "2009-08-13 07:12:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711109000038/hsy-20090705.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "IBM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "51143"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-045198",
+        "cik": "51143",
+        "archive_accepted": "2009-07-28 14:07:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000110465909045198/ibm-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "INTC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "50863"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-028975",
+        "cik": "50863",
+        "archive_accepted": "2009-08-03 17:09:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000095012309028975/intc-20090627.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "JNJ",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "200406"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-029672",
+        "cik": "200406",
+        "archive_accepted": "2009-08-04 17:12:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/200406/000095012309029672/jnj-20090628.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "JPM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "19617"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-032832",
+        "cik": "19617",
+        "archive_accepted": "2009-08-10 15:46:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000095012309032832/jpm-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "KMB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "55785"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000055785-09-000026",
+        "cik": "55785",
+        "archive_accepted": "2009-08-07 14:48:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/55785/000005578509000026/kmb-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "KO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "21344"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001047469-09-007013",
+        "cik": "21344",
+        "archive_accepted": "2009-07-30 10:33:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/21344/000104746909007013/ko-20090703.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "KR",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "56873"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001104659-09-055895",
+        "cik": "56873",
+        "archive_accepted": "2009-09-23 12:00:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465909055895/kr-20090815.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "LIN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1707925",
+        "884905"
+      ],
+      "filings_before_first_training_day": 4,
+      "earliest_candidate": {
+        "accession": "0001193125-09-091929",
+        "cik": "884905",
+        "archive_accepted": "2009-04-29 15:57:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/884905/000119312509091929/px-20090331.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "LLY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "59478"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-028099",
+        "cik": "59478",
+        "archive_accepted": "2009-07-31 10:23:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000095012309028099/lly-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "LMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "936468"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-153203",
+        "cik": "936468",
+        "archive_accepted": "2009-07-22 17:09:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/936468/000119312509153203/lmt-20090628.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "LOW",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "60667"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0000060667-09-000096",
+        "cik": "60667",
+        "archive_accepted": "2009-09-01 17:09:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/60667/000006066709000096/low-20090731.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "MCD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "63908"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-166658",
+        "cik": "63908",
+        "archive_accepted": "2009-08-06 11:13:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/63908/000119312509166658/mcd-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "MDLZ",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1103982"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-164943",
+        "cik": "1103982",
+        "archive_accepted": "2009-08-05 11:44:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000119312509164943/kft-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "MLM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "916076"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0000950123-10-071734",
+        "cik": "916076",
+        "archive_accepted": "2010-08-03 15:19:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310071734/mlm-20100630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "MRK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "310158"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-025362",
+        "cik": "310158",
+        "archive_accepted": "2009-07-24 16:45:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012309025362/sgp-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "MS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "895421"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-169269",
+        "cik": "895421",
+        "archive_accepted": "2009-08-07 17:20:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000119312509169269/ms-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "MSFT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "789019"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-212454",
+        "cik": "789019",
+        "archive_accepted": "2009-10-23 08:34:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509212454/msft-20090930.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "NEE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "753308"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000753308-09-000086",
+        "cik": "753308",
+        "archive_accepted": "2009-07-31 14:36:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330809000086/fpl-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "NEM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1164727"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-024448",
+        "cik": "1164727",
+        "archive_accepted": "2009-07-22 19:17:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1164727/000095012309024448/nem-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "NFLX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1065280"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-160729",
+        "cik": "1065280",
+        "archive_accepted": "2009-07-31 15:27:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000119312509160729/nflx-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "NKE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "320187"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-205690",
+        "cik": "320187",
+        "archive_accepted": "2009-10-08 17:07:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000119312509205690/nke-20090831.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "NUE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "73309"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-171521",
+        "cik": "73309",
+        "archive_accepted": "2009-08-11 11:17:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/73309/000119312509171521/nue-20090704.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "NVDA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045810"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001045810-09-000024",
+        "cik": "1045810",
+        "archive_accepted": "2009-08-20 16:59:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581009000024/nvda-20090727.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "O",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "726728"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0000726728-10-000060",
+        "cik": "726728",
+        "archive_accepted": "2010-07-29 17:12:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672810000060/o-20100630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "OMC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "29989"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000891092-09-003150",
+        "cik": "29989",
+        "archive_accepted": "2009-08-06 16:07:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/29989/000089109209003150/omc-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ORCL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1341439"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-195193",
+        "cik": "1341439",
+        "archive_accepted": "2009-09-21 17:00:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312509195193/orcl-20090831.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "OXY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "797468"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000797468-09-000095",
+        "cik": "797468",
+        "archive_accepted": "2009-08-06 13:32:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746809000095/oxy-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PEG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "788784"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000930413-09-003976",
+        "cik": "788784",
+        "archive_accepted": "2009-07-31 20:32:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/788784/000093041309003976/peg-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PEP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "77476"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-205617",
+        "cik": "77476",
+        "archive_accepted": "2009-10-08 16:10:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/77476/000119312509205617/pep-20090905.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PFE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "78003"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001157523-09-005774",
+        "cik": "78003",
+        "archive_accepted": "2009-08-06 17:21:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/78003/000115752309005774/pfe-20090628.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "80424"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-217067",
+        "cik": "80424",
+        "archive_accepted": "2009-10-29 10:31:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000119312509217067/pg-20090930.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PLD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045609"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0000950123-10-071864",
+        "cik": "1045609",
+        "archive_accepted": "2010-08-03 17:17:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045609/000095012310071864/amb-20100630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PNC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "713676"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-170563",
+        "cik": "713676",
+        "archive_accepted": "2009-08-10 15:49:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000119312509170563/pnc-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PPG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "79879"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-155628",
+        "cik": "79879",
+        "archive_accepted": "2009-07-27 13:51:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/79879/000119312509155628/ppg-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "PSA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1393311"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001393311-09-000025",
+        "cik": "1393311",
+        "archive_accepted": "2009-08-10 16:50:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1393311/000139331109000025/psa-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "QCOM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "804328"
+      ],
+      "filings_before_first_training_day": 4,
+      "earliest_candidate": {
+        "accession": "0000950123-09-024369",
+        "cik": "804328",
+        "archive_accepted": "2009-07-22 16:31:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/804328/000095012309024369/qcom-20090628.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "ROST",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "745732"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0001206774-10-001420",
+        "cik": "745732",
+        "archive_accepted": "2010-06-09 06:01:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/745732/000120677410001420/rost-20100501.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "RTX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "101829"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-154417",
+        "cik": "101829",
+        "archive_accepted": "2009-07-24 06:26:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/101829/000119312509154417/utx-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "SBUX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "829224"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-029843",
+        "cik": "829224",
+        "archive_accepted": "2009-08-04 21:39:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000095012309029843/sbux-20090628.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "SHW",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "89800"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-028093",
+        "cik": "89800",
+        "archive_accepted": "2009-07-31 10:08:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/89800/000095012309028093/shw-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "SLB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "87347"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-158007",
+        "cik": "87347",
+        "archive_accepted": "2009-07-29 14:37:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/87347/000119312509158007/slb-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "SO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "92122"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000092122-09-000072",
+        "cik": "92122",
+        "archive_accepted": "2009-08-27 11:36:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/92122/000009212209000072/so-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "SPG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1063761"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-053343",
+        "cik": "1063761",
+        "archive_accepted": "2009-09-04 08:30:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1063761/000110465909053343/spg-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "SRE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1032208"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000086521-09-000047",
+        "cik": "1032208",
+        "archive_accepted": "2009-07-31 16:07:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1032208/000008652109000047/sre-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "T",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "732717"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000732717-09-000050",
+        "cik": "732717",
+        "archive_accepted": "2009-08-05 16:40:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271709000050/t-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "TGT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "27419"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-052321",
+        "cik": "27419",
+        "archive_accepted": "2009-08-28 13:04:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000110465909052321/tgt-20090801.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "TJX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "109198"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0000950123-09-039364",
+        "cik": "109198",
+        "archive_accepted": "2009-08-28 15:56:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/109198/000095012309039364/tjx-20090801.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "TMUS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1283699"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0001193125-10-182910",
+        "cik": "1283699",
+        "archive_accepted": "2010-08-09 12:43:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312510182910/pcs-20100630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "TTWO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "946581"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0001047469-10-007879",
+        "cik": "946581",
+        "archive_accepted": "2010-09-03 07:06:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/946581/000104746910007879/ttwo-20100731.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "TXN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "97476"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001140361-09-017223",
+        "cik": "97476",
+        "archive_accepted": "2009-07-29 17:24:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000114036109017223/txn-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "UNH",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "731766"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-167160",
+        "cik": "731766",
+        "archive_accepted": "2009-08-06 16:08:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/731766/000119312509167160/unh-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "UNP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "100885"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-154939",
+        "cik": "100885",
+        "archive_accepted": "2009-07-24 16:07:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/100885/000119312509154939/unp-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "UPS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1090727"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-169068",
+        "cik": "1090727",
+        "archive_accepted": "2009-08-07 16:06:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090727/000119312509169068/ups-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "USB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "36104"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-033037",
+        "cik": "36104",
+        "archive_accepted": "2009-08-10 17:09:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/36104/000095012309033037/usb-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "VLO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1035002"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-031901",
+        "cik": "1035002",
+        "archive_accepted": "2009-08-07 13:16:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1035002/000095012309031901/vlo-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "VMC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1396009"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-030370",
+        "cik": "1396009",
+        "archive_accepted": "2009-08-05 17:02:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1396009/000095012309030370/vmc-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "VTR",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "740260"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-165464",
+        "cik": "740260",
+        "archive_accepted": "2009-08-05 16:32:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/740260/000119312509165464/vtr-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "VZ",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "732712"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-159648",
+        "cik": "732712",
+        "archive_accepted": "2009-07-30 16:51:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/732712/000119312509159648/vz-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "WELL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "766704"
+      ],
+      "filings_before_first_training_day": 0,
+      "earliest_candidate": {
+        "accession": "0000950123-10-074122",
+        "cik": "766704",
+        "archive_accepted": "2010-08-06 14:00:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/766704/000095012310074122/hcn-20100630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "WFC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "72971"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0000950123-09-032191",
+        "cik": "72971",
+        "archive_accepted": "2009-08-07 16:56:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000095012309032191/wfc-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "WMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "104169"
+      ],
+      "filings_before_first_training_day": 2,
+      "earliest_candidate": {
+        "accession": "0001193125-09-189177",
+        "cik": "104169",
+        "archive_accepted": "2009-09-09 12:11:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000119312509189177/wmt-20090731.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "XEL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "72903"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001104659-09-046313",
+        "cik": "72903",
+        "archive_accepted": "2009-07-31 15:46:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/72903/000110465909046313/xel-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    },
+    {
+      "symbol": "XOM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "34088"
+      ],
+      "filings_before_first_training_day": 3,
+      "earliest_candidate": {
+        "accession": "0001193125-09-165196",
+        "cik": "34088",
+        "archive_accepted": "2009-08-05 14:46:00.0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000119312509165196/xom-20090630.xml"
+      },
+      "historical_identity_verified": false,
+      "historical_type_verified": false
+    }
+  ],
+  "stocks": 107,
+  "stocks_with_earlier_candidate_filings": 97,
+  "historical_metadata_admitted": false,
+  "reason": "Current CIK candidate links and financial-form records do not establish historical traded-security type or price continuity",
+  "training_performed": false,
+  "colab_allocated": false,
+  "ledger_unchanged": true
+}

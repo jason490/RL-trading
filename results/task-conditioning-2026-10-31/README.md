@@ -26,3 +26,25 @@ The factory has no-optimization tests for full SB3 SAC save/load parity, replay
 tag retention and role mismatch rejection. No worker or ordinary factory was
 changed to start this experiment. Replay-update behavior, frozen-bundle metadata,
 production manifest and centrally metered Colab worker integration remain pending.
+
+## Historical source investigation
+
+[Cached SEC candidate coverage](sec-candidate-coverage.json) joins each stock's
+first training session to the retained original-candidate filing ledger by its
+explicit `discovery_symbols`. Candidates are ordered by archive acceptance time;
+only acceptance dates strictly earlier than the first training day count, avoiding
+same-day availability assumptions.97/107 stocks have an earlier candidate filing.
+The ten without one in this ledger are ABBV, DIS, EQIX, MLM, O, PLD, ROST, TMUS,
+TTWO and WELL. This is a scope for further source review, not a declaration that
+these issuers lacked public filings or were not stocks. Current CIK discovery,
+corporate predecessors and historical ticker continuity remain unverified for
+all107; no record is admitted merely because a10-K or10-Q exists. Source/audit/
+usage-ledger hashes are retained and unchanged.
+
+A primary-source lead for QQQ is the
+[2008 PowerShares QQQ Trust registration](https://www.sec.gov/Archives/edgar/data/1067839/000120677408000229/powershares_485bpos.htm).
+Its historical trust identity must be linked to the provider's canonical QQQ
+series; the URL is a review lead, not a checksummed collected/admitted record.
+Later prospectuses describing earlier history cannot automatically acquire the
+earlier publication date. No provider call, raw archive download, historical
+classification admission or Colab allocation was made during this investigation.

@@ -3110,3 +3110,12 @@ unchanged ledger. Historical classification evidence remains unadmitted; no
 dates invented from retrospective metadata. Frozen/runtime integration and actual
 Colab smoke/profile/screens remain pending. See
 [preflight evidence](results/task-conditioning-2026-10-31/README.md).
+
+### Task frozen inference and historical source scope — 2026-10-31
+
+Dedicated checksummed task bundle and symbol/date-generated tag inference
+implemented; immutable state, schema/role/corruption rejection and generic frozen
+compatibility verified without optimization. Cached SEC source review finds
+earlier candidates for97/107 stocks, with historical continuity/type unadmitted.
+No training, source archive download or new Colab charge; worker integration and
+actual smoke/profile/performance remain pending.

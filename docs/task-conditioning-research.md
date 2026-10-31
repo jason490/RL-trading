@@ -183,3 +183,32 @@ metadata is **not admitted**. Do not turn first observed training dates into
 classification availability dates. Complete primary-source historical evidence,
 frozen-bundle/worker integration and actual Colab optimizer/profile acceptance
 before any performance screen. No new credits were used by this audit.
+
+## Frozen task inference foundation
+
+`inference/task_bundle.py` adds opt-in `freeze_task` and `FrozenTaskPolicy`.
+The standard generic bundle format retains model/dependency checksums; task
+metadata additionally binds the full reviewed type manifest, its digest, dataset
+identity, role and type encoding. Freezing requires historical metadata admission.
+Loading checks file/manifest/model identities, feed, feature/action schemas,
+seven-feature normalization, full execution state, policy class and role agreement
+across actor/twin/target critics. It uses the same SAC model and execution filter.
+
+Prediction takes the original finite21-vector plus explicit symbol/session. The
+loader generates its own tag from frozen reviewed records and rejects unknown
+symbols or dates before availability. Supplying a22-vector cannot override the
+tag. Calls are deterministic/no-grad, manifest views are copies, and the registry
+and normalizer are immutable. No broker decision path is introduced. The ordinary
+`FrozenPolicy` API remains unchanged; task bundles use this dedicated API.
+
+All three roles have actual untrained bundle prediction parity and immutable
+state tests. Corruption, bad feed, forged input tags and relabeled metadata even
+with recomputed checksums reject. Existing generic frozen, observation and
+execution checks remain compatible. Actual learned checkpoints/Colab optimizer
+acceptance and worker integration remain pending.
+
+The [source investigation](../results/task-conditioning-2026-10-31/README.md)
+finds earlier cached candidate filings for97/107 stocks. Those current-CIK links
+do not establish historical security continuity/type, and the ten absent matches
+are not proof of absent filings. Historical metadata remains unadmitted; no
+classification dates or causal readiness are inferred from archive coverage.

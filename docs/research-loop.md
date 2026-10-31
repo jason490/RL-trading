@@ -54,8 +54,11 @@ Long stock/ETF gaps14.30/7.00pp contain2.74/2.79pp incremental cost drag and
 XOM despite both negative holding returns. These are descriptive paths, not an
 attainable-return bound or a future-label trading rule. Constraints stay unchanged.
 
-Next: implement the [task-conditioning contract](task-conditioning-research.md)
-and machine-readable fixed protocol before any new allocation. Primary-source
+Next: complete historical type evidence and Colab worker integration for the
+[fixed task-conditioning protocol](task-conditioning-research.md). The policy,
+metadata admission, factory and frozen inference foundation are implemented;
+97/107 stocks have earlier cached SEC candidate filings, but none is admitted
+without historical security/type review. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
 interference and reward-scale causes remain unproven. This is design admission,
 not an executable profile or permission to reopen the closed recurrent family.
