@@ -96,3 +96,22 @@ Only after complete reviewed records cover the exact111 training symbols can
 validation and model performance are separate requirements. No Colab allocation
 is needed for this source work; cumulative credit and retired-test restrictions
 remain unchanged.
+
+## Bounded original HTML collection
+
+`html_source.py:acquire_filing_html` supports exact pre2024 SEC filing endpoints,
+normalized CIK/accession binding, private identified requests, immutable cache
+reuse, single-request20MB/60s bounds, no redirects/retries, and immediate rejection
+of concurrent collectors at the same cache root. A new source retains its raw
+bytes and receipt. This collector must not overlap the separate XML downloader.
+`filing_index.py:primary_html` selects only the single sequence1 document whose
+form matches the original index; it does not guess a filename or substitute an
+exhibit/new filing.
+
+`scripts/collect_task_type_covers.py` fixes the first three alphabetically sorted
+cached unresolved cases, at most one index plus one primary source each. A durable
+claim prevents automatic retry, including after rejection/interruption. Any failure
+stops the remaining collection; original evidence and ledger hashes are retained.
+Collection itself never admits a classification or performs model/provider-price
+operations. Tests use mocked HTTP, including single-attempt403 rejection and
+cache-corruption detection. Actual source receipts are separate from these tests.
