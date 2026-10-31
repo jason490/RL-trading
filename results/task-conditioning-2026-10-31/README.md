@@ -73,3 +73,16 @@ GOOGL/LIN/MDLZ show GOOG/PX/KFT and need explicit alias/security review. No vali
 interval or historical classification is automatically admitted. See the
 [instrument evidence guide](../../docs/instrument-type-evidence.md) for the
 extractor, conservative exclusions, reproduction and next source scope.
+
+## Actual bounded original-cover collection and review
+
+The first three unresolved cached cases, ABT/ADBE/AEP, completed their six fixed
+index/primary acquisition operations. [Receipts](original-cover-collection.json)
+bind7,298,946 retained raw bytes to official endpoints; no retry or Colab.
+[Verified review](original-cover-review.json) confirms common-equity statements
+for all three and an explicit ADBE trading-symbol statement. ABT/AEP ticker links
+remain partial. Original index filing/acceptance metadata support conservative
+availability on2010-02-23/2010-01-26/2010-03-02 respectively, all before training.
+This is the declared two-XNYS-session assumption, not exact dissemination proof.
+All protected original source, ledger and code hashes remain unchanged. No
+historical interval/classification admission or model input was enabled.

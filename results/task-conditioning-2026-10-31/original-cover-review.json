@@ -1,0 +1,93 @@
+{
+  "schema": "task-original-cover-review-v1",
+  "records": [
+    {
+      "symbol": "ABT",
+      "cik": "1800",
+      "accession": "0001047469-10-001018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000104746910001018/a2196380z10-k.htm",
+      "source_sha256": "cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902",
+      "filed": "2010-02-19",
+      "accepted_source": "2010-02-19 16:05:52",
+      "availability": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "observation": {
+        "security_anchor": "Common Shares, Without Par Value",
+        "issuer_anchor": "Abbott Laboratories",
+        "ticker_anchor": null
+      },
+      "common_equity_supported_in_document": true,
+      "exact_ticker_clause_supported": false,
+      "historical_metadata_admitted": false,
+      "validity_interval_inferred": false
+    },
+    {
+      "symbol": "ADBE",
+      "cik": "796343",
+      "accession": "0000796343-10-000003",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634310000003/form_10k.htm",
+      "source_sha256": "96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784",
+      "filed": "2010-01-22",
+      "accepted_source": "2010-01-22 12:14:18",
+      "availability": {
+        "available_time": "2010-01-26T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "observation": {
+        "security_anchor": "common stock is traded on the NASDAQ Global Select Market under the symbol \u201cADBE.\u201d",
+        "issuer_anchor": "ADOBE SYSTEMS INCORPORATED",
+        "ticker_anchor": "under the symbol \u201cADBE.\u201d"
+      },
+      "common_equity_supported_in_document": true,
+      "exact_ticker_clause_supported": true,
+      "historical_metadata_admitted": false,
+      "validity_interval_inferred": false
+    },
+    {
+      "symbol": "AEP",
+      "cik": "4904",
+      "accession": "0000004904-10-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/ye09aep10k.htm",
+      "source_sha256": "ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21",
+      "filed": "2010-02-26",
+      "accepted_source": "2010-02-26 15:29:54",
+      "availability": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "observation": {
+        "security_anchor": "American Electric Power Company, Inc. Common Stock, $6.50 par value New York Stock Exchange",
+        "issuer_anchor": "American Electric Power Company, Inc.",
+        "ticker_anchor": null
+      },
+      "common_equity_supported_in_document": true,
+      "exact_ticker_clause_supported": false,
+      "historical_metadata_admitted": false,
+      "validity_interval_inferred": false
+    }
+  ],
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/original-cover-collection.json": "257889b3815e3c52e261e5a16dd92007f731508087839747fdeba8aa8e8fc7ff",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "/home/vibe/projects/rl-stocks/scripts/review_task_type_covers.py": "c99c94dd7b5cc1dd714a30807752df88d1159b7b9c6eb8f462cc65843bd14999",
+    "data/raw/sec-filings/521b294b384f0291b1ce02966749bad8156f979a5158991b22d3293c31534b04/filing.htm": "521b294b384f0291b1ce02966749bad8156f979a5158991b22d3293c31534b04",
+    "data/raw/sec-filings/cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902/filing.htm": "cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902",
+    "data/raw/sec-filings/61a17906aa5501d61b0c31ff7ebf7ea96e43ab298df2fcd949a4efa2ccd72aab/filing.htm": "61a17906aa5501d61b0c31ff7ebf7ea96e43ab298df2fcd949a4efa2ccd72aab",
+    "data/raw/sec-filings/96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784/filing.htm": "96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784",
+    "data/raw/sec-filings/bb52509af5fac48518aeea954ae42d4445d32e16258cebc1de60af7742e5582e/filing.htm": "bb52509af5fac48518aeea954ae42d4445d32e16258cebc1de60af7742e5582e",
+    "data/raw/sec-filings/ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21/filing.htm": "ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21"
+  },
+  "protected_sources_unchanged": true,
+  "historical_metadata_admitted": false,
+  "network_requests": 0,
+  "training_performed": false,
+  "colab_allocated": false
+}

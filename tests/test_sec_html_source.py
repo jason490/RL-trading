@@ -66,3 +66,47 @@ def test_primary_html_comes_from_exact_index_row(tmp_path):
     with pytest.raises(ValueError, match='one explicitly'):
         primary_html(path, sha256(raw).hexdigest(), cik=OPTIONS['cik'],
                      accession=OPTIONS['accession'], form='10-Q')
+
+
+def test_single_success_is_immutable_and_oversize_rejects_before_read(tmp_path, monkeypatch):
+    import io
+    import rl_stocks.data.providers.sec.html_source as module
+    raw = b'<html>synthetic source</html>'
+    calls = []
+    class Response(io.BytesIO):
+        status = 200
+        headers = {'Content-Length': str(len(raw))}
+    class Opener:
+        def open(self, *args, **kwargs):
+            calls.append(True)
+            return Response(raw)
+    monkeypatch.setattr(module, 'build_opener', lambda *a: Opener())
+    monkeypatch.setattr(module.time, 'sleep', lambda _: None)
+    path, receipt, cached = acquire_filing_html(tmp_path, **OPTIONS)
+    assert not cached and path.read_bytes() == raw
+    assert receipt['sha256'] == sha256(raw).hexdigest()
+    assert acquire_filing_html(tmp_path, **OPTIONS)[2] is True
+    assert len(calls) == 1
+
+    class Oversize(Response):
+        headers = {'Content-Length': '20000001'}
+        def read(self, *args):
+            pytest.fail('oversized response body read')
+    class BadOpener:
+        def open(self, *args, **kwargs):
+            return Oversize(raw)
+    monkeypatch.setattr(module, 'build_opener', lambda *a: BadOpener())
+    with pytest.raises(ValueError, match='declared size'):
+        acquire_filing_html(tmp_path / 'other', **OPTIONS)
+
+
+def test_concurrent_collector_rejects_without_network(tmp_path, monkeypatch):
+    import fcntl
+    import rl_stocks.data.providers.sec.html_source as module
+    def forbidden(*args, **kwargs):
+        pytest.fail('concurrent collector issued request')
+    monkeypatch.setattr(module, 'build_opener', forbidden)
+    with (tmp_path / '.html-download.lock').open('a+b') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        with pytest.raises(ValueError, match='busy'):
+            acquire_filing_html(tmp_path, **OPTIONS)

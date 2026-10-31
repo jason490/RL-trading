@@ -115,3 +115,37 @@ stops the remaining collection; original evidence and ledger hashes are retained
 Collection itself never admits a classification or performs model/provider-price
 operations. Tests use mocked HTTP, including single-attempt403 rejection and
 cache-corruption detection. Actual source receipts are separate from these tests.
+
+## Actual three-case original-cover result
+
+The bounded collection completed all six index/primary operations for ABT, ADBE
+and AEP, retaining7,298,946 raw bytes with source receipts. There were no retries,
+redirect substitutions, Colab sessions or model operations. The selected indexes
+supply official filing and acceptance timestamps; the body document is the
+explicit sequence1 form selected from each original index.
+
+[Collection](../results/task-conditioning-2026-10-31/original-cover-collection.json)
+and [review](../results/task-conditioning-2026-10-31/original-cover-review.json)
+retain the exact endpoints, hashes, brief checked source anchors and ledger/code
+invariance. `scripts/review_task_type_covers.py` reproduces the fixed observations
+against those raw bytes, with a fresh output path. It is a review verifier for
+these three documents, not a universal automatic classifier.
+
+| Symbol | Filed | Conservative availability | Original-document finding |
+| --- | --- | --- | --- |
+| ABT |2010-02-19|2010-02-23| Registered common shares; no admitted exact ticker clause |
+| ADBE |2010-01-22|2010-01-26| Registered common equity plus explicit ADBE trading-symbol statement |
+| AEP |2010-02-26|2010-03-02| Parent's registered common stock distinguished from subsidiary debt; no admitted exact ticker clause |
+
+Availability uses the existing explicit research assumption: second XNYS open
+strictly after both SEC-local acceptance and filing dates. It is not a verified
+exact first public dissemination timestamp. All dates precede each first training
+session. Original cover statements improve document evidence, but do not establish
+a constant type/security validity interval over2010–2020 or cure survivorship.
+The cached33 exact hints remain their original immutable result; ADBE supplies an
+additional HTML observation. Complete111-symbol metadata remains unadmitted.
+
+Next review original incorporated market sections/exhibits for ABT/AEP and other
+unresolved records, using a separately bounded source selection. Do not treat a
+company abbreviation or a compound/drug name containing a ticker as a market
+symbol statement. Preserve failed/partial evidence and earlier collection claims.

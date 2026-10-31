@@ -3146,3 +3146,12 @@ implemented. Actual85 original documents yield33 exact document identity hints,
 175 source/code/ledger inputs unchanged. No validity intervals or classifications
 admitted, no model inputs/fitting/network requests/Colab allocation in the audit.
 Primary cover/alias/availability review and four ETF records remain pending.
+
+### Bounded original cover collection — 2026-10-31
+
+ABT/ADBE/AEP original SEC index and primary filings collected in six fixed
+operations,7,298,946 bytes retained, no retries/Colab. Review verifies common
+equity for all three and explicit ADBE ticker evidence; ABT/AEP remain partial.
+Official source dates plus conservative two-session availability precede training;
+exact dissemination and historical intervals remain unverified. All111-symbol
+metadata admission, fleet/archive acceptance and actual training remain pending.

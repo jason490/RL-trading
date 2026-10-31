@@ -1,0 +1,130 @@
+{
+  "schema": "task-original-cover-collection-v1",
+  "cases": [
+    {
+      "symbol": "ABT",
+      "cik": "1800",
+      "accession": "0001047469-10-001018",
+      "form": "10-K",
+      "first_training_session": "2010-03-16",
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/521b294b384f0291b1ce02966749bad8156f979a5158991b22d3293c31534b04/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000104746910001018/0001047469-10-001018-index.htm",
+          "sha256": "521b294b384f0291b1ce02966749bad8156f979a5158991b22d3293c31534b04",
+          "bytes": 13967,
+          "retrieved_utc": "2026-10-31T18:04:10.251707+00:00",
+          "accession": "0001047469-10-001018",
+          "cik": "1800",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000104746910001018/a2196380z10-k.htm",
+          "sha256": "cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902",
+          "bytes": 1372465,
+          "retrieved_utc": "2026-10-31T18:04:12.576033+00:00",
+          "accession": "0001047469-10-001018",
+          "cik": "1800",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "ADBE",
+      "cik": "796343",
+      "accession": "0000796343-10-000003",
+      "form": "10-K",
+      "first_training_session": "2010-03-16",
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/61a17906aa5501d61b0c31ff7ebf7ea96e43ab298df2fcd949a4efa2ccd72aab/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634310000003/0000796343-10-000003-index.htm",
+          "sha256": "61a17906aa5501d61b0c31ff7ebf7ea96e43ab298df2fcd949a4efa2ccd72aab",
+          "bytes": 13314,
+          "retrieved_utc": "2026-10-31T18:04:14.811811+00:00",
+          "accession": "0000796343-10-000003",
+          "cik": "796343",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634310000003/form_10k.htm",
+          "sha256": "96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784",
+          "bytes": 4106547,
+          "retrieved_utc": "2026-10-31T18:04:17.574137+00:00",
+          "accession": "0000796343-10-000003",
+          "cik": "796343",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "AEP",
+      "cik": "4904",
+      "accession": "0000004904-10-000018",
+      "form": "10-K",
+      "first_training_session": "2010-03-16",
+      "status": "retrieved",
+      "index": {
+        "path": "data/raw/sec-filings/bb52509af5fac48518aeea954ae42d4445d32e16258cebc1de60af7742e5582e/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/0000004904-10-000018-index.htm",
+          "sha256": "bb52509af5fac48518aeea954ae42d4445d32e16258cebc1de60af7742e5582e",
+          "bytes": 16464,
+          "retrieved_utc": "2026-10-31T18:04:19.727268+00:00",
+          "accession": "0000004904-10-000018",
+          "cik": "4904",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/ye09aep10k.htm",
+          "sha256": "ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21",
+          "bytes": 1776189,
+          "retrieved_utc": "2026-10-31T18:04:22.246873+00:00",
+          "accession": "0000004904-10-000018",
+          "cik": "4904",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    }
+  ],
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/cached-stock-evidence.json": "777fe03844057527df481607725f02f757845937550e0b5a90b0c332b4e1cf25",
+    "artifacts/filings/original-candidate-ledger.json": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "scripts/collect_task_type_covers.py": "329db827b10a85036681ad87f446e94ff373b1f60d3447e0ca7f089497811a76",
+    "src/rl_stocks/data/providers/sec/html_source.py": "0cf10b6c4f7a9403fbacaba6535c482ec03d6ad25a883a4a273b63fea6127ba9",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "8eca64069bfed8068bba6ca9da0d77bf43f3a4666776949d3eba28df15b2144a"
+  },
+  "maximum_acquisition_operations": 6,
+  "acquisition_operations_attempted": 6,
+  "automatic_retry": false,
+  "historical_metadata_admitted": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "model_inputs_enabled": false,
+  "status": "complete",
+  "protected_sources_unchanged": true
+}
