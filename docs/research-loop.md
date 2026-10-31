@@ -54,7 +54,12 @@ Long stock/ETF gaps14.30/7.00pp contain2.74/2.79pp incremental cost drag and
 XOM despite both negative holding returns. These are descriptive paths, not an
 attainable-return bound or a future-label trading rule. Constraints stay unchanged.
 
-Next: review primary sources and existing implementations for a distinct,
+Next: implement the [task-conditioning contract](task-conditioning-research.md)
+and machine-readable fixed protocol before any new allocation. Primary-source
+review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
+interference and reward-scale causes remain unproven. This is design admission,
+not an executable profile or permission to reopen the closed recurrent family.
+No new training or charges. Continue to require a distinct,
 bounded learned hypothesis with training-only justification before another
 development comparison. No open-ended grid, renamed rescue of a closed family,
 future-label direction choice or retired-test access. Do not repeat identical

@@ -6,6 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
+| Task conditioning research | [task-conditioning-research.md](task-conditioning-research.md) | Primary-source review, explicit stock/ETF context hypothesis, matched controls and staged admission |
 | Feasible reference policies | [feasible-references.md](feasible-references.md) | Fixed long/short/cash training-only requests, active protection/holding constraints, immutable inputs and descriptive limits |
 | Recurrent off-policy fitted diagnosis | [offpolicy-fit-diagnostic.md](offpolicy-fit-diagnostic.md) | Fixed four-state inference-only training-window replay, no-optimization guard, immutable state and descriptive limits |
 | Completed recurrent off-policy screen | [final result](../results/recurrent-offpolicy-2026-10-31/README.md) | Accepted100k artifacts, failed fixed performance gate, retained dashboard, shared charges and verified cleanup |

@@ -3091,3 +3091,12 @@ or upper bound on feasible returns. All constraints remain active; no learned
 model loaded/fitted, development/test replay or Colab allocation.35 focused
 checks and Ruff pass; full paths/charts retained. See
 [actual evidence](results/feasible-references-2026-10-31/README.md).
+
+### Stock/ETF conditioning design — 2026-10-31
+
+Primary-source and existing-family review recorded in
+[task-conditioning research](docs/task-conditioning-research.md). A fixed
+masked/tagged/routed SAC comparison requires versioned type provenance, matched
+initialization and training-only admission before development. Implementation,
+actual Colab smoke/profile and all performance evidence remain pending; no
+allocation or ledger change. Closed families and retired tests remain closed.
