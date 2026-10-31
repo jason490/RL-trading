@@ -3119,3 +3119,12 @@ compatibility verified without optimization. Cached SEC source review finds
 earlier candidates for97/107 stocks, with historical continuity/type unadmitted.
 No training, source archive download or new Colab charge; worker integration and
 actual smoke/profile/performance remain pending.
+
+### Typed training and fitted evaluation paths — 2026-10-31
+
+Validated typed training environment and fixed-window episode prediction adapter
+implemented using the existing sampler/evaluator/accounting. Gymnasium/SB3 and
+no-optimization mixed-group integration checks pass. Historical QQQ primary
+filing confirms ETF type and oldQQQQ ticker, but canonical identity/durable
+provenance admission remains incomplete. No training/allocation; workers,
+optimizer/profile acceptance and performance gates remain pending.

@@ -48,3 +48,17 @@ series; the URL is a review lead, not a checksummed collected/admitted record.
 Later prospectuses describing earlier history cannot automatically acquire the
 earlier publication date. No provider call, raw archive download, historical
 classification admission or Colab allocation was made during this investigation.
+
+## Primary lead reviewed and integration checks
+
+The January31,2008 QQQ registration above identifies the trust as an ETF and lists
+the contemporary tickerQQQQ. This supplies historical fund-type evidence for that
+trust, while the provider's canonical QQQ series still needs an explicit identity
+link and durable source/acceptance receipt. No manifest record was admitted from
+a search snippet or a publication-date assumption.
+
+The environment/fitted-replay helpers now use the existing sampler, frozen
+normalizer, evaluator, simulator and holding baseline. Synthetic checks verify
+all roles sample identically under shared seeds and use the correct per-episode
+tags, with no local optimization. Worker/controller/archive and actual Colab
+acceptance remain pending. The source and account ledger were not changed.

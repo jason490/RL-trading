@@ -212,3 +212,29 @@ finds earlier cached candidate filings for97/107 stocks. Those current-CIK links
 do not establish historical security continuity/type, and the ten absent matches
 are not proof of absent filings. Historical metadata remains unadmitted; no
 classification dates or causal readiness are inferred from archive coverage.
+
+## Environment and fitted evaluation integration
+
+`training/task_environment.py:build_task_environment` now validates the reviewed
+manifest, preserves the frozen normalizer and constructs training-only full-state
+episodes with the existing stock/ETF cycle sampler. Research windows remain512
+transitions; smokes use128. Reward, execution and simulation defaults stay fixed.
+The explicit wrapper adds type after preprocessing. Callers cannot enable a
+retrospective metadata fallback, change the sampling rule or supply a test split.
+The eventual worker must additionally enforce pinned dataset/protocol identities.
+
+`evaluation/task_conditioning.py:evaluate_task_training` revalidates evidence,
+crops the unchanged fixed original-panel training window and delegates each
+episode to the existing accounting evaluator. A separate episode predictor adds
+the known type at each decision, validates finite full21 observations and rejects
+unavailable types or exhausted streams. Raw four-action requests remain in the
+report before the existing unit-magnitude evaluation filter. There is no new
+holding baseline, cost formula or simulator. Public validation/test evaluation
+and generic prediction streams are unchanged; this task API opens only training.
+
+Synthetic no-optimization integration tests exercise mixed stock/ETF tags,
+identical seeded group/start sampling across all roles, full episode replay,
+immutable source data and Gymnasium/SB3 checkers. These fixtures include deliberate
+small accounting windows and are not market coverage or performance evidence.
+Actual Colab optimization, checkpoint selection/gates and job/controller/archive
+integration remain pending, along with historical metadata admission.
