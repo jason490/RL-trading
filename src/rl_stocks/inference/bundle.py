@@ -63,6 +63,9 @@ class FrozenPolicy:
         self.exposure_execution=self.action_execution['evaluation_exposure_mode']
         algorithm=self.manifest["metadata"]["algorithm"]
         self._model=CLASSES[algorithm].load(self.path/"model.zip",device=device)
+        from rl_stocks.rl.sac.task_policy import TaskSACPolicy
+        if isinstance(self._model.policy,TaskSACPolicy):
+            raise ValueError('task SAC requires the symbol/date-aware FrozenTaskPolicy loader')
         if self._model.observation_space.shape!=(self.observation_size,):
             raise ValueError('model observation schema mismatch')
         from rl_stocks.rl.ppo.architecture import architecture_spec,validate_loaded_architecture

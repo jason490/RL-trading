@@ -94,8 +94,11 @@ class TaskSACPolicy(SACPolicy):
         super().__init__(*args, **kwargs)
         if self.observation_space.shape != (22,) or self.action_space.shape != (4,):
             raise ValueError('task policy schema mismatch')
-        if self.net_arch != [64, 64] or self.critic.n_critics != 2:
-            raise ValueError('task policy requires two64 layers and twin critics')
+        if (self.net_arch != [64, 64] or self.critic.n_critics != 2
+                or self.activation_fn is not nn.ReLU
+                or self.features_extractor_class is not FlattenExtractor
+                or self.share_features_extractor is not False):
+            raise ValueError('task policy requires native ReLU/full inputs, two64 layers and twin critics')
 
     def make_actor(self, features_extractor=None):
         options = self._update_features_extractor(self.actor_kwargs, features_extractor)

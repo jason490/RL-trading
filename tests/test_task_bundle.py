@@ -104,3 +104,18 @@ def test_rehashed_metadata_cannot_relabel_policy_role(tmp_path):
     path.rename(renamed)
     with pytest.raises(ValueError, match='loaded policy'):
         FrozenTaskPolicy(renamed, feature_schema='task-fixture', feed='fixture')
+
+
+def test_generic_frozen_loader_rejects_task_policy_even_with_matching_vector_size(tmp_path):
+    from rl_stocks.inference.bundle import FrozenPolicy, freeze
+    from rl_stocks.environment.observations.state import observation_spec
+    _, path, _ = bundle(tmp_path)
+    names = [f'f{i}' for i in range(8)]
+    generic = {'schema': 'generic-fixture', 'names': names,
+               'normalizer': {'names': names, 'means': [0.] * 8, 'scales': [1.] * 8},
+               'manifest': {'provenance': {'capabilities': {'feed': 'fixture'}}}}
+    disguised = freeze(path / 'model.zip', generic,
+                        {'algorithm': 'sac', 'observation': observation_spec('execution_full')},
+                        tmp_path / 'generic')
+    with pytest.raises(ValueError, match='symbol/date-aware'):
+        FrozenPolicy(disguised, 'generic-fixture', 'fixture')

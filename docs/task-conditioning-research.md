@@ -275,3 +275,14 @@ corruption detection without optimizer execution. Actual smoke/profile results,
 archive/controller acceptance and remote session cleanup remain unverified until
 run through the existing centrally metered owned fleet. Historical evidence is
 still unadmitted. No runtime was allocated for these engineering checks.
+
+## Strict policy and loader boundary checks
+
+Task policies now verify the effective native ReLU/flattened-input contract after
+SB3 construction, including positional constructor arguments. A custom extractor,
+shared feature extractor or alternate activation cannot silently pass the fixed
+64x64 task study geometry. The ordinary `FrozenPolicy` loader explicitly rejects
+`TaskSACPolicy`, even when an unrelated feature schema happens to produce22
+inputs; task inference must use the symbol/date-aware loader. Untrained regression
+tests cover both bypasses and preserve normal SAC/CrossQ frozen compatibility.
+No optimizer execution or performance result is implied by these checks.

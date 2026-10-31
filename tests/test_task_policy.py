@@ -172,3 +172,20 @@ def test_task_factory_model_save_and_replay_tags(tmp_path, monkeypatch):
     assert np.array_equal(action, restored.predict(x, deterministic=True)[0])
     with pytest.raises(ValueError, match='role mismatch'):
         create_task_sac(Fixture(), task_role='masked_shared')
+
+
+def test_task_geometry_cannot_change_activation_or_positional_extractor():
+    from stable_baselines3.common.torch_layers import FlattenExtractor
+    observations_space = spaces.Box(-np.inf, np.inf, (22,), dtype=np.float32)
+    actions = spaces.Box(-1, 1, (4,), dtype=np.float32)
+    with pytest.raises(ValueError, match='ReLU'):
+        TaskSACPolicy(observations_space, actions, lambda _: .0003, net_arch=[64, 64],
+                      activation_fn=torch.nn.Tanh, task_role='tagged_shared')
+    class OtherFlatten(FlattenExtractor):
+        pass
+    # SACPolicy positional args: spaces, schedule, architecture, activation, use_sde,
+    # log_std_init, use_expln, clip_mean, extractor_class.
+    with pytest.raises(ValueError, match='ReLU'):
+        TaskSACPolicy(observations_space, actions, lambda _: .0003, [64, 64],
+                      torch.nn.ReLU, False, -3, False, 2., OtherFlatten,
+                      task_role='tagged_shared')
