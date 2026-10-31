@@ -164,3 +164,34 @@ iShares registrant filing; its issuer must never be assigned to IWM. Both the
 original index and explicitly typed primary HTML are collected, at most eight
 operations, with one durable claim and stop-on-failure/no-retry behavior. Source
 selection/collection alone does not verify the fund statements or admit metadata.
+
+## Actual incorporated exhibit and four-fund observations
+
+A separate single-request AEP collection retained the original sequence11 EX-13
+annual-report HTML (17,995,757 bytes). Its [review](../results/task-conditioning-2026-10-31/aep-exhibit-review.json)
+confirms a common-stock/NYSE market statement, but retains the distinction
+between a company abbreviation and an explicit ticker keyword clause. ABT's
+original index has no EX-13 annual-report attachment; its main filing supplies
+the common-share market description. No missing exhibit was guessed or replaced.
+
+The fixed fund collection completed all eight index/primary operations, retaining
+3,598,117 raw bytes. [Source receipts](../results/task-conditioning-2026-10-31/fund-source-collection.json)
+and [checked observations](../results/task-conditioning-2026-10-31/fund-source-review.json)
+record source/master/index agreement, short source anchors and unchanged protected
+inputs. All conservative dates precede the first training session:
+
+| Canonical research symbol | Source filed | Conservative availability | Observation limit |
+| --- | --- | --- | --- |
+| SPY |2010-01-27|2010-01-29| Fund registration names ETF trust and SPY market symbol |
+| QQQ |2010-01-26|2010-01-28| Fund registration describes unit investment trust trading asQQQQ; canonical alias still requires review |
+| DIA |2010-02-26|2010-03-02| Fund registration names ETF trust and DIA market symbol |
+| IWM |2009-10-29|2009-11-02| Bank424B2 names IWM and describes its underlying fund as an ETF; not fund-issuer identity verification |
+
+`review_task_fund_sources.py` reproduces these four fixed observations against
+retained primary bytes. Bank registrant19617 belongs to the source filing and
+must not be assigned to IWM. The observation is limited to dated product-type
+evidence; it does not establish financial issuer identity or historical price
+linkage. Likewise, QQQ's old ticker cannot be silently overwritten in evidence.
+All records leave whole-history metadata admission and inferred validity intervals
+false. The two-session reconstruction remains an explicit research assumption.
+No Colab/optimizer/model operation or retired-test evaluation occurred.

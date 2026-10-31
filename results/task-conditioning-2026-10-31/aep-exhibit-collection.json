@@ -1,0 +1,26 @@
+{
+  "schema": "task-aep-exhibit-collection-v1",
+  "symbol": "AEP",
+  "cik": "4904",
+  "accession": "0000004904-10-000018",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/ye09aepar.htm",
+  "selection": "Sequence11 EX-13 annual-report HTML in already retained original index",
+  "maximum_requests": 1,
+  "automatic_retry": false,
+  "historical_metadata_admitted": false,
+  "colab_allocated": false,
+  "training_performed": false,
+  "status": "retrieved",
+  "path": "data/raw/sec-filings/59d7808c50d4ca75c6ccac7cff9508fb2c0f6690b5c5fe5a842c49e72a4cac33/filing.htm",
+  "receipt": {
+    "schema": "sec-filing-html-acquisition-v1",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/ye09aepar.htm",
+    "sha256": "59d7808c50d4ca75c6ccac7cff9508fb2c0f6690b5c5fe5a842c49e72a4cac33",
+    "bytes": 17995757,
+    "retrieved_utc": "2026-10-31T18:08:35.602786+00:00",
+    "accession": "0000004904-10-000018",
+    "cik": "4904",
+    "historical_metadata_admitted": false
+  },
+  "cached": false
+}

@@ -86,3 +86,19 @@ availability on2010-02-23/2010-01-26/2010-03-02 respectively, all before trainin
 This is the declared two-XNYS-session assumption, not exact dissemination proof.
 All protected original source, ledger and code hashes remain unchanged. No
 historical interval/classification admission or model input was enabled.
+
+## Incorporated exhibit and fund source results
+
+[AEP exhibit collection](aep-exhibit-collection.json) retrieved the explicitly
+indexed EX-13 HTML in one request (17,995,757 bytes); its
+[review](aep-exhibit-review.json) supports a common-stock NYSE market reference,
+without upgrading the abbreviation to a separately verified ticker/history link.
+ABT has no EX-13 annual-report attachment in the retained index.
+
+[Four-fund collection](fund-source-collection.json) completed eight fixed
+index/primary operations and retained3,598,117 bytes. [Review](fund-source-review.json)
+verifies dated fund-type observations for SPY/QQQ/DIA/IWM, with conservative
+availability2010-01-29/2010-01-28/2010-03-02/2009-11-02. QQQ's source ticker is
+QQQQ. IWM's source is a bank424B2, so source registrant19617 is not an IWM issuer
+mapping. All original/master/code/ledger hashes remain unchanged. No historical
+interval admission, fitting, new Colab credits or retired-test access.

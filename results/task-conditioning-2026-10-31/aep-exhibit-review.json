@@ -1,0 +1,14 @@
+{
+  "schema": "task-aep-exhibit-review-v1",
+  "collection_sha256": "da20c9427da520e1c5fee4570b83d4debe3d7c3343877ee1f22293050a8f4e9e",
+  "source_sha256": "59d7808c50d4ca75c6ccac7cff9508fb2c0f6690b5c5fe5a842c49e72a4cac33",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/ye09aepar.htm",
+  "anchor": "AEP common stock is traded principally on the New York Stock Exchange.",
+  "common_stock_market_reference_supported": true,
+  "explicit_ticker_keyword_clause_supported": false,
+  "historical_metadata_admitted": false,
+  "validity_interval_inferred": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "interpretation": "The stock market statement is useful evidence; do not turn a company abbreviation into an independently verified trading-symbol or whole-history identity record."
+}

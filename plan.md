@@ -3155,3 +3155,12 @@ equity for all three and explicit ADBE ticker evidence; ABT/AEP remain partial.
 Official source dates plus conservative two-session availability precede training;
 exact dissemination and historical intervals remain unverified. All111-symbol
 metadata admission, fleet/archive acceptance and actual training remain pending.
+
+### Incorporated market section and historical fund sources — 2026-10-31
+
+AEP original EX-13 collected in one bounded request and checked for NYSE
+common-stock reference. Four fixed SPY/QQQ/DIA/IWM sources collected in eight
+index/primary operations; original/master dates and fund-type anchors verified.
+QQQQ alias and IWM bank-source/issuer distinction retained.33 cached exact stock
+hints and these dated observations do not yet admit the complete111-symbol
+historical metadata. No Colab credits/training/test access; source hashes retained.

@@ -63,7 +63,10 @@ fleet/archive integration remain pending;
 inspection finds33 exact document hints,52 cached nonmatching cases and22
 without earlier cached originals. A separate bounded ABT/ADBE/AEP cover
 collection is complete: all three support common equity and ADBE adds an explicit
-ticker clause; ABT/AEP remain partial. All classifications remain unadmitted until
+ticker clause; ABT/AEP remain partial. AEP's original EX-13 adds a NYSE
+common-stock statement. Four fund sources now provide dated type observations,
+retaining QQQQ alias and IWM bank-source limits. All classifications remain
+unadmitted until
 [historical source review](instrument-type-evidence.md) is complete. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
 interference and reward-scale causes remain unproven. This is design admission,

@@ -1,0 +1,190 @@
+{
+  "schema": "task-fund-source-collection-v1",
+  "cases": [
+    {
+      "symbol": "SPY",
+      "master_record": {
+        "cik": "884394",
+        "company_name": "SPDR S&P 500 ETF TRUST",
+        "form": "485BPOS",
+        "filed": "2010-01-27",
+        "accession": "0000950123-10-005702",
+        "filing_directory_cik": "884394",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/884394/0000950123-10-005702.txt"
+      },
+      "status": "retrieved",
+      "source_is_fund_registrant": true,
+      "index": {
+        "path": "data/raw/sec-filings/0a1bb1047aeb9f3bb27a9f2603e125409cd1b2326f9ca10a81b881154cbabc2c/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000095012310005702/0000950123-10-005702-index.htm",
+          "sha256": "0a1bb1047aeb9f3bb27a9f2603e125409cd1b2326f9ca10a81b881154cbabc2c",
+          "bytes": 10828,
+          "retrieved_utc": "2026-10-31T18:09:54.083949+00:00",
+          "accession": "0000950123-10-005702",
+          "cik": "884394",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/817f49d50380fe420827b5a787dcc73405621d3fc49742303a0690794cfb7b2d/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000095012310005702/y02740e485bpos.htm",
+          "sha256": "817f49d50380fe420827b5a787dcc73405621d3fc49742303a0690794cfb7b2d",
+          "bytes": 1356066,
+          "retrieved_utc": "2026-10-31T18:09:56.972799+00:00",
+          "accession": "0000950123-10-005702",
+          "cik": "884394",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "master_record": {
+        "cik": "1067839",
+        "company_name": "POWERSHARES QQQ TRUST, SERIES 1",
+        "form": "485BPOS",
+        "filed": "2010-01-26",
+        "accession": "0001104659-10-002985",
+        "filing_directory_cik": "1067839",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1067839/0001104659-10-002985.txt"
+      },
+      "status": "retrieved",
+      "source_is_fund_registrant": true,
+      "index": {
+        "path": "data/raw/sec-filings/b0f65f2ded852eb0c400876b480bf987d304bb8f06a0fc6b0c24f38522d2a041/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465910002985/0001104659-10-002985-index.htm",
+          "sha256": "b0f65f2ded852eb0c400876b480bf987d304bb8f06a0fc6b0c24f38522d2a041",
+          "bytes": 8463,
+          "retrieved_utc": "2026-10-31T18:09:59.220432+00:00",
+          "accession": "0001104659-10-002985",
+          "cik": "1067839",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/5b73be7cdce0b9f710400e78246ed45075212bba1cffac2a27796ea2b44323be/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465910002985/a09-28465_1485bpos.htm",
+          "sha256": "5b73be7cdce0b9f710400e78246ed45075212bba1cffac2a27796ea2b44323be",
+          "bytes": 1038583,
+          "retrieved_utc": "2026-10-31T18:10:01.832790+00:00",
+          "accession": "0001104659-10-002985",
+          "cik": "1067839",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "DIA",
+      "master_record": {
+        "cik": "1041130",
+        "company_name": "SPDR DOW JONES INDUSTRIAL AVERAGE ETF TRUST",
+        "form": "485BPOS",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018164",
+        "filing_directory_cik": "1041130",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1041130/0000950123-10-018164.txt"
+      },
+      "status": "retrieved",
+      "source_is_fund_registrant": true,
+      "index": {
+        "path": "data/raw/sec-filings/970c213dc3f9552e1736a81b2cd8d408455a5e4e795090ca3b3e0e665f7d0d57/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1041130/000095012310018164/0000950123-10-018164-index.htm",
+          "sha256": "970c213dc3f9552e1736a81b2cd8d408455a5e4e795090ca3b3e0e665f7d0d57",
+          "bytes": 10860,
+          "retrieved_utc": "2026-10-31T18:10:04.086640+00:00",
+          "accession": "0000950123-10-018164",
+          "cik": "1041130",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/ce7e60e21fb408e4333c59fd6b94d7df565992e70171d2d54b151bf6687d6ede/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1041130/000095012310018164/y02978e485bpos.htm",
+          "sha256": "ce7e60e21fb408e4333c59fd6b94d7df565992e70171d2d54b151bf6687d6ede",
+          "bytes": 1098888,
+          "retrieved_utc": "2026-10-31T18:10:06.519151+00:00",
+          "accession": "0000950123-10-018164",
+          "cik": "1041130",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    },
+    {
+      "symbol": "IWM",
+      "master_record": {
+        "cik": "19617",
+        "company_name": "J P MORGAN CHASE & CO",
+        "form": "424B2",
+        "filed": "2009-10-29",
+        "accession": "0000891092-09-004052",
+        "filing_directory_cik": "19617",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/19617/0000891092-09-004052.txt"
+      },
+      "status": "retrieved",
+      "source_is_fund_registrant": false,
+      "index": {
+        "path": "data/raw/sec-filings/f6fb1223f880dc6b7ed9d1201b50d5d2a39c2146eaf8929d2940ff0f4f4bec01/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000089109209004052/0000891092-09-004052-index.htm",
+          "sha256": "f6fb1223f880dc6b7ed9d1201b50d5d2a39c2146eaf8929d2940ff0f4f4bec01",
+          "bytes": 8076,
+          "retrieved_utc": "2026-10-31T18:10:08.639115+00:00",
+          "accession": "0000891092-09-004052",
+          "cik": "19617",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      },
+      "primary": {
+        "path": "data/raw/sec-filings/3df90674f144e5a78b02a4bf3a1325142a4bb32638d002f6b8c1b56955430b5f/filing.htm",
+        "receipt": {
+          "schema": "sec-filing-html-acquisition-v1",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000089109209004052/e36880_424b2.htm",
+          "sha256": "3df90674f144e5a78b02a4bf3a1325142a4bb32638d002f6b8c1b56955430b5f",
+          "bytes": 66353,
+          "retrieved_utc": "2026-10-31T18:10:10.810232+00:00",
+          "accession": "0000891092-09-004052",
+          "cik": "19617",
+          "historical_metadata_admitted": false
+        },
+        "cached": false
+      }
+    }
+  ],
+  "protected_sha256": {
+    "/home/vibe/projects/rl-stocks/scripts/collect_task_fund_sources.py": "dd34c151cbf6e4cf6af9a24e576d723dab4e5aaa27548d2ecf15642b3bf2636c",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "src/rl_stocks/data/providers/sec/master.py": "95b713efd5ab082cce5753b309a31b306d9be60330c838ba60178b34f5504173",
+    "src/rl_stocks/data/providers/sec/html_source.py": "0cf10b6c4f7a9403fbacaba6535c482ec03d6ad25a883a4a273b63fea6127ba9",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "8eca64069bfed8068bba6ca9da0d77bf43f3a4666776949d3eba28df15b2144a",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+  },
+  "maximum_acquisition_operations": 8,
+  "acquisition_operations_attempted": 8,
+  "historical_metadata_admitted": false,
+  "automatic_retry": false,
+  "colab_allocated": false,
+  "training_performed": false,
+  "status": "complete",
+  "protected_sources_unchanged": true
+}
