@@ -1,0 +1,1105 @@
+{
+  "schema": "task-stock-reviewed-resume-plan-v2",
+  "cases": [
+    {
+      "symbol": "NEE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "753308"
+      ],
+      "eligible_ciks": [
+        "753308"
+      ],
+      "master_record": {
+        "cik": "753308",
+        "company_name": "FPL GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000753308-10-000025",
+        "filing_directory_cik": "753308",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/753308/0000753308-10-000025.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 4,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "NEM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1164727"
+      ],
+      "eligible_ciks": [
+        "1164727"
+      ],
+      "master_record": {
+        "cik": "1164727",
+        "company_name": "NEWMONT MINING CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-016613",
+        "filing_directory_cik": "1164727",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1164727/0000950123-10-016613.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 4,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "NKE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "320187"
+      ],
+      "eligible_ciks": [
+        "320187"
+      ],
+      "master_record": {
+        "cik": "320187",
+        "company_name": "NIKE INC",
+        "form": "10-K",
+        "filed": "2009-07-27",
+        "accession": "0001193125-09-155951",
+        "filing_directory_cik": "320187",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/320187/0001193125-09-155951.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 4,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/archive.zip",
+        "sha256": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d"
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045810"
+      ],
+      "eligible_ciks": [
+        "1045810"
+      ],
+      "master_record": {
+        "cik": "1045810",
+        "company_name": "NVIDIA CORP",
+        "form": "10-Q",
+        "filed": "2009-11-19",
+        "accession": "0001045810-09-000036",
+        "filing_directory_cik": "1045810",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1045810/0001045810-09-000036.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 4,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip",
+        "sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+      }
+    },
+    {
+      "symbol": "O",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "726728"
+      ],
+      "eligible_ciks": [
+        "726728"
+      ],
+      "master_record": {
+        "cik": "726728",
+        "company_name": "REALTY INCOME CORP",
+        "form": "10-K",
+        "filed": "2010-02-11",
+        "accession": "0000726728-10-000017",
+        "filing_directory_cik": "726728",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/726728/0000726728-10-000017.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 4,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "OMC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "29989"
+      ],
+      "eligible_ciks": [
+        "29989"
+      ],
+      "master_record": {
+        "cik": "29989",
+        "company_name": "OMNICOM GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0000891092-10-000656",
+        "filing_directory_cik": "29989",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/29989/0000891092-10-000656.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "ORCL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1341439"
+      ],
+      "eligible_ciks": [
+        "1341439"
+      ],
+      "master_record": {
+        "cik": "1341439",
+        "company_name": "ORACLE CORP",
+        "form": "10-K",
+        "filed": "2009-06-29",
+        "accession": "0000950123-09-018689",
+        "filing_directory_cik": "1341439",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1341439/0000950123-09-018689.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/archive.zip",
+        "sha256": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1"
+      }
+    },
+    {
+      "symbol": "OXY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "797468"
+      ],
+      "eligible_ciks": [
+        "797468"
+      ],
+      "master_record": {
+        "cik": "797468",
+        "company_name": "OCCIDENTAL PETROLEUM CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000797468-10-000020",
+        "filing_directory_cik": "797468",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/797468/0000797468-10-000020.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "PFE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "78003"
+      ],
+      "eligible_ciks": [
+        "78003"
+      ],
+      "master_record": {
+        "cik": "78003",
+        "company_name": "PFIZER INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042425",
+        "filing_directory_cik": "78003",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/78003/0001193125-10-042425.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "PG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "80424"
+      ],
+      "eligible_ciks": [
+        "80424"
+      ],
+      "master_record": {
+        "cik": "80424",
+        "company_name": "PROCTER & GAMBLE CO",
+        "form": "10-K",
+        "filed": "2009-08-14",
+        "accession": "0001193125-09-175986",
+        "filing_directory_cik": "80424",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/80424/0001193125-09-175986.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/archive.zip",
+        "sha256": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d"
+      }
+    },
+    {
+      "symbol": "PLD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045609"
+      ],
+      "eligible_ciks": [
+        "1045609"
+      ],
+      "master_record": {
+        "cik": "1045609",
+        "company_name": "AMB PROPERTY CORP",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0000950123-10-014699",
+        "filing_directory_cik": "1045609",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1045609/0000950123-10-014699.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "PSA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1393311"
+      ],
+      "eligible_ciks": [
+        "1393311"
+      ],
+      "master_record": {
+        "cik": "1393311",
+        "company_name": "Public Storage",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001393311-10-000004",
+        "filing_directory_cik": "1393311",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1393311/0001393311-10-000004.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "804328"
+      ],
+      "eligible_ciks": [
+        "804328"
+      ],
+      "master_record": {
+        "cik": "804328",
+        "company_name": "QUALCOMM INC/DE",
+        "form": "10-K",
+        "filed": "2009-11-05",
+        "accession": "0000950123-09-057827",
+        "filing_directory_cik": "804328",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/804328/0000950123-09-057827.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 5,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip",
+        "sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+      }
+    },
+    {
+      "symbol": "ROST",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "745732"
+      ],
+      "eligible_ciks": [
+        "745732"
+      ],
+      "master_record": {
+        "cik": "745732",
+        "company_name": "ROSS STORES INC",
+        "form": "10-Q",
+        "filed": "2009-12-09",
+        "accession": "0001206774-09-002310",
+        "filing_directory_cik": "745732",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/745732/0001206774-09-002310.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip",
+        "sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+      }
+    },
+    {
+      "symbol": "RTX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "101829"
+      ],
+      "eligible_ciks": [
+        "101829"
+      ],
+      "master_record": {
+        "cik": "101829",
+        "company_name": "UNITED TECHNOLOGIES CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-11",
+        "accession": "0001193125-10-027861",
+        "filing_directory_cik": "101829",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/101829/0001193125-10-027861.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "SBUX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "829224"
+      ],
+      "eligible_ciks": [
+        "829224"
+      ],
+      "master_record": {
+        "cik": "829224",
+        "company_name": "STARBUCKS CORP",
+        "form": "10-K",
+        "filed": "2009-11-20",
+        "accession": "0000950123-09-064772",
+        "filing_directory_cik": "829224",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/829224/0000950123-09-064772.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip",
+        "sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+      }
+    },
+    {
+      "symbol": "SHW",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "89800"
+      ],
+      "eligible_ciks": [
+        "89800"
+      ],
+      "master_record": {
+        "cik": "89800",
+        "company_name": "SHERWIN WILLIAMS CO",
+        "form": "10-K",
+        "filed": "2010-02-24",
+        "accession": "0000950123-10-016198",
+        "filing_directory_cik": "89800",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/89800/0000950123-10-016198.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "SO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "92122"
+      ],
+      "eligible_ciks": [
+        "92122"
+      ],
+      "master_record": {
+        "cik": "92122",
+        "company_name": "SOUTHERN CO",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000092122-10-000009",
+        "filing_directory_cik": "92122",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/92122/0000092122-10-000009.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "SPG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1063761"
+      ],
+      "eligible_ciks": [
+        "1063761"
+      ],
+      "master_record": {
+        "cik": "1063761",
+        "company_name": "SIMON PROPERTY GROUP INC /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001047469-10-001324",
+        "filing_directory_cik": "1063761",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1063761/0001047469-10-001324.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "SRE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1032208"
+      ],
+      "eligible_ciks": [
+        "1032208"
+      ],
+      "master_record": {
+        "cik": "1032208",
+        "company_name": "SEMPRA ENERGY",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000086521-10-000019",
+        "filing_directory_cik": "1032208",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1032208/0000086521-10-000019.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "T",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "732717"
+      ],
+      "eligible_ciks": [
+        "732717"
+      ],
+      "master_record": {
+        "cik": "732717",
+        "company_name": "AT&T INC.",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000732717-10-000013",
+        "filing_directory_cik": "732717",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/732717/0000732717-10-000013.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 6,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "TGT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "27419"
+      ],
+      "eligible_ciks": [
+        "27419"
+      ],
+      "master_record": {
+        "cik": "27419",
+        "company_name": "TARGET CORP",
+        "form": "10-K",
+        "filed": "2010-03-12",
+        "accession": "0001047469-10-002121",
+        "filing_directory_cik": "27419",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/27419/0001047469-10-002121.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "TJX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "109198"
+      ],
+      "eligible_ciks": [
+        "109198"
+      ],
+      "master_record": {
+        "cik": "109198",
+        "company_name": "TJX COMPANIES INC /DE/",
+        "form": "10-Q",
+        "filed": "2009-12-01",
+        "accession": "0000950123-09-067237",
+        "filing_directory_cik": "109198",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/109198/0000950123-09-067237.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip",
+        "sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+      }
+    },
+    {
+      "symbol": "TMUS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1283699"
+      ],
+      "eligible_ciks": [
+        "1283699"
+      ],
+      "master_record": {
+        "cik": "1283699",
+        "company_name": "METROPCS COMMUNICATIONS INC",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001193125-10-044780",
+        "filing_directory_cik": "1283699",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1283699/0001193125-10-044780.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "TTWO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "946581"
+      ],
+      "eligible_ciks": [
+        "946581"
+      ],
+      "master_record": {
+        "cik": "946581",
+        "company_name": "TAKE TWO INTERACTIVE SOFTWARE INC",
+        "form": "10-K",
+        "filed": "2009-12-18",
+        "accession": "0001047469-09-010820",
+        "filing_directory_cik": "946581",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/946581/0001047469-09-010820.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip",
+        "sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913"
+      }
+    },
+    {
+      "symbol": "TXN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "97476"
+      ],
+      "eligible_ciks": [
+        "97476"
+      ],
+      "master_record": {
+        "cik": "97476",
+        "company_name": "TEXAS INSTRUMENTS INC",
+        "form": "10-K",
+        "filed": "2010-02-23",
+        "accession": "0001140361-10-007923",
+        "filing_directory_cik": "97476",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/97476/0001140361-10-007923.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "UNP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "100885"
+      ],
+      "eligible_ciks": [
+        "100885"
+      ],
+      "master_record": {
+        "cik": "100885",
+        "company_name": "UNION PACIFIC CORP",
+        "form": "10-K",
+        "filed": "2010-02-05",
+        "accession": "0001193125-10-023294",
+        "filing_directory_cik": "100885",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/100885/0001193125-10-023294.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "USB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "36104"
+      ],
+      "eligible_ciks": [
+        "36104"
+      ],
+      "master_record": {
+        "cik": "36104",
+        "company_name": "US BANCORP \\DE\\",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018123",
+        "filing_directory_cik": "36104",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/36104/0000950123-10-018123.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "VLO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1035002"
+      ],
+      "eligible_ciks": [
+        "1035002"
+      ],
+      "master_record": {
+        "cik": "1035002",
+        "company_name": "VALERO ENERGY CORP/TX",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018097",
+        "filing_directory_cik": "1035002",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1035002/0000950123-10-018097.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 7,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "VMC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1396009"
+      ],
+      "eligible_ciks": [
+        "1396009"
+      ],
+      "master_record": {
+        "cik": "1396009",
+        "company_name": "Vulcan Materials CO",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018400",
+        "filing_directory_cik": "1396009",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1396009/0000950123-10-018400.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 8,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "WELL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "766704"
+      ],
+      "eligible_ciks": [
+        "766704"
+      ],
+      "master_record": {
+        "cik": "766704",
+        "company_name": "HEALTH CARE REIT INC /DE/",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018352",
+        "filing_directory_cik": "766704",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/766704/0000950123-10-018352.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 8,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "WFC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "72971"
+      ],
+      "eligible_ciks": [
+        "72971"
+      ],
+      "master_record": {
+        "cik": "72971",
+        "company_name": "WELLS FARGO & CO/MN",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-017877",
+        "filing_directory_cik": "72971",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/72971/0000950123-10-017877.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 8,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    },
+    {
+      "symbol": "WMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "104169"
+      ],
+      "eligible_ciks": [
+        "104169"
+      ],
+      "master_record": {
+        "cik": "104169",
+        "company_name": "WAL MART STORES INC",
+        "form": "10-K",
+        "filed": "2009-04-01",
+        "accession": "0000104169-09-000006",
+        "filing_directory_cik": "104169",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/104169/0000104169-09-000006.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 8,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/archive.zip",
+        "sha256": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1"
+      }
+    },
+    {
+      "symbol": "XEL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "72903"
+      ],
+      "eligible_ciks": [
+        "72903"
+      ],
+      "master_record": {
+        "cik": "72903",
+        "company_name": "XCEL ENERGY INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001047469-10-001536",
+        "filing_directory_cik": "72903",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/72903/0001047469-10-001536.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false,
+      "original_batch": 8,
+      "status": "not_attempted",
+      "master_archive": {
+        "path": "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip",
+        "sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+      }
+    }
+  ],
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/stock-master-selection.json": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+    ".runtime/task-stock-master-collection-stop-v1.json": "066fc194e6e466bd135fefb17acae3db3b7a21bb252a55bf1e8caf9e383d55af",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "/home/vibe/projects/rl-stocks/scripts/resume_task_stock_sources.py": "92d1354735e1859ccb39d90b9a688253318e03ef1f1f231551a60df1683b4f40",
+    "results/task-conditioning-2026-10-31/nee-joint-resolution.json": "46fe9af9901e39705d7a5b69468eb29448ff6c65c6d7969b51643a9c8709ce51",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "6ae8825f2f8349dc845fc3f012b71118252d68a9c987bc48972e155f71b1cbdb",
+    "src/rl_stocks/data/providers/sec/html_source.py": "0cf10b6c4f7a9403fbacaba6535c482ec03d6ad25a883a4a273b63fea6127ba9",
+    "src/rl_stocks/data/providers/sec/master.py": "95b713efd5ab082cce5753b309a31b306d9be60330c838ba60178b34f5504173",
+    "src/rl_stocks/data/providers/sec/lineage.py": "0bb12384d7cc7a95b4784860b8f96e5ba5c7621bfc8d5617811b9a3aff1bd74d",
+    "scripts/review_task_type_covers.py": "c99c94dd7b5cc1dd714a30807752df88d1159b7b9c6eb8f462cc65843bd14999",
+    "results/task-conditioning-2026-10-31/stock-master-batch-0.json": "99494e6d99e05e94e435adb0fd14e8293c0958645d76a1a63d7756ce89f06d87",
+    ".runtime/task-stock-master-batch-0-claim-v1.json": "d82b8a0385e20cb6b6a1691f3db9d37c174e60bc306c7f8d96a66df0efdc65dc",
+    "data/raw/sec-filings/23fdc65366dd32bee02fb606552502862f9bf1484ff480059ed54d893d657dd4/filing.htm": "23fdc65366dd32bee02fb606552502862f9bf1484ff480059ed54d893d657dd4",
+    "data/raw/sec-filings/c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49/filing.htm": "c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49",
+    "data/raw/sec-filings/5a65ed32a35b0a0c3e04de8f6452843bb47acb40386a429089894e617aa241df/filing.htm": "5a65ed32a35b0a0c3e04de8f6452843bb47acb40386a429089894e617aa241df",
+    "data/raw/sec-filings/4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af/filing.htm": "4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af",
+    "data/raw/sec-filings/560188de5ced5a0afd029dd2941994b64a0ee80a43b697193e461844c58a0c37/filing.htm": "560188de5ced5a0afd029dd2941994b64a0ee80a43b697193e461844c58a0c37",
+    "data/raw/sec-filings/e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03/filing.htm": "e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03",
+    "data/raw/sec-filings/73905e12d0680f2cc685b546180d37b3f783d8ddb818f95d8d90d7b0e7fed26a/filing.htm": "73905e12d0680f2cc685b546180d37b3f783d8ddb818f95d8d90d7b0e7fed26a",
+    "data/raw/sec-filings/e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9/filing.htm": "e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9",
+    "data/raw/sec-filings/b60fa33fb53531c8d4c86789bb9a81bd68569a29346a376569c7e1c131330c58/filing.htm": "b60fa33fb53531c8d4c86789bb9a81bd68569a29346a376569c7e1c131330c58",
+    "data/raw/sec-filings/2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1/filing.htm": "2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1",
+    "data/raw/sec-filings/69aa4fb763326e4c48fd4f51da8aa9be844308c697c7ad5956ec08ee4a4206d1/filing.htm": "69aa4fb763326e4c48fd4f51da8aa9be844308c697c7ad5956ec08ee4a4206d1",
+    "data/raw/sec-filings/8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e/filing.htm": "8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e",
+    "data/raw/sec-filings/1ea6fd9300bc71ea5ec56106dd74cae07592e0079582b3450eb5604be67bdcc2/filing.htm": "1ea6fd9300bc71ea5ec56106dd74cae07592e0079582b3450eb5604be67bdcc2",
+    "data/raw/sec-filings/ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778/filing.htm": "ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778",
+    "data/raw/sec-filings/32f40c0c5c5f5b325a1e66d0571825617485e19fa40ab5231bb941501bba54fe/filing.htm": "32f40c0c5c5f5b325a1e66d0571825617485e19fa40ab5231bb941501bba54fe",
+    "data/raw/sec-filings/d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927/filing.htm": "d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927",
+    "results/task-conditioning-2026-10-31/stock-master-batch-1.json": "78e38e5fae9c2ccbedc3607494703cc5bcc09f0140cd20b0195c86570fec9a5a",
+    ".runtime/task-stock-master-batch-1-claim-v1.json": "74ea5645744c981ac787ede40d27d73c0416803f1297e5a2a09afb91d4245b13",
+    "data/raw/sec-filings/2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21/filing.htm": "2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21",
+    "data/raw/sec-filings/5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367/filing.htm": "5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367",
+    "data/raw/sec-filings/70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d/filing.htm": "70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d",
+    "data/raw/sec-filings/06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04/filing.htm": "06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04",
+    "data/raw/sec-filings/40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d/filing.htm": "40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d",
+    "data/raw/sec-filings/82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f/filing.htm": "82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f",
+    "data/raw/sec-filings/8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099/filing.htm": "8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099",
+    "data/raw/sec-filings/66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264/filing.htm": "66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264",
+    "data/raw/sec-filings/0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4/filing.htm": "0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4",
+    "data/raw/sec-filings/1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe/filing.htm": "1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe",
+    "data/raw/sec-filings/1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1/filing.htm": "1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1",
+    "data/raw/sec-filings/4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a/filing.htm": "4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a",
+    "data/raw/sec-filings/1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936/filing.htm": "1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936",
+    "data/raw/sec-filings/7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f/filing.htm": "7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f",
+    "data/raw/sec-filings/00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200/filing.htm": "00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200",
+    "data/raw/sec-filings/0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9/filing.htm": "0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9",
+    "results/task-conditioning-2026-10-31/stock-master-batch-2.json": "a828aab6be9ab2a692b0592659c90020d834a7ba1ca69846393f00ebd94a3845",
+    ".runtime/task-stock-master-batch-2-claim-v1.json": "fdf9c1a50cc7d6c5f25ec00e3a83a7b3086e6038f224c5472e1f1fdb836d383d",
+    "data/raw/sec-filings/5cd4806a3b89d3d2726161ee1f317c32fc8b59c45e427278ddaa346933225fd3/filing.htm": "5cd4806a3b89d3d2726161ee1f317c32fc8b59c45e427278ddaa346933225fd3",
+    "data/raw/sec-filings/99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e/filing.htm": "99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e",
+    "data/raw/sec-filings/005e399b0e1e59637bd53be403e500a57428f478a7af170924091d8f30fb35eb/filing.htm": "005e399b0e1e59637bd53be403e500a57428f478a7af170924091d8f30fb35eb",
+    "data/raw/sec-filings/7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558/filing.htm": "7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558",
+    "data/raw/sec-filings/699c9072c609e781c1244d233085a92327a959a1bc9062a118dd0d8897c68395/filing.htm": "699c9072c609e781c1244d233085a92327a959a1bc9062a118dd0d8897c68395",
+    "data/raw/sec-filings/fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666/filing.htm": "fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666",
+    "data/raw/sec-filings/ce680a4f2807a5b66e59f481e5910efdb99e3a262a0343f1b42cdb844dc73504/filing.htm": "ce680a4f2807a5b66e59f481e5910efdb99e3a262a0343f1b42cdb844dc73504",
+    "data/raw/sec-filings/4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b/filing.htm": "4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b",
+    "data/raw/sec-filings/b7d2a664cc7383ded6299b11b6bf5980c6b1b3ef86658ea81a6d02e1b323f6b9/filing.htm": "b7d2a664cc7383ded6299b11b6bf5980c6b1b3ef86658ea81a6d02e1b323f6b9",
+    "data/raw/sec-filings/f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90/filing.htm": "f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90",
+    "data/raw/sec-filings/3bd1a77c1428dd481320534c28e82494bf8cbf55954dc613054305809588ebaf/filing.htm": "3bd1a77c1428dd481320534c28e82494bf8cbf55954dc613054305809588ebaf",
+    "data/raw/sec-filings/0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69/filing.htm": "0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69",
+    "data/raw/sec-filings/1b5f5bb4fdfb80edaab703d4557976dc4afd6085f09ef15f36bddc3dbe497168/filing.htm": "1b5f5bb4fdfb80edaab703d4557976dc4afd6085f09ef15f36bddc3dbe497168",
+    "data/raw/sec-filings/ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de/filing.htm": "ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de",
+    "data/raw/sec-filings/58bc66d7e828f07d35a07b076daf9c7d965df56397958f679721a05d560a9a72/filing.htm": "58bc66d7e828f07d35a07b076daf9c7d965df56397958f679721a05d560a9a72",
+    "data/raw/sec-filings/3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16/filing.htm": "3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16",
+    "results/task-conditioning-2026-10-31/stock-master-batch-3.json": "1026c2afef0d423fcb05343a7ad0fca4e38c1c394c7cb5fd860af0a8d6f51267",
+    ".runtime/task-stock-master-batch-3-claim-v1.json": "70e532e5b11d3f3b6a8fd75c9e2d95cbf2e6a27190aec2081352f2df3f9f5986",
+    "data/raw/sec-filings/f5398b629cca430b9cc6bf21cea712d6caa6e3e64634ad7da97edc99ba0bfe48/filing.htm": "f5398b629cca430b9cc6bf21cea712d6caa6e3e64634ad7da97edc99ba0bfe48",
+    "data/raw/sec-filings/d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba/filing.htm": "d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba",
+    "data/raw/sec-filings/39d64ccf03db44e8ea8e17c3582617452f9553e83356c5d8df65e5e13bb3711b/filing.htm": "39d64ccf03db44e8ea8e17c3582617452f9553e83356c5d8df65e5e13bb3711b",
+    "data/raw/sec-filings/22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f/filing.htm": "22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f",
+    "data/raw/sec-filings/e5258a7bb310b9a32b07274197de4cd6085c626ea098553c09f3250a9391e5bb/filing.htm": "e5258a7bb310b9a32b07274197de4cd6085c626ea098553c09f3250a9391e5bb",
+    "data/raw/sec-filings/e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e/filing.htm": "e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e",
+    "data/raw/sec-filings/c8d06376672de3eb6d23a3334b56f772b0e174879932657b1b40c1029ed69fe1/filing.htm": "c8d06376672de3eb6d23a3334b56f772b0e174879932657b1b40c1029ed69fe1",
+    "data/raw/sec-filings/295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685/filing.htm": "295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685",
+    "data/raw/sec-filings/d9a3388845da5b4d010cb25b2c93fb2c75d01faba2f7ec8e1e07b499b7affc3e/filing.htm": "d9a3388845da5b4d010cb25b2c93fb2c75d01faba2f7ec8e1e07b499b7affc3e",
+    "data/raw/sec-filings/181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1/filing.htm": "181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1",
+    "data/raw/sec-filings/0462698193cb3e0a2e31b2ec45ee469bbf2883f8807c75ab48c0569a31ddc251/filing.htm": "0462698193cb3e0a2e31b2ec45ee469bbf2883f8807c75ab48c0569a31ddc251",
+    "data/raw/sec-filings/f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf/filing.htm": "f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf",
+    "data/raw/sec-filings/1c4d375fd049b5e1da7ae05dd64d627005f6a2718e6f6480a3c6cdf2e6e76107/filing.htm": "1c4d375fd049b5e1da7ae05dd64d627005f6a2718e6f6480a3c6cdf2e6e76107",
+    "data/raw/sec-filings/f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95/filing.htm": "f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95",
+    "data/raw/sec-filings/aeac0eb4304230361a3df8e4bb342312613124898e033754ced3f8e18881cba2/filing.htm": "aeac0eb4304230361a3df8e4bb342312613124898e033754ced3f8e18881cba2",
+    "data/raw/sec-filings/9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2/filing.htm": "9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2",
+    "results/task-conditioning-2026-10-31/stock-master-batch-4.json": "5484ceaf0e0e0cc155d1c072e4bf315284aa93ba1b955593c464f004451cda0a",
+    ".runtime/task-stock-master-batch-4-claim-v1.json": "3b0835aa0d5c6e78008aaec1c644183cee65d0d73245d45479c9bbe7fcd5c797",
+    "data/raw/sec-filings/9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0/filing.htm": "9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0",
+    "data/raw/sec-filings/eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d/filing.htm": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+    "data/raw/sec-filings/593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7/filing.htm": "593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7",
+    "data/raw/sec-filings/04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee/filing.htm": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+    "data/raw/sec-filings/aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f/filing.htm": "aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f",
+    "data/raw/sec-filings/45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9/filing.htm": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+    "data/raw/sec-filings/eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5/filing.htm": "eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5",
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/acquisition-0c1676b269a9e23158886f29c0b51536559fddb2a63727c527234c4f390704ee.json": "0c1676b269a9e23158886f29c0b51536559fddb2a63727c527234c4f390704ee",
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/archive.zip": "446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942",
+    "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/acquisition-d5898948e3c19bc2ce9b8dbc272c551357f15493c5dd7b066e1effe80e832b3f.json": "d5898948e3c19bc2ce9b8dbc272c551357f15493c5dd7b066e1effe80e832b3f",
+    "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/archive.zip": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+    "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/acquisition-b5493c1cff649765a619d938c3ed96188c97f2f89f2f19c82c9ecc53ddf8b1fd.json": "b5493c1cff649765a619d938c3ed96188c97f2f89f2f19c82c9ecc53ddf8b1fd",
+    "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/archive.zip": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/acquisition-5397c51407f2a865e54bf6c7b7b8d53fa569023219f505571f9c8fdd3951b2d1.json": "5397c51407f2a865e54bf6c7b7b8d53fa569023219f505571f9c8fdd3951b2d1",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/archive.zip": "e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/acquisition-0fdf9eff42725c8d25a95b56f23ca6e2697e464e3e7d48ed283aa295941a1021.json": "0fdf9eff42725c8d25a95b56f23ca6e2697e464e3e7d48ed283aa295941a1021",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/acquisition-b34b696e53e078aa3ad84e95bbb3dffba2cb9cafe122c4a1c41f91219ce17b20.json": "b34b696e53e078aa3ad84e95bbb3dffba2cb9cafe122c4a1c41f91219ce17b20",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670"
+  },
+  "selection_sha256": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+  "retained_primary_count": 35,
+  "remaining_primary_count": 34,
+  "maximum_acquisition_operations": 68,
+  "old_stop_preserved": true,
+  "automatic_retry": false,
+  "historical_metadata_admitted": false,
+  "training_performed": false,
+  "colab_allocated": false
+}

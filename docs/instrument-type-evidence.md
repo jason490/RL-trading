@@ -290,3 +290,25 @@ passes against the retained index and2010q1 master. Original failed batch, globa
 stop and cumulative ledger hashes remain unchanged; this check issued no request
 and did not resume collection. Any resumed source work must record a new claim
 and retain the old failure instead of deleting/reusing the original batch claim.
+
+## Reviewed source-only resume plan
+
+`resume_task_stock_sources.py --prepare --plan NEW_PLAN` verifies the diagnosed
+original stop, unchanged69-source selection,35 retained primaries and the actual
+NEE joint resolution. The [concrete v2 plan](../results/task-conditioning-2026-10-31/stock-reviewed-resume-plan-v2.json)
+contains only34 unfinished cases, preserving original batch groups5/8/8/8/5 and
+at most68 index/primary acquisition operations. NEE's retained index is reused
+from the immutable cache. Already retrieved primary files are not downloaded
+again. Original stop, claims, source receipts and cumulative ledger remain
+protected; preparation performs no request.
+
+Explicit execution requires the exact plan to equal a fresh preflight. A separate
+one-use v2 claim and stop record govern the resume; the original global stop is
+never cleared. All primary links use master-verified authority, and original
+filing/acceptance metadata must again satisfy first-training availability. Each
+retrieved case publishes a progress receipt. Failure stops the resume without
+retry and retains both generations of evidence; temporary progress writes clean
+up on failure. This is a reviewed compatibility correction, not reuse of a failed
+claim or an extension of any model experiment. No metadata admission or Colab
+allocation is performed. Mocked tests cover changed-plan rejection, persistent
+old stops and single-attempt failure with no temporary-file residue.
