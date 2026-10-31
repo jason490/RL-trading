@@ -3079,3 +3079,15 @@ loading/fitting, direction choice from outcomes, development/test replay or Cola
 Tests cover fresh constant arrays, geometry, zero-cost cash, training scope and
 actual holding exits; shared guard/split/participation regressions pass. Actual
 replay follows committed source. See [contract and command](docs/feasible-references.md).
+
+### Fixed feasible references completed — 2026-10-31
+
+Three unconditional requests complete78 episodes/57,408 rows with12 protected
+sources, ledger, normalization and family closure unchanged. Long43.28%, short
+−45.60%, cash0%, holding56.45%; long stock/ETF43.85/40.14% versus58.15/47.15%.
+Fixed short profits on CVX but loses on XOM despite both negative holding paths;
+labels remain reporting-only. Cost add-back is descriptive, not a counterfactual
+or upper bound on feasible returns. All constraints remain active; no learned
+model loaded/fitted, development/test replay or Colab allocation.35 focused
+checks and Ruff pass; full paths/charts retained. See
+[actual evidence](results/feasible-references-2026-10-31/README.md).

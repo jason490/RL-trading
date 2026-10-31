@@ -1,0 +1,914 @@
+{
+  "protocol_sha256": "67248a9cfa7c99852bdf4a88fe6d7c7584ab14a1ef3b6537b20df20d19d21051",
+  "source_revision": "13b5df29f37471ecf508e45489b636c94c0ed66e",
+  "package_sha256": "ea5a597651b476b291c46c53f67a1c23d3d98a67bf1ef49a1a10e1746b8cf121",
+  "source_sha256": {
+    "/home/vibe/projects/rl-stocks/data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "/home/vibe/projects/rl-stocks/results/recurrent-offpolicy-fit-2026-10-31/summary.json": "34db454e4c114e43aa5a9817b686cd6f8d7b77557cfd42495571078da2485f92",
+    "/home/vibe/projects/rl-stocks/.runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "/home/vibe/projects/rl-stocks/.runtime/recurrent-comparison-screen-closure-v1.json": "2970c316d5267d5870e6051bea2123fd7b78dfef2f9ef924b0321a5c5f1d4562",
+    "/home/vibe/projects/rl-stocks/configs/experiments/feasible_references.json": "6cf1ff35f8f36c7a481c3fc5a2f58ac4c16970c8a195d03de89254a097f895d9",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/evaluation/feasible_references.py": "21fbf397da3a56561a47c6c83460005d72f342e1f3f8f95b485b654790d7a603",
+    "/home/vibe/projects/rl-stocks/scripts/diagnose_feasible_references.py": "4a13b4f0b482e6388f957952a004e6b5fd7a76970ac7f5f0c5b9350122746c93",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/evaluation/offpolicy_fit.py": "1b2473772828b8140a0d72462d6d2f11d2927fe4a7a328b1892063608009605c",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/evaluation/training_fit.py": "d9a3d0ddf78a222e8919d9c3a6e48bc7b07dfb8f42137791e3a8e6aad790affe",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/evaluation/runner.py": "4a8de304ba683463d4b0b851b62f9e445f679b4b0461255e651e8be5331a540a",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/risk/decisions.py": "cbed14aaf510eb0c6e3c064862991b3e46abdd62be1d897e11554bb46d991b09",
+    "/home/vibe/projects/rl-stocks/src/rl_stocks/environment/execution/simulator.py": "d9cf6d41d6ae9e829da0b63c63d112daeecad3bd27e4ca431bc98772b6a8a536"
+  },
+  "records": {
+    "long": {
+      "action": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "training": {
+        "score": 0.4327862481922746,
+        "mean_max_drawdown": -0.4048289559694076,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.43848646276460324,
+            "buy_hold_return": 0.5814593877458677,
+            "excess_return": -0.14297292498126446,
+            "median_excess_return": -0.1129448712538495,
+            "buy_hold_max_drawdown": -0.3640432336062538,
+            "max_drawdown": -0.40928013318143286
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.40143506804446727,
+            "buy_hold_return": 0.4714601263306348,
+            "excess_return": -0.07002505828616751,
+            "median_excess_return": -0.04258240938692526,
+            "buy_hold_max_drawdown": -0.34073494920756275,
+            "max_drawdown": -0.38034748130326884
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -0.32847024007625736,
+          "AMT": -0.26735048090053803,
+          "AMZN": -0.06758415001253537,
+          "APD": -0.1093355525742381,
+          "BAC": -0.03170706431673187,
+          "CAT": -0.09088944740883753,
+          "CVX": 0.06863521484279855,
+          "DIS": -0.29105544784790105,
+          "DUK": -0.04602179419173158,
+          "GOOGL": 0.07033157664071266,
+          "HD": 0.08545043457128698,
+          "HON": -0.10958103240132089,
+          "JNJ": -0.02769423475964894,
+          "JPM": -0.3053406237218821,
+          "KO": -0.23367069247816397,
+          "LIN": -0.2674777238196493,
+          "MSFT": -0.5452327952171134,
+          "NEE": -0.12874970618833403,
+          "PG": 0.08389968639028633,
+          "PLD": -0.12218166488201021,
+          "UNH": -0.3650699011296308,
+          "XOM": -0.11630871010637811
+        }
+      },
+      "behavior_groups": {
+        "stock": {
+          "count": 22,
+          "equal_weight_cost_categories": {
+            "same_side_resize": {
+              "fills": 41.40909090909091,
+              "fees": 8.442575588813586,
+              "impact": 16.881856978449264,
+              "borrow": 0.0,
+              "cost": 25.32443256726285,
+              "cost_pp": 0.025324432567262852
+            },
+            "entry": {
+              "fills": 40.09090909090909,
+              "fees": 457.0124710431781,
+              "impact": 913.8421736515277,
+              "borrow": 0.0,
+              "cost": 1370.8546446947057,
+              "cost_pp": 1.3708546446947056
+            },
+            "discretionary_close": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "reversal": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "protective_exit": {
+              "fills": 7.2272727272727275,
+              "fees": 71.48527985810023,
+              "impact": 142.99915954809813,
+              "borrow": 0.0,
+              "cost": 214.48443940619836,
+              "cost_pp": 0.21448443940619835
+            },
+            "holding_limit": {
+              "fills": 33.09090909090909,
+              "fees": 385.08131386021637,
+              "impact": 770.3166910585602,
+              "borrow": 0.0,
+              "cost": 1155.3980049187765,
+              "cost_pp": 1.1553980049187766
+            },
+            "borrow": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            }
+          },
+          "equal_weight_means": {
+            "net_return": 0.43848646276460324,
+            "buy_hold_return": 0.5814593877458677,
+            "net_excess_pp": -14.297292498126446,
+            "incremental_cost_drag_pp": 2.7360865677905366,
+            "saved_path_noncost_excess_pp": -11.56120593033591,
+            "reported_costs": 2766.0615215869434,
+            "mean_abs_exposure": 0.9450559718390688,
+            "mean_signed_exposure": 0.9450559718390688,
+            "mean_long_exposure": 0.9450559718390688,
+            "mean_short_abs_exposure": 0.0,
+            "long_fraction": 0.9467020750988142,
+            "short_fraction": 0,
+            "flat_fraction": 0.05329792490118577,
+            "long_touched_fraction": 1.0,
+            "short_touched_fraction": 0.0,
+            "long_return_contribution": 0.4384864627646031,
+            "short_return_contribution": 0.0,
+            "fills": 121.81818181818181,
+            "discretionary_same_side_resize_fills": 30.272727272727273,
+            "holding_limit_fills": 33.09090909090909,
+            "protective_reentries_within_one_session": 39.09090909090909,
+            "same_side_resizes_below_5pct_equity": 29.318181818181817,
+            "saved_fees_impact_on_small_resizes_pp": 0.00564384702782873
+          },
+          "total_fill_reasons": {
+            "add": 1548,
+            "hold": 245,
+            "holding_limit": 728,
+            "stop": 131,
+            "target_near": 24,
+            "target_far": 4
+          }
+        },
+        "etf": {
+          "count": 4,
+          "equal_weight_cost_categories": {
+            "same_side_resize": {
+              "fills": 34.75,
+              "fees": 7.614322475837364,
+              "impact": 15.225692325208872,
+              "borrow": 0.0,
+              "cost": 22.840014801046237,
+              "cost_pp": 0.022840014801046235
+            },
+            "entry": {
+              "fills": 41.5,
+              "fees": 467.7109026143928,
+              "impact": 935.2347582770169,
+              "borrow": 0.0,
+              "cost": 1402.9456608914097,
+              "cost_pp": 1.4029456608914097
+            },
+            "discretionary_close": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "reversal": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "protective_exit": {
+              "fills": 10,
+              "fees": 102.3919228564986,
+              "impact": 204.82481067510588,
+              "borrow": 0.0,
+              "cost": 307.21673353160446,
+              "cost_pp": 0.3072167335316045
+            },
+            "holding_limit": {
+              "fills": 31.5,
+              "fees": 362.3622360961634,
+              "impact": 724.8694460814643,
+              "borrow": 0.0,
+              "cost": 1087.2316821776276,
+              "cost_pp": 1.0872316821776276
+            },
+            "borrow": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            }
+          },
+          "equal_weight_means": {
+            "net_return": 0.40143506804446727,
+            "buy_hold_return": 0.4714601263306348,
+            "net_excess_pp": -7.0025058286167505,
+            "incremental_cost_drag_pp": 2.7902689433372343,
+            "saved_path_noncost_excess_pp": -4.212236885279517,
+            "reported_costs": 2820.2340914016886,
+            "mean_abs_exposure": 0.9429507746051302,
+            "mean_signed_exposure": 0.9429507746051302,
+            "mean_long_exposure": 0.9429507746051302,
+            "mean_short_abs_exposure": 0.0,
+            "long_fraction": 0.9449728260869565,
+            "short_fraction": 0,
+            "flat_fraction": 0.05502717391304347,
+            "long_touched_fraction": 1.0,
+            "short_touched_fraction": 0.0,
+            "long_return_contribution": 0.4014350680444676,
+            "short_return_contribution": 0.0,
+            "fills": 117.75,
+            "discretionary_same_side_resize_fills": 29.75,
+            "holding_limit_fills": 31.5,
+            "protective_reentries_within_one_session": 40.5,
+            "same_side_resizes_below_5pct_equity": 28.5,
+            "saved_fees_impact_on_small_resizes_pp": 0.004224135324455825
+          },
+          "total_fill_reasons": {
+            "add": 285,
+            "target_near": 4,
+            "target_far": 3,
+            "hold": 20,
+            "stop": 33,
+            "holding_limit": 126
+          }
+        }
+      },
+      "decliners_reporting_only": {
+        "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+        "count": 2,
+        "positive_policy_and_short_pnl_count": 0,
+        "records": [
+          {
+            "episode": "CVX-train-0",
+            "symbol": "CVX",
+            "policy_return": -0.10211259437913822,
+            "buy_hold_return": -0.17074780922193677,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": -10211.25943791386,
+            "short_net_pnl": 0.0,
+            "long_return_contribution": -0.10211259437913861,
+            "short_return_contribution": 0.0,
+            "long_costs": 2328.376064171332,
+            "short_costs": 0.0,
+            "long_active_sessions": 736,
+            "short_active_sessions": 0,
+            "sessions": 736,
+            "max_equity_reconciliation_error": 4.3655745685100555e-11,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          },
+          {
+            "episode": "XOM-train-0",
+            "symbol": "XOM",
+            "policy_return": -0.5187892831399082,
+            "buy_hold_return": -0.40248057303353013,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": -51878.928313990866,
+            "short_net_pnl": 0.0,
+            "long_return_contribution": -0.5187892831399087,
+            "short_return_contribution": 0.0,
+            "long_costs": 2127.6611671066044,
+            "short_costs": 0.0,
+            "long_active_sessions": 736,
+            "short_active_sessions": 0,
+            "sessions": 736,
+            "max_equity_reconciliation_error": 6.548361852765083e-11,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          }
+        ]
+      },
+      "episodes": 26,
+      "execution_rows": 19136,
+      "derived_report_sha256": "66fb951424a62b32468be54e528d1b51c11485f176200d01cffd68d9fff2f0ae"
+    },
+    "short": {
+      "action": [
+        -1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "training": {
+        "score": -0.4560197361349725,
+        "mean_max_drawdown": -0.5527250376802926,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": -0.45851097403798646,
+            "buy_hold_return": 0.5814593877458677,
+            "excess_return": -1.039970361783854,
+            "median_excess_return": -1.0514786174731527,
+            "buy_hold_max_drawdown": -0.3640432336062538,
+            "max_drawdown": -0.5622975833080486
+          },
+          "etf": {
+            "count": 4,
+            "net_return": -0.4423179276683957,
+            "buy_hold_return": 0.4714601263306348,
+            "excess_return": -0.9137780539990306,
+            "median_excess_return": -0.7749912602726136,
+            "buy_hold_max_drawdown": -0.34073494920756275,
+            "max_drawdown": -0.5000760367276345
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -2.6760539260833376,
+          "AMT": -1.254990652754396,
+          "AMZN": -2.5091693712694996,
+          "APD": -1.3317691318114886,
+          "BAC": -0.3471944596619315,
+          "CAT": -0.5173206342290622,
+          "CVX": 0.30681249816774425,
+          "DIS": -0.9273798926541554,
+          "DUK": -0.6704162244674636,
+          "GOOGL": -1.3401059682803083,
+          "HD": -1.0231133440947016,
+          "HON": -0.8540803183098626,
+          "JNJ": -0.5108452927177496,
+          "JPM": -0.49777290432337595,
+          "KO": -0.6420948482519767,
+          "LIN": -1.215071467144457,
+          "MSFT": -2.301475078208977,
+          "NEE": -1.6015532051405867,
+          "PG": -1.079843890851604,
+          "PLD": -1.13741618063591,
+          "UNH": -1.1215183192775902,
+          "XOM": 0.3730246527558988
+        }
+      },
+      "behavior_groups": {
+        "stock": {
+          "count": 22,
+          "equal_weight_cost_categories": {
+            "same_side_resize": {
+              "fills": 668.0454545454545,
+              "fees": 130.79642591828534,
+              "impact": 261.5925997737928,
+              "borrow": 0.0,
+              "cost": 392.3890256920782,
+              "cost_pp": 0.3923890256920782
+            },
+            "entry": {
+              "fills": 39.45454545454545,
+              "fees": 310.5677835832757,
+              "impact": 621.2598191303117,
+              "borrow": 0.0,
+              "cost": 931.8276027135875,
+              "cost_pp": 0.9318276027135874
+            },
+            "discretionary_close": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "reversal": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "protective_exit": {
+              "fills": 7.954545454545454,
+              "fees": 52.77618661415645,
+              "impact": 105.53126697490704,
+              "borrow": 0.0,
+              "cost": 158.3074535890635,
+              "cost_pp": 0.15830745358906348
+            },
+            "holding_limit": {
+              "fills": 32.40909090909091,
+              "fees": 255.0756809213138,
+              "impact": 510.04935197217753,
+              "borrow": 0.0,
+              "cost": 765.1250328934914,
+              "cost_pp": 0.7651250328934913
+            },
+            "borrow": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 6481.075860548184,
+              "cost": 6481.075860548184,
+              "cost_pp": 6.481075860548184
+            }
+          },
+          "equal_weight_means": {
+            "net_return": -0.45851097403798646,
+            "buy_hold_return": 0.5814593877458677,
+            "net_excess_pp": -103.99703617838541,
+            "incremental_cost_drag_pp": 8.698750021639997,
+            "saved_path_noncost_excess_pp": -95.29828615674542,
+            "reported_costs": 8728.724975436404,
+            "mean_abs_exposure": 0.9375610971751751,
+            "mean_signed_exposure": -0.9375610971751751,
+            "mean_long_exposure": 0.0,
+            "mean_short_abs_exposure": 0.9375610971751751,
+            "long_fraction": 0,
+            "short_fraction": 0.9454051383399209,
+            "flat_fraction": 0.05459486166007905,
+            "long_touched_fraction": 0.0,
+            "short_touched_fraction": 0.9977149209486166,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": -0.4585109740379865,
+            "fills": 747.8636363636364,
+            "discretionary_same_side_resize_fills": 656.5909090909091,
+            "holding_limit_fills": 32.40909090909091,
+            "protective_reentries_within_one_session": 38.27272727272727,
+            "same_side_resizes_below_5pct_equity": 584.1818181818181,
+            "saved_fees_impact_on_small_resizes_pp": 0.23759108986095337
+          },
+          "total_fill_reasons": {
+            "add": 8962,
+            "reduce": 6351,
+            "holding_limit": 713,
+            "stop": 116,
+            "hold": 252,
+            "target_near": 41,
+            "target_far": 18
+          }
+        },
+        "etf": {
+          "count": 4,
+          "equal_weight_cost_categories": {
+            "same_side_resize": {
+              "fills": 643.5,
+              "fees": 120.19038419849016,
+              "impact": 240.38336275556264,
+              "borrow": 0.0,
+              "cost": 360.5737469540528,
+              "cost_pp": 0.36057374695405287
+            },
+            "entry": {
+              "fills": 40,
+              "fees": 336.68402488060855,
+              "impact": 673.5027503112085,
+              "borrow": 0.0,
+              "cost": 1010.1867751918171,
+              "cost_pp": 1.010186775191817
+            },
+            "discretionary_close": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "reversal": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "protective_exit": {
+              "fills": 12.25,
+              "fees": 79.6340383934128,
+              "impact": 159.23622954089112,
+              "borrow": 0.0,
+              "cost": 238.8702679343039,
+              "cost_pp": 0.2388702679343039
+            },
+            "holding_limit": {
+              "fills": 31,
+              "fees": 261.248677674976,
+              "impact": 522.3928767745119,
+              "borrow": 0.0,
+              "cost": 783.641554449488,
+              "cost_pp": 0.7836415544494879
+            },
+            "borrow": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 6918.994117411432,
+              "cost": 6918.994117411432,
+              "cost_pp": 6.918994117411431
+            }
+          },
+          "equal_weight_means": {
+            "net_return": -0.4423179276683957,
+            "buy_hold_return": 0.4714601263306348,
+            "net_excess_pp": -91.37780539990305,
+            "incremental_cost_drag_pp": 9.282301313876632,
+            "saved_path_noncost_excess_pp": -82.09550408602642,
+            "reported_costs": 9312.266461941086,
+            "mean_abs_exposure": 0.9382474632685072,
+            "mean_signed_exposure": -0.9382474632685072,
+            "mean_long_exposure": 0.0,
+            "mean_short_abs_exposure": 0.9382474632685072,
+            "long_fraction": 0,
+            "short_fraction": 0.9470108695652174,
+            "flat_fraction": 0.05298913043478261,
+            "long_touched_fraction": 0.0,
+            "short_touched_fraction": 1.0,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": -0.4423179276683946,
+            "fills": 726.75,
+            "discretionary_same_side_resize_fills": 607.5,
+            "holding_limit_fills": 31,
+            "protective_reentries_within_one_session": 39,
+            "same_side_resizes_below_5pct_equity": 561,
+            "saved_fees_impact_on_small_resizes_pp": 0.2171029722895302
+          },
+          "total_fill_reasons": {
+            "add": 1477,
+            "reduce": 1113,
+            "hold": 144,
+            "stop": 23,
+            "target_near": 17,
+            "target_far": 9,
+            "holding_limit": 124
+          }
+        }
+      },
+      "decliners_reporting_only": {
+        "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+        "count": 2,
+        "positive_policy_and_short_pnl_count": 1,
+        "records": [
+          {
+            "episode": "CVX-train-0",
+            "symbol": "CVX",
+            "policy_return": 0.13606468894580748,
+            "buy_hold_return": -0.17074780922193677,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": 0.0,
+            "short_net_pnl": 13606.468894580321,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": 0.1360646889458032,
+            "long_costs": 0.0,
+            "short_costs": 11072.17116784273,
+            "long_active_sessions": 0,
+            "short_active_sessions": 722,
+            "sessions": 736,
+            "max_equity_reconciliation_error": 5.820766091346741e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": true
+          },
+          {
+            "episode": "XOM-train-0",
+            "symbol": "XOM",
+            "policy_return": -0.02945592027763133,
+            "buy_hold_return": -0.40248057303353013,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": 0.0,
+            "short_net_pnl": -2945.5920277633413,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": -0.029455920277633413,
+            "long_costs": 0.0,
+            "short_costs": 10774.62577766633,
+            "long_active_sessions": 0,
+            "short_active_sessions": 736,
+            "sessions": 736,
+            "max_equity_reconciliation_error": 3.7834979593753815e-10,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          }
+        ]
+      },
+      "episodes": 26,
+      "execution_rows": 19136,
+      "derived_report_sha256": "e6a71c3da58a94cb029f93ff018d7af9c9279f9e2f923b29bd9c9f1b421edc73"
+    },
+    "cash": {
+      "action": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "training": {
+        "score": 0.0,
+        "mean_max_drawdown": 0.0,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.0,
+            "buy_hold_return": 0.5814593877458677,
+            "excess_return": -0.5814593877458677,
+            "median_excess_return": -0.5523034093134748,
+            "buy_hold_max_drawdown": -0.3640432336062538,
+            "max_drawdown": 0.0
+          },
+          "etf": {
+            "count": 4,
+            "net_return": 0.0,
+            "buy_hold_return": 0.4714601263306348,
+            "excess_return": -0.4714601263306348,
+            "median_excess_return": -0.346883504935831,
+            "buy_hold_max_drawdown": -0.34073494920756275,
+            "max_drawdown": 0.0
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -1.9457938445146374,
+          "AMT": -0.6697103348031326,
+          "AMZN": -1.731579564984556,
+          "APD": -0.7393838281676666,
+          "BAC": -0.0349800820636641,
+          "CAT": -0.168492768049624,
+          "CVX": 0.17074780922193677,
+          "DIS": -0.441144092158509,
+          "DUK": -0.2462932788251293,
+          "GOOGL": -0.7322806599150471,
+          "HD": -0.5060628960630291,
+          "HON": -0.4772167134518106,
+          "JNJ": -0.14091287877266856,
+          "JPM": -0.22047157209589385,
+          "KO": -0.23917015841097444,
+          "LIN": -0.6891539548774981,
+          "MSFT": -1.5650042228471253,
+          "NEE": -0.9955815881117016,
+          "PG": -0.6014091054406494,
+          "PLD": -0.5985439225639204,
+          "UNH": -0.6221494465473183,
+          "XOM": 0.40248057303353013
+        }
+      },
+      "behavior_groups": {
+        "stock": {
+          "count": 22,
+          "equal_weight_cost_categories": {
+            "same_side_resize": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "entry": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "discretionary_close": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "reversal": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "protective_exit": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "holding_limit": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "borrow": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            }
+          },
+          "equal_weight_means": {
+            "net_return": 0.0,
+            "buy_hold_return": 0.5814593877458677,
+            "net_excess_pp": -58.14593877458677,
+            "incremental_cost_drag_pp": -0.029974953796406894,
+            "saved_path_noncost_excess_pp": -58.17591372838318,
+            "reported_costs": 0.0,
+            "mean_abs_exposure": 0.0,
+            "mean_signed_exposure": 0.0,
+            "mean_long_exposure": 0.0,
+            "mean_short_abs_exposure": 0.0,
+            "long_fraction": 0,
+            "short_fraction": 0,
+            "flat_fraction": 1,
+            "long_touched_fraction": 0.0,
+            "short_touched_fraction": 0.0,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": 0.0,
+            "fills": 0,
+            "discretionary_same_side_resize_fills": 0,
+            "holding_limit_fills": 0,
+            "protective_reentries_within_one_session": 0,
+            "same_side_resizes_below_5pct_equity": 0,
+            "saved_fees_impact_on_small_resizes_pp": 0.0
+          },
+          "total_fill_reasons": {}
+        },
+        "etf": {
+          "count": 4,
+          "equal_weight_cost_categories": {
+            "same_side_resize": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "entry": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "discretionary_close": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "reversal": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "protective_exit": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "holding_limit": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            },
+            "borrow": {
+              "fills": 0,
+              "fees": 0.0,
+              "impact": 0.0,
+              "borrow": 0.0,
+              "cost": 0.0,
+              "cost_pp": 0.0
+            }
+          },
+          "equal_weight_means": {
+            "net_return": 0.0,
+            "buy_hold_return": 0.4714601263306348,
+            "net_excess_pp": -47.14601263306348,
+            "incremental_cost_drag_pp": -0.029965148064454616,
+            "saved_path_noncost_excess_pp": -47.17597778112793,
+            "reported_costs": 0.0,
+            "mean_abs_exposure": 0.0,
+            "mean_signed_exposure": 0.0,
+            "mean_long_exposure": 0.0,
+            "mean_short_abs_exposure": 0.0,
+            "long_fraction": 0,
+            "short_fraction": 0,
+            "flat_fraction": 1,
+            "long_touched_fraction": 0.0,
+            "short_touched_fraction": 0.0,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": 0.0,
+            "fills": 0,
+            "discretionary_same_side_resize_fills": 0,
+            "holding_limit_fills": 0,
+            "protective_reentries_within_one_session": 0,
+            "same_side_resizes_below_5pct_equity": 0,
+            "saved_fees_impact_on_small_resizes_pp": 0.0
+          },
+          "total_fill_reasons": {}
+        }
+      },
+      "decliners_reporting_only": {
+        "cohort": "ex-post-negative-buy-hold-stocks-reporting-only",
+        "count": 2,
+        "positive_policy_and_short_pnl_count": 0,
+        "records": [
+          {
+            "episode": "CVX-train-0",
+            "symbol": "CVX",
+            "policy_return": 0.0,
+            "buy_hold_return": -0.17074780922193677,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": 0.0,
+            "short_net_pnl": 0.0,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": 0.0,
+            "long_costs": 0.0,
+            "short_costs": 0.0,
+            "long_active_sessions": 0,
+            "short_active_sessions": 0,
+            "sessions": 736,
+            "max_equity_reconciliation_error": 0.0,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          },
+          {
+            "episode": "XOM-train-0",
+            "symbol": "XOM",
+            "policy_return": 0.0,
+            "buy_hold_return": -0.40248057303353013,
+            "method": "signed-cash-flows-plus-final-mark-v1",
+            "long_net_pnl": 0.0,
+            "short_net_pnl": 0.0,
+            "long_return_contribution": 0.0,
+            "short_return_contribution": 0.0,
+            "long_costs": 0.0,
+            "short_costs": 0.0,
+            "long_active_sessions": 0,
+            "short_active_sessions": 0,
+            "sessions": 736,
+            "max_equity_reconciliation_error": 0.0,
+            "includes_open_position_mark": true,
+            "positive_policy_and_short_pnl": false
+          }
+        ]
+      },
+      "episodes": 26,
+      "execution_rows": 19136,
+      "derived_report_sha256": "bd954cd5c5c51f9d526af7b988708af1ee7430ed2fb6d103179081a058ccc9da"
+    }
+  },
+  "simulation": {
+    "initial_equity": 100000.0,
+    "fee_bps": 1.0,
+    "impact_bps": 2.0,
+    "borrow_rate": 0.03,
+    "max_holding": 20,
+    "allow_short": true,
+    "exposure_cap": 1.0
+  },
+  "normalization_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "holding_path_sha256": "4e4e4bcd110710107c265599df56c970461fb62b6b3427db09418b3e1f74ebe9",
+  "source_files_unchanged": true,
+  "project_units_unchanged": 39.92585919127071,
+  "training_performed": false,
+  "learned_models_loaded": false,
+  "colab_allocated": false,
+  "provider_requested": false,
+  "development_replayed": false,
+  "retired_test_access": false,
+  "policy_selected": false,
+  "family_reopened": false,
+  "objective_achieved": false,
+  "interpretation": "Unconditional descriptive references, not an optimal attainable-return bound. Boundary geometry remains active and entries can be clipped/rejected. No direction chosen from outcomes; decliners reporting-only. No trained policy, simulation rule, checkpoint or promotion changes."
+}

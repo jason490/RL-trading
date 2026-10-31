@@ -67,4 +67,15 @@ MPLCONFIGDIR="$PWD/.runtime/matplotlib" PYTHONPATH=src \
 35 focused checks and Ruff pass. They cover unconditional fresh action arrays, long/short ATR
 geometry, explicit cash accounting, retained train dates and actual20-session
 holding exits, with the existing no-fitting/split/participation regressions.
-Actual replay follows the committed source. No new learning or allocation.
+Actual replay completed after committed source; no new learning or allocation.
+
+## Actual outcome
+
+All78 episodes/57,408 rows complete. Long mean43.28%, short−45.60%, cash0%,
+holding56.45%. Long stock/ETF returns43.85/40.14% versus holding58.15/47.15%.
+No source, ledger, normalization, closure or rule changed; every request remained
+unconditional and matched holding paths are identical to the fitted-policy audit.
+Fixed short profits on CVX but loses on XOM despite both negative holding returns;
+the cohort remains reporting-only. The observed gaps do not establish an optimal
+feasibility bound or justify relaxing constraints. Read the
+[complete evidence](../results/feasible-references-2026-10-31/README.md).

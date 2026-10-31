@@ -46,14 +46,20 @@ GRU final ETFs outperform fitted holding but stocks lag; SAC final stocks beat
 holding while ETFs and median stocks fail. Fitted improvements with development
 declines do not prove a sole optimizer cause. No new Colab charge or model fitting.
 
-Next bounded research: characterize fixed training-only feasible reference
-policies under unchanged four-action/cost/protection/holding constraints before
-another learned hypothesis. The [fixed three-reference diagnostic](feasible-references.md)
-is implemented and tested; actual replay follows committed source. No future-label
-direction choice, development tuning or simulation-rule change. Do not repeat
-identical PPO-final inference, reopen this family or access retired test. The
-broader goal remains active; no allocation is owned. Original profile attempts,
-claims and CrossQ integrity stop remain preserved.
+The [fixed reference replay](../results/feasible-references-2026-10-31/README.md)
+is complete:78 episodes/57,408 rows,12 protected sources unchanged, no new model
+loading/fitting/Colab. Long mean43.28%, short−45.60%, cash0%, holding56.45%.
+Long stock/ETF gaps14.30/7.00pp contain2.74/2.79pp incremental cost drag and
+11.56/4.21pp saved-path non-cost gaps. Fixed short profits on CVX but loses on
+XOM despite both negative holding returns. These are descriptive paths, not an
+attainable-return bound or a future-label trading rule. Constraints stay unchanged.
+
+Next: review primary sources and existing implementations for a distinct,
+bounded learned hypothesis with training-only justification before another
+development comparison. No open-ended grid, renamed rescue of a closed family,
+future-label direction choice or retired-test access. Do not repeat identical
+PPO-final inference. The broader goal stays active; no allocation is owned.
+Original attempts, claims and CrossQ integrity stop remain preserved.
 
 CrossQ [fixed protocol](../configs/experiments/crossq_comparison_preregistration.json)
 compares native small64×64 SAC/CrossQ packages on original26-symbol data. Delay,
