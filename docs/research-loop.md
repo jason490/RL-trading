@@ -48,7 +48,8 @@ declines do not prove a sole optimizer cause. No new Colab charge or model fitti
 
 Next bounded research: characterize fixed training-only feasible reference
 policies under unchanged four-action/cost/protection/holding constraints before
-another learned hypothesis. Commit a separate bounded diagnostic; no future-label
+another learned hypothesis. The [fixed three-reference diagnostic](feasible-references.md)
+is implemented and tested; actual replay follows committed source. No future-label
 direction choice, development tuning or simulation-rule change. Do not repeat
 identical PPO-final inference, reopen this family or access retired test. The
 broader goal remains active; no allocation is owned. Original profile attempts,

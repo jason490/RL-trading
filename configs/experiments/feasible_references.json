@@ -1,0 +1,47 @@
+{
+  "schema": "fixed-feasible-references-v1",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "fitted_summary": "results/recurrent-offpolicy-fit-2026-10-31/summary.json",
+  "fitted_summary_sha256": "34db454e4c114e43aa5a9817b686cd6f8d7b77557cfd42495571078da2485f92",
+  "holding_path_sha256": "4e4e4bcd110710107c265599df56c970461fb62b6b3427db09418b3e1f74ebe9",
+  "actions": {
+    "long": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "short": [
+      -1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "cash": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "anchor": "2017-12-29",
+  "first_execution": "2018-01-02",
+  "last_execution": "2020-12-02",
+  "original_panel_only": true,
+  "observation_profile": "execution_full",
+  "exposure_mode": "unit_magnitude",
+  "simulation": "Unchanged SimulationConfig defaults; max holding20, whole shares,100% cap, fees/impact/borrow and protective exits remain active",
+  "distance_factors": {
+    "stop_atr": 5.0,
+    "near_atr": 8.0,
+    "width_atr": 4.0
+  },
+  "constraints": [
+    "Three fixed requests for every symbol/session; no direction choice from outcomes, no sweeps or adaptation",
+    "Training-only fixed original26 panel; no development/test replay, checkpoint selection, fitting, model loading, provider request or Colab allocation",
+    "Constant boundary protection is a descriptive reference, not a learned policy, attainable-return bound or production substitution",
+    "Reconcile all cost/side paths, preserve data/normalizer/source/ledger/closure, retain all results including losses",
+    "Commit verified protocol/source before actual replay; no reopening failed families or changing rules"
+  ]
+}

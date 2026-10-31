@@ -3069,3 +3069,13 @@ with development declines do not establish a sole cause. No fitting, new model
 selection, provider/Colab/test access or ledger change; family remains closed.
 Full paths/charts retained, weights not duplicated. See
 [actual evidence](results/recurrent-offpolicy-fit-2026-10-31/README.md).
+
+### Fixed feasible-reference diagnostic implemented — 2026-10-31
+
+Protocol67248a9c fixes unconditional long/short/cash requests on original26-symbol
+2018–2020 fitted history. Existing decoder's5/8/4 ATR boundary geometry remains
+active, with all costs, whole shares, cap and20-session exits unchanged. No model
+loading/fitting, direction choice from outcomes, development/test replay or Colab.
+Tests cover fresh constant arrays, geometry, zero-cost cash, training scope and
+actual holding exits; shared guard/split/participation regressions pass. Actual
+replay follows committed source. See [contract and command](docs/feasible-references.md).
