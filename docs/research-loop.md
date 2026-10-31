@@ -59,8 +59,10 @@ Next: complete historical type evidence and Colab worker integration for the
 metadata admission, factory, frozen inference, fitted evaluator and guarded
 smoke worker are implemented; actual optimizer/profile acceptance and
 fleet/archive integration remain pending;
-97/107 stocks have earlier cached SEC candidate filings, but none is admitted
-without historical security/type review. No performance allocation yet. Primary-source
+97/107 stocks have earlier SEC candidate filings; actual cached original
+inspection finds33 exact document hints,52 cached nonmatching cases and22
+without earlier cached originals. All classifications remain unadmitted until
+[historical source review](instrument-type-evidence.md) is complete. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
 interference and reward-scale causes remain unproven. This is design admission,
 not an executable profile or permission to reopen the closed recurrent family.

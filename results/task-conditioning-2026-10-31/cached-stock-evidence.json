@@ -1,0 +1,4444 @@
+{
+  "schema": "task-cached-stock-type-audit-v1",
+  "records": [
+    {
+      "symbol": "AAPL",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-09-214859",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000119312509214859/aapl-20090926.xml",
+          "accepted": "2009-10-27 16:18:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20",
+            "expected_cik": "320193",
+            "expected_symbol": "AAPL",
+            "filed": "2009-10-27",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE2035----0910-K0006_STD_Inst_20091016_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE2035----0910-K0006_STD_p12m_20090926_0",
+                "text": "AAPL"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE2035----0910-K0006_STD_p12m_20090926_0",
+                "text": "APPLE INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE2035----0910-K0006_STD_p12m_20090926_0",
+                "text": "2009-09-26"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE2035----0910-K0006_STD_p12m_20090926_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "ABBV",
+      "first_training_session": "2013-03-14",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "ABT",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001047469-10-001018",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000104746910001018/abt-20091231.xml",
+          "accepted": "2010-02-19 16:06:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "c1cfd4bb95b7592775eb9ec2a6d14c065ce5d5d440de623d44a2b21a1b1f5778",
+            "expected_cik": "1800",
+            "expected_symbol": "ABT",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "ABBOTT LABORATORIES"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "ADBE",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000796343-10-000003",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634310000003/adbe-20091127.xml",
+          "accepted": "2010-01-22 12:14:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "77dea33e5b7ba308f1d970247cae4275872ceffbc094a6a6fb33ea9fda5716ef",
+            "expected_cik": "796343",
+            "expected_symbol": "ADBE",
+            "filed": "2010-01-22",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "TwelveMonthsEnded_27Nov2009",
+                "text": "2009-11-27"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "TwelveMonthsEnded_27Nov2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "TwelveMonthsEnded_27Nov2009",
+                "text": "ADOBE SYSTEMS INC"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_15Jun2010",
+                "reasons": [
+                  "invalid_or_late_period"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "AEP",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000004904-10-000018",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/aep-20091231.xml",
+          "accepted": "2010-02-26 15:30:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "f3c8bc6f77af7eb5eb92b6a3b4c2324670f4e4b00d2eb85d296c7f7810a1098f",
+            "expected_cik": "4904",
+            "expected_symbol": "AEP",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00024",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00024",
+                "text": "AMERICAN ELECTRIC POWER CO INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00024",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00030"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "AMGN",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-044311",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000119312510044311/amgn-20091231.xml",
+          "accepted": "2010-03-01 13:05:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "671c3fb9911c0d81b4be34311e056480d58987706373dbedffecd210bab9bc14",
+            "expected_cik": "318154",
+            "expected_symbol": "AMGN",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE2668----0910-K0013_STD_0_20100212_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE2668----0910-K0013_STD_365_20091231_0",
+                "text": "AMGN"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE2668----0910-K0013_STD_365_20091231_0",
+                "text": "AMGEN INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE2668----0910-K0013_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE2668----0910-K0013_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "AMT",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-044876",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1053507/000119312510044876/amt-20091231.xml",
+          "accepted": "2010-03-01 17:13:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "780df3266008b4fc83589b9cee728b3c6403e4cb6efc3aa66cedcb1c6d048b82",
+            "expected_cik": "1053507",
+            "expected_symbol": "AMT",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE2533----0910-K0008_STD_0_20100212_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE2533----0910-K0008_STD_365_20091231_0",
+                "text": "AMT"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE2533----0910-K0008_STD_365_20091231_0",
+                "text": "AMERICAN TOWER CORP /MA/"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE2533----0910-K0008_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE2533----0910-K0008_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-016098",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312510016098/amzn-20091231.xml",
+          "accepted": "2010-01-28 21:42:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "32c5235828cec652d3ef6a47e92b171569da57eaadaae7b815f9850022c083f5",
+            "expected_cik": "1018724",
+            "expected_symbol": "AMZN",
+            "filed": "2010-01-29",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE7235----0910-K0010_STD_0_20100122_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE7235----0910-K0010_STD_365_20091231_0",
+                "text": "AMZN"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE7235----0910-K0010_STD_365_20091231_0",
+                "text": "AMAZON COM INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE7235----0910-K0010_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE7235----0910-K0010_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "APA",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-018311",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/6769/000095012310018311/apa-20091231.xml",
+          "accepted": "2010-02-26 17:11:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "da1e88b587ed7e24d52cc4b083c199d185be325b84a71a0a822800e12d1b86d6",
+            "expected_cik": "6769",
+            "expected_symbol": "APA",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "APACHE CORP"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "APD",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-09-066095",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2969/000095012309066095/apd-20090930.xml",
+          "accepted": "2009-11-25 13:59:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "e8dc902277fcab7ec17d539420d4a627b4ffd2c60f9d61ed0f14e0e4b04a8474",
+            "expected_cik": "2969",
+            "expected_symbol": "APD",
+            "filed": "2009-11-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "October-01-2008_September-30-2009",
+                "text": "2009-09-30"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "October-01-2008_September-30-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_20Nov2009"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "October-01-2008_September-30-2009",
+                "text": "AIR PRODUCTS & CHEMICALS INC /DE/"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "AXP",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-041232",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/4962/000119312510041232/axp-20091231.xml",
+          "accepted": "2010-02-25 20:48:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "0d6a98196f7b0d807e1d5e2c42a5f7fb9b12d89f0aac9ce8fb95eb9276b236c8",
+            "expected_cik": "4962",
+            "expected_symbol": "AXP",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE8450----0910-K0009_STD_0_20100222_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE8450----0910-K0009_STD_365_20091231_0",
+                "text": "AXP"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE8450----0910-K0009_STD_365_20091231_0",
+                "text": "AMERICAN EXPRESS CO"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE8450----0910-K0009_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE8450----0910-K0009_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-024406",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000119312510024406/ba-20091231.xml",
+          "accepted": "2010-02-08 16:29:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "93e997dff061057cf20fdff2f5ff8e7045fe69bd7c329fb85c902a8fa1b87420",
+            "expected_cik": "12927",
+            "expected_symbol": "BA",
+            "filed": "2010-02-08",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE11757---0910-K0009_STD_0_20100201_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE11757---0910-K0009_STD_365_20091231_0",
+                "text": "BA"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE11757---0910-K0009_STD_365_20091231_0",
+                "text": "BOEING CO"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE11757---0910-K0009_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE11757---0910-K0009_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-041666",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000119312510041666/bac-20091231.xml",
+          "accepted": "2010-02-26 07:51:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "9292a874084b80b89609b127934fed2a1d398f85c62ef0eb6c98979cc63f882d",
+            "expected_cik": "70858",
+            "expected_symbol": "BAC",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE15519---0910-K0014_STD_0_20100224_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE15519---0910-K0014_STD_365_20091231_0",
+                "text": "BAC"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE15519---0910-K0014_STD_365_20091231_0",
+                "text": "BANK OF AMERICA CORP /DE/"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE15519---0910-K0014_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE15519---0910-K0014_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "BLK",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-052764",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312510052764/blk-20091231.xml",
+          "accepted": "2010-03-10 17:26:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "8e41043e31ff42b809ed55844e79d0ecaf9984efcc35112d4a74d41676e0b047",
+            "expected_cik": "1364742",
+            "expected_symbol": "BLK",
+            "filed": "2010-03-10",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE711679--0910-K0012_STD_0_20100228_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE711679--0910-K0012_STD_365_20091231_0",
+                "text": "BLK"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE711679--0910-K0012_STD_365_20091231_0",
+                "text": "BLACKROCK INC."
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE711679--0910-K0012_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE711679--0910-K0012_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "BMY",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-035167",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/14272/000119312510035167/bmy-20091231.xml",
+          "accepted": "2010-02-19 15:38:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "9a6752460581dd87f4e424a8159bbb9ddbfa39776491fb996a159e1fbaf2bef2",
+            "expected_cik": "14272",
+            "expected_symbol": "BMY",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE919-----0910-K0013_STD_0_20100201_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE919-----0910-K0013_STD_365_20091231_0",
+                "text": "BMY"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE919-----0910-K0013_STD_365_20091231_0",
+                "text": "BRISTOL MYERS SQUIBB CO"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE919-----0910-K0013_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE919-----0910-K0013_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "C",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001206774-10-000406",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/831001/000120677410000406/c-20091231.xml",
+          "accepted": "2010-02-26 17:00:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "3db6e4ccaa7fe5d4583bce6918d2f627d36bff081f46397dd2e9167f6c43f1f8",
+            "expected_cik": "831001",
+            "expected_symbol": "C",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "CITIGROUP INC"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "CAT",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000018230-10-000092",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823010000092/cat-20091231.xml",
+          "accepted": "2010-02-19 12:43:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "ffdd6782db844b6a453e600e4c9504681c0a59c113a4e2752b2e8cca3a10a4b6",
+            "expected_cik": "18230",
+            "expected_symbol": "CAT",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00006",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00006",
+                "text": "Caterpillar Inc."
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00006",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00018"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "CL",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001140361-10-008522",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/21665/000114036110008522/cl-20091231.xml",
+          "accepted": "2010-02-25 17:18:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "0cf28f393211b13856ceb508d2e69d7b1ac126b98af1e4ec914a8bf2b3f11afc",
+            "expected_cik": "21665",
+            "expected_symbol": "CL",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00046",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00046",
+                "text": "COLGATE PALMOLIVE CO"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00046",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00064",
+                "reasons": [
+                  "invalid_or_late_period"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "CMCSA",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-037551",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1166691/000119312510037551/cmcsa-20091231.xml",
+          "accepted": "2010-02-23 15:48:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "cb02741d401a48a83a8870371ef23c2ee7414ca2832b23c038cb7c35a8ba7791",
+            "expected_cik": "1166691",
+            "expected_symbol": "CMCSA",
+            "filed": "2010-02-23",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE97076---0910-K0010_STD_0_20091231_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE97076---0910-K0010_STD_365_20091231_0",
+                "text": "CMCSA"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE97076---0910-K0010_STD_365_20091231_0",
+                "text": "COMCAST CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE97076---0910-K0010_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE97076---0910-K0010_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE97076---0910-K0010_STD_0_20091231_0_411809x401075",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE97076---0910-K0010_STD_0_20091231_0_411809x414895",
+                "reasons": [
+                  "qualified_context"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "COP",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-017187",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1163165/000095012310017187/cop-20091231.xml",
+          "accepted": "2010-02-25 17:30:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "e57318863028d0785bd31a44ad5b0c540fd90b52391df46f92c3fba14d68dc12",
+            "expected_cik": "1163165",
+            "expected_symbol": "COP",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "CONOCOPHILLIPS"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "CSCO",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "CVX",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-016846",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000095012310016846/cvx-20091231.xml",
+          "accepted": "2010-02-25 12:56:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "ca6f1bba9fc228616be2e8242f5785adf2b6e577ee2d7b1dffad95fa18a4a215",
+            "expected_cik": "93410",
+            "expected_symbol": "CVX",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_19Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "CHEVRON CORP"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "D",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-042883",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/715957/000119312510042883/d-20091231.xml",
+          "accepted": "2010-02-26 16:06:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "b0035db22262a4e8318cd4a163bd2f8dd8aeee8d6485dd93ccdd702897f4d00a",
+            "expected_cik": "715957",
+            "expected_symbol": "D",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE8334----0910-K0007_STD_0_20100201_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE8334----0910-K0007_STD_365_20091231_0",
+                "text": "D"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE8334----0910-K0007_STD_365_20091231_0",
+                "text": "DOMINION RESOURCES INC /VA/"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE8334----0910-K0007_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE8334----0910-K0007_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "DE",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001104659-09-070344",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909070344/de-20091031.xml",
+          "accepted": "2009-12-17 10:42:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "df48b58b6f655ab009acf8d987e450df01a14df65374bf30a27fda6e83a590c0",
+            "expected_cik": "315189",
+            "expected_symbol": "DE",
+            "filed": "2009-12-17",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-10-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "DEERE & CO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "DUK",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-043083",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326160/000119312510043083/duk-20091231.xml",
+          "accepted": "2010-02-26 17:00:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "7d1f7f847395b935f1ab7cc02090708eb1c5f64afd49bf5f37a2d6d2921b1eb5",
+            "expected_cik": "1326160",
+            "expected_symbol": "DUK",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE673371--0910-K0008_STD_0_20100222_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE673371--0910-K0008_STD_365_20091231_0",
+                "text": "DUK"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE673371--0910-K0008_STD_365_20091231_0",
+                "text": "DUKE ENERGY CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE673371--0910-K0008_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE673371--0910-K0008_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "DVN",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-017093",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012310017093/dvn-20091231.xml",
+          "accepted": "2010-02-25 16:32:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "2b34a170472259e3634cb9153dd7848778eac818753efba690fcd79fc5d52ade",
+            "expected_cik": "1090012",
+            "expected_symbol": "DVN",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "February_15_2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "Devon Energy Corp/DE"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "ECL",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001104659-10-010302",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/31462/000110465910010302/ecl-20091231.xml",
+          "accepted": "2010-02-26 16:38:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "df235606efc638cb36b9bb9c2f3bd40d25e0321b050ff6ca06273efc68fef64f",
+            "expected_cik": "31462",
+            "expected_symbol": "ECL",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "ECOLAB INC"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "ED",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-036116",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1047862/000119312510036116/ed-20091231.xml",
+          "accepted": "2010-02-22 13:23:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "6edade37f395187b14d5a6c503c64ac2348ee109f3d4f207212586822c1e2abd",
+            "expected_cik": "1047862",
+            "expected_symbol": "ED",
+            "filed": "2010-02-22",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE7811----0910-K0012_STD_0_20100131_0"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE7811----0910-K0012_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE7811----0910-K0012_STD_365_20091231_0",
+                "text": "10-K"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE7811----0910-K0012_STD_365_20091231_0",
+                "text": "ED"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE7811----0910-K0012_STD_365_20091231_0",
+                "text": "CONSOLIDATED EDISON INC"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE7811----0910-K0012_STD_365_20091231_0_396770x415103",
+                "text": "CONSOLIDATED EDISON CO OF NEW YORK INC",
+                "reasons": [
+                  "qualified_context"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "EOG",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000821189-10-000011",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/821189/000082118910000011/eog-20091231.xml",
+          "accepted": "2010-02-25 17:11:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "3855f2bd008a8df95edd4af71f7233da32396ae28fe979fae6e9b45c16de8e1c",
+            "expected_cik": "821189",
+            "expected_symbol": "EOG",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "Asof_19Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "EOG RESOURCES INC"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "EQIX",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "EXC",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-023280",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1109357/000119312510023280/exc-20091231.xml",
+          "accepted": "2010-02-05 15:17:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "65d6fc8d04f8d0ce59768920c10b0df20b5027a65d576562a388edc486010520",
+            "expected_cik": "1109357",
+            "expected_symbol": "EXC",
+            "filed": "2010-02-05",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3541----0910-K0013_STD_0_20100129_0"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0",
+                "text": "10-K"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0",
+                "text": "EXC"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0",
+                "text": "EXELON CORP"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3541----0910-K0013_STD_0_20100129_0_396770x415070",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3541----0910-K0013_STD_0_20100129_0_396770x415071",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0_396770x415070",
+                "text": "PECO ENERGY CO",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0_396770x415071",
+                "text": "COMMONWEALTH EDISON CO",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3541----0910-K0013_STD_365_20091231_0_396770x415073",
+                "text": "EXELON GENERATION CO LLC",
+                "reasons": [
+                  "qualified_context"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001157523-10-001218",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000115752310001218/f-20091231.xml",
+          "accepted": "2010-02-25 14:03:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "692d8054fd3e48f78f19822a838f5f023bed927e028c657253340e2a571024a4",
+            "expected_cik": "37996",
+            "expected_symbol": "F",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Cur_12Mos_2009-12-31",
+                "text": "FORD MOTOR CO"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "Cur_12Mos_2009-12-31",
+                "text": "F"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "Cur_12Mos_2009-12-31",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Cur_12Mos_2009-12-31",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "Cur_2010-02-12"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "Cur_2010-02-12_CommonClassBMember",
+                "reasons": [
+                  "qualified_context"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "FCX",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000831259-10-000010",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/831259/000083125910000010/fcx-20091231.xml",
+          "accepted": "2010-02-26 15:13:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "afcea16bfb03ff0741095759e35f4d0498518945bb40b2ea5c180108475001d6",
+            "expected_cik": "831259",
+            "expected_symbol": "FCX",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00009",
+                "text": "FREEPORT MCMORAN COPPER & GOLD INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00067"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "GD",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-034883",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/40533/000119312510034883/gd-20091231.xml",
+          "accepted": "2010-02-19 11:25:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "70a60eb692773be8740d7e9b254215838936c79aa5d06e74886efbfd63b71c5f",
+            "expected_cik": "40533",
+            "expected_symbol": "GD",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE8084----0910-K0008_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE8084----0910-K0008_STD_365_20091231_0",
+                "text": "GD"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE8084----0910-K0008_STD_365_20091231_0",
+                "text": "GENERAL DYNAMICS CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE8084----0910-K0008_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE8084----0910-K0008_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "GE",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000040545-10-000010",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054510000010/ge-20091231.xml",
+          "accepted": "2010-02-19 17:16:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "d991b06cbf0f4f33af77389f7cc6fc2ea092ce852cab93a86321737f0e416104",
+            "expected_cik": "40545",
+            "expected_symbol": "GE",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "General Electric Company"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "AS_OF_Dec31_2009"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-044753",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/882095/000119312510044753/gild-20091231.xml",
+          "accepted": "2010-03-01 16:28:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "128db52897722cb74188393897d2d47c359cff7facf1a6fdc6e0c26d7839eb22",
+            "expected_cik": "882095",
+            "expected_symbol": "GILD",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE7556----0910-K0013_STD_0_20100219_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE7556----0910-K0013_STD_365_20091231_0",
+                "text": "GILD"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE7556----0910-K0013_STD_365_20091231_0",
+                "text": "GILEAD SCIENCES INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE7556----0910-K0013_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE7556----0910-K0013_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-030774",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1288776/000119312510030774/goog-20091231.xml",
+          "accepted": "2010-02-12 17:19:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "3a67b18ea3dfbe9ad002cb104b822646c15d1ad4acd239ac1fdb739952672b17",
+            "expected_cik": "1288776",
+            "expected_symbol": "GOOGL",
+            "filed": "2010-02-12",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE633170--0910-K0012_STD_0_20100129_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE633170--0910-K0012_STD_365_20091231_0",
+                "text": "GOOG"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE633170--0910-K0012_STD_365_20091231_0",
+                "text": "Google Inc."
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE633170--0910-K0012_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE633170--0910-K0012_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE633170--0910-K0012_STD_0_20100129_0_411809x401075",
+                "reasons": [
+                  "qualified_context"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-018464",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000095012310018464/gs-20091231.xml",
+          "accepted": "2010-02-26 18:20:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "e4d12c09ebe85f1547ad06d005757856b8677b290eb69774b6366e733fd512a4",
+            "expected_cik": "886982",
+            "expected_symbol": "GS",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_12Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "GOLDMAN SACHS GROUP INC"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "HAL",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000045012-10-000085",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/45012/000004501210000085/hal-20091231.xml",
+          "accepted": "2010-02-17 13:02:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "7b90a5b53ded73876c51ca8efba15138d6799cab420cd1fd050c3022348943e9",
+            "expected_cik": "45012",
+            "expected_symbol": "HAL",
+            "filed": "2010-02-17",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00002",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00002",
+                "text": "Halliburton Company"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00002",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00008"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "HD",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "HON",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000930413-10-000784",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/773840/000093041310000784/hon-20091231.xml",
+          "accepted": "2010-02-12 16:37:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "f5d673982e6be74668f4d95791267af0b02789870e6c475c5a3a3a97173454a9",
+            "expected_cik": "773840",
+            "expected_symbol": "HON",
+            "filed": "2010-02-12",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "As_Of_1_31_2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "HONEYWELL INTERNATIONAL INC"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "HSY",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-034780",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47111/000119312510034780/hsy-20091231.xml",
+          "accepted": "2010-02-19 09:15:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "1f8076620e9cdebd7838e5dc925c98f1fd4eafd971e80e1e934b274ffccb81cd",
+            "expected_cik": "47111",
+            "expected_symbol": "HSY",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00029",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00029",
+                "text": "HERSHEY CO"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00029",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00067"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001047469-10-001151",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000104746910001151/ibm-20091231.xml",
+          "accepted": "2010-02-23 13:32:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c",
+            "expected_cik": "51143",
+            "expected_symbol": "IBM",
+            "filed": "2010-02-23",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "International Business Machines Corporation"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009so"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-015237",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000095012310015237/intc-20091226.xml",
+          "accepted": "2010-02-22 17:14:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "950478746cc69b051a4084db06c2f3e9148ff13c8829ca096abfc09e08039b3c",
+            "expected_cik": "50863",
+            "expected_symbol": "INTC",
+            "filed": "2010-02-22",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "December-28-2008_December-26-2009",
+                "text": "2009-12-26"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "December-28-2008_December-26-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_05Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "December-28-2008_December-26-2009",
+                "text": "Intel Corporation"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "JNJ",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-019392",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/200406/000095012310019392/jnj-20100103.xml",
+          "accepted": "2010-03-01 16:50:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "d66dc38a5f0252fdb26d342922d3dde5cf0d133c7b3cd591c6a4afbdbf2d4e6c",
+            "expected_cik": "200406",
+            "expected_symbol": "JNJ",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "December-29-2008_January-03-2010",
+                "text": "2010-01-03"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "December-29-2008_January-03-2010",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_08Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "December-29-2008_January-03-2010",
+                "text": "JOHNSON & JOHNSON"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-016029",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000095012310016029/jpm-20091231.xml",
+          "accepted": "2010-02-24 06:19:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "0c7c1105b44ac69e616f9d11415431275b381a38e1b356e3667f195d2158bc98",
+            "expected_cik": "19617",
+            "expected_symbol": "JPM",
+            "filed": "2010-02-24",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "J P MORGAN CHASE & CO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "KMB",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-038621",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/55785/000119312510038621/kmb-20091231.xml",
+          "accepted": "2010-02-24 13:39:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "8e62ab544ab0ea202b56568e290a4e67840b976ae54e73ca8022cd4bfdc904c6",
+            "expected_cik": "55785",
+            "expected_symbol": "KMB",
+            "filed": "2010-02-24",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3507----0910-K0003_STD_0_20100212_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE3507----0910-K0003_STD_365_20091231_0",
+                "text": "KMB"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3507----0910-K0003_STD_365_20091231_0",
+                "text": "KIMBERLY CLARK CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE3507----0910-K0003_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE3507----0910-K0003_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "KO",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001047469-10-001476",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/21344/000104746910001476/ko-20091231.xml",
+          "accepted": "2010-02-26 09:40:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "e1c1c70bbe51b318ccea9f77183d61627bc40fb8b0448280b72dbfe3f7a45034",
+            "expected_cik": "21344",
+            "expected_symbol": "KO",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "COCA COLA CO"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "KR",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "LIN",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-038766",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/884905/000119312510038766/px-20091231.xml",
+          "accepted": "2010-02-24 15:26:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "fa6b89f9194166e27f49b2cff4a1ba076701821fb7a969536fe8633f87ca3a49",
+            "expected_cik": "884905",
+            "expected_symbol": "LIN",
+            "filed": "2010-02-24",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3120----0910-K0015_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE3120----0910-K0015_STD_365_20091231_0",
+                "text": "PX"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3120----0910-K0015_STD_365_20091231_0",
+                "text": "PRAXAIR INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE3120----0910-K0015_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE3120----0910-K0015_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "LLY",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-014958",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000095012310014958/lly-20091231.xml",
+          "accepted": "2010-02-22 12:45:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "9720fd8a3a84cc2b37fa38b0bfdbee5f145fb39ab189310dc83bb0e0ea6f463e",
+            "expected_cik": "59478",
+            "expected_symbol": "LLY",
+            "filed": "2010-02-22",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "As_Of_2_12_2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "Lilly Eli & Co"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "LMT",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-040520",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/936468/000119312510040520/lmt-20091231.xml",
+          "accepted": "2010-02-25 15:14:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "36a07da32d7526185692db940a6ff5ebc68a6499dabd77629b34bc7d0b285c8c",
+            "expected_cik": "936468",
+            "expected_symbol": "LMT",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE11373---0910-K0010_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE11373---0910-K0010_STD_365_20091231_0",
+                "text": "LMT"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE11373---0910-K0010_STD_365_20091231_0",
+                "text": "LOCKHEED MARTIN CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE11373---0910-K0010_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE11373---0910-K0010_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "LOW",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "MCD",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-042025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/63908/000119312510042025/mcd-20091231.xml",
+          "accepted": "2010-02-26 10:46:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "8ab0e832e260816155f9e0a753690b3627abe7f746b8184bb11d1f18f23f9bf6",
+            "expected_cik": "63908",
+            "expected_symbol": "MCD",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE2163----0910-K0010_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE2163----0910-K0010_STD_365_20091231_0",
+                "text": "MCD"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE2163----0910-K0010_STD_365_20091231_0",
+                "text": "MCDONALDS CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE2163----0910-K0010_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE2163----0910-K0010_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "MDLZ",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-040106",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000119312510040106/kft-20091231.xml",
+          "accepted": "2010-02-25 11:55:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "3615605f65fd10458a9fbce67f90a288a37f0e5c49f49ba69b1c27253c454dc3",
+            "expected_cik": "1103982",
+            "expected_symbol": "MDLZ",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE71240---0910-K0012_STD_0_20100129_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE71240---0910-K0012_STD_365_20091231_0",
+                "text": "KFT"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE71240---0910-K0012_STD_365_20091231_0",
+                "text": "KRAFT FOODS INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE71240---0910-K0012_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE71240---0910-K0012_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "MLM",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "MRK",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-018679",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/mrk-20091231.xml",
+          "accepted": "2010-03-01 07:33:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "beebc2767f3cf62f6fcee2ff9377ea724fe3b4f4e6110f4e442726ea605a6523",
+            "expected_cik": "310158",
+            "expected_symbol": "MRK",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_29Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "Merck & Co. Inc."
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-042763",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000119312510042763/ms-20091231.xml",
+          "accepted": "2010-02-26 15:35:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "1d38db98acf61d75427f4313f35df0468f2296e443e60eb4e728c650d55bcc6f",
+            "expected_cik": "895421",
+            "expected_symbol": "MS",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE5929----0910-K0011_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE5929----0910-K0011_STD_365_20091231_0",
+                "text": "MS"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE5929----0910-K0011_STD_365_20091231_0",
+                "text": "MORGAN STANLEY"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE5929----0910-K0011_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE5929----0910-K0011_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "NEE",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000753308-10-000025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330810000025/fpl-20091231.xml",
+          "accepted": "2010-02-26 14:59:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "df7de5909f704736f7a340c2f79358aa14d87b7309a1f38ea072e4d662da5fa2",
+            "expected_cik": "753308",
+            "expected_symbol": "NEE",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00036",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00036",
+                "text": "FPL GROUP INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00036",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00043"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "NEM",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-016613",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1164727/000095012310016613/nem-20091231.xml",
+          "accepted": "2010-02-25 06:06:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "9fd89101f86bffd45c22021c502a80c31291a595686e2dc1057dac54b2d8463d",
+            "expected_cik": "1164727",
+            "expected_symbol": "NEM",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_17Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "NEWMONT MINING CORP /DE/"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-036181",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000119312510036181/nflx-20091231.xml",
+          "accepted": "2010-02-22 14:10:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "2b0801fd60d97740061878bce159d0d164fa2ab818c98990e70243c0ed99342a",
+            "expected_cik": "1065280",
+            "expected_symbol": "NFLX",
+            "filed": "2010-02-22",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE75377---0910-K0009_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE75377---0910-K0009_STD_365_20091231_0",
+                "text": "NFLX"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE75377---0910-K0009_STD_365_20091231_0",
+                "text": "NETFLIX INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE75377---0910-K0009_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE75377---0910-K0009_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "NUE",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-040686",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/73309/000119312510040686/nue-20091231.xml",
+          "accepted": "2010-02-25 16:16:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "54df378e1ce783cb5d7b18261d59830bc813bb0a1bab3ef9cbe5d92f437f30e3",
+            "expected_cik": "73309",
+            "expected_symbol": "NUE",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE2036----0910-K0007_STD_0_20100219_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE2036----0910-K0007_STD_365_20091231_0",
+                "text": "NUE"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE2036----0910-K0007_STD_365_20091231_0",
+                "text": "NUCOR CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE2036----0910-K0007_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE2036----0910-K0007_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "O",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "OMC",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000891092-10-000656",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/29989/000089109210000656/omc-20091231.xml",
+          "accepted": "2010-02-19 17:23:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "aa827e76bf1b49f0155b04a5bf5c9d6fbbaf8c224140c983352f4148f3f8a4ac",
+            "expected_cik": "29989",
+            "expected_symbol": "OMC",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "As_Of_2_11_2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "OMNICOM GROUP INC."
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "OXY",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000797468-10-000020",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746810000020/oxy-20091231.xml",
+          "accepted": "2010-02-25 14:54:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "f784d2cb0d391b8eaab7cb68505d6ce1de112ca8d9669b0e9e0c5120f4eb6553",
+            "expected_cik": "797468",
+            "expected_symbol": "OXY",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "OCCIDENTAL PETROLEUM CORP /DE/"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "PEG",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-040508",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/788784/000119312510040508/peg-20091231.xml",
+          "accepted": "2010-02-25 15:10:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "268c58906e0a17d79d22ebeaffb2efda0f94a80bbcbfcdc5fc5eb07512f83512",
+            "expected_cik": "788784",
+            "expected_symbol": "PEG",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3677----0910-K0007_STD_0_20100129_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE3677----0910-K0007_STD_365_20091231_0",
+                "text": "PEG"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3677----0910-K0007_STD_365_20091231_0",
+                "text": "PUBLIC SERVICE ENTERPRISE GROUP INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE3677----0910-K0007_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE3677----0910-K0007_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "PEP",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-036385",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/77476/000119312510036385/pep-20091226.xml",
+          "accepted": "2010-02-22 16:20:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "82123fe8b634941e7029ab64f9444030dc882dc0dba1dd5319a1a7eaa9f297b1",
+            "expected_cik": "77476",
+            "expected_symbol": "PEP",
+            "filed": "2010-02-22",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE5110----0910-K0010_STD_0_20100212_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE5110----0910-K0010_STD_364_20091226_0",
+                "text": "PEP"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE5110----0910-K0010_STD_364_20091226_0",
+                "text": "PEPSICO INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE5110----0910-K0010_STD_364_20091226_0",
+                "text": "2009-12-26"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE5110----0910-K0010_STD_364_20091226_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-042425",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/78003/000119312510042425/pfe-20091231.xml",
+          "accepted": "2010-02-26 13:43:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "5f51a1cdf8e8032c5e5f55eb123c317a8e6d460b3d5750e1c3d53f593e39f750",
+            "expected_cik": "78003",
+            "expected_symbol": "PFE",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "Cur_12mos_20091231",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Cur_12mos_20091231",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Cur_12mos_20091231",
+                "text": "PFIZER INC"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "DEI_2010-02-18"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "PG",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "PLD",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "PNC",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-052794",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000119312510052794/pnc-20091231.xml",
+          "accepted": "2010-03-10 17:38:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "c750c031f7f46fee5010d02eabe5870eb1bbe1b4b350424206a4a3cefe7e01e7",
+            "expected_cik": "713676",
+            "expected_symbol": "PNC",
+            "filed": "2010-03-11",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE4948----0910-K0015_STD_0_20100226_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE4948----0910-K0015_STD_365_20091231_0",
+                "text": "PNC"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE4948----0910-K0015_STD_365_20091231_0",
+                "text": "PNC FINANCIAL SERVICES GROUP INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE4948----0910-K0015_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE4948----0910-K0015_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "PPG",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-033939",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/79879/000119312510033939/ppg-20091231.xml",
+          "accepted": "2010-02-18 10:57:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "b5bab7fa003c4a299ddec3dcddc9be0960f5a948d65e56f215f56480057cc5df",
+            "expected_cik": "79879",
+            "expected_symbol": "PPG",
+            "filed": "2010-02-18",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE11290---0910-K0011_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE11290---0910-K0011_STD_365_20091231_0",
+                "text": "PPG"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE11290---0910-K0011_STD_365_20091231_0",
+                "text": "PPG INDUSTRIES INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE11290---0910-K0011_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE11290---0910-K0011_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "PSA",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001393311-10-000004",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1393311/000139331110000004/psa-20091231.xml",
+          "accepted": "2010-02-26 21:49:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "7e2b69f5cd483d75f84a6a46a3e2a29d6c0ac34d14f4b46cd06dc2a1985d394d",
+            "expected_cik": "1393311",
+            "expected_symbol": "PSA",
+            "filed": "2010-03-01",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "As_Of_2_26_2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Duration_1_1_2009_To_12_31_2009",
+                "text": "Public Storage"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-09-057827",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/804328/000095012309057827/qcom-20090927.xml",
+          "accepted": "2009-11-04 20:22:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "a18fda52796c42b2604c8fdb837d5b30707a406965602d75dad0de5345768f6f",
+            "expected_cik": "804328",
+            "expected_symbol": "QCOM",
+            "filed": "2009-11-05",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00015",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00015",
+                "text": "QUALCOMM INC/DE"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00015",
+                "text": "2009-09-27"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00035"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "ROST",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "RTX",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-027861",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/101829/000119312510027861/utx-20091231.xml",
+          "accepted": "2010-02-11 06:09:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "38940d9ff8275d12592ed490c77b6bc72b2392b0e8024f687db81ca942c28921",
+            "expected_cik": "101829",
+            "expected_symbol": "RTX",
+            "filed": "2010-02-11",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "AS_OF_Dec31_2009"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "UNITED TECHNOLOGIES CORP /DE/"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-09-064772",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000095012309064772/sbux-20090927.xml",
+          "accepted": "2009-11-20 16:45:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "8e363f9d1a57b7a93e24120a1251a5a4134161ffe27f0f498263f192f276596a",
+            "expected_cik": "829224",
+            "expected_symbol": "SBUX",
+            "filed": "2009-11-20",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "September-29-2008_September-27-2009",
+                "text": "2009-09-27"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "September-29-2008_September-27-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_13Nov2009"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "September-29-2008_September-27-2009",
+                "text": "STARBUCKS CORP"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SHW",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-016198",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/89800/000095012310016198/shw-20091231.xml",
+          "accepted": "2010-02-24 12:54:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "c7bc069d48e312ad0a9efe14dd34366f18e236ca27fa8ac2e805a54f6d1636dc",
+            "expected_cik": "89800",
+            "expected_symbol": "SHW",
+            "filed": "2010-02-24",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "Dec31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "Dec31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "Jan31_2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "Dec31_2009",
+                "text": "SHERWIN WILLIAMS CO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SLB",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-023041",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/87347/000119312510023041/slb-20091231.xml",
+          "accepted": "2010-02-05 12:32:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "d65ea0ad9b331aab1b56d13cc3c56eca37f088620dce18439e0b53ce7ba4ffa7",
+            "expected_cik": "87347",
+            "expected_symbol": "SLB",
+            "filed": "2010-02-05",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE2410----0910-K0007_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE2410----0910-K0007_STD_365_20091231_0",
+                "text": "SLB"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE2410----0910-K0007_STD_365_20091231_0",
+                "text": "SCHLUMBERGER LTD /NV/"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE2410----0910-K0007_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE2410----0910-K0007_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SO",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000092122-10-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/92122/000009212210000009/so-20091231.xml",
+          "accepted": "2010-02-25 16:39:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "f1f9e0310b528ead3445dfa9d425d7dd5477ee9d7568289f3e4e367da4ebb968",
+            "expected_cik": "92122",
+            "expected_symbol": "SO",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "SOUTHERN CO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SPG",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001047469-10-001324",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1063761/000104746910001324/spg-20091231.xml",
+          "accepted": "2010-02-25 11:12:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "68ed8aa2603c49070592656161e6dde9b9ec1b142a7c87a40e441f34f617da16",
+            "expected_cik": "1063761",
+            "expected_symbol": "SPG",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "SIMON PROPERTY GROUP INC /DE/"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO_CommonClassBMember",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO_CommonClassAMember",
+                "reasons": [
+                  "qualified_context"
+                ]
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO",
+                "reasons": [
+                  "invalid_share_count"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SRE",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000086521-10-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1032208/000008652110000019/sre-20091231.xml",
+          "accepted": "2010-02-25 18:30:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "0beeb9f7ad3cd53192a989164f6188c1a57d43d327ce7ec7c5e90474e60876b0",
+            "expected_cik": "1032208",
+            "expected_symbol": "SRE",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "Sempra Energy"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "AS_OF_Dec31_2009"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "T",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000732717-10-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271710000013/t-20091231.xml",
+          "accepted": "2010-02-25 17:19:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "a8cb7ceb54974e1726ff616a0ed8976d0de0e3d76246456a1225cce88a061a4b",
+            "expected_cik": "732717",
+            "expected_symbol": "T",
+            "filed": "2010-02-25",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00044",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00044",
+                "text": "AT&T Inc."
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00044",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00052"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001047469-10-002121",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000104746910002121/tgt-20100130.xml",
+          "accepted": "2010-03-12 12:11:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "2dc1ab522f19b4ad9207cc8d6cbca338fb4059b8cfc97cbbcedcd999bce535c0",
+            "expected_cik": "27419",
+            "expected_symbol": "TGT",
+            "filed": "2010-03-12",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "TARGET CORP"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2010-01-30"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "TJX",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "TMUS",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "TTWO",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "TXN",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001140361-10-007923",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000114036110007923/txn-20091231.xml",
+          "accepted": "2010-02-23 14:26:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "03e0d3ac334fe40a5fd91f40b8d8a3801fc24b5433b04e3f3fb411d3a55f688e",
+            "expected_cik": "97476",
+            "expected_symbol": "TXN",
+            "filed": "2010-02-23",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "c00030",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "c00030",
+                "text": "Texas Instruments Inc"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "c00030",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "c00043"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "UNH",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-027229",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/731766/000119312510027229/unh-20091231.xml",
+          "accepted": "2010-02-10 16:37:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "89be2fa8e50269af9e52755da930011aec899c34e6b209a72e019892c347c3f8",
+            "expected_cik": "731766",
+            "expected_symbol": "UNH",
+            "filed": "2010-02-10",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE8792----0910-K0006_STD_0_20100203_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE8792----0910-K0006_STD_365_20091231_0",
+                "text": "UNH"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE8792----0910-K0006_STD_365_20091231_0",
+                "text": "UNITEDHEALTH GROUP INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE8792----0910-K0006_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE8792----0910-K0006_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "UNP",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-023294",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/100885/000119312510023294/unp-20091231.xml",
+          "accepted": "2010-02-05 15:31:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "287898b28e6b6c7c56292a5b98686952767370c582d08bdd8964b9f20960d1db",
+            "expected_cik": "100885",
+            "expected_symbol": "UNP",
+            "filed": "2010-02-05",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentType",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "FROM_Jan01_2009_TO_Dec31_2009",
+                "text": "UNION PACIFIC CORPORATION"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "AS_OF_Jan29_2010"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "UPS",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-042908",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090727/000119312510042908/ups-20091231.xml",
+          "accepted": "2010-02-26 16:13:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "44d95679bbd1fb0dc3b66462a1e502c4d380ab7b184a325164c64cb718c9061a",
+            "expected_cik": "1090727",
+            "expected_symbol": "UPS",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE10216---0910-K0007_STD_0_20100217_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE10216---0910-K0007_STD_365_20091231_0",
+                "text": "UPS"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE10216---0910-K0007_STD_365_20091231_0",
+                "text": "UNITED PARCEL SERVICE INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE10216---0910-K0007_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE10216---0910-K0007_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE10216---0910-K0007_STD_0_20100217_0_411809x401074",
+                "reasons": [
+                  "qualified_context"
+                ]
+              }
+            ],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "USB",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-018123",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/36104/000095012310018123/usb-20091231.xml",
+          "accepted": "2010-02-26 16:05:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "1aa94ab07dfcf8e456450f80e5c98cbacd1f9c82d7c8811d4aa57be16839f6dc",
+            "expected_cik": "36104",
+            "expected_symbol": "USB",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "US BANCORP \\DE\\"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "VLO",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-018097",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1035002/000095012310018097/vlo-20091231.xml",
+          "accepted": "2010-02-26 15:55:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "45f7a803de38529f3373c0bd76537e0e4d097723d52d245a885ab8a8d03f7e24",
+            "expected_cik": "1035002",
+            "expected_symbol": "VLO",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "TwelveMonthsEnded_31Dec2009",
+                "text": "VALERO ENERGY CORP/TX"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "VMC",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-018400",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1396009/000095012310018400/vmc-20091231.xml",
+          "accepted": "2010-02-26 17:26:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "95fdb840beff0ff4e93ddbe392540eddf5bcc2210b997dee903a4f49ba56beb9",
+            "expected_cik": "1396009",
+            "expected_symbol": "VMC",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_19Feb2010"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "Vulcan Materials CO"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "VTR",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-035246",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/740260/000119312510035246/vtr-20091231.xml",
+          "accepted": "2010-02-19 16:33:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "9e1a0a160a21375ae399308089ae4a8df48fe961963c7f29787a8a1968c19497",
+            "expected_cik": "740260",
+            "expected_symbol": "VTR",
+            "filed": "2010-02-19",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE1093----0910-K0018_STD_0_20100215_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE1093----0910-K0018_STD_365_20091231_0",
+                "text": "VTR"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE1093----0910-K0018_STD_365_20091231_0",
+                "text": "VENTAS INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE1093----0910-K0018_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE1093----0910-K0018_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "VZ",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-041685",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/732712/000119312510041685/vz-20091231.xml",
+          "accepted": "2010-02-26 08:03:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "e0b43ad79b85f6c82b0c5913c750d3ebc3bf82e4fccc87f11f47699d602b0515",
+            "expected_cik": "732712",
+            "expected_symbol": "VZ",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE7762----0910-K0015_STD_0_20100129_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE7762----0910-K0015_STD_365_20091231_0",
+                "text": "VZ"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE7762----0910-K0015_STD_365_20091231_0",
+                "text": "VERIZON COMMUNICATIONS INC"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE7762----0910-K0015_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE7762----0910-K0015_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "WELL",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "WFC",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0000950123-10-017877",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000095012310017877/wfc-20091231.xml",
+          "accepted": "2010-02-26 13:26:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "3536e88e0fbdfa84fafa183ebd785091ab43296603889ef22e5e63b51708492b",
+            "expected_cik": "72971",
+            "expected_symbol": "WFC",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "January-01-2009_December-31-2009",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "January-01-2009_December-31-2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "BalanceAsOf_31Jan2009"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "January-01-2009_December-31-2009",
+                "text": "WELLS FARGO & CO/MN"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "first_training_session": "2010-03-16",
+      "status": "no_cached_earlier_instance",
+      "documents": []
+    },
+    {
+      "symbol": "XEL",
+      "first_training_session": "2010-03-16",
+      "status": "cached_without_exact_ticker_hint",
+      "documents": [
+        {
+          "accession": "0001047469-10-001536",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/72903/000104746910001536/xel-20091231.xml",
+          "accepted": "2010-02-26 16:24:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "8cef6f210c336cb1c881731e0d8b07416f6c2cdeb4f2498321e2072eda2a4eaf",
+            "expected_cik": "72903",
+            "expected_symbol": "XEL",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": false,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "I2009SO"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "D2009",
+                "text": "XCEL ENERGY INC"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "D2009",
+                "text": "10-K"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "D2009",
+                "text": "2009-12-31"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "XOM",
+      "first_training_session": "2010-03-16",
+      "status": "exact_document_hint",
+      "documents": [
+        {
+          "accession": "0001193125-10-042929",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000119312510042929/xom-20091231.xml",
+          "accepted": "2010-02-26 16:17:00.0",
+          "evidence": {
+            "schema": "sec-stock-type-document-v1",
+            "source_sha256": "7da40f58a1ab0200c8d79563d006f765fdaf55684d5dba0986de0c8a3930aeab",
+            "expected_cik": "34088",
+            "expected_symbol": "XOM",
+            "filed": "2010-02-26",
+            "document_exact_stock_identity_hint": true,
+            "facts": [
+              {
+                "concept": "EntityCommonStockSharesOutstanding",
+                "context": "eol_PE3810----0910-K0006_STD_0_20100131_0"
+              },
+              {
+                "concept": "TradingSymbol",
+                "context": "eol_PE3810----0910-K0006_STD_365_20091231_0",
+                "text": "XOM"
+              },
+              {
+                "concept": "EntityRegistrantName",
+                "context": "eol_PE3810----0910-K0006_STD_365_20091231_0",
+                "text": "EXXON MOBIL CORP"
+              },
+              {
+                "concept": "DocumentPeriodEndDate",
+                "context": "eol_PE3810----0910-K0006_STD_365_20091231_0",
+                "text": "2009-12-31"
+              },
+              {
+                "concept": "DocumentType",
+                "context": "eol_PE3810----0910-K0006_STD_365_20091231_0",
+                "text": "10-K"
+              }
+            ],
+            "excluded": [],
+            "historical_metadata_admitted": false,
+            "validity_interval_inferred": false,
+            "model_inputs_enabled": false
+          }
+        }
+      ]
+    }
+  ],
+  "status_counts": {
+    "exact_document_hint": 33,
+    "no_cached_earlier_instance": 22,
+    "cached_without_exact_ticker_hint": 52
+  },
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/type-evidence.json": "30be01794b8911e01de3ae46b53a7e7264442b092b3805ed4e8db649f6fd57c6",
+    "artifacts/filings/original-candidate-ledger.json": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "scripts/audit_cached_stock_types.py": "8fb6eddda0a0ed0ebb1d776726227ccd8591c8a1087f5a85e48f708f8ac491c4",
+    "src/rl_stocks/data/providers/sec/instrument_type.py": "82d0338ad16c1b599d188f1422e2ee082387cb765b154ef18c8a95d7fd286731",
+    "data/raw/sec-xbrl/original-receipts/60f05da147314414b14cd8ba2a08a9e93d9a7684735aa0ec3c1c8af50235ad57.json": "71e59c8d55947cb4129af71ab8a425ab323f9b177f40097cc3c2dc005be6f4fa",
+    "data/raw/sec-xbrl/5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20/instance.xml": "5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20",
+    "data/raw/sec-xbrl/original-receipts/042ffe2a5b69845350eabd0d8304bfc04ffb1c79268fc4c81d8126aaea54f7b9.json": "ae95bacd7fe5fdd63ec14f635359bdef136e9db5fef8d06df8be87a0fb14cc76",
+    "data/raw/sec-xbrl/c1cfd4bb95b7592775eb9ec2a6d14c065ce5d5d440de623d44a2b21a1b1f5778/instance.xml": "c1cfd4bb95b7592775eb9ec2a6d14c065ce5d5d440de623d44a2b21a1b1f5778",
+    "data/raw/sec-xbrl/original-receipts/24090bdc03c7d04e0c94ca5a07cf50aebb852c1f128f043b8fe4de05006cb344.json": "999e5c0b25c40a731a5d269300642ee5dc80808918a2369747a47caaeff3d1e4",
+    "data/raw/sec-xbrl/77dea33e5b7ba308f1d970247cae4275872ceffbc094a6a6fb33ea9fda5716ef/instance.xml": "77dea33e5b7ba308f1d970247cae4275872ceffbc094a6a6fb33ea9fda5716ef",
+    "data/raw/sec-xbrl/original-receipts/b3aa4e474dc32d919f99279cd6dfcae7b10b240a534caedfac72ab8e3314e4e7.json": "8e34fc8b2a6e3fdc317b4cf711c9adc1060e52aec2fe6ab5a66cc680dc849851",
+    "data/raw/sec-xbrl/f3c8bc6f77af7eb5eb92b6a3b4c2324670f4e4b00d2eb85d296c7f7810a1098f/instance.xml": "f3c8bc6f77af7eb5eb92b6a3b4c2324670f4e4b00d2eb85d296c7f7810a1098f",
+    "data/raw/sec-xbrl/original-receipts/2c3ad0133ccb551c475406da3a952bbb1ae83f68c1186eb3fcf391b02d42fdc2.json": "63a9dbd13ef15612c6749870bdfb620240c868b999522d5f76bba54fafb20c0f",
+    "data/raw/sec-xbrl/671c3fb9911c0d81b4be34311e056480d58987706373dbedffecd210bab9bc14/instance.xml": "671c3fb9911c0d81b4be34311e056480d58987706373dbedffecd210bab9bc14",
+    "data/raw/sec-xbrl/original-receipts/12a3d6239b0de3d0513a4b3e5938f398d39f7bd21ee24d94e5e6f011872aa84d.json": "eb0e70ebec24d6de5838c8e752f1880d57f606ed85c3dac31bc37464ea8251d5",
+    "data/raw/sec-xbrl/780df3266008b4fc83589b9cee728b3c6403e4cb6efc3aa66cedcb1c6d048b82/instance.xml": "780df3266008b4fc83589b9cee728b3c6403e4cb6efc3aa66cedcb1c6d048b82",
+    "data/raw/sec-xbrl/original-receipts/4ae9111d00c8b54cd72ff6d4f474c4631e0f4a98639bb32f0e664c27a5cb3f7d.json": "8d2fdafd1568fa005bb2e9e46ebbee2059b2d982edfb41c4f058b0dd01e82530",
+    "data/raw/sec-xbrl/32c5235828cec652d3ef6a47e92b171569da57eaadaae7b815f9850022c083f5/instance.xml": "32c5235828cec652d3ef6a47e92b171569da57eaadaae7b815f9850022c083f5",
+    "data/raw/sec-xbrl/original-receipts/6ba2c2742f24bffc4b2527d9bd3ae7c70152a7cfcc4903f9eec32944b6771a1a.json": "41021648625282b71ce96bd7a4f27a13674af857e9b843569adcdc977ef396af",
+    "data/raw/sec-xbrl/da1e88b587ed7e24d52cc4b083c199d185be325b84a71a0a822800e12d1b86d6/instance.xml": "da1e88b587ed7e24d52cc4b083c199d185be325b84a71a0a822800e12d1b86d6",
+    "data/raw/sec-xbrl/original-receipts/1a52fe83d7c3e5e2aba4aabb925d7558aba0944f4da72b7734a53e9d95bbffda.json": "93b2dec6b5abaf2544ab50a1dc4129a2d9689b7c4bc63b8bbe9fa28a1d23afc7",
+    "data/raw/sec-xbrl/e8dc902277fcab7ec17d539420d4a627b4ffd2c60f9d61ed0f14e0e4b04a8474/instance.xml": "e8dc902277fcab7ec17d539420d4a627b4ffd2c60f9d61ed0f14e0e4b04a8474",
+    "data/raw/sec-xbrl/original-receipts/b4fdac4e4d629c23050d8a9cb14d5e5126149bcefbc45147513a3f0444ccad51.json": "952c780ff347b132b31c4d1898ed4b3a17ce21f807c9963a53249ec2394d5cf3",
+    "data/raw/sec-xbrl/0d6a98196f7b0d807e1d5e2c42a5f7fb9b12d89f0aac9ce8fb95eb9276b236c8/instance.xml": "0d6a98196f7b0d807e1d5e2c42a5f7fb9b12d89f0aac9ce8fb95eb9276b236c8",
+    "data/raw/sec-xbrl/original-receipts/9f75e04d39888a4215567f934590f67c36a573f69f717b8df526de25125e1028.json": "52f9ac22015a58b202632ebfa7feef435aa68c653dab2d53de471a561ec2c16a",
+    "data/raw/sec-xbrl/93e997dff061057cf20fdff2f5ff8e7045fe69bd7c329fb85c902a8fa1b87420/instance.xml": "93e997dff061057cf20fdff2f5ff8e7045fe69bd7c329fb85c902a8fa1b87420",
+    "data/raw/sec-xbrl/original-receipts/f6604683230eb22ff57d58e60f0b87afab0619501db523145ef45637e6b9e9c7.json": "c74e196b52e5ba509dc12a6a11d6242f9d3943771e39f4dc7e54599e68a87efb",
+    "data/raw/sec-xbrl/9292a874084b80b89609b127934fed2a1d398f85c62ef0eb6c98979cc63f882d/instance.xml": "9292a874084b80b89609b127934fed2a1d398f85c62ef0eb6c98979cc63f882d",
+    "data/raw/sec-xbrl/original-receipts/4151a36860c0360182c11d464de4e62ed4ca5c6d27fc88bfaded4c8a9066452b.json": "033f645f8f8f62f1f5db5cc8dd214e1d5c7fa29f7024bd26226e8140adf04ca4",
+    "data/raw/sec-xbrl/8e41043e31ff42b809ed55844e79d0ecaf9984efcc35112d4a74d41676e0b047/instance.xml": "8e41043e31ff42b809ed55844e79d0ecaf9984efcc35112d4a74d41676e0b047",
+    "data/raw/sec-xbrl/original-receipts/cb4e1358267be9daac8c215652d9807a45236abbd5fc5e9c0199b9990c90ee95.json": "1ad824329903d33daf669e4afa9ac652e0e13beb77a422d2e6b815c9ac934b8c",
+    "data/raw/sec-xbrl/9a6752460581dd87f4e424a8159bbb9ddbfa39776491fb996a159e1fbaf2bef2/instance.xml": "9a6752460581dd87f4e424a8159bbb9ddbfa39776491fb996a159e1fbaf2bef2",
+    "data/raw/sec-xbrl/original-receipts/2766bb452de493f5b9feec6b1660505d444722f87b7efd11d40caf87f84d6d3e.json": "cba7b54864a04dbd21f00b460c8f8d4e469f0ad0aa1095b1efa23af7608f98d2",
+    "data/raw/sec-xbrl/3db6e4ccaa7fe5d4583bce6918d2f627d36bff081f46397dd2e9167f6c43f1f8/instance.xml": "3db6e4ccaa7fe5d4583bce6918d2f627d36bff081f46397dd2e9167f6c43f1f8",
+    "data/raw/sec-xbrl/original-receipts/e5df0c47f1a00decd956d6ee2681fd59567094ead8c130849f45fda24d795e12.json": "b2b31d39321b5653cb3d792ca0b4f811a5f3aa3af8c9fa81f8953ed9046ba7a0",
+    "data/raw/sec-xbrl/ffdd6782db844b6a453e600e4c9504681c0a59c113a4e2752b2e8cca3a10a4b6/instance.xml": "ffdd6782db844b6a453e600e4c9504681c0a59c113a4e2752b2e8cca3a10a4b6",
+    "data/raw/sec-xbrl/original-receipts/989526839f995803043a136fa37e6a9444f4e65caf94c29282ff4ef1bc44cbb6.json": "1d4b7525da8e2690e66ff741f04d8139d9b67cb804851c71429e91f0ecbc43c6",
+    "data/raw/sec-xbrl/0cf28f393211b13856ceb508d2e69d7b1ac126b98af1e4ec914a8bf2b3f11afc/instance.xml": "0cf28f393211b13856ceb508d2e69d7b1ac126b98af1e4ec914a8bf2b3f11afc",
+    "data/raw/sec-xbrl/original-receipts/21e85a14c7c54dbf834b6d7513dfabada5d69c5ee7d9a27bb518c08da9d14e57.json": "aa47660791fe68caa8d1e2823b241319881ccf214303b12a7ea7b141d382360a",
+    "data/raw/sec-xbrl/cb02741d401a48a83a8870371ef23c2ee7414ca2832b23c038cb7c35a8ba7791/instance.xml": "cb02741d401a48a83a8870371ef23c2ee7414ca2832b23c038cb7c35a8ba7791",
+    "data/raw/sec-xbrl/original-receipts/c72ed47c0acb5a5a2031ff1cd0c3ad6e8662366af48bd4aff9dffa38d74a7bbe.json": "584eb24c14a4923d3a22ed570b926c2697a039cc284c311f87033a68ed424299",
+    "data/raw/sec-xbrl/e57318863028d0785bd31a44ad5b0c540fd90b52391df46f92c3fba14d68dc12/instance.xml": "e57318863028d0785bd31a44ad5b0c540fd90b52391df46f92c3fba14d68dc12",
+    "data/raw/sec-xbrl/original-receipts/1008ffddda92fb9cd789e19d06815dd25b5376538a125f4239f78b4722dbf29d.json": "5c4c060acb1126080e05a1cd7680db85229ddbe4ac9b33b23482cedca46ddd1a",
+    "data/raw/sec-xbrl/ca6f1bba9fc228616be2e8242f5785adf2b6e577ee2d7b1dffad95fa18a4a215/instance.xml": "ca6f1bba9fc228616be2e8242f5785adf2b6e577ee2d7b1dffad95fa18a4a215",
+    "data/raw/sec-xbrl/original-receipts/ca982f882c68522556a4cf7e748b5a67c4cfb6f648a6ab0eb0267a607e3c4c62.json": "c83616d7f0905df70ae4d997edf46b67566050aa483d0f540067f580a48a49eb",
+    "data/raw/sec-xbrl/b0035db22262a4e8318cd4a163bd2f8dd8aeee8d6485dd93ccdd702897f4d00a/instance.xml": "b0035db22262a4e8318cd4a163bd2f8dd8aeee8d6485dd93ccdd702897f4d00a",
+    "data/raw/sec-xbrl/original-receipts/39c0b52a89efdebe808285ab2a26594171bc38cb8a12b1b9e32fa79464c9f71e.json": "3efe484a252262040d616aa2b6c99e9308bfdd3c82add6f6e2be099ffc139668",
+    "data/raw/sec-xbrl/df48b58b6f655ab009acf8d987e450df01a14df65374bf30a27fda6e83a590c0/instance.xml": "df48b58b6f655ab009acf8d987e450df01a14df65374bf30a27fda6e83a590c0",
+    "data/raw/sec-xbrl/original-receipts/87e2f818c19edf1d361616bf2a200886da2edb11cb341af220522e0a68f067d7.json": "e0f6199663192710d40ec0ac18c31dc4f78fc3d8209e4530edd4de337a16d4fa",
+    "data/raw/sec-xbrl/7d1f7f847395b935f1ab7cc02090708eb1c5f64afd49bf5f37a2d6d2921b1eb5/instance.xml": "7d1f7f847395b935f1ab7cc02090708eb1c5f64afd49bf5f37a2d6d2921b1eb5",
+    "data/raw/sec-xbrl/original-receipts/cf3d3b6f4b0f1b18fb1871ec21b499dbdefa0c1ee59712693908804bd3e7c810.json": "b9f2dadd7447835e1323500e92aa605d5b485b1500d9e49f1c98d04ec5de1fbe",
+    "data/raw/sec-xbrl/2b34a170472259e3634cb9153dd7848778eac818753efba690fcd79fc5d52ade/instance.xml": "2b34a170472259e3634cb9153dd7848778eac818753efba690fcd79fc5d52ade",
+    "data/raw/sec-xbrl/original-receipts/22905ed0fa7d40b311785d6c0ca2a563270068d28ca024d8784b6a41bb3b77d1.json": "f4e02a9872076db32b1a95533b320e17fc67a969f1f856dd6ee6bb44b67fef2f",
+    "data/raw/sec-xbrl/df235606efc638cb36b9bb9c2f3bd40d25e0321b050ff6ca06273efc68fef64f/instance.xml": "df235606efc638cb36b9bb9c2f3bd40d25e0321b050ff6ca06273efc68fef64f",
+    "data/raw/sec-xbrl/original-receipts/e68ceb274367cd30a6711d8ffb3c83bbca2accadfd4f0384b3b8430a395700b2.json": "fc98d2b84f83451bc97d4fb763b4b6e2eb79618fc96c6b4df82e7dbd07367528",
+    "data/raw/sec-xbrl/6edade37f395187b14d5a6c503c64ac2348ee109f3d4f207212586822c1e2abd/instance.xml": "6edade37f395187b14d5a6c503c64ac2348ee109f3d4f207212586822c1e2abd",
+    "data/raw/sec-xbrl/original-receipts/7b7fc11fd3e4a08d958208fbe1f0e695f1e53aabacdb8bca169409d3d3706878.json": "dacc94b7033b2da4e5ba54195d5df62baf78e17c40c3bf2a5c722c79659835e2",
+    "data/raw/sec-xbrl/3855f2bd008a8df95edd4af71f7233da32396ae28fe979fae6e9b45c16de8e1c/instance.xml": "3855f2bd008a8df95edd4af71f7233da32396ae28fe979fae6e9b45c16de8e1c",
+    "data/raw/sec-xbrl/original-receipts/b3c28ceed2b9252562ca5b4a933a584227006d1c7a5ee6dd569ee9dd4dcb07f7.json": "09b59dfd208aa923e82a91f48b35ff7700c6c49fa7b2e0e22eb571bf9ef68b9a",
+    "data/raw/sec-xbrl/65d6fc8d04f8d0ce59768920c10b0df20b5027a65d576562a388edc486010520/instance.xml": "65d6fc8d04f8d0ce59768920c10b0df20b5027a65d576562a388edc486010520",
+    "data/raw/sec-xbrl/original-receipts/01aa43bfbe7a31a12b31e1d0bc52295ad027a494ad6d781b4d18ec95b5b93c29.json": "66103b31e37392cc6b3d246395bcec91d3ad00780f6a042a05b2d04d68e6dd4a",
+    "data/raw/sec-xbrl/692d8054fd3e48f78f19822a838f5f023bed927e028c657253340e2a571024a4/instance.xml": "692d8054fd3e48f78f19822a838f5f023bed927e028c657253340e2a571024a4",
+    "data/raw/sec-xbrl/original-receipts/054133fcb096cfb9c13a3f9d027077399cebb489e4389ffcc122774fc062c2aa.json": "e6eebb9d8a13f51020bcb44bab2b2d4927133514a425e93bd1e23364300928d4",
+    "data/raw/sec-xbrl/afcea16bfb03ff0741095759e35f4d0498518945bb40b2ea5c180108475001d6/instance.xml": "afcea16bfb03ff0741095759e35f4d0498518945bb40b2ea5c180108475001d6",
+    "data/raw/sec-xbrl/original-receipts/b07952e4dfae3692a9c28443870b6c688a9bc87f8d0511bb0d756a231bd457ac.json": "85558efc0744909399f203166f7f9e256b2adc5f22cebfdf8462dc49db6e45a5",
+    "data/raw/sec-xbrl/70a60eb692773be8740d7e9b254215838936c79aa5d06e74886efbfd63b71c5f/instance.xml": "70a60eb692773be8740d7e9b254215838936c79aa5d06e74886efbfd63b71c5f",
+    "data/raw/sec-xbrl/original-receipts/0ed51cba0aa8ba2c96f888518e92c896e18f1170a0029d8138f5043a71befbbb.json": "e70a4f0bd9b3493acbcbed4d9dcfc9329a381b49f590b2482c5381dd79f1148b",
+    "data/raw/sec-xbrl/d991b06cbf0f4f33af77389f7cc6fc2ea092ce852cab93a86321737f0e416104/instance.xml": "d991b06cbf0f4f33af77389f7cc6fc2ea092ce852cab93a86321737f0e416104",
+    "data/raw/sec-xbrl/original-receipts/a245b998c1b15a780631b6521c45d65e689b6a8cb58778d5c9a10a7f4f658d34.json": "36ec84b9e2bf1627e40a9ddb594068d3ee179a617b47281cd46bb79d923fc046",
+    "data/raw/sec-xbrl/128db52897722cb74188393897d2d47c359cff7facf1a6fdc6e0c26d7839eb22/instance.xml": "128db52897722cb74188393897d2d47c359cff7facf1a6fdc6e0c26d7839eb22",
+    "data/raw/sec-xbrl/original-receipts/a80564c6464742ebbc30bb8c3fe960cb85458353de209358639e5306998bf261.json": "a117784731fbf763ed6b51d4e3fb79841b0c38dcf314844aacd3898ae7a8157a",
+    "data/raw/sec-xbrl/3a67b18ea3dfbe9ad002cb104b822646c15d1ad4acd239ac1fdb739952672b17/instance.xml": "3a67b18ea3dfbe9ad002cb104b822646c15d1ad4acd239ac1fdb739952672b17",
+    "data/raw/sec-xbrl/original-receipts/1f4584c8125b305500798af3d91bfba40d312a7232aebc6921a7b7968caf75bb.json": "cb428e0fb6462c5a6ec9a2d3acb74d5ea41139b4bffd9d45b47fba16a951716d",
+    "data/raw/sec-xbrl/e4d12c09ebe85f1547ad06d005757856b8677b290eb69774b6366e733fd512a4/instance.xml": "e4d12c09ebe85f1547ad06d005757856b8677b290eb69774b6366e733fd512a4",
+    "data/raw/sec-xbrl/original-receipts/c7579840978d24e5f434a5580e900405f9489d4de63e424cc86c0bb777611358.json": "ab53655438f917058d90d74f1db2de725b8e16c28a303d27626868c218093429",
+    "data/raw/sec-xbrl/7b90a5b53ded73876c51ca8efba15138d6799cab420cd1fd050c3022348943e9/instance.xml": "7b90a5b53ded73876c51ca8efba15138d6799cab420cd1fd050c3022348943e9",
+    "data/raw/sec-xbrl/original-receipts/4c72b60451664dbdf8c9aff411684885c2c1ec359aa631412d839cc70a4e1778.json": "05828099b0f088b32830b3e39a7c8dd521fdfa26c818da97321cbf0dff34c88a",
+    "data/raw/sec-xbrl/f5d673982e6be74668f4d95791267af0b02789870e6c475c5a3a3a97173454a9/instance.xml": "f5d673982e6be74668f4d95791267af0b02789870e6c475c5a3a3a97173454a9",
+    "data/raw/sec-xbrl/original-receipts/c01bec67a36ee1b5f4cba999ac5b2af1090c5dcb9c568ef489751a30a2caef43.json": "911192721f55d6e0b121304a349af05317371760b8d126002fbf2188003367d7",
+    "data/raw/sec-xbrl/1f8076620e9cdebd7838e5dc925c98f1fd4eafd971e80e1e934b274ffccb81cd/instance.xml": "1f8076620e9cdebd7838e5dc925c98f1fd4eafd971e80e1e934b274ffccb81cd",
+    "data/raw/sec-xbrl/original-receipts/10e4f756039cbe2effcd73e7bfd4ea36794f57fc4e695f3a1d1f87410c3fecaa.json": "4aa6924d6c89ee3c0217e6ad3966eeea3e3a7e8035cccece510f6993f2db8172",
+    "data/raw/sec-xbrl/9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c/instance.xml": "9d0b132b7311db0e0d7c6de60949cd7d76359df35159c7528040d84baeb7f50c",
+    "data/raw/sec-xbrl/original-receipts/a3d3077f4835aeefe350f7a445bd6504592397e9043167f099cc0805ecc84a11.json": "9df3c6eb80aabf6f5d49732d825d1a15912242d4832fdc846f7b0de929a5f0f7",
+    "data/raw/sec-xbrl/950478746cc69b051a4084db06c2f3e9148ff13c8829ca096abfc09e08039b3c/instance.xml": "950478746cc69b051a4084db06c2f3e9148ff13c8829ca096abfc09e08039b3c",
+    "data/raw/sec-xbrl/original-receipts/c781f03b87cd87a3513b6c1ab9935f98567e4eaf3121ec8f3e4741e234d41511.json": "10eea9cd2ab9b769e9933e84b3bd29f2ca2010326ae994bcecf05e656904cb9d",
+    "data/raw/sec-xbrl/d66dc38a5f0252fdb26d342922d3dde5cf0d133c7b3cd591c6a4afbdbf2d4e6c/instance.xml": "d66dc38a5f0252fdb26d342922d3dde5cf0d133c7b3cd591c6a4afbdbf2d4e6c",
+    "data/raw/sec-xbrl/original-receipts/f6c2a8f579a01b4fcf322b7f5d9ab2d1b1d005fc610db79ed9187fa528b4b7ee.json": "f47dc6a4abf8e342deedb59b3c6562375e772af2be85172315b6758e01be78e3",
+    "data/raw/sec-xbrl/0c7c1105b44ac69e616f9d11415431275b381a38e1b356e3667f195d2158bc98/instance.xml": "0c7c1105b44ac69e616f9d11415431275b381a38e1b356e3667f195d2158bc98",
+    "data/raw/sec-xbrl/original-receipts/d98988884327c00f1facfd8acab685df9c28ef091b4d1372cba3059b328a2258.json": "1765c9a5801655bd0f36fa50b748c9c92dd6e34af207f8244f96e67249f46e34",
+    "data/raw/sec-xbrl/8e62ab544ab0ea202b56568e290a4e67840b976ae54e73ca8022cd4bfdc904c6/instance.xml": "8e62ab544ab0ea202b56568e290a4e67840b976ae54e73ca8022cd4bfdc904c6",
+    "data/raw/sec-xbrl/original-receipts/b2e7dcb9a6e4d34cd86da602117319102bb3fcfde028791ab6afd9b37607515b.json": "3494057d889839f96b2f5b03eb5c72175f5fdd7f6e08f36b0b524b4d2862fada",
+    "data/raw/sec-xbrl/e1c1c70bbe51b318ccea9f77183d61627bc40fb8b0448280b72dbfe3f7a45034/instance.xml": "e1c1c70bbe51b318ccea9f77183d61627bc40fb8b0448280b72dbfe3f7a45034",
+    "data/raw/sec-xbrl/original-receipts/815123bc9a9e7b974fc93a8c236a73fb30774787aca7861866efab6c445e5935.json": "94ca882b439b125c241185c6c18a9cb0eebcaf137ae675a7d8814a23f0f6863b",
+    "data/raw/sec-xbrl/fa6b89f9194166e27f49b2cff4a1ba076701821fb7a969536fe8633f87ca3a49/instance.xml": "fa6b89f9194166e27f49b2cff4a1ba076701821fb7a969536fe8633f87ca3a49",
+    "data/raw/sec-xbrl/original-receipts/75f699794bf440b84251adce3c5da3f34d779aaf4957afe67dffa39cc01b67f3.json": "2e43e50776d104c422e035473ee7d2d524cbb71f3347366469e52316c3554347",
+    "data/raw/sec-xbrl/9720fd8a3a84cc2b37fa38b0bfdbee5f145fb39ab189310dc83bb0e0ea6f463e/instance.xml": "9720fd8a3a84cc2b37fa38b0bfdbee5f145fb39ab189310dc83bb0e0ea6f463e",
+    "data/raw/sec-xbrl/original-receipts/99da984349817830c4342f13438d4ba55119d0ca00d098de9474fc843e44eece.json": "a678aa18c3bb81f7baffebee3ff15ae030e4caa53777ce397fe7b07ee4078178",
+    "data/raw/sec-xbrl/36a07da32d7526185692db940a6ff5ebc68a6499dabd77629b34bc7d0b285c8c/instance.xml": "36a07da32d7526185692db940a6ff5ebc68a6499dabd77629b34bc7d0b285c8c",
+    "data/raw/sec-xbrl/original-receipts/df3cb80168772ac5fd89c35ea27db41e2071bc6b1128661c288366d0954521ac.json": "1781110c98d02d083df047878f3ea347c5d9fc447e636f4883f0cb687ba7eb92",
+    "data/raw/sec-xbrl/8ab0e832e260816155f9e0a753690b3627abe7f746b8184bb11d1f18f23f9bf6/instance.xml": "8ab0e832e260816155f9e0a753690b3627abe7f746b8184bb11d1f18f23f9bf6",
+    "data/raw/sec-xbrl/original-receipts/0436ea61bb11292f8538db7f916053c754726072342a750d27ecdf3e15785c44.json": "bb8f0e2df7913872c6b44feda859c5c8ac7420677e6043b83db9c017a44db0af",
+    "data/raw/sec-xbrl/3615605f65fd10458a9fbce67f90a288a37f0e5c49f49ba69b1c27253c454dc3/instance.xml": "3615605f65fd10458a9fbce67f90a288a37f0e5c49f49ba69b1c27253c454dc3",
+    "data/raw/sec-xbrl/original-receipts/73ca776c107915e7e7fb6966ead5c82b4d19cb8a7910e06650954ec2ef29e447.json": "d363a9d5c37f8753ea84335a35913e511dd9116a60e30fb62f6af753bfadbbcd",
+    "data/raw/sec-xbrl/beebc2767f3cf62f6fcee2ff9377ea724fe3b4f4e6110f4e442726ea605a6523/instance.xml": "beebc2767f3cf62f6fcee2ff9377ea724fe3b4f4e6110f4e442726ea605a6523",
+    "data/raw/sec-xbrl/original-receipts/41d7ad8179aa5e8c890e20968b09620192c77e6eea2c9f63e988fd9c071ead2e.json": "891871224a80507b142d501ca9def733ea1b516c3323c7ab7f93677e439c7951",
+    "data/raw/sec-xbrl/1d38db98acf61d75427f4313f35df0468f2296e443e60eb4e728c650d55bcc6f/instance.xml": "1d38db98acf61d75427f4313f35df0468f2296e443e60eb4e728c650d55bcc6f",
+    "data/raw/sec-xbrl/original-receipts/0c7133ed9cf401ae1f69d9ae90ed9a29c079b0524d3944707f431eccc330923f.json": "4f9bbd087ba16d90186eedc9898b9322b5dd940d2ea8eb9cbadbd296bde631cc",
+    "data/raw/sec-xbrl/df7de5909f704736f7a340c2f79358aa14d87b7309a1f38ea072e4d662da5fa2/instance.xml": "df7de5909f704736f7a340c2f79358aa14d87b7309a1f38ea072e4d662da5fa2",
+    "data/raw/sec-xbrl/original-receipts/4672c3dd4fed717b873e3e6ca6a2fc40a6cf6cc133e3af0339eacbba6513831b.json": "972b2cf47e6a2ea2ad51d930d4a233b6be469efd718c50a45e9e255d2c63d461",
+    "data/raw/sec-xbrl/9fd89101f86bffd45c22021c502a80c31291a595686e2dc1057dac54b2d8463d/instance.xml": "9fd89101f86bffd45c22021c502a80c31291a595686e2dc1057dac54b2d8463d",
+    "data/raw/sec-xbrl/original-receipts/8c601acf6a5f46d0402fc83cf49af1d1046a5cb457a27382b0430ef1908346b3.json": "c4316b498f28d33975291c6a5196b7bbb63983dd21a448e8de30c0b6f78b9195",
+    "data/raw/sec-xbrl/2b0801fd60d97740061878bce159d0d164fa2ab818c98990e70243c0ed99342a/instance.xml": "2b0801fd60d97740061878bce159d0d164fa2ab818c98990e70243c0ed99342a",
+    "data/raw/sec-xbrl/original-receipts/428670408724cd4d0a75f78023683dcbc7b1b87f57ec2add7aca7d4c386542be.json": "7bdeff16e280c987b50d813db87d074e05abeec8f1490f1e42222ec2cb92ea75",
+    "data/raw/sec-xbrl/54df378e1ce783cb5d7b18261d59830bc813bb0a1bab3ef9cbe5d92f437f30e3/instance.xml": "54df378e1ce783cb5d7b18261d59830bc813bb0a1bab3ef9cbe5d92f437f30e3",
+    "data/raw/sec-xbrl/original-receipts/eff746d9fd21d21c3d63889c2cba8213356caa478d784545da3dab6c014fdb45.json": "f1f8ed0e484db31075f5d77aff0cdddea5f6a571c79c186e0af8049b15160590",
+    "data/raw/sec-xbrl/aa827e76bf1b49f0155b04a5bf5c9d6fbbaf8c224140c983352f4148f3f8a4ac/instance.xml": "aa827e76bf1b49f0155b04a5bf5c9d6fbbaf8c224140c983352f4148f3f8a4ac",
+    "data/raw/sec-xbrl/original-receipts/26e3b2a1c5e34209a5a4849e5ec1cae18e8a5c2b5c18850b8b863d52c00107d6.json": "0d3678c33f8a817e1c6e39b069fc72d4ff13e7afa8e751d77e9f6c541a58a02b",
+    "data/raw/sec-xbrl/f784d2cb0d391b8eaab7cb68505d6ce1de112ca8d9669b0e9e0c5120f4eb6553/instance.xml": "f784d2cb0d391b8eaab7cb68505d6ce1de112ca8d9669b0e9e0c5120f4eb6553",
+    "data/raw/sec-xbrl/original-receipts/5674b0f125e110353c9227b6b5695698349eda5fed9ccadd036acea23d90994b.json": "e10d03f0e1638639b2ef012160f7c9b664e33cf86b9f650ec27245dead72f6ca",
+    "data/raw/sec-xbrl/268c58906e0a17d79d22ebeaffb2efda0f94a80bbcbfcdc5fc5eb07512f83512/instance.xml": "268c58906e0a17d79d22ebeaffb2efda0f94a80bbcbfcdc5fc5eb07512f83512",
+    "data/raw/sec-xbrl/original-receipts/9378eda9397225a66a9b63f23b401174e501233be88c1464f4db7712186fab82.json": "8066bfeb9c3a9af1648ab4e272867cc343b705f8b95ab0a7c49c7d07f026715e",
+    "data/raw/sec-xbrl/82123fe8b634941e7029ab64f9444030dc882dc0dba1dd5319a1a7eaa9f297b1/instance.xml": "82123fe8b634941e7029ab64f9444030dc882dc0dba1dd5319a1a7eaa9f297b1",
+    "data/raw/sec-xbrl/original-receipts/2143e5f19e6f76587bd89e36540e1d974e40ec1cb343a542d7e3c8a696fe5b7f.json": "f1bc4c31101343dc17c9f763cc0c682b63fa09bdd04b699362adfb3924acbae8",
+    "data/raw/sec-xbrl/5f51a1cdf8e8032c5e5f55eb123c317a8e6d460b3d5750e1c3d53f593e39f750/instance.xml": "5f51a1cdf8e8032c5e5f55eb123c317a8e6d460b3d5750e1c3d53f593e39f750",
+    "data/raw/sec-xbrl/original-receipts/b0a4c4ec996ade3b707971e259021fc17ca9f33661aec3cebcc1e70821ba319b.json": "f69a1ceb0b38f9d37cb88f4e9b731e1df22e7ed5fbd5f7c1e2f347446bf24a7b",
+    "data/raw/sec-xbrl/c750c031f7f46fee5010d02eabe5870eb1bbe1b4b350424206a4a3cefe7e01e7/instance.xml": "c750c031f7f46fee5010d02eabe5870eb1bbe1b4b350424206a4a3cefe7e01e7",
+    "data/raw/sec-xbrl/original-receipts/9fc2f944a20911f58f35e56e34abda6a3a2b5c3551066d372400fc1811bae6a8.json": "acf142136308808f06d76c901cad75110b34eaf9df2311883f878df37c59a475",
+    "data/raw/sec-xbrl/b5bab7fa003c4a299ddec3dcddc9be0960f5a948d65e56f215f56480057cc5df/instance.xml": "b5bab7fa003c4a299ddec3dcddc9be0960f5a948d65e56f215f56480057cc5df",
+    "data/raw/sec-xbrl/original-receipts/d37612c97f5741f6fe6f06c27345ab63d16ded05aec342bc86aa0496ac9824e6.json": "429f5a4e2065e7c14335a8d7d70b5d374d50ecae15098622d6feb39796e05c05",
+    "data/raw/sec-xbrl/7e2b69f5cd483d75f84a6a46a3e2a29d6c0ac34d14f4b46cd06dc2a1985d394d/instance.xml": "7e2b69f5cd483d75f84a6a46a3e2a29d6c0ac34d14f4b46cd06dc2a1985d394d",
+    "data/raw/sec-xbrl/original-receipts/dfe7b8ed4c0ea8c7769285d09cdec6953ed9eda507b0f40b7251bfb8c4e332f5.json": "e0778db6093b8a9c3cd884a28cd8df354bacd0f3075e2e4f656382d8988bcf2f",
+    "data/raw/sec-xbrl/a18fda52796c42b2604c8fdb837d5b30707a406965602d75dad0de5345768f6f/instance.xml": "a18fda52796c42b2604c8fdb837d5b30707a406965602d75dad0de5345768f6f",
+    "data/raw/sec-xbrl/original-receipts/e9cc909cb558f7ea3789fee4e590ac69930f5a878e29e6b4d23a7c2801b58f1b.json": "5ef66d296961910bcae14316a00ec8e03386325c831d977c862f5b84d270f08f",
+    "data/raw/sec-xbrl/38940d9ff8275d12592ed490c77b6bc72b2392b0e8024f687db81ca942c28921/instance.xml": "38940d9ff8275d12592ed490c77b6bc72b2392b0e8024f687db81ca942c28921",
+    "data/raw/sec-xbrl/original-receipts/63c8483ea634bfc1e2d9b8cae053b32b4c932bc670a19c8c91f027aeb19c6491.json": "e8ceda1d346f119846be4c533d825107723b1b7937cb4140c16e6552d88ba031",
+    "data/raw/sec-xbrl/8e363f9d1a57b7a93e24120a1251a5a4134161ffe27f0f498263f192f276596a/instance.xml": "8e363f9d1a57b7a93e24120a1251a5a4134161ffe27f0f498263f192f276596a",
+    "data/raw/sec-xbrl/original-receipts/6c64f9047c13048f6d8b6acd25ac10f7fc8eada0ef31ba202b13a53f24cbf1f6.json": "709a832f4a7bab0637127d8933918950ce31b9ff9485ff852239fc27506363bc",
+    "data/raw/sec-xbrl/c7bc069d48e312ad0a9efe14dd34366f18e236ca27fa8ac2e805a54f6d1636dc/instance.xml": "c7bc069d48e312ad0a9efe14dd34366f18e236ca27fa8ac2e805a54f6d1636dc",
+    "data/raw/sec-xbrl/original-receipts/6a514980cc17f3d0f0bbe911ff0840548ea90299989edbe2c06ff91ee11d1042.json": "826cb6c9b43bd8a930b813e8f8b9cac30377605c699e3881d6dcaf968805f06d",
+    "data/raw/sec-xbrl/d65ea0ad9b331aab1b56d13cc3c56eca37f088620dce18439e0b53ce7ba4ffa7/instance.xml": "d65ea0ad9b331aab1b56d13cc3c56eca37f088620dce18439e0b53ce7ba4ffa7",
+    "data/raw/sec-xbrl/original-receipts/19b2d45f1cc95c4475cecfdf74c272541e8dd1b68b4dd68c18ce810c9fd9cac4.json": "af5022150bd298a498536dbd1115af42e075dd1bf36cbeeb60ed16d68eb2908b",
+    "data/raw/sec-xbrl/f1f9e0310b528ead3445dfa9d425d7dd5477ee9d7568289f3e4e367da4ebb968/instance.xml": "f1f9e0310b528ead3445dfa9d425d7dd5477ee9d7568289f3e4e367da4ebb968",
+    "data/raw/sec-xbrl/original-receipts/c3604810daa7033043fc1e6b81a0d0cffe408922c4f8ee5d77b663ae80e27e90.json": "b7040f4198f776a49991afa40f821dce1c76c435179bac18e04b40e554b495e2",
+    "data/raw/sec-xbrl/68ed8aa2603c49070592656161e6dde9b9ec1b142a7c87a40e441f34f617da16/instance.xml": "68ed8aa2603c49070592656161e6dde9b9ec1b142a7c87a40e441f34f617da16",
+    "data/raw/sec-xbrl/original-receipts/2c164873549856dc2ae01eff4f19612e36eb368cea20eb85f104486f8aea0bf6.json": "ca60878dca193acdc5ab4d203bcc514d64a203a3e715332d0897213bdb8d32c8",
+    "data/raw/sec-xbrl/0beeb9f7ad3cd53192a989164f6188c1a57d43d327ce7ec7c5e90474e60876b0/instance.xml": "0beeb9f7ad3cd53192a989164f6188c1a57d43d327ce7ec7c5e90474e60876b0",
+    "data/raw/sec-xbrl/original-receipts/862e301553a94aa2984b4a2ccc1045918b3f768f7a820f897925289a90cbafbf.json": "9b191e957da407569f154d883b75c9eb453e480c543156c884727e0243e5cdcb",
+    "data/raw/sec-xbrl/a8cb7ceb54974e1726ff616a0ed8976d0de0e3d76246456a1225cce88a061a4b/instance.xml": "a8cb7ceb54974e1726ff616a0ed8976d0de0e3d76246456a1225cce88a061a4b",
+    "data/raw/sec-xbrl/original-receipts/5fe5e47dc66ecb612d57a63e7a6ae5b3405b3da37612215f087742fec4557a58.json": "687b5c3b13f8dede563bbacdfcb806956c50d61d2727d4a3de7dc0981d49150e",
+    "data/raw/sec-xbrl/2dc1ab522f19b4ad9207cc8d6cbca338fb4059b8cfc97cbbcedcd999bce535c0/instance.xml": "2dc1ab522f19b4ad9207cc8d6cbca338fb4059b8cfc97cbbcedcd999bce535c0",
+    "data/raw/sec-xbrl/original-receipts/14042c3919f2a3c7bc440e5b540458ef3af689e2510d6ef9660275c950f22c6b.json": "281624f9908c25b01ffb6a2855cb2b997e78cf0c67d8930a7e5353d92bf2be88",
+    "data/raw/sec-xbrl/03e0d3ac334fe40a5fd91f40b8d8a3801fc24b5433b04e3f3fb411d3a55f688e/instance.xml": "03e0d3ac334fe40a5fd91f40b8d8a3801fc24b5433b04e3f3fb411d3a55f688e",
+    "data/raw/sec-xbrl/original-receipts/28806384795f58d216f3d48c63cb6fc3ea4475c843d29ff82bef1ef0a97cda88.json": "d3d174d2a12eecbc24b5768cba32c279f77f4a7e3cf647d607380e742ce8c16f",
+    "data/raw/sec-xbrl/89be2fa8e50269af9e52755da930011aec899c34e6b209a72e019892c347c3f8/instance.xml": "89be2fa8e50269af9e52755da930011aec899c34e6b209a72e019892c347c3f8",
+    "data/raw/sec-xbrl/original-receipts/6cdb9ed92af40be6ba1074daa49b977dee5cb2c6261288141bc7b780d85857fc.json": "dfb236e40520a003c735c9d7c2d00bff6d31b0bcbd209944668d2e03a8db2cdc",
+    "data/raw/sec-xbrl/287898b28e6b6c7c56292a5b98686952767370c582d08bdd8964b9f20960d1db/instance.xml": "287898b28e6b6c7c56292a5b98686952767370c582d08bdd8964b9f20960d1db",
+    "data/raw/sec-xbrl/original-receipts/65a517b1658339287c5c738c717c748b09765f2e99216fb01c1fade718bf3654.json": "db863c4773b9dd162efd2163308ddfb28216be6220bb81173a68bfa4dfd6909f",
+    "data/raw/sec-xbrl/44d95679bbd1fb0dc3b66462a1e502c4d380ab7b184a325164c64cb718c9061a/instance.xml": "44d95679bbd1fb0dc3b66462a1e502c4d380ab7b184a325164c64cb718c9061a",
+    "data/raw/sec-xbrl/original-receipts/1eb23bc70f74d9ac192ecaeb87efc3613e7ad76a391b9b38644beb68dde85fa6.json": "27abbfc4817627a1dc897e4576fd74354694e0808c379b13860153b699a11c93",
+    "data/raw/sec-xbrl/1aa94ab07dfcf8e456450f80e5c98cbacd1f9c82d7c8811d4aa57be16839f6dc/instance.xml": "1aa94ab07dfcf8e456450f80e5c98cbacd1f9c82d7c8811d4aa57be16839f6dc",
+    "data/raw/sec-xbrl/original-receipts/3f71a6af669e9b8c4cd51fe8368ba4c1d355a55450e2709435d50c9b828bab04.json": "cc54c13a9b15fd9a174abe13b3f2b1038abaaa7a8837b1e6cdb0cef0f92b72cc",
+    "data/raw/sec-xbrl/45f7a803de38529f3373c0bd76537e0e4d097723d52d245a885ab8a8d03f7e24/instance.xml": "45f7a803de38529f3373c0bd76537e0e4d097723d52d245a885ab8a8d03f7e24",
+    "data/raw/sec-xbrl/original-receipts/f30bf7c55ac17e177c633f5d891a6e22e893dc4798432206639469535082b9f3.json": "e0026ead5b86e656114411e8aa0df25571fe636497794b0f67cc534778a3c5b9",
+    "data/raw/sec-xbrl/95fdb840beff0ff4e93ddbe392540eddf5bcc2210b997dee903a4f49ba56beb9/instance.xml": "95fdb840beff0ff4e93ddbe392540eddf5bcc2210b997dee903a4f49ba56beb9",
+    "data/raw/sec-xbrl/original-receipts/82e123627524ed10c83dc52bc8e0546382fd6c7f871ec39155f424272d4a3b81.json": "03d5e2c55ddfcdc2584a274b10bc9efdd0f918e0068525c4ee9880d12a0feeae",
+    "data/raw/sec-xbrl/9e1a0a160a21375ae399308089ae4a8df48fe961963c7f29787a8a1968c19497/instance.xml": "9e1a0a160a21375ae399308089ae4a8df48fe961963c7f29787a8a1968c19497",
+    "data/raw/sec-xbrl/original-receipts/bd9177e3a000001b55be9e838ae7399516bc7686474d5b861d18a3575f522b69.json": "55df06f06a3490599a8ce5a16bfd2d44133ef58ccb70f85be526f4ce3687a081",
+    "data/raw/sec-xbrl/e0b43ad79b85f6c82b0c5913c750d3ebc3bf82e4fccc87f11f47699d602b0515/instance.xml": "e0b43ad79b85f6c82b0c5913c750d3ebc3bf82e4fccc87f11f47699d602b0515",
+    "data/raw/sec-xbrl/original-receipts/8fded9c33620815c355241e83000774d2e9ac18776631e7e937d71f502a65f8a.json": "d2c79ce887cebce7c1fa615907407ea2b5f9e94394f5cfa22d920f266fe1b35d",
+    "data/raw/sec-xbrl/3536e88e0fbdfa84fafa183ebd785091ab43296603889ef22e5e63b51708492b/instance.xml": "3536e88e0fbdfa84fafa183ebd785091ab43296603889ef22e5e63b51708492b",
+    "data/raw/sec-xbrl/original-receipts/e081853a9f7a0f2438be6d6c9aef8694d148ee2ad7bdb892dc94c9fb6ea8eaf8.json": "79cdfb716a816b1702b34f772eff5869fb0aeae07db6a7c75a9a9dd494fd68b1",
+    "data/raw/sec-xbrl/8cef6f210c336cb1c881731e0d8b07416f6c2cdeb4f2498321e2072eda2a4eaf/instance.xml": "8cef6f210c336cb1c881731e0d8b07416f6c2cdeb4f2498321e2072eda2a4eaf",
+    "data/raw/sec-xbrl/original-receipts/53c274ce37e7d4a3201c75661ff7187e48d871210f240ceecadb3b557c6eb93a.json": "5d79967e6fc944b642418b2953328d4f3cdc54d8e663dafa6a0bd4798da668d3",
+    "data/raw/sec-xbrl/7da40f58a1ab0200c8d79563d006f765fdaf55684d5dba0986de0c8a3930aeab/instance.xml": "7da40f58a1ab0200c8d79563d006f765fdaf55684d5dba0986de0c8a3930aeab"
+  },
+  "protected_sources_unchanged": true,
+  "historical_metadata_admitted": false,
+  "validity_interval_inferred": false,
+  "model_inputs_enabled": false,
+  "network_requests": 0,
+  "colab_allocated": false,
+  "training_performed": false
+}

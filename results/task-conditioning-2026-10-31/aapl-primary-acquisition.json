@@ -1,0 +1,14 @@
+{
+  "schema": "task-type-primary-acquisition-v1",
+  "symbol": "AAPL",
+  "accession": "0001193125-09-214859",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000119312509214859/aapl-20090926.xml",
+  "ledger_sha256": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+  "historical_metadata_admitted": false,
+  "colab_allocated": false,
+  "training_performed": false,
+  "status": "retrieved",
+  "path": "data/raw/sec-xbrl/5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20/instance.xml",
+  "source_sha256": "5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20",
+  "bytes": 760344
+}

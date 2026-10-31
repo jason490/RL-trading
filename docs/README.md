@@ -6,6 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
+| Historical instrument types | [instrument-type-evidence.md](instrument-type-evidence.md) | Original SEC type/ticker evidence, context exclusions, immutable cache audit and admission gaps |
 | Task conditioning research | [task-conditioning-research.md](task-conditioning-research.md) | Primary-source review, explicit stock/ETF context hypothesis, matched controls and staged admission |
 | Feasible reference policies | [feasible-references.md](feasible-references.md) | Fixed long/short/cash training-only requests, active protection/holding constraints, immutable inputs and descriptive limits |
 | Recurrent off-policy fitted diagnosis | [offpolicy-fit-diagnostic.md](offpolicy-fit-diagnostic.md) | Fixed four-state inference-only training-window replay, no-optimization guard, immutable state and descriptive limits |

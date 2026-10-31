@@ -62,3 +62,14 @@ normalizer, evaluator, simulator and holding baseline. Synthetic checks verify
 all roles sample identically under shared seeds and use the correct per-episode
 tags, with no local optimization. Worker/controller/archive and actual Colab
 acceptance remain pending. The source and account ledger were not changed.
+
+## Actual cached primary-instance inspection
+
+[Cached document evidence](cached-stock-evidence.json) now inspects85 retained
+originals:33 exact expected-ticker/form/common-share hints,52 without an exact
+eligible ticker hint and22 stocks without a cached earlier instance.175 protected
+inputs remain unchanged; no network requests, model inputs, optimization or Colab.
+GOOGL/LIN/MDLZ show GOOG/PX/KFT and need explicit alias/security review. No validity
+interval or historical classification is automatically admitted. See the
+[instrument evidence guide](../../docs/instrument-type-evidence.md) for the
+extractor, conservative exclusions, reproduction and next source scope.

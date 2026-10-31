@@ -3137,3 +3137,12 @@ compact curves, frozen/replay restoration checks and handled-failure cleanup are
 present. Offline tests use untrained/manual fixtures and forbid local updates.
 No actual smoke/profile or100k execution; historical metadata admission and
 fleet/archive integration remain pending. Original credits and stops preserved.
+
+### Historical instrument-type original-source audit — 2026-10-31
+
+Restricted checksum/context/unit-validated DEI extractor and cached-source audit
+implemented. Actual85 original documents yield33 exact document identity hints,
+52 nonmatching ticker cases and22 stocks without an earlier cached instance;
+175 source/code/ledger inputs unchanged. No validity intervals or classifications
+admitted, no model inputs/fitting/network requests/Colab allocation in the audit.
+Primary cover/alias/availability review and four ETF records remain pending.
