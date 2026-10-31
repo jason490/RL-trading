@@ -273,3 +273,20 @@ are now located in cached masters: ABBV's January2,2013 spinoff8-K and an older
 Disney CIK1001039 annual filing from December2,2009. These are source selections,
 not verified historical identity links; neither original primary has been
 collected or substituted into the111-symbol metadata manifest by this discovery.
+
+## Master-verified joint-filer resolver
+
+`primary_html_joint` adds an explicit alternative to the unchanged strict
+`primary_html` API. It verifies the bounded original index, exact sequence1 form,
+SEC host, same accession and safe filename, then reads checksum-verified master
+bytes for both declared and target-directory registrants. Both must have exactly
+matching accession/form/filing-date rows, and the target directory must itself
+be listed. Missing counterparts, another accession/date, malformed endpoints or
+unrelated CIKs reject. Joint-source authority does not verify a traded-security
+identity or allow financial issuer joins.
+
+The [actual NEE resolution](../results/task-conditioning-2026-10-31/nee-joint-resolution.json)
+passes against the retained index and2010q1 master. Original failed batch, global
+stop and cumulative ledger hashes remain unchanged; this check issued no request
+and did not resume collection. Any resumed source work must record a new claim
+and retain the old failure instead of deleting/reusing the original batch claim.

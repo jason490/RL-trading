@@ -1,0 +1,45 @@
+{
+  "schema": "task-nee-joint-resolution-v1",
+  "resolution": {
+    "url": "https://www.sec.gov/Archives/edgar/data/37634/000075330810000025/form10k123109.htm",
+    "declared_cik": "753308",
+    "directory_cik": "37634",
+    "accession": "0000753308-10-000025",
+    "form": "10-K",
+    "cross_directory": true,
+    "index_sha256": "eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5",
+    "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+    "master_records": [
+      {
+        "cik": "37634",
+        "company_name": "FLORIDA POWER & LIGHT CO",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000753308-10-000025",
+        "filing_directory_cik": "37634",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/37634/0000753308-10-000025.txt"
+      },
+      {
+        "cik": "753308",
+        "company_name": "FPL GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000753308-10-000025",
+        "filing_directory_cik": "753308",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/753308/0000753308-10-000025.txt"
+      }
+    ],
+    "historical_identity_verified": false
+  },
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/stock-master-batch-4.json": "5484ceaf0e0e0cc155d1c072e4bf315284aa93ba1b955593c464f004451cda0a",
+    ".runtime/task-stock-master-collection-stop-v1.json": "066fc194e6e466bd135fefb17acae3db3b7a21bb252a55bf1e8caf9e383d55af",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6"
+  },
+  "protected_sources_unchanged": true,
+  "old_stop_preserved": true,
+  "network_requests": 0,
+  "resumed": false,
+  "historical_metadata_admitted": false,
+  "colab_allocated": false
+}

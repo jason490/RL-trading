@@ -110,3 +110,28 @@ def test_concurrent_collector_rejects_without_network(tmp_path, monkeypatch):
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         with pytest.raises(ValueError, match='busy'):
             acquire_filing_html(tmp_path, **OPTIONS)
+
+
+def test_joint_directory_requires_both_official_master_rows_and_same_accession(tmp_path):
+    from rl_stocks.data.providers.sec.filing_index import primary_html, primary_html_joint
+    from test_sec_master import archive
+    index = tmp_path / 'joint-index.htm'
+    index.write_text('<html><table><tr><td>1</td><td>ANNUAL</td><td><a href="'
+                     '/Archives/edgar/data/2/000000000110000001/main.htm">main</a>'
+                     '</td><td>10-K</td></tr></table></html>')
+    sha = sha256(index.read_bytes()).hexdigest()
+    kwargs = dict(cik='1', accession='0000000001-10-000001', form='10-K')
+    with pytest.raises(ValueError, match='differs'):
+        primary_html(index, sha, **kwargs)
+    rows = ['1|Parent|10-K|2010-02-01|edgar/data/1/0000000001-10-000001.txt',
+            '2|Joint filer|10-K|2010-02-01|edgar/data/2/0000000001-10-000001.txt']
+    path, master_sha = archive(tmp_path, rows)
+    result = primary_html_joint(index, sha, **kwargs, master_archive=path,
+                                master_sha256=master_sha)
+    assert result['cross_directory'] and result['directory_cik'] == '2'
+    assert not result['historical_identity_verified']
+    for bad in ([rows[0]], [rows[0], rows[1].replace('2010-02-01', '2010-02-02')],
+                [rows[0], rows[1].replace('0000000001-10-000001', '0000000001-10-000002')]):
+        path, bad_sha = archive(tmp_path, bad)
+        with pytest.raises(ValueError, match='both registrants'):
+            primary_html_joint(index, sha, **kwargs, master_archive=path, master_sha256=bad_sha)
