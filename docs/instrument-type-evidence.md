@@ -220,3 +220,26 @@ index/master dates and conservative availability must agree before primary
 collection. Preserve retrieved partial sources and failed cases. Batches select
 only by the frozen source plan, never by returns or later model results. Complete
 collection still requires source-content/identity review before model inputs.
+
+## First stock master batch and compact review hints
+
+Batch0 completed APA/APD/C/CAT/CL/COP/COST/CSCO: sixteen index/primary operations,
+21,826,972 raw bytes, with original publication metadata available before each
+training start. Seven primary files have a conservative registered-common-equity
+cover hint; five have an explicit expected-ticker clause near common-equity text.
+These are review candidates, not automatic ticker/security or interval admission.
+
+`html_stock_type.py` checks bounded SHA256 source bytes, removes script/style
+text, searches registration/common-equity cover context, and requires explicit
+symbol wording plus the exact canonical ticker near common-equity text. A company
+abbreviation, drug code or different share-class suffix cannot satisfy that
+literal-ticker rule. Conservative misses remain unresolved, including cases where
+registration details appear beyond the fixed cover window. The helper retains
+only a short source review excerpt and always leaves historical identity, input
+enablement and metadata admission false. It does not infer an issuer from a match.
+
+`audit_stock_html_batches.py --batches 0,1,... --output NEW_PATH` processes only
+explicit complete batches sharing the original selection digest. It rejects
+repeated symbols, partial source records or changed hashes. Review against the
+original document is still required. Remaining batches1–8 follow the original
+fixed69-source plan; any failed batch stops the sequence without automatic retry.
