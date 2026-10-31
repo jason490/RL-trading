@@ -1,0 +1,2669 @@
+{
+  "schema": "task-stock-master-selection-v1",
+  "records": [
+    {
+      "symbol": "AAPL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "320193"
+      ],
+      "eligible_ciks": [
+        "320193"
+      ],
+      "master_record": {
+        "cik": "320193",
+        "company_name": "APPLE INC",
+        "form": "10-K",
+        "filed": "2009-10-27",
+        "accession": "0001193125-09-214859",
+        "filing_directory_cik": "320193",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/320193/0001193125-09-214859.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ABBV",
+      "first_training_session": "2013-03-14",
+      "candidate_ciks": [
+        "1551152"
+      ],
+      "eligible_ciks": [],
+      "master_record": null,
+      "already_has_document_observation": false,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ABT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1800"
+      ],
+      "eligible_ciks": [
+        "1800"
+      ],
+      "master_record": {
+        "cik": "1800",
+        "company_name": "ABBOTT LABORATORIES",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0001047469-10-001018",
+        "filing_directory_cik": "1800",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1800/0001047469-10-001018.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ADBE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "796343"
+      ],
+      "eligible_ciks": [
+        "796343"
+      ],
+      "master_record": {
+        "cik": "796343",
+        "company_name": "ADOBE SYSTEMS INC",
+        "form": "10-K",
+        "filed": "2010-01-22",
+        "accession": "0000796343-10-000003",
+        "filing_directory_cik": "796343",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/796343/0000796343-10-000003.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AEP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "4904"
+      ],
+      "eligible_ciks": [
+        "4904"
+      ],
+      "master_record": {
+        "cik": "4904",
+        "company_name": "AMERICAN ELECTRIC POWER CO INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000004904-10-000018",
+        "filing_directory_cik": "4904",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/4904/0000004904-10-000018.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AMGN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "318154"
+      ],
+      "eligible_ciks": [
+        "318154"
+      ],
+      "master_record": {
+        "cik": "318154",
+        "company_name": "AMGEN INC",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001193125-10-044311",
+        "filing_directory_cik": "318154",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/318154/0001193125-10-044311.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1053507"
+      ],
+      "eligible_ciks": [
+        "1053507"
+      ],
+      "master_record": {
+        "cik": "1053507",
+        "company_name": "AMERICAN TOWER CORP /MA/",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001193125-10-044876",
+        "filing_directory_cik": "1053507",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1053507/0001193125-10-044876.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AMZN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1018724"
+      ],
+      "eligible_ciks": [
+        "1018724"
+      ],
+      "master_record": {
+        "cik": "1018724",
+        "company_name": "AMAZON COM INC",
+        "form": "10-K",
+        "filed": "2010-01-29",
+        "accession": "0001193125-10-016098",
+        "filing_directory_cik": "1018724",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1018724/0001193125-10-016098.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "APA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1841666",
+        "6769"
+      ],
+      "eligible_ciks": [
+        "6769"
+      ],
+      "master_record": {
+        "cik": "6769",
+        "company_name": "APACHE CORP",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018311",
+        "filing_directory_cik": "6769",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/6769/0000950123-10-018311.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "APD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "2969"
+      ],
+      "eligible_ciks": [
+        "2969"
+      ],
+      "master_record": {
+        "cik": "2969",
+        "company_name": "AIR PRODUCTS & CHEMICALS INC /DE/",
+        "form": "10-K",
+        "filed": "2009-11-25",
+        "accession": "0000950123-09-066095",
+        "filing_directory_cik": "2969",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/2969/0000950123-09-066095.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AXP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "4962"
+      ],
+      "eligible_ciks": [
+        "4962"
+      ],
+      "master_record": {
+        "cik": "4962",
+        "company_name": "AMERICAN EXPRESS CO",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-041232",
+        "filing_directory_cik": "4962",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/4962/0001193125-10-041232.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "12927"
+      ],
+      "eligible_ciks": [
+        "12927"
+      ],
+      "master_record": {
+        "cik": "12927",
+        "company_name": "BOEING CO",
+        "form": "10-K",
+        "filed": "2010-02-08",
+        "accession": "0001193125-10-024406",
+        "filing_directory_cik": "12927",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/12927/0001193125-10-024406.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BAC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "70858"
+      ],
+      "eligible_ciks": [
+        "70858"
+      ],
+      "master_record": {
+        "cik": "70858",
+        "company_name": "BANK OF AMERICA CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-041666",
+        "filing_directory_cik": "70858",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/70858/0001193125-10-041666.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BLK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1364742"
+      ],
+      "eligible_ciks": [
+        "1364742"
+      ],
+      "master_record": {
+        "cik": "1364742",
+        "company_name": "BlackRock Inc.",
+        "form": "10-K",
+        "filed": "2010-03-10",
+        "accession": "0001193125-10-052764",
+        "filing_directory_cik": "1364742",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1364742/0001193125-10-052764.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BMY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "14272"
+      ],
+      "eligible_ciks": [
+        "14272"
+      ],
+      "master_record": {
+        "cik": "14272",
+        "company_name": "BRISTOL MYERS SQUIBB CO",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0001193125-10-035167",
+        "filing_directory_cik": "14272",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/14272/0001193125-10-035167.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "C",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "831001"
+      ],
+      "eligible_ciks": [
+        "831001"
+      ],
+      "master_record": {
+        "cik": "831001",
+        "company_name": "CITIGROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001206774-10-000406",
+        "filing_directory_cik": "831001",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/831001/0001206774-10-000406.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CAT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "18230"
+      ],
+      "eligible_ciks": [
+        "18230"
+      ],
+      "master_record": {
+        "cik": "18230",
+        "company_name": "CATERPILLAR INC",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0000018230-10-000092",
+        "filing_directory_cik": "18230",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/18230/0000018230-10-000092.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "21665"
+      ],
+      "eligible_ciks": [
+        "21665"
+      ],
+      "master_record": {
+        "cik": "21665",
+        "company_name": "COLGATE PALMOLIVE CO",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001140361-10-008522",
+        "filing_directory_cik": "21665",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/21665/0001140361-10-008522.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CMCSA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1166691"
+      ],
+      "eligible_ciks": [
+        "1166691"
+      ],
+      "master_record": {
+        "cik": "1166691",
+        "company_name": "COMCAST CORP",
+        "form": "10-K",
+        "filed": "2010-02-23",
+        "accession": "0001193125-10-037551",
+        "filing_directory_cik": "1166691",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1166691/0001193125-10-037551.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "COP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1163165"
+      ],
+      "eligible_ciks": [
+        "1163165"
+      ],
+      "master_record": {
+        "cik": "1163165",
+        "company_name": "CONOCOPHILLIPS",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-017187",
+        "filing_directory_cik": "1163165",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1163165/0000950123-10-017187.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "COST",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "909832"
+      ],
+      "eligible_ciks": [
+        "909832"
+      ],
+      "master_record": {
+        "cik": "909832",
+        "company_name": "COSTCO WHOLESALE CORP /NEW",
+        "form": "10-K",
+        "filed": "2009-10-16",
+        "accession": "0001193125-09-208963",
+        "filing_directory_cik": "909832",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/909832/0001193125-09-208963.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CSCO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "858877"
+      ],
+      "eligible_ciks": [
+        "858877"
+      ],
+      "master_record": {
+        "cik": "858877",
+        "company_name": "CISCO SYSTEMS INC",
+        "form": "10-K",
+        "filed": "2009-09-11",
+        "accession": "0001193125-09-190326",
+        "filing_directory_cik": "858877",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/858877/0001193125-09-190326.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CVX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "93410"
+      ],
+      "eligible_ciks": [
+        "93410"
+      ],
+      "master_record": {
+        "cik": "93410",
+        "company_name": "CHEVRON CORP",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-016846",
+        "filing_directory_cik": "93410",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/93410/0000950123-10-016846.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "D",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "715957"
+      ],
+      "eligible_ciks": [
+        "715957"
+      ],
+      "master_record": {
+        "cik": "715957",
+        "company_name": "DOMINION RESOURCES INC /VA/",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042883",
+        "filing_directory_cik": "715957",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/715957/0001193125-10-042883.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "315189"
+      ],
+      "eligible_ciks": [
+        "315189"
+      ],
+      "master_record": {
+        "cik": "315189",
+        "company_name": "DEERE & CO",
+        "form": "10-K",
+        "filed": "2009-12-17",
+        "accession": "0001104659-09-070344",
+        "filing_directory_cik": "315189",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/315189/0001104659-09-070344.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DIS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1744489"
+      ],
+      "eligible_ciks": [],
+      "master_record": null,
+      "already_has_document_observation": false,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DUK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1326160"
+      ],
+      "eligible_ciks": [
+        "1326160"
+      ],
+      "master_record": {
+        "cik": "1326160",
+        "company_name": "Duke Energy CORP",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-043083",
+        "filing_directory_cik": "1326160",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1326160/0001193125-10-043083.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DVN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1090012"
+      ],
+      "eligible_ciks": [
+        "1090012"
+      ],
+      "master_record": {
+        "cik": "1090012",
+        "company_name": "DEVON ENERGY CORP/DE",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-017093",
+        "filing_directory_cik": "1090012",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1090012/0000950123-10-017093.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ECL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "31462"
+      ],
+      "eligible_ciks": [
+        "31462"
+      ],
+      "master_record": {
+        "cik": "31462",
+        "company_name": "ECOLAB INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001104659-10-010302",
+        "filing_directory_cik": "31462",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/31462/0001104659-10-010302.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ED",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1047862"
+      ],
+      "eligible_ciks": [
+        "1047862"
+      ],
+      "master_record": {
+        "cik": "1047862",
+        "company_name": "CONSOLIDATED EDISON INC",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0001193125-10-036116",
+        "filing_directory_cik": "1047862",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1047862/0001193125-10-036116.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "EOG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "821189"
+      ],
+      "eligible_ciks": [
+        "821189"
+      ],
+      "master_record": {
+        "cik": "821189",
+        "company_name": "EOG RESOURCES INC",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000821189-10-000011",
+        "filing_directory_cik": "821189",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/821189/0000821189-10-000011.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "EQIX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1101239"
+      ],
+      "eligible_ciks": [
+        "1101239"
+      ],
+      "master_record": {
+        "cik": "1101239",
+        "company_name": "EQUINIX INC",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0001193125-10-036420",
+        "filing_directory_cik": "1101239",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1101239/0001193125-10-036420.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "EXC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1109357"
+      ],
+      "eligible_ciks": [
+        "1109357"
+      ],
+      "master_record": {
+        "cik": "1109357",
+        "company_name": "EXELON CORP",
+        "form": "10-K",
+        "filed": "2010-02-05",
+        "accession": "0001193125-10-023280",
+        "filing_directory_cik": "1109357",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1109357/0001193125-10-023280.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "F",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "37996"
+      ],
+      "eligible_ciks": [
+        "37996"
+      ],
+      "master_record": {
+        "cik": "37996",
+        "company_name": "FORD MOTOR CO",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001157523-10-001218",
+        "filing_directory_cik": "37996",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/37996/0001157523-10-001218.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "FCX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "831259"
+      ],
+      "eligible_ciks": [
+        "831259"
+      ],
+      "master_record": {
+        "cik": "831259",
+        "company_name": "FREEPORT MCMORAN COPPER & GOLD INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000831259-10-000010",
+        "filing_directory_cik": "831259",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/831259/0000831259-10-000010.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "40533"
+      ],
+      "eligible_ciks": [
+        "40533"
+      ],
+      "master_record": {
+        "cik": "40533",
+        "company_name": "GENERAL DYNAMICS CORP",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0001193125-10-034883",
+        "filing_directory_cik": "40533",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/40533/0001193125-10-034883.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "40545"
+      ],
+      "eligible_ciks": [
+        "40545"
+      ],
+      "master_record": {
+        "cik": "40545",
+        "company_name": "GENERAL ELECTRIC CO",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0000040545-10-000010",
+        "filing_directory_cik": "40545",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/40545/0000040545-10-000010.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GILD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "882095"
+      ],
+      "eligible_ciks": [
+        "882095"
+      ],
+      "master_record": {
+        "cik": "882095",
+        "company_name": "GILEAD SCIENCES INC",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001193125-10-044753",
+        "filing_directory_cik": "882095",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/882095/0001193125-10-044753.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GOOGL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1288776",
+        "1652044"
+      ],
+      "eligible_ciks": [
+        "1288776"
+      ],
+      "master_record": {
+        "cik": "1288776",
+        "company_name": "Google Inc.",
+        "form": "10-K",
+        "filed": "2010-02-12",
+        "accession": "0001193125-10-030774",
+        "filing_directory_cik": "1288776",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1288776/0001193125-10-030774.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "886982"
+      ],
+      "eligible_ciks": [
+        "886982"
+      ],
+      "master_record": {
+        "cik": "886982",
+        "company_name": "GOLDMAN SACHS GROUP INC",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0000950123-10-018464",
+        "filing_directory_cik": "886982",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/886982/0000950123-10-018464.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HAL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "45012"
+      ],
+      "eligible_ciks": [
+        "45012"
+      ],
+      "master_record": {
+        "cik": "45012",
+        "company_name": "HALLIBURTON CO",
+        "form": "10-K",
+        "filed": "2010-02-17",
+        "accession": "0000045012-10-000085",
+        "filing_directory_cik": "45012",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/45012/0000045012-10-000085.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "354950"
+      ],
+      "eligible_ciks": [
+        "354950"
+      ],
+      "master_record": {
+        "cik": "354950",
+        "company_name": "HOME DEPOT INC",
+        "form": "10-K",
+        "filed": "2009-04-02",
+        "accession": "0000950144-09-002875",
+        "filing_directory_cik": "354950",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/354950/0000950144-09-002875.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HON",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "773840"
+      ],
+      "eligible_ciks": [
+        "773840"
+      ],
+      "master_record": {
+        "cik": "773840",
+        "company_name": "HONEYWELL INTERNATIONAL INC",
+        "form": "10-K",
+        "filed": "2010-02-12",
+        "accession": "0000930413-10-000784",
+        "filing_directory_cik": "773840",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/773840/0000930413-10-000784.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HSY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "47111"
+      ],
+      "eligible_ciks": [
+        "47111"
+      ],
+      "master_record": {
+        "cik": "47111",
+        "company_name": "HERSHEY CO",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0001193125-10-034780",
+        "filing_directory_cik": "47111",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/47111/0001193125-10-034780.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "IBM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "51143"
+      ],
+      "eligible_ciks": [
+        "51143"
+      ],
+      "master_record": {
+        "cik": "51143",
+        "company_name": "INTERNATIONAL BUSINESS MACHINES CORP",
+        "form": "10-K",
+        "filed": "2010-02-23",
+        "accession": "0001047469-10-001151",
+        "filing_directory_cik": "51143",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/51143/0001047469-10-001151.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "INTC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "50863"
+      ],
+      "eligible_ciks": [
+        "50863"
+      ],
+      "master_record": {
+        "cik": "50863",
+        "company_name": "INTEL CORP",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0000950123-10-015237",
+        "filing_directory_cik": "50863",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/50863/0000950123-10-015237.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "JNJ",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "200406"
+      ],
+      "eligible_ciks": [
+        "200406"
+      ],
+      "master_record": {
+        "cik": "200406",
+        "company_name": "JOHNSON & JOHNSON",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0000950123-10-019392",
+        "filing_directory_cik": "200406",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/200406/0000950123-10-019392.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "JPM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "19617"
+      ],
+      "eligible_ciks": [
+        "19617"
+      ],
+      "master_record": {
+        "cik": "19617",
+        "company_name": "J P MORGAN CHASE & CO",
+        "form": "10-K",
+        "filed": "2010-02-24",
+        "accession": "0000950123-10-016029",
+        "filing_directory_cik": "19617",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/19617/0000950123-10-016029.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "KMB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "55785"
+      ],
+      "eligible_ciks": [
+        "55785"
+      ],
+      "master_record": {
+        "cik": "55785",
+        "company_name": "KIMBERLY CLARK CORP",
+        "form": "10-K",
+        "filed": "2010-02-24",
+        "accession": "0001193125-10-038621",
+        "filing_directory_cik": "55785",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/55785/0001193125-10-038621.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "KO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "21344"
+      ],
+      "eligible_ciks": [
+        "21344"
+      ],
+      "master_record": {
+        "cik": "21344",
+        "company_name": "COCA COLA CO",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001047469-10-001476",
+        "filing_directory_cik": "21344",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/21344/0001047469-10-001476.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "KR",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "56873"
+      ],
+      "eligible_ciks": [
+        "56873"
+      ],
+      "master_record": {
+        "cik": "56873",
+        "company_name": "KROGER CO",
+        "form": "10-Q",
+        "filed": "2009-12-17",
+        "accession": "0001104659-09-070369",
+        "filing_directory_cik": "56873",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/56873/0001104659-09-070369.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LIN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1707925",
+        "884905"
+      ],
+      "eligible_ciks": [
+        "884905"
+      ],
+      "master_record": {
+        "cik": "884905",
+        "company_name": "PRAXAIR INC",
+        "form": "10-K",
+        "filed": "2010-02-24",
+        "accession": "0001193125-10-038766",
+        "filing_directory_cik": "884905",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/884905/0001193125-10-038766.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LLY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "59478"
+      ],
+      "eligible_ciks": [
+        "59478"
+      ],
+      "master_record": {
+        "cik": "59478",
+        "company_name": "LILLY ELI & CO",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0000950123-10-014958",
+        "filing_directory_cik": "59478",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/59478/0000950123-10-014958.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "936468"
+      ],
+      "eligible_ciks": [
+        "936468"
+      ],
+      "master_record": {
+        "cik": "936468",
+        "company_name": "LOCKHEED MARTIN CORP",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001193125-10-040520",
+        "filing_directory_cik": "936468",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/936468/0001193125-10-040520.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LOW",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "60667"
+      ],
+      "eligible_ciks": [
+        "60667"
+      ],
+      "master_record": {
+        "cik": "60667",
+        "company_name": "LOWES COMPANIES INC",
+        "form": "10-Q",
+        "filed": "2009-12-01",
+        "accession": "0000060667-09-000160",
+        "filing_directory_cik": "60667",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/60667/0000060667-09-000160.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MCD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "63908"
+      ],
+      "eligible_ciks": [
+        "63908"
+      ],
+      "master_record": {
+        "cik": "63908",
+        "company_name": "MCDONALDS CORP",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042025",
+        "filing_directory_cik": "63908",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/63908/0001193125-10-042025.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MDLZ",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1103982"
+      ],
+      "eligible_ciks": [
+        "1103982"
+      ],
+      "master_record": {
+        "cik": "1103982",
+        "company_name": "KRAFT FOODS INC",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001193125-10-040106",
+        "filing_directory_cik": "1103982",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1103982/0001193125-10-040106.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MLM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "916076"
+      ],
+      "eligible_ciks": [
+        "916076"
+      ],
+      "master_record": {
+        "cik": "916076",
+        "company_name": "MARTIN MARIETTA MATERIALS INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018035",
+        "filing_directory_cik": "916076",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/916076/0000950123-10-018035.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MRK",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "310158"
+      ],
+      "eligible_ciks": [
+        "310158"
+      ],
+      "master_record": {
+        "cik": "310158",
+        "company_name": "Merck & Co. Inc.",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0000950123-10-018679",
+        "filing_directory_cik": "310158",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/310158/0000950123-10-018679.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "895421"
+      ],
+      "eligible_ciks": [
+        "895421"
+      ],
+      "master_record": {
+        "cik": "895421",
+        "company_name": "MORGAN STANLEY",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042763",
+        "filing_directory_cik": "895421",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/895421/0001193125-10-042763.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MSFT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "789019"
+      ],
+      "eligible_ciks": [
+        "789019"
+      ],
+      "master_record": {
+        "cik": "789019",
+        "company_name": "MICROSOFT CORP",
+        "form": "10-K",
+        "filed": "2009-07-30",
+        "accession": "0001193125-09-158735",
+        "filing_directory_cik": "789019",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/789019/0001193125-09-158735.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NEE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "753308"
+      ],
+      "eligible_ciks": [
+        "753308"
+      ],
+      "master_record": {
+        "cik": "753308",
+        "company_name": "FPL GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000753308-10-000025",
+        "filing_directory_cik": "753308",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/753308/0000753308-10-000025.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NEM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1164727"
+      ],
+      "eligible_ciks": [
+        "1164727"
+      ],
+      "master_record": {
+        "cik": "1164727",
+        "company_name": "NEWMONT MINING CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-016613",
+        "filing_directory_cik": "1164727",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1164727/0000950123-10-016613.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NFLX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1065280"
+      ],
+      "eligible_ciks": [
+        "1065280"
+      ],
+      "master_record": {
+        "cik": "1065280",
+        "company_name": "NETFLIX INC",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0001193125-10-036181",
+        "filing_directory_cik": "1065280",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1065280/0001193125-10-036181.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NKE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "320187"
+      ],
+      "eligible_ciks": [
+        "320187"
+      ],
+      "master_record": {
+        "cik": "320187",
+        "company_name": "NIKE INC",
+        "form": "10-K",
+        "filed": "2009-07-27",
+        "accession": "0001193125-09-155951",
+        "filing_directory_cik": "320187",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/320187/0001193125-09-155951.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NUE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "73309"
+      ],
+      "eligible_ciks": [
+        "73309"
+      ],
+      "master_record": {
+        "cik": "73309",
+        "company_name": "NUCOR CORP",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001193125-10-040686",
+        "filing_directory_cik": "73309",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/73309/0001193125-10-040686.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NVDA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045810"
+      ],
+      "eligible_ciks": [
+        "1045810"
+      ],
+      "master_record": {
+        "cik": "1045810",
+        "company_name": "NVIDIA CORP",
+        "form": "10-Q",
+        "filed": "2009-11-19",
+        "accession": "0001045810-09-000036",
+        "filing_directory_cik": "1045810",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1045810/0001045810-09-000036.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "O",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "726728"
+      ],
+      "eligible_ciks": [
+        "726728"
+      ],
+      "master_record": {
+        "cik": "726728",
+        "company_name": "REALTY INCOME CORP",
+        "form": "10-K",
+        "filed": "2010-02-11",
+        "accession": "0000726728-10-000017",
+        "filing_directory_cik": "726728",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/726728/0000726728-10-000017.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "OMC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "29989"
+      ],
+      "eligible_ciks": [
+        "29989"
+      ],
+      "master_record": {
+        "cik": "29989",
+        "company_name": "OMNICOM GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0000891092-10-000656",
+        "filing_directory_cik": "29989",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/29989/0000891092-10-000656.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ORCL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1341439"
+      ],
+      "eligible_ciks": [
+        "1341439"
+      ],
+      "master_record": {
+        "cik": "1341439",
+        "company_name": "ORACLE CORP",
+        "form": "10-K",
+        "filed": "2009-06-29",
+        "accession": "0000950123-09-018689",
+        "filing_directory_cik": "1341439",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1341439/0000950123-09-018689.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "OXY",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "797468"
+      ],
+      "eligible_ciks": [
+        "797468"
+      ],
+      "master_record": {
+        "cik": "797468",
+        "company_name": "OCCIDENTAL PETROLEUM CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000797468-10-000020",
+        "filing_directory_cik": "797468",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/797468/0000797468-10-000020.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PEG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "788784"
+      ],
+      "eligible_ciks": [
+        "788784"
+      ],
+      "master_record": {
+        "cik": "788784",
+        "company_name": "PUBLIC SERVICE ENTERPRISE GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001193125-10-040508",
+        "filing_directory_cik": "788784",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/788784/0001193125-10-040508.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PEP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "77476"
+      ],
+      "eligible_ciks": [
+        "77476"
+      ],
+      "master_record": {
+        "cik": "77476",
+        "company_name": "PEPSICO INC",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0001193125-10-036385",
+        "filing_directory_cik": "77476",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/77476/0001193125-10-036385.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PFE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "78003"
+      ],
+      "eligible_ciks": [
+        "78003"
+      ],
+      "master_record": {
+        "cik": "78003",
+        "company_name": "PFIZER INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042425",
+        "filing_directory_cik": "78003",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/78003/0001193125-10-042425.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "80424"
+      ],
+      "eligible_ciks": [
+        "80424"
+      ],
+      "master_record": {
+        "cik": "80424",
+        "company_name": "PROCTER & GAMBLE CO",
+        "form": "10-K",
+        "filed": "2009-08-14",
+        "accession": "0001193125-09-175986",
+        "filing_directory_cik": "80424",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/80424/0001193125-09-175986.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PLD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1045609"
+      ],
+      "eligible_ciks": [
+        "1045609"
+      ],
+      "master_record": {
+        "cik": "1045609",
+        "company_name": "AMB PROPERTY CORP",
+        "form": "10-K",
+        "filed": "2010-02-22",
+        "accession": "0000950123-10-014699",
+        "filing_directory_cik": "1045609",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1045609/0000950123-10-014699.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PNC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "713676"
+      ],
+      "eligible_ciks": [
+        "713676"
+      ],
+      "master_record": {
+        "cik": "713676",
+        "company_name": "PNC FINANCIAL SERVICES GROUP INC",
+        "form": "10-K",
+        "filed": "2010-03-11",
+        "accession": "0001193125-10-052794",
+        "filing_directory_cik": "713676",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/713676/0001193125-10-052794.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PPG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "79879"
+      ],
+      "eligible_ciks": [
+        "79879"
+      ],
+      "master_record": {
+        "cik": "79879",
+        "company_name": "PPG INDUSTRIES INC",
+        "form": "10-K",
+        "filed": "2010-02-18",
+        "accession": "0001193125-10-033939",
+        "filing_directory_cik": "79879",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/79879/0001193125-10-033939.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PSA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1393311"
+      ],
+      "eligible_ciks": [
+        "1393311"
+      ],
+      "master_record": {
+        "cik": "1393311",
+        "company_name": "Public Storage",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001393311-10-000004",
+        "filing_directory_cik": "1393311",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1393311/0001393311-10-000004.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "QCOM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "804328"
+      ],
+      "eligible_ciks": [
+        "804328"
+      ],
+      "master_record": {
+        "cik": "804328",
+        "company_name": "QUALCOMM INC/DE",
+        "form": "10-K",
+        "filed": "2009-11-05",
+        "accession": "0000950123-09-057827",
+        "filing_directory_cik": "804328",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/804328/0000950123-09-057827.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ROST",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "745732"
+      ],
+      "eligible_ciks": [
+        "745732"
+      ],
+      "master_record": {
+        "cik": "745732",
+        "company_name": "ROSS STORES INC",
+        "form": "10-Q",
+        "filed": "2009-12-09",
+        "accession": "0001206774-09-002310",
+        "filing_directory_cik": "745732",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/745732/0001206774-09-002310.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "RTX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "101829"
+      ],
+      "eligible_ciks": [
+        "101829"
+      ],
+      "master_record": {
+        "cik": "101829",
+        "company_name": "UNITED TECHNOLOGIES CORP /DE/",
+        "form": "10-K",
+        "filed": "2010-02-11",
+        "accession": "0001193125-10-027861",
+        "filing_directory_cik": "101829",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/101829/0001193125-10-027861.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SBUX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "829224"
+      ],
+      "eligible_ciks": [
+        "829224"
+      ],
+      "master_record": {
+        "cik": "829224",
+        "company_name": "STARBUCKS CORP",
+        "form": "10-K",
+        "filed": "2009-11-20",
+        "accession": "0000950123-09-064772",
+        "filing_directory_cik": "829224",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/829224/0000950123-09-064772.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SHW",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "89800"
+      ],
+      "eligible_ciks": [
+        "89800"
+      ],
+      "master_record": {
+        "cik": "89800",
+        "company_name": "SHERWIN WILLIAMS CO",
+        "form": "10-K",
+        "filed": "2010-02-24",
+        "accession": "0000950123-10-016198",
+        "filing_directory_cik": "89800",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/89800/0000950123-10-016198.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SLB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "87347"
+      ],
+      "eligible_ciks": [
+        "87347"
+      ],
+      "master_record": {
+        "cik": "87347",
+        "company_name": "SCHLUMBERGER LTD /NV/",
+        "form": "10-K",
+        "filed": "2010-02-05",
+        "accession": "0001193125-10-023041",
+        "filing_directory_cik": "87347",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/87347/0001193125-10-023041.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "92122"
+      ],
+      "eligible_ciks": [
+        "92122"
+      ],
+      "master_record": {
+        "cik": "92122",
+        "company_name": "SOUTHERN CO",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000092122-10-000009",
+        "filing_directory_cik": "92122",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/92122/0000092122-10-000009.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SPG",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1063761"
+      ],
+      "eligible_ciks": [
+        "1063761"
+      ],
+      "master_record": {
+        "cik": "1063761",
+        "company_name": "SIMON PROPERTY GROUP INC /DE/",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001047469-10-001324",
+        "filing_directory_cik": "1063761",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1063761/0001047469-10-001324.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SRE",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1032208"
+      ],
+      "eligible_ciks": [
+        "1032208"
+      ],
+      "master_record": {
+        "cik": "1032208",
+        "company_name": "SEMPRA ENERGY",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000086521-10-000019",
+        "filing_directory_cik": "1032208",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1032208/0000086521-10-000019.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "T",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "732717"
+      ],
+      "eligible_ciks": [
+        "732717"
+      ],
+      "master_record": {
+        "cik": "732717",
+        "company_name": "AT&T INC.",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000732717-10-000013",
+        "filing_directory_cik": "732717",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/732717/0000732717-10-000013.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TGT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "27419"
+      ],
+      "eligible_ciks": [
+        "27419"
+      ],
+      "master_record": {
+        "cik": "27419",
+        "company_name": "TARGET CORP",
+        "form": "10-K",
+        "filed": "2010-03-12",
+        "accession": "0001047469-10-002121",
+        "filing_directory_cik": "27419",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/27419/0001047469-10-002121.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TJX",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "109198"
+      ],
+      "eligible_ciks": [
+        "109198"
+      ],
+      "master_record": {
+        "cik": "109198",
+        "company_name": "TJX COMPANIES INC /DE/",
+        "form": "10-Q",
+        "filed": "2009-12-01",
+        "accession": "0000950123-09-067237",
+        "filing_directory_cik": "109198",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/109198/0000950123-09-067237.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TMUS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1283699"
+      ],
+      "eligible_ciks": [
+        "1283699"
+      ],
+      "master_record": {
+        "cik": "1283699",
+        "company_name": "METROPCS COMMUNICATIONS INC",
+        "form": "10-K",
+        "filed": "2010-03-01",
+        "accession": "0001193125-10-044780",
+        "filing_directory_cik": "1283699",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1283699/0001193125-10-044780.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TTWO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "946581"
+      ],
+      "eligible_ciks": [
+        "946581"
+      ],
+      "master_record": {
+        "cik": "946581",
+        "company_name": "TAKE TWO INTERACTIVE SOFTWARE INC",
+        "form": "10-K",
+        "filed": "2009-12-18",
+        "accession": "0001047469-09-010820",
+        "filing_directory_cik": "946581",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/946581/0001047469-09-010820.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TXN",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "97476"
+      ],
+      "eligible_ciks": [
+        "97476"
+      ],
+      "master_record": {
+        "cik": "97476",
+        "company_name": "TEXAS INSTRUMENTS INC",
+        "form": "10-K",
+        "filed": "2010-02-23",
+        "accession": "0001140361-10-007923",
+        "filing_directory_cik": "97476",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/97476/0001140361-10-007923.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "UNH",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "731766"
+      ],
+      "eligible_ciks": [
+        "731766"
+      ],
+      "master_record": {
+        "cik": "731766",
+        "company_name": "UNITEDHEALTH GROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-10",
+        "accession": "0001193125-10-027229",
+        "filing_directory_cik": "731766",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/731766/0001193125-10-027229.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "UNP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "100885"
+      ],
+      "eligible_ciks": [
+        "100885"
+      ],
+      "master_record": {
+        "cik": "100885",
+        "company_name": "UNION PACIFIC CORP",
+        "form": "10-K",
+        "filed": "2010-02-05",
+        "accession": "0001193125-10-023294",
+        "filing_directory_cik": "100885",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/100885/0001193125-10-023294.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "UPS",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1090727"
+      ],
+      "eligible_ciks": [
+        "1090727"
+      ],
+      "master_record": {
+        "cik": "1090727",
+        "company_name": "UNITED PARCEL SERVICE INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042908",
+        "filing_directory_cik": "1090727",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1090727/0001193125-10-042908.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "USB",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "36104"
+      ],
+      "eligible_ciks": [
+        "36104"
+      ],
+      "master_record": {
+        "cik": "36104",
+        "company_name": "US BANCORP \\DE\\",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018123",
+        "filing_directory_cik": "36104",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/36104/0000950123-10-018123.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VLO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1035002"
+      ],
+      "eligible_ciks": [
+        "1035002"
+      ],
+      "master_record": {
+        "cik": "1035002",
+        "company_name": "VALERO ENERGY CORP/TX",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018097",
+        "filing_directory_cik": "1035002",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1035002/0000950123-10-018097.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VMC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1396009"
+      ],
+      "eligible_ciks": [
+        "1396009"
+      ],
+      "master_record": {
+        "cik": "1396009",
+        "company_name": "Vulcan Materials CO",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018400",
+        "filing_directory_cik": "1396009",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1396009/0000950123-10-018400.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VTR",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "740260"
+      ],
+      "eligible_ciks": [
+        "740260"
+      ],
+      "master_record": {
+        "cik": "740260",
+        "company_name": "VENTAS INC",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0001193125-10-035246",
+        "filing_directory_cik": "740260",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/740260/0001193125-10-035246.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VZ",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "732712"
+      ],
+      "eligible_ciks": [
+        "732712"
+      ],
+      "master_record": {
+        "cik": "732712",
+        "company_name": "VERIZON COMMUNICATIONS INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-041685",
+        "filing_directory_cik": "732712",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/732712/0001193125-10-041685.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "WELL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "766704"
+      ],
+      "eligible_ciks": [
+        "766704"
+      ],
+      "master_record": {
+        "cik": "766704",
+        "company_name": "HEALTH CARE REIT INC /DE/",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018352",
+        "filing_directory_cik": "766704",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/766704/0000950123-10-018352.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "WFC",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "72971"
+      ],
+      "eligible_ciks": [
+        "72971"
+      ],
+      "master_record": {
+        "cik": "72971",
+        "company_name": "WELLS FARGO & CO/MN",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-017877",
+        "filing_directory_cik": "72971",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/72971/0000950123-10-017877.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "WMT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "104169"
+      ],
+      "eligible_ciks": [
+        "104169"
+      ],
+      "master_record": {
+        "cik": "104169",
+        "company_name": "WAL MART STORES INC",
+        "form": "10-K",
+        "filed": "2009-04-01",
+        "accession": "0000104169-09-000006",
+        "filing_directory_cik": "104169",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/104169/0000104169-09-000006.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "XEL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "72903"
+      ],
+      "eligible_ciks": [
+        "72903"
+      ],
+      "master_record": {
+        "cik": "72903",
+        "company_name": "XCEL ENERGY INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001047469-10-001536",
+        "filing_directory_cik": "72903",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/72903/0001047469-10-001536.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "XOM",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "34088"
+      ],
+      "eligible_ciks": [
+        "34088"
+      ],
+      "master_record": {
+        "cik": "34088",
+        "company_name": "EXXON MOBIL CORP",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001193125-10-042929",
+        "filing_directory_cik": "34088",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/34088/0001193125-10-042929.txt"
+      },
+      "already_has_document_observation": true,
+      "collection_needed": false,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    }
+  ],
+  "batch": [
+    {
+      "symbol": "APA",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1841666",
+        "6769"
+      ],
+      "eligible_ciks": [
+        "6769"
+      ],
+      "master_record": {
+        "cik": "6769",
+        "company_name": "APACHE CORP",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0000950123-10-018311",
+        "filing_directory_cik": "6769",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/6769/0000950123-10-018311.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "APD",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "2969"
+      ],
+      "eligible_ciks": [
+        "2969"
+      ],
+      "master_record": {
+        "cik": "2969",
+        "company_name": "AIR PRODUCTS & CHEMICALS INC /DE/",
+        "form": "10-K",
+        "filed": "2009-11-25",
+        "accession": "0000950123-09-066095",
+        "filing_directory_cik": "2969",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/2969/0000950123-09-066095.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "C",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "831001"
+      ],
+      "eligible_ciks": [
+        "831001"
+      ],
+      "master_record": {
+        "cik": "831001",
+        "company_name": "CITIGROUP INC",
+        "form": "10-K",
+        "filed": "2010-02-26",
+        "accession": "0001206774-10-000406",
+        "filing_directory_cik": "831001",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/831001/0001206774-10-000406.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CAT",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "18230"
+      ],
+      "eligible_ciks": [
+        "18230"
+      ],
+      "master_record": {
+        "cik": "18230",
+        "company_name": "CATERPILLAR INC",
+        "form": "10-K",
+        "filed": "2010-02-19",
+        "accession": "0000018230-10-000092",
+        "filing_directory_cik": "18230",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/18230/0000018230-10-000092.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CL",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "21665"
+      ],
+      "eligible_ciks": [
+        "21665"
+      ],
+      "master_record": {
+        "cik": "21665",
+        "company_name": "COLGATE PALMOLIVE CO",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0001140361-10-008522",
+        "filing_directory_cik": "21665",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/21665/0001140361-10-008522.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "COP",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "1163165"
+      ],
+      "eligible_ciks": [
+        "1163165"
+      ],
+      "master_record": {
+        "cik": "1163165",
+        "company_name": "CONOCOPHILLIPS",
+        "form": "10-K",
+        "filed": "2010-02-25",
+        "accession": "0000950123-10-017187",
+        "filing_directory_cik": "1163165",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/1163165/0000950123-10-017187.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "COST",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "909832"
+      ],
+      "eligible_ciks": [
+        "909832"
+      ],
+      "master_record": {
+        "cik": "909832",
+        "company_name": "COSTCO WHOLESALE CORP /NEW",
+        "form": "10-K",
+        "filed": "2009-10-16",
+        "accession": "0001193125-09-208963",
+        "filing_directory_cik": "909832",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/909832/0001193125-09-208963.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CSCO",
+      "first_training_session": "2010-03-16",
+      "candidate_ciks": [
+        "858877"
+      ],
+      "eligible_ciks": [
+        "858877"
+      ],
+      "master_record": {
+        "cik": "858877",
+        "company_name": "CISCO SYSTEMS INC",
+        "form": "10-K",
+        "filed": "2009-09-11",
+        "accession": "0001193125-09-190326",
+        "filing_directory_cik": "858877",
+        "submission_url": "https://www.sec.gov/Archives/edgar/data/858877/0001193125-09-190326.txt"
+      },
+      "already_has_document_observation": false,
+      "collection_needed": true,
+      "historical_identity_verified": false,
+      "historical_metadata_admitted": false
+    }
+  ],
+  "selection": "Latest eligible original annual, else latest original quarterly; original acceptance remains unverified; first eight unresolved alphabetically",
+  "counts": {
+    "document_already_present": 36,
+    "no_eligible_candidate": 2,
+    "collection_needed": 69
+  },
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/type-evidence.json": "30be01794b8911e01de3ae46b53a7e7264442b092b3805ed4e8db649f6fd57c6",
+    "results/task-conditioning-2026-10-31/cached-stock-evidence.json": "777fe03844057527df481607725f02f757845937550e0b5a90b0c332b4e1cf25",
+    "results/task-conditioning-2026-10-31/original-cover-collection.json": "257889b3815e3c52e261e5a16dd92007f731508087839747fdeba8aa8e8fc7ff",
+    "artifacts/filings/original-candidate-ledger.json": "70aac9ec265b823f2ab1f752ec51d701dfc2d8c73be6f0decf9b5f19e4a8ded3",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "/home/vibe/projects/rl-stocks/scripts/prepare_task_stock_sources.py": "be06cb4a41fd13b6ef41178fbf6d0290f753e56995101f8606ed7e6951e7ca4b",
+    "src/rl_stocks/data/providers/sec/type_sources.py": "595399c983af2ae6cd41cd9d712d3da4149876e439c26eb2b80b6e4e7e791f89",
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/acquisition-0c1676b269a9e23158886f29c0b51536559fddb2a63727c527234c4f390704ee.json": "0c1676b269a9e23158886f29c0b51536559fddb2a63727c527234c4f390704ee",
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/archive.zip": "446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942",
+    "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/acquisition-b5493c1cff649765a619d938c3ed96188c97f2f89f2f19c82c9ecc53ddf8b1fd.json": "b5493c1cff649765a619d938c3ed96188c97f2f89f2f19c82c9ecc53ddf8b1fd",
+    "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/archive.zip": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/acquisition-b34b696e53e078aa3ad84e95bbb3dffba2cb9cafe122c4a1c41f91219ce17b20.json": "b34b696e53e078aa3ad84e95bbb3dffba2cb9cafe122c4a1c41f91219ce17b20",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/acquisition-0fdf9eff42725c8d25a95b56f23ca6e2697e464e3e7d48ed283aa295941a1021.json": "0fdf9eff42725c8d25a95b56f23ca6e2697e464e3e7d48ed283aa295941a1021",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+    "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/acquisition-d5898948e3c19bc2ce9b8dbc272c551357f15493c5dd7b066e1effe80e832b3f.json": "d5898948e3c19bc2ce9b8dbc272c551357f15493c5dd7b066e1effe80e832b3f",
+    "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/archive.zip": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/acquisition-5397c51407f2a865e54bf6c7b7b8d53fa569023219f505571f9c8fdd3951b2d1.json": "5397c51407f2a865e54bf6c7b7b8d53fa569023219f505571f9c8fdd3951b2d1",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/archive.zip": "e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1"
+  },
+  "maximum_acquisition_operations": 16,
+  "historical_metadata_admitted": false,
+  "network_requests": 0,
+  "training_performed": false,
+  "colab_allocated": false,
+  "protected_sources_unchanged": true
+}

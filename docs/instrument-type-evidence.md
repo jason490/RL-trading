@@ -195,3 +195,28 @@ linkage. Likewise, QQQ's old ticker cannot be silently overwritten in evidence.
 All records leave whole-history metadata admission and inferred validity intervals
 false. The two-session reconstruction remains an explicit research assumption.
 No Colab/optimizer/model operation or retired-test evaluation occurred.
+
+## Deterministic stock master selection and bounded batches
+
+`type_sources.py` and `prepare_task_stock_sources.py` query the retained2009q2–
+2010q1/2012q4/2013q1 full master indexes, preserving current/predecessor CIK
+candidates as discovery-only. Prefer the latest eligible original10-K, else the
+latest original10-Q. A selection-stage two-session estimate uses the filing date;
+actual original-index acceptance/filing metadata must pass again after collection.
+No amendment substitution, return ranking or metadata admission occurs.
+
+The [selection](../results/task-conditioning-2026-10-31/stock-master-selection.json)
+finds105/107 stocks with eligible original candidates:36 already have a collected
+document observation,69 need primary HTML collection, and ABBV/DIS lack an
+eligible candidate in this scope. Missing XBRL entries are not evidence of missing
+historical filings. ABBV needs registration/spinoff evidence and DIS needs an
+explicit older issuer candidate; neither gets a guessed mapping.
+
+`collect_task_stock_batch.py --batch N --output NEW_PATH` allows only nine fixed
+batches over those69 candidates, at most eight cases/sixteen index-primary
+operations each (the last batch is smaller). Claims prevent repeated batches;
+a global stop record prevents continuing after any failed operation. Actual
+index/master dates and conservative availability must agree before primary
+collection. Preserve retrieved partial sources and failed cases. Batches select
+only by the frozen source plan, never by returns or later model results. Complete
+collection still requires source-content/identity review before model inputs.
