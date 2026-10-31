@@ -238,3 +238,40 @@ immutable source data and Gymnasium/SB3 checkers. These fixtures include deliber
 small accounting windows and are not market coverage or performance evidence.
 Actual Colab optimization, checkpoint selection/gates and job/controller/archive
 integration remain pending, along with historical metadata admission.
+
+## Admission gate and Colab-only smoke worker
+
+`evaluation/task_gates.py:training_gate` implements the fixed final100k seed11
+training-fit comparison. It requires all three roles, the original22-stock/four-
+ETF panel, finite metrics, matching holding-path digests and the pinned protocol.
+Routed SAC must gain2pp versus each control and satisfy stock/ETF/median excess
+floors of-2pp. Incomplete, selected-phase, development, wrong-seed or unmatched
+inputs reject. A passing numeric gate permits the later development stage, not
+performance promotion or objective completion. These summaries still require
+independent physical artifact acceptance; a metric dictionary is not that proof.
+
+`training/task_smoke_worker.py:execute_smoke_colab` implements the fixed1024-step,
+seed11 CPU smoke for one role. It rejects outside default-Python3.13 Colab CPU
+before outputs/models, then requires clean committed source, exact dataset/
+normalization and reviewed historical evidence. It uses64x64 networks,128-session
+sampled windows, batch64/warmup64 and post-update512/1024 checkpoints. The worker
+never opens development or retired tests. It cannot run a100k screen.
+
+`TaskOptimizerAudit` observes actual actor/critic/entropy Adam steps, finite
+parameters/gradients, per-parameter moments and nonzero routed-head activity.
+The expected smoke count is960 updates per optimizer; synthetic counters alone
+cannot establish a real smoke. Checkpoints publish before fitted replay and
+compact return/change curves, with final training HTML/JSON. Original source,
+seed, role, type manifest, sampling and counters are retained. Learned state is
+fingerprinted across inference. Replay/model save/load checks compare all
+weights, optimizer states, raw alpha, counters and replay arrays/cursors; learned
+frozen predictions must match for every declared symbol. This does not claim
+exact continued-learning restoration of environment/RNG/sampler state.
+
+Hooks/environments close in `finally`; failure evidence and the latest complete
+artifact tree are published through the existing exporter. Tests verify local
+rejection before construction, failure cleanup and real untrained save/load
+corruption detection without optimizer execution. Actual smoke/profile results,
+archive/controller acceptance and remote session cleanup remain unverified until
+run through the existing centrally metered owned fleet. Historical evidence is
+still unadmitted. No runtime was allocated for these engineering checks.

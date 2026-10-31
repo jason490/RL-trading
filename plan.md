@@ -3128,3 +3128,12 @@ no-optimization mixed-group integration checks pass. Historical QQQ primary
 filing confirms ETF type and oldQQQQ ticker, but canonical identity/durable
 provenance admission remains incomplete. No training/allocation; workers,
 optimizer/profile acceptance and performance gates remain pending.
+
+### Task training gate and Colab-only smoke worker — 2026-10-31
+
+Fixed three-role final fitted gate and1024-transition CPU smoke worker implemented.
+Actual-step/finite-gradient/Adam-state observers, checkpoint-first publication,
+compact curves, frozen/replay restoration checks and handled-failure cleanup are
+present. Offline tests use untrained/manual fixtures and forbid local updates.
+No actual smoke/profile or100k execution; historical metadata admission and
+fleet/archive integration remain pending. Original credits and stops preserved.

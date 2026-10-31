@@ -56,7 +56,9 @@ attainable-return bound or a future-label trading rule. Constraints stay unchang
 
 Next: complete historical type evidence and Colab worker integration for the
 [fixed task-conditioning protocol](task-conditioning-research.md). The policy,
-metadata admission, factory and frozen inference foundation are implemented;
+metadata admission, factory, frozen inference, fitted evaluator and guarded
+smoke worker are implemented; actual optimizer/profile acceptance and
+fleet/archive integration remain pending;
 97/107 stocks have earlier cached SEC candidate filings, but none is admitted
 without historical security/type review. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
