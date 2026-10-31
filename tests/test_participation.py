@@ -28,6 +28,17 @@ def test_saved_path_cost_identity_and_intraday_short_are_not_end_close_exposure(
     assert report['groups']['etf']['total_fill_reasons']['stop']==1
 
 
+def test_training_period_requires_explicit_group_diagnostic_scope():
+    etf=fixture();etf['split']='train';etf['rows'][0]['session']='2018-01-02'
+    etf['baselines']['buy_hold']['rows'][0]['session']='2018-01-02'
+    for event in etf['events']:event['time']=event['time'].replace('2021-01-04','2018-01-02')
+    stock=deepcopy(etf);stock['symbol']='AAPL';results={'etf':etf,'stock':stock}
+    with pytest.raises(ValueError):diagnose_groups(results,{'AAPL'})
+    assert diagnose_groups(results,{'AAPL'},period='training-window')['groups']['stock']['count']==1
+    etf['rows'][0]['session']='2024-01-02'
+    with pytest.raises(ValueError):diagnose_groups(results,{'AAPL'},period='training-window')
+
+
 def test_rejects_test_dates_unmatched_horizons_or_bad_accounting():
     for mutate in [lambda r:r.update(split='test'),lambda r:r['rows'][0].update(session='2024-01-02'),
         lambda r:r['directional'].update(short_costs=50.),lambda r:r['directional'].update(short_net_pnl=0.),

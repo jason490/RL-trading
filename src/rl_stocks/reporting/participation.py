@@ -101,9 +101,9 @@ def episode_diagnosis(result, initial=100000., *, period='development'):
         'holding_limit_fills':sum(e['reason']=='holding_limit' for e in events)}
 
 
-def diagnose_groups(results,stocks):
+def diagnose_groups(results,stocks,*,period='development'):
     if len({r['symbol'] for r in results.values()})!=len(results):raise ValueError('one episode per symbol required')
-    records=[episode_diagnosis(r) for r in results.values()]
+    records=[episode_diagnosis(r,period=period) for r in results.values()]
     groups={}
     keys=('net_return','buy_hold_return','net_excess_pp','incremental_cost_drag_pp','saved_path_noncost_excess_pp',
           'reported_costs','mean_abs_exposure','mean_signed_exposure','mean_long_exposure','mean_short_abs_exposure',

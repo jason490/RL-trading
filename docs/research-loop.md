@@ -38,8 +38,9 @@ control on the same dataset: reuse that final fitted-period evidence, without
 counting a new seed/replay/confirmation. New selected40k post-update differs from
 old selected80k pre-update. Higher selected return is not improved100k learning.
 
-Next bounded research: a separately fixed inference-only fitted-period diagnosis
-for new GRU/SAC selected/final states, then require training-only justification
+Next bounded research: the [fixed inference-only fitted-period diagnosis](offpolicy-fit-diagnostic.md)
+for new GRU/SAC selected/final states is implemented with34 focused checks and
+no-optimization guards; actual replay follows committed protocol/source. Then require training-only justification
 before any different performance hypothesis. Do not repeat identical PPO-final
 inference. Do not reopen this family or retired test. The broader improvement
 goal remains active; no new allocation is currently owned. Original profile

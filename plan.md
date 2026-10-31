@@ -3046,3 +3046,14 @@ project39.92585919/150; original study including profiles0.38972324/2 retained.
 ledger retained. Standalone dashboard generated, retired test unopened. No
 robust/prospective winner; broader research remains active. See
 [complete evidence](results/recurrent-offpolicy-2026-10-31/README.md).
+
+### Fixed off-policy fitted-period diagnostic implemented — 2026-10-31
+
+Protocolcfa2cac9 fixes accepted GRU/SAC selected/final states, original26 panel,
+eligible2018–2020 window, full21 inputs and unit-sign execution. Explicit
+training-window scope leaves ordinary evaluation and default diagnostics strict.
+Runtime guard forbids fitting/backward/Adam steps; full model/optimizer/alpha/
+counter and source/normalization immutability checks required.34 focused tests
+and Ruff pass; actual replay follows committed source, no allocation or new
+training. Failed family/retired test remain closed. See
+[method and command](docs/offpolicy-fit-diagnostic.md).

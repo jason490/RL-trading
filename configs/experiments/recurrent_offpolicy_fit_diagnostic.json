@@ -1,0 +1,32 @@
+{
+  "schema": "recurrent-offpolicy-fit-v1",
+  "acceptance": "results/recurrent-offpolicy-2026-10-31/acceptance.json",
+  "acceptance_receipt_sha256": "e233963a02516a7b775b5978adaef63be223903114317688a6e0a0ff89c2c010",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "arms": [
+    "gru_sac",
+    "native_sac"
+  ],
+  "phases": [
+    "selected",
+    "final"
+  ],
+  "seed": 11,
+  "anchor": "2017-12-29",
+  "first_execution": "2018-01-02",
+  "last_execution": "2020-12-02",
+  "observation_profile": "execution_full",
+  "exposure_mode": "unit_magnitude",
+  "original_panel_only": true,
+  "minimum_descriptive_excess_pp": -2.0,
+  "minimum_descriptive_median_stock_excess_pp": -2.0,
+  "constraints": [
+    "Fixed accepted selected/final weights only; no checkpoint selection, fitting, optimizer step, normalization update, provider request or Colab allocation",
+    "Original26-symbol common eligible training window; preserve train labels, defaults, learned protections and holding limit",
+    "Hash all accepted cell files, counters, optimizer tensors, policy tensors, raw alpha, frozen actor and normalization before/after",
+    "Reporting-only fitted/validation contrasts and declining-stock labels; no causal optimizer/capacity/generalization claim or promotion",
+    "Do not reopen failed family or retired2024+ test; do not replay identical historical PPO-final",
+    "Commit verified protocol and implementation before actual inference replay"
+  ]
+}
