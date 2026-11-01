@@ -637,3 +637,22 @@ part of that review, and the original failed projection must remain preserved.
 
 Official post-cleanup account548.23/rate0/no assignments; cumulative project
 39.976410/150, task study0.050551/2 units. No development or retired-test scoring.
+
+## Explicit subsequent-screen execution review
+
+`configs/experiments/task_screen_execution_review.json` pins the accepted profile
+receipt and preserves its failed initial two-hour projection. The initial smoke and
+profile allocations already met the user-required two-hour initial deadline. This
+separate reviewed subsequent-run contract permits7200 seconds for each shared role
+and9000 seconds for routed, covering its7903-second conservative projection. It
+changes no training steps, model/optimizer, selection, performance gate, study
+baseline, credit ceiling or account floor. No automatic runtime extension occurs.
+
+`training/task_execution.py` physically rechecks all stopped smokes/profile, exact
+receipts/archives and103 compute dependencies, recomputes original projections and
+checks the complete reviewed durations against remaining shared allowance. The
+full allocation ceilings cost0.585 units at the observed rate plus ledger margin,
+within the original two-unit family allowance. Per-role persistent claims prohibit
+retries. Actual production admission passed these checks without allocation or
+ledger reset. Remote registration/fleet wiring for this reviewed contract remains
+pending; the original version46 plan stays blocked and unchanged.

@@ -1,0 +1,23 @@
+{
+  "schema": "task-screen-execution-review-v1",
+  "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+  "profile_acceptance_sha256": "667620e5e179560e79a38b95b280c367a8cbd59d6021f36e12be4c940d5526b7",
+  "profile_receipt_file_sha256": "f66badff2070dc67eff018810dccafb4b54c507d3ad2c44c9771aa52134578b2",
+  "original_projection_retained": true,
+  "original_execution_admitted": false,
+  "allocation_seconds": {
+    "masked_shared": 7200,
+    "tagged_shared": 7200,
+    "tagged_routed": 9000
+  },
+  "verification_seconds": 1800,
+  "teardown_reserve_seconds": 360,
+  "maximum_incremental_study_units": 2.0,
+  "project_ceiling_units": 150.0,
+  "project_teardown_units": 130.0,
+  "minimum_account_balance": 150.0,
+  "account_teardown_balance": 170.0,
+  "learning_protocol_unchanged": true,
+  "automatic_retry_allowed": false,
+  "reason": "Measured subsequent100k CPU routed projection7903s exceeds initial7200s; allow9000s only for this role, preserving failed projection and all method/budget limits"
+}
