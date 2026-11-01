@@ -3226,3 +3226,12 @@ All owned cleanup verified; project39.960425/150, task-family0.034566/2 units.
 Retained archives and compact acceptance are under results/task-conditioning-2026-10-31.
 Research-geometry timing profile is next; no100k screen, development promotion or
 retired-test access is admitted by these smoke results.
+
+### Research-geometry profile accepted; duration admission rejected — 2026-11-01
+
+All three4096-step CPU profiles pass physical checks and cleanup. Full100k duration
+projections6783/7006/7903 seconds reject routed against the initial7200-second
+contract, despite projected0.5423-unit cost fitting the existing allowance. Original
+failure retained; no screen allocated. Next is a distinct execution-only duration
+review, preserving methods/performance gates and all150/130 and account protections.
+Project39.976410/150; owned sessions stopped.

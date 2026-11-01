@@ -616,3 +616,24 @@ against the running profile's captured clean revision matches103 files. New scre
 orchestration/verifier code is outside that compute inventory and requires its own
 checks; this does not claim it was timed by the earlier profiling worker. The helper
 is implemented for admission binding; full-screen fleet admission remains disabled.
+
+## Accepted research profile and failed initial duration admission — 2026-11-01
+
+All roles pass physical4096-transition/3096-update profiling and103-file compute
+source binding; owned shutdown is verified. Learning/evaluation seconds are masked
+71.561/41.666, tagged shared75.518/42.770 and routed96.716/38.779. The retained
+`research-profile-acceptance.json` includes exact archives, source evidence, actual
+records, aggregate rate and original study charges.
+
+The conservative full-allocation projections are6783/7006/7903 seconds. Routed
+exceeds the currently registered7200-second limit, so full-screen admission fails;
+that failed result is retained and no100k job was allocated. All verification
+projections fit1800 seconds. Projected study execution cost0.5423 units fits the
+unchanged remaining allowance. This is a duration failure, not a performance result.
+The next action is an explicit execution-only review of a measured subsequent-run
+duration; the two-hour initial smoke/profile requirement was met. No learning,
+selection, performance gate, study baseline or project/account limit may change as
+part of that review, and the original failed projection must remain preserved.
+
+Official post-cleanup account548.23/rate0/no assignments; cumulative project
+39.976410/150, task study0.050551/2 units. No development or retired-test scoring.

@@ -1,0 +1,1052 @@
+{
+  "schema": "task-profile-acceptance-v1",
+  "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+  "session": "rl-stocks-cpu-1bbddf29782a",
+  "archive": "artifacts/colab/rl-stocks-cpu-1bbddf29782a/artifacts.tar.gz",
+  "archive_sha256": "348ded5f6a4a79f2a3a12c97737201e3fefb0607659f6a974ea71746b8adc519",
+  "completion": {
+    "plan": {
+      "version": 45,
+      "accelerator": "CPU",
+      "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+      "type_manifest_sha256": "7c4a078fcec05be000d720e2d9625c6cd5d7c03b5d1d6502e46357f526ba1590",
+      "dataset_contract": {
+        "identity": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b"
+      },
+      "allocation_deadline_seconds": 7200,
+      "teardown_reserve_seconds": 360,
+      "jobs": [
+        {
+          "algorithm": "task_sac_profile",
+          "task_role": "masked_shared",
+          "device": "cpu",
+          "smoke": false,
+          "seed": 11,
+          "steps": 4096
+        },
+        {
+          "algorithm": "task_sac_profile",
+          "task_role": "tagged_shared",
+          "device": "cpu",
+          "smoke": false,
+          "seed": 11,
+          "steps": 4096
+        },
+        {
+          "algorithm": "task_sac_profile",
+          "task_role": "tagged_routed",
+          "device": "cpu",
+          "smoke": false,
+          "seed": 11,
+          "steps": 4096
+        }
+      ],
+      "task_profile_roles": [
+        "masked_shared",
+        "tagged_shared",
+        "tagged_routed"
+      ]
+    },
+    "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "python": [
+      3,
+      13,
+      18
+    ],
+    "gpu": null,
+    "source_git": {
+      "revision": "36493823c3b8d9a818d7f02598b33a5b71c19b59",
+      "dirty": ""
+    },
+    "source_hash": "05427795d023e6a0dab828460ec9305721a1bd2177a866b51370dc9c9641f926"
+  },
+  "physical_acceptance": [
+    {
+      "algorithm": "task_sac_profile",
+      "seed": 11,
+      "actual_steps": 4096,
+      "task_role": "masked_shared",
+      "bundle_id": "cac94ae22345d24e98fa1ce37d6da8ac402b192c7b7999afaca8e348400d63b6",
+      "status": "complete",
+      "physical_state_verified": true,
+      "learning_seconds": 71.56129148299999,
+      "evaluation_seconds": 41.665853623999965
+    },
+    {
+      "algorithm": "task_sac_profile",
+      "seed": 11,
+      "actual_steps": 4096,
+      "task_role": "tagged_shared",
+      "bundle_id": "7b43ba59333f34560a78856eba3c99660941f51eb2025c01ea64ccdc7fe5cf7a",
+      "status": "complete",
+      "physical_state_verified": true,
+      "learning_seconds": 75.51815426000007,
+      "evaluation_seconds": 42.77048434100004
+    },
+    {
+      "algorithm": "task_sac_profile",
+      "seed": 11,
+      "actual_steps": 4096,
+      "task_role": "tagged_routed",
+      "bundle_id": "0fd31a584fba1fc8a4b63400fc76d3c1036f25837c89aa7f34e2b7024051fb1a",
+      "status": "complete",
+      "physical_state_verified": true,
+      "learning_seconds": 96.71581280700002,
+      "evaluation_seconds": 38.778614750999964
+    }
+  ],
+  "profiles": [
+    {
+      "active_gradients": {
+        "actor/latent_pi.0.bias": 3096,
+        "actor/latent_pi.0.weight": 3096,
+        "actor/latent_pi.2.bias": 3096,
+        "actor/latent_pi.2.weight": 3096,
+        "actor/log_std.bias": 3096,
+        "actor/log_std.weight": 3096,
+        "actor/mu.bias": 3096,
+        "actor/mu.weight": 3096,
+        "critic/qf0.0.bias": 3096,
+        "critic/qf0.0.weight": 3096,
+        "critic/qf0.2.bias": 3096,
+        "critic/qf0.2.weight": 3096,
+        "critic/qf0.4.bias": 3096,
+        "critic/qf0.4.weight": 3096,
+        "critic/qf1.0.bias": 3096,
+        "critic/qf1.0.weight": 3096,
+        "critic/qf1.2.bias": 3096,
+        "critic/qf1.2.weight": 3096,
+        "critic/qf1.4.bias": 3096,
+        "critic/qf1.4.weight": 3096,
+        "entropy/log_ent_coef": 3096
+      },
+      "actual_transitions": 4096,
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "development_evaluated": false,
+      "evaluation_seconds": 41.665853623999965,
+      "holding_path_sha256": "4e4e4bcd110710107c265599df56c970461fb62b6b3427db09418b3e1f74ebe9",
+      "inclusive_elapsed_seconds": 135.257073112,
+      "learning_seconds": 71.56129148299999,
+      "optimizer_steps": {
+        "actor": 3096,
+        "critic": 3096,
+        "entropy": 3096
+      },
+      "performance_promotion": false,
+      "performance_scores_exported": false,
+      "profile_only": true,
+      "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+      "repository": {
+        "dirty": "",
+        "revision": "36493823c3b8d9a818d7f02598b33a5b71c19b59"
+      },
+      "sampling": {
+        "downtrend_counts_measured": false,
+        "downtrend_starts": 0,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "COST:recent": {
+            "starts": 1,
+            "transitions": 0
+          },
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "LMT:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "MCD:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "SHW:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 512
+          }
+        },
+        "mode": "stock_etf_cycle_windows",
+        "starts": 9,
+        "transitions": 4096,
+        "year_counts": {
+          "decision_execution_year_pairs": {
+            "2012->2012": 247,
+            "2012->2013": 2,
+            "2013->2013": 726,
+            "2013->2014": 4,
+            "2014->2014": 938,
+            "2014->2015": 3,
+            "2015->2015": 715,
+            "2015->2016": 3,
+            "2016->2016": 596,
+            "2016->2017": 2,
+            "2017->2017": 348,
+            "2018->2018": 144,
+            "2018->2019": 1,
+            "2019->2019": 251,
+            "2019->2020": 1,
+            "2020->2020": 115
+          },
+          "decision_years": {
+            "2012": 249,
+            "2013": 730,
+            "2014": 941,
+            "2015": 718,
+            "2016": 598,
+            "2017": 348,
+            "2018": 145,
+            "2019": 252,
+            "2020": 115
+          },
+          "execution_years": {
+            "2012": 247,
+            "2013": 728,
+            "2014": 942,
+            "2015": 718,
+            "2016": 599,
+            "2017": 350,
+            "2018": 144,
+            "2019": 252,
+            "2020": 116
+          },
+          "measured": true,
+          "per_symbol": {
+            "BLK": {
+              "decision_years": {
+                "2012": 78,
+                "2013": 252,
+                "2014": 182
+              },
+              "execution_years": {
+                "2012": 77,
+                "2013": 252,
+                "2014": 183
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "COST": {
+              "decision_years": {},
+              "execution_years": {},
+              "starts": 1,
+              "transitions": 0
+            },
+            "DIA": {
+              "decision_years": {
+                "2015": 145,
+                "2016": 252,
+                "2017": 115
+              },
+              "execution_years": {
+                "2015": 144,
+                "2016": 252,
+                "2017": 116
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "KMB": {
+              "decision_years": {
+                "2015": 27,
+                "2016": 252,
+                "2017": 233
+              },
+              "execution_years": {
+                "2015": 26,
+                "2016": 252,
+                "2017": 234
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "LMT": {
+              "decision_years": {
+                "2013": 73,
+                "2014": 252,
+                "2015": 187
+              },
+              "execution_years": {
+                "2013": 72,
+                "2014": 252,
+                "2015": 188
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "MCD": {
+              "decision_years": {
+                "2013": 153,
+                "2014": 252,
+                "2015": 107
+              },
+              "execution_years": {
+                "2013": 152,
+                "2014": 252,
+                "2015": 108
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "SHW": {
+              "decision_years": {
+                "2014": 166,
+                "2015": 252,
+                "2016": 94
+              },
+              "execution_years": {
+                "2014": 165,
+                "2015": 252,
+                "2016": 95
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "SLB": {
+              "decision_years": {
+                "2012": 171,
+                "2013": 252,
+                "2014": 89
+              },
+              "execution_years": {
+                "2012": 170,
+                "2013": 252,
+                "2014": 90
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "UNP": {
+              "decision_years": {
+                "2018": 145,
+                "2019": 252,
+                "2020": 115
+              },
+              "execution_years": {
+                "2018": 144,
+                "2019": 252,
+                "2020": 116
+              },
+              "starts": 1,
+              "transitions": 512
+            }
+          },
+          "start_years": {
+            "2012": 2,
+            "2013": 2,
+            "2014": 2,
+            "2015": 2,
+            "2018": 1
+          },
+          "version": 1
+        }
+      },
+      "seed": 11,
+      "source": "05427795d023e6a0dab828460ec9305721a1bd2177a866b51370dc9c9641f926",
+      "status": "complete",
+      "task_role": "masked_shared",
+      "test_evaluated": false,
+      "type_manifest_sha256": "7c4a078fcec05be000d720e2d9625c6cd5d7c03b5d1d6502e46357f526ba1590"
+    },
+    {
+      "active_gradients": {
+        "actor/latent_pi.0.bias": 3096,
+        "actor/latent_pi.0.weight": 3096,
+        "actor/latent_pi.2.bias": 3096,
+        "actor/latent_pi.2.weight": 3096,
+        "actor/log_std.bias": 3096,
+        "actor/log_std.weight": 3096,
+        "actor/mu.bias": 3096,
+        "actor/mu.weight": 3096,
+        "critic/qf0.0.bias": 3096,
+        "critic/qf0.0.weight": 3096,
+        "critic/qf0.2.bias": 3096,
+        "critic/qf0.2.weight": 3096,
+        "critic/qf0.4.bias": 3096,
+        "critic/qf0.4.weight": 3096,
+        "critic/qf1.0.bias": 3096,
+        "critic/qf1.0.weight": 3096,
+        "critic/qf1.2.bias": 3096,
+        "critic/qf1.2.weight": 3096,
+        "critic/qf1.4.bias": 3096,
+        "critic/qf1.4.weight": 3096,
+        "entropy/log_ent_coef": 3096
+      },
+      "actual_transitions": 4096,
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "development_evaluated": false,
+      "evaluation_seconds": 42.77048434100004,
+      "holding_path_sha256": "4e4e4bcd110710107c265599df56c970461fb62b6b3427db09418b3e1f74ebe9",
+      "inclusive_elapsed_seconds": 123.95878613999992,
+      "learning_seconds": 75.51815426000007,
+      "optimizer_steps": {
+        "actor": 3096,
+        "critic": 3096,
+        "entropy": 3096
+      },
+      "performance_promotion": false,
+      "performance_scores_exported": false,
+      "profile_only": true,
+      "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+      "repository": {
+        "dirty": "",
+        "revision": "36493823c3b8d9a818d7f02598b33a5b71c19b59"
+      },
+      "sampling": {
+        "downtrend_counts_measured": false,
+        "downtrend_starts": 0,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "COST:recent": {
+            "starts": 1,
+            "transitions": 0
+          },
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "LMT:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "MCD:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "SHW:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 512
+          }
+        },
+        "mode": "stock_etf_cycle_windows",
+        "starts": 9,
+        "transitions": 4096,
+        "year_counts": {
+          "decision_execution_year_pairs": {
+            "2012->2012": 247,
+            "2012->2013": 2,
+            "2013->2013": 726,
+            "2013->2014": 4,
+            "2014->2014": 938,
+            "2014->2015": 3,
+            "2015->2015": 715,
+            "2015->2016": 3,
+            "2016->2016": 596,
+            "2016->2017": 2,
+            "2017->2017": 348,
+            "2018->2018": 144,
+            "2018->2019": 1,
+            "2019->2019": 251,
+            "2019->2020": 1,
+            "2020->2020": 115
+          },
+          "decision_years": {
+            "2012": 249,
+            "2013": 730,
+            "2014": 941,
+            "2015": 718,
+            "2016": 598,
+            "2017": 348,
+            "2018": 145,
+            "2019": 252,
+            "2020": 115
+          },
+          "execution_years": {
+            "2012": 247,
+            "2013": 728,
+            "2014": 942,
+            "2015": 718,
+            "2016": 599,
+            "2017": 350,
+            "2018": 144,
+            "2019": 252,
+            "2020": 116
+          },
+          "measured": true,
+          "per_symbol": {
+            "BLK": {
+              "decision_years": {
+                "2012": 78,
+                "2013": 252,
+                "2014": 182
+              },
+              "execution_years": {
+                "2012": 77,
+                "2013": 252,
+                "2014": 183
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "COST": {
+              "decision_years": {},
+              "execution_years": {},
+              "starts": 1,
+              "transitions": 0
+            },
+            "DIA": {
+              "decision_years": {
+                "2015": 145,
+                "2016": 252,
+                "2017": 115
+              },
+              "execution_years": {
+                "2015": 144,
+                "2016": 252,
+                "2017": 116
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "KMB": {
+              "decision_years": {
+                "2015": 27,
+                "2016": 252,
+                "2017": 233
+              },
+              "execution_years": {
+                "2015": 26,
+                "2016": 252,
+                "2017": 234
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "LMT": {
+              "decision_years": {
+                "2013": 73,
+                "2014": 252,
+                "2015": 187
+              },
+              "execution_years": {
+                "2013": 72,
+                "2014": 252,
+                "2015": 188
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "MCD": {
+              "decision_years": {
+                "2013": 153,
+                "2014": 252,
+                "2015": 107
+              },
+              "execution_years": {
+                "2013": 152,
+                "2014": 252,
+                "2015": 108
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "SHW": {
+              "decision_years": {
+                "2014": 166,
+                "2015": 252,
+                "2016": 94
+              },
+              "execution_years": {
+                "2014": 165,
+                "2015": 252,
+                "2016": 95
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "SLB": {
+              "decision_years": {
+                "2012": 171,
+                "2013": 252,
+                "2014": 89
+              },
+              "execution_years": {
+                "2012": 170,
+                "2013": 252,
+                "2014": 90
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "UNP": {
+              "decision_years": {
+                "2018": 145,
+                "2019": 252,
+                "2020": 115
+              },
+              "execution_years": {
+                "2018": 144,
+                "2019": 252,
+                "2020": 116
+              },
+              "starts": 1,
+              "transitions": 512
+            }
+          },
+          "start_years": {
+            "2012": 2,
+            "2013": 2,
+            "2014": 2,
+            "2015": 2,
+            "2018": 1
+          },
+          "version": 1
+        }
+      },
+      "seed": 11,
+      "source": "05427795d023e6a0dab828460ec9305721a1bd2177a866b51370dc9c9641f926",
+      "status": "complete",
+      "task_role": "tagged_shared",
+      "test_evaluated": false,
+      "type_manifest_sha256": "7c4a078fcec05be000d720e2d9625c6cd5d7c03b5d1d6502e46357f526ba1590"
+    },
+    {
+      "active_gradients": {
+        "actor/latent_pi.0.bias": 3096,
+        "actor/latent_pi.0.weight": 3096,
+        "actor/latent_pi.2.bias": 3096,
+        "actor/latent_pi.2.weight": 3096,
+        "actor/log_std.etf.bias": 3096,
+        "actor/log_std.etf.weight": 3096,
+        "actor/log_std.stock.bias": 3096,
+        "actor/log_std.stock.weight": 3096,
+        "actor/mu.etf.bias": 3096,
+        "actor/mu.etf.weight": 3096,
+        "actor/mu.stock.bias": 3096,
+        "actor/mu.stock.weight": 3096,
+        "critic/qf0.0.bias": 3096,
+        "critic/qf0.0.weight": 3096,
+        "critic/qf0.2.bias": 3096,
+        "critic/qf0.2.weight": 3096,
+        "critic/qf0.4.etf.bias": 3096,
+        "critic/qf0.4.etf.weight": 3096,
+        "critic/qf0.4.stock.bias": 3096,
+        "critic/qf0.4.stock.weight": 3096,
+        "critic/qf1.0.bias": 3096,
+        "critic/qf1.0.weight": 3096,
+        "critic/qf1.2.bias": 3096,
+        "critic/qf1.2.weight": 3096,
+        "critic/qf1.4.etf.bias": 3096,
+        "critic/qf1.4.etf.weight": 3096,
+        "critic/qf1.4.stock.bias": 3096,
+        "critic/qf1.4.stock.weight": 3096,
+        "entropy/log_ent_coef": 3096
+      },
+      "actual_transitions": 4096,
+      "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+      "development_evaluated": false,
+      "evaluation_seconds": 38.778614750999964,
+      "holding_path_sha256": "4e4e4bcd110710107c265599df56c970461fb62b6b3427db09418b3e1f74ebe9",
+      "inclusive_elapsed_seconds": 146.555012219,
+      "learning_seconds": 96.71581280700002,
+      "optimizer_steps": {
+        "actor": 3096,
+        "critic": 3096,
+        "entropy": 3096
+      },
+      "performance_promotion": false,
+      "performance_scores_exported": false,
+      "profile_only": true,
+      "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+      "repository": {
+        "dirty": "",
+        "revision": "36493823c3b8d9a818d7f02598b33a5b71c19b59"
+      },
+      "sampling": {
+        "downtrend_counts_measured": false,
+        "downtrend_starts": 0,
+        "downtrend_transitions": 0,
+        "history_groups": {
+          "BLK:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "COST:recent": {
+            "starts": 1,
+            "transitions": 0
+          },
+          "DIA:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "KMB:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "LMT:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "MCD:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "SHW:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "SLB:recent": {
+            "starts": 1,
+            "transitions": 512
+          },
+          "UNP:recent": {
+            "starts": 1,
+            "transitions": 512
+          }
+        },
+        "mode": "stock_etf_cycle_windows",
+        "starts": 9,
+        "transitions": 4096,
+        "year_counts": {
+          "decision_execution_year_pairs": {
+            "2012->2012": 247,
+            "2012->2013": 2,
+            "2013->2013": 726,
+            "2013->2014": 4,
+            "2014->2014": 938,
+            "2014->2015": 3,
+            "2015->2015": 715,
+            "2015->2016": 3,
+            "2016->2016": 596,
+            "2016->2017": 2,
+            "2017->2017": 348,
+            "2018->2018": 144,
+            "2018->2019": 1,
+            "2019->2019": 251,
+            "2019->2020": 1,
+            "2020->2020": 115
+          },
+          "decision_years": {
+            "2012": 249,
+            "2013": 730,
+            "2014": 941,
+            "2015": 718,
+            "2016": 598,
+            "2017": 348,
+            "2018": 145,
+            "2019": 252,
+            "2020": 115
+          },
+          "execution_years": {
+            "2012": 247,
+            "2013": 728,
+            "2014": 942,
+            "2015": 718,
+            "2016": 599,
+            "2017": 350,
+            "2018": 144,
+            "2019": 252,
+            "2020": 116
+          },
+          "measured": true,
+          "per_symbol": {
+            "BLK": {
+              "decision_years": {
+                "2012": 78,
+                "2013": 252,
+                "2014": 182
+              },
+              "execution_years": {
+                "2012": 77,
+                "2013": 252,
+                "2014": 183
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "COST": {
+              "decision_years": {},
+              "execution_years": {},
+              "starts": 1,
+              "transitions": 0
+            },
+            "DIA": {
+              "decision_years": {
+                "2015": 145,
+                "2016": 252,
+                "2017": 115
+              },
+              "execution_years": {
+                "2015": 144,
+                "2016": 252,
+                "2017": 116
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "KMB": {
+              "decision_years": {
+                "2015": 27,
+                "2016": 252,
+                "2017": 233
+              },
+              "execution_years": {
+                "2015": 26,
+                "2016": 252,
+                "2017": 234
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "LMT": {
+              "decision_years": {
+                "2013": 73,
+                "2014": 252,
+                "2015": 187
+              },
+              "execution_years": {
+                "2013": 72,
+                "2014": 252,
+                "2015": 188
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "MCD": {
+              "decision_years": {
+                "2013": 153,
+                "2014": 252,
+                "2015": 107
+              },
+              "execution_years": {
+                "2013": 152,
+                "2014": 252,
+                "2015": 108
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "SHW": {
+              "decision_years": {
+                "2014": 166,
+                "2015": 252,
+                "2016": 94
+              },
+              "execution_years": {
+                "2014": 165,
+                "2015": 252,
+                "2016": 95
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "SLB": {
+              "decision_years": {
+                "2012": 171,
+                "2013": 252,
+                "2014": 89
+              },
+              "execution_years": {
+                "2012": 170,
+                "2013": 252,
+                "2014": 90
+              },
+              "starts": 1,
+              "transitions": 512
+            },
+            "UNP": {
+              "decision_years": {
+                "2018": 145,
+                "2019": 252,
+                "2020": 115
+              },
+              "execution_years": {
+                "2018": 144,
+                "2019": 252,
+                "2020": 116
+              },
+              "starts": 1,
+              "transitions": 512
+            }
+          },
+          "start_years": {
+            "2012": 2,
+            "2013": 2,
+            "2014": 2,
+            "2015": 2,
+            "2018": 1
+          },
+          "version": 1
+        }
+      },
+      "seed": 11,
+      "source": "05427795d023e6a0dab828460ec9305721a1bd2177a866b51370dc9c9641f926",
+      "status": "complete",
+      "task_role": "tagged_routed",
+      "test_evaluated": false,
+      "type_manifest_sha256": "7c4a078fcec05be000d720e2d9625c6cd5d7c03b5d1d6502e46357f526ba1590"
+    }
+  ],
+  "compute_sources": {
+    "requirements.lock": "2ae6dde86a7576ad075bde08ec4523086e7dba76873b966b05e97faca5009142",
+    "src/rl_stocks/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/core/contracts.py": "d05b409d6cff52d865356fced078fb87e829fc4906fed1605e786c220fcfe202",
+    "src/rl_stocks/core/execution_provenance.py": "32526b286a33a84fd67ee50b06202cc85b03b8641aff2d1546e6caa38e130f40",
+    "src/rl_stocks/core/files.py": "8cd3138015b4a0fa135147bd89b64a078af742b7a92ae5189e0c7eda4d5e1285",
+    "src/rl_stocks/core/provenance.py": "3ab4293756736a7fc88596fc2bd6a2f136255c4a25de05e8eee7c10afd4f1e7f",
+    "src/rl_stocks/data/generation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/data/generation/clipping.py": "69f86ffe6fce3fa1fe60d093e245f4d7a5e66e9aff830c89f7512ad4bd7daa92",
+    "src/rl_stocks/data/generation/datasets.py": "77bc38e996b42c0e685acfdd01c3abea659537be11e43ea5dd9bfdc39e9cb8eb",
+    "src/rl_stocks/data/generation/history.py": "f4887c600a156b86b0393f2975738c2ec11031b65fefa3ad3c651311be3cb8e3",
+    "src/rl_stocks/data/generation/market_context.py": "0781908b31e33862d78005b3e0dd941e6bbb7673c486c9eaba8db3c251893a00",
+    "src/rl_stocks/data/generation/session_context.py": "bb0befdfde95f09fca73b799b42de3a8966d931ee4393172ee56ee25dfcc22fc",
+    "src/rl_stocks/data/generation/training_history.py": "f604b4cba52ec0a698f83ac8827caded831c23276f11639cba92824835c52a79",
+    "src/rl_stocks/data/generation/treasury_contract.py": "506d6ef08c1bcfd2b0f7e99b4e1624529150dfea16a2656fc61c64c4dfe9072b",
+    "src/rl_stocks/data/generation/treasury_payload.py": "131774091bbd288ee0ac9b301eb95889657619df880ef584a80d938320853c29",
+    "src/rl_stocks/data/generation/volatility_context.py": "896e0f991cdebedaaed91ddc1f742c4a07e34e2461d230041c36a756acee138e",
+    "src/rl_stocks/data/generation/volatility_payload.py": "3a260d139da7841e8c776a2cc66d09053f0c6f74efebd3694ae5e15534d4f5f4",
+    "src/rl_stocks/data/universe/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/data/universe/config.py": "2f62ca56997b1e7dfc65c0626d6813f89ad2b769f48e6fdf7886c27269a7f226",
+    "src/rl_stocks/data/universe/historical/__init__.py": "dd346d08b7d09d6d1be81f85ebb0c68e5a787a6f5cb1de8588740de4d88ac722",
+    "src/rl_stocks/data/universe/historical/coverage.py": "b203d42d8cabac7a958ac9dbb969d3b29423c25044102b2f96fc482b33002efd",
+    "src/rl_stocks/data/universe/historical/registry.py": "782461869552de8e3f02ca836d6b8b3b30aadb80c04e807e5931b3f43f96ce27",
+    "src/rl_stocks/data/universe/historical/schema.py": "ef99b6f47277868e9abc6ac2e9b10cee6525f1ff7d81b61fb63a490c6589f1e4",
+    "src/rl_stocks/data/universe/historical/storage.py": "154d2fe211bac6a211f315f4d730e65db501e34aa556179a24b374999939f316",
+    "src/rl_stocks/data/universe/sectors.py": "49480b142d37f15498415c12a01dc3148f5e3348e15ffebfa64d9d87188c8706",
+    "src/rl_stocks/data/universe/type_contract.py": "66f3b0f8866381f2248f2af17b0361618d0da2e0e0fe526238b8a9f8cc73509a",
+    "src/rl_stocks/data/validation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/data/validation/bars.py": "21a0892ad97891d6f7218725d32070a4848f19978c9deb66954413ba1890bf14",
+    "src/rl_stocks/data/validation/historical.py": "8cb0ca868489909e571c1393aa939ede06c3b37952083cf634a1eac6babefdbf",
+    "src/rl_stocks/data/validation/overlap.py": "4461e051bb34351cd29a55b626883fb5be2b5db00fcfde9e088bd7e1a2ab83c3",
+    "src/rl_stocks/data/validation/treasury_coverage.py": "5b5f7be9c5c3503f90e265357536d449477e67e0d5734cde6ab28279f189d643",
+    "src/rl_stocks/environment/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/environment/accounting/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/environment/accounting/portfolio.py": "3e5d539d3d4360edd9d72502a1401682377f9cbcc17e11fe8b6ca0858cb6f5a9",
+    "src/rl_stocks/environment/execution/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/environment/execution/simulator.py": "d9cf6d41d6ae9e829da0b63c63d112daeecad3bd27e4ca431bc98772b6a8a536",
+    "src/rl_stocks/environment/observations/state.py": "6bff469a519d3b681e6bccd40812caf398b20b25c52a85f1d20938d94e835085",
+    "src/rl_stocks/environment/observations/task.py": "fd989edf2cd03cec4ae6dee7c696aae730e467e257f6d1afc89c4b5604410ed6",
+    "src/rl_stocks/environment/rewards/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/environment/rewards/equity.py": "1256d26f3616c57a93c50cfebdcfa864c053553e8730aeb5f26047eeb66fd950",
+    "src/rl_stocks/environment/sampling/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/environment/sampling/regimes.py": "fccc65687ffded0db221d21fd74a75ceb550c6597359de52636eada23446c7ec",
+    "src/rl_stocks/environment/sampling/windows.py": "314a0fbee1589d02f47ee11de6a199444b0c69dbba84cef9426d8c46292919b2",
+    "src/rl_stocks/environment/sampling/years.py": "96daf333a46582c0ea1c5458aba6f49897dc5f5df60285b6b80ab0da6b275a0f",
+    "src/rl_stocks/environment/trading/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/environment/trading/env.py": "c4821e8530f7ed4f7464ccba60cbd53ca03321f2f4824f480edf617202a044e4",
+    "src/rl_stocks/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/evaluation/behavior.py": "706b6cf1f34d8486d6bc18a3ce8559e360c532b0701fd5ee6ac408ef06fe1238",
+    "src/rl_stocks/evaluation/critic_sensitivity.py": "61b565a1ffaef1dab6d5ed40a056c34b8a19119141e53eff3dfda3f2de20e854",
+    "src/rl_stocks/evaluation/direction.py": "bc74eded40f53a1f81c0594100a8d0a48d35dc5244d1eb593ac4b637899a6db8",
+    "src/rl_stocks/evaluation/exposure.py": "954f3dcd90b779d7a0ac5298b75c01ac0c02f5ad71266b98419e3637a6429e25",
+    "src/rl_stocks/evaluation/feasible_references.py": "21fbf397da3a56561a47c6c83460005d72f342e1f3f8f95b485b654790d7a603",
+    "src/rl_stocks/evaluation/metrics.py": "440e82d08f5785167cd9a1a0fab011b320b8b31712fe988fa810faed1c9de68e",
+    "src/rl_stocks/evaluation/offpolicy_fit.py": "1b2473772828b8140a0d72462d6d2f11d2927fe4a7a328b1892063608009605c",
+    "src/rl_stocks/evaluation/recorded_economics.py": "8d66a36f2d6979eea3b9ffc7f65ffe75ec5e995ead59920e62032942299ecf0a",
+    "src/rl_stocks/evaluation/recurrent_comparison_acceptance.py": "1908bf3f905c44049c4559c78ab462bf77c849d74d04dbac2669e09845b39ae9",
+    "src/rl_stocks/evaluation/recurrent_sac.py": "73320b96deefd01a14a5859a95d85b5b075460b53bf76b77bfe45d09734703c6",
+    "src/rl_stocks/evaluation/report_contract.py": "5001277cdf5559be4b42dce604b032c6332c7f17bfaf659c0fd374eefc38b060",
+    "src/rl_stocks/evaluation/rules.py": "938baa37007a35f751d38f8c43b3adc506cf2a84f0c932c815cd64eceff9a177",
+    "src/rl_stocks/evaluation/runner.py": "4a8de304ba683463d4b0b851b62f9e445f679b4b0461255e651e8be5331a540a",
+    "src/rl_stocks/evaluation/soft_consistency.py": "88c42d8cb1b7838ce06aa4715a81fc84dcd140d79861b55a1442b7c1fd55d4fc",
+    "src/rl_stocks/evaluation/task_conditioning.py": "1c3674dbbb53f55291c529587a81c2fd4940375282bbd15b40c41567476acb79",
+    "src/rl_stocks/evaluation/task_gates.py": "3adfba36cc3c218768ffd9d26f6a5bf53345beb77bd65dd2718f4552d3cd0dd7",
+    "src/rl_stocks/evaluation/training_fit.py": "d9a3d0ddf78a222e8919d9c3a6e48bc7b07dfb8f42137791e3a8e6aad790affe",
+    "src/rl_stocks/features/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/fundamentals/__init__.py": "56c4bd702205e11af9637ce2fec37582e56c3cb6353d32da48fa8c4a1fdc816a",
+    "src/rl_stocks/features/fundamentals/balance.py": "567de553a149a32261e6f61dfbdc764cc997341e7728fbe62f5e0eddc262cffd",
+    "src/rl_stocks/features/fundamentals/history.py": "701bf205b5d58af3073f50ee7ffe34fa62ea542c5e091447a686f7aa6a8974a5",
+    "src/rl_stocks/features/fundamentals/snapshot.py": "8a848c405058b1a2213c95da27cee24bfb1d5b55d35e8e3271b4b7052c200891",
+    "src/rl_stocks/features/market/__init__.py": "71899215635a0dee31a55a1600b4ad40cf09603d53c14e72bd34a0abb9f80b7b",
+    "src/rl_stocks/features/market/context.py": "531d18ff05b7fcda27b76d099a9d0a60880d88677c5796353136a1a766449b14",
+    "src/rl_stocks/features/market_structure/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/market_structure/supply_demand.py": "1b2233659a92f41e357cbee308e64a6f95bc920dbaec975375290643c013d579",
+    "src/rl_stocks/features/momentum/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/momentum/rsi.py": "bedb5754ab159df00e426719dd13363e29841325269e0498434458054c17af56",
+    "src/rl_stocks/features/price/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/price/indicators.py": "3b2c20cf63a8980791ad5565d83af666d6b5de8561de375d01f30a611bdf85ca",
+    "src/rl_stocks/features/price/sessions.py": "6318d7a90d178915759f103302540ad73ab84d33a087fd7ebaae50b1a05f1ad2",
+    "src/rl_stocks/features/registry/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/registry/assemble.py": "f5d950b2f0bbc11a07c5d9e8236a4eac666747442ea560a3e841495ff346a555",
+    "src/rl_stocks/features/sectors/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/sectors/rotation.py": "1f8f9408b71300326acbfe9dcfd762703540a7e99f08b85bbd1f33ad397d0e2d",
+    "src/rl_stocks/features/timeframes/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/timeframes/aggregation.py": "780f274a0390d7b93129fa2df300dfcf03107c0fc24f2ca562c3e9d225989e0d",
+    "src/rl_stocks/features/timeframes/weekly.py": "cf4bc1546e39c9461046201fe22f7604e5a98c097cd8ec07ff5982befe6b0dfe",
+    "src/rl_stocks/features/treasury_context.py": "28e09182663c5663317d79ccf71a6f7356802f9c0ffb98d51679d90fcc53cc2d",
+    "src/rl_stocks/features/trend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/trend/context.py": "4223d735f0abffb257b1e887e47c3765ae7043c502a82ef7d542ee0beb996fb4",
+    "src/rl_stocks/features/trend/ema.py": "b478b4234c10548ebc056a278e1e818a1e9956e4c60260ae9ec9a3c5ee5594a7",
+    "src/rl_stocks/features/volatility_context.py": "63f54c2a85f90b3aeda589e747254776829ea8193ca1ba29bfb7bd7b17cd612b",
+    "src/rl_stocks/features/volume/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/features/volume/relative.py": "3662f9ec5f9c3e023203a0b50c55d4127dde7384637903a00c077fbf4db3db06",
+    "src/rl_stocks/risk/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/risk/decisions.py": "cbed14aaf510eb0c6e3c064862991b3e46abdd62be1d897e11554bb46d991b09",
+    "src/rl_stocks/risk/exposure.py": "a551f29620d94fc8182ebc225fef77800e6a2bdddfea9161c678f4b4b56168aa",
+    "src/rl_stocks/rl/registry/factory.py": "728e149c3a522cc492a087137d8129dfac920c8de1ccfc0516db81d481856393",
+    "src/rl_stocks/rl/sac/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rl_stocks/rl/sac/config.py": "a4632964e06b18330443ef9e3f2feec6e3339a71437baff50ee4a8702fac4e00",
+    "src/rl_stocks/rl/sac/task_factory.py": "0fdcdec02cfed935557bd321eac05b9fe8395891234358a726297cd59db3433f",
+    "src/rl_stocks/rl/sac/task_policy.py": "c0520d0db67b83b18d8f88cfea427ec19857aa400f05a9819f725ef9bdd07a06",
+    "src/rl_stocks/training/task_conditioning.py": "4bb13da51b9a87533086fb0684893f915e69c73e7cc22b2b8cf3acd560dcb75e",
+    "src/rl_stocks/training/task_environment.py": "c546128260b9825e5e852bb83fddeaecb85e327e08e63774277a8f201ab1f8ff",
+    "src/rl_stocks/training/task_optimizer.py": "711d81af769612c44f43cdd96a72512ced29330964d40e219a68cbb668011bae"
+  },
+  "projection": {
+    "roles": {
+      "masked_shared": {
+        "projected_allocation_seconds": 6783,
+        "projected_verification_seconds": 1225,
+        "within_verification_limit": true,
+        "within_two_hour_limit": true
+      },
+      "tagged_shared": {
+        "projected_allocation_seconds": 7006,
+        "projected_verification_seconds": 1242,
+        "within_verification_limit": true,
+        "within_two_hour_limit": true
+      },
+      "tagged_routed": {
+        "projected_allocation_seconds": 7903,
+        "projected_verification_seconds": 1182,
+        "within_verification_limit": true,
+        "within_two_hour_limit": false
+      }
+    },
+    "projected_units": 0.5423,
+    "within_allowance": true,
+    "execution_admitted": false,
+    "margin": 1.5,
+    "setup_seconds": 900,
+    "retrieval_cleanup_seconds": 600,
+    "performance_promotion": false
+  },
+  "project_units": 39.97640976573895,
+  "study_start_units": 39.92585919127071,
+  "study_units": 0.05055057446823952,
+  "observed_rate": 0.08,
+  "cleanup_verified": true,
+  "performance_promotion": false
+}
