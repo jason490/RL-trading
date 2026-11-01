@@ -344,3 +344,15 @@ The [cleanup receipt](../results/task-conditioning-2026-10-31/source-progress-cl
 removes only the142,610-byte progress file after byte equality with the complete
 final receipt and all164 protected inputs are reverified. Every raw source,
 scientific receipt, claim and original stop is retained.
+
+## Two exceptional stock source selections
+
+`collect_task_exception_sources.py` fixes ABBV's January2,2013 spinoff8-K and
+Disney's December2,2009 older-registrant10-K. It verifies the two exact selected
+rows against checksum-bounded cached master indexes without broadening the
+financial master reader's default form scope. Each case collects only its original
+index and sequence1 typed primary, at most four operations total. Original dates
+must agree with master metadata, and conservative availability must precede each
+first training session. One persistent claim prevents automatic retry; partial
+or rejected cases remain. Collection alone does not verify either company's
+historical traded-security mapping or admit metadata.
