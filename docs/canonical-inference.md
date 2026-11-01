@@ -49,11 +49,55 @@ a600-digit perturbation, subnormals, odd symmetry, reference tanh examples, over
 nonfinite input and isolation from ambient precision/rounding/traps/exponent limits.
 These checks do not constitute cross-machine model acceptance.
 
-Actor weight export, schema-checked loading, ReLU/output scaling, deterministic
-stock/ETF routing, frozen bundle checksums and actual saved-model/episode replay are
-not implemented for this arithmetic path yet. Latency and supported Colab default
-Python must be checked before any allocation. The execution variant and its gates
-must be declared before reading its new evaluation outcomes. Original native reports
-must not be relabeled as reference-arithmetic results or used to claim exact parity
-with this different numerical definition. Any later training remains Colab-only
-and shares the unchanged project ledger and account protection.
+## Portable task actor export and loading
+
+`inference/canonical_export.py:export_actor(source, output)` loads a trusted,
+task-owned SB3 SAC checkpoint on CPU and writes a fresh JSON file. Loading a SAC
+ZIP uses pickle: this exporter is not a safe reader for untrusted downloads.
+It checks the actual TaskSACPolicy/TaskActor types, flattened22 input, two64-wide
+Linear/ReLU layers, four outputs, normalized Box bounds and finite binary32 actor
+state. Routed actors export separate stock/ETF mean heads. Stochastic log-standard
+deviation heads are not used in deterministic prediction. The exporter preserves
+Python, NumPy and CPU Torch RNG state; it performs no optimization or fitting.
+Existing output files are never overwritten.
+
+`inference/canonical_actor.py:CanonicalActor.load(path, expected_source=...,
+expected_role=...)` requires only the standard library. It checks the envelope
+SHA256, exact schema fields, dimensions, finite hexadecimal IEEE binary32 weights,
+role and optional caller-supplied source-checkpoint identity. JSON duplicate keys
+and files larger than512KiB are rejected. The body identifies schema
+`canonical-task-actor-v1` and the arithmetic contract above. SHA256 detects content
+changes; it does not authenticate who produced a file. Callers must pin a trusted
+expected identity. Internal decoded layers are immutable tuples; manifest views
+are independent copies.
+
+Prediction consumes one already-preprocessed22-coordinate vector. Masked actors
+require type0; tagged actors require stock−1 or ETF+1. Each hidden layer applies
+exact-dot/one-round arithmetic followed by ReLU. The selected mean head uses
+certified tanh, then the explicit SB3 Box unscale formula with binary32 rounding
+after each add/multiply. This scaling is recorded as
+`sb3-box-minus-one-plus-one-binary32-v1`; it is not assumed to be a bitwise identity
+even for Box[-1,1]. No RNG, normalization updates, native BLAS or Torch prediction
+occurs. This is an actor component, not a complete frozen research bundle: callers
+must still supply the correct frozen preprocessing, causal instrument registry,
+action-execution rules and episode state.
+
+Tests cover shared/routed heads, exact cancellation through hidden layers, ReLU,
+output scaling, checksum/source/role rejection, malformed geometry/nonfinite
+weights, duplicate fields and size limits, immutable views, all three trusted
+checkpoint exports, preserved RNG and no-local-optimization guards. Fresh Python
+subprocesses produce identical output bits with different native backend selector
+environments and hostile ambient Decimal settings; those subprocesses assert
+neither Torch nor NumPy was imported. These are host tests, not cross-machine
+Colab acceptance or proof of native Torch parity.
+
+## Remaining integration and research gates
+
+Full frozen bundle integration, saved-model episode replay, throughput profiling
+and actual cross-machine validation remain pending. The execution variant and its
+gates must be declared before reading its new evaluation outcomes. Latency and
+Colab default Python must be checked before allocation. Original native reports
+remain unchanged and must not be relabeled as reference-arithmetic results. No
+new performance conclusion or native-study restart is authorized by these unit
+checks. Any later training remains Colab-only and shares the unchanged project
+ledger and account protection.
