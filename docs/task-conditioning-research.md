@@ -512,3 +512,19 @@ baseline and aggregate account/project protection, uses bounded artifact downloa
 and disables execution retry. Missing immutable inputs or incomplete smoke evidence
 reject admission before allocation. Actual profile execution remains pending the
 routed smoke's successful completion and cleanup.
+
+## Complete learned smoke acceptance — 2026-11-01
+
+All three roles completed1024 transitions,960 updates per optimizer, physical
+checkpoint/replay restoration and exact frozen prediction parity across111 symbols.
+The routed smoke confirms actual stock and ETF actor/critic head gradients. Final
+training-window returns are masked+2.23%, tagged shared−7.30%, routed−2.08%; these
+short fitted runs are engineering acceptance, not evidence selecting a winner or
+opening development. The combined `complete-smoke-acceptance.json` retains each
+archive checksum, source, curve, head activity and acceptance scope.
+
+All three owned sessions are stopped; official usage reports zero assignments and
+548.25 account units. Recorded cumulative project usage is39.960425 units, including
+all setup/failures/retrieval. Shared task-study consumption is0.034566 of2 units.
+The original failed fleet records remain retained. Research-geometry profiling is
+now admitted;100k training and development access remain gated.

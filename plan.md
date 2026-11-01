@@ -3217,3 +3217,12 @@ No training or Colab allocation accompanied admission. Next are real-data untrai
 parity checks and guarded Colab smoke transport/archive acceptance, followed by
 actual profiling. The fixed performance gates and closed prior families remain
 unchanged.
+
+### Task-conditioned SAC learned smoke complete — 2026-11-01
+
+All three fixed roles pass1024-transition Colab CPU learning, saved optimizer/replay
+inspection and111-symbol frozen parity. Routed heads receive actual gradients.
+All owned cleanup verified; project39.960425/150, task-family0.034566/2 units.
+Retained archives and compact acceptance are under results/task-conditioning-2026-10-31.
+Research-geometry timing profile is next; no100k screen, development promotion or
+retired-test access is admitted by these smoke results.

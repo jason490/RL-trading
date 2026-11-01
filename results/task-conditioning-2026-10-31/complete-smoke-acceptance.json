@@ -1,0 +1,176 @@
+{
+  "roles": [
+    {
+      "role": "masked_shared",
+      "session": "rl-stocks-cpu-66d4269bcf62",
+      "archive": "artifacts/colab/rl-stocks-cpu-66d4269bcf62/artifacts.tar.gz",
+      "archive_sha256": "35492cbfb09c1384a17f9ba2e3c214c4d2ead66d022c1518684ca12e15a6266e",
+      "source": {
+        "dirty": "",
+        "revision": "1de24722165afb55a446b59a2ccaf3ce2ce1ea77"
+      },
+      "updates": {
+        "actor": 960,
+        "critic": 960,
+        "entropy": 960
+      },
+      "frozen_symbols": 111,
+      "active_gradient_names": [
+        "actor/latent_pi.0.bias",
+        "actor/latent_pi.0.weight",
+        "actor/latent_pi.2.bias",
+        "actor/latent_pi.2.weight",
+        "actor/log_std.bias",
+        "actor/log_std.weight",
+        "actor/mu.bias",
+        "actor/mu.weight",
+        "critic/qf0.0.bias",
+        "critic/qf0.0.weight",
+        "critic/qf0.2.bias",
+        "critic/qf0.2.weight",
+        "critic/qf0.4.bias",
+        "critic/qf0.4.weight",
+        "critic/qf1.0.bias",
+        "critic/qf1.0.weight",
+        "critic/qf1.2.bias",
+        "critic/qf1.2.weight",
+        "critic/qf1.4.bias",
+        "critic/qf1.4.weight",
+        "entropy/log_ent_coef"
+      ],
+      "inclusive_elapsed_seconds": 149.445081425,
+      "curve": [
+        {
+          "steps": 512,
+          "return_pct": -42.22825570385656,
+          "elapsed_seconds": 68.28602298400006
+        },
+        {
+          "steps": 1024,
+          "return_pct": 2.2328643024753516,
+          "elapsed_seconds": 118.33271558800004
+        }
+      ]
+    },
+    {
+      "role": "tagged_shared",
+      "session": "rl-stocks-cpu-7493c4c696b2",
+      "archive": "artifacts/colab/rl-stocks-cpu-7493c4c696b2/artifacts.tar.gz",
+      "archive_sha256": "dfd0a6c855149f344536ea85d18ab97dfb14f9af24c018ba4cf5dfaa15a319ae",
+      "source": {
+        "dirty": "",
+        "revision": "17d6d6cd1750c9f07f6ce60f1a813435e7def999"
+      },
+      "updates": {
+        "actor": 960,
+        "critic": 960,
+        "entropy": 960
+      },
+      "frozen_symbols": 111,
+      "active_gradient_names": [
+        "actor/latent_pi.0.bias",
+        "actor/latent_pi.0.weight",
+        "actor/latent_pi.2.bias",
+        "actor/latent_pi.2.weight",
+        "actor/log_std.bias",
+        "actor/log_std.weight",
+        "actor/mu.bias",
+        "actor/mu.weight",
+        "critic/qf0.0.bias",
+        "critic/qf0.0.weight",
+        "critic/qf0.2.bias",
+        "critic/qf0.2.weight",
+        "critic/qf0.4.bias",
+        "critic/qf0.4.weight",
+        "critic/qf1.0.bias",
+        "critic/qf1.0.weight",
+        "critic/qf1.2.bias",
+        "critic/qf1.2.weight",
+        "critic/qf1.4.bias",
+        "critic/qf1.4.weight",
+        "entropy/log_ent_coef"
+      ],
+      "inclusive_elapsed_seconds": 137.42510973999998,
+      "curve": [
+        {
+          "steps": 512,
+          "return_pct": -31.614442406714442,
+          "elapsed_seconds": 59.066550079000024
+        },
+        {
+          "steps": 1024,
+          "return_pct": -7.299791821641327,
+          "elapsed_seconds": 107.13948344099998
+        }
+      ]
+    },
+    {
+      "role": "tagged_routed",
+      "session": "rl-stocks-cpu-c4d7b85c99ed",
+      "archive": "artifacts/colab/rl-stocks-cpu-c4d7b85c99ed/artifacts.tar.gz",
+      "archive_sha256": "41d4233ad134f22bfa4963a564e031168dfab3ebc7cbf56d696c999f1567a136",
+      "source": {
+        "dirty": "",
+        "revision": "fa1ef968d77df454a9cd7601484256da4e608a60"
+      },
+      "updates": {
+        "actor": 960,
+        "critic": 960,
+        "entropy": 960
+      },
+      "frozen_symbols": 111,
+      "active_gradient_names": [
+        "actor/latent_pi.0.bias",
+        "actor/latent_pi.0.weight",
+        "actor/latent_pi.2.bias",
+        "actor/latent_pi.2.weight",
+        "actor/log_std.etf.bias",
+        "actor/log_std.etf.weight",
+        "actor/log_std.stock.bias",
+        "actor/log_std.stock.weight",
+        "actor/mu.etf.bias",
+        "actor/mu.etf.weight",
+        "actor/mu.stock.bias",
+        "actor/mu.stock.weight",
+        "critic/qf0.0.bias",
+        "critic/qf0.0.weight",
+        "critic/qf0.2.bias",
+        "critic/qf0.2.weight",
+        "critic/qf0.4.etf.bias",
+        "critic/qf0.4.etf.weight",
+        "critic/qf0.4.stock.bias",
+        "critic/qf0.4.stock.weight",
+        "critic/qf1.0.bias",
+        "critic/qf1.0.weight",
+        "critic/qf1.2.bias",
+        "critic/qf1.2.weight",
+        "critic/qf1.4.etf.bias",
+        "critic/qf1.4.etf.weight",
+        "critic/qf1.4.stock.bias",
+        "critic/qf1.4.stock.weight",
+        "entropy/log_ent_coef"
+      ],
+      "inclusive_elapsed_seconds": 171.09685814399995,
+      "curve": [
+        {
+          "steps": 512,
+          "return_pct": -30.560119179564133,
+          "elapsed_seconds": 82.6873466269999
+        },
+        {
+          "steps": 1024,
+          "return_pct": -2.0839923680517702,
+          "elapsed_seconds": 144.41121861700003
+        }
+      ]
+    }
+  ],
+  "physical_acceptance_verified": true,
+  "all_owned_cleanup_verified": true,
+  "project_units": 39.96042547087607,
+  "study_start_units": 39.92585919127071,
+  "training_only": true,
+  "development_allowed": false,
+  "research_profile_allowed": true,
+  "performance_promotion": false
+}
