@@ -315,13 +315,13 @@ class Fleet:
         self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json')
         self.allocation_plan_seconds=None
         if any(t['plan'].get('version') == 44 for t in self.tasks):
-            from rl_stocks.training.task_runtime import shared_budget
+            from rl_stocks.training.task_runtime import shared_budget, validate_smoke_roles
             roles = [t['plan'].get('task_smoke', {}).get('task_role') for t in self.tasks]
-            if (len(self.tasks) != 3 or any(t['plan'].get('version') != 44 for t in self.tasks)
-                    or set(roles) != {'masked_shared', 'tagged_shared', 'tagged_routed'}):
-                raise ValueError('task smoke requires exactly the three fixed roles')
+            if any(t['plan'].get('version') != 44 for t in self.tasks):
+                raise ValueError('dedicated task smoke fleet required')
+            validate_smoke_roles(self.root, self.budget.ledger, roles)
             study_limit, study_start = shared_budget(self.budget.ledger, study_limit, study_start)
-            self.allocation_plan_seconds = [7200] * 3
+            self.allocation_plan_seconds = [7200] * len(self.tasks)
         if any(t['plan'].get('version')==43 for t in self.tasks):
             from rl_stocks.training.recurrent_comparison import protocol
             from rl_stocks.training.recurrent_screen_spec import verify_profile,specification

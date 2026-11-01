@@ -45,3 +45,14 @@ def test_existing_budget_stop_and_account_floor_are_not_cleared(tmp_path, key, v
     with pytest.raises(BudgetStop, match='protections'):
         shared_budget(item)
     assert not (tmp_path / 'task-conditioning-budget-v1.json').exists()
+
+
+def test_only_complete_initial_matrix_or_exact_reviewed_suffix(tmp_path):
+    from rl_stocks.training.task_runtime import validate_smoke_roles
+    item = ledger(tmp_path)
+    validate_smoke_roles(tmp_path, item, ['masked_shared', 'tagged_shared', 'tagged_routed'])
+    for roles in (['masked_shared'], ['tagged_routed'], ['tagged_shared'] * 3):
+        with pytest.raises(ValueError, match='matrix'):
+            validate_smoke_roles(tmp_path, item, roles)
+    with pytest.raises(FileNotFoundError):
+        validate_smoke_roles(tmp_path, item, ['tagged_shared', 'tagged_routed'])

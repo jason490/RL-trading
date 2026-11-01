@@ -429,3 +429,13 @@ Owned-session cleanup was verified. Tagged shared/routed roles were never alloca
 a reviewed continuation must account for the accepted original role and retain its
 charges rather than restarting the complete fleet. These smoke returns do not
 admit performance or the full100k screen.
+
+## Reviewed unallocated suffix
+
+The continuation admits exactly tagged shared and tagged routed after rechecking
+the pinned masked-role acceptance receipt and archive, physical saved state,
+original stopped ownership, original failed fleet state and allocation claim.
+It rejects any already-claimed suffix role and keeps the original two-unit study
+baseline. It does not retry masked training or overwrite the failed fleet record.
+A separate fleet state records the two never-allocated roles; each still receives
+one allocation with ordinary shared metering, deadlines and verified cleanup.
