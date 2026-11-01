@@ -541,3 +541,21 @@ margin, and must fit the original remaining two-unit allowance. A positive relia
 rate is required even for CPU. Any failure rejects execution; no duration/allowance
 is enlarged automatically. This arithmetic is not physical profile acceptance or
 performance evidence, and has not admitted any100k run yet.
+
+## Fixed100k training cell implementation
+
+`training/task_screen_worker.py` implements an unregistered seed11 cell using the
+unchanged research SAC/sampler/simulator. It saves every10k checkpoint after the
+actual optimizer update, durably exports weights before replay, retains full
+training-window replay JSON and compact incremental curves, and selects only from
+the complete ordered training curve. Each checkpoint evaluation must leave policy,
+optimizer and entropy state unchanged. All111 training symbols require measured
+starts/transitions; routed actor/critic heads require actual nonzero gradients.
+
+It retains99000 optimizer updates, final replay and exact saved-state restoration,
+selected/final training reports and separate frozen bundles, plus a final training
+cell for the three-role fitted admission gate. No development/test evaluation or
+promotion is performed. Local execution rejects before creating outputs. Relevant
+unit checks cover the guard, selection and existing optimizer/gate machinery; actual
+100k positive-path execution remains unrun. Remote allocation/physical full-run
+acceptance and measured profile binding remain to implement before any screen run.
