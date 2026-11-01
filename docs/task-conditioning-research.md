@@ -373,3 +373,21 @@ metering and owned-session teardown apply. Tests cover persistent charges, allow
 exhaustion, attempted reset, invalid allowance, role claims and existing protections.
 The pre-allocation staging guard remains until physical archive acceptance is
 implemented. These tests use temporary ledgers; the project ledger was not changed.
+
+## Downloaded smoke state verification — 2026-11-01
+
+The version44 archive verifier allowlists checkpoint/replay/report and frozen
+bundle files, bounds expanded size to256MiB and member count to40, and rejects
+missing, duplicate, linked or unsafe entries before extraction. It binds completion
+to the CPU/default-kernel plan, dataset and clean source receipt. Physical inspection
+loads the initial/512/1024 SAC states, checks actual Adam ownership/moments/counters,
+finite parameters and changed final weights, verifies1024 replay transitions and
+type encoding, and compares the final policy to the checksummed frozen model and
+its predictions across the reviewed registry. A remote success flag cannot replace
+these checks. Only trusted task-owned downloads are candidates for SB3 loading.
+
+Rejection tests include an untrained model paired with a fabricated successful
+run record, incomplete downloads, incorrect dataset, links, traversal and duplicate
+members. Learned positive-path acceptance still requires actual Colab output;
+local training is prohibited. Allocation remains staged off pending final controller/transport review; the first
+owned smoke must supply learned positive-path acceptance before research training.
