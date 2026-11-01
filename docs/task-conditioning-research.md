@@ -326,3 +326,20 @@ No training or Colab allocation accompanied admission. Next are real-data untrai
 parity checks and guarded Colab smoke transport/archive acceptance, followed by
 actual profiling. The fixed performance gates and closed prior families remain
 unchanged.
+
+## Real-data inference acceptance — 2026-11-01
+
+`scripts/check_task_real_data.py --output artifacts/<fresh-name>` loads the pinned
+111-instrument dataset and reviewed type manifest with optimization APIs disabled.
+The retained `real-data-untrained-acceptance.json` records exact save/load frozen
+prediction parity for all111 classifications in each of the three roles, using a
+real normalized reset observation as a common input. It does not replay all symbols'
+price histories or demonstrate learned performance. Policy state, preprocessing and
+the dataset remain unchanged, and learned transitions are zero. Parameter counts
+including target critics are29,964 for either shared role and30,744 for routed.
+
+Actual execution passed on November1. Frozen bundles remain under
+`artifacts/task-real-data-acceptance-v1`; this does not replace learned Colab smoke
+acceptance. The guard test also verifies that a handled interruption restores the
+original local APIs. Remote transport, archive verification and measured profiling
+remain pending before the fixed100k comparison.
