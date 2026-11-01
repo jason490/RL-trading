@@ -80,6 +80,8 @@ def validate_tasks(tasks,root):
         if set(task)!={'id','dataset','plan'} or not re.fullmatch(r'[A-Za-z0-9_-]+',task['id']) or task['id'] in seen:
             raise ValueError('unique safe task IDs and exact task fields required')
         validate_plan(task['plan']);plan=task['plan']
+        if plan.get('version') == 46:
+            raise ValueError('task screen awaits accepted profile binding and asynchronous artifact verification')
         if plan['accelerator']=='A100' and not any(not j['smoke'] for j in plan['jobs']):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()

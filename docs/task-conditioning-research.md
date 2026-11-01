@@ -574,3 +574,16 @@ with untrained model files and confirms rejection from saved optimizer counters.
 Actual100k positive-path acceptance remains unrun. This verifier can take several
 minutes and must run asynchronously under the fleet's continuing minute metering;
 remote transport/async registration remain pending before allocation admission.
+
+## Full-cell transport contract
+
+Version46 fixes seed11/CPU/100k and requires a profile-acceptance identity; canonical
+validation rejects extended steps/deadlines. Fleet allocation is still explicitly
+blocked pending measured profile binding and async verifier wiring. The transport
+extractor requires all ten models and full fitted replays, final replay, curve,
+selected/final reports with JSON sidecars and both frozen bundles. It rejects extra,
+missing, duplicate, unsafe/linked members and mismatched completion provenance
+before extraction, bounded to64 members and1GiB expanded. The higher byte bound
+accounts for the measured approximately51MB full26-symbol JSON replay per checkpoint
+and retained selected/final copies. Transport acceptance does not accept performance;
+independent checkpoint replay remains mandatory. No100k job has run.

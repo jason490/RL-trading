@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 45:
+    if plan.get('version') == 46:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected = task_screen_plan(plan['task_screen']['task_role'], plan['profile_acceptance_sha256'])
+        except (KeyError, TypeError):
+            raise ValueError('malformed task screen plan') from None
+        if canonical(plan) != canonical(expected):
+            raise ValueError('fixed profile-bound100k task screen required')
+    elif plan.get('version') == 45:
         from rl_stocks.core.contracts import canonical
         if canonical(plan) != canonical(task_profile_plan()):
             raise ValueError('fixed three-role task research profile required')
@@ -896,4 +904,15 @@ def task_profile_plan():
     plan['jobs'] = [dict(algorithm='task_sac_profile', task_role=role, device='cpu',
                         smoke=False, seed=11, steps=PROFILE_STEPS)
                     for role in plan['task_profile_roles']]
+    return plan
+
+
+def task_screen_plan(task_role, profile_acceptance_sha256):
+    import re
+    if not isinstance(profile_acceptance_sha256, str) or not re.fullmatch(r'[a-f0-9]{64}', profile_acceptance_sha256):
+        raise ValueError('explicit profile acceptance identity required')
+    plan = task_smoke_plan(task_role)
+    plan['task_screen'] = plan.pop('task_smoke')
+    plan.update(version=46, profile_acceptance_sha256=profile_acceptance_sha256)
+    plan['jobs'] = [dict(algorithm='task_sac_screen', device='cpu', smoke=False, seed=11, steps=100000)]
     return plan
