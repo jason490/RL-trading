@@ -54,24 +54,36 @@ def claim_smoke(ledger, session, task_role):
 
 
 def validate_smoke_roles(root, ledger, roles):
-    """Admit full initial matrix or the reviewed unallocated suffix, never a retry."""
+    """Require all roles initially, or physically accepted prefix plus unclaimed suffix."""
     from pathlib import Path
+    ordered = ['masked_shared', 'tagged_shared', 'tagged_routed']
+    if roles not in (ordered, ordered[1:], ordered[2:]):
+        raise ValueError('complete initial task matrix or reviewed unallocated suffix required')
+    runtime = ledger.path.resolve().parent
+    if any((runtime / f'task-conditioning-smoke-{role}-allocation-v1.json').exists() for role in roles):
+        raise ValueError('requested smoke role already claimed; no automatic retry')
+    reviews = [
+        ('masked_shared', 'masked-smoke-acceptance.json',
+         '9d3c9082f21e36a351d26ff25ebae794b3091b77731b273f7cb3ab8a183ba14e',
+         'task-smoke-fleet-v1.json'),
+        ('tagged_shared', 'tagged-shared-smoke-acceptance.json',
+         'b4663701d29bee76b2adfa7e13d6dbd68efd739e5c04a292c7f15702e2d2f388',
+         'task-smoke-fleet-suffix-v1.json')]
+    for role, receipt_name, receipt_sha, state_name in reviews[:3 - len(roles)]:
+        _verify_stopped_smoke(Path(root), ledger, role, receipt_name, receipt_sha, state_name)
+
+
+def _verify_stopped_smoke(root, ledger, role, receipt_name, receipt_sha, state_name):
     import hashlib
     from rl_stocks.runtime.colab.jobs import task_smoke_plan
     from rl_stocks.runtime.colab.task_smoke_artifacts import validate_task_smoke_archive
-    expected = {'masked_shared', 'tagged_shared', 'tagged_routed'}
-    if len(roles) == 3 and set(roles) == expected:
-        return
-    if len(roles) != 2 or set(roles) != expected - {'masked_shared'}:
-        raise ValueError('complete initial task matrix or reviewed unallocated suffix required')
-    root = Path(root)
-    receipt_path = root / 'results/task-conditioning-2026-10-31/masked-smoke-acceptance.json'
-    if hashlib.sha256(receipt_path.read_bytes()).hexdigest() != '9d3c9082f21e36a351d26ff25ebae794b3091b77731b273f7cb3ab8a183ba14e':
-        raise ValueError('exact retained masked acceptance review required')
+    receipt_path = root / 'results/task-conditioning-2026-10-31' / receipt_name
+    if hashlib.sha256(receipt_path.read_bytes()).hexdigest() != receipt_sha:
+        raise ValueError('exact retained acceptance review required')
     receipt = json.loads(receipt_path.read_text())
     runtime = ledger.path.resolve().parent
-    old = json.loads((runtime / 'task-smoke-fleet-v1.json').read_text())
-    claim = json.loads((runtime / 'task-conditioning-smoke-masked_shared-allocation-v1.json').read_text())
+    old = json.loads((runtime / state_name).read_text())
+    claim = json.loads((runtime / f'task-conditioning-smoke-{role}-allocation-v1.json').read_text())
     session = receipt['session']
     attempts = [a for a in ledger.value['attempts'] if a['session'] == receipt['original_fleet']]
     if (len(attempts) != 1 or attempts[0]['status'] != 'stopped'
@@ -79,15 +91,14 @@ def validate_smoke_roles(root, ledger, roles):
             or attempts[0]['children'][session]['status'] != 'stopped'
             or old.get('fleet') != receipt['original_fleet'] or old.get('status') != 'failed'
             or old.get('cleanup_verified') is not True or claim.get('session') != session
-            or claim.get('task_role') != 'masked_shared' or claim.get('protocol_sha256') != PROTOCOL_SHA256
-            or any((runtime / f'task-conditioning-smoke-{role}-allocation-v1.json').exists() for role in roles)):
-        raise ValueError('preserved original failure, stopped ownership and unallocated suffix required')
+            or claim.get('task_role') != role or claim.get('protocol_sha256') != PROTOCOL_SHA256):
+        raise ValueError('preserved original failure and stopped ownership required')
     archive = root / receipt['archive']
     if hashlib.sha256(archive.read_bytes()).hexdigest() != receipt['archive_sha256']:
         raise ValueError('original accepted archive changed')
-    plan = task_smoke_plan('masked_shared')
+    plan = task_smoke_plan(role)
     proof = validate_task_smoke_archive(archive, plan, plan['dataset_contract']['identity'])
     if (len(proof) != len(receipt['physical_acceptance'])
             or any(any(actual.get(key) != value for key, value in expected.items())
                    for actual, expected in zip(proof, receipt['physical_acceptance']))):
-        raise ValueError('original physical masked acceptance required')
+        raise ValueError('original physical acceptance required')

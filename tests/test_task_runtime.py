@@ -51,8 +51,16 @@ def test_only_complete_initial_matrix_or_exact_reviewed_suffix(tmp_path):
     from rl_stocks.training.task_runtime import validate_smoke_roles
     item = ledger(tmp_path)
     validate_smoke_roles(tmp_path, item, ['masked_shared', 'tagged_shared', 'tagged_routed'])
-    for roles in (['masked_shared'], ['tagged_routed'], ['tagged_shared'] * 3):
+    for roles in (['masked_shared'], ['tagged_shared'], ['tagged_shared'] * 3):
         with pytest.raises(ValueError, match='matrix'):
             validate_smoke_roles(tmp_path, item, roles)
     with pytest.raises(FileNotFoundError):
         validate_smoke_roles(tmp_path, item, ['tagged_shared', 'tagged_routed'])
+
+
+def test_claimed_role_cannot_reenter_complete_initial_matrix(tmp_path):
+    from rl_stocks.training.task_runtime import validate_smoke_roles
+    item = ledger(tmp_path)
+    claim_smoke(item, 'rl-stocks-cpu-012345abcdef', 'masked_shared')
+    with pytest.raises(ValueError, match='already claimed'):
+        validate_smoke_roles(tmp_path, item, ['masked_shared', 'tagged_shared', 'tagged_routed'])

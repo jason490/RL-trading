@@ -461,3 +461,10 @@ additional descriptive field, while every original acceptance field is rechecked
 same retained archive. No training was retried or numerical/performance checks
 relaxed. Original failed fleet state and claims stay intact; cleanup was verified.
 The routed role remains unallocated and requires its own reviewed continuation.
+
+The final routed-only continuation rechecks both pinned accepted-prefix receipts,
+archive checksums, physical saved state, stopped ledger ownership and preserved
+failed fleet states. Requested roles must form the exact remaining ordered suffix
+and have no allocation claims. Even a complete initial matrix now rejects an
+already-claimed role before allocation. No accepted smoke is repeated; all study
+charges and the original baseline remain in force.
