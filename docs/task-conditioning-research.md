@@ -286,3 +286,19 @@ shared feature extractor or alternate activation cannot silently pass the fixed
 inputs; task inference must use the symbol/date-aware loader. Untrained regression
 tests cover both bypasses and preserve normal SAC/CrossQ frozen compatibility.
 No optimizer execution or performance result is implied by these checks.
+
+## Source coverage and nominal smoke sampling — 2026-11-01
+
+Dated candidate sources now cover all111 instruments after the ABBV/DIS original
+primary collection and review. Coarse-type/issuer-association sufficiency remains
+unadmitted; complete coverage alone does not authorize training. The full original
+price identity and survivorship limitations stay visible.
+
+`audit_task_smoke_sampling.py` replays only the fixed sampler's eight nominal
+128-transition starts from the original111-symbol payload, seed11. The
+[actual read-only audit](../results/task-conditioning-2026-10-31/smoke-nominal-sampling.json)
+starts with DIA followed by seven stock starts, so both groups appear without a
+seed sweep or changed sampling. Data/preprocessing/ledger bytes remain unchanged.
+No environment or learner is constructed. Nominal schedules do not verify actual
+transitions, early terminations, replay batches or routed gradients; those remain
+requirements of the real Colab smoke. No allocation or optimization occurred.

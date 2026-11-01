@@ -1,0 +1,66 @@
+{
+  "schema": "task-smoke-nominal-sampling-v1",
+  "seed": 11,
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "starts": [
+    {
+      "symbol": "DIA",
+      "start": 1547,
+      "group": "etf"
+    },
+    {
+      "symbol": "KMB",
+      "start": 1685,
+      "group": "stock"
+    },
+    {
+      "symbol": "BLK",
+      "start": 737,
+      "group": "stock"
+    },
+    {
+      "symbol": "UNP",
+      "start": 2433,
+      "group": "stock"
+    },
+    {
+      "symbol": "SLB",
+      "start": 628,
+      "group": "stock"
+    },
+    {
+      "symbol": "SHW",
+      "start": 1226,
+      "group": "stock"
+    },
+    {
+      "symbol": "LMT",
+      "start": 1039,
+      "group": "stock"
+    },
+    {
+      "symbol": "MCD",
+      "start": 946,
+      "group": "stock"
+    }
+  ],
+  "group_start_counts": {
+    "etf": 1,
+    "stock": 7
+  },
+  "protected_sha256": {
+    "data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "/home/vibe/projects/rl-stocks/scripts/audit_task_smoke_sampling.py": "2a604f63dc01b6aff9cd10ec8f03a8a483c403791160d77f9d7255592f16a615",
+    "src/rl_stocks/environment/sampling/windows.py": "314a0fbee1589d02f47ee11de6a199444b0c69dbba84cef9426d8c46292919b2",
+    "configs/experiments/task_conditioning.json": "346768087d99ed115405ebace58c55766a7ebd66c4e5013c3a7d64650c7643bb"
+  },
+  "protected_sources_unchanged": true,
+  "actual_transition_coverage_verified": false,
+  "limitation": "Full-window nominal schedule only; actual resets, terminations, replay and gradients require Colab smoke acceptance",
+  "model_constructed": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "seed_or_sampling_changed": false,
+  "historical_metadata_admitted": false
+}

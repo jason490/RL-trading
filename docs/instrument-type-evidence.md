@@ -356,3 +356,29 @@ must agree with master metadata, and conservative availability must precede each
 first training session. One persistent claim prevents automatic retry; partial
 or rejected cases remain. Collection alone does not verify either company's
 historical traded-security mapping or admit metadata.
+
+## Exceptional observations complete — 2026-11-01
+
+The fixed [exception collection](../results/task-conditioning-2026-10-31/exception-source-collection.json)
+completed all four index/primary operations. [Content review](../results/task-conditioning-2026-10-31/exception-source-review.json)
+verifies AbbVie's distributed equity and independent public-company ABBV trading
+statement, and Disney's registered common-stock DIS statement under the older
+registrant. Conservative availability is2013-01-04 for ABBV and2009-12-04 for DIS,
+before their first training sessions2013-03-14/2010-03-16. Report/event dates in
+body text are not substituted for original filing/acceptance dates.
+
+The distinct candidate source inventory now covers all111 declared instruments:
+33 original-instance exact document hints,69 selected master primaries, three
+original-cover observations, two exceptional primaries and four fund sources.
+This is complete source coverage, not automatic metadata admission. Public-source
+content, coarse type, issuer association and alias limits still need review.
+
+The sufficiency review should address only distinctions affecting the proposed
+stock/ETF input. A missing literal ticker-keyword match is not itself proof that
+a source lacks type evidence: registered or outstanding corporate-equity context
+and an independently supported issuer association may suffice. Conversely, a
+current CIK lookup or current kind alone does not suffice. Any unresolved
+predecessor/share-class ambiguity can be immaterial to the coarse type only when
+dated evidence establishes type invariance for the plausible alternatives. Do not
+upgrade that finding into financial comparability or exact historical price-link
+verification. Unknown/mixed type or unavailable evidence must remain rejected.

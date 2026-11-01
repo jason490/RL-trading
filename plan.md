@@ -3184,3 +3184,12 @@ indexes/master authority, dates and hashes, including three joint-filer links.
 only after exact final equality.60 cover/31 ticker hints do not admit historical
 metadata. ABBV/DIS sources and alias/content review remain pending; no training,
 Colab allocation, new credits or retired-test access.
+
+### Full candidate source coverage and fixed sampler preflight — 2026-11-01
+
+ABBV spinoff and older Disney primary sources collected/reviewed with original
+publication metadata before first training sessions.111 distinct candidate sources
+now cover the full instrument set; coarse-type/issuer-association review still
+precedes metadata admission. Fixed seed11 nominal smoke schedule visits one ETF
+and seven stocks without changing sampler/seed; no learner or environment rollout.
+Data/normalization/ledger unchanged, no Colab allocation or new training results.

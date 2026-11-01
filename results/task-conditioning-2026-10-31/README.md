@@ -142,3 +142,18 @@ admission still false. ABBV/DIS special sources and content/alias review remain.
 progress receipt after equality/integrity checks; every raw source and scientific
 receipt remains. No training, Colab allocation, retired-test access or ledger
 change. Project usage remains39.92585919/150.
+
+## Exceptional source and sampling preflight complete — 2026-11-01
+
+[Exception collection](exception-source-collection.json) and
+[review](exception-source-review.json) verify ABBV's equity/public-company ticker
+statement and Disney's common-stock DIS statement. Both conservative source dates
+precede their first training sessions. The distinct candidate source inventory is
+now111/111:33 original instances +69 master primaries +3 initial covers +2
+exceptions +4 fund sources. Coarse-type sufficiency/association review remains
+required; no historical metadata was automatically admitted.
+
+The [nominal sampler audit](smoke-nominal-sampling.json) visits one ETF then seven
+stock starts under the fixed seed11/1024-transition smoke schedule. No seed,
+sampling or preprocessing changes, model construction, optimization or Colab.
+Actual training/replay/gradient coverage remains unverified until the real smoke.

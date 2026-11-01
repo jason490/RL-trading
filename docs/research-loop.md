@@ -75,8 +75,12 @@ Original stop/claims persist. The separate reviewed v2 resume is now complete:
 34 remaining primaries retrieved, all69 selected sources independently verified,
 including three master-corroborated joint directories.164 protected inputs unchanged;
 only duplicate progress output removed.60 cover/31 ticker hints remain unadmitted.
-Next collect the two exceptional ABBV/DIS sources and review content/aliases before
-metadata admission; actual Colab profile and model gates remain pending. No performance allocation yet. Primary-source
+ABBV/DIS exceptional sources are now collected and their dated equity/ticker
+statements verified. Distinct candidate-source coverage is111/111. Next review
+coarse-type/issuer-association sufficiency before metadata admission; do not
+conflate it with exact financial issuer/price continuity. The fixed seed11 nominal
+smoke sampler visits both groups without a sweep, but actual Colab/replay/gradient
+acceptance and all model performance gates remain pending. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
 interference and reward-scale causes remain unproven. This is design admission,
 not an executable profile or permission to reopen the closed recurrent family.
