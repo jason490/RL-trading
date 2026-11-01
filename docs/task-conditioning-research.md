@@ -751,3 +751,22 @@ although one retains positive short P&L. These are reporting-only ex-post cohort
 never observations/sampling/rewards/checkpoint criteria. The model therefore does
 not satisfy the requested declining-stock outcome in this control. This diagnosis
 cannot choose or modify the unfinished tagged comparison; its fixed gate remains.
+
+## Tagged100k exact replay failure and fixed-mode limitation
+
+Tagged shared completed100k, selected50k return50.27%, final46.03% on the fitted
+window, but remains unaccepted: independent exact replay failed even with AVX2.
+The controller salvaged the full archive and verified shutdown; routed was never
+allocated. `tagged-screen-numerical-diagnosis.json` pins archive/checkpoint hashes,
+original failed state and nine bounded first-decision probes. Host/default, AVX2
+and baseline Torch dispatch crossed with default/AVX2/COMPATIBLE MKL modes yield
+14–18 exact symbols out of26, with maximum action difference1.192e-7. No mode
+reproduces all first decisions. No performance outcome selected a backend.
+
+The masked AVX2 exact proof remains valid, but the assumption that one fixed mode
+would reproduce every Colab session is contradicted. No tolerance, gate or learning
+configuration was changed; no training was repeated and the suffix was not
+restarted. Next is a retained-artifact numerical execution investigation. Future
+runtime provenance must describe the relevant arithmetic/backend rather than imply
+universal CPU bit portability. Current project40.121163/150; official post-cleanup
+account548.11/rate0/no assignments. Development and routed allocation remain shut.

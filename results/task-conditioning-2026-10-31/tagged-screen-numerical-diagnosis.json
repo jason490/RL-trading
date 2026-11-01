@@ -1,0 +1,99 @@
+{
+  "schema": "task-tagged-numerical-diagnosis-v1",
+  "session": "rl-stocks-cpu-8421f33527ca",
+  "steps": 10000,
+  "archive_sha256": "cc918d8b7fab21b9aa7ba8a360392a2d2f071da54f6c44b6d5fbd69aa8a47abb",
+  "checkpoint_sha256": "4289bb4e7956cd57cd2aeb6470a58fb20de9d7122b7073b320df0b5c7f01b7d9",
+  "observations": "First real normalized decision for each original26 training-window symbol; deterministic saved-model predictions",
+  "probes": [
+    {
+      "aten_cpu_capability": "host-default",
+      "mkl_cbwr": "host-default",
+      "exact_symbols": 15,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "avx2",
+      "mkl_cbwr": "host-default",
+      "exact_symbols": 15,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "host-default",
+      "mkl_cbwr": "AVX2",
+      "exact_symbols": 18,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "avx2",
+      "mkl_cbwr": "AVX2",
+      "exact_symbols": 18,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "host-default",
+      "mkl_cbwr": "COMPATIBLE",
+      "exact_symbols": 14,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "avx2",
+      "mkl_cbwr": "COMPATIBLE",
+      "exact_symbols": 14,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "default",
+      "mkl_cbwr": "AVX2",
+      "exact_symbols": 18,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "default",
+      "mkl_cbwr": "host-default",
+      "exact_symbols": 15,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    },
+    {
+      "aten_cpu_capability": "default",
+      "mkl_cbwr": "COMPATIBLE",
+      "exact_symbols": 14,
+      "total": 26,
+      "max_abs_action_difference": 1.1920928955078125e-07
+    }
+  ],
+  "exact_replay_accepted": false,
+  "tolerance_changed": false,
+  "training_repeated": false,
+  "development_evaluated": false,
+  "original_failed_fleet": {
+    "fleet": "rl-stocks-fleet-9b0c31b22b43",
+    "status": "failed",
+    "completed": {},
+    "initial_ledger_units": 40.06512306962679,
+    "study_budget": {
+      "start_units": 39.92585919127071,
+      "limit_units": 2.0
+    },
+    "sessions": {
+      "rl-stocks-cpu-8421f33527ca": {
+        "task": "task-screen-tagged-shared",
+        "phase": "done"
+      }
+    },
+    "failed_task": "task-screen-tagged-shared",
+    "failure_phase": "validate",
+    "error_type": "RuntimeError",
+    "cleanup_verified": true
+  },
+  "project_units": 40.1211633711802,
+  "next_action": "Isolate numerical execution discrepancy using retained artifacts; no fresh training or routed allocation admitted by this diagnosis"
+}
