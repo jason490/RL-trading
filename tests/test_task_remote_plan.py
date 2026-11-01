@@ -24,8 +24,8 @@ def test_fixed_task_remote_contract(role):
         validate_plan(bad)
 
 
-def test_task_smoke_cannot_allocate_before_controller_integration(tmp_path):
-    with pytest.raises(ValueError, match='awaits aggregate budget'):
+def test_task_smoke_cannot_allocate_without_immutable_inputs(tmp_path):
+    with pytest.raises(ValueError, match='immutable dataset missing'):
         validate_tasks([{'id': 'task-smoke', 'dataset': 'unused',
                          'plan': task_smoke_plan('tagged_routed')}], tmp_path)
     with pytest.raises(ValueError):

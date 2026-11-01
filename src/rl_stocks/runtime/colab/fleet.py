@@ -80,12 +80,19 @@ def validate_tasks(tasks,root):
         if set(task)!={'id','dataset','plan'} or not re.fullmatch(r'[A-Za-z0-9_-]+',task['id']) or task['id'] in seen:
             raise ValueError('unique safe task IDs and exact task fields required')
         validate_plan(task['plan']);plan=task['plan']
-        if plan.get('version') == 44:
-            raise ValueError('task smoke allocation awaits aggregate budget and artifact acceptance integration')
         if plan['accelerator']=='A100' and not any(not j['smoke'] for j in plan['jobs']):
             raise ValueError('A100 requires research, not smoke-only allocation')
         dataset=(root/task['dataset']).resolve()
         if not (dataset/'dataset.json').is_file():raise ValueError('immutable dataset missing')
+        if plan.get('version') == 44:
+            from rl_stocks.core.contracts import digest
+            from rl_stocks.training.task_conditioning import validate_type_manifest
+            payload = json.loads((dataset / 'dataset.json').read_text())
+            evidence = json.loads((root / 'configs/universes/task_types_research_initial_v1.json').read_text())
+            if (dataset.name != plan['dataset_contract']['identity']
+                    or digest(payload) != dataset.name
+                    or validate_type_manifest(payload, evidence) != plan['type_manifest_sha256']):
+                raise ValueError('bound reviewed task smoke inputs required')
         if plan.get('version') in (41,42,43):
             from rl_stocks.training.recurrent_comparison_profile import validate_panel
             from rl_stocks.training.recurrent_comparison_starts import accept

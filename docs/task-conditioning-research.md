@@ -391,3 +391,13 @@ run record, incomplete downloads, incorrect dataset, links, traversal and duplic
 members. Learned positive-path acceptance still requires actual Colab output;
 local training is prohibited. Allocation remains staged off pending final controller/transport review; the first
 owned smoke must supply learned positive-path acceptance before research training.
+
+## Smoke launch readiness — 2026-11-01
+
+Version44 fleet admission now verifies the immutable dataset and reviewed type
+manifest before allocation. The complete three-role fleet uses the shared two-unit
+baseline, persistent per-role claims, CPU defaults, bounded downloads and verified
+owned-session shutdown. The temporary allocation staging rejection is removed.
+First learned artifacts must pass physical inspection before any100k experiment.
+Actual kernel Python is checked by bootstrap before dependencies or optimization;
+a default-version change stops the worker rather than installing an older Python.
