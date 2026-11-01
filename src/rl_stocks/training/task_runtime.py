@@ -87,5 +87,7 @@ def validate_smoke_roles(root, ledger, roles):
         raise ValueError('original accepted archive changed')
     plan = task_smoke_plan('masked_shared')
     proof = validate_task_smoke_archive(archive, plan, plan['dataset_contract']['identity'])
-    if proof != receipt['physical_acceptance']:
+    if (len(proof) != len(receipt['physical_acceptance'])
+            or any(any(actual.get(key) != value for key, value in expected.items())
+                   for actual, expected in zip(proof, receipt['physical_acceptance']))):
         raise ValueError('original physical masked acceptance required')

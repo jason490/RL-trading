@@ -126,4 +126,5 @@ def validate_task_smoke_archive(path, plan, dataset_id):
             if run['repository'] != git or run['source'] != completion['source_hash']:
                 raise RuntimeError('task source provenance mismatch')
             return [dict(algorithm='task_sac_smoke', seed=11, actual_steps=1024,
+                         bundle_id=next(name for name in bundle_files if name.endswith('/manifest.json')).split('/')[-2],
                          status='complete', task_role=run['task_role'], physical_state_verified=True)]

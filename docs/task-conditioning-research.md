@@ -446,3 +446,18 @@ keep their existing labels; unknown or mixed phases say Evaluation. Previously
 retrieved immutable smoke reports retain the old display label, while their JSON
 phase remains the authoritative training-only scope. No returns or checkpoint
 selection changed. Future worker payloads include the corrected chart renderer.
+
+## Tagged shared smoke and controller result contract
+
+The tagged shared role completed1024 transitions and960 updates per optimizer;
+training-window return changed from−31.61% at512 to−7.30% at1024. Physical
+saved-state verification passed, but fleet acceptance recording raised KeyError
+because the verifier summary omitted the controller-required `bundle_id`. The
+summary now returns the identity of the physically inspected frozen bundle; a
+regression checks that field. The existing masked review remains valid with this
+additional descriptive field, while every original acceptance field is rechecked.
+
+`tagged-shared-smoke-acceptance.json` records corrected physical acceptance of the
+same retained archive. No training was retried or numerical/performance checks
+relaxed. Original failed fleet state and claims stay intact; cleanup was verified.
+The routed role remains unallocated and requires its own reviewed continuation.

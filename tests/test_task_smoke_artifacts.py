@@ -88,4 +88,6 @@ def test_report_json_sidecar_is_required_and_allowlisted(tmp_path, monkeypatch):
             with pytest.raises(RuntimeError, match='bounded complete'):
                 verifier.validate_task_smoke_archive(path, plan, completion['dataset'])
         else:
-            assert verifier.validate_task_smoke_archive(path, plan, completion['dataset'])[0]['status'] == 'complete'
+            result = verifier.validate_task_smoke_archive(path, plan, completion['dataset'])[0]
+            assert result['status'] == 'complete'
+            assert result['bundle_id'] == 'f' * 64

@@ -1,0 +1,47 @@
+{
+  "session": "rl-stocks-cpu-7493c4c696b2",
+  "original_fleet": "rl-stocks-fleet-df53c185fc5f",
+  "original_fleet_status": "failed",
+  "cleanup_verified": true,
+  "original_rejection": "Verifier result omitted fleet-required bundle_id; original failed state retained",
+  "archive": "artifacts/colab/rl-stocks-cpu-7493c4c696b2/artifacts.tar.gz",
+  "archive_sha256": "dfd0a6c855149f344536ea85d18ab97dfb14f9af24c018ba4cf5dfaa15a319ae",
+  "physical_acceptance": [
+    {
+      "algorithm": "task_sac_smoke",
+      "seed": 11,
+      "actual_steps": 1024,
+      "bundle_id": "663f754d405befe06e68ad6222f94b2003c0f04e275da5bfcbf4e52b01deddd2",
+      "status": "complete",
+      "task_role": "tagged_shared",
+      "physical_state_verified": true
+    }
+  ],
+  "source": {
+    "dirty": "",
+    "revision": "17d6d6cd1750c9f07f6ce60f1a813435e7def999"
+  },
+  "optimizer_steps": {
+    "actor": 960,
+    "critic": 960,
+    "entropy": 960
+  },
+  "inclusive_elapsed_seconds": 137.42510973999998,
+  "curve": [
+    {
+      "steps": 512,
+      "return_pct": -31.614442406714442,
+      "elapsed_seconds": 59.066550079000024
+    },
+    {
+      "steps": 1024,
+      "return_pct": -7.299791821641327,
+      "elapsed_seconds": 107.13948344099998
+    }
+  ],
+  "training_only": true,
+  "performance_promotion": false,
+  "remaining_roles_unallocated": [
+    "tagged_routed"
+  ]
+}
