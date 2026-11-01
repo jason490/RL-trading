@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 43:
+    if plan.get('version') == 44:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected = task_smoke_plan(plan['task_smoke']['task_role'])
+        except (KeyError, TypeError):
+            raise ValueError('malformed task smoke plan') from None
+        if canonical(plan) != canonical(expected):
+            raise ValueError('fixed task smoke contract required')
+    elif plan.get('version') == 43:
         from rl_stocks.core.contracts import canonical
         try:
             expected=recurrent_screen_plan(**plan['comparison_screen'])
@@ -861,3 +869,16 @@ def recurrent_screen_plan(arm,seed=11):
         dataset_contract=dict(identity=protocol()['dataset']),
         allocation_deadline_seconds=spec['allocation_seconds'][arm],teardown_reserve_seconds=360,
         jobs=[dict(algorithm=arm,device='cpu',smoke=False,seed=seed,steps=100000)])
+
+
+def task_smoke_plan(task_role):
+    """Distinct CPU learned smoke; no full-study or development-scoring entry point."""
+    from rl_stocks.rl.sac.task_policy import check_role
+    from rl_stocks.training.task_conditioning import PROTOCOL_SHA256, protocol
+    role = check_role(task_role)
+    return dict(version=44, accelerator='CPU', protocol_sha256=PROTOCOL_SHA256,
+        task_smoke=dict(task_role=role),
+        type_manifest_sha256='7c4a078fcec05be000d720e2d9625c6cd5d7c03b5d1d6502e46357f526ba1590',
+        dataset_contract=dict(identity=protocol()['dataset']),
+        allocation_deadline_seconds=7200, teardown_reserve_seconds=360,
+        jobs=[dict(algorithm='task_sac_smoke', device='cpu', smoke=True, seed=11, steps=1024)])

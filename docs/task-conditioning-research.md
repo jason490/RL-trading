@@ -343,3 +343,16 @@ Actual execution passed on November1. Frozen bundles remain under
 acceptance. The guard test also verifies that a handled interruption restores the
 original local APIs. Remote transport, archive verification and measured profiling
 remain pending before the fixed100k comparison.
+
+## Remote smoke job registration — 2026-11-01
+
+Job version44 binds each role to the reviewed type-manifest digest, original
+111-instrument dataset, CPU, seed11 and1024 transitions. Remote dispatch verifies
+both payload identities before calling the learned smoke worker, and records the
+completion/source/kernel receipt. Canonical plan validation rejects changed
+hardware, steps, seed, smoke mode or metadata identity. It has no full-study route.
+
+Allocation remains explicitly rejected by fleet task validation until the shared
+incremental-budget claim and physical artifact verifier are integrated. This is an
+implementation staging guard, not a request for user permission. No task smoke has
+been allocated or run. Existing fleet budget and cleanup behavior remains in force.
