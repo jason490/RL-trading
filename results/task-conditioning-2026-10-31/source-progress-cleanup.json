@@ -1,0 +1,17 @@
+{
+  "schema": "task-source-progress-cleanup-v1",
+  "created_utc": "2026-11-01T02:47:27.502714+00:00",
+  "removed_path": "results/task-conditioning-2026-10-31/stock-reviewed-resume-result-v2.json.progress.json",
+  "removed_sha256": "dd04afc7f158b620397f0cba838fc8b0b192fbe25573f6631ecd20761b32608b",
+  "bytes_reclaimed": 142610,
+  "retained_equivalent": "results/task-conditioning-2026-10-31/stock-reviewed-resume-result-v2.json",
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/stock-reviewed-resume-result-v2.json": "dd04afc7f158b620397f0cba838fc8b0b192fbe25573f6631ecd20761b32608b",
+    "results/task-conditioning-2026-10-31/stock-source-combined-audit.json": "bd78995174203d6595692ad8912bcdd21eecb764cf68b29500d802d6b80b87ad"
+  },
+  "audit_protected_inputs_unchanged": 164,
+  "old_stop_preserved": true,
+  "scientific_source_files_removed": 0,
+  "colab_allocated": false,
+  "cleanup_verified": true
+}

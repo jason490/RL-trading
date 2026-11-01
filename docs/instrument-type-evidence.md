@@ -312,3 +312,35 @@ up on failure. This is a reviewed compatibility correction, not reuse of a faile
 claim or an extension of any model experiment. No metadata admission or Colab
 allocation is performed. Mocked tests cover changed-plan rejection, persistent
 old stops and single-attempt failure with no temporary-file residue.
+
+## Completed reviewed resume and independent combined audit
+
+The source-only v2 resume completed34/34 unfinished primaries in68 acquisition
+operations, reusing the retained NEE index from cache. New raw bytes total
+88,940,815. No already retrieved primary was downloaded again. Original batch4
+remains stopped, all v1 claims/global stop remain unchanged, and no automatic
+retry or Colab allocation occurred.
+
+[Resume receipt](../results/task-conditioning-2026-10-31/stock-reviewed-resume-result-v2.json)
+and [independent combined audit](../results/task-conditioning-2026-10-31/stock-source-combined-audit.json)
+cover the exact69-source selection across35 original and34 resumed primaries.
+The verifier independently recomputes original index/master authority, byte counts,
+checksums, publication metadata and conservative availability. It validates NEE,
+SO and SRE's three joint-filer directories without assigning a subsidiary issuer
+to a stock's price series.164 protected inputs remain unchanged. The collection
+scope is complete; historical classification admission is not.
+
+Across69 primary files, the conservative helper finds60 common-equity cover hints
+and31 explicit expected-ticker clauses. These counts are discovery aids, not69
+verified historical ticker/type intervals. Source aliases, missing literal clauses
+and initial-versus-whole-history evidence still require review. ABBV/DIS's two
+special event/predecessor candidates remain outside this completed selection.
+
+`audit_stock_source_sequence.py --output NEW_PATH` reproduces the combined audit
+from both generations of receipts without relabeling the original failed batch.
+Use the recorded source revision: source-code changes can invalidate current-tree
+protected-input checks even while the retained original receipts remain valid.
+The [cleanup receipt](../results/task-conditioning-2026-10-31/source-progress-cleanup.json)
+removes only the142,610-byte progress file after byte equality with the complete
+final receipt and all164 protected inputs are reverified. Every raw source,
+scientific receipt, claim and original stop is retained.

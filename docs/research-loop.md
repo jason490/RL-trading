@@ -1,6 +1,6 @@
 # Bounded autonomous research
 
-Current frontier (2026-10-31): no robust/prospective winner. The fixed100k
+Current frontier (2026-11-01): no robust/prospective winner. The fixed100k
 seed11 GRU-SAC/SAC/RecurrentPPO matrix is physically accepted, its performance
 gate failed, and this family is closed. No confirmation seeds23/37, extra steps,
 indicator/reward/width rescue grid or checkpoint reselection. Retired2024+ stays
@@ -71,8 +71,12 @@ unadmitted until
 master sequence completed32 primary documents plus three partial-batch documents,
 then stopped on NEE's joint-filer primary directory. Both official registrants
 share the accession; strict URL authority rejected before the primary request.
-Original stop/claims persist, no retry or later batches. Next verify an explicit
-joint-filer resolution before any separately recorded reviewed resume. No performance allocation yet. Primary-source
+Original stop/claims persist. The separate reviewed v2 resume is now complete:
+34 remaining primaries retrieved, all69 selected sources independently verified,
+including three master-corroborated joint directories.164 protected inputs unchanged;
+only duplicate progress output removed.60 cover/31 ticker hints remain unadmitted.
+Next collect the two exceptional ABBV/DIS sources and review content/aliases before
+metadata admission; actual Colab profile and model gates remain pending. No performance allocation yet. Primary-source
 review supports a bounded explicit-type/shared-versus-routed-head hypothesis;
 interference and reward-scale causes remain unproven. This is design admission,
 not an executable profile or permission to reopen the closed recurrent family.

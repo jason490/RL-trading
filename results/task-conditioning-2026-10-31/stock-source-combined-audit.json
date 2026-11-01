@@ -1,0 +1,3748 @@
+{
+  "schema": "task-stock-combined-source-audit-v1",
+  "records": [
+    {
+      "symbol": "APA",
+      "accession": "0000950123-10-018311",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/6769/000095012310018311/h69016e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 17:10:45",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/6769/000095012310018311/h69016e10vk.htm",
+        "declared_cik": "6769",
+        "directory_cik": "6769",
+        "accession": "0000950123-10-018311",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "23fdc65366dd32bee02fb606552502862f9bf1484ff480059ed54d893d657dd4",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "6769",
+            "company_name": "APACHE CORP",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-018311",
+            "filing_directory_cik": "6769",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/6769/0000950123-10-018311.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49",
+        "expected_symbol": "APA",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cAPA",
+          "position": 107180,
+          "nearby_common_equity": true,
+          "review_excerpt": "Exchanges and the NASDAQ National Market under the symbol \u201cAPA.\u201d The table below provides certain information regarding our"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "APD",
+      "accession": "0000950123-09-066095",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2969/000095012309066095/y79730e10vk.htm",
+      "publication": {
+        "filed": "2009-11-25",
+        "accepted_source": "2009-11-25 13:58:55",
+        "availability": {
+          "available_time": "2009-11-30T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/2969/000095012309066095/y79730e10vk.htm",
+        "declared_cik": "2969",
+        "directory_cik": "2969",
+        "accession": "0000950123-09-066095",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "5a65ed32a35b0a0c3e04de8f6452843bb47acb40386a429089894e617aa241df",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "2969",
+            "company_name": "AIR PRODUCTS & CHEMICALS INC /DE/",
+            "form": "10-K",
+            "filed": "2009-11-25",
+            "accession": "0000950123-09-066095",
+            "filing_directory_cik": "2969",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/2969/0000950123-09-066095.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af",
+        "expected_symbol": "APD",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "ticker symbol APD",
+          "position": 59103,
+          "nearby_common_equity": true,
+          "review_excerpt": "OF EQUITY SECURITIES The Company\u2019s common stock (ticker symbol APD) is listed on the New York Stock Exchange."
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "C",
+      "accession": "0001206774-10-000406",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/831001/000120677410000406/citi_10k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 17:00:16",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/831001/000120677410000406/citi_10k.htm",
+        "declared_cik": "831001",
+        "directory_cik": "831001",
+        "accession": "0001206774-10-000406",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "560188de5ced5a0afd029dd2941994b64a0ee80a43b697193e461844c58a0c37",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "831001",
+            "company_name": "CITIGROUP INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0001206774-10-000406",
+            "filing_directory_cik": "831001",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/831001/0001206774-10-000406.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03",
+        "expected_symbol": "C",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "ticker symbol \u201cC",
+          "position": 1058472,
+          "nearby_common_equity": true,
+          "review_excerpt": "stock is listed on the NYSE under the ticker symbol \u201cC\u201d and on the Tokyo Stock Exchange and"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "CAT",
+      "accession": "0000018230-10-000092",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823010000092/form10k_2009.htm",
+      "publication": {
+        "filed": "2010-02-19",
+        "accepted_source": "2010-02-19 12:42:45",
+        "availability": {
+          "available_time": "2010-02-23T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823010000092/form10k_2009.htm",
+        "declared_cik": "18230",
+        "directory_cik": "18230",
+        "accession": "0000018230-10-000092",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "73905e12d0680f2cc685b546180d37b3f783d8ddb818f95d8d90d7b0e7fed26a",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "18230",
+            "company_name": "CATERPILLAR INC",
+            "form": "10-K",
+            "filed": "2010-02-19",
+            "accession": "0000018230-10-000092",
+            "filing_directory_cik": "18230",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/18230/0000018230-10-000092.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9",
+        "expected_symbol": "CAT",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "CL",
+      "accession": "0001140361-10-008522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/21665/000114036110008522/form10k.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 17:18:01",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/21665/000114036110008522/form10k.htm",
+        "declared_cik": "21665",
+        "directory_cik": "21665",
+        "accession": "0001140361-10-008522",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "b60fa33fb53531c8d4c86789bb9a81bd68569a29346a376569c7e1c131330c58",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "21665",
+            "company_name": "COLGATE PALMOLIVE CO",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0001140361-10-008522",
+            "filing_directory_cik": "21665",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/21665/0001140361-10-008522.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1",
+        "expected_symbol": "CL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "COP",
+      "accession": "0000950123-10-017187",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1163165/000095012310017187/h69477e10vk.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 17:30:06",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1163165/000095012310017187/h69477e10vk.htm",
+        "declared_cik": "1163165",
+        "directory_cik": "1163165",
+        "accession": "0000950123-10-017187",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "69aa4fb763326e4c48fd4f51da8aa9be844308c697c7ad5956ec08ee4a4206d1",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1163165",
+            "company_name": "CONOCOPHILLIPS",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000950123-10-017187",
+            "filing_directory_cik": "1163165",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1163165/0000950123-10-017187.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e",
+        "expected_symbol": "COP",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cCOP",
+          "position": 101916,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange, under the symbol \u201cCOP.\u201d Stock Price High Low Dividends 2009 First $"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "COST",
+      "accession": "0001193125-09-208963",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/909832/000119312509208963/d10k.htm",
+      "publication": {
+        "filed": "2009-10-16",
+        "accepted_source": "2009-10-16 12:41:07",
+        "availability": {
+          "available_time": "2009-10-20T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/909832/000119312509208963/d10k.htm",
+        "declared_cik": "909832",
+        "directory_cik": "909832",
+        "accession": "0001193125-09-208963",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "1ea6fd9300bc71ea5ec56106dd74cae07592e0079582b3450eb5604be67bdcc2",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "909832",
+            "company_name": "COSTCO WHOLESALE CORP /NEW",
+            "form": "10-K",
+            "filed": "2009-10-16",
+            "accession": "0001193125-09-208963",
+            "filing_directory_cik": "909832",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/909832/0001193125-09-208963.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778",
+        "expected_symbol": "COST",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cCOST",
+          "position": 5867,
+          "nearby_common_equity": true,
+          "review_excerpt": "on The NASDAQ Global Select Market under the symbol \u201cCOST.\u201d General We operate membership warehouses based on the"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0001193125-09-190326",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000119312509190326/d10k.htm",
+      "publication": {
+        "filed": "2009-09-11",
+        "accepted_source": "2009-09-11 07:40:41",
+        "availability": {
+          "available_time": "2009-09-15T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/858877/000119312509190326/d10k.htm",
+        "declared_cik": "858877",
+        "directory_cik": "858877",
+        "accession": "0001193125-09-190326",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "32f40c0c5c5f5b325a1e66d0571825617485e19fa40ab5231bb941501bba54fe",
+        "master_sha256": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+        "master_records": [
+          {
+            "cik": "858877",
+            "company_name": "CISCO SYSTEMS INC",
+            "form": "10-K",
+            "filed": "2009-09-11",
+            "accession": "0001193125-09-190326",
+            "filing_directory_cik": "858877",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/858877/0001193125-09-190326.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927",
+        "expected_symbol": "CSCO",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "CVX",
+      "accession": "0000950123-10-016846",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000095012310016846/f54086e10vk.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 12:56:14",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/93410/000095012310016846/f54086e10vk.htm",
+        "declared_cik": "93410",
+        "directory_cik": "93410",
+        "accession": "0000950123-10-016846",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "93410",
+            "company_name": "CHEVRON CORP",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000950123-10-016846",
+            "filing_directory_cik": "93410",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/93410/0000950123-10-016846.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367",
+        "expected_symbol": "CVX",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "trading symbol: CVX",
+          "position": 256488,
+          "nearby_common_equity": true,
+          "review_excerpt": "listed on the New York Stock Exchange (trading symbol: CVX). As of February 19, 2010, stockholders of record"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "DE",
+      "accession": "0001104659-09-070344",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909070344/a09-32005_110k.htm",
+      "publication": {
+        "filed": "2009-12-17",
+        "accepted_source": "2009-12-17 10:42:28",
+        "availability": {
+          "available_time": "2009-12-21T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909070344/a09-32005_110k.htm",
+        "declared_cik": "315189",
+        "directory_cik": "315189",
+        "accession": "0001104659-09-070344",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "315189",
+            "company_name": "DEERE & CO",
+            "form": "10-K",
+            "filed": "2009-12-17",
+            "accession": "0001104659-09-070344",
+            "filing_directory_cik": "315189",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/315189/0001104659-09-070344.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04",
+        "expected_symbol": "DE",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "DVN",
+      "accession": "0000950123-10-017093",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012310017093/d71091e10vk.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 16:31:44",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012310017093/d71091e10vk.htm",
+        "declared_cik": "1090012",
+        "directory_cik": "1090012",
+        "accession": "0000950123-10-017093",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1090012",
+            "company_name": "DEVON ENERGY CORP/DE",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000950123-10-017093",
+            "filing_directory_cik": "1090012",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1090012/0000950123-10-017093.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f",
+        "expected_symbol": "DVN",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "ECL",
+      "accession": "0001104659-10-010302",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/31462/000110465910010302/a09-36096_110k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 16:38:17",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465910010302/a09-36096_110k.htm",
+        "declared_cik": "31462",
+        "directory_cik": "31462",
+        "accession": "0001104659-10-010302",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "31462",
+            "company_name": "ECOLAB INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0001104659-10-010302",
+            "filing_directory_cik": "31462",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/31462/0001104659-10-010302.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264",
+        "expected_symbol": "ECL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cECL",
+          "position": 66750,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange under the symbol \u201cECL.\u201d The Common Stock is also traded on an"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "EOG",
+      "accession": "0000821189-10-000011",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/821189/000082118910000011/form10-k.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 17:10:39",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118910000011/form10-k.htm",
+        "declared_cik": "821189",
+        "directory_cik": "821189",
+        "accession": "0000821189-10-000011",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "821189",
+            "company_name": "EOG RESOURCES INC",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000821189-10-000011",
+            "filing_directory_cik": "821189",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/821189/0000821189-10-000011.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe",
+        "expected_symbol": "EOG",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "ticker symbol \"EOG",
+          "position": 94031,
+          "nearby_common_equity": true,
+          "review_excerpt": "the New York Stock Exchange (NYSE) under the ticker symbol \"EOG.\" The following table sets forth, for the"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "EQIX",
+      "accession": "0001193125-10-036420",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000119312510036420/d10k.htm",
+      "publication": {
+        "filed": "2010-02-22",
+        "accepted_source": "2010-02-22 16:35:52",
+        "availability": {
+          "available_time": "2010-02-24T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000119312510036420/d10k.htm",
+        "declared_cik": "1101239",
+        "directory_cik": "1101239",
+        "accession": "0001193125-10-036420",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1101239",
+            "company_name": "EQUINIX INC",
+            "form": "10-K",
+            "filed": "2010-02-22",
+            "accession": "0001193125-10-036420",
+            "filing_directory_cik": "1101239",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1101239/0001193125-10-036420.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a",
+        "expected_symbol": "EQIX",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol of \u201cEQIX",
+          "position": 123672,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the NASDAQ Global Select Market under the symbol of \u201cEQIX.\u201d Our common stock began trading in August"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "FCX",
+      "accession": "0000831259-10-000010",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/831259/000083125910000010/fcx123109-10k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 15:12:35",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125910000010/fcx123109-10k.htm",
+        "declared_cik": "831259",
+        "directory_cik": "831259",
+        "accession": "0000831259-10-000010",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "831259",
+            "company_name": "FREEPORT MCMORAN COPPER & GOLD INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000831259-10-000010",
+            "filing_directory_cik": "831259",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/831259/0000831259-10-000010.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f",
+        "expected_symbol": "FCX",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cFCX",
+          "position": 224440,
+          "nearby_common_equity": true,
+          "review_excerpt": "the New York Stock Exchange (NYSE) under the symbol \u201cFCX.\u201d The FCX share price is reported daily in"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "GE",
+      "accession": "0000040545-10-000010",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054510000010/frm10k.htm",
+      "publication": {
+        "filed": "2010-02-19",
+        "accepted_source": "2010-02-19 17:16:21",
+        "availability": {
+          "available_time": "2010-02-23T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054510000010/frm10k.htm",
+        "declared_cik": "40545",
+        "directory_cik": "40545",
+        "accession": "0000040545-10-000010",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "40545",
+            "company_name": "GENERAL ELECTRIC CO",
+            "form": "10-K",
+            "filed": "2010-02-19",
+            "accession": "0000040545-10-000010",
+            "filing_directory_cik": "40545",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/40545/0000040545-10-000010.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9",
+        "expected_symbol": "GE",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "accession": "0001193125-10-030774",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1288776/000119312510030774/d10k.htm",
+      "publication": {
+        "filed": "2010-02-12",
+        "accepted_source": "2010-02-12 17:19:28",
+        "availability": {
+          "available_time": "2010-02-17T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1288776/000119312510030774/d10k.htm",
+        "declared_cik": "1288776",
+        "directory_cik": "1288776",
+        "accession": "0001193125-10-030774",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "5cd4806a3b89d3d2726161ee1f317c32fc8b59c45e427278ddaa346933225fd3",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1288776",
+            "company_name": "Google Inc.",
+            "form": "10-K",
+            "filed": "2010-02-12",
+            "accession": "0001193125-10-030774",
+            "filing_directory_cik": "1288776",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1288776/0001193125-10-030774.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e",
+        "expected_symbol": "GOOGL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "GS",
+      "accession": "0000950123-10-018464",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000095012310018464/y81914e10vk.htm",
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-02-26 18:20:23",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/886982/000095012310018464/y81914e10vk.htm",
+        "declared_cik": "886982",
+        "directory_cik": "886982",
+        "accession": "0000950123-10-018464",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "005e399b0e1e59637bd53be403e500a57428f478a7af170924091d8f30fb35eb",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "886982",
+            "company_name": "GOLDMAN SACHS GROUP INC",
+            "form": "10-K",
+            "filed": "2010-03-01",
+            "accession": "0000950123-10-018464",
+            "filing_directory_cik": "886982",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/886982/0000950123-10-018464.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558",
+        "expected_symbol": "GS",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "HAL",
+      "accession": "0000045012-10-000085",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/45012/000004501210000085/ed10k2009_final.htm",
+      "publication": {
+        "filed": "2010-02-17",
+        "accepted_source": "2010-02-17 13:01:33",
+        "availability": {
+          "available_time": "2010-02-19T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/45012/000004501210000085/ed10k2009_final.htm",
+        "declared_cik": "45012",
+        "directory_cik": "45012",
+        "accession": "0000045012-10-000085",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "699c9072c609e781c1244d233085a92327a959a1bc9062a118dd0d8897c68395",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "45012",
+            "company_name": "HALLIBURTON CO",
+            "form": "10-K",
+            "filed": "2010-02-17",
+            "accession": "0000045012-10-000085",
+            "filing_directory_cik": "45012",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/45012/0000045012-10-000085.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666",
+        "expected_symbol": "HAL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "HD",
+      "accession": "0000950144-09-002875",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/354950/000095014409002875/x17422e10vk.htm",
+      "publication": {
+        "filed": "2009-04-02",
+        "accepted_source": "2009-04-02 16:12:35",
+        "availability": {
+          "available_time": "2009-04-06T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/354950/000095014409002875/x17422e10vk.htm",
+        "declared_cik": "354950",
+        "directory_cik": "354950",
+        "accession": "0000950144-09-002875",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "ce680a4f2807a5b66e59f481e5910efdb99e3a262a0343f1b42cdb844dc73504",
+        "master_sha256": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1",
+        "master_records": [
+          {
+            "cik": "354950",
+            "company_name": "HOME DEPOT INC",
+            "form": "10-K",
+            "filed": "2009-04-02",
+            "accession": "0000950144-09-002875",
+            "filing_directory_cik": "354950",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/354950/0000950144-09-002875.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b",
+        "expected_symbol": "HD",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cHD",
+          "position": 48784,
+          "nearby_common_equity": true,
+          "review_excerpt": "the New York Stock Exchange, trading under the symbol \u201cHD.\u201d The Company paid its first cash dividend on"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "HON",
+      "accession": "0000930413-10-000784",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/773840/000093041310000784/c60039_10k.htm",
+      "publication": {
+        "filed": "2010-02-12",
+        "accepted_source": "2010-02-12 16:36:38",
+        "availability": {
+          "available_time": "2010-02-17T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/773840/000093041310000784/c60039_10k.htm",
+        "declared_cik": "773840",
+        "directory_cik": "773840",
+        "accession": "0000930413-10-000784",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "b7d2a664cc7383ded6299b11b6bf5980c6b1b3ef86658ea81a6d02e1b323f6b9",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "773840",
+            "company_name": "HONEYWELL INTERNATIONAL INC",
+            "form": "10-K",
+            "filed": "2010-02-12",
+            "accession": "0000930413-10-000784",
+            "filing_directory_cik": "773840",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/773840/0000930413-10-000784.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90",
+        "expected_symbol": "HON",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "HSY",
+      "accession": "0001193125-10-034780",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/47111/000119312510034780/d10k.htm",
+      "publication": {
+        "filed": "2010-02-19",
+        "accepted_source": "2010-02-19 09:15:03",
+        "availability": {
+          "available_time": "2010-02-23T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/47111/000119312510034780/d10k.htm",
+        "declared_cik": "47111",
+        "directory_cik": "47111",
+        "accession": "0001193125-10-034780",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "3bd1a77c1428dd481320534c28e82494bf8cbf55954dc613054305809588ebaf",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "47111",
+            "company_name": "HERSHEY CO",
+            "form": "10-K",
+            "filed": "2010-02-19",
+            "accession": "0001193125-10-034780",
+            "filing_directory_cik": "47111",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/47111/0001193125-10-034780.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69",
+        "expected_symbol": "HSY",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "ticker symbol \u201cHSY",
+          "position": 50351,
+          "nearby_common_equity": true,
+          "review_excerpt": "the New York Stock Exchange (\u201cNYSE\u201d) under the ticker symbol \u201cHSY.\u201d Approximately 379.3 million shares of our Common"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "IBM",
+      "accession": "0001047469-10-001151",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000104746910001151/a2195966z10-k.htm",
+      "publication": {
+        "filed": "2010-02-23",
+        "accepted_source": "2010-02-23 13:31:57",
+        "availability": {
+          "available_time": "2010-02-25T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/51143/000104746910001151/a2195966z10-k.htm",
+        "declared_cik": "51143",
+        "directory_cik": "51143",
+        "accession": "0001047469-10-001151",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "1b5f5bb4fdfb80edaab703d4557976dc4afd6085f09ef15f36bddc3dbe497168",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "51143",
+            "company_name": "INTERNATIONAL BUSINESS MACHINES CORP",
+            "form": "10-K",
+            "filed": "2010-02-23",
+            "accession": "0001047469-10-001151",
+            "filing_directory_cik": "51143",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/51143/0001047469-10-001151.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de",
+        "expected_symbol": "IBM",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "INTC",
+      "accession": "0000950123-10-015237",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000095012310015237/f54119e10vk.htm",
+      "publication": {
+        "filed": "2010-02-22",
+        "accepted_source": "2010-02-22 17:14:00",
+        "availability": {
+          "available_time": "2010-02-24T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000095012310015237/f54119e10vk.htm",
+        "declared_cik": "50863",
+        "directory_cik": "50863",
+        "accession": "0000950123-10-015237",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "58bc66d7e828f07d35a07b076daf9c7d965df56397958f679721a05d560a9a72",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "50863",
+            "company_name": "INTEL CORP",
+            "form": "10-K",
+            "filed": "2010-02-22",
+            "accession": "0000950123-10-015237",
+            "filing_directory_cik": "50863",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/50863/0000950123-10-015237.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16",
+        "expected_symbol": "INTC",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol INTC",
+          "position": 408711,
+          "nearby_common_equity": true,
+          "review_excerpt": "this Form 10-K. 3 Intel\u2019s common stock (symbol INTC) trades on The NASDAQ Global Select Market and is"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "accession": "0000950123-10-019392",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/200406/000095012310019392/y80744e10vk.htm",
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-03-01 16:50:02",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/200406/000095012310019392/y80744e10vk.htm",
+        "declared_cik": "200406",
+        "directory_cik": "200406",
+        "accession": "0000950123-10-019392",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "f5398b629cca430b9cc6bf21cea712d6caa6e3e64634ad7da97edc99ba0bfe48",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "200406",
+            "company_name": "JOHNSON & JOHNSON",
+            "form": "10-K",
+            "filed": "2010-03-01",
+            "accession": "0000950123-10-019392",
+            "filing_directory_cik": "200406",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/200406/0000950123-10-019392.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba",
+        "expected_symbol": "JNJ",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "JPM",
+      "accession": "0000950123-10-016029",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000095012310016029/e82150e10vk.htm",
+      "publication": {
+        "filed": "2010-02-24",
+        "accepted_source": "2010-02-24 06:19:22",
+        "availability": {
+          "available_time": "2010-02-26T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000095012310016029/e82150e10vk.htm",
+        "declared_cik": "19617",
+        "directory_cik": "19617",
+        "accession": "0000950123-10-016029",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "39d64ccf03db44e8ea8e17c3582617452f9553e83356c5d8df65e5e13bb3711b",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "19617",
+            "company_name": "J P MORGAN CHASE & CO",
+            "form": "10-K",
+            "filed": "2010-02-24",
+            "accession": "0000950123-10-016029",
+            "filing_directory_cik": "19617",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/19617/0000950123-10-016029.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f",
+        "expected_symbol": "JPM",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "KO",
+      "accession": "0001047469-10-001476",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/21344/000104746910001476/a2195739z10-k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 09:39:34",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/21344/000104746910001476/a2195739z10-k.htm",
+        "declared_cik": "21344",
+        "directory_cik": "21344",
+        "accession": "0001047469-10-001476",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "e5258a7bb310b9a32b07274197de4cd6085c626ea098553c09f3250a9391e5bb",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "21344",
+            "company_name": "COCA COLA CO",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0001047469-10-001476",
+            "filing_directory_cik": "21344",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/21344/0001047469-10-001476.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e",
+        "expected_symbol": "KO",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "KR",
+      "accession": "0001104659-09-070369",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465909070369/a09-34065_110q.htm",
+      "publication": {
+        "filed": "2009-12-17",
+        "accepted_source": "2009-12-17 11:35:27",
+        "availability": {
+          "available_time": "2009-12-21T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465909070369/a09-34065_110q.htm",
+        "declared_cik": "56873",
+        "directory_cik": "56873",
+        "accession": "0001104659-09-070369",
+        "form": "10-Q",
+        "cross_directory": false,
+        "index_sha256": "c8d06376672de3eb6d23a3334b56f772b0e174879932657b1b40c1029ed69fe1",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "56873",
+            "company_name": "KROGER CO",
+            "form": "10-Q",
+            "filed": "2009-12-17",
+            "accession": "0001104659-09-070369",
+            "filing_directory_cik": "56873",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/56873/0001104659-09-070369.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685",
+        "expected_symbol": "KR",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "LIN",
+      "accession": "0001193125-10-038766",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884905/000119312510038766/d10k.htm",
+      "publication": {
+        "filed": "2010-02-24",
+        "accepted_source": "2010-02-24 15:25:53",
+        "availability": {
+          "available_time": "2010-02-26T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/884905/000119312510038766/d10k.htm",
+        "declared_cik": "884905",
+        "directory_cik": "884905",
+        "accession": "0001193125-10-038766",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "d9a3388845da5b4d010cb25b2c93fb2c75d01faba2f7ec8e1e07b499b7affc3e",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "884905",
+            "company_name": "PRAXAIR INC",
+            "form": "10-K",
+            "filed": "2010-02-24",
+            "accession": "0001193125-10-038766",
+            "filing_directory_cik": "884905",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/884905/0001193125-10-038766.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1",
+        "expected_symbol": "LIN",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "LLY",
+      "accession": "0000950123-10-014958",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000095012310014958/c55339ke10vk.htm",
+      "publication": {
+        "filed": "2010-02-22",
+        "accepted_source": "2010-02-22 12:45:27",
+        "availability": {
+          "available_time": "2010-02-24T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000095012310014958/c55339ke10vk.htm",
+        "declared_cik": "59478",
+        "directory_cik": "59478",
+        "accession": "0000950123-10-014958",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "0462698193cb3e0a2e31b2ec45ee469bbf2883f8807c75ab48c0569a31ddc251",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "59478",
+            "company_name": "LILLY ELI & CO",
+            "form": "10-K",
+            "filed": "2010-02-22",
+            "accession": "0000950123-10-014958",
+            "filing_directory_cik": "59478",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/59478/0000950123-10-014958.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf",
+        "expected_symbol": "LLY",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "LOW",
+      "accession": "0000060667-09-000160",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/60667/000006066709000160/lowesform10q10302009.htm",
+      "publication": {
+        "filed": "2009-12-01",
+        "accepted_source": "2009-12-01 16:40:03",
+        "availability": {
+          "available_time": "2009-12-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/60667/000006066709000160/lowesform10q10302009.htm",
+        "declared_cik": "60667",
+        "directory_cik": "60667",
+        "accession": "0000060667-09-000160",
+        "form": "10-Q",
+        "cross_directory": false,
+        "index_sha256": "1c4d375fd049b5e1da7ae05dd64d627005f6a2718e6f6480a3c6cdf2e6e76107",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "60667",
+            "company_name": "LOWES COMPANIES INC",
+            "form": "10-Q",
+            "filed": "2009-12-01",
+            "accession": "0000060667-09-000160",
+            "filing_directory_cik": "60667",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/60667/0000060667-09-000160.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95",
+        "expected_symbol": "LOW",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "MDLZ",
+      "accession": "0001193125-10-040106",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000119312510040106/d10k.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 11:55:07",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1103982/000119312510040106/d10k.htm",
+        "declared_cik": "1103982",
+        "directory_cik": "1103982",
+        "accession": "0001193125-10-040106",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "aeac0eb4304230361a3df8e4bb342312613124898e033754ced3f8e18881cba2",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1103982",
+            "company_name": "KRAFT FOODS INC",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0001193125-10-040106",
+            "filing_directory_cik": "1103982",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1103982/0001193125-10-040106.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2",
+        "expected_symbol": "MDLZ",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "MLM",
+      "accession": "0000950123-10-018035",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310018035/g22182e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 15:16:41",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310018035/g22182e10vk.htm",
+        "declared_cik": "916076",
+        "directory_cik": "916076",
+        "accession": "0000950123-10-018035",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "916076",
+            "company_name": "MARTIN MARIETTA MATERIALS INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-018035",
+            "filing_directory_cik": "916076",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/916076/0000950123-10-018035.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+        "expected_symbol": "MLM",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "Symbol: MLM",
+          "position": 102156,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange (\u201cNYSE\u201d) (Symbol: MLM). Information concerning stock prices and dividends paid is included"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "MRK",
+      "accession": "0000950123-10-018679",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/y81622e10vk.htm",
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-03-01 07:33:21",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/y81622e10vk.htm",
+        "declared_cik": "310158",
+        "directory_cik": "310158",
+        "accession": "0000950123-10-018679",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "310158",
+            "company_name": "Merck & Co. Inc.",
+            "form": "10-K",
+            "filed": "2010-03-01",
+            "accession": "0000950123-10-018679",
+            "filing_directory_cik": "310158",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/310158/0000950123-10-018679.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+        "expected_symbol": "MRK",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "accession": "0001193125-09-158735",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509158735/d10k.htm",
+      "publication": {
+        "filed": "2009-07-30",
+        "accepted_source": "2009-07-30 06:05:07",
+        "availability": {
+          "available_time": "2009-08-03T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509158735/d10k.htm",
+        "declared_cik": "789019",
+        "directory_cik": "789019",
+        "accession": "0001193125-09-158735",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f",
+        "master_sha256": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+        "master_records": [
+          {
+            "cik": "789019",
+            "company_name": "MICROSOFT CORP",
+            "form": "10-K",
+            "filed": "2009-07-30",
+            "accession": "0001193125-09-158735",
+            "filing_directory_cik": "789019",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/789019/0001193125-09-158735.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+        "expected_symbol": "MSFT",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol MSFT",
+          "position": 82449,
+          "nearby_common_equity": true,
+          "review_excerpt": "traded on the NASDAQ Stock Market under the symbol MSFT. On July 27, 2009, there were 142,468 registered"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "NEE",
+      "accession": "0000753308-10-000025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/37634/000075330810000025/form10k123109.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 14:59:17",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/37634/000075330810000025/form10k123109.htm",
+        "declared_cik": "753308",
+        "directory_cik": "37634",
+        "accession": "0000753308-10-000025",
+        "form": "10-K",
+        "cross_directory": true,
+        "index_sha256": "eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "37634",
+            "company_name": "FLORIDA POWER & LIGHT CO",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000753308-10-000025",
+            "filing_directory_cik": "37634",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/37634/0000753308-10-000025.txt"
+          },
+          {
+            "cik": "753308",
+            "company_name": "FPL GROUP INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000753308-10-000025",
+            "filing_directory_cik": "753308",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/753308/0000753308-10-000025.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "39623923ebf3e3c16bd30bd41b20e713041ee532e583e5505f1d00d17ed8a4a4",
+        "expected_symbol": "NEE",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "NEM",
+      "accession": "0000950123-10-016613",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1164727/000095012310016613/d70495e10vk.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 06:06:09",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1164727/000095012310016613/d70495e10vk.htm",
+        "declared_cik": "1164727",
+        "directory_cik": "1164727",
+        "accession": "0000950123-10-016613",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "9c09b7c565d3fc2ba8c915ce79f74def559b5448550d35189520d5fe65ea02dd",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1164727",
+            "company_name": "NEWMONT MINING CORP /DE/",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000950123-10-016613",
+            "filing_directory_cik": "1164727",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1164727/0000950123-10-016613.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "6e0f305a7654433e3214473e0b59300065150801a4a7a752626dfe816098ba26",
+        "expected_symbol": "NEM",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cNEM",
+          "position": 141174,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange (under the symbol \u201cNEM\u201d) and is also listed in the form of"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "NKE",
+      "accession": "0001193125-09-155951",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000119312509155951/d10k.htm",
+      "publication": {
+        "filed": "2009-07-27",
+        "accepted_source": "2009-07-27 17:27:24",
+        "availability": {
+          "available_time": "2009-07-29T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000119312509155951/d10k.htm",
+        "declared_cik": "320187",
+        "directory_cik": "320187",
+        "accession": "0001193125-09-155951",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "e6b60909dc3b114aa74ef8daf1218af5471b50158b4446d368efb6602735d0b9",
+        "master_sha256": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+        "master_records": [
+          {
+            "cik": "320187",
+            "company_name": "NIKE INC",
+            "form": "10-K",
+            "filed": "2009-07-27",
+            "accession": "0001193125-09-155951",
+            "filing_directory_cik": "320187",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/320187/0001193125-09-155951.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "1205d90bfea003a73e6673eb523bf00c79f06670319368b84e35c3f727187d7f",
+        "expected_symbol": "NKE",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol NKE",
+          "position": 78973,
+          "nearby_common_equity": true,
+          "review_excerpt": "New York Stock Exchange and trades under the symbol NKE. At July 24, 2009, there were 20,672 holders"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "accession": "0001045810-09-000036",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581009000036/q310form10q.htm",
+      "publication": {
+        "filed": "2009-11-19",
+        "accepted_source": "2009-11-19 09:03:13",
+        "availability": {
+          "available_time": "2009-11-23T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581009000036/q310form10q.htm",
+        "declared_cik": "1045810",
+        "directory_cik": "1045810",
+        "accession": "0001045810-09-000036",
+        "form": "10-Q",
+        "cross_directory": false,
+        "index_sha256": "f1abecbb480643305fe33894ec8feb4b4ee99eeaecbec158a948af316a2b8634",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "1045810",
+            "company_name": "NVIDIA CORP",
+            "form": "10-Q",
+            "filed": "2009-11-19",
+            "accession": "0001045810-09-000036",
+            "filing_directory_cik": "1045810",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1045810/0001045810-09-000036.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "0a3617f4fe50a42241ea06d5c5f2df0b49aa4f7c0aacb0ef2c9ba970f1efe763",
+        "expected_symbol": "NVDA",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "O",
+      "accession": "0000726728-10-000017",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672810000017/ri10k_2009yt.htm",
+      "publication": {
+        "filed": "2010-02-11",
+        "accepted_source": "2010-02-11 17:17:43",
+        "availability": {
+          "available_time": "2010-02-16T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672810000017/ri10k_2009yt.htm",
+        "declared_cik": "726728",
+        "directory_cik": "726728",
+        "accession": "0000726728-10-000017",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "67c7d2b7ce394bc2b1fc0785b396e16a7c3f3a1648185821182e2eaf44b321dd",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "726728",
+            "company_name": "REALTY INCOME CORP",
+            "form": "10-K",
+            "filed": "2010-02-11",
+            "accession": "0000726728-10-000017",
+            "filing_directory_cik": "726728",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/726728/0000726728-10-000017.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "74064c5ddf37af9e85ebf1a0217a5bda73db528785eb02bcc9522034ea824821",
+        "expected_symbol": "O",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "ticker symbol \"O",
+          "position": 10133,
+          "nearby_common_equity": true,
+          "review_excerpt": "The New York Stock Exchange (\"NYSE\") under the ticker symbol \"O\" with a cusip number of 756109-104. Our"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "OMC",
+      "accession": "0000891092-10-000656",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29989/000089109210000656/e37246_10k.htm",
+      "publication": {
+        "filed": "2010-02-19",
+        "accepted_source": "2010-02-19 17:23:05",
+        "availability": {
+          "available_time": "2010-02-23T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/29989/000089109210000656/e37246_10k.htm",
+        "declared_cik": "29989",
+        "directory_cik": "29989",
+        "accession": "0000891092-10-000656",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "339d8a36a912b99d3109e84838fb667ec8f5ac33624789d84e34b2ee32368531",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "29989",
+            "company_name": "OMNICOM GROUP INC",
+            "form": "10-K",
+            "filed": "2010-02-19",
+            "accession": "0000891092-10-000656",
+            "filing_directory_cik": "29989",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/29989/0000891092-10-000656.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "11f6ed3476ee6f57a519366666ceb01a9e0d18982ee42d7f25e7d7c9723870ef",
+        "expected_symbol": "OMC",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cOMC",
+          "position": 38092,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange under the symbol \u201cOMC.\u201d On February 11, 2010, we had 2,876 holders"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "ORCL",
+      "accession": "0000950123-09-018689",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000095012309018689/f52658e10vk.htm",
+      "publication": {
+        "filed": "2009-06-29",
+        "accepted_source": "2009-06-29 17:05:21",
+        "availability": {
+          "available_time": "2009-07-01T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095012309018689/f52658e10vk.htm",
+        "declared_cik": "1341439",
+        "directory_cik": "1341439",
+        "accession": "0000950123-09-018689",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "e0bf6de3d441c9394c87d75ac5dbde46afc5f2b67af5f1301beafc38d0a06c5e",
+        "master_sha256": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1",
+        "master_records": [
+          {
+            "cik": "1341439",
+            "company_name": "ORACLE CORP",
+            "form": "10-K",
+            "filed": "2009-06-29",
+            "accession": "0000950123-09-018689",
+            "filing_directory_cik": "1341439",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1341439/0000950123-09-018689.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "783ce35ce1ebe1efcaca60b10d9b52528b38ed68db4ad675393cd68e7ff0ff7e",
+        "expected_symbol": "ORCL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cORCL",
+          "position": 105791,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the NASDAQ Global Select Market under the symbol \u201cORCL\u201d and has been traded on NASDAQ since our"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "OXY",
+      "accession": "0000797468-10-000020",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746810000020/form10k-2009.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 14:53:37",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000079746810000020/form10k-2009.htm",
+        "declared_cik": "797468",
+        "directory_cik": "797468",
+        "accession": "0000797468-10-000020",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "bebcfc163aba43f7298db9f6c6506ecc257ee84ef97974772b1324b893220d0d",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "797468",
+            "company_name": "OCCIDENTAL PETROLEUM CORP /DE/",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000797468-10-000020",
+            "filing_directory_cik": "797468",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/797468/0000797468-10-000020.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "93c2fe98efaca264b82947ed4f71a20af8ff0ede1e9c4f39f00e561e495114ca",
+        "expected_symbol": "OXY",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "PFE",
+      "accession": "0001193125-10-042425",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/78003/000119312510042425/d10k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 13:43:14",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000119312510042425/d10k.htm",
+        "declared_cik": "78003",
+        "directory_cik": "78003",
+        "accession": "0001193125-10-042425",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "cdabe126031a14826ad86721a431d4ef94b8c892640f615d0ce341fc02cbe95f",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "78003",
+            "company_name": "PFIZER INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0001193125-10-042425",
+            "filing_directory_cik": "78003",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/78003/0001193125-10-042425.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "ce13b30b491448c20cf22e6171e74ee474fb25ff0ac61cac7eb3dab2c557671e",
+        "expected_symbol": "PFE",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "PG",
+      "accession": "0001193125-09-175986",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000119312509175986/d10k.htm",
+      "publication": {
+        "filed": "2009-08-14",
+        "accepted_source": "2009-08-14 16:18:14",
+        "availability": {
+          "available_time": "2009-08-18T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000119312509175986/d10k.htm",
+        "declared_cik": "80424",
+        "directory_cik": "80424",
+        "accession": "0001193125-09-175986",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "f0bfb3510c59d30c42aafa2a26e1a678debebb58fec2e15e53b6e5c781a6758e",
+        "master_sha256": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+        "master_records": [
+          {
+            "cik": "80424",
+            "company_name": "PROCTER & GAMBLE CO",
+            "form": "10-K",
+            "filed": "2009-08-14",
+            "accession": "0001193125-09-175986",
+            "filing_directory_cik": "80424",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/80424/0001193125-09-175986.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "b91d23a18fecc4863b219ff78f0b5f6f23cb7afc33a73d791f60dfec63a8ede8",
+        "expected_symbol": "PG",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "PLD",
+      "accession": "0000950123-10-014699",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045609/000095012310014699/f54839e10vk.htm",
+      "publication": {
+        "filed": "2010-02-22",
+        "accepted_source": "2010-02-19 19:50:07",
+        "availability": {
+          "available_time": "2010-02-24T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1045609/000095012310014699/f54839e10vk.htm",
+        "declared_cik": "1045609",
+        "directory_cik": "1045609",
+        "accession": "0000950123-10-014699",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "46f997abb991a29595b0facadd893a8b4ae098c5442bb0330be057eaaa2d8015",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1045609",
+            "company_name": "AMB PROPERTY CORP",
+            "form": "10-K",
+            "filed": "2010-02-22",
+            "accession": "0000950123-10-014699",
+            "filing_directory_cik": "1045609",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1045609/0000950123-10-014699.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "9e72e3f283d54805eeade9908f97b8efb5d7b265d2b097b3854cc7cf288864f8",
+        "expected_symbol": "PLD",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "PSA",
+      "accession": "0001393311-10-000004",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1393311/000139331110000004/ps10k_123109.htm",
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-02-26 21:48:46",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000139331110000004/ps10k_123109.htm",
+        "declared_cik": "1393311",
+        "directory_cik": "1393311",
+        "accession": "0001393311-10-000004",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "89ab03e5f92345b15765c1b4c4a06ad50321cc7e6fec32a04b75690d2151565f",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1393311",
+            "company_name": "Public Storage",
+            "form": "10-K",
+            "filed": "2010-03-01",
+            "accession": "0001393311-10-000004",
+            "filing_directory_cik": "1393311",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1393311/0001393311-10-000004.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "db254e9854b8ebbe4de1836e128af214364b05143f2b2a10f582c8a57d496b1b",
+        "expected_symbol": "PSA",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "accession": "0000950123-09-057827",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/804328/000095012309057827/a54086e10vk.htm",
+      "publication": {
+        "filed": "2009-11-05",
+        "accepted_source": "2009-11-04 20:21:47",
+        "availability": {
+          "available_time": "2009-11-09T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/804328/000095012309057827/a54086e10vk.htm",
+        "declared_cik": "804328",
+        "directory_cik": "804328",
+        "accession": "0000950123-09-057827",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "4c9c08b199b30870ce6f0bc4484a722aa2f160e3eeaf3183cf52e14077832830",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "804328",
+            "company_name": "QUALCOMM INC/DE",
+            "form": "10-K",
+            "filed": "2009-11-05",
+            "accession": "0000950123-09-057827",
+            "filing_directory_cik": "804328",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/804328/0000950123-09-057827.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "22da5cf3766d1efc0d00a9a14c232a4c883257a7987457035a9ce23aa0be6fb0",
+        "expected_symbol": "QCOM",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cQCOM",
+          "position": 194437,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the NASDAQ Global Select Market under the symbol \u201cQCOM.\u201d The following table sets forth the range of"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "ROST",
+      "accession": "0001206774-09-002310",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/745732/000120677409002310/rossstores_10q.htm",
+      "publication": {
+        "filed": "2009-12-09",
+        "accepted_source": "2009-12-09 06:00:36",
+        "availability": {
+          "available_time": "2009-12-11T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/745732/000120677409002310/rossstores_10q.htm",
+        "declared_cik": "745732",
+        "directory_cik": "745732",
+        "accession": "0001206774-09-002310",
+        "form": "10-Q",
+        "cross_directory": false,
+        "index_sha256": "21d9dd800014166c9cf5e02c5d0851d927c3809a846e7543bda6942f4589e02c",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "745732",
+            "company_name": "ROSS STORES INC",
+            "form": "10-Q",
+            "filed": "2009-12-09",
+            "accession": "0001206774-09-002310",
+            "filing_directory_cik": "745732",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/745732/0001206774-09-002310.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "1fd0df5179854cad30a63e63f6a6179c25189ccc00bfb48f25de3ed7bdd537c6",
+        "expected_symbol": "ROST",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "RTX",
+      "accession": "0001193125-10-027861",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/101829/000119312510027861/d10k.htm",
+      "publication": {
+        "filed": "2010-02-11",
+        "accepted_source": "2010-02-11 06:08:52",
+        "availability": {
+          "available_time": "2010-02-16T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/101829/000119312510027861/d10k.htm",
+        "declared_cik": "101829",
+        "directory_cik": "101829",
+        "accession": "0001193125-10-027861",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "05629937ea26dcf0760e56c23f042827a1419f12d10c711c84c155a0117e5ef1",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "101829",
+            "company_name": "UNITED TECHNOLOGIES CORP /DE/",
+            "form": "10-K",
+            "filed": "2010-02-11",
+            "accession": "0001193125-10-027861",
+            "filing_directory_cik": "101829",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/101829/0001193125-10-027861.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "24c0ef5b6ca529249b1d545ad66286702773993a0a798f252f55817fdee240d1",
+        "expected_symbol": "RTX",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "SBUX",
+      "accession": "0000950123-09-064772",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000095012309064772/v53316e10vk.htm",
+      "publication": {
+        "filed": "2009-11-20",
+        "accepted_source": "2009-11-20 16:44:50",
+        "availability": {
+          "available_time": "2009-11-24T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000095012309064772/v53316e10vk.htm",
+        "declared_cik": "829224",
+        "directory_cik": "829224",
+        "accession": "0000950123-09-064772",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "90619952975c3e945511b581313fc6487b102cffea683a992ed8eac36b9dce70",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "829224",
+            "company_name": "STARBUCKS CORP",
+            "form": "10-K",
+            "filed": "2009-11-20",
+            "accession": "0000950123-09-064772",
+            "filing_directory_cik": "829224",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/829224/0000950123-09-064772.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "38dfaba9477b87645f431c11f8b168a53662b48678c4c2f0eebda0ce0cd9db41",
+        "expected_symbol": "SBUX",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cSBUX",
+          "position": 5404,
+          "nearby_common_equity": true,
+          "review_excerpt": "the NASDAQ Global Select Market (\u201cNASDAQ\u201d) under the symbol \u201cSBUX.\u201d Starbucks (together with its subsidiaries, \u201cStarbucks\u201d or the"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "SHW",
+      "accession": "0000950123-10-016198",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/89800/000095012310016198/l38063e10vk.htm",
+      "publication": {
+        "filed": "2010-02-24",
+        "accepted_source": "2010-02-24 12:53:56",
+        "availability": {
+          "available_time": "2010-02-26T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/89800/000095012310016198/l38063e10vk.htm",
+        "declared_cik": "89800",
+        "directory_cik": "89800",
+        "accession": "0000950123-10-016198",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "f6c2a719e19c51cd90e4fed9248dde7e602444c8b9bb2f924e3a8b7ad17d2c7c",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "89800",
+            "company_name": "SHERWIN WILLIAMS CO",
+            "form": "10-K",
+            "filed": "2010-02-24",
+            "accession": "0000950123-10-016198",
+            "filing_directory_cik": "89800",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/89800/0000950123-10-016198.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "877fabf30aaf313cd537447cab369168ad7996cae379325cdd1cefb49570cff5",
+        "expected_symbol": "SHW",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol SHW",
+          "position": 62108,
+          "nearby_common_equity": true,
+          "review_excerpt": "New York Stock Exchange and traded under the symbol SHW. The number of shareholders of record at January"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "SO",
+      "accession": "0000092122-10-000009",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/3153/000009212210000009/g21794e10vk.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 16:38:34",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/3153/000009212210000009/g21794e10vk.htm",
+        "declared_cik": "92122",
+        "directory_cik": "3153",
+        "accession": "0000092122-10-000009",
+        "form": "10-K",
+        "cross_directory": true,
+        "index_sha256": "d4cdec937e7b9f75435f9cc45829f6f87b8d0a1475c95df0a3c257d6174b2066",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "3153",
+            "company_name": "ALABAMA POWER CO",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000092122-10-000009",
+            "filing_directory_cik": "3153",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/3153/0000092122-10-000009.txt"
+          },
+          {
+            "cik": "92122",
+            "company_name": "SOUTHERN CO",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000092122-10-000009",
+            "filing_directory_cik": "92122",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/92122/0000092122-10-000009.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "eae1381c724c741b3276971958ada0b7f14ffe481780cdfe13eb59317537f44f",
+        "expected_symbol": "SO",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "SPG",
+      "accession": "0001047469-10-001324",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1063761/000104746910001324/a2196642z10-k.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 11:12:02",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1063761/000104746910001324/a2196642z10-k.htm",
+        "declared_cik": "1063761",
+        "directory_cik": "1063761",
+        "accession": "0001047469-10-001324",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "0c10714b7e587493d9e17ed4da65d605114b24fe7ba971351841c7455b1fbcd4",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1063761",
+            "company_name": "SIMON PROPERTY GROUP INC /DE/",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0001047469-10-001324",
+            "filing_directory_cik": "1063761",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1063761/0001047469-10-001324.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "fc3ba76f9fc86118bb9d69bdf5cd7074c01b2d293f5dff3133247cb4f280a128",
+        "expected_symbol": "SPG",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \"SPG",
+          "position": 152827,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange under the symbol \"SPG\". The quarterly price range for the shares and"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "SRE",
+      "accession": "0000086521-10-000019",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/75527/000008652110000019/sre_200910k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-25 18:30:20",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/75527/000008652110000019/sre_200910k.htm",
+        "declared_cik": "1032208",
+        "directory_cik": "75527",
+        "accession": "0000086521-10-000019",
+        "form": "10-K",
+        "cross_directory": true,
+        "index_sha256": "18bab46507de841d4aab425763760505d49c388e58539adac6375922ca33cd65",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1032208",
+            "company_name": "SEMPRA ENERGY",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000086521-10-000019",
+            "filing_directory_cik": "1032208",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1032208/0000086521-10-000019.txt"
+          },
+          {
+            "cik": "75527",
+            "company_name": "PACIFIC ENTERPRISES INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000086521-10-000019",
+            "filing_directory_cik": "75527",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/75527/0000086521-10-000019.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "5eee38c2d4b036b161948209c93910dad2fa84dcf6308efa174732835bc1046c",
+        "expected_symbol": "SRE",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "T",
+      "accession": "0000732717-10-000013",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271710000013/ye09_10k.htm",
+      "publication": {
+        "filed": "2010-02-25",
+        "accepted_source": "2010-02-25 17:19:20",
+        "availability": {
+          "available_time": "2010-03-01T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271710000013/ye09_10k.htm",
+        "declared_cik": "732717",
+        "directory_cik": "732717",
+        "accession": "0000732717-10-000013",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "3057ebf2f4a8e0b566e2038a6fb55332b37f0787bd582cc251f78c92231bdf44",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "732717",
+            "company_name": "AT&T INC.",
+            "form": "10-K",
+            "filed": "2010-02-25",
+            "accession": "0000732717-10-000013",
+            "filing_directory_cik": "732717",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/732717/0000732717-10-000013.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "103240e789adde9e505798918a9cd7379ef77243eea486325d741b45660b19aa",
+        "expected_symbol": "T",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "TGT",
+      "accession": "0001047469-10-002121",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000104746910002121/a2196751z10-k.htm",
+      "publication": {
+        "filed": "2010-03-12",
+        "accepted_source": "2010-03-12 12:10:33",
+        "availability": {
+          "available_time": "2010-03-16T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000104746910002121/a2196751z10-k.htm",
+        "declared_cik": "27419",
+        "directory_cik": "27419",
+        "accession": "0001047469-10-002121",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "ff30fb5a5cc61132b6ef4613d4728aceed4f09e454c7da5fa19b656e33e01332",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "27419",
+            "company_name": "TARGET CORP",
+            "form": "10-K",
+            "filed": "2010-03-12",
+            "accession": "0001047469-10-002121",
+            "filing_directory_cik": "27419",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/27419/0001047469-10-002121.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "aec2b474d4f794b2ca0520fc583fe215ed9779e52f5fbe161a77d404f39f03dd",
+        "expected_symbol": "TGT",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \"TGT",
+          "position": 36152,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange under the symbol \"TGT.\" We are authorized to issue up to 6,000,000,000"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "TJX",
+      "accession": "0000950123-09-067237",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/109198/000095012309067237/b77180e10vq.htm",
+      "publication": {
+        "filed": "2009-12-01",
+        "accepted_source": "2009-12-01 15:33:58",
+        "availability": {
+          "available_time": "2009-12-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/109198/000095012309067237/b77180e10vq.htm",
+        "declared_cik": "109198",
+        "directory_cik": "109198",
+        "accession": "0000950123-09-067237",
+        "form": "10-Q",
+        "cross_directory": false,
+        "index_sha256": "fc064deaae6abe27f7da45bad7d83b7c2fd56d44ac0030e42cc629d619e033e6",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "109198",
+            "company_name": "TJX COMPANIES INC /DE/",
+            "form": "10-Q",
+            "filed": "2009-12-01",
+            "accession": "0000950123-09-067237",
+            "filing_directory_cik": "109198",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/109198/0000950123-09-067237.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "cc74f848d864d33efeeaf82084029aba156b3ecebdfdf22f73cab2e46fa23c70",
+        "expected_symbol": "TJX",
+        "common_equity_cover_hint": false,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "TMUS",
+      "accession": "0001193125-10-044780",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312510044780/d10k.htm",
+      "publication": {
+        "filed": "2010-03-01",
+        "accepted_source": "2010-03-01 16:40:55",
+        "availability": {
+          "available_time": "2010-03-03T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312510044780/d10k.htm",
+        "declared_cik": "1283699",
+        "directory_cik": "1283699",
+        "accession": "0001193125-10-044780",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "0e9fd179fc39e48bb3e22fe5be58db411e6665dbbe7bf3eb7159f0f290c5f0f7",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1283699",
+            "company_name": "METROPCS COMMUNICATIONS INC",
+            "form": "10-K",
+            "filed": "2010-03-01",
+            "accession": "0001193125-10-044780",
+            "filing_directory_cik": "1283699",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1283699/0001193125-10-044780.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "389dd8c02928b10369b50b1aa44984ced4a6e8a6b0091e062dbca183dfe58043",
+        "expected_symbol": "TMUS",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "TTWO",
+      "accession": "0001047469-09-010820",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/946581/000104746909010820/a2195852z10-k.htm",
+      "publication": {
+        "filed": "2009-12-18",
+        "accepted_source": "2009-12-18 08:10:12",
+        "availability": {
+          "available_time": "2009-12-22T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/946581/000104746909010820/a2195852z10-k.htm",
+        "declared_cik": "946581",
+        "directory_cik": "946581",
+        "accession": "0001047469-09-010820",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "ebec44752d413c69b66eb2222c1b22d585f4e90013467f9fca617891d351d433",
+        "master_sha256": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+        "master_records": [
+          {
+            "cik": "946581",
+            "company_name": "TAKE TWO INTERACTIVE SOFTWARE INC",
+            "form": "10-K",
+            "filed": "2009-12-18",
+            "accession": "0001047469-09-010820",
+            "filing_directory_cik": "946581",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/946581/0001047469-09-010820.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "a1a0567183c91e7de1db9ed22e652a0065e420022106b60d517a01d4d009cf39",
+        "expected_symbol": "TTWO",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \"TTWO",
+          "position": 116293,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the NASDAQ Global Select Market under the symbol \"TTWO.\" The following table sets forth, for the periods"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "TXN",
+      "accession": "0001140361-10-007923",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000114036110007923/form10k.htm",
+      "publication": {
+        "filed": "2010-02-23",
+        "accepted_source": "2010-02-23 14:25:33",
+        "availability": {
+          "available_time": "2010-02-25T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/97476/000114036110007923/form10k.htm",
+        "declared_cik": "97476",
+        "directory_cik": "97476",
+        "accession": "0001140361-10-007923",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "ec346d7488ebbf04d85ad50bf01027ef0443579d09c5fbf393a6dde3f7d666d0",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "97476",
+            "company_name": "TEXAS INSTRUMENTS INC",
+            "form": "10-K",
+            "filed": "2010-02-23",
+            "accession": "0001140361-10-007923",
+            "filing_directory_cik": "97476",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/97476/0001140361-10-007923.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "bb23985f2268b17058f29f7f26a90c725f30db29d0cde958839b016d7469ed0e",
+        "expected_symbol": "TXN",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "UNP",
+      "accession": "0001193125-10-023294",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/100885/000119312510023294/d10k.htm",
+      "publication": {
+        "filed": "2010-02-05",
+        "accepted_source": "2010-02-05 15:30:53",
+        "availability": {
+          "available_time": "2010-02-09T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/100885/000119312510023294/d10k.htm",
+        "declared_cik": "100885",
+        "directory_cik": "100885",
+        "accession": "0001193125-10-023294",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "3489617b99234deae57bc71d624a1b293c600f1144ee3768c49cb801c656b585",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "100885",
+            "company_name": "UNION PACIFIC CORP",
+            "form": "10-K",
+            "filed": "2010-02-05",
+            "accession": "0001193125-10-023294",
+            "filing_directory_cik": "100885",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/100885/0001193125-10-023294.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "7e0c4afe8d7cf7aa6fed6176d3b97df54c360f4eb88e062cfaf69dbe7bd3f368",
+        "expected_symbol": "UNP",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cUNP",
+          "position": 12504,
+          "nearby_common_equity": true,
+          "review_excerpt": "the New York Stock Exchange (NYSE) under the symbol \u201cUNP\u201d. For purposes of this report, unless the context"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "USB",
+      "accession": "0000950123-10-018123",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/36104/000095012310018123/x55114e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 16:05:04",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/36104/000095012310018123/x55114e10vk.htm",
+        "declared_cik": "36104",
+        "directory_cik": "36104",
+        "accession": "0000950123-10-018123",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "1f7c6c7240ee3f93647a8c1686dcc50cbfd1f3bd25ecdab11cecaa343377042c",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "36104",
+            "company_name": "US BANCORP \\DE\\",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-018123",
+            "filing_directory_cik": "36104",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/36104/0000950123-10-018123.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "23593b5bcf4219c1a6bb36cf507e747afa5c5f856635dd00051041ae86321e48",
+        "expected_symbol": "USB",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "VLO",
+      "accession": "0000950123-10-018097",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1035002/000095012310018097/d70408e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 15:55:06",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1035002/000095012310018097/d70408e10vk.htm",
+        "declared_cik": "1035002",
+        "directory_cik": "1035002",
+        "accession": "0000950123-10-018097",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "bc028b474718d4b59e93ac45c34aac9b038b1a8fc0c134c21273b71df43d2cfb",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1035002",
+            "company_name": "VALERO ENERGY CORP/TX",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-018097",
+            "filing_directory_cik": "1035002",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1035002/0000950123-10-018097.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "594fbd4330373394789f95641ed1ac41f2e18fce31087a77cd58338961cf6f45",
+        "expected_symbol": "VLO",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cVLO",
+          "position": 7876,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange under the symbol \u201cVLO.\u201d We were incorporated in Delaware in 1981 under"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "VMC",
+      "accession": "0000950123-10-018400",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1396009/000095012310018400/g21744e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 17:25:32",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1396009/000095012310018400/g21744e10vk.htm",
+        "declared_cik": "1396009",
+        "directory_cik": "1396009",
+        "accession": "0000950123-10-018400",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "5e43c8c97fc6b54484d9af0acd353c2bd91f0ac65a6a4c6f4121603609d6dbc6",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "1396009",
+            "company_name": "Vulcan Materials CO",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-018400",
+            "filing_directory_cik": "1396009",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/1396009/0000950123-10-018400.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "141174e516f4f65cfa621c7a6aaf27613420569ce7da89e952b853ab4a644096",
+        "expected_symbol": "VMC",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "ticker symbol VMC",
+          "position": 71860,
+          "nearby_common_equity": true,
+          "review_excerpt": "traded on the New York Stock Exchange (ticker symbol VMC). As of February 19, 2010, the number of"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "WELL",
+      "accession": "0000950123-10-018352",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/766704/000095012310018352/l38660e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 17:19:00",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/766704/000095012310018352/l38660e10vk.htm",
+        "declared_cik": "766704",
+        "directory_cik": "766704",
+        "accession": "0000950123-10-018352",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "4441a32dcdab76dd61ecc24a694dc0bf60d8a4918e5d47085646a6d1ff54b48e",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "766704",
+            "company_name": "HEALTH CARE REIT INC /DE/",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-018352",
+            "filing_directory_cik": "766704",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/766704/0000950123-10-018352.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "e612857f45454d02d9315232ca2c1f29f634d88dcded355caacfe7bcb09730eb",
+        "expected_symbol": "WELL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "WFC",
+      "accession": "0000950123-10-017877",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000095012310017877/f54129e10vk.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 13:26:06",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/72971/000095012310017877/f54129e10vk.htm",
+        "declared_cik": "72971",
+        "directory_cik": "72971",
+        "accession": "0000950123-10-017877",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "34c58dbf8d12b5db1ffbd2299045c9e6d6c4b5f9f5d565adc1ebb912f995ec95",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "72971",
+            "company_name": "WELLS FARGO & CO/MN",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0000950123-10-017877",
+            "filing_directory_cik": "72971",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/72971/0000950123-10-017877.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "6691d869b1d6550510d7dc008f4b07732fe3b4fa0dfdb61fa9f27d1dba1c6a11",
+        "expected_symbol": "WFC",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "symbol \u201cWFC",
+          "position": 52253,
+          "nearby_common_equity": true,
+          "review_excerpt": "common stock is listed on the NYSE (symbol \u201cWFC\u201d). The Quarterly Financial Data table on page 187 of"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "WMT",
+      "accession": "0000104169-09-000006",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416909000006/d10k.htm",
+      "publication": {
+        "filed": "2009-04-01",
+        "accepted_source": "2009-04-01 15:48:09",
+        "availability": {
+          "available_time": "2009-04-03T13:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416909000006/d10k.htm",
+        "declared_cik": "104169",
+        "directory_cik": "104169",
+        "accession": "0000104169-09-000006",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "f0ef62f3bf1bc717f89fa3ee5766134ec1466b3c97c8952e0718f26058bde97a",
+        "master_sha256": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1",
+        "master_records": [
+          {
+            "cik": "104169",
+            "company_name": "WAL MART STORES INC",
+            "form": "10-K",
+            "filed": "2009-04-01",
+            "accession": "0000104169-09-000006",
+            "filing_directory_cik": "104169",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/104169/0000104169-09-000006.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "820bc0d82eafe19f6c11bf7f9a2f58c264dd9d8794e4be2061116728f8bd95f7",
+        "expected_symbol": "WMT",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": false,
+        "first_ticker_clause": null,
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    },
+    {
+      "symbol": "XEL",
+      "accession": "0001047469-10-001536",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/72903/000104746910001536/a2196778z10-k.htm",
+      "publication": {
+        "filed": "2010-02-26",
+        "accepted_source": "2010-02-26 16:23:37",
+        "availability": {
+          "available_time": "2010-03-02T14:30:00Z",
+          "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+          "exact_first_publication_verified": false,
+          "availability_reconstructed": true
+        }
+      },
+      "resolution": {
+        "url": "https://www.sec.gov/Archives/edgar/data/72903/000104746910001536/a2196778z10-k.htm",
+        "declared_cik": "72903",
+        "directory_cik": "72903",
+        "accession": "0001047469-10-001536",
+        "form": "10-K",
+        "cross_directory": false,
+        "index_sha256": "fb665a8af2479666996f333973c20616d57c5dd58ea65757106937192e6cedef",
+        "master_sha256": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+        "master_records": [
+          {
+            "cik": "72903",
+            "company_name": "XCEL ENERGY INC",
+            "form": "10-K",
+            "filed": "2010-02-26",
+            "accession": "0001047469-10-001536",
+            "filing_directory_cik": "72903",
+            "submission_url": "https://www.sec.gov/Archives/edgar/data/72903/0001047469-10-001536.txt"
+          }
+        ],
+        "historical_identity_verified": false
+      },
+      "hints": {
+        "schema": "sec-html-stock-review-hints-v1",
+        "source_sha256": "2b3c15e1ed369b55b33bef0a25b4ef160410d233e37e2040e780bb14869f97ba",
+        "expected_symbol": "XEL",
+        "common_equity_cover_hint": true,
+        "explicit_ticker_clause_hint": true,
+        "first_ticker_clause": {
+          "ticker_anchor": "trading symbol is XEL",
+          "position": 176055,
+          "nearby_common_equity": true,
+          "review_excerpt": "on the New York Stock Exchange (NYSE). The trading symbol is XEL. The following are the reported high"
+        },
+        "historical_identity_verified": false,
+        "historical_metadata_admitted": false,
+        "validity_interval_inferred": false,
+        "model_inputs_enabled": false
+      }
+    }
+  ],
+  "counts": {
+    "documents": 69,
+    "common_equity_cover_hints": 60,
+    "explicit_ticker_clause_hints": 31,
+    "cross_directory_joint_filings": 3
+  },
+  "collection_scope_complete": true,
+  "old_stop_preserved": true,
+  "original_failed_batch_status": "stopped",
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/stock-master-selection.json": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+    "results/task-conditioning-2026-10-31/stock-reviewed-resume-result-v2.json": "dd04afc7f158b620397f0cba838fc8b0b192fbe25573f6631ecd20761b32608b",
+    "/home/vibe/projects/rl-stocks/scripts/audit_stock_source_sequence.py": "5c3530e02a93f06c8e4d17b6fd1b6837e8c20c5e5f5dd09e5eb510ba43844b43",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "6ae8825f2f8349dc845fc3f012b71118252d68a9c987bc48972e155f71b1cbdb",
+    "src/rl_stocks/data/providers/sec/html_stock_type.py": "dba233218aabaf1d0f8f3d463672a47dc7c6cb2f0b411d23ed1cf23334d8871f",
+    "src/rl_stocks/data/providers/sec/lineage.py": "0bb12384d7cc7a95b4784860b8f96e5ba5c7621bfc8d5617811b9a3aff1bd74d",
+    "scripts/review_task_type_covers.py": "c99c94dd7b5cc1dd714a30807752df88d1159b7b9c6eb8f462cc65843bd14999",
+    ".runtime/task-stock-master-collection-stop-v1.json": "066fc194e6e466bd135fefb17acae3db3b7a21bb252a55bf1e8caf9e383d55af",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "results/task-conditioning-2026-10-31/stock-master-batch-0.json": "99494e6d99e05e94e435adb0fd14e8293c0958645d76a1a63d7756ce89f06d87",
+    "results/task-conditioning-2026-10-31/stock-master-batch-1.json": "78e38e5fae9c2ccbedc3607494703cc5bcc09f0140cd20b0195c86570fec9a5a",
+    "results/task-conditioning-2026-10-31/stock-master-batch-2.json": "a828aab6be9ab2a692b0592659c90020d834a7ba1ca69846393f00ebd94a3845",
+    "results/task-conditioning-2026-10-31/stock-master-batch-3.json": "1026c2afef0d423fcb05343a7ad0fca4e38c1c394c7cb5fd860af0a8d6f51267",
+    "results/task-conditioning-2026-10-31/stock-master-batch-4.json": "5484ceaf0e0e0cc155d1c072e4bf315284aa93ba1b955593c464f004451cda0a",
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/acquisition-0c1676b269a9e23158886f29c0b51536559fddb2a63727c527234c4f390704ee.json": "0c1676b269a9e23158886f29c0b51536559fddb2a63727c527234c4f390704ee",
+    "data/raw/sec-masters/446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942/archive.zip": "446c30894e2a9898996c036d500ba0e55aa0ae641af0d05a9160937997d56942",
+    "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/acquisition-b5493c1cff649765a619d938c3ed96188c97f2f89f2f19c82c9ecc53ddf8b1fd.json": "b5493c1cff649765a619d938c3ed96188c97f2f89f2f19c82c9ecc53ddf8b1fd",
+    "data/raw/sec-masters/4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1/archive.zip": "4cc2ee9e09076e8dc244951ee4f2c632449f550a063fc5a686bd433929bb1bf1",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/acquisition-b34b696e53e078aa3ad84e95bbb3dffba2cb9cafe122c4a1c41f91219ce17b20.json": "b34b696e53e078aa3ad84e95bbb3dffba2cb9cafe122c4a1c41f91219ce17b20",
+    "data/raw/sec-masters/4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670/archive.zip": "4d86c5196cc0c55fdbfd34eced3ea10b2a554ae80e17df5a1f1a4fba46b01670",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/acquisition-0fdf9eff42725c8d25a95b56f23ca6e2697e464e3e7d48ed283aa295941a1021.json": "0fdf9eff42725c8d25a95b56f23ca6e2697e464e3e7d48ed283aa295941a1021",
+    "data/raw/sec-masters/53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913/archive.zip": "53a29a28cf0876933843344df7663038269b0843e259f8af4892b2156ff1e913",
+    "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/acquisition-d5898948e3c19bc2ce9b8dbc272c551357f15493c5dd7b066e1effe80e832b3f.json": "d5898948e3c19bc2ce9b8dbc272c551357f15493c5dd7b066e1effe80e832b3f",
+    "data/raw/sec-masters/b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d/archive.zip": "b8d14a2c3c9a6d6cbcae69411048247942f9776043969f002f6fb20642c7ab4d",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/acquisition-5397c51407f2a865e54bf6c7b7b8d53fa569023219f505571f9c8fdd3951b2d1.json": "5397c51407f2a865e54bf6c7b7b8d53fa569023219f505571f9c8fdd3951b2d1",
+    "data/raw/sec-masters/e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1/archive.zip": "e7fd3389633cc81140000a92e6dd24eb3dad18736c75831c7f4cfbc734b166d1",
+    "data/raw/sec-filings/23fdc65366dd32bee02fb606552502862f9bf1484ff480059ed54d893d657dd4/filing.htm": "23fdc65366dd32bee02fb606552502862f9bf1484ff480059ed54d893d657dd4",
+    "data/raw/sec-filings/c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49/filing.htm": "c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49",
+    "data/raw/sec-filings/5a65ed32a35b0a0c3e04de8f6452843bb47acb40386a429089894e617aa241df/filing.htm": "5a65ed32a35b0a0c3e04de8f6452843bb47acb40386a429089894e617aa241df",
+    "data/raw/sec-filings/4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af/filing.htm": "4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af",
+    "data/raw/sec-filings/560188de5ced5a0afd029dd2941994b64a0ee80a43b697193e461844c58a0c37/filing.htm": "560188de5ced5a0afd029dd2941994b64a0ee80a43b697193e461844c58a0c37",
+    "data/raw/sec-filings/e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03/filing.htm": "e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03",
+    "data/raw/sec-filings/73905e12d0680f2cc685b546180d37b3f783d8ddb818f95d8d90d7b0e7fed26a/filing.htm": "73905e12d0680f2cc685b546180d37b3f783d8ddb818f95d8d90d7b0e7fed26a",
+    "data/raw/sec-filings/e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9/filing.htm": "e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9",
+    "data/raw/sec-filings/b60fa33fb53531c8d4c86789bb9a81bd68569a29346a376569c7e1c131330c58/filing.htm": "b60fa33fb53531c8d4c86789bb9a81bd68569a29346a376569c7e1c131330c58",
+    "data/raw/sec-filings/2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1/filing.htm": "2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1",
+    "data/raw/sec-filings/69aa4fb763326e4c48fd4f51da8aa9be844308c697c7ad5956ec08ee4a4206d1/filing.htm": "69aa4fb763326e4c48fd4f51da8aa9be844308c697c7ad5956ec08ee4a4206d1",
+    "data/raw/sec-filings/8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e/filing.htm": "8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e",
+    "data/raw/sec-filings/1ea6fd9300bc71ea5ec56106dd74cae07592e0079582b3450eb5604be67bdcc2/filing.htm": "1ea6fd9300bc71ea5ec56106dd74cae07592e0079582b3450eb5604be67bdcc2",
+    "data/raw/sec-filings/ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778/filing.htm": "ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778",
+    "data/raw/sec-filings/32f40c0c5c5f5b325a1e66d0571825617485e19fa40ab5231bb941501bba54fe/filing.htm": "32f40c0c5c5f5b325a1e66d0571825617485e19fa40ab5231bb941501bba54fe",
+    "data/raw/sec-filings/d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927/filing.htm": "d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927",
+    "data/raw/sec-filings/2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21/filing.htm": "2e74da920c6c7469ca95ffacf45bedf1c69ec0ae30e04820c7c5e6f3d2197b21",
+    "data/raw/sec-filings/5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367/filing.htm": "5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367",
+    "data/raw/sec-filings/70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d/filing.htm": "70ebc06b6a63c096cf2226a7112e3e8af445d8d2b1dafc2e8bd178d49e29d28d",
+    "data/raw/sec-filings/06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04/filing.htm": "06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04",
+    "data/raw/sec-filings/40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d/filing.htm": "40a36d5d6d74ee03c64df921d1c726db7b2290c60b7c3f984f4d908b2315dc6d",
+    "data/raw/sec-filings/82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f/filing.htm": "82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f",
+    "data/raw/sec-filings/8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099/filing.htm": "8bafafadd33679fadb0f6ec1a5d5cc9e1db544b6c8597fce803eeec53b321099",
+    "data/raw/sec-filings/66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264/filing.htm": "66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264",
+    "data/raw/sec-filings/0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4/filing.htm": "0267c437cf4f20f14e149d0e20aecb99b5561ba7ce8b23116586fa9298b73dd4",
+    "data/raw/sec-filings/1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe/filing.htm": "1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe",
+    "data/raw/sec-filings/1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1/filing.htm": "1e67709c9f019e07700229d8cc8a0c60b9162a2d9623f34e7f509c603b86aed1",
+    "data/raw/sec-filings/4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a/filing.htm": "4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a",
+    "data/raw/sec-filings/1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936/filing.htm": "1bcc398ac22fb6f0c3696abaea5c425c256b90e46659c1608190bf674c0f7936",
+    "data/raw/sec-filings/7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f/filing.htm": "7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f",
+    "data/raw/sec-filings/00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200/filing.htm": "00ecd46174387fcc6aee289f6f1549949ee69330fa30b3515a37204ac4519200",
+    "data/raw/sec-filings/0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9/filing.htm": "0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9",
+    "data/raw/sec-filings/5cd4806a3b89d3d2726161ee1f317c32fc8b59c45e427278ddaa346933225fd3/filing.htm": "5cd4806a3b89d3d2726161ee1f317c32fc8b59c45e427278ddaa346933225fd3",
+    "data/raw/sec-filings/99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e/filing.htm": "99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e",
+    "data/raw/sec-filings/005e399b0e1e59637bd53be403e500a57428f478a7af170924091d8f30fb35eb/filing.htm": "005e399b0e1e59637bd53be403e500a57428f478a7af170924091d8f30fb35eb",
+    "data/raw/sec-filings/7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558/filing.htm": "7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558",
+    "data/raw/sec-filings/699c9072c609e781c1244d233085a92327a959a1bc9062a118dd0d8897c68395/filing.htm": "699c9072c609e781c1244d233085a92327a959a1bc9062a118dd0d8897c68395",
+    "data/raw/sec-filings/fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666/filing.htm": "fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666",
+    "data/raw/sec-filings/ce680a4f2807a5b66e59f481e5910efdb99e3a262a0343f1b42cdb844dc73504/filing.htm": "ce680a4f2807a5b66e59f481e5910efdb99e3a262a0343f1b42cdb844dc73504",
+    "data/raw/sec-filings/4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b/filing.htm": "4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b",
+    "data/raw/sec-filings/b7d2a664cc7383ded6299b11b6bf5980c6b1b3ef86658ea81a6d02e1b323f6b9/filing.htm": "b7d2a664cc7383ded6299b11b6bf5980c6b1b3ef86658ea81a6d02e1b323f6b9",
+    "data/raw/sec-filings/f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90/filing.htm": "f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90",
+    "data/raw/sec-filings/3bd1a77c1428dd481320534c28e82494bf8cbf55954dc613054305809588ebaf/filing.htm": "3bd1a77c1428dd481320534c28e82494bf8cbf55954dc613054305809588ebaf",
+    "data/raw/sec-filings/0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69/filing.htm": "0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69",
+    "data/raw/sec-filings/1b5f5bb4fdfb80edaab703d4557976dc4afd6085f09ef15f36bddc3dbe497168/filing.htm": "1b5f5bb4fdfb80edaab703d4557976dc4afd6085f09ef15f36bddc3dbe497168",
+    "data/raw/sec-filings/ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de/filing.htm": "ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de",
+    "data/raw/sec-filings/58bc66d7e828f07d35a07b076daf9c7d965df56397958f679721a05d560a9a72/filing.htm": "58bc66d7e828f07d35a07b076daf9c7d965df56397958f679721a05d560a9a72",
+    "data/raw/sec-filings/3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16/filing.htm": "3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16",
+    "data/raw/sec-filings/f5398b629cca430b9cc6bf21cea712d6caa6e3e64634ad7da97edc99ba0bfe48/filing.htm": "f5398b629cca430b9cc6bf21cea712d6caa6e3e64634ad7da97edc99ba0bfe48",
+    "data/raw/sec-filings/d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba/filing.htm": "d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba",
+    "data/raw/sec-filings/39d64ccf03db44e8ea8e17c3582617452f9553e83356c5d8df65e5e13bb3711b/filing.htm": "39d64ccf03db44e8ea8e17c3582617452f9553e83356c5d8df65e5e13bb3711b",
+    "data/raw/sec-filings/22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f/filing.htm": "22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f",
+    "data/raw/sec-filings/e5258a7bb310b9a32b07274197de4cd6085c626ea098553c09f3250a9391e5bb/filing.htm": "e5258a7bb310b9a32b07274197de4cd6085c626ea098553c09f3250a9391e5bb",
+    "data/raw/sec-filings/e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e/filing.htm": "e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e",
+    "data/raw/sec-filings/c8d06376672de3eb6d23a3334b56f772b0e174879932657b1b40c1029ed69fe1/filing.htm": "c8d06376672de3eb6d23a3334b56f772b0e174879932657b1b40c1029ed69fe1",
+    "data/raw/sec-filings/295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685/filing.htm": "295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685",
+    "data/raw/sec-filings/d9a3388845da5b4d010cb25b2c93fb2c75d01faba2f7ec8e1e07b499b7affc3e/filing.htm": "d9a3388845da5b4d010cb25b2c93fb2c75d01faba2f7ec8e1e07b499b7affc3e",
+    "data/raw/sec-filings/181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1/filing.htm": "181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1",
+    "data/raw/sec-filings/0462698193cb3e0a2e31b2ec45ee469bbf2883f8807c75ab48c0569a31ddc251/filing.htm": "0462698193cb3e0a2e31b2ec45ee469bbf2883f8807c75ab48c0569a31ddc251",
+    "data/raw/sec-filings/f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf/filing.htm": "f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf",
+    "data/raw/sec-filings/1c4d375fd049b5e1da7ae05dd64d627005f6a2718e6f6480a3c6cdf2e6e76107/filing.htm": "1c4d375fd049b5e1da7ae05dd64d627005f6a2718e6f6480a3c6cdf2e6e76107",
+    "data/raw/sec-filings/f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95/filing.htm": "f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95",
+    "data/raw/sec-filings/aeac0eb4304230361a3df8e4bb342312613124898e033754ced3f8e18881cba2/filing.htm": "aeac0eb4304230361a3df8e4bb342312613124898e033754ced3f8e18881cba2",
+    "data/raw/sec-filings/9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2/filing.htm": "9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2",
+    "data/raw/sec-filings/9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0/filing.htm": "9d8abaaf9f5adaaf9e77b89f185b2cc38a39df1fdc05e4a5e5bcf2c33c84b3b0",
+    "data/raw/sec-filings/eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d/filing.htm": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+    "data/raw/sec-filings/593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7/filing.htm": "593fdd69b2cebbaf7565e08b5f7adc50b00b5f3af43aa3c66c0f876037972ea7",
+    "data/raw/sec-filings/04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee/filing.htm": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+    "data/raw/sec-filings/aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f/filing.htm": "aa5e69454482516a996622e28283a3d62bf12e5a1f3614d1ec60048a6249ce9f",
+    "data/raw/sec-filings/45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9/filing.htm": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+    "data/raw/sec-filings/eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5/filing.htm": "eb02802e38026d214b67f65d698e32afd688c47aa42dc029a238aa8a0b6222b5",
+    "data/raw/sec-filings/39623923ebf3e3c16bd30bd41b20e713041ee532e583e5505f1d00d17ed8a4a4/filing.htm": "39623923ebf3e3c16bd30bd41b20e713041ee532e583e5505f1d00d17ed8a4a4",
+    "data/raw/sec-filings/9c09b7c565d3fc2ba8c915ce79f74def559b5448550d35189520d5fe65ea02dd/filing.htm": "9c09b7c565d3fc2ba8c915ce79f74def559b5448550d35189520d5fe65ea02dd",
+    "data/raw/sec-filings/6e0f305a7654433e3214473e0b59300065150801a4a7a752626dfe816098ba26/filing.htm": "6e0f305a7654433e3214473e0b59300065150801a4a7a752626dfe816098ba26",
+    "data/raw/sec-filings/e6b60909dc3b114aa74ef8daf1218af5471b50158b4446d368efb6602735d0b9/filing.htm": "e6b60909dc3b114aa74ef8daf1218af5471b50158b4446d368efb6602735d0b9",
+    "data/raw/sec-filings/1205d90bfea003a73e6673eb523bf00c79f06670319368b84e35c3f727187d7f/filing.htm": "1205d90bfea003a73e6673eb523bf00c79f06670319368b84e35c3f727187d7f",
+    "data/raw/sec-filings/f1abecbb480643305fe33894ec8feb4b4ee99eeaecbec158a948af316a2b8634/filing.htm": "f1abecbb480643305fe33894ec8feb4b4ee99eeaecbec158a948af316a2b8634",
+    "data/raw/sec-filings/0a3617f4fe50a42241ea06d5c5f2df0b49aa4f7c0aacb0ef2c9ba970f1efe763/filing.htm": "0a3617f4fe50a42241ea06d5c5f2df0b49aa4f7c0aacb0ef2c9ba970f1efe763",
+    "data/raw/sec-filings/67c7d2b7ce394bc2b1fc0785b396e16a7c3f3a1648185821182e2eaf44b321dd/filing.htm": "67c7d2b7ce394bc2b1fc0785b396e16a7c3f3a1648185821182e2eaf44b321dd",
+    "data/raw/sec-filings/74064c5ddf37af9e85ebf1a0217a5bda73db528785eb02bcc9522034ea824821/filing.htm": "74064c5ddf37af9e85ebf1a0217a5bda73db528785eb02bcc9522034ea824821",
+    "data/raw/sec-filings/339d8a36a912b99d3109e84838fb667ec8f5ac33624789d84e34b2ee32368531/filing.htm": "339d8a36a912b99d3109e84838fb667ec8f5ac33624789d84e34b2ee32368531",
+    "data/raw/sec-filings/11f6ed3476ee6f57a519366666ceb01a9e0d18982ee42d7f25e7d7c9723870ef/filing.htm": "11f6ed3476ee6f57a519366666ceb01a9e0d18982ee42d7f25e7d7c9723870ef",
+    "data/raw/sec-filings/e0bf6de3d441c9394c87d75ac5dbde46afc5f2b67af5f1301beafc38d0a06c5e/filing.htm": "e0bf6de3d441c9394c87d75ac5dbde46afc5f2b67af5f1301beafc38d0a06c5e",
+    "data/raw/sec-filings/783ce35ce1ebe1efcaca60b10d9b52528b38ed68db4ad675393cd68e7ff0ff7e/filing.htm": "783ce35ce1ebe1efcaca60b10d9b52528b38ed68db4ad675393cd68e7ff0ff7e",
+    "data/raw/sec-filings/bebcfc163aba43f7298db9f6c6506ecc257ee84ef97974772b1324b893220d0d/filing.htm": "bebcfc163aba43f7298db9f6c6506ecc257ee84ef97974772b1324b893220d0d",
+    "data/raw/sec-filings/93c2fe98efaca264b82947ed4f71a20af8ff0ede1e9c4f39f00e561e495114ca/filing.htm": "93c2fe98efaca264b82947ed4f71a20af8ff0ede1e9c4f39f00e561e495114ca",
+    "data/raw/sec-filings/cdabe126031a14826ad86721a431d4ef94b8c892640f615d0ce341fc02cbe95f/filing.htm": "cdabe126031a14826ad86721a431d4ef94b8c892640f615d0ce341fc02cbe95f",
+    "data/raw/sec-filings/ce13b30b491448c20cf22e6171e74ee474fb25ff0ac61cac7eb3dab2c557671e/filing.htm": "ce13b30b491448c20cf22e6171e74ee474fb25ff0ac61cac7eb3dab2c557671e",
+    "data/raw/sec-filings/f0bfb3510c59d30c42aafa2a26e1a678debebb58fec2e15e53b6e5c781a6758e/filing.htm": "f0bfb3510c59d30c42aafa2a26e1a678debebb58fec2e15e53b6e5c781a6758e",
+    "data/raw/sec-filings/b91d23a18fecc4863b219ff78f0b5f6f23cb7afc33a73d791f60dfec63a8ede8/filing.htm": "b91d23a18fecc4863b219ff78f0b5f6f23cb7afc33a73d791f60dfec63a8ede8",
+    "data/raw/sec-filings/46f997abb991a29595b0facadd893a8b4ae098c5442bb0330be057eaaa2d8015/filing.htm": "46f997abb991a29595b0facadd893a8b4ae098c5442bb0330be057eaaa2d8015",
+    "data/raw/sec-filings/9e72e3f283d54805eeade9908f97b8efb5d7b265d2b097b3854cc7cf288864f8/filing.htm": "9e72e3f283d54805eeade9908f97b8efb5d7b265d2b097b3854cc7cf288864f8",
+    "data/raw/sec-filings/89ab03e5f92345b15765c1b4c4a06ad50321cc7e6fec32a04b75690d2151565f/filing.htm": "89ab03e5f92345b15765c1b4c4a06ad50321cc7e6fec32a04b75690d2151565f",
+    "data/raw/sec-filings/db254e9854b8ebbe4de1836e128af214364b05143f2b2a10f582c8a57d496b1b/filing.htm": "db254e9854b8ebbe4de1836e128af214364b05143f2b2a10f582c8a57d496b1b",
+    "data/raw/sec-filings/4c9c08b199b30870ce6f0bc4484a722aa2f160e3eeaf3183cf52e14077832830/filing.htm": "4c9c08b199b30870ce6f0bc4484a722aa2f160e3eeaf3183cf52e14077832830",
+    "data/raw/sec-filings/22da5cf3766d1efc0d00a9a14c232a4c883257a7987457035a9ce23aa0be6fb0/filing.htm": "22da5cf3766d1efc0d00a9a14c232a4c883257a7987457035a9ce23aa0be6fb0",
+    "data/raw/sec-filings/21d9dd800014166c9cf5e02c5d0851d927c3809a846e7543bda6942f4589e02c/filing.htm": "21d9dd800014166c9cf5e02c5d0851d927c3809a846e7543bda6942f4589e02c",
+    "data/raw/sec-filings/1fd0df5179854cad30a63e63f6a6179c25189ccc00bfb48f25de3ed7bdd537c6/filing.htm": "1fd0df5179854cad30a63e63f6a6179c25189ccc00bfb48f25de3ed7bdd537c6",
+    "data/raw/sec-filings/05629937ea26dcf0760e56c23f042827a1419f12d10c711c84c155a0117e5ef1/filing.htm": "05629937ea26dcf0760e56c23f042827a1419f12d10c711c84c155a0117e5ef1",
+    "data/raw/sec-filings/24c0ef5b6ca529249b1d545ad66286702773993a0a798f252f55817fdee240d1/filing.htm": "24c0ef5b6ca529249b1d545ad66286702773993a0a798f252f55817fdee240d1",
+    "data/raw/sec-filings/90619952975c3e945511b581313fc6487b102cffea683a992ed8eac36b9dce70/filing.htm": "90619952975c3e945511b581313fc6487b102cffea683a992ed8eac36b9dce70",
+    "data/raw/sec-filings/38dfaba9477b87645f431c11f8b168a53662b48678c4c2f0eebda0ce0cd9db41/filing.htm": "38dfaba9477b87645f431c11f8b168a53662b48678c4c2f0eebda0ce0cd9db41",
+    "data/raw/sec-filings/f6c2a719e19c51cd90e4fed9248dde7e602444c8b9bb2f924e3a8b7ad17d2c7c/filing.htm": "f6c2a719e19c51cd90e4fed9248dde7e602444c8b9bb2f924e3a8b7ad17d2c7c",
+    "data/raw/sec-filings/877fabf30aaf313cd537447cab369168ad7996cae379325cdd1cefb49570cff5/filing.htm": "877fabf30aaf313cd537447cab369168ad7996cae379325cdd1cefb49570cff5",
+    "data/raw/sec-filings/d4cdec937e7b9f75435f9cc45829f6f87b8d0a1475c95df0a3c257d6174b2066/filing.htm": "d4cdec937e7b9f75435f9cc45829f6f87b8d0a1475c95df0a3c257d6174b2066",
+    "data/raw/sec-filings/eae1381c724c741b3276971958ada0b7f14ffe481780cdfe13eb59317537f44f/filing.htm": "eae1381c724c741b3276971958ada0b7f14ffe481780cdfe13eb59317537f44f",
+    "data/raw/sec-filings/0c10714b7e587493d9e17ed4da65d605114b24fe7ba971351841c7455b1fbcd4/filing.htm": "0c10714b7e587493d9e17ed4da65d605114b24fe7ba971351841c7455b1fbcd4",
+    "data/raw/sec-filings/fc3ba76f9fc86118bb9d69bdf5cd7074c01b2d293f5dff3133247cb4f280a128/filing.htm": "fc3ba76f9fc86118bb9d69bdf5cd7074c01b2d293f5dff3133247cb4f280a128",
+    "data/raw/sec-filings/18bab46507de841d4aab425763760505d49c388e58539adac6375922ca33cd65/filing.htm": "18bab46507de841d4aab425763760505d49c388e58539adac6375922ca33cd65",
+    "data/raw/sec-filings/5eee38c2d4b036b161948209c93910dad2fa84dcf6308efa174732835bc1046c/filing.htm": "5eee38c2d4b036b161948209c93910dad2fa84dcf6308efa174732835bc1046c",
+    "data/raw/sec-filings/3057ebf2f4a8e0b566e2038a6fb55332b37f0787bd582cc251f78c92231bdf44/filing.htm": "3057ebf2f4a8e0b566e2038a6fb55332b37f0787bd582cc251f78c92231bdf44",
+    "data/raw/sec-filings/103240e789adde9e505798918a9cd7379ef77243eea486325d741b45660b19aa/filing.htm": "103240e789adde9e505798918a9cd7379ef77243eea486325d741b45660b19aa",
+    "data/raw/sec-filings/ff30fb5a5cc61132b6ef4613d4728aceed4f09e454c7da5fa19b656e33e01332/filing.htm": "ff30fb5a5cc61132b6ef4613d4728aceed4f09e454c7da5fa19b656e33e01332",
+    "data/raw/sec-filings/aec2b474d4f794b2ca0520fc583fe215ed9779e52f5fbe161a77d404f39f03dd/filing.htm": "aec2b474d4f794b2ca0520fc583fe215ed9779e52f5fbe161a77d404f39f03dd",
+    "data/raw/sec-filings/fc064deaae6abe27f7da45bad7d83b7c2fd56d44ac0030e42cc629d619e033e6/filing.htm": "fc064deaae6abe27f7da45bad7d83b7c2fd56d44ac0030e42cc629d619e033e6",
+    "data/raw/sec-filings/cc74f848d864d33efeeaf82084029aba156b3ecebdfdf22f73cab2e46fa23c70/filing.htm": "cc74f848d864d33efeeaf82084029aba156b3ecebdfdf22f73cab2e46fa23c70",
+    "data/raw/sec-filings/0e9fd179fc39e48bb3e22fe5be58db411e6665dbbe7bf3eb7159f0f290c5f0f7/filing.htm": "0e9fd179fc39e48bb3e22fe5be58db411e6665dbbe7bf3eb7159f0f290c5f0f7",
+    "data/raw/sec-filings/389dd8c02928b10369b50b1aa44984ced4a6e8a6b0091e062dbca183dfe58043/filing.htm": "389dd8c02928b10369b50b1aa44984ced4a6e8a6b0091e062dbca183dfe58043",
+    "data/raw/sec-filings/ebec44752d413c69b66eb2222c1b22d585f4e90013467f9fca617891d351d433/filing.htm": "ebec44752d413c69b66eb2222c1b22d585f4e90013467f9fca617891d351d433",
+    "data/raw/sec-filings/a1a0567183c91e7de1db9ed22e652a0065e420022106b60d517a01d4d009cf39/filing.htm": "a1a0567183c91e7de1db9ed22e652a0065e420022106b60d517a01d4d009cf39",
+    "data/raw/sec-filings/ec346d7488ebbf04d85ad50bf01027ef0443579d09c5fbf393a6dde3f7d666d0/filing.htm": "ec346d7488ebbf04d85ad50bf01027ef0443579d09c5fbf393a6dde3f7d666d0",
+    "data/raw/sec-filings/bb23985f2268b17058f29f7f26a90c725f30db29d0cde958839b016d7469ed0e/filing.htm": "bb23985f2268b17058f29f7f26a90c725f30db29d0cde958839b016d7469ed0e",
+    "data/raw/sec-filings/3489617b99234deae57bc71d624a1b293c600f1144ee3768c49cb801c656b585/filing.htm": "3489617b99234deae57bc71d624a1b293c600f1144ee3768c49cb801c656b585",
+    "data/raw/sec-filings/7e0c4afe8d7cf7aa6fed6176d3b97df54c360f4eb88e062cfaf69dbe7bd3f368/filing.htm": "7e0c4afe8d7cf7aa6fed6176d3b97df54c360f4eb88e062cfaf69dbe7bd3f368",
+    "data/raw/sec-filings/1f7c6c7240ee3f93647a8c1686dcc50cbfd1f3bd25ecdab11cecaa343377042c/filing.htm": "1f7c6c7240ee3f93647a8c1686dcc50cbfd1f3bd25ecdab11cecaa343377042c",
+    "data/raw/sec-filings/23593b5bcf4219c1a6bb36cf507e747afa5c5f856635dd00051041ae86321e48/filing.htm": "23593b5bcf4219c1a6bb36cf507e747afa5c5f856635dd00051041ae86321e48",
+    "data/raw/sec-filings/bc028b474718d4b59e93ac45c34aac9b038b1a8fc0c134c21273b71df43d2cfb/filing.htm": "bc028b474718d4b59e93ac45c34aac9b038b1a8fc0c134c21273b71df43d2cfb",
+    "data/raw/sec-filings/594fbd4330373394789f95641ed1ac41f2e18fce31087a77cd58338961cf6f45/filing.htm": "594fbd4330373394789f95641ed1ac41f2e18fce31087a77cd58338961cf6f45",
+    "data/raw/sec-filings/5e43c8c97fc6b54484d9af0acd353c2bd91f0ac65a6a4c6f4121603609d6dbc6/filing.htm": "5e43c8c97fc6b54484d9af0acd353c2bd91f0ac65a6a4c6f4121603609d6dbc6",
+    "data/raw/sec-filings/141174e516f4f65cfa621c7a6aaf27613420569ce7da89e952b853ab4a644096/filing.htm": "141174e516f4f65cfa621c7a6aaf27613420569ce7da89e952b853ab4a644096",
+    "data/raw/sec-filings/4441a32dcdab76dd61ecc24a694dc0bf60d8a4918e5d47085646a6d1ff54b48e/filing.htm": "4441a32dcdab76dd61ecc24a694dc0bf60d8a4918e5d47085646a6d1ff54b48e",
+    "data/raw/sec-filings/e612857f45454d02d9315232ca2c1f29f634d88dcded355caacfe7bcb09730eb/filing.htm": "e612857f45454d02d9315232ca2c1f29f634d88dcded355caacfe7bcb09730eb",
+    "data/raw/sec-filings/34c58dbf8d12b5db1ffbd2299045c9e6d6c4b5f9f5d565adc1ebb912f995ec95/filing.htm": "34c58dbf8d12b5db1ffbd2299045c9e6d6c4b5f9f5d565adc1ebb912f995ec95",
+    "data/raw/sec-filings/6691d869b1d6550510d7dc008f4b07732fe3b4fa0dfdb61fa9f27d1dba1c6a11/filing.htm": "6691d869b1d6550510d7dc008f4b07732fe3b4fa0dfdb61fa9f27d1dba1c6a11",
+    "data/raw/sec-filings/f0ef62f3bf1bc717f89fa3ee5766134ec1466b3c97c8952e0718f26058bde97a/filing.htm": "f0ef62f3bf1bc717f89fa3ee5766134ec1466b3c97c8952e0718f26058bde97a",
+    "data/raw/sec-filings/820bc0d82eafe19f6c11bf7f9a2f58c264dd9d8794e4be2061116728f8bd95f7/filing.htm": "820bc0d82eafe19f6c11bf7f9a2f58c264dd9d8794e4be2061116728f8bd95f7",
+    "data/raw/sec-filings/fb665a8af2479666996f333973c20616d57c5dd58ea65757106937192e6cedef/filing.htm": "fb665a8af2479666996f333973c20616d57c5dd58ea65757106937192e6cedef",
+    "data/raw/sec-filings/2b3c15e1ed369b55b33bef0a25b4ef160410d233e37e2040e780bb14869f97ba/filing.htm": "2b3c15e1ed369b55b33bef0a25b4ef160410d233e37e2040e780bb14869f97ba"
+  },
+  "protected_sources_unchanged": true,
+  "historical_metadata_admitted": false,
+  "network_requests": 0,
+  "training_performed": false,
+  "colab_allocated": false
+}

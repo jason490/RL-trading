@@ -125,3 +125,20 @@ pending an explicit verified joint-filer resolution and reviewed resume, not a
 license for arbitrary cross-CIK links. All declared protected files/ledger remain
 unchanged; project usage39.92585919/150. Model results and metadata admission are
 unchanged.
+
+## Reviewed resume complete — 2026-11-01
+
+The [source-only v2 resume](stock-reviewed-resume-result-v2.json) completed34/34
+unfinished primaries in68 operations, reusing NEE's retained index and adding
+88,940,815 raw bytes. [Combined independent verification](stock-source-combined-audit.json)
+passes all69 originally selected primaries, including three master-verified joint
+directories (NEE/SO/SRE), original publication dates and source checksums. All164
+protected inputs remain unchanged. Original batch4 is still stopped; its failure,
+claims and global stop are preserved alongside the successful resume.
+
+The text helper yields60 cover hints/31 ticker-clause hints, with metadata
+admission still false. ABBV/DIS special sources and content/alias review remain.
+[Cleanup](source-progress-cleanup.json) removes only a142,610-byte duplicate
+progress receipt after equality/integrity checks; every raw source and scientific
+receipt remains. No training, Colab allocation, retired-test access or ledger
+change. Project usage remains39.92585919/150.

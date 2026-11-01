@@ -3174,3 +3174,13 @@ request for rejected NEE, no later batch or retry. Official master confirms both
 registrants share the accession; explicit joint-filer resolution/reviewed resume
 remains next. All declared protected inputs/ledger unchanged; no training/credits.
 ABBV/DIS event/predecessor candidates located but not admitted.
+
+### Reviewed source resume and full selected-corpus verification — 2026-11-01
+
+Separate v2 resume completed34 unfinished primaries, preserving original failure/
+claims/global stop and35 earlier successes. Independent69-source audit validates
+indexes/master authority, dates and hashes, including three joint-filer links.
+164 protected inputs unchanged;142,610-byte duplicate progress receipt removed
+only after exact final equality.60 cover/31 ticker hints do not admit historical
+metadata. ABBV/DIS sources and alias/content review remain pending; no training,
+Colab allocation, new credits or retired-test access.
