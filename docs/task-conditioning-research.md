@@ -796,3 +796,13 @@ Capture tests verify no RNG/thread/environment mutation. Historical records stay
 unchanged and missing backend fields stay missing; profile artifact validation
 supports both original records and explicitly captured CPU records. This logging
 fix alone does not admit the failed tagged cell or restart the remaining role.
+
+## Proposed reference-inference path
+
+A separate [arithmetic category guide](canonical-inference.md) documents the new
+binary32 exact-dot/certified-tanh core and its14 passing host unit checks. This is
+an implementation foundation for a future explicitly versioned execution variant,
+not retrospective acceptance of the tagged native reports. Actor integration,
+frozen/export checks, actual runtime measurement and predeclared evaluation remain
+pending. No training or Colab allocation accompanied this work, and all original
+failures, native artifacts, performance gates and charges remain preserved.
