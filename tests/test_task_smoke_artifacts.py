@@ -60,3 +60,32 @@ def test_complete_shaped_archive_rejects_unsafe_members(tmp_path, unsafe):
         archive.addfile(item)
     with pytest.raises(RuntimeError, match='archive'):
         validate_task_smoke_archive(path, plan, plan['dataset_contract']['identity'])
+
+
+def test_report_json_sidecar_is_required_and_allowlisted(tmp_path, monkeypatch):
+    import rl_stocks.runtime.colab.task_smoke_artifacts as verifier
+    plan = task_smoke_plan('masked_shared')
+    completion = dict(plan=plan, dataset=plan['dataset_contract']['identity'], gpu=None,
+                      python=[3, 13, 18], source_git={'revision': 'a' * 40, 'dirty': ''},
+                      source_hash='b' * 64)
+    monkeypatch.setattr(verifier, 'verify_directory', lambda *args: dict(
+        repository=completion['source_git'], source=completion['source_hash'], task_role='masked_shared'))
+    assert 'final-training.json' in verifier.FILES
+    names = {'artifacts/task-smoke/' + name for name in verifier.FILES}
+    names |= {'artifacts/task-smoke/frozen/' + 'f' * 64 + '/' + name
+              for name in ('model.zip', 'manifest.json', 'checksums.json', 'requirements.lock')}
+    for omit in (False, True):
+        path = tmp_path / f'report-{omit}.tar'
+        with tarfile.open(path, 'w') as archive:
+            for name in sorted(names | {'artifacts/completion.json'}):
+                if omit and name.endswith('/final-training.json'):
+                    continue
+                data = json.dumps(completion).encode() if name.endswith('/completion.json') else b'{}'
+                item = tarfile.TarInfo(name)
+                item.size = len(data)
+                archive.addfile(item, io.BytesIO(data))
+        if omit:
+            with pytest.raises(RuntimeError, match='bounded complete'):
+                verifier.validate_task_smoke_archive(path, plan, completion['dataset'])
+        else:
+            assert verifier.validate_task_smoke_archive(path, plan, completion['dataset'])[0]['status'] == 'complete'

@@ -411,3 +411,21 @@ development scores, nonfinite scores or changed holding paths reject selection.
 It returns independent copies and never grants development access: the complete
 three-role final training gate remains mandatory. This helper does not implement
 or authorize the full100k worker; learned smoke acceptance and profiling come first.
+
+## First learned smoke and retained-archive correction — 2026-11-01
+
+The masked shared role completed1024 Colab CPU transitions with960 actor/critic/
+entropy updates. Its model/replay restoration and learned frozen predictions pass
+independent inspection of the downloaded archive. The original fleet stopped after
+archive acceptance rejected the report writer's `final-training.json` sidecar: the
+allowlist omitted this expected file. The verifier now requires and allows that
+specific sidecar; a regression covers its presence and omission. No model settings,
+performance thresholds or numerical tolerances changed, and no training was retried.
+
+`masked-smoke-acceptance.json` retains archive SHA, original failed fleet identity,
+source revision, compact training curve and corrected physical acceptance. Original
+failure state, per-role allocation claim and shared budget baseline stay intact.
+Owned-session cleanup was verified. Tagged shared/routed roles were never allocated;
+a reviewed continuation must account for the accepted original role and retain its
+charges rather than restarting the complete fleet. These smoke returns do not
+admit performance or the full100k screen.

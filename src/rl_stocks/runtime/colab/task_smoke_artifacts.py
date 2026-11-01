@@ -18,7 +18,8 @@ from rl_stocks.training.task_optimizer import TaskOptimizerAudit
 
 
 FILES = {'initial.zip', 'checkpoint-512.zip', 'checkpoint-1024.zip', 'replay.pkl',
-         'input.json', 'run.json', 'curve.json', 'curve.csv', 'curve.html', 'final-training.html'}
+         'input.json', 'run.json', 'curve.json', 'curve.csv', 'curve.html',
+         'final-training.html', 'final-training.json'}
 
 
 def verify_directory(folder, plan):
