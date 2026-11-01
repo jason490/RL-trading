@@ -48,6 +48,9 @@ def append_record(path,record):
 
 def render_curve(history,destination):
     destination=Path(destination);points=latest_points(history)
+    phases = {point.get('phase') for point in points}
+    period = ('Training-window' if phases == {'training-window'} else
+              'Validation' if phases <= {'validation', 'validation-post-update', 'on_step', 'post_update'} else 'Evaluation')
     columns=('steps','phase','return_pct','change_pp','equity_change_pct_from_previous',
         'gain_since_50k_pp','best_return_pct','buy_hold_return_pct','excess_return_pp',
         'mean_max_drawdown_pct','mean_costs','mean_turnover','elapsed_seconds')
@@ -57,13 +60,13 @@ def render_curve(history,destination):
     from plotly.subplots import make_subplots
     import plotly.graph_objects as go
     figure=make_subplots(rows=4,cols=1,shared_xaxes=True,subplot_titles=(
-        'Validation total return (%) — separate symbol episodes',
+        f'{period} total return (%) — separate symbol episodes',
         'Incremental change (percentage points)', 'Average maximum drawdown (%)','Average modeled costs ($)'))
     x=[r['steps'] for r in points]
     for name,key,row in [('Current','return_pct',1),('Best so far','best_return_pct',1),
              ('Buy and hold','buy_hold_return_pct',1),('Since previous checkpoint','change_pp',2),
              ('Since 50k','gain_since_50k_pp',2),('Drawdown','mean_max_drawdown_pct',3),('Costs','mean_costs',4)]:
         figure.add_trace(go.Scatter(x=x,y=[r[key] for r in points],name=name,mode='lines+markers'),row=row,col=1)
-    figure.update_layout(height=1100,title='Validation learning curve; no final-test evaluation')
+    figure.update_layout(height=1100,title=f'{period} learning curve; no final-test evaluation')
     figure.update_xaxes(title_text='Training transitions',row=4,col=1)
     figure.write_html(str(destination),include_plotlyjs=True)

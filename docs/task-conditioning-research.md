@@ -439,3 +439,10 @@ It rejects any already-claimed suffix role and keeps the original two-unit study
 baseline. It does not retry masked training or overwrite the failed fleet record.
 A separate fleet state records the two never-allocated roles; each still receives
 one allocation with ordinary shared metering, deadlines and verified cleanup.
+
+Training-window learning charts now derive their title from their recorded phase;
+they no longer inherit the generic validation label. Ordinary validation curves
+keep their existing labels; unknown or mixed phases say Evaluation. Previously
+retrieved immutable smoke reports retain the old display label, while their JSON
+phase remains the authoritative training-only scope. No returns or checkpoint
+selection changed. Future worker payloads include the corrected chart renderer.
