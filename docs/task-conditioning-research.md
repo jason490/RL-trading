@@ -401,3 +401,13 @@ owned-session shutdown. The temporary allocation staging rejection is removed.
 First learned artifacts must pass physical inspection before any100k experiment.
 Actual kernel Python is checked by bootstrap before dependencies or optimization;
 a default-version change stops the worker rather than installing an older Python.
+
+## Training-only checkpoint selector
+
+`training/task_selection.py` requires the complete ordered10k-through100k training
+curve and identical holding-path identities. It selects the earliest strict maximum
+mean net return and keeps the final100k point separately. Missing/duplicate steps,
+development scores, nonfinite scores or changed holding paths reject selection.
+It returns independent copies and never grants development access: the complete
+three-role final training gate remains mandatory. This helper does not implement
+or authorize the full100k worker; learned smoke acceptance and profiling come first.
