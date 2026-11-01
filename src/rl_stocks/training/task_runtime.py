@@ -11,6 +11,8 @@ from rl_stocks.rl.sac.task_policy import check_role
 
 def shared_budget(ledger, requested_limit=None, requested_start=None):
     from rl_stocks.runtime.colab.budget import BudgetStop
+    if (ledger.path.resolve().parent / 'task-conditioning-family-closure-v1.json').exists():
+        raise RuntimeError('task-conditioning family closed; no automatic retry or extension')
     spec = protocol()['execution']
     maximum = spec['max_study_incremental_units']
     limit = maximum if requested_limit is None else requested_limit

@@ -79,3 +79,12 @@ def test_complete_smoke_admission_requires_retained_evidence(tmp_path):
     from rl_stocks.training.task_runtime import verify_all_smokes
     with pytest.raises(FileNotFoundError):
         verify_all_smokes(tmp_path, ledger(tmp_path))
+
+
+def test_closed_family_cannot_allocate_or_reset_budget(tmp_path):
+    item = ledger(tmp_path)
+    (tmp_path / 'task-conditioning-family-closure-v1.json').write_text('{}')
+    with pytest.raises(RuntimeError, match='family closed'):
+        shared_budget(item)
+    assert item.value['consumed'] == 39.9
+    assert not item.value['budget_stopped']

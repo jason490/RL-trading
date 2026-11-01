@@ -712,3 +712,25 @@ retry masked training or overwrite original failure state. Current production
 admission passed with0.405 projected units and1.860736 study units remaining.
 Use a fresh jobs output and fleet state file for the suffix; development stays shut
 until the complete three-role final fitted gate passes.
+
+## Complete verified final training gate publication
+
+After the suffix fleet completes and all owned sessions are stopped, run:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/accept_task_screen.py --output results/task-conditioning-2026-10-31/training-admission.json
+```
+
+The reader binds the pinned masked exact proof and both suffix verification files
+to retained archives, final training-cell metrics, selected steps and frozen bundle
+identities. It requires complete ten-checkpoint replay proofs and stopped verified
+ownership before calling the original three-role training gate. This inexpensive
+binding consumes independent replay evidence; it does not replace model replay.
+
+The decision is written once. Failure also publishes a persistent family closure;
+shared task-budget admission then rejects further allocations without altering
+cumulative usage or global budget-stop state. Development remains forbidden on
+failure. Unit checks reject modified metrics and incomplete proofs and verify
+closure enforcement. This reader has not yet consumed a complete actual matrix;
+tagged shared/routed100k outcomes remain pending. All103 profiled compute files
+remain unchanged by these orchestration additions.
