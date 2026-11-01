@@ -22,3 +22,22 @@ def test_screen_claim_cannot_repeat_or_clear_prior_charges(tmp_path):
     assert ledger.value['consumed'] == 39.97
     with pytest.raises(FileNotFoundError):
         verify_execution(tmp_path, ledger)
+
+
+def test_reviewed_job_cannot_change_profile_duration_or_learning_budget():
+    from copy import deepcopy
+    from rl_stocks.runtime.colab.jobs import reviewed_task_screen_plan, validate_plan
+    for role, seconds in review_spec()['allocation_seconds'].items():
+        plan = reviewed_task_screen_plan(role)
+        validate_plan(plan)
+        assert plan['allocation_deadline_seconds'] == seconds
+        for field, value in [('allocation_deadline_seconds', seconds + 3600),
+                             ('profile_acceptance_sha256', '0' * 64)]:
+            altered = deepcopy(plan)
+            altered[field] = value
+            with pytest.raises(ValueError, match='fixed reviewed'):
+                validate_plan(altered)
+        altered = deepcopy(plan)
+        altered['jobs'][0]['steps'] = 250000
+        with pytest.raises(ValueError, match='fixed reviewed'):
+            validate_plan(altered)

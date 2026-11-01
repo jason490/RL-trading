@@ -18,7 +18,7 @@ ROOT_FILES |= {f'training-{step}.json' for step in range(10000, 100001, 10000)}
 def extract_screen_transport(path, plan, dataset_id, destination):
     """Validate transport before extraction; does not accept learned performance."""
     validate_plan(plan)
-    if plan['version'] != 46 or dataset_id != plan['dataset_contract']['identity']:
+    if plan['version'] not in (46, 47) or dataset_id != plan['dataset_contract']['identity']:
         raise ValueError('bound task screen transport required')
     prefix = 'artifacts/task-screen/'
     required = {'artifacts/completion.json'} | {prefix + name for name in ROOT_FILES}

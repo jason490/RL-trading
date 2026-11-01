@@ -656,3 +656,26 @@ within the original two-unit family allowance. Per-role persistent claims prohib
 retries. Actual production admission passed these checks without allocation or
 ledger reset. Remote registration/fleet wiring for this reviewed contract remains
 pending; the original version46 plan stays blocked and unchanged.
+
+## Reviewed screen launch wiring
+
+Version47 implements the explicit execution review with fixed7200/7200/9000-second
+role allocations, original seed11/100k methods and profile identity. The complete
+ordered matrix is required; a dedicated aggregate fleet supports the9000-second
+maximum and records each role's one-time claim. There is no automatic execution
+retry. The asynchronous verifier retains1800 seconds plus shutdown reserve, and
+all roles still share the original two-unit baseline and account/project protections.
+Version46's original two-hour contract stays blocked and preserved.
+
+From clean committed source, prepare without allocating:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/build_task_screen_jobs.py --output .runtime/task-screen-jobs-v1.json
+```
+
+Run through `python -m rl_stocks.runtime.colab.fleet` with the prepared jobs, existing
+CLI interpreter and a fresh state-output. The builder and fleet each recheck physical
+profile/source evidence before allocation. Remote dispatch verifies input identities,
+executes the fixed training-only cell and exports completion metadata; downloaded
+cells undergo independent saved-checkpoint replay. No development evaluation is
+performed in this stage, regardless of training returns.

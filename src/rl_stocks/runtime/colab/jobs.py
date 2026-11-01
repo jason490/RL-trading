@@ -66,7 +66,15 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 46:
+    if plan.get('version') == 47:
+        from rl_stocks.core.contracts import canonical
+        try:
+            expected = reviewed_task_screen_plan(plan['task_screen']['task_role'])
+        except (KeyError, TypeError):
+            raise ValueError('malformed reviewed task screen plan') from None
+        if canonical(plan) != canonical(expected):
+            raise ValueError('fixed reviewed task screen required')
+    elif plan.get('version') == 46:
         from rl_stocks.core.contracts import canonical
         try:
             expected = task_screen_plan(plan['task_screen']['task_role'], plan['profile_acceptance_sha256'])
@@ -915,4 +923,13 @@ def task_screen_plan(task_role, profile_acceptance_sha256):
     plan['task_screen'] = plan.pop('task_smoke')
     plan.update(version=46, profile_acceptance_sha256=profile_acceptance_sha256)
     plan['jobs'] = [dict(algorithm='task_sac_screen', device='cpu', smoke=False, seed=11, steps=100000)]
+    return plan
+
+
+def reviewed_task_screen_plan(task_role):
+    from rl_stocks.training.task_execution import REVIEW_SHA256, review_spec
+    review = review_spec()
+    plan = task_screen_plan(task_role, review['profile_acceptance_sha256'])
+    plan.update(version=47, execution_review_sha256=REVIEW_SHA256,
+                allocation_deadline_seconds=review['allocation_seconds'][task_role])
     return plan
