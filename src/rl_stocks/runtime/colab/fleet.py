@@ -554,7 +554,7 @@ class Fleet:
             if code:
                 if a.download_attempts>=3:raise RuntimeError('final download retries exhausted')
                 a.download_attempts+=1;self.download(a,'download','/content/research-artifacts.tar.gz','artifacts.tar.gz');return
-            if a.task['plan'].get('version')==43:
+            if a.task['plan'].get('version') in (43, 46):
                 a.phase='await_validation';child['phase']=a.phase;self.budget.ledger.save();self.save()
             else:
                 output=self.root/'artifacts/colab'/a.session;archive=output/'artifacts.tar.gz'
@@ -593,15 +593,18 @@ class Fleet:
         self.save();self.stop(a)
 
     def start_local_validation(self,a):
-        self.guard_study(300);self.budget.guard(a.session,300)
+        task_screen = a.task['plan'].get('version') == 46
+        duration = 1800 if task_screen else 300
+        self.guard_study(duration + 360);self.budget.guard(a.session,duration + 360)
         a.phase='validate';a.sequence+=1
         folder=self.root/'artifacts/colab'/a.session
-        args=['-m','rl_stocks.runtime.colab.verify_screen_export','--archive',str(folder/'artifacts.tar.gz'),
+        module = 'verify_task_screen_export' if task_screen else 'verify_screen_export'
+        args=['-m','rl_stocks.runtime.colab.' + module,'--archive',str(folder/'artifacts.tar.gz'),
               '--plan',str(self.root/'.runtime/payloads'/a.session/'job-plan.json'),
               '--dataset-id',Path(a.task['dataset']).name,'--output',str(folder/'verification.json'),
               '--retrieved',str(folder/'retrieved')]
         path=self.root/'.runtime'/a.session/f'validate-{a.sequence}-output.txt'
-        a.command=Command([sys.executable],args,self.root,path,300)
+        a.command=Command([sys.executable],args,self.root,path,duration)
         self.budget.active['children'][a.session]['phase']=a.phase
         self.budget.ledger.save();self.save()
 

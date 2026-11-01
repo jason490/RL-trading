@@ -587,3 +587,20 @@ before extraction, bounded to64 members and1GiB expanded. The higher byte bound
 accounts for the measured approximately51MB full26-symbol JSON replay per checkpoint
 and retained selected/final copies. Transport acceptance does not accept performance;
 independent checkpoint replay remains mandatory. No100k job has run.
+
+## Asynchronous full-cell verification
+
+The full-cell verifier has a separate subprocess entry that disables learn/train,
+backward and Adam step locally, restores APIs on interruption, extracts only checked
+transport, independently replays saved models and publishes proof only on success.
+Fleet routing permits one local verifier at a time while minute metering continues.
+The subprocess is bounded to1800 seconds and starts only when budget/deadline checks
+cover that duration plus360 seconds shutdown reserve. Full allocation remains off
+until measured profile binding is implemented.
+
+Timing projections now explicitly include independent verification:1.5 times ten
+measured evaluation durations plus600 seconds loading/I/O allowance. This must fit
+the1800-second verifier limit and is added to the already declared remote compute,
+setup and retrieval/cleanup allowances before the7200-second allocation check.
+This corrects omitted verification work before any100k allocation is admitted;
+no learning setting, performance threshold or credit allowance is changed.
