@@ -559,3 +559,18 @@ promotion is performed. Local execution rejects before creating outputs. Relevan
 unit checks cover the guard, selection and existing optimizer/gate machinery; actual
 100k positive-path execution remains unrun. Remote allocation/physical full-run
 acceptance and measured profile binding remain to implement before any screen run.
+
+## Independent full-cell replay verification
+
+`training/task_screen_verify.py` loads all ten learned checkpoints, verifies their
+actual Adam counts/moments and research geometry, and independently reruns the
+fixed original26 training-window evaluation. Retained full results, compact curves,
+matched holding identities, earliest-max selection and final gate cell must match
+exactly. It also checks complete replay,111-symbol coverage, selected/final frozen
+weights and111-symbol prediction parity. No local optimizer call is made.
+
+The unit rejection fixture deliberately pairs a complete success/selection record
+with untrained model files and confirms rejection from saved optimizer counters.
+Actual100k positive-path acceptance remains unrun. This verifier can take several
+minutes and must run asynchronously under the fleet's continuing minute metering;
+remote transport/async registration remain pending before allocation admission.
