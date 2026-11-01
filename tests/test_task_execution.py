@@ -20,7 +20,7 @@ def test_screen_claim_cannot_repeat_or_clear_prior_charges(tmp_path):
     with pytest.raises(RuntimeError, match='already claimed'):
         claim_screen(ledger, 'rl-stocks-cpu-abcdef012345', 'tagged_routed')
     assert ledger.value['consumed'] == 39.97
-    with pytest.raises(FileNotFoundError):
+    with pytest.raises(ValueError, match='already claimed'):
         verify_execution(tmp_path, ledger)
 
 
@@ -41,3 +41,16 @@ def test_reviewed_job_cannot_change_profile_duration_or_learning_budget():
         altered['jobs'][0]['steps'] = 250000
         with pytest.raises(ValueError, match='fixed reviewed'):
             validate_plan(altered)
+
+
+def test_screen_suffix_requires_exact_retained_acceptance_and_unclaimed_roles(tmp_path):
+    from rl_stocks.training.task_execution import verify_screen_roles
+    ledger = SimpleNamespace(path=tmp_path / 'ledger.json')
+    verify_screen_roles(tmp_path, ledger, ['masked_shared', 'tagged_shared', 'tagged_routed'])
+    with pytest.raises(ValueError, match='matrix'):
+        verify_screen_roles(tmp_path, ledger, ['tagged_routed'])
+    with pytest.raises(FileNotFoundError):
+        verify_screen_roles(tmp_path, ledger, ['tagged_shared', 'tagged_routed'])
+    (tmp_path / 'task-screen-tagged_shared-allocation-v1.json').write_text('{}')
+    with pytest.raises(ValueError, match='already claimed'):
+        verify_screen_roles(tmp_path, ledger, ['tagged_shared', 'tagged_routed'])

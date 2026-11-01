@@ -320,11 +320,10 @@ class Fleet:
             from rl_stocks.training.task_execution import verify_execution, review_spec
             from rl_stocks.training.task_runtime import shared_budget
             roles = [t['plan'].get('task_screen', {}).get('task_role') for t in self.tasks]
-            if (len(self.tasks) != 3 or any(t['plan'].get('version') != 47 for t in self.tasks)
-                    or roles != ['masked_shared', 'tagged_shared', 'tagged_routed']):
-                raise ValueError('complete ordered reviewed task screen required')
+            if any(t['plan'].get('version') != 47 for t in self.tasks):
+                raise ValueError('dedicated reviewed task screen fleet required')
             self.budget = FleetBudget(self.root / '.runtime/usage-ledger.json', allocation_limit_seconds=9000)
-            self.task_execution_acceptance = verify_execution(self.root, self.budget.ledger)
+            self.task_execution_acceptance = verify_execution(self.root, self.budget.ledger, roles)
             study_limit, study_start = shared_budget(self.budget.ledger, study_limit, study_start)
             self.allocation_plan_seconds = [review_spec()['allocation_seconds'][role] for role in roles]
         if any(t['plan'].get('version') == 45 for t in self.tasks):

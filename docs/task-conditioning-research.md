@@ -700,3 +700,15 @@ same archive SHA, exact proof and diagnostic evidence. Selected50k training-wind
 return40.52%; final100k27.61%. These fitted returns do not open development: both
 unallocated roles and the complete three-role training admission gate are pending.
 Project40.065123/150; official account548.15/rate0/no assignments after cleanup.
+
+## Reviewed remaining100k roles after exact masked acceptance
+
+The builder accepts `--resume-unallocated` only for tagged shared/routed after
+checking the pinned masked exact-replay receipt, original archive SHA, retained
+failed fleet/claim and stopped ownership. A claimed requested role rejects before
+allocation. The fleet supports this exact suffix and keeps the original baseline,
+measured profile/source checks, role durations and per-role claims. It does not
+retry masked training or overwrite original failure state. Current production
+admission passed with0.405 projected units and1.860736 study units remaining.
+Use a fresh jobs output and fleet state file for the suffix; development stays shut
+until the complete three-role final fitted gate passes.

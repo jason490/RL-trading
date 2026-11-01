@@ -25,8 +25,10 @@ def review_spec():
     return value
 
 
-def verify_execution(root, ledger):
+def verify_execution(root, ledger, roles=None):
     root = Path(root)
+    roles = ['masked_shared', 'tagged_shared', 'tagged_routed'] if roles is None else roles
+    verify_screen_roles(root, ledger, roles)
     spec = review_spec()
     limit, start = shared_budget(ledger)
     if any(a['status'] != 'stopped' for a in ledger.value['attempts']):
@@ -67,13 +69,44 @@ def verify_execution(root, ledger):
         measured = projection['roles'][role]
         if measured['projected_allocation_seconds'] > duration or not measured['within_verification_limit']:
             raise ValueError('measured operation exceeds reviewed execution limit')
-        if (runtime / f'task-screen-{role}-allocation-v1.json').exists():
+        if role in roles and (runtime / f'task-screen-{role}-allocation-v1.json').exists():
             raise ValueError('screen role already claimed; no automatic retry')
-    planned_units = sum(spec['allocation_seconds'].values()) * (receipt['observed_rate'] + .01) / 3600
+    planned_units = sum(spec['allocation_seconds'][role] for role in roles) * (receipt['observed_rate'] + .01) / 3600
     if not projection['within_allowance'] or planned_units >= remaining:
         raise ValueError('reviewed complete allocation plan exceeds original study allowance')
     return dict(review_sha256=REVIEW_SHA256, profile_acceptance_sha256=spec['profile_acceptance_sha256'],
                 planned_units=planned_units, remaining_study_units=remaining, source_files=len(sources))
+
+
+def verify_screen_roles(root, ledger, roles):
+    """Only a complete fresh matrix or the reviewed never-allocated suffix."""
+    ordered = ['masked_shared', 'tagged_shared', 'tagged_routed']
+    if roles not in (ordered, ordered[1:]):
+        raise ValueError('complete task matrix or exact unallocated screen suffix required')
+    runtime = ledger.path.resolve().parent
+    if any((runtime / f'task-screen-{role}-allocation-v1.json').exists() for role in roles):
+        raise ValueError('requested screen role already claimed; no automatic retry')
+    if roles == ordered:
+        return
+    root = Path(root)
+    path = root / 'results/task-conditioning-2026-10-31/masked-screen-acceptance.json'
+    if hashlib.sha256(path.read_bytes()).hexdigest() != 'dc19b256f760ca1cbc848423332323d025a473515e24f80c7599cce4608b3749':
+        raise ValueError('exact retained masked screen acceptance required')
+    receipt = json.loads(path.read_text())
+    state = json.loads((runtime / 'task-screen-fleet-v1.json').read_text())
+    claim = json.loads((runtime / 'task-screen-masked_shared-allocation-v1.json').read_text())
+    attempts = [a for a in ledger.value['attempts'] if a['session'] == receipt['original_fleet']]
+    session = receipt['session']
+    if (state.get('fleet') != receipt['original_fleet'] or state.get('status') != 'failed'
+            or state.get('cleanup_verified') is not True or claim.get('session') != session
+            or claim.get('review_sha256') != REVIEW_SHA256 or claim.get('task_role') != 'masked_shared'
+            or len(attempts) != 1 or attempts[0]['status'] != 'stopped'
+            or set(attempts[0]['children']) != {session} or attempts[0]['children'][session]['status'] != 'stopped'
+            or receipt['exact_physical_proof']['replayed_checkpoints'] != 10
+            or receipt['training_repeated'] is not False or receipt['development_allowed'] is not False):
+        raise ValueError('preserved masked screen failure, exact replay and stopped ownership required')
+    if hashlib.sha256((root / receipt['archive']).read_bytes()).hexdigest() != receipt['archive_sha256']:
+        raise ValueError('accepted masked screen archive changed')
 
 
 def claim_screen(ledger, session, role):
