@@ -1,3 +1,4 @@
+from rl_stocks.data.universe.type_contract import verification_scope
 from copy import deepcopy
 from dataclasses import asdict
 
@@ -52,10 +53,12 @@ def payload():
                              {'symbol': s, 'kind': 'stock' if s == 'A' else 'broad_etf'}
                              for s in symbols]}}}
     evidence = {'schema': 'historical-instrument-types-v1', 'dataset': digest(data),
-                'historical_evidence_verified': True, 'records': [
+                'historical_evidence_verified': True, 'verification_scope': verification_scope(), 'records': [
                     {'symbol': s, 'kind': 'stock' if s == 'A' else 'etf',
                      'source': 'synthetic historical fixture only',
-                     'known_from': '2010-01-01', 'evidence_kind': 'historical_primary_source'}
+                     'known_from': '2010-01-01', 'evidence_kind': 'historical_primary_source',
+                     'source_fact_kind': 'stock' if s == 'A' else 'etf',
+                     'source_sha256': 'f' * 64, 'source_available_time': '2010-01-01T00:00:00Z'}
                     for s in symbols]}
     return data, evidence
 

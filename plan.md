@@ -3193,3 +3193,27 @@ now cover the full instrument set; coarse-type/issuer-association review still
 precedes metadata admission. Fixed seed11 nominal smoke schedule visits one ETF
 and seven stocks without changing sampler/seed; no learner or environment rollout.
 Data/normalization/ledger unchanged, no Colab allocation or new training results.
+
+
+## Scoped initial type admission — 2026-11-01
+
+The reviewed manifest `configs/universes/task_types_research_initial_v1.json`
+covers111 instruments (107 stocks, four ETFs). Admission is conditional on the
+existing dataset provider instrument association and a fixed coarse-type research
+contract. It verifies initial stock/ETF facts; exact historical ticker intervals,
+share classes, price identity, financial comparability and historical membership
+remain unverified. This does not enable financial inputs or paper execution.
+
+Initial type values come from sources available before the first training decision;
+validation compares UTC availability timestamps, including same-session ordering.
+Later Google/Linde corporate-event documents only corroborate stock-to-stock
+continuity and supply no earlier model value. The additional2012 QQQ registration
+still says QQQQ: it does not establish a ticker-change date. Same named fund and
+CUSIP corroborate only the documented provider-association assumption. The IWM
+bank contract names an ETF underlying and does not identify the bank as fund issuer.
+
+The retained `coarse-type-admission-review.json` records source checksums and limits.
+No training or Colab allocation accompanied admission. Next are real-data untrained
+parity checks and guarded Colab smoke transport/archive acceptance, followed by
+actual profiling. The fixed performance gates and closed prior families remain
+unchanged.

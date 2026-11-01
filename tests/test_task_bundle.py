@@ -1,3 +1,4 @@
+from rl_stocks.data.universe.type_contract import verification_scope
 from copy import deepcopy
 from dataclasses import asdict
 import json
@@ -34,10 +35,11 @@ def bundle(root, role='tagged_routed'):
                              {'symbol': symbol, 'kind': 'broad_etf'}]},
                          'provenance': {'capabilities': {'feed': 'fixture'}}}}
     evidence = {'schema': 'historical-instrument-types-v1', 'dataset': digest(data),
-                'historical_evidence_verified': True, 'records': [
+                'historical_evidence_verified': True, 'verification_scope': verification_scope(), 'records': [
                     {'symbol': symbol, 'kind': 'etf', 'known_from': '2010-01-01',
                      'source': 'synthetic historical fixture, not production evidence',
-                     'evidence_kind': 'historical_primary_source'}]}
+                     'evidence_kind': 'historical_primary_source', 'source_fact_kind': 'etf',
+                     'source_sha256': 'f' * 64, 'source_available_time': '2010-01-01T00:00:00Z'}]}
     wrapped = InstrumentTypeObservation(env, evidence['records'], task_role=role)
     model = create_task_sac(wrapped, task_role=role, smoke=True)
     source = root / 'model.zip'
@@ -119,3 +121,21 @@ def test_generic_frozen_loader_rejects_task_policy_even_with_matching_vector_siz
                         tmp_path / 'generic')
     with pytest.raises(ValueError, match='symbol/date-aware'):
         FrozenPolicy(disguised, 'generic-fixture', 'fixture')
+
+
+def test_rehashed_bundle_cannot_backdate_source_point(tmp_path):
+    from rl_stocks.core.contracts import canonical
+    from rl_stocks.inference.bundle import checksum
+    _, path, _ = bundle(tmp_path)
+    manifest_path = path / 'manifest.json'
+    value = json.loads(manifest_path.read_text())
+    contract = value['metadata']['task_contract']
+    contract['type_manifest']['records'][0]['source_available_time'] = '2010-01-02T00:00:00Z'
+    contract['type_manifest_sha256'] = digest(contract['type_manifest'])
+    manifest_path.write_bytes(canonical(value))
+    (path / 'checksums.json').write_bytes(canonical({
+        p.name: checksum(p) for p in path.iterdir() if p.name != 'checksums.json'}))
+    renamed = path.with_name(digest(value))
+    path.rename(renamed)
+    with pytest.raises(ValueError, match='availability'):
+        FrozenTaskPolicy(renamed, feature_schema='task-fixture', feed='fixture')

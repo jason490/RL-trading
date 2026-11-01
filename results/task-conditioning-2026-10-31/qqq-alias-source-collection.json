@@ -1,0 +1,57 @@
+{
+  "schema": "task-qqq-alias-collection-v1",
+  "master_record": {
+    "cik": "1067839",
+    "company_name": "POWERSHARES QQQ TRUST, SERIES 1",
+    "form": "485BPOS",
+    "filed": "2012-01-30",
+    "accession": "0001104659-12-005092",
+    "filing_directory_cik": "1067839",
+    "submission_url": "https://www.sec.gov/Archives/edgar/data/1067839/0001104659-12-005092.txt"
+  },
+  "master_sha256": "1f3c48461e68aebfa6a19ba256d0b069fc8ab01e26fe8c3f93876afbb3bd2b82",
+  "maximum_acquisition_operations": 2,
+  "acquisition_operations_attempted": 2,
+  "automatic_retry": false,
+  "protected_sha256": {
+    "/home/vibe/projects/rl-stocks/scripts/collect_task_qqq_alias.py": "f664151760d8f6f19de48196e8a5d299cd2fb2c266dbc0b7b8dd439d55423050",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "data/raw/sec-masters/1f3c48461e68aebfa6a19ba256d0b069fc8ab01e26fe8c3f93876afbb3bd2b82/archive.zip": "1f3c48461e68aebfa6a19ba256d0b069fc8ab01e26fe8c3f93876afbb3bd2b82",
+    "src/rl_stocks/data/providers/sec/filing_index.py": "6ae8825f2f8349dc845fc3f012b71118252d68a9c987bc48972e155f71b1cbdb",
+    "src/rl_stocks/data/providers/sec/html_source.py": "0cf10b6c4f7a9403fbacaba6535c482ec03d6ad25a883a4a273b63fea6127ba9"
+  },
+  "historical_metadata_admitted": false,
+  "training_performed": false,
+  "colab_allocated": false,
+  "purpose": "Identifier/type-invariance review only; never backdate the2012 publication",
+  "index": {
+    "path": "data/raw/sec-filings/c174902fa8bc124d6576145cece7e8a46eacc001bb0b75a9ba825334be768b13/filing.htm",
+    "receipt": {
+      "schema": "sec-filing-html-acquisition-v1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465912005092/0001104659-12-005092-index.htm",
+      "sha256": "c174902fa8bc124d6576145cece7e8a46eacc001bb0b75a9ba825334be768b13",
+      "bytes": 8444,
+      "retrieved_utc": "2026-11-01T03:09:53.004668+00:00",
+      "accession": "0001104659-12-005092",
+      "cik": "1067839",
+      "historical_metadata_admitted": false
+    },
+    "cached": false
+  },
+  "status": "complete",
+  "primary": {
+    "path": "data/raw/sec-filings/4f483272f2000b0c9235581ad8280a95fb96682263bb15889c46f5ac041e4b5a/filing.htm",
+    "receipt": {
+      "schema": "sec-filing-html-acquisition-v1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465912005092/a11-30095_1485bpos.htm",
+      "sha256": "4f483272f2000b0c9235581ad8280a95fb96682263bb15889c46f5ac041e4b5a",
+      "bytes": 1230339,
+      "retrieved_utc": "2026-11-01T03:09:55.413634+00:00",
+      "accession": "0001104659-12-005092",
+      "cik": "1067839",
+      "historical_metadata_admitted": false
+    },
+    "cached": false
+  },
+  "protected_sources_unchanged": true
+}

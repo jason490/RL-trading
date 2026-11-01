@@ -61,12 +61,15 @@ class FrozenTaskPolicy:
                 or evidence['schema'] != 'historical-instrument-types-v1'
                 or evidence['historical_evidence_verified'] is not True):
             raise ValueError('task type provenance mismatch')
+        from rl_stocks.data.universe.type_contract import validate_scope, validate_source_point
+        validate_scope(evidence)
         records = evidence['records']
         if (len(records) != len({r['symbol'] for r in records})
                 or {r['symbol'] for r in records} != set(manifest['data_manifest']['universe'])):
             raise ValueError('task universe mismatch')
         registry = {}
         for record in records:
+            validate_source_point(record)
             if (record['kind'] not in ('stock', 'etf') or not record['source']
                     or record['evidence_kind'] != 'historical_primary_source'):
                 raise ValueError('task historical evidence required')

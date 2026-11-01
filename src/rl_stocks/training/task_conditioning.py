@@ -65,11 +65,20 @@ def validate_type_manifest(dataset, evidence):
             or evidence.get('dataset') != audit['dataset_identity']
             or evidence.get('historical_evidence_verified') is not True):
         raise ValueError('reviewed historical type manifest required')
+    from rl_stocks.data.universe.type_contract import validate_scope, validate_source_point
+    validate_scope(evidence)
+    from rl_stocks.data.validation.bars import timestamp
+    first_decisions = {episode['symbol']: timestamp(episode['bars'][0]['available_time'])
+                       for episode in dataset['episodes'].values()
+                       if episode['split'] == 'train'}
     records = evidence['records']
     expected = {r['symbol']: r for r in audit['records']}
     if len(records) != len(expected) or {r['symbol'] for r in records} != set(expected):
         raise ValueError('exact training universe classification required')
     for record in records:
+        validate_source_point(record)
+        if timestamp(record['source_available_time']) > first_decisions[record['symbol']]:
+            raise ValueError('type source availability follows first training decision')
         declared = expected[record['symbol']]
         if (record['kind'] != declared['kind'] or not record.get('source')
                 or record.get('evidence_kind') != 'historical_primary_source'
