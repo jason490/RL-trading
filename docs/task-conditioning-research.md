@@ -503,3 +503,12 @@ includes the required `bundle_id` (the profile-record identity; no frozen predic
 bundle is produced by profiling). Untrained success claims and invalid timings are
 rejected without local optimization. Actual learned positive-path profile acceptance
 remains unrun; complete smoke admission and budget integration are still required.
+
+Profile fleet admission now independently rechecks both reviewed prefix archives
+and the routed role's successful fleet/bundle identity, stopped ledger ownership
+and cleanup before permitting one dedicated sequential CPU allocation. A durable
+profile claim forbids automatic retries. It retains the original task-study
+baseline and aggregate account/project protection, uses bounded artifact downloads
+and disables execution retry. Missing immutable inputs or incomplete smoke evidence
+reject admission before allocation. Actual profile execution remains pending the
+routed smoke's successful completion and cleanup.

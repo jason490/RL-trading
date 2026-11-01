@@ -102,3 +102,44 @@ def _verify_stopped_smoke(root, ledger, role, receipt_name, receipt_sha, state_n
             or any(any(actual.get(key) != value for key, value in expected.items())
                    for actual, expected in zip(proof, receipt['physical_acceptance']))):
         raise ValueError('original physical acceptance required')
+
+
+def verify_all_smokes(root, ledger):
+    """Physical admission of all three stopped smokes before research profiling."""
+    from pathlib import Path
+    from rl_stocks.runtime.colab.jobs import task_smoke_plan
+    from rl_stocks.runtime.colab.task_smoke_artifacts import validate_task_smoke_archive
+    root = Path(root)
+    _verify_stopped_smoke(root, ledger, 'masked_shared', 'masked-smoke-acceptance.json',
+        '9d3c9082f21e36a351d26ff25ebae794b3091b77731b273f7cb3ab8a183ba14e', 'task-smoke-fleet-v1.json')
+    _verify_stopped_smoke(root, ledger, 'tagged_shared', 'tagged-shared-smoke-acceptance.json',
+        'b4663701d29bee76b2adfa7e13d6dbd68efd739e5c04a292c7f15702e2d2f388', 'task-smoke-fleet-suffix-v1.json')
+    runtime = ledger.path.resolve().parent
+    state = json.loads((runtime / 'task-smoke-fleet-routed-v1.json').read_text())
+    claim = json.loads((runtime / 'task-conditioning-smoke-tagged_routed-allocation-v1.json').read_text())
+    session = claim['session']
+    attempts = [a for a in ledger.value['attempts'] if a['session'] == state['fleet']]
+    if (state.get('status') != 'complete' or state.get('cleanup_verified') is not True
+            or claim.get('protocol_sha256') != PROTOCOL_SHA256 or claim.get('task_role') != 'tagged_routed'
+            or len(attempts) != 1 or attempts[0]['status'] != 'stopped'
+            or set(attempts[0]['children']) != {session}
+            or attempts[0]['children'][session]['status'] != 'stopped'):
+        raise ValueError('completed physically accepted routed smoke and verified cleanup required')
+    plan = task_smoke_plan('tagged_routed')
+    proof = validate_task_smoke_archive(root / 'artifacts/colab' / session / 'artifacts.tar.gz',
+                                        plan, plan['dataset_contract']['identity'])
+    accepted = state['completed']['task-smoke-tagged-routed']
+    if accepted['session'] != session or accepted['runs'][0]['bundle_id'] != proof[0]['bundle_id']:
+        raise ValueError('routed fleet acceptance identity mismatch')
+    return proof
+
+
+def claim_profile(ledger, session):
+    shared_budget(ledger)
+    if not isinstance(session, str) or not re.fullmatch(r'rl-stocks-cpu-[a-f0-9]{12}', session):
+        raise ValueError('owned CPU profile session required')
+    path = ledger.path.resolve().parent / 'task-conditioning-profile-allocation-v1.json'
+    if path.exists():
+        raise RuntimeError('task profile already claimed; no automatic retry')
+    write_once(path, canonical(dict(protocol_sha256=PROTOCOL_SHA256, session=session,
+        allocation_deadline_seconds=7200, teardown_reserve_seconds=360, automatic_retry_allowed=False)))

@@ -23,5 +23,5 @@ def test_profile_plan_requires_all_roles_and_research_geometry(tmp_path):
         altered[field] = value
         with pytest.raises(ValueError, match='fixed three-role'):
             validate_plan(altered)
-    with pytest.raises(ValueError, match='awaits complete smoke'):
+    with pytest.raises(ValueError, match='immutable dataset missing'):
         validate_tasks([{'id': 'profile', 'dataset': 'unused', 'plan': plan}], tmp_path)

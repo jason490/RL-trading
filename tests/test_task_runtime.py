@@ -64,3 +64,18 @@ def test_claimed_role_cannot_reenter_complete_initial_matrix(tmp_path):
     claim_smoke(item, 'rl-stocks-cpu-012345abcdef', 'masked_shared')
     with pytest.raises(ValueError, match='already claimed'):
         validate_smoke_roles(tmp_path, item, ['masked_shared', 'tagged_shared', 'tagged_routed'])
+
+
+def test_profile_has_one_persistent_allocation_claim(tmp_path):
+    from rl_stocks.training.task_runtime import claim_profile
+    item = ledger(tmp_path)
+    claim_profile(item, 'rl-stocks-cpu-012345abcdef')
+    with pytest.raises(RuntimeError, match='already claimed'):
+        claim_profile(item, 'rl-stocks-cpu-abcdef012345')
+    assert shared_budget(item) == (2., 39.9)
+
+
+def test_complete_smoke_admission_requires_retained_evidence(tmp_path):
+    from rl_stocks.training.task_runtime import verify_all_smokes
+    with pytest.raises(FileNotFoundError):
+        verify_all_smokes(tmp_path, ledger(tmp_path))
