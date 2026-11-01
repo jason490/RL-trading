@@ -1,0 +1,2815 @@
+{
+  "schema": "task-initial-type-source-ledger-v1",
+  "counts": {
+    "instruments": 111,
+    "stocks": 107,
+    "etfs": 4,
+    "literal_canonical_ticker_observations": 70
+  },
+  "source_family_counts": {
+    "exact_original_instance": 33,
+    "selected_original_primary": 69,
+    "reviewed_original_cover": 3,
+    "reviewed_exception_primary": 2,
+    "reviewed_fund_observation": 4
+  },
+  "records": [
+    {
+      "symbol": "AAPL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000119312509214859/aapl-20090926.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "320193",
+      "publication": {
+        "available_time": "2009-10-29T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ABBV",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "e33286af8894b31352ed5d51c880594a27899e2fed58885a57e351754f016b57",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1551152/000104746913000017/a2212291z8-k.htm",
+      "source_family": "reviewed_exception_primary",
+      "source_registrant_cik": "1551152",
+      "publication": {
+        "available_time": "2013-01-04T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "dated distributed/registered corporate equity and own ticker statement",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2013-03-14",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ABT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000104746910001018/a2196380z10-k.htm",
+      "source_family": "reviewed_original_cover",
+      "source_registrant_cik": "1800",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "fixed original registered common-equity observation",
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ADBE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634310000003/form_10k.htm",
+      "source_family": "reviewed_original_cover",
+      "source_registrant_cik": "796343",
+      "publication": {
+        "available_time": "2010-01-26T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "fixed original registered common-equity observation",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AEP",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490410000018/ye09aep10k.htm",
+      "source_family": "reviewed_original_cover",
+      "source_registrant_cik": "4904",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "fixed original registered common-equity observation",
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AMGN",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "671c3fb9911c0d81b4be34311e056480d58987706373dbedffecd210bab9bc14",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000119312510044311/amgn-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "318154",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AMT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "780df3266008b4fc83589b9cee728b3c6403e4cb6efc3aa66cedcb1c6d048b82",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1053507/000119312510044876/amt-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1053507",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AMZN",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "32c5235828cec652d3ef6a47e92b171569da57eaadaae7b815f9850022c083f5",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312510016098/amzn-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1018724",
+      "publication": {
+        "available_time": "2010-02-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "APA",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/6769/000095012310018311/h69016e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "6769",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 946
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "APD",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2969/000095012309066095/y79730e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "2969",
+      "publication": {
+        "available_time": "2009-11-30T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 711
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "AXP",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "0d6a98196f7b0d807e1d5e2c42a5f7fb9b12d89f0aac9ce8fb95eb9276b236c8",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/4962/000119312510041232/axp-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "4962",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BA",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "93e997dff061057cf20fdff2f5ff8e7045fe69bd7c329fb85c902a8fa1b87420",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000119312510024406/ba-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "12927",
+      "publication": {
+        "available_time": "2010-02-10T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BAC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "9292a874084b80b89609b127934fed2a1d398f85c62ef0eb6c98979cc63f882d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000119312510041666/bac-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "70858",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BLK",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "8e41043e31ff42b809ed55844e79d0ecaf9984efcc35112d4a74d41676e0b047",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312510052764/blk-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1364742",
+      "publication": {
+        "available_time": "2010-03-12T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "BMY",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "9a6752460581dd87f4e424a8159bbb9ddbfa39776491fb996a159e1fbaf2bef2",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/14272/000119312510035167/bmy-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "14272",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "C",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/831001/000120677410000406/citi_10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "831001",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2745
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CAT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823010000092/form10k_2009.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "18230",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 909
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/21665/000114036110008522/form10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "21665",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 911
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CMCSA",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "cb02741d401a48a83a8870371ef23c2ee7414ca2832b23c038cb7c35a8ba7791",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1166691/000119312510037551/cmcsa-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1166691",
+      "publication": {
+        "available_time": "2010-02-25T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "COP",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1163165/000095012310017187/h69477e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1163165",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 919
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "COST",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/909832/000119312509208963/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "909832",
+      "publication": {
+        "available_time": "2009-10-20T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 906
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CSCO",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000119312509190326/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "858877",
+      "publication": {
+        "available_time": "2009-09-15T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 983
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "CVX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000095012310016846/f54086e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "93410",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 928
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "D",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "b0035db22262a4e8318cd4a163bd2f8dd8aeee8d6485dd93ccdd702897f4d00a",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/715957/000119312510042883/d-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "715957",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465909070344/a09-32005_110k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "315189",
+      "publication": {
+        "available_time": "2009-12-21T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 673
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DIA",
+      "kind_supported_by_source": "etf",
+      "source_sha256": "ce7e60e21fb408e4333c59fd6b94d7df565992e70171d2d54b151bf6687d6ede",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1041130/000095012310018164/y02978e485bpos.htm",
+      "source_family": "reviewed_fund_observation",
+      "source_registrant_cik": "1041130",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "fund_issuer_source": true,
+        "symbol_in_source": "DIA"
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DIS",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "286a3b596a45c5b11154ac44a37dc0671686ef4f84016b73ef5d4dc06d6a7cac",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001039/000119312509245848/d10k.htm",
+      "source_family": "reviewed_exception_primary",
+      "source_registrant_cik": "1001039",
+      "publication": {
+        "available_time": "2009-12-04T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "dated distributed/registered corporate equity and own ticker statement",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DUK",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "7d1f7f847395b935f1ab7cc02090708eb1c5f64afd49bf5f37a2d6d2921b1eb5",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326160/000119312510043083/duk-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1326160",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "DVN",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000095012310017093/d71091e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1090012",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 903
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ECL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/31462/000110465910010302/a09-36096_110k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "31462",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 908
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ED",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "6edade37f395187b14d5a6c503c64ac2348ee109f3d4f207212586822c1e2abd",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1047862/000119312510036116/ed-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1047862",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "EOG",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/821189/000082118910000011/form10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "821189",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 863
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "EQIX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000119312510036420/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1101239",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 888
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "EXC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "65d6fc8d04f8d0ce59768920c10b0df20b5027a65d576562a388edc486010520",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1109357/000119312510023280/exc-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1109357",
+      "publication": {
+        "available_time": "2010-02-09T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "F",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "692d8054fd3e48f78f19822a838f5f023bed927e028c657253340e2a571024a4",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000115752310001218/f-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "37996",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "FCX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/831259/000083125910000010/fcx123109-10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "831259",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 959
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GD",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "70a60eb692773be8740d7e9b254215838936c79aa5d06e74886efbfd63b71c5f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/40533/000119312510034883/gd-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "40533",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054510000010/frm10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "40545",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 883
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GILD",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "128db52897722cb74188393897d2d47c359cff7facf1a6fdc6e0c26d7839eb22",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/882095/000119312510044753/gild-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "882095",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GOOGL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1288776/000119312510030774/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1288776",
+      "publication": {
+        "available_time": "2010-02-17T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 888
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "GS",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000095012310018464/y81914e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "886982",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 788
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HAL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/45012/000004501210000085/ed10k2009_final.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "45012",
+      "publication": {
+        "available_time": "2010-02-19T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 945
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HD",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/354950/000095014409002875/x17422e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "354950",
+      "publication": {
+        "available_time": "2009-04-06T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 886
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HON",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/773840/000093041310000784/c60039_10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "773840",
+      "publication": {
+        "available_time": "2010-02-17T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 928
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "HSY",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/47111/000119312510034780/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "47111",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 796
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "IBM",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/51143/000104746910001151/a2195966z10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "51143",
+      "publication": {
+        "available_time": "2010-02-25T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 804
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "INTC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000095012310015237/f54119e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "50863",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 943
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "IWM",
+      "kind_supported_by_source": "etf",
+      "source_sha256": "3df90674f144e5a78b02a4bf3a1325142a4bb32638d002f6b8c1b56955430b5f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000089109209004052/e36880_424b2.htm",
+      "source_family": "reviewed_fund_observation",
+      "source_registrant_cik": "19617",
+      "publication": {
+        "available_time": "2009-11-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "fund_issuer_source": false,
+        "symbol_in_source": "IWM"
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "JNJ",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/200406/000095012310019392/y80744e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "200406",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 744
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "JPM",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000095012310016029/e82150e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "19617",
+      "publication": {
+        "available_time": "2010-02-26T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 771
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "KMB",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "8e62ab544ab0ea202b56568e290a4e67840b976ae54e73ca8022cd4bfdc904c6",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/55785/000119312510038621/kmb-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "55785",
+      "publication": {
+        "available_time": "2010-02-26T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "KO",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/21344/000104746910001476/a2195739z10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "21344",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 937
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "KR",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465909070369/a09-34065_110q.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "56873",
+      "publication": {
+        "available_time": "2009-12-21T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2170
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LIN",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884905/000119312510038766/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "884905",
+      "publication": {
+        "available_time": "2010-02-26T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 696
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LLY",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000095012310014958/c55339ke10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "59478",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 564
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LMT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "36a07da32d7526185692db940a6ff5ebc68a6499dabd77629b34bc7d0b285c8c",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/936468/000119312510040520/lmt-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "936468",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "LOW",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/60667/000006066709000160/lowesform10q10302009.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "60667",
+      "publication": {
+        "available_time": "2009-12-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2184
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MCD",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "8ab0e832e260816155f9e0a753690b3627abe7f746b8184bb11d1f18f23f9bf6",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/63908/000119312510042025/mcd-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "63908",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MDLZ",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000119312510040106/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1103982",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 874
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MLM",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/916076/000095012310018035/g22182e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "916076",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 949
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MRK",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000095012310018679/y81622e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "310158",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 788
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MS",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "1d38db98acf61d75427f4313f35df0468f2296e443e60eb4e728c650d55bcc6f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000119312510042763/ms-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "895421",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "MSFT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312509158735/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "789019",
+      "publication": {
+        "available_time": "2009-08-03T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 651
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NEE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "39623923ebf3e3c16bd30bd41b20e713041ee532e583e5505f1d00d17ed8a4a4",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/37634/000075330810000025/form10k123109.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "753308",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 802
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NEM",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "6e0f305a7654433e3214473e0b59300065150801a4a7a752626dfe816098ba26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1164727/000095012310016613/d70495e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1164727",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 952
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NFLX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "2b0801fd60d97740061878bce159d0d164fa2ab818c98990e70243c0ed99342a",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000119312510036181/nflx-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1065280",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NKE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "1205d90bfea003a73e6673eb523bf00c79f06670319368b84e35c3f727187d7f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000119312509155951/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "320187",
+      "publication": {
+        "available_time": "2009-07-29T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 818
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NUE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "54df378e1ce783cb5d7b18261d59830bc813bb0a1bab3ef9cbe5d92f437f30e3",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/73309/000119312510040686/nue-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "73309",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "NVDA",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "0a3617f4fe50a42241ea06d5c5f2df0b49aa4f7c0aacb0ef2c9ba970f1efe763",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581009000036/q310form10q.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1045810",
+      "publication": {
+        "available_time": "2009-11-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2215
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "O",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "74064c5ddf37af9e85ebf1a0217a5bda73db528785eb02bcc9522034ea824821",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672810000017/ri10k_2009yt.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "726728",
+      "publication": {
+        "available_time": "2010-02-16T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 801
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "OMC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "11f6ed3476ee6f57a519366666ceb01a9e0d18982ee42d7f25e7d7c9723870ef",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29989/000089109210000656/e37246_10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "29989",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 749
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ORCL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "783ce35ce1ebe1efcaca60b10d9b52528b38ed68db4ad675393cd68e7ff0ff7e",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000095012309018689/f52658e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1341439",
+      "publication": {
+        "available_time": "2009-07-01T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 888
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "OXY",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "93c2fe98efaca264b82947ed4f71a20af8ff0ede1e9c4f39f00e561e495114ca",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746810000020/form10k-2009.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "797468",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 961
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PEG",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "268c58906e0a17d79d22ebeaffb2efda0f94a80bbcbfcdc5fc5eb07512f83512",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/788784/000119312510040508/peg-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "788784",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PEP",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "82123fe8b634941e7029ab64f9444030dc882dc0dba1dd5319a1a7eaa9f297b1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/77476/000119312510036385/pep-20091226.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "77476",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PFE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "ce13b30b491448c20cf22e6171e74ee474fb25ff0ac61cac7eb3dab2c557671e",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/78003/000119312510042425/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "78003",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 916
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PG",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "b91d23a18fecc4863b219ff78f0b5f6f23cb7afc33a73d791f60dfec63a8ede8",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000119312509175986/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "80424",
+      "publication": {
+        "available_time": "2009-08-18T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 908
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PLD",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "9e72e3f283d54805eeade9908f97b8efb5d7b265d2b097b3854cc7cf288864f8",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045609/000095012310014699/f54839e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1045609",
+      "publication": {
+        "available_time": "2010-02-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 1066
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PNC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "c750c031f7f46fee5010d02eabe5870eb1bbe1b4b350424206a4a3cefe7e01e7",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000119312510052794/pnc-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "713676",
+      "publication": {
+        "available_time": "2010-03-15T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PPG",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "b5bab7fa003c4a299ddec3dcddc9be0960f5a948d65e56f215f56480057cc5df",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/79879/000119312510033939/ppg-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "79879",
+      "publication": {
+        "available_time": "2010-02-22T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "PSA",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "db254e9854b8ebbe4de1836e128af214364b05143f2b2a10f582c8a57d496b1b",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1393311/000139331110000004/ps10k_123109.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1393311",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 3301
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "QCOM",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "22da5cf3766d1efc0d00a9a14c232a4c883257a7987457035a9ce23aa0be6fb0",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/804328/000095012309057827/a54086e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "804328",
+      "publication": {
+        "available_time": "2009-11-09T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 935
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "QQQ",
+      "kind_supported_by_source": "etf",
+      "source_sha256": "5b73be7cdce0b9f710400e78246ed45075212bba1cffac2a27796ea2b44323be",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465910002985/a09-28465_1485bpos.htm",
+      "source_family": "reviewed_fund_observation",
+      "source_registrant_cik": "1067839",
+      "publication": {
+        "available_time": "2010-01-28T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "fund_issuer_source": true,
+        "symbol_in_source": "QQQQ"
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "ROST",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "1fd0df5179854cad30a63e63f6a6179c25189ccc00bfb48f25de3ed7bdd537c6",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/745732/000120677409002310/rossstores_10q.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "745732",
+      "publication": {
+        "available_time": "2009-12-11T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2162
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "RTX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "24c0ef5b6ca529249b1d545ad66286702773993a0a798f252f55817fdee240d1",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/101829/000119312510027861/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "101829",
+      "publication": {
+        "available_time": "2010-02-16T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 793
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SBUX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "38dfaba9477b87645f431c11f8b168a53662b48678c4c2f0eebda0ce0cd9db41",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000095012309064772/v53316e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "829224",
+      "publication": {
+        "available_time": "2009-11-24T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 828
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SHW",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "877fabf30aaf313cd537447cab369168ad7996cae379325cdd1cefb49570cff5",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/89800/000095012310016198/l38063e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "89800",
+      "publication": {
+        "available_time": "2010-02-26T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 792
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SLB",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "d65ea0ad9b331aab1b56d13cc3c56eca37f088620dce18439e0b53ce7ba4ffa7",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/87347/000119312510023041/slb-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "87347",
+      "publication": {
+        "available_time": "2010-02-09T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SO",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "eae1381c724c741b3276971958ada0b7f14ffe481780cdfe13eb59317537f44f",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/3153/000009212210000009/g21794e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "92122",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 1558
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SPG",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "fc3ba76f9fc86118bb9d69bdf5cd7074c01b2d293f5dff3133247cb4f280a128",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1063761/000104746910001324/a2196642z10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1063761",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 791
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SPY",
+      "kind_supported_by_source": "etf",
+      "source_sha256": "817f49d50380fe420827b5a787dcc73405621d3fc49742303a0690794cfb7b2d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000095012310005702/y02740e485bpos.htm",
+      "source_family": "reviewed_fund_observation",
+      "source_registrant_cik": "884394",
+      "publication": {
+        "available_time": "2010-01-29T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "fund_issuer_source": true,
+        "symbol_in_source": "SPY"
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "SRE",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "5eee38c2d4b036b161948209c93910dad2fa84dcf6308efa174732835bc1046c",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/75527/000008652110000019/sre_200910k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1032208",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 1199
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "T",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "103240e789adde9e505798918a9cd7379ef77243eea486325d741b45660b19aa",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271710000013/ye09_10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "732717",
+      "publication": {
+        "available_time": "2010-03-01T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2789
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TGT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "aec2b474d4f794b2ca0520fc583fe215ed9779e52f5fbe161a77d404f39f03dd",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000104746910002121/a2196751z10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "27419",
+      "publication": {
+        "available_time": "2010-03-16T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 912
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TJX",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "cc74f848d864d33efeeaf82084029aba156b3ecebdfdf22f73cab2e46fa23c70",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/109198/000095012309067237/b77180e10vq.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "109198",
+      "publication": {
+        "available_time": "2009-12-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 2174
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TMUS",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "389dd8c02928b10369b50b1aa44984ced4a6e8a6b0091e062dbca183dfe58043",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312510044780/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1283699",
+      "publication": {
+        "available_time": "2010-03-03T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 956
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TTWO",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "a1a0567183c91e7de1db9ed22e652a0065e420022106b60d517a01d4d009cf39",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/946581/000104746909010820/a2195852z10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "946581",
+      "publication": {
+        "available_time": "2009-12-22T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 916
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "TXN",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "bb23985f2268b17058f29f7f26a90c725f30db29d0cde958839b016d7469ed0e",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000114036110007923/form10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "97476",
+      "publication": {
+        "available_time": "2010-02-25T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 940
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "UNH",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "89be2fa8e50269af9e52755da930011aec899c34e6b209a72e019892c347c3f8",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/731766/000119312510027229/unh-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "731766",
+      "publication": {
+        "available_time": "2010-02-12T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "UNP",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "7e0c4afe8d7cf7aa6fed6176d3b97df54c360f4eb88e062cfaf69dbe7bd3f368",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/100885/000119312510023294/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "100885",
+      "publication": {
+        "available_time": "2010-02-09T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 918
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "UPS",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "44d95679bbd1fb0dc3b66462a1e502c4d380ab7b184a325164c64cb718c9061a",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1090727/000119312510042908/ups-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "1090727",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "USB",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "23593b5bcf4219c1a6bb36cf507e747afa5c5f856635dd00051041ae86321e48",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/36104/000095012310018123/x55114e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "36104",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 907
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VLO",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "594fbd4330373394789f95641ed1ac41f2e18fce31087a77cd58338961cf6f45",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1035002/000095012310018097/d70408e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1035002",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 860
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VMC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "141174e516f4f65cfa621c7a6aaf27613420569ce7da89e952b853ab4a644096",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1396009/000095012310018400/g21744e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "1396009",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 820
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VTR",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "9e1a0a160a21375ae399308089ae4a8df48fe961963c7f29787a8a1968c19497",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/740260/000119312510035246/vtr-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "740260",
+      "publication": {
+        "available_time": "2010-02-23T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "VZ",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "e0b43ad79b85f6c82b0c5913c750d3ebc3bf82e4fccc87f11f47699d602b0515",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/732712/000119312510041685/vz-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "732712",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "WELL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "e612857f45454d02d9315232ca2c1f29f634d88dcded355caacfe7bcb09730eb",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/766704/000095012310018352/l38660e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "766704",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 781
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "WFC",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "6691d869b1d6550510d7dc008f4b07732fe3b4fa0dfdb61fa9f27d1dba1c6a11",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000095012310017877/f54129e10vk.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "72971",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 759
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "WMT",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "820bc0d82eafe19f6c11bf7f9a2f58c264dd9d8794e4be2061116728f8bd95f7",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416909000006/d10k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "104169",
+      "publication": {
+        "available_time": "2009-04-03T13:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 861
+      },
+      "explicit_canonical_ticker_observation": false,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "XEL",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "2b3c15e1ed369b55b33bef0a25b4ef160410d233e37e2040e780bb14869f97ba",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/72903/000104746910001536/a2196778z10-k.htm",
+      "source_family": "selected_original_primary",
+      "source_registrant_cik": "72903",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": {
+        "source_concept": "corporate_equity",
+        "front_matter_offset": 839
+      },
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": true,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    },
+    {
+      "symbol": "XOM",
+      "kind_supported_by_source": "stock",
+      "source_sha256": "7da40f58a1ab0200c8d79563d006f765fdaf55684d5dba0986de0c8a3930aeab",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000119312510042929/xom-20091231.xml",
+      "source_family": "exact_original_instance",
+      "source_registrant_cik": "34088",
+      "publication": {
+        "available_time": "2010-03-02T14:30:00Z",
+        "policy": "sec-source-dates-plus-two-xnys-sessions-v1",
+        "exact_first_publication_verified": false,
+        "availability_reconstructed": true
+      },
+      "initial_type_fact_supported": true,
+      "source_rule": "issuer-qualified ticker/form/common-share facts",
+      "explicit_canonical_ticker_observation": true,
+      "same_cik_in_current_discovery": false,
+      "current_discovery_is_not_historical_evidence": true,
+      "first_training_session": "2010-03-16",
+      "historical_price_link_verified": false,
+      "historical_metadata_admitted": false
+    }
+  ],
+  "protected_sha256": {
+    "results/task-conditioning-2026-10-31/type-evidence.json": "30be01794b8911e01de3ae46b53a7e7264442b092b3805ed4e8db649f6fd57c6",
+    "results/task-conditioning-2026-10-31/cached-stock-evidence.json": "777fe03844057527df481607725f02f757845937550e0b5a90b0c332b4e1cf25",
+    "results/task-conditioning-2026-10-31/stock-source-combined-audit.json": "bd78995174203d6595692ad8912bcdd21eecb764cf68b29500d802d6b80b87ad",
+    "results/task-conditioning-2026-10-31/original-cover-review.json": "0ce23fb8dd27709f4780b757d031d5f1db309053f6f923ff8330a9c4088a0d5b",
+    "results/task-conditioning-2026-10-31/original-cover-collection.json": "257889b3815e3c52e261e5a16dd92007f731508087839747fdeba8aa8e8fc7ff",
+    "results/task-conditioning-2026-10-31/exception-source-review.json": "29fc7983e3d867432f099491d7bfe009e75b3addb88e72d6e91fd8db6831f9f5",
+    "results/task-conditioning-2026-10-31/fund-source-review.json": "f8d551b6d25311b4a8a12503f38edc6cfe3499d4ac1140f0add2ab42105cb4c2",
+    "results/task-conditioning-2026-10-31/stock-master-selection.json": "d4635483a674456f4c538fcc281c9775b78e174924c6c8ac0f868c618ec065f0",
+    "/home/vibe/projects/rl-stocks/scripts/review_task_type_inventory.py": "a25a6f16061c84871f935ea5cc72aabc5426aa4c1950d2dbd62a1b2a35d96a15",
+    "scripts/review_task_type_covers.py": "c99c94dd7b5cc1dd714a30807752df88d1159b7b9c6eb8f462cc65843bd14999",
+    "src/rl_stocks/data/providers/sec/lineage.py": "0bb12384d7cc7a95b4784860b8f96e5ba5c7621bfc8d5617811b9a3aff1bd74d",
+    ".runtime/usage-ledger.json": "8821f8fd5a659b3063223b24fc7031b63cb57744de74522d34a4285ea8f991f6",
+    "artifacts/filings/current-identity-discovery.json": "ab35976758a3f50ad6e189e5ce59ab1b0e0abc4411636610f423b518919525d2",
+    "data/raw/sec-xbrl/5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20/instance.xml": "5bf4c28bd9ac411c366a012bb4e929d4f13167b454c8761a7297d4f60cf99c20",
+    "data/raw/sec-xbrl/671c3fb9911c0d81b4be34311e056480d58987706373dbedffecd210bab9bc14/instance.xml": "671c3fb9911c0d81b4be34311e056480d58987706373dbedffecd210bab9bc14",
+    "data/raw/sec-xbrl/780df3266008b4fc83589b9cee728b3c6403e4cb6efc3aa66cedcb1c6d048b82/instance.xml": "780df3266008b4fc83589b9cee728b3c6403e4cb6efc3aa66cedcb1c6d048b82",
+    "data/raw/sec-xbrl/32c5235828cec652d3ef6a47e92b171569da57eaadaae7b815f9850022c083f5/instance.xml": "32c5235828cec652d3ef6a47e92b171569da57eaadaae7b815f9850022c083f5",
+    "data/raw/sec-xbrl/0d6a98196f7b0d807e1d5e2c42a5f7fb9b12d89f0aac9ce8fb95eb9276b236c8/instance.xml": "0d6a98196f7b0d807e1d5e2c42a5f7fb9b12d89f0aac9ce8fb95eb9276b236c8",
+    "data/raw/sec-xbrl/93e997dff061057cf20fdff2f5ff8e7045fe69bd7c329fb85c902a8fa1b87420/instance.xml": "93e997dff061057cf20fdff2f5ff8e7045fe69bd7c329fb85c902a8fa1b87420",
+    "data/raw/sec-xbrl/9292a874084b80b89609b127934fed2a1d398f85c62ef0eb6c98979cc63f882d/instance.xml": "9292a874084b80b89609b127934fed2a1d398f85c62ef0eb6c98979cc63f882d",
+    "data/raw/sec-xbrl/8e41043e31ff42b809ed55844e79d0ecaf9984efcc35112d4a74d41676e0b047/instance.xml": "8e41043e31ff42b809ed55844e79d0ecaf9984efcc35112d4a74d41676e0b047",
+    "data/raw/sec-xbrl/9a6752460581dd87f4e424a8159bbb9ddbfa39776491fb996a159e1fbaf2bef2/instance.xml": "9a6752460581dd87f4e424a8159bbb9ddbfa39776491fb996a159e1fbaf2bef2",
+    "data/raw/sec-xbrl/cb02741d401a48a83a8870371ef23c2ee7414ca2832b23c038cb7c35a8ba7791/instance.xml": "cb02741d401a48a83a8870371ef23c2ee7414ca2832b23c038cb7c35a8ba7791",
+    "data/raw/sec-xbrl/b0035db22262a4e8318cd4a163bd2f8dd8aeee8d6485dd93ccdd702897f4d00a/instance.xml": "b0035db22262a4e8318cd4a163bd2f8dd8aeee8d6485dd93ccdd702897f4d00a",
+    "data/raw/sec-xbrl/7d1f7f847395b935f1ab7cc02090708eb1c5f64afd49bf5f37a2d6d2921b1eb5/instance.xml": "7d1f7f847395b935f1ab7cc02090708eb1c5f64afd49bf5f37a2d6d2921b1eb5",
+    "data/raw/sec-xbrl/6edade37f395187b14d5a6c503c64ac2348ee109f3d4f207212586822c1e2abd/instance.xml": "6edade37f395187b14d5a6c503c64ac2348ee109f3d4f207212586822c1e2abd",
+    "data/raw/sec-xbrl/65d6fc8d04f8d0ce59768920c10b0df20b5027a65d576562a388edc486010520/instance.xml": "65d6fc8d04f8d0ce59768920c10b0df20b5027a65d576562a388edc486010520",
+    "data/raw/sec-xbrl/692d8054fd3e48f78f19822a838f5f023bed927e028c657253340e2a571024a4/instance.xml": "692d8054fd3e48f78f19822a838f5f023bed927e028c657253340e2a571024a4",
+    "data/raw/sec-xbrl/70a60eb692773be8740d7e9b254215838936c79aa5d06e74886efbfd63b71c5f/instance.xml": "70a60eb692773be8740d7e9b254215838936c79aa5d06e74886efbfd63b71c5f",
+    "data/raw/sec-xbrl/128db52897722cb74188393897d2d47c359cff7facf1a6fdc6e0c26d7839eb22/instance.xml": "128db52897722cb74188393897d2d47c359cff7facf1a6fdc6e0c26d7839eb22",
+    "data/raw/sec-xbrl/8e62ab544ab0ea202b56568e290a4e67840b976ae54e73ca8022cd4bfdc904c6/instance.xml": "8e62ab544ab0ea202b56568e290a4e67840b976ae54e73ca8022cd4bfdc904c6",
+    "data/raw/sec-xbrl/36a07da32d7526185692db940a6ff5ebc68a6499dabd77629b34bc7d0b285c8c/instance.xml": "36a07da32d7526185692db940a6ff5ebc68a6499dabd77629b34bc7d0b285c8c",
+    "data/raw/sec-xbrl/8ab0e832e260816155f9e0a753690b3627abe7f746b8184bb11d1f18f23f9bf6/instance.xml": "8ab0e832e260816155f9e0a753690b3627abe7f746b8184bb11d1f18f23f9bf6",
+    "data/raw/sec-xbrl/1d38db98acf61d75427f4313f35df0468f2296e443e60eb4e728c650d55bcc6f/instance.xml": "1d38db98acf61d75427f4313f35df0468f2296e443e60eb4e728c650d55bcc6f",
+    "data/raw/sec-xbrl/2b0801fd60d97740061878bce159d0d164fa2ab818c98990e70243c0ed99342a/instance.xml": "2b0801fd60d97740061878bce159d0d164fa2ab818c98990e70243c0ed99342a",
+    "data/raw/sec-xbrl/54df378e1ce783cb5d7b18261d59830bc813bb0a1bab3ef9cbe5d92f437f30e3/instance.xml": "54df378e1ce783cb5d7b18261d59830bc813bb0a1bab3ef9cbe5d92f437f30e3",
+    "data/raw/sec-xbrl/268c58906e0a17d79d22ebeaffb2efda0f94a80bbcbfcdc5fc5eb07512f83512/instance.xml": "268c58906e0a17d79d22ebeaffb2efda0f94a80bbcbfcdc5fc5eb07512f83512",
+    "data/raw/sec-xbrl/82123fe8b634941e7029ab64f9444030dc882dc0dba1dd5319a1a7eaa9f297b1/instance.xml": "82123fe8b634941e7029ab64f9444030dc882dc0dba1dd5319a1a7eaa9f297b1",
+    "data/raw/sec-xbrl/c750c031f7f46fee5010d02eabe5870eb1bbe1b4b350424206a4a3cefe7e01e7/instance.xml": "c750c031f7f46fee5010d02eabe5870eb1bbe1b4b350424206a4a3cefe7e01e7",
+    "data/raw/sec-xbrl/b5bab7fa003c4a299ddec3dcddc9be0960f5a948d65e56f215f56480057cc5df/instance.xml": "b5bab7fa003c4a299ddec3dcddc9be0960f5a948d65e56f215f56480057cc5df",
+    "data/raw/sec-xbrl/d65ea0ad9b331aab1b56d13cc3c56eca37f088620dce18439e0b53ce7ba4ffa7/instance.xml": "d65ea0ad9b331aab1b56d13cc3c56eca37f088620dce18439e0b53ce7ba4ffa7",
+    "data/raw/sec-xbrl/89be2fa8e50269af9e52755da930011aec899c34e6b209a72e019892c347c3f8/instance.xml": "89be2fa8e50269af9e52755da930011aec899c34e6b209a72e019892c347c3f8",
+    "data/raw/sec-xbrl/44d95679bbd1fb0dc3b66462a1e502c4d380ab7b184a325164c64cb718c9061a/instance.xml": "44d95679bbd1fb0dc3b66462a1e502c4d380ab7b184a325164c64cb718c9061a",
+    "data/raw/sec-xbrl/9e1a0a160a21375ae399308089ae4a8df48fe961963c7f29787a8a1968c19497/instance.xml": "9e1a0a160a21375ae399308089ae4a8df48fe961963c7f29787a8a1968c19497",
+    "data/raw/sec-xbrl/e0b43ad79b85f6c82b0c5913c750d3ebc3bf82e4fccc87f11f47699d602b0515/instance.xml": "e0b43ad79b85f6c82b0c5913c750d3ebc3bf82e4fccc87f11f47699d602b0515",
+    "data/raw/sec-xbrl/7da40f58a1ab0200c8d79563d006f765fdaf55684d5dba0986de0c8a3930aeab/instance.xml": "7da40f58a1ab0200c8d79563d006f765fdaf55684d5dba0986de0c8a3930aeab",
+    "data/raw/sec-filings/c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49/filing.htm": "c6216ff495beb8a14bb2b37262bc12d49006009bed50983c5bf16fbc71f0bb49",
+    "data/raw/sec-filings/4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af/filing.htm": "4edec5a4c8c4cfeeaa74365a7593e26cb6fdc78be909af063de4c61c069929af",
+    "data/raw/sec-filings/e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03/filing.htm": "e078b6d84940f1357c5efe50c45f4b48adbacabba44844a2381aa12931fb4c03",
+    "data/raw/sec-filings/e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9/filing.htm": "e65b273eb69f6320e404af772706ad51fe59576b030d8d2f247cec618a3eaaa9",
+    "data/raw/sec-filings/2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1/filing.htm": "2d2696f6df1b9ba44318d78487893ccc53e5637f0f1a08f950ac382f8ac0b1b1",
+    "data/raw/sec-filings/8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e/filing.htm": "8657aaa456117dd3347a80f208356e95968889503fb800183159928da04e166e",
+    "data/raw/sec-filings/ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778/filing.htm": "ab1b69a020f1dcd24f8fd53aa46dc92f7b1a08ef4154fbac5b97b9c81320a778",
+    "data/raw/sec-filings/d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927/filing.htm": "d2ca500954945f7c41e074f34d5f0fbf73f8a37f8df2b5212365b00773b3f927",
+    "data/raw/sec-filings/5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367/filing.htm": "5331c08e4a335704c9d65a627a9c6ab8a680fc6794d534186d2926dd7505f367",
+    "data/raw/sec-filings/06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04/filing.htm": "06d5681d778f953653a0a520219fc21f94e6d5c0a475b7bd7c394ea71a304a04",
+    "data/raw/sec-filings/82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f/filing.htm": "82d7fc9a5e09da16dd35bb693e4c41c3ba674ef181ac1a156a7a51011c1f9d8f",
+    "data/raw/sec-filings/66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264/filing.htm": "66b8ef39f2e60749f7ac7eaf41982bfde89598d81ff7f7d9c1edf63e8a780264",
+    "data/raw/sec-filings/1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe/filing.htm": "1a7f218df4a8583d5b1154941f93ad3cb0fb6af19565432442b5ff14d0845ebe",
+    "data/raw/sec-filings/4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a/filing.htm": "4701db1390c8ad1503a659612f7bb58c0fded45399ce44a1b908a6418ac61d7a",
+    "data/raw/sec-filings/7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f/filing.htm": "7ffb2e427e782310f874852b8940046cef08e1ee0f8ed51addfecdca4286ad1f",
+    "data/raw/sec-filings/0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9/filing.htm": "0dab738c74705ded9d7fda0a226fa2357444adbdb14ed97c8a4e96ddd02792c9",
+    "data/raw/sec-filings/99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e/filing.htm": "99c68f720b8edbc8e6c6616f0d1e4b293668abb2293b85652404ae6f2970da8e",
+    "data/raw/sec-filings/7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558/filing.htm": "7c6efb6b2770efd0516fae16fb2e269d3b1240ddeea5f48f4437fbd54a5f5558",
+    "data/raw/sec-filings/fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666/filing.htm": "fca8076c5eb97a31a62b0e38639ac26eb1c3e16d9b8459efbd8310e8826ae666",
+    "data/raw/sec-filings/4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b/filing.htm": "4f464aca03d60a564a56d1b44aa5d51c38cdc086371b4dec62b7b61f7d425e7b",
+    "data/raw/sec-filings/f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90/filing.htm": "f492faab47135464aa21eab5cefff0c54fc2013dfc75a57952924c3d70300d90",
+    "data/raw/sec-filings/0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69/filing.htm": "0da2d0e519f726b3591c27c7df89be0e6ffdf350555f8bc6ddadf60913a8fa69",
+    "data/raw/sec-filings/ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de/filing.htm": "ad6d61839ef552ed1e87126c387ccdd3936abc015102b2f7f202d4f0811286de",
+    "data/raw/sec-filings/3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16/filing.htm": "3e20d1ca5f7bef884dc84f2786ff16a5ba0ac9365bc3a1cfed36380052cbfc16",
+    "data/raw/sec-filings/d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba/filing.htm": "d7498542fb8a43a584a4a7bb2bfdda7e7483656b8c44430953ae46c6d0fe35ba",
+    "data/raw/sec-filings/22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f/filing.htm": "22b32d0ca740d3a9a53a846c4e2fd305e638998e4f957c3415173d0d7dea250f",
+    "data/raw/sec-filings/e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e/filing.htm": "e0113c68a3def5dd01b2eaaa64354a98c91cddad91016997c31a61569fc0cd3e",
+    "data/raw/sec-filings/295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685/filing.htm": "295f1fccb232fc30bae8ee4b345fc51f958339b6ac11eaf08625a1b122531685",
+    "data/raw/sec-filings/181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1/filing.htm": "181bdf9d9e4d3dfb821018c411986069aa5dd45399a2e99e209ced433ba317d1",
+    "data/raw/sec-filings/f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf/filing.htm": "f86df0146635ee0e557a5e45742e3a032e75af230503e2e82eaa6725263700bf",
+    "data/raw/sec-filings/f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95/filing.htm": "f1eb220e7812c6dcaac84a2793ab4f25a79bc6562bfa15dca90359d8fe6acb95",
+    "data/raw/sec-filings/9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2/filing.htm": "9f8fbe4b4a4787c5058fa83810e5009cdad5217e03605fd2117a4350bbc8e9a2",
+    "data/raw/sec-filings/eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d/filing.htm": "eafc272d9c7faa033002b7f654677d08a174d3984beb02598954d00ac8c3a14d",
+    "data/raw/sec-filings/04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee/filing.htm": "04e95e0b4c08cb0cc7ca00772cb4774826accfbaf5165881a5613e828212c2ee",
+    "data/raw/sec-filings/45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9/filing.htm": "45b5d0fe5b278365d047c47b701e87ccc3b98c2a7c1facbf48979c0bdb2512e9",
+    "data/raw/sec-filings/39623923ebf3e3c16bd30bd41b20e713041ee532e583e5505f1d00d17ed8a4a4/filing.htm": "39623923ebf3e3c16bd30bd41b20e713041ee532e583e5505f1d00d17ed8a4a4",
+    "data/raw/sec-filings/6e0f305a7654433e3214473e0b59300065150801a4a7a752626dfe816098ba26/filing.htm": "6e0f305a7654433e3214473e0b59300065150801a4a7a752626dfe816098ba26",
+    "data/raw/sec-filings/1205d90bfea003a73e6673eb523bf00c79f06670319368b84e35c3f727187d7f/filing.htm": "1205d90bfea003a73e6673eb523bf00c79f06670319368b84e35c3f727187d7f",
+    "data/raw/sec-filings/0a3617f4fe50a42241ea06d5c5f2df0b49aa4f7c0aacb0ef2c9ba970f1efe763/filing.htm": "0a3617f4fe50a42241ea06d5c5f2df0b49aa4f7c0aacb0ef2c9ba970f1efe763",
+    "data/raw/sec-filings/74064c5ddf37af9e85ebf1a0217a5bda73db528785eb02bcc9522034ea824821/filing.htm": "74064c5ddf37af9e85ebf1a0217a5bda73db528785eb02bcc9522034ea824821",
+    "data/raw/sec-filings/11f6ed3476ee6f57a519366666ceb01a9e0d18982ee42d7f25e7d7c9723870ef/filing.htm": "11f6ed3476ee6f57a519366666ceb01a9e0d18982ee42d7f25e7d7c9723870ef",
+    "data/raw/sec-filings/783ce35ce1ebe1efcaca60b10d9b52528b38ed68db4ad675393cd68e7ff0ff7e/filing.htm": "783ce35ce1ebe1efcaca60b10d9b52528b38ed68db4ad675393cd68e7ff0ff7e",
+    "data/raw/sec-filings/93c2fe98efaca264b82947ed4f71a20af8ff0ede1e9c4f39f00e561e495114ca/filing.htm": "93c2fe98efaca264b82947ed4f71a20af8ff0ede1e9c4f39f00e561e495114ca",
+    "data/raw/sec-filings/ce13b30b491448c20cf22e6171e74ee474fb25ff0ac61cac7eb3dab2c557671e/filing.htm": "ce13b30b491448c20cf22e6171e74ee474fb25ff0ac61cac7eb3dab2c557671e",
+    "data/raw/sec-filings/b91d23a18fecc4863b219ff78f0b5f6f23cb7afc33a73d791f60dfec63a8ede8/filing.htm": "b91d23a18fecc4863b219ff78f0b5f6f23cb7afc33a73d791f60dfec63a8ede8",
+    "data/raw/sec-filings/9e72e3f283d54805eeade9908f97b8efb5d7b265d2b097b3854cc7cf288864f8/filing.htm": "9e72e3f283d54805eeade9908f97b8efb5d7b265d2b097b3854cc7cf288864f8",
+    "data/raw/sec-filings/db254e9854b8ebbe4de1836e128af214364b05143f2b2a10f582c8a57d496b1b/filing.htm": "db254e9854b8ebbe4de1836e128af214364b05143f2b2a10f582c8a57d496b1b",
+    "data/raw/sec-filings/22da5cf3766d1efc0d00a9a14c232a4c883257a7987457035a9ce23aa0be6fb0/filing.htm": "22da5cf3766d1efc0d00a9a14c232a4c883257a7987457035a9ce23aa0be6fb0",
+    "data/raw/sec-filings/1fd0df5179854cad30a63e63f6a6179c25189ccc00bfb48f25de3ed7bdd537c6/filing.htm": "1fd0df5179854cad30a63e63f6a6179c25189ccc00bfb48f25de3ed7bdd537c6",
+    "data/raw/sec-filings/24c0ef5b6ca529249b1d545ad66286702773993a0a798f252f55817fdee240d1/filing.htm": "24c0ef5b6ca529249b1d545ad66286702773993a0a798f252f55817fdee240d1",
+    "data/raw/sec-filings/38dfaba9477b87645f431c11f8b168a53662b48678c4c2f0eebda0ce0cd9db41/filing.htm": "38dfaba9477b87645f431c11f8b168a53662b48678c4c2f0eebda0ce0cd9db41",
+    "data/raw/sec-filings/877fabf30aaf313cd537447cab369168ad7996cae379325cdd1cefb49570cff5/filing.htm": "877fabf30aaf313cd537447cab369168ad7996cae379325cdd1cefb49570cff5",
+    "data/raw/sec-filings/eae1381c724c741b3276971958ada0b7f14ffe481780cdfe13eb59317537f44f/filing.htm": "eae1381c724c741b3276971958ada0b7f14ffe481780cdfe13eb59317537f44f",
+    "data/raw/sec-filings/fc3ba76f9fc86118bb9d69bdf5cd7074c01b2d293f5dff3133247cb4f280a128/filing.htm": "fc3ba76f9fc86118bb9d69bdf5cd7074c01b2d293f5dff3133247cb4f280a128",
+    "data/raw/sec-filings/5eee38c2d4b036b161948209c93910dad2fa84dcf6308efa174732835bc1046c/filing.htm": "5eee38c2d4b036b161948209c93910dad2fa84dcf6308efa174732835bc1046c",
+    "data/raw/sec-filings/103240e789adde9e505798918a9cd7379ef77243eea486325d741b45660b19aa/filing.htm": "103240e789adde9e505798918a9cd7379ef77243eea486325d741b45660b19aa",
+    "data/raw/sec-filings/aec2b474d4f794b2ca0520fc583fe215ed9779e52f5fbe161a77d404f39f03dd/filing.htm": "aec2b474d4f794b2ca0520fc583fe215ed9779e52f5fbe161a77d404f39f03dd",
+    "data/raw/sec-filings/cc74f848d864d33efeeaf82084029aba156b3ecebdfdf22f73cab2e46fa23c70/filing.htm": "cc74f848d864d33efeeaf82084029aba156b3ecebdfdf22f73cab2e46fa23c70",
+    "data/raw/sec-filings/389dd8c02928b10369b50b1aa44984ced4a6e8a6b0091e062dbca183dfe58043/filing.htm": "389dd8c02928b10369b50b1aa44984ced4a6e8a6b0091e062dbca183dfe58043",
+    "data/raw/sec-filings/a1a0567183c91e7de1db9ed22e652a0065e420022106b60d517a01d4d009cf39/filing.htm": "a1a0567183c91e7de1db9ed22e652a0065e420022106b60d517a01d4d009cf39",
+    "data/raw/sec-filings/bb23985f2268b17058f29f7f26a90c725f30db29d0cde958839b016d7469ed0e/filing.htm": "bb23985f2268b17058f29f7f26a90c725f30db29d0cde958839b016d7469ed0e",
+    "data/raw/sec-filings/7e0c4afe8d7cf7aa6fed6176d3b97df54c360f4eb88e062cfaf69dbe7bd3f368/filing.htm": "7e0c4afe8d7cf7aa6fed6176d3b97df54c360f4eb88e062cfaf69dbe7bd3f368",
+    "data/raw/sec-filings/23593b5bcf4219c1a6bb36cf507e747afa5c5f856635dd00051041ae86321e48/filing.htm": "23593b5bcf4219c1a6bb36cf507e747afa5c5f856635dd00051041ae86321e48",
+    "data/raw/sec-filings/594fbd4330373394789f95641ed1ac41f2e18fce31087a77cd58338961cf6f45/filing.htm": "594fbd4330373394789f95641ed1ac41f2e18fce31087a77cd58338961cf6f45",
+    "data/raw/sec-filings/141174e516f4f65cfa621c7a6aaf27613420569ce7da89e952b853ab4a644096/filing.htm": "141174e516f4f65cfa621c7a6aaf27613420569ce7da89e952b853ab4a644096",
+    "data/raw/sec-filings/e612857f45454d02d9315232ca2c1f29f634d88dcded355caacfe7bcb09730eb/filing.htm": "e612857f45454d02d9315232ca2c1f29f634d88dcded355caacfe7bcb09730eb",
+    "data/raw/sec-filings/6691d869b1d6550510d7dc008f4b07732fe3b4fa0dfdb61fa9f27d1dba1c6a11/filing.htm": "6691d869b1d6550510d7dc008f4b07732fe3b4fa0dfdb61fa9f27d1dba1c6a11",
+    "data/raw/sec-filings/820bc0d82eafe19f6c11bf7f9a2f58c264dd9d8794e4be2061116728f8bd95f7/filing.htm": "820bc0d82eafe19f6c11bf7f9a2f58c264dd9d8794e4be2061116728f8bd95f7",
+    "data/raw/sec-filings/2b3c15e1ed369b55b33bef0a25b4ef160410d233e37e2040e780bb14869f97ba/filing.htm": "2b3c15e1ed369b55b33bef0a25b4ef160410d233e37e2040e780bb14869f97ba",
+    "data/raw/sec-filings/cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902/filing.htm": "cd6cc325ba909ccb1e1d93939d017ce0036d2b89225a653bc0beaa166b87a902",
+    "data/raw/sec-filings/96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784/filing.htm": "96cb97f219276c040172d9dbc7d505ad6fd745024d10f2e6cf7ae5bc3f00a784",
+    "data/raw/sec-filings/ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21/filing.htm": "ba59c4b67c7d7d427db4a7b5c713b52531e7b3095d09144b81f0ce1ce7d28f21",
+    "data/raw/sec-filings/e33286af8894b31352ed5d51c880594a27899e2fed58885a57e351754f016b57/filing.htm": "e33286af8894b31352ed5d51c880594a27899e2fed58885a57e351754f016b57",
+    "data/raw/sec-filings/286a3b596a45c5b11154ac44a37dc0671686ef4f84016b73ef5d4dc06d6a7cac/filing.htm": "286a3b596a45c5b11154ac44a37dc0671686ef4f84016b73ef5d4dc06d6a7cac",
+    "data/raw/sec-filings/817f49d50380fe420827b5a787dcc73405621d3fc49742303a0690794cfb7b2d/filing.htm": "817f49d50380fe420827b5a787dcc73405621d3fc49742303a0690794cfb7b2d",
+    "data/raw/sec-filings/5b73be7cdce0b9f710400e78246ed45075212bba1cffac2a27796ea2b44323be/filing.htm": "5b73be7cdce0b9f710400e78246ed45075212bba1cffac2a27796ea2b44323be",
+    "data/raw/sec-filings/ce7e60e21fb408e4333c59fd6b94d7df565992e70171d2d54b151bf6687d6ede/filing.htm": "ce7e60e21fb408e4333c59fd6b94d7df565992e70171d2d54b151bf6687d6ede",
+    "data/raw/sec-filings/3df90674f144e5a78b02a4bf3a1325142a4bb32638d002f6b8c1b56955430b5f/filing.htm": "3df90674f144e5a78b02a4bf3a1325142a4bb32638d002f6b8c1b56955430b5f"
+  },
+  "protected_sources_unchanged": true,
+  "initial_source_fact_coverage_complete": true,
+  "scope": "Initial coarse stock/ETF type facts; not historical issuer/share-class/price continuity",
+  "association_review_required": true,
+  "historical_metadata_admitted": false,
+  "source_fact_is_not_a_validity_interval": true,
+  "network_requests": 0,
+  "model_inputs_enabled": false,
+  "training_performed": false,
+  "colab_allocated": false
+}

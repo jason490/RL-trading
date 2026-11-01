@@ -382,3 +382,37 @@ predecessor/share-class ambiguity can be immaterial to the coarse type only when
 dated evidence establishes type invariance for the plausible alternatives. Do not
 upgrade that finding into financial comparability or exact historical price-link
 verification. Unknown/mixed type or unavailable evidence must remain rejected.
+
+## Initial coarse-type fact ledger and association review
+
+`review_task_type_inventory.py` now verifies the distinct111-source union and
+checks each source-derived type fact's conservative availability against its first
+training session. The [actual ledger](../results/task-conditioning-2026-10-31/initial-type-source-ledger.json)
+corroborates107 corporate-equity and four fund observations before training.
+Seventy have literal canonical-ticker observations;38 more have an original issuer
+CIK also present in current stock discovery. These are separate evidence fields:
+current discovery is never the historical type value or a validity interval.
+GOOGL/LIN/QQQ lack both of those particular corroborations; QQQ is outside the
+stock-only discovery lookup, so this is review routing, not a negative identity
+finding. No input is automatically enabled by the ledger.
+
+Quarterly issued-share declarations and registered capital stock can corroborate
+corporate equity even when the earlier conservative registration-window matcher
+misses them. Such facts still require issuer/instrument association review.
+Do not convert a generic common-stock word match into a security-master record.
+Exact financial issuer, share-class pricing and survivorship claims remain outside
+this coarse stock/ETF review.
+
+For identifier changes, review whether dated primary evidence preserves the
+coarse type across the known paths. Later event documents can corroborate an
+identifier bridge, but must never supply an earlier type value: the initial type
+fact must independently predate training. A mixed/unknown type path rejects the
+fixed-kind contract. Corporate-event flags, future parent IDs and later sector or
+financial values must not enter model observations.
+
+A bounded QQQ identifier-source collector now selects the exact January30,2012
+registration from the retained2012q1 master, at most two index/primary operations
+under one non-repeating claim. Its purpose is to compare the same fund registry
+with the already retained2010 QQQQ observation. The2012 publication must not be
+backdated or used as the source of the2010 type. Actual review/admission remains
+separate from this prepared collector.
