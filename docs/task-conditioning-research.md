@@ -468,3 +468,19 @@ failed fleet states. Requested roles must form the exact remaining ordered suffi
 and have no allocation claims. Even a complete initial matrix now rejects an
 already-claimed role before allocation. No accepted smoke is repeated; all study
 charges and the original baseline remain in force.
+
+## Bounded research-geometry profile worker
+
+`training/task_profile_worker.py` runs4096 transitions/3096 updates for one fixed
+role using research batch256, warmup1000 and512-session training windows, seed11.
+It times learning separately from one original26 training-window evaluation,
+checks unchanged inference state, exports initial/final models durably and records
+actual optimizer counts, sampling and head activity. No performance scores or
+checkpoint selection are exported. It rejects local execution before model/output
+creation; no local optimization is used for verification.
+
+This worker is implemented but unrun. Remote registration, complete smoke
+acceptance, physical profile verification and shared-budget allocation admission
+must precede profiling. Measured timings must determine a bounded100k execution
+plan including setup/evaluation/retrieval/cleanup; smoke wall time alone cannot
+justify a research duration. The two-unit total family allowance is unchanged.
