@@ -604,3 +604,15 @@ the1800-second verifier limit and is added to the already declared remote comput
 setup and retrieval/cleanup allowances before the7200-second allocation check.
 This corrects omitted verification work before any100k allocation is admitted;
 no learning setting, performance threshold or credit allowance is changed.
+
+## Profile compute-source binding
+
+`training/task_profile_sources.py` compares current policy/SAC configuration and
+factory, simulator/accounting/sampling, features, dataset/validation/type handling,
+evaluation, task environment/optimizer helpers and dependency lock against the exact
+profile Git revision. Changed content, added/removed compute files or source symlinks
+reject reuse. It returns SHA256 evidence for the matched files. Actual comparison
+against the running profile's captured clean revision matches103 files. New screen
+orchestration/verifier code is outside that compute inventory and requires its own
+checks; this does not claim it was timed by the earlier profiling worker. The helper
+is implemented for admission binding; full-screen fleet admission remains disabled.
