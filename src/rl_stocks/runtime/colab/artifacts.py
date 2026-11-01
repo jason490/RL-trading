@@ -12,6 +12,9 @@ from rl_stocks.core.contracts import digest, canonical
 
 
 def validate_archive(path, plan, dataset_id):
+    if plan.get('version') == 45:
+        from rl_stocks.runtime.colab.task_profile_artifacts import validate_task_profile_archive
+        return validate_task_profile_archive(path, plan, dataset_id)
     if plan.get('version') == 44:
         from rl_stocks.runtime.colab.task_smoke_artifacts import validate_task_smoke_archive
         return validate_task_smoke_archive(path, plan, dataset_id)

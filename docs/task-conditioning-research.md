@@ -493,3 +493,13 @@ validation rejects omitted roles, hardware changes or extended deadlines. This
 registration does not enable allocation: complete learned smoke acceptance and a
 physical downloaded-profile verifier are still required. The profile shares the
 existing task-study allowance and cannot start a new budget baseline.
+
+The downloaded version45 profile verifier requires all three roles' initial/final
+models and input/profile records within a64MiB/24-member safe archive. It verifies
+CPU/default-kernel clean provenance, actual research batch/warmup/replay capacity,
+4096 transitions/3096 Adam steps, finite changed weights, finite positive learning/
+evaluation/inclusive timings and identical fitted holding paths. Its fleet result
+includes the required `bundle_id` (the profile-record identity; no frozen prediction
+bundle is produced by profiling). Untrained success claims and invalid timings are
+rejected without local optimization. Actual learned positive-path profile acceptance
+remains unrun; complete smoke admission and budget integration are still required.
