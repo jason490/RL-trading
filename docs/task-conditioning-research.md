@@ -484,3 +484,12 @@ acceptance, physical profile verification and shared-budget allocation admission
 must precede profiling. Measured timings must determine a bounded100k execution
 plan including setup/evaluation/retrieval/cleanup; smoke wall time alone cannot
 justify a research duration. The two-unit total family allowance is unchanged.
+
+The version45 remote profile contract runs the three fixed roles sequentially in
+one CPU allocation,4096 transitions each. It pins the same dataset/type evidence
+and seed11, retains a two-hour allocation ceiling and360-second shutdown reserve,
+and exports completion/source/kernel metadata after all roles finish. Canonical
+validation rejects omitted roles, hardware changes or extended deadlines. This
+registration does not enable allocation: complete learned smoke acceptance and a
+physical downloaded-profile verifier are still required. The profile shares the
+existing task-study allowance and cannot start a new budget baseline.

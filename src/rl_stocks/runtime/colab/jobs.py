@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 44:
+    if plan.get('version') == 45:
+        from rl_stocks.core.contracts import canonical
+        if canonical(plan) != canonical(task_profile_plan()):
+            raise ValueError('fixed three-role task research profile required')
+    elif plan.get('version') == 44:
         from rl_stocks.core.contracts import canonical
         try:
             expected = task_smoke_plan(plan['task_smoke']['task_role'])
@@ -882,3 +886,14 @@ def task_smoke_plan(task_role):
         dataset_contract=dict(identity=protocol()['dataset']),
         allocation_deadline_seconds=7200, teardown_reserve_seconds=360,
         jobs=[dict(algorithm='task_sac_smoke', device='cpu', smoke=True, seed=11, steps=1024)])
+
+
+def task_profile_plan():
+    from rl_stocks.training.task_profile_worker import PROFILE_STEPS
+    plan = task_smoke_plan('masked_shared')
+    plan.pop('task_smoke')
+    plan.update(version=45, task_profile_roles=['masked_shared', 'tagged_shared', 'tagged_routed'])
+    plan['jobs'] = [dict(algorithm='task_sac_profile', task_role=role, device='cpu',
+                        smoke=False, seed=11, steps=PROFILE_STEPS)
+                    for role in plan['task_profile_roles']]
+    return plan
