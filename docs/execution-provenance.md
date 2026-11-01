@@ -86,3 +86,13 @@ execution are not proven semantically identical by a scoped byte/AST audit.
 Root cause stays unproven; no tolerance change or training retry is authorized.
 The audit imports/trains neither source, changes no retained model/data artifact
 and allocates no runtime.
+
+## Task-conditioning workers
+
+Task-specific workers use `training/task_backend.py` around the same read-only core
+capture before learning. It adds libc/NumPy/build identity, CPU model and allowlisted
+CPU-math selectors, with arbitrary environment values redacted. This prevents the
+task path from omitting backend metadata. Existing missing records are not backfilled.
+The tagged screen's retained replay still fails exact equality; its new diagnostic
+reports discrete-path equality and small floating differences without relaxing the
+acceptance contract or authorizing fresh training.

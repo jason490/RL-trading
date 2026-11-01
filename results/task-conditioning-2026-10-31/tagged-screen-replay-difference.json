@@ -1,0 +1,303 @@
+{
+  "schema": "task-tagged-replay-difference-v1",
+  "steps": 10000,
+  "actual_sha256": "bbb4cf3f55169e84700ab3d84d4da0eb670b3017bfb1c023dc1c61c97aa129ca",
+  "retained_sha256": "bc6afba6bdf63254f2ccb41c50d2c2f088505d46a7686150066a4135948e8d53",
+  "discrete_examples": [],
+  "structure_mismatches": [],
+  "field_differences": {
+    "policy_action": {
+      "count": 10514,
+      "max_abs_difference": 2.384185791015625e-07
+    },
+    "1": {
+      "count": 11260,
+      "max_abs_difference": 1.853887144420696e-05
+    },
+    "stop": {
+      "count": 2879,
+      "max_abs_difference": 8.861056016939983e-06
+    },
+    "0": {
+      "count": 2749,
+      "max_abs_difference": 8.861056016939983e-06
+    },
+    "2": {
+      "count": 12352,
+      "max_abs_difference": 1.853887144420696e-05
+    },
+    "zone_upper": {
+      "count": 2978,
+      "max_abs_difference": 1.853887144420696e-05
+    },
+    "far": {
+      "count": 4312,
+      "max_abs_difference": 1.853887144420696e-05
+    },
+    "near": {
+      "count": 2743,
+      "max_abs_difference": 1.853887144420696e-05
+    },
+    "zone_lower": {
+      "count": 4077,
+      "max_abs_difference": 1.853887144420696e-05
+    },
+    "3": {
+      "count": 5967,
+      "max_abs_difference": 2.384185791015625e-07
+    },
+    "turnover": {
+      "count": 6861,
+      "max_abs_difference": 0.0016845948994159698
+    },
+    "unscaled_reward": {
+      "count": 6839,
+      "max_abs_difference": 2.0551966059545457e-08
+    },
+    "cash": {
+      "count": 6844,
+      "max_abs_difference": 0.001684089278569445
+    },
+    "equity": {
+      "count": 13433,
+      "max_abs_difference": 0.001684089278569445
+    },
+    "raw_return": {
+      "count": 6839,
+      "max_abs_difference": 1.8263672685314702e-08
+    },
+    "costs": {
+      "count": 6861,
+      "max_abs_difference": 5.05347088619601e-07
+    },
+    "previous_equity": {
+      "count": 6827,
+      "max_abs_difference": 0.001684089278569445
+    },
+    "exposure": {
+      "count": 6522,
+      "max_abs_difference": 2.995841752451156e-08
+    },
+    "average_loss": {
+      "count": 16,
+      "max_abs_difference": 8.592292147113767e-06
+    },
+    "expectancy": {
+      "count": 17,
+      "max_abs_difference": 6.552876499199556e-06
+    },
+    "profit_factor": {
+      "count": 17,
+      "max_abs_difference": 9.538165923750341e-09
+    },
+    "sharpe": {
+      "count": 17,
+      "max_abs_difference": 2.3148641004056003e-08
+    },
+    "volatility": {
+      "count": 17,
+      "max_abs_difference": 5.073011649647796e-09
+    },
+    "net_return": {
+      "count": 17,
+      "max_abs_difference": 1.6840892458347412e-08
+    },
+    "max_drawdown": {
+      "count": 17,
+      "max_abs_difference": 1.518393388799666e-08
+    },
+    "long_return_contribution": {
+      "count": 7,
+      "max_abs_difference": 1.684089277753653e-08
+    },
+    "long_costs": {
+      "count": 7,
+      "max_abs_difference": 5.053493623563554e-07
+    },
+    "long_net_pnl": {
+      "count": 7,
+      "max_abs_difference": 0.001684089278569445
+    },
+    "impact": {
+      "count": 25,
+      "max_abs_difference": 3.618029040808324e-07
+    },
+    "realized_pnl": {
+      "count": 25,
+      "max_abs_difference": 0.0018084490548062604
+    },
+    "price": {
+      "count": 25,
+      "max_abs_difference": 4.96876350553066e-06
+    },
+    "fee": {
+      "count": 25,
+      "max_abs_difference": 1.808629903621295e-07
+    },
+    "reference_price": {
+      "count": 25,
+      "max_abs_difference": 4.96975746955286e-06
+    },
+    "short_costs": {
+      "count": 11,
+      "max_abs_difference": 1.902590156532824e-07
+    },
+    "max_equity_reconciliation_error": {
+      "count": 7,
+      "max_abs_difference": 7.275957614183426e-11
+    },
+    "short_return_contribution": {
+      "count": 11,
+      "max_abs_difference": 6.343432112920766e-09
+    },
+    "short_net_pnl": {
+      "count": 11,
+      "max_abs_difference": 0.0006343432178255171
+    },
+    "average_win": {
+      "count": 2,
+      "max_abs_difference": 1.0706672810556483e-06
+    }
+  },
+  "returns": [
+    {
+      "symbol": "AAPL",
+      "actual_return": -0.674645984523483,
+      "retained_return": -0.6746459810828265
+    },
+    {
+      "symbol": "AMT",
+      "actual_return": -0.4580985239200486,
+      "retained_return": -0.4580985302634808
+    },
+    {
+      "symbol": "AMZN",
+      "actual_return": -0.7632599404506427,
+      "retained_return": -0.7632599397020139
+    },
+    {
+      "symbol": "APD",
+      "actual_return": -0.45733710117201887,
+      "retained_return": -0.45733710117201887
+    },
+    {
+      "symbol": "BAC",
+      "actual_return": -0.6866779529540712,
+      "retained_return": -0.6866779559635633
+    },
+    {
+      "symbol": "CAT",
+      "actual_return": -0.6554489249757904,
+      "retained_return": -0.6554489249757904
+    },
+    {
+      "symbol": "CVX",
+      "actual_return": -0.22638191999339385,
+      "retained_return": -0.22638191999339385
+    },
+    {
+      "symbol": "DIA",
+      "actual_return": -0.45463662817437767,
+      "retained_return": -0.4546366280598093
+    },
+    {
+      "symbol": "DIS",
+      "actual_return": -0.6271839967244015,
+      "retained_return": -0.6271839967244015
+    },
+    {
+      "symbol": "DUK",
+      "actual_return": -0.4517184402394251,
+      "retained_return": -0.45171844130669225
+    },
+    {
+      "symbol": "GOOGL",
+      "actual_return": -0.43020289330647454,
+      "retained_return": -0.43020289330647454
+    },
+    {
+      "symbol": "HD",
+      "actual_return": -0.4843967288393104,
+      "retained_return": -0.48439673798527405
+    },
+    {
+      "symbol": "HON",
+      "actual_return": -0.4662456741103683,
+      "retained_return": -0.4662456741103683
+    },
+    {
+      "symbol": "IWM",
+      "actual_return": -0.5043057766474446,
+      "retained_return": -0.5043057700842106
+    },
+    {
+      "symbol": "JNJ",
+      "actual_return": -0.264182539595206,
+      "retained_return": -0.2641825417898339
+    },
+    {
+      "symbol": "JPM",
+      "actual_return": -0.6764363387027684,
+      "retained_return": -0.6764363387027684
+    },
+    {
+      "symbol": "KO",
+      "actual_return": -0.22413104973038744,
+      "retained_return": -0.22413104860845046
+    },
+    {
+      "symbol": "LIN",
+      "actual_return": -0.6470143067310246,
+      "retained_return": -0.6470143086165605
+    },
+    {
+      "symbol": "MSFT",
+      "actual_return": -0.6811848378208929,
+      "retained_return": -0.6811848330437356
+    },
+    {
+      "symbol": "NEE",
+      "actual_return": -0.7034516710195806,
+      "retained_return": -0.7034516690928907
+    },
+    {
+      "symbol": "PG",
+      "actual_return": -0.5614519001042324,
+      "retained_return": -0.5614519036978292
+    },
+    {
+      "symbol": "PLD",
+      "actual_return": -0.6772931225989698,
+      "retained_return": -0.6772931225989698
+    },
+    {
+      "symbol": "QQQ",
+      "actual_return": -0.4672103086761875,
+      "retained_return": -0.4672103101102567
+    },
+    {
+      "symbol": "SPY",
+      "actual_return": -0.43786208794973946,
+      "retained_return": -0.437862071108847
+    },
+    {
+      "symbol": "UNH",
+      "actual_return": -0.5239624632669053,
+      "retained_return": -0.5239624652032204
+    },
+    {
+      "symbol": "XOM",
+      "actual_return": -0.5442539167414704,
+      "retained_return": -0.5442539167414704
+    }
+  ],
+  "verification_math": {
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "MKL_CBWR": "AVX2"
+  },
+  "local_optimization_prohibited": true,
+  "exact_replay_accepted": false,
+  "tolerance_changed": false,
+  "development_evaluated": false,
+  "checkpoint_sha256": "4289bb4e7956cd57cd2aeb6470a58fb20de9d7122b7073b320df0b5c7f01b7d9"
+}

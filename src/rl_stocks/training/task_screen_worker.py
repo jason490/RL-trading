@@ -57,6 +57,8 @@ def execute_screen_colab(dataset, type_manifest, output, *, task_role):
             torch.set_num_threads(1)
             env = build_task_environment(dataset, type_manifest, task_role=role, smoke=False)
             model = create_task_sac(env, task_role=role, seed=11, smoke=False)
+            from rl_stocks.training.task_backend import task_execution_backend
+            metadata['execution_backend'] = task_execution_backend(model.device)
             audit = TaskOptimizerAudit(model, maximum=99000)
             model.save(output / 'initial.zip')
             _atomic_json(output / 'input.json', metadata)

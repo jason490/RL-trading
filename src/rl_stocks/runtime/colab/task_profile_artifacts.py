@@ -27,6 +27,12 @@ def verify_profile_directory(folder, plan, role, completion):
         dataset=plan['dataset_contract']['identity'], type_manifest_sha256=plan['type_manifest_sha256'],
         repository=completion['source_git'], source=completion['source_hash'], profile_only=True,
         seed=11, development_evaluated=False, test_evaluated=False, performance_promotion=False)
+    if 'execution_backend' in initial_metadata:
+        backend = initial_metadata['execution_backend']
+        if (backend.get('schema') != 'numerical-execution-v1' or backend.get('selected_device') != 'cpu'
+                or backend.get('torch_intraop_threads') != 1 or not backend.get('cpu_capability')):
+            raise RuntimeError('actual CPU profile backend record required')
+        expected['execution_backend'] = backend
     if (canonical(initial_metadata) != canonical(expected)
             or any(record.get(k) != v for k, v in expected.items())
             or record.get('status') != 'complete' or record.get('actual_transitions') != PROFILE_STEPS

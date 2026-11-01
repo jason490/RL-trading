@@ -84,6 +84,8 @@ def execute_smoke_colab(dataset, type_manifest, output, *, task_role, seed=11):
             torch.set_num_threads(1)
             environment = build_task_environment(dataset, type_manifest, task_role=role, smoke=True)
             model = create_task_sac(environment, task_role=role, seed=seed, smoke=True)
+            from rl_stocks.training.task_backend import task_execution_backend
+            metadata['execution_backend'] = task_execution_backend(model.device)
             audit = TaskOptimizerAudit(model, maximum=960)
             initial = deepcopy(model.policy.state_dict())
             model.save(output / 'initial.zip')

@@ -770,3 +770,29 @@ restarted. Next is a retained-artifact numerical execution investigation. Future
 runtime provenance must describe the relevant arithmetic/backend rather than imply
 universal CPU bit portability. Current project40.121163/150; official post-cleanup
 account548.11/rate0/no assignments. Development and routed allocation remain shut.
+
+## Tagged retained replay difference scope and future backend capture
+
+A guarded inference-only replay of the tagged10k checkpoint is retained in
+`tagged-screen-replay-difference.json`. All26 episodes have identical structure and
+no differences in the audited discrete trade fields (quantities, sides/intents,
+sessions, expiry/decision times, rejection/clipping flags and fill reasons). Maximum
+equity difference is$0.001684 and net-return difference1.684e-8. Exact full-result
+hashes still differ, so the original rejection remains; this diagnostic neither
+accepts the cell nor changes any tolerance or performance gate.
+
+An exact-float32 first-observation probe remains18/26 matches. Replacing the final
+tanh with Torch/NumPy float64 reference variants does not improve that count;
+NumPy float32 gives16. Additional strict-AVX2, AVX2 instruction-limit and SSE4.2
+BLAS probes give9/18/14 matches. These bounded probes narrow the investigation but
+do not prove an original kernel/backend cause; no missing remote record is filled
+from the host. No Colab allocation or optimization occurred during diagnosis.
+
+Future task smoke/profile/screen workers now capture `execution_backend` immediately
+after constructing the selected model, before learning. The read-only task wrapper
+reuses core provenance and adds libc, NumPy version, Torch build-config SHA, CPU
+model and allowlisted ATEN/MKL math selectors; unknown selector values are redacted.
+Capture tests verify no RNG/thread/environment mutation. Historical records stay
+unchanged and missing backend fields stay missing; profile artifact validation
+supports both original records and explicitly captured CPU records. This logging
+fix alone does not admit the failed tagged cell or restart the remaining role.

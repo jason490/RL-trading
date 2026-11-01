@@ -49,6 +49,8 @@ def execute_profile_colab(dataset, type_manifest, output, *, task_role):
             torch.set_num_threads(1)
             env = build_task_environment(dataset, type_manifest, task_role=role, smoke=False)
             model = create_task_sac(env, task_role=role, seed=11, smoke=False)
+            from rl_stocks.training.task_backend import task_execution_backend
+            metadata['execution_backend'] = task_execution_backend(model.device)
             if model.batch_size != 256 or model.learning_starts != 1000:
                 raise ValueError('research batch/warmup required for profiling')
             initial = fingerprint(model.policy.state_dict())
