@@ -1,0 +1,47 @@
+from types import SimpleNamespace
+
+import pytest
+
+from rl_stocks.runtime.colab.budget import BudgetStop
+from rl_stocks.training.task_runtime import claim_smoke, shared_budget
+
+
+def ledger(tmp_path):
+    return SimpleNamespace(path=tmp_path / 'usage-ledger.json',
+        value={'consumed': 39.9, 'budget_stopped': False, 'minimum_account_balance': 150},
+        account_teardown_balance=170)
+
+
+def test_shared_baseline_preserves_charges_and_exhaustion(tmp_path):
+    item = ledger(tmp_path)
+    assert shared_budget(item) == (2., 39.9)
+    item.value['consumed'] += 1
+    assert shared_budget(item) == (2., 39.9)
+    with pytest.raises(ValueError, match='preserved'):
+        shared_budget(item, requested_start=40.9)
+    item.value['consumed'] += 1
+    with pytest.raises(BudgetStop, match='exhausted'):
+        shared_budget(item)
+    for value in (True, float('nan'), 3, 0):
+        with pytest.raises(ValueError, match='allowance'):
+            shared_budget(item, value)
+
+
+def test_claims_persist_independently_and_cannot_retry(tmp_path):
+    item = ledger(tmp_path)
+    claim_smoke(item, 'rl-stocks-cpu-012345abcdef', 'masked_shared')
+    with pytest.raises(RuntimeError, match='already claimed'):
+        claim_smoke(item, 'rl-stocks-cpu-abcdef012345', 'masked_shared')
+    claim_smoke(item, 'rl-stocks-cpu-abcdef012345', 'tagged_shared')
+    assert shared_budget(item)[1] == 39.9
+    with pytest.raises(ValueError, match='owned CPU'):
+        claim_smoke(item, 'unrelated', 'tagged_routed')
+
+
+@pytest.mark.parametrize('key,value', [('budget_stopped', True), ('minimum_account_balance', 0)])
+def test_existing_budget_stop_and_account_floor_are_not_cleared(tmp_path, key, value):
+    item = ledger(tmp_path)
+    item.value[key] = value
+    with pytest.raises(BudgetStop, match='protections'):
+        shared_budget(item)
+    assert not (tmp_path / 'task-conditioning-budget-v1.json').exists()

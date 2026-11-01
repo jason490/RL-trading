@@ -356,3 +356,20 @@ Allocation remains explicitly rejected by fleet task validation until the shared
 incremental-budget claim and physical artifact verifier are integrated. This is an
 implementation staging guard, not a request for user permission. No task smoke has
 been allocated or run. Existing fleet budget and cleanup behavior remains in force.
+
+## Shared task-study budget controller — 2026-11-01
+
+`training/task_runtime.py` retains one protocol-bound baseline against cumulative
+project usage, including smoke/setup/retrieval and later study attempts. The entire
+family allowance is at most two additional units; callers cannot reset the baseline
+or clear an existing budget stop. Account floor150/teardown170 remains required.
+Each role has a durable, non-repeating CPU allocation claim with a7200-second
+allocation deadline and360-second retrieval/shutdown reserve. No automatic role
+retry follows a failed allocation or worker.
+
+Fleet wiring requires the complete three-role set, one aggregate study allowance,
+clean committed source and projected allocation deadlines; existing aggregate
+metering and owned-session teardown apply. Tests cover persistent charges, allowance
+exhaustion, attempted reset, invalid allowance, role claims and existing protections.
+The pre-allocation staging guard remains until physical archive acceptance is
+implemented. These tests use temporary ledgers; the project ledger was not changed.

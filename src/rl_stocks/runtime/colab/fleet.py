@@ -307,6 +307,14 @@ class Fleet:
         self.concurrency=concurrency;self.state_path=Path(state_path)
         self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json')
         self.allocation_plan_seconds=None
+        if any(t['plan'].get('version') == 44 for t in self.tasks):
+            from rl_stocks.training.task_runtime import shared_budget
+            roles = [t['plan'].get('task_smoke', {}).get('task_role') for t in self.tasks]
+            if (len(self.tasks) != 3 or any(t['plan'].get('version') != 44 for t in self.tasks)
+                    or set(roles) != {'masked_shared', 'tagged_shared', 'tagged_routed'}):
+                raise ValueError('task smoke requires exactly the three fixed roles')
+            study_limit, study_start = shared_budget(self.budget.ledger, study_limit, study_start)
+            self.allocation_plan_seconds = [7200] * 3
         if any(t['plan'].get('version')==43 for t in self.tasks):
             from rl_stocks.training.recurrent_comparison import protocol
             from rl_stocks.training.recurrent_screen_spec import verify_profile,specification
@@ -510,7 +518,7 @@ class Fleet:
         elif phase=='exec':
             if code:
                 child['exec_cli_failed']=True
-                if a.task['plan'].get('version') not in (38,39,40,41,42,43) and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') not in (38,39,40,41,42,43,44) and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
             a.phase='await_export';a.probe_due=0.;child['phase']=a.phase;self.budget.ledger.save();self.save()
         elif phase=='ready':
@@ -589,7 +597,7 @@ class Fleet:
             if time.monotonic()+20>=a.exec_deadline:raise TimeoutError('remote export deadline')
             if time.monotonic()>=a.probe_due:
                 child=self.budget.active['children'][a.session]
-                if a.task['plan'].get('version') not in (38,39,40,41,42,43) and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') not in (38,39,40,41,42,43,44) and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
                 self.download(a,'ready','/content/research-artifacts.ready','export.ready',20)
             return
@@ -613,10 +621,10 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
                 raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
-            if any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):
+            if any(t['plan'].get('version') == 44 for t in self.tasks) or any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):
                 git=repository_state(self.root)
                 if git.get('dirty')!='' or not git.get('revision'):raise RuntimeError('clean committed research source required')
             self.cli.short(['version'])
@@ -643,7 +651,13 @@ class Fleet:
                                 if a.phase not in ('stop','verify'):self.budget.guard(a.session,60)
                             pending=next((a for a in self.actors if a.phase=='pending'),None)
                             if pending and len(active)<self.concurrency and not any(a.phase in ('new','status') for a in active):
-                                if pending.task['plan'].get('version')==43:
+                                if pending.task['plan'].get('version') == 44:
+                                    from rl_stocks.training.task_runtime import claim_smoke
+                                    claim_smoke(self.budget.ledger, pending.session,
+                                                pending.task['plan']['task_smoke']['task_role'])
+                                    self.budget.admit(pending.session, 'CPU', allocation_seconds=7200,
+                                                      teardown_reserve_seconds=360)
+                                elif pending.task['plan'].get('version')==43:
                                     from rl_stocks.training.recurrent_screen_runtime import claim_screen_cell
                                     arm=pending.task['plan']['comparison_screen']['arm']
                                     claim_screen_cell(self.budget.ledger,pending.session,arm)
