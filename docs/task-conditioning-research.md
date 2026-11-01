@@ -528,3 +528,16 @@ All three owned sessions are stopped; official usage reports zero assignments an
 all setup/failures/retrieval. Shared task-study consumption is0.034566 of2 units.
 The original failed fleet records remain retained. Research-geometry profiling is
 now admitted;100k training and development access remain gated.
+
+## Predeclared timing projection
+
+`training/task_projection.py` scales each role's complete4096-step learning time
+by99000/3096 research updates and includes ten measured training-window evaluations,
+then applies a1.5 margin. Add900 seconds setup and600 seconds retrieval/cleanup per
+allocation. Scaling the whole learning interval also recharges warmup/environment
+work conservatively. Each projected allocation must fit7200 seconds. Sequential
+aggregate cost uses at least the observed profile rate plus the ledger's0.01/hr
+margin, and must fit the original remaining two-unit allowance. A positive reliable
+rate is required even for CPU. Any failure rejects execution; no duration/allowance
+is enlarged automatically. This arithmetic is not physical profile acceptance or
+performance evidence, and has not admitted any100k run yet.
