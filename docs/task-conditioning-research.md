@@ -734,3 +734,20 @@ failure. Unit checks reject modified metrics and incomplete proofs and verify
 closure enforcement. This reader has not yet consumed a complete actual matrix;
 tagged shared/routed100k outcomes remain pending. All103 profiled compute files
 remain unchanged by these orchestration additions.
+
+## Accepted masked training-only directional diagnosis
+
+`masked-training-directional.json` derives side-specific contributions directly
+from the checksum-pinned, exactly replayed reports, without fitting or checkpoint
+changes. Long+short P&L reconciles to net equity for all26 symbols at selected/final.
+Selected50k mean return40.52% comprises+43.35pp long and−2.82pp short; final100k
+27.61% comprises+43.29pp long and−15.68pp short. Matched holding is56.45% over
+this fitted window; it is not the30.60% development baseline. Contributions are
+cash P&L divided by initial equity, not separately compounded portfolio returns.
+
+Only two stocks have negative full-window holding returns. Selected has one with
+positive total and positive short contribution; final has none with positive total,
+although one retains positive short P&L. These are reporting-only ex-post cohorts,
+never observations/sampling/rewards/checkpoint criteria. The model therefore does
+not satisfy the requested declining-stock outcome in this control. This diagnosis
+cannot choose or modify the unfinished tagged comparison; its fixed gate remains.
