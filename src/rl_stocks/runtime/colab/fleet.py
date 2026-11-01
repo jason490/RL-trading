@@ -24,11 +24,11 @@ from rl_stocks.runtime.colab.transport import connection_lost,worker_not_started
 
 
 class Command:
-    def __init__(self,command,args,root,path,timeout):
+    def __init__(self,command,args,root,path,timeout,env=None):
         self.path=path;path.parent.mkdir(parents=True,exist_ok=True)
         self.output=path.open('w');os.chmod(path,0o600)
         self.process=subprocess.Popen(command+args,cwd=root,stdout=self.output,stderr=self.output,
-            stdin=subprocess.DEVNULL,start_new_session=True)
+            stdin=subprocess.DEVNULL,start_new_session=True,env=env)
         self.started=time.monotonic();self.timeout=timeout
 
     def poll(self):return self.process.poll()
@@ -615,7 +615,12 @@ class Fleet:
               '--dataset-id',Path(a.task['dataset']).name,'--output',str(folder/'verification.json'),
               '--retrieved',str(folder/'retrieved')]
         path=self.root/'.runtime'/a.session/f'validate-{a.sequence}-output.txt'
-        a.command=Command([sys.executable],args,self.root,path,duration)
+        if task_screen:
+            from rl_stocks.runtime.colab.verify_task_screen_export import verification_environment
+            a.command=Command([sys.executable],args,self.root,path,duration,
+                              env=verification_environment(os.environ))
+        else:
+            a.command=Command([sys.executable],args,self.root,path,duration)
         self.budget.active['children'][a.session]['phase']=a.phase
         self.budget.ledger.save();self.save()
 

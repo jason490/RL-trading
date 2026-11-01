@@ -1,0 +1,343 @@
+{
+  "schema": "task-masked-screen-acceptance-v1",
+  "session": "rl-stocks-cpu-bf3f86798a17",
+  "original_fleet": "rl-stocks-fleet-dbea0c3c2a7c",
+  "original_fleet_status": "failed",
+  "cleanup_verified": true,
+  "archive": "artifacts/colab/rl-stocks-cpu-bf3f86798a17/artifacts.tar.gz",
+  "archive_sha256": "4724c136e6b35754b9906d63f9a73239e6a80e06dc15ba4677a53a08faff39df",
+  "exact_physical_proof": {
+    "task_role": "masked_shared",
+    "replayed_checkpoints": 10,
+    "selected_step": 50000,
+    "frozen_bundles": {
+      "selected": "48f55e6b9a558b6d943f93414de5f4d51e7496b25fe0680d59776adb1aee6422",
+      "final": "d0883537505d3d4636e34c01c70059cdfa7cfce79e9c0143febf26b14f072ec9"
+    },
+    "training_cell": {
+      "steps": 100000,
+      "period": "training-window",
+      "phase": "final",
+      "seed": 11,
+      "protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+      "holding_path_sha256": "4e4e4bcd110710107c265599df56c970461fb62b6b3427db09418b3e1f74ebe9",
+      "metrics": {
+        "score": 0.276082696547874,
+        "mean_max_drawdown": -0.36058979446045497,
+        "groups": {
+          "stock": {
+            "count": 22,
+            "net_return": 0.34894384894742647,
+            "buy_hold_return": 0.5814593877458677,
+            "excess_return": -0.23251553879844122,
+            "median_excess_return": -0.21891750139400645,
+            "buy_hold_max_drawdown": -0.3640432336062538,
+            "max_drawdown": -0.36267478458017516
+          },
+          "etf": {
+            "count": 4,
+            "net_return": -0.12465364164966453,
+            "buy_hold_return": 0.4714601263306348,
+            "excess_return": -0.5961137679802992,
+            "median_excess_return": -0.644613033655642,
+            "buy_hold_max_drawdown": -0.34073494920756275,
+            "max_drawdown": -0.3491223488019941
+          }
+        },
+        "stock_excess_by_symbol": {
+          "AAPL": -1.3491923487515385,
+          "AMT": -0.06890219588813373,
+          "AMZN": -0.34821682210795,
+          "APD": -0.6761625493186643,
+          "BAC": 0.18844981957249618,
+          "CAT": 0.3040858694504194,
+          "CVX": -0.18374517448789318,
+          "DIS": -0.3821087400783445,
+          "DUK": -0.7523873483619266,
+          "GOOGL": 0.9319714688580112,
+          "HD": -0.36054807251674603,
+          "HON": -0.4349341264696358,
+          "JNJ": -0.4287687149301632,
+          "JPM": -0.2540898283001197,
+          "KO": 0.07450114522281703,
+          "LIN": 0.3714141534954192,
+          "MSFT": -1.2617504492168086,
+          "NEE": 0.17568595956285815,
+          "PG": -0.10344836749241226,
+          "PLD": -0.024720249506177128,
+          "UNH": -0.44794938273322393,
+          "XOM": -0.08452589956799073
+        }
+      }
+    },
+    "performance_promotion": false
+  },
+  "source": {
+    "dirty": "",
+    "revision": "e39fcdd89299d3a14d717763b0ea74467d386dad"
+  },
+  "verification_environment": {
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "MKL_CBWR": "AVX2",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "original_rejection": "Default host arithmetic produced small replay differences; all10 checkpoints replay exactly under AVX2",
+  "first_checkpoint_default_math_diagnosis": {
+    "actual_sha": "f88192f32615005defb2150ed4efb78173ced443ca2af12cc312e6be7015d3db",
+    "retained_sha": "acc2a0bc86cbd1cfba3f4dee5edc2faec2d1f3914cac67e958fe60df2ac14f45",
+    "counts": {
+      "policy_action": 9113,
+      "other": 67348,
+      "equity": 7473
+    },
+    "max_abs_diff": {
+      "policy_action": 2.384185791015625e-07,
+      "other": 0.0019128099083900452,
+      "equity": 0.001912234933115542
+    },
+    "examples": [
+      [
+        "/CAT-train-0/rows/3/policy_action/3",
+        -0.056455790996551514,
+        -0.05645585060119629
+      ],
+      [
+        "/CAT-train-0/rows/3/decision/raw/3",
+        -0.056455790996551514,
+        -0.05645585060119629
+      ],
+      [
+        "/CAT-train-0/rows/3/decision/far",
+        144.96768470035127,
+        144.96768495223995
+      ],
+      [
+        "/CAT-train-0/rows/3/decision/zone_lower",
+        144.96768470035127,
+        144.96768495223995
+      ],
+      [
+        "/CAT-train-0/rows/3/decision/approved/3",
+        -0.056455790996551514,
+        -0.05645585060119629
+      ],
+      [
+        "/CAT-train-0/rows/3/raw_action/3",
+        -0.056455790996551514,
+        -0.05645585060119629
+      ],
+      [
+        "/CAT-train-0/rows/3/protection/2",
+        144.96768470035127,
+        144.96768495223995
+      ],
+      [
+        "/CAT-train-0/rows/4/policy_action/0",
+        -0.04370194673538208,
+        -0.043701887130737305
+      ],
+      [
+        "/CAT-train-0/rows/4/policy_action/1",
+        -0.030130624771118164,
+        -0.03013056516647339
+      ],
+      [
+        "/CAT-train-0/rows/4/policy_action/2",
+        0.06589269638061523,
+        0.06589281558990479
+      ],
+      [
+        "/CAT-train-0/rows/4/decision/raw/1",
+        -0.030130624771118164,
+        -0.03013056516647339
+      ],
+      [
+        "/CAT-train-0/rows/4/decision/raw/2",
+        0.06589269638061523,
+        0.06589281558990479
+      ],
+      [
+        "/CAT-train-0/rows/4/decision/near",
+        151.70977077540147,
+        151.70976975647483
+      ],
+      [
+        "/CAT-train-0/rows/4/decision/stop",
+        168.07355987134042,
+        168.0735601770184
+      ],
+      [
+        "/CAT-train-0/rows/4/decision/far",
+        147.14558236314335,
+        147.14558134421674
+      ]
+    ],
+    "metrics": {
+      "AAPL-train-0": {
+        "actual": -0.7103260269933841,
+        "retained": -0.7103260269933841
+      },
+      "AMT-train-0": {
+        "actual": -0.49878988022878157,
+        "retained": -0.4987898793351391
+      },
+      "AMZN-train-0": {
+        "actual": -0.8030506429651778,
+        "retained": -0.8030506429651778
+      },
+      "APD-train-0": {
+        "actual": -0.31004132086805325,
+        "retained": -0.31004132086805325
+      },
+      "BAC-train-0": {
+        "actual": -0.3244595949519663,
+        "retained": -0.3244595949519663
+      },
+      "CAT-train-0": {
+        "actual": -0.12372065943901867,
+        "retained": -0.12372065943901867
+      },
+      "CVX-train-0": {
+        "actual": 0.010082174064301341,
+        "retained": 0.010082165603891191
+      },
+      "DIA-train-0": {
+        "actual": 0.05591684694443444,
+        "retained": 0.05591683647255685
+      },
+      "DIS-train-0": {
+        "actual": -0.1315923553115409,
+        "retained": -0.1315923553115409
+      },
+      "DUK-train-0": {
+        "actual": -0.2713569889463615,
+        "retained": -0.2713569889463615
+      },
+      "GOOGL-train-0": {
+        "actual": -0.45138302021225873,
+        "retained": -0.45138301759653154
+      },
+      "HD-train-0": {
+        "actual": -0.23263482542746583,
+        "retained": -0.23263480630511646
+      },
+      "HON-train-0": {
+        "actual": -0.47683224924868006,
+        "retained": -0.4768322575807592
+      },
+      "IWM-train-0": {
+        "actual": -0.13334604917274961,
+        "retained": -0.13334604657529447
+      },
+      "JNJ-train-0": {
+        "actual": 0.19536648870100026,
+        "retained": 0.1953664904597605
+      },
+      "JPM-train-0": {
+        "actual": -0.42112391943467553,
+        "retained": -0.42112391943467553
+      },
+      "KO-train-0": {
+        "actual": -0.04310996859809002,
+        "retained": -0.04310996859809002
+      },
+      "LIN-train-0": {
+        "actual": -0.41172239675814837,
+        "retained": -0.41172239675814837
+      },
+      "MSFT-train-0": {
+        "actual": -0.6130797001335819,
+        "retained": -0.6130797001335819
+      },
+      "NEE-train-0": {
+        "actual": -0.5220105522856229,
+        "retained": -0.5220105522856229
+      },
+      "PG-train-0": {
+        "actual": -0.2714348524664837,
+        "retained": -0.2714348524664837
+      },
+      "PLD-train-0": {
+        "actual": -0.23894410755440243,
+        "retained": -0.23894410755440243
+      },
+      "QQQ-train-0": {
+        "actual": -0.38802973787574946,
+        "retained": -0.38802973787574946
+      },
+      "SPY-train-0": {
+        "actual": -0.1763079928461302,
+        "retained": -0.1763079928461302
+      },
+      "UNH-train-0": {
+        "actual": -0.3713667065030374,
+        "retained": -0.3713667142517344
+      },
+      "XOM-train-0": {
+        "actual": 0.38630733648028803,
+        "retained": 0.38630733648028803
+      }
+    }
+  },
+  "curve": [
+    {
+      "steps": 10000,
+      "return_pct": -27.988425807909483,
+      "elapsed_seconds": 303.99187329000006
+    },
+    {
+      "steps": 20000,
+      "return_pct": -25.055476429923218,
+      "elapsed_seconds": 623.002950739
+    },
+    {
+      "steps": 30000,
+      "return_pct": -24.834435730868716,
+      "elapsed_seconds": 943.2829729429998
+    },
+    {
+      "steps": 40000,
+      "return_pct": 34.19018619349974,
+      "elapsed_seconds": 1263.295753995
+    },
+    {
+      "steps": 50000,
+      "return_pct": 40.52414974600082,
+      "elapsed_seconds": 1571.646891444
+    },
+    {
+      "steps": 60000,
+      "return_pct": 12.198803049987973,
+      "elapsed_seconds": 1889.522144962
+    },
+    {
+      "steps": 70000,
+      "return_pct": 22.514484091538694,
+      "elapsed_seconds": 2205.6910826209996
+    },
+    {
+      "steps": 80000,
+      "return_pct": 21.15769648403787,
+      "elapsed_seconds": 2532.1394163570003
+    },
+    {
+      "steps": 90000,
+      "return_pct": 20.546357375273132,
+      "elapsed_seconds": 2858.1585832500004
+    },
+    {
+      "steps": 100000,
+      "return_pct": 27.6082696547874,
+      "elapsed_seconds": 3193.637843892
+    }
+  ],
+  "project_units": 40.06512306962679,
+  "training_repeated": false,
+  "development_allowed": false,
+  "performance_promotion": false,
+  "remaining_roles_unallocated": [
+    "tagged_shared",
+    "tagged_routed"
+  ]
+}

@@ -679,3 +679,24 @@ profile/source evidence before allocation. Remote dispatch verifies input identi
 executes the fixed training-only cell and exports completion metadata; downloaded
 cells undergo independent saved-checkpoint replay. No development evaluation is
 performed in this stage, regardless of training returns.
+
+## Masked100k completion and exact CPU replay diagnosis — 2026-11-01
+
+Masked shared completed100k transitions/99000 updates. Original fleet stopped at
+local validation because host-default replay differed from retained results; owned
+shutdown was verified, and no other screen role was allocated. At10k, maximum raw
+action difference was2.384e-7 and equity difference$0.001912; no tolerance was widened.
+Matching subprocess `ATEN_CPU_CAPABILITY=avx2` and `MKL_CBWR=AVX2` restored exact first
+predictions for26/26 symbols and then exact independent replay for all ten saved
+checkpoints, including curves, selection, final cell and learned frozen parity.
+No model was retrained or optimized locally. This supports an arithmetic-mode cause;
+it is not a claim of bit portability across all CPU backends.
+
+Future local full-cell verifier children explicitly set this arithmetic mode before
+Torch import, require actual AVX2 capability and retain single-thread execution.
+The parent environment and remote training remain unchanged. Original failed fleet
+and default-mode diagnosis stay retained. `masked-screen-acceptance.json` pins the
+same archive SHA, exact proof and diagnostic evidence. Selected50k training-window
+return40.52%; final100k27.61%. These fitted returns do not open development: both
+unallocated roles and the complete three-role training admission gate are pending.
+Project40.065123/150; official account548.15/rate0/no assignments after cleanup.

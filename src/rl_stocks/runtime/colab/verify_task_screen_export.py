@@ -2,6 +2,7 @@
 import argparse
 from contextlib import contextmanager
 import json
+import os
 from pathlib import Path
 
 import torch
@@ -12,6 +13,12 @@ from rl_stocks.core.files import write_once
 from rl_stocks.data.generation.datasets import read_dataset
 from rl_stocks.runtime.colab.task_screen_artifacts import extract_screen_transport
 from rl_stocks.training.task_screen_verify import verify_cell
+
+
+def verification_environment(parent):
+    """Match the measured Colab CPU arithmetic before importing Torch in the child."""
+    return dict(parent, ATEN_CPU_CAPABILITY='avx2', MKL_CBWR='AVX2',
+                OMP_NUM_THREADS='1', MKL_NUM_THREADS='1')
 
 
 @contextmanager
@@ -35,6 +42,10 @@ def main():
         parser.add_argument('--' + name, type=Path, required=True)
     parser.add_argument('--dataset-id', required=True)
     args = parser.parse_args()
+    if (os.environ.get('ATEN_CPU_CAPABILITY') != 'avx2'
+            or os.environ.get('MKL_CBWR') != 'AVX2'
+            or torch.backends.cpu.get_cpu_capability() != 'AVX2'):
+        raise RuntimeError('explicit matched AVX2 verification subprocess required')
     root = Path.cwd()
     plan = json.loads(args.plan.read_text())
     with no_optimization(), torch.no_grad():
