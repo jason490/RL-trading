@@ -78,3 +78,28 @@ normalization fitting, provider calls, Colab allocation, new development outcome
 or retired-test access occurred. No credits were charged by this local replay.
 Full simulator cross-machine verification and a new declared performance protocol
 are still pending; the broader objective is incomplete.
+
+## Full simulator Colab probe — setup failure
+
+The [failed attempt receipt](market-probe-failure.json) preserves source d849084,
+protocol b9bcb419…, local preflight and original one-time claim. The new minimal
+worker first passed the **complete local**26-episode/19,136-decision replay:
+64.48s, exact canonical result b2c464c4…, no Torch/SB3 imports. The inspected
+upload was2.92MB/397 members and contained only training episodes and public
+source/frozen metadata; no credentials or native model files.
+
+Owned CPU session `rl-stocks-cpu-3cdf89d21cd1` then failed at
+`/usr/bin/python3 -m venv <owned-root>/venv`, exit1, before dependency installation
+or remote market replay. The original wrapper did not capture child stdout/stderr,
+so the underlying cause is **unknown**. Missing distribution-packaged ensurepip
+is a possible explanation, not a verified diagnosis. The CLI returned despite
+the remote error; the missing independently required artifact correctly prevented
+acceptance. Bounded retrieval exhausted; no remote report was retrieved. The
+local CLI execution log is retained and its hash pinned in the failure receipt.
+
+Cleanup ran and owned termination was verified. A separate official idle reading
+reported548.11 balance, rate0 and zero assignments. Conservative charge0.000525920
+units; measured0.00 at reported CLI resolution. Project40.122243104/150, remaining
+109.877756896. The original claim remains consumed, no retry occurred, and full
+simulator cross-machine equality remains unproven. No training, new development
+outcome, retired-test access or original-native acceptance change occurred.
