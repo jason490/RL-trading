@@ -36,6 +36,17 @@ Native SAC is strongest in this screen, but its ETF returns lag holding in both
 phases. Its final median individual-stock excess is−2.70pp. It is not a robust
 winner merely because its overall mean approaches holding.
 
+## Exit-fill win rates
+
+A read-only [diagnostic receipt](exit-fill-diagnostics.json) independently checks
+all three archived final-validation reports against the recorded archive hashes.
+Pooled winning exit fills are747/1,370 (54.53%) SAC,1,800/3,548 (50.73%)
+RecurrentPPO and2,174/5,258 (41.35%) GRU-SAC. Partial exits count separately;
+these are not complete-trade win rates or future-success probabilities. Entry
+fees are excluded from realized exit-fill diagnostics but included in net equity
+returns. These rates do not override failed return gates or establish readiness
+for trading. No new training, checkpoint selection or retired-test access occurred.
+
 ## Gate outcome and interpretation
 
 GRU-SAC needed at least2pp improvement over each control in both selected and
