@@ -245,3 +245,47 @@ and baseline39.92585919127071; prior controls and engineering charges remain
 included. Candidate worker/claim, current-kernel preflight and transport/offline
 acceptance integration remain required. The projection's `execution_admitted`
 flag is **false**. Original project150/130 and account150/170 limits still apply.
+
+
+## Implemented candidate runtime and local acceptance
+
+The scoped candidate lifecycle is implemented in
+`configs/experiments/task_reference_candidate_execution.json` and
+`scripts/run_task_reference_candidate.py`. A read-only admission check passed:
+all103 profiled compute files remain unchanged, the four approved reference-only
+modules and reference arithmetic match their control-producing revision, and
+retained profile/smoke artifacts pass physical checks with optimization disabled.
+This establishes execution eligibility, not a successful candidate result.
+
+The fixed job is CPU SAC, tagged routed, seed11,100,000 transitions. Before any
+dependency installation, the controller inspects the actual default Colab kernel;
+an unsupported Python minor stops the owned runtime. Initial routed tensors must
+exactly map to the retained shared control before learning. Native learning and
+training-curve checkpoint selection are unchanged. The one-time allocation claim
+prevents automatic training retries. The allocation deadline is7200 seconds with
+600 seconds reserved for retrieval and shutdown; all original budget limits apply.
+
+Every300 seconds, completed checkpoint downloads receive unique local names and
+are gzip/tar validated before retention. A corrupt download cannot replace the
+previous valid snapshot. Complete artifact transport is validated before stopping
+and verifying the owned session. Only then does local inference-only acceptance
+check physical checkpoints/replay/curves and reference selected/final paths, within
+a separate1800-second bound. A failed post-stop check retains evidence and cannot
+restart training. The fitted gate uses the original thresholds; failure closes
+the family, and passing only permits subsequent development scoring.
+
+Run from a clean committed repository, with the existing CLI Python:
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+.venv/bin/python scripts/run_task_reference_candidate.py \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+State is retained in `.runtime/task-reference-candidate-fleet-v1.json`; acceptance
+artifacts go to `artifacts/task-reference-candidate-acceptance-v1`. Do not delete
+claims, admission records or historical stop records to rerun this command.
+Focused verification passed52 tests covering fixed plans, common initialization,
+local-training rejection, original gates, immutable snapshots, kernel rejection,
+transport-before-shutdown ordering and cleanup after metering failure/interruption.
+Actual candidate training and performance acceptance remain pending.

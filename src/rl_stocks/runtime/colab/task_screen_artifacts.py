@@ -18,7 +18,7 @@ ROOT_FILES |= {f'training-{step}.json' for step in range(10000, 100001, 10000)}
 def extract_screen_transport(path, plan, dataset_id, destination):
     """Validate transport before extraction; does not accept learned performance."""
     validate_plan(plan)
-    if plan['version'] not in (46, 47) or dataset_id != plan['dataset_contract']['identity']:
+    if plan['version'] not in (46, 47, 48) or dataset_id != plan['dataset_contract']['identity']:
         raise ValueError('bound task screen transport required')
     prefix = 'artifacts/task-screen/'
     required = {'artifacts/completion.json'} | {prefix + name for name in ROOT_FILES}
@@ -51,6 +51,13 @@ def extract_screen_transport(path, plan, dataset_id, destination):
                 or git.get('dirty') != '' or not re.fullmatch(r'[a-f0-9]{40}', git.get('revision', ''))
                 or not re.fullmatch(r'[a-f0-9]{64}', completion.get('source_hash', ''))):
             raise RuntimeError('clean default-kernel CPU task screen completion required')
+        if plan['version'] == 48:
+            from rl_stocks.training.task_reference_runtime import execution_spec
+            proof = completion.get('initial_parity', {})
+            if (proof.get('all_mapped_arrays_exact') is not True
+                    or proof.get('shared_policy_sha256') != execution_spec()['initial_shared_policy_sha256']
+                    or proof.get('routed_arrays') != 44 or proof.get('shared_arrays') != 32):
+                raise RuntimeError('actual complete common-start parity required')
         destination = Path(destination)
         destination.mkdir(parents=True, exist_ok=False)
         archive.extractall(destination, filter='data')

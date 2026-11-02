@@ -66,7 +66,11 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 47:
+    if plan.get('version') == 48:
+        from rl_stocks.core.contracts import canonical
+        if canonical(plan) != canonical(task_reference_candidate_plan()):
+            raise ValueError('fixed reference routed candidate plan required')
+    elif plan.get('version') == 47:
         from rl_stocks.core.contracts import canonical
         try:
             expected = reviewed_task_screen_plan(plan['task_screen']['task_role'])
@@ -932,4 +936,16 @@ def reviewed_task_screen_plan(task_role):
     plan = task_screen_plan(task_role, review['profile_acceptance_sha256'])
     plan.update(version=47, execution_review_sha256=REVIEW_SHA256,
                 allocation_deadline_seconds=review['allocation_seconds'][task_role])
+    return plan
+
+
+def task_reference_candidate_plan():
+    from rl_stocks.training.task_reference_runtime import REVIEW_SHA256, REFERENCE_SHA256, execution_spec
+    spec = execution_spec()
+    plan = task_screen_plan('tagged_routed', spec['profile_acceptance_sha256'])
+    plan.update(version=48, reference_execution_sha256=REFERENCE_SHA256,
+                reference_candidate_review_sha256=REVIEW_SHA256,
+                control_results_sha256=spec['control_results_sha256'],
+                allocation_deadline_seconds=7200, teardown_reserve_seconds=600,
+                acceptance_stage='complete transport then verified shutdown then offline acceptance')
     return plan

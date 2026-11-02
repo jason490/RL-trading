@@ -15,6 +15,12 @@ def prepare_payload(root,dataset,plan,session):
             tar.add(root/name,arcname=name)
         if plan.get('version') in (41,42,43):
             tar.add(root/'.runtime/recurrent-comparison-starts-v1',arcname='comparison-starts')
+        if plan.get('version') == 48:
+            from rl_stocks.training.task_reference_runtime import checksum, execution_spec
+            initial = root/'artifacts/colab/rl-stocks-cpu-bf3f86798a17/retrieved/artifacts/task-screen/initial.zip'
+            if checksum(initial) != execution_spec(root)['initial_control_zip_sha256']:
+                raise ValueError('retained shared start archive changed')
+            tar.add(initial, arcname='initial-control.zip')
         tar.add(Path(dataset)/'dataset.json',arcname='dataset.json')
         tar.add(job,arcname='job-plan.json');tar.add(source,arcname='source-git.json')
     return archive

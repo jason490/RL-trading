@@ -134,9 +134,13 @@ def replay_fingerprint(replay):
 
 
 def verify_control(root, dataset, *, role):
+    return verify_asset_case(root, dataset, role=role, origin=protocol(root)['controls'][role])
+
+
+def verify_asset_case(root, dataset, *, role, origin):
+    # Candidate callers must bind origin to an owned, stopped, validated transport.
     root = Path(root)
     spec = protocol(root)
-    origin = spec['controls'][role]
     base = base_protocol()
     if digest(dataset) != base['dataset'] or digest(dataset['normalizer']) != base['normalizer_sha256']:
         raise ValueError('fixed verified control dataset/preprocessing required')
