@@ -6,6 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
+| Reference task performance execution | [task-reference-execution.md](task-reference-execution.md) | Reusing physical controls, native training-only selection, reference performance gates and pending candidate admission |
 | Reference inference arithmetic | [canonical-inference.md](canonical-inference.md) | Reference arithmetic, frozen actor bundles, training-only episode integration and timing |
 | Historical instrument types | [instrument-type-evidence.md](instrument-type-evidence.md) | Original SEC type/ticker evidence, context exclusions, immutable cache audit and admission gaps |
 | Task conditioning research | [task-conditioning-research.md](task-conditioning-research.md) | Primary-source review, explicit stock/ETF context hypothesis, matched controls and staged admission |

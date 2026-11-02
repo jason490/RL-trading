@@ -1,0 +1,106 @@
+# Task conditioning with reference performance execution
+
+The original stock/ETF-conditioning hypothesis is incomplete: masked shared and
+tagged shared controls trained100k, while the routed candidate has not trained
+its full cell. Tagged native replay failed exact numerical acceptance; that
+failure remains retained. A separate reference actor and simulator now reproduce
+one fixed19,136-decision training replay across local/Colab machines. See
+[reference inference](canonical-inference.md) for engineering evidence and limits.
+No robust winner or trading promotion has been demonstrated.
+
+## Fixed contract and interpretation
+
+`configs/experiments/task_reference_execution.json`, canonical SHA
+`8c8f7bb00b1ba4c38e01d6dbbee401033d2b4b4d895ad9dbab2cbaf0b37e79a8`,
+is declared before any new reference-control final results. It retains the
+[original scientific protocol](task-conditioning-research.md): data, normalization,
+coarse-type evidence, sampler, reward/costs, initialization, seed11, network shapes,
+SAC settings and100k transitions per cell. It changes the explicit performance
+execution definition to the independently verified reference arithmetic.
+
+Checkpoint selection stays on the original native **post-update training-window**
+curves at10k increments, taking the earliest strict maximum. Existing controls
+retain their already selected50k snapshots. The future candidate must use the
+same native selection rule. Reference inference evaluates the selected and final
+snapshots for **every role**; it does not select checkpoints. Native selection
+curves and reference performance reports must carry distinct execution labels.
+Development never selects a checkpoint, and retired2024+ remains closed.
+
+The prior tagged-shared selected50k engineering result50.26779262694228% on the
+training window is already known. It is disclosed in the declaration and has not
+changed a gate, selection rule or hyperparameter. The final snapshot, other
+controls and routed candidate still require their own verified reference results.
+An exact reference run does not accept old native prediction results or imply a
+model improvement. This is completion of the original declared comparison under
+a new numerical execution contract, not a reward/indicator/width rescue grid.
+
+## Reusing immutable control assets
+
+The declaration pins original archive hashes, source revisions and source
+identities for `masked_shared` and `tagged_shared`. Reuse requires independent
+physical consistency checks rather than another control training run:
+
+- Every extracted file must match bytes in its hash-pinned original archive;
+  original completion, dataset, source and run metadata must agree.
+- Initial plus ten saved research checkpoints must have the right role, full22
+  observations/four actions,64-wide trunks, finite binary32 weights, seed and
+  native hyperparameters. Transition/update counts, complete Adam ownership,
+  step counters and finite moments must agree, including99000 final updates.
+- Full100k replay must have the original cursor, finite aligned arrays and valid
+  role tags. Actual sampling metadata must cover all111 training symbols.
+- Each original26-symbol training report must have complete aligned rows. Metrics,
+  matched baselines and directional accounting must reconstruct from raw paths;
+  ten compact curve points, native selection and final cell must agree.
+- Selected/final frozen metadata, checkpoints, original normalization, execution
+  rule and historical type evidence must match. No native prediction is performed.
+
+`training/task_reference_assets.py` implements these checks. Guards reject native
+SAC prediction, learning, training, Adam steps and backward calls; RNG state is
+preserved around trusted checkpoint loading. It handles only task-owned trusted
+pickle archives. Original source files and archives are rehashed after checking.
+This verifies physical consistency and native selection records, not historical
+optimizer execution independently of the trusted source logs, native inference
+parity or new model performance.
+
+Run once from clean committed source:
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src \
+  OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .venv/bin/python scripts/verify_task_reference_assets.py
+```
+
+The fresh output directory is `artifacts/task-reference-assets-v1`; a1200-second
+local deadline bounds checking. This is file/state/record verification, not
+training. No Colab allocation or provider requests occur. Tests cover all three
+untrained research-role save/load states, counters versus missing moments,
+nonfinite weights, role/hyperparameter drift, hook cleanup, archive substitution,
+extra files and inconsistent economic metrics/baselines/attribution.
+
+## Gates and remaining implementation
+
+All original numerical performance thresholds remain authoritative. Complete
+reference-final fitted results must pass the original+2pp-versus-each-control and
+stock/ETF/median-stock floors before development may be read. Selected/final
+reference development results then face the original gains, group excess and
+maximum-drawdown gates. Only a passing seed11 screen permits seeds23/37 and the
+unchanged multi-seed confirmation gate. A frozen prospective comparison remains
+required. Failure closes the comparison; no extra steps or rescue search.
+
+The original two-unit task-study allowance is shared from baseline
+39.92585919127071, including all prior attempts and the engineering work. It is
+not reset. Project150/teardown130 and account150/teardown170 remain in force.
+CPU is the default; only Colab may perform training. This declaration authorizes
+**no allocation**. Before the routed cell can run, the system still must:
+
+1. Complete control physical admission and selected/final reference evaluations.
+2. Review unchanged native learning source versus the measured profile and
+   explicitly include reference evaluation/verification time in projection.
+3. Integrate a candidate worker, durable artifacts, independent acceptance and a
+   one-time claim preserving the original study baseline and failures.
+4. Retrieve, checksum and stop/verify owned sessions before applying gates.
+
+Declining-stock results remain reporting-only; future decline labels never enter
+features, rewards, sampling, selection or promotion. Passing fitted gates alone
+would not establish generalization, historical membership completeness or trading
+readiness.

@@ -1,0 +1,57 @@
+{
+  "schema": "task-conditioning-reference-execution-v1",
+  "base_protocol_sha256": "4feb50d28de5a07d851573ba2bf4649cf2941d65d41db2ed3afc06ca5be163d8",
+  "arithmetic": "binary32-exact-dot-certified-tanh-v1",
+  "engineering_acceptance_sha256": "a4c41dbd6a389c06bae4cfd8eef4a8b0a34d4b945f903cc0b0a7359da17ee5c1",
+  "hypothesis": "Complete the original explicit-type/shared-versus-routed comparison under independently reproducible selected/final inference; no changed learning hypothesis or rescue grid",
+  "learning": "Original native Torch SAC, same seed11, data, sampler, initialization, hyperparameters, reward, costs and100k transitions per role",
+  "selection": "Original native post-update training-window curves at10k increments; earliest strict best; no reference or development reselection",
+  "performance_evaluation": "Verified reference actor arithmetic for selected and final checkpoints of every role, with unchanged simulator and frozen preprocessing",
+  "training_gate": "Original final training-admission thresholds, evaluated on all three reference-final results; no development before complete pass",
+  "development_gate": "Original selected/final development thresholds with fixed training-selected checkpoints; reference inference only; no selection from development",
+  "confirmation_gate": "Original seeds11/23/37 and unchanged multi-seed thresholds, only after the fixed seed11 gates pass",
+  "prospective_confirmation_required": true,
+  "controls": {
+    "masked_shared": {
+      "session": "rl-stocks-cpu-bf3f86798a17",
+      "archive_sha256": "4724c136e6b35754b9906d63f9a73239e6a80e06dc15ba4677a53a08faff39df",
+      "source_revision": "e39fcdd89299d3a14d717763b0ea74467d386dad",
+      "source_hash": "28a16639bdef66fe6847a2c28be04c8c999f414054f295db197216126d1084e0"
+    },
+    "tagged_shared": {
+      "session": "rl-stocks-cpu-8421f33527ca",
+      "archive_sha256": "cc918d8b7fab21b9aa7ba8a360392a2d2f071da54f6c44b6d5fbd69aa8a47abb",
+      "source_revision": "d93a695d83a6179a2daacc4592419e23b34bdf97",
+      "source_hash": "6898c84b79689f8079841cbfd650861ecf1e812c14038dc63cf32386bcce6832"
+    }
+  },
+  "control_reuse": "Only immutable physical models/replay, native training selection records and metadata; independent consistency verification required; original native replay/transport failures remain unchanged",
+  "candidate": "tagged_routed",
+  "candidate_status": "Full100k not allocated; remains pending physical control admission and reviewed runtime projection/integration",
+  "known_prior_reference_outcome": "Tagged-shared native-selected50k training engineering replay already observed:50.26779262694228% versus56.453642445121645% holding; not used to change any selection or gate",
+  "budget": {
+    "shared_baseline_units": 39.92585919127071,
+    "maximum_cumulative_study_units": 2.0,
+    "ledger_baseline_file": ".runtime/task-conditioning-budget-v1.json",
+    "project_ceiling_units": 150,
+    "project_teardown_units": 130,
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "count_prior_attempts_and_engineering": true
+  },
+  "training_location": "Google Colab only",
+  "device": "CPU",
+  "colab_allocation_allowed_by_this_declaration": false,
+  "additional_control_training_allowed": false,
+  "automatic_retry_allowed": false,
+  "native_acceptance_changed": false,
+  "retired_test_access": false,
+  "performance_promotion": false,
+  "next_requirements": [
+    "Independently verify both original controls' complete checkpoint/Adam/replay/curve/frozen assets",
+    "Reference-evaluate their selected/final snapshots without reselection; require native holding baselines to match",
+    "Review current training-source equivalence and native/reference evaluation timing before any fresh candidate allocation",
+    "Implement candidate worker/artifact acceptance and persistent single claim within the original study budget",
+    "Failure of the unchanged final training gate closes this reference-execution comparison before development"
+  ]
+}

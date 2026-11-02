@@ -1,5 +1,11 @@
 # Stock/ETF task conditioning: research decision
 
+Current continuation (2026-11-02): [reference performance execution](task-reference-execution.md)
+retains the original learning/selection/gates, reuses immutable control assets
+only after independent consistency checks, and requires reference selected/final
+performance for every role. Original native failures remain unchanged. The routed
+full100k cell is still unallocated; the new declaration grants no allocation.
+
 Reviewed 2026-10-31. This is a design decision and implementation brief, not an
 accepted runtime profile or permission to reopen the completed recurrent screen.
 No new training, allocation, predictive result or performance claim accompanies it.
