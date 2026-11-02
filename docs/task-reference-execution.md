@@ -138,3 +138,42 @@ Next reference-evaluate selected/final controls under the fixed declaration,
 reusing the already accepted tagged-selected engineering point only if identities
 match. Candidate runtime projection, worker acceptance and its one-time claim
 remain pending; no candidate allocation is authorized yet.
+
+## Selected/final reference control evaluation
+
+`evaluation/task_reference_controls.py` pins the complete physical-admission
+receipt SHA b12c1796… and its producer artifact. It reads only original native
+training-selected/final frozen snapshots and the fixed verified dataset. It
+exports a separate reference bundle for each snapshot and evaluates the fixed
+original26 fitted windows under the declared arithmetic. Native checkpoint
+selection stays unchanged. Each point records both selection and performance
+execution labels, original/reference bundle identities, complete result/holding
+hashes, stock/ETF metrics, drawdown and reporting-only short attribution.
+
+The already accepted tagged-selected50k point is reused only when its newly
+exported reference bundle matches the accepted actor ID and both retrieved
+metadata/gzip hashes validate. Its full paths, not a rounded scalar, supply the
+point. Other three snapshots run fresh reference inference. Reuse is disclosed
+and does not count as independent confirmation or a new model outcome.
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src \
+  OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .venv/bin/python scripts/evaluate_task_reference_controls.py
+```
+
+The fresh output directory `artifacts/task-reference-controls-v1` has a1200-second
+local deadline. Each new point keeps a standalone interactive HTML report and
+lossless canonical JSON gzip. The temporary duplicate pretty-JSON sidecar is
+removed only after its contents and the retained gzip match exactly. Original
+native reports, models and receipts remain retained. The reused point links to
+its existing accepted full paths/report. A failure preserves completed points
+and a failure record; no directory is overwritten or rerun automatically.
+
+The complete matrix requires both phases for both controls, selected steps from
+physical admission,100k endpoints,26 episodes/19,136 decisions per point, matching
+holding paths and explicit reference performance. It cannot authorize candidate
+allocation, open development, select another checkpoint or promote a policy.
+Tests reject mixed execution, reselection, changed periods/baselines/source
+bundles, physical artifact substitution, mismatched reused actors/paths and loss
+of report-sidecar data. Native predict/learning/backward remain forbidden.
