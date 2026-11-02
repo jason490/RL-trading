@@ -193,3 +193,41 @@ resolution; project40.121717184/150. No dependency installation, fitting, market
 returns, original-native promotion or retired-test access occurred. The one-time
 claim remains consumed. This successful engineering check does not authorize
 rerunning the stopped native family or change its numerical rejection.
+
+## Fixed saved-market replay protocol
+
+`configs/experiments/canonical_task_replay.json`, canonical SHA
+`f5fb168a3e71ee071917f53697965e378296237bcb8dff1fce9719a1aca8d328`,
+is declared before its new saved-market results. This is a different numerical
+execution definition from original Torch inference; the original rejected tagged
+reports stay rejected. It uses the already retained tagged-shared selected50k
+checkpoint (source bundle16b5ce4a…, checkpoint SHA066f23b7…) and does not select
+another checkpoint or compare it to development outcomes.
+
+Exactly26 original symbols and19,136 decisions cover the2017-12-29 anchor,
+2018-01-02 first fill and2020-12-02 final session. The full input-window digest,
+source dataset, seven-feature normalization, checkpoint and action execution
+contracts are pinned. Existing next-session simulator defaults, full21 causal
+state and unit-magnitude evaluation exposure remain unchanged. Source data,
+weights and frozen metadata are hashed before/after. Complete chronological
+paths, matched holding, per-session long/short attribution and an interactive
+report are retained. Falling-stock labels are descriptive only.
+
+Run once from clean committed source:
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src \
+  OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .venv/bin/python scripts/replay_canonical_task.py
+```
+
+The local process has a hard1,200-second deadline; it performs inference and
+simulation only. Guards reject SAC native `predict`, `learn`, `train`, Adam
+`step` and tensor `backward`, restoring methods on handled exit. It cannot
+allocate Colab, query providers, update preprocessing, open development/test
+results or grant performance promotion. The output directory must be fresh;
+failures retain evidence and are not automatically retried. Full simulator
+cross-machine equality and a separately declared future performance study remain
+required regardless of fitted-window return. Three focused diagnostic tests cover
+the pinned protocol, chronological/split rejection and guard restoration, alongside
+35 actor/arithmetic/bundle tests.

@@ -1,6 +1,16 @@
 # Bounded autonomous research
 
-Current frontier (2026-11-01): no robust/prospective winner. The fixed100k
+Current engineering frontier (2026-11-02): the separate reference arithmetic
+actor passes640 exact cross-machine synthetic predictions on default Colab
+Python3.13.18, with owned cleanup verified. The original tagged native replay
+remains rejected; no development outcome or promotion changed. A fixed saved
+selected50k actor replay on all26 training windows is now declared in
+[reference inference](canonical-inference.md), before its new outcomes. It is
+inference-only and cannot open development/test or restart the native study.
+Project40.121717184/150, account548.11 idle after the probe. Full simulator
+cross-machine verification remains pending.
+
+Prior completed model comparison (2026-11-01): no robust/prospective winner. The fixed100k
 seed11 GRU-SAC/SAC/RecurrentPPO matrix is physically accepted, its performance
 gate failed, and this family is closed. No confirmation seeds23/37, extra steps,
 indicator/reward/width rescue grid or checkpoint reselection. Retired2024+ stays
