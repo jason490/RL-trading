@@ -118,3 +118,23 @@ Replay hashing now binds each array's shape, dtype and exact contiguous bytes.
 The regression test rejects shape, dtype and value changes without optimizer
 calls. Fifteen focused tests pass; a fresh output directory is required for the
 corrected full control check. Original native acceptance and gates are unchanged.
+
+### Actual control physical verification
+
+The [control asset receipt](../results/task-conditioning-2026-10-31/reference-control-assets.json)
+passes both actual saved controls with verifier source acfa618. It checks22
+checkpoints,80 original extracted files, two complete100k replay buffers,20 native
+training curves and382,720 reported decision rows including economic metrics,
+matched baselines and directional attribution. Both original training-selected
+checkpoints remain50k. Sampling records show actual111-symbol coverage in each
+run. All source archive/file hashes remain unchanged. Original backend records
+are absent and remain explicitly absent; none were inferred or backfilled.
+
+This is physical consistency admission only. The original tagged native replay
+remains rejected, prior failure records and claims stay retained, and no model
+was trained or native prediction executed. No Colab allocation/credit use, new
+reference-control performance result, development access or promotion occurred.
+Next reference-evaluate selected/final controls under the fixed declaration,
+reusing the already accepted tagged-selected engineering point only if identities
+match. Candidate runtime projection, worker acceptance and its one-time claim
+remain pending; no candidate allocation is authorized yet.

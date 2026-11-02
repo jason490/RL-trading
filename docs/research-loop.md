@@ -15,8 +15,13 @@ status remains failed after a reply timeout; both complete retrieved artifacts
 pass post-cleanup verification. Original setup failure/claims/charges remain
 retained, with shared engineering spend0.005019091/0.1. The CLI execution-timeout
 mismatch is corrected for future probes. No new learning or performance promotion.
-Next declare a research execution protocol using the verified numerical path;
-original failed native/development gates remain unchanged.
+The [reference task execution](task-reference-execution.md) contract is now
+declared with unchanged native training-only selection and original performance
+gates. Both saved controls pass independent physical consistency:22 checkpoints,
+80 bound files,20 reconstructed native curves and two complete100k replay buffers.
+Original failed native/development gates remain unchanged. Next complete selected/
+final reference-control evaluation and candidate runtime admission; no allocation
+is authorized by the declaration.
 
 Prior completed model comparison (2026-11-01): no robust/prospective winner. The fixed100k
 seed11 GRU-SAC/SAC/RecurrentPPO matrix is physically accepted, its performance

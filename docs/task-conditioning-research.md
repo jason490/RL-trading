@@ -812,3 +812,15 @@ not retrospective acceptance of the tagged native reports. Actor integration,
 frozen/export checks, actual runtime measurement and predeclared evaluation remain
 pending. No training or Colab allocation accompanied this work, and all original
 failures, native artifacts, performance gates and charges remain preserved.
+
+### Reference control consistency admission — 2026-11-02
+
+[Both controls' immutable assets](../results/task-conditioning-2026-10-31/reference-control-assets.json)
+pass22 saved checkpoint/Adam checks, two complete replay checks and20 reconstructed
+native training curves/382,720 economic rows. Eighty extracted files match their
+original archived bytes. Selected checkpoints stay50k;111 training symbols were
+visited in each original run. No native inference replay, retraining, reference
+performance gate or development access accompanies this admission. The original
+tagged native numerical rejection is unchanged. Read
+[reference task execution](task-reference-execution.md) for the declared numerical
+continuation and remaining candidate requirements.

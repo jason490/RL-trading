@@ -17,6 +17,10 @@ verified from complete artifacts after a CLI reply timeout. Original controller
 failure and claims remain retained; owned cleanup is verified. Cumulative project
 40.126736274/150. Same-interpreter setup is verified remotely; the CLI timeout
 mismatch is fixed for future probes. No new training or development/test evaluation.
+Both [task controls' physical assets](task-conditioning-2026-10-31/reference-control-assets.json)
+now pass22 checkpoint/Adam checks,80 archive-bound files,20 native curves and two
+complete replay buffers. Original native failures stay unchanged; selected/final
+reference performance and routed candidate admission remain pending.
 
 [Fixed VIX information study](vix-context-2026-10-25/README.md) failed: legacy
 selected/final19.62/18.48%, same-size masked24.36/9.20%, full24.09/14.44%, matched
