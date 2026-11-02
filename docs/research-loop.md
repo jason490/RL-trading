@@ -8,12 +8,15 @@ selected50k actor replay on all26 training windows is complete:19,136 decisions
 in66.58s, training mean50.27% versus56.45% holding; stocks54.08/58.15%,
 ETFs29.29/47.15%. See [reference inference](canonical-inference.md). Source
 hashes are unchanged; no fitting, development outcome or promotion occurred.
-Project40.122243104/150, account548.11 idle after verified owned cleanup.
-The full simulator Colab probe failed at environment creation before market
-replay; its claim remains consumed. Same-interpreter pip-free setup and failure
-receipt capture are corrected locally but not yet remotely verified. A separate
-reviewed execution plan is required; full simulator cross-machine verification
-remains pending.
+Project40.126736274/150, account548.11 idle after verified owned cleanup.
+The reviewed full simulator probe independently reproduces all26 episodes and
+19,136 decisions exactly on defaultColabPython3.13.18. Original CLI transport
+status remains failed after a reply timeout; both complete retrieved artifacts
+pass post-cleanup verification. Original setup failure/claims/charges remain
+retained, with shared engineering spend0.005019091/0.1. The CLI execution-timeout
+mismatch is corrected for future probes. No new learning or performance promotion.
+Next declare a research execution protocol using the verified numerical path;
+original failed native/development gates remain unchanged.
 
 Prior completed model comparison (2026-11-01): no robust/prospective winner. The fixed100k
 seed11 GRU-SAC/SAC/RecurrentPPO matrix is physically accepted, its performance

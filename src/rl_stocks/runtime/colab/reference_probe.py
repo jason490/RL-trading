@@ -156,7 +156,8 @@ class ReferenceProbeJob(ColabJob):
             if 'CPU' not in self.short(['status', '-s', self.session]).upper():
                 raise RuntimeError('owned CPU allocation not verified')
             self.prepare_remote(actors)
-            self.operation(['exec', '-s', self.session, '-f', str(script)], self.execution_seconds)
+            self.operation(['exec', '-s', self.session, '--timeout', str(self.execution_seconds),
+                            '-f', str(script)], self.execution_seconds)
             if not self.retrieve(remote, retrieved):
                 raise RuntimeError('bounded reference artifact retrieval exhausted')
             result = json.loads(retrieved.read_text())

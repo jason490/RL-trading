@@ -368,3 +368,38 @@ full-result target, training windows, weights, preprocessing and numerical gates
 are unchanged. A failed reviewed attempt remains failed and cannot allocate
 again automatically. No new training, development outcome, native acceptance or
 policy promotion is authorized by this execution review.
+
+### Reviewed full simulator result
+
+The [independently verified acceptance](../results/reference-inference-2026-11-02/market-cross-machine-acceptance.json)
+passes the exact full-result hash for26 episodes/19,136 decisions on default
+ColabPython3.13.18. Replay took150.62s, no Torch/SB3 imports; five dependency
+versions match. Same-interpreter pip-free setup is now verified on Colab.
+
+The CLI reply timed out, so the original controller summary remains failed with
+reference_verified=false. Cleanup nevertheless retrieved the completed metadata
+and gzip paths and verified owned termination. Independent post-cleanup checks
+bind the original claim/source/payload, revalidate the metadata, decompress the
+full paths and match all canonical result bytes to the predeclared local hash.
+The acceptance receipt explicitly preserves both transport failure and accepted
+artifact evidence; it does not change the old summary or native failures.
+
+CLI0.7.4 `exec --help` documents default timeout30s. The controller had bounded
+its local process but omitted this separate CLI execution timeout. It now passes
+`--timeout <execution_seconds>` explicitly; lifecycle fixtures verify the CLI
+window matches the controller's intended execution window. No CLI upgrade or
+new allocation was needed to independently accept the existing artifacts.
+
+Owned session `rl-stocks-cpu-f4a2bb8115c6` is stopped; independent official reading
+548.11/rate0/assignments0. Estimated reviewed charge0.004493171, shared original
+engineering charge0.005019091/0.1, cumulative project40.126736274/150. Both claims
+and the initial setup failure remain retained. This proves one reference actor's
+complete training-window execution across machines, not multi-seed performance,
+new training, unseen returns or policy readiness. The broader goal remains open.
+
+[Verified preflight cleanup](../results/reference-inference-2026-11-02/preflight-cleanup.json)
+removed19.85MB/470 temporary files: extracted inputs were byte-identical to the
+retained original upload, and generated gzip paths exactly duplicated accepted
+retrieved paths. Host worker metadata and original preflight receipt remain
+retained. No source data, models, market reports, failed claims or charges were
+removed.

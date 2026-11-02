@@ -86,6 +86,7 @@ class FakeProbe(ReferenceProbeJob):
         if args[0] == 'new':
             self.remote_active = True
         elif args[0] == 'exec':
+            self.exec_arguments = tuple(args)
             if self.fail == 'interrupt':
                 raise KeyboardInterrupt()
             if self.fail == 'exec':
@@ -119,6 +120,9 @@ def test_owned_cleanup_success_failure_and_no_retry(tmp_path, probe, monkeypatch
     assert job.ledger.active['status'] == 'stopped'
     assert json.loads(claim.read_text())['session'] == job.session
     assert job.calls.count('new') == 1
+    if 'exec' in job.calls:
+        arguments = job.exec_arguments
+        assert float(arguments[arguments.index('--timeout')+1]) == job.execution_seconds
     with pytest.raises(FileExistsError):
         FakeProbe(tmp_path, expected).run_probe(actors, expected, claim)
 

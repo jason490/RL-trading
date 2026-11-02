@@ -103,3 +103,46 @@ units; measured0.00 at reported CLI resolution. Project40.122243104/150, remaini
 109.877756896. The original claim remains consumed, no retry occurred, and full
 simulator cross-machine equality remains unproven. No training, new development
 outcome, retired-test access or original-native acceptance change occurred.
+
+## Complete Colab/local simulator parity — independently accepted
+
+The [reviewed acceptance](market-cross-machine-acceptance.json) proves exact
+canonical equality of **all26 episodes/19,136 decisions**, including every row,
+fill, metric, matched baseline and directional attribution. Default Colab
+Python3.13.18 used the same five pinned inference dependencies, no Torch/SB3
+imports, and the same fixed source actor/window. Colab replay took150.62s versus
+64.48s for the minimal local worker. Corrected pip-free same-interpreter setup
+therefore worked on the actual runtime. This remains one fixed training-window
+checkpoint, not training determinism or generalization evidence.
+
+The CLI `exec` call failed with `Timeout waiting for reply`, while the remote
+worker had completed and durably written both required artifacts. The controller
+entered cleanup, retrieved the compact report and complete gzip paths, stopped
+and verified its owned session `rl-stocks-cpu-f4a2bb8115c6`. Its original failed
+summary/reference_verified=false is retained unchanged. Independent post-cleanup
+verification checked the report metadata, archive/claim/source identities,
+compressed SHA and full decompressed canonical-result SHA against the fixed
+local target; all pass. This acceptance records artifact evidence separately
+from the failed CLI transport status. No rerun was used to obtain parity.
+
+Installed CLI0.7.4 help documents a default30-second `exec --timeout`; the old
+probe supplied only the local process timeout. The controller now explicitly
+passes its bounded execution window to the CLI as well. This fixes the timeout
+mismatch for future probes; the original transport failure is not relabeled.
+
+Fresh official usage after verified shutdown shows548.11 balance, rate0,
+assignments0. Conservative reviewed charge0.004493171 units, measured0.00 at CLI
+resolution. Shared original-plus-reviewed engineering charge0.005019091/0.1,
+with original baseline and both consumed claims preserved. Project
+40.126736274/150, remaining109.873263726. All artifacts remain retrieved and
+checksummed. No training, new development/test outcome, native acceptance change
+or trading promotion occurred. Numerical execution is now demonstrated for this
+fixed replay; the next research method must be declared separately before new
+model outcomes.
+
+The [cleanup receipt](preflight-cleanup.json) removes470 owned temporary files,
+19,851,406 bytes. Every extracted source/training-input file was byte-identical
+to the retained original ZIP. The generated gzip paths were an exact duplicate
+of the retained accepted Colab paths. Small host worker metadata was retained
+separately; original local-preflight acceptance, both claims/failures, payload
+archives, frozen models, complete market reports and hashes remain intact.
