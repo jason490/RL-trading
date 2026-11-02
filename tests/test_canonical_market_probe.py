@@ -102,7 +102,50 @@ def test_worker_setup_checks_default_python_before_install_and_safe_archive(tmp_
     job = CanonicalMarketJob(root, sys.executable, 'CPU')
     script = job.build_worker({'archive_sha256': 'a'*64}, '/content/result.json')
     compile(script, '<worker>', 'exec')
-    assert script.index('sys.version_info') < script.index('"pip"')
-    assert '--require-hashes' in script and '--no-deps' in script
-    assert 'sys.executable,"-m","venv"' in script
+    assert script.index('sys.version_info') < script.index('create_environment(')
+    assert 'python=create_environment(sys.executable' in script
+    assert 'diagnostic receipt exported' in script
     assert '".." not in path.parts' in script
+
+
+def test_setup_failure_is_retrievable_without_attempting_missing_paths(tmp_path):
+    import json
+    import zipfile
+    root = Path(__file__).resolve().parents[1]
+    job = CanonicalMarketJob(root, sys.executable, 'CPU')
+    archive = tmp_path / 'fixture.zip'
+    source = '''
+class Failure(RuntimeError):
+    record={'stage':'kernel-pip-preflight','returncode':73,'stderr':'fixture child failure'}
+def create_environment(*a,**kw):
+    raise Failure('fixture')
+def checked(*a,**kw):
+    raise AssertionError('unreachable replay')
+'''
+    with zipfile.ZipFile(archive, 'w') as stream:
+        stream.writestr('configs/reference-inference.lock',
+                        (root / 'configs/reference-inference.lock').read_bytes())
+        for package in ('rl_stocks', 'rl_stocks/runtime', 'rl_stocks/runtime/colab'):
+            stream.writestr('src/' + package + '/__init__.py', '')
+        stream.writestr('src/rl_stocks/runtime/colab/inference_setup.py', source)
+    output = tmp_path / 'reference-probe.json'
+    script = job.build_worker({'archive_sha256': hashlib.sha256(archive.read_bytes()).hexdigest()},
+                              str(output))
+    script = script.replace('/content/' + job.session + '-market.zip', str(archive))
+    script = script.replace('/content/' + job.session + '-market', str(tmp_path / 'work'))
+    worker = tmp_path / 'worker.py'
+    worker.write_text(script)
+    result = subprocess.run([sys.executable, '-I', str(worker)], capture_output=True,
+                            text=True, timeout=30)
+    assert result.returncode != 0
+    metadata = json.loads(output.read_text())
+    assert metadata['status'] == 'failed'
+    assert metadata['stage'] == 'kernel-pip-preflight' and metadata['returncode'] == 73
+    assert metadata['stderr'] == 'fixture child failure'
+    def forbidden(*a, **kw):
+        pytest.fail('attempted download of paths that setup never produced')
+    job.retrieve = forbidden
+    job.retrieve_extra(tmp_path, '/unused')
+    assert job.extra_path is None
+    with pytest.raises(ValueError, match='kernel-pip-preflight'):
+        job.verify_result(metadata, {})

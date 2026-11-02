@@ -273,8 +273,9 @@ validation/test episode, `.env` or credentials enter the payload. Its SHA and Gi
 revision are bound before allocation. `configs/reference-inference.lock` copies
 five pins and hashes from the existing project lock: NumPy, Gymnasium,
 cloudpickle, typing-extensions and Farama notifications. Colab's actual default
-Python must be3.13 before setup; a venv uses that same interpreter. Pip installs
-only these hash-checked binary inference dependencies. Torch/SB3 are absent from
+Python must be3.13 before setup; a pip-free venv uses that same interpreter. The kernel's existing pip must
+support `--python`; it targets that isolated venv and installs only these
+hash-checked binary inference dependencies. Torch/SB3 are absent from
 the isolated environment; no model fitting is possible through them.
 
 ```bash
@@ -298,3 +299,34 @@ decompresses at most128MiB to verify the exact complete-result SHA. Failures kee
 retrieved evidence and stop the owned session. A pass proves this one reference
 market replay across two machines, not training determinism, unseen-data quality,
 policy promotion or permission to restart a failed native family.
+
+
+### Full simulator probe outcome and setup correction
+
+The [original failed attempt](../results/reference-inference-2026-11-02/market-probe-failure.json)
+retains its consumed claim, source d849084 and local complete-path preflight.
+Colab failed at plain `python -m venv`, exit1; child stdout/stderr were not
+captured, so the exact cause remains unknown. Remote market replay did not start.
+The CLI's return did not override missing-artifact rejection. Owned session
+`rl-stocks-cpu-3cdf89d21cd1` was stopped/verified; official idle balance548.11,
+zero rate/assignments. Conservative charge0.000525920 units, cumulative
+40.122243104/150. No automatic retry occurred.
+
+`runtime/colab/inference_setup.py` now creates the same-interpreter venv with
+`--without-pip`, avoiding dependence on distribution-provided ensurepip. It checks
+the existing kernel pip's `--python` capability before environment creation and
+installs the five locked dependencies only into that venv. It does not install
+another interpreter, change the base packages or install/upgrade the Colab CLI.
+If the kernel pip is absent or incompatible, setup fails with its actual captured
+error rather than guessing or installing a replacement automatically.
+
+Child commands now capture bounded stdout/stderr, redact URLs and attach stage,
+return code and diagnostics to a small independently retrievable failure receipt,
+even if failure occurs before dependencies are available. A failure receipt skips
+attempts to download nonexistent market paths and cannot pass acceptance. Local
+checks create a real pip-free environment with exactly the current interpreter,
+verify package installation targets, capture real child stderr and execute a
+whole generated bootstrap failure without network or allocation. This correction
+has not been validated on Colab. The v1 failed claim stays consumed; a separate
+reviewed execution plan is required before another allocation. Complete simulator
+cross-machine equality, new performance research and the broader goal remain open.

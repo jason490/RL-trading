@@ -12,8 +12,10 @@ passes640 exact synthetic Colab/host actor predictions and one full local saved
 market replay. Its fixed selected50k actor returns50.27% versus56.45% holding
 on the **2018–2020 training window**, outside the development-return convention
 above. This is not improved fitted weights or trading acceptance. Full simulator
-cross-machine equality remains pending. Probe cleanup is verified; cumulative
-project40.121717184/150. No new training or development/test evaluation.
+cross-machine equality remains pending: the Colab attempt failed at venv creation
+before replay, and its consumed claim/failure are retained. Probe cleanup is
+verified; cumulative project40.122243104/150. The setup correction is tested
+locally but remains unverified remotely. No new training or development/test evaluation.
 
 [Fixed VIX information study](vix-context-2026-10-25/README.md) failed: legacy
 selected/final19.62/18.48%, same-size masked24.36/9.20%, full24.09/14.44%, matched

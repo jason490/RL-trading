@@ -145,35 +145,55 @@ class CanonicalMarketJob(ReferenceProbeJob):
         spec = protocol(self.root)
         # Install only the five existing pinned numerical inference dependencies,
         # into an isolated venv made with Colab's current default interpreter.
-        return f'''import hashlib, os, pathlib, subprocess, sys, zipfile
-assert sys.version_info[:2] == (3,13), "Inspect actual default Colab Python before updating project"
-archive=pathlib.Path({('/content/' + self.session + '-market.zip')!r})
-assert hashlib.sha256(archive.read_bytes()).hexdigest()=={inputs['archive_sha256']!r}
-root=pathlib.Path({('/content/' + self.session + '-market')!r})
-root.mkdir(exist_ok=False)
-with zipfile.ZipFile(archive) as stream:
-    assert len(stream.infolist()) < 1500
-    for entry in stream.infolist():
-        path=pathlib.PurePosixPath(entry.filename)
-        assert not path.is_absolute() and ".." not in path.parts
-    stream.extractall(root)
-lock=root/"configs/reference-inference.lock"
-assert hashlib.sha256(lock.read_bytes()).hexdigest()=={spec['inference_lock_sha256']!r}
-subprocess.run([sys.executable,"-m","venv",str(root/"venv")],check=True,timeout=120)
-python=str(root/"venv/bin/python")
-subprocess.run([python,"-m","pip","install","--disable-pip-version-check","--only-binary=:all:","--require-hashes","--no-deps","-r",str(lock)],check=True,timeout=300)
-program="import sys; sys.path.insert(0,sys.argv[1]+'/src'); from rl_stocks.runtime.colab.canonical_market_probe import run_worker; run_worker(sys.argv[1],sys.argv[2])"
-env=dict(os.environ,OMP_NUM_THREADS="1",MKL_NUM_THREADS="1")
-subprocess.run([python,"-I","-c",program,str(root),{remote!r}],check=True,timeout=420,env=env)
+        return f'''import hashlib, json, os, pathlib, subprocess, sys, zipfile
+output=pathlib.Path({remote!r})
+stage="inspect-default-python"
+try:
+    assert sys.version_info[:2] == (3,13), "Inspect actual default Colab Python before updating project"
+    archive=pathlib.Path({('/content/' + self.session + '-market.zip')!r})
+    stage="verify-payload"
+    assert hashlib.sha256(archive.read_bytes()).hexdigest()=={inputs['archive_sha256']!r}
+    root=pathlib.Path({('/content/' + self.session + '-market')!r})
+    root.mkdir(exist_ok=False)
+    with zipfile.ZipFile(archive) as stream:
+        assert len(stream.infolist()) < 1500
+        for entry in stream.infolist():
+            path=pathlib.PurePosixPath(entry.filename)
+            assert not path.is_absolute() and ".." not in path.parts
+        stream.extractall(root)
+    lock=root/"configs/reference-inference.lock"
+    assert hashlib.sha256(lock.read_bytes()).hexdigest()=={spec['inference_lock_sha256']!r}
+    sys.path.insert(0,str(root/"src"))
+    from rl_stocks.runtime.colab.inference_setup import create_environment, checked
+    stage="create-inference-environment"
+    python=create_environment(sys.executable,root/"venv",lock)
+    program="import sys; sys.path.insert(0,sys.argv[1]+'/src'); from rl_stocks.runtime.colab.canonical_market_probe import run_worker; run_worker(sys.argv[1],sys.argv[2])"
+    stage="market-replay"
+    checked(stage,[python,"-I","-c",program,str(root),str(output)],420)
+    print("Fixed market replay receipt exported")
+except BaseException as error:
+    failure={{"status":"failed","stage":stage,"error_type":type(error).__name__,
+              "python":sys.version,"training_performed":False}}
+    failure.update(getattr(error,"record",{{"message":str(error)[-2000:]}}))
+    if not output.exists():
+        output.write_text(json.dumps(failure,sort_keys=True,allow_nan=False))
+    print("Market probe failed; diagnostic receipt exported")
+    raise
 '''
 
     def retrieve_extra(self, output, remote):
+        metadata = json.loads((output / 'reference-probe.json').read_text())
+        if metadata.get('status') == 'failed':
+            self.extra_path = None
+            return
         path = output / 'market-paths.json.gz'
         if not path.exists() and not self.retrieve(remote + '.paths.gz', path):
             raise RuntimeError('bounded full market path retrieval exhausted')
         self.extra_path = path
 
     def verify_result(self, actual, expected):
+        if actual.get('status') == 'failed':
+            raise ValueError('market probe failed at ' + actual.get('stage', 'unknown stage'))
         spec = protocol(self.root)
         if (actual['protocol_sha256'] != PROTOCOL_SHA256
                 or actual['schema'] != spec['schema'] or actual['python_minor'] != [3, 13]
