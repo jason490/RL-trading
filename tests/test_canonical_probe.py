@@ -148,3 +148,17 @@ def test_cleanup_failure_retains_session_and_recovery(tmp_path, probe, monkeypat
     assert job.remote_active
     error = capsys.readouterr().err
     assert job.session in error and 'stop -s' in error
+
+
+def test_projected_operation_reserves_teardown_before_launch(tmp_path, probe):
+    _, expected = probe
+    job = FakeProbe(tmp_path, expected)
+    job.ledger.begin(job.session, Usage(548., 0., 0))
+    job.ledger.observe(Usage(548., .3, 1))
+    # Current six-minute reserve fits, but the next long operation plus teardown
+    # does not fit the fixed allowance; no remote operation may start.
+    job.guard_allowance(360)
+    with pytest.raises(BudgetStop, match='allowance'):
+        job.guard_allowance(1260)
+    assert job.calls == []
+    assert job.ledger.value['budget_stopped'] is True

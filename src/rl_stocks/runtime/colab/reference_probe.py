@@ -54,19 +54,13 @@ print("Reference inference probe exported")
 
 
 class ReferenceProbeJob(ColabJob):
-    def tick(self):
-        super().tick()
-        self.last_snapshot_meter = self.last_meter  # No training checkpoints exist in this probe.
-        active = self.ledger.active
-        projected = self.ledger.value['consumed'] - active['base_consumed'] + (
-            self.ledger.clock() - active['last_time'] + RESERVE) * (active['rate'] + .01)/3600
-        if projected >= LIMIT_UNITS:
-            self.ledger.value['budget_stopped'] = True
-            self.ledger.save()
-            raise BudgetStop('reference probe allowance exhausted; no automatic restart')
-        self.ledger.guard(RESERVE)
+    limit_units = LIMIT_UNITS
+    deadline_seconds = DEADLINE
+    reserve_seconds = RESERVE
+    execution_seconds = 240
+    kind = 'canonical-inference-probe'
 
-    def run_probe(self, actors, expected, claim):
+    def validate_input(self, actors, expected):
         if set(actors) != set(ROLES):
             raise ValueError('all three role actors required')
         verify(expected, expected)
@@ -74,12 +68,46 @@ class ReferenceProbeJob(ColabJob):
             CanonicalActor(actors[role], expected_role=role)
             if expected['roles'][role]['actor_sha256'] != actors[role]['sha256']:
                 raise ValueError('host reference actor identity mismatch')
+
+    def build_worker(self, inputs, remote):
+        return worker_script(self.root, inputs, remote)
+
+    def prepare_remote(self, inputs):
+        pass
+
+    def retrieve_extra(self, output, remote):
+        pass
+
+    def verify_result(self, actual, expected):
+        return verify(actual, expected)
+
+    def tick(self):
+        super().tick()
+        self.last_snapshot_meter = self.last_meter  # No training checkpoints exist in this probe.
+        self.guard_allowance(self.reserve_seconds)
+
+    def guard_allowance(self, projected_seconds):
+        active = self.ledger.active
+        projected = self.ledger.value['consumed'] - active['base_consumed'] + (
+            self.ledger.clock() - active['last_time'] + projected_seconds) * (active['rate'] + .01)/3600
+        if projected >= self.limit_units:
+            self.ledger.value['budget_stopped'] = True
+            self.ledger.save()
+            raise BudgetStop('reference probe allowance exhausted; no automatic restart')
+        self.ledger.guard(projected_seconds)
+
+    def operation(self, args, timeout):
+        self.guard_allowance(timeout + self.reserve_seconds)
+        return super().operation(args, timeout)
+
+    def run_probe(self, actors, expected, claim):
+        self.validate_input(actors, expected)
         git = repository_state(self.root)
         if git['dirty']:
             raise ValueError('clean committed probe source required')
         if self.ledger.value.get('minimum_account_balance', 0) < 150:
             raise BudgetStop('persisted account floor150 required')
-        for command in ('usage', 'new', 'exec', 'download', 'stop', 'sessions', 'status'):
+        for command in ('usage', 'new', 'exec', 'upload', 'download', 'stop', 'sessions', 'status'):
             self.short([command, '--help'])
         version = self.short(['version'])
         usage = self.meter()
@@ -88,7 +116,7 @@ class ReferenceProbeJob(ColabJob):
         # held by main(), and begin() rejects any existing account assignments.
         claim = Path(claim)
         payload = {'session': self.session, 'actors_sha256': digest(actors),
-                   'source': git, 'limit_units': LIMIT_UNITS, 'deadline_seconds': DEADLINE,
+                   'source': git, 'limit_units': self.limit_units, 'deadline_seconds': self.deadline_seconds,
                    'training': False, 'automatic_retry': False}
         with claim.open('x') as stream:
             json.dump(payload, stream, sort_keys=True)
@@ -96,12 +124,12 @@ class ReferenceProbeJob(ColabJob):
         output.mkdir(parents=True, exist_ok=False)
         remote = '/content/' + self.session + '-reference.json'
         script = output / 'probe.py'
-        script.write_text(worker_script(self.root, actors, remote))
+        script.write_text(self.build_worker(actors, remote))
         retrieved = output / 'reference-probe.json'
         self.ledger.begin(self.session, usage)
         active = self.ledger.active
-        active.update(accelerator='CPU', kind='canonical-inference-probe',
-                      deadline=min(active['deadline'], self.ledger.clock()+DEADLINE),
+        active.update(accelerator='CPU', kind=self.kind,
+                      deadline=min(active['deadline'], self.ledger.clock()+self.deadline_seconds),
                       cli_version=version.strip(), protocol=payload)
         self.ledger.save()
         self.last_meter = time.monotonic()
@@ -127,11 +155,13 @@ class ReferenceProbeJob(ColabJob):
             self.tick()
             if 'CPU' not in self.short(['status', '-s', self.session]).upper():
                 raise RuntimeError('owned CPU allocation not verified')
-            self.operation(['exec', '-s', self.session, '-f', str(script)], 240)
+            self.prepare_remote(actors)
+            self.operation(['exec', '-s', self.session, '-f', str(script)], self.execution_seconds)
             if not self.retrieve(remote, retrieved):
                 raise RuntimeError('bounded reference artifact retrieval exhausted')
             result = json.loads(retrieved.read_text())
-            verify(result, expected)
+            self.retrieve_extra(output, remote)
+            self.verify_result(result, expected)
             active['reference_verified'] = True
             self.ledger.save()
         except BudgetStop:
@@ -145,6 +175,7 @@ class ReferenceProbeJob(ColabJob):
                 if self.allocated and result is None:
                     try:
                         self.retrieve(remote, retrieved)
+                        self.retrieve_extra(output, remote)
                     except Exception:
                         pass  # Budget/metering failure must proceed directly to owned cleanup.
                 clean = self.cleanup()

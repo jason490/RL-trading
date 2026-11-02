@@ -248,3 +248,53 @@ versus holding56.45%; stocks54.08/58.15%, ETFs29.29/47.15%, mean maximum drawdow
 overall despite positive short P&L. No policy promotion, checkpoint reselection,
 new learning or development/test evaluation follows these engineering outcomes.
 No Colab allocation or credit use occurred in this local replay.
+
+## Full simulator cross-machine probe declaration
+
+`configs/experiments/canonical_market_probe.json`, SHA
+`b9bcb419386de24f18201e52cb84533232ba20970727eac975b8b48f59b7d249`,
+declares a separate inference-only Colab engineering allocation. The previous
+local replay protocol stays unchanged. The target is exact canonical result SHA
+`b2c464c47f5d9c0f1520381d2fac72b0f944afdc6693997308dd080da6fb5b4a`
+from the completed local26-symbol/19,136-decision replay: all rows, fills,
+metrics, matched baselines and per-session direction attribution. No tolerances,
+checkpoint selection or native-result acceptance changes are allowed.
+
+`evaluation/canonical_window.py` calls the existing TradingEnv, simulator,
+metrics, baselines and attribution directly, using the reference episode adapter.
+It omits the generic RL PredictionStream and does not duplicate accounting rules.
+A fixture matches the original evaluator's entire canonical result. A fresh-process
+check confirms no Torch or SB3 import. The actual full worker will also be checked
+locally before allocation, using the unchanged original full replay hash.
+
+Only the fixed training windows, frozen reference actor/metadata, public source
+modules and two engineering protocols are uploaded. No native model pickle,
+validation/test episode, `.env` or credentials enter the payload. Its SHA and Git
+revision are bound before allocation. `configs/reference-inference.lock` copies
+five pins and hashes from the existing project lock: NumPy, Gymnasium,
+cloudpickle, typing-extensions and Farama notifications. Colab's actual default
+Python must be3.13 before setup; a venv uses that same interpreter. Pip installs
+only these hash-checked binary inference dependencies. Torch/SB3 are absent from
+the isolated environment; no model fitting is possible through them.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.canonical_market_probe --prepare
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.canonical_market_probe \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+The one-time owned CPU allocation uses the existing CLI and shared ledger/lock.
+Maximum30 minutes includes provisioning, dependency setup and retrieval; six
+minutes are reserved for teardown. Incremental allowance0.1 units includes all
+failures, idle time and downloads. Each projected next operation reserves teardown
+before starting; aggregate150/130 and account150/170 limits remain unchanged.
+Minute metering, bounded downloads and failure/interruption cleanup reuse the
+already tested probe lifecycle. Original640-actor probe claims remain consumed;
+this has its own persistent session claim and cannot restart automatically.
+
+The worker retrieves both a compact metadata receipt and full canonical paths
+compressed as gzip. Verification checks the compressed-file SHA and independently
+decompresses at most128MiB to verify the exact complete-result SHA. Failures keep
+retrieved evidence and stop the owned session. A pass proves this one reference
+market replay across two machines, not training determinism, unseen-data quality,
+policy promotion or permission to restart a failed native family.
