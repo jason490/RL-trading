@@ -330,3 +330,41 @@ whole generated bootstrap failure without network or allocation. This correction
 has not been validated on Colab. The v1 failed claim stays consumed; a separate
 reviewed execution plan is required before another allocation. Complete simulator
 cross-machine equality, new performance research and the broader goal remain open.
+
+## Reviewed execution after the setup failure
+
+`configs/experiments/canonical_market_probe_review.json`, SHA
+`6c45c5db914a5bfdb7ff4bafd29bca4e4a2914ed3d56a637bea8a7cbc66c5ef6`,
+records one separately reviewed CPU attempt after original setup failure. The
+original claim, failure receipt, local preflight and charges remain immutable.
+This is an execution review of the committed bootstrap correction under standing
+research authorization, not a retry loop or reset of the failed result.
+
+The original shared engineering allowance remains0.1 units from project baseline
+40.121717183767466, including the failed attempt's0.000525919842 charge. The new
+controller projects cumulative charges plus each operation and teardown reserve;
+it does not receive a fresh0.1 units. One new persistent claim permits one CPU
+allocation, at most30 minutes including setup/retrieval, with six minutes reserved
+for teardown. Aggregate150/130 and account150/170 protections are unchanged.
+No budget stop can be bypassed; all prior owned attempts must already be stopped.
+
+Preflight reuse is supported by physical source comparison against the original
+hash-pinned upload:389 modules are byte-identical. The changed orchestration
+module's worker, protocol and hash functions, imports and protocol constant have
+identical AST contracts. Only the reviewed setup helper and review module are
+new. The actual helper SHA, original local preflight and failure SHA are pinned.
+Any other changed/added/deleted numerical source requires a new full local check.
+Tests reject worker/import/protocol/engine changes, unreviewed additions/deletions
+and attempts to reset the shared allowance.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.canonical_market_review --prepare
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.canonical_market_review \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+A new payload records the committed source revision and equivalence proof. Exact
+full-result target, training windows, weights, preprocessing and numerical gates
+are unchanged. A failed reviewed attempt remains failed and cannot allocate
+again automatically. No new training, development outcome, native acceptance or
+policy promotion is authorized by this execution review.
