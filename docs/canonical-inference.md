@@ -179,3 +179,17 @@ An accepted synthetic probe would still leave real saved-market episode replay,
 complete simulator cross-machine equality and a declared numerical execution
 variant for future performance research pending. No gate can promote a policy
 from this synthetic check.
+
+### Actual v1 outcome — 2026-11-02
+
+The [Colab acceptance receipt](../results/reference-inference-2026-11-02/cross-machine-acceptance.json)
+passes all640 exact prediction-bit comparisons, including both tagged/routed
+branches. Actual defaultPython3.13.18 matches the supported3.13 minor. No native
+packages were imported by the worker. CPU latency was6–8ms/prediction; complete
+simulator throughput is still unmeasured. Owned session
+`rl-stocks-cpu-f04787394fc0` terminated and was independently confirmed idle.
+Conservative probe charge0.000553813 units, measured CLI debit0.00 at reported
+resolution; project40.121717184/150. No dependency installation, fitting, market
+returns, original-native promotion or retired-test access occurred. The one-time
+claim remains consumed. This successful engineering check does not authorize
+rerunning the stopped native family or change its numerical rejection.
