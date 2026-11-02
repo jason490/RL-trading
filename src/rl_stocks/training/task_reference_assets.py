@@ -123,6 +123,16 @@ def check_economic_report(result, episode, baseline):
         raise ValueError('raw native economic report is inconsistent')
 
 
+
+def replay_fingerprint(replay):
+    records = {}
+    for name in ('observations', 'next_observations', 'actions', 'rewards', 'dones', 'timeouts'):
+        array = np.ascontiguousarray(getattr(replay, name))
+        records[name] = {'shape':list(array.shape), 'dtype':str(array.dtype),
+                         'sha256':hashlib.sha256(memoryview(array).cast('B')).hexdigest()}
+    return digest(records)
+
+
 def verify_control(root, dataset, *, role):
     root = Path(root)
     spec = protocol(root)
@@ -195,8 +205,7 @@ def verify_control(root, dataset, *, role):
                 tags = getattr(replay, name)[..., -1]
                 if not np.isin(tags, [0] if role == 'masked_shared' else [-1, 1]).all():
                     raise ValueError('original replay task tags mismatch')
-            replay_sha = fingerprint({name:getattr(replay, name) for name in
-                ('observations', 'next_observations', 'actions', 'rewards', 'dones', 'timeouts')})
+            replay_sha = replay_fingerprint(replay)
             for phase in ('selected', 'final'):
                 paths = list((folder / f'frozen-{phase}').iterdir())
                 if len(paths) != 1:

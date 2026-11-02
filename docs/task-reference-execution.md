@@ -104,3 +104,17 @@ Declining-stock results remain reporting-only; future decline labels never enter
 features, rewards, sampling, selection or promotion. Passing fitted gates alone
 would not establish generalization, historical membership completeness or trading
 readiness.
+
+### Local verifier correction
+
+The first physical-check attempt reached replay hashing after checking the masked
+control's saved checkpoints and native economic curves, then failed because a
+tensor-only fingerprint helper did not accept NumPy replay arrays. The failed
+local attempt is retained under `artifacts/task-reference-assets-v1/failure.json`;
+this is a verifier defect, not a model/performance failure. All protected source
+files passed the final unchanged-hash check. No Colab allocation occurred.
+
+Replay hashing now binds each array's shape, dtype and exact contiguous bytes.
+The regression test rejects shape, dtype and value changes without optimizer
+calls. Fifteen focused tests pass; a fresh output directory is required for the
+corrected full control check. Original native acceptance and gates are unchanged.

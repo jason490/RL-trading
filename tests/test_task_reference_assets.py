@@ -131,3 +131,23 @@ def test_raw_economic_checks_reject_inconsistent_saved_metrics(corruption):
         result['directional']['long_net_pnl'] += 1.
     with pytest.raises(ValueError, match='inconsistent'):
         check_economic_report(result, episode, baseline)
+
+
+def test_replay_hash_covers_numpy_shape_dtype_and_bytes():
+    from types import SimpleNamespace
+    import numpy as np
+    from rl_stocks.training.task_reference_assets import replay_fingerprint
+    names = ('observations', 'next_observations', 'actions', 'rewards', 'dones', 'timeouts')
+    def fixture():
+        return SimpleNamespace(**{name:np.arange(6, dtype=np.float32).reshape(2,3) for name in names})
+    original = replay_fingerprint(fixture())
+    assert replay_fingerprint(fixture()) == original
+    for change in ('shape', 'dtype', 'value'):
+        replay = fixture()
+        if change == 'shape':
+            replay.rewards = replay.rewards.reshape(3,2)
+        elif change == 'dtype':
+            replay.rewards = replay.rewards.view(np.int32)
+        else:
+            replay.rewards[0,0] += 1.
+        assert replay_fingerprint(replay) != original
