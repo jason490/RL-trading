@@ -93,8 +93,38 @@ Colab acceptance or proof of native Torch parity.
 
 ## Remaining integration and research gates
 
-Full frozen bundle integration, saved-model episode replay, throughput profiling
-and actual cross-machine validation remain pending. The execution variant and its
+`inference/canonical_bundle.py` now derives a separate checksummed reference bundle
+from a trusted native task bundle. It retains the original manifest, original
+bundle/checkpoint identities and source file checksums, plus the new actor identity
+and arithmetic version. Source files are checked before and after export and stay
+unchanged. The new directory identity hashes its own manifest; loading optionally
+requires a caller-pinned bundle ID. Normalization, feature/feed/action schemas,
+full21 observation specification, coarse-type evidence scope and dated symbol
+registry are validated before prediction. `raw_action` retains all four output
+components; `predict` applies the frozen evaluation exposure filter. The source
+native ZIP remains in its original durable archive, not duplicated in the new
+bundle. This derived format is research-only and makes no native-parity claim.
+
+`evaluation/canonical_task.py` adds one chronological cursor per episode and
+applies the execution filter once through the existing simulator/evaluator.
+`evaluate_canonical_training` requires the exact source dataset, normalizer and
+type-manifest identities, then restricts replay to the fixed original26 training
+window. It has no development/test argument. The episode adapter rejects non-train
+splits and dates after2020. A short synthetic episode reproduces the complete
+rows/events/metrics/baselines exactly against an independent direct-actor adapter;
+this validates wiring, not performance on real saved market episodes.
+
+The [host timing record](../results/reference-inference-2026-11-02/host-profile.json)
+uses the saved tagged selected actor and128 fixed synthetic full21 vectors:
+0.3911 seconds total, about3.06ms per prediction on localPython3.13.16. Inputs
+are generated as `((i+j)%17-8)/16` for i=0..127 and j=0..20, with the ETF tag
+supplied by the frozen SPY registry. Four warmup calls precede timing. This is not
+an episode return evaluation or Colab throughput guarantee. Forty-two focused
+actor/arithmetic/bundle/native-bundle tests pass, including corruption and source
+binding, normalization preservation and no-local-optimization guards.
+
+Actual saved-market episode replay, complete end-to-end throughput profiling and
+cross-machine validation remain pending. The execution variant and its
 gates must be declared before reading its new evaluation outcomes. Latency and
 Colab default Python must be checked before allocation. Original native reports
 remain unchanged and must not be relabeled as reference-arithmetic results. No

@@ -6,7 +6,7 @@ Read [architecture](architecture.md), [setup](setup.md), [data providers](provid
 
 | Category | Guide | What it covers |
 | --- | --- | --- |
-| Reference inference arithmetic | [canonical-inference.md](canonical-inference.md) | Reference arithmetic, checksummed actor export/loading and pending episode integration |
+| Reference inference arithmetic | [canonical-inference.md](canonical-inference.md) | Reference arithmetic, frozen actor bundles, training-only episode integration and timing |
 | Historical instrument types | [instrument-type-evidence.md](instrument-type-evidence.md) | Original SEC type/ticker evidence, context exclusions, immutable cache audit and admission gaps |
 | Task conditioning research | [task-conditioning-research.md](task-conditioning-research.md) | Primary-source review, explicit stock/ETF context hypothesis, matched controls and staged admission |
 | Feasible reference policies | [feasible-references.md](feasible-references.md) | Fixed long/short/cash training-only requests, active protection/holding constraints, immutable inputs and descriptive limits |
