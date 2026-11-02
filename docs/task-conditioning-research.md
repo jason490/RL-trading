@@ -824,3 +824,18 @@ performance gate or development access accompanies this admission. The original
 tagged native numerical rejection is unchanged. Read
 [reference task execution](task-reference-execution.md) for the declared numerical
 continuation and remaining candidate requirements.
+
+
+### Fixed reference control matrix complete — 2026-11-02
+
+[Selected/final reference results](../results/task-conditioning-2026-10-31/reference-controls.json)
+are40.52/27.61% masked and50.27/46.03% tagged, versus56.45% fitted holding.
+Native selection remains50k; all four complete paths and matching holding hashes
+are verified. Three points are freshly replayed, while tagged-selected reuses its
+accepted full engineering paths under matching actor/checksum identities.
+The original native rejection is unchanged; no development or candidate gate has
+passed. [Timing evidence](../results/task-conditioning-2026-10-31/reference-candidate-projection.json)
+projects6721 allocated seconds by moving independent acceptance after verified
+shutdown, plus1052 post-stop seconds; this lifecycle is still unimplemented and
+`execution_admitted=false`. Read [reference execution](task-reference-execution.md)
+for group/short diagnostics and remaining runtime requirements.

@@ -19,9 +19,13 @@ The [reference task execution](task-reference-execution.md) contract is now
 declared with unchanged native training-only selection and original performance
 gates. Both saved controls pass independent physical consistency:22 checkpoints,
 80 bound files,20 reconstructed native curves and two complete100k replay buffers.
-Original failed native/development gates remain unchanged. Next complete selected/
-final reference-control evaluation and candidate runtime admission; no allocation
-is authorized by the declaration.
+Original failed native/development gates remain unchanged. Reference controls are complete: masked selected/final40.52/27.61%, tagged
+50.27/46.03%, fitted holding56.45%; three fresh replays plus one disclosed reuse.
+No development was opened. Native source audit finds103 unchanged profiled files;
+the proposed stop-before-local-acceptance lifecycle projects6721 allocated seconds
+and1052 post-stop seconds for routed100k,0.168025 units. It is not admitted:
+candidate worker/claim, current-kernel preflight and lifecycle integration remain
+required before allocation.
 
 Prior completed model comparison (2026-11-01): no robust/prospective winner. The fixed100k
 seed11 GRU-SAC/SAC/RecurrentPPO matrix is physically accepted, its performance

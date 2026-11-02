@@ -177,3 +177,71 @@ allocation, open development, select another checkpoint or promote a policy.
 Tests reject mixed execution, reselection, changed periods/baselines/source
 bundles, physical artifact substitution, mismatched reused actors/paths and loss
 of report-sidecar data. Native predict/learning/backward remain forbidden.
+
+### Actual reference control outcomes
+
+The [complete control receipt](../results/task-conditioning-2026-10-31/reference-controls.json)
+passes all four fixed points: three fresh reference replays and one explicitly
+reused accepted engineering replay. Each contains26 episodes/19,136 decisions;
+all76,544 decisions' complete paths, group metrics, short attribution, reports and
+hashes were independently rechecked. Fresh point times were70.26–71.75 seconds;
+total217.17 seconds. Native-selected checkpoints stay50k, endpoints100k. No
+checkpoint reselection, fitting, Colab allocation or development access occurred.
+
+These are mean **2018–2020 training-window total returns**, not annualized,
+portfolio, new development or prospective results:
+
+| Control snapshot | Overall | Stocks22 | ETFs4 | Mean maximum drawdown |
+| --- | ---: | ---: | ---: | ---: |
+| Masked selected50k |40.52%|38.95%|49.20%|−31.38%|
+| Masked final100k |27.61%|34.89%|−12.47%|−36.06%|
+| Tagged selected50k |50.27%|54.08%|29.29%|−35.33%|
+| Tagged final100k |46.03%|50.37%|22.18%|−35.37%|
+| Matched holding |56.45%|58.15%|47.15%|—|
+
+Both controls decline from selected to final. The masked ETF component collapses
+much more than its stock component, but these paths do not establish a sole
+optimizer or gradient-interference cause. Type context helps this single fitted
+comparison; it does not establish generalization or justify promotion.
+
+The tagged final snapshot has XOM total+28.03% versus holding−40.25%, with+43.94pp
+short contribution; CVX remains−17.23% versus holding−17.07%, despite+12.06pp
+short contribution. Thus only1/2 declining stocks has positive total plus positive
+short P&L. Masked final achieves0/2. This cohort remains reporting-only and has
+not changed any sampling, selection or gate.
+
+Interactive reports and lossless gzip paths live under
+`artifacts/task-reference-controls-v1`; tagged-selected links to its previously
+accepted report/paths. The complete matrix grants no development or candidate
+allocation because the routed result is still missing.
+
+## Candidate timing review evidence — not allocation admission
+
+The [native source audit](../results/task-conditioning-2026-10-31/reference-native-source-audit.json)
+finds all103 originally profiled compute files byte-identical. Four reference-only
+evaluation modules are new. The full native worker matches the original trained
+worker exactly after removing its two-line read-only backend metadata annotation.
+The original strict source validator remains unchanged; this audit is evidence
+for a separate scoped runtime review, not a bypass or new profile acceptance.
+
+The [candidate projection](../results/task-conditioning-2026-10-31/reference-candidate-projection.json)
+uses the measured routed4096-transition/3096-update learning interval96.7158s and
+native full-window evaluation38.7786s. Scaling to99000 updates and ten native
+selection evaluations with1.5 margin, plus900s setup and600s transport/retrieval/
+shutdown, gives **6721 allocated seconds** and0.168025 estimated units at the
+observed0.08/hour plus0.01 metering margin. It fits a7200-second allocation.
+
+This projection proposes stopping the owned runtime after bounded complete
+transport/checksum validation and retrieval, then running expensive independent
+physical/reference acceptance locally. The post-stop phase is separately bounded
+at1052 projected seconds within1800, using twice the slower actual Colab reference
+replay150.62s,1.5 margin and600s overhead. This avoids allocated CPU idle time
+during local acceptance; all downloads and shutdown still occur inside the paid
+allocation deadline. A post-stop failure must retain artifacts and cannot retry
+training. This lifecycle change still needs implementation and verification.
+
+The original study has1.799122917 units remaining from its unchanged2-unit ceiling
+and baseline39.92585919127071; prior controls and engineering charges remain
+included. Candidate worker/claim, current-kernel preflight and transport/offline
+acceptance integration remain required. The projection's `execution_admitted`
+flag is **false**. Original project150/130 and account150/170 limits still apply.

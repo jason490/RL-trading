@@ -19,8 +19,11 @@ failure and claims remain retained; owned cleanup is verified. Cumulative projec
 mismatch is fixed for future probes. No new training or development/test evaluation.
 Both [task controls' physical assets](task-conditioning-2026-10-31/reference-control-assets.json)
 now pass22 checkpoint/Adam checks,80 archive-bound files,20 native curves and two
-complete replay buffers. Original native failures stay unchanged; selected/final
-reference performance and routed candidate admission remain pending.
+complete replay buffers. Original native failures stay unchanged. [Reference controls](task-conditioning-2026-10-31/reference-controls.json)
+now have fixed selected/final training returns40.52/27.61% masked and50.27/46.03%
+tagged versus56.45% holding. These use2018–2020 training windows, not development.
+Routed candidate admission remains pending; the explicit timing review is not an
+allocation grant.
 
 [Fixed VIX information study](vix-context-2026-10-25/README.md) failed: legacy
 selected/final19.62/18.48%, same-size masked24.36/9.20%, full24.09/14.44%, matched
