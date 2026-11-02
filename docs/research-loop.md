@@ -3,10 +3,11 @@
 Current engineering frontier (2026-11-02): the separate reference arithmetic
 actor passes640 exact cross-machine synthetic predictions on default Colab
 Python3.13.18, with owned cleanup verified. The original tagged native replay
-remains rejected; no development outcome or promotion changed. A fixed saved
-selected50k actor replay on all26 training windows is now declared in
-[reference inference](canonical-inference.md), before its new outcomes. It is
-inference-only and cannot open development/test or restart the native study.
+remains rejected; no development outcome or promotion changed. The fixed saved
+selected50k actor replay on all26 training windows is complete:19,136 decisions
+in66.58s, training mean50.27% versus56.45% holding; stocks54.08/58.15%,
+ETFs29.29/47.15%. See [reference inference](canonical-inference.md). Source
+hashes are unchanged; no fitting, development outcome or promotion occurred.
 Project40.121717184/150, account548.11 idle after the probe. Full simulator
 cross-machine verification remains pending.
 

@@ -40,3 +40,41 @@ not a claim of zero consumption. Cumulative project40.121717184/150, remaining
 109.878282816. Original ledger/floor150/teardown170 are preserved. No retry or
 new training followed the probe. Next declare a numerical execution variant
 before saved-market outcomes; development and retired-test gates remain closed.
+
+## Fixed selected50k saved-market engineering replay
+
+The [market receipt](market-replay.json) completes the separately declared protocol
+f5fb168a… on source5750a7a. All26 original training episodes/19,136 decisions pass
+alignment and completeness checks. Replay took66.58s; total including export and
+reporting70.36s. Protected dataset, original frozen metadata and checkpoint hashes
+are unchanged. Complete per-session directional attribution reconciles within
+3.21e-10 dollars. Full46.04MB JSON paths and10.45MB interactive HTML remain at
+`artifacts/canonical-market-replay-v1/replay.json` and `replay.html`; receipt hashes
+were independently checked after execution. The report includes equity/holding,
+drawdown, fills, learned stops/target zones, exposure and exit-fill diagnostics.
+
+This is the **2018–2020 training window**, not the2021–2023 development comparison:
+
+| Fixed saved actor | Reference replay | Matched holding |
+| --- | ---: | ---: |
+| Overall mean26 |50.27%|56.45%|
+| Stocks22 |54.08%|58.15%|
+| ETFs4 |29.29%|47.15%|
+
+Mean maximum drawdown is−35.33%; median stock excess is−11.72pp. It remains
+below holding overall and in both groups. The source was already selected50k;
+this diagnostic does not select a new checkpoint, improve the fitted weights,
+accept the original native replay or promote a trading model.
+
+The reporting-only declining-stock cohort has two symbols. CVX total+0.14%
+versus holding−17.07%, with+8.78pp short contribution and−8.64pp long contribution.
+XOM total−33.51% versus holding−40.25%, with+10.58pp short contribution outweighed
+by−44.09pp long contribution. Only1/2 has both positive total return and positive
+short P&L. Decliner labels are not inputs or selection criteria.
+
+Thirty-eight focused arithmetic/actor/bundle/diagnostic checks pass. Actual
+execution guards forbid native SAC predict, training and backward; no optimization,
+normalization fitting, provider calls, Colab allocation, new development outcome
+or retired-test access occurred. No credits were charged by this local replay.
+Full simulator cross-machine verification and a new declared performance protocol
+are still pending; the broader objective is incomplete.

@@ -231,3 +231,20 @@ cross-machine equality and a separately declared future performance study remain
 required regardless of fitted-window return. Three focused diagnostic tests cover
 the pinned protocol, chronological/split rejection and guard restoration, alongside
 35 actor/arithmetic/bundle tests.
+
+### Actual saved-market outcome
+
+The [fixed market receipt](../results/reference-inference-2026-11-02/market-replay.json)
+completes26 training episodes and19,136 decisions in66.58s, total70.36s including
+export/reporting. Exact source identities remain unchanged. Directional P&L
+reconciles every row with maximum error3.21e-10 dollars. The HTML report and full
+JSON paths are retained under `artifacts/canonical-market-replay-v1`; hashes were
+independently rechecked after execution. This is one local full replay, not a
+cross-machine simulator equality claim.
+
+The fixed selected50k reference actor has mean training-window return50.27%
+versus holding56.45%; stocks54.08/58.15%, ETFs29.29/47.15%, mean maximum drawdown
+−35.33%. CVX is positive overall and on short P&L, while XOM remains negative
+overall despite positive short P&L. No policy promotion, checkpoint reselection,
+new learning or development/test evaluation follows these engineering outcomes.
+No Colab allocation or credit use occurred in this local replay.
