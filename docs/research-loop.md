@@ -1,6 +1,23 @@
 # Bounded autonomous research
 
-Current engineering frontier (2026-11-02): the separate reference arithmetic
+Current frontier (2026-11-03): the complete routed reference comparison failed
+its original final fitted gate and is closed before development/confirmation.
+Selected90k61.62%, final100k54.14%, holding56.45% on the fixed training window.
+All physical/reference checks and owned cleanup pass. Project40.196982/150;
+fresh account548.05, rate0, assignments0. Read the
+[actual result and saved-path diagnosis](../results/task-conditioning-2026-11-03/README.md)
+before historical entries. No robust/prospective winner exists.
+
+The endpoint decline is not explained by higher costs alone: stock non-cost
+excess worsens6.66pp and ETF non-cost excess7.94pp; ETF costs improve4.31pp.
+Final ETF short P&L contributes−8.10pp. These fixed-path identities establish no
+optimizer cause. Next is a distinct training-supported direction/exit hypothesis
+with matched controls and bounded profiling; no rescue of this closed family,
+retired-test reuse or promotion from its training-selected result.
+
+## Historical research log
+
+Historical engineering frontier (2026-11-02): the separate reference arithmetic
 actor passes640 exact cross-machine synthetic predictions on default Colab
 Python3.13.18, with owned cleanup verified. The original tagged native replay
 remains rejected; no development outcome or promotion changed. The fixed saved

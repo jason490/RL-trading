@@ -60,3 +60,29 @@ retained for provenance; generated reports use compressed lossless paths.
 Next: diagnose the fitted endpoint decline and long/short participation using
 these saved paths before specifying a distinct hypothesis. Do not reopen this
 family, tune its gates, or infer prospective performance from the selected result.
+
+
+## Saved-path endpoint diagnosis
+
+[Read-only diagnosis](saved-path-diagnosis.json) covers all six accepted reference
+points,156 episodes/114,816 saved decisions. Existing participation/cost accounting
+reconciles fills, borrow, long/short P&L and net equity. Input/model/ledger evidence
+is unchanged; no model was loaded, no dataset opened and no Colab allocated.
+
+From routed90k to100k, mean stock return declines8.19pp. Incremental cost drag
+rises1.52pp, while saved-path non-cost excess declines6.66pp. ETF return falls
+3.63pp despite cost drag improving4.31pp; saved-path non-cost excess falls7.94pp.
+These are exact fixed-path identities, not a zero-cost replay or a causal
+explanation of training deterioration. Costs added back would not preserve fills.
+
+Final stock long/short contributions are+55.24/+0.81pp; ETF contributions are
++51.73/−8.10pp. Selected ETF short contribution was+0.55pp. Final ETF reversal
+costs average7.26pp of initial equity; small same-side resizing costs only0.10pp.
+Stock small-resize costs are0.05pp. Thus a small-resize filter alone does not
+account for the observed gap. End-of-session long fractions are80.01% stocks and
+79.11% ETFs; these differ from intraday touched fractions in the receipt.
+
+The next distinct hypothesis needs training-only support for better direction/exit
+quality and short participation, plus matched controls, cost profiling and the
+existing multi-seed/prospective gates. These observations do not authorize a
+short ban, reward grid, extended steps or reselection within the closed family.
