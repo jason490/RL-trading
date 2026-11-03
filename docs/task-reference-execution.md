@@ -289,3 +289,15 @@ Focused verification passed52 tests covering fixed plans, common initialization,
 local-training rejection, original gates, immutable snapshots, kernel rejection,
 transport-before-shutdown ordering and cleanup after metering failure/interruption.
 Actual candidate training and performance acceptance remain pending.
+
+
+## Completed candidate and failed fitted gate — 2026-11-03
+
+[Actual results](../results/task-conditioning-2026-11-03/README.md) complete the
+previously pending routed100k case. Physical checkpoints/replay/selection and
+reference selected/final acceptance pass after verified shutdown. Selected90k
+returns61.62%; final100k54.14% versus56.45% holding on the fixed training window.
+Final stock−2.10pp, ETF−3.52pp and median-stock−6.16pp fail the original−2pp
+floors despite gains over both controls. The family is closed before development;
+no confirmation training, promotion or retired-test access. Project40.196982/150;
+owned session stopped and account idle. Earlier pending statements are historical.

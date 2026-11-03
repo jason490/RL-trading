@@ -1,0 +1,21 @@
+{
+  "schema": "task-reference-candidate-usage-v1",
+  "session": "rl-stocks-cpu-07e11d409cec",
+  "status": "stopped",
+  "cleanup_verified": true,
+  "measured_units": 0.06000000000005912,
+  "estimated_units": 0.07024609084195561,
+  "charged_units": 0.07024609084195561,
+  "project_units": 40.1969823652036,
+  "project_remaining_units": 109.80301763479639,
+  "project_teardown_units": 130,
+  "study_units": 0.2711231739328923,
+  "study_ceiling_units": 2,
+  "account_balance": 548.05,
+  "fresh_account_rate": 0,
+  "fresh_active_assignments": 0,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "training_source_revision": "368e4f3af51d0204ac1ed463ee3f7c289103e270",
+  "acceptance_sha256": "688a84aae2f7b77fc44e64eada1ac1badea2dab4f34e14699402dcbb78299aa0"
+}

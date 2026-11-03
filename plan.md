@@ -3237,3 +3237,15 @@ contract, despite projected0.5423-unit cost fitting the existing allowance. Orig
 failure retained; no screen allocated. Next is a distinct execution-only duration
 review, preserving methods/performance gates and all150/130 and account protections.
 Project39.976410/150; owned sessions stopped.
+
+
+### Routed reference comparison completed — 2026-11-03
+
+[Actual acceptance](results/task-conditioning-2026-11-03/README.md) completes
+all three seed11 roles under the reviewed reference execution. Routed selected90k
+61.62%, final100k54.14%, matched holding56.45% on the training window. Physical
+and numerical acceptance pass; original final group/median performance floors
+fail. Family closed without development/confirmation or promotion. Original
+150/130 budget and retired-test isolation preserved. Project40.196982/150; owned
+CPU session stopped/verified and fresh account idle. Next is saved-path diagnosis
+before a distinct bounded research hypothesis; robust/prospective winner unmet.

@@ -492,3 +492,9 @@ Next factory/frozen/runtime and actual learned-state/replay/counter acceptance.
 actual four-update recurrent/native SAC integration acceptance, physical target/
 Adam restoration, retained artifacts, shared-budget charge and verified cleanup.
 No trading-return comparison or model promotion.
+
+
+[Routed SAC reference comparison](task-conditioning-2026-11-03/README.md):
+100k completed, selected90k61.62% and final54.14% versus56.45% holding on the
+training window. Original final group/median floors failed; family closed before
+development. Physical/reference acceptance and owned cleanup verified.

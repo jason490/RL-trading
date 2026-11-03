@@ -2773,3 +2773,13 @@ asset validator binds manifest/archive hashes and rejects unsafe paths/phases;
 optimization, Colab allocation or ledger mutation; project39.472562/150 unchanged.
 Next factory/frozen/runtime and actual learned-state/replay/counter acceptance.
 [Evidence](../results/crossq-feasibility-2026-10-26/initializations.json).
+
+
+### Routed SAC reference acceptance — 2026-11-03
+
+[Routed completion evidence](../results/task-conditioning-2026-11-03/README.md):
+11 physical checkpoints, full100k replay,99k Adam updates, common initialization,
+selected90k/final100k reference paths and unchanged fitted gate independently
+verified.52 focused runtime/gate tests passed before allocation. Performance gate
+failed; no development or confirmation seeds. All owned cleanup verified; fresh
+account548.05/rate0/assignments0. Project40.196982/150, unchanged ledger baseline.

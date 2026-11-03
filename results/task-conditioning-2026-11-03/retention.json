@@ -1,0 +1,16 @@
+{
+  "schema": "task-reference-candidate-retention-v1",
+  "session": "rl-stocks-cpu-07e11d409cec",
+  "cleanup_verified": true,
+  "removed_files": [],
+  "retention_reason": "Original transport/source upload and differing checkpoint snapshots retain provenance and recovery evidence; no temporary partial downloads remain. Final selected/final reports use lossless compressed paths without duplicate pretty JSON.",
+  "partial_downloads": [],
+  "protected": {
+    ".runtime/usage-ledger.json": "fcfa14ac8680f00e7c91fd9c6cdb2269beb4a1f5a7471e919d9ad02f99c80eb0",
+    ".runtime/task-reference-family-closure-v1.json": "6d27a7c801d8c8fbf0b8dc173ec5d59761de04038fc3187b268ec3f0deeafe0d",
+    ".runtime/task-conditioning-family-closure-v1.json": "6d27a7c801d8c8fbf0b8dc173ec5d59761de04038fc3187b268ec3f0deeafe0d",
+    "artifacts/task-reference-candidate-acceptance-v1/result.json": "688a84aae2f7b77fc44e64eada1ac1badea2dab4f34e14699402dcbb78299aa0",
+    "artifacts/colab/rl-stocks-cpu-07e11d409cec/artifacts.tar.gz": "a544085741ec7c4da637c17b29a45c2b7ae466c4713123c5373298fb6e4a5b96",
+    "plan.html": "26c4bf4b910013bf47231d47b74ccf82ece9fe05296cd5eefddccc300d3a365f"
+  }
+}
