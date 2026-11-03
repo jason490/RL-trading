@@ -15,6 +15,15 @@ optimizer cause. Next is a distinct training-supported direction/exit hypothesis
 with matched controls and bounded profiling; no rescue of this closed family,
 retired-test reuse or promotion from its training-selected result.
 
+The next concrete engineering step is the separate
+[residual-boosting feasibility](residual-boosting.md): ridge plus a fixed shallow
+nonlinear correction on the original completed-label training-era forecast task.
+Protocol, untrained constructor and immutable portable predictor are implemented;
+six checks pass. No fit/allocation is admitted yet. Implement guarded worker and
+artifact acceptance, then inspect actual default kernel and profile the complete
+operation within0.25 incremental units. Original predictive and trading gates
+remain separate; earlier families stay closed.
+
 ## Historical research log
 
 Historical engineering frontier (2026-11-02): the separate reference arithmetic

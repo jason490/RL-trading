@@ -3249,3 +3249,14 @@ fail. Family closed without development/confirmation or promotion. Original
 150/130 budget and retired-test isolation preserved. Project40.196982/150; owned
 CPU session stopped/verified and fresh account idle. Next is saved-path diagnosis
 before a distinct bounded research hypothesis; robust/prospective winner unmet.
+
+
+### Ridge-residual boosting engineering — 2026-11-03
+
+[Distinct feasibility contract](docs/residual-boosting.md) fixes a shallow256-stage
+residual correction to the existing ridge forecast, reusing completed targets,
+fit/probe folds, feature arms, seeds and original predictive gates. Constructor
+and immutable portable additive-tree prediction implemented; six no-fit checks
+pass. Guarded Colab worker, fitted native/portable parity, artifact acceptance and
+current-kernel/timing/budget admission remain pending. No optimization, allocation,
+new units or reopening of prior failed families. Project40.196982365/150 unchanged.

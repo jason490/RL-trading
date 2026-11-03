@@ -1,0 +1,94 @@
+{
+  "schema": "ridge-residual-boosting-v1",
+  "name": "ridge-residual-boosting-feasibility-2026-11-03",
+  "hypothesis": "A fixed shallow stagewise residual correction may add nonlinear predictive information beyond ridge; test completed training-era forecasts before any trading-policy integration.",
+  "signal_dataset": "84b1e38843f8e623c3abbee3d1373c4e20556b39b85891ba8201c1ff54723235",
+  "source_dataset": "830eba077a761a2de72b3935f9cf91b1b2694ecc51a888943f4d0cb30d124eed",
+  "arms": [
+    "masked",
+    "full"
+  ],
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "target": {
+    "horizon_sessions": 20,
+    "entry": "Next session open, after entry-day corporate actions",
+    "exit": "20th session close, including later splits and cash dividends",
+    "kind": "Gross log unit total return; no reinvestment of dividends",
+    "label_availability": "Exit bar available_time; never before completion",
+    "exclusions": "No execution costs, borrow, stops, targets, or whole-share rounding; a forecast label, not an oracle trading action"
+  },
+  "folds": {
+    "fit_label_completed_through": "2017-12-31",
+    "probe_decision_start": "2018-01-01",
+    "probe_label_completed_through": "2020-12-31",
+    "project_validation": "Never used for supervision, preprocessing or feasibility scoring",
+    "purge": "Discard every window straddling fit/probe, episode end, or training end; source episodes already split at known gaps",
+    "normalization": "Refit raw feature means/scales on fit rows only; ignore source pooled2010-2020 normalizer"
+  },
+  "feasibility_gate": {
+    "candidates": [
+      "masked",
+      "full"
+    ],
+    "minimum_mean_mse_reduction_vs_constant_and_own_ridge": 0.02,
+    "minimum_passing_seeds": 2,
+    "per_seed_pass": "Final overall probe MSE must improve at least2% versus BOTH constant and the same-arm ridge.",
+    "minimum_mean_daily_spearman_ic": 0.02,
+    "minimum_symbols_per_daily_ic": 10,
+    "probe_years": [
+      2018,
+      2019,
+      2020
+    ],
+    "maximum_yearly_mean_mse_deterioration_vs_constant_and_own_ridge": 0.0,
+    "yearly_and_ic_aggregation": "Average final MLP metrics equally across seeds; require every probe year to pass its baseline limits.",
+    "feature_information_comparison": "Report paired full-minus-masked MSE by seed; descriptive, not an additional gate.",
+    "ranking": "Among passing candidates use lowest mean final probe MSE; exact ties follow declared candidate order. No checkpoint selection.",
+    "interpretation": "Two declared feature candidates, overlapping targets and correlated symbols are not independent samples; no p-value or trading-profit claim. If neither passes stop; no automatic PPO allocation."
+  },
+  "ridge_penalty": 0.01,
+  "model": {
+    "loss": "squared_error",
+    "learning_rate": 0.03,
+    "n_estimators": 256,
+    "subsample": 0.8,
+    "min_samples_leaf": 64,
+    "max_depth": 2,
+    "max_features": 1.0,
+    "init": "zero",
+    "n_iter_no_change": null,
+    "warm_start": false
+  },
+  "fit_rule": "Fit the unchanged ridge on fit rows only; fit boosting to y minus that fit-row ridge prediction; final forecast is ridge plus boosting residual. No probe targets or dates enter fitting.",
+  "selection": "Fixed final256 trees only; no early stopping, tree-count choice, parameter search or checkpoint selection.",
+  "execution": {
+    "location": "Google Colab CPU only",
+    "max_study_units": 0.25,
+    "project_ceiling_units": 150,
+    "project_teardown_units": 130,
+    "minimum_account_balance": 150,
+    "account_teardown_balance": 170,
+    "allocation_deadline_seconds": 7200,
+    "maximum_allocations": 1,
+    "automatic_retry": false,
+    "allocation_admitted": false,
+    "requirements": [
+      "Inspect actual default kernel before installation; match supported Python and locked dependencies",
+      "Two-tree discarded-prefix finite-loss/save/load/portable-parity acceptance and conservative full-operation timing projection",
+      "Meter each minute, include setup/idle/download/failure, preserve original project ledger",
+      "Retrieve durable artifacts; stop and verify owned cleanup on every exit"
+    ]
+  },
+  "scope": "Predictive feasibility only; no simulator/reward/action/protection changes, brokerage orders, development or retired-test data.",
+  "failure_rule": "Failure closes this fixed candidate; no extra trees, seeds, target/gate revisions or automatic policy training. Prior failed families remain closed.",
+  "next_requirements": [
+    "Implement guarded Colab worker and exact payload/transport acceptance",
+    "Verify full forecast parity, immutable preprocessing and recomputed original gates",
+    "Admit runtime only after current-kernel/dependency/profile/budget preflight"
+  ],
+  "performance_promotion": false
+}

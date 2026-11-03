@@ -154,3 +154,7 @@ construction, optimization, Colab allocation, new units or retired-test access.
 [Recurrent off-policy feasibility](recurrent-offpolicy.md) records the tagged
 SAC_RNN replay audit, circular-buffer counterexample and required sequence,
 burn-in, reset and bootstrap acceptance before a new learner comparison.
+
+[Residual boosting feasibility](residual-boosting.md): fixed ridge-plus-shallow-tree
+forecast hypothesis, portable immutable arrays, unchanged predictive gates and
+pending guarded Colab worker/profile admission.
