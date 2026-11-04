@@ -1,0 +1,94 @@
+{
+  "schema": "trpo-feasibility-v1",
+  "stage": "engineering acceptance only; no performance allocation admitted",
+  "hypothesis": "A conjugate-gradient natural-gradient step with explicit KL-constrained line search is a distinct policy optimizer from PPO clipping or early stopping; test engineering feasibility before claiming economic benefit.",
+  "algorithms": [
+    "ppo",
+    "trpo"
+  ],
+  "implementation": {
+    "ppo": "stable_baselines3.PPO2.7.0",
+    "trpo": "sb3_contrib.TRPO2.7.0"
+  },
+  "observations": {
+    "shape": 21,
+    "profile": "execution_full",
+    "market_features": 7,
+    "action_shape": 4,
+    "dtype": "float32",
+    "action_bounds": [
+      -1,
+      1
+    ]
+  },
+  "shared_parameters": {
+    "learning_rate": 0.0003,
+    "n_steps": 1000,
+    "batch_size": 50,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "normalize_advantage": true,
+    "use_sde": false
+  },
+  "policy": {
+    "hidden": [
+      64,
+      64
+    ],
+    "activation": "tanh",
+    "separate_actor_value": true,
+    "ortho_init": true,
+    "log_std_init": 0.0,
+    "output": "native diagonal Gaussian mean, Box-clipped deterministic action"
+  },
+  "ppo_parameters": {
+    "n_epochs": 10,
+    "clip_range": 0.2,
+    "ent_coef": 0.0
+  },
+  "trpo_parameters": {
+    "cg_max_steps": 15,
+    "cg_damping": 0.1,
+    "line_search_shrinking_factor": 0.8,
+    "line_search_max_iter": 10,
+    "n_critic_updates": 10,
+    "target_kl": 0.01,
+    "sub_sampling_factor": 1
+  },
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "smoke": {
+    "steps": 1024,
+    "n_steps": 128,
+    "batch_size": 32,
+    "network_geometry": "same64x64 as research",
+    "purpose": "finite actual updates, optimizer/state counters, save/load/frozen action agreement and timing; no smoke-return selection"
+  },
+  "research_profile": {
+    "steps": 2000,
+    "n_steps": 1000,
+    "updates": 2,
+    "purpose": "original rollout geometry, measured line-search/Hessian/critic cost; no return gate"
+  },
+  "comparison_not_yet_registered": "Require fixed matched controls and selected/final training/development gates before performance fitting; strongest relevant SAC comparator must be included with comparable selection, not silently replace it by weaker PPO.",
+  "constraints": {
+    "features_reward_execution": "No indicator, reward, action, stop/target, costs, exposure cap or maximum holding changes",
+    "training_location": "Colab CPU only; local constructors/save-load/inference do not optimize",
+    "source_families": "Earlier failed PPO safeguards, SAC families, CrossQ integrity stop and forecasting families remain closed",
+    "retired_test_access": false,
+    "prospective_required": true,
+    "performance_promotion": false
+  },
+  "requirements": [
+    "Match actual default Colab Python and reuse current locked dependencies/official CLI",
+    "Exact shared untrained actor/value/log_std arrays between PPO and TRPO per seed; no warm start",
+    "Count actual accepted actor line searches separately from nominal updates; record actual critic Adam steps and finite states",
+    "Freeze inference without normalization mutation and validate full saved economic paths with numerical backend provenance",
+    "Profile before allocating screens; use original project150/130 and account150/170 budgets, all charges and guaranteed owned cleanup",
+    "Preregister selected/final multi-seed development gates and prospective confirmation; smoke or lower KL alone never promotes"
+  ],
+  "colab_allocation_admitted": false
+}

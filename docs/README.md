@@ -158,3 +158,7 @@ burn-in, reset and bootstrap acceptance before a new learner comparison.
 [Residual boosting feasibility](residual-boosting.md): fixed ridge-plus-shallow-tree
 forecast hypothesis, portable immutable arrays, unchanged predictive gates and
 pending guarded Colab worker/profile admission.
+
+[TRPO engineering feasibility](trpo-feasibility.md): fixed native TRPO/PPO
+initialization and save/load acceptance, distinct constrained update procedure,
+and pending numerical/Colab/cost requirements before performance registration.

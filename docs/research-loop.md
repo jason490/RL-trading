@@ -14,6 +14,14 @@ alignment and worsening within-session error in both arms, with2020 dominating
 overall deterioration. Removing a common offset does not account for the entire
 observed gap. No correction, year selection or new fit followed. Next distinct
 hypothesis must address evidence beyond a larger tabular residual learner.
+Next concrete engineering branch: [TRPO feasibility](trpo-feasibility.md), a
+distinct constrained natural-gradient/line-search update, not a reopened PPO KL
+early-stop study. Local no-fit constructors show exact shared actor/value/log_std
+starts and save/load/repeat parity across11/23/37; four tests pass. It remains
+unregistered for performance. Next frozen numerical-contract acceptance, actual
+Colab smoke/update counters and bounded research-geometry profiling before any
+matched experiment. Include the strongest relevant SAC comparator, not just PPO.
+No new units or evidence of improved return.
 Earlier pending/allocation instructions below are historical and superseded.
 
 

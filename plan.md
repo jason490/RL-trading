@@ -3349,3 +3349,14 @@ in both arms accompany2020-dominated deterioration.14 identity/validation tests
 pass; inputs/ledger/family closure unchanged. No local fitting/calibration,
 Colab charge or gate reopening. Evidence informs the next distinct hypothesis;
 boosted residual models remain ineligible for RL transfer.
+
+
+### TRPO engineering feasibility — 2026-11-04
+
+Distinct native TRPO/PPO preflight contract and unregistered constructors added.
+Four no-fit tests prove exact complete initial tensors across11/23/37,11,465
+policy parameters, deterministic/local save-load prediction parity and strict
+observation/action contracts. No optimization or generic training registration.
+Frozen tanh-hidden/Box-clipped numerical inference, actual Colab smoke/counters
+and profiling are next; no performance allocation admitted. Existing scientific
+families stay closed; original budgets and test isolation preserved.
