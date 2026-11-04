@@ -197,3 +197,31 @@ Gaussian direction, and exact restoration against an untrained native TRPO
 policy. These are engineering checks, not evidence that learned updates pass.
 The verifier still needs integration with complete retrieved checkpoint/reference
 acceptance and a bounded Colab controller before the four-case allocation.
+
+### Retrieved smoke artifact acceptance
+
+`evaluation/trpo_smoke.py` verifies the five bounded regular artifacts per case
+against recorded checksums before loading trusted project ZIPs. It restores
+initial/final native configurations, transition and epoch/update counters, finite
+policy tensors and exact optimizer ownership/moments. PPO requires Adam state
+for every policy parameter; TRPO requires critic-only state. Fractional step
+counters, missing moments and negative second moments fail acceptance.
+
+Saved actor-update endpoints must match the native checkpoints. Every update
+passes the independent Gaussian KL/rollback/continuity verifier. Reference actors
+are independently re-exported from each native ZIP and must match exactly;
+eight reference predictions use the saved rollout observations and must reproduce
+all recorded output bits. Native repeated inference must leave model and optimizer
+state unchanged. Sampling, per-update Adam counts, accepted-search/HVP counts,
+CPU/thread metadata and positive measured learning time are reconciled. Matrix
+acceptance requires equal complete initial PPO/TRPO policies within each pair.
+The artifacts are rehashed after inspection.
+
+Seven additional tests cover native initial save/load, counter rejection, both
+optimizer ownership patterns, corrupted moments, pre-load checksum rejection,
+and complete synthetic PPO artifact restoration plus a tampered reference output.
+Synthetic counters/moments are explicitly fixture data, never local optimization
+or proof that a real learner ran. Worker observation and controller provenance
+are still necessary. Root dataset/preprocessing/source admission and cleanup are
+not established by this per-case verifier; the future controller must bind them.
+No actual Colab smoke/profile result or performance promotion is claimed.

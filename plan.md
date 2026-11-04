@@ -3404,3 +3404,11 @@ Hessian-vector calls/update; finite moments and critic exclusion of actor enforc
 Native/reference checkpoint/probe evidence and before/after actor states saved.
 20 no-fit tests pass. No allocation yet: independent learned-state restoration
 and controller/budget/transport admission remain; no performance study admitted.
+
+- 2026-11-04 TRPO feasibility: independent retrieved smoke checkpoint acceptance
+  implemented for native configuration/counters, optimizer ownership/moments,
+  saved actor-update endpoints/KL/rollback, exact reference re-export/predictions,
+  sampling/HVP/Adam receipts and paired initialization. Synthetic restoration
+  tests do not optimize locally. Dedicated bounded controller/root provenance
+  admission and actual four-case Colab learning/profile remain pending; no
+  performance allocation or trading promotion is admitted.
