@@ -189,6 +189,16 @@ def test_independent_restoration_rejects_changed_metrics_and_labels(tmp_path, mo
     }
     (tmp_path / "result.json").write_bytes(canonical(result))
     np.savez_compressed(tmp_path / "probe-predictions.npz", **arrays)
+    save_boosting(tmp_path / "prefix.npz", ridge, [leaf] * 2)
+    (tmp_path / "progress.json").write_bytes(
+        canonical(
+            [
+                {"arm": a, "seed": s, "trees": 256, "fit_loss_curve": [0.01] * 256}
+                for a in ("masked", "full")
+                for s in (11, 23, 37)
+            ]
+        )
+    )
     assert verifier.verify(tmp_path, "ignored")["restored_forecasts"] == 468
     result["gate"]["passed"] = True
     (tmp_path / "result.json").write_bytes(canonical(result))

@@ -66,7 +66,9 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 48:
+    if plan.get('version') == 49:
+        if plan != boosting_plan():raise ValueError('fixed residual boosting plan required')
+    elif plan.get('version') == 48:
         from rl_stocks.core.contracts import canonical
         if canonical(plan) != canonical(task_reference_candidate_plan()):
             raise ValueError('fixed reference routed candidate plan required')
@@ -949,3 +951,12 @@ def task_reference_candidate_plan():
                 allocation_deadline_seconds=7200, teardown_reserve_seconds=600,
                 acceptance_stage='complete transport then verified shutdown then offline acceptance')
     return plan
+
+
+def boosting_plan():
+    from rl_stocks.training.supervised.boosting_spec import PROTOCOL_SHA256
+    from rl_stocks.training.supervised.spec import SIGNAL_DATASET
+    return {'version':49,'accelerator':'CPU','protocol_sha256':PROTOCOL_SHA256,
+            'dataset_contract':{'identity':SIGNAL_DATASET,'kind':'completed-training-signal-v1'},
+            'allocation_deadline_seconds':7200,'teardown_reserve_seconds':900,
+            'jobs':[{'algorithm':'residual_boosting','device':'cpu','smoke':False,'seed':11,'steps':1538}]}

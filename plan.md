@@ -3270,3 +3270,14 @@ restoration implemented. Ten focused no-fit tests pass, including tampered label
 and false success. Actual fitted-tree parity and performance remain untested.
 Next exact fleet job/source/payload/one-claim/kernel/budget/cleanup integration;
 no allocation admitted yet, project40.196982365/150 unchanged.
+
+
+### Residual boosting runtime integration — 2026-11-04
+
+Exact version49 CPU job, persistent0.25-unit allowance and one-time claim, default
+kernel preflight, original allocation deadline, bounded durable transport and
+stop-before-independent-restoration lifecycle implemented.27 focused lifecycle/
+model checks pass, including metering/kernel failures and claim reuse. No full
+execution retry, test-data access or policy allocation. Actual Colab prefix
+parity/timing and fixed six-model predictive gate are next, within original
+project150/130 and account150/170 protections.

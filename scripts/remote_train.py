@@ -23,6 +23,22 @@ def main():
     if (plan['accelerator']=='CPU' and cuda or
         plan['accelerator']!='CPU' and (not cuda or plan['accelerator'] not in gpu)):
         raise RuntimeError('requested runtime hardware not verified')
+    if plan.get('version') == 49:
+        import time
+        from rl_stocks.core.provenance import source_identity, repository_state
+        from rl_stocks.core.contracts import digest
+        from rl_stocks.training.supervised.boosting_runner import run
+        payload=json.loads((root/'dataset.json').read_text())
+        if digest(payload)!=plan['dataset_contract']['identity']:
+            raise ValueError('fixed completed signal payload required')
+        dataset=root/'data'/digest(payload);dataset.mkdir(parents=True,exist_ok=False)
+        (root/'dataset.json').rename(dataset/'dataset.json')
+        os.environ['RL_COLAB_OWNED_WORKER']='1'
+        run(dataset,root/'artifacts/boosting',remaining_seconds=float(os.environ['RL_ALLOCATION_DEADLINE'])-time.time())
+        (root/'artifacts/completion.json').write_text(json.dumps(dict(
+            plan=plan,dataset=dataset.name,python=list(sys.version_info[:3]),gpu=gpu,
+            source_git=repository_state(root),source_hash=source_identity()),indent=2))
+        return
     if plan.get('version') == 48:
         from rl_stocks.core.provenance import source_identity, repository_state
         from rl_stocks.core.contracts import digest

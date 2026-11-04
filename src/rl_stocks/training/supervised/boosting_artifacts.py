@@ -9,6 +9,7 @@ import numpy as np
 from rl_stocks.core.contracts import canonical, digest
 from rl_stocks.data.generation.datasets import read_dataset
 from rl_stocks.inference.boosting_signal import BoostingSignalBundle
+from rl_stocks.inference.boosting_arrays import load_boosting
 from rl_stocks.inference.bundle import checksum
 from rl_stocks.training.supervised.boosting_spec import protocol, PROTOCOL_SHA256
 from rl_stocks.training.supervised.metrics import score, gate
@@ -32,6 +33,21 @@ def verify(output, dataset_path):
         )
     ):
         raise ValueError("completed residual-boosting scope mismatch")
+    load_boosting(output / "prefix.npz", prefix=True)
+    progress = json.loads((output / "progress.json").read_text())
+    if (
+        len(progress) != 6
+        or {(r["arm"], r["seed"]) for r in progress}
+        != {(a, s) for a in ("masked", "full") for s in (11, 23, 37)}
+        or any(
+            r["trees"] != 256
+            or len(r["fit_loss_curve"]) != 256
+            or not np.isfinite(r["fit_loss_curve"]).all()
+            or min(r["fit_loss_curve"]) < 0
+            for r in progress
+        )
+    ):
+        raise ValueError("complete finite fixed fit histories required")
     bundle = BoostingSignalBundle(
         output / "frozen" / result["bundle_id"], data["names"], data["source_dataset"]
     )

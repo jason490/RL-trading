@@ -126,3 +126,45 @@ The runtime is not yet registered: next implement one-time ownership, exact job
 and payload/source binding, actual default-kernel preflight, shared-ledger budget
 admission, bounded transport and guaranteed owned cleanup. No session has been
 allocated and no new predictive or trading result exists.
+
+## Metered runtime integration — 2026-11-04
+
+The dedicated version49 CPU job is now registered. Its exact plan binds the
+original completed-label payload and fixed protocol. One-time allocation
+ownership and a persistent0.25-unit study baseline live under `.runtime`;
+the original cumulative project ledger is preserved. An existing claim rejects
+all automatic repeats, including attempts to reuse the same owned session ID.
+
+The controller inspects the default kernel before installing dependencies,
+passes the original allocation deadline into the worker, enforces a900-second
+reserve and samples shared consumption each minute. Full execution is never
+retried after a lost CLI reply. Five-minute uniquely named checkpoint retrieval
+preserves the last valid archive. Complete final transport is allowlisted and
+bounded before extraction; it binds the plan, clean captured source and actual
+CPU/kernel metadata. The owned runtime is stopped and shutdown verified before
+local forecast restoration. Post-stop verification is bounded to1800 seconds;
+failure retains source artifacts and cannot restart training. A failed predictive
+gate writes a persistent family closure and permits no automatic policy training.
+
+From a clean committed repository, reuse the installed official CLI:
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+.venv/bin/python scripts/run_residual_boosting.py \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+State: `.runtime/residual-boosting-fleet-v1.json`; baseline/claim:
+`.runtime/residual-boosting-budget-v1.json` and
+`.runtime/residual-boosting-allocation-v1.json`. Do not delete them to rerun.
+Source/model/forecast artifacts stay under `artifacts/colab/OWNED_SESSION`;
+independent acceptance is `artifacts/residual-boosting-restoration-v1.json`.
+Use the existing fleet recovery command with the exact recorded fleet/state if
+cleanup fails; it stops only owned sessions and performs no learning.
+
+Twenty-seven focused controller/model tests pass, including unsupported-kernel
+shutdown before installation, metering-failure cleanup, nonrepeating claims,
+exact transport, immutable saved forecasts, false-success/label rejection and
+finite fixed loss histories. Existing task-reference lifecycle tests still pass.
+Actual Colab prefix timing/parity and the six forecasts remain pending; this
+integration is not evidence of improved predictive or trading performance.
