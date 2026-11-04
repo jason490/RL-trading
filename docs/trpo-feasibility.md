@@ -122,3 +122,60 @@ verification and shutdown pass. Project40.213697006/150, measured debit0 versus
 learning-smoke/optimizer/line-search counters, frozen preprocessing/full-path
 checks and cost profile. Synthetic arithmetic acceptance is not training success
 or permission for a performance allocation.
+
+## Guarded learning smoke worker — 2026-11-04
+
+[Fixed smoke/profile contract](../configs/experiments/trpo_smoke.json) SHA256
+`e0b8a26cbfd51eee4046544d49e282abd1409b024ec4a0637d92b774bffc5f7b`
+binds the existing111-symbol dataset, original seven-feature normalizer and
+accepted arithmetic receipt. It specifies four fresh seed11 cases:
+
+| Case | Transitions | Rollout/batch | Native train calls | Actual Adam invocations |
+| --- | ---: | ---: | ---: | ---: |
+| Smoke PPO |1024|128/32|8|320|
+| Smoke TRPO |1024|128/32|8|320 critic-only|
+| Profile PPO |2000|1000/50|2|400|
+| Profile TRPO |2000|1000/50|2|400 critic-only|
+
+Total6048 transitions; no smoke-return or checkpoint selection. Network64×64
+geometry, reward, features, four actions, costs, training-only normalization and
+causal stock/ETF window sampler remain unchanged. Both models in each pair must
+share initial actor/value/log_std arrays before either learns. Collection RNGs
+reset to seed11 immediately before each case; no warm start.
+
+`training/trpo_audit.py` observes native operations without calling an optimizer
+or initiating learning. It records actual Adam invocations, required finite/
+nonzero gradient families, complete finite parameter-owned moments and exact
+step counters. TRPO actor gradients must be absent during critic Adam; hashes
+also prove those steps did not change actor weights. Failed line searches must
+restore actor bytes and report zero KL; accepted searches must change actor bytes
+and remain strictly below the fixed KL target. At least one accepted search is
+required per TRPO smoke/profile case, not assumed from a nominal update count.
+
+Hessian-vector counts are separate: the installed conjugate-gradient solver
+uses one initialization product, up to15 iteration products, and one final
+scaling product, giving a2…17 bound per native TRPO update. This counts actual
+calls, not a nominal15. PPO's native`_n_updates` counts epochs, while TRPO counts
+train calls; neither is relabeled as Adam steps. All hooks/wrappers are removed
+before checkpoint serialization, including failure paths.
+
+`training/trpo_smoke.py` checks actual default Colab CPU/kernel before any data
+construction or fitting. It accepts only the pinned payload, filters environment
+episodes to training, and verifies source/preprocessing immutability. It saves
+initial/final native ZIPs and reference actors, per-update actor before/after
+weights and original observations, actual sampling/backend metadata, reference
+probe vectors and durable per-case progress. Native save/load/repeat actions must
+match exactly; reference arithmetic is stored separately. No development or
+retired-test scoring occurs.
+
+Twenty focused tests pass without local learning, including counter/ownership/
+finite-gradient integrity, inconsistent rollback, excessive KL, unauthorized
+critic mutation of actor, split/preprocessing rejection and pre-I/O Colab guard.
+The observer fixtures populate tensors/state manually and never call backward,
+optimizer.step or a real learner. Existing initialization/reference checks pass.
+
+The worker is not yet registered with a Colab controller. Next implement independent
+learned-state/KL/rollback/reference restoration and bounded ownership/transport/
+budget admission. Actual finite learning, counts, profile timings and full economic
+paths are still unverified. This implementation does not admit a performance
+screen or change the original project/account protections.

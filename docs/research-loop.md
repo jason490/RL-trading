@@ -25,8 +25,11 @@ checks; one CPU allocation capped0.05 units, source/actor/vector bindings,
 minute metering and mandatory owned cleanup. Actual defaultColabPython3.13.18 CPU probe now passes all512 reference
 coordinates exactly in3.4792s; owned cleanup verified, no fitting. Charge
 0.000526086, project40.213697006/150, fresh account548.04 idle.
-Full-path numerical acceptance, actual
-Colab smoke/update counters and bounded research-geometry profiling before any
+Guarded four-case PPO/TRPO smoke/profile worker and actual Adam/Hessian/
+line-search observers are now implemented;20 no-fit tests pass. It remains
+unregistered for allocation. Next independent learned-state/KL/rollback/reference
+restoration and bounded controller admission, then actual Colab smoke/profile.
+Full-path numerical acceptance is still required before any
 matched experiment. Include the strongest relevant SAC comparator, not just PPO.
 No new units or evidence of improved return.
 Earlier pending/allocation instructions below are historical and superseded.

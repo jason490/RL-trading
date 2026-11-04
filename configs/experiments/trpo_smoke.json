@@ -1,0 +1,75 @@
+{
+  "schema": "trpo-native-smoke-v1",
+  "feasibility_protocol_sha256": "ba19cae92e039c0f6d86e01d8309203899835596daefa6abc1ea4245b706c7ab",
+  "reference_acceptance_sha256": "6ab69c5376c5626880161f13e22774228b1310d4f96e1ef38128347e7f9f1256",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "names": 7,
+  "observation_profile": "execution_full",
+  "sampling": "stock_etf_cycle_windows",
+  "reward": "net_log_equity",
+  "reward_scale": 1.0,
+  "exposure_execution": "unrestricted",
+  "seed": 11,
+  "collection_rng": "Reset native algorithm seed11 immediately before each case learns; no warm start",
+  "cases": [
+    {
+      "mode": "smoke",
+      "algorithm": "ppo",
+      "steps": 1024,
+      "rollout": 128,
+      "batch": 32,
+      "episode_steps": 128,
+      "nominal_updates": 8,
+      "adam_steps": 320
+    },
+    {
+      "mode": "smoke",
+      "algorithm": "trpo",
+      "steps": 1024,
+      "rollout": 128,
+      "batch": 32,
+      "episode_steps": 128,
+      "nominal_updates": 8,
+      "adam_steps": 320
+    },
+    {
+      "mode": "profile",
+      "algorithm": "ppo",
+      "steps": 2000,
+      "rollout": 1000,
+      "batch": 50,
+      "episode_steps": 512,
+      "nominal_updates": 2,
+      "adam_steps": 400
+    },
+    {
+      "mode": "profile",
+      "algorithm": "trpo",
+      "steps": 2000,
+      "rollout": 1000,
+      "batch": 50,
+      "episode_steps": 512,
+      "nominal_updates": 2,
+      "adam_steps": 400
+    }
+  ],
+  "requirements": [
+    "Full initial PPO/TRPO actor/value/log_std arrays match before either pair learns",
+    "Finite actual required gradients/moments; TRPO critic Adam never changes actor",
+    "Track accepted/rolled-back line searches and actual HVP calls; at least one accepted per TRPO case",
+    "Record before/after actor tensors and original rollout observations for independent KL/rollback audit",
+    "Save initial/final native ZIP and reference actor, exact native save/load repeats and reference probe vectors",
+    "Freeze original normalizer; use only train episodes; no development/checkpoint selection or retired test",
+    "Native KL recorded strictly below0.01 on acceptance; later independent native recomputation tolerance at most1e-6 for engineering metadata only",
+    "Profile learns original rollout geometry; no performance allocation or projection admission from smoke returns"
+  ],
+  "colab_only": true,
+  "performance_evaluated": false,
+  "allocation_admitted": false,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "automatic_retry": false
+}

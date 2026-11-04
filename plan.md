@@ -3392,3 +3392,15 @@ shutdown verified; measured0/conservative0.000526086 units, project40.213697006/
 fresh account548.04 idle. One exact staging duplicate removed; original evidence/
 claim retained. Next learning-smoke counters, frozen preprocessing/full paths and
 research-geometry profiling before performance admission.
+
+
+### TRPO learning smoke worker and update audit — 2026-11-04
+
+Fixed four-case smoke/profile contract and Colab-only worker implemented.6048
+total transitions planned, paired fresh seed11 initial tensors, original source/
+normalizer/sampler/actions/reward preserved. Observers distinguish Adam steps,
+native epoch/train counters, accepted/rolled-back actor searches and actual2…17
+Hessian-vector calls/update; finite moments and critic exclusion of actor enforced.
+Native/reference checkpoint/probe evidence and before/after actor states saved.
+20 no-fit tests pass. No allocation yet: independent learned-state restoration
+and controller/budget/transport admission remain; no performance study admitted.
