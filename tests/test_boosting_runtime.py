@@ -7,7 +7,7 @@ import pytest
 from rl_stocks.core.contracts import canonical
 from rl_stocks.runtime.colab.boosting_runtime import admission, claim, extract_transport
 from rl_stocks.runtime.colab.budget import Ledger
-from rl_stocks.runtime.colab.jobs import boosting_plan, validate_plan
+from rl_stocks.runtime.colab.jobs import boosting_plan, reviewed_boosting_plan, validate_plan
 from test_task_reference_fleet import setup, CandidateCLI, run as run_fleet
 from rl_stocks.runtime.colab.fleet import Fleet
 
@@ -66,8 +66,9 @@ def archive(path, plan, extra=False):
     return completion
 
 
-def test_complete_transport_before_offline_model_acceptance(tmp_path):
-    plan = boosting_plan()
+@pytest.mark.parametrize("reviewed", [False, True])
+def test_complete_transport_before_offline_model_acceptance(tmp_path, reviewed):
+    plan = reviewed_boosting_plan() if reviewed else boosting_plan()
     p = tmp_path / "ok.tar.gz"
     completion = archive(p, plan)
     assert (
@@ -82,12 +83,16 @@ def test_complete_transport_before_offline_model_acceptance(tmp_path):
     assert not (tmp_path / "badout").exists()
 
 
-def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatch):
+@pytest.mark.parametrize("reviewed", [False, True])
+def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatch, reviewed):
     original, _ = setup(tmp_path, monkeypatch)
     root = original.root
     from rl_stocks.runtime.colab import boosting_runtime
 
     monkeypatch.setattr(boosting_runtime, "admission", lambda *a: (0.25, 0.0))
+    from rl_stocks.runtime.colab import boosting_review
+
+    monkeypatch.setattr(boosting_review, "admission", lambda *a: (0.25, 0.0))
 
     def transport(path, plan, dataset_id, destination):
         destination.mkdir()
@@ -98,7 +103,13 @@ def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatc
     runner = Fleet(
         root,
         cli,
-        [{"id": "boost", "dataset": "dataset", "plan": boosting_plan()}],
+        [
+            {
+                "id": "boost",
+                "dataset": "dataset",
+                "plan": reviewed_boosting_plan() if reviewed else boosting_plan(),
+            }
+        ],
         1,
         root / ".runtime/boost.json",
     )
@@ -148,3 +159,65 @@ def test_boosting_failure_cleans_owned_runtime(tmp_path, monkeypatch, options):
             == 1
         )
         assert not any("--env" in a for a in cli.calls)
+
+
+def test_review_admission_preserves_failure_charges_and_science(tmp_path, monkeypatch):
+    from rl_stocks.runtime.colab import boosting_review as review
+
+    runtime = tmp_path / ".runtime"
+    runtime.mkdir()
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "results/residual-boosting-2026-11-04").mkdir(parents=True)
+    originals = {
+        ".runtime/residual-boosting-fleet-v1.json": b"original failed state",
+        ".runtime/residual-boosting-allocation-v1.json": b"original claim",
+    }
+    for name, data in originals.items():
+        (tmp_path / name).write_bytes(data)
+    failure = {
+        "worker_started": False,
+        "model_fitting_performed": False,
+        "cleanup_verified": True,
+        "protected": {name: review.sha(tmp_path / name) for name in originals},
+    }
+    receipt = tmp_path / "results/residual-boosting-2026-11-04/bootstrap-failure.json"
+    receipt.write_bytes(canonical(failure))
+    (tmp_path / "science.py").write_text("unchanged")
+    (tmp_path / "scripts/install_colab_bootstrap.py").write_text("bounded bootstrap")
+    config = {
+        "failure_receipt_sha256": review.sha(receipt),
+        "original_study_start_units": 40.0,
+        "scientific_protocol_sha256": "fixed",
+        "original_failed_session": "old",
+        "original_failure_project_units": 40.01,
+        "unchanged_scientific_source_sha256": {"science.py": review.sha(tmp_path / "science.py")},
+        "bootstrap_script_sha256": review.sha(tmp_path / "scripts/install_colab_bootstrap.py"),
+    }
+    monkeypatch.setattr(review, "spec", lambda *a: config)
+    baseline = {"start_units": 40.0, "limit_units": 0.25, "protocol_sha256": "fixed"}
+    base = runtime / "residual-boosting-budget-v1.json"
+    base.write_bytes(canonical(baseline))
+    ledger = Ledger(runtime / "usage-ledger.json")
+    ledger.value["consumed"] = 40.01
+    ledger.value["attempts"] = [
+        {
+            "status": "stopped",
+            "children": {"old": {"session": "old", "status": "stopped", "cleanup_verified": True}},
+        }
+    ]
+    assert review.admission(tmp_path, ledger) == (0.25, 40.0)
+    baseline["start_units"] = 40.01
+    base.write_bytes(canonical(baseline))
+    with pytest.raises(ValueError, match="baseline"):
+        review.admission(tmp_path, ledger)
+    baseline["start_units"] = 40.0
+    base.write_bytes(canonical(baseline))
+    (tmp_path / "science.py").write_text("changed")
+    with pytest.raises(ValueError, match="scientific"):
+        review.admission(tmp_path, ledger)
+    (tmp_path / "science.py").write_text("unchanged")
+    review.claim(ledger, "rl-stocks-cpu-123456789abc")
+    with pytest.raises(RuntimeError):
+        review.admission(tmp_path, ledger)
+    with pytest.raises(RuntimeError):
+        review.claim(ledger, "rl-stocks-cpu-123456789abc")

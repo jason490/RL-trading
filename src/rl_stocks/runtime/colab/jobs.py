@@ -66,7 +66,9 @@ def study_plan(algorithm=None, accelerator="A100", seeds=None):
 
 
 def validate_plan(plan):
-    if plan.get('version') == 49:
+    if plan.get('version') == 50:
+        if plan != reviewed_boosting_plan():raise ValueError('fixed reviewed boosting plan required')
+    elif plan.get('version') == 49:
         if plan != boosting_plan():raise ValueError('fixed residual boosting plan required')
     elif plan.get('version') == 48:
         from rl_stocks.core.contracts import canonical
@@ -960,3 +962,9 @@ def boosting_plan():
             'dataset_contract':{'identity':SIGNAL_DATASET,'kind':'completed-training-signal-v1'},
             'allocation_deadline_seconds':7200,'teardown_reserve_seconds':900,
             'jobs':[{'algorithm':'residual_boosting','device':'cpu','smoke':False,'seed':11,'steps':1538}]}
+
+
+def reviewed_boosting_plan():
+    from rl_stocks.runtime.colab.boosting_review import REVIEW_SHA256
+    plan=boosting_plan();plan.update(version=50,bootstrap_execution_review_sha256=REVIEW_SHA256)
+    return plan

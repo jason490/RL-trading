@@ -184,3 +184,38 @@ is bounded to150 seconds. The actual kernel is inspected first; no local CLI
 upgrade or interpreter replacement occurs. Bootstrap failure immediately stops
 without launching training. Further allocation requires a separately recorded
 execution review; deleting the original claim/state is forbidden.
+
+## Reviewed setup-only continuation — 2026-11-04
+
+[Execution review](../configs/experiments/residual_boosting_execution_review.json)
+SHA `d5c2985a8107f835a7d7d5f28d3c3b06251c6396dc5a2d2ae38b7d6d6ad88454`
+permits exactly one additional allocation after the failed pre-worker setup.
+This explicitly changes the earlier one-allocation execution limit to at most
+two total allocations including that failure; the scientific protocol stays
+unchanged. The review binds the original failure/claim/state, stopped owned
+session, preserved failure charges, exact original0.25-unit baseline, bounded
+bootstrap script and unchanged scientific source bytes from the failed attempt.
+No prior forecast result exists and no model family was reopened.
+
+Version50 uses a separate reviewed claim/state; version49 remains blocked by its
+original claim. The new claim is also single-use, with no automatic repeat.
+Admission rejects source drift, reset budget baselines, missing failure charges,
+unresolved ownership, family closure or an already claimed continuation. All
+project150/130 and account150/170 limits, deadlines, kernel checks, metering,
+retrieval, shutdown and post-stop acceptance remain binding.
+
+Run the explicitly reviewed route from committed source:
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+.venv/bin/python scripts/run_residual_boosting.py --reviewed-bootstrap \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+Reviewed state: `.runtime/residual-boosting-reviewed-fleet-v1.json`; reviewed
+claim: `.runtime/residual-boosting-reviewed-allocation-v1.json`. The original
+baseline, claim, state and failure evidence remain. Thirty-one focused checks
+pass, including both version49/50 transport and lifecycle, rejection of reset
+baselines/source drift/reused review claims, and existing cleanup protections.
+Actual read-only admission passes against the retained original failure and
+current ledger. This is runtime admission evidence, not a predictive result.

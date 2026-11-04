@@ -3292,3 +3292,14 @@ verified; fresh account548.05 idle. Corrected future bootstrap uses bounded
 explicit-timeout official CLI exec; no automatic retry or scientific outcome.
 Project40.199364701/150. A distinct execution review is required before any
 new allocation; original project/study baseline and failed claim stay retained.
+
+
+### Residual boosting setup-only execution review — 2026-11-04
+
+One explicit version50 continuation is admitted after verifying the original
+pre-worker installation failure, owned cleanup, preserved charges/baseline and
+unchanged scientific source.31 focused tests pass, including review-claim reuse,
+baseline reset/source mutation and both transport/lifecycle routes. Original
+version49 stays blocked; one new claim only, same0.25-unit study ceiling and
+project/account safeguards. Actual prefix/native parity and predictive gates
+remain pending. No model change or scientific-family reopening.

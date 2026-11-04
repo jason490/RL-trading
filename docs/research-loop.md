@@ -33,6 +33,13 @@ official CLI exec and a bounded subprocess;28 tests pass. Do not rerun the
 claimed command. Next is a distinct execution-only review preserving this
 failure and all charges before any additional allocation.
 
+A separate setup-only execution review now binds that retained failure, unchanged
+scientific source and original0.25-unit baseline. It permits exactly one explicit
+version50 continuation using bounded bootstrap; version49 stays blocked.31 tests
+pass and actual read-only admission succeeds. Use `--reviewed-bootstrap`; preserve
+both claims, both states and all charges. No forecasts or performance gate have
+yet completed. See the [reviewed route](residual-boosting.md).
+
 ## Historical research log
 
 Historical engineering frontier (2026-11-02): the separate reference arithmetic
