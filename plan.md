@@ -3281,3 +3281,14 @@ model checks pass, including metering/kernel failures and claim reuse. No full
 execution retry, test-data access or policy allocation. Actual Colab prefix
 parity/timing and fixed six-model predictive gate are next, within original
 project150/130 and account150/170 protections.
+
+
+### Residual boosting bootstrap failed before fitting — 2026-11-04
+
+[Failure evidence](results/residual-boosting-2026-11-04/README.md) retains the
+original claim and0.002382336-unit charge. DefaultPython3.13.18 inspection passed;
+official CLI install reply timeout prevented worker launch. Owned shutdown
+verified; fresh account548.05 idle. Corrected future bootstrap uses bounded
+explicit-timeout official CLI exec; no automatic retry or scientific outcome.
+Project40.199364701/150. A distinct execution review is required before any
+new allocation; original project/study baseline and failed claim stay retained.

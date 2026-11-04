@@ -25,6 +25,14 @@ transport integration, then inspect actual default kernel and profile the comple
 operation within0.25 incremental units. Original predictive and trading gates
 remain separate; earlier families stay closed.
 
+The initial residual-boosting allocation failed in bootstrap before fitting:
+[actual failure](../results/residual-boosting-2026-11-04/README.md). Owned cleanup
+is verified; account548.05 idle, project40.199364701/150. The original claim
+and0.25-unit study baseline remain. Future bootstrap uses explicit-timeout
+official CLI exec and a bounded subprocess;28 tests pass. Do not rerun the
+claimed command. Next is a distinct execution-only review preserving this
+failure and all charges before any additional allocation.
+
 ## Historical research log
 
 Historical engineering frontier (2026-11-02): the separate reference arithmetic

@@ -585,7 +585,12 @@ class Fleet:
             if kernel.get('supported') is not True or kernel.get('python',[])[:2] != [3,13]:
                 raise RuntimeError('default Colab Python changed; update and verify project before installing dependencies')
             child['actual_default_python']=kernel['python'];self.budget.ledger.save()
-            self.launch(a,'install',['install','-s',a.session,'uv==0.13.1'],180)
+            if a.task['plan'].get('version')==49:
+                self.launch(a,'bootstrap',['exec','-s',a.session,'--timeout','180','-f',str(self.root/'scripts/install_colab_bootstrap.py')],210)
+            else:self.launch(a,'install',['install','-s',a.session,'uv==0.13.1'],180)
+        elif phase=='bootstrap':
+            if code:raise RuntimeError('bounded default-kernel bootstrap failed; no automatic retry')
+            self.execute(a)
         elif phase=='install':
             if code:
                 if connection_lost(path) and not a.install_retries:

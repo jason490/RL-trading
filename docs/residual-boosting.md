@@ -168,3 +168,19 @@ exact transport, immutable saved forecasts, false-success/label rejection and
 finite fixed loss histories. Existing task-reference lifecycle tests still pass.
 Actual Colab prefix timing/parity and the six forecasts remain pending; this
 integration is not evidence of improved predictive or trading performance.
+
+
+## Initial bootstrap failure and timeout fix — 2026-11-04
+
+[Actual failure](../results/residual-boosting-2026-11-04/README.md): the first
+claimed session stopped before any fitting because official CLI `install`
+inherited a10-second kernel-client timeout. The controller verified shutdown;
+fresh account is idle. Original claim/baseline/failure remain retained; no
+automatic retry. Project40.199364701/150, original study charge0.002382336/0.25.
+
+For this job, bootstrap now uses existing official CLI `exec --timeout180` to
+run `scripts/install_colab_bootstrap.py`, whose default-kernel pip subprocess
+is bounded to150 seconds. The actual kernel is inspected first; no local CLI
+upgrade or interpreter replacement occurs. Bootstrap failure immediately stops
+without launching training. Further allocation requires a separately recorded
+execution review; deleting the original claim/state is forbidden.

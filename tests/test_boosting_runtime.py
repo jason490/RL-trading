@@ -104,6 +104,11 @@ def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatc
     )
     run_fleet(runner)
     assert runner.state["cleanup_verified"] and not cli.active
+    bootstrap = next(
+        a for a in cli.calls if a[0] == "exec" and any("install_colab_bootstrap.py" in x for x in a)
+    )
+    assert bootstrap[bootstrap.index("--timeout") + 1] == "180"
+    assert not any(a[0] == "install" for a in cli.calls)
     completed = runner.state["completed"]["boost"]
     assert completed["runs"] == []
     args = next(a for a in cli.calls if a[0] == "exec" and "--env" in a)
@@ -111,7 +116,9 @@ def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatc
     assert runner.budget.active["children"][completed["session"]]["training_verified"] is False
 
 
-@pytest.mark.parametrize("options", [{"kernel": (3, 14, 0)}, {"fail_meter": True}])
+@pytest.mark.parametrize(
+    "options", [{"kernel": (3, 14, 0)}, {"fail_meter": True}, {"worker_error": True}]
+)
 def test_boosting_failure_cleans_owned_runtime(tmp_path, monkeypatch, options):
     original, _ = setup(tmp_path, monkeypatch)
     root = original.root
@@ -131,3 +138,13 @@ def test_boosting_failure_cleans_owned_runtime(tmp_path, monkeypatch, options):
     assert runner.state["cleanup_verified"] and not cli.active
     if "kernel" in options:
         assert not any(a[0] == "install" for a in cli.calls)
+
+    if options.get("worker_error"):
+        assert (
+            sum(
+                a[0] == "exec" and any("install_colab_bootstrap.py" in x for x in a)
+                for a in cli.calls
+            )
+            == 1
+        )
+        assert not any("--env" in a for a in cli.calls)

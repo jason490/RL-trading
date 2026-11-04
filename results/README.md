@@ -498,3 +498,9 @@ No trading-return comparison or model promotion.
 100k completed, selected90k61.62% and final54.14% versus56.45% holding on the
 training window. Original final group/median floors failed; family closed before
 development. Physical/reference acceptance and owned cleanup verified.
+
+
+[Residual boosting bootstrap failure](residual-boosting-2026-11-04/README.md):
+first claimed attempt stopped before fitting due to inherited CLI installer
+reply timeout. Cleanup verified; future explicit-timeout bootstrap fixed and
+tested. Original claim/charges retained; no predictive outcome or automatic retry.

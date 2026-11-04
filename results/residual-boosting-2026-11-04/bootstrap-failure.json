@@ -1,0 +1,31 @@
+{
+  "schema": "residual-boosting-bootstrap-failure-v1",
+  "session": "rl-stocks-cpu-545b22d6c5eb",
+  "fleet": "rl-stocks-fleet-c436bbf76504",
+  "source_revision": "bd2ec13",
+  "failure_phase": "install",
+  "reason": "Official CLI install omitted explicit kernel execution timeout and inherited the10-second kernel-client request limit; reply timeout observed.",
+  "worker_started": false,
+  "model_fitting_performed": false,
+  "predictive_outcome": null,
+  "cleanup_verified": true,
+  "measured_units": 0.0,
+  "estimated_units": 0.002382336292001936,
+  "charged_units": 0.002382336292001936,
+  "project_units": 40.199364701495604,
+  "project_remaining_units": 109.8006352985044,
+  "study_original_start_units": 40.1969823652036,
+  "study_limit_units": 0.25,
+  "account_balance": 548.05,
+  "account_rate": 0,
+  "active_assignments": 0,
+  "automatic_retry_performed": false,
+  "original_claim_preserved": true,
+  "protected": {
+    ".runtime/residual-boosting-fleet-v1.json": "dd836d270cd47e0f382c033d6f7496462f989c9e8fc5f777dab2f4db57610fe3",
+    ".runtime/residual-boosting-budget-v1.json": "52b2ba1053ce3a06192f93c88a1a587b0bf8d825e24e5ad4f0dd99ddca1cd072",
+    ".runtime/residual-boosting-allocation-v1.json": "f901f07b1fb74062d8ad04adaabd7aa16a3bb49b392c9c7a46159fd6c27dfe05",
+    ".runtime/usage-ledger.json": "300236a8ba5bbcbc399b8c4e93beff2b5ba04cf051de1533f66e1a085dabe69f",
+    ".runtime/rl-stocks-cpu-545b22d6c5eb/install-6-output.txt": "3b7d6032f65dacf1d264dbcd3caa0724d1befa5c82f5e4ee78715de59de1f223"
+  }
+}
