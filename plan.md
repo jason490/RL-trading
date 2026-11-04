@@ -3303,3 +3303,15 @@ baseline reset/source mutation and both transport/lifecycle routes. Original
 version49 stays blocked; one new claim only, same0.25-unit study ceiling and
 project/account safeguards. Actual prefix/native parity and predictive gates
 remain pending. No model change or scientific-family reopening.
+
+
+### Residual boosting duration admission stopped — 2026-11-04
+
+Reviewed bootstrap completed, actual defaultPython3.13.18/CPU, two ridge baselines
+and discarded two-tree prefix fitted with producer parity. Full-model forecasts
+never started:9981.881s projection exceeded7058.859s remaining. Failure archive/
+prefix retrieved and owned shutdown verified. Component timing now separates
+cold construction from scalable fit/parity, retaining2x/900s reserve and original
+fit/gate/deadline settings;22 focused checks pass. Both claims/charges remain,
+prior review rejects source drift. Project40.203170920/150; another execution
+review is next. No predictive/trading performance result or promotion.

@@ -72,7 +72,11 @@ def run(dataset_path, output, *, remaining_seconds):
         residual = {a: y - ridge_predict(ridge[a], x[a]) for a in x}
         stamp = time.monotonic()
         prefix = make_boosting(11, prefix=True)
+        cold_seconds = time.monotonic() - stamp
+        stamp = time.monotonic()
         prefix.fit(x["full"], residual["full"])
+        fit_seconds = time.monotonic() - stamp
+        stamp = time.monotonic()
         export(prefix, ridge["full"], output / "prefix.npz")
         native = ridge_predict(ridge["full"], xp["full"]) + prefix.predict(xp["full"])
         np.testing.assert_allclose(
@@ -83,16 +87,21 @@ def run(dataset_path, output, *, remaining_seconds):
         )
         if not np.isfinite(prefix.train_score_).all():
             raise ValueError("nonfinite prefix loss")
-        projection = 2 * (time.monotonic() - stamp) * 128 * 6 + 900
-        (output / "timing.json").write_bytes(
-            canonical(
-                {
-                    "projected_remaining_seconds": projection,
-                    "remaining_seconds": remaining_seconds - (time.monotonic() - started),
-                }
-            )
+        acceptance_seconds = time.monotonic() - stamp
+        stamp = time.monotonic()
+        make_boosting(11)  # Unfitted warm constructor only; discarded, no extra fitting.
+        warm_seconds = time.monotonic() - stamp
+        from rl_stocks.runtime.colab.boosting_timing import projection
+
+        timing = projection(
+            cold_constructor_seconds=cold_seconds,
+            fit_seconds=fit_seconds,
+            acceptance_seconds=acceptance_seconds,
+            warm_constructor_seconds=warm_seconds,
         )
-        if projection >= remaining_seconds - (time.monotonic() - started):
+        timing["remaining_seconds"] = remaining_seconds - (time.monotonic() - started)
+        (output / "timing.json").write_bytes(canonical(timing))
+        if timing["projected_remaining_seconds"] >= timing["remaining_seconds"]:
             raise TimeoutError("complete fixed fits/retrieval exceed remaining allocation")
         predictions = {"constant": np.full(len(target), float(y.mean()))}
         metrics = {

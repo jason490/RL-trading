@@ -1,0 +1,55 @@
+{
+  "schema": "residual-boosting-reviewed-duration-stop-v1",
+  "session": "rl-stocks-cpu-66edf80ae135",
+  "fleet": "rl-stocks-fleet-38585f96fe8c",
+  "training_source_revision": "7b38242",
+  "default_python": [
+    3,
+    13,
+    18
+  ],
+  "hardware": "CPU",
+  "bootstrap_completed": true,
+  "discarded_prefix_trees_fitted": 2,
+  "ridge_baselines_fitted": 2,
+  "full_models_fitted": 0,
+  "predictive_gate_evaluated": false,
+  "prefix_native_portable_parity_checked_by_worker": true,
+  "independent_native_prefix_parity_reproduced": false,
+  "timing": {
+    "projected_remaining_seconds": 9981.881192448054,
+    "remaining_seconds": 7058.859439352692
+  },
+  "reason": "Conservative prefix-derived full-operation duration exceeds remaining original allocation; stopped before six full fits.",
+  "timing_limitation": "Original timer includes cold constructor/import overhead as well as fit/export/parity; components were not separately recorded, so the dominant remote component cannot be recovered.",
+  "archive_sha256": "93c14cd9433c18f7da47f7acc11cbc97340aeafc94b0a63f1383c41ab7f6988f",
+  "archive_members": {
+    "artifacts/boosting/prefix.npz": {
+      "bytes": 2746,
+      "sha256": "1f5f91e2f9aa7f3a48afc1aa083fcb9b1f0e635b34efb9c9e17429e18251001d"
+    },
+    "artifacts/boosting/timing.json": {
+      "bytes": 87,
+      "sha256": "4c89b15c322915c1e8ffb2324dcf0b0f10e416b4f66aa8f2d15630223f517908"
+    },
+    "artifacts/bootstrap-log.txt": {
+      "bytes": 5091,
+      "sha256": "a1d8f1e7bfa8f2595443c99e8b9a04104a9c290a573590bc2df4e3526926890d"
+    },
+    "artifacts/failure.txt": {
+      "bytes": 1202,
+      "sha256": "5437f56c272f254df1e446ecdc4e3106a1e5e7ccff4d2be15b02923b9f242daa"
+    }
+  },
+  "cleanup_verified": true,
+  "measured_units": 0.0,
+  "estimated_units": 0.003806218343310886,
+  "charged_units": 0.003806218343310886,
+  "project_units": 40.20317091983892,
+  "original_study_start_units": 40.1969823652036,
+  "original_study_used_units": 0.006188554635315313,
+  "study_limit_units": 0.25,
+  "automatic_retry": false,
+  "both_original_claims_preserved": true,
+  "performance_promotion": false
+}

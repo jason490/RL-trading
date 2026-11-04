@@ -219,3 +219,30 @@ pass, including both version49/50 transport and lifecycle, rejection of reset
 baselines/source drift/reused review claims, and existing cleanup protections.
 Actual read-only admission passes against the retained original failure and
 current ledger. This is runtime admission evidence, not a predictive result.
+
+## Reviewed duration stop and component timing — 2026-11-04
+
+The reviewed bootstrap succeeded on actualPython3.13.18/CPU. Both ridge baselines
+and the discarded two-tree prefix fitted and producer native/portable parity
+passed. Full fitting stopped before any six-model forecast/probe metrics because
+9981.881 projected seconds exceeded7058.859 remaining. The controller retrieved
+the complete failure archive and verified owned shutdown.
+[Evidence](../results/residual-boosting-2026-11-04/reviewed-duration-stop.json).
+
+The original aggregate timer included constructor/import startup and scaled it
+with tree count. Because separate components were not saved, the remote dominant
+cost cannot be identified after the fact. Future instrumentation records cold
+construction, fitting, acceptance/export and warm construction individually.
+Only already-spent cold construction is excluded from remaining-work projection;
+fit/acceptance still scale2→256 trees across six models, warm construction is
+charged per model, and2x margin plus900 seconds remain. Invalid/zero/nonfinite
+measurements and overflow reject admission. This corrects measurement granularity
+without changing a deadline, model, fit count, target, seed or predictive gate.
+
+Twenty-two timing/worker/predictor/runtime checks pass. Retrieved prefix arrays
+restore with valid topology and finite predictions; this is not independent
+reproduction of the producer's native sklearn prefix. Original archives, prefix,
+state, claims and charges remain retained. Combined study usage0.006188555/0.25,
+project40.203170920/150. No further allocation or automatic repeat occurred.
+The previous execution review rejects the changed worker; another explicit
+execution review with actual component timing is required before new fitting.

@@ -40,6 +40,16 @@ pass and actual read-only admission succeeds. Use `--reviewed-bootstrap`; preser
 both claims, both states and all charges. No forecasts or performance gate have
 yet completed. See the [reviewed route](residual-boosting.md).
 
+Latest residual-boosting status: the reviewed bootstrap completed, two ridge
+baselines/two-tree prefix fitted, and producer prefix parity passed. Full fits
+stopped at duration admission (9981.881 projected vs7058.859 remaining); no
+predictive result exists. See [reviewed stop](../results/residual-boosting-2026-11-04/README.md).
+Retrieved prefix restores structurally/finite; owned cleanup verified. Corrected
+component timing preserves2x margin/900s reserve/deadline and all model/gate
+settings.22 focused checks pass. Project40.203170920/150, study0.006188555/0.25.
+Both claims remain; previous review rejects changed worker bytes. Next is another
+explicit execution-only timing review, not rerunning either claimed route.
+
 ## Historical research log
 
 Historical engineering frontier (2026-11-02): the separate reference arithmetic
