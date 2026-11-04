@@ -2783,3 +2783,14 @@ selected90k/final100k reference paths and unchanged fitted gate independently
 verified.52 focused runtime/gate tests passed before allocation. Performance gate
 failed; no development or confirmation seeds. All owned cleanup verified; fresh
 account548.05/rate0/assignments0. Project40.196982/150, unchanged ledger baseline.
+
+
+### Residual boosting completed — 2026-11-04
+
+[Actual feasibility outcome](../results/residual-boosting-2026-11-04/README.md):
+six256-tree fits complete on defaultColabPython3.13.18/CPU; all111,696 forecasts
+restore, immutable normalizers and fit-only ridge equations accepted; original
+metrics/gates independently recomputed. Both arms fail,0/3 seeds each; no trading
+transfer. Forty preallocation tests plus actual post-cleanup acceptance. Six
+verified duplicates removed1,708,566 bytes;16 protected hashes unchanged. All
+owned sessions stopped; account548.04 idle, project40.213170920/150 settled.

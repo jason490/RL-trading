@@ -1,8 +1,9 @@
 # Ridge-residual boosting feasibility
 
-This is a separate forecast-feasibility hypothesis, not a continuation of the
-closed routed SAC, random-forest or supervised-MLP families. No trading model is
-promoted and no allocation is admitted by the current implementation.
+Current result: the completed six-model study failed its original predictive
+gates and is closed. No RL transfer or trading promotion.
+[Complete outcome, credits and cleanup](../results/residual-boosting-2026-11-04/README.md).
+The implementation/review notes below record the historical sequence.
 
 ## Reason for the experiment
 
@@ -278,3 +279,17 @@ Forty focused checks and actual read-only admission pass, covering all three
 transport/lifecycle routes, original baseline/source preservation, measurement
 bounds, failure cleanup and independent forecast acceptance. Actual component
 measurements/full forecasts remain pending. Project40.203170920/150 at admission.
+
+
+## Completed outcome — 2026-11-04
+
+Six full models completed after the component-timing gate passed. Masked/full
+mean MSE is15.94%/15.06% worse than constant and19.10%/18.26% worse than own
+ridge;0/3 seeds pass per arm. Rank IC0.02159/0.04613 cannot override MSE/yearly
+failures. Family closed; no RL integration or predictive hyperparameter rescue.
+All111,696 forecasts independently restore, native/portable max error0, and
+immutable normalization, fit-only ridge equations and original gates pass
+engineering acceptance. Project40.213170920/150 after delayed-debit settlement;
+study0.016188555/0.25 including failures, fresh account548.04 idle. All owned
+cleanup verified. Six byte-identical stage copies removed1,708,566 bytes; frozen
+models/source/forecasts/archives retained and restoration rerun successfully.

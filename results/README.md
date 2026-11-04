@@ -504,3 +504,10 @@ development. Physical/reference acceptance and owned cleanup verified.
 first claimed attempt stopped before fitting due to inherited CLI installer
 reply timeout. Cleanup verified; future explicit-timeout bootstrap fixed and
 tested. Original claim/charges retained; no predictive outcome or automatic retry.
+
+
+[Completed residual boosting feasibility](residual-boosting-2026-11-04/README.md):
+six models/111,696 restored forecasts, both predictive arms fail,0/3 seeds each.
+No RL transfer. Component-timing/owned cleanup pass; all charges preserved,
+project40.213170920/150 after settlement. Six exact duplicates removed with
+post-cleanup restoration unchanged. Earlier bootstrap notes are historical.

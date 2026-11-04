@@ -3326,3 +3326,16 @@ warm constructor; all model/fit/target/seed/gate settings remain.40 tests and
 actual read-only admission pass. New component measurements must fit the original
 7200-second deadline with2x/900s reserve before full fitting. No automatic repeat
 or predictive outcome; earlier routes remain blocked.
+
+
+### Residual boosting feasibility completed and closed — 2026-11-04
+
+[Complete result](results/residual-boosting-2026-11-04/README.md): all six fixed
+models fitted,111,696 forecasts independently restored; native/portable max
+error0. Both arms fail original MSE/yearly gates with0/3 passing seeds. No RL
+transfer, candidate rescue, development or retired-test scoring. Component
+timing admitted within unchanged deadline/margin/reserve. Original failures/
+charges retained; study0.016188555/0.25, project40.213170920/150 after idle
+settlement. All owned cleanup verified, six exact duplicates removed, frozen
+evidence and post-cleanup restoration retained. Robust-return goal remains unmet;
+next distinct hypothesis must follow evidence review.

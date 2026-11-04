@@ -1,5 +1,17 @@
 # Bounded autonomous research
 
+Latest completed study (2026-11-04):
+[residual boosting](../results/residual-boosting-2026-11-04/README.md) fails both
+original predictive gates. Masked/full MSE15.94%/15.06% worse than constant,
+19.10%/18.26% worse than ridge,0/3 passing seeds. Positive rank IC does not
+override failure. Family closed without RL transfer or development/test access.
+111,696 forecasts restore; owned cleanup and post-cleanup restoration verified.
+Project40.213170920/150, study0.016188555/0.25 including both prior stops; fresh
+account548.04 idle. No robust/prospective trading winner. Next is evidence review
+for a distinct hypothesis, not another attempt within this closed candidate.
+Earlier pending/allocation instructions below are historical and superseded.
+
+
 Current frontier (2026-11-03): the complete routed reference comparison failed
 its original final fitted gate and is closed before development/confirmation.
 Selected90k61.62%, final100k54.14%, holding56.45% on the fixed training window.
