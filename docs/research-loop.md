@@ -22,7 +22,9 @@ unregistered for performance. Frozen tanh-hidden/direct-clipped reference actor 
 checks; untrained128-point local probe takes1.4174s with native/reference
 differences disclosed. A fixed stdlib-only cross-machine arithmetic probe is now implemented with38
 checks; one CPU allocation capped0.05 units, source/actor/vector bindings,
-minute metering and mandatory owned cleanup. Actual execution is next.
+minute metering and mandatory owned cleanup. Actual defaultColabPython3.13.18 CPU probe now passes all512 reference
+coordinates exactly in3.4792s; owned cleanup verified, no fitting. Charge
+0.000526086, project40.213697006/150, fresh account548.04 idle.
 Full-path numerical acceptance, actual
 Colab smoke/update counters and bounded research-geometry profiling before any
 matched experiment. Include the strongest relevant SAC comparator, not just PPO.

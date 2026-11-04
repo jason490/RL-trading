@@ -3,7 +3,8 @@
 This module gives the proposed tanh-hidden policy a separate frozen arithmetic
 contract. It leaves existing task-SAC actors and accepted results unchanged.
 [Local engineering evidence](../results/trpo-feasibility-2026-11-04/README.md)
-is complete; cross-machine and full-simulator acceptance remain pending.
+and the fixed cross-machine probe pass; learned-policy and full-simulator
+acceptance remain pending.
 
 ## Input, activation and output contract
 
@@ -88,7 +89,7 @@ interpreter replacement or performance allocation is admitted.
 MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src \
 .venv/bin/python scripts/prepare_tanh_probe.py \
   --output .runtime/trpo-tanh-reference-probe-v1.json
-PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.tanh_probe \
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.tanh_probe \
   .runtime/trpo-tanh-reference-probe-v1.json \
   --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
 ```
@@ -114,3 +115,17 @@ stops only its owned session and verifies termination; cleanup failure reports
 the owned ID and recovery command. Thirty-eight focused probe/actor/constructor/
 shared-lifecycle checks pass, including failure cleanup, bit/runtime mismatch and
 repeat-allocation rejection. Actual Colab outcome remains pending.
+
+
+## Actual cross-machine outcome — 2026-11-04
+
+[Exact acceptance](../results/trpo-feasibility-2026-11-04/cross-machine-acceptance.json):
+all128 fixed points/512 output coordinates match host reference bits on actual
+ColabPython3.13.18/CPU. Neither native package was imported;3.4792s inference.
+Independent post-cleanup verification passes, and initial source hashes remain.
+No training, markets or preprocessing updates. Owned shutdown verified, measured
+debit0 and conservative charge0.000526086; project40.213697006/150. Fresh account
+548.04, rate0, assignments0. One verified staging duplicate removed, retained
+weights/source/results/ledger/claim unchanged. This does not admit a performance
+study: learned-policy, bundle/full-path acceptance and actual learning profile
+remain necessary. The claim prevents repeating this allocation automatically.

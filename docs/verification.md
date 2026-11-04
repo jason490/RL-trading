@@ -2794,3 +2794,13 @@ metrics/gates independently recomputed. Both arms fail,0/3 seeds each; no tradin
 transfer. Forty preallocation tests plus actual post-cleanup acceptance. Six
 verified duplicates removed1,708,566 bytes;16 protected hashes unchanged. All
 owned sessions stopped; account548.04 idle, project40.213170920/150 settled.
+
+
+### TRPO untrained reference arithmetic — 2026-11-04
+
+38 focused tests and actual Colab inference-only acceptance pass. All128/512
+reference points/coordinates match exactly on defaultPython3.13.18 CPU;3.4792s,
+no Torch/NumPy imports. Retrieved artifact independently rechecked; original
+source hashes unchanged. No optimization/market/preprocessing use. Owned session
+stopped/verified, one verified staging duplicate removed; project40.213697006/150,
+fresh account548.04 idle. Learned-state/full-path/Colab smoke remain pending.

@@ -511,3 +511,9 @@ six models/111,696 restored forecasts, both predictive arms fail,0/3 seeds each.
 No RL transfer. Component-timing/owned cleanup pass; all charges preserved,
 project40.213170920/150 after settlement. Six exact duplicates removed with
 post-cleanup restoration unchanged. Earlier bootstrap notes are historical.
+
+
+[TRPO arithmetic engineering](trpo-feasibility-2026-11-04/README.md): local
+constructor/export checks and actual default-Colab CPU probe pass all512 exact
+reference coordinates. No training/markets; owned cleanup verified, project
+40.213697006/150. Learned-policy/full-path acceptance and smoke/profile pending.

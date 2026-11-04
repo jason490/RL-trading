@@ -3381,3 +3381,14 @@ inference-only allocation capped0.05 units/1200 seconds with360-second reserve
 is next; no installs, optimization, markets or performance promotion. Actual
 default Python and exact512 output coordinates must verify before arithmetic
 acceptance. Original project/account limits and prior claims remain unchanged.
+
+
+### TRPO exact reference probe completed — 2026-11-04
+
+Actual defaultColabPython3.13.18/CPU: all128 synthetic points/512 reference
+outputs match exactly,3.4792 seconds, isolated stdlib worker. Post-cleanup
+verification/source identities pass; no fitting or market evaluation. Owned
+shutdown verified; measured0/conservative0.000526086 units, project40.213697006/150,
+fresh account548.04 idle. One exact staging duplicate removed; original evidence/
+claim retained. Next learning-smoke counters, frozen preprocessing/full paths and
+research-geometry profiling before performance admission.

@@ -111,3 +111,14 @@ It uses one separately capped0.05-unit CPU inference-only allocation, original
 shared ledger/account protections and mandatory cleanup; no installation or
 optimization.38 focused probe/actor/constructor/lifecycle checks pass. Actual
 Colab arithmetic acceptance is next; learning smoke/performance stay unadmitted.
+
+
+## Actual reference arithmetic accepted — 2026-11-04
+
+The owned Colab probe matches all512 reference coordinates exactly on actual
+Python3.13.18/CPU in3.4792 seconds, with no native imports or fitting. Independent
+verification and shutdown pass. Project40.213697006/150, measured debit0 versus
+0.000526086 conservative charge; fresh account548.04 idle. Next actual Colab
+learning-smoke/optimizer/line-search counters, frozen preprocessing/full-path
+checks and cost profile. Synthetic arithmetic acceptance is not training success
+or permission for a performance allocation.
