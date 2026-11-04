@@ -293,3 +293,24 @@ engineering acceptance. Project40.213170920/150 after delayed-debit settlement;
 study0.016188555/0.25 including failures, fresh account548.04 idle. All owned
 cleanup verified. Six byte-identical stage copies removed1,708,566 bytes; frozen
 models/source/forecasts/archives retained and restoration rerun successfully.
+
+## Saved residual-error diagnosis
+
+`scripts/diagnose_residual_boosting.py` binds the accepted failed forecast file
+and restoration receipt. It audits every masked/full seed on the pooled probe
+and each2018/2019/2020 year:24 fixed cells. No model/dataset/provider is opened,
+no calibration applied and no gate/family decision changes. The original ledger
+and family closure are hashed before/after. Run from clean committed source:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/diagnose_residual_boosting.py \
+  --output results/residual-boosting-2026-11-04/saved-error-diagnosis.json
+```
+
+The exact change in MSE versus ridge is correction squared magnitude minus twice
+its alignment with ridge's remaining error. Pooled bias/variability and weighted
+session-common/within-session components also reconcile that same change. This
+can explain how positive ranking coexists with worse absolute forecasts, without
+proving a training cause or identifying a tradable signal. No scale/offset or
+future-label rule is inferred. Fourteen focused identity/validation checks pass;
+actual diagnosis follows the committed-source check.
