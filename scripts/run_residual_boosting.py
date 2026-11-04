@@ -8,7 +8,11 @@ import signal
 from rl_stocks.core.contracts import canonical
 from rl_stocks.core.files import write_once
 from rl_stocks.runtime.colab.fleet import CLI, Fleet
-from rl_stocks.runtime.colab.jobs import boosting_plan, reviewed_boosting_plan
+from rl_stocks.runtime.colab.jobs import (
+    boosting_plan,
+    reviewed_boosting_plan,
+    component_boosting_plan,
+)
 from rl_stocks.training.supervised.boosting_artifacts import verify
 from rl_stocks.training.supervised.spec import SIGNAL_DATASET
 
@@ -17,11 +21,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cli-python", required=True)
     parser.add_argument("--reviewed-bootstrap", action="store_true")
+    parser.add_argument("--component-timing", action="store_true")
     args = parser.parse_args()
+    if args.component_timing and args.reviewed_bootstrap:
+        parser.error("choose one explicit review")
     root = Path.cwd()
     state = root / (
-        ".runtime/residual-boosting-reviewed-fleet-v1.json"
-        if args.reviewed_bootstrap
+        ".runtime/residual-boosting-component-fleet-v1.json"
+        if args.component_timing
+        else ".runtime/residual-boosting-reviewed-fleet-v1.json"
+        if args.reviewed_bootstrap or args.component_timing
         else ".runtime/residual-boosting-fleet-v1.json"
     )
     dataset = root / "data/signals" / SIGNAL_DATASET
@@ -29,7 +38,11 @@ def main():
         {
             "id": "residual-boosting",
             "dataset": str(dataset),
-            "plan": reviewed_boosting_plan() if args.reviewed_bootstrap else boosting_plan(),
+            "plan": component_boosting_plan()
+            if args.component_timing
+            else reviewed_boosting_plan()
+            if args.reviewed_bootstrap
+            else boosting_plan(),
         }
     ]
     runner = Fleet(root, CLI(root, args.cli_python), tasks, 1, state)

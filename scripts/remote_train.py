@@ -23,7 +23,7 @@ def main():
     if (plan['accelerator']=='CPU' and cuda or
         plan['accelerator']!='CPU' and (not cuda or plan['accelerator'] not in gpu)):
         raise RuntimeError('requested runtime hardware not verified')
-    if plan.get('version') in (49,50):
+    if plan.get('version') in (49,50,51):
         import time
         from rl_stocks.core.provenance import source_identity, repository_state
         from rl_stocks.core.contracts import digest

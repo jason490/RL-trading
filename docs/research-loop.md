@@ -50,6 +50,13 @@ settings.22 focused checks pass. Project40.203170920/150, study0.006188555/0.25.
 Both claims remain; previous review rejects changed worker bytes. Next is another
 explicit execution-only timing review, not rerunning either claimed route.
 
+A separate component-timing execution review now admits one explicit version51
+continuation, preserving both stopped claims/states, raw duration archive,
+original charges/baseline and scientific settings.40 checks and actual read-only
+admission pass. Use `--component-timing`; earlier routes stay blocked. The new
+measurements must pass the original deadline/margin/reserve before six full fits;
+no larger runtime or predictive threshold change. See [contract](residual-boosting.md).
+
 ## Historical research log
 
 Historical engineering frontier (2026-11-02): the separate reference arithmetic

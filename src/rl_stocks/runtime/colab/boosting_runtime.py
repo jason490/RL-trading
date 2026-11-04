@@ -53,12 +53,23 @@ def claim(ledger, session):
 
 
 def extract_transport(path, plan, dataset_id, destination):
-    from rl_stocks.runtime.colab.jobs import boosting_plan, reviewed_boosting_plan, validate_plan
+    from rl_stocks.runtime.colab.jobs import (
+        boosting_plan,
+        reviewed_boosting_plan,
+        component_boosting_plan,
+        validate_plan,
+    )
 
     validate_plan(plan)
     if (
         canonical(plan)
-        != canonical(reviewed_boosting_plan() if plan.get("version") == 50 else boosting_plan())
+        != canonical(
+            component_boosting_plan()
+            if plan.get("version") == 51
+            else reviewed_boosting_plan()
+            if plan.get("version") == 50
+            else boosting_plan()
+        )
         or dataset_id != plan["dataset_contract"]["identity"]
     ):
         raise ValueError("fixed boosting transport required")

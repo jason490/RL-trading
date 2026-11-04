@@ -302,7 +302,7 @@ def validate_tasks(tasks,root):
             from rl_stocks.runtime.colab.jobs import validate_context_payload
             if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('trend-context task dataset identity mismatch')
             validate_context_payload(read_dataset(dataset),plan)
-        if plan.get('version') in (13,14,49,50):
+        if plan.get('version') in (13,14,49,50,51):
             from rl_stocks.data.generation.datasets import read_dataset
             from rl_stocks.training.supervised.spec import validate_payload
             if dataset.name!=plan['dataset_contract']['identity']:raise ValueError('signal task dataset identity mismatch')
@@ -318,14 +318,14 @@ class Fleet:
         self.concurrency=concurrency;self.state_path=Path(state_path)
         self.budget=FleetBudget(self.root/'.runtime/usage-ledger.json')
         self.allocation_plan_seconds=None
-        if any(t['plan'].get('version') in (49,50) for t in self.tasks):
-            if self.tasks[0]['plan']['version']==50:
+        if any(t['plan'].get('version') in (49,50,51) for t in self.tasks):
+            if self.tasks[0]['plan']['version'] in (50,51):
                 from rl_stocks.runtime.colab.boosting_review import admission
             else:
                 from rl_stocks.runtime.colab.boosting_runtime import admission
-            if len(self.tasks)!=1 or concurrency!=1 or self.tasks[0]['plan']['version'] not in (49,50):
+            if len(self.tasks)!=1 or concurrency!=1 or self.tasks[0]['plan']['version'] not in (49,50,51):
                 raise ValueError('one dedicated residual boosting CPU job required')
-            study_limit,study_start=admission(self.root,self.budget.ledger)
+            study_limit,study_start=admission(self.root,self.budget.ledger,True) if self.tasks[0]['plan']['version']==51 else admission(self.root,self.budget.ledger)
             self.allocation_plan_seconds=[7200]
         if any(t['plan'].get('version') == 48 for t in self.tasks):
             from rl_stocks.training.task_reference_runtime import admit
@@ -490,8 +490,8 @@ class Fleet:
         preferred=6600 if any(j['steps']==250000 for j in a.task['plan']['jobs']) else 5400 if long else 1800
         if self.budget.active.get('allocation_plan_seconds') is not None and child.get('allocation_seconds',0)>7200:
             preferred=child['allocation_seconds']
-        if a.task['plan'].get('version') in (48,49,50):preferred=7200
-        timeout=execution_window(child['deadline']-time.time(),preferred,900 if a.task['plan'].get('version') in (49,50) else 600 if long else 300)
+        if a.task['plan'].get('version') in (48,49,50,51):preferred=7200
+        timeout=execution_window(child['deadline']-time.time(),preferred,900 if a.task['plan'].get('version') in (49,50,51) else 600 if long else 300)
         if preserve_deadline:
             timeout=min(timeout,a.exec_deadline-time.monotonic())
             if timeout<=20:raise TimeoutError('existing remote execution deadline')
@@ -499,7 +499,7 @@ class Fleet:
         a.exec_deadline=min(a.exec_deadline,next_deadline) if preserve_deadline else next_deadline
         a.snapshot_due=time.monotonic()+60
         args=['exec','-s',a.session,'--timeout',str(timeout),'-f',str(self.root/'scripts/remote_smoke.py')]
-        if a.task['plan'].get('version') in (49,50):args+=['--env','RL_ALLOCATION_DEADLINE='+str(child['deadline'])]
+        if a.task['plan'].get('version') in (49,50,51):args+=['--env','RL_ALLOCATION_DEADLINE='+str(child['deadline'])]
         self.launch(a,'exec',args,timeout)
 
     def stop(self,a):
@@ -516,7 +516,7 @@ class Fleet:
         if a.snapshot:a.snapshot.terminate();a.snapshot=None
         if was_running and not self.budget.ledger.value['budget_stopped']:
             try:
-                name='salvage-checkpoint.tar.gz' if a.task['plan'].get('version') in (48,49,50) else 'checkpoint.tar.gz'
+                name='salvage-checkpoint.tar.gz' if a.task['plan'].get('version') in (48,49,50,51) else 'checkpoint.tar.gz'
                 self.download(a,'salvage','/content/research-checkpoint.tar.gz',name,45)
                 return
             except Exception:pass
@@ -535,7 +535,7 @@ class Fleet:
                 else:a.snapshot.close()
                 if code==0:
                     child=self.budget.active['children'][a.session]
-                    if a.task['plan'].get('version') in (48,49,50):
+                    if a.task['plan'].get('version') in (48,49,50,51):
                         from rl_stocks.runtime.colab.task_reference_snapshots import retain
                         target=self.root/'artifacts/colab'/a.session/f'checkpoint-{a.snapshot_sequence:06d}.tar.gz'
                         try:
@@ -553,14 +553,14 @@ class Fleet:
         if a.phase in ('exec','ready','await_export') and not a.snapshot and time.monotonic()>=a.snapshot_due:
             self.budget.guard(a.session,50)
             folder=self.root/'artifacts/colab'/a.session;folder.mkdir(parents=True,exist_ok=True)
-            if a.task['plan'].get('version') in (48,49,50):
+            if a.task['plan'].get('version') in (48,49,50,51):
                 a.snapshot_sequence+=1
                 a.snapshot_candidate=folder/f'checkpoint-{a.snapshot_sequence:06d}.partial.tar.gz'
                 destination=a.snapshot_candidate
             else:destination=folder/'checkpoint.tar.gz'
             a.snapshot=self.cli.launch(['download','-s',a.session,'/content/research-checkpoint.tar.gz',str(destination)],
                 self.root/'.runtime'/a.session/'snapshot-output.txt',45)
-            a.snapshot_due=time.monotonic()+(300 if a.task['plan'].get('version') in (48,49,50) else 60)
+            a.snapshot_due=time.monotonic()+(300 if a.task['plan'].get('version') in (48,49,50,51) else 60)
 
     def completed_command(self,a,code,path):
         phase=a.phase;child=self.budget.active['children'][a.session]
@@ -576,7 +576,7 @@ class Fleet:
             self.launch(a,'upload',['upload','-s',a.session,str(a.payload),'/content/research-upload.tar.gz'],120)
         elif phase=='upload':
             if code:raise RuntimeError('runtime upload failed')
-            if a.task['plan'].get('version') in (48,49,50):
+            if a.task['plan'].get('version') in (48,49,50,51):
                 self.launch(a,'kernel',['exec','-s',a.session,'--timeout','30','-f',str(self.root/'scripts/check_colab_kernel.py')],45)
             else:self.launch(a,'install',['install','-s',a.session,'uv==0.13.1'],180)
         elif phase=='kernel':
@@ -588,7 +588,7 @@ class Fleet:
             if kernel.get('supported') is not True or kernel.get('python',[])[:2] != [3,13]:
                 raise RuntimeError('default Colab Python changed; update and verify project before installing dependencies')
             child['actual_default_python']=kernel['python'];self.budget.ledger.save()
-            if a.task['plan'].get('version') in (49,50):
+            if a.task['plan'].get('version') in (49,50,51):
                 self.launch(a,'bootstrap',['exec','-s',a.session,'--timeout','180','-f',str(self.root/'scripts/install_colab_bootstrap.py')],210)
             else:self.launch(a,'install',['install','-s',a.session,'uv==0.13.1'],180)
         elif phase=='bootstrap':
@@ -603,9 +603,9 @@ class Fleet:
         elif phase=='exec':
             if code:
                 child['exec_cli_failed']=True
-                if a.task['plan'].get('version') in (48,49,50) and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') in (48,49,50,51) and worker_not_started(self.root,a.session):
                     raise RuntimeError('candidate worker did not start; cleanup without retry')
-                if a.task['plan'].get('version') not in (38,39,40,41,42,43,44,45,47,48,49,50) and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') not in (38,39,40,41,42,43,44,45,47,48,49,50,51) and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
             a.phase='await_export';a.probe_due=0.;child['phase']=a.phase;self.budget.ledger.save();self.save()
         elif phase=='ready':
@@ -623,8 +623,8 @@ class Fleet:
             if code:
                 if a.download_attempts>=3:raise RuntimeError('final download retries exhausted')
                 a.download_attempts+=1;self.download(a,'download','/content/research-artifacts.tar.gz','artifacts.tar.gz');return
-            if a.task['plan'].get('version') in (48,49,50):
-                if a.task['plan']['version'] in (49,50):
+            if a.task['plan'].get('version') in (48,49,50,51):
+                if a.task['plan']['version'] in (49,50,51):
                     from rl_stocks.runtime.colab.boosting_runtime import extract_transport as extract_screen_transport
                 else:
                     from rl_stocks.runtime.colab.task_screen_artifacts import extract_screen_transport
@@ -651,7 +651,7 @@ class Fleet:
             runs=json.loads((output/'verification.json').read_text())
             self.accept_verified_export(a,runs,output/'artifacts.tar.gz',already_extracted=True)
         elif phase=='salvage':
-            name='salvage-checkpoint.tar.gz' if a.task['plan'].get('version') in (48,49,50) else 'checkpoint.tar.gz'
+            name='salvage-checkpoint.tar.gz' if a.task['plan'].get('version') in (48,49,50,51) else 'checkpoint.tar.gz'
             if code==0:child['retrieved'].append(str(self.root/'artifacts/colab'/a.session/name))
             self.stop(a)
         elif phase=='stop':self.launch(a,'verify',['sessions'],25,teardown=True)
@@ -709,7 +709,7 @@ class Fleet:
             if time.monotonic()+20>=a.exec_deadline:raise TimeoutError('remote export deadline')
             if time.monotonic()>=a.probe_due:
                 child=self.budget.active['children'][a.session]
-                if a.task['plan'].get('version') not in (38,39,40,41,42,43,44,45,47,48,49,50) and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
+                if a.task['plan'].get('version') not in (38,39,40,41,42,43,44,45,47,48,49,50,51) and child.get('exec_cli_failed') and not a.exec_retries and worker_not_started(self.root,a.session):
                     a.exec_retries+=1;self.execute(a,preserve_deadline=True);return
                 self.download(a,'ready','/content/research-artifacts.ready','export.ready',20)
             return
@@ -733,7 +733,7 @@ class Fleet:
             if self.state_path.exists():raise RuntimeError('existing fleet state requires recovery review')
             if self.budget.ledger.value['budget_stopped'] or any(a['status']!='stopped' for a in self.budget.ledger.value['attempts']):
                 raise BudgetStop('project stop or unresolved ownership requires manual review')
-            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,47,48,49,50) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
+            if any(t['plan'].get('version') in (21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,47,48,49,50,51) for t in self.tasks) and self.budget.ledger.account_teardown_balance<170:
                 raise BudgetStop('study requires account floor150/teardown170')
             if not (self.root/'requirements.lock').is_file():raise RuntimeError('dependency lock missing')
             if any(t['plan'].get('version') == 44 for t in self.tasks) or any(not j['smoke'] for t in self.tasks for j in t['plan']['jobs']):
@@ -763,12 +763,12 @@ class Fleet:
                                 if a.phase not in ('stop','verify'):self.budget.guard(a.session,60)
                             pending=next((a for a in self.actors if a.phase=='pending'),None)
                             if pending and len(active)<self.concurrency and not any(a.phase in ('new','status') for a in active):
-                                if pending.task['plan'].get('version') in (49,50):
-                                    if pending.task['plan']['version']==50:
+                                if pending.task['plan'].get('version') in (49,50,51):
+                                    if pending.task['plan']['version'] in (50,51):
                                         from rl_stocks.runtime.colab.boosting_review import claim
                                     else:
                                         from rl_stocks.runtime.colab.boosting_runtime import claim
-                                    claim(self.budget.ledger,pending.session)
+                                    claim(self.budget.ledger,pending.session,True) if pending.task['plan']['version']==51 else claim(self.budget.ledger,pending.session)
                                     self.budget.admit(pending.session,'CPU',allocation_seconds=7200,teardown_reserve_seconds=900)
                                 elif pending.task['plan'].get('version') == 48:
                                     from rl_stocks.training.task_reference_runtime import claim_candidate

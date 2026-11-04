@@ -246,3 +246,35 @@ state, claims and charges remain retained. Combined study usage0.006188555/0.25,
 project40.203170920/150. No further allocation or automatic repeat occurred.
 The previous execution review rejects the changed worker; another explicit
 execution review with actual component timing is required before new fitting.
+
+## Component-timing execution review — 2026-11-04
+
+[Component review](../configs/experiments/residual_boosting_component_review.json)
+SHA `ecfcec3e90321480db69af12be342f100dfb775385268517eba4b921b856aa1a`
+permits exactly one explicit version51 continuation. Maximum total allocations
+are now three including the stopped installer attempt and the stopped duration
+probe. This is a documented execution-limit change, not a reset: both original
+claims/states, raw duration archive, stopped owned sessions, failure charges and
+original0.25-unit baseline must remain. The six-model scientific protocol stays
+fixed; no full-model forecast result was observed before this review.
+
+Only prefix timing instrumentation changed in the worker: separate clock samples,
+an additional discarded **unfitted** warm constructor, and component projection.
+Full/prefix fitting calls, input design, parameters, target, folds, seeds, parity
+and predictive gates remain. The new helper retains2x margin/900-second reserve;
+actual measurements must admit work within the unchanged7200-second allocation.
+No larger deadline, reduced fit count or relaxed predictive threshold is allowed.
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+.venv/bin/python scripts/run_residual_boosting.py --component-timing \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+State: `.runtime/residual-boosting-component-fleet-v1.json`; claim:
+`.runtime/residual-boosting-component-allocation-v1.json`. Earlier routes stay
+blocked. The new claim is single-use and no further attempt starts automatically.
+Forty focused checks and actual read-only admission pass, covering all three
+transport/lifecycle routes, original baseline/source preservation, measurement
+bounds, failure cleanup and independent forecast acceptance. Actual component
+measurements/full forecasts remain pending. Project40.203170920/150 at admission.

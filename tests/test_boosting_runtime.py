@@ -7,7 +7,12 @@ import pytest
 from rl_stocks.core.contracts import canonical
 from rl_stocks.runtime.colab.boosting_runtime import admission, claim, extract_transport
 from rl_stocks.runtime.colab.budget import Ledger
-from rl_stocks.runtime.colab.jobs import boosting_plan, reviewed_boosting_plan, validate_plan
+from rl_stocks.runtime.colab.jobs import (
+    boosting_plan,
+    reviewed_boosting_plan,
+    component_boosting_plan,
+    validate_plan,
+)
 from test_task_reference_fleet import setup, CandidateCLI, run as run_fleet
 from rl_stocks.runtime.colab.fleet import Fleet
 
@@ -66,9 +71,15 @@ def archive(path, plan, extra=False):
     return completion
 
 
-@pytest.mark.parametrize("reviewed", [False, True])
+@pytest.mark.parametrize("reviewed", [False, True, "component"])
 def test_complete_transport_before_offline_model_acceptance(tmp_path, reviewed):
-    plan = reviewed_boosting_plan() if reviewed else boosting_plan()
+    plan = (
+        component_boosting_plan()
+        if reviewed == "component"
+        else reviewed_boosting_plan()
+        if reviewed
+        else boosting_plan()
+    )
     p = tmp_path / "ok.tar.gz"
     completion = archive(p, plan)
     assert (
@@ -83,7 +94,7 @@ def test_complete_transport_before_offline_model_acceptance(tmp_path, reviewed):
     assert not (tmp_path / "badout").exists()
 
 
-@pytest.mark.parametrize("reviewed", [False, True])
+@pytest.mark.parametrize("reviewed", [False, True, "component"])
 def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatch, reviewed):
     original, _ = setup(tmp_path, monkeypatch)
     root = original.root
@@ -107,7 +118,11 @@ def test_boosting_lifecycle_stops_before_offline_acceptance(tmp_path, monkeypatc
             {
                 "id": "boost",
                 "dataset": "dataset",
-                "plan": reviewed_boosting_plan() if reviewed else boosting_plan(),
+                "plan": component_boosting_plan()
+                if reviewed == "component"
+                else reviewed_boosting_plan()
+                if reviewed
+                else boosting_plan(),
             }
         ],
         1,
@@ -161,7 +176,8 @@ def test_boosting_failure_cleans_owned_runtime(tmp_path, monkeypatch, options):
         assert not any("--env" in a for a in cli.calls)
 
 
-def test_review_admission_preserves_failure_charges_and_science(tmp_path, monkeypatch):
+@pytest.mark.parametrize("component", [False, True])
+def test_review_admission_preserves_failure_charges_and_science(tmp_path, monkeypatch, component):
     from rl_stocks.runtime.colab import boosting_review as review
 
     runtime = tmp_path / ".runtime"
@@ -205,19 +221,19 @@ def test_review_admission_preserves_failure_charges_and_science(tmp_path, monkey
             "children": {"old": {"session": "old", "status": "stopped", "cleanup_verified": True}},
         }
     ]
-    assert review.admission(tmp_path, ledger) == (0.25, 40.0)
+    assert review.admission(tmp_path, ledger, component) == (0.25, 40.0)
     baseline["start_units"] = 40.01
     base.write_bytes(canonical(baseline))
     with pytest.raises(ValueError, match="baseline"):
-        review.admission(tmp_path, ledger)
+        review.admission(tmp_path, ledger, component)
     baseline["start_units"] = 40.0
     base.write_bytes(canonical(baseline))
     (tmp_path / "science.py").write_text("changed")
     with pytest.raises(ValueError, match="scientific"):
-        review.admission(tmp_path, ledger)
+        review.admission(tmp_path, ledger, component)
     (tmp_path / "science.py").write_text("unchanged")
-    review.claim(ledger, "rl-stocks-cpu-123456789abc")
+    review.claim(ledger, "rl-stocks-cpu-123456789abc", component)
     with pytest.raises(RuntimeError):
-        review.admission(tmp_path, ledger)
+        review.admission(tmp_path, ledger, component)
     with pytest.raises(RuntimeError):
-        review.claim(ledger, "rl-stocks-cpu-123456789abc")
+        review.claim(ledger, "rl-stocks-cpu-123456789abc", component)

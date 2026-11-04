@@ -10,6 +10,8 @@ from rl_stocks.core.files import write_once
 
 REVIEW_SHA256 = "d5c2985a8107f835a7d7d5f28d3c3b06251c6396dc5a2d2ae38b7d6d6ad88454"
 CLAIM = "residual-boosting-reviewed-allocation-v1.json"
+COMPONENT_SHA256 = "ecfcec3e90321480db69af12be342f100dfb775385268517eba4b921b856aa1a"
+COMPONENT_CLAIM = "residual-boosting-component-allocation-v1.json"
 
 
 def sha(path):
@@ -17,20 +19,27 @@ def sha(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def spec(root=None):
+def spec(root=None, component=False):
     root = Path(root) if root is not None else Path(__file__).resolve().parents[4]
     value = json.loads(
-        (root / "configs/experiments/residual_boosting_execution_review.json").read_text()
+        (
+            root
+            / (
+                "configs/experiments/residual_boosting_component_review.json"
+                if component
+                else "configs/experiments/residual_boosting_execution_review.json"
+            )
+        ).read_text()
     )
-    if digest(value) != REVIEW_SHA256:
+    if digest(value) != (COMPONENT_SHA256 if component else REVIEW_SHA256):
         raise ValueError("fixed bootstrap execution review required")
     return value
 
 
-def admission(root, ledger):
+def admission(root, ledger, component=False):
     root = Path(root)
-    review = spec(root)
-    if (ledger.path.parent / CLAIM).exists() or (
+    review = spec(root, component)
+    if (ledger.path.parent / (COMPONENT_CLAIM if component else CLAIM)).exists() or (
         ledger.path.parent / "residual-boosting-family-closure-v1.json"
     ).exists():
         raise RuntimeError("review already claimed or predictive family closed")
@@ -75,6 +84,22 @@ def admission(root, ledger):
         raise ValueError("original owned shutdown required")
     if ledger.value["consumed"] < review["original_failure_project_units"]:
         raise ValueError("original failure charges missing")
+    for name, expected in review.get("required_protected", {}).items():
+        if sha(root / name) != expected:
+            raise ValueError("prior duration-stop evidence changed")
+    for session in review.get("required_stopped_sessions", []):
+        owned = [
+            c
+            for a in ledger.value["attempts"]
+            for c in a.get("children", {}).values()
+            if c["session"] == session
+        ]
+        if (
+            len(owned) != 1
+            or owned[0]["status"] != "stopped"
+            or not owned[0].get("cleanup_verified")
+        ):
+            raise ValueError("prior duration-stop shutdown required")
     for name, expected in review["unchanged_scientific_source_sha256"].items():
         if sha(root / name) != expected:
             raise ValueError("scientific source changed: " + name)
@@ -83,13 +108,19 @@ def admission(root, ledger):
     return 0.25, baseline["start_units"]
 
 
-def claim(ledger, session):
+def claim(ledger, session, component=False):
     if not re.fullmatch(r"rl-stocks-cpu-[a-f0-9]{12}", session):
         raise ValueError("owned CPU session required")
-    path = ledger.path.parent / CLAIM
+    path = ledger.path.parent / (COMPONENT_CLAIM if component else CLAIM)
     if path.exists():
         raise RuntimeError("reviewed allocation already claimed; no retry")
     write_once(
         path,
-        canonical({"session": session, "review_sha256": REVIEW_SHA256, "automatic_retry": False}),
+        canonical(
+            {
+                "session": session,
+                "review_sha256": COMPONENT_SHA256 if component else REVIEW_SHA256,
+                "automatic_retry": False,
+            }
+        ),
     )
