@@ -3360,3 +3360,14 @@ observation/action contracts. No optimization or generic training registration.
 Frozen tanh-hidden/Box-clipped numerical inference, actual Colab smoke/counters
 and profiling are next; no performance allocation admitted. Existing scientific
 families stay closed; original budgets and test isolation preserved.
+
+
+### TRPO reference actor local acceptance — 2026-11-04
+
+Separate immutable21→64tanh→64tanh→4linear/direct-clipped reference and trusted
+PPO/TRPO export implemented.26 focused tests pass including existing SAC
+regression, schema/source rejection, RNG preservation and stdlib-only prediction.
+Retained untrained128-vector probe:1.4174s local, native/reference max5.59e−9
+explicitly not exact parity. No old math/control change, fitting, Colab or market
+evaluation. Cross-machine, learned-state/bundle/preprocessing/full-path acceptance
+and actual research-geometry profiling precede any performance allocation.

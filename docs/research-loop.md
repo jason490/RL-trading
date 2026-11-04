@@ -18,7 +18,9 @@ Next concrete engineering branch: [TRPO feasibility](trpo-feasibility.md), a
 distinct constrained natural-gradient/line-search update, not a reopened PPO KL
 early-stop study. Local no-fit constructors show exact shared actor/value/log_std
 starts and save/load/repeat parity across11/23/37; four tests pass. It remains
-unregistered for performance. Next frozen numerical-contract acceptance, actual
+unregistered for performance. Frozen tanh-hidden/direct-clipped reference actor and trusted export now pass26
+checks; untrained128-point local probe takes1.4174s with native/reference
+differences disclosed. Next cross-machine/full-path numerical acceptance, actual
 Colab smoke/update counters and bounded research-geometry profiling before any
 matched experiment. Include the strongest relevant SAC comparator, not just PPO.
 No new units or evidence of improved return.

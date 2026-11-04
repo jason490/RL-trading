@@ -162,3 +162,7 @@ pending guarded Colab worker/profile admission.
 [TRPO engineering feasibility](trpo-feasibility.md): fixed native TRPO/PPO
 initialization and save/load acceptance, distinct constrained update procedure,
 and pending numerical/Colab/cost requirements before performance registration.
+
+[TRPO/PPO reference inference](trpo-reference-inference.md): bounded immutable
+tanh-hidden/direct-clipped actor, RNG-preserving trusted export, local evidence
+and pending cross-machine/full-path acceptance.

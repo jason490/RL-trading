@@ -90,3 +90,14 @@ These are local engineering checks, not Colab training or cross-machine parity.
 
 No Colab session, model fitting, provider request, retired-test read or new credit
 charge accompanied this engineering step. Project usage remains40.213170920/150.
+
+
+## Frozen actor arithmetic implemented — 2026-11-04
+
+[Reference contract](trpo-reference-inference.md) now implements21-field
+tanh-hidden/direct-clipped-mean inference and trusted native PPO/TRPO export.
+26 focused checks pass, including existing SAC regressions and isolated
+stdlib-only prediction. A retained untrained128-point synthetic probe takes
+1.4174s locally; native/reference max difference5.59e−9 is disclosed, not relabeled
+exact. Cross-machine/full-path/preprocessing acceptance and actual Colab learning
+smoke/profile remain pending. No allocation or optimization occurred.

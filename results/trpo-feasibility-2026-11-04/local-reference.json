@@ -1,0 +1,68 @@
+{
+  "backend": {
+    "affinity_cpus": 8,
+    "cpu_capability": "AVX512",
+    "cpu_math_environment": {
+      "ATEN_CPU_CAPABILITY": null,
+      "MKL_CBWR": null,
+      "MKL_ENABLE_INSTRUCTIONS": null
+    },
+    "cpu_model": "Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_enabled": true,
+    "default_dtype": "torch.float32",
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "float32_matmul_precision": "highest",
+    "gpu_name": null,
+    "libc": [
+      "glibc",
+      "2.43"
+    ],
+    "machine": "x86_64",
+    "mkldnn_deterministic": false,
+    "mkldnn_enabled": true,
+    "numpy_version": "2.2.6",
+    "schema": "numerical-execution-v1",
+    "selected_device": "cpu",
+    "thread_environment": {
+      "MKL_NUM_THREADS": 1,
+      "NUMEXPR_NUM_THREADS": null,
+      "OMP_NUM_THREADS": 1,
+      "OPENBLAS_NUM_THREADS": null
+    },
+    "torch_build_config_sha256": "d42d729aea9dbc7917f1047903b79ee3572ed10988621cde1837ed7d7a36a14b",
+    "torch_interop_threads": 4,
+    "torch_intraop_threads": 1,
+    "torch_version": "2.8.0+cu128",
+    "visible_logical_cpus": 8
+  },
+  "cross_machine_verified": false,
+  "model_untrained": true,
+  "native_model_sha256": "a4cfadeaad4c92f81e813ce83884d1d2b571a3ba7d9775af289425e92aac2318",
+  "native_reference_equal_coordinates": 74,
+  "native_reference_max_action_difference": 5.587935447692871e-09,
+  "performance_promotion": false,
+  "points": 128,
+  "reference_seconds": 1.4174101899843663,
+  "reference_seconds_per_prediction": 0.011073517109252862,
+  "reference_sha256": "e757be605221e7625c99a1cc5d4c8894f3202281a2d0de7f60193b9af6a8fabd",
+  "schema": "trpo-reference-local-engineering-v1",
+  "total_coordinates": 512,
+  "probe_path": "artifacts/trpo-reference-engineering-v1/probe.json",
+  "probe_sha256": "65492bde489577ca07821b5d42df39bc0b86849b55ab355a3c69e8d2ee84289a",
+  "source_sha256": {
+    "src/rl_stocks/inference/canonical_tanh_policy.py": "6fb29012497730fb72af77bb809530818131b025cdcc0b31d76972dc51065961",
+    "src/rl_stocks/inference/canonical_tanh_export.py": "17cc08896cdb7fcf2567205e37c8a2978d6ccb58c10d51990f8e748c365ba4ce",
+    "src/rl_stocks/inference/canonical_math.py": "f8aec0ab9c3a9b0ced423fd804350a211e9a2489fdb46d81554671df58cd550d",
+    "src/rl_stocks/inference/canonical_actor.py": "d8b6eec68b2f1d2addcefec0789504675afec1caa0a339821ab9bc53edea4258"
+  },
+  "training_performed": false,
+  "dataset_opened": false,
+  "colab_allocated": false,
+  "project_units": 40.21317091983891,
+  "full_simulator_reference_verified": false
+}
