@@ -3371,3 +3371,13 @@ Retained untrained128-vector probe:1.4174s local, native/reference max5.59e−9
 explicitly not exact parity. No old math/control change, fitting, Colab or market
 evaluation. Cross-machine, learned-state/bundle/preprocessing/full-path acceptance
 and actual research-geometry profiling precede any performance allocation.
+
+
+### TRPO synthetic cross-machine probe runtime — 2026-11-04
+
+Fixed actor/vector/output bindings, isolated stdlib worker and existing shared
+ledger/owned cleanup lifecycle implemented.38 focused checks pass. One CPU
+inference-only allocation capped0.05 units/1200 seconds with360-second reserve
+is next; no installs, optimization, markets or performance promotion. Actual
+default Python and exact512 output coordinates must verify before arithmetic
+acceptance. Original project/account limits and prior claims remain unchanged.

@@ -72,3 +72,45 @@ its numerical execution and selection rules before new results; it must not
 silently reuse differently evaluated controls or widen old failed tolerances.
 CPU profiling, original cumulative budgets/account floors and verified owned
 cleanup remain mandatory. No new Colab charge accompanies this local work.
+
+## Exact cross-machine probe runtime
+
+[Fixed probe protocol](../configs/experiments/trpo_tanh_probe.json) SHA256
+`4e50eaa4cf31396172e397ad312a78b78085f4e69b7f29c040779e82a253219b`
+binds the untrained actor,128 synthetic21-field inputs and512 expected output
+coordinates. It permits one CPU inference-only allocation, maximum0.05 units,
+1200-second deadline and360-second teardown reserve. Original project150/130
+and account150/170 limits remain; actual rate/balance are read after allocation.
+No optimization, market evaluation, normalization, dependency installation,
+interpreter replacement or performance allocation is admitted.
+
+```bash
+MPLCONFIGDIR=$PWD/.runtime/matplotlib PYTHONPATH=src \
+.venv/bin/python scripts/prepare_tanh_probe.py \
+  --output .runtime/trpo-tanh-reference-probe-v1.json
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.tanh_probe \
+  .runtime/trpo-tanh-reference-probe-v1.json \
+  --cli-python /home/jassno/.local/share/uv/tools/google-colab-cli/bin/python
+```
+
+Preparation checks retained artifact hashes, regenerates host results in an
+isolated stdlib process and compares all retained output bits. The controller
+rejects input/protocol changes before provisioning. It reuses the original shared
+ledger/allocation lock, one immutable claim, minute metering, bounded downloads
+and mandatory owned cleanup. No GPU/TPU flag is passed; the installed CLI documents
+that this creates CPU, and post-allocation status is independently checked.
+
+The worker ships only the minimal Python source and reference JSON to the actual
+default kernel. It checks Python3.13 before invoking a fresh`-I` subprocess with
+an180-second bound. Exact output bits/checksums,128×4 shape, default major/minor,
+finite clipped actions and absence of imported Torch/NumPy are mandatory. This
+checks reference arithmetic, not native Torch bit parity or economic-path parity.
+The CLI exec timeout is explicitly240 seconds.
+
+Claim: `.runtime/trpo-tanh-reference-probe-v1-claim.json`. Retrieved output and
+cleanup summary remain under `artifacts/colab/OWNED_SESSION`. Never delete the
+claim to retry. On any failure/interruption the controller attempts retrieval,
+stops only its owned session and verifies termination; cleanup failure reports
+the owned ID and recovery command. Thirty-eight focused probe/actor/constructor/
+shared-lifecycle checks pass, including failure cleanup, bit/runtime mismatch and
+repeat-allocation rejection. Actual Colab outcome remains pending.

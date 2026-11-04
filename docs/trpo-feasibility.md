@@ -101,3 +101,13 @@ stdlib-only prediction. A retained untrained128-point synthetic probe takes
 1.4174s locally; native/reference max difference5.59e−9 is disclosed, not relabeled
 exact. Cross-machine/full-path/preprocessing acceptance and actual Colab learning
 smoke/profile remain pending. No allocation or optimization occurred.
+
+
+## Arithmetic probe prepared — 2026-11-04
+
+The [fixed cross-machine probe](trpo-reference-inference.md) binds the retained
+untrained actor and128 synthetic vectors/512 reference output coordinates.
+It uses one separately capped0.05-unit CPU inference-only allocation, original
+shared ledger/account protections and mandatory cleanup; no installation or
+optimization.38 focused probe/actor/constructor/lifecycle checks pass. Actual
+Colab arithmetic acceptance is next; learning smoke/performance stay unadmitted.

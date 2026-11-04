@@ -1,0 +1,31 @@
+{
+  "schema": "trpo-tanh-cross-machine-probe-v1",
+  "scope": "128 fixed synthetic observations and untrained reference actor only; no optimization or markets",
+  "actor_sha256": "bb20e4aae17874649398afa57276bc7a48ac2f5b4860e875cecc993a78af7daa",
+  "source_model_sha256": "a4cfadeaad4c92f81e813ce83884d1d2b571a3ba7d9775af289425e92aac2318",
+  "inputs_sha256": "f171ba373f3b94ddd7e4c6f6e753aafd50eaf575a979f30cdcef213beffeba53",
+  "outputs_sha256": "7d084a15723e991e7489977d554f0f78643289aa1aa31e69f70568a153c7ea5a",
+  "points": 128,
+  "outputs_per_point": 4,
+  "cpu_only": true,
+  "default_python_major_minor": [
+    3,
+    13
+  ],
+  "isolated_stdlib_process": true,
+  "maximum_probe_units": 0.05,
+  "deadline_seconds": 1200,
+  "teardown_reserve_seconds": 360,
+  "execution_seconds": 240,
+  "child_seconds": 180,
+  "maximum_allocations": 1,
+  "automatic_retry": false,
+  "original_project_ceiling": 150,
+  "original_project_teardown": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170,
+  "actual_rate_required_after_allocation": true,
+  "cleanup": "Bounded retrieval then stop/verify owned session on success/failure/interruption; preserve original ledger and claim",
+  "training_allocation_admitted": false,
+  "performance_promotion": false
+}

@@ -20,7 +20,10 @@ early-stop study. Local no-fit constructors show exact shared actor/value/log_st
 starts and save/load/repeat parity across11/23/37; four tests pass. It remains
 unregistered for performance. Frozen tanh-hidden/direct-clipped reference actor and trusted export now pass26
 checks; untrained128-point local probe takes1.4174s with native/reference
-differences disclosed. Next cross-machine/full-path numerical acceptance, actual
+differences disclosed. A fixed stdlib-only cross-machine arithmetic probe is now implemented with38
+checks; one CPU allocation capped0.05 units, source/actor/vector bindings,
+minute metering and mandatory owned cleanup. Actual execution is next.
+Full-path numerical acceptance, actual
 Colab smoke/update counters and bounded research-geometry profiling before any
 matched experiment. Include the strongest relevant SAC comparator, not just PPO.
 No new units or evidence of improved return.
