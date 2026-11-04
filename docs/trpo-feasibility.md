@@ -179,3 +179,21 @@ learned-state/KL/rollback/reference restoration and bounded ownership/transport/
 budget admission. Actual finite learning, counts, profile timings and full economic
 paths are still unverified. This implementation does not admit a performance
 screen or change the original project/account protections.
+
+### Independent saved actor restoration
+
+`evaluation/trpo_updates.py` restores the exact seven actor tensors using
+read-only affine/tanh operations and a diagonal Gaussian. It independently
+recomputes the installed native convention, KL(new || old), averaged over both
+rollout samples and action coordinates. It checks saved tensor fingerprints,
+update cadence, consecutive actor continuity, finite bounded original observations,
+accepted-search KL (the declared1e-6 metadata allowance), and exact rollback.
+Reported native accepted KL must still be strictly below0.01. It verifies that
+its input tensors remain unchanged and performs no learning or optimizer step.
+
+Eight focused tests cover synthetic accepted updates, corrupted hashes, false
+rollback, incorrect reported KL, broken continuity, nonfinite observations,
+Gaussian direction, and exact restoration against an untrained native TRPO
+policy. These are engineering checks, not evidence that learned updates pass.
+The verifier still needs integration with complete retrieved checkpoint/reference
+acceptance and a bounded Colab controller before the four-case allocation.
