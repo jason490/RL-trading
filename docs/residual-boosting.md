@@ -86,3 +86,43 @@ failures, retrieve durable artifacts and verify owned shutdown on every exit.
 At0.08/hour plus0.01 margin, two hours project0.18 units; admission must use the
 actual reported rate and stop if the complete operation will not fit. Existing
 project usage remains40.196982365 units; no new allocation or optimization occurred.
+
+## Worker and restoration implemented — 2026-11-04
+
+`training/supervised/boosting_runner.py:run` now implements the fixed fit. It
+requires the actual Colab CPU/kernel guard and owned-worker marker before reading
+inputs, creating output or fitting. The caller must provide the bounded remaining
+allocation time. It validates the immutable labeled payload and locked tree
+versions; the existing fit-fold normalizers remain unchanged.
+
+The discarded two-tree prefix uses fit rows and checks finite training loss,
+export and native/portable forecast agreement. Its measured fit/export/prediction
+time projects six256-stage fits with a2x margin plus900 seconds for remaining
+work/retrieval. Full fitting is refused if that projection exceeds the remaining
+allocation; a900-second reserve is checked between fixed fits. These worker
+checks supplement the future controller deadline and metering, not replace them.
+Fit-only loss curves and completed-model snapshots are persisted after each fit.
+The total is1,538 fitted trees, including the discarded prefix.
+
+`inference/boosting_signal.py` restores a checksummed forecast-only bundle with
+all six fixed models and fit-only preprocessing. It supplies constant/ridge
+baselines and boosted forecasts; it has no trading actions. Native/portable and
+frozen repeated predictions are checked for every probe row at absolute1e-10
+agreement, with exact local repeated predictions.
+
+`training/supervised/boosting_artifacts.py:verify` independently restores every
+forecast, binds labels/dates/symbols to the immutable payload, checks model ridge
+coefficients against the fit-fold normal equations, and recomputes all original
+metrics and gates. Normal-equation checking does not fit a local estimator.
+The verifier rejects missing models, changed normalization/dependencies, altered
+labels/predictions, false scope flags and fabricated success. It verifies retained
+artifact hashes remain unchanged during restoration.
+
+Ten focused worker, bundle, boosting-array and shared forest-array checks pass
+without fitting locally. Tests include fixed-model export contracts, pre-I/O
+local-fitting rejection, forecast restoration and tampered gate/label rejection.
+Actual native sklearn parity on fitted trees remains pending Colab acceptance.
+The runtime is not yet registered: next implement one-time ownership, exact job
+and payload/source binding, actual default-kernel preflight, shared-ledger budget
+admission, bounded transport and guaranteed owned cleanup. No session has been
+allocated and no new predictive or trading result exists.

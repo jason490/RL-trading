@@ -3260,3 +3260,13 @@ and immutable portable additive-tree prediction implemented; six no-fit checks
 pass. Guarded Colab worker, fitted native/portable parity, artifact acceptance and
 current-kernel/timing/budget admission remain pending. No optimization, allocation,
 new units or reopening of prior failed families. Project40.196982365/150 unchanged.
+
+
+### Residual boosting worker/restoration — 2026-11-04
+
+Colab-only fixed residual fits, discarded-prefix timing/parity admission, durable
+fit progress, checksummed forecast bundle and independent full forecast/metric/gate
+restoration implemented. Ten focused no-fit tests pass, including tampered labels
+and false success. Actual fitted-tree parity and performance remain untested.
+Next exact fleet job/source/payload/one-claim/kernel/budget/cleanup integration;
+no allocation admitted yet, project40.196982365/150 unchanged.
