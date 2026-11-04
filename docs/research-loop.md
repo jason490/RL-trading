@@ -9,6 +9,11 @@ override failure. Family closed without RL transfer or development/test access.
 Project40.213170920/150, study0.016188555/0.25 including both prior stops; fresh
 account548.04 idle. No robust/prospective trading winner. Next is evidence review
 for a distinct hypothesis, not another attempt within this closed candidate.
+The fixed24-cell saved-error audit now shows negative pooled correction/error
+alignment and worsening within-session error in both arms, with2020 dominating
+overall deterioration. Removing a common offset does not account for the entire
+observed gap. No correction, year selection or new fit followed. Next distinct
+hypothesis must address evidence beyond a larger tabular residual learner.
 Earlier pending/allocation instructions below are historical and superseded.
 
 

@@ -314,3 +314,11 @@ can explain how positive ranking coexists with worse absolute forecasts, without
 proving a training cause or identifying a tradable signal. No scale/offset or
 future-label rule is inferred. Fourteen focused identity/validation checks pass;
 actual diagnosis follows the committed-source check.
+
+
+The actual24-cell saved-error audit is complete. Both pooled correction/error
+products are negative; daily-within error also increases for both arms.2020
+dominates the overall MSE deterioration, despite2019 improvement. Exact residual
+identities and protected-source hashes pass. This is descriptive evidence, not
+a calibrated predictor, optimizer explanation, selection criterion or reopening.
+[Detailed diagnosis](../results/residual-boosting-2026-11-04/README.md).

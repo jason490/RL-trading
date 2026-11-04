@@ -3339,3 +3339,13 @@ charges retained; study0.016188555/0.25, project40.213170920/150 after idle
 settlement. All owned cleanup verified, six exact duplicates removed, frozen
 evidence and post-cleanup restoration retained. Robust-return goal remains unmet;
 next distinct hypothesis must follow evidence review.
+
+
+### Residual forecast-error audit completed — 2026-11-04
+
+All24 fixed arm/seed/period cells reconcile exact residual-MSE identities.
+Negative pooled error/correction alignment and worsening within-session error
+in both arms accompany2020-dominated deterioration.14 identity/validation tests
+pass; inputs/ledger/family closure unchanged. No local fitting/calibration,
+Colab charge or gate reopening. Evidence informs the next distinct hypothesis;
+boosted residual models remain ineligible for RL transfer.

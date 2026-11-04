@@ -125,3 +125,29 @@ Failure archive, portable prefix and timing record are retrieved; owned shutdown
 is verified. This reviewed attempt charged0.003806218 units, measured debit0.
 Combined original study usage is0.006188555/0.25, project40.203170920/150.
 No automatic restart or trading-policy allocation occurred.
+
+
+## Saved forecast-error diagnosis
+
+[Fixed audit](saved-error-diagnosis.json) covers all six accepted boosted models
+on the pooled probe and each2018/2019/2020 year:24 cells, with source/ledger/
+closure hashes unchanged. No model load, fitting, calibration, new dataset,
+Colab allocation, gate change or family reopening. Fourteen focused identity/
+validation checks pass; all24 actual residual-MSE identities reconcile.
+
+Across seeds, masked/full MSE increases versus ridge are0.00110504/0.00105605.
+The mean product of ridge's remaining error with the added correction is
+negative (−0.00021680/−0.00021886). Thus the correction's added squared magnitude
+and its adverse alignment both worsen pooled MSE; large magnitude is not the
+only descriptive issue. These moments do not prove an optimizer cause.
+
+Weighted session-common components account for91.92%/87.15% of that pooled
+increase, while within-session components also worsen by0.00008928/0.00013568.
+2019 improves for both arms, but2020 increases MSE0.00367276/0.00359821 versus
+ridge and accounts for nearly all overall deterioration. No year is excluded
+from gates or selected for a new calibration. Positive rank correlation therefore
+does not establish robust absolute signal quality or profitable trading.
+
+The failed candidate remains closed. A future hypothesis must be distinct and
+preregistered; this audit does not authorize centering, shrinking, new targets,
+extra stages or transfer of these models into RL.
