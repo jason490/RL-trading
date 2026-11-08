@@ -299,9 +299,9 @@ remain pending. No additional Colab credits or local fitting occurred.
 ## Gated full-path Colab runtime
 
 [Runtime contract](../configs/experiments/tanh_paths_runtime.json), canonical SHA256
-`7b44a183961fcc4e51a6952b814412766c234c91b549a87bfa769d0335f3ad43`, fixes
+`0682ddded6921b4bea243f0e952cd8a3cdc0285ce9435a625504cd9336765be8`, fixes
 one CPU inference allocation at0.25 units,7200-second deadline,900-second
-retrieval/shutdown reserve,5400-second preferred execution window and300-second
+retrieval/shutdown reserve,6300-second preferred execution window (clipped after setup) and300-second
 checkpoint interval. Original cumulative150/130 project and150/170 account
 limits remain enforced by the shared controller. Setup, idle, failures and
 retrieval count. No automatic worker/allocation retry is introduced.
@@ -331,3 +331,12 @@ PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.tanh_paths \
 
 This is inference-only numerical acceptance. Its output never selects actors,
 changes failed-family gates or establishes improved trading returns.
+
+Before any full-path allocation, the preferred worker limit was changed from5400
+to6300 seconds, with the same7200 allocation deadline/900 reserve and0.25 units.
+The controller clips this preference to actual time remaining after setup, with
+an additional10-second margin. This removes an arbitrary shorter worker cap for
+the long complete-panel replay; it does not extend a deadline, change the
+scientific panel or restart a failed remote operation. A test checks clipping
+including600 seconds of elapsed setup. Current local replay has completed three
+panels; first two independently restore all38,272 decisions. Final panel pending.

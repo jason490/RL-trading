@@ -13,7 +13,7 @@ from rl_stocks.runtime.colab.tanh_path_inputs import (
 )
 from rl_stocks.runtime.colab.trpo_smoke import TrpoSmokeJob
 
-RUNTIME_SHA256 = "7b44a183961fcc4e51a6952b814412766c234c91b549a87bfa769d0335f3ad43"
+RUNTIME_SHA256 = "0682ddded6921b4bea243f0e952cd8a3cdc0285ce9435a625504cd9336765be8"
 
 
 def runtime_spec(root):

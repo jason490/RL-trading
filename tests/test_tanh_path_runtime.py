@@ -93,3 +93,14 @@ def test_remote_identity_corruption_rejected_before_comparison(tmp_path, monkeyp
     with pytest.raises(ValueError):
         artifacts.accept_remote(archive, tmp_path / 'unused', **kwargs)
     assert 'compare' not in calls
+
+
+def test_remote_execution_is_clipped_after_setup_and_preserves_shutdown_reserve():
+    from rl_stocks.runtime.colab.budget import execution_window
+    spec = runtime_spec(Path(__file__).resolve().parents[1])
+    remaining_after_setup = spec['deadline_seconds'] - 600
+    window = execution_window(remaining_after_setup, spec['preferred_execution_seconds'],
+                              spec['reserve_seconds'] + 10)
+    assert window < spec['preferred_execution_seconds']
+    assert window + spec['reserve_seconds'] < remaining_after_setup
+    assert spec['maximum_units'] == .25 and spec['deadline_seconds'] == 7200

@@ -4,7 +4,7 @@
   "maximum_units": 0.25,
   "deadline_seconds": 7200,
   "reserve_seconds": 900,
-  "preferred_execution_seconds": 5400,
+  "preferred_execution_seconds": 6300,
   "snapshot_seconds": 300,
   "claim": ".runtime/tanh-full-path-inference-v1-claim.json",
   "accelerator": "CPU",
