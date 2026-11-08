@@ -1,0 +1,45 @@
+{
+  "binding": {
+    "automatic_retry": false,
+    "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+    "performance_allocation": false,
+    "runtime_sha256": "f798e3cdc0e37ac0e923519312ff2257bbb1d0394bf4909fdea565d0bb43f372",
+    "session": "rl-stocks-cpu-4f2bbd67c096",
+    "source": {
+      "dirty": "",
+      "revision": "3c42cc4d7c177115b4a6928a3015f8f04bbe1622"
+    },
+    "source_hash": "03f3234e32b121bbab4d00f3f094ec59876e1c420606e0ca134161a291e8bc41",
+    "training": true,
+    "upload_sha256": "9705fbda40da87929a2a85073e60dd8d968a723237c137214a679f9690fdea81"
+  },
+  "charged_units": 0.0010579031546910605,
+  "cleanup_verified": true,
+  "estimated_units": 0.0010579031546910605,
+  "measured_units": 0.0,
+  "project_units": 40.214754908711406,
+  "remaining_project_units": 109.7852450912886,
+  "retrieved": [
+    "/home/vibe/projects/rl-stocks/artifacts/colab/rl-stocks-cpu-4f2bbd67c096/kernel.json"
+  ],
+  "session": "rl-stocks-cpu-4f2bbd67c096",
+  "training_verified": false,
+  "failure": "Notebook kernel argv rejected by bootstrap before dependency setup or fitting",
+  "python": [
+    3,
+    13,
+    18
+  ],
+  "training_performed": false,
+  "automatic_retry": false,
+  "artifacts_retrieved": [
+    "kernel.json"
+  ],
+  "retired_test_access": false,
+  "protected_files": {
+    "artifacts/colab/rl-stocks-cpu-4f2bbd67c096/summary.json": "7f79f3435958c103b3c5f5390246d2a9eb3450ae55e204d661647c2b6f9ad69f",
+    "artifacts/colab/rl-stocks-cpu-4f2bbd67c096/kernel.json": "afd42b7b5a06a293d0da774d585c4ed49aa286aefd928fe141a3fc757307a727",
+    "artifacts/colab/rl-stocks-cpu-4f2bbd67c096/upload.tar.gz": "9705fbda40da87929a2a85073e60dd8d968a723237c137214a679f9690fdea81",
+    ".runtime/trpo-native-smoke-v1-claim.json": "4304c8af3d70e9c30cab012094c348ea3d5d0a1a34c940d26e632282e1a010b1"
+  }
+}

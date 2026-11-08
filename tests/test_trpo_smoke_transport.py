@@ -110,3 +110,20 @@ def test_container_expanded_size_and_member_count_bounds(tmp_path, monkeypatch):
     with pytest.raises(ValueError, match="count/expanded"):
         transport.extract_owned(source, tmp_path / "size-out")
     assert not (tmp_path / "size-out").exists()
+
+
+def test_notebook_kernel_arguments_do_not_block_bootstrap(monkeypatch):
+    path = Path(__file__).resolve().parents[1] / "scripts/remote_trpo_smoke.py"
+    spec = importlib.util.spec_from_file_location("remote_trpo_kernel_args", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    monkeypatch.setenv("COLAB_RELEASE_TAG", "fixture")
+    monkeypatch.setenv("RL_ALLOCATION_DEADLINE", "9999999999")
+    monkeypatch.setattr(module.sys, "argv", ["ipykernel_launcher.py", "-f", "kernel.json"])
+    class OwnedRoot:
+        def mkdir(self, *, exist_ok):
+            assert exist_ok is False
+            raise RuntimeError("bootstrap selected before any filesystem mutation")
+    monkeypatch.setattr(module, "Path", lambda value: OwnedRoot())
+    with pytest.raises(RuntimeError, match="bootstrap selected"):
+        module.main()

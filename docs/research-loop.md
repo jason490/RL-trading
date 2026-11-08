@@ -1,5 +1,16 @@
 # Bounded autonomous research
 
+Latest runtime event (2026-11-08): the first dedicated PPO/TRPO CPU smoke/profile
+allocation failed before dependency setup or learning because bootstrap rejected
+notebook kernel arguments. Actual defaultPython3.13.18 inspection passed. Owned
+shutdown verified; fresh account544.61 idle. Charge0.001057903, project40.214754909/150.
+[Failure and fix](../results/trpo-smoke-2026-11-08/README.md). Regression fixed with18
+affected checks; original claim consumed, no automatic retry. Next is a separately
+reviewed execution-only admission retaining the original0.25-unit study baseline
+and this charge, then actual finite-update acceptance. No new performance result.
+The user-directed stock/index data expansion and source cleanup are complete;
+new features remain disabled pending separate matched protocols.
+
 Latest completed study (2026-11-04):
 [residual boosting](../results/residual-boosting-2026-11-04/README.md) fails both
 original predictive gates. Masked/full MSE15.94%/15.06% worse than constant,

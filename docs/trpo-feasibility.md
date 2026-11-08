@@ -270,3 +270,15 @@ fixture tests cover setup/execution/meter/budget failures, persistent claim
 rejection, budget preservation, acceptance after cleanup, retained rejection
 transport and upload exclusions. No actual Colab smoke/profile result exists yet.
 The user requested code cleanup before allocation; complete that separately first.
+
+### First actual allocation failed before fitting
+
+The November8 CPU attempt passed actual defaultPython3.13.18 inspection but
+failed because the bootstrap rejected notebook-kernel argv. Owned teardown is
+verified; no fitting occurred. Charge0.001057903, project40.214754909/150;
+fresh account544.61 idle. [Original failure](../results/trpo-smoke-2026-11-08/README.md).
+The bootstrap now distinguishes its explicit worker entry and ignores notebook
+arguments; a regression test covers that environment,18 affected checks pass.
+The original claim remains consumed. Any later reviewed execution-only attempt
+must preserve prior charges/claim and the original0.25-unit study baseline;
+there is no automatic restart or economic-gate change.

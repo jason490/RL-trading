@@ -39,18 +39,16 @@ def learn(root):
     export_artifacts(root / "artifacts")
 
 
-def main():
+def main(*, worker=False):
     # Inspect the default kernel BEFORE extraction, installation or fitting.
     if sys.version_info[:2] != (3, 13) or not os.environ.get("COLAB_RELEASE_TAG"):
         raise RuntimeError("inspect and match actual default Colab Python before training")
     root = Path("/content/rl-stocks")
-    if sys.argv[1:] == ["--worker"]:
+    if worker:
         if Path.cwd() != root:
             raise RuntimeError("owned Colab working directory required")
         learn(root)
         return
-    if sys.argv[1:]:
-        raise ValueError("dedicated fixed smoke bootstrap takes no arguments")
     deadline = float(os.environ["RL_ALLOCATION_DEADLINE"])
     root.mkdir(exist_ok=False)
     (root / "artifacts").mkdir()
@@ -84,4 +82,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(worker=sys.argv[1:] == ["--worker"])

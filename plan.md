@@ -3430,3 +3430,10 @@ and controller/budget/transport admission remain; no performance study admitted.
   and root source/dataset/normalizer/four-case acceptance implemented. Nine
   transport/guard tests pass. Dedicated budget/ownership controller and actual
   Colab smoke/profile still pending; no performance allocation or promotion.
+
+- 2026-11-08 first actual TRPO/PPO engineering allocation: inspected default
+  ColabPython3.13.18; bootstrap rejected notebook argv before dependencies/fit.
+  Owned CPU session4f2bbd67c096 stopped and verified. Conservative charge0.001057903,
+  project40.214754909/150, account544.61 idle. Fixed explicit worker/bootstrap
+  dispatch with notebook-argv regression;18 affected checks pass. No training
+  results or automatic retry; consumed claim and original0.25-study baseline retained.
