@@ -175,3 +175,7 @@ and pending cross-machine/full-path acceptance.
   chronological cross-fitting, frozen contracts and separate return gates.
 - [Earnings context](earnings-context.md): current absence, schedule vintages,
   release timing and consensus requirements before historical features.
+
+[Capability overview](capabilities.md) summarizes implemented components and
+remaining work. The repository [README](../README.md) provides the short setup,
+data-download, dataset and Colab getting-started path.
