@@ -232,3 +232,31 @@ replay continues under its original process and source3607704; the new checker
 has independently restored its first16 completed real episodes. This is partial
 progress, not full-panel or cross-machine acceptance. Source provenance was saved
 before adding the checker; the replay's calculation modules were not modified.
+
+## Prepared inference-only remote transport
+
+`scripts/remote_tanh_paths.py` prepares an inference-only Colab worker using the
+actual default Python3.13 kernel, the existing locked dependency environment and
+the accepted bootstrap deadline helper. Notebook arguments do not select worker
+mode; only the explicit subprocess `--worker` entry does. The worker requires
+owned Colab CPU/default-version guards before dataset access and checks installed
+dependency versions. It never calls a learner or changes normalizers/checkpoints.
+It reuses the exact full-path calculation function; a wrapper only publishes
+durable partial artifacts at300-second intervals between completed episodes.
+Final success/failure exports include complete path files and provenance.
+
+The shared metered CPU controller now exposes configuration, input-packaging,
+preflight, worker-path and artifact-acceptance hooks. Inference subclasses can
+reject admission before claims/allocation and record `training=false` plus
+`artifacts_verified` without falsely claiming training. Existing budget guards,
+minute metering, single-use claims, same-worker stream-loss handling and verified
+cleanup remain shared. Original training/review fixtures continue to pass.
+
+Twenty focused worker/controller/review checks pass without allocation, including
+local pre-I/O refusal, notebook argv dispatch, specialized preflight rejection,
+correct inference labels and post-cleanup acceptance. This worker is unregistered:
+no remote allocation is admitted. Next bind the completed independently restored
+local result, original numerical source inventory, four bundle assets and source
+receipt into an exact runtime/upload contract. That contract must enforce shared
+150/130 project and150/170 account limits and a separate bounded inference cap;
+location provenance and exact remote comparison are still unverified.

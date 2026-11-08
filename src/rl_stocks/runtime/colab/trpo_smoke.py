@@ -49,6 +49,22 @@ def prepare_upload(root, dataset, output, source):
 
 class TrpoSmokeJob(ColabJob):
     download_timeout = 120
+    worker_script = "scripts/remote_trpo_smoke.py"
+    runtime_sha256 = RUNTIME_SHA256
+    kind = "trpo-native-engineering-smoke"
+    training_performed = True
+
+    def configuration(self):
+        return runtime_spec(self.root)
+
+    def preflight(self, payload):
+        """Specialized inference jobs may require additional completed evidence."""
+
+    def prepare_input(self, dataset, output, source):
+        return prepare_upload(self.root, dataset, output, source)
+
+    def accept_artifacts(self, archive, destination, *, source, source_hash, dataset):
+        return accept(archive, destination, source=source, source_hash=source_hash, dataset=dataset)
 
     def guard_allowance(self, seconds):
         active = self.ledger.active
@@ -82,7 +98,7 @@ class TrpoSmokeJob(ColabJob):
         return super().operation(args, timeout)
 
     def run_smoke(self, dataset, *, reviewed_bootstrap_fix=False):
-        self.spec = runtime_spec(self.root)
+        self.spec = self.configuration()
         if self.accelerator != "CPU":
             raise ValueError("fixed CPU smoke allocation required")
         dataset = Path(dataset)
@@ -99,6 +115,7 @@ class TrpoSmokeJob(ColabJob):
         if reviewed_bootstrap_fix:
             from rl_stocks.runtime.colab.trpo_smoke_review import REVIEW_CLAIM, review
             reviewed = review(self.root, self.ledger)
+        self.preflight(payload)
         claim = self.root / (REVIEW_CLAIM if reviewed else self.spec["claim"])
         if claim.exists():
             raise ValueError("smoke allocation already claimed; no automatic retry")
@@ -107,16 +124,17 @@ class TrpoSmokeJob(ColabJob):
         version, usage = self.short(["version"]), self.meter()
         self.output = self.root / "artifacts/colab" / self.session
         self.output.mkdir(parents=True, exist_ok=False)
-        upload = prepare_upload(self.root, dataset, self.output / "upload.tar.gz", source)
+        upload = self.prepare_input(dataset, self.output / "upload.tar.gz", source)
         binding = {"session": self.session, "source": source, "source_hash": source_hash,
                    "dataset": digest(payload), "upload_sha256": checksum(upload),
-                   "runtime_sha256": RUNTIME_SHA256, "execution_review": reviewed, "training": True,
+                   "runtime_sha256": self.runtime_sha256, "execution_review": reviewed,
+                   "training": self.training_performed,
                    "automatic_retry": False, "performance_allocation": False}
         with claim.open("x") as stream:
             json.dump(binding, stream, sort_keys=True)
         active = self.ledger.begin(self.session, usage)
         self.study_base = reviewed["original_study_base"] if reviewed else active["base_consumed"]
-        active.update(accelerator="CPU", kind="trpo-native-engineering-smoke", protocol=binding,
+        active.update(accelerator="CPU", kind=self.kind, protocol=binding,
                       cli_version=version.strip())
         self.ledger.save()
         self.last_meter = time.monotonic()
@@ -164,7 +182,7 @@ class TrpoSmokeJob(ColabJob):
             try:
                 self.operation(["exec", "-s", self.session, "--timeout", str(window),
                                 "--env", "RL_ALLOCATION_DEADLINE=" + str(active["deadline"]),
-                                "-f", str(self.root / "scripts/remote_trpo_smoke.py")], window)
+                                "-f", str(self.root / self.worker_script)], window)
             except TransportLost:
                 # A failed output stream does not authorize another worker or allocation.
                 active["awaiting_same_worker_export"] = True
@@ -208,12 +226,14 @@ class TrpoSmokeJob(ColabJob):
                     signal.signal(s, handler)
         if not clean:
             raise RuntimeError("owned session cleanup not verified; see persisted recovery ID")
-        proof = accept(archive, self.output / "retrieved", source=source,
+        proof = self.accept_artifacts(archive, self.output / "retrieved", source=source,
                        source_hash=source_hash, dataset=payload)
         (self.output / "acceptance.json").write_bytes(canonical(proof))
-        active["training_verified"] = True
+        active["artifacts_verified"] = True
+        active["training_verified"] = self.training_performed
         self.ledger.save()
-        summary["training_verified"] = True
+        summary["artifacts_verified"] = True
+        summary["training_verified"] = self.training_performed
         (self.output / "summary.json").write_bytes(canonical(summary))
         return proof
 

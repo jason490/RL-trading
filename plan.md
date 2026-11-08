@@ -3471,3 +3471,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   mutations and leaves machine-location provenance explicitly unverified. Sixteen
   focused checks pass. Original local replay remains live; first16 completed real
   episodes independently restore. Full104-episode and remote acceptance pending.
+
+- 2026-11-08 cross-machine path transport preparation: inference-only default-
+  kernel worker reuses full-path calculations and durably exports between completed
+  episodes; no optimization calls. Shared metered controller gains preflight,
+  packaging/worker and acceptance hooks with truthful inference verification labels.
+  Twenty focused worker/controller/review checks pass. Remote job remains
+  unregistered pending complete local parity, numerical-source/assets admission
+  and fixed budget contract. Existing local replay continues unchanged.

@@ -158,3 +158,33 @@ def test_reviewed_attempt_counts_prior_charges_in_original_allowance(tmp_path):
         job.guard_allowance(900)
     assert job.ledger.active["base_consumed"] == 40.249
     assert job.study_base == 40
+
+
+def test_inference_subclass_keeps_same_cleanup_and_never_claims_training(tmp_path, monkeypatch):
+    job, dataset = setup(tmp_path, monkeypatch)
+    job.training_performed = False
+    job.worker_script = 'scripts/inference-fixture.py'
+    called = []
+    job.preflight = lambda payload: called.append('preflight')
+    def accept(*args, **kwargs):
+        assert job.cleaned
+        called.append('acceptance_after_cleanup')
+        return {'inference': True}
+    job.accept_artifacts = accept
+    job.run_smoke(dataset)
+    summary = json.loads((job.output / 'summary.json').read_text())
+    assert called == ['preflight', 'acceptance_after_cleanup']
+    assert summary['binding']['training'] is False
+    assert summary['training_verified'] is False and summary['artifacts_verified']
+    assert any('inference-fixture.py' in str(args) for args in job.calls)
+
+
+def test_specialized_preflight_blocks_before_allocation_or_claim(tmp_path, monkeypatch):
+    job, dataset = setup(tmp_path, monkeypatch)
+    def reject(payload):
+        raise ValueError('complete local parity required')
+    job.preflight = reject
+    with pytest.raises(ValueError, match='complete local parity'):
+        job.run_smoke(dataset)
+    assert not job.calls and not job.allocated
+    assert not (tmp_path / fixed()['claim']).exists()
