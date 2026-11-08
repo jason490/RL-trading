@@ -225,3 +225,29 @@ or proof that a real learner ran. Worker observation and controller provenance
 are still necessary. Root dataset/preprocessing/source admission and cleanup are
 not established by this per-case verifier; the future controller must bind them.
 No actual Colab smoke/profile result or performance promotion is claimed.
+
+### Dedicated bootstrap and root transport acceptance
+
+`scripts/remote_trpo_smoke.py` inspects the actual default kernel before any
+extraction, dependency setup or fitting. It uses that interpreter for an isolated
+environment, the existing locked bootstrap commands and a dedicated four-case
+worker. Each subprocess is bounded by the original allocation deadline minus a
+900-second retrieval/shutdown reserve. It exports completion provenance and
+checksums, and publishes a final archive from its failure/success cleanup path.
+The existing Colab CLI installation is not changed.
+
+`runtime/colab/trpo_smoke_artifacts.py` validates retrieved containers before
+extraction: at most100 regular/directory members,128MiB compressed/expanded,
+unique paths, no links or traversal, and a fresh destination. Remote failure
+markers reject acceptance while preserving original transport. Root validation
+binds captured Git/source identity, default Python family, original dataset and
+normalizer, ordered four-case receipts, disabled evaluation flags and every
+smoke file checksum before native physical inspection. Normalizer identity is
+checked against the original dataset, not only worker assertions.
+
+Nine transport/bootstrap tests cover unsafe paths/links/duplicates, compressed
+expansion/member limits, retained failure transport, root source/preprocessing
+and file-manifest mutation, and the pre-I/O local/kernel guard. No local fitting,
+Colab allocation or units consumed. The dedicated metered ownership/controller
+and its failure/cleanup acceptance are still pending; this bootstrap is not an
+admitted standalone training command. Do not invoke it outside that controller.

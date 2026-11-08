@@ -3424,3 +3424,9 @@ and controller/budget/transport admission remain; no performance study admitted.
   sector evidence, feature admission and matched Colab evaluation remain pending.
   Separate docs specify auxiliary-model cross-fitting and earnings vintage needs;
   no auxiliary predictor or earnings input enabled.
+
+- 2026-11-08 TRPO engineering: dedicated default-kernel bootstrap with original
+  deadline/900-second reserve and always-export path; bounded retrieved-container
+  and root source/dataset/normalizer/four-case acceptance implemented. Nine
+  transport/guard tests pass. Dedicated budget/ownership controller and actual
+  Colab smoke/profile still pending; no performance allocation or promotion.
