@@ -160,3 +160,50 @@ bundles and detailed proof under `artifacts/trpo-frozen-preprocessing-v1`.
 No local fitting, return evaluation, checkpoint selection, Colab allocation or
 retired-test access occurred. Cross-machine full preprocessing and complete
 saved economic-path parity remain pending before a performance comparison.
+
+## Fixed complete economic-path parity protocol
+
+[Protocol](../configs/experiments/tanh_full_paths.json), canonical SHA256
+`f81d5de49c3206ae92272accf1c35db154cf997ad8a59177b5807ebb68668834`, fixes
+all four accepted learned bundles and all26 original symbols, with unchanged
+training rows anchored2017-12-29 through the purged final2020-12-02 session.
+Each complete non-bankrupt panel has19,136 decisions. Exact episode-view digest,
+original dataset/normalizer and accepted frozen receipt prevent panel changes.
+This is engineering acceptance, with no profit gate, checkpoint selection,
+development scoring or performance promotion; retired2024+ remains closed.
+
+`evaluation/tanh_paths.py` creates two independent simulation accounts per episode.
+One uses the direct reference actor on ordinary environment observations; the
+other uses the frozen bundle's raw-feature/state normalization and availability
+checks. Every observation/action binary32 value must match. Every subsequent
+reward, fill/event, cash/quantity/basis, costs/borrow, age, stop/target state,
+termination flag and final metric must match exactly. JSONL evidence preserves
+binary64 values as hexadecimal strings, including signed zero. There is no
+numerical tolerance. Full paths and per-episode summaries remain outside Git;
+per-case sparse progress supports observation and failure recovery. Partial
+outputs are retained on failure and fresh destinations prevent silent reruns.
+
+Short-side attribution is retained per episode for later reporting; no declining
+stock label enters prediction or acceptance. Bankruptcy may legitimately end an
+episode early; otherwise every available decision is required. Frozen bundle
+files, preprocessing and the complete original dataset are rechecked unchanged.
+Existing simulator accounting acceptance remains a separate evidence layer;
+two executions of the same simulator do not independently prove its economics.
+
+Four new fixture tests cover complete/repeated path identity, action corruption,
+nontraining rejection, a1e-8 equity discrepancy, and signed-zero/nonfinite state.
+Together with bundle checks, eight focused tests pass without learning. Actual
+full-panel local replay and subsequent cross-machine replay are still pending.
+The local command is inference/backtesting only, never local optimization:
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/verify_tanh_paths.py \
+  data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json \
+  --bundles artifacts/trpo-frozen-preprocessing-v1 \
+  --output artifacts/trpo-full-path-local-v1
+```
+
+No Colab allocation is admitted by this protocol; a separate bounded runtime
+contract is required for cross-machine execution. Native Torch actions are not
+claimed bit-identical to reference arithmetic; this verifies the explicit frozen
+reference execution contract rather than reopening native numerical failures.

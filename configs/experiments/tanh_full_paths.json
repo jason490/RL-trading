@@ -1,0 +1,50 @@
+{
+  "schema": "tanh-full-path-parity-v1",
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "frozen_receipt_sha256": "ae0268b3d92d8af7c7fd7c8fb830871178d43381abc0e5d4ba5ce82180417106",
+  "training_window_episodes_sha256": "52f308b76e37e20a3c8040f2b6c0f151c703d4bae251d51af8fed502fee8db78",
+  "anchor_session": "2017-12-29",
+  "last_session": "2020-12-02",
+  "episodes_per_case": 26,
+  "maximum_decisions_per_case": 19136,
+  "cases": [
+    {
+      "case": "smoke-ppo",
+      "bundle": "artifacts/trpo-frozen-preprocessing-v1/smoke-ppo/f1bca28cadb8d5cbec40ddb7a31f9db443c2f305e33471a35f0a9e2726b13366",
+      "bundle_id": "f1bca28cadb8d5cbec40ddb7a31f9db443c2f305e33471a35f0a9e2726b13366",
+      "actor_sha256": "3dbeee395bda16de646682f4f10708934a8774772966a69323a8f5fbe8e3d0bd",
+      "source_model_sha256": "c47e69dc033e6b7b6a6f2a6d2c497258effeecc5a661e37eac6bc13e8f3797cc"
+    },
+    {
+      "case": "smoke-trpo",
+      "bundle": "artifacts/trpo-frozen-preprocessing-v1/smoke-trpo/a2120a1061ba2c872b81d6ce879385fe3d9cfaeb4aad3602184d6b7101f47563",
+      "bundle_id": "a2120a1061ba2c872b81d6ce879385fe3d9cfaeb4aad3602184d6b7101f47563",
+      "actor_sha256": "e6f04b27b89e717db6be1824ca55652f4c70a80f0ec0738a4093a26db0e4e45e",
+      "source_model_sha256": "ece6d8f063374d5bb3615b47da90da72544e7b23d07b77abf62e98d4fce4c08a"
+    },
+    {
+      "case": "profile-ppo",
+      "bundle": "artifacts/trpo-frozen-preprocessing-v1/profile-ppo/5761ec67d5d2f0282ebad1d2cf58ef273f7aa129de06191ee393970ba3a91ef5",
+      "bundle_id": "5761ec67d5d2f0282ebad1d2cf58ef273f7aa129de06191ee393970ba3a91ef5",
+      "actor_sha256": "f06fe5f672bf71515f4e4c408c924f24c6710736601b561fd3b2ede3382292fc",
+      "source_model_sha256": "0b5fd4b7ee61dede434d8c5915ac0c8d08b584389c36b4c696c9ace7d654ff45"
+    },
+    {
+      "case": "profile-trpo",
+      "bundle": "artifacts/trpo-frozen-preprocessing-v1/profile-trpo/58dceb122ed3dbf39677706ddea746c78267b6f86a0025888c4002ceffb19959",
+      "bundle_id": "58dceb122ed3dbf39677706ddea746c78267b6f86a0025888c4002ceffb19959",
+      "actor_sha256": "47a28e36a67b888fd0f0e3972efda175ccdb4a82a3592e2d31b0269cb0a4b12c",
+      "source_model_sha256": "2d66a1a1b14078f737dd820d8feb51dabc2fc29da371eaa3b58029fedc525bb5"
+    }
+  ],
+  "execution": "unrestricted; original simulation defaults; four-component action",
+  "comparison": "independent direct-reference/environment versus bundled raw-feature preprocessing/environment; exact lossless observations/actions/accounting/events/final metrics",
+  "checkpoint_selection": false,
+  "training_performed": false,
+  "development_evaluated": false,
+  "retired_test_access": false,
+  "performance_promotion": false,
+  "colab_allocation_admitted": false,
+  "acceptance": "All four cases/all26 episodes; no tolerances; identical complete path and final metric hashes; no profit threshold or actor selection from this engineering replay"
+}

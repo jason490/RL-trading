@@ -3454,3 +3454,12 @@ and controller/budget/transport admission remain; no performance study admitted.
   exact environment preprocessing/direct-reference actions. Cross-machine full
   preprocessing and saved economic-path parity remain pending; no new allocation
   or performance gate admitted.
+
+- 2026-11-08 complete economic-path parity preregistration: all four accepted
+  frozen PPO/TRPO actors, fixed26-symbol training-only2018–2020 window with
+  19,136 maximum decisions per case. Independent direct-reference and bundled
+  preprocessing accounts compare exact observations/actions/rewards/events and
+  portfolio/protection state, final metrics and directional attribution. Lossless
+  JSONL evidence and immutable input checks; no return/selection gate. Eight
+  focused path/bundle checks pass. Actual local/cross-machine replays pending;
+  no new allocation, performance promotion or retired-test access.
