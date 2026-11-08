@@ -52,7 +52,7 @@ class TrpoSmokeJob(ColabJob):
 
     def guard_allowance(self, seconds):
         active = self.ledger.active
-        projected = self.ledger.value["consumed"] - active["base_consumed"] + (
+        projected = self.ledger.value["consumed"] - getattr(self, "study_base", active["base_consumed"]) + (
             self.ledger.clock() - active["last_time"] + seconds) * (active["rate"] + .01) / 3600
         if projected >= self.spec["maximum_units"]:
             self.ledger.value["budget_stopped"] = True
@@ -81,7 +81,7 @@ class TrpoSmokeJob(ColabJob):
         self.guard_allowance(timeout + self.spec["reserve_seconds"])
         return super().operation(args, timeout)
 
-    def run_smoke(self, dataset):
+    def run_smoke(self, dataset, *, reviewed_bootstrap_fix=False):
         self.spec = runtime_spec(self.root)
         if self.accelerator != "CPU":
             raise ValueError("fixed CPU smoke allocation required")
@@ -93,7 +93,13 @@ class TrpoSmokeJob(ColabJob):
         source_hash = source_identity()
         if self.ledger.value.get("minimum_account_balance", 0) < 150:
             raise BudgetStop("persisted account floor150 required")
-        claim = self.root / self.spec["claim"]
+        if type(reviewed_bootstrap_fix) is not bool:
+            raise ValueError("explicit bootstrap review flag required")
+        reviewed = None
+        if reviewed_bootstrap_fix:
+            from rl_stocks.runtime.colab.trpo_smoke_review import REVIEW_CLAIM, review
+            reviewed = review(self.root, self.ledger)
+        claim = self.root / (REVIEW_CLAIM if reviewed else self.spec["claim"])
         if claim.exists():
             raise ValueError("smoke allocation already claimed; no automatic retry")
         for command in ("usage", "new", "exec", "upload", "download", "stop", "sessions", "status"):
@@ -104,11 +110,12 @@ class TrpoSmokeJob(ColabJob):
         upload = prepare_upload(self.root, dataset, self.output / "upload.tar.gz", source)
         binding = {"session": self.session, "source": source, "source_hash": source_hash,
                    "dataset": digest(payload), "upload_sha256": checksum(upload),
-                   "runtime_sha256": RUNTIME_SHA256, "training": True,
+                   "runtime_sha256": RUNTIME_SHA256, "execution_review": reviewed, "training": True,
                    "automatic_retry": False, "performance_allocation": False}
         with claim.open("x") as stream:
             json.dump(binding, stream, sort_keys=True)
         active = self.ledger.begin(self.session, usage)
+        self.study_base = reviewed["original_study_base"] if reviewed else active["base_consumed"]
         active.update(accelerator="CPU", kind="trpo-native-engineering-smoke", protocol=binding,
                       cli_version=version.strip())
         self.ledger.save()
@@ -215,11 +222,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("dataset", type=Path)
     parser.add_argument("--cli-python", required=True)
+    parser.add_argument("--reviewed-bootstrap-fix", action="store_true")
     args = parser.parse_args()
     root = Path.cwd()
     with (root / ".runtime/allocation.lock").open("w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        TrpoSmokeJob(root, args.cli_python, "CPU").run_smoke(args.dataset)
+        TrpoSmokeJob(root, args.cli_python, "CPU").run_smoke(
+            args.dataset, reviewed_bootstrap_fix=args.reviewed_bootstrap_fix)
 
 
 if __name__ == "__main__":

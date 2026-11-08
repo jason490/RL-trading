@@ -146,3 +146,15 @@ def test_upload_excludes_credentials_and_python_caches(tmp_path):
         names = archive.getnames()
     assert ".env" not in names and not any("__pycache__" in name for name in names)
     assert "src/pkg/a.py" in names and "source-git.json" in names
+
+
+def test_reviewed_attempt_counts_prior_charges_in_original_allowance(tmp_path):
+    job = FixtureJob(tmp_path)
+    job.spec = fixed()
+    job.study_base = 40
+    job.ledger.value["consumed"] = 40.249
+    job.ledger.begin(job.session, Usage(500, 0, 0))
+    with pytest.raises(BudgetStop, match="allowance"):
+        job.guard_allowance(900)
+    assert job.ledger.active["base_consumed"] == 40.249
+    assert job.study_base == 40

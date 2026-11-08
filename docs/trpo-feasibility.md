@@ -282,3 +282,18 @@ arguments; a regression test covers that environment,18 affected checks pass.
 The original claim remains consumed. Any later reviewed execution-only attempt
 must preserve prior charges/claim and the original0.25-unit study baseline;
 there is no automatic restart or economic-gate change.
+
+### Explicit execution-only bootstrap review
+
+`runtime/colab/trpo_smoke_review.py` permits one separately claimed execution-only
+attempt via `--reviewed-bootstrap-fix`. It requires the exact original failure
+receipt, retained claim/upload/kernel/summary checksums, fixed bootstrap checksum,
+latest original stopped pre-fit session and unchanged original study baseline.
+A budget stop, unresolved allocation, different session, changed baseline or
+exhausted allowance rejects admission. The reviewed controller projects against
+40.21369700555672, so the previous0.001057903 charge counts toward the same0.25
+units. It does not clear a stop, alter the ledger history, replace the original
+claim or change any model/return gate. A new single-use claim prevents replay.
+Eight review/cumulative-allowance checks plus eight original controller fixtures
+pass without allocation. This is a bounded manual code/evidence review under
+standing research authorization, not an automatic worker/allocation retry.
