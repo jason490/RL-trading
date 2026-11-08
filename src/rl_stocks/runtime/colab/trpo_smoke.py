@@ -72,6 +72,9 @@ class TrpoSmokeJob(ColabJob):
     def configuration(self):
         return runtime_spec(self.root)
 
+    def admission_record(self):
+        return None
+
     def preflight(self, payload):
         """Specialized inference jobs may require additional completed evidence."""
 
@@ -143,7 +146,7 @@ class TrpoSmokeJob(ColabJob):
         binding = {"session": self.session, "source": source, "source_hash": source_hash,
                    "dataset": digest(payload), "upload_sha256": checksum(upload),
                    "runtime_sha256": self.runtime_sha256, "execution_review": reviewed,
-                   "training": self.training_performed,
+                   "training": self.training_performed, "admission": self.admission_record(),
                    "automatic_retry": False, "performance_allocation": False}
         with claim.open("x") as stream:
             json.dump(binding, stream, sort_keys=True)

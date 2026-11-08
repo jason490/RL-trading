@@ -3487,3 +3487,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   worker checks uploaded numerical inventory. Shared bounded archive extraction
   preserves original smoke128MiB/100-member limits. Twenty-seven focused checks
   pass; local replay remains active, remote runtime allocation still unregistered.
+
+- 2026-11-08 gated full-path Colab runtime implemented under fixed0.25-unit,
+  7200-second allocation/900-second reserve contract, same cumulative150/130 and
+  account150/170 guards. Requires complete local restoration and numerical-source
+  identity before single-use claim/allocation; validates full remote artifacts
+  and exact paths after verified shutdown. Explicit512MiB/256-member bounds,
+  original smoke bounds unchanged. Twenty-four focused checks pass; no full-path
+  Colab allocation while the original local replay remains incomplete.

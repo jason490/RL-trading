@@ -295,3 +295,39 @@ unchanged and17 valid bundle/receipt assets. The original local replay remains
 active; its calculation files have not changed. A fixed remote runtime contract,
 complete local-result binding, location provenance and cross-machine acceptance
 remain pending. No additional Colab credits or local fitting occurred.
+
+## Gated full-path Colab runtime
+
+[Runtime contract](../configs/experiments/tanh_paths_runtime.json), canonical SHA256
+`7b44a183961fcc4e51a6952b814412766c234c91b549a87bfa769d0335f3ad43`, fixes
+one CPU inference allocation at0.25 units,7200-second deadline,900-second
+retrieval/shutdown reserve,5400-second preferred execution window and300-second
+checkpoint interval. Original cumulative150/130 project and150/170 account
+limits remain enforced by the shared controller. Setup, idle, failures and
+retrieval count. No automatic worker/allocation retry is introduced.
+
+`runtime/colab/tanh_paths.py` requires complete independent local restoration and
+unchanged numerical source/bundle assets before creating a single-use claim.
+That claim captures the exact local result/provenance hashes and numerical
+inventory. Remote artifacts are accepted only after the owned session is stopped,
+with matching source/Git/kernel/dataset/inventory and disabled training/test flags.
+The full-path container has explicit512MiB/256-member bounds; original smoke
+bounds remain unchanged. Complete remote manifests and both restored path sets
+must agree exactly before location verification is marked true. Local result,
+provenance and numerical sources are rechecked to detect changes during the job.
+
+Twenty-four focused runtime/input/worker/controller checks pass without allocation,
+including stopped-session enforcement, partial-panel preflight rejection,
+source/kernel/test-flag/file-manifest corruption and local-provenance mutation.
+No runtime has been allocated for this full-path job. The active local replay is
+still incomplete; the command below must fail before allocation until all four
+local cases pass. Once it is consumed, do not rerun its claim.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m rl_stocks.runtime.colab.tanh_paths \
+  data/datasets/cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b/dataset.json \
+  --cli-python /path/to/existing/colab-cli/python
+```
+
+This is inference-only numerical acceptance. Its output never selects actors,
+changes failed-family gates or establishes improved trading returns.
