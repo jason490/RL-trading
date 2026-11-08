@@ -2,9 +2,12 @@
 
 This module gives the proposed tanh-hidden policy a separate frozen arithmetic
 contract. It leaves existing task-SAC actors and accepted results unchanged.
-[Local engineering evidence](../results/trpo-feasibility-2026-11-04/README.md)
-and the fixed cross-machine probe pass; learned-policy and full-simulator
-acceptance remain pending.
+The fixed synthetic cross-machine probe, four-case learned Colab smoke/profile,
+and full local104-episode/76,544-decision path replay pass independent acceptance.
+The gated Colab full-path comparison is active; its full remote result is pending.
+[Current evidence](../results/trpo-smoke-2026-11-08/README.md) records completed
+checks separately from performance/trading admission. Sections below retain the
+original contract and chronological engineering history.
 
 ## Input, activation and output contract
 

@@ -1,8 +1,13 @@
 # TRPO engineering feasibility
 
 This is a distinct optimizer-feasibility study. It does not reopen failed PPO
-safeguards, SAC experiments, CrossQ's integrity stop or forecast families. No
-performance comparison or Colab allocation is admitted yet.
+safeguards, SAC experiments, CrossQ's integrity stop or forecast families. The
+four-case Colab smoke/profile and complete local104-episode economic replay now
+pass independent acceptance. The gated Colab full-path inference comparison is
+active; remote parity and a performance allocation are not yet accepted.
+[Current evidence](../results/trpo-smoke-2026-11-08/README.md) distinguishes these
+engineering milestones from trading returns. Earlier sections below retain the
+original protocol and chronological implementation/acceptance records.
 
 ## Motivation and limits
 
@@ -71,7 +76,7 @@ and rejection of altered initialization and incompatible geometry/settings.
 The fixture refuses any environment step and monkeypatches learning to fail.
 These are local engineering checks, not Colab training or cross-machine parity.
 
-## Remaining acceptance before allocation
+## Original pre-allocation checklist (historical)
 
 1. Inspect actual default Colab Python and match it with the current lock; reuse
    the official CLI and bounded bootstrap. No older interpreter or dependency grid.

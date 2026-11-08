@@ -1,6 +1,18 @@
 # Modular swing-trading RL project plan
 
-Status2026-11-02: research-only; no robust multi-seed/prospective winner or trading promotion. The completed2021–2023 comparison has final SAC30.01% versus matched holding30.60%. The separate reference-inference path passes640 exact Colab/host actor predictions and a fixed local training-window replay (26 symbols/19,136 decisions,50.27% versus56.45% holding); one fixed full simulator replay now reproduces exactly across Colab/local execution, with separately preserved CLI reply-timeout status. Original native numerical rejections remain unchanged. Fixed reference controls are complete (selected/final masked40.52/27.61%, tagged50.27/46.03%, training holding56.45%); the routed candidate remains unallocated pending runtime integration and admission. Project40.126736274/150; corrected setup and complete replay are verified remotely, artifacts retrieved and owned termination verified. Original setup failure and reviewed transport failure are retained. Current category evidence is in `docs/canonical-inference.md`, `docs/research-loop.md` and `results/README.md`. `plan.html` remains preserved.
+Status2026-11-08: research-only; no robust multi-seed/prospective winner or trading
+promotion. Four fixed Colab PPO/TRPO smoke/profile cases and full local frozen
+104-episode/76,544-decision path acceptance pass. One owned metered CPU runtime
+is running the exact cross-machine path comparison under a0.25-unit cap and the
+original project150/130/account150/170 guards; its full remote result is pending.
+Standard SAC21-input reference export is separately prepared without new fitting,
+checkpoint selection or native-parity claims. New stock/MOVE/VIX data is retained;
+optional relationship inputs remain gated. Completed-allocation project baseline
+40.226906028/150 is historical; active charges are recorded in the shared ledger.
+Read [current research guidance](docs/research-loop.md) and [actual results](results/README.md).
+`plan.html` remains preserved. Earlier status entries below are historical.
+
+Historical status (2026-11-02): research-only; no robust multi-seed/prospective winner or trading promotion. The completed2021–2023 comparison has final SAC30.01% versus matched holding30.60%. The separate reference-inference path passes640 exact Colab/host actor predictions and a fixed local training-window replay (26 symbols/19,136 decisions,50.27% versus56.45% holding); one fixed full simulator replay now reproduces exactly across Colab/local execution, with separately preserved CLI reply-timeout status. Original native numerical rejections remain unchanged. Fixed reference controls are complete (selected/final masked40.52/27.61%, tagged50.27/46.03%, training holding56.45%); the routed candidate remains unallocated pending runtime integration and admission. Project40.126736274/150; corrected setup and complete replay are verified remotely, artifacts retrieved and owned termination verified. Original setup failure and reviewed transport failure are retained. Current category evidence is in `docs/canonical-inference.md`, `docs/research-loop.md` and `results/README.md`. `plan.html` remains preserved.
 
 Historical status (2026-10-15): Python 3.13 aligned with Colab; 101 tests pass. Updated 2026-10-15. All 36 expanded-universe 50,000-transition runs and the frozen three-seed held-out audit are complete. Combined SAC averaged 10.83% on test versus buy-and-hold 48.46%; no benchmark advantage demonstrated. Models/reports are published, all owned runtimes stopped, cumulative conservative usage 33.090762/150 units, and 7.82 GiB recovered through verified cleanup. CPU is now the default per the user-directed hardware change.
 
