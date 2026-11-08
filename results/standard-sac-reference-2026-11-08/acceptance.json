@@ -1,0 +1,65 @@
+{
+  "checkpoint_reselection": false,
+  "colab_allocated": false,
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "development_evaluated": false,
+  "initial_diagnostic_harness_failure": "Attempted nonexistent policy.optimizer; stopped before export; corrected to independent actor/critic/entropy optimizer fingerprints",
+  "performance_promotion": false,
+  "phases": [
+    {
+      "historical_evaluation_exposure": "unit_magnitude",
+      "historical_training_exposure": "unrestricted",
+      "native_batch_equal_coordinates": 436,
+      "native_batch_max_abs_difference": 1.1920928955078125e-07,
+      "native_reference_parity_claimed": false,
+      "phase": "selected",
+      "probe_sha256": "c7d89ea502b1fd080c30ffb1aa8a961a41d8ec641f448ea3bb06d8a354d81c8b",
+      "protected_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell/checkpoint-10000/manifest.json": "10f6c90250fde8c75d0e5df430e5d7ec1ef8da43e33ae5f49fd5ca75fd4ebcf7",
+        "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell/checkpoint-10000/model.zip": "eca3739d163b841c6a63baa4d1600abec25a065b4c5e4e8ae208123e4d1e2dca",
+        "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell/selected.json": "603ebe85973196e7bd609a98382560f0304f392bc88864a3fc285048969df51c",
+        "results/recurrent-offpolicy-2026-10-31/acceptance.json": "f29470c792f175b30479fa53df4da0b64fe66348d5e3f6e58f1655a3d91bd972"
+      },
+      "reference_actor_sha256": "9b53668d2d3eadc99f240f77391241dcd62f9071578858ec51edd2cd6bef073c",
+      "reference_repeat_exact": true,
+      "reference_seconds": 0.38561946619302034,
+      "source_and_learned_state_unchanged": true,
+      "source_model_sha256": "eca3739d163b841c6a63baa4d1600abec25a065b4c5e4e8ae208123e4d1e2dca",
+      "steps": 10000,
+      "synthetic_points": 128
+    },
+    {
+      "historical_evaluation_exposure": "unit_magnitude",
+      "historical_training_exposure": "unrestricted",
+      "native_batch_equal_coordinates": 362,
+      "native_batch_max_abs_difference": 6.556510925292969e-07,
+      "native_reference_parity_claimed": false,
+      "phase": "final",
+      "probe_sha256": "d3f47252ead3408b0767d20a538200dced28f71fdec3e750461c6a9bfae0d7b4",
+      "protected_sha256": {
+        "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell/checkpoint-100000/manifest.json": "6e930745eac1a755acb03e0b0ca7a0e31c1cf3f7ab111f84b791888557d9b1c5",
+        "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell/checkpoint-100000/model.zip": "71d419516f99254c7dd876d2dec9f31b354eb06da659c99a7289607bc2cc4dc2",
+        "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell/final.json": "e676ad79ca9232f8bc72eddaa66ff04bb670f76c8d431342b6d7fde3bb7273fa",
+        "results/recurrent-offpolicy-2026-10-31/acceptance.json": "f29470c792f175b30479fa53df4da0b64fe66348d5e3f6e58f1655a3d91bd972"
+      },
+      "reference_actor_sha256": "98fc86b3e7fdb06afb5cd3e74d27aea8284e23a6c28fdb64b54cd597d6bfe7f5",
+      "reference_repeat_exact": true,
+      "reference_seconds": 0.3813409428112209,
+      "source_and_learned_state_unchanged": true,
+      "source_model_sha256": "71d419516f99254c7dd876d2dec9f31b354eb06da659c99a7289607bc2cc4dc2",
+      "steps": 100000,
+      "synthetic_points": 128
+    }
+  ],
+  "retired_test_access": false,
+  "schema": "standard-sac-reference-export-v1",
+  "source": {
+    "folder": "/home/vibe/projects/rl-stocks/.runtime/recurrent-screen-source-v1/artifacts/colab/rl-stocks-cpu-025e19b898e4/retrieved/artifacts/comparison-cell",
+    "source_hash": "c61990aae25a4062635343e71afb8c3a85de695b3233c68d78273475bb0742a6",
+    "source_revision": "4a85618111350178ac4018a66d701ae6556d9d34"
+  },
+  "source_acceptance_sha256": "f29470c792f175b30479fa53df4da0b64fe66348d5e3f6e58f1655a3d91bd972",
+  "training_performed": false,
+  "artifact": "artifacts/standard-sac-reference-v1/acceptance.json",
+  "artifact_sha256": "53a2c51ff6cbf1123a871921acff36b446e1701a5d04e5a167383844b7c7ed1a"
+}

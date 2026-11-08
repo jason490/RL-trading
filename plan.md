@@ -3503,3 +3503,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   Complete evidence retained, five superseded progress summaries removed after
   reconciliation/protected-hash checks. No fitting/credits/test access. Fresh
   gated Colab full-path comparison is the next step; no performance promotion.
+
+- 2026-11-08 future strong-control preparation: separate standard21-input SAC
+  64x64 ReLU/certified-tanh actor and trusted RNG-preserving export, without task
+  tags/padding or changes to accepted task-SAC/PPO/TRPO arithmetic. Four no-fit
+  tests pass; selected10k/final100k accepted native checkpoints export and repeat
+ 128 synthetic predictions each exactly. Native-bit differences disclosed; old
+  returns/failures unchanged. No market evaluation, reselection, fitting or new
+  allocation. Full bundle/cross-machine/path and performance protocol pending.

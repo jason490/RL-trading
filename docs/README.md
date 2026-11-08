@@ -179,3 +179,7 @@ and pending cross-machine/full-path acceptance.
 [Capability overview](capabilities.md) summarizes implemented components and
 remaining work. The repository [README](../README.md) provides the short setup,
 data-download, dataset and Colab getting-started path.
+
+[Standard SAC reference control](standard-sac-reference.md) documents the separate
+21-input frozen actor/export contract, read-only historical checkpoint evidence,
+disclosed native differences and pending comparison admission.
