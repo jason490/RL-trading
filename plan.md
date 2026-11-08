@@ -3437,3 +3437,12 @@ and controller/budget/transport admission remain; no performance study admitted.
   project40.214754909/150, account544.61 idle. Fixed explicit worker/bootstrap
   dispatch with notebook-argv regression;18 affected checks pass. No training
   results or automatic retry; consumed claim and original0.25-study baseline retained.
+
+- 2026-11-08 reviewed TRPO/PPO engineering completion: all four fixed CPU cases
+  (1024 smoke/2000 profile per algorithm) complete on ColabPython3.13.18, source
+  0280143. Independent native/reference/update/optimizer acceptance and repeated
+  post-cleanup restoration pass. TRPO actor searches8/8 and2/2 accepted, maximum
+  KL0.00683742/0.00568785. Owned53324f7dd3a6 shutdown verified before acceptance.
+  Combined original+reviewed charge0.013209022/0.25, project40.226906028/150;
+  account544.61 idle. Both claims consumed, no performance promotion. Next full
+  frozen preprocessing/economic-path acceptance before a new matched protocol.

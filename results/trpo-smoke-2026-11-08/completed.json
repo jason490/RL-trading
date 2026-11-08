@@ -1,0 +1,81 @@
+{
+  "schema": "trpo-smoke-completed-v1",
+  "session": "rl-stocks-cpu-53324f7dd3a6",
+  "source": {
+    "dirty": "",
+    "revision": "028014305813036d841feea618d1f4ac7b26194f"
+  },
+  "source_hash": "71839821926c7f00f04f9a7fab9e55741124428b59ac705726fa007eace0e2a0",
+  "python": [
+    3,
+    13,
+    18
+  ],
+  "dataset": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "normalizer_sha256": "b3c8a298d66f253e4e4f5474214873d6b6aae16d1b4666633c6d83be6041469f",
+  "cases": [
+    {
+      "mode": "smoke",
+      "algorithm": "ppo",
+      "transitions": 1024,
+      "learn_seconds": 6.803163385000062,
+      "actual_adam_steps": 320,
+      "actual_hvp_calls": 0,
+      "accepted_actor_line_searches": 0,
+      "max_independent_kl": 0.002259317319840193,
+      "initial_parameters": 11465
+    },
+    {
+      "mode": "smoke",
+      "algorithm": "trpo",
+      "transitions": 1024,
+      "learn_seconds": 3.130156323000051,
+      "actual_adam_steps": 320,
+      "actual_hvp_calls": 134,
+      "accepted_actor_line_searches": 8,
+      "max_independent_kl": 0.006837424356490374,
+      "initial_parameters": 11465
+    },
+    {
+      "mode": "profile",
+      "algorithm": "ppo",
+      "transitions": 2000,
+      "learn_seconds": 8.961385631999974,
+      "actual_adam_steps": 400,
+      "actual_hvp_calls": 0,
+      "accepted_actor_line_searches": 0,
+      "max_independent_kl": 0.0027767003048211336,
+      "initial_parameters": 11465
+    },
+    {
+      "mode": "profile",
+      "algorithm": "trpo",
+      "transitions": 2000,
+      "learn_seconds": 7.465939566999964,
+      "actual_adam_steps": 400,
+      "actual_hvp_calls": 33,
+      "accepted_actor_line_searches": 2,
+      "max_independent_kl": 0.005687846802175045,
+      "initial_parameters": 11465
+    }
+  ],
+  "acceptance_sha256": "875e64abf87e6d1551d074c74ad4d6ba7dc81287bfb9888323bdee9ada4a5105",
+  "archive_sha256": "fe2c382ff00d969e3ae49b7cc23991bdc4ff8c92e0bc49745cc93a5b4862d40d",
+  "summary_sha256": "24ad66391796712b87f730a2476b45d88f9a71595b9ca3cc959fb09d678dcd5d",
+  "measured_units": 0.0,
+  "estimated_units": 0.012151118820243409,
+  "charged_units": 0.012151118820243409,
+  "original_study_base": 40.21369700555672,
+  "study_units": 0.013209021974930124,
+  "project_units": 40.22690602753165,
+  "remaining_project_units": 109.77309397246836,
+  "cleanup_verified": true,
+  "training_verified": true,
+  "account_balance": 544.61,
+  "account_rate": 0,
+  "account_assignments": 0,
+  "retired_test_access": false,
+  "performance_evaluated": false,
+  "performance_promotion": false,
+  "post_cleanup_physical_reverification": true
+}

@@ -297,3 +297,18 @@ claim or change any model/return gate. A new single-use claim prevents replay.
 Eight review/cumulative-allowance checks plus eight original controller fixtures
 pass without allocation. This is a bounded manual code/evidence review under
 standing research authorization, not an automatic worker/allocation retry.
+
+### Actual reviewed Colab smoke/profile accepted — 2026-11-08
+
+All four cases complete on defaultPython3.13.18/CPU, clean source0280143. Native
+PPO/TRPO1024 learning times6.803/3.130s;2000 profile8.961/7.466s, including observer
+overhead. Each smoke has320 actual Adam steps, each profile400. TRPO has134/33
+actual HVPs and8/8,2/2 accepted actor searches; independent maximum accepted
+KL0.00683742/0.00568785. Full initial pair parity, finite optimizer states,
+actor continuity/endpoints, exact reference probes and post-cleanup restoration
+pass. [Physical results and retained artifacts](../results/trpo-smoke-2026-11-08/README.md).
+Owned shutdown verified before acceptance; fresh account544.61 idle. Combined
+study charge0.013209022 includes the original failed setup; project40.226906028/150.
+Both claims consumed. Next full frozen preprocessing/bundle and economic-path
+acceptance, then separately preregister strong SAC/holding comparisons and
+multi-seed gates. No performance evaluation/promotion has occurred.

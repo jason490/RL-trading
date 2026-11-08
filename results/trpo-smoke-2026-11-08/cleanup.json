@@ -1,0 +1,55 @@
+{
+  "removed": [
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/bootstrap-progress.txt",
+      "bytes": 4333,
+      "sha256": "859cfd81295befe9a3a2c77121cd5bfaa70b22c2bd2ca2498e01b1be2b9ec0fd"
+    },
+    {
+      "path": "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/case-progress.json",
+      "bytes": 17926,
+      "sha256": "d101911bf62871be0c863ba600e68002067c58c2ae5633f486d1e29518185b2c"
+    }
+  ],
+  "bytes_removed": 22259,
+  "protected_sha256": {
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/upload.tar.gz": "9dec9d9614182d281232ed42f0ceb4810bb1429f3c87c3550552f2820261560f",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/kernel.json": "afd42b7b5a06a293d0da774d585c4ed49aa286aefd928fe141a3fc757307a727",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/summary.json": "24ad66391796712b87f730a2476b45d88f9a71595b9ca3cc959fb09d678dcd5d",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/source-git.json": "51101215f0d54100caa19c5ef63ce61d360183c0b015801c1674cd5b19c92c16",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/artifacts.tar.gz": "fe2c382ff00d969e3ae49b7cc23991bdc4ff8c92e0bc49745cc93a5b4862d40d",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/acceptance.json": "875e64abf87e6d1551d074c74ad4d6ba7dc81287bfb9888323bdee9ada4a5105",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/completion.json": "72289ec256b4c623b54392e5e07e644af27b03267439952bd69d47915dcddd0f",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/bootstrap-log.txt": "859cfd81295befe9a3a2c77121cd5bfaa70b22c2bd2ca2498e01b1be2b9ec0fd",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/progress.json": "c1ee1bdc4bf4fe813e5228ec720798da31a605e7873f105c464463906360710e",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/result.json": "f6896a30ac29e49203a6551cec761a25fa894af5b76c4556085dbd0a51b53eb2",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-ppo/reference-initial.json": "7b8105838f9037c5a4d53b403196afad95dcf61e17b145894d5e18821e9e23a0",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-ppo/initial.zip": "c6baec566fbec14972bd68d3278f83dc6427106a4d606937463589e1d3906b35",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-ppo/final.zip": "0b5fd4b7ee61dede434d8c5915ac0c8d08b584389c36b4c696c9ace7d654ff45",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-ppo/actor-updates.pt": "2f5c07dd2639c7f891f3556e6940b115d23d7c5e7f9d80ef10335963f9ca823e",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-ppo/result.json": "2fc7c8cd50d12f1362601721bff1f4f586b22c7cea335f4a16c27d71358437b9",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-ppo/reference-final.json": "f06fe5f672bf71515f4e4c408c924f24c6710736601b561fd3b2ede3382292fc",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-trpo/reference-initial.json": "ab45e915dac2e47c723eb6ab3e9415a5e3b0feb45c44e39c842e2df60b40e1c3",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-trpo/initial.zip": "08efb1b78bc743081bce1515fee58ac6ca8c32199c4dfcb1144bc1f7c0bf36f3",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-trpo/final.zip": "2d66a1a1b14078f737dd820d8feb51dabc2fc29da371eaa3b58029fedc525bb5",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-trpo/actor-updates.pt": "daaa7c57456259244764fdb3d9df99d70b483c9676d426964642f2cf579ca1fa",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-trpo/result.json": "4f020e4c9e6f49b3dfc16fb29e14cad9a06f64771f3c2847938da686a1978542",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/profile-trpo/reference-final.json": "47a28e36a67b888fd0f0e3972efda175ccdb4a82a3592e2d31b0269cb0a4b12c",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-trpo/reference-initial.json": "693bf63a5f967a1cd1a242fe7c35e78d08357f25dd27ab629388ab96eeef4478",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-trpo/initial.zip": "b2ab520950360c9e5448abbb0d298bd11ea9ecf03f931aef5a1139662a323c73",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-trpo/final.zip": "ece6d8f063374d5bb3615b47da90da72544e7b23d07b77abf62e98d4fce4c08a",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-trpo/actor-updates.pt": "3a799d458b3b02b74f1f6956d92dac3c5174e82449b5366482958239f4e2c818",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-trpo/result.json": "c5a469029a2a59cfbed6758d933a76eae67ecadc4619e3e61b48b84855363181",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-trpo/reference-final.json": "e6f04b27b89e717db6be1824ca55652f4c70a80f0ec0738a4093a26db0e4e45e",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-ppo/reference-initial.json": "0ca3a27aeb4e55269892a67430a9e905cb8b9bb1397e0e68fd631d842c22e433",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-ppo/initial.zip": "8856083380d8c839640467b01c4f596b82b6c61b5e139fa75d0217a504bfa0d2",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-ppo/final.zip": "c47e69dc033e6b7b6a6f2a6d2c497258effeecc5a661e37eac6bc13e8f3797cc",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-ppo/actor-updates.pt": "2d27f21c7a8349081ccae7a920b710ba906db1bc54bef6db3a6f24c533cdd910",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-ppo/result.json": "4aeafd4d342b950b90a83b6b63d54baed6479e6cc79ef0f75569500e44cedd19",
+    "artifacts/colab/rl-stocks-cpu-53324f7dd3a6/retrieved/artifacts/trpo-smoke/smoke-ppo/reference-final.json": "3dbeee395bda16de646682f4f10708934a8774772966a69323a8f5fbe8e3d0bd",
+    ".runtime/usage-ledger.json": "96464b0967e3eb7ecafa271fae626f586749a8dc6e19214a2bd9222b69f01a7c",
+    "plan.html": "26c4bf4b910013bf47231d47b74ccf82ece9fe05296cd5eefddccc300d3a365f"
+  },
+  "protected_unchanged": true,
+  "post_cleanup_physical_reverification": true
+}

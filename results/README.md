@@ -7,7 +7,15 @@ the full required multi-seed and prospective acceptance process.
 
 ## Current research status
 
-Latest engineering result (2026-11-02): [reference inference](reference-inference-2026-11-02/README.md)
+Latest engineering result (2026-11-08): [TRPO/PPO smoke/profile](trpo-smoke-2026-11-08/README.md)
+completes four ColabCPU cases with independent saved-update/optimizer/reference
+acceptance and verified owned shutdown. No economic performance scored. Original
+failed setup preserved; total0.013209022 units, project40.226906028/150, account
+544.61 idle. Full frozen preprocessing/economic replay remains before any new
+performance screen. [Stock/MOVE/VIX expansion](stock-context-expansion-2026-11-08/README.md)
+and [code cleanup](code-cleanup-2026-11-08/README.md) are separate completed work.
+
+Earlier engineering result (2026-11-02): [reference inference](reference-inference-2026-11-02/README.md)
 passes640 exact synthetic Colab/host actor predictions and one full local saved
 market replay. Its fixed selected50k actor returns50.27% versus56.45% holding
 on the **2018–2020 training window**, outside the development-return convention
