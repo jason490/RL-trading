@@ -251,3 +251,22 @@ and file-manifest mutation, and the pre-I/O local/kernel guard. No local fitting
 Colab allocation or units consumed. The dedicated metered ownership/controller
 and its failure/cleanup acceptance are still pending; this bootstrap is not an
 admitted standalone training command. Do not invoke it outside that controller.
+
+### Metered engineering controller
+
+`runtime/colab/trpo_smoke.py` implements one single-claim CPU allocation under
+[the fixed runtime contract](../configs/experiments/trpo_smoke_runtime.json):
+0.25 incremental units, original7200-second allocation deadline,900-second
+retrieval/shutdown reserve and300-second unique checkpoint snapshots. It reuses
+the original project ledger,150/130 project limits and150/170 account protection.
+Metering failures stop the owned allocation. All operations are projected before
+starting; no automatic training/allocation retries occur. A lost worker stream
+waits for that same atomic export within the original deadline.
+
+The controller captures default kernel version before remote setup, excludes
+credentials/caches from its allowlisted upload, retrieves bounded transport and
+verifies termination before offline physical acceptance. Eight no-allocation
+fixture tests cover setup/execution/meter/budget failures, persistent claim
+rejection, budget preservation, acceptance after cleanup, retained rejection
+transport and upload exclusions. No actual Colab smoke/profile result exists yet.
+The user requested code cleanup before allocation; complete that separately first.

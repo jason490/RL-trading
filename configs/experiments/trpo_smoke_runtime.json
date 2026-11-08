@@ -1,0 +1,18 @@
+{
+  "schema": "trpo-smoke-runtime-v1",
+  "smoke_protocol_sha256": "e0b8a26cbfd51eee4046544d49e282abd1409b024ec4a0637d92b774bffc5f7b",
+  "reference_acceptance_sha256": "6ab69c5376c5626880161f13e22774228b1310d4f96e1ef38128347e7f9f1256",
+  "maximum_units": 0.25,
+  "deadline_seconds": 7200,
+  "reserve_seconds": 900,
+  "preferred_execution_seconds": 5400,
+  "snapshot_seconds": 300,
+  "claim": ".runtime/trpo-native-smoke-v1-claim.json",
+  "accelerator": "CPU",
+  "automatic_retry": false,
+  "performance_allocation": false,
+  "project_ceiling": 150,
+  "project_teardown": 130,
+  "minimum_account_balance": 150,
+  "account_teardown_balance": 170
+}
