@@ -340,3 +340,14 @@ the long complete-panel replay; it does not extend a deadline, change the
 scientific panel or restart a failed remote operation. A test checks clipping
 including600 seconds of elapsed setup. Current local replay has completed three
 panels; first two independently restore all38,272 decisions. Final panel pending.
+
+### Actual complete local path acceptance
+
+The original process has now finished all104 episodes/76,544 decisions. Independent
+saved-path restoration passes the full matrix, and all114 numerical import files
+remain identical to original replay revision3607704. [Bound local proof](../results/trpo-smoke-2026-11-08/local-full-paths.json).
+Five superseded progress summaries were removed only after reconciliation; all
+complete lossless paths, metrics, source provenance, independent acceptance and
+protected ledger/plan hashes are retained. No credits or fitting were used.
+The gated remote inference comparison can now run after fresh admission/metering;
+remote equivalence and trading-return improvement are not yet established.

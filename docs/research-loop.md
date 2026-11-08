@@ -1,5 +1,15 @@
 # Bounded autonomous research
 
+Latest local engineering acceptance (2026-11-08): all four frozen PPO/TRPO actors
+pass104 complete training-window episodes/76,544 exact paired decisions, with
+independent saved-path/accounting/metric restoration and114 original numerical
+source files unchanged. [Proof](../results/trpo-smoke-2026-11-08/local-full-paths.json).
+No fitting, development selection, retired-test access or new credits. Complete
+paths retained and superseded progress summaries cleaned by hash/record checks.
+Next the separately gated ColabCPU full-path comparison (0.25-unit cap, original
+project150/130 and account150/170, no automatic retry), then performance protocol
+registration only after exact remote acceptance. No robust winner/trading promotion.
+
 Latest runtime event (2026-11-08): the separately reviewed corrected PPO/TRPO
 CPU smoke/profile completes all four cases and independent post-cleanup physical
 acceptance. [Actual results](../results/trpo-smoke-2026-11-08/README.md). TRPO accepts

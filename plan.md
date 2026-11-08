@@ -3495,3 +3495,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   and exact paths after verified shutdown. Explicit512MiB/256-member bounds,
   original smoke bounds unchanged. Twenty-four focused checks pass; no full-path
   Colab allocation while the original local replay remains incomplete.
+
+- 2026-11-08 actual complete local economic-path acceptance: all four actors x26
+  fixed training episodes,76,544 decisions, exact direct/bundled observations,
+  fills/account/protection/rewards and metrics. Independent saved-path restoration
+  passes all104 episodes;114 numerical import files match original source3607704.
+  Complete evidence retained, five superseded progress summaries removed after
+  reconciliation/protected-hash checks. No fitting/credits/test access. Fresh
+  gated Colab full-path comparison is the next step; no performance promotion.

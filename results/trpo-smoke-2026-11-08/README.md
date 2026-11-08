@@ -83,3 +83,26 @@ their direct reference actor exactly. Original actors and dataset remain unchang
 [Bound receipt](frozen-preprocessing.json); detailed local proof and bundles are
 under `artifacts/trpo-frozen-preprocessing-v1`. This is local inference acceptance,
 not cross-machine full-path or trading-return evidence. No new Colab units used.
+
+## Complete local economic-path acceptance
+
+All four frozen actors pass exact direct-reference versus bundled-preprocessing
+replay over the full fixed26-symbol training window. Each case has19,136 decisions:
+**104 complete episodes /76,544 decisions total**. A separate saved-path verifier
+reconstructs every observation, recorded action execution, fill, cash/holding/
+protection state, reward, final metric and directional attribution. All pass.
+The114 declared numerical import files still match original replay revision3607704.
+[Complete local receipt](local-full-paths.json) binds the local result, provenance,
+case path digests and independent acceptance artifact.
+
+This establishes local engineering parity, not return superiority, a prospective
+result or readiness to trade. No local fitting, checkpoint selection, development
+scoring, retired-test access or additional Colab allocation occurred. Complete
+lossless paths, case/root results and independent proof remain under
+`artifacts/trpo-full-path-local-v1`. Source provenance records the original clean
+revision before later transport/checker additions; calculation code was unchanged.
+
+[Local path cleanup](local-path-cleanup.json) removes five superseded progress
+summaries after reconciling them against complete retained results. Every protected
+path/proof/source/ledger/plan hash remains unchanged. Full remote replay is next,
+under the already fixed single-claim CPU inference runtime and shared budgets.

@@ -1,0 +1,46 @@
+{
+  "local_result": "/home/vibe/projects/rl-stocks/artifacts/trpo-full-path-local-v1/result.json",
+  "local_result_sha256": "01a364f515d54920ce0042a76e5c06aa2d87165f4ab06dea0159c75e3613c5d4",
+  "local_provenance_sha256": "e68c0c5ea4342fe83500a3c5cb2e00d43e238cfd7a8cc5ee5b73363c71ed8db8",
+  "cases": [
+    {
+      "case": "smoke-ppo",
+      "bundle_id": "f1bca28cadb8d5cbec40ddb7a31f9db443c2f305e33471a35f0a9e2726b13366",
+      "episodes": 26,
+      "decisions": 19136,
+      "paths_digest": "cb742d771dbda9dcad94a4f5565b7034784efe49b97c384bdec13826735e11a4"
+    },
+    {
+      "case": "smoke-trpo",
+      "bundle_id": "a2120a1061ba2c872b81d6ce879385fe3d9cfaeb4aad3602184d6b7101f47563",
+      "episodes": 26,
+      "decisions": 19136,
+      "paths_digest": "d3177f9b4aa57fd8408eb62927d9ba9c87c09eb0177cb973ba7c42490667380a"
+    },
+    {
+      "case": "profile-ppo",
+      "bundle_id": "5761ec67d5d2f0282ebad1d2cf58ef273f7aa129de06191ee393970ba3a91ef5",
+      "episodes": 26,
+      "decisions": 19136,
+      "paths_digest": "d623129cc5c230c6be4846e9a3ceb51c412c22ca8913e1a575a09042c01d1c51"
+    },
+    {
+      "case": "profile-trpo",
+      "bundle_id": "58dceb122ed3dbf39677706ddea746c78267b6f86a0025888c4002ceffb19959",
+      "episodes": 26,
+      "decisions": 19136,
+      "paths_digest": "a4221124c17bf721a79ddd4b0e0d26ab5fb6f5babecdb7bccdd6d2d2034e16ea"
+    }
+  ],
+  "episodes": 104,
+  "decisions": 76544,
+  "training_performed": false,
+  "allocation_admitted": false,
+  "schema": "tanh-complete-local-path-acceptance-v1",
+  "numerical_source_files": 114,
+  "independent_acceptance_sha256": "2c5cbe4d134e10392100dd73a3dc978c5dd503b532708a5f39b48622dc517611",
+  "complete_panel_accepted": true,
+  "colab_allocated": false,
+  "retired_test_access": false,
+  "performance_promotion": false
+}
