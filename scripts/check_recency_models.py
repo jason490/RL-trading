@@ -1,5 +1,4 @@
 """Real dataset environment/model construction acceptance; no learning or allocation."""
-from rl_stocks.training.training_history import validate_sampling
 import argparse,json
 from pathlib import Path
 import numpy as np

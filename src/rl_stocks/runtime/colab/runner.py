@@ -15,6 +15,7 @@ import shutil
 from rl_stocks.runtime.colab.budget import BudgetStop,Ledger,parse_usage,execution_window
 from rl_stocks.runtime.colab.jobs import job_plan,study_plan,learning_plan,stability_plan
 from rl_stocks.core.provenance import repository_state
+from rl_stocks.runtime.colab.source_archive import source_member
 from rl_stocks.runtime.colab.artifacts import validate_archive
 from rl_stocks.runtime.colab.transport import TransportLost,connection_lost,worker_not_started,export_ready
 
@@ -258,7 +259,7 @@ class ColabJob:
             self.ledger.active["job_plan"]=plan;self.ledger.save()
             with tarfile.open(archive,"w:gz") as tar:
                 for item in ("src","scripts","pyproject.toml","requirements.txt","requirements.lock","configs"):
-                    tar.add(self.root/item,arcname=item)
+                    tar.add(self.root/item,arcname=item,filter=source_member)
                 tar.add(Path(dataset)/"dataset.json",arcname="dataset.json")
                 tar.add(job_file,arcname="job-plan.json")
                 tar.add(git_file,arcname="source-git.json")

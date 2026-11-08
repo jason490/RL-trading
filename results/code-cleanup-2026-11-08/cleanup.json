@@ -1,0 +1,3339 @@
+{
+  "schema": "source-cleanup-v1",
+  "tracked_code_files_reviewed": 644,
+  "duplicate_report_implementations_replaced": 5,
+  "retained_report_implementations": 1,
+  "generated_files_removed": 664,
+  "bytes_removed": 4291513,
+  "removed_files": [
+    {
+      "path": "src/rl_stocks/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 154,
+      "sha256": "82d54eb4316c4afdd8ff8fba4f459a9c5d32274823da8369dc766702b6f9c2dc"
+    },
+    {
+      "path": "src/rl_stocks/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 145,
+      "sha256": "ba8e270f71bc6235d7d1ffebf112d5fbcb6f638c87f267cc0e819bf6ca534740"
+    },
+    {
+      "path": "src/rl_stocks/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 122,
+      "sha256": "740ac141127d8c8eb38dac721094d59ffe34e9328223c8b0a57a1041ff3ffc0a"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/recurrent_comparison_acceptance.cpython-313.pyc",
+      "bytes": 7292,
+      "sha256": "c0184b8c875bcf0259fa82535d330121787517053879e513708f0bf254ace2e1"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/exposure.cpython-313.pyc",
+      "bytes": 340,
+      "sha256": "e7e109d28eefc4d69b4d0fb38c4eb922d79255521b4ab5c7f943627873feb327"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/recurrent_sac.cpython-313.pyc",
+      "bytes": 3466,
+      "sha256": "41980528391bdb6ebdf13d0179e66b2a48d703daf26cb7192b74ddcfaf774bc0"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/report_contract.cpython-313.pyc",
+      "bytes": 3398,
+      "sha256": "ff7cd0b3de279c54cdf7ae4f40040b58ebfe2d9df79220abde2cf30d8a9c87ab"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/critic_sensitivity.cpython-313.pyc",
+      "bytes": 6578,
+      "sha256": "4271983644f5bc99df3efa2699e300ddbc9dbe0efa3a905aecd3ca42a374ba07"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/canonical_window.cpython-313.pyc",
+      "bytes": 3303,
+      "sha256": "756adf44ec8d3523182e32ac18cda031a9055f9e97d99cb9d4a3a7d8f7ba043e"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/direction.cpython-313.pyc",
+      "bytes": 6395,
+      "sha256": "6d684e21d9197f1433763db7bad8fc4d5933727e560e62e9c75b3ea41d13af50"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/runner.cpython-312.pyc",
+      "bytes": 4141,
+      "sha256": "3930bf3a4424e72bfd66a8765b0c791b6accebfd930822c4da63b444cf113c38"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/runner.cpython-313.pyc",
+      "bytes": 5566,
+      "sha256": "9997b5c34f1ffe519a10b6f0d3a55dfb4a3c439ed31383f66ff721cce8dd04c9"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/task_gates.cpython-313.pyc",
+      "bytes": 3614,
+      "sha256": "b9443e557af35a55b62fcef57b81ce3be9d2827095997a5a84de9fc9f249dc0c"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/canonical_task.cpython-313.pyc",
+      "bytes": 5142,
+      "sha256": "086fc7dd41963a4625655d28dedfa745304123338f775153d273a88a13341572"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/recorded_economics.cpython-313.pyc",
+      "bytes": 4749,
+      "sha256": "3e3199fe3fc38a928b467c963162b3ec1f1a265bf804e130eb706750c35c49d7"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/trpo_smoke.cpython-313.pyc",
+      "bytes": 14903,
+      "sha256": "4fa37c056b87eb3a09a5240b495c0674b0e0ca95d6a2272e164befc2229dd57a"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/metrics.cpython-312.pyc",
+      "bytes": 2576,
+      "sha256": "b4cd92e6f16efd04efb771f4a984a9537d2e8f923b90a4c8b43af984eef8c894"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/behavior.cpython-313.pyc",
+      "bytes": 6330,
+      "sha256": "86dab694c0485fce5e0b1e2f00a2fb816d5ee7d018850b7613398925a6dfb1d4"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/trpo_updates.cpython-313.pyc",
+      "bytes": 6489,
+      "sha256": "b1ff07930f5e33402c3d43b840a0818fa0e8a3ff24bcdd648d2ebd55d0c58c52"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/rules.cpython-313.pyc",
+      "bytes": 2496,
+      "sha256": "f2d265ac97f3ca5547e4b8f67df18b011d0b587e270348c03fe20a388bff1eba"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/feasible_references.cpython-313.pyc",
+      "bytes": 2672,
+      "sha256": "1915282242d1857467702cc828ea324b1c6cce6fd60a279caa55eee5d0e2ece6"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/training_fit.cpython-313.pyc",
+      "bytes": 6635,
+      "sha256": "931b04a090cb2350bffda5d7b9b0f06217132e503808adb2ade5470e60a52eb7"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/task_reference_controls.cpython-313.pyc",
+      "bytes": 13268,
+      "sha256": "999f538e066209098bb4de9585695b087c81982663164ac7fc2f35dbb405ba7b"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/task_conditioning.cpython-313.pyc",
+      "bytes": 5460,
+      "sha256": "543bee843ba1b234fee4971a9df84f6235e2184784d84f300ca3c71f0d553306"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 133,
+      "sha256": "c29658da6bc15c85ee738ef7f0df9cae35ef13816273eea5f2108c564a5b2639"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 133,
+      "sha256": "f1799db31622259e05f9fc92f1c081ff0a1bf58fc081dec3e31b1722aca360c4"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/soft_consistency.cpython-313.pyc",
+      "bytes": 6130,
+      "sha256": "e957ed9c583d8cc4c61d5b39a05e9a4e493349e3c8f075409069eff0d1fdcdf6"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/canonical_diagnostic.cpython-313.pyc",
+      "bytes": 11248,
+      "sha256": "2ee2d2ee0b8bd51edfbe8a95cb04a11e631264f7e8c3753915c771b8e26fc89c"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/offpolicy_fit.cpython-313.pyc",
+      "bytes": 11517,
+      "sha256": "0b83a62993c90452ad30ca1388589dba2ad90e0a65c5d691da475aa7c26db9bb"
+    },
+    {
+      "path": "src/rl_stocks/evaluation/__pycache__/metrics.cpython-313.pyc",
+      "bytes": 2666,
+      "sha256": "cd0ac659894137629fc6f6c30b6723a5449eda98129f96edbd45b849573cd2ed"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/action_execution.cpython-313.pyc",
+      "bytes": 15274,
+      "sha256": "232d54c5d1f2bcacf5556a195c9bfdde4982d23c750abc2cb2eef51ad01d166b"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/history_coverage.cpython-313.pyc",
+      "bytes": 3424,
+      "sha256": "234a952b1e7d677a79888a21711e1853afd39b363334ede6d431304ed6bc8e55"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/gae_public.cpython-313.pyc",
+      "bytes": 2759,
+      "sha256": "cb0c83eafdffc29fec43913d032313f8484e671b76949b5873c56fdf523845ed"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/comparison.cpython-312.pyc",
+      "bytes": 5130,
+      "sha256": "04ba8377def504ea1e6e03383718270f0f4e86ae91945d05d122baf30fe93813"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/pnl_bridge.cpython-313.pyc",
+      "bytes": 11814,
+      "sha256": "3c3d01ce557b7da12b98bb6b3b12f540e7c21effc1aa745c8619e8e010c231f7"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/history.cpython-313.pyc",
+      "bytes": 7146,
+      "sha256": "0abc360bfc36e2bed43e79d607191b6cf77221554588cfcf025e0eb151fcf9ed"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/learning.cpython-313.pyc",
+      "bytes": 13610,
+      "sha256": "73b1d125a2698288de36d4652b5073578742040cdd6cdc3ac3673a2c6716ed5a"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/html.cpython-312.pyc",
+      "bytes": 6373,
+      "sha256": "809fba2d7ea3bd9232a3c2e1c02be8dbe6409e29be98f4eeecb3840c7053e031"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/offpolicy.cpython-313.pyc",
+      "bytes": 4120,
+      "sha256": "e610825839b923f96756c01fbb4ce7f85785cec7c85607286399652fdd56c27f"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/html.cpython-313.pyc",
+      "bytes": 6393,
+      "sha256": "ff59a2d4712424ca6718b0ed2b5bfd183e4850cdcbafb9d7b03e2fe56793a509"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/gae_traces.cpython-313.pyc",
+      "bytes": 1394,
+      "sha256": "a9adecbe64b0cd2ba6b08cf006deb1e7ecdc7b50c4460a0982666a44de1fb5e0"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/benchmark_variance.cpython-313.pyc",
+      "bytes": 8472,
+      "sha256": "661e0d5d06775cddad5809a7c72411690954517b2ef0113373026f3c066c6249"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/treasury_context.cpython-313.pyc",
+      "bytes": 3285,
+      "sha256": "3b91f5de8805aaa36665432f80067834f6daa4d6cc45da2dbbe0497203277d0b"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/sac_learning.cpython-313.pyc",
+      "bytes": 3377,
+      "sha256": "c821d1f4f453dd70528a12a4a99a2056dfbee425b36486bb5ba268037f64e71c"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/forecast_errors.cpython-313.pyc",
+      "bytes": 4251,
+      "sha256": "93e0e75bd27f834e9c79e28c2512a014be70800f39e646c53b75a43ba0497075"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/temperature.cpython-313.pyc",
+      "bytes": 2028,
+      "sha256": "c0ab6df5484cffc61c6923ce0a7456a198c86b3438b9118ee224eb56a672af57"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/offline.cpython-313.pyc",
+      "bytes": 9844,
+      "sha256": "9ae28c30a98d373b5f2c704d13b49d6562077bb253d3a30386b3dd24e872f943"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/retained_reports.cpython-313.pyc",
+      "bytes": 1132,
+      "sha256": "ff5db97237921d3b115e6378dcf161b2c4c87d0dde355caafc56e9221622c1ce"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/crossq_comparison.cpython-313.pyc",
+      "bytes": 1513,
+      "sha256": "7af6c21455ffaeb395d04c152ae56181be1ecf255dbe5fdd956618b48b9d5d89"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/stability.cpython-313.pyc",
+      "bytes": 14470,
+      "sha256": "e6cd243a32c626cf0af85f2ff7d404b6a865433d8c5a7922db86c17cea73a4a5"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/vix_context.cpython-313.pyc",
+      "bytes": 1404,
+      "sha256": "661bbe5860bff8807e5c93f16103a34d6e1170f6afd03f753d537b715528b545"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/study.cpython-313.pyc",
+      "bytes": 8967,
+      "sha256": "79d046653a50e86812a71d62027621ceacf0c1202011a882eee84030ae28118b"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/comparison.cpython-313.pyc",
+      "bytes": 5167,
+      "sha256": "5790ed960b12e27cd7e6a90aa34877cdf202a1050836e5f9bca67d009220b216"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/historical.cpython-313.pyc",
+      "bytes": 2674,
+      "sha256": "27dd4197abbafb90743234c66074ac057713bf881396702c05844f150c67a8ab"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/feature_scale.cpython-313.pyc",
+      "bytes": 3754,
+      "sha256": "e5c3b7120b75775845bb33b1ed8e49428606684a08c45863824e3a65f0c389d2"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/crossq_public.cpython-313.pyc",
+      "bytes": 3955,
+      "sha256": "1475adfb4d9ca4d2b4a22e722ddd9a239022243b00e2b390c0967259eb4437e1"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/path_divergence.cpython-313.pyc",
+      "bytes": 7714,
+      "sha256": "ff4217e16437355830f5d2aef3e2b1ed2f08d5739c75691725e787b6a8189367"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/historical_control.cpython-313.pyc",
+      "bytes": 4790,
+      "sha256": "a7a7294d3cabd4e0cc25a095710aa7c71c02eaad4c460862c23253cc20a3b779"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/universe.cpython-313.pyc",
+      "bytes": 14670,
+      "sha256": "89fc42b731091fe6eac504623bc77679db37ed57b2c15c4b78f7e21c2632fb97"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/deterioration.cpython-313.pyc",
+      "bytes": 7922,
+      "sha256": "95e5688de0f74edbbfc2f0560f8e97dfb29d07254b5366e35c86699fa2f648f9"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/gae_variance.cpython-313.pyc",
+      "bytes": 13952,
+      "sha256": "74d008608223d082ca9b96f372b9a66fe43fec4baa6a06be726006fc6727c3b3"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/participation.cpython-313.pyc",
+      "bytes": 14432,
+      "sha256": "b73264f43c38b8afd25c371364a70ec842ce7d96b6df310a7336c2c8c54ced9d"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/offline.cpython-312.pyc",
+      "bytes": 9460,
+      "sha256": "af0036b6b1e7d5255073fb36160ca1778f0f71971d60f1aa94bc734ba6bfb127"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/shadow.cpython-313.pyc",
+      "bytes": 9943,
+      "sha256": "3177e8f4166f92e2c66596965ca7e94f42fcd917f195b93d811b23d25095ad3a"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/action_boundaries.cpython-313.pyc",
+      "bytes": 8986,
+      "sha256": "5d8f9521c3a2904418d45308d8e97a2c3c2860390a8688a9f8ba0f454504d6af"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/initialization.cpython-313.pyc",
+      "bytes": 13770,
+      "sha256": "6e6de1eb5f228d6c4d6eb7f2394cd5feb3139585aefd91dedd809d50ae177b88"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/regimes.cpython-313.pyc",
+      "bytes": 4577,
+      "sha256": "3e4d2ef90b2622c2dc3528af40956dfcb070585edea2cbda0f13884decd3d9ae"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/recurrent_sac_comparison.cpython-313.pyc",
+      "bytes": 6599,
+      "sha256": "7447f246578206d84988b84b26527ff2c8a47608c41d744a37940ce017d624f3"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/recurrent_comparison_report.cpython-313.pyc",
+      "bytes": 5177,
+      "sha256": "b3de360ee1869ef59d7238e94d1ce95ff2d73dc7d2da07687339a18b16e03f71"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/distributional_critics.cpython-313.pyc",
+      "bytes": 1999,
+      "sha256": "4c89056bd8f90da347da3842f2b552aa77c2b23f592060b3ed8cf0a18f4ad85f"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 132,
+      "sha256": "69f558d528a035910cffbe3f0bef14cb7bdfd63d04ec7e49056e7f5390327bff"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/optimizer.cpython-313.pyc",
+      "bytes": 13124,
+      "sha256": "9ccac4ac7d1482e07f698001c238a19daf148fae9d9db3ce9e3ac6f9d66b6bc9"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 132,
+      "sha256": "fa6b249b6b27939e33e0490c7118073a9f8ac5191bd1fefc296886305b2b5d58"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/recurrent_values.cpython-313.pyc",
+      "bytes": 6788,
+      "sha256": "27c4ec4644f4c4ca5c1fcd2dc00194165bce9338df40908781259634d977ed46"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/indicators.cpython-313.pyc",
+      "bytes": 16280,
+      "sha256": "db0440cf0a91e8c33045de196d02e11b4b3aface5a6ee10de5a155ca1d400de7"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/training_regimes.cpython-313.pyc",
+      "bytes": 4561,
+      "sha256": "4fcd377e9d6f9741bff5b645c33240a0eefa3f34bb1292f834c08589b4f77e61"
+    },
+    {
+      "path": "src/rl_stocks/reporting/__pycache__/residual_errors.cpython-313.pyc",
+      "bytes": 4842,
+      "sha256": "bd9e3521f8ff05a57679116169924b9d5c0a673d3b2b3e6aa7b9ec26cd4be3f0"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/forest_arrays.cpython-313.pyc",
+      "bytes": 7150,
+      "sha256": "108b47ab9556c98ed1b920c23eca05eebc11dcd0b0605d33959ae2c889042252"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_actor.cpython-313.pyc",
+      "bytes": 11714,
+      "sha256": "4d9dd01d8c8e372f2771adb8d3ed3fae95f3c55b8a1f90934537a18199607728"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_export.cpython-313.pyc",
+      "bytes": 7596,
+      "sha256": "3a884c0aff366a813374793c2a203e5a68b37aed300fa153fa247138d914ce5f"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/signal.cpython-313.pyc",
+      "bytes": 5882,
+      "sha256": "c17a64dd77440148c8630354959fda38724db88fef4995c3c1dd4080c45c5ea3"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/forest_signal.cpython-313.pyc",
+      "bytes": 1812,
+      "sha256": "a56c3bbce0bfbb5aa8708fc8c37aa4f493a9f2b275c92e46176c70eca97f8f72"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_math.cpython-313.pyc",
+      "bytes": 7060,
+      "sha256": "ac00b4d5cc73feba72c62ce47995d2b68c321518a9eedfb0bdeddaf6f9c85067"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/task_bundle.cpython-313.pyc",
+      "bytes": 9508,
+      "sha256": "f95eb9d6b47758242262ca350abcb0bff78af16dd7bb24b2c9d3d0f9b2140c05"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_tanh_policy.cpython-313.pyc",
+      "bytes": 6509,
+      "sha256": "ecf5652c9f543e0cf7033b657c578577645ce95d229d2b8d50d7f2547859e3ca"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/crossover.cpython-313.pyc",
+      "bytes": 6985,
+      "sha256": "54d298e7212ab82ff661365a29205ad8e2ecf202a7ac524630ceae7fb19ee803"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/signal_centering.cpython-313.pyc",
+      "bytes": 4051,
+      "sha256": "88d9fb96e4602b18921587e259cc062174ba3ced4e56042ae0e2a02963044da0"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/bundle.cpython-312.pyc",
+      "bytes": 6940,
+      "sha256": "9007a804b621a97cd37cd906d1e92ed908bdbddc1ac2998155c8b8fc49d175a6"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_probe.cpython-313.pyc",
+      "bytes": 4583,
+      "sha256": "3dcb80a7536a86258f18369fe9c991bb8567dec155e769d570c17015aecc3653"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/ensemble.cpython-313.pyc",
+      "bytes": 6895,
+      "sha256": "6859bcaaf1261f8e727f56c4df98a4046328580becef1b1a5e1fa3adc3dc42cd"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_tanh_export.cpython-313.pyc",
+      "bytes": 8406,
+      "sha256": "0f7c5d3afe2988a79ac2f5c0ae2ea570f14585b9a9842dc97388289f52c745ca"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/boosting_signal.cpython-313.pyc",
+      "bytes": 1815,
+      "sha256": "276fd9256bec5c9fbffc829cd4228f722b2621b1dfe4718c5c74a809dd5cab9b"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_bundle.cpython-313.pyc",
+      "bytes": 11867,
+      "sha256": "739b70cba5655a8b777389f9e08e9865fac6a1db19ab1d97f1ffcf8efa1b3588"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 132,
+      "sha256": "5d4f53c99d73dd3fa113afe19d4e0fc44c96949712e0ab0e02b4a6c8e38720ae"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 132,
+      "sha256": "4fcaa322ff5732205f186c7edfad7c27300d0e2b791fac20970f568d45a3b55f"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/boosting_arrays.cpython-313.pyc",
+      "bytes": 7404,
+      "sha256": "910e6c1d6bafb59afa31661675c75994ef08fd7fa201df5336b3501439aceddc"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/canonical_tanh_probe.cpython-313.pyc",
+      "bytes": 5498,
+      "sha256": "29f10a4ebb19d750156c2204ddb66d77fb163a71fd95a7ad0ff996469543371e"
+    },
+    {
+      "path": "src/rl_stocks/inference/__pycache__/bundle.cpython-313.pyc",
+      "bytes": 14446,
+      "sha256": "b47081d068ba048a4d269ef8e7df1e05eab29e0cc1a832fcf00fea3ca5928116"
+    },
+    {
+      "path": "src/rl_stocks/inference/shadow/__pycache__/collect.cpython-313.pyc",
+      "bytes": 5076,
+      "sha256": "e5d4c4a142e0b5a78e071aa32dad914dc8b22dd307107be94c98ef067b78cd59"
+    },
+    {
+      "path": "src/rl_stocks/inference/shadow/__pycache__/protocol.cpython-313.pyc",
+      "bytes": 9298,
+      "sha256": "8fc7f87fed342fa1346a2e583839618378a6e140d6eae8302ea3accb932edf4c"
+    },
+    {
+      "path": "src/rl_stocks/inference/shadow/__pycache__/runner.cpython-313.pyc",
+      "bytes": 17494,
+      "sha256": "7914f5f6c65648d03f7b696003a2a17a3cd13918301c0c8b4ef853e715cc89d5"
+    },
+    {
+      "path": "src/rl_stocks/inference/shadow/__pycache__/features.cpython-313.pyc",
+      "bytes": 2213,
+      "sha256": "7bc467c50f53830d195b9140aab8ceced7e8ebe07f6dcf385161a10b2c23b35c"
+    },
+    {
+      "path": "src/rl_stocks/inference/shadow/__pycache__/journal.cpython-313.pyc",
+      "bytes": 2771,
+      "sha256": "7e94c90e93d5c1c42d700986050297490e11c9d7a2995ecf9046b5324e463c9a"
+    },
+    {
+      "path": "src/rl_stocks/inference/shadow/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 246,
+      "sha256": "05aa207f95080e28b5c2367f7d05f1d7e2e6f0a8e868903a69d2a815ec0a01ad"
+    },
+    {
+      "path": "src/rl_stocks/data/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 127,
+      "sha256": "53bce34e81c6c3e3d3b9dffa81418b464a0435c0ac14cb45005463ff5290051d"
+    },
+    {
+      "path": "src/rl_stocks/data/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 127,
+      "sha256": "4ed09b43a6172345dc2a54833f33cc9b168bdf529cce3b3f68624db7c827a990"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/treasury_contract.cpython-313.pyc",
+      "bytes": 8486,
+      "sha256": "736dc32b9d068a14564ac561d009489f5dece16e547b75a4e049b36639c6cfc4"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/history.cpython-313.pyc",
+      "bytes": 5087,
+      "sha256": "e9160df5fdcc02ddf48d7b2191499a92810f1971c26e35b68b197fe21c0d1b23"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/training_history.cpython-313.pyc",
+      "bytes": 4973,
+      "sha256": "f44189bc6cb0527480de703c41c9e3841b247b0f6480ea44dbd51247aa5d087a"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/datasets.cpython-313.pyc",
+      "bytes": 21088,
+      "sha256": "26f62580219287d7913c83a395096624966ebc7ff55666196dcc0997ccd93bb1"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/session_context.cpython-313.pyc",
+      "bytes": 4386,
+      "sha256": "dae235cf45b20772b04a668f0286a0e0cd7fa641bce23324c2c14bf80a3572db"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/clipping.cpython-313.pyc",
+      "bytes": 6043,
+      "sha256": "4a2851804dc622223c51bf9195a4b23bd7a7f1d7f86f988a663c31a51425ac45"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/market_context.cpython-313.pyc",
+      "bytes": 8427,
+      "sha256": "1d1307b794588bb29a97b04a2ca7b2044b2ff720b45f06a96c4bab160d9655a0"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/treasury_payload.cpython-313.pyc",
+      "bytes": 11152,
+      "sha256": "b49cd76664a900828301b75eea2422b884133d7706d9d890c58216cf29524c8d"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/volatility_payload.cpython-313.pyc",
+      "bytes": 11047,
+      "sha256": "de3ebc40dcde4af188363d41d5fd82c5590f124c4cc9f0661a1089f22660acae"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/datasets.cpython-312.pyc",
+      "bytes": 11418,
+      "sha256": "ea60539aaa704fabcf439148af781722b3961fc850ccc64c261f3414080be7b4"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 138,
+      "sha256": "b71f0a24f06e0d712329554803710924a63882e1193613aefeb70eb5b2b692d7"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 138,
+      "sha256": "972ab18869de9154b5cd994cb5e721312b570d002d87fcae74dea90a90623d93"
+    },
+    {
+      "path": "src/rl_stocks/data/generation/__pycache__/volatility_context.cpython-313.pyc",
+      "bytes": 3517,
+      "sha256": "10419288563bc1b7aa35d4828db59544000ecc960ab7c40bd91765eac8be80fe"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/__pycache__/config.cpython-313.pyc",
+      "bytes": 4157,
+      "sha256": "ccc186181ba963444ae37d09000e505ba34a88b455a6f384153ff20de0d35d48"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 166,
+      "sha256": "92d00fa93f7e673ecf53069a539b7e63a03cafb5cca7a58358644297c9f60fef"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/__pycache__/type_contract.cpython-313.pyc",
+      "bytes": 2458,
+      "sha256": "965a44c7a82545d95b8d485827b7fed708bdee5700781728bef85656fa838271"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/__pycache__/sectors.cpython-313.pyc",
+      "bytes": 4314,
+      "sha256": "c1b5a03c7e00a3542dd81158aabdea44fc72d0ff8ec75654038ab5335cb0685d"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/historical/__pycache__/storage.cpython-313.pyc",
+      "bytes": 1516,
+      "sha256": "4c3c888ac2c7aaa93431d4607ae5db9b149300bd0ec14c0b9c7d586ec8cfc244"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/historical/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 266,
+      "sha256": "50af649f059741bbea9066087b29cc1e59de9e49def30fdf930072af37cfa954"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/historical/__pycache__/schema.cpython-313.pyc",
+      "bytes": 9750,
+      "sha256": "18008f7d3cd27da69b24969cd9839469d0b45700765b93c9079bad6b88e44ee0"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/historical/__pycache__/coverage.cpython-313.pyc",
+      "bytes": 10849,
+      "sha256": "c57996e2271074589529adf7aa48b2be3f93818e9b065d5f9e57d2d3985dd93b"
+    },
+    {
+      "path": "src/rl_stocks/data/universe/historical/__pycache__/registry.cpython-313.pyc",
+      "bytes": 3150,
+      "sha256": "8ce45766efb63f50bb0a8b0315b59b85f43a2c6bb355de86cab4d30ae9995723"
+    },
+    {
+      "path": "src/rl_stocks/data/accumulation/__pycache__/backfill.cpython-312.pyc",
+      "bytes": 4830,
+      "sha256": "cb9685740b28f8d65df7184a2338e043b633c4f05ba4a2134f97e43d7ad012d7"
+    },
+    {
+      "path": "src/rl_stocks/data/accumulation/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 140,
+      "sha256": "c03f3957e71e58713a9fc756ac923eac920f27c6e332d56815573261cd3043f2"
+    },
+    {
+      "path": "src/rl_stocks/data/accumulation/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 140,
+      "sha256": "6908531ca2691ddb5672d1cf87b527e9aff8b1874bf5ab1e4e38f2b36a2e097a"
+    },
+    {
+      "path": "src/rl_stocks/data/accumulation/__pycache__/backfill.cpython-313.pyc",
+      "bytes": 6089,
+      "sha256": "323a5a2e3c72a4137309d7da1a7ef5ac3c02e2d90db8c622e93d980170dd02bc"
+    },
+    {
+      "path": "src/rl_stocks/data/storage/__pycache__/immutable.cpython-312.pyc",
+      "bytes": 2413,
+      "sha256": "5ef4dd87f6f1702e9dbf3db957cb7e1402e4790a2245488e2de7a6f7ad6c269b"
+    },
+    {
+      "path": "src/rl_stocks/data/storage/__pycache__/immutable.cpython-313.pyc",
+      "bytes": 2404,
+      "sha256": "9ec62d962a1ec751af1da54135de65d7e392d56fa1ec36864783a55e36f5b30c"
+    },
+    {
+      "path": "src/rl_stocks/data/storage/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 135,
+      "sha256": "c2e17f51994d276e97c2aa43415143b4d473ca383c373eadde44a6264e853826"
+    },
+    {
+      "path": "src/rl_stocks/data/storage/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 135,
+      "sha256": "0cbcfd1ac40b50e22babe540fcb89a3a4fbd8f2e767b28c29875db1c4525a860"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/bars.cpython-312.pyc",
+      "bytes": 5216,
+      "sha256": "19fe92156c4bc0de84a3d2a178b755af8b74e467facf483cb7cf8c9ae29a3379"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/treasury_coverage.cpython-313.pyc",
+      "bytes": 7451,
+      "sha256": "8efc82880ebcc15e134190afa7def22ae6e84aee6f1a4b4dadf62a779224e35f"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/overlap.cpython-313.pyc",
+      "bytes": 3168,
+      "sha256": "c837fb18cc726f866a18fcf3643f61026401f777b9f9c4f2ab2ffd89e9ae5248"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/historical.cpython-313.pyc",
+      "bytes": 5493,
+      "sha256": "cc17c302e99ddcfea7b94a3123a38137c91c2f153236f7d394942171df0fe276"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 138,
+      "sha256": "03f1359fed97074d231c576f3f94e1ea42d6e8313e827b2bd43a7c69fd9e02a7"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 138,
+      "sha256": "497193f97aae63ca063c465fe8e40036e67451f550ea1136bd8283484fe29943"
+    },
+    {
+      "path": "src/rl_stocks/data/validation/__pycache__/bars.cpython-313.pyc",
+      "bytes": 5218,
+      "sha256": "a12eceef6311450f6bfdb442df34d9e4de616c211f41885cd39be54825e07788"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 137,
+      "sha256": "335be156e2c606ead60bfd7c4c47a2e4658bfd485f08317d3e331dfd4992526d"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 137,
+      "sha256": "410c1e45d57a4fed78b1e32038e072b6cbf19ce611acd72c23c3661cbca603d5"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/archive.cpython-313.pyc",
+      "bytes": 12255,
+      "sha256": "817be60f9b6e0a274f1a2904e84a99a82e57af2993d71c3b437dedc794c33c52"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/type_sources.cpython-313.pyc",
+      "bytes": 2577,
+      "sha256": "94a8b73dd8b07333e12e39f3d341b2cc2691984a978f051c6d931f4232c3b2e0"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/master.cpython-313.pyc",
+      "bytes": 4499,
+      "sha256": "fc15b8762aec0818dd48c6336203fea8de634e2947135b46a54dbec62d701968"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/instrument_type.cpython-313.pyc",
+      "bytes": 7962,
+      "sha256": "3e7848428f5d2b19cfcbd7e65fd45ab4c5233cfb51ae991955fda980032ac380"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/facts.cpython-313.pyc",
+      "bytes": 11714,
+      "sha256": "0d384faec4bb8b13911a0698ce27f85212e963096980f23d2e0debcbe770a0a2"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/download.cpython-313.pyc",
+      "bytes": 12926,
+      "sha256": "78a3c73f9395943ae51480699f756b86c6a6885b37e10005cb2bfe868cd41f95"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/originals.cpython-313.pyc",
+      "bytes": 8876,
+      "sha256": "22862a966b5f1e082cdb32c81f0e994a4b3315dc3dc70e4e96d7129674e9a76d"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/html_stock_type.cpython-313.pyc",
+      "bytes": 5037,
+      "sha256": "3f7c6f93d65beeb656714a4d58ddc140328732ffccba57bd4e91117d79091704"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/filing_index.cpython-313.pyc",
+      "bytes": 6493,
+      "sha256": "2de258c3182179f58a2c2478762e2a6cb9bf4900ed907bc2dd8bea6073fb0807"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/identity.cpython-313.pyc",
+      "bytes": 5548,
+      "sha256": "0e3c9a89fd0d9e4bf223ee8b93007a620bb35f88629d610447d463bc9b71165a"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/lineage.cpython-313.pyc",
+      "bytes": 5848,
+      "sha256": "9980bd738c795f717ddcd5c57696937c153e5d13e46769ecd4fb4c67415f467e"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/html_source.cpython-313.pyc",
+      "bytes": 8164,
+      "sha256": "245dde7fd5a8c8e1028180e316a4cf83df1b9f3cc6f33b4d0433ecc73ddc49ac"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 257,
+      "sha256": "962cdb8e3faac37167e7182c0a460e453d9acd610a1dc0150fc077b367ad16af"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/sec/__pycache__/concepts.cpython-313.pyc",
+      "bytes": 6367,
+      "sha256": "fb0d7f8e1c1bf2a4f2b7be77d329fa1a7e0b79cf8304ef71947a1736587f78fe"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/transport.cpython-313.pyc",
+      "bytes": 3720,
+      "sha256": "abbb346d66f1e1ea9cdbf93693df46706688995740e105042d57904ae2d2cd4d"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/adapter.cpython-313.pyc",
+      "bytes": 4499,
+      "sha256": "c4906370faff0d390ee7b0d2fd1aea493368a6b7d8758fbcf87d990de9b7f56b"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/transport.cpython-312.pyc",
+      "bytes": 972,
+      "sha256": "6f368ed9327061cd7945e96da62caa61977a93ae126079bc682dcf7ae9043859"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/adapter.cpython-312.pyc",
+      "bytes": 4463,
+      "sha256": "786861ec5c837e9854bd8e75c3da77b5a77135dd6c8d3fc8efc51aeaf2fb5564"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/credentials.cpython-313.pyc",
+      "bytes": 2408,
+      "sha256": "4dc1dfa6f22368245d5ee1826d474114f1826a7058f20ceb8c0e07bb06645163"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 144,
+      "sha256": "4fac449c79ba95a57a53e10fb040e44873b5aa0338f379a944e40a3ac5471511"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alpaca/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 144,
+      "sha256": "623d3634985edd537da34e86ba2079968560b9171a6c81273711c5cb87268e6a"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/files/__pycache__/adapter.cpython-313.pyc",
+      "bytes": 2774,
+      "sha256": "dc0e06670c6cffbf6558cc1461fa86ea3b8f70ec25071eceafe947f22c4f8886"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/files/__pycache__/adapter.cpython-312.pyc",
+      "bytes": 2671,
+      "sha256": "8e2ab9edf78d741e0a1884dc6c950baba373510d3c131a6e17ee8936534460ec"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/files/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 143,
+      "sha256": "d8e5b2c76229a984a9c91ed9c1b6c658e01b33fe3d34d516f7579de4d900af81"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/files/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 143,
+      "sha256": "b782bbbf78786ac173abd5277b189614bbf59a87879279ab52e9946ee2a98a00"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alphavantage/__pycache__/listings.cpython-313.pyc",
+      "bytes": 6321,
+      "sha256": "556b75eba4571c22b1a7ab91814eb1874d1ca3215dd7adfea2a554937f27beff"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/alphavantage/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 270,
+      "sha256": "80f892ed077d1bca20ee64e375979533e37a2215d83d448eafec3e73a5877bf4"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/corrections.cpython-313.pyc",
+      "bytes": 2717,
+      "sha256": "eda71ca7f91655c9075137e6c0677a554c3029cce2048ece5c4466e4617a83ec"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/adapter.cpython-313.pyc",
+      "bytes": 4855,
+      "sha256": "affa0454f02beda80add936f9cd2decd44dc8ee94d3b0dfa54c273b6088f5165"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/adapter.cpython-312.pyc",
+      "bytes": 3564,
+      "sha256": "8b7c83ab1d979f565a2e098fa3246bb2c0e58ac152aa26f2f4bca40025273b5c"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/volatility.cpython-313.pyc",
+      "bytes": 2867,
+      "sha256": "13c16311a0d1cc9251cdb9bf512791195b66435259e2bb1a093d3cf006e771c1"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 143,
+      "sha256": "f0bed62145921529a1cb4a298db66afc38dadbacbd834eb06eb931c3fb85b454"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 143,
+      "sha256": "af929b9826688264e93204ee6ecdf8f16e628ea221d76ac1899d113f9a01435f"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/yahoo/__pycache__/sectors.cpython-313.pyc",
+      "bytes": 2074,
+      "sha256": "b826cc8b1ecfb880fc3704c5b9eeed445a1389c47f4b23da0ab9037069bf792a"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/synthetic/__pycache__/adapter.cpython-313.pyc",
+      "bytes": 2960,
+      "sha256": "c5f99796c2c56a87b5d015dca556d1d54c15bffbef6ee3ab05cf2fb4c0b5a55d"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/synthetic/__pycache__/adapter.cpython-312.pyc",
+      "bytes": 2959,
+      "sha256": "1fe12e67ab9e58c4b601775733f38b9a677ef3da05fc592642a0abf3a84e8d38"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/synthetic/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 147,
+      "sha256": "2e809f1ec7355a35639dc93c53dd32a5becf709658e702dd5be53c8b21583f9b"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/synthetic/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 147,
+      "sha256": "ffb7d8ec420e0c2396d28f657fb793140bf2052ed7408c3317f2ece9a7575509"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/treasury/__pycache__/collection.cpython-313.pyc",
+      "bytes": 1922,
+      "sha256": "666e4e789a82198b11989e5604a5ecb6a7d054120048e1e515454e0ad6553532"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/treasury/__pycache__/acquire.cpython-313.pyc",
+      "bytes": 7081,
+      "sha256": "5e13dcd8b861c6542a8542454697edffdb1fc02a1b7c5aa7e74bbf97acad0452"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/treasury/__pycache__/xml.cpython-313.pyc",
+      "bytes": 7535,
+      "sha256": "9017c60f926ff9ddea0d51f99b4efcf5338a2e11a64346e0167ae55cf7e02aad"
+    },
+    {
+      "path": "src/rl_stocks/data/providers/treasury/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 261,
+      "sha256": "13493416804444b1d5410a382b9a8d514cc5364dc8592456ab4eab542a504d40"
+    },
+    {
+      "path": "src/rl_stocks/features/__pycache__/treasury_context.cpython-313.pyc",
+      "bytes": 6058,
+      "sha256": "57d432f75c363226b4ab57d67845909ad87f7ec911a3a67001e6091697cea19d"
+    },
+    {
+      "path": "src/rl_stocks/features/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 131,
+      "sha256": "c6ee10b5cf219207a54dcaad7b4018d329e74c23b546a097b50930e20c2ffb0a"
+    },
+    {
+      "path": "src/rl_stocks/features/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 131,
+      "sha256": "24930ed81e2b0ddda8ed524a14815995b5a287cab2f633716866897bc2984e80"
+    },
+    {
+      "path": "src/rl_stocks/features/__pycache__/volatility_context.cpython-313.pyc",
+      "bytes": 3547,
+      "sha256": "7444b39a920a5060f3565939f8d538d37c9378eb1daacfaeb4f90393ab27903c"
+    },
+    {
+      "path": "src/rl_stocks/features/timeframes/__pycache__/aggregation.cpython-313.pyc",
+      "bytes": 1976,
+      "sha256": "8e4f18fbb97936135cfcb3ae44f0252564ad5d9a4d6cd923fde9af589f36fd96"
+    },
+    {
+      "path": "src/rl_stocks/features/timeframes/__pycache__/weekly.cpython-312.pyc",
+      "bytes": 1045,
+      "sha256": "9b2de72c7a5ad40fff42320627d71f8925837e72cf23ab9981d0aa3247b2f329"
+    },
+    {
+      "path": "src/rl_stocks/features/timeframes/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 142,
+      "sha256": "974c18896e8f6d5953e5afab8c4b2451cc98d16d03006dc3c6c5befc61c27a25"
+    },
+    {
+      "path": "src/rl_stocks/features/timeframes/__pycache__/weekly.cpython-313.pyc",
+      "bytes": 1049,
+      "sha256": "49116c29ff7945fff00cceaf28545309a08a0040061ba601665d3559d76af2cd"
+    },
+    {
+      "path": "src/rl_stocks/features/timeframes/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 142,
+      "sha256": "da2add22fde17c08f096ef8619f604426474e00fb6958b9c4883ea80d7dc7959"
+    },
+    {
+      "path": "src/rl_stocks/features/sectors/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 169,
+      "sha256": "728c4d706262797da35b5cc0e44e58adae8200fe28a8de3d3e84c7d68cec53ce"
+    },
+    {
+      "path": "src/rl_stocks/features/sectors/__pycache__/rotation.cpython-313.pyc",
+      "bytes": 7362,
+      "sha256": "5290fe96950c25b8b3b7258b0b2d78b16d17c696fdd0babcd17659cffccc57ae"
+    },
+    {
+      "path": "src/rl_stocks/features/market/__pycache__/context.cpython-313.pyc",
+      "bytes": 4296,
+      "sha256": "fa6234b0ef24e7a58d74f90ef62eb0f13eca4661edeb42703dec530a42963a57"
+    },
+    {
+      "path": "src/rl_stocks/features/market/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 217,
+      "sha256": "97c818b4391971a66c3760390e992b84c9f501f4c014ccc00ebc19c8400579ea"
+    },
+    {
+      "path": "src/rl_stocks/features/market/__pycache__/relationships.cpython-313.pyc",
+      "bytes": 5805,
+      "sha256": "c9e3de15c89e1ea08dcbb19c1be4e3a6956a97dbd418104c1a5e3fa49577433d"
+    },
+    {
+      "path": "src/rl_stocks/features/volume/__pycache__/relative.cpython-312.pyc",
+      "bytes": 570,
+      "sha256": "d492c3499699397ce6862aed492254da55fed11eac856e4b2d756a2481e91a1d"
+    },
+    {
+      "path": "src/rl_stocks/features/volume/__pycache__/relative.cpython-313.pyc",
+      "bytes": 564,
+      "sha256": "e7ec33360e86515dbdb1ca89f0ee54f3ae7cc5633163fb69bca4e9bc6ac2387c"
+    },
+    {
+      "path": "src/rl_stocks/features/volume/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 138,
+      "sha256": "8d20cc8edc19cec6366a5f811d4020b406b49efa4cc961a31bcaef7151be92f7"
+    },
+    {
+      "path": "src/rl_stocks/features/volume/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 138,
+      "sha256": "de057eb4644ea601a1fe1b17d4107c6818f02b4952a3b2598668301c089458a4"
+    },
+    {
+      "path": "src/rl_stocks/features/market_structure/__pycache__/supply_demand.cpython-313.pyc",
+      "bytes": 15601,
+      "sha256": "6a746a270e73e6a7be62585025e244c9891632755f9ed6ff9f3d240a9b8460ce"
+    },
+    {
+      "path": "src/rl_stocks/features/market_structure/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 178,
+      "sha256": "900a848036866a134b7410805ce979eb60946f8d748352b15dfdea9f9ddc8e39"
+    },
+    {
+      "path": "src/rl_stocks/features/registry/__pycache__/assemble.cpython-312.pyc",
+      "bytes": 3101,
+      "sha256": "6cfdda35f229850b3e1dc2feb4e36bd1ed16c5424253f6c753f13d72ff5a5522"
+    },
+    {
+      "path": "src/rl_stocks/features/registry/__pycache__/assemble.cpython-313.pyc",
+      "bytes": 5267,
+      "sha256": "985da314c336ebbaf2e5bc6f18fb814f1fdd3d19c4998f37fa971db90b2a5f22"
+    },
+    {
+      "path": "src/rl_stocks/features/registry/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 140,
+      "sha256": "55009c75c08e04f0d7cbfee5bdbaa22abd39ffaa22758adf29441db1e5fffa40"
+    },
+    {
+      "path": "src/rl_stocks/features/registry/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 140,
+      "sha256": "da8689c9f3d3fcd83111a789321068fdd9eb4fdaae2dab2f7e665241277bc789"
+    },
+    {
+      "path": "src/rl_stocks/features/fundamentals/__pycache__/balance.cpython-313.pyc",
+      "bytes": 5209,
+      "sha256": "a79d027e8779994ade3e4caefba344014e8f3dfbd7fda7a047875dccc51a61eb"
+    },
+    {
+      "path": "src/rl_stocks/features/fundamentals/__pycache__/history.cpython-313.pyc",
+      "bytes": 6567,
+      "sha256": "b401ea9c4b8c48dba9a3608348280c90c78aaa0ef4ef3d69c8c748c5a219e114"
+    },
+    {
+      "path": "src/rl_stocks/features/fundamentals/__pycache__/snapshot.cpython-313.pyc",
+      "bytes": 9541,
+      "sha256": "9b3f25ae5f461ab43ff04bb53a059b7e5991757f195a7c53b73646ffbac0282a"
+    },
+    {
+      "path": "src/rl_stocks/features/fundamentals/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 267,
+      "sha256": "40c57eba50864ff935a15a28a32a874ac700f0e01ddf084716d33d07965b4d5b"
+    },
+    {
+      "path": "src/rl_stocks/features/price/__pycache__/indicators.cpython-312.pyc",
+      "bytes": 2179,
+      "sha256": "a8e38fd8154703262890bf8c17674ac018d54b6b8567ef89e0c726944086cff5"
+    },
+    {
+      "path": "src/rl_stocks/features/price/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 137,
+      "sha256": "6a33b53dd0aaee9c3af5e0eff99e1e488ab837b5a43ac35620679253293e6d69"
+    },
+    {
+      "path": "src/rl_stocks/features/price/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 137,
+      "sha256": "c610a467041339164d8d559dd30d1705b6a2f3b24098cb9be58ac814ad93aa1d"
+    },
+    {
+      "path": "src/rl_stocks/features/price/__pycache__/indicators.cpython-313.pyc",
+      "bytes": 2185,
+      "sha256": "5cd44a910c2cc92d96d2a2f1a2e46daac775f4724c0301435d92b6b9a39d7853"
+    },
+    {
+      "path": "src/rl_stocks/features/price/__pycache__/sessions.cpython-313.pyc",
+      "bytes": 1985,
+      "sha256": "44df8f9f252e9e5065e776b5cb2725e17676c1f56a3114ab80b23c7ed59eec59"
+    },
+    {
+      "path": "src/rl_stocks/features/trend/__pycache__/context.cpython-313.pyc",
+      "bytes": 2024,
+      "sha256": "7947fb5b6c81ecc54ddf4f64ad296dd706247391cd775da6044bd3024b877244"
+    },
+    {
+      "path": "src/rl_stocks/features/trend/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 137,
+      "sha256": "e9ea2f5d9a4102f730838ff660901ca5cc2f720f1874fc944cd09455b6b95aaa"
+    },
+    {
+      "path": "src/rl_stocks/features/trend/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 137,
+      "sha256": "8c84103f18dddb1433826a3c1db29acfd21770222a9c4d27195db9207dc1ea46"
+    },
+    {
+      "path": "src/rl_stocks/features/trend/__pycache__/ema.cpython-313.pyc",
+      "bytes": 543,
+      "sha256": "0bdb28e25b0914e0c9a391d9f7da98f81e86ad9042a0c96dedae692440b2d9ab"
+    },
+    {
+      "path": "src/rl_stocks/features/trend/__pycache__/ema.cpython-312.pyc",
+      "bytes": 553,
+      "sha256": "95dfdaffa3233fbd75da92f4195b3fe7508b051ca6d5557ed0fd42950078e6ac"
+    },
+    {
+      "path": "src/rl_stocks/features/momentum/__pycache__/rsi.cpython-313.pyc",
+      "bytes": 1081,
+      "sha256": "1aeeb33600e4cd5645ccecc326731cd3de3a27be982230738a10b61f4cb0dd67"
+    },
+    {
+      "path": "src/rl_stocks/features/momentum/__pycache__/rsi.cpython-312.pyc",
+      "bytes": 1110,
+      "sha256": "15f62a5550f1401db16ea8b6fe8d05c17facee279157a5de9ac0b48c0b7f8932"
+    },
+    {
+      "path": "src/rl_stocks/features/momentum/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 140,
+      "sha256": "acbcb20ffadc051472791fa93f699ac91c14430bd808e8b844567005549d2cb7"
+    },
+    {
+      "path": "src/rl_stocks/features/momentum/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 140,
+      "sha256": "7481d15f43c3c9df65cf62531f7ca683083d1e56f5806006d596124b49eec1da"
+    },
+    {
+      "path": "src/rl_stocks/environment/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 134,
+      "sha256": "b87709d1fed8ee4f5b72e07cc1d8a79fb2a9bbec8384ba68d7c83232a6082554"
+    },
+    {
+      "path": "src/rl_stocks/environment/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 134,
+      "sha256": "e5bab8cc4da0a460ca75c9d380780242a67d4f3afb841cb6cea07acac0516a8b"
+    },
+    {
+      "path": "src/rl_stocks/environment/observations/__pycache__/task.cpython-313.pyc",
+      "bytes": 4579,
+      "sha256": "fd5b1b573131434bc2699a0ec89779e87d41900add3bc781add19f6d12d142bf"
+    },
+    {
+      "path": "src/rl_stocks/environment/observations/__pycache__/state.cpython-313.pyc",
+      "bytes": 3924,
+      "sha256": "90c8c30daee75eb40917e8518f437846c9a8f6e4983645562fc92eecaf3554a8"
+    },
+    {
+      "path": "src/rl_stocks/environment/execution/__pycache__/simulator.cpython-313.pyc",
+      "bytes": 11032,
+      "sha256": "110a7fbad9ed977c718f597b71a0248ed6aaffbe6692559daa0ddee7fd8afb49"
+    },
+    {
+      "path": "src/rl_stocks/environment/execution/__pycache__/simulator.cpython-312.pyc",
+      "bytes": 10750,
+      "sha256": "484dab918aae2531ed8a9960d9b48c99793f6710fd323afd10f5bfbc96708a91"
+    },
+    {
+      "path": "src/rl_stocks/environment/execution/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 144,
+      "sha256": "772e8443f7638592c71a7978afc0134520cb12ba69a5a6d3ad2aa182e71d82ee"
+    },
+    {
+      "path": "src/rl_stocks/environment/execution/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 144,
+      "sha256": "c0f774b4b22d8ac0c613a726d3b3822c5a36ea08fe8c8b13fdb9afef7b112214"
+    },
+    {
+      "path": "src/rl_stocks/environment/accounting/__pycache__/portfolio.cpython-312.pyc",
+      "bytes": 3953,
+      "sha256": "4948716a295d01ae65984a42ecd463bcb1c239ebce9b2f50ed9af1466163b83c"
+    },
+    {
+      "path": "src/rl_stocks/environment/accounting/__pycache__/portfolio.cpython-313.pyc",
+      "bytes": 3986,
+      "sha256": "20c02e8bc5c5b8fb2e531c05c3584359fbe35b916fecb4145f831e773a1217b7"
+    },
+    {
+      "path": "src/rl_stocks/environment/accounting/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 145,
+      "sha256": "4f2329dae4950401ba57ed5e1397996006c22aa3e40a9410c459595807163211"
+    },
+    {
+      "path": "src/rl_stocks/environment/accounting/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 145,
+      "sha256": "a4a5671b0b9284b5e527d88d18d080b905a1bd72fa221484e1c92030c7a2b42a"
+    },
+    {
+      "path": "src/rl_stocks/environment/sampling/__pycache__/windows.cpython-313.pyc",
+      "bytes": 6360,
+      "sha256": "85b818c1180e00dc196749596b0d56bb25a19930d606c657ccc490c36f86d514"
+    },
+    {
+      "path": "src/rl_stocks/environment/sampling/__pycache__/years.cpython-313.pyc",
+      "bytes": 8003,
+      "sha256": "297712ae4ab366a98585bf8109959048b328ada0c8131cee8b859bd5bd84dee5"
+    },
+    {
+      "path": "src/rl_stocks/environment/sampling/__pycache__/regimes.cpython-313.pyc",
+      "bytes": 5864,
+      "sha256": "5ab09e1d371149a9470181cd9960cf041c36e7961744fe78e8e4e446a91bd727"
+    },
+    {
+      "path": "src/rl_stocks/environment/sampling/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 173,
+      "sha256": "6fd66f632c0c187ec24c2dd9ec805d3cab7c17ab8246d51d1ba45fcae32281b2"
+    },
+    {
+      "path": "src/rl_stocks/environment/trading/__pycache__/env.cpython-312.pyc",
+      "bytes": 6593,
+      "sha256": "243757650681607e10aaf61cc8052284f98c9f75052a9c113ea2bdf393266c4b"
+    },
+    {
+      "path": "src/rl_stocks/environment/trading/__pycache__/env.cpython-313.pyc",
+      "bytes": 14454,
+      "sha256": "877910aaaee7f61e22827234ad6aad6a232bd90a852aef3f9849af8a7ec48b55"
+    },
+    {
+      "path": "src/rl_stocks/environment/trading/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 142,
+      "sha256": "12813241ee923713fa46f7427c9af28ac0f2725e98f886331ab78737199d76a5"
+    },
+    {
+      "path": "src/rl_stocks/environment/trading/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 142,
+      "sha256": "e53eee1db07d72fec1360287441b922802e24d12eb5471aeb8bbc9047bd02976"
+    },
+    {
+      "path": "src/rl_stocks/environment/rewards/__pycache__/equity.cpython-313.pyc",
+      "bytes": 1388,
+      "sha256": "d415a61c85fc27ab68d569a33b32270fa555c01cd38658f13a8a88261e68bc02"
+    },
+    {
+      "path": "src/rl_stocks/environment/rewards/__pycache__/equity.cpython-312.pyc",
+      "bytes": 411,
+      "sha256": "0c83207c1e272c491abc1e50ebe08e449bab4e9ede6affdae8fa6da42ca90e7c"
+    },
+    {
+      "path": "src/rl_stocks/environment/rewards/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 142,
+      "sha256": "31495f1c7813a228540ea8a1ba417b415a8491f3625e2dcae680e7360041eb86"
+    },
+    {
+      "path": "src/rl_stocks/environment/rewards/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 142,
+      "sha256": "5f26a308dcf627f1a68090c5bc84abf29e9bd44cf2fc3736768ea9bd9742f35e"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/local.cpython-313.pyc",
+      "bytes": 9580,
+      "sha256": "e5e7de2998dea8de136294a9c38584e2145b3bd29323baf75150915960139e72"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/historical.cpython-313.pyc",
+      "bytes": 3097,
+      "sha256": "af081040a1b1a2d0910b046da2ad8c849effc31e3fa71828221dba433c227667"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 162,
+      "sha256": "c21a0c8ec916fb0c327c155561fc3bf493e72e2aa33bf9761bb1bc2f0f7d1c9e"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/shadow.cpython-313.pyc",
+      "bytes": 9041,
+      "sha256": "8f77953ecc3de2837fb73855ddffa4071774b01c9168e838ab3128b4643c7495"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/local.cpython-312.pyc",
+      "bytes": 4801,
+      "sha256": "9ee7d36ee19a689ecac61521d727ed9d0062285ec884efcb8cab2ebecd93a45d"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 153,
+      "sha256": "1e9eaf610214dc96f47b95e98e694ed7700a40cc220831c25ed218b6b52f09a7"
+    },
+    {
+      "path": "src/rl_stocks/runtime/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 130,
+      "sha256": "5ac6462d4a1d3ec2d5bbcefd90fe4280badf817bfc21e005117ef06478e5d7b6"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/session_artifacts.cpython-313.pyc",
+      "bytes": 4754,
+      "sha256": "9041191e10af1d72fd5098a7810f3e057126020cfbdec2350cb3a3fa30ae69d0"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/transport.cpython-313.pyc",
+      "bytes": 3605,
+      "sha256": "debd3bd14f59a48eacd1f22d29b9ed0480567ffb6a196d45ea3c706f1fbc4a16"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/gae_rollout_artifacts.cpython-313.pyc",
+      "bytes": 5564,
+      "sha256": "eb88e9199f4e2de7f911c6545f2c928d46219ea8eb4445095078bce5824b5f88"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/recurrent_comparison_artifacts.cpython-313.pyc",
+      "bytes": 13011,
+      "sha256": "c7f75c30605100713d7e26d182261741e01c45f10384cd10b5cb4ff39d353c7d"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/boosting_runtime.cpython-313.pyc",
+      "bytes": 9343,
+      "sha256": "c9794c79d5c3895a4196deca96ef0a5f266d699b576d277414bb9b13c0af6707"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/capacity_artifacts.cpython-313.pyc",
+      "bytes": 5071,
+      "sha256": "d206e0fa89e29c6f919f4dfb64b05fa392a5660647bd64fffb1bbb159d6dc5c7"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/vix_artifacts.cpython-313.pyc",
+      "bytes": 8126,
+      "sha256": "1747bf773cc406564eac96478a3b50eb0b6217f4fe3525d21f20eddac5ce9d36"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/budget.cpython-312.pyc",
+      "bytes": 8491,
+      "sha256": "83e1c1fdfb21cbdbfef4f236b4e90be568f7cfa9b9963d88b2127b59c9b53a98"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/recency_artifacts.cpython-313.pyc",
+      "bytes": 5098,
+      "sha256": "2164fa48c66f4822325d56bb731ea06d307cde401d1530b9ad0e1439776f0beb"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/canonical_market_review.cpython-313.pyc",
+      "bytes": 12912,
+      "sha256": "9b21541027b0ccf6d31ca95431bcc75fac43ef3c2d88f55a837bed482d632c19"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/task_reference_snapshots.cpython-313.pyc",
+      "bytes": 2811,
+      "sha256": "f30c35f798e50752bd2abb02718d265110c24aab9036f8bb9fbf402d83741d11"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/source_archive.cpython-313.pyc",
+      "bytes": 628,
+      "sha256": "e3697a308890c77f921e78fc4cc2f6a2cc42c56a02123dfb0769c5df1849d5d4"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/jobs.cpython-313.pyc",
+      "bytes": 68082,
+      "sha256": "c839f59fa92af8068edfe19f0ff0a018cbcd503c66c7ff1ac8bcc031d5ba1087"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/history_artifacts.cpython-313.pyc",
+      "bytes": 5068,
+      "sha256": "7d9db86b6e9c72ecb628def0a08763340a7dc9cf64d7700003a8501213a14736"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/runner.cpython-312.pyc",
+      "bytes": 20874,
+      "sha256": "0a89877d77b396f9d08f26e00d6ee90627d8df0512ad57c578d1884069a2134c"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/recurrent_screen_artifacts.cpython-313.pyc",
+      "bytes": 5099,
+      "sha256": "b817c039bd1c896daf7b0029a057e629e10e5d5ce81677d95cf2dd546aecd084"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/runner.cpython-313.pyc",
+      "bytes": 32334,
+      "sha256": "a8bee0cfd50f08f31046859c04672323eb4e624abc5c02f02f4e0b4929d1be8f"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/transfers.cpython-314.pyc",
+      "bytes": 3723,
+      "sha256": "b2b51010ecda5250a72601f92746079df28a19e4d8b3a94a2d00c62364113eb8"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/treasury_artifacts.cpython-313.pyc",
+      "bytes": 8568,
+      "sha256": "06fe7058335369732131c684966cca57e0d6aeee038e7dceda2c3d7bcfd1190c"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/tanh_probe.cpython-313.pyc",
+      "bytes": 6602,
+      "sha256": "886128e009c3e81e766291a1c1bac179cb91e3fce3d711b342ba0d54a0653a81"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/sac_update_artifacts.cpython-313.pyc",
+      "bytes": 5597,
+      "sha256": "5a4db9f702a9b8ecf78443c50f73c84f283f64f1cd37f749c795ac0c8fe58352"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/task_smoke_artifacts.cpython-313.pyc",
+      "bytes": 12956,
+      "sha256": "f0886b72976842b2daa19feeaacb7aeedf2e7b7c4ffed918e5bc074aa8561bf6"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/trpo_smoke.cpython-313.pyc",
+      "bytes": 18422,
+      "sha256": "cf13107eafe5b3cc938b8d601c652348b6ae4e5eade2d7f0365d4da989156967"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/payloads.cpython-313.pyc",
+      "bytes": 2522,
+      "sha256": "3d4c12325b6f18912e4b312fa121b5c9c376a5d86794388c57e9e605d8df784b"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/inference_setup.cpython-313.pyc",
+      "bytes": 3417,
+      "sha256": "c9e675855b3b91c9b43c8206240795957e15a83116d454035919c8e4163bf7f0"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/transfers.cpython-313.pyc",
+      "bytes": 3543,
+      "sha256": "bf454d56eccbda3b6bd346bb0377470a1a1987b12ef655f952d8fcd93ca25d4a"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/boosting_timing.cpython-313.pyc",
+      "bytes": 1708,
+      "sha256": "cfe91f0734f27d4ef8cdda0b848a5efc1ce72f1bdd3d0bcc38779f2056268b4b"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/artifacts.cpython-313.pyc",
+      "bytes": 42067,
+      "sha256": "9f596eb1a7f5672ddbacc78365beec786e6921b3dbd42daeefe403f660708548"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/artifacts.cpython-312.pyc",
+      "bytes": 4568,
+      "sha256": "2521715abfc7c72663c857f5da543cba52a5cc85cbb910654789e7d8fe91b7d9"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/verify_task_screen_export.cpython-313.pyc",
+      "bytes": 4866,
+      "sha256": "5ad954a0ae6340f9d77f58806e56f3447b6a039b9977a7c7ea3648159ef602a2"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/review.cpython-313.pyc",
+      "bytes": 2693,
+      "sha256": "3023e01004b305962f8a985d6d51961bdf72ecdd9a6d48651dc675f8c6f2f332"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/reference_probe.cpython-313.pyc",
+      "bytes": 15740,
+      "sha256": "9588d4c41da1ac87448a6fb384270b00180deb84e1f6656a234c0b4307b61bf5"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/canonical_market_probe.cpython-313.pyc",
+      "bytes": 18465,
+      "sha256": "b2fd9ee5d418b258396bf50a25775f05a76514103e2e786e282aa5737754a198"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/recurrent_sac_smoke_artifacts.cpython-313.pyc",
+      "bytes": 5420,
+      "sha256": "807d5d26b0d380ef6209c282820898bb9977ca2386b042a8e342f7bef954f786"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/control.cpython-313.pyc",
+      "bytes": 2837,
+      "sha256": "12edd60e849a2e8ad9235df831e44cc462dab6769e2ba89726ef438fe3a7ae52"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/recurrent_environment_artifacts.cpython-313.pyc",
+      "bytes": 5451,
+      "sha256": "4b19bf084471cb6d1ba6feb01beffbb03cf7cff586db6a9d2fa39f02b51cac88"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/budget.cpython-313.pyc",
+      "bytes": 16041,
+      "sha256": "2a04403df1c26a0e9c879f49c18f08c27ad038be0a633307beeb0f25e2af3feb"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/status.cpython-313.pyc",
+      "bytes": 4298,
+      "sha256": "04f1a5c57de1b3229c5f383c138c93c953ecbf5025dbf311f49a436271139815"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/boosting_review.cpython-313.pyc",
+      "bytes": 7470,
+      "sha256": "8b4424f4b56a903b685a7061f4fc63d9455a0140b98a11e59b8304bc80e720e5"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/task_profile_artifacts.cpython-313.pyc",
+      "bytes": 11400,
+      "sha256": "05ccf2e21080926dba39b89392c14fa02391b9cbf505d071fd86e813f6ffde0c"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 168,
+      "sha256": "7123f76c4d2e79fa9302c482f81f2edc88ff8e8f5bb0a8b3bd61000d533de9e8"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/fleet.cpython-313.pyc",
+      "bytes": 96256,
+      "sha256": "912fa39e801baf880d130b2e6162a50b9d0654eda50e54fd61e59021f40bf647"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/crossq_artifacts.cpython-313.pyc",
+      "bytes": 9578,
+      "sha256": "91e79ede3a49e9c1f3f3eb28f52b8c23b9b1e051da738494896a8b4ebec065cb"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/task_screen_artifacts.cpython-313.pyc",
+      "bytes": 6635,
+      "sha256": "98134847a9f392edebd9723664417487c4033e44fbf3ed3d8518d290392ac048"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/clipping_artifacts.cpython-313.pyc",
+      "bytes": 5428,
+      "sha256": "1cc1481e65c19f70d267e3093f66862fee6ff4b8c8fcc79fe2f5edf00f22445c"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/fleet_budget.cpython-313.pyc",
+      "bytes": 8264,
+      "sha256": "19258f378371b93abd9be7cc75271433a197a8ad62a402e8482542c17e4c84c8"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/recurrent_screen_status.cpython-313.pyc",
+      "bytes": 7060,
+      "sha256": "5ed9293f50d1663eb22811a2871517ca96d8964187727265a873501649ae838a"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/l2_artifacts.cpython-313.pyc",
+      "bytes": 4997,
+      "sha256": "2f08765d6cd7b7a06a02d20a4a8a1809cebdc0e0db169073dcb11f9f3b9fd0ee"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/squashed_artifacts.cpython-313.pyc",
+      "bytes": 5406,
+      "sha256": "69cc36390256b4d740aa8e9c90cfa64713bdc6dd9beab270d76c8b7be4c528c8"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/market_artifacts.cpython-313.pyc",
+      "bytes": 5526,
+      "sha256": "141855c8e3b3751ee5740c79efffb7ce39d1b238d3ab27eb2a0892105b8c1630"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/trpo_smoke_artifacts.cpython-313.pyc",
+      "bytes": 6881,
+      "sha256": "2b965fb88f0fba25f6c3c55a39b7e6c856b8371475767ecba5f68b78d8664974"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/distributional_artifacts.cpython-313.pyc",
+      "bytes": 7061,
+      "sha256": "ecddd152e8f312c274c81b0ffff2ed30cdaffe34aca9fccd4c9803e80806f9bb"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 159,
+      "sha256": "c53c072db7954794dcad924eb51632aebfb60a7b45205b905640dec9775dbfda"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/control.cpython-314.pyc",
+      "bytes": 3034,
+      "sha256": "e1c8864f3cb57b5ba52f20734450b47f7bbe5d5641c3f078f42a7b6fc66e734f"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/jobs.cpython-312.pyc",
+      "bytes": 1499,
+      "sha256": "340bf5f6e07b1b38166293716d432825b2435b76ca0b151e23f88c101770303f"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 136,
+      "sha256": "72145404c4327956cfd0453de500510cf963a8eeabbebee3107493fc36a6e276"
+    },
+    {
+      "path": "src/rl_stocks/runtime/colab/__pycache__/gae_artifacts.cpython-313.pyc",
+      "bytes": 7735,
+      "sha256": "d01f96c38db94a7055c4c15ce3f0edf64b8275201c881739a69d97138bba6947"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/checkpoint_export.cpython-313.pyc",
+      "bytes": 1895,
+      "sha256": "1d90fdfaf72e36de0d8107108421c2f81040a30860e29def14c9cac8365c49f0"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_cash.cpython-313.pyc",
+      "bytes": 10751,
+      "sha256": "f414c90d64ece687644794989a15f7adacaf4c5c81f9b1e6f523db105e957df8"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/distributional_runtime.cpython-313.pyc",
+      "bytes": 8010,
+      "sha256": "396eb23b5e20d9d49624be12ddbd29ecdd2c57f16170997355aa79fe9efc21a2"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_spec.cpython-313.pyc",
+      "bytes": 2452,
+      "sha256": "ba04c133d64d460b86ccffe2ac8e365be36a1ad82599f8d17f7e43bb9a6533cd"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/native_post_updates.cpython-313.pyc",
+      "bytes": 2506,
+      "sha256": "e5f082ac40ec120ba615a2944e7f4577d1474e6e43a4b49a1e850ff527cd9916"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_environment_spec.cpython-313.pyc",
+      "bytes": 6156,
+      "sha256": "caec916219f2e3e1656887d18a30bca3529d0d83684993a4a0558febd435e3b5"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_execution_review.cpython-313.pyc",
+      "bytes": 8315,
+      "sha256": "d942d4df11dfaa6aaac9e378ea9b1040f42d5365a93ee699ddf871c9695b17aa"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/vix_spec.cpython-313.pyc",
+      "bytes": 2083,
+      "sha256": "522cc9d1fae7d1f5aae67a03462868324b027d78c06734f35d1b3579b9416aac"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/trpo_audit.cpython-313.pyc",
+      "bytes": 14600,
+      "sha256": "1dba917664961ff341ffbd4efd263f1497b4b2e1affc94b2f967683dbbdca749"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_runtime.cpython-313.pyc",
+      "bytes": 8829,
+      "sha256": "b08b1e8bf34399278dbfe718c9c304b7377a760245bf67b22481b55058b677a1"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_replay.cpython-313.pyc",
+      "bytes": 3497,
+      "sha256": "b7db73e7404b19a33dde09e9f153f5e02ae1e86f4b13af9773827ed22294d5d0"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/trpo_feasibility.cpython-313.pyc",
+      "bytes": 5903,
+      "sha256": "62c939a268c7cb63c80dcb2dc0fc839bec71b32f6ab13e9bdfa1bc7991d02560"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/dependencies.cpython-313.pyc",
+      "bytes": 1396,
+      "sha256": "2467e06e4e5a530eb0c923d10a5b2a674fc10ef748f10124609dde2e2757424d"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_runtime.cpython-313.pyc",
+      "bytes": 9954,
+      "sha256": "3740397883b5e2f773fbde5d5e127cff6013112b7cb1e3e291ffab32924593a2"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/gae_runtime.cpython-313.pyc",
+      "bytes": 8757,
+      "sha256": "44d2a75b02aa9c3730a427e0d56fdcc01bf5e93d9f0f7bf55ae99cbec39deaa6"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_state.cpython-313.pyc",
+      "bytes": 7226,
+      "sha256": "dfcc1404d7a1e3c3cdefae96500a5ba5fc5e092a3ac2c75b7f422eeeeb0fd7cf"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_discount.cpython-313.pyc",
+      "bytes": 2803,
+      "sha256": "4573be4fbd16b11bd5827ade3c2e1862c5d350167a65e557cb766b3324539d60"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_screen_verify.cpython-313.pyc",
+      "bytes": 10743,
+      "sha256": "a28e96672c5f855e5f546dbe477f9f9e56396d9acae948d9c4c1beb11ac875cf"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_update_verify.cpython-313.pyc",
+      "bytes": 18273,
+      "sha256": "4de03223d3eccd7d5b264bb6558ac37864d8d60fe74ffabb9ec3662baa181da5"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/vix_initialization.cpython-313.pyc",
+      "bytes": 8871,
+      "sha256": "d768179baf28964bf5f982d32c5979557fe35cc3d4cd5621118db410475b5360"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_update_worker.cpython-313.pyc",
+      "bytes": 23054,
+      "sha256": "6d56512038e9ba9a381a19b8b299f03478c2954ae7da01a59ef69a531cd48b0a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/shared_initialization.cpython-313.pyc",
+      "bytes": 10817,
+      "sha256": "f5667148549d30cf9afdde9175911274532897da1b5fb53a0c2f40c702405c61"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_replay.cpython-313.pyc",
+      "bytes": 15643,
+      "sha256": "41a8cc05cccb6278df2a7c1c4ea57ae0cd7d79564a5047706eab0fd910f3d58a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_assets.cpython-313.pyc",
+      "bytes": 8991,
+      "sha256": "d04f7e3f79efd7276ab20e7ff1b0c6be0c204e7bfd7fdf0103191ab18f9b4204"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_forward_audit.cpython-313.pyc",
+      "bytes": 10134,
+      "sha256": "79721eb802ed6c66fdc3e811c5534745c54a1660256b8bcacab2fb8780dbd7a3"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_runtime.cpython-313.pyc",
+      "bytes": 12477,
+      "sha256": "d72fec9aa9ed869918336374844f8357a179445f434b47f04cb0fcf17a103195"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_history.cpython-313.pyc",
+      "bytes": 6712,
+      "sha256": "ebb666cc27f0193625d119945775b74ba1c96735c32407d758119afacc8782e3"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/runner.cpython-312.pyc",
+      "bytes": 11831,
+      "sha256": "46d92150fa1c0ed16e8b2b3b1a9339709755629a6bdce0b96d9ad6d83186e33e"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/training_history.cpython-313.pyc",
+      "bytes": 15443,
+      "sha256": "7b0d5c04452a715b1bcea3876fcbf1999835992a7a92d9f5b7b4880dcd40cc99"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/gae_spec.cpython-313.pyc",
+      "bytes": 1858,
+      "sha256": "10dc8a4ee1db113e6bc195ea94377a7a931183079a7550678e39ca6ba4c31cb8"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/runner.cpython-313.pyc",
+      "bytes": 41999,
+      "sha256": "ba007eff5aae8a49ab18297861b6c680432a470625baa85e711f69bbab7979ea"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/checkpoint_state.cpython-313.pyc",
+      "bytes": 5114,
+      "sha256": "e16c51ce2b426c5e465c0b98b7cc1065f5fd9da22c35dca13c9a9c3dc11fc719"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/curves.cpython-313.pyc",
+      "bytes": 7072,
+      "sha256": "843605a22463a42be2ff592402486d7ca28909985fad091777dc6f04c5410d3a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_alignment.cpython-313.pyc",
+      "bytes": 4950,
+      "sha256": "39d2325ff79d90ac53b3c4dcc705dc3837db76f746aabd0cbf7cce0e89545678"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_context.cpython-313.pyc",
+      "bytes": 6004,
+      "sha256": "b6bb916522eac10569ac4373e7b5c246b45160dd212f3637e5102e7bea21334f"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_comparison_verify.cpython-313.pyc",
+      "bytes": 22926,
+      "sha256": "8eae2579af3bbc1a7d084b89dabeb8a566664af4bd8780d1c3567eb7cb9a1413"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_losses.cpython-313.pyc",
+      "bytes": 11281,
+      "sha256": "18c1b44ee9de79e625916bb105e8286f0a19b87c1e80150576c2adb1abf11747"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_smoke_worker.cpython-313.pyc",
+      "bytes": 15260,
+      "sha256": "0b1cc2881350b4644b5d961c6cfd72f39dc29edbcc35e128d98f6f76882165a7"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/gae_context.cpython-313.pyc",
+      "bytes": 3607,
+      "sha256": "1aa5c62b07c78db4d6ce2b38f282f7250f99788f2a0d0d9071169cb9c0c3e699"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/trpo_smoke.cpython-313.pyc",
+      "bytes": 12066,
+      "sha256": "6b63f6e83301a662ffb876048860a6d63ae87bfe441e2547053665ab72b7244a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/squashed_actions.cpython-313.pyc",
+      "bytes": 17471,
+      "sha256": "81b57c576dfbdf178f04f96a3e3b91162cb5f5168d551192a6402388d58bdcb2"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_screen_worker.cpython-313.pyc",
+      "bytes": 11759,
+      "sha256": "786dad174c8908d8e44ce33fbcf8eeebb36070d1ab16a953f23605655021eb6a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_collector.cpython-313.pyc",
+      "bytes": 7514,
+      "sha256": "818a0742eb6e6e01604e88aeb1caf88967aa1fe59b1b48aaa0d8fafa91445cb1"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_inspection.cpython-313.pyc",
+      "bytes": 11302,
+      "sha256": "e43bdffba50f0f2dbb16fb2e057fb6e860c73cf8b52fc4815ffcc7943ddae12e"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_comparison_profile.cpython-313.pyc",
+      "bytes": 17767,
+      "sha256": "593f748c98d50bc0c0a9cc67decf199e9ab8ed2e75a0891ab0dfd628a067c9f9"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_restoration.cpython-313.pyc",
+      "bytes": 9927,
+      "sha256": "1617bc7e4d161ea664f4fd0dee7db7c724b6abc423a47318404b6960499639e5"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_archives.cpython-313.pyc",
+      "bytes": 5533,
+      "sha256": "e2af635ae64069aeecf7fb8d0427bf00bb6bda8e94e858a4981321f2017033f4"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_reference_runtime.cpython-313.pyc",
+      "bytes": 11837,
+      "sha256": "268adede280b75597f1c94329f20080be90e3af6063f0f7643eee0071eadfbaa"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_selection.cpython-313.pyc",
+      "bytes": 2070,
+      "sha256": "c174561c2afd6bf520951a626324ddabdf01d9970e26c177a9be4e877227553c"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_comparison_starts.cpython-313.pyc",
+      "bytes": 10258,
+      "sha256": "5e9faec0ce0666a1bb80631315db0c5ad0da84f2e9fadf808b229a95f2c6ec14"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/market_initialization.cpython-313.pyc",
+      "bytes": 7789,
+      "sha256": "de279f80ee4cde72182f06cd3b97592da64e0ed485a0a5e6883ff030b48cc174"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_initialization.cpython-313.pyc",
+      "bytes": 3924,
+      "sha256": "7288ed7c3d77e6fb43a73a6e95f18004db6aebcae972df0dd7453558be9f44e9"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/session_context.cpython-313.pyc",
+      "bytes": 11032,
+      "sha256": "b9d3310a82c40e1ec9df00f57c599d374ac8090d3e93d4b2a038b29f3bf38733"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_backend.cpython-313.pyc",
+      "bytes": 2595,
+      "sha256": "f11b3f762fce86ab9edf083545990cadc9c92746bb04942fd66cb5d951736b17"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_learner.cpython-313.pyc",
+      "bytes": 9917,
+      "sha256": "287db46c25021479777d3adc2ef715f1dd36376cefe61e5ee0b226bd7ba26bb8"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/vix_context.cpython-313.pyc",
+      "bytes": 11370,
+      "sha256": "ff6e83ecf7db8c5a9a827a77b84dfbfc0066e44a03222c932970cc2a083a17fb"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_projection.cpython-313.pyc",
+      "bytes": 3609,
+      "sha256": "5ef1aa82fd60ccc5e87ff9ccede16ad1a24c57c45e37ee2d172a43f0ccb8e5ab"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/dependencies.cpython-312.pyc",
+      "bytes": 1331,
+      "sha256": "61c899a6c8d8d982fa7e0aa100e6cd969a4910e06b28da22064af774ff425813"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_smoke_runtime.cpython-313.pyc",
+      "bytes": 3578,
+      "sha256": "3c3195fd9869ef8b96f3f6a2ef39c188570cbfe51d6d82a25743f22cf58c1047"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_spec.cpython-313.pyc",
+      "bytes": 3233,
+      "sha256": "4ced589e4e744d4d5bff5af65bb72d59484a5f6916f3ffaba103fd20cbafeb70"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_initialization.cpython-313.pyc",
+      "bytes": 14264,
+      "sha256": "79598fa25f40acfc6c9012f22eafc0d47d10a98809fe17ca17b896743cf74ec7"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_smoke_verify.cpython-313.pyc",
+      "bytes": 15058,
+      "sha256": "cb72289db301be5fbcf8450e3f7c243bbe1124fd9c0ae260a884b54cf8d8bc65"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_reference_assets.cpython-313.pyc",
+      "bytes": 23486,
+      "sha256": "4d360ec4829b90facef70a4001d64bad1aeb5ff933adf532b5b96b356c63e99d"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/market_context.cpython-313.pyc",
+      "bytes": 20160,
+      "sha256": "b95991f8dcac9d89e50a5d1ac1bd34edeb84f4babc460619cf5d872719d85eff"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_restoration.cpython-313.pyc",
+      "bytes": 11794,
+      "sha256": "47f9153e8fd1cdc048e111b8927c51a2b9dc8afa5c6a01eec80214ff9838d683"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_regularization.cpython-313.pyc",
+      "bytes": 4091,
+      "sha256": "c8fa551180f5321b88ba3e77326a8dcc13f5dfe2360cc0af9dba60253f239893"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_environment_runtime.cpython-313.pyc",
+      "bytes": 3643,
+      "sha256": "7226944318bb4713fd4eb22016b93a9a64644bb35f235492977e5cdf5557cf85"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_profile_sources.cpython-313.pyc",
+      "bytes": 3648,
+      "sha256": "22a270d265b138e65911578d5bdabe0127a4f977ec0214fc3b76337ccc9e67c7"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_profile_worker.cpython-313.pyc",
+      "bytes": 7888,
+      "sha256": "43d492dd8fe563ec116837378c7a79bb4aa9324ebd20935c82b67b660d531342"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/gae_restoration.cpython-313.pyc",
+      "bytes": 10550,
+      "sha256": "0236c3933042847edc61e0a79e13ab70dc562447b46100336632415d1c73fcb1"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_environment.cpython-313.pyc",
+      "bytes": 1888,
+      "sha256": "9ebba0234c99a8bba4dfe9764beea9c61d479e372e8ce0061c03e49f26d59e5b"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_loop.cpython-313.pyc",
+      "bytes": 19979,
+      "sha256": "a7240e5cbf6efb99a765f3e138382d01e28d11b318073e282986d806ab706c95"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/td3_state.cpython-313.pyc",
+      "bytes": 5896,
+      "sha256": "bd7f0a567e0ee04c3ce7568d925ad906403da762f59de2519d522962b26574ee"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_execution.cpython-313.pyc",
+      "bytes": 11405,
+      "sha256": "aebf56168be6d18119034b2ec1718192c4f1909ff0b3113637bb4d9a3946409d"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/gae_rollouts.cpython-313.pyc",
+      "bytes": 17938,
+      "sha256": "336384e7608a94b1a9d21d5b8826ef3fa92a880b42b317e92d50a22edb629433"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/vix_runtime.cpython-313.pyc",
+      "bytes": 8688,
+      "sha256": "6a32432375922d366601f40613470b56df52ac04d9c11366e7c1cae013c94c9d"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_mapping.cpython-313.pyc",
+      "bytes": 11497,
+      "sha256": "0552db29a8cb9c7d00feb02cfe70bc0346b69b9699d7eb1d106e72014beb61b5"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/gae_initialization.cpython-313.pyc",
+      "bytes": 10851,
+      "sha256": "71a11d30f85b3ffab7d86282827411178da2cd6f2ceb2be0d9ffe2db6becef7e"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_reference_candidate_acceptance.cpython-313.pyc",
+      "bytes": 12116,
+      "sha256": "69691a3baa9d9c4b0ed9107ac3d044a4f4ccc697f6a593b7d6edfd4de8ecf044"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_record.cpython-313.pyc",
+      "bytes": 7135,
+      "sha256": "37369dd0d5f45be4c6732668c9dbe1d36a89df02aaff70b82db9e091da756e91"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/input_clipping.cpython-313.pyc",
+      "bytes": 17224,
+      "sha256": "78ef458b55ce4d66622f4a611f3c481fcc4c5df2e129628b3054addfde204e88"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_sampling.cpython-313.pyc",
+      "bytes": 4828,
+      "sha256": "8afe614549ff803ba6588c77656be6487fa74273bb35852920e597aec4912351"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/treasury_guard.cpython-313.pyc",
+      "bytes": 1026,
+      "sha256": "4e29f588e164b257bea7d797e179758cebe21be51327bcba5579a8894e6e9a96"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_environment_verify.cpython-313.pyc",
+      "bytes": 8769,
+      "sha256": "aca317a7cd87d27cefcaead9eb6de3a3e1ac92f48d19812e6b64acd03c16c38e"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_environment_worker.cpython-313.pyc",
+      "bytes": 2633,
+      "sha256": "9f5059b6e2c37cfb3c87b9c6d2cc2598158b989c16aacaa2ca5f61cc3e4b0da9"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_guard.cpython-313.pyc",
+      "bytes": 14697,
+      "sha256": "6bf322a7fb5824b060642a80e4cd664e067fc77b73f623144dbb456ce49db2a4"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_smoke_worker.cpython-313.pyc",
+      "bytes": 22162,
+      "sha256": "60003dcfdfb7c335d9b5c856161ae56e2d5ae2dfe76bc581d7092aade8d150c4"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_comparison.cpython-313.pyc",
+      "bytes": 9870,
+      "sha256": "4673e5748959e2c74d62909c0c8057c3716904a66fe151d369ed5696de72635a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_screen_acceptance.cpython-313.pyc",
+      "bytes": 6853,
+      "sha256": "c6b78d2cd0cbe2b382113a135c5c17ad1248889ffed2537b317a25dfa7a8bc4d"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_state.cpython-313.pyc",
+      "bytes": 2564,
+      "sha256": "be162e01edc7ad8df6be4dcae2bd08387ce226c57a343229fe6a93f9e6ce8577"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_optimizer.cpython-313.pyc",
+      "bytes": 7587,
+      "sha256": "1518b0ec7c83e9e7c7a086d29431f7299c5169785daaf9e895f19d8f57d14dc5"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_regularization.cpython-313.pyc",
+      "bytes": 15892,
+      "sha256": "2b5b9cd562fe35e5d7f24614ddfe9603ea04c901fbaa66f49e73ba99c2711268"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_reference_worker.cpython-313.pyc",
+      "bytes": 4295,
+      "sha256": "9293f4477d9e68b6ee9c2a9cb02ebd723d6721161f9ac09318d71b0f49b32d88"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_temperature.cpython-313.pyc",
+      "bytes": 5355,
+      "sha256": "9b0a6a3196302a195bce4c1eabc04395767fa217ed9edf3875dee549a35fd1ed"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/distributional_assets.cpython-313.pyc",
+      "bytes": 5829,
+      "sha256": "50ac1223c839d6df8c1e7c5add8d8caf61d884ad563b83be3be4d18b649b8955"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_capacity.cpython-313.pyc",
+      "bytes": 14123,
+      "sha256": "72a8fab87001924d02057d10f9b4f9fad22de420d55d1f5964d7e1d77cdef266"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/diversity.cpython-313.pyc",
+      "bytes": 17934,
+      "sha256": "371b2d6929ec347517ac4f1efe055630b60c181e4e4131b7080becd4f6ab3870"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/initialization.cpython-313.pyc",
+      "bytes": 2034,
+      "sha256": "fd466a4b41239a1b5985bb320f03d18478be71ff98ccc3e716549a2bd30ba3be"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/task_conditioning.cpython-313.pyc",
+      "bytes": 6289,
+      "sha256": "05b2d24a968447fb5bb3508bf128d8d7f4af459cfec4f30bf24e22430348fe1f"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_comparison_worker.cpython-313.pyc",
+      "bytes": 16621,
+      "sha256": "d427c58154d4cae7ac0274d15e32551f9fd86e57fdd391da77dac8ec23eacdf4"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_context.cpython-313.pyc",
+      "bytes": 3657,
+      "sha256": "e6c45fc2dd0708b740106090c6f9d419411341277904c06d625361f095ea8eb1"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/distributional_restoration.cpython-313.pyc",
+      "bytes": 8412,
+      "sha256": "d17ef6d141ae271b67ee7a049480afd287d00ebdae010d57c03bd51fb9221567"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_update_input.cpython-313.pyc",
+      "bytes": 5499,
+      "sha256": "1659e9cce223036da7c362063d1b7dd9b043fb6aef650fbd3e8e30649b2ce183"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/distributional_critics.cpython-313.pyc",
+      "bytes": 19705,
+      "sha256": "97e05a3cffa54586b7b3714e680b33f172991b7eb304376f93cd4c7af7c3d63e"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/sac_update_runtime.cpython-313.pyc",
+      "bytes": 3559,
+      "sha256": "a19a290af5c69d47e4f7cd25e91146d5b46e1fd2e051b8387a71bdac51357dee"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 131,
+      "sha256": "307fab7fa7eaad27026a34485ac52d4885111007e09bded22a1c26515c297d3a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_comparison_runtime.cpython-313.pyc",
+      "bytes": 3641,
+      "sha256": "11c909fc86adf3aa3c430262f92ac8e85049aa3bbdb02c0e196be7b62160399a"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 131,
+      "sha256": "1558b0154f4b7ae467e85987b90371c6a76f7590bbc441b522f068b7c650dad9"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/crossq_state.cpython-313.pyc",
+      "bytes": 15138,
+      "sha256": "61c834a0e5fa15c082143e04f31f9c2002c677010abd8bbb796cd1440bc0ec30"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_smoke.cpython-313.pyc",
+      "bytes": 7531,
+      "sha256": "caaba472b6b1af113627ed62993e0f2909e31235329399430329d5aa66232d60"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_sac_checkpoint.cpython-313.pyc",
+      "bytes": 10495,
+      "sha256": "655caaf588dbf89f20f54aa423783702db4b3a70321425f87adc378e7ba67046"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/vix_assets.cpython-313.pyc",
+      "bytes": 7885,
+      "sha256": "46e89dc48b2a569b63053cddd08bd4a1730e62d6dec3b0fcffed5d5962f10d26"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_screen_runtime.cpython-313.pyc",
+      "bytes": 3783,
+      "sha256": "58759c700ad6975f2f545d2f0180063536cb688e277207a9db2b403ba85b501f"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_restore.cpython-313.pyc",
+      "bytes": 2581,
+      "sha256": "994659c1304eb91860f2f1b1d69f444e2fb9f332b1c90c853fda450f421d4029"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/vix_restoration.cpython-313.pyc",
+      "bytes": 9743,
+      "sha256": "1a2c3aac7c8259d329ec294e0ececc55ec8a908b7c3b231b4201f9a8d6f347e4"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_payload.cpython-313.pyc",
+      "bytes": 10390,
+      "sha256": "3c53c45af7d5ff74d033309fae66007dff7018ceb56a20caa408be89c7e13601"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/distributional_records.cpython-313.pyc",
+      "bytes": 9351,
+      "sha256": "c21dc9456ce15e068279b8ae1911d67c96b6de5541faa5cc3c4ee889814a9f4e"
+    },
+    {
+      "path": "src/rl_stocks/training/__pycache__/recurrent_screen_spec.cpython-313.pyc",
+      "bytes": 4138,
+      "sha256": "61c06beb87b283edeb071c0da7b2f88f2e066d42d7c951e56ad095e0a95204d0"
+    },
+    {
+      "path": "src/rl_stocks/training/history/__pycache__/spec.cpython-313.pyc",
+      "bytes": 5499,
+      "sha256": "48a3c4609bf3dec1fbd037eb099fd923691ae0f617a16b6d8df7ca372ddb598a"
+    },
+    {
+      "path": "src/rl_stocks/training/history/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 233,
+      "sha256": "111008352b7fa5755fcfa9e478359bf666853fc427b5b1850f575066dd947ce2"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/forest_artifacts.cpython-313.pyc",
+      "bytes": 6543,
+      "sha256": "1352d7c19f88c10fc8b0252aa0b298da9c5a49eb3617d2efc6034aba57cc8927"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/spec.cpython-313.pyc",
+      "bytes": 2300,
+      "sha256": "cf5279f1b4dd23364e828fc2c9f8ae198e84b02c02425ff9acbf3245e8ebbd16"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/runner.cpython-313.pyc",
+      "bytes": 15578,
+      "sha256": "f4b77cdfce516937e6f16878c39094b43689ed15606affab5adbc339e8ff8666"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/boosting_runner.cpython-313.pyc",
+      "bytes": 12963,
+      "sha256": "3e298b68694d332b328f7e8ab556c8d0da5cdffccf62cdd1853434c222aa4efb"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/models.cpython-313.pyc",
+      "bytes": 4039,
+      "sha256": "4f815fc8d34ca39e34e07c6290ce869a71cd0d27cce225cfc564e3e8b26f9941"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/artifacts.cpython-313.pyc",
+      "bytes": 7929,
+      "sha256": "b81b07b8754518b63e183184dd8dba0c4c6c1225860b4d0181472727a985967d"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/forest_spec.cpython-313.pyc",
+      "bytes": 2896,
+      "sha256": "2529b4f3b6f95cb8a59294a75e303b1e79df6561f7836e34ee1e0b78fb2bad54"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/boosting_spec.cpython-313.pyc",
+      "bytes": 1930,
+      "sha256": "3e5d11d955bd204626ea7ab09345e846e24912954985102ac1ea44acb9d7e4c0"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/targets.cpython-313.pyc",
+      "bytes": 6005,
+      "sha256": "2a300b355eaafe28cb393455f18c26a796445a1e4746c05d3a589384ed702144"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/boosting_artifacts.cpython-313.pyc",
+      "bytes": 10630,
+      "sha256": "d7a481e117d89c254b0b72c6148e7cd4072e0c81ac924f0a50ab53b6c0297c0a"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 230,
+      "sha256": "140ab44345f2b2deaa52b7d221eeb8a479f29ece7e8de87f85a173d762192653"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/metrics.cpython-313.pyc",
+      "bytes": 7990,
+      "sha256": "6958e350f64761f594d3ac1867126018c8d04fc5f41ba285fdc80a7211598a1b"
+    },
+    {
+      "path": "src/rl_stocks/training/supervised/__pycache__/forest_runner.cpython-313.pyc",
+      "bytes": 13748,
+      "sha256": "04b4ff997e47bc7056a616a59f4a620a05e2f9c9f8dcee6f8a44a7e79519ec98"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/contracts.cpython-313.pyc",
+      "bytes": 5043,
+      "sha256": "417f7514dff49ea7e38a95ec28718af2ba2c208c199e525b61dab3c7401a010c"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/provenance.cpython-312.pyc",
+      "bytes": 2824,
+      "sha256": "23fac1ce131d29cf675ebfeec7baf06a4ef49e263a3c1bda64b01de2dd025aba"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/files.cpython-313.pyc",
+      "bytes": 1626,
+      "sha256": "8c52535f8a1d1793d3dcc5db305ce9182e998aa2c60c78fd84c844536e9b354a"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/execution_provenance.cpython-313.pyc",
+      "bytes": 3539,
+      "sha256": "ae7b1cebaa097a28afc817cc3311af0732e47906156ab8575450dc9a20017f16"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/contracts.cpython-312.pyc",
+      "bytes": 4830,
+      "sha256": "1c74760937356f6f8a5ddce5915d63e83bc2528246f34993d87679d2e2d7f89c"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/contracts.cpython-314.pyc",
+      "bytes": 6753,
+      "sha256": "a7d6e3ed652c7566eb71a504d2385c8a206d813e1f3ecce489355c991c3bb84f"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/files.cpython-312.pyc",
+      "bytes": 1651,
+      "sha256": "0e48b9bf46e57e17d315a40e303a0259b91477270bfda107ee8ddf5df50ec384"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/provenance.cpython-313.pyc",
+      "bytes": 2883,
+      "sha256": "253e4b13608c048133988e90e2a2280d3ebba503a5921f1d00e21979cdaaf222"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 159,
+      "sha256": "9f6f6b53bb5026789af0676591f3d6562e484e1c3edb862e3dd4b0d51fc2dc3a"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 150,
+      "sha256": "3a9e15f4332541a7cb4508a9d4ea8d76630d8f4adb12ba22795447b8f41fcc14"
+    },
+    {
+      "path": "src/rl_stocks/core/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 127,
+      "sha256": "9168f9c4901f9700a0007fc85cf326690a192d188fe15bfe2d15d0f6c0bb865f"
+    },
+    {
+      "path": "src/rl_stocks/rl/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 125,
+      "sha256": "da57a46ede64bc865e02953e477a08faada3b8d39cef68107be49835872434db"
+    },
+    {
+      "path": "src/rl_stocks/rl/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 125,
+      "sha256": "819e9231ad17365f17886e3c661954db9bbaf873d092c2c2ab9d9cbdf12302d3"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_ppo/__pycache__/squashed.cpython-313.pyc",
+      "bytes": 2052,
+      "sha256": "aedec971abe2a0bf1c7cee4dc6452df994e2760047a3e5ed73540aa287b9ce32"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_ppo/__pycache__/config.cpython-313.pyc",
+      "bytes": 379,
+      "sha256": "1a698deb85a07f7f407a018fd0b4eabf51361d69867a70ed144dfc3510b80444"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_ppo/__pycache__/hybrid.cpython-313.pyc",
+      "bytes": 8002,
+      "sha256": "9e8048690f4b44ef5f6f1ab26e4dcd833fc0d39a4160a673db0aec4f81285e31"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_ppo/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 220,
+      "sha256": "5d5bf3f7bec620e754a638398d9fce076f16a8d65a274884f1cfa29ac8280786"
+    },
+    {
+      "path": "src/rl_stocks/rl/registry/__pycache__/prediction.cpython-313.pyc",
+      "bytes": 2034,
+      "sha256": "681146fe291b335a4979d4147c2f22a29f254c17e0eea4f35bdfb78dd2b740a4"
+    },
+    {
+      "path": "src/rl_stocks/rl/registry/__pycache__/factory.cpython-313.pyc",
+      "bytes": 5888,
+      "sha256": "aaaef3959ee7ac4fd04c617aadc81ee578eea8a542384a8f3aaa95588c7f9445"
+    },
+    {
+      "path": "src/rl_stocks/rl/registry/__pycache__/distribution.cpython-313.pyc",
+      "bytes": 5582,
+      "sha256": "7f65f51d39ee786e6f051a2630a78aa23a06c6cef741ac5729c3f8f020088928"
+    },
+    {
+      "path": "src/rl_stocks/rl/registry/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 134,
+      "sha256": "3a1b1d3838a3ba61884ddd3fac420bb43432ac146f7eaa8786dc49b1652d8078"
+    },
+    {
+      "path": "src/rl_stocks/rl/registry/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 134,
+      "sha256": "1230c17cbbc455e4969fb11b5063eee9066a2feee5687ef56ae75e16d1797dac"
+    },
+    {
+      "path": "src/rl_stocks/rl/registry/__pycache__/factory.cpython-312.pyc",
+      "bytes": 2518,
+      "sha256": "c1122dee10353675d5273892abb0c59e208dce0fff233083ad96507f2c7d3b3f"
+    },
+    {
+      "path": "src/rl_stocks/rl/crossq/__pycache__/config.cpython-313.pyc",
+      "bytes": 861,
+      "sha256": "ad433566a306bd30b12dbfb1102555586c31aa7b1811e17b213f630031c79fa5"
+    },
+    {
+      "path": "src/rl_stocks/rl/crossq/__pycache__/geometry.cpython-313.pyc",
+      "bytes": 8499,
+      "sha256": "5397c22a19fd0a1893220958b03b0432ecc8de73790c9dcfb71a4de6ed2ebb87"
+    },
+    {
+      "path": "src/rl_stocks/rl/crossq/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 250,
+      "sha256": "78609e82dcb30e9f539aaa9f0ee9938029c972229b4da1051c2f2eecd36217c1"
+    },
+    {
+      "path": "src/rl_stocks/rl/tqc/__pycache__/config.cpython-313.pyc",
+      "bytes": 1515,
+      "sha256": "32cb3a3856496b1f6c079fb3ea83ee0f91d99f15d0079a5442f0a5fc41cdfbc2"
+    },
+    {
+      "path": "src/rl_stocks/rl/tqc/__pycache__/geometry.cpython-313.pyc",
+      "bytes": 3222,
+      "sha256": "1aa8a134ada5257f052a835a461f835357b637429597a045c9467995dfaa121c"
+    },
+    {
+      "path": "src/rl_stocks/rl/tqc/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 248,
+      "sha256": "bd2c034235f1174043ad77c661a996fdc0bef610771ceac9d15e8535778660c0"
+    },
+    {
+      "path": "src/rl_stocks/rl/ppo/__pycache__/architecture.cpython-313.pyc",
+      "bytes": 2428,
+      "sha256": "8b7cb4ea9d30814f1712f5ec69e2f3a2f81bd8c3aad0880cc321bdfc0ce544a6"
+    },
+    {
+      "path": "src/rl_stocks/rl/ppo/__pycache__/config.cpython-313.pyc",
+      "bytes": 430,
+      "sha256": "45f7b61b59047c24a578e62bce6806374390e62fad20f7cdaa9b86e1ac0989ea"
+    },
+    {
+      "path": "src/rl_stocks/rl/ppo/__pycache__/config.cpython-312.pyc",
+      "bytes": 424,
+      "sha256": "389abd4693adfa15897c249e751fa6cba839b78ac13f70c6ca173b2abd3bc727"
+    },
+    {
+      "path": "src/rl_stocks/rl/ppo/__pycache__/policies.cpython-313.pyc",
+      "bytes": 7567,
+      "sha256": "9644665a1b1bada4d2209d85a3971ee927dd49f23e0c497a94999d28d5495be4"
+    },
+    {
+      "path": "src/rl_stocks/rl/ppo/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 129,
+      "sha256": "ad7767268df585f6e2e4db507b371e19ff4c0081cf12a6169e8b29da073e3433"
+    },
+    {
+      "path": "src/rl_stocks/rl/ppo/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 129,
+      "sha256": "37bccca08115628342bb91cbb353059b77411d997ba50e89ef3b6119939761d3"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_sac/__pycache__/networks.cpython-313.pyc",
+      "bytes": 5421,
+      "sha256": "20870a904a755d27497c674694351c105ba1b5898c2328f34a9c0e191bdd844b"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_sac/__pycache__/collection.cpython-313.pyc",
+      "bytes": 5220,
+      "sha256": "97facc4bef2f5036396d3fda64acd22cb586922e734f35cb2eb1876974ee9940"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_sac/__pycache__/prediction.cpython-313.pyc",
+      "bytes": 3836,
+      "sha256": "cc84a07b7ce527db3eecf3e1e5bb463760089e80372c6e13888b70ed49dd5b47"
+    },
+    {
+      "path": "src/rl_stocks/rl/recurrent_sac/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 258,
+      "sha256": "99b11f14655efa45872cafaa7f55665457392a007326bbe7f4984f6263794da1"
+    },
+    {
+      "path": "src/rl_stocks/rl/sac/__pycache__/config.cpython-313.pyc",
+      "bytes": 474,
+      "sha256": "6148e773a1f87ecb7b12c7ca7822255dbd8bc804ec7ad64c5b4a233aa99b357b"
+    },
+    {
+      "path": "src/rl_stocks/rl/sac/__pycache__/task_factory.cpython-313.pyc",
+      "bytes": 1235,
+      "sha256": "f091da7cd6d8132f74d3f9d4d5696986f4b4f3da94a4cad2cf542638963c7c66"
+    },
+    {
+      "path": "src/rl_stocks/rl/sac/__pycache__/config.cpython-312.pyc",
+      "bytes": 458,
+      "sha256": "e561c3602d254d146887f1a2c07debd2ad5c639343a0a25b9df217a63d5af5a8"
+    },
+    {
+      "path": "src/rl_stocks/rl/sac/__pycache__/task_policy.cpython-313.pyc",
+      "bytes": 9168,
+      "sha256": "599542ed5bae7c61a73e608bf6622e5287a8059e1729634104471f0e62d8fc08"
+    },
+    {
+      "path": "src/rl_stocks/rl/sac/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 129,
+      "sha256": "d843b12041c8ae2c7d48b2287fa7b2eef2810f6652b5ebd30ab1f8078c8b3d28"
+    },
+    {
+      "path": "src/rl_stocks/rl/sac/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 129,
+      "sha256": "c25b9041df1f7ff35375816746d44927da94b430693fca5895c83945daa73a95"
+    },
+    {
+      "path": "src/rl_stocks/rl/td3/__pycache__/config.cpython-313.pyc",
+      "bytes": 543,
+      "sha256": "59515009041716dc5485de56776c366a747d037856c2ccf4c472afdc3776e1c0"
+    },
+    {
+      "path": "src/rl_stocks/rl/td3/__pycache__/config.cpython-312.pyc",
+      "bytes": 527,
+      "sha256": "ff78c2eb05628964d44f4caf5caab064215dfe9e527728788493c35e7e824fd0"
+    },
+    {
+      "path": "src/rl_stocks/rl/td3/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 129,
+      "sha256": "2816af54f842607f75d57bef28fbdd95b23e21caa331e4e0d184f4c2319ad3bf"
+    },
+    {
+      "path": "src/rl_stocks/rl/td3/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 129,
+      "sha256": "4517ca002b7129cad2a0b679e49420e54e6ae8698529a5d9447a633171489672"
+    },
+    {
+      "path": "src/rl_stocks/risk/__pycache__/exposure.cpython-313.pyc",
+      "bytes": 2381,
+      "sha256": "d09646f76ad50c828562b5b1a8637e8f925b2fbdd3259abc8d8a516897c40162"
+    },
+    {
+      "path": "src/rl_stocks/risk/__pycache__/decisions.cpython-313.pyc",
+      "bytes": 4933,
+      "sha256": "6af4d6b9569ff92e752bef08afed0a710354aacb67e1b4ff1343d4f1ed82296d"
+    },
+    {
+      "path": "src/rl_stocks/risk/__pycache__/decisions.cpython-312.pyc",
+      "bytes": 4789,
+      "sha256": "e3b25439a9b6eaa3af1868806eeef7b95840e993014e9fbe7d7fa7419b975f90"
+    },
+    {
+      "path": "src/rl_stocks/risk/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 127,
+      "sha256": "30461c1bd115107b29339904462354db94495c49c94d7df178faee8daef74398"
+    },
+    {
+      "path": "src/rl_stocks/risk/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 127,
+      "sha256": "acbafceb36aa1c4695cc9f50b75a49eb9f67ec9e650afecbe2d2ef9fd0438b82"
+    },
+    {
+      "path": "scripts/__pycache__/accept_capacity_smokes.cpython-313.pyc",
+      "bytes": 8842,
+      "sha256": "c1b5e668d6adc43bd3ac89b7390b708f23326fd37c435bbd071241724f840e0c"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_learning.cpython-313.pyc",
+      "bytes": 2456,
+      "sha256": "61692aa6bf55d3c01625d451c89f7d884d56f38215e15d4e508bf9023222769b"
+    },
+    {
+      "path": "scripts/__pycache__/audit_training_history.cpython-313.pyc",
+      "bytes": 4877,
+      "sha256": "ae174ce1e6bb89cc0e3bae839dbeb070014cd06e27394de54b1cb8d678e2df0d"
+    },
+    {
+      "path": "scripts/__pycache__/build_guard_jobs.cpython-313.pyc",
+      "bytes": 1854,
+      "sha256": "7856e325752da0f188cc093ff9ab416343c6f315c58d7a5f1bb70de13e39bddd"
+    },
+    {
+      "path": "scripts/__pycache__/build_initialization_jobs.cpython-313.pyc",
+      "bytes": 3839,
+      "sha256": "158521ef8f72b993d65a3cd0e5956c7fa61333db9cebd57d8d043eb778cc3f26"
+    },
+    {
+      "path": "scripts/__pycache__/resume_task_stock_sources.cpython-313.pyc",
+      "bytes": 15300,
+      "sha256": "ae58d3beb2bdff3560ba0142c65bdda73caa1cf35c75ceadc4c142b36e4f7fec"
+    },
+    {
+      "path": "scripts/__pycache__/audit_historical_regimes.cpython-313.pyc",
+      "bytes": 4143,
+      "sha256": "a1e8bc8ad04e6b653e255f7764954da6885a55072dcf0d5ad1d22e7a9b6be21b"
+    },
+    {
+      "path": "scripts/__pycache__/report_training_history.cpython-313.pyc",
+      "bytes": 11632,
+      "sha256": "f55de4f7bdd265d3d9703abd40b77c8beb5b395ed05154f43e8e514fed4fd6ac"
+    },
+    {
+      "path": "scripts/__pycache__/replay_recurrent_sizing.cpython-313.pyc",
+      "bytes": 10366,
+      "sha256": "cb2af4f7152a95957c9f826781153d1be73434398430aec599cde084c0d3e438"
+    },
+    {
+      "path": "scripts/__pycache__/report_td3_state.cpython-313.pyc",
+      "bytes": 9482,
+      "sha256": "f30bca63641308a8e90e1c33ce77418e707307d4022ef73d5e3b79dea55475a6"
+    },
+    {
+      "path": "scripts/__pycache__/colab_cli.cpython-314.pyc",
+      "bytes": 1461,
+      "sha256": "03c79cc5ff69bb7c8af9757efdf94225fee9222e6185c4fa7ab4b92b1182ceb8"
+    },
+    {
+      "path": "scripts/__pycache__/replay_signal_centering.cpython-313.pyc",
+      "bytes": 11970,
+      "sha256": "00d9183caecdc275663bc056831f4af02dbe2aacaef749a7d4ce780a98fadaee"
+    },
+    {
+      "path": "scripts/__pycache__/accept_crossq_smokes.cpython-313.pyc",
+      "bytes": 8321,
+      "sha256": "97bc165fd1a2bc6af727ada8a0664b0bb550c027b6ea6dc923dd529cad3c234a"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_regularization_numerics.cpython-313.pyc",
+      "bytes": 11525,
+      "sha256": "942b2c524888e94487a512962bec8131396a60af9ebe3ef4c23ad39fc66f7505"
+    },
+    {
+      "path": "scripts/__pycache__/build_market_jobs.cpython-313.pyc",
+      "bytes": 2873,
+      "sha256": "9683545beeb6b3e7e2965c46f1fcabd2dc16f9c0502e14bdb5760ddc74f79437"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_diversity_fit.cpython-313.pyc",
+      "bytes": 6602,
+      "sha256": "71cbace1067a12d384fb3a26c625f5714cd74a29e723062bd1c3cfa2b913503a"
+    },
+    {
+      "path": "scripts/__pycache__/build_sac_state_jobs.cpython-313.pyc",
+      "bytes": 1861,
+      "sha256": "e8f6234a5acdbf56eb94b2384f4d8cff251ed589687c1bda3fa7269b78a1d3dd"
+    },
+    {
+      "path": "scripts/__pycache__/report_input_clipping.cpython-313.pyc",
+      "bytes": 11599,
+      "sha256": "c13a64610fb44fd1fbc1df418e6a9f6d211525e0e69f589e8edf4ddf419f9d45"
+    },
+    {
+      "path": "scripts/__pycache__/check_l2_models.cpython-313.pyc",
+      "bytes": 5010,
+      "sha256": "084396d69ec3a3035eec33aa9c5883d5c260d8896cedd8b9ce0e31ba831fb75d"
+    },
+    {
+      "path": "scripts/__pycache__/collect_task_exception_sources.cpython-313.pyc",
+      "bytes": 9856,
+      "sha256": "f5feb8ded3e65d1ed2309debbf3afc1b00bfecfc7ac037b05a93229bea257d48"
+    },
+    {
+      "path": "scripts/__pycache__/report_recurrent_l2.cpython-313.pyc",
+      "bytes": 11481,
+      "sha256": "4c811f60e3dd3be353585dadb1a1157aec7c5c0efef0798f898d158d90074569"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_recurrent_actions.cpython-313.pyc",
+      "bytes": 8455,
+      "sha256": "66ca81ade283a453bf2b234a20912adeea12c10fa6c1d745da6d2b20586a2be8"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_training_fit.cpython-313.pyc",
+      "bytes": 11350,
+      "sha256": "dc484d37217dce1055b77b2e82108b690900d0bb5a6dc0f7b4b2fda00aa16f60"
+    },
+    {
+      "path": "scripts/__pycache__/remote_train.cpython-312.pyc",
+      "bytes": 2794,
+      "sha256": "7a866963e9886662fb11483f451f0219dcee3e18acef00961abf0b3e333f822b"
+    },
+    {
+      "path": "scripts/__pycache__/build_crossq_jobs.cpython-313.pyc",
+      "bytes": 2966,
+      "sha256": "43dbe86bf99da35130996e34f02266a1c7852c39b3c983684db7413120f4defe"
+    },
+    {
+      "path": "scripts/__pycache__/accept_recency_smokes.cpython-313.pyc",
+      "bytes": 8899,
+      "sha256": "b4cdd99d2a1e3b243f15fcf13a9052e086c6b43b881295e63b7ac94db2d9be7e"
+    },
+    {
+      "path": "scripts/__pycache__/replay_directions.cpython-313.pyc",
+      "bytes": 29378,
+      "sha256": "f8faa648ccac16020e6f8504b25111660c57b03a0edceb46546c855289f7c8ec"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_guard_bridge.cpython-313.pyc",
+      "bytes": 7618,
+      "sha256": "cb83859ee1b388738d3602fcff5e68b7521b9cdc7588cc19cb40b0a5ec77337a"
+    },
+    {
+      "path": "scripts/__pycache__/audit_treasury_source.cpython-313.pyc",
+      "bytes": 10310,
+      "sha256": "81df070c76d18178f3b7207d2c5068296dbbf9b986a33e6c6f6a565206447c60"
+    },
+    {
+      "path": "scripts/__pycache__/verify_signal_runs.cpython-313.pyc",
+      "bytes": 6903,
+      "sha256": "555a40b85eb908bcd3099897e27a598f207fc1ba517e4a5bed92f356c97ffccc"
+    },
+    {
+      "path": "scripts/__pycache__/remote_train.cpython-313.pyc",
+      "bytes": 14639,
+      "sha256": "5eaac2262551f170a7395c5e43a142d560150f19011c3a4d8ec740893d63bbb0"
+    },
+    {
+      "path": "scripts/__pycache__/collect_research_expansion.cpython-313.pyc",
+      "bytes": 8052,
+      "sha256": "2c5dddbb6fec4abc300fa091c0c680b8524e2326ad65146a87878b7ef5ec3091"
+    },
+    {
+      "path": "scripts/__pycache__/report_stability.cpython-313.pyc",
+      "bytes": 1855,
+      "sha256": "83df27057a61e280501da321ce7d934995940e61158e2637cf4cff1708b52785"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_sac_learning.cpython-313.pyc",
+      "bytes": 11363,
+      "sha256": "956de6641aa6a3836e336b22aca8ffbb67100162de50190181ca938a4ec82665"
+    },
+    {
+      "path": "scripts/__pycache__/report_direction_replay.cpython-313.pyc",
+      "bytes": 19683,
+      "sha256": "3ceda99a585400ac7e34b42b13377491865ccec800fec6c52948be0cfc4bee20"
+    },
+    {
+      "path": "scripts/__pycache__/build_cash_jobs.cpython-313.pyc",
+      "bytes": 1846,
+      "sha256": "51e1e20d1ebf9ec0346b4545f39c891bdf8f9c03b134bd721c7583a593e61edc"
+    },
+    {
+      "path": "scripts/__pycache__/report_temperature.cpython-313.pyc",
+      "bytes": 12133,
+      "sha256": "946dc8e1bf7e1d5df64abbf394766818a97b4af62eefcb450a8429ad553b1b78"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_sampling.cpython-313.pyc",
+      "bytes": 4701,
+      "sha256": "f25e78f22212ccf57d579679913f1f7913a4318e1bc574d85eada46ffd71a835"
+    },
+    {
+      "path": "scripts/__pycache__/report_vix_study.cpython-313.pyc",
+      "bytes": 12044,
+      "sha256": "edbdb7850ed3da2bc469ea62f40818a4976234b8e11321aaa4feddf3370b58fb"
+    },
+    {
+      "path": "scripts/__pycache__/check_session_models.cpython-313.pyc",
+      "bytes": 4942,
+      "sha256": "92be19d1a7556e224b5eb2530d6b06fac2ed6af4f68b0aa6460970584bf42a85"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_temperature_paths.cpython-313.pyc",
+      "bytes": 7112,
+      "sha256": "8497b9209a6a4d6132fd7a77121e88a079e0ef6fa0e11c20d3d28b82f72aa217"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_session_context.cpython-313.pyc",
+      "bytes": 6424,
+      "sha256": "70f4591d138cce3e40ca224dd0633e2710f0c23c19ff04914fd584a601c8d8ac"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_input_clipping.cpython-313.pyc",
+      "bytes": 6066,
+      "sha256": "38e5593883928c7ca69d4eadb0b01cb2485fa1072a2dcaebccc9c11114152ffd"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_training_regimes.cpython-313.pyc",
+      "bytes": 2823,
+      "sha256": "6e5c4f400913104f8cbb0e97b4b1fd6d22f8de74fcc9189aa2f71cbe50fd5407"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_forest_signal.cpython-313.pyc",
+      "bytes": 3849,
+      "sha256": "c120692ed7078ca07c9f21bf8633d270de1b1f3bdd43cb029e589331ff5420c2"
+    },
+    {
+      "path": "scripts/__pycache__/check_market_models.cpython-313.pyc",
+      "bytes": 5023,
+      "sha256": "a29095efbc31ea0d64eb4b87febbb978477c3041272d52d8ef5eb51a60e9ccee"
+    },
+    {
+      "path": "scripts/__pycache__/remote_smoke.cpython-313.pyc",
+      "bytes": 3641,
+      "sha256": "392f9d5550f44296da293017356b2ae4de4d3ac104e09796fe5e42f445aeb82e"
+    },
+    {
+      "path": "scripts/__pycache__/compare_history_fit_actions.cpython-313.pyc",
+      "bytes": 6605,
+      "sha256": "6dac83b0a6f6c33dfb87bf2a42d04ac3c38da535d142032b1047072056a61aad"
+    },
+    {
+      "path": "scripts/__pycache__/build_diversity_jobs.cpython-313.pyc",
+      "bytes": 1878,
+      "sha256": "fc2a2d8aa40b3e8739cc5f223dd443d697e2ed9185e2504a4e88d134971d1ab5"
+    },
+    {
+      "path": "scripts/__pycache__/prepare_historical_arms.cpython-313.pyc",
+      "bytes": 4403,
+      "sha256": "5324884962bf6538587e6cbf129894c8c8b4af66eabe7d7b3009daf881054d61"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_soft_consistency.cpython-313.pyc",
+      "bytes": 21425,
+      "sha256": "f9f7dfb96968315fe1ea5a1163394088b98919af9d49bb1d1135d2733e00a4b4"
+    },
+    {
+      "path": "scripts/__pycache__/offline_audit.cpython-312.pyc",
+      "bytes": 4424,
+      "sha256": "92bf1dedc092e8a8bb9b84a08e06d57d83a7c394db9f20e4d1480a2327a09a2a"
+    },
+    {
+      "path": "scripts/__pycache__/audit_short_side.cpython-313.pyc",
+      "bytes": 8171,
+      "sha256": "d86f96342bfa2676fb23cb88daaee066933484cbce2a265fb11b8a0cc557cea3"
+    },
+    {
+      "path": "scripts/__pycache__/report_history.cpython-313.pyc",
+      "bytes": 8942,
+      "sha256": "73fe5adf15720cca6a0e926f65e490f8801e316a5688f7743b876bb056973c07"
+    },
+    {
+      "path": "scripts/__pycache__/accept_vix_smokes.cpython-313.pyc",
+      "bytes": 8029,
+      "sha256": "a376538d46f63336bc4bb7e683d4fa73b2330d872c1bc6ca29bbd92fe4ccf47c"
+    },
+    {
+      "path": "scripts/__pycache__/report_observations.cpython-313.pyc",
+      "bytes": 14237,
+      "sha256": "17a5edc0e1ecfba099d4c9206914c9aba91f2301f579e5202208df9f8f5c1299"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_cash_optimizer.cpython-313.pyc",
+      "bytes": 9630,
+      "sha256": "2bbadbb441652fb4dbead0b28e67dbec53f445caf14709bf508b7043edd761d0"
+    },
+    {
+      "path": "scripts/__pycache__/colab_safe.cpython-313.pyc",
+      "bytes": 2574,
+      "sha256": "519e3906d09b3026ae7ca88d4168a197d58c305ad7f8ab031332ba973fd2733d"
+    },
+    {
+      "path": "scripts/__pycache__/accept_market_smokes.cpython-313.pyc",
+      "bytes": 8836,
+      "sha256": "73a6da113a1e2e720c337d176068a6e875b313c35544f5755deee295da2d90b3"
+    },
+    {
+      "path": "scripts/__pycache__/prepare_universe_expansion.cpython-313.pyc",
+      "bytes": 6501,
+      "sha256": "a8abbb504ef4ef491fa54592188a7aec6a4511ba83ffd27002058ce0bc558ddc"
+    },
+    {
+      "path": "scripts/__pycache__/report_initialization_confirmation.cpython-313.pyc",
+      "bytes": 9324,
+      "sha256": "ed0f7db2a2a1a1a8bddd4a1c0798c631e3a5a9dad5c79271645ee8db65814bd2"
+    },
+    {
+      "path": "scripts/__pycache__/remote_trpo_smoke.cpython-313.pyc",
+      "bytes": 6483,
+      "sha256": "25237300e7bc360e70703c7b207ab36f64db67b3859e80d950dc6b0fa217b763"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_recurrent_fit.cpython-313.pyc",
+      "bytes": 12990,
+      "sha256": "be4fa26620261bfcc1a80873dfff7ee7d6aef3c78a9b5c2ad95620100820b83b"
+    },
+    {
+      "path": "scripts/__pycache__/build_td3_state_jobs.cpython-313.pyc",
+      "bytes": 1859,
+      "sha256": "023b425e137c36289514418aa69d33d49e599fcafb16f2082a305b1bc8db3b19"
+    },
+    {
+      "path": "scripts/__pycache__/build_sec_original_ledger.cpython-313.pyc",
+      "bytes": 8503,
+      "sha256": "ca1411697a97b779837de47e1a000303e8665f20417f81ab8fe7d2080cd4b5e0"
+    },
+    {
+      "path": "scripts/__pycache__/build_capacity_jobs.cpython-313.pyc",
+      "bytes": 2868,
+      "sha256": "a5371b5eb15faa978e302f7515b1a22c957ac2465afe76e7843d88643ffbe19e"
+    },
+    {
+      "path": "scripts/__pycache__/report_discount.cpython-313.pyc",
+      "bytes": 10762,
+      "sha256": "98712575fc0ae1daa641e100d896f7788f27251cdace720b5720ae7695131360"
+    },
+    {
+      "path": "scripts/__pycache__/audit_selected.cpython-313.pyc",
+      "bytes": 7685,
+      "sha256": "d5f47c7087e3a6b7b08bd70749762eb0c74ce260e5cdfe81c6d111b10aab81a0"
+    },
+    {
+      "path": "scripts/__pycache__/accept_recurrent_comparison.cpython-313.pyc",
+      "bytes": 4179,
+      "sha256": "6053642e5ca3a60a4ac205fb59ee1a9b351ce03e908d16161a30f1e6e2b45a2c"
+    },
+    {
+      "path": "scripts/__pycache__/accept_squashed_smokes.cpython-313.pyc",
+      "bytes": 8870,
+      "sha256": "61d45da8e27d96d5d3ee24995751b035e88a46ede607c0305a5b2ceee97b44c9"
+    },
+    {
+      "path": "scripts/__pycache__/report_sac_state.cpython-313.pyc",
+      "bytes": 8955,
+      "sha256": "b97df0804ef14a35e103a3ce37bfc6970078a6fb6c24ba57f8ccc913e475a6b7"
+    },
+    {
+      "path": "scripts/__pycache__/audit_training_regimes.cpython-313.pyc",
+      "bytes": 2578,
+      "sha256": "39f2a1ee4f4e7edbe7314af1914ed85e84db6061158dba6fb4682d925910ff4a"
+    },
+    {
+      "path": "scripts/__pycache__/audit_execution_rules.cpython-313.pyc",
+      "bytes": 6216,
+      "sha256": "272a5792b9b1bc63876e9a9d60ae919add061d3d247a2a6034a0219c603f1716"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_l2_crossover.cpython-313.pyc",
+      "bytes": 11569,
+      "sha256": "1231db1d01931d323a2c7463c2543716a099bf3cfb62232e50d396e9cebff168"
+    },
+    {
+      "path": "scripts/__pycache__/check_task_real_data.cpython-313.pyc",
+      "bytes": 7541,
+      "sha256": "070a0d6ca447cba76a7d5e3165acf3ab1cf9349f0439ce8a348d9209006d2e89"
+    },
+    {
+      "path": "scripts/__pycache__/report_cash.cpython-313.pyc",
+      "bytes": 11068,
+      "sha256": "471937b8914e9e2b32e7d1e75966cb500c71c024ee9560737a0388164d9b6c9f"
+    },
+    {
+      "path": "scripts/__pycache__/check_recency_models.cpython-313.pyc",
+      "bytes": 5067,
+      "sha256": "227b7202531da6a927b5e32b0a16df902876ca0c7f6e0d2eea9c0f3bb7214be9"
+    },
+    {
+      "path": "scripts/__pycache__/collect_sec_archives.cpython-313.pyc",
+      "bytes": 7322,
+      "sha256": "593c8997b2fea462843e1406513f8496985df4dbbe424bc890636127fa45e2e5"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_forecast_errors.cpython-313.pyc",
+      "bytes": 4197,
+      "sha256": "7f3ba928cf5cd583e733ead3707aabb0f72712cc552d8c81b977415dfc32b522"
+    },
+    {
+      "path": "scripts/__pycache__/build_regularization_jobs.cpython-313.pyc",
+      "bytes": 1890,
+      "sha256": "b27be853b290043360e966cf3bab3f7f1c250e1540b7e7fa5b29d44b2bac430b"
+    },
+    {
+      "path": "scripts/__pycache__/accept_treasury_smokes.cpython-313.pyc",
+      "bytes": 8354,
+      "sha256": "525bf632f3b63fff9aa72837e29473361d04b77c89f3e7c1dd9a5ba69478931c"
+    },
+    {
+      "path": "scripts/__pycache__/report_diversity.cpython-313.pyc",
+      "bytes": 9905,
+      "sha256": "d1daba72b4630549b92d6c2ee3d86c2e843559a5baff2beca4eb5f0b8998dbf2"
+    },
+    {
+      "path": "scripts/__pycache__/audit_crossq_source_equivalence.cpython-313.pyc",
+      "bytes": 8574,
+      "sha256": "87dd225daacf88cc82030459fc66d18f2f96369bb1025e6f502a9b4c64855b41"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_behavior.cpython-313.pyc",
+      "bytes": 2889,
+      "sha256": "17bb5019da72a61c52c6e1800b224e17ba03fcfc60212d5250f506a9021c89f1"
+    },
+    {
+      "path": "scripts/__pycache__/check_clipping_models.cpython-313.pyc",
+      "bytes": 5025,
+      "sha256": "57d278e8ea0c7011c93f746f1076442a90e8dd9e3f726a67496cd4697f0308b1"
+    },
+    {
+      "path": "scripts/__pycache__/build_sampling_jobs.cpython-313.pyc",
+      "bytes": 3210,
+      "sha256": "f2cbe5143b542f20b7a1b652d011fc5ee2e00f86497169e9ed45449886cd9df5"
+    },
+    {
+      "path": "scripts/__pycache__/audit_sec_archive.cpython-313.pyc",
+      "bytes": 1876,
+      "sha256": "5cc8af15b8e1fbe5d2431bd1e3a76f5755d85476231e521a9b0038393639a8a8"
+    },
+    {
+      "path": "scripts/__pycache__/replay_partial_regularization.cpython-313.pyc",
+      "bytes": 8897,
+      "sha256": "4f9cf510dac424366f3d42a7ef1d95b3273cfb720dd08d6aa1fb5ff103f9578a"
+    },
+    {
+      "path": "scripts/__pycache__/accept_alignment_smokes.cpython-313.pyc",
+      "bytes": 8212,
+      "sha256": "04197dde47ca35ff8c3ffa8cf815c2f0a10bcb40fdf521b1a724ecc08fbfb775"
+    },
+    {
+      "path": "scripts/__pycache__/report_session_context.cpython-313.pyc",
+      "bytes": 11226,
+      "sha256": "b189b108bdefe1c9b17669cb3d90d9cffc03e8e69da0ad3d5c71a98d62aeb545"
+    },
+    {
+      "path": "scripts/__pycache__/replay_ensembles.cpython-313.pyc",
+      "bytes": 33087,
+      "sha256": "dddf24142d1397685edb81b515555ebe835f1070856eb1c0debf356fa2dbb285"
+    },
+    {
+      "path": "scripts/__pycache__/colab_safe.cpython-312.pyc",
+      "bytes": 1726,
+      "sha256": "66a1753292080fa73da45a11db48a42f1a0fabbf7b78dd30081275b4355ec07e"
+    },
+    {
+      "path": "scripts/__pycache__/build_distributional_initializations.cpython-313.pyc",
+      "bytes": 6330,
+      "sha256": "fc54934b0d74ae2f63dff6bfb817a9a14cb06eacea0952aaf01378def4c3dcd7"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_trend_context.cpython-313.pyc",
+      "bytes": 8590,
+      "sha256": "f1717865da20184ada8e7937377da0d8d66a18119ab46f057c83c78208eed95a"
+    },
+    {
+      "path": "scripts/__pycache__/inventory_sec_submissions.cpython-313.pyc",
+      "bytes": 9723,
+      "sha256": "4b972c297dfe32037ea4c11afbc8f4f71738710df13d84fd31fcad1873b27e20"
+    },
+    {
+      "path": "scripts/__pycache__/report_critic_study.cpython-313.pyc",
+      "bytes": 9982,
+      "sha256": "a5bae7c79b08db94dea8ce93c79d685807c6255895c120accc2bea8033942f5c"
+    },
+    {
+      "path": "scripts/__pycache__/accept_l2_smokes.cpython-313.pyc",
+      "bytes": 8800,
+      "sha256": "e088bb006420f0718dc71ef4c6a6fc647091cd876dbd55048f3a5a531972deb5"
+    },
+    {
+      "path": "scripts/__pycache__/review_task_type_covers.cpython-313.pyc",
+      "bytes": 7341,
+      "sha256": "ff27a64a150ccb6f7a9f1b1f17d2809fbfe58eb7a50e2f0164480acecaf58b1e"
+    },
+    {
+      "path": "scripts/__pycache__/check_squashed_models.cpython-313.pyc",
+      "bytes": 5028,
+      "sha256": "5b21817896bd7859e6a3d1b77ca14ddffbac1c50438867efe9a88ac8af87706c"
+    },
+    {
+      "path": "scripts/__pycache__/accept_gae_smokes.cpython-313.pyc",
+      "bytes": 7910,
+      "sha256": "397d238bcaeb64c56c38cb52a7b582cf31d30f852e9586f4d6a2db48a482024f"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_history_fit.cpython-313.pyc",
+      "bytes": 13277,
+      "sha256": "84def479fc7dbe92c1251ce1a127ab7668759e54b9ffa14e3d0d4e8b555f0836"
+    },
+    {
+      "path": "scripts/__pycache__/report_guard.cpython-313.pyc",
+      "bytes": 11106,
+      "sha256": "2306216f6a83aac9cb0bb2b17e196d4ad08ebc7d659564f1d2022e75abedfeb9"
+    },
+    {
+      "path": "scripts/__pycache__/build_universe_jobs.cpython-313.pyc",
+      "bytes": 2721,
+      "sha256": "814218c8b5c4c349eaa21e5a77d8c47161fcf9dfc5e1f4d1963dd1a019b7b41a"
+    },
+    {
+      "path": "scripts/__pycache__/report_regularization.cpython-313.pyc",
+      "bytes": 10993,
+      "sha256": "01234f29431dd1ff8a89103792083e691da99b14760f6b17a16317e92d59f75c"
+    },
+    {
+      "path": "scripts/__pycache__/offline_audit.cpython-313.pyc",
+      "bytes": 4375,
+      "sha256": "72e6b757cc29d1c22fea18b541ffadbee7c84bc5fcad13995d70cd8f0b658a0a"
+    },
+    {
+      "path": "scripts/__pycache__/check_capacity_models.cpython-313.pyc",
+      "bytes": 5012,
+      "sha256": "3bcc981de43f0b7fd409270b1bf889a22d2051972417d0725d588b3046cdfede"
+    },
+    {
+      "path": "scripts/__pycache__/report_universe.cpython-313.pyc",
+      "bytes": 1680,
+      "sha256": "dfa9a3fe5263f32cfdb4ea8a177cec23ca9616889d6e9014a3c3e1320376081f"
+    },
+    {
+      "path": "scripts/__pycache__/benchmark_artifact_export.cpython-313.pyc",
+      "bytes": 5898,
+      "sha256": "30e4ba2f98883ff154788cdc0ef5baed213a5dbe34024621317ef392db2e27fa"
+    },
+    {
+      "path": "scripts/__pycache__/verify_frozen_runs.cpython-313.pyc",
+      "bytes": 10926,
+      "sha256": "59ba649fb0e57b1308bc31dab9edf6dca7c1ce7bd0f7a8dc328916b36d0a3b3d"
+    },
+    {
+      "path": "scripts/__pycache__/report_treasury_study.cpython-313.pyc",
+      "bytes": 11925,
+      "sha256": "2377130e755d9204d126a707ce2ab63fffcaa47710ca1330bd04e173c687e3c9"
+    },
+    {
+      "path": "scripts/__pycache__/accept_recurrent_smokes.cpython-313.pyc",
+      "bytes": 7033,
+      "sha256": "b8505856d432bd8f938fdbfd4c3524e39e9bc503225ace2d3c8b1eed2db4dcbd"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_td3.cpython-313.pyc",
+      "bytes": 9106,
+      "sha256": "e3b30d312aa4f69e6e5a4b0cc4334b897bb6dc26b3720491041f9e792d2ee062"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_recurrent_values.cpython-313.pyc",
+      "bytes": 16072,
+      "sha256": "6f157f396774b5b2790a04d3a314378616d8a163346aa66525d6d7503a971a43"
+    },
+    {
+      "path": "scripts/__pycache__/collect_original_flow_pilot.cpython-313.pyc",
+      "bytes": 17019,
+      "sha256": "331c3739657f341e975352543dee681f9d3079e08130f6f4516491a98c44ada7"
+    },
+    {
+      "path": "scripts/__pycache__/report_squashed_actions.cpython-313.pyc",
+      "bytes": 11529,
+      "sha256": "9d50de19a4cec682e86d0eb30ccd27e2d7d1d7287c8b011c3bf39afca1194773"
+    },
+    {
+      "path": "scripts/__pycache__/accept_clipping_smokes.cpython-313.pyc",
+      "bytes": 8868,
+      "sha256": "7f3e149f6363ec2d9d77832ff40d874ce1d873aa2896a3ff63de94d8eadc77df"
+    },
+    {
+      "path": "scripts/__pycache__/freeze_research_source.cpython-313.pyc",
+      "bytes": 4023,
+      "sha256": "cded082aceaba465f93c97dffe7c9c96c90c3f930f5aaaf732f6c9f0c48aa164"
+    },
+    {
+      "path": "scripts/__pycache__/audit_recurrent_contract.cpython-313.pyc",
+      "bytes": 8731,
+      "sha256": "4b5c0daca800b244c06360f7c3d3408cc04737eed44be7a64b2693a8b5e4390f"
+    },
+    {
+      "path": "scripts/__pycache__/audit_historical_overlap.cpython-313.pyc",
+      "bytes": 6007,
+      "sha256": "9e5186dd366f2e30585ab05ca0d9af07cb1cc12591c8aa32b7f7e0b046dbd7e6"
+    },
+    {
+      "path": "scripts/__pycache__/report_causal_sampling.cpython-313.pyc",
+      "bytes": 11309,
+      "sha256": "6bd219cf0149ea41b472cb967a4e7273197972e7b3598ebe825a1a34e1211f64"
+    },
+    {
+      "path": "scripts/__pycache__/build_observation_jobs.cpython-313.pyc",
+      "bytes": 4253,
+      "sha256": "bf1258a34fef67fe60be32522e42f5dbf4f549a3b677207112dc39a0b27f123c"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_crossq_reproduction.cpython-313.pyc",
+      "bytes": 13207,
+      "sha256": "a86986c91cf4468b4d94f614479efecf6c6efe4c91188de2ee3d0e974cd190bb"
+    },
+    {
+      "path": "scripts/__pycache__/report_alignment.cpython-313.pyc",
+      "bytes": 11719,
+      "sha256": "f3582ce45f0a98b33a81fcc4b0610e2a8ea7f6e689b6da4400fa47758d6b2b8c"
+    },
+    {
+      "path": "scripts/__pycache__/build_signal_jobs.cpython-313.pyc",
+      "bytes": 1547,
+      "sha256": "06ef8a730b9a9f7ec823d60fc4ea17a51c86bae1097eda9ca8067caf3fa3a52a"
+    },
+    {
+      "path": "scripts/__pycache__/accept_cash_smokes.cpython-313.pyc",
+      "bytes": 8052,
+      "sha256": "6cf6d7b73dd30f72642a4ebc7cb1f570ef8dfbcdebfbd1ba66bfcf1732af24ad"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_training_history.cpython-313.pyc",
+      "bytes": 3778,
+      "sha256": "f723ddb497d4099eac40bd604c1d17743d2b3f191a959d4f409fc192b3f07322"
+    },
+    {
+      "path": "scripts/__pycache__/build_l2_jobs.cpython-313.pyc",
+      "bytes": 2850,
+      "sha256": "fe24b899c2cc49d1c8e090531282dd03242506b731c7967fca8f02a39520ac30"
+    },
+    {
+      "path": "scripts/__pycache__/build_session_initializations.cpython-313.pyc",
+      "bytes": 3397,
+      "sha256": "6216f832761bc116b60278dd953d1e0431938a3bf0bc511b888d0c4b31f0a241"
+    },
+    {
+      "path": "scripts/__pycache__/report_market_context.cpython-313.pyc",
+      "bytes": 11570,
+      "sha256": "378e431622ff0b6d765497fbb7cbe35a480d3ec1b158b79c4fdf717ffe8bf32e"
+    },
+    {
+      "path": "scripts/__pycache__/build_squashed_jobs.cpython-313.pyc",
+      "bytes": 2866,
+      "sha256": "17afb0feb17dddd4234f0417bd7235f0f9b04872abf522380f8964158ac53b72"
+    },
+    {
+      "path": "scripts/__pycache__/build_capacity_initializations.cpython-313.pyc",
+      "bytes": 4225,
+      "sha256": "8f1cd9ceaf37c9947d5f9893d04ef4c072a7840f404cfc8501ed397122cab6a7"
+    },
+    {
+      "path": "scripts/__pycache__/build_temperature_jobs.cpython-313.pyc",
+      "bytes": 1871,
+      "sha256": "d9e67b245463fa18ca9df622fe29d3282f0e30f684758b9ad389c4d8574fc0a7"
+    },
+    {
+      "path": "scripts/__pycache__/compare_historical_regimes.cpython-313.pyc",
+      "bytes": 5202,
+      "sha256": "df2f4424cd3cf16e0750f609f2b81aac6ddafceb3fa8166b836c88a2666ae153"
+    },
+    {
+      "path": "scripts/__pycache__/build_recency_jobs.cpython-313.pyc",
+      "bytes": 2879,
+      "sha256": "172350319f8520316bdf5c704ca372b478886334709e690e0ceb1027203fd008"
+    },
+    {
+      "path": "scripts/__pycache__/build_history_jobs.cpython-313.pyc",
+      "bytes": 1961,
+      "sha256": "8b91f7ab63eb0732f6df99734333e7eaa08a0db64aca37a8f1a8dcec63099e4e"
+    },
+    {
+      "path": "scripts/__pycache__/prepare_sac_diversity.cpython-313.pyc",
+      "bytes": 3843,
+      "sha256": "05fbde58dac1f83e25ef92ce355a3e1c225d0552c17c2613f13f20dea537057d"
+    },
+    {
+      "path": "scripts/__pycache__/build_recurrent_state_jobs.cpython-313.pyc",
+      "bytes": 1890,
+      "sha256": "5c4a40100dc67c50a37c0d3dbbc82803822173200a2d954555851f854da9d46f"
+    },
+    {
+      "path": "scripts/__pycache__/report_learning.cpython-313.pyc",
+      "bytes": 2047,
+      "sha256": "e314691e47819b9d3d056beb4fa9dfd0fb19d8020120eb60422312cda55d1f38"
+    },
+    {
+      "path": "scripts/__pycache__/build_session_jobs.cpython-313.pyc",
+      "bytes": 1730,
+      "sha256": "1469a58bd26441f0e40fb76d981c35ca897e5ebdbc57c5c223e4b931ff7df425"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_participation.cpython-313.pyc",
+      "bytes": 8728,
+      "sha256": "af823d16ba869edfc2cd69cd8bf5d388701cb5b3a39dc8e6a04a608f9b239f53"
+    },
+    {
+      "path": "scripts/__pycache__/build_alignment_jobs.cpython-313.pyc",
+      "bytes": 1876,
+      "sha256": "a3d1a7026ef4818a6c266d6615443115fbb256f2138b1adebca871c5dfcefd15"
+    },
+    {
+      "path": "scripts/__pycache__/build_discount_jobs.cpython-313.pyc",
+      "bytes": 1860,
+      "sha256": "f6d73ed63d3393bd4c4440c16f2b2e2a9aa9ebc527810da16741904f0f1b1e04"
+    },
+    {
+      "path": "scripts/__pycache__/accept_guard_smokes.cpython-313.pyc",
+      "bytes": 8732,
+      "sha256": "14fcd402160928d87025967895d646a89910fe8fa1b7562ba5a668ee2633b1ef"
+    },
+    {
+      "path": "scripts/__pycache__/package_research.cpython-313.pyc",
+      "bytes": 10481,
+      "sha256": "f55767dcd8836d2499478ec349ae07a476bb49f79554280fa760cd80c24664e9"
+    },
+    {
+      "path": "scripts/__pycache__/report_original_flow_pilot.cpython-313.pyc",
+      "bytes": 11861,
+      "sha256": "c86b5bfc5cba3b4be4fa12aabcfb3135a68e38893bd08a26cde063cdae69ea94"
+    },
+    {
+      "path": "scripts/__pycache__/report_gae_study.cpython-313.pyc",
+      "bytes": 11732,
+      "sha256": "5e8c6871aee0921f67513bc73375c8bd293ab6191036e4cc50e1742558150bea"
+    },
+    {
+      "path": "scripts/__pycache__/report_indicators.cpython-313.pyc",
+      "bytes": 2121,
+      "sha256": "fcf250ebea6175336bccc259c96bf65c3a67079904a5344eaa9576a39dd67c9e"
+    },
+    {
+      "path": "scripts/__pycache__/build_guard_initializations.cpython-313.pyc",
+      "bytes": 3191,
+      "sha256": "5398f1c6d26170ad8d1092b3b5bdeb0509446a05df89bb5cfcf364650da813fe"
+    },
+    {
+      "path": "scripts/__pycache__/report_recurrent_state.cpython-313.pyc",
+      "bytes": 11220,
+      "sha256": "2eeb8c4641224b7a75ff338138965b52a93d46d3b5bd950fb4eb412355e0a331"
+    },
+    {
+      "path": "scripts/__pycache__/report_recurrent_capacity.cpython-313.pyc",
+      "bytes": 11493,
+      "sha256": "be7aa3faaf4320a047a0531be77b85c5f1622d30c5f5ea93838e8359e10c93aa"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_sac.cpython-313.pyc",
+      "bytes": 8910,
+      "sha256": "f3ae7e42496a3e6019886aa03ac4b52f622261c450b053b5f43a22d14b658433"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_supervised_signal.cpython-313.pyc",
+      "bytes": 6715,
+      "sha256": "d0958d04867f29d621207b1ecef22d0c8021a4693fd10278a1b63466b9722b2f"
+    },
+    {
+      "path": "scripts/__pycache__/accept_session_smokes.cpython-313.pyc",
+      "bytes": 8849,
+      "sha256": "e956ccd968621c7971a1446b6c2a9bf25c82c8428827c822f2a5759bc5498075"
+    },
+    {
+      "path": "scripts/__pycache__/build_clipping_jobs.cpython-313.pyc",
+      "bytes": 2881,
+      "sha256": "afd750c0e208d339ddacba97dd65feb2cdccc325dfffb941daba08f664e5ecd6"
+    },
+    {
+      "path": "scripts/__pycache__/report_regularization_interruption.cpython-313.pyc",
+      "bytes": 9993,
+      "sha256": "2dab4a12061a2447ab142cf3e7ecff98eed3e3853de8066741b41a2d2b5608b5"
+    },
+    {
+      "path": "scripts/__pycache__/remote_smoke.cpython-312.pyc",
+      "bytes": 2397,
+      "sha256": "90a233e366a77041c1b91855ac74bf2ed497acf6a3f8b6619add3eacd101742a"
+    },
+    {
+      "path": "scripts/__pycache__/audit_sec_identity_candidates.cpython-313.pyc",
+      "bytes": 6015,
+      "sha256": "1fa659a194c051ee3798dbd3cec37c9ee5df77c3a18653155496fb646b44f213"
+    },
+    {
+      "path": "scripts/__pycache__/report_initialization.cpython-313.pyc",
+      "bytes": 8793,
+      "sha256": "57f57b0c1a2a622ee2d7209f691d9e6f80f909d40b2437dd0f7a726a5e4a6f7e"
+    },
+    {
+      "path": "scripts/__pycache__/report_crossq_study.cpython-313.pyc",
+      "bytes": 11136,
+      "sha256": "47d7a1835b1dcad0c35b665be19163385c42b24bfc9e291fc0300a15f6a71394"
+    },
+    {
+      "path": "scripts/__pycache__/build_stability_jobs.cpython-313.pyc",
+      "bytes": 2385,
+      "sha256": "9c4be30f28038093009764a4e2a00645871dee2c378dc43942c75754554b03e2"
+    }
+  ],
+  "source_unchanged_by_cache_deletion": true,
+  "protected_sha256": {
+    ".runtime/usage-ledger.json": "e52a2362e303ab45f59254a673369b6ac7365549386c081c56d3209e6767974b",
+    "plan.html": "26c4bf4b910013bf47231d47b74ccf82ece9fe05296cd5eefddccc300d3a365f"
+  },
+  "protected_unchanged": true,
+  "historical_tools_removed": false,
+  "data_models_runtime_records_deleted": false,
+  "colab_allocated": false
+}

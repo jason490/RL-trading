@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import tarfile
 from rl_stocks.core.provenance import repository_state
+from rl_stocks.runtime.colab.source_archive import source_member
 
 
 def prepare_payload(root,dataset,plan,session):
@@ -12,7 +13,7 @@ def prepare_payload(root,dataset,plan,session):
     archive=folder/'research-upload.tar.gz'
     with tarfile.open(archive,'w:gz') as tar:
         for name in ('src','scripts','pyproject.toml','requirements.txt','requirements.lock','configs'):
-            tar.add(root/name,arcname=name)
+            tar.add(root/name,arcname=name,filter=source_member)
         if plan.get('version') in (41,42,43):
             tar.add(root/'.runtime/recurrent-comparison-starts-v1',arcname='comparison-starts')
         if plan.get('version') == 48:

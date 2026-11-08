@@ -300,3 +300,12 @@ final visual reports and JSONL/CSV/HTML curves retained. Verified8,352,207-byte
 upload duplicate removed with1,908 protected files unchanged. Owned session
 rl-stocks-cpu-7100dc6978f6 stopped/verified; original stop/claims preserved.
 [Evidence](../results/recurrent-offpolicy-2026-10-27/README.md).
+
+## Source-code cleanup — 2026-11-08
+
+Five duplicated report-loader bodies were consolidated into
+`reporting/retained_reports.py`; historical report commands remain available.
+Generated Python cache files are excluded from the standard Colab source upload
+builders. Removed664 local pyc/pyo files (4,291,513 bytes), with source, budget
+ledger and plan.html hashes unchanged by deletion. No research evidence or
+recovery tools were removed. [Inventory and checks](../results/code-cleanup-2026-11-08/README.md).

@@ -7,6 +7,7 @@ from pathlib import Path
 import tarfile
 import tempfile
 
+from rl_stocks.reporting.retained_reports import run_reports
 from rl_stocks.core.contracts import canonical, digest
 from rl_stocks.core.files import write_once
 from rl_stocks.data.generation.datasets import read_dataset
@@ -36,22 +37,6 @@ from rl_stocks.training.vix_runtime import (
 )
 
 
-def run_reports(root):
-    paths = list((root / "runs").glob("*/metadata.json"))
-    if len(paths) != 1:
-        raise ValueError("one retained run per owned task required")
-    run = paths[0].parent
-    return (
-        run,
-        json.loads(paths[0].read_text()),
-        {
-            phase: json.loads((run / name).read_text())
-            for phase, name in (
-                ("selected", "selected-validation.json"),
-                ("final", "validation.json"),
-            )
-        },
-    )
 
 
 def report(state_path, source_path, root):
