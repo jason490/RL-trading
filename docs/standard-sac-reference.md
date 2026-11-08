@@ -44,7 +44,7 @@ Native/reference bit parity is **not** established. These are different explicit
 arithmetic paths; no tolerance was widened and previous native failures/results
 remain unchanged. The source checkpoints' old development returns are not
 relabelled as reference returns. No reference market replay or performance
-selection has occurred. Full frozen preprocessing, cross-machine/action/path
+selection has occurred. Local frozen preprocessing is accepted below; cross-machine/action/path
 acceptance and a separately fixed comparison protocol are still required.
 
 Four no-fit tests cover architecture/input/schema rejection, immutable state,
@@ -65,3 +65,35 @@ performance training. The overall robust-return objective remains unachieved.
 Regression verification:40 focused standard-SAC, existing task-SAC, PPO/TRPO and
 reference-math checks pass. Existing numerical calculation source inventory remains
 unchanged, so this preparation does not alter the active Colab comparison.
+
+## Frozen preprocessing and explicit execution bundles
+
+`inference/standard_sac_bundle.py` provides a separate versioned full21 SAC
+bundle. It reuses the unchanged PPO/TRPO input preparation/time checks, while
+validating its own SAC actor schema, original dataset/normalizer, simulation
+settings, dependency lock and source checkpoint descriptor. Selected/final phase,
+transition count, native model SHA and source acceptance SHA are retained.
+Descriptors record provenance and do not replace physical checkpoint admission.
+
+Training exposure is fixed unrestricted. Evaluation execution must be explicitly
+chosen when creating **and** loading a bundle: unrestricted or unit_magnitude.
+The bundle ID changes with the mode; a mismatched requested mode is rejected.
+`raw_action` exposes the unfiltered reference action; `predict` applies only the
+bound exposure filter, preserving all three protection components. Callers must
+retain both when diagnosing sizing; do not select a mode by reported returns.
+No output is a broker order.
+
+Creation is atomic/create-only and file sets/checksums/identities are strict.
+Manifest copies and frozen normalization cannot silently update during inference.
+Schema/feed/feature-order/state-shape, unavailable/stale input, unknown symbols,
+invalid checkpoint descriptors and file corruption are rejected. These checks
+remain local software acceptance, not proof of historical data representativeness.
+
+Both original accepted control phases were packaged with their **historical
+unit_magnitude evaluation mode**. Sixteen actual training-row/environment-state
+observations match the original environment exactly; raw actions match the direct
+reference actors and approved actions match the explicit historical filter.
+Source actors and original dataset remain unchanged. No new market returns were
+scored or checkpoints reselected. [Bound bundle receipt](../results/standard-sac-reference-2026-11-08/bundles.json)
+records local Python separately from Colab acceptance. Full paths and cross-machine
+SAC execution remain pending before a performance comparison.

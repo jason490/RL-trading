@@ -1,0 +1,32 @@
+{
+  "checkpoint_reselection": false,
+  "colab_allocated": false,
+  "dataset_and_source_actors_unchanged": true,
+  "dataset_sha256": "cdb93a33cbfd12c85a0d7ea50af8e0e8843356407b1fbcc8124efa0792d2223b",
+  "market_returns_evaluated": false,
+  "performance_promotion": false,
+  "retired_test_access": false,
+  "schema": "standard-sac-frozen-preprocessing-v1",
+  "training_performed": false,
+  "artifact": "artifacts/standard-sac-reference-v1/bundle-acceptance.json",
+  "artifact_sha256": "72bb1e21403afed94f67ac171df45a43475053fa127082e89ee40858421611b7",
+  "local_python": "3.13.16",
+  "cases": [
+    {
+      "bundle": "artifacts/standard-sac-reference-v1/bundles/selected/b7965c306fe0dc98ab80d014a9928a218e6ced4308990213ba345c516d2692bf",
+      "bundle_id": "b7965c306fe0dc98ab80d014a9928a218e6ced4308990213ba345c516d2692bf",
+      "evaluation_execution": "unit_magnitude",
+      "phase": "selected",
+      "source_model_sha256": "eca3739d163b841c6a63baa4d1600abec25a065b4c5e4e8ae208123e4d1e2dca",
+      "exact_raw_feature_observations": 8
+    },
+    {
+      "bundle": "artifacts/standard-sac-reference-v1/bundles/final/9cf619d41c194a1a28b5178a5af37579d53ef700e8d8f36f8a34fd5fc1db92ef",
+      "bundle_id": "9cf619d41c194a1a28b5178a5af37579d53ef700e8d8f36f8a34fd5fc1db92ef",
+      "evaluation_execution": "unit_magnitude",
+      "phase": "final",
+      "source_model_sha256": "71d419516f99254c7dd876d2dec9f31b354eb06da659c99a7289607bc2cc4dc2",
+      "exact_raw_feature_observations": 8
+    }
+  ]
+}

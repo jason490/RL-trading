@@ -3523,3 +3523,12 @@ and controller/budget/transport admission remain; no performance study admitted.
  128 synthetic predictions each exactly. Native-bit differences disclosed; old
   returns/failures unchanged. No market evaluation, reselection, fitting or new
   allocation. Full bundle/cross-machine/path and performance protocol pending.
+
+- 2026-11-08 standard SAC frozen control bundles: separate versioned full21
+  schema reuses unchanged input/time checks, binds original normalization/source
+  checkpoint/lock/simulation and requires explicit evaluation exposure mode at
+  creation/load. Original selected/final controls retain unit_magnitude mode;
+  raw/approved actions separately exposed. Sixteen actual environment/raw-feature
+  observations and reference/filter actions match; source actors/dataset unchanged.
+  No return scoring, reselection or allocation. Full SAC path/remote acceptance
+  and separately preregistered performance comparison remain pending.

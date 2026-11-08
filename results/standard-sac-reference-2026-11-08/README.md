@@ -16,3 +16,14 @@ initial diagnostic harness error. Full local artifacts remain in
 allocation, retired-test access or performance promotion. This prepares a strong
 control for a separately preregistered future comparison; it does not reopen any
 failed family. Existing PPO/TRPO Colab path calculations remain unchanged.
+
+## Local frozen control bundles
+
+Selected/final actors now have separate full21 preprocessing bundles with their
+original unit-magnitude evaluation rule. Loading requires that explicit mode;
+raw and approved actions stay separately accessible. Sixteen actual training-row
+checks match the real environment's normalization and direct reference/filter
+outputs exactly. [Receipt](bundles.json) binds retained bundle identities and
+`artifacts/standard-sac-reference-v1/bundle-acceptance.json`. This adds no return
+assessment or native-parity claim. Dataset/source actors remain unchanged;
+SAC full-path and cross-machine acceptance are pending.
