@@ -3463,3 +3463,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   JSONL evidence and immutable input checks; no return/selection gate. Eight
   focused path/bundle checks pass. Actual local/cross-machine replays pending;
   no new allocation, performance promotion or retired-test access.
+
+- 2026-11-08 independent saved-path acceptance implemented: restore exact numeric
+  evidence, reconstruct feature/state observations, replay recorded actions through
+  original simulation bars, rederive fills/protection/account state, rewards,
+  metrics and directional attribution. Complete-directory/hash comparator rejects
+  mutations and leaves machine-location provenance explicitly unverified. Sixteen
+  focused checks pass. Original local replay remains live; first16 completed real
+  episodes independently restore. Full104-episode and remote acceptance pending.

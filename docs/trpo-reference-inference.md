@@ -207,3 +207,28 @@ No Colab allocation is admitted by this protocol; a separate bounded runtime
 contract is required for cross-machine execution. Native Torch actions are not
 claimed bit-identical to reference arithmetic; this verifies the explicit frozen
 reference execution contract rather than reopening native numerical failures.
+
+## Independent saved-path restoration
+
+`evaluation/tanh_path_acceptance.py` restores canonical binary64 evidence and
+checks every recorded raw-feature/state observation, next-observation continuity,
+action bits, equity identity, rewards, execution dates and terminal conditions.
+It replays recorded actions against the original bars through a fresh simulator,
+requiring exact fills/events, cash, basis, borrow/cost totals, protection and
+holding state. Final metrics and directional attribution are independently
+recomputed. Missing records, untagged/noncanonical/nonfinite floats, oversized
+records and even1e-8 accounting/summary changes fail acceptance.
+
+Complete-directory acceptance requires the fixed four-case order, original
+training-panel identity, all paths and per-case/root metrics/digests. A comparison
+requires both directories to pass restoration before comparing every path hash
+and result exactly. This comparison alone does not prove two machine locations;
+`runtime_locations_verified=false` explicitly leaves Colab/host provenance and
+owned-session cleanup to a future runtime controller.
+
+Eight new tests cover complete file/directory restoration and mutation rejection;
+16 focused acceptance/path/bundle checks pass without fitting. The existing local
+replay continues under its original process and source3607704; the new checker
+has independently restored its first16 completed real episodes. This is partial
+progress, not full-panel or cross-machine acceptance. Source provenance was saved
+before adding the checker; the replay's calculation modules were not modified.
