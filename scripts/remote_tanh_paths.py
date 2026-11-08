@@ -17,7 +17,11 @@ def replay(root):
     require_colab_cpu()  # Before reading datasets/bundles or constructing accounts.
     from rl_stocks.training.dependencies import verify_environment
     verify_environment()
-    from rl_stocks.core.contracts import canonical
+    from rl_stocks.core.contracts import canonical, digest
+    from rl_stocks.runtime.colab.tanh_path_inputs import numerical_imports
+    numerical_sources = numerical_imports(root)
+    if numerical_sources != json.loads((root / "compute-sources.json").read_text()):
+        raise ValueError("uploaded numerical source inventory mismatch")
     from rl_stocks.core.provenance import repository_state, source_identity
     from rl_stocks.inference.bundle import checksum
     from rl_stocks.training.checkpoint_export import export_artifacts
@@ -46,6 +50,7 @@ def replay(root):
     completion = {"schema": "tanh-path-inference-completion-v1",
                   "protocol_sha256": result["protocol_sha256"], "dataset": result["dataset"],
                   "source": repository_state(root), "source_hash": source_identity(),
+                  "numerical_sources_sha256": digest(numerical_sources),
                   "python": list(sys.version_info[:3]), "files": files,
                   "training_performed": False, "development_evaluated": False,
                   "retired_test_access": False, "performance_promotion": False,

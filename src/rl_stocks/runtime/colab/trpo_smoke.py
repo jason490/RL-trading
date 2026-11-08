@@ -3,7 +3,7 @@
 import argparse
 import fcntl
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import signal
 import tarfile
 import time
@@ -30,9 +30,21 @@ def runtime_spec(root):
     return spec
 
 
-def prepare_upload(root, dataset, output, source):
+def prepare_upload(root, dataset, output, source, *, extra_files=()):
     """Allowlist research files; never include secrets, artifacts or Python caches."""
     root, output = Path(root), Path(output)
+    extras = []
+    seen = set()
+    for file, name in extra_files:
+        file, name = Path(file), PurePosixPath(name)
+        if (name.is_absolute() or not name.parts or ".." in name.parts
+                or any(part.startswith(".") for part in name.parts)
+                or str(name) in seen or name.parts[0] not in ("tanh-bundles", "results", "compute-sources.json")
+                or file.is_symlink() or not file.is_file() or file.name.startswith(".")
+                or file.stat().st_size > 16 * 1024 * 1024):
+            raise ValueError("explicit bounded regular inference assets required")
+        seen.add(str(name))
+        extras.append((file, str(name)))
     captured = output.parent / "source-git.json"
     captured.write_bytes(canonical(source))
     with tarfile.open(output, "w:gz", compresslevel=1) as archive:
@@ -40,10 +52,13 @@ def prepare_upload(root, dataset, output, source):
             path = root / name
             paths = sorted(path.rglob("*")) if path.is_dir() else [path]
             for item in paths:
-                if item.is_file() and not item.is_symlink() and "__pycache__" not in item.parts:
+                if (item.is_file() and not item.is_symlink() and "__pycache__" not in item.parts
+                        and item.suffix not in (".pyc", ".pyo")):
                     archive.add(item, arcname=str(item.relative_to(root)), recursive=False)
         archive.add(dataset, arcname="dataset.json")
         archive.add(captured, arcname="source-git.json")
+        for file, name in extras:
+            archive.add(file, arcname=name, recursive=False)
     return output
 
 

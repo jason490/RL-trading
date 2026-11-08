@@ -3479,3 +3479,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   Twenty focused worker/controller/review checks pass. Remote job remains
   unregistered pending complete local parity, numerical-source/assets admission
   and fixed budget contract. Existing local replay continues unchanged.
+
+- 2026-11-08 remote path input preparation:114 declared numerical-import files
+  match original local source3607704; frozen bundle/receipt17-file assets verified.
+  Preflight rejects incomplete local results before allocation, and source uploads
+  support explicit bounded inference assets without credentials/caches. Remote
+  worker checks uploaded numerical inventory. Shared bounded archive extraction
+  preserves original smoke128MiB/100-member limits. Twenty-seven focused checks
+  pass; local replay remains active, remote runtime allocation still unregistered.

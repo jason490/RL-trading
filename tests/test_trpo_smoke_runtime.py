@@ -188,3 +188,24 @@ def test_specialized_preflight_blocks_before_allocation_or_claim(tmp_path, monke
         job.run_smoke(dataset)
     assert not job.calls and not job.allocated
     assert not (tmp_path / fixed()['claim']).exists()
+
+
+def test_explicit_inference_assets_are_bounded_and_preserve_destinations(tmp_path):
+    root = tmp_path / 'root'
+    root.mkdir()
+    for name in ('src', 'scripts', 'configs'):
+        (root / name).mkdir()
+    for name in ('pyproject.toml', 'requirements.txt', 'requirements.lock'):
+        (root / name).write_text('fixture')
+    dataset = tmp_path / 'dataset.json'
+    dataset.write_text('{}')
+    asset = tmp_path / 'actor.json'
+    asset.write_text('{"actor":"fixture"}')
+    output = tmp_path / 'upload.tar.gz'
+    runtime.prepare_upload(root, dataset, output, {'revision': 'fixture', 'dirty': ''},
+                           extra_files=[(asset, 'tanh-bundles/case/id/actor.json')])
+    with tarfile.open(output) as archive:
+        assert archive.extractfile('tanh-bundles/case/id/actor.json').read() == asset.read_bytes()
+    for name in ('../escape', '/absolute', '.env', 'results/.env', 'src/collision.py'):
+        with pytest.raises(ValueError, match='inference assets'):
+            runtime.prepare_upload(root, dataset, output, {}, extra_files=[(asset, name)])

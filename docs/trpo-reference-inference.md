@@ -260,3 +260,38 @@ local result, original numerical source inventory, four bundle assets and source
 receipt into an exact runtime/upload contract. That contract must enforce shared
 150/130 project and150/170 account limits and a separate bounded inference cap;
 location provenance and exact remote comparison are still unverified.
+
+## Remote input and bounded-container preparation
+
+`runtime/colab/tanh_path_inputs.py` discovers the internal declared import closure
+of the exact replay entry, including imports inside functions and relative imports.
+All114 numerical import files currently match Git revision3607704, the original
+local replay revision. The separately saved local provenance/hash must match that
+baseline. This inventory covers declared imports; arbitrary dynamic import strings
+are not interpreted as a claim of universal executable-code analysis. The actual
+replay source uses the checked entry/import structure.
+
+Remote preflight refuses a missing complete local result before restoration or
+allocation. A complete result must independently restore all fixed paths and
+metrics before any runtime-specific budget admission. The returned evidence does
+not itself authorize allocation. Four content-addressed bundles are checked for
+identity, feed/schema, actor/model hashes and exact file sets; their16 files plus
+the original accepted public receipt form17 allowlisted source assets. A separate
+sidecar records the checked numerical inventory. The remote worker compares that
+inventory against its uploaded calculation sources before reading market inputs.
+
+The existing source uploader now accepts explicit bounded inference assets under
+controlled archive prefixes, rejecting duplicate/absolute/traversal/hidden paths,
+symlinks and oversized files. Default source uploads still omit credentials,
+artifacts and generated caches; standalone pyc/pyo files are now excluded too.
+`runtime/colab/bounded_archive.py` centralizes pre-extraction count/expanded-size,
+path/link/duplicate and failure-marker checks. Original smoke extraction retains
+its unchanged128MiB/100-member bounds; a future full-path runtime must explicitly
+supply its own bounds rather than weakening the smoke contract.
+
+Twenty-seven focused import/source/asset, worker, controller and transport checks
+pass without allocation. Actual checks confirm all114 original numerical sources
+unchanged and17 valid bundle/receipt assets. The original local replay remains
+active; its calculation files have not changed. A fixed remote runtime contract,
+complete local-result binding, location provenance and cross-machine acceptance
+remain pending. No additional Colab credits or local fitting occurred.

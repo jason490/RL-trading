@@ -1,10 +1,10 @@
 """Bounded transport and root identity checks before physical TRPO acceptance."""
 
 import json
-from pathlib import Path, PurePosixPath
-import tarfile
+from pathlib import Path
 
 from rl_stocks.core.contracts import digest
+from rl_stocks.runtime.colab.bounded_archive import extract_artifacts
 from rl_stocks.evaluation.trpo_smoke import verify_matrix
 from rl_stocks.inference.bundle import checksum
 from rl_stocks.training.trpo_smoke import PROTOCOL_SHA256, protocol
@@ -13,35 +13,7 @@ MAXIMUM_BYTES = 128 * 1024 * 1024
 
 
 def extract_owned(path, destination):
-    """Reject links, duplicates, traversal and oversized containers before extraction."""
-    path, destination = Path(path), Path(destination)
-    if destination.exists() or path.stat().st_size > MAXIMUM_BYTES:
-        raise ValueError("fresh extraction and bounded owned transport required")
-    with tarfile.open(path) as archive:
-        members = []
-        total = 0
-        for member in archive:
-            total += member.size
-            if len(members) >= 100 or total > MAXIMUM_BYTES:
-                raise ValueError("artifact container count/expanded size exceeded")
-            members.append(member)
-        names = [m.name for m in members]
-        if (
-            not members or len(members) > 100 or len(names) != len(set(names))
-            or sum(m.size for m in members) > MAXIMUM_BYTES
-            or any(not (m.isfile() or m.isdir()) or m.size < 0
-                   or PurePosixPath(m.name).is_absolute()
-                   or ".." in PurePosixPath(m.name).parts
-                   or not PurePosixPath(m.name).parts
-                   or PurePosixPath(m.name).parts[0] != "artifacts"
-                   for m in members)
-        ):
-            raise ValueError("invalid bounded regular artifact container")
-        if "artifacts/failure.txt" in names:
-            raise RuntimeError("remote smoke failed; retain archive for diagnosis")
-        destination.mkdir(parents=True)
-        archive.extractall(destination, filter="data")
-    return destination / "artifacts"
+    return extract_artifacts(path, destination, maximum_bytes=MAXIMUM_BYTES, maximum_members=100)
 
 
 def verify_root(artifacts, *, source, source_hash, dataset):
