@@ -191,3 +191,12 @@ so additional names contribute training only. Every failed source request is
 retained in the dataset's original provenance and coverage audit. This is
 retrospective survivor research, not solved historical membership/delisting
 coverage or representative market performance.
+
+## November8 separate expansion
+
+[stock_research_132.json](../configs/universes/stock_research_132.json) adds two
+stocks per declared sector (22 total) without changing prior universes. All22
+2010–2023 requested histories were acquired; shorter listed histories and exact
+coverage are recorded in the [acquisition report](../results/stock-context-expansion-2026-11-08/README.md).
+Separate MOVE/VIX context records do not enter the tradable list. No training
+dataset or historical sector admission follows from acquisition alone.

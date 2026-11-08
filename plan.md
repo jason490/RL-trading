@@ -3412,3 +3412,15 @@ and controller/budget/transport admission remain; no performance study admitted.
   tests do not optimize locally. Dedicated bounded controller/root provenance
   admission and actual four-case Colab learning/profile remain pending; no
   performance allocation or trading promotion is admitted.
+
+- 2026-11-08 user-directed data expansion: new separate132-stock universe adds22
+  sector-tagged stocks; all71,909 requested2010–2023 bars downloaded and validated
+  with no interior XNYS gaps. Short listing histories retained. MOVE3,693 daily
+  closes acquired; original VIX3,774 closes reused/checksummed. Context-only;
+  MOVE79 missing XNYS dates, availability-aware feature audit pending. Added
+  optional aligned20-session stock/market/sector correlation and relative-momentum
+  component with future/availability/gap checks. No current datasets,21-field
+  policies, failed-family gates or retired-test isolation changed. Historical
+  sector evidence, feature admission and matched Colab evaluation remain pending.
+  Separate docs specify auxiliary-model cross-fitting and earnings vintage needs;
+  no auxiliary predictor or earnings input enabled.

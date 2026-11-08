@@ -1,0 +1,15 @@
+{
+  "schema": "macro-context-request-v1",
+  "name": "MOVE",
+  "symbol": "^MOVE",
+  "kind": "index",
+  "role": "context",
+  "tradable": false,
+  "provider": "yahoo",
+  "official_description": "https://developer.ice.com/fixed-income-data-services/catalog/ice-data-indices-move-index",
+  "start": "2009-01-01",
+  "end_exclusive": "2024-01-01",
+  "availability_policy": "Conservative next calendar day 23:59:59 UTC; explicit assumption, not verified historical publication time",
+  "model_inputs_enabled": false,
+  "limitations": "Current-vintage unofficial history; free availability and licensing not guaranteed; never substitute realized Treasury volatility or executable stock bars."
+}

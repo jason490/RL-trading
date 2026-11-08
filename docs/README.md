@@ -166,3 +166,12 @@ and pending numerical/Colab/cost requirements before performance registration.
 [TRPO/PPO reference inference](trpo-reference-inference.md): bounded immutable
 tanh-hidden/direct-clipped actor, RNG-preserving trusted export, local evidence
 and pending cross-machine/full-path acceptance.
+
+- [Cross-stock relationships](cross-stock-relationships.md): optional aligned
+  stock/market/sector correlations, relative momentum and panel architecture roadmap.
+- [MOVE/VIX catalog](macro-index-context.md): nontradable immutable context history,
+  publication assumptions, missing dates and disabled model-input status.
+- [Auxiliary model inputs](auxiliary-model-inputs.md): causal stacked predictions,
+  chronological cross-fitting, frozen contracts and separate return gates.
+- [Earnings context](earnings-context.md): current absence, schedule vintages,
+  release timing and consensus requirements before historical features.

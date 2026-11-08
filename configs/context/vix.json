@@ -1,0 +1,17 @@
+{
+  "schema": "macro-context-request-v1",
+  "name": "VIX",
+  "symbol": "^VIX",
+  "kind": "index",
+  "role": "context",
+  "tradable": false,
+  "provider": "yahoo",
+  "start": "2009-01-01",
+  "end_exclusive": "2024-01-01",
+  "retained_snapshot": "data/context/vix/62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e/snapshot.json",
+  "retained_sha256": "62cb5200876bcc8eddfb9ee413b12fbbc6c3058ed4b092ff4c4eb205c9bfd87e",
+  "availability_policy": "Following XNYS session close plus15minutes; assumption, not verified original publication vintages",
+  "model_inputs_enabled": false,
+  "prior_experiment": "results/vix-context-2026-10-25/README.md",
+  "limitations": "Current-vintage unofficial history; earlier VIX policy screen failed and remains closed. Catalog inclusion does not reopen the experiment."
+}
