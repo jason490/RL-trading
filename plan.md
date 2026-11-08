@@ -3446,3 +3446,11 @@ and controller/budget/transport admission remain; no performance study admitted.
   Combined original+reviewed charge0.013209022/0.25, project40.226906028/150;
   account544.61 idle. Both claims consumed, no performance promotion. Next full
   frozen preprocessing/economic-path acceptance before a new matched protocol.
+
+- 2026-11-08 frozen PPO/TRPO preprocessing: immutable checksummed reference bundles
+  bind learned actor, fixed seven-feature normalization, full21 state, action and
+  simulator schemas, provenance and lock. Four no-fit tests pass; actual local
+  inference accepts all four learned actors over32 training-row observations,
+  exact environment preprocessing/direct-reference actions. Cross-machine full
+  preprocessing and saved economic-path parity remain pending; no new allocation
+  or performance gate admitted.

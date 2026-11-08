@@ -72,3 +72,14 @@ diff checks. The original single-use claim is consumed and has not been replaced
 No automatic retry occurred. Before a separately reviewed execution-only attempt,
 preserve this charge and claim and retain the original0.25-unit study baseline
 40.21369700555672. Do not rerun the consumed command or reset shared budgets.
+
+## Local frozen preprocessing acceptance
+
+The four learned actors now have separate checksummed frozen research bundles,
+including the original normalizer, feature/action/state schemas, data provenance,
+simulation defaults and dependency lock. All32 raw-feature/state observations
+match the real environment exactly, and all resulting frozen predictions match
+their direct reference actor exactly. Original actors and dataset remain unchanged.
+[Bound receipt](frozen-preprocessing.json); detailed local proof and bundles are
+under `artifacts/trpo-frozen-preprocessing-v1`. This is local inference acceptance,
+not cross-machine full-path or trading-return evidence. No new Colab units used.

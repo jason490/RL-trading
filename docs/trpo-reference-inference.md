@@ -129,3 +129,34 @@ debit0 and conservative charge0.000526086; project40.213697006/150. Fresh accoun
 weights/source/results/ledger/claim unchanged. This does not admit a performance
 study: learned-policy, bundle/full-path acceptance and actual learning profile
 remain necessary. The claim prevents repeating this allocation automatically.
+
+## Full frozen preprocessing bundle — 2026-11-08
+
+`inference/tanh_bundle.py` packages the already exported learned actor with the
+original frozen seven-feature normalizer, full21 observation schema, four-action
+contract, original simulation settings, data provenance and dependency lock.
+Content-addressed identity and exact checksummed file sets reject corruption,
+extra files, symlinks and schema/feed/execution mismatches. Source actor and
+normalizer identity are preserved. Creation never overwrites an existing bundle.
+The generic SAC bundle format and accepted numerical contracts are unchanged.
+
+`FrozenTanhPolicy.observation` reproduces the environment's raw-feature
+normalization followed by binary32 conversion and14 portfolio-state fields.
+`predict_features` checks research symbol, UTC availability/decision/current time
+ordering and maximum input age before deterministic reference prediction. It
+returns research actions only, never submits orders or updates preprocessing.
+Manifest access returns a copy; normalizer fields remain frozen tuples. Callers
+must supply state from the matching simulator/account contract; arbitrary state
+values are not independently verified broker positions.
+
+Four focused tests cover complete normalization/reference parity, immutable
+state, create-only packaging, extra/checksum/schema/feed/bundle-ID rejection,
+feature ordering/shape, unavailable/stale inputs and unknown symbols. Actual
+local inference acceptance packages all four learned Colab actors and compares
+32 original training-row observations against the real environment, then checks
+exact frozen/direct-reference actions. Original dataset/actors remain unchanged.
+[Receipt](../results/trpo-smoke-2026-11-08/frozen-preprocessing.json) binds retained
+bundles and detailed proof under `artifacts/trpo-frozen-preprocessing-v1`.
+No local fitting, return evaluation, checkpoint selection, Colab allocation or
+retired-test access occurred. Cross-machine full preprocessing and complete
+saved economic-path parity remain pending before a performance comparison.
